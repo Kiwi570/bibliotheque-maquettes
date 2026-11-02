@@ -1,0 +1,47 @@
+{
+ "id": "surffm-maquette/player",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "emissions",
+  "mentions-legales",
+  "nous-capter"
+ ],
+ "titre": "Lecteur du direct",
+ "role": "barre-fixe",
+ "description": "Barre fixe en bas : lecture et pause, émission en cours, spectre en canvas et volume ; l'ambiance sonore est générée (bruit filtré, Web Audio) et continue quand on change de page grâce à la navigation sans rechargement.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:387-399",
+  "css": "assets/css/style.css:448-472,665-666,725-726",
+  "js": "assets/js/app.js:42-49,52,59-61,84-86,122-131,136"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/player-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/player-m390.jpg"
+ },
+ "pieges": [
+  "mesurer sa hauteur dans --barres-h",
+  "le retirer sur le formulaire et au pied de page sur téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 68,
+  "hauteur_m390": 68,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

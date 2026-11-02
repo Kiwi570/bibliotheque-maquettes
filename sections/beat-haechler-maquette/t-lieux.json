@@ -1,0 +1,43 @@
+{
+ "id": "beat-haechler-maquette/t-lieux",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Carte des deux lieux",
+ "role": "carte",
+ "description": "Carte SVG simplifiée d'un lac : la route entre les deux lieux se dessine au défilement et le repère du lieu ouvert aujourd'hui pulse, à côté de deux fiches de lieu.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:265-290",
+  "css": "assets/css/style.css:462-485",
+  "js": "assets/js/fx/lakemap.js:1-54"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/t-lieux-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/t-lieux-m390.jpg",
+  "video": "medias/beat-haechler-maquette/t-lieux-p960.mp4"
+ },
+ "pieges": [
+  "couleurs du dégradé de l'eau en dur dans le SVG",
+  "lieu du jour calculé d'après le jour de la semaine"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1057,
+  "hauteur_m390": 1127,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

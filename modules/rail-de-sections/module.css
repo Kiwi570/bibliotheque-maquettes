@@ -1,0 +1,28 @@
+/* Rail de sections — identité uniquement par les variables du socle. */
+.rds { --rail-l: 44px; position: fixed; z-index: 40; right: clamp(4px, 1vw, 16px); top: calc(var(--entete-h) + clamp(16px, 4vh, 40px)); bottom: calc(var(--barres-h-autres, 0px) + clamp(16px, 4vh, 40px)); width: var(--rail-l); pointer-events: none; font-family: var(--police-mono); font-size: max(12px, .72rem); color: var(--couleur-texte-doux); }
+.rds__regle, .rds__reperes { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; }
+.rds__trait { position: absolute; right: 0; top: var(--p); width: 8px; height: 1px; background: var(--couleur-ligne); }
+.rds__trait--majeur { width: 16px; background: var(--couleur-texte-doux); }
+.rds__nombre { position: absolute; right: 20px; top: var(--p); transform: translateY(-50%); line-height: 1; letter-spacing: .04em; }
+/* Repères cliquables : 44 px de zone tactile autour d'un point de 7 px. */
+.rds__reperes li { position: absolute; right: -12px; top: var(--p); transform: translateY(-50%); }
+.rds__repere { pointer-events: auto; position: relative; display: block; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
+.rds__repere::before { content: ""; position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; margin: -3.5px; border-radius: 50%; border: 1px solid var(--couleur-texte-doux); background: var(--couleur-fond); transition: background .3s, border-color .3s, scale .3s; }
+.rds__repere:hover::before, .rds__repere[aria-current]::before { background: var(--couleur-accent); border-color: var(--couleur-accent); scale: 1.3; }
+.rds__repere:focus-visible { outline-offset: -6px; }
+.rds__aiguille { position: absolute; right: -4px; top: 0; width: 26px; height: 2px; background: var(--couleur-accent); box-shadow: 0 0 10px color-mix(in oklab, var(--couleur-accent) 70%, transparent); transform: translateY(calc(var(--progression, 0) * (100cqh - 2px))); will-change: transform; }
+.rds { container-type: size; }
+.rds__etiquette { position: absolute; right: 30px; top: 0; transform: translateY(calc(var(--progression, 0) * (100cqh - 2px))) translateY(-50%); white-space: nowrap; padding: 2px 8px; border-radius: 3px; background: var(--couleur-accent); color: var(--couleur-sur-accent); letter-spacing: .08em; text-transform: uppercase; line-height: 1.5; }
+
+/* Téléphone : barre horizontale en bas, comptée dans --barres-h par le socle. */
+@media (max-width: 699px) {
+  .rds { top: auto; left: 0; right: 0; bottom: 0; width: auto; height: 44px; padding-inline: var(--espace); background: color-mix(in oklab, var(--couleur-fond) 94%, transparent); border-top: 1px solid var(--couleur-ligne); }
+  .rds__regle, .rds__reperes { inset: 0 var(--espace); }
+  .rds__trait { top: auto; bottom: 0; left: var(--p); right: auto; width: 1px; height: 6px; }
+  .rds__trait--majeur { height: 11px; width: 1px; }
+  .rds__nombre { display: none; }
+  .rds__reperes li { top: auto; right: auto; left: var(--p); bottom: 0; transform: translateX(-50%); }
+  .rds__aiguille { top: auto; bottom: 0; right: auto; left: var(--espace); width: 2px; height: 22px; transform: translateX(calc(var(--progression, 0) * (100cqw - 2 * var(--espace) - 2px))); }
+  .rds__etiquette { right: auto; left: var(--espace); top: 3px; transform: none; padding: 0 6px; }
+  html.rds-actif body { padding-bottom: var(--barres-h); }
+}

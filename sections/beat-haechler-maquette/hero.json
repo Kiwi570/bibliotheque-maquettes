@@ -1,0 +1,45 @@
+{
+ "id": "beat-haechler-maquette/hero",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Image d'ouverture sur l'eau en WebGL",
+ "role": "ouverture",
+ "description": "Premier écran plein cadre : la photo est rendue dans un shader OGL qui ajoute une brume qui respire et des ondes concentriques là où passent la souris ou le doigt ; titre en lignes masquées, boutons et pastille du prochain jour de consultation.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:106-122",
+  "css": "assets/css/style.css:95-106,194-201,267-304,316,729-730,739-751,788,792,801,851-853,974,991,1007-1012,1044",
+  "js": "assets/js/main.js:36-37,77-78,114-128 ; assets/js/fx/lakemap.js:2 ; assets/js/ui.js:139-151,300-303 ; assets/js/reveal.js:40 ; assets/js/water.js:138,153,166,223,241,362"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/hero-m390.jpg",
+  "video": "medias/beat-haechler-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "erreur console sans WebGL non corrigée : ne pas extraire en l'état",
+  "point d'impact et cadrage exprimés en coordonnées de l'image (data-focus, data-drop), un réglage par format"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

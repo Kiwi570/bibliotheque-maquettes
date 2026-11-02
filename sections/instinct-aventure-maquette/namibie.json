@@ -1,0 +1,45 @@
+{
+ "id": "instinct-aventure-maquette/namibie",
+ "maquette": "instinct-aventure-maquette",
+ "page": "index",
+ "titre": "Chiffres et soleil en direct",
+ "role": "chiffres",
+ "description": "Compteurs (superficie, densité, population) qui montent à l'arrivée, et un arc du soleil calculé en direct pour la destination (lever, coucher, position actuelle), à côté d'une carte illustrée.",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:399-432",
+  "css": "assets/css/main.css:470-482,849-851,889,1376-1397",
+  "js": "assets/js/core.js:262-318,405-425"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/namibie-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/namibie-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/namibie-p960.mp4"
+ },
+ "pieges": [
+  "calcul solaire NOAA simplifié : fuseau horaire de la destination, pas celui du visiteur",
+  "chiffres en tabular-nums, place finale réservée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1834,
+  "hauteur_m390": 2181,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

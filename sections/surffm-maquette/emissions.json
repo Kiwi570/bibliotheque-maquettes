@@ -1,0 +1,45 @@
+{
+ "id": "surffm-maquette/emissions",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Galerie horizontale des émissions",
+ "role": "galerie",
+ "description": "Section épinglée : le titre reste en haut et une piste de cartes photo défile à l'horizontale avec la molette, chaque image glissant légèrement dans son cadre ; la dernière carte renvoie à la grille. Sous 900 px, défilement horizontal natif.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:207-217",
+  "css": "assets/css/style.css:304-310,685-689,709-722",
+  "js": "assets/js/app.js:349-362,590-602"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/emissions-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/emissions-m390.jpg",
+  "video": "medias/surffm-maquette/emissions-p960.mp4"
+ },
+ "pieges": [
+  "hauteur des cartes prise sur la hauteur restante (flex: 1; min-height: 0), jamais estimée",
+  "distance de défilement recalculée au refresh (invalidateOnRefresh)",
+  "overflow-x sur le body masque la piste : ce n'est pas un débordement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 754,
+  "epinglee": true,
+  "scrolltriggers": 10
+ }
+}

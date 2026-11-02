@@ -1,0 +1,46 @@
+{
+ "id": "beat-haechler-maquette/bienvenue",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Portrait et mot d'accueil",
+ "role": "manifeste",
+ "description": "Portrait en ovale qui se dévoile par un rideau (clip-path) pendant qu'un filtre SVG de déplacement le fait onduler puis se figer, à côté d'un texte d'accueil signé ; au survol, l'image se trouble comme une eau effleurée.",
+ "animations": [
+  "révélation-image",
+  "masque",
+  "survol-image",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:124-145",
+  "css": "assets/css/style.css:349-355,377-384",
+  "js": "assets/js/reveal.js:21-33,60-91"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/bienvenue-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/bienvenue-m390.jpg",
+  "video": "medias/beat-haechler-maquette/bienvenue-p960.mp4"
+ },
+ "pieges": [
+  "filtre SVG désactivé sous Safari et sans souris (trop coûteux)",
+  "retirer le filtre à la fin de l'animation pour rendre l'image nette"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1097,
+  "hauteur_m390": 1301,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

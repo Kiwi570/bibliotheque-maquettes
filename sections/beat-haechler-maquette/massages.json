@@ -1,0 +1,41 @@
+{
+ "id": "beat-haechler-maquette/massages",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Trois soins en cartes",
+ "role": "services",
+ "description": "Trois cartes photo des soins, révélées en cascade, avec onde au survol ; prévues pour une galerie horizontale épinglée qui ne s'active jamais.",
+ "animations": [
+  "apparition-au-défilement",
+  "survol-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:147-189",
+  "css": "assets/css/style.css:388-400,404-405,878-898,902",
+  "js": "assets/js/reveal.js:152"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/massages-p1440.jpg"
+ },
+ "pieges": [
+  "galerie horizontale jamais active (attribut data-hscroll absent) et anticipatePin dans le code"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1488,
+  "hauteur_m390": 1325,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

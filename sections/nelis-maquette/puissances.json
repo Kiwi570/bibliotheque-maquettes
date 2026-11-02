@@ -1,0 +1,44 @@
+{
+ "id": "nelis-maquette/puissances",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Jauge de puissance épinglée",
+ "role": "offre",
+ "description": "Section épinglée : une jauge verticale en échelle logarithmique monte palier par palier au défilement (chaque palier affiche sa plage, sa photo et son texte, la valeur entre en glissant), puis bascule en mode « gel » au dernier palier en température négative.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:234-292",
+  "css": "assets/css/style.css:271-306,323-326,718",
+  "js": "assets/js/home.js:22-53"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/puissances-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/puissances-m390.jpg",
+  "video": "medias/nelis-maquette/puissances-p960.mp4"
+ },
+ "pieges": [
+  "colonne en 100svh flex, grille en minmax(0, 1fr), jauge en height: 100 % (max 580 px) : rien de coupé de 640 à 1080 px de haut",
+  "épinglage seulement à partir de 1024 px ; liste lisible en dessous"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4050,
+  "hauteur_m390": 3898,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

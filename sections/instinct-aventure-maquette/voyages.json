@@ -1,0 +1,45 @@
+{
+ "id": "instinct-aventure-maquette/voyages",
+ "maquette": "instinct-aventure-maquette",
+ "page": "index",
+ "titre": "Galerie horizontale à tampons",
+ "role": "produits",
+ "description": "Section épinglée : une piste de cartes voyages défile à l'horizontale, chaque carte monte en arrivant (containerAnimation) et un tampon « complet » s'abat dessus ; la carte qui prend le focus clavier est ramenée à l'écran. Sous 1101 px, défilement natif et tampons à l'IntersectionObserver.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:279-326",
+  "css": "assets/css/main.css:414-428,605-606,801,825-827,932-933,964-979,987-988,1479-1480,1484-1491,1497-1499,1600",
+  "js": "assets/js/home.js:116-152"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/voyages-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/voyages-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/voyages-p960.mp4"
+ },
+ "pieges": [
+  "variante de surffm-maquette/emissions : containerAnimation pour les effets par carte",
+  "tampons à opacité 0 posés en JS : les remettre visibles en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 509,
+  "epinglee": true,
+  "scrolltriggers": 11
+ }
+}

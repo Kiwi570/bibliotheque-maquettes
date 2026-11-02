@@ -1,0 +1,52 @@
+{
+ "id": "beat-haechler-maquette/site-header",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "a-propos",
+  "bons-cadeaux",
+  "confidentialite",
+  "cours-de-massage",
+  "drainage-lymphatique",
+  "massage-anti-tensions",
+  "massage-relaxant",
+  "massages",
+  "rendez-vous"
+ ],
+ "titre": "En-tête qui se retire",
+ "role": "menu",
+ "description": "En-tête fixe sur une ligne (logo, liens, téléphone, bouton Rendez-vous) qui se cache en descendant et revient en remontant ; il entre par le haut à la fin de l'ouverture.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:67-83",
+  "css": "assets/css/style.css:205-223,232-247,845-847,1019-1022",
+  "js": "assets/js/main.js:79 ; assets/js/fx/forms.js:12-20 ; assets/js/ui.js:116,163-173"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/site-header-p1440.jpg"
+ },
+ "pieges": [
+  "pendant l'ouverture, suspendre la transition CSS sur transform : GSAP seul anime l'en-tête",
+  "sous 400 px, le sous-titre passait sous le bouton Menu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 76,
+  "hauteur_m390": 76,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

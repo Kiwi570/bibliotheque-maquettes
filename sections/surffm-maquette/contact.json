@@ -1,0 +1,40 @@
+{
+ "id": "surffm-maquette/contact",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Dédicace et contact",
+ "role": "contact",
+ "description": "Adresse e-mail en grand avec boutons Copier et Écrire, liens sociaux, photo, et formulaire de dédicace simulé à droite.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:333-361",
+  "css": "assets/css/style.css:390,409-427",
+  "js": "assets/js/app.js:563-572"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/contact-p1440.jpg"
+ },
+ "pieges": [
+  "le bouton Copier cherchait l'adresse dans le mauvais parent : chercher avec closest()"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1225,
+  "hauteur_m390": 1583,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

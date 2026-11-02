@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Givre WebGL · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #05070d; --couleur-texte: #e8eef9; --couleur-accent: #a9ace4; --couleur-secondaire: #7ec9f3; --police-titres: "Helvetica Neue", Arial, sans-serif; --rayon: 4px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="givre" data-module="givre-webgl" aria-labelledby="givre-titre">
+    <div class="givre__fond" aria-hidden="true"><span class="socle-visuel socle-visuel--2"></span></div>
+    <div class="givre__voile" aria-hidden="true"></div>
+    <canvas class="givre__canvas" aria-hidden="true"></canvas>
+    <div class="givre__statique" aria-hidden="true"></div>
+    <div class="givre__cadre socle-cadre">
+      <p class="socle-surtitre">Surtitre de la page</p>
+      <h1 class="givre__titre" id="givre-titre" data-givre-cible>Titre de la page en deux lignes.</h1>
+      <div class="givre__bas">
+        <p class="givre__texte">Un paragraphe de deux lignes qui présente l'activité, ce que l'on propose et à qui, avant les deux boutons d'action.</p>
+        <div class="givre__actions">
+          <a class="socle-bouton socle-bouton--plein" href="#suite">Action principale</a>
+          <a class="socle-bouton" href="#suite">Action secondaire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Passez la souris sur le premier écran : le givre fond sous le pointeur, puis se reforme lentement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="givre-webgl"]')) init(el);
+</script>
+</body>
+</html>

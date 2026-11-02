@@ -1,0 +1,43 @@
+{
+ "id": "surffm-maquette/manifeste",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Manifeste qui s'allume",
+ "role": "manifeste",
+ "description": "Un long paragraphe en capitales découpé en mots : au défilement, chaque mot passe de l'accent à la couleur du texte et de 30 % à 100 % d'opacité, lié à la molette ; image de fond en parallaxe.",
+ "animations": [
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "manifeste-mot-a-mot",
+ "code": {
+  "html": "index.html:144-164",
+  "css": "assets/css/style.css:263-280",
+  "js": "assets/js/app.js:405-443"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/manifeste-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/manifeste-m390.jpg",
+  "video": "medias/surffm-maquette/manifeste-p960.mp4"
+ },
+ "pieges": [
+  "les couleurs de départ et d'arrivée sont en dur dans le tween : les lire dans les variables"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1340,
+  "hauteur_m390": 1073,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

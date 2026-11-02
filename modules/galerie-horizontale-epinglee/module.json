@@ -1,0 +1,52 @@
+{
+ "nom": "galerie-horizontale-epinglee",
+ "titre": "Galerie horizontale épinglée, cartes réglées sur la hauteur de l'écran",
+ "role": "galerie",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": "surffm-maquette/emissions",
+ "convient_a": [
+  "média",
+  "culture",
+  "spectacle",
+  "tourisme",
+  "restauration",
+  "hébergement",
+  "commerce",
+  "artisanat",
+  "sport",
+  "formation"
+ ],
+ "ambiances": [
+  "sombre",
+  "énergique",
+  "nocturne",
+  "clair"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "largeurMin": "nombre, 900 par défaut : largeur à partir de laquelle la galerie s'épingle",
+  "parallaxe": "nombre en %, 6 par défaut, 0 pour couper",
+  "lissage": "scrub de ScrollTrigger, 1 par défaut"
+ },
+ "poids_ko": 6.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "surffm-maquette/cadran",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "emissions",
+  "mentions-legales",
+  "nous-capter"
+ ],
+ "titre": "Cadran de fréquences latéral",
+ "role": "decor",
+ "description": "Règle verticale de 87,5 à 108 MHz fixée à droite : l'aiguille suit la progression de la page, chaque section porte une fréquence cliquable et son nom s'affiche en étiquette au changement, avec un grésillement bref ; sur téléphone il devient une règle horizontale au-dessus du lecteur.",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "rail-de-sections",
+ "code": {
+  "html": "index.html:73-73",
+  "css": "assets/css/style.css:185-189",
+  "js": "assets/js/app.js:446-508"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/cadran-p1440.jpg"
+ },
+ "pieges": [
+  "positions des sections mesurées au refresh (pin-spacer compris), jamais pendant le défilement",
+  "changer de section quand elle atteint le milieu de l'écran, pas son haut",
+  "sur téléphone, ajouter la hauteur de la règle au padding-bottom du body"
+ ],
+ "mesures": {
+  "hauteur_p1440": 672,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

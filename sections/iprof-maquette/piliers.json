@@ -1,0 +1,44 @@
+{
+ "id": "iprof-maquette/piliers",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "titre": "Galerie horizontale de polaroïds",
+ "role": "galerie",
+ "description": "Section épinglée dont la piste de piliers défile à l'horizontale ; chaque photo se redresse de ±6° vers ±1° en entrant (containerAnimation), légendes manuscrites ; la dernière carte appelle au rendez-vous.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:123-142",
+  "css": "assets/css/site.css:154,169,214-222,501-504,555",
+  "js": "assets/js/site.js:557-566"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/piliers-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/piliers-m390.jpg",
+  "video": "medias/iprof-maquette/piliers-p960.mp4"
+ },
+ "pieges": [
+  "utilise encore anticipatePin : à retirer (à-coup à l'entrée)",
+  "départ « center 55% » : vérifier que tout tient dans l'écran sous l'en-tête aux écrans bas",
+  "légendes manuscrites coupées par des points de suspension (défaut restant) : laisser passer à la ligne"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3148,
+  "hauteur_m390": 2577,
+  "epinglee": true,
+  "scrolltriggers": 11
+ }
+}

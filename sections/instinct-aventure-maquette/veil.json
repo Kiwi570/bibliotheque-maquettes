@@ -1,0 +1,52 @@
+{
+ "id": "instinct-aventure-maquette/veil",
+ "maquette": "instinct-aventure-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "grande-aventure",
+  "immersion-sauvage",
+  "namibie-authentique",
+  "namibie-botswana",
+  "namibie-integrale",
+  "ocean-caprivi",
+  "preparer",
+  "voyages"
+ ],
+ "titre": "Voile de sable entre les pages",
+ "role": "transition-de-page",
+ "description": "Un voile texturé (bruit SVG) balaie l'écran de gauche à droite avant la navigation, puis se retire sur la page d'arrivée ; sur les navigateurs récents, View Transitions natives où la photo de la carte cliquée devient le héros de la fiche.",
+ "animations": [
+  "transition-de-page",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:76-76",
+  "css": "assets/css/main.css:270-280,1504",
+  "js": "assets/js/core.js:496-532"
+ },
+ "medias": {
+  "video": "medias/instinct-aventure-maquette/veil-p960.mp4"
+ },
+ "pieges": [
+  "indicateur posé en sessionStorage pour démarrer la page d'arrivée couverte",
+  "pageshow persisted : remettre le voile hors écran et effacer le nom de View Transition"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

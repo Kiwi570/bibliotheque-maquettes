@@ -1,0 +1,53 @@
+{
+ "nom": "catalogue-filtres-flip",
+ "titre": "Catalogue à filtres, budget et tri, fiches réordonnées en Flip, sélection dans l'adresse",
+ "role": "produits",
+ "animations": [
+  "flip",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "origine": "instinct-aventure-maquette/voyages-catalogue",
+ "convient_a": [
+  "tourisme",
+  "hébergement",
+  "commerce",
+  "formation",
+  "immobilier",
+  "culture",
+  "sport",
+  "restauration",
+  "auto-moto",
+  "artisanat"
+ ],
+ "ambiances": [
+  "clair",
+  "chaleureux",
+  "sobre",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "adresse": "booléen, true : filtres reportés dans l'adresse et relus à l'arrivée",
+  "nombres": "booléen, true : nombre de résultats dans chaque bouton",
+  "format": "fonction (n) => texte pour le curseur, prix en euros par défaut",
+  "mots": "[singulier, pluriel] du compteur, ['fiche', 'fiches']",
+  "duree": "durée du Flip en s, 0.7"
+ },
+ "poids_ko": 11.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.001,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

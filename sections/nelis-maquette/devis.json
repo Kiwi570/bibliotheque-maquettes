@@ -1,0 +1,43 @@
+{
+ "id": "nelis-maquette/devis",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Devis en quatre étapes",
+ "role": "calculateur",
+ "description": "Formulaire par étapes simulé : choix du besoin, curseurs de puissance (échelle logarithmique), de température et de durée, coordonnées ; un récapitulatif et une orientation vers une gamme sont calculés en direct, avec erreurs à côté des champs et mention « rien n'est envoyé ».",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:484-640",
+  "css": "assets/css/style.css:442-482,490-510,715,721,742",
+  "js": "assets/js/form.js:1-171"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/devis-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/devis-m390.jpg",
+  "video": "medias/nelis-maquette/devis-p960.mp4"
+ },
+ "pieges": [
+  "présélection lue dans l'adresse ou le bouton d'origine",
+  "étape 1 sans message quand rien n'est choisi"
+ ],
+ "mesures": {
+  "hauteur_p1440": 811,
+  "hauteur_m390": 1118,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

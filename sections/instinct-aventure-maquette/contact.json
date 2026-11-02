@@ -1,0 +1,59 @@
+{
+ "id": "instinct-aventure-maquette/contact",
+ "maquette": "instinct-aventure-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "grande-aventure",
+  "immersion-sauvage",
+  "namibie-authentique",
+  "namibie-botswana",
+  "namibie-integrale",
+  "ocean-caprivi",
+  "preparer",
+  "voyages"
+ ],
+ "titre": "Contact sous ciel étoilé et safari à la lampe",
+ "role": "contact",
+ "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
+ "animations": [
+  "canvas-2d",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:457-559",
+  "css": "assets/css/main.css:144-145,493-518,523-526,853-854,882,896-897,1418-1445,1508,1513,1604",
+  "js": "assets/js/core.js:435-494,559-607"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/contact-p960.mp4"
+ },
+ "pieges": [
+  "lampe calée dans le repère de la scène (largeur de scène, pas de l'écran)",
+  "boucle arrêtée hors écran et dessin ralenti en version légère",
+  "un seul bloc regroupe contact, jeu et pied de page"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2025,
+  "hauteur_m390": 3028,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

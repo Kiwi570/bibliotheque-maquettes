@@ -1,0 +1,56 @@
+{
+ "nom": "givre-webgl",
+ "titre": "Premier écran givré en shader : le givre pousse des bords, fond le long du titre et sous la souris",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "origine": "nelis-maquette/haut",
+ "convient_a": [
+  "industrie",
+  "bâtiment",
+  "services-b2b",
+  "sport",
+  "tourisme",
+  "hébergement",
+  "restauration",
+  "commerce",
+  "numérique"
+ ],
+ "ambiances": [
+  "froid",
+  "sombre",
+  "nocturne",
+  "industriel",
+  "montagne",
+  "luxueux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "pousse": "durée de la pousse en s, 2.4",
+  "fonteTitre": "le givre fond le long du titre, true",
+  "force": "intensité du givre, 1 (0,5 à 1,2)",
+  "delai": "attente après le premier affichage en ms, 150 (à allonger derrière une ouverture)",
+  "glace": "couleur CSS des cristaux, mélange secondaire + texte par défaut",
+  "blanc": "couleur CSS des reflets, --couleur-texte",
+  "cellule": "couleur CSS des cellules, --couleur-accent"
+ },
+ "poids_ko": 12.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0.032,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

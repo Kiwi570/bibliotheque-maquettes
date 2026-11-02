@@ -1,0 +1,48 @@
+{
+ "id": "nelis-maquette/haut",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Héros givré en WebGL",
+ "role": "ouverture",
+ "description": "Photo produit plein cadre recouverte d'un givre en shader (OGL : bruit fractal, crêtes et cellules de Voronoï) qui pousse depuis les bords et autour du titre, puis fond le long du titre ; la souris fait fondre le givre (texture de fonte dessinée en canvas 2D qui se regèle lentement). Titre découpé en lignes qui montent, repli en givre statique sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "givre-webgl",
+ "code": {
+  "html": "index.html:102-125",
+  "css": "assets/css/style.css:203-229,555,716,736-737",
+  "js": "assets/js/frost.js:1-182 ; assets/js/main.js:291-305"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/haut-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/haut-m390.jpg",
+  "video": "medias/nelis-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "position du titre passée au shader en coordonnées du héros, remesurée au redimensionnement",
+  "boucle limitée à ~45 i/s et arrêtée hors écran",
+  "erreur console sans WebGL : tester OGL avant de créer le Renderer",
+  "voile plus dense sous le texte sur téléphone pour la lisibilité"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

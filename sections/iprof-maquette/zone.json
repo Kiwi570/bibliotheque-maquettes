@@ -1,0 +1,43 @@
+{
+ "id": "iprof-maquette/zone",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "titre": "Carte dessinée de la zone d'intervention",
+ "role": "carte",
+ "description": "Carte SVG du lac : la rive se trace (DrawSVG), l'eau et la zone surlignée apparaissent, les villes surgissent une à une, flèches et notes manuscrites se dessinent, puis une bulle « en visio » s'ouvre ; photo panoramique dessous.",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:144-174",
+  "css": "assets/css/site.css:85-86,170,225-241,332,493,505-506",
+  "js": "assets/js/site.js:568-580"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/zone-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/zone-m390.jpg",
+  "video": "medias/iprof-maquette/zone-p960.mp4"
+ },
+ "pieges": [
+  "dépend de DrawSVGPlugin",
+  "zone et étiquettes marquées « indicatives »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1357,
+  "hauteur_m390": 1022,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

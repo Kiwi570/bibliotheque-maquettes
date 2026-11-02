@@ -1,0 +1,45 @@
+{
+ "id": "surffm-maquette/histoire",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Frise des saisons et compteurs",
+ "role": "chiffres",
+ "description": "Trois compteurs qui montent à l'arrivée, puis une frise verticale dont le trait se dessine au défilement pendant que les années glissent depuis la gauche.",
+ "animations": [
+  "compteur",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "frise-tracee",
+ "code": {
+  "html": "index.html:220-255",
+  "css": "assets/css/style.css:325-349",
+  "js": "assets/js/app.js:405-443,446-508,605-613,674-731,787-821"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/histoire-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/histoire-m390.jpg",
+  "video": "medias/surffm-maquette/histoire-p960.mp4"
+ },
+ "pieges": [
+  "chiffres en tabular-nums et largeur finale réservée",
+  "longueur du trait remesurée au refresh"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2618,
+  "hauteur_m390": 3182,
+  "epinglee": false,
+  "scrolltriggers": 16
+ }
+}

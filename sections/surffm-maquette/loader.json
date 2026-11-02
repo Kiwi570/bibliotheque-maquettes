@@ -1,0 +1,48 @@
+{
+ "id": "surffm-maquette/loader",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "emissions",
+  "mentions-legales",
+  "nous-capter"
+ ],
+ "titre": "Recherche de la station",
+ "role": "ouverture",
+ "description": "Écran d'ouverture : une onde dessinée en canvas 2D s'amplifie pendant que la fréquence défile de 87,5 à 108 MHz, puis affiche « DAB+ » et se retire en rideau (clip-path) vers le haut ; il ne joue qu'une fois par session et disparaît en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "canvas-2d",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:42-46",
+  "css": "assets/css/style.css:177-182,657",
+  "js": "assets/js/app.js:787-821"
+ },
+ "medias": {
+  "video": "medias/surffm-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "la promesse de fin d'ouverture lance le titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
+  "couleurs de l'onde écrites en dur dans le canvas : les lire dans les variables CSS"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

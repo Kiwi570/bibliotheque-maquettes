@@ -1,0 +1,47 @@
+{
+ "id": "iprof-maquette/sheet",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "a-propos",
+  "conseils",
+  "contact",
+  "cours-individuels",
+  "mentions-legales",
+  "tarifs"
+ ],
+ "titre": "Feuille qui glisse entre les pages",
+ "role": "transition-de-page",
+ "description": "Au clic sur un lien interne, une feuille de papier monte du bas en 0,55 s en portant le nom de la page d'arrivée en manuscrit, puis se retire vers le haut sur la nouvelle page ; un indicateur en sessionStorage fait démarrer la page couverte, et le retour arrière (pageshow) la retire aussitôt.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:259-259",
+  "css": "assets/css/site.css:315-319",
+  "js": "assets/js/site.js:197-226"
+ },
+ "medias": {},
+ "pieges": [
+  "comparer des chemins normalisés (sans .html ni index) pour ne pas lancer la transition vers la page en cours",
+  "pas de transition en mode calme ni avec une touche de modification enfoncée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

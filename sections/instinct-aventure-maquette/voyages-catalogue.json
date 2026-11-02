@@ -1,0 +1,48 @@
+{
+ "id": "instinct-aventure-maquette/voyages-catalogue",
+ "maquette": "instinct-aventure-maquette",
+ "page": "voyages",
+ "titre": "Catalogue filtré avec Flip",
+ "role": "produits",
+ "description": "Filtres (formule, durée, région), curseur de budget et tri : les cartes se réordonnent et disparaissent en Flip, un compteur annonce le nombre de résultats ; au survol d'une carte, sa trace s'allume sur une carte collante à droite.",
+ "animations": [
+  "flip",
+  "filtre-anime",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "carte-interactive",
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "catalogue-filtres-flip",
+ "code": {
+  "html": "voyages.html:184-286",
+  "css": "assets/css/main.css:385,418-428,592-611,801,827-829,879,894-895,900,932-933,964-988,1152-1160,1213,1479-1480,1484-1491,1506,1513,1560,1577,1600,1606-1608",
+  "js": "assets/js/voyages.js:57-134"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/voyages-catalogue-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/voyages-catalogue-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/voyages-catalogue-p960.mp4"
+ },
+ "pieges": [
+  "ScrollTrigger.refresh() à la fin du Flip",
+  "filtres lus depuis l'ancre de l'adresse",
+  "rubrique vide : message plutôt qu'une grille vide"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2616,
+  "hauteur_m390": 4638,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "iprof-maquette/conseils-guide",
+ "maquette": "iprof-maquette",
+ "page": "conseils",
+ "titre": "Fiches de conseils filtrées et retournées",
+ "role": "services",
+ "description": "Boutons de filtre à état (aria-pressed) qui réorganisent la grille de fiches par Flip (sorties en fondu réduit, entrées en grossissant) ; chaque fiche se retourne en 3D pour montrer son dos, la face cachée étant rendue inerte ; un lien profond (#fiche) ouvre la fiche retournée.",
+ "animations": [
+  "flip",
+  "filtre-anime",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "conseils.html:65-182",
+  "css": "assets/css/site.css:154,169,173-179,191-192,350-373,514,529,591",
+  "js": "assets/js/site.js:307-343"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/conseils-guide-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/conseils-guide-m390.jpg",
+  "video": "medias/iprof-maquette/conseils-guide-p960.mp4"
+ },
+ "pieges": [
+  "face cachée en inert et focus déplacé sur l'autre face après le retournement",
+  "ScrollTrigger.refresh() à la fin du Flip (la hauteur change)",
+  "le sujet choisi passe au formulaire de contact par sessionStorage"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1912,
+  "hauteur_m390": 4493,
+  "epinglee": false,
+  "scrolltriggers": 13
+ }
+}

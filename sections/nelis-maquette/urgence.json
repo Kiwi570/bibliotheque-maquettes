@@ -1,0 +1,47 @@
+{
+ "id": "nelis-maquette/urgence",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "groupes-eau-glacee",
+  "location",
+  "mentions-legales"
+ ],
+ "titre": "Bande d'urgence fixe",
+ "role": "barre-fixe",
+ "description": "Fine barre fixe au-dessus de la navigation : libellé d'urgence, deux numéros cliquables et statut du magasin (ouvert, fermé, réouverture) calculé sur les horaires à l'heure de Paris ; elle compte dans la hauteur d'en-tête mesurée.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:40-52",
+  "css": "assets/css/style.css:123-139",
+  "js": "assets/js/form.js:19-20,79,129 ; assets/js/main.js:23,55"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/urgence-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/urgence-m390.jpg"
+ },
+ "pieges": [
+  "sa hauteur fait partie de --entete-h (mesurée par ResizeObserver)",
+  "44 px de haut sous 1024 px pour les cibles tactiles"
+ ],
+ "mesures": {
+  "hauteur_p1440": 37,
+  "hauteur_m390": 45,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "nelis-maquette/location-scenarios",
+ "maquette": "nelis-maquette",
+ "page": "location",
+ "titre": "Scénarios en onglets",
+ "role": "offre",
+ "description": "Onglets verticaux de situations, navigables aux flèches, Début et Fin : la photo change par un cercle qui s'ouvre depuis la gauche (clip-path) et le texte s'efface puis entre en glissant.",
+ "animations": [
+  "masque",
+  "révélation-image"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "location.html:130-162",
+  "css": "assets/css/style.css:77,561-574,717",
+  "js": "assets/js/location.js:22-66"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/location-scenarios-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/location-scenarios-m390.jpg",
+  "video": "medias/nelis-maquette/location-scenarios-p960.mp4"
+ },
+ "pieges": [
+  "motif d'onglets accessible : role tab, aria-selected, tabindex itinérant",
+  "textes des onglets dans le JS : les garder dans le HTML"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1284,
+  "hauteur_m390": 1227,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

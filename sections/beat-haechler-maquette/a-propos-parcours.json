@@ -1,0 +1,41 @@
+{
+ "id": "beat-haechler-maquette/a-propos-parcours",
+ "maquette": "beat-haechler-maquette",
+ "page": "a-propos",
+ "titre": "Parcours en frise",
+ "role": "étapes",
+ "description": "Titre et photo dans une colonne collante, texte et frise verticale dont la ligne se dessine au défilement de l'autre côté.",
+ "animations": [
+  "progression-fixée",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "a-propos.html:109-134",
+  "css": "assets/css/style.css:136-144,152,350,534-535,690-696,775,1026-1032",
+  "js": "assets/js/main.js:103,117 ; assets/js/fx/gift.js:26 ; assets/js/fx/breath.js:28 ; assets/js/fx/gestures.js:32-37 ; assets/js/ui.js:212,225 ; assets/js/reveal.js:64,107"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/a-propos-parcours-p1440.jpg"
+ },
+ "pieges": [
+  "colonne collante : top lié à --entete-h, hauteur bornée à l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1275,
+  "hauteur_m390": 1999,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

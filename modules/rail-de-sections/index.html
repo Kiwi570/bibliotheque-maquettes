@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rail de sections · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #071620; --couleur-texte: #e9f2f2; --couleur-accent: #d8cc22; --couleur-secondaire: #2a69bf; }
+  .demo-bloc { min-height: 100vh; display: grid; align-content: center; padding-block: 12vh; border-top: 1px solid var(--couleur-ligne); }
+  .demo-grille { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr); padding-right: 64px; }
+  @media (min-width: 900px) { .demo-grille { grid-template-columns: 1.1fr .9fr; align-items: center; } }
+  .demo-grille h2 { font-size: clamp(2rem, 5vw, 3.8rem); margin-block: .4em; }
+  .demo-visuel { aspect-ratio: 4 / 3; border-radius: var(--rayon); }
+  @media (max-width: 699px) { .demo-grille { padding-right: 0; } }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc" data-rail="Ouverture" id="s1" aria-labelledby="t1">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 01</p><h2 id="t1">Titre de la page</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="demo-bloc" data-rail="Présentation" id="s2" aria-labelledby="t2">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 02</p><h2 id="t2">Titre de la section</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="demo-bloc" data-rail="Services" id="s3" aria-labelledby="t3">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 03</p><h2 id="t3">Titre de la section</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="demo-bloc" data-rail="Méthode" id="s4" aria-labelledby="t4">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 04</p><h2 id="t4">Titre de la section</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="demo-bloc" data-rail="Questions" id="s5" aria-labelledby="t5">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 05</p><h2 id="t5">Titre de la section</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+    </div>
+  </section>
+  <section class="demo-bloc" data-rail="Contact" id="s6" aria-labelledby="t6">
+    <div class="socle-cadre demo-grille">
+      <div><p class="socle-surtitre">Section 06</p><h2 id="t6">Titre de la section</h2><p>Un paragraphe de deux lignes pour remplir la section et montrer le rail qui suit le défilement de la page.</p></div>
+      <div class="demo-visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+    </div>
+  </section>
+</main>
+<nav class="rds" data-module="rail-de-sections" aria-label="Sections de la page"></nav>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="rail-de-sections"]'), { echelle: [0, 100], pas: 5, majeur: 20 });
+</script>
+</body>
+</html>

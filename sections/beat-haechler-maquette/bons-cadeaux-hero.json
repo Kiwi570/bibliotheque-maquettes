@@ -1,0 +1,45 @@
+{
+ "id": "beat-haechler-maquette/bons-cadeaux-hero",
+ "maquette": "beat-haechler-maquette",
+ "page": "bons-cadeaux",
+ "titre": "Bon cadeau dans son enveloppe",
+ "role": "produits",
+ "description": "Une enveloppe entre en scène, son rabat s'ouvre en 3D, la carte en sort et penche légèrement ; l'ensemble s'incline sous la souris et la carte se retourne au clic ou au clavier pour montrer le verso ; le prénom saisi dans le formulaire s'écrit sur l'enveloppe.",
+ "animations": [
+  "ouverture-orchestrée",
+  "flip",
+  "webgl-shader"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "bons-cadeaux.html:91-116",
+  "css": "assets/css/style.css:672-687,787-793",
+  "js": "assets/js/fx/gift.js:1-51"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/bons-cadeaux-hero-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/bons-cadeaux-hero-m390.jpg",
+  "video": "medias/beat-haechler-maquette/bons-cadeaux-hero-p960.mp4"
+ },
+ "pieges": [
+  "en mode calme, poser directement l'état final (rabat ouvert, carte sortie)",
+  "la carte retournable est un bouton avec aria-pressed"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 908,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

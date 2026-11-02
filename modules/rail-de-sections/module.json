@@ -1,0 +1,53 @@
+{
+ "nom": "rail-de-sections",
+ "titre": "Rail gradué qui suit la page, repères de sections cliquables et nom de la section en cours",
+ "role": "decor",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": "surffm-maquette/cadran",
+ "convient_a": [
+  "média",
+  "culture",
+  "spectacle",
+  "tourisme",
+  "sport",
+  "formation",
+  "conseil",
+  "industrie",
+  "numérique"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "industriel",
+  "énergique",
+  "sobre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "echelle": "[min, max] affichés sur la règle, [0, 100] par défaut (fréquences, années, altitudes…)",
+  "pas": "écart entre graduations, 5",
+  "majeur": "graduation numérotée toutes les N unités, 20",
+  "format": "fonction (v) => texte",
+  "selecteur": "sections repérées, [data-rail] (nom dans l'attribut)",
+  "largeurTelephone": "700 : en dessous, barre horizontale en bas"
+ },
+ "poids_ko": 8.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

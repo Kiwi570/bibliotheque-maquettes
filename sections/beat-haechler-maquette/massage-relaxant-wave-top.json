@@ -1,0 +1,43 @@
+{
+ "id": "beat-haechler-maquette/massage-relaxant-wave-top",
+ "maquette": "beat-haechler-maquette",
+ "page": "massage-relaxant",
+ "titre": "Respiration guidée",
+ "role": "outil-interactif",
+ "description": "Un disque qui gonfle 4 s à l'inspiration et se vide 6 s à l'expiration, entouré d'anneaux, pendant une minute, avec le mot et le décompte annoncés aux lecteurs d'écran ; bouton démarrer et arrêter.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "massage-relaxant.html:127-143",
+  "css": "assets/css/style.css:562-569,764-768",
+  "js": "assets/js/fx/breath.js:1-56"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/massage-relaxant-wave-top-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/massage-relaxant-wave-top-m390.jpg",
+  "video": "medias/beat-haechler-maquette/massage-relaxant-wave-top-p960.mp4"
+ },
+ "pieges": [
+  "en mode calme, pas d'animation de taille : le décompte texte suffit",
+  "image de fond en mix-blend-mode : à éviter au-dessus d'un fond animé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 778,
+  "hauteur_m390": 811,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

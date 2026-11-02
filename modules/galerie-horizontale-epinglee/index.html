@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Galerie horizontale épinglée · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0f1418; --couleur-texte: #eef1ee; --couleur-accent: #e7c64b; --couleur-secondaire: #4f78c9; --rayon: 10px; }
+  .demo-bloc { min-height: 90vh; display: grid; align-content: center; gap: 1rem; padding-block: 15vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Un paragraphe de deux lignes pour placer la galerie dans une page. Faites défiler pour l'épingler.</p>
+  </section>
+
+  <section class="ghe" data-module="galerie-horizontale-epinglee" data-epingle aria-labelledby="ghe-titre">
+    <div class="ghe__cadre">
+      <div class="ghe__tete socle-cadre" data-tient="tête">
+        <p class="socle-surtitre">Surtitre</p>
+        <h2 class="ghe__titre" id="ghe-titre">Titre de la section</h2>
+        <p class="ghe__texte">Un paragraphe de deux lignes qui présente la galerie et ce que l'on va y voir.</p>
+      </div>
+      <div class="ghe__piste" role="region" aria-label="Galerie, défilement horizontal" tabindex="0">
+        <a class="ghe__carte" href="#carte-1" data-tient="carte 1">
+          <span class="ghe__visuel"><span class="socle-visuel"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">01 / 07</span><span class="ghe__nom">Titre de carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-2" data-tient="carte 2">
+          <span class="ghe__visuel"><span class="socle-visuel socle-visuel--2"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">02 / 07</span><span class="ghe__nom">Deuxième carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-3" data-tient="carte 3">
+          <span class="ghe__visuel"><span class="socle-visuel socle-visuel--3"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">03 / 07</span><span class="ghe__nom">Une carte plus longue</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-4" data-tient="carte 4">
+          <span class="ghe__visuel"><span class="socle-visuel"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">04 / 07</span><span class="ghe__nom">Quatrième carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-5" data-tient="carte 5">
+          <span class="ghe__visuel"><span class="socle-visuel socle-visuel--2"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">05 / 07</span><span class="ghe__nom">Cinquième carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-6" data-tient="carte 6">
+          <span class="ghe__visuel"><span class="socle-visuel socle-visuel--3"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">06 / 07</span><span class="ghe__nom">Sixième carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+        <a class="ghe__carte" href="#carte-7" data-tient="carte 7">
+          <span class="ghe__visuel"><span class="socle-visuel"></span></span>
+          <span class="ghe__corps"><span class="ghe__index">07 / 07</span><span class="ghe__nom">Septième carte</span><span class="ghe__ligne">Une ligne de description</span></span>
+        </a>
+      </div>
+      <div class="ghe__pied socle-cadre" data-tient="pied">
+        <span class="ghe__progression" aria-hidden="true"><span></span></span>
+        <span class="ghe__indice" aria-hidden="true">Faites glisser</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son défilement vertical après la dernière carte.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="galerie-horizontale-epinglee"]')) init(el);
+</script>
+</body>
+</html>

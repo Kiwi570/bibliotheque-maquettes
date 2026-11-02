@@ -1,0 +1,44 @@
+{
+ "id": "nelis-maquette/cle-en-main",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Clé en main en étapes",
+ "role": "étapes",
+ "description": "Texte d'introduction dont les lignes se « dégivrent » (flou et teinte glacée qui se dissipent au défilement), photo en parallaxe, puis étapes reliées par un trait SVG qui se dessine et allume chaque étape à mesure qu'on avance.",
+ "animations": [
+  "révélation-texte",
+  "progression-fixée",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:139-163",
+  "css": "assets/css/style.css:79,239-252",
+  "js": "assets/js/home.js:7-20 ; assets/js/main.js:307-345"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/cle-en-main-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/cle-en-main-m390.jpg",
+  "video": "medias/nelis-maquette/cle-en-main-p960.mp4"
+ },
+ "pieges": [
+  "filtre blur animé sur le texte : réserver aux paragraphes courts",
+  "en mode calme, toutes les étapes allumées et le trait tracé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1305,
+  "hauteur_m390": 2137,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

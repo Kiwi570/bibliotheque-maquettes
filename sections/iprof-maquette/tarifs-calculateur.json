@@ -1,0 +1,43 @@
+{
+ "id": "iprof-maquette/tarifs-calculateur",
+ "maquette": "iprof-maquette",
+ "page": "tarifs",
+ "titre": "Calculateur écrit à la main",
+ "role": "calculateur",
+ "description": "Choix du lieu (domicile ou distance) en boutons segmentés et compteurs ± pour les heures et les visites ; sur une fiche de cahier à droite, le détail du calcul se réécrit à la main ligne par ligne (clip-path), le total rebondit comme un tampon et l'économie du forfait s'affiche ; estimation marquée « illustratif ».",
+ "animations": [
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "tarifs.html:76-104",
+  "css": "assets/css/site.css:86,260,386-411,493",
+  "js": "assets/js/site.js:345-384"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/tarifs-calculateur-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/tarifs-calculateur-m390.jpg",
+  "video": "medias/iprof-maquette/tarifs-calculateur-p960.mp4"
+ },
+ "pieges": [
+  "bornes min et max imposées après chaque saisie, visites limitées au nombre d'heures",
+  "ligne des visites désactivée (disabled) quand le cours est à distance",
+  "total et détail annoncés aux lecteurs d'écran (aria-live polite sur la fiche de calcul)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 772,
+  "hauteur_m390": 1070,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

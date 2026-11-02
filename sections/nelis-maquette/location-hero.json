@@ -1,0 +1,45 @@
+{
+ "id": "nelis-maquette/location-hero",
+ "maquette": "nelis-maquette",
+ "page": "location",
+ "titre": "Héros chaleur qui se fige",
+ "role": "ouverture",
+ "description": "La photo du héros ondule d'abord comme sous la chaleur (filtre SVG turbulence et déplacement animés), l'ondulation retombe et l'image se désature, puis le givre WebGL pousse.",
+ "animations": [
+  "webgl-shader",
+  "filtre-anime",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "location.html:105-128",
+  "css": "assets/css/style.css:203-229,554-558,716,736-737",
+  "js": "assets/js/location.js:7-20 ; assets/js/frost.js:1-182"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/location-hero-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/location-hero-m390.jpg",
+  "video": "medias/nelis-maquette/location-hero-p960.mp4"
+ },
+ "pieges": [
+  "filtre SVG coûteux : le retirer à la fin de l'animation",
+  "givre lancé après 1,5 s pour laisser la chaleur se figer"
+ ],
+ "mesures": {
+  "hauteur_p1440": 828,
+  "hauteur_m390": 776,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

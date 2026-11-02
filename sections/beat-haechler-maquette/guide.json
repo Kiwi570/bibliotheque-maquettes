@@ -1,0 +1,42 @@
+{
+ "id": "beat-haechler-maquette/guide",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Silhouette conseil",
+ "role": "outil-interactif",
+ "description": "Silhouette de dos en SVG avec des zones cliquables et une rangée de pastilles : choisir une zone l'allume et affiche le soin conseillé dans une carte à côté.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:191-222",
+  "css": "assets/css/style.css:410-428,577-578,754-756,812-818,907-916,948",
+  "js": "assets/js/main.js:40 ; assets/js/fx/trigger.js:24 ; assets/js/fx/bodymap.js:28-52,68-73,88-96 ; assets/js/fx/body-shape.js:1"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/guide-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/guide-m390.jpg",
+  "video": "medias/beat-haechler-maquette/guide-p960.mp4"
+ },
+ "pieges": [
+  "zones SVG sous 44 px non corrigées : les pastilles servent de cibles accessibles"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1461,
+  "hauteur_m390": 1531,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

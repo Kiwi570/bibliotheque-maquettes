@@ -1,0 +1,42 @@
+{
+ "id": "nelis-maquette/telemaintenance",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Écran de supervision",
+ "role": "outil-interactif",
+ "description": "Faux écran de supervision étiqueté « données illustratives » : trois indicateurs, courbes SVG de départ et de retour qui avancent toutes les 1,4 s et journal d'événements horodaté qui s'enrichit ; tout s'arrête hors écran.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:322-357",
+  "css": "assets/css/style.css:85,342-369",
+  "js": "assets/js/home.js:83-124"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/telemaintenance-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/telemaintenance-m390.jpg",
+  "video": "medias/nelis-maquette/telemaintenance-p960.mp4"
+ },
+ "pieges": [
+  "étiqueter les données comme illustratives",
+  "minuteurs coupés par IntersectionObserver"
+ ],
+ "mesures": {
+  "hauteur_p1440": 972,
+  "hauteur_m390": 1217,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "beat-haechler-maquette/rendez-vous-demande",
+ "maquette": "beat-haechler-maquette",
+ "page": "rendez-vous",
+ "titre": "Demande de rendez-vous en trois étapes",
+ "role": "contact",
+ "description": "Formulaire simulé en trois étapes (soin, date parmi les prochains jours de consultation calculés, coordonnées) : hauteur animée entre les étapes, erreurs sous les champs, bouton désactivé après envoi et récapitulatif « démonstration ».",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "rendez-vous.html:150-208",
+  "css": "assets/css/style.css:529-535,640-663",
+  "js": "assets/js/fx/forms.js:1-101"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/rendez-vous-demande-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/rendez-vous-demande-m390.jpg",
+  "video": "medias/beat-haechler-maquette/rendez-vous-demande-p960.mp4"
+ },
+ "pieges": [
+  "CLS au chargement en mode réduit corrigé : réserver la hauteur des options de dates",
+  "les dates sont calculées, jamais écrites en dur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 854,
+  "hauteur_m390": 1288,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

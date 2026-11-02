@@ -1,0 +1,46 @@
+{
+ "id": "iprof-maquette/comfort",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "a-propos",
+  "conseils",
+  "contact",
+  "cours-individuels",
+  "mentions-legales",
+  "tarifs"
+ ],
+ "titre": "Onglet « Confort de lecture »",
+ "role": "outil-interactif",
+ "description": "Onglet vertical fixé au bord gauche avec deux boutons à état (aria-pressed) : mode calme, qui coupe animations, curseur et défilement adouci, et « A+ », qui agrandit le texte et relance les mesures ; les deux choix sont mémorisés.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "mode-calme"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:252-255",
+  "css": "assets/css/site.css:297-301,525-527,579-582,636-637",
+  "js": null
+ },
+ "medias": {},
+ "pieges": [
+  "après « A+ », retracer les annotations SVG et lancer ScrollTrigger.refresh()"
+ ],
+ "mesures": {
+  "hauteur_p1440": 200,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

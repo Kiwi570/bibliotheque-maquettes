@@ -1,0 +1,42 @@
+{
+ "id": "instinct-aventure-maquette/voyages-quand",
+ "maquette": "instinct-aventure-maquette",
+ "page": "voyages",
+ "titre": "Sélecteur de mois",
+ "role": "outil-interactif",
+ "description": "Histogramme des douze mois en barres cliquables : le mois choisi affiche sa saison et les voyages conseillés à ce moment.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "voyages.html:290-313",
+  "css": "assets/css/main.css:1163-1176,1211-1212",
+  "js": "assets/js/voyages.js:226-250"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/voyages-quand-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/voyages-quand-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/voyages-quand-p960.mp4"
+ },
+ "pieges": [
+  "barres en boutons avec aria-pressed"
+ ],
+ "mesures": {
+  "hauteur_p1440": 864,
+  "hauteur_m390": 1007,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

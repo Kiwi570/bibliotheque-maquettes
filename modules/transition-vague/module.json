@@ -1,0 +1,52 @@
+{
+ "nom": "transition-vague",
+ "titre": "Transition de page : un voile au bord en vague monte, couvre, puis se retire sur la page d'arrivée",
+ "role": "transition-de-page",
+ "animations": [
+  "transition-de-page",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": "beat-haechler-maquette/veil",
+ "convient_a": [
+  "bien-être",
+  "santé",
+  "tourisme",
+  "hébergement",
+  "restauration",
+  "artisanat",
+  "culture",
+  "sport",
+  "conseil",
+  "association"
+ ],
+ "ambiances": [
+  "doux",
+  "océanique",
+  "végétal",
+  "clair",
+  "chaleureux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "montee": "durée de la montée en s, 0.75",
+  "retrait": "durée du retrait à l'arrivée en s, 0.85",
+  "nom": "affiche le nom de la page d'arrivée (data-voile-nom ou texte du lien), true",
+  "exclure": "sélecteur des liens sans voile, '[data-sans-voile]'"
+ },
+ "poids_ko": 6.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

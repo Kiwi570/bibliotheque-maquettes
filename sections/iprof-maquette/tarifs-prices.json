@@ -1,0 +1,44 @@
+{
+ "id": "iprof-maquette/tarifs-prices",
+ "maquette": "iprof-maquette",
+ "page": "tarifs",
+ "titre": "Trois fiches de prix",
+ "role": "tarifs",
+ "description": "Trois fiches de prix qui tombent sur la page et s'inclinent sous la souris ; les montants s'écrivent à la main l'un après l'autre (clip-path), la fiche mise en avant porte un tampon d'économie, et une note hachurée signale le rabais à confirmer.",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "tarifs.html:64-74",
+  "css": "assets/css/site.css:87,154,254,259,377-385,515-516",
+  "js": "assets/js/site.js:536-541,594-599"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/tarifs-prices-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/tarifs-prices-m390.jpg",
+  "video": "medias/iprof-maquette/tarifs-prices-p960.mp4"
+ },
+ "pieges": [
+  "montants en manuscrit : réserver la largeur finale pour qu'ils ne passent pas à la ligne pendant l'écriture",
+  "même mécanique que la fiche de prix de l'accueil (tt)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 793,
+  "hauteur_m390": 1011,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

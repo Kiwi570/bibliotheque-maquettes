@@ -1,0 +1,28 @@
+/* Frise tracée et compteurs — identité uniquement par les variables du socle. */
+.frt { padding-block: clamp(72px, 10vw, 140px); background: var(--couleur-surface); }
+.frt__titre { font-size: clamp(2.2rem, 5.4vw, 4.8rem); margin: .3em 0 clamp(32px, 5vw, 64px); }
+.frt__chiffres { display: grid; gap: clamp(20px, 3vw, 40px); margin: 0 0 clamp(56px, 7vw, 110px); }
+@media (min-width: 760px) { .frt__chiffres { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.frt__chiffre { display: grid; gap: 8px; border-top: 2px solid var(--couleur-accent); padding-top: 18px; }
+.frt__n { font-family: var(--police-titres); font-weight: 800; font-size: clamp(3.2rem, 7vw, 6.4rem); line-height: .9; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.frt__l { color: var(--couleur-texte-doux); max-width: 26ch; }
+
+.frt__frise { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: clamp(56px, 8vw, 120px); --axe: 7px; }
+.frt__trait { position: absolute; left: var(--axe); top: 0; width: 4px; height: 100%; overflow: visible; }
+.frt__trait path { fill: none; stroke: var(--couleur-accent); stroke-width: 2; }
+.frt__etape { position: relative; display: grid; gap: 16px 40px; padding-left: 44px; }
+.frt__etape::before { content: ""; position: absolute; left: 0; top: 10px; width: 16px; height: 16px; border-radius: 50%; background: var(--couleur-fond); border: 2px solid var(--couleur-accent); transition: background .4s; }
+.frt__etape.est-passee::before { background: var(--couleur-accent); }
+.frt__annee { font-family: var(--police-titres); font-weight: 800; font-size: clamp(2.6rem, 5.6vw, 5.2rem); line-height: .9; font-variant-numeric: tabular-nums; }
+.frt__corps { display: grid; gap: 8px; }
+.frt__corps h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+.frt__corps p { color: var(--couleur-texte-doux); }
+.frt__visuel { margin: 0; max-width: 300px; }
+.frt__visuel > span, .frt__visuel > img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--rayon); }
+.frt__visuel figcaption { padding-top: 8px; font-family: var(--police-mono); font-size: max(12px, .75rem); color: var(--couleur-texte-doux); }
+@media (min-width: 900px) {
+  .frt__frise { --axe: calc(26% + 7px); }
+  .frt__etape { grid-template-columns: 26% minmax(0, 1fr) minmax(0, 300px); padding-left: 0; align-items: start; }
+  .frt__etape::before { left: 26%; }
+  .frt__corps { padding-left: 44px; }
+}

@@ -1,0 +1,1061 @@
+{
+ "maquette": {
+  "client": "agence de voyages en 4x4 en Afrique australe",
+  "activite": [
+   "tourisme"
+  ],
+  "concept": [
+   "voyage",
+   "carte"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "minéral",
+   "clair"
+  ],
+  "palette": {
+   "fond": "--bg",
+   "texte": "--ink",
+   "accent": "--ochre",
+   "secondaire": "--night"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Inter Tight",
+   "mono": null
+  },
+  "points_forts": [
+   "carte épinglée où la trace avance jour par jour",
+   "mirage WebGL de la nuit à l'aube sur la photo d'ouverture",
+   "safari de nuit à la lampe torche",
+   "catalogue filtré avec Flip et carte surlignée",
+   "palette de la page qui suit la course du soleil au défilement"
+  ],
+  "reserves": [
+   "erreur console sans WebGL",
+   "même photo en héros de deux pages",
+   "case « Comparer » de 20 px dans une pastille de 46 px",
+   "heure de l'ouverture qui passe à la ligne sur téléphone"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "masque",
+   "webgl-shader",
+   "révélation-texte",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "flip",
+   "filtre-anime",
+   "parallaxe",
+   "compteur",
+   "canvas-2d",
+   "survol-image",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "quiz",
+   "filtres",
+   "comparateur",
+   "carte-interactive",
+   "formulaire-par-étapes",
+   "jeu",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": "Après la correction (412286c), sept commits jusqu'au 31/10 : visuels Grok définitifs, carte des fiches remise dans le flux sur téléphone avec une barre « Jour n / 21 » compacte et mesurée, et anticipatePin retiré des sections fixées ; vérifié en ligne (?v=20261031) : piste de l'accueil entière en 1366×768, barre compacte correcte en 390×844.",
+  "accueil": "hero"
+ },
+ "sections": {
+  "cursor": {
+   "titre": "Curseur soleil",
+   "role": "decor",
+   "description": "Anneau qui suit la souris avec une étiquette contextuelle, en forme de soleil ; curseur natif dans les champs et au toucher.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "seulement avec une souris"
+   ],
+   "sans_capture": true
+  },
+  "dial": {
+   "titre": "Course du soleil",
+   "role": "decor",
+   "description": "Cadran fixe qui montre la course du soleil au fil de la page : la palette de fond glisse de l'aube au crépuscule selon la progression du défilement.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "palette interpolée entre variables CSS, jamais des couleurs écrites dans le JS"
+   ],
+   "sans_capture": true
+  },
+  "toast": {
+   "ignorer": "message d'état aria-live partagé, sans mise en page propre"
+  },
+  "cmpbar": {
+   "titre": "Barre du comparateur",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas qui apparaît dès qu'une fiche est cochée « Comparer », compte la sélection et ouvre le comparateur côte à côte.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la mesurer dans --barres-h quand elle apparaît",
+    "case de 20 px : la pastille cliquable fait 46 px"
+   ]
+  },
+  "slam": {
+   "titre": "Tampon de carnet de route",
+   "role": "decor",
+   "description": "Calque qui fait s'abattre un tampon de région (rotation, rebond) chaque fois qu'une nouvelle région est découverte au défilement d'une fiche.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "sur téléphone, tampon réduit en haut à droite sous l'en-tête mesuré"
+   ],
+   "sans_capture": true
+  },
+  "veil": {
+   "titre": "Voile de sable entre les pages",
+   "role": "transition-de-page",
+   "description": "Un voile texturé (bruit SVG) balaie l'écran de gauche à droite avant la navigation, puis se retire sur la page d'arrivée ; sur les navigateurs récents, View Transitions natives où la photo de la carte cliquée devient le héros de la fiche.",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/core.js:496-532"
+   },
+   "pieges": [
+    "indicateur posé en sessionStorage pour démarrer la page d'arrivée couverte",
+    "pageshow persisted : remettre le voile hors écran et effacer le nom de View Transition"
+   ]
+  },
+  "intro": {
+   "titre": "Ouverture nuit puis aube",
+   "role": "ouverture",
+   "description": "Écran d'ouverture : une ligne d'horizon se trace, un ciel puis un soleil montent, le mot apparaît, et l'écran se retire en rideau (clip-path) pendant que le héros se révèle ; une première action accélère, un bouton « Passer » est fourni, jouée une fois par session.",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "medias": {
+    "video": "medias/instinct-aventure-maquette/hero-p960.mp4"
+   },
+   "code": {
+    "js": "assets/js/home.js:14-46"
+   },
+   "pieges": [
+    "heure locale qui passe à la ligne sur téléphone (non corrigé)",
+    "bloquer Lenis pendant l'ouverture et le relancer à la fin"
+   ]
+  },
+  "hd": {
+   "titre": "En-tête à horloge locale",
+   "role": "menu",
+   "description": "En-tête fixe : logo, liens, horloge à l'heure de la destination, cœur de la liste d'envies avec compteur et bouton devis ; il se cache en descendant et revient en remontant.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu téléphone plein écran avec liens en grand corps et pied de contact ; Échap ferme et rend le focus au bouton.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "hero": {
+   "titre": "Mirage WebGL sur photo d'ouverture",
+   "role": "ouverture",
+   "description": "Photo plein écran rendue en shader (OGL) : elle passe d'une teinte de nuit à l'aube à l'arrivée, l'air ondule au-dessus du sol et sous la souris, un rai de lumière suit le défilement ; titre découpé en lettres qui montent.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "code": {
+    "js": "assets/js/gl.js:1-132 ; assets/js/home.js:7-22"
+   },
+   "pieges": [
+    "erreur console sans WebGL (non corrigée) : tester getContext avant d'instancier le rendu",
+    "cadrage cover recalculé dans le shader (uRes, uImg, uPos)"
+   ]
+  },
+  "formules": {
+   "titre": "Trois offres à mirage au survol",
+   "role": "offre",
+   "description": "Trois cartes photo avec prix d'appel ; au survol, la photo ondule par un filtre SVG de turbulence et s'incline légèrement, les cartes montent à l'arrivée.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "filtre SVG coupé en mode calme",
+    "ne jamais poser un filtre sur une grande surface animée"
+   ]
+  },
+  "philosophie": {
+   "titre": "Citation qui s'allume",
+   "role": "manifeste",
+   "description": "Une citation découpée en mots dont l'opacité monte un à un avec la molette (de 16 % à 100 %), à côté de deux photos superposées en parallaxe inverse.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:50-65"
+   },
+   "pieges": [
+    "variante de surffm-maquette/manifeste (opacité seule, sans couleur)"
+   ]
+  },
+  "piste": {
+   "titre": "Piste épinglée jour par jour",
+   "role": "étapes",
+   "description": "Section épinglée en deux colonnes : à droite une carte SVG où un tracé avance au défilement avec un véhicule et des étapes qui s'allument, à gauche un grand numéro de jour, l'étape et la fiche de la région en cours qui changent ; un tampon s'abat à chaque région. Sous 1101 px, pas d'épinglage : la trace avance quand la carte traverse l'écran.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:67-114 ; assets/js/map.js:1-255"
+   },
+   "pieges": [
+    "section en height 100svh colonne, haut réservé par --entete-h mesuré : le lien du bas sortait de l'écran en 1366×768",
+    "longueurs de tracé mesurées une fois, le défilement ne fait que lire",
+    "pas d'anticipatePin (à-coup à l'entrée)"
+   ]
+  },
+  "voyages": {
+   "titre": "Galerie horizontale à tampons",
+   "role": "produits",
+   "description": "Section épinglée : une piste de cartes voyages défile à l'horizontale, chaque carte monte en arrivant (containerAnimation) et un tampon « complet » s'abat dessus ; la carte qui prend le focus clavier est ramenée à l'écran. Sous 1101 px, défilement natif et tampons à l'IntersectionObserver.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:116-152"
+   },
+   "pieges": [
+    "variante de surffm-maquette/emissions : containerAnimation pour les effets par carte",
+    "tampons à opacité 0 posés en JS : les remettre visibles en mode calme"
+   ]
+  },
+  "jeu": {
+   "titre": "Accroche du quiz",
+   "role": "appel",
+   "description": "Bloc d'appel au jeu : texte et bouton magnétique à gauche, éventail de trois cartes inclinées à droite qui ouvre le quiz.",
+   "animations": [
+    "bouton-magnétique",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "quiz"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "assistance": {
+   "titre": "Assistance de nuit",
+   "role": "preuves",
+   "description": "Bandeau sombre sur photo de bivouac en parallaxe, titre et liste de trois engagements.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "agence": {
+   "titre": "L'agence",
+   "role": "équipe",
+   "description": "Photo d'équipe et texte en deux colonnes, avec une liste de faits (direction, siège, partenaires) et étiquettes « à compléter ».",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "garanties": {
+   "titre": "Garanties",
+   "role": "preuves",
+   "description": "Rangée de quatre garanties en colonnes fines (immatriculation, garantie financière, assurance, médiateur) et encart d'avis « à compléter ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "namibie": {
+   "titre": "Chiffres et soleil en direct",
+   "role": "chiffres",
+   "description": "Compteurs (superficie, densité, population) qui montent à l'arrivée, et un arc du soleil calculé en direct pour la destination (lever, coucher, position actuelle), à côté d'une carte illustrée.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/core.js:262-318,405-425"
+   },
+   "pieges": [
+    "calcul solaire NOAA simplifié : fuseau horaire de la destination, pas celui du visiteur",
+    "chiffres en tabular-nums, place finale réservée"
+   ]
+  },
+  "insta-titre": {
+   "titre": "Bande Instagram",
+   "role": "galerie",
+   "description": "Quatre vignettes carrées qui ondulent légèrement au survol, sous un titre court et un lien vers le compte.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "actionbar": {
+   "titre": "Barre d'action téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas sur téléphone : prix ou accroche, bouton de messagerie et bouton devis ; masquée sur le formulaire et au pied de page.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "mesurer sa hauteur dans --barres-h"
+   ]
+  },
+  "contact": {
+   "titre": "Contact sous ciel étoilé et safari à la lampe",
+   "role": "contact",
+   "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
+   "animations": [
+    "canvas-2d",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/core.js:435-494,559-607"
+   },
+   "pieges": [
+    "lampe calée dans le repère de la scène (largeur de scène, pas de l'écran)",
+    "boucle arrêtée hors écran et dessin ralenti en version légère",
+    "un seul bloc regroupe contact, jeu et pied de page"
+   ]
+  },
+  "devis": {
+   "titre": "Devis en quatre étapes",
+   "role": "contact",
+   "description": "Fenêtre de devis : quatre étapes avec une route où une voiture avance d'une borne à l'autre, hauteur animée entre les étapes, brouillon gardé, récapitulatif et envoi simulé ; le choix est prérempli selon le bouton d'origine.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/devis.js:1-173"
+   },
+   "pieges": [
+    "focus gardé dans la fenêtre puis rendu au bouton",
+    "data-lenis-prevent sur le panneau qui défile"
+   ]
+  },
+  "envies": {
+   "titre": "Tiroir de la liste d'envies",
+   "role": "outil-interactif",
+   "description": "Tiroir latéral qui liste les voyages mis de côté par un cœur (gardés dans le navigateur), avec compteur dans l'en-tête et ajout au devis.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "donnée abîmée filtrée au chargement"
+   ]
+  },
+  "quiz": {
+   "titre": "Quiz « trouve ta piste »",
+   "role": "outil-interactif",
+   "description": "Fenêtre de trois questions à points de progression ; à chaque réponse, une carte trace en direct le voyage le mieux noté et affiche un pourcentage de correspondance avec ce qui colle et ce qui manque.",
+   "animations": [
+    "apparition-au-défilement",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "quiz",
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/quiz.js:1-142"
+   },
+   "pieges": [
+    "recommandations uniquement tirées des données réelles",
+    "réponses annoncées en aria-live"
+   ]
+  },
+  "comparer": {
+   "titre": "Comparateur côte à côte",
+   "role": "outil-interactif",
+   "description": "Panneau qui met deux voyages cochés côte à côte (durée, prix, nuits, régions), ouvert depuis une barre flottante.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "case à cocher de 20 px dans une pastille de 46 px (non corrigé)"
+   ]
+  },
+  "404-titre-404": {
+   "titre": "404 piste perdue",
+   "role": "page-404",
+   "description": "Page introuvable sobre : titre en italique sur trois lignes, phrase et deux boutons de retour.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "CLS 0,11 en 1280×720 (non corrigé)"
+   ]
+  },
+  "grande-aventure-hero": {
+   "titre": "Héros de fiche à prix à rouleaux",
+   "role": "ouverture",
+   "description": "Héros court de fiche voyage en mirage WebGL, avec un interrupteur de formule qui change le prix par un compteur à rouleaux (chiffres qui défilent comme un odomètre) et les textes liés.",
+   "animations": [
+    "webgl-shader",
+    "compteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "code": {
+    "js": "assets/js/circuit.js:17-94 ; assets/js/core.js:534-557"
+   },
+   "pieges": [
+    "même erreur sans WebGL que le héros d'accueil",
+    "odomètre : texte réel en sr-only, colonnes aria-hidden"
+   ]
+  },
+  "grande-aventure-subnav": {
+   "titre": "Sous-menu collant de fiche",
+   "role": "menu",
+   "description": "Barre collante sous l'en-tête : ancres des sections de la fiche avec la section en cours soulignée, prix et bouton devis à droite.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "grande-aventure-voyage": {
+   "titre": "Le voyage en bref",
+   "role": "offre",
+   "description": "Présentation du voyage avec jauges de nuits (camping, lodge) qui se remplissent et une frise des douze mois avec la saison conseillée.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "grande-aventure-jours": {
+   "titre": "Itinéraire à carte collante",
+   "role": "étapes",
+   "description": "Liste des jours à droite et carte collante à gauche : quand un jour passe au centre de l'écran, la trace s'allonge jusqu'à son étape, un compteur de jour et de nuitée se met à jour et l'animal de la région apparaît. Sur téléphone, carte dans le flux et barre « Jour n / total » compacte mesurée.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "carte-itineraire-collante",
+   "code": {
+    "js": "assets/js/circuit.js:96-188 ; assets/js/map.js:1-255"
+   },
+   "pieges": [
+    "carte collante limitée à la hauteur visible sous l'en-tête mesuré : la légende sortait en 1280×720",
+    "barre compacte quand la carte dépasse 30 % de l'écran en une colonne",
+    "tampon de région qui chevauche la barre compacte sur téléphone"
+   ]
+  },
+  "grande-aventure-inclus": {
+   "titre": "Inclus, non inclus",
+   "role": "offre",
+   "description": "Deux colonnes de listes à coches et croix, sur fond légèrement teinté.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "grande-aventure-focus": {
+   "titre": "Le véhicule annoté",
+   "role": "services",
+   "description": "Photo du véhicule avec étiquettes d'équipement posées dessus, à côté d'un texte court.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "étiquettes positionnées en pourcentage de l'image"
+   ]
+  },
+  "grande-aventure-galerie": {
+   "titre": "Mosaïque photo",
+   "role": "galerie",
+   "description": "Mosaïque de sept photos de tailles variées, chaque vignette ouvre la visionneuse plein écran.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "lightbox": {
+   "titre": "Visionneuse glissante",
+   "role": "galerie",
+   "description": "Visionneuse plein écran à piste glissante : flèches, clavier, glissement au doigt et Échap, compteur et légende.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/circuit.js:191-239"
+   },
+   "pieges": [
+    "focus rendu à la vignette d'origine"
+   ]
+  },
+  "grande-aventure-regions": {
+   "titre": "Accordéon horizontal des régions",
+   "role": "galerie",
+   "description": "Rangée de panneaux photo étroits : celui qu'on survole ou touche s'élargit et révèle son titre et son texte, les autres se resserrent.",
+   "animations": [
+    "survol-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/circuit.js:241-250"
+   },
+   "pieges": [
+    "boutons avec aria-expanded, un seul ouvert"
+   ]
+  },
+  "grande-aventure-section": {
+   "titre": "Assistance et autres voyages",
+   "role": "appel",
+   "description": "Bloc d'assistance en deux colonnes puis rangée de cartes « vous aimerez aussi ».",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-hero": {
+   "titre": "Tête de page en mirage",
+   "role": "ouverture",
+   "description": "Tête de page courte en mirage WebGL déjà révélé, titre et trois informations clés en bas.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-subnav": {
+   "titre": "Sommaire collant",
+   "role": "menu",
+   "description": "Sommaire collant des rubriques de la page, rubrique en cours soulignée, compteur de la liste cochée à droite.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-liste": {
+   "titre": "Liste de départ à cocher",
+   "role": "outil-interactif",
+   "description": "Liste à cocher en trois groupes, gardée dans le navigateur, avec compteur et barre de progression ; un tampon s'abat quand tout est coché.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/preparer.js:21-50"
+   },
+   "pieges": [
+    "vraies cases à cocher, libellés cliquables de 44 px"
+   ]
+  },
+  "preparer-papiers": {
+   "titre": "Les papiers",
+   "role": "faq",
+   "description": "Rubrique en cartes de texte (formalités, permis) avec source citée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-sante": {
+   "titre": "Santé et carte des zones",
+   "role": "faq",
+   "description": "Cartes de conseils à côté d'une carte SVG des zones de risque avec légende.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-route": {
+   "titre": "Conduite à gauche",
+   "role": "faq",
+   "description": "Bande sombre avec pictogrammes et grands chiffres de vitesse et d'alcoolémie.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-argent": {
+   "titre": "Payer sur place",
+   "role": "faq",
+   "description": "Quatre cartes de texte (monnaie, cartes, pourboires, électricité).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Grille de cartes de texte (heure, urgences, prises, avant de partir) avec étiquettes « à compléter ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-sources": {
+   "titre": "Sources datées",
+   "role": "preuves",
+   "description": "Liste des sources consultées, avec leur date de consultation.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "preparer-prep-cta": {
+   "titre": "Appel de fin de page",
+   "role": "appel",
+   "description": "Encadré d'appel avec deux boutons (devis, jeu).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "voyages-hero": {
+   "titre": "Tête du catalogue",
+   "role": "ouverture",
+   "description": "Tête de page en mirage WebGL avec titre, puces de raccourci vers les rubriques et informations clés.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "voyages-cmp-titre": {
+   "titre": "Deux formules face à face",
+   "role": "offre",
+   "description": "Deux colonnes illustrées qui comparent les deux façons de voyager, avec listes et boutons qui filtrent le catalogue.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "voyages-catalogue": {
+   "titre": "Catalogue filtré avec Flip",
+   "role": "produits",
+   "description": "Filtres (formule, durée, région), curseur de budget et tri : les cartes se réordonnent et disparaissent en Flip, un compteur annonce le nombre de résultats ; au survol d'une carte, sa trace s'allume sur une carte collante à droite.",
+   "animations": [
+    "flip",
+    "filtre-anime",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "carte-interactive",
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "catalogue-filtres-flip",
+   "code": {
+    "js": "assets/js/voyages.js:57-134"
+   },
+   "pieges": [
+    "ScrollTrigger.refresh() à la fin du Flip",
+    "filtres lus depuis l'ancre de l'adresse",
+    "rubrique vide : message plutôt qu'une grille vide"
+   ]
+  },
+  "voyages-quand": {
+   "titre": "Sélecteur de mois",
+   "role": "outil-interactif",
+   "description": "Histogramme des douze mois en barres cliquables : le mois choisi affiche sa saison et les voyages conseillés à ce moment.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/voyages.js:226-250"
+   },
+   "pieges": [
+    "barres en boutons avec aria-pressed"
+   ]
+  },
+  "voyages-departs": {
+   "titre": "Prochains départs",
+   "role": "agenda",
+   "description": "Liste datée des départs confirmés, grandes dates à gauche, étiquette « complet » en tampon et lien vers la fiche.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "voyages-services": {
+   "titre": "Services complémentaires",
+   "role": "services",
+   "description": "Trois engagements en colonnes puis cartes photo des véhicules avec leurs caractéristiques.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "voyages-sur-mesure": {
+   "titre": "Sur mesure en quatre étapes",
+   "role": "méthode",
+   "description": "Photo en parallaxe et quatre étapes numérotées en grille, bouton qui ouvre le devis prérempli.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  }
+ }
+}

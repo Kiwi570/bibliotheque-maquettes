@@ -1,0 +1,608 @@
+{
+ "maquette": {
+  "client": "radio associative de glisse",
+  "activite": [
+   "média"
+  ],
+  "concept": [
+   "station"
+  ],
+  "ambiance": [
+   "nocturne",
+   "océanique",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--ink",
+   "texte": "--foam",
+   "accent": "--sun",
+   "secondaire": "--blue"
+  },
+  "polices": {
+   "titres": "Big Shoulders Display",
+   "texte": "Inter Tight",
+   "mono": "JetBrains Mono"
+  },
+  "points_forts": [
+   "recherche de station à l'ouverture",
+   "houle WebGL sous un titre géant",
+   "cadran de fréquences qui suit le défilement",
+   "son qui continue d'une page à l'autre",
+   "carte de couverture SVG à calques"
+  ],
+  "reserves": [
+   "photos d'archives 2015 inégales",
+   "joints visibles dans la police variable en graisse 800",
+   "polices non attendues hors accueil"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "webgl-shader",
+   "révélation-texte",
+   "section-fixée",
+   "galerie-horizontale",
+   "compteur",
+   "parallaxe",
+   "masque",
+   "canvas-2d",
+   "curseur-personnalisé",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "lecteur-audio",
+   "carte-interactive",
+   "comparateur",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero"
+ },
+ "sections": {
+  "loader": {
+   "titre": "Recherche de la station",
+   "role": "ouverture",
+   "description": "Écran d'ouverture : une onde dessinée en canvas 2D s'amplifie pendant que la fréquence défile de 87,5 à 108 MHz, puis affiche « DAB+ » et se retire en rideau (clip-path) vers le haut ; il ne joue qu'une fois par session et disparaît en mode calme.",
+   "animations": [
+    "chargement-orchestré",
+    "canvas-2d",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "medias": {
+    "video": "medias/surffm-maquette/hero-p960.mp4"
+   },
+   "pieges": [
+    "la promesse de fin d'ouverture lance le titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
+    "couleurs de l'onde écrites en dur dans le canvas : les lire dans les variables CSS"
+   ]
+  },
+  "site-header": {
+   "titre": "En-tête translucide",
+   "role": "menu",
+   "description": "En-tête fixe sur une ligne : logo, trois liens avec soulignement de la page en cours et bouton « Mode calme » ; il devient opaque après le premier écran.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "sans_capture": false,
+   "pieges": [
+    "bouton calme haut de 40 px à l'origine : min-height 44 px"
+   ]
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu téléphone plein écran, liens en grand corps condensé, fermé par Échap ou par le bouton ; la page derrière est bloquée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cadran": {
+   "titre": "Cadran de fréquences latéral",
+   "role": "decor",
+   "description": "Règle verticale de 87,5 à 108 MHz fixée à droite : l'aiguille suit la progression de la page, chaque section porte une fréquence cliquable et son nom s'affiche en étiquette au changement, avec un grésillement bref ; sur téléphone il devient une règle horizontale au-dessus du lecteur.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "rail-de-sections",
+   "pieges": [
+    "positions des sections mesurées au refresh (pin-spacer compris), jamais pendant le défilement",
+    "changer de section quand elle atteint le milieu de l'écran, pas son haut",
+    "sur téléphone, ajouter la hauteur de la règle au padding-bottom du body"
+   ]
+  },
+  "cadran-h": {
+   "ignorer": "variante téléphone du cadran, décrite dans surffm-maquette/cadran"
+  },
+  "static": {
+   "titre": "Grésillement de changement de section",
+   "role": "decor",
+   "description": "Canvas 2D plein écran qui affiche une fraction de seconde de « neige » à chaque changement de station du cadran, en fusion écran à faible opacité.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "coupé en mode calme",
+    "pas de mix-blend-mode au-dessus d'un canvas WebGL animé (fluidité)"
+   ],
+   "sans_capture": true
+  },
+  "cursor": {
+   "titre": "Curseur à étiquette",
+   "role": "decor",
+   "description": "Pastille qui suit la souris avec un léger retard et affiche une étiquette contextuelle (« Glisser », « Écouter ») au survol des zones marquées ; remplacée par le curseur natif dans les champs.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "seulement avec (hover: hover) and (pointer: fine)",
+    "masqué pendant la loupe"
+   ],
+   "sans_capture": true
+  },
+  "hero": {
+   "titre": "Titre géant sur houle WebGL",
+   "role": "ouverture",
+   "description": "Premier écran plein cadre : une houle de lignes animée en shader (OGL, repli canvas 2D) sous une photo de nuit, un titre géant découpé en lettres qui montent en vague puis se soulèvent au passage de la souris, et un bouton lecture qui lance le direct.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "parallaxe",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "les puces du bas passaient sous le lecteur : padding-bottom calc(var(--barres-h) + clamp(24px, 6vh, 72px))",
+    "line-height .9 sur les capitales : prévoir une marge pour les accents"
+   ]
+  },
+  "direct": {
+   "titre": "Le direct",
+   "role": "outil-interactif",
+   "description": "Panneau « en ce moment » : visuel du studio, émission en cours calculée d'après l'heure de Paris, barres de spectre en canvas 2D qui s'animent quand le son joue, et encadré des conditions de glisse étiqueté démonstration.",
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "pieges": [
+    "données de démonstration à étiqueter"
+   ]
+  },
+  "manifeste": {
+   "titre": "Manifeste qui s'allume",
+   "role": "manifeste",
+   "description": "Un long paragraphe en capitales découpé en mots : au défilement, chaque mot passe de l'accent à la couleur du texte et de 30 % à 100 % d'opacité, lié à la molette ; image de fond en parallaxe.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "manifeste-mot-a-mot",
+   "pieges": [
+    "les couleurs de départ et d'arrivée sont en dur dans le tween : les lire dans les variables"
+   ]
+  },
+  "capter": {
+   "titre": "Trois façons d'écouter",
+   "role": "services",
+   "description": "Trois cartes photo (FM, DAB+, web) qui s'inclinent sous la souris avec un reflet, et un lien vers la page dédiée.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "emissions": {
+   "titre": "Galerie horizontale des émissions",
+   "role": "galerie",
+   "description": "Section épinglée : le titre reste en haut et une piste de cartes photo défile à l'horizontale avec la molette, chaque image glissant légèrement dans son cadre ; la dernière carte renvoie à la grille. Sous 900 px, défilement horizontal natif.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "galerie-horizontale-epinglee",
+   "pieges": [
+    "hauteur des cartes prise sur la hauteur restante (flex: 1; min-height: 0), jamais estimée",
+    "distance de défilement recalculée au refresh (invalidateOnRefresh)",
+    "overflow-x sur le body masque la piste : ce n'est pas un débordement"
+   ]
+  },
+  "histoire": {
+   "titre": "Frise des saisons et compteurs",
+   "role": "chiffres",
+   "description": "Trois compteurs qui montent à l'arrivée, puis une frise verticale dont le trait se dessine au défilement pendant que les années glissent depuis la gauche.",
+   "animations": [
+    "compteur",
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "frise-tracee",
+   "pieges": [
+    "chiffres en tabular-nums et largeur finale réservée",
+    "longueur du trait remesurée au refresh"
+   ]
+  },
+  "soutenir": {
+   "titre": "Don et adhésion",
+   "role": "appel",
+   "description": "Deux cartes : un don avec montants à choisir et bouton simulé, une adhésion avec photo ; tout est marqué démonstration.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "agenda": {
+   "titre": "Prochains rendez-vous",
+   "role": "agenda",
+   "description": "Photo révélée en vague (masque) et encadré « aucun rendez-vous annoncé » : un agenda vide honnête plutôt qu'inventé.",
+   "animations": [
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Dédicace et contact",
+   "role": "contact",
+   "description": "Adresse e-mail en grand avec boutons Copier et Écrire, liens sociaux, photo, et formulaire de dédicace simulé à droite.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "le bouton Copier cherchait l'adresse dans le mauvais parent : chercher avec closest()"
+   ]
+  },
+  "site-footer": {
+   "titre": "Pied de page à nom géant",
+   "role": "pied-de-page",
+   "description": "Nom de la radio en lettres détourées sur toute la largeur, trois colonnes (écouter, pages, contact) et ligne de crédits.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "player": {
+   "titre": "Lecteur du direct",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas : lecture et pause, émission en cours, spectre en canvas et volume ; l'ambiance sonore est générée (bruit filtré, Web Audio) et continue quand on change de page grâce à la navigation sans rechargement.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": false,
+   "pieges": [
+    "mesurer sa hauteur dans --barres-h",
+    "le retirer sur le formulaire et au pied de page sur téléphone"
+   ]
+  },
+  "404-page-hero": {
+   "titre": "404 hors fréquence",
+   "role": "page-404",
+   "description": "Page introuvable en « neige » de télévision (canvas 2D rafraîchi toutes les 160 ms) sous un titre géant, avec retour au direct et à la grille.",
+   "animations": [
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "arrêter le minuteur en mode calme"
+   ]
+  },
+  "emissions-page-hero": {
+   "titre": "Tête de page intérieure",
+   "role": "ouverture",
+   "description": "Tête de page intérieure : photo plein cadre qui se resserre à l'arrivée, titre géant en lettres qui montent, texte et bouton d'ancre ; le tout remonte et s'estompe au défilement.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "emissions-grille": {
+   "titre": "Grille horaire du jour",
+   "role": "agenda",
+   "description": "Frise de 24 heures à faire glisser (souris ou doigt) avec les créneaux du jour choisi, curseur « maintenant » à l'heure de Paris et onglets des jours navigables aux flèches du clavier ; les créneaux montent à chaque changement de jour.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "onglets avec role tab et aria-selected",
+    "rendu relancé qui remplace les créneaux au lieu de les ajouter"
+   ]
+  },
+  "emissions-emissions-2015": {
+   "titre": "Fiches des émissions",
+   "role": "produits",
+   "description": "Grille de cartes photo des émissions qui s'inclinent sous la souris, avec animateurs et étiquette « à mettre à jour ».",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "emissions-equipe": {
+   "titre": "Trombinoscope à la loupe",
+   "role": "équipe",
+   "description": "Photo de groupe dans un cadre : une loupe ronde grossit le visage sous la souris (×2,4), à côté de la liste des membres et de leurs émissions.",
+   "animations": [
+    "survol-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "loupe seulement avec une souris ; masquer le curseur personnalisé pendant"
+   ]
+  },
+  "emissions-rejoindre": {
+   "titre": "Proposer une émission",
+   "role": "appel",
+   "description": "Bloc d'appel en deux colonnes : photo révélée en vague et texte avec bouton « Devenir bénévole ».",
+   "animations": [
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "mentions-legales-page-hero": {
+   "titre": "Tête des mentions légales",
+   "role": "ouverture",
+   "description": "Tête de page courte sur photo d'écume, titre géant et phrase qui signale les champs à compléter.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "mentions-legales-legal": {
+   "titre": "Mentions légales en blocs",
+   "role": "texte-legal",
+   "description": "Mentions en quatre blocs (éditeur, service de radio, hébergement, données personnelles) avec étiquettes jaunes « à compléter ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "étiquettes en inline-block qui débordaient à 320 px : white-space normal et max-width 100 %"
+   ]
+  },
+  "nous-capter-page-hero": {
+   "titre": "Tête de page « Nous capter »",
+   "role": "ouverture",
+   "description": "Tête de page sur une photo d'émetteur, ondes concentriques qui partent de l'antenne, titre géant et puces de fréquences.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "nous-capter-couverture": {
+   "titre": "Carte de couverture à calques",
+   "role": "carte",
+   "description": "Carte SVG générée depuis des coordonnées : le trait de côte se dessine, les villes apparaissent l'une après l'autre, les zones FM et DAB+ grandissent et des ondes partent des émetteurs en boucle ; deux boutons allument ou éteignent chaque calque.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive",
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "étiquettes de villes décalées à la main pour ne pas se toucher",
+    "ondes en boucle retirées en mode calme"
+   ]
+  },
+  "nous-capter-fm-dab": {
+   "titre": "Comparateur de signal",
+   "role": "outil-interactif",
+   "description": "Un curseur glisse de « FM analogique » à « DAB+ numérique » : la courbe tracée en canvas 2D perd son grésillement et devient en escalier ; l'animation s'arrête hors écran.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "couleurs du tracé en dur dans le canvas",
+    "redessiner une fois à l'entrée du curseur en mode calme"
+   ]
+  },
+  "nous-capter-reglages": {
+   "titre": "Quatre gestes",
+   "role": "étapes",
+   "description": "Quatre étapes numérotées à côté d'une photo collante (position: sticky).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "image collante qui sort sous l'en-tête à 1000×560 : top lié à --entete-h et hauteur bornée"
+   ]
+  },
+  "nous-capter-questions": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Questions dépliables en accordéon à côté d'une photo, ouvertes une à une avec une croix qui pivote.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  }
+ }
+}

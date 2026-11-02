@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Manifeste mot à mot · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #0d1a22; --couleur-texte: #ecf3f1; --couleur-accent: #d9cf2a; --couleur-secondaire: #2f6bb8; --police-titres: "Arial Narrow", "Helvetica Neue", sans-serif; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : chaque mot du manifeste s'allume au rythme de la molette.</p>
+  </section>
+
+  <section class="mmm" data-module="manifeste-mot-a-mot" aria-labelledby="mmm-sur">
+    <div class="mmm__fond" aria-hidden="true"><span class="socle-visuel socle-visuel--2"></span></div>
+    <div class="mmm__cadre socle-cadre">
+      <p class="socle-surtitre" id="mmm-sur">Manifeste</p>
+      <p class="mmm__texte">Un manifeste en quelques lignes, écrit en grand pour être lu d'un seul souffle : ce que nous faisons, pour qui, et pourquoi nous le faisons ainsi depuis le premier jour, avec les mots de tous les jours et une promesse que l'on peut tenir.</p>
+      <p class="mmm__signature">Une signature ou une phrase de conclusion</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le texte reste entièrement lisible en mode calme et sans JavaScript.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="manifeste-mot-a-mot"]')) init(el);
+</script>
+</body>
+</html>

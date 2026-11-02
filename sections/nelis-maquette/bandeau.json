@@ -1,0 +1,41 @@
+{
+ "id": "nelis-maquette/bandeau",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Bandeau défilant",
+ "role": "manifeste",
+ "description": "Ruban de mots-clés en capitales qui défile en boucle (contenu dupliqué, xPercent −50) ; sa vitesse et son sens suivent la vitesse du défilement de la page.",
+ "animations": [
+  "marquee"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:127-137",
+  "css": "assets/css/style.css:233-236",
+  "js": "assets/js/main.js:347-357"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/bandeau-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/bandeau-m390.jpg",
+  "video": "medias/nelis-maquette/bandeau-p960.mp4"
+ },
+ "pieges": [
+  "pas de bouton pause alors qu'il défile plus de 5 s",
+  "dupliquer le contenu une seule fois au démarrage"
+ ],
+ "mesures": {
+  "hauteur_p1440": 86,
+  "hauteur_m390": 67,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

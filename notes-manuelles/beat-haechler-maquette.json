@@ -1,0 +1,997 @@
+{
+ "maquette": {
+  "client": "masseur indépendant entre deux villes au bord d'un lac",
+  "activite": [
+   "bien-être"
+  ],
+  "concept": [
+   "carnet"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "océanique"
+  ],
+  "palette": {
+   "fond": "--fog",
+   "texte": "--ink",
+   "accent": "--coral",
+   "secondaire": "--lake"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "goutte qui tombe et ondes WebGL sur l'image d'ouverture",
+   "transition de page en vague",
+   "silhouette qui oriente vers le bon soin",
+   "bon cadeau qui sort de son enveloppe et se retourne",
+   "respiration guidée d'une minute"
+  ],
+  "reserves": [
+   "zones SVG de la silhouette et points gâchettes sous 44 px",
+   "erreur console sans WebGL",
+   "galerie horizontale de l'accueil jamais active",
+   "contraste 3,6:1 des étiquettes à valider"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "révélation-texte",
+   "révélation-image",
+   "apparition-au-défilement",
+   "parallaxe",
+   "compteur",
+   "masque",
+   "flip",
+   "canvas-2d",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "survol-image",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "réservation-simulee",
+   "carte-interactive",
+   "simulateur",
+   "configurateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero"
+ },
+ "sections": {
+  "intro": {
+   "titre": "Goutte d'ouverture",
+   "role": "ouverture",
+   "description": "Écran d'ouverture à la première visite : un mot apparaît, une goutte tombe et s'écrase, l'écran s'efface pendant que l'image WebGL du héros se dévoile en cercle depuis le point d'impact, puis le titre monte ligne par ligne ; le titre attend les polices (800 ms au plus).",
+   "animations": [
+    "chargement-orchestré",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "medias": {
+    "video": "medias/beat-haechler-maquette/hero-p960.mp4"
+   },
+   "pieges": [
+    "chaînée au shader du héros, dont la version sans WebGL laisse une erreur console",
+    "ne jouer la goutte qu'à la première visite (sessionStorage), le voile sinon"
+   ]
+  },
+  "veil": {
+   "titre": "Vague de transition",
+   "role": "transition-de-page",
+   "description": "Voile plein écran dont le bord supérieur est une vague SVG : au clic sur un lien interne, il monte en ondulant (le tracé passe de plat à courbe), la navigation a lieu, puis sur la page d'arrivée il repart vers le haut et découvre le contenu ; retour arrière depuis le cache géré par pageshow.",
+   "animations": [
+    "transition-de-page",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "transition-vague",
+   "code": {
+    "html": "index.html:62-65",
+    "css": "assets/css/style.css:329-334",
+    "js": "assets/js/ui.js:200-253"
+   },
+   "pieges": [
+    "la page d'arrivée démarre couverte grâce à une classe posée par le script critique (html.is-veiled)",
+    "en mode calme, navigation directe sans voile",
+    "les ancres de la même page défilent sans voile"
+   ]
+  },
+  "site-header": {
+   "titre": "En-tête qui se retire",
+   "role": "menu",
+   "description": "En-tête fixe sur une ligne (logo, liens, téléphone, bouton Rendez-vous) qui se cache en descendant et revient en remontant ; il entre par le haut à la fin de l'ouverture.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "pendant l'ouverture, suspendre la transition CSS sur transform : GSAP seul anime l'en-tête",
+    "sous 400 px, le sous-titre passait sous le bouton Menu"
+   ]
+  },
+  "menu": {
+   "titre": "Menu plein écran sombre",
+   "role": "menu",
+   "description": "Menu téléphone plein écran sur fond sombre, liens en grand corps à empattements qui apparaissent l'un après l'autre, coordonnées en pied ; Échap le ferme.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "hero": {
+   "titre": "Image d'ouverture sur l'eau en WebGL",
+   "role": "ouverture",
+   "description": "Premier écran plein cadre : la photo est rendue dans un shader OGL qui ajoute une brume qui respire et des ondes concentriques là où passent la souris ou le doigt ; titre en lignes masquées, boutons et pastille du prochain jour de consultation.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "pieges": [
+    "erreur console sans WebGL non corrigée : ne pas extraire en l'état",
+    "point d'impact et cadrage exprimés en coordonnées de l'image (data-focus, data-drop), un réglage par format"
+   ]
+  },
+  "bienvenue": {
+   "titre": "Portrait et mot d'accueil",
+   "role": "manifeste",
+   "description": "Portrait en ovale qui se dévoile par un rideau (clip-path) pendant qu'un filtre SVG de déplacement le fait onduler puis se figer, à côté d'un texte d'accueil signé ; au survol, l'image se trouble comme une eau effleurée.",
+   "animations": [
+    "révélation-image",
+    "masque",
+    "survol-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:124-145",
+    "css": "assets/css/style.css:349-355,377-384",
+    "js": "assets/js/reveal.js:21-33,60-91"
+   },
+   "pieges": [
+    "filtre SVG désactivé sous Safari et sans souris (trop coûteux)",
+    "retirer le filtre à la fin de l'animation pour rendre l'image nette"
+   ]
+  },
+  "massages": {
+   "titre": "Trois soins en cartes",
+   "role": "services",
+   "description": "Trois cartes photo des soins, révélées en cascade, avec onde au survol ; prévues pour une galerie horizontale épinglée qui ne s'active jamais.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "galerie horizontale jamais active (attribut data-hscroll absent) et anticipatePin dans le code"
+   ]
+  },
+  "guide": {
+   "titre": "Silhouette conseil",
+   "role": "outil-interactif",
+   "description": "Silhouette de dos en SVG avec des zones cliquables et une rangée de pastilles : choisir une zone l'allume et affiche le soin conseillé dans une carte à côté.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "pieges": [
+    "zones SVG sous 44 px non corrigées : les pastilles servent de cibles accessibles"
+   ]
+  },
+  "wave-top": {
+   "titre": "Tarifs à rouleaux",
+   "role": "tarifs",
+   "description": "Section sombre ouverte par une vague : deux durées et leurs prix dont les chiffres tournent comme un compteur mécanique (colonnes de 0 à 9 qui défilent), puis redeviennent du texte simple pour le crénage.",
+   "animations": [
+    "compteur",
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:224-242",
+    "css": "assets/css/style.css:431-446",
+    "js": "assets/js/reveal.js:112-137"
+   },
+   "pieges": [
+    "aria-label avec la valeur finale, colonnes aria-hidden",
+    "hauteur de colonne en em : figer line-height"
+   ]
+  },
+  "band": {
+   "titre": "Bande photo en parallaxe",
+   "role": "manifeste",
+   "description": "Bande pleine largeur : la photo glisse plus lentement que la page et se resserre, sous un titre et une phrase centrés.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "wave-top-2": {
+   "titre": "Photos du cabinet en décalé",
+   "role": "galerie",
+   "description": "Trois photos de tailles et hauteurs décalées, révélées par un rideau qui ondule, celle du milieu en légère parallaxe, avec un lien vers la page dédiée.",
+   "animations": [
+    "révélation-image",
+    "parallaxe",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "t-lieux": {
+   "titre": "Carte des deux lieux",
+   "role": "carte",
+   "description": "Carte SVG simplifiée d'un lac : la route entre les deux lieux se dessine au défilement et le repère du lieu ouvert aujourd'hui pulse, à côté de deux fiches de lieu.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:265-290",
+    "css": "assets/css/style.css:462-485",
+    "js": "assets/js/fx/lakemap.js:1-54"
+   },
+   "pieges": [
+    "couleurs du dégradé de l'eau en dur dans le SVG",
+    "lieu du jour calculé d'après le jour de la semaine"
+   ]
+  },
+  "t-plus": {
+   "titre": "Cours et bons cadeaux",
+   "role": "offre",
+   "description": "Deux grandes cartes photo inclinables (cours, bon cadeau) ; au survol, une mini-carte cadeau se soulève de la seconde.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "site-footer": {
+   "titre": "Pied de page à vague",
+   "role": "pied-de-page",
+   "description": "Pied de page sombre ouvert par une vague, phrase d'au revoir, bouton, quatre colonnes (contact copiable, lieux, pages, réglage du mode calme).",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "callbar": {
+   "titre": "Barre d'appel téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas sur téléphone (appeler, rendez-vous) qui n'apparaît qu'une fois le héros passé et se retire au formulaire et au pied de page.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "mesurer sa hauteur dans --barres-h"
+   ]
+  },
+  "breath-dialog": {
+   "titre": "Fenêtre de respiration",
+   "role": "outil-interactif",
+   "description": "Fenêtre plein écran ouverte depuis n'importe quelle page qui lance la respiration guidée (voir la section respiration).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "focus gardé dans la fenêtre et rendu au bouton"
+   ]
+  },
+  "404-hero": {
+   "titre": "404 dans la brume",
+   "role": "page-404",
+   "description": "Page introuvable qui reprend l'image d'ouverture en WebGL (brume, ondes au survol) avec un titre en lignes masquées et deux liens de retour.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "a-propos-hero": {
+   "titre": "Tête de page portrait",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL avec un portrait en ovale posé à droite de l'image d'eau.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "a-propos-parcours": {
+   "titre": "Parcours en frise",
+   "role": "étapes",
+   "description": "Titre et photo dans une colonne collante, texte et frise verticale dont la ligne se dessine au défilement de l'autre côté.",
+   "animations": [
+    "progression-fixée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "colonne collante : top lié à --entete-h, hauteur bornée à l'écran"
+   ]
+  },
+  "a-propos-wave-top": {
+   "titre": "Liste des formations",
+   "role": "preuves",
+   "description": "Liste à puces des formations en deux colonnes, révélée ligne par ligne.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "a-propos-cabinet": {
+   "titre": "Photos du lieu en rangée",
+   "role": "galerie",
+   "description": "Rangée de photos du lieu à faire défiler à l'horizontale (défilement natif), avec légendes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "a-propos-wave-top-2": {
+   "titre": "Second lieu sur fond sombre",
+   "role": "contact",
+   "description": "Section sombre : photo de reflet dans un ovale, présentation du second lieu et bouton de réservation.",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "bons-cadeaux-hero": {
+   "titre": "Bon cadeau dans son enveloppe",
+   "role": "produits",
+   "description": "Une enveloppe entre en scène, son rabat s'ouvre en 3D, la carte en sort et penche légèrement ; l'ensemble s'incline sous la souris et la carte se retourne au clic ou au clavier pour montrer le verso ; le prénom saisi dans le formulaire s'écrit sur l'enveloppe.",
+   "animations": [
+    "ouverture-orchestrée",
+    "flip",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "bons-cadeaux.html:91-116",
+    "css": "assets/css/style.css:672-687,787-793",
+    "js": "assets/js/fx/gift.js:1-51"
+   },
+   "pieges": [
+    "en mode calme, poser directement l'état final (rabat ouvert, carte sortie)",
+    "la carte retournable est un bouton avec aria-pressed"
+   ]
+  },
+  "bons-cadeaux-t-bon": {
+   "titre": "Fiche du bon",
+   "role": "offre",
+   "description": "Titre en lignes, texte, puis quatre cases d'informations (durée, prix, format, paiement) en rangée.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "bons-cadeaux-commander": {
+   "titre": "Commande en trois étapes",
+   "role": "contact",
+   "description": "Formulaire de commande simulé en trois étapes (quantité avec total, destinataire, paiement), avec indicateur d'étapes, total en direct et récapitulatif « démonstration ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "pieges": [
+    "même moteur d'étapes que la demande de rendez-vous, retenue comme référence"
+   ]
+  },
+  "confidentialite-hero": {
+   "titre": "Tête des pages légales",
+   "role": "ouverture",
+   "description": "Tête de page courte sur l'image WebGL, titre en deux lignes et étiquette « à faire valider ».",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "confidentialite-l-impressum": {
+   "titre": "Texte légal",
+   "role": "texte-legal",
+   "description": "Impressum et politique de confidentialité en texte courant avec intertitres et étiquettes « à décider ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-de-massage-hero": {
+   "titre": "Tête de page cours",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL avec une photo ronde à droite et la pastille de la prochaine session.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-de-massage-programme": {
+   "titre": "Quatre gestes tracés",
+   "role": "méthode",
+   "description": "Quatre vignettes où un trait SVG se dessine en imitant le mouvement de la main (vague, spirales, petits cercles, ligne appuyée), un point suivant le bout du tracé ; citation et liste du programme à côté.",
+   "animations": [
+    "apparition-au-défilement",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "cours-de-massage.html:109-141",
+    "css": "assets/css/style.css:606-614",
+    "js": "assets/js/fx/gestures.js:1-41 ; assets/js/fx/gesture-paths.js:1-7"
+   },
+   "pieges": [
+    "longueur des tracés mesurée (getTotalLength), tracé complet en fin d'animation et en mode calme"
+   ]
+  },
+  "cours-de-massage-wave-top": {
+   "titre": "Infos pratiques",
+   "role": "offre",
+   "description": "Titre et rangée de cinq cases d'information (quand, lieu, participants, tarif, prochaine date).",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-de-massage-inscription": {
+   "titre": "Liste d'attente",
+   "role": "contact",
+   "description": "Formulaire court simulé (prénom, e-mail, choix du cours) dans une carte, avec erreurs sous les champs et confirmation « démonstration ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-de-massage-wave-top-2": {
+   "titre": "Autres formats",
+   "role": "offre",
+   "description": "Trois cartes photo inclinables pour les autres formules.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-de-massage-wave-top-3": {
+   "titre": "Témoignages à faire défiler",
+   "role": "témoignages",
+   "description": "Rangée de citations à défilement horizontal natif, avec boutons précédent et suivant qui avancent d'une carte.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "drainage-lymphatique-soin": {
+   "titre": "Présentation du soin",
+   "role": "services",
+   "description": "Titre en lignes masquées et photo d'eau révélée en ondulant à gauche, texte du soin et étiquettes « à valider » à droite.",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "drainage-lymphatique-moments": {
+   "titre": "Quand consulter",
+   "role": "services",
+   "description": "Photo en ovale révélée en ondulant, quatre cartes de situations révélées en cascade et un encadré « bon à savoir » sur les limites du soin.",
+   "animations": [
+    "révélation-texte",
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massage-anti-tensions-hero": {
+   "titre": "Tête de page soin",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL avec photo de soin, titre en deux lignes et bouton vers l'essai interactif.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massage-anti-tensions-soin": {
+   "titre": "Texte du soin",
+   "role": "services",
+   "description": "Titre court à gauche, texte long à droite avec étiquettes « à valider ».",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massage-anti-tensions-points": {
+   "titre": "Points à maintenir",
+   "role": "outil-interactif",
+   "description": "Silhouette sombre avec sept points : maintenir l'appui (souris, doigt ou Espace) remplit un anneau en 2,2 s, puis une onde chaude se diffuse au relâchement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur",
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "pieges": [
+    "points sous 44 px non corrigés",
+    "annoncer l'état de chaque point aux lecteurs d'écran"
+   ]
+  },
+  "massage-anti-tensions-tecar": {
+   "titre": "Ondes sur l'appareil",
+   "role": "services",
+   "description": "Photo d'appareil d'où partent des cercles concentriques dessinés en canvas 2D, à côté d'un texte et de trois encadrés.",
+   "animations": [
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "origine des ondes calée sur l'image, recalculée au redimensionnement"
+   ]
+  },
+  "massage-relaxant-wave-top": {
+   "titre": "Respiration guidée",
+   "role": "outil-interactif",
+   "description": "Un disque qui gonfle 4 s à l'inspiration et se vide 6 s à l'expiration, entouré d'anneaux, pendant une minute, avec le mot et le décompte annoncés aux lecteurs d'écran ; bouton démarrer et arrêter.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "massage-relaxant.html:127-143",
+    "css": "assets/css/style.css:562-569,764-768",
+    "js": "assets/js/fx/breath.js:1-56"
+   },
+   "pieges": [
+    "en mode calme, pas d'animation de taille : le décompte texte suffit",
+    "image de fond en mix-blend-mode : à éviter au-dessus d'un fond animé"
+   ]
+  },
+  "massage-relaxant-wave-top-2": {
+   "titre": "Déroulé d'une séance",
+   "role": "étapes",
+   "description": "Trois étapes numérotées en cartes révélées en cascade, puis une photo large ; une étiquette signale que le déroulé reste à compléter.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massages-liste": {
+   "titre": "Les trois soins en détail",
+   "role": "services",
+   "description": "Trois blocs alternés photo et texte, un par soin, avec images qui ondulent à la révélation.",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massages-guide": {
+   "titre": "Silhouette conseil (page soins)",
+   "role": "outil-interactif",
+   "description": "Même silhouette conseil que l'accueil, ouverte sur une autre zone par défaut (data-initial).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "zones SVG sous 44 px non corrigées"
+   ]
+  },
+  "massages-comparer": {
+   "titre": "Tableau comparatif",
+   "role": "tarifs",
+   "description": "Tableau des trois soins (geste, apprécié pour) sur fond de texture, suivi de quatre cases de prix ; sur téléphone, le tableau devient une pile de fiches étiquetées.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "libellés des cellules dans data-label pour la version téléphone"
+   ]
+  },
+  "rendez-vous-lieux": {
+   "titre": "Fiches des deux lieux",
+   "role": "contact",
+   "description": "Deux fiches de lieu côte à côte : photo, jour, puis liste de définitions (adresse, tarif, réservation, accès, horaires) avec étiquettes « à compléter ».",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "rendez-vous-demande": {
+   "titre": "Demande de rendez-vous en trois étapes",
+   "role": "contact",
+   "description": "Formulaire simulé en trois étapes (soin, date parmi les prochains jours de consultation calculés, coordonnées) : hauteur animée entre les étapes, erreurs sous les champs, bouton désactivé après envoi et récapitulatif « démonstration ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "rendez-vous.html:150-208",
+    "css": "assets/css/style.css:529-535,640-663",
+    "js": "assets/js/fx/forms.js:1-101"
+   },
+   "pieges": [
+    "CLS au chargement en mode réduit corrigé : réserver la hauteur des options de dates",
+    "les dates sont calculées, jamais écrites en dur"
+   ]
+  },
+  "rendez-vous-t-carte": {
+   "titre": "Carte des lieux (rendez-vous)",
+   "role": "carte",
+   "description": "Même carte SVG du lac en grand format, sous un titre.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "drainage-lymphatique-hero": {
+   "titre": "Tête de page drainage",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL (brume et ondes au survol) sur une photo de soin, titre en lignes masquées, deux boutons et pastille du prochain jour de consultation.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massage-relaxant-hero": {
+   "titre": "Tête de page relaxant",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL sur une photo de soin, titre en deux lignes et lien vers la respiration guidée de la page.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massages-hero": {
+   "titre": "Tête de page des soins",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL avec titre en lignes masquées et deux liens d'ancre vers le guide et le comparatif.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "rendez-vous-hero": {
+   "titre": "Tête de page rendez-vous",
+   "role": "ouverture",
+   "description": "Variante du héros WebGL sur un paysage de lac, avec deux boutons de contact et une carte « aujourd'hui » qui calcule le prochain jour et lieu de consultation.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "massage-relaxant-soin": {
+   "titre": "Texte du soin avec photo",
+   "role": "services",
+   "description": "Titre en lignes masquées et photo à gauche, texte long à droite terminé par une rangée de mots-clés et une étiquette « à valider ».",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  }
+ }
+}

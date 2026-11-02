@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte d'itinéraire collante · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3e6da; --couleur-texte: #2a211b; --couleur-accent: #a9471f; --couleur-secondaire: #6e7a3a; --couleur-sur-accent: #fbf4ec; --rayon: 8px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la carte reste à l'écran et le tracé avance d'étape en étape.</p>
+  </section>
+
+  <section class="cic" data-module="carte-itineraire-collante" data-epingle aria-labelledby="cic-titre">
+    <div class="cic__tete socle-cadre">
+      <p class="socle-surtitre">Surtitre</p>
+      <h2 class="cic__titre" id="cic-titre">Titre de la section</h2>
+      <p class="cic__intro">Un paragraphe de deux lignes qui annonce le parcours et le nombre d'étapes.</p>
+    </div>
+    <div class="cic__corps socle-cadre">
+      <ol class="cic__etapes">
+        <li class="cic__etape" id="etape-1" data-x="14" data-y="74">
+          <p class="cic__n"><b>01</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Titre de la première étape</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel" aria-hidden="true"></span>
+          </div>
+        </li>
+        <li class="cic__etape" id="etape-2" data-x="30" data-y="58">
+          <p class="cic__n"><b>02</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Deuxième étape</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel socle-visuel--2" aria-hidden="true"></span>
+          </div>
+        </li>
+        <li class="cic__etape" id="etape-3" data-x="24" data-y="34">
+          <p class="cic__n"><b>03</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Une étape plus longue à lire</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel socle-visuel--3" aria-hidden="true"></span>
+          </div>
+        </li>
+        <li class="cic__etape" id="etape-4" data-x="48" data-y="22">
+          <p class="cic__n"><b>04</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Quatrième étape</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel" aria-hidden="true"></span>
+          </div>
+        </li>
+        <li class="cic__etape" id="etape-5" data-x="70" data-y="40">
+          <p class="cic__n"><b>05</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Cinquième étape</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel socle-visuel--2" aria-hidden="true"></span>
+          </div>
+        </li>
+        <li class="cic__etape" id="etape-6" data-x="86" data-y="18">
+          <p class="cic__n"><b>06</b><span>Étape</span></p>
+          <div class="cic__texte">
+            <h3>Dernière étape</h3>
+            <p>Un paragraphe de deux ou trois lignes qui décrit ce qui se passe à cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+            <span class="cic__visuel socle-visuel socle-visuel--3" aria-hidden="true"></span>
+          </div>
+        </li>
+      </ol>
+      <div class="cic__carte" data-tient="carte">
+        <div class="cic__plan">
+          <svg class="cic__svg" viewBox="0 0 100 75" aria-hidden="true" focusable="false">
+            <rect class="cic__fond" width="100" height="75"/>
+            <path class="cic__forme cic__forme--1" d="M-4 52 C10 40 22 46 34 38 S58 18 72 26 S96 30 104 20 L104 79 L-4 79 Z"/>
+            <path class="cic__forme cic__forme--2" d="M-4 66 C14 58 30 64 46 56 S78 52 104 60 L104 79 L-4 79 Z"/>
+            <ellipse class="cic__forme cic__forme--3" cx="62" cy="16" rx="18" ry="9"/>
+            <ellipse class="cic__forme cic__forme--3" cx="18" cy="22" rx="10" ry="6"/>
+            <g class="cic__courbes"><path d="M0 12 Q25 4 50 12 T100 12"/><path d="M0 30 Q25 22 50 30 T100 30"/><path d="M0 46 Q25 40 50 46 T100 46"/></g>
+          </svg>
+          <p class="cic__compteur" aria-live="polite">Étape <b data-cic-n>1</b> / <span data-cic-total>6</span></p>
+          <p class="cic__legende" data-tient="légende">Carte illustrative, positions approximatives</p>
+        </div>
+      </div>
+    </div>
+    <p class="cic__barre" data-barre hidden><span>Étape <b data-cic-n>1</b> / <span data-cic-total>6</span></span><span class="cic__barre-titre" data-cic-titre></span></p>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le tracé reste complet après la dernière étape. En mode calme, il est dessiné d'emblée.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="carte-itineraire-collante"]')) init(el);
+</script>
+</body>
+</html>

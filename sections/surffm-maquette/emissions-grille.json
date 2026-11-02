@@ -1,0 +1,42 @@
+{
+ "id": "surffm-maquette/emissions-grille",
+ "maquette": "surffm-maquette",
+ "page": "emissions",
+ "titre": "Grille horaire du jour",
+ "role": "agenda",
+ "description": "Frise de 24 heures à faire glisser (souris ou doigt) avec les créneaux du jour choisi, curseur « maintenant » à l'heure de Paris et onglets des jours navigables aux flèches du clavier ; les créneaux montent à chaque changement de jour.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "emissions.html:93-113",
+  "css": "assets/css/style.css:510-513,518-526,537-539",
+  "js": "assets/js/app.js:26,615-656 ; assets/js/data.js:16"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/emissions-grille-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/emissions-grille-m390.jpg",
+  "video": "medias/surffm-maquette/emissions-grille-p960.mp4"
+ },
+ "pieges": [
+  "onglets avec role tab et aria-selected",
+  "rendu relancé qui remplace les créneaux au lieu de les ajouter"
+ ],
+ "mesures": {
+  "hauteur_p1440": 971,
+  "hauteur_m390": 820,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

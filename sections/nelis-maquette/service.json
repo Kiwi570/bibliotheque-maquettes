@@ -1,0 +1,46 @@
+{
+ "id": "nelis-maquette/service",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Trois prestations",
+ "role": "services",
+ "description": "Trois cartes (vente, location, service) qui s'inclinent sous la souris ; sur leur photo, une buée en canvas s'efface sous le curseur (« Désembuer ») et se reforme lentement.",
+ "animations": [
+  "apparition-au-défilement",
+  "survol-image",
+  "canvas-2d",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:165-232",
+  "css": "assets/css/style.css:197,255-268",
+  "js": "assets/js/main.js:359-449"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/service-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/service-m390.jpg",
+  "video": "medias/nelis-maquette/service-p960.mp4"
+ },
+ "pieges": [
+  "buée seulement avec une souris",
+  "canvas à demi-résolution de la carte"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1375,
+  "hauteur_m390": 2350,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

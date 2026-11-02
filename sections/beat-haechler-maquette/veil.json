@@ -1,0 +1,54 @@
+{
+ "id": "beat-haechler-maquette/veil",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "a-propos",
+  "bons-cadeaux",
+  "confidentialite",
+  "cours-de-massage",
+  "drainage-lymphatique",
+  "massage-anti-tensions",
+  "massage-relaxant",
+  "massages",
+  "rendez-vous"
+ ],
+ "titre": "Vague de transition",
+ "role": "transition-de-page",
+ "description": "Voile plein écran dont le bord supérieur est une vague SVG : au clic sur un lien interne, il monte en ondulant (le tracé passe de plat à courbe), la navigation a lieu, puis sur la page d'arrivée il repart vers le haut et découvre le contenu ; retour arrière depuis le cache géré par pageshow.",
+ "animations": [
+  "transition-de-page",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "transition-vague",
+ "code": {
+  "html": "index.html:62-65",
+  "css": "assets/css/style.css:329-334",
+  "js": "assets/js/ui.js:200-253"
+ },
+ "medias": {
+  "video": "medias/beat-haechler-maquette/veil-p960.mp4"
+ },
+ "pieges": [
+  "la page d'arrivée démarre couverte grâce à une classe posée par le script critique (html.is-veiled)",
+  "en mode calme, navigation directe sans voile",
+  "les ancres de la même page défilent sans voile"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

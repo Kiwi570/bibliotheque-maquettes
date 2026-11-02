@@ -1,0 +1,45 @@
+{
+ "id": "nelis-maquette/applications",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "titre": "Galerie qui refroidit",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée : la piste de cartes photo défile avec la molette et chaque carte passe d'un ton chaud à un ton froid quand elle traverse l'écran (variable --froid calculée à la position) ; une dernière carte liste les autres applications. Sur téléphone, défilement natif avec le même effet.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:294-320",
+  "css": "assets/css/style.css:309-339",
+  "js": "assets/js/home.js:55-81"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/applications-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/applications-m390.jpg",
+  "video": "medias/nelis-maquette/applications-p960.mp4"
+ },
+ "pieges": [
+  "section en colonne flex de 100svh, piste flex: 0 1 auto; min-height: 0, cartes max-height: 100 %, légende flex: none",
+  "--froid lu pendant le défilement par getBoundingClientRect : préférer la progression du ScrollTrigger",
+  "téléphone : première carte collée au bord"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 906,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

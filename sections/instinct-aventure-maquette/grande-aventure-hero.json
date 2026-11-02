@@ -1,0 +1,53 @@
+{
+ "id": "instinct-aventure-maquette/grande-aventure-hero",
+ "maquette": "instinct-aventure-maquette",
+ "page": "grande-aventure",
+ "pages": [
+  "grande-aventure",
+  "immersion-sauvage",
+  "namibie-authentique",
+  "namibie-botswana",
+  "namibie-integrale",
+  "ocean-caprivi"
+ ],
+ "titre": "Héros de fiche à prix à rouleaux",
+ "role": "ouverture",
+ "description": "Héros court de fiche voyage en mirage WebGL, avec un interrupteur de formule qui change le prix par un compteur à rouleaux (chiffres qui défilent comme un odomètre) et les textes liés.",
+ "animations": [
+  "webgl-shader",
+  "compteur",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "grande-aventure.html:127-149",
+  "css": "assets/css/main.css:90-94,283-304,668-670,681-685,812,929,934,1493,1581-1586,1590,1601",
+  "js": "assets/js/circuit.js:17-94 ; assets/js/core.js:534-557"
+ },
+ "medias": {
+  "capture": "medias/instinct-aventure-maquette/grande-aventure-hero-p1440.jpg",
+  "capture_m390": "medias/instinct-aventure-maquette/grande-aventure-hero-m390.jpg",
+  "video": "medias/instinct-aventure-maquette/grande-aventure-hero-p960.mp4"
+ },
+ "pieges": [
+  "même erreur sans WebGL que le héros d'accueil",
+  "odomètre : texte réel en sr-only, colonnes aria-hidden"
+ ],
+ "mesures": {
+  "hauteur_p1440": 771,
+  "hauteur_m390": 709,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

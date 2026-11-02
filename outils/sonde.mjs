@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+import { servir } from '/Users/paul/Downloads/bibliotheque-maquettes/outils/commun.mjs';
+const [,, page, w, h, frac, out] = process.argv;
+const srv = await servir('/Users/paul/Downloads/bibliotheque-maquettes');
+const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: +w, height: +h } });
+p.on('console', m => console.log('console', m.text()));
+await p.goto(srv.url + page); await p.waitForTimeout(1500);
+const info = await p.evaluate(async frac => { const m = document.querySelector('[data-module]'); const top = m.getBoundingClientRect().top + scrollY; const st = window.ScrollTrigger?.getAll().find(s => s.pin); const y = st ? st.start + (st.end - st.start) * frac : top + innerHeight * frac; scrollTo(0, y); await new Promise(r => setTimeout(r, 1200)); const hd = document.querySelector('[data-entete]').getBoundingClientRect(); return { y, hd: [hd.top, hd.height], cls: m.className, eh: getComputedStyle(document.documentElement).getPropertyValue('--entete-h') }; }, +frac);
+console.log(JSON.stringify(info));
+await p.screenshot({ path: out }); await b.close(); await srv.fermer();

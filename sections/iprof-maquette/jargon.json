@@ -1,0 +1,44 @@
+{
+ "id": "iprof-maquette/jargon",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "titre": "Jargon corrigé au stylo rouge",
+ "role": "méthode",
+ "description": "La colonne de titre reste épinglée pendant que défile une liste de termes techniques : chacun est barré d'un trait rouge (background-size) puis sa traduction en mots simples s'écrit à la main dessous (clip-path), au rythme de la molette sur ordinateur, d'un coup sur téléphone.",
+ "animations": [
+  "section-fixée",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:100-122",
+  "css": "assets/css/site.css:85-86,202-210,332,493,624-627",
+  "js": "assets/js/site.js:544-555"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/jargon-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/jargon-m390.jpg",
+  "video": "medias/iprof-maquette/jargon-p960.mp4"
+ },
+ "pieges": [
+  "épinglage de la tête avec pinSpacing: false et un départ calé sur la hauteur mesurée de l'en-tête",
+  "sur téléphone, déclenchement unique (once) au lieu du scrub"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1003,
+  "hauteur_m390": 1261,
+  "epinglee": true,
+  "scrolltriggers": 8
+ }
+}

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Catalogue filtré · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3e6da; --couleur-texte: #2a211b; --couleur-accent: #a9471f; --couleur-secondaire: #6e6a3a; --couleur-sur-accent: #fbf4ea; --police-titres: "Iowan Old Style", Georgia, serif; --rayon: 6px; }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Choisissez des filtres : les fiches se réordonnent sans que la page saute, et la sélection reste dans l'adresse.</p>
+  </section>
+
+  <section class="cff socle-cadre" data-module="catalogue-filtres-flip" aria-labelledby="cff-titre">
+    <div class="cff__tete">
+      <p class="socle-surtitre">Catalogue</p>
+      <h2 class="cff__titre" id="cff-titre">Titre du catalogue</h2>
+      <p class="cff__texte">Un paragraphe de deux lignes qui explique comment filtrer, trier et comparer les fiches.</p>
+    </div>
+    <div class="cff__filtres">
+      <div class="cff__rang">
+        <div class="cff__groupe" role="group" aria-label="Catégorie" data-filtre-groupe="categorie"><span class="cff__etiquette">Catégorie</span>
+          <button type="button" data-valeur="tout" aria-pressed="true">Tout</button>
+          <button type="button" data-valeur="atelier" aria-pressed="false">Atelier</button>
+          <button type="button" data-valeur="sortie" aria-pressed="false">Sortie</button>
+          <button type="button" data-valeur="stage" aria-pressed="false">Stage</button>
+        </div>
+        <div class="cff__groupe" role="group" aria-label="Durée" data-filtre-groupe="duree"><span class="cff__etiquette">Durée</span>
+          <button type="button" data-valeur="tout" aria-pressed="true">Tout</button>
+          <button type="button" data-valeur="court" aria-pressed="false">Court</button>
+          <button type="button" data-valeur="long" aria-pressed="false">Long</button>
+        </div>
+        <div class="cff__groupe" role="group" aria-label="Thème" data-filtre-groupe="theme"><span class="cff__etiquette">Thème</span>
+          <button type="button" data-valeur="tout" aria-pressed="true">Tout</button>
+          <button type="button" data-valeur="ville" aria-pressed="false">Ville</button>
+          <button type="button" data-valeur="nature" aria-pressed="false">Nature</button>
+          <button type="button" data-valeur="mer" aria-pressed="false">Mer</button>
+        </div>
+      </div>
+      <div class="cff__rang">
+        <label class="cff__curseur"><span class="cff__etiquette">Budget</span> jusqu'à <b data-sortie="prix">1 600 €</b>
+          <input type="range" min="200" max="1600" step="50" value="1600" data-filtre-max="prix"></label>
+        <label class="cff__tri"><span class="cff__etiquette">Trier</span>
+          <select data-tri><option value="ordre">Recommandés</option><option value="prix-asc">Prix croissant</option><option value="prix-desc">Prix décroissant</option><option value="jours-asc">Durée</option></select></label>
+        <p class="cff__compte" aria-live="polite"><b data-compte>11</b> <span data-compte-mot>fiches</span> · <button type="button" class="cff__reinit" data-reinit>Réinitialiser</button></p>
+      </div>
+    </div>
+    <div class="cff__grille" data-grille>
+      <article class="cff__fiche" data-categorie="atelier" data-duree="court" data-theme="ville nature" data-prix="290" data-jours="1">
+        <div class="cff__visuel socle-visuel" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Atelier</span><span>1 jour</span></div>
+        <h3 class="cff__nom"><a href="#fiche-1">Titre de la fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>290 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="sortie" data-duree="court" data-theme="nature" data-prix="640" data-jours="3">
+        <div class="cff__visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Sortie</span><span>3 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-2">Une fiche au nom plus long</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>640 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="stage" data-duree="long" data-theme="ville" data-prix="1180" data-jours="4">
+        <div class="cff__visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Stage</span><span>4 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-3">Fiche numéro trois</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>1 180 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="atelier" data-duree="court" data-theme="nature" data-prix="450" data-jours="2">
+        <div class="cff__visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Atelier</span><span>2 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-4">Quatrième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>450 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="sortie" data-duree="long" data-theme="ville nature" data-prix="980" data-jours="4">
+        <div class="cff__visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Sortie</span><span>4 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-5">Cinquième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>980 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="stage" data-duree="long" data-theme="nature" data-prix="1560" data-jours="6">
+        <div class="cff__visuel socle-visuel" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Stage</span><span>6 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-6">Sixième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>1 560 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="atelier" data-duree="court" data-theme="ville" data-prix="720" data-jours="3">
+        <div class="cff__visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Atelier</span><span>3 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-7">Septième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>720 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="sortie" data-duree="court" data-theme="nature" data-prix="380" data-jours="2">
+        <div class="cff__visuel socle-visuel" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Sortie</span><span>2 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-8">Huitième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>380 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="stage" data-duree="long" data-theme="ville nature" data-prix="1340" data-jours="5">
+        <div class="cff__visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Stage</span><span>5 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-9">Neuvième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>1 340 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="atelier" data-duree="long" data-theme="nature" data-prix="860" data-jours="3">
+        <div class="cff__visuel socle-visuel" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Atelier</span><span>3 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-10">Dixième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>860 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <article class="cff__fiche" data-categorie="sortie" data-duree="court" data-theme="ville" data-prix="520" data-jours="2">
+        <div class="cff__visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+        <div class="cff__puces"><span>Sortie</span><span>2 jours</span></div>
+        <h3 class="cff__nom"><a href="#fiche-11">Onzième fiche</a></h3>
+        <p class="cff__ligne">Une ligne de description de la fiche.</p>
+        <p class="cff__prix"><b>520 €</b> <span>prix d'exemple</span></p>
+      </article>
+      <p class="cff__vide" data-vide hidden>Aucune fiche ne correspond. Élargissez le budget ou <button type="button" class="cff__reinit" data-reinit>réinitialisez les filtres</button>.</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sans JavaScript, toutes les fiches restent affichées.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="catalogue-filtres-flip"]')) init(el);
+</script>
+</body>
+</html>

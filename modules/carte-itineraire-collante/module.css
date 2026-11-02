@@ -1,0 +1,60 @@
+/* Carte d'itinéraire collante — identité uniquement par les variables du socle. */
+.cic { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.cic__tete { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vh, 56px); }
+.cic__titre { font-size: clamp(2.2rem, 5.4vw, 4.6rem); line-height: 1; padding-block: .06em; }
+.cic__intro { color: var(--couleur-texte-doux); max-width: 48ch; }
+
+.cic__corps { display: grid; gap: clamp(24px, 4vw, 64px); align-items: start; }
+@media (min-width: 900px) { .cic__corps { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+/* Étapes */
+.cic__etapes { list-style: none; margin: 0; padding: 0; display: grid; }
+.cic__etape { display: grid; grid-template-columns: clamp(64px, 8vw, 110px) minmax(0, 1fr); gap: clamp(12px, 2vw, 24px); padding-block: clamp(24px, 4vh, 40px); border-top: 1px solid var(--couleur-ligne); scroll-margin-top: calc(var(--entete-h) + 16px); }
+.cic__etape:last-child { border-bottom: 1px solid var(--couleur-ligne); }
+.cic__n { margin: 0; font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cic__n b { display: block; font-family: var(--police-titres); font-size: clamp(2.4rem, 4vw, 3.6rem); line-height: .95; font-weight: 400; letter-spacing: 0; font-variant-numeric: tabular-nums; color: var(--couleur-texte); transition: color .4s; }
+.cic__texte { display: grid; gap: 10px; }
+.cic__texte h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); }
+.cic__texte p { color: var(--couleur-texte-doux); }
+.cic__visuel { display: block; aspect-ratio: 16 / 9; border-radius: var(--rayon); margin-top: 6px; overflow: hidden; }
+.cic__visuel > img { width: 100%; height: 100%; object-fit: cover; }
+.cic__etape.est-active .cic__n b { color: var(--couleur-accent); }
+/* Étapes inactives : le texte reste lisible, seuls le numéro et le visuel s'estompent. */
+.cic--vivant .cic__etape:not(.est-active) .cic__n b, .cic--vivant .cic__etape:not(.est-active) .cic__visuel { opacity: .55; }
+.cic__visuel, .cic__n b { transition: opacity .5s, color .4s; }
+
+/* Carte : collante sur ordinateur, bornée par la hauteur visible entre l'en-tête et les barres mesurés. */
+.cic__carte { --cic-marge: clamp(16px, 3vh, 32px); order: -1; }
+.cic__plan { position: relative; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); box-shadow: 0 0 0 1px var(--couleur-ligne); }
+@media (min-width: 900px) {
+  .cic__carte { position: sticky; top: calc(var(--entete-h) + var(--cic-marge)); order: 2; display: flex; justify-content: center; }
+  .cic__plan { width: min(100%, calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--cic-marge)) * 4 / 3)); }
+}
+.cic__svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cic__fond { fill: color-mix(in oklab, var(--couleur-secondaire) 14%, var(--couleur-fond)); }
+.cic__forme--1 { fill: color-mix(in oklab, var(--couleur-secondaire) 26%, var(--couleur-fond)); }
+.cic__forme--2 { fill: color-mix(in oklab, var(--couleur-secondaire) 38%, var(--couleur-fond)); }
+.cic__forme--3 { fill: color-mix(in oklab, var(--couleur-accent) 12%, var(--couleur-fond)); }
+.cic__courbes path { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 12%, transparent); stroke-width: .25; }
+.cic__fantome { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 28%, transparent); stroke-width: .45; stroke-dasharray: 1 1.2; stroke-linecap: round; }
+.cic__trace { fill: none; stroke: var(--couleur-accent); stroke-width: .8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Repères : boutons de 44 px posés en % du plan (même repère que le viewBox 100 × 75). */
+.cic__reperes { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; }
+.cic__reperes li { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); }
+.cic__repere { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
+.cic__repere > span[aria-hidden] { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; font-family: var(--police-mono); font-size: 12px; line-height: 1; font-weight: 700; background: var(--couleur-fond); color: var(--couleur-texte); box-shadow: 0 0 0 2px var(--couleur-texte-doux); transition: background .35s, color .35s, box-shadow .35s, scale .35s; }
+.cic__repere.est-vu > span[aria-hidden] { box-shadow: 0 0 0 2px var(--couleur-accent); }
+.cic__repere.est-active > span[aria-hidden] { background: var(--couleur-accent); color: var(--couleur-sur-accent); box-shadow: 0 0 0 2px var(--couleur-accent), 0 0 0 7px color-mix(in oklab, var(--couleur-accent) 25%, transparent); scale: 1.15; }
+.cic__repere:focus-visible { outline-offset: -4px; }
+
+.cic__compteur, .cic__legende { position: absolute; margin: 0; padding: 6px 12px; border-radius: 999px; background: color-mix(in oklab, var(--couleur-fond) 92%, transparent); font-size: max(12px, .8rem); }
+.cic__compteur { left: 12px; top: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.cic__legende { left: 12px; bottom: 12px; max-width: calc(100% - 24px); color: var(--couleur-texte-doux); font-family: var(--police-mono); letter-spacing: .04em; }
+
+/* Barre « Étape n / total » : téléphone seulement, fixée en bas pendant la lecture des étapes, mesurée dans --barres-h. */
+.cic__barre { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; margin: 0; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px var(--espace) calc(8px + env(safe-area-inset-bottom, 0px)); background: color-mix(in oklab, var(--couleur-fond) 96%, transparent); border-top: 1px solid var(--couleur-ligne); font-size: max(12px, .85rem); font-variant-numeric: tabular-nums; }
+.cic__barre > span:first-child { flex: none; font-weight: 700; color: var(--couleur-accent); }
+.cic__barre-titre { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--couleur-texte-doux); }
+@media (min-width: 900px) { .cic__barre { display: none; } }
+@media (max-width: 899px) { .cic--vivant .cic__etapes { padding-bottom: var(--barres-h); } }

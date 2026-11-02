@@ -1,0 +1,44 @@
+{
+ "id": "surffm-maquette/nous-capter-fm-dab",
+ "maquette": "surffm-maquette",
+ "page": "nous-capter",
+ "titre": "Comparateur de signal",
+ "role": "outil-interactif",
+ "description": "Un curseur glisse de « FM analogique » à « DAB+ numérique » : la courbe tracée en canvas 2D perd son grésillement et devient en escalier ; l'animation s'arrête hors écran.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "nous-capter.html:118-146",
+  "css": "assets/css/style.css:69,306,601-613",
+  "js": "assets/js/app.js:734-770"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/nous-capter-fm-dab-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/nous-capter-fm-dab-m390.jpg",
+  "video": "medias/surffm-maquette/nous-capter-fm-dab-p960.mp4"
+ },
+ "pieges": [
+  "couleurs du tracé en dur dans le canvas",
+  "redessiner une fois à l'entrée du curseur en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1520,
+  "hauteur_m390": 1390,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

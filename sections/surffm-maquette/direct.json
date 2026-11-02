@@ -1,0 +1,43 @@
+{
+ "id": "surffm-maquette/direct",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Le direct",
+ "role": "outil-interactif",
+ "description": "Panneau « en ce moment » : visuel du studio, émission en cours calculée d'après l'heure de Paris, barres de spectre en canvas 2D qui s'animent quand le son joue, et encadré des conditions de glisse étiqueté démonstration.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:108-141",
+  "css": "assets/css/style.css:226-251",
+  "js": "assets/js/app.js:42-49,54-57,87 ; assets/js/player.js:1"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/direct-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/direct-m390.jpg",
+  "video": "medias/surffm-maquette/direct-p960.mp4"
+ },
+ "pieges": [
+  "données de démonstration à étiqueter"
+ ],
+ "mesures": {
+  "hauteur_p1440": 986,
+  "hauteur_m390": 1329,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

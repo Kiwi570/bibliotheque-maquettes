@@ -1,0 +1,47 @@
+{
+ "id": "surffm-maquette/hero",
+ "maquette": "surffm-maquette",
+ "page": "index",
+ "titre": "Titre géant sur houle WebGL",
+ "role": "ouverture",
+ "description": "Premier écran plein cadre : une houle de lignes animée en shader (OGL, repli canvas 2D) sous une photo de nuit, un titre géant découpé en lettres qui montent en vague puis se soulèvent au passage de la souris, et un bouton lecture qui lance le direct.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:80-105",
+  "css": "assets/css/style.css:102-119,205-223,499,653,662,730-742",
+  "js": "assets/js/app.js:365-402,575-587"
+ },
+ "medias": {
+  "capture": "medias/surffm-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/surffm-maquette/hero-m390.jpg",
+  "video": "medias/surffm-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "les puces du bas passaient sous le lecteur : padding-bottom calc(var(--barres-h) + clamp(24px, 6vh, 72px))",
+  "line-height .9 sur les capitales : prévoir une marge pour les accents"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "beat-haechler-maquette/wave-top",
+ "maquette": "beat-haechler-maquette",
+ "page": "index",
+ "titre": "Tarifs à rouleaux",
+ "role": "tarifs",
+ "description": "Section sombre ouverte par une vague : deux durées et leurs prix dont les chiffres tournent comme un compteur mécanique (colonnes de 0 à 9 qui défilent), puis redeviennent du texte simple pour le crénage.",
+ "animations": [
+  "compteur",
+  "révélation-texte",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:224-242",
+  "css": "assets/css/style.css:431-446",
+  "js": "assets/js/reveal.js:112-137"
+ },
+ "medias": {
+  "capture": "medias/beat-haechler-maquette/wave-top-p1440.jpg",
+  "capture_m390": "medias/beat-haechler-maquette/wave-top-m390.jpg",
+  "video": "medias/beat-haechler-maquette/wave-top-p960.mp4"
+ },
+ "pieges": [
+  "aria-label avec la valeur finale, colonnes aria-hidden",
+  "hauteur de colonne en em : figer line-height"
+ ],
+ "mesures": {
+  "hauteur_p1440": 992,
+  "hauteur_m390": 1087,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "nelis-maquette/groupes-eau-glacee-principe",
+ "maquette": "nelis-maquette",
+ "page": "groupes-eau-glacee",
+ "titre": "Schéma de principe épinglé",
+ "role": "méthode",
+ "description": "Section épinglée : un schéma SVG du circuit frigorifique à côté d'une liste d'étapes ; à chaque palier de défilement, l'étape s'allume et seuls les composants et flux concernés restent pleinement visibles. Sur téléphone, les étapes défilent seules toutes les 3,2 s.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "groupes-eau-glacee.html:123-175",
+  "css": "assets/css/style.css:248,302-305,353,455,460,640-663,706",
+  "js": "assets/js/eau.js:1-45"
+ },
+ "medias": {
+  "capture": "medias/nelis-maquette/groupes-eau-glacee-principe-p1440.jpg",
+  "capture_m390": "medias/nelis-maquette/groupes-eau-glacee-principe-m390.jpg",
+  "video": "medias/nelis-maquette/groupes-eau-glacee-principe-p960.mp4"
+ },
+ "pieges": [
+  "composants et flux reliés aux étapes par data-c et data-s",
+  "en mode calme, tout est allumé",
+  "transition CSS posée en JS sur l'opacité des flux : une seule source par propriété"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3060,
+  "hauteur_m390": 1027,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

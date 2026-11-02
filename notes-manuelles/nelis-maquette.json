@@ -1,0 +1,809 @@
+{
+ "maquette": {
+  "client": "froid industriel (vente, location et service de groupes frigorifiques)",
+  "activite": [
+   "industrie",
+   "services-b2b"
+  ],
+  "concept": [
+   "laboratoire",
+   "catalogue"
+  ],
+  "ambiance": [
+   "froid",
+   "nocturne",
+   "industriel"
+  ],
+  "palette": {
+   "fond": "--nuit",
+   "texte": "--texte",
+   "accent": "--glace",
+   "secondaire": "--violet"
+  },
+  "polices": {
+   "titres": "Archivo",
+   "texte": "Archivo",
+   "mono": "Geist Mono"
+  },
+  "points_forts": [
+   "ouverture « gel » avec compte à rebours de température",
+   "givre WebGL qui fond sous la souris sur la photo du héros",
+   "jauge de puissance épinglée en échelle logarithmique",
+   "galerie horizontale dont les cartes « refroidissent » en passant",
+   "devis simulé en quatre étapes avec orientation calculée"
+  ],
+  "reserves": [
+   "erreur console sans WebGL (le repli fonctionne)",
+   "galerie sur téléphone : première carte collée au bord",
+   "devis, étape 1 : pas de message sans choix"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "webgl-shader",
+   "canvas-2d",
+   "révélation-texte",
+   "révélation-image",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "compteur",
+   "marquee",
+   "parallaxe",
+   "masque",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "survol-image",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "configurateur",
+   "filtres",
+   "mode-calme",
+   "lecteur-audio"
+  ],
+  "change_depuis_audit": "Commit 8ab8326 postérieur à la correction (240ad09) : images Grok définitives et textes alternatifs seulement ; vérifié en ligne, l'image aux trois mains est remplacée (deux gants, manomètres à cadran), la mise en page et les effets sont inchangés.",
+  "accueil": "haut"
+ },
+ "sections": {
+  "gel": {
+   "titre": "Ouverture « gel »",
+   "role": "ouverture",
+   "description": "Écran plein cadre couvert de givre dessiné en canvas 2D (dendrites générées à partir d'une graine) : le monogramme apparaît, la température affichée descend de +24 à −40 °C, puis un trou circulaire s'ouvre au centre (variable CSS animée) et découvre le héros ; version courte au retour, rien en mode calme.",
+   "animations": [
+    "chargement-orchestré",
+    "canvas-2d",
+    "masque",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "medias": {
+    "video": "medias/nelis-maquette/haut-p960.mp4"
+   },
+   "code": {
+    "js": "assets/js/main.js:244-281 ; assets/js/media.js:22-59"
+   },
+   "pieges": [
+    "le signal « prêt » (fin de l'ouverture) lance le givre et l'entrée du héros : garder ce chaînage",
+    "dendrites dessinées une seule fois à la taille de l'écran, densité de pixels plafonnée à 1,5"
+   ]
+  },
+  "urgence": {
+   "titre": "Bande d'urgence fixe",
+   "role": "barre-fixe",
+   "description": "Fine barre fixe au-dessus de la navigation : libellé d'urgence, deux numéros cliquables et statut du magasin (ouvert, fermé, réouverture) calculé sur les horaires à l'heure de Paris ; elle compte dans la hauteur d'en-tête mesurée.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "sa hauteur fait partie de --entete-h (mesurée par ResizeObserver)",
+    "44 px de haut sous 1024 px pour les cibles tactiles"
+   ]
+  },
+  "nav": {
+   "titre": "Navigation",
+   "role": "menu",
+   "description": "Barre de navigation fixe sous la bande d'urgence : logo, liens, bouton son d'ambiance, bouton Menu et bouton devis magnétique ; elle se cache en descendant et revient en remontant.",
+   "animations": [
+    "bouton-magnétique"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu téléphone plein écran avec liens en grand et bloc d'informations (adresses, téléphones) ; fermé par Échap ou le bouton.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "haut": {
+   "titre": "Héros givré en WebGL",
+   "role": "ouverture",
+   "description": "Photo produit plein cadre recouverte d'un givre en shader (OGL : bruit fractal, crêtes et cellules de Voronoï) qui pousse depuis les bords et autour du titre, puis fond le long du titre ; la souris fait fondre le givre (texture de fonte dessinée en canvas 2D qui se regèle lentement). Titre découpé en lignes qui montent, repli en givre statique sans WebGL.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "parallaxe",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "givre-webgl",
+   "code": {
+    "js": "assets/js/frost.js:1-182 ; assets/js/main.js:291-305"
+   },
+   "pieges": [
+    "position du titre passée au shader en coordonnées du héros, remesurée au redimensionnement",
+    "boucle limitée à ~45 i/s et arrêtée hors écran",
+    "erreur console sans WebGL : tester OGL avant de créer le Renderer",
+    "voile plus dense sous le texte sur téléphone pour la lisibilité"
+   ]
+  },
+  "bandeau": {
+   "titre": "Bandeau défilant",
+   "role": "manifeste",
+   "description": "Ruban de mots-clés en capitales qui défile en boucle (contenu dupliqué, xPercent −50) ; sa vitesse et son sens suivent la vitesse du défilement de la page.",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/main.js:347-357"
+   },
+   "pieges": [
+    "pas de bouton pause alors qu'il défile plus de 5 s",
+    "dupliquer le contenu une seule fois au démarrage"
+   ]
+  },
+  "cle-en-main": {
+   "titre": "Clé en main en étapes",
+   "role": "étapes",
+   "description": "Texte d'introduction dont les lignes se « dégivrent » (flou et teinte glacée qui se dissipent au défilement), photo en parallaxe, puis étapes reliées par un trait SVG qui se dessine et allume chaque étape à mesure qu'on avance.",
+   "animations": [
+    "révélation-texte",
+    "progression-fixée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:7-20 ; assets/js/main.js:307-345"
+   },
+   "pieges": [
+    "filtre blur animé sur le texte : réserver aux paragraphes courts",
+    "en mode calme, toutes les étapes allumées et le trait tracé"
+   ]
+  },
+  "service": {
+   "titre": "Trois prestations",
+   "role": "services",
+   "description": "Trois cartes (vente, location, service) qui s'inclinent sous la souris ; sur leur photo, une buée en canvas s'efface sous le curseur (« Désembuer ») et se reforme lentement.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image",
+    "canvas-2d",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/main.js:359-449"
+   },
+   "pieges": [
+    "buée seulement avec une souris",
+    "canvas à demi-résolution de la carte"
+   ]
+  },
+  "puissances": {
+   "titre": "Jauge de puissance épinglée",
+   "role": "offre",
+   "description": "Section épinglée : une jauge verticale en échelle logarithmique monte palier par palier au défilement (chaque palier affiche sa plage, sa photo et son texte, la valeur entre en glissant), puis bascule en mode « gel » au dernier palier en température négative.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:22-53"
+   },
+   "pieges": [
+    "colonne en 100svh flex, grille en minmax(0, 1fr), jauge en height: 100 % (max 580 px) : rien de coupé de 640 à 1080 px de haut",
+    "épinglage seulement à partir de 1024 px ; liste lisible en dessous"
+   ]
+  },
+  "applications": {
+   "titre": "Galerie qui refroidit",
+   "role": "galerie",
+   "description": "Galerie horizontale épinglée : la piste de cartes photo défile avec la molette et chaque carte passe d'un ton chaud à un ton froid quand elle traverse l'écran (variable --froid calculée à la position) ; une dernière carte liste les autres applications. Sur téléphone, défilement natif avec le même effet.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:55-81"
+   },
+   "pieges": [
+    "section en colonne flex de 100svh, piste flex: 0 1 auto; min-height: 0, cartes max-height: 100 %, légende flex: none",
+    "--froid lu pendant le défilement par getBoundingClientRect : préférer la progression du ScrollTrigger",
+    "téléphone : première carte collée au bord"
+   ]
+  },
+  "telemaintenance": {
+   "titre": "Écran de supervision",
+   "role": "outil-interactif",
+   "description": "Faux écran de supervision étiqueté « données illustratives » : trois indicateurs, courbes SVG de départ et de retour qui avancent toutes les 1,4 s et journal d'événements horodaté qui s'enrichit ; tout s'arrête hors écran.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:83-124"
+   },
+   "pieges": [
+    "étiqueter les données comme illustratives",
+    "minuteurs coupés par IntersectionObserver"
+   ]
+  },
+  "preuves": {
+   "titre": "Preuves chiffrées",
+   "role": "chiffres",
+   "description": "Photo collante à gauche et grille de quatre preuves chiffrées à droite, dont les nombres comptent à l'arrivée.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "fin de sticky normale à 1000×560"
+   ]
+  },
+  "gammes": {
+   "titre": "Gammes en stock",
+   "role": "produits",
+   "description": "Trois cartes produit qui s'inclinent sous la souris, photo révélée de bas en haut, liste de caractéristiques et lien.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Carte en points et agences",
+   "role": "carte",
+   "description": "Carte de deux pays dessinée en points sur canvas 2D (points placés par test d'appartenance aux polygones), qui scintillent ; un arc relie les deux agences et des ondes partent de chacune ; à côté, coordonnées et horaires avec statut ouvert ou fermé.",
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/home.js:126-200"
+   },
+   "pieges": [
+    "couleurs et police des étiquettes écrites en dur dans le canvas : les lire dans les variables",
+    "redessiner après document.fonts.ready",
+    "points recalculés au redimensionnement"
+   ]
+  },
+  "devis": {
+   "titre": "Devis en quatre étapes",
+   "role": "calculateur",
+   "description": "Formulaire par étapes simulé : choix du besoin, curseurs de puissance (échelle logarithmique), de température et de durée, coordonnées ; un récapitulatif et une orientation vers une gamme sont calculés en direct, avec erreurs à côté des champs et mention « rien n'est envoyé ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/form.js:1-171"
+   },
+   "pieges": [
+    "présélection lue dans l'adresse ou le bouton d'origine",
+    "étape 1 sans message quand rien n'est choisi"
+   ]
+  },
+  "pied": {
+   "titre": "Pied de page à slogan détouré",
+   "role": "pied-de-page",
+   "description": "Appel en grand avec une seconde ligne en lettres détourées, bouton devis, puis colonnes d'adresses, horaires et navigation sur fond de givre.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "marge du bas égale à --barres-h"
+   ]
+  },
+  "barre-bas": {
+   "titre": "Barre d'actions du bas",
+   "role": "barre-fixe",
+   "description": "Barre fixe sur téléphone avec le bouton devis et l'appel d'urgence, masquée par IntersectionObserver sur le héros, le devis et le pied de page ; sa hauteur est mesurée dans --barres-h.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "ajouter --barres-h au bas du pied de page"
+   ]
+  },
+  "thermo": {
+   "titre": "Thermomètre de lecture",
+   "role": "decor",
+   "description": "Petit thermomètre fixe en bas à gauche : sa colonne descend et la température affichée passe de +24 à −40 °C avec la progression de la page ; il apparaît après le premier écran et disparaît en fin de page.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/main.js:123-134"
+   },
+   "pieges": [
+    "masqué sur téléphone",
+    "valeur lue depuis le défilement de Lenis quand il est actif"
+   ]
+  },
+  "curseur": {
+   "titre": "Curseur à anneau",
+   "role": "decor",
+   "description": "Anneau qui suit la souris avec une étiquette contextuelle au survol des zones marquées ; curseur natif dans les champs et au toucher.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "seulement avec une souris"
+   ],
+   "sans_capture": true
+  },
+  "404-hero": {
+   "titre": "Page introuvable",
+   "role": "page-404",
+   "description": "Tête de page 404 sur photo sombre avec titre découpé, retour à l'accueil et numéro d'urgence.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "pied-haut": {
+   "titre": "Appel avant le pied de page",
+   "role": "appel",
+   "description": "Bandeau d'appel en grand titre avec seconde ligne détourée et bouton devis, placé au-dessus du pied de page des pages intérieures.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "groupes-eau-glacee-hero": {
+   "titre": "Héros givré de page produit",
+   "role": "ouverture",
+   "description": "Même héros givré en WebGL que l'accueil, sur une photo produit, avec fil d'Ariane et deux boutons.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "variante de nelis-maquette/haut"
+   ]
+  },
+  "groupes-eau-glacee-principe": {
+   "titre": "Schéma de principe épinglé",
+   "role": "méthode",
+   "description": "Section épinglée : un schéma SVG du circuit frigorifique à côté d'une liste d'étapes ; à chaque palier de défilement, l'étape s'allume et seuls les composants et flux concernés restent pleinement visibles. Sur téléphone, les étapes défilent seules toutes les 3,2 s.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/eau.js:1-45"
+   },
+   "pieges": [
+    "composants et flux reliés aux étapes par data-c et data-s",
+    "en mode calme, tout est allumé",
+    "transition CSS posée en JS sur l'opacité des flux : une seule source par propriété"
+   ]
+  },
+  "groupes-eau-glacee-mesure-titre": {
+   "titre": "Blocs texte et photo alternés",
+   "role": "méthode",
+   "description": "Trois blocs alternant photo en parallaxe et texte (sur mesure, essai, raccordement), titres révélés ligne par ligne.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "groupes-eau-glacee-fluides-titre": {
+   "titre": "Fluides et encadré réglementaire",
+   "role": "offre",
+   "description": "Texte d'explication à côté d'un encadré réglementaire marqué « à valider ».",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "groupes-eau-glacee-dispo-titre": {
+   "titre": "Quatre chiffres de disponibilité",
+   "role": "chiffres",
+   "description": "Rangée de quatre chiffres clés en grand avec une phrase d'explication sous chacun.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "groupes-eau-glacee-modeles-titre": {
+   "titre": "Gamme à compléter",
+   "role": "produits",
+   "description": "Trois cartes de modèles avec étiquette « à compléter » en attendant les données du client.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "groupes-eau-glacee-appel": {
+   "titre": "Appel de page produit",
+   "role": "appel",
+   "description": "Bandeau court avec question et bouton devis présélectionné.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "location-hero": {
+   "titre": "Héros chaleur qui se fige",
+   "role": "ouverture",
+   "description": "La photo du héros ondule d'abord comme sous la chaleur (filtre SVG turbulence et déplacement animés), l'ondulation retombe et l'image se désature, puis le givre WebGL pousse.",
+   "animations": [
+    "webgl-shader",
+    "filtre-anime",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/location.js:7-20 ; assets/js/frost.js:1-182"
+   },
+   "pieges": [
+    "filtre SVG coûteux : le retirer à la fin de l'animation",
+    "givre lancé après 1,5 s pour laisser la chaleur se figer"
+   ]
+  },
+  "location-scenarios": {
+   "titre": "Scénarios en onglets",
+   "role": "offre",
+   "description": "Onglets verticaux de situations, navigables aux flèches, Début et Fin : la photo change par un cercle qui s'ouvre depuis la gauche (clip-path) et le texte s'efface puis entre en glissant.",
+   "animations": [
+    "masque",
+    "révélation-image"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/location.js:22-66"
+   },
+   "pieges": [
+    "motif d'onglets accessible : role tab, aria-selected, tabindex itinérant",
+    "textes des onglets dans le JS : les garder dans le HTML"
+   ]
+  },
+  "location-parc": {
+   "titre": "Parc avec jauges logarithmiques",
+   "role": "produits",
+   "description": "Liste d'équipements avec, pour chacun, une jauge horizontale qui montre sa plage de puissance sur une échelle logarithmique commune et se déploie à l'arrivée ; photo collante à côté.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/location.js:68-77"
+   },
+   "pieges": [
+    "largeur minimale de jauge pour les plages très étroites"
+   ]
+  },
+  "location-techno": {
+   "titre": "Atouts en orbite",
+   "role": "preuves",
+   "description": "Atouts placés en ellipse autour d'une photo produit ; l'ellipse tourne doucement avec le défilement. Sous 1024 px, simple liste.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/location.js:79-96"
+   },
+   "pieges": [
+    "positions recalculées au redimensionnement",
+    "vérifier que les étiquettes ne se chevauchent pas aux formats bas"
+   ]
+  },
+  "location-stock": {
+   "titre": "Raccords qui s'assemblent",
+   "role": "services",
+   "description": "Photo en parallaxe et liste d'accessoires dont chaque ligne « se raccorde » (deux demi-pièces qui se rejoignent) l'une après l'autre à l'arrivée.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "location-apps-loc": {
+   "titre": "Applications filtrables",
+   "role": "services",
+   "description": "Longue liste d'applications en colonnes avec boutons de filtre (aria-pressed) qui estompent les entrées hors catégorie sans les retirer.",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "location-appel": {
+   "titre": "Appel d'aide rapide",
+   "role": "appel",
+   "description": "Bandeau avec question, numéro d'urgence en grand et mention des horaires.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "location-configurateur": {
+   "titre": "Configurateur de location",
+   "role": "calculateur",
+   "description": "Même formulaire par étapes que le devis de l'accueil, présélectionné sur la location, avec durée en semaines.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "variante de nelis-maquette/devis"
+   ]
+  },
+  "mentions-legales-hero": {
+   "titre": "Tête des mentions légales",
+   "role": "ouverture",
+   "description": "Tête de page courte sur photo sombre avec titre et mention des champs à compléter.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "mentions-legales-section": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions en tableaux clé et valeur par rubrique (éditeur, hébergement, propriété intellectuelle, données), étiquettes « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  }
+ }
+}

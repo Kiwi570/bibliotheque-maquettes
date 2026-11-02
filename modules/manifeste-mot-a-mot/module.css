@@ -1,0 +1,9 @@
+/* Manifeste mot à mot — identité uniquement par les variables du socle. */
+.mmm { position: relative; overflow: hidden; isolation: isolate; padding-block: clamp(80px, 16vh, 200px); }
+.mmm__fond { position: absolute; inset: -12% 0; z-index: -1; opacity: .38; }
+.mmm__fond > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mmm__fond::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--couleur-fond), transparent 30%, transparent 70%, var(--couleur-fond)); }
+.mmm__cadre { display: grid; gap: clamp(20px, 3vh, 36px); }
+.mmm__texte { font-family: var(--police-titres); font-weight: 700; text-transform: uppercase; font-size: clamp(1.8rem, 4.4vw, 4.4rem); line-height: 1.04; letter-spacing: -.005em; max-width: 22ch; padding-block: .08em; text-wrap: balance; }
+.mmm__mot { display: inline; }
+.mmm__signature { font-family: var(--police-mono); font-size: max(12px, .85rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }

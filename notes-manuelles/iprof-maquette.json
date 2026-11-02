@@ -1,0 +1,838 @@
+{
+ "maquette": {
+  "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+  "activite": [
+   "formation",
+   "numérique"
+  ],
+  "concept": [
+   "cahier"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "--paper",
+   "texte": "--graphite",
+   "accent": "--ink",
+   "secondaire": "--red"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Atkinson Hyperlegible Next",
+   "mono": null,
+   "manuscrite": "Caveat"
+  },
+  "points_forts": [
+   "univers du cahier à petits carreaux avec marge rouge",
+   "photo révélée par une tache d'encre WebGL",
+   "jargon barré au stylo rouge et traduit à la main",
+   "fiches de conseils filtrées et retournées (Flip)",
+   "calculateur de prix écrit à la main"
+  ],
+  "reserves": [
+   "ouverture sage, sans moment fort",
+   "légendes manuscrites coupées par des points de suspension"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "webgl-shader",
+   "masque",
+   "section-fixée",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "flip",
+   "filtre-anime",
+   "compteur",
+   "parallaxe",
+   "apparition-au-défilement",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "filtres",
+   "calculateur",
+   "formulaire-par-étapes",
+   "réservation-simulee",
+   "mode-calme"
+  ],
+  "dependances": [
+   "gsap",
+   "scrolltrigger",
+   "splittext",
+   "flip",
+   "lenis",
+   "ogl",
+   "canvas"
+  ],
+  "change_depuis_audit": "Commit a725ee6 postérieur à la correction (4d8670f) : visuels remplacés par les images Grok définitives et textes alternatifs mis à jour, sans changement de mise en page ni de code ; vérifié en ligne le 02/11/2026.",
+  "accueil": "hero"
+ },
+ "sections": {
+  "margin-line": {
+   "titre": "Ligne de marge du cahier",
+   "role": "decor",
+   "description": "Trait rouge vertical fixé à gauche, comme la marge d'une copie d'écolier, qui accompagne toute la page.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "pen": {
+   "titre": "Curseur plume",
+   "role": "decor",
+   "description": "Curseur en forme de plume qui suit la souris et s'incline selon la vitesse ; curseur natif dans les champs et au toucher.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "seulement avec une souris"
+   ],
+   "sans_capture": true
+  },
+  "inktrail": {
+   "titre": "Traînée d'encre",
+   "role": "decor",
+   "description": "Canvas 2D plein écran qui dessine une traînée d'encre derrière la plume, qui s'efface en quelques dixièmes de seconde.",
+   "animations": [
+    "canvas-2d",
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "chargée après l'ouverture, seulement avec une souris",
+    "s'arrête quand l'onglet est caché"
+   ],
+   "sans_capture": true
+  },
+  "site-header": {
+   "titre": "En-tête à logo écrit à la plume",
+   "role": "menu",
+   "description": "En-tête collant sur une ligne : logo révélé de gauche à droite par un clip-path au premier chargement, liens soulignés d'un trait manuscrit pour la page en cours et bouton d'appel ; il prend une ombre dès qu'on défile.",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran sur fond papier, liens en grand corps, contacts en pied ; fermé par Échap ou le bouton, refermé si la fenêtre s'élargit pour ne pas laisser la page inerte.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "refermer le menu au passage en grand écran, sinon la page reste inerte"
+   ]
+  },
+  "comfort": {
+   "titre": "Onglet « Confort de lecture »",
+   "role": "outil-interactif",
+   "description": "Onglet vertical fixé au bord gauche avec deux boutons à état (aria-pressed) : mode calme, qui coupe animations, curseur et défilement adouci, et « A+ », qui agrandit le texte et relance les mesures ; les deux choix sont mémorisés.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "après « A+ », retracer les annotations SVG et lancer ScrollTrigger.refresh()"
+   ]
+  },
+  "callbar": {
+   "titre": "Barre d'appel du bas (téléphone)",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas sur téléphone avec appel et rendez-vous, masquée sur l'ouverture, le formulaire, le pied de page et le menu ouvert ; sa hauteur est mesurée en JS.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "hauteur mesurée dans une variable et marge du bas égale, pour ne rien cacher"
+   ]
+  },
+  "sheet": {
+   "titre": "Feuille qui glisse entre les pages",
+   "role": "transition-de-page",
+   "description": "Au clic sur un lien interne, une feuille de papier monte du bas en 0,55 s en portant le nom de la page d'arrivée en manuscrit, puis se retire vers le haut sur la nouvelle page ; un indicateur en sessionStorage fait démarrer la page couverte, et le retour arrière (pageshow) la retire aussitôt.",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "code": {
+    "js": "assets/js/site.js:197-226"
+   },
+   "pieges": [
+    "comparer des chemins normalisés (sans .html ni index) pour ne pas lancer la transition vers la page en cours",
+    "pas de transition en mode calme ni avec une touche de modification enfoncée"
+   ]
+  },
+  "hero": {
+   "titre": "Photo révélée par une tache d'encre",
+   "role": "ouverture",
+   "description": "Ouverture en deux colonnes : titre découpé en lignes qui montent sous un masque, mots manuscrits écrits par clip-path, puis une photo collée d'un ruban dont la révélation suit une tache d'encre qui s'étend (shader OGL à bruit fractal, 2,4 s) ; un post-it tombe, un tampon s'imprime et une réglette d'informations se déroule.",
+   "animations": [
+    "ouverture-orchestrée",
+    "webgl-shader",
+    "révélation-texte",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "code": {
+    "js": "assets/js/ink.js:1-122 ; assets/js/site.js:28-36,474-501"
+   },
+   "pieges": [
+    "l'audit juge l'ouverture sage : la tache d'encre est la signature, mettre le moment fort sur elle",
+    "repli sans WebGL testé avant de créer le Renderer (aucune erreur console)",
+    "le contexte WebGL est libéré (WEBGL_lose_context) à la fin de la révélation",
+    "couleurs du papier et de l'encre en dur dans ink.js : les lire dans les variables"
+   ]
+  },
+  "offers": {
+   "titre": "Deux façons d'aider",
+   "role": "offre",
+   "description": "Deux fiches photo qui tombent sur la page en tournant légèrement, photos qui se « développent » comme un tirage à l'entrée et légendes manuscrites.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "jargon": {
+   "titre": "Jargon corrigé au stylo rouge",
+   "role": "méthode",
+   "description": "La colonne de titre reste épinglée pendant que défile une liste de termes techniques : chacun est barré d'un trait rouge (background-size) puis sa traduction en mots simples s'écrit à la main dessous (clip-path), au rythme de la molette sur ordinateur, d'un coup sur téléphone.",
+   "animations": [
+    "section-fixée",
+    "révélation-texte",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:100-122",
+    "js": "assets/js/site.js:544-555"
+   },
+   "pieges": [
+    "épinglage de la tête avec pinSpacing: false et un départ calé sur la hauteur mesurée de l'en-tête",
+    "sur téléphone, déclenchement unique (once) au lieu du scrub"
+   ]
+  },
+  "piliers": {
+   "titre": "Galerie horizontale de polaroïds",
+   "role": "galerie",
+   "description": "Section épinglée dont la piste de piliers défile à l'horizontale ; chaque photo se redresse de ±6° vers ±1° en entrant (containerAnimation), légendes manuscrites ; la dernière carte appelle au rendez-vous.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:557-566"
+   },
+   "pieges": [
+    "utilise encore anticipatePin : à retirer (à-coup à l'entrée)",
+    "départ « center 55% » : vérifier que tout tient dans l'écran sous l'en-tête aux écrans bas",
+    "légendes manuscrites coupées par des points de suspension (défaut restant) : laisser passer à la ligne"
+   ]
+  },
+  "zone": {
+   "titre": "Carte dessinée de la zone d'intervention",
+   "role": "carte",
+   "description": "Carte SVG du lac : la rive se trace (DrawSVG), l'eau et la zone surlignée apparaissent, les villes surgissent une à une, flèches et notes manuscrites se dessinent, puis une bulle « en visio » s'ouvre ; photo panoramique dessous.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:568-580"
+   },
+   "pieges": [
+    "dépend de DrawSVGPlugin",
+    "zone et étiquettes marquées « indicatives »"
+   ]
+  },
+  "prof": {
+   "titre": "Portrait du professeur",
+   "role": "équipe",
+   "description": "Portrait photo collé, années d'expérience en compteur manuscrit, citation, langues en étiquettes et signature, avec lien vers le parcours.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "tt": {
+   "titre": "Tarif écrit à la main",
+   "role": "tarifs",
+   "description": "Fiche de prix dont les chiffres s'écrivent l'un après l'autre par un clip-path de gauche à droite (décalage de 0,28 s), anciens montants barrés, photo d'un carnet ; lien vers les tarifs.",
+   "animations": [
+    "révélation-texte",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:594-599"
+   },
+   "pieges": [
+    "prix jamais coupés : réserver la largeur finale avant l'écriture"
+   ]
+  },
+  "site-footer": {
+   "titre": "Pied de page à numéro entouré",
+   "role": "pied-de-page",
+   "description": "Grand appel avec numéro de téléphone entouré d'un trait manuscrit SVG qui se dessine (tracé calculé sur la taille du texte), boutons Copier le numéro et l'e-mail, photo et liens de pages.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": [
+    "recalculer le tracé de l'entourage après chargement des polices et au redimensionnement"
+   ]
+  },
+  "404-hero": {
+   "titre": "404 du cahier",
+   "role": "page-404",
+   "description": "Tête de page d'erreur au gabarit des pages intérieures : titre en lignes masquées, photo révélée à l'encre, retour à l'accueil et appel.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "a-propos-hero": {
+   "titre": "Tête de page intérieure",
+   "role": "ouverture",
+   "description": "Tête de page intérieure en deux colonnes : titre en lignes masquées, phrase surlignée au fluo, photo révélée par la tache d'encre WebGL.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "a-propos-bio": {
+   "titre": "Parcours en fiches",
+   "role": "équipe",
+   "description": "Portrait et signature à gauche, quatre petites fiches de rôles qui tombent sur la page à droite, avec une note de bas de fiche.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "a-propos-why": {
+   "titre": "Citation surlignée mot à mot",
+   "role": "manifeste",
+   "description": "Longue citation découpée en mots : un surlignage fluo (background-size) passe sur chaque mot au rythme du défilement, à côté d'une photo collée et d'une note manuscrite.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:615-617"
+   },
+   "pieges": [
+    "surlignage en background-size, pas en couleur : le texte reste lisible à tout moment"
+   ]
+  },
+  "a-propos-langs-sec": {
+   "titre": "Langues parlées",
+   "role": "preuves",
+   "description": "Trois salutations manuscrites qui tombent en tournant l'une après l'autre (back.out).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "conseils-hero": {
+   "titre": "Tête de page « Conseils »",
+   "role": "ouverture",
+   "description": "Tête de page intérieure courte : titre en lignes masquées, mot souligné, photo révélée à l'encre et bouton d'appel.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "conseils-guide": {
+   "titre": "Fiches de conseils filtrées et retournées",
+   "role": "services",
+   "description": "Boutons de filtre à état (aria-pressed) qui réorganisent la grille de fiches par Flip (sorties en fondu réduit, entrées en grossissant) ; chaque fiche se retourne en 3D pour montrer son dos, la face cachée étant rendue inerte ; un lien profond (#fiche) ouvre la fiche retournée.",
+   "animations": [
+    "flip",
+    "filtre-anime",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:307-343"
+   },
+   "pieges": [
+    "face cachée en inert et focus déplacé sur l'autre face après le retournement",
+    "ScrollTrigger.refresh() à la fin du Flip (la hauteur change)",
+    "le sujet choisi passe au formulaire de contact par sessionStorage"
+   ]
+  },
+  "conseils-indep": {
+   "titre": "Avis indépendant",
+   "role": "manifeste",
+   "description": "Bloc texte et photo collée en deux colonnes, titre en lignes masquées.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "contact-hero": {
+   "titre": "Numéro entouré",
+   "role": "contact",
+   "description": "Tête de page contact : numéro de téléphone en très grand, entouré d'un trait manuscrit qui se dessine, boutons Copier, coordonnées en liste et photo révélée à l'encre.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": [
+    "coordonnées en texte sélectionnable, copie avec repli execCommand"
+   ]
+  },
+  "contact-rendez-vous": {
+   "titre": "Rendez-vous en trois étapes",
+   "role": "contact",
+   "description": "Formulaire simulé en trois pages qui tournent comme des feuilles (rotationY), étapes signalées (aria-current), focus posé sur la page suivante, erreurs à côté des champs, récapitulatif final en liste de définitions et bouton pour recommencer.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "contact.html:74-133",
+    "js": "assets/js/site.js:386-455"
+   },
+   "pieges": [
+    "récapitulatif construit avec textContent, jamais innerHTML de saisie",
+    "sujet présélectionné depuis la page Conseils (sessionStorage)"
+   ]
+  },
+  "cours-individuels-hero": {
+   "titre": "Tête de page « Cours »",
+   "role": "ouverture",
+   "description": "Tête de page intérieure : titre en lignes masquées, mots surlignés au fluo, tampon qui s'imprime et photo révélée à l'encre.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "cours-individuels-stackcards": {
+   "titre": "Fiches empilées",
+   "role": "méthode",
+   "description": "Trois grandes fiches collantes (position: sticky, décalées de 16 px) : quand la suivante arrive, la précédente rétrécit à 94 % et pivote d'un degré, au rythme du défilement ; empilement simple sur téléphone.",
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:606-613"
+   },
+   "pieges": [
+    "fin du scrub calculée sur la hauteur mesurée de l'en-tête plus 16 px par fiche",
+    "fiches tenues dans l'écran dès 1000×560 (corrigé à l'audit)"
+   ]
+  },
+  "cours-individuels-xp": {
+   "titre": "Expérience",
+   "role": "preuves",
+   "description": "Photo collée et citation sur l'expérience, en deux colonnes, titre en lignes masquées.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-individuels-steps": {
+   "titre": "Étapes qui se cochent",
+   "role": "étapes",
+   "description": "Liste d'étapes avec cases qui se cochent d'un trait manuscrit quand chacune atteint les deux tiers de l'écran, à côté d'une photo collée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/site.js:601-604"
+   },
+   "pieges": []
+  },
+  "cours-individuels-visio": {
+   "titre": "Cours en visioconférence",
+   "role": "services",
+   "description": "Texte à gauche et croquis SVG d'un écran de visio dont les traits se dessinent dans un ordre aléatoire (DrawSVG) sur des lavis qui s'étalent.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "cours-individuels-topics": {
+   "titre": "Sujets possibles",
+   "role": "services",
+   "description": "Tableau de sujets en cases à côté d'une photo collée, titre en lignes masquées.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "mentions-legales-hero": {
+   "titre": "Tête des mentions légales",
+   "role": "ouverture",
+   "description": "Tête de page courte : titre en lignes masquées, phrase sur les champs à compléter, photo révélée à l'encre.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "mentions-legales-legal": {
+   "titre": "Mentions en fiches",
+   "role": "texte-legal",
+   "description": "Mentions légales en fiches de cahier (éditeur, confidentialité, marques, crédits), champs manquants hachurés « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "pieges": []
+  },
+  "tarifs-calculateur": {
+   "titre": "Calculateur écrit à la main",
+   "role": "calculateur",
+   "description": "Choix du lieu (domicile ou distance) en boutons segmentés et compteurs ± pour les heures et les visites ; sur une fiche de cahier à droite, le détail du calcul se réécrit à la main ligne par ligne (clip-path), le total rebondit comme un tampon et l'économie du forfait s'affiche ; estimation marquée « illustratif ».",
+   "animations": [
+    "révélation-texte",
+    "masque"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "tarifs.html:76-104",
+    "js": "assets/js/site.js:345-384"
+   },
+   "pieges": [
+    "bornes min et max imposées après chaque saisie, visites limitées au nombre d'heures",
+    "ligne des visites désactivée (disabled) quand le cours est à distance",
+    "total et détail annoncés aux lecteurs d'écran (aria-live polite sur la fiche de calcul)"
+   ]
+  },
+  "tarifs-hero": {
+   "titre": "Tête de page « Tarifs »",
+   "role": "ouverture",
+   "description": "Tête de page intérieure : titre en lignes masquées, phrase soulignée d'un trait manuscrit rouge et photo collée révélée par la tache d'encre WebGL.",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "dependances": [
+    "gsap",
+    "splittext",
+    "ogl"
+   ],
+   "pieges": []
+  },
+  "tarifs-prices": {
+   "titre": "Trois fiches de prix",
+   "role": "tarifs",
+   "description": "Trois fiches de prix qui tombent sur la page et s'inclinent sous la souris ; les montants s'écrivent à la main l'un après l'autre (clip-path), la fiche mise en avant porte un tampon d'économie, et une note hachurée signale le rabais à confirmer.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "tarifs.html:64-74",
+    "js": "assets/js/site.js:536-541,594-599"
+   },
+   "pieges": [
+    "montants en manuscrit : réserver la largeur finale pour qu'ils ne passent pas à la ligne pendant l'écriture",
+    "même mécanique que la fiche de prix de l'accueil (tt)"
+   ]
+  },
+  "tarifs-pay": {
+   "titre": "Moyens de paiement en tampons",
+   "role": "preuves",
+   "description": "Moyens de paiement en tampons encreurs qui s'impriment l'un après l'autre (grossissement puis petit rebond), à côté d'une photo collée en parallaxe.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

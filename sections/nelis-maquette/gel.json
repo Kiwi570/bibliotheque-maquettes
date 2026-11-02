@@ -1,0 +1,49 @@
+{
+ "id": "nelis-maquette/gel",
+ "maquette": "nelis-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "groupes-eau-glacee",
+  "location",
+  "mentions-legales"
+ ],
+ "titre": "Ouverture « gel »",
+ "role": "ouverture",
+ "description": "Écran plein cadre couvert de givre dessiné en canvas 2D (dendrites générées à partir d'une graine) : le monogramme apparaît, la température affichée descend de +24 à −40 °C, puis un trou circulaire s'ouvre au centre (variable CSS animée) et découvre le héros ; version courte au retour, rien en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "canvas-2d",
+  "masque",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:31-38",
+  "css": "assets/css/style.css:112-120,710,722",
+  "js": "assets/js/main.js:244-281 ; assets/js/media.js:22-59"
+ },
+ "medias": {
+  "video": "medias/nelis-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "le signal « prêt » (fin de l'ouverture) lance le givre et l'entrée du héros : garder ce chaînage",
+  "dendrites dessinées une seule fois à la taille de l'écran, densité de pixels plafonnée à 1,5"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

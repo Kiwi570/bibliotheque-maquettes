@@ -1,0 +1,54 @@
+{
+ "nom": "carte-itineraire-collante",
+ "titre": "Liste d'étapes et carte SVG collante dont le tracé avance d'étape en étape",
+ "role": "étapes",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": "instinct-aventure-maquette/grande-aventure-jours",
+ "convient_a": [
+  "tourisme",
+  "sport",
+  "formation",
+  "conseil",
+  "bâtiment",
+  "industrie",
+  "culture",
+  "hébergement",
+  "collectivité",
+  "association"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "clair",
+  "artisanal",
+  "végétal",
+  "sobre",
+  "montagne"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "lecture": "ligne de lecture ScrollTrigger, '62%'",
+  "duree": "avancée du tracé en s, 1.2",
+  "tension": "courbure du tracé, 0.5 (0 = segments droits)",
+  "largeurMin": "900 : en dessous, carte dans le flux et barre « Étape n / total » en bas"
+ },
+ "poids_ko": 13.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

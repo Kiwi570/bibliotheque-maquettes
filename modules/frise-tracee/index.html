@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Frise tracée et compteurs · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #0b2230; --couleur-texte: #eaf4f4; --couleur-accent: #d9cf14; --couleur-secondaire: #2468c0; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : les chiffres montent, puis la frise se dessine.</p>
+  </section>
+
+  <section class="frt" data-module="frise-tracee" aria-labelledby="frt-titre">
+    <div class="socle-cadre">
+      <p class="socle-surtitre">Histoire</p>
+      <h2 class="frt__titre" id="frt-titre">Titre de la section</h2>
+      <div class="frt__chiffres">
+        <p class="frt__chiffre"><span class="frt__n" data-compte="136">136</span><span class="frt__l">un libellé court sous le chiffre</span></p>
+        <p class="frt__chiffre"><span class="frt__n" data-compte="8257" data-suffixe=" €">8 257 €</span><span class="frt__l">un deuxième libellé court</span></p>
+        <p class="frt__chiffre"><span class="frt__n" data-compte="13">13</span><span class="frt__l">un troisième libellé</span></p>
+      </div>
+      <ol class="frt__frise">
+        <svg class="frt__trait" aria-hidden="true" preserveAspectRatio="none"><path d=""/></svg>
+      <li class="frt__etape">
+        <span class="frt__annee">1998</span>
+        <div class="frt__corps"><h3>Titre de la première étape</h3><p>Un paragraphe de deux lignes qui raconte ce qui s'est passé cette année-là, sans détour.</p></div>
+        <figure class="frt__visuel"><span class="socle-visuel"></span><figcaption>Légende de l'image · 1998</figcaption></figure>
+      </li>
+      <li class="frt__etape">
+        <span class="frt__annee">2006</span>
+        <div class="frt__corps"><h3>Titre de la deuxième étape</h3><p>Un paragraphe de deux lignes qui raconte ce qui s'est passé cette année-là, sans détour.</p></div>
+        <figure class="frt__visuel"><span class="socle-visuel socle-visuel--2"></span><figcaption>Légende de l'image · 2006</figcaption></figure>
+      </li>
+      <li class="frt__etape">
+        <span class="frt__annee">2015</span>
+        <div class="frt__corps"><h3>Titre de la troisième étape</h3><p>Un paragraphe de deux lignes qui raconte ce qui s'est passé cette année-là, sans détour.</p></div>
+        <figure class="frt__visuel"><span class="socle-visuel socle-visuel--3"></span><figcaption>Légende de l'image · 2015</figcaption></figure>
+      </li>
+      <li class="frt__etape">
+        <span class="frt__annee">2024</span>
+        <div class="frt__corps"><h3>Titre de la quatrième étape</h3><p>Un paragraphe de deux lignes qui raconte ce qui s'est passé cette année-là, sans détour.</p></div>
+        <figure class="frt__visuel"><span class="socle-visuel"></span><figcaption>Légende de l'image · 2024</figcaption></figure>
+      </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sans JavaScript et en mode calme, chiffres et frise sont affichés dans leur état final.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="frise-tracee"]')) init(el);
+</script>
+</body>
+</html>

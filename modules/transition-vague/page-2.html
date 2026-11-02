@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Deuxième page · transition en vague · module</title>
+<script>
+  /* Script critique du module transition-vague : à placer dans le head, avant les feuilles de style. */
+  (function (h) {
+    var calme = /[?&]calme\b/.test(location.search);
+    try { calme = calme || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    try { if (!calme && sessionStorage.getItem('tv-voile') === '1') h.classList.add('tv-couvert'); sessionStorage.removeItem('tv-voile'); } catch (e) {}
+    setTimeout(function () { h.classList.remove('tv-couvert'); }, 2000); /* délai de secours */
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #f3f5f3; --couleur-texte: #1b2c34; --couleur-accent: #c9673f; --couleur-secondaire: #20394a; --voile-texte: #eef2f0; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1.2rem; padding-block: 10vh; }
+  .demo-bloc h1 { font-size: clamp(2.4rem, 7vw, 5.6rem); }
+  .demo-liens { display: flex; flex-wrap: wrap; gap: 12px; }
+  .demo-visuel { aspect-ratio: 16 / 7; border-radius: var(--rayon); }
+  .demo-nav { display: flex; gap: 4px; }
+  .demo-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; }
+  .demo-nav a[aria-current] { color: var(--couleur-accent); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete>
+  <nav class="demo-nav" aria-label="Pages de démonstration"><a href="index.html">Page 1</a><a href="page-2.html" aria-current="page">Page 2</a></nav>
+  <button type="button" data-calme>Mode calme</button>
+</header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Page 2 sur 2</p>
+    <h1>Deuxième page</h1>
+    <p>Un paragraphe de deux lignes. Cliquez sur le lien ci-dessous : une vague monte, couvre l'écran, la page change, puis la vague se retire vers le haut.</p>
+    <p class="demo-liens">
+      <a class="socle-bouton socle-bouton--plein" href="index.html" data-voile-nom="Page 1">Aller à la page 1</a>
+      <a class="socle-bouton" href="#suite">Lien vers la suite de la page</a>
+      <a class="socle-bouton" href="page-2">Lien vers cette page</a>
+    </p>
+  </section>
+  <section class="demo-bloc socle-cadre" id="suite">
+    <div class="demo-visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+    <h2>Titre de la section</h2>
+    <p>Les ancres de la même page défilent sans voile ; un lien vers la page en cours ne recharge rien.</p>
+  </section>
+</main>
+<div class="tv" data-module="transition-vague" aria-hidden="true">
+  <svg class="tv__vague" viewBox="0 0 1440 120" preserveAspectRatio="none" focusable="false"><path fill="currentColor" d="M0 120 C 240 120 480 120 720 120 S 1200 120 1440 120 V 120 H 0 Z"/></svg>
+  <div class="tv__corps"><span class="tv__nom"></span></div>
+</div>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="transition-vague"]'));
+</script>
+</body>
+</html>

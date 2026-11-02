@@ -1,0 +1,42 @@
+{
+ "id": "iprof-maquette/cours-individuels-stackcards",
+ "maquette": "iprof-maquette",
+ "page": "cours-individuels",
+ "titre": "Fiches empilées",
+ "role": "méthode",
+ "description": "Trois grandes fiches collantes (position: sticky, décalées de 16 px) : quand la suivante arrive, la précédente rétrécit à 94 % et pivote d'un degré, au rythme du défilement ; empilement simple sur téléphone.",
+ "animations": [
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "cours-individuels.html:65-83",
+  "css": "assets/css/site.css:154,169,191-192,323-329,511-512,591,620-623",
+  "js": "assets/js/site.js:606-613"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/cours-individuels-stackcards-p1440.jpg",
+  "capture_m390": "medias/iprof-maquette/cours-individuels-stackcards-m390.jpg",
+  "video": "medias/iprof-maquette/cours-individuels-stackcards-p960.mp4"
+ },
+ "pieges": [
+  "fin du scrub calculée sur la hauteur mesurée de l'en-tête plus 16 px par fiche",
+  "fiches tenues dans l'écran dès 1000×560 (corrigé à l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2151,
+  "hauteur_m390": 2265,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

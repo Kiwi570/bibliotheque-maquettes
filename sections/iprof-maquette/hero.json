@@ -1,0 +1,47 @@
+{
+ "id": "iprof-maquette/hero",
+ "maquette": "iprof-maquette",
+ "page": "index",
+ "titre": "Photo révélée par une tache d'encre",
+ "role": "ouverture",
+ "description": "Ouverture en deux colonnes : titre découpé en lignes qui montent sous un masque, mots manuscrits écrits par clip-path, puis une photo collée d'un ruban dont la révélation suit une tache d'encre qui s'étend (shader OGL à bruit fractal, 2,4 s) ; un post-it tombe, un tampon s'imprime et une réglette d'informations se déroule.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "révélation-texte",
+  "masque",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:51-76",
+  "css": "assets/css/site.css:64,76,83-84,157-164,182-183,472,493-498,570-575,608,615-616",
+  "js": "assets/js/ink.js:1-122 ; assets/js/site.js:28-36,474-501"
+ },
+ "medias": {
+  "capture": "medias/iprof-maquette/hero-p1440.jpg"
+ },
+ "pieges": [
+  "l'audit juge l'ouverture sage : la tache d'encre est la signature, mettre le moment fort sur elle",
+  "repli sans WebGL testé avant de créer le Renderer (aucune erreur console)",
+  "le contexte WebGL est libéré (WEBGL_lose_context) à la fin de la révélation",
+  "couleurs du papier et de l'encre en dur dans ink.js : les lire dans les variables"
+ ],
+ "mesures": {
+  "hauteur_p1440": 939,
+  "hauteur_m390": 1249,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}
