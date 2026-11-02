@@ -1,0 +1,861 @@
+{
+ "maquette": {
+  "client": "éducatrice canine et promeneuse",
+  "activite": [
+   "animaux"
+  ],
+  "concept": [
+   "carnet"
+  ],
+  "ambiance": [
+   "végétal",
+   "chaleureux",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "--creme",
+   "texte": "--encre",
+   "accent": "--jaune",
+   "secondaire": "--foret"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "laisse dorée qui serpente d'une section à l'autre avec empreintes",
+   "lumière de sous-bois en shader et balle à lancer",
+   "horloge de la balade fixée",
+   "photos révélées au flair",
+   "rideau de pattes entre les pages"
+  ],
+  "reserves": [
+   "une image du comparateur hors contexte",
+   "pages intérieures lourdes (près de 4 à 5 Mo)"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "section-fixée",
+   "galerie-horizontale",
+   "progression-fixée",
+   "parallaxe",
+   "compteur",
+   "masque",
+   "survol-image",
+   "empilement-de-fiches",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "jeu",
+   "calculateur",
+   "formulaire-par-étapes",
+   "comparateur",
+   "galerie-cliquable",
+   "lecteur-audio",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero"
+ },
+ "sections": {
+  "ouverture": {
+   "titre": "Logo tracé puis rideau qui monte",
+   "role": "ouverture",
+   "description": "Écran d'ouverture papier : le nom se dessine en contour SVG, une laisse ondulée se trace dessous, le remplissage arrive puis le sous-titre, et l'écran remonte comme un rideau pour lancer l'entrée du héros (titre découpé en lignes masquées, photo polaroïd qui tourne en montant) ; une seule fois par session, sauté en mode calme ou après une transition de page.",
+   "animations": [
+    "chargement-orchestré",
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "sessionStorage pour ne jouer qu'une fois, avec repli CSS (animation de secours à 6 s) si le JS échoue",
+    "enchaîner l'entrée du héros sur la fin de l'ouverture, sinon le titre s'anime sous l'écran",
+    "ne pas rejouer après un rideau de transition de page"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "sans_capture": true,
+   "medias": {
+    "video": "medias/apasdechien-maquette/hero-p960.mp4"
+   },
+   "code": {
+    "html": "index.html:45-51",
+    "css": "assets/css/main.css:715-724",
+    "js": "assets/js/app.js:496-546"
+   }
+  },
+  "header": {
+   "titre": "En-tête sur photo",
+   "role": "menu",
+   "description": "En-tête fixe transparent sur le héros puis opaque : logo rond, cinq liens avec soulignement de la page en cours, boutons Son et Calme, bouton d'appel jaune.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu téléphone plein écran",
+   "role": "menu",
+   "description": "Menu plein écran sur téléphone, grands liens en serif, fermeture par Échap ou bouton, défilement de la page bloqué derrière.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hero": {
+   "titre": "Sous-bois en lumière tachetée et balle à lancer",
+   "role": "ouverture",
+   "description": "Premier écran plein cadre sur photo de forêt : une lumière tachetée à travers le feuillage, animée en shader (OGL, repli CSS), bouge au vent et suit la souris ; un clic dans le décor lance une balle en canvas 2D qui rebondit avec ombre puis revient d'elle-même au bouton ; photo polaroïd scotchée et pastille de compte à rebours du prochain cours.",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "parallaxe",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "balle limitée à quatre à la fois, boucle rAF arrêtée dès qu'il n'y en a plus",
+    "lancer au clic désactivé au toucher, bouton dédié à la place",
+    "couleurs de la balle écrites en dur dans le canvas : les lire dans les variables CSS"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "splittext",
+    "ogl",
+    "canvas"
+   ],
+   "code": {
+    "html": "index.html:73-89",
+    "css": "assets/css/main.css:213-260",
+    "js": "assets/js/sousbois.js:1-92 ; assets/js/pages.js:303-370"
+   }
+  },
+  "services": {
+   "titre": "Quatre cartes de services",
+   "role": "services",
+   "description": "Quatre cartes photo inclinables au survol avec étiquette jaune, sous un titre à mot en italique.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours": {
+   "titre": "Sentier en trois étapes",
+   "role": "étapes",
+   "description": "Trois cartes numérotées reliées par un tracé SVG qui se dessine au défilement ; chaque carte s'allume quand le tracé l'atteint.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "anne": {
+   "titre": "Portrait révélé par un trait",
+   "role": "équipe",
+   "description": "Portrait rond dévoilé par un masque en dégradé qui balaie l'image comme un coup de pinceau, avec léger zoom au défilement, à côté du texte de présentation et d'un avis cité.",
+   "animations": [
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reperes": {
+   "titre": "Chiffres sur fond forêt",
+   "role": "chiffres",
+   "description": "Quatre repères chiffrés qui comptent jusqu'à leur valeur sur fond vert profond.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "temoignages": {
+   "titre": "Avis en pile",
+   "role": "témoignages",
+   "description": "Avis empilés comme des fiches légèrement tournées, que l'on fait défiler par boutons, à côté d'une photo polaroïd ; feuilles qui tombent en canvas en fond.",
+   "animations": [
+    "empilement-de-fiches",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-images": {
+   "titre": "Bande de photos révélées au flair",
+   "role": "galerie",
+   "description": "Bande horizontale de photos désaturées qui défile ; sous la souris, un cercle révèle la photo en couleur comme une truffe qui renifle, le curseur prend l'étiquette « Renifler » ; au toucher, un appui ouvre toute la couleur.",
+   "animations": [
+    "galerie-horizontale",
+    "survol-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "position du cercle en variables --x/--y sur le calque couleur, pas de reflow",
+    "au toucher, le clic remplace le survol (classe is-ouvert)"
+   ],
+   "code": {
+    "html": "index.html:183-187",
+    "css": "assets/css/main.css:318-329,396-401",
+    "js": "assets/js/app.js:315-334 ; assets/js/pages.js:206-226"
+   }
+  },
+  "zone": {
+   "titre": "Carte du lac",
+   "role": "carte",
+   "description": "Carte SVG dessinée du lac et des communes desservies, halo sur la ville et chemin tracé à l'apparition.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bilan": {
+   "titre": "Appel au bilan sur photo",
+   "role": "appel",
+   "description": "Bloc d'appel plein cadre sur photo de paysage en parallaxe, titre et bouton jaune, numéro de téléphone.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page forêt",
+   "role": "pied-de-page",
+   "description": "Pied de page vert profond, rappel du titre d'accroche en grand, colonnes de liens et coordonnées.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "barre-mobile": {
+   "titre": "Barre d'actions téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixée en bas sur téléphone avec appel, message et réservation.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "curseur": {
+   "titre": "Curseur balle",
+   "role": "decor",
+   "description": "Curseur en petite balle qui grossit sur les liens, s'élargit en loupe « Renifler » sur les photos et propose « Lancer » dans le héros.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "rideau": {
+   "titre": "Rideau de pattes entre les pages",
+   "role": "transition-de-page",
+   "description": "Transition de page : un rideau vert monte en couvrant l'écran pendant qu'une ligne d'empreintes de pattes le traverse, la page suivante s'ouvre en le faisant remonter ; restauré correctement au retour arrière (pageshow).",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "drapeau sessionStorage pour savoir que la page suivante doit lever le rideau",
+    "pageshow persisted : retirer le rideau sinon l'écran reste vert au retour arrière",
+    "liens internes seulement, pas de rideau en mode calme"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "sans_capture": true,
+   "code": {
+    "html": "index.html:254",
+    "css": "assets/css/main.css:711-714",
+    "js": "assets/js/app.js:446-495"
+   }
+  },
+  "grain": {
+   "titre": "Grain papier",
+   "role": "decor",
+   "description": "Calque de grain fixe sur toute la page pour donner une texture de papier aux aplats.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-hero": {
+   "titre": "Sentier sans issue",
+   "role": "page-404",
+   "description": "Page introuvable en héros court sur photo de forêt, titre à mot en italique et bouton de retour.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-educative-hero": {
+   "ignorer": "variante intérieure du héros, décrite dans apasdechien-maquette/hero"
+  },
+  "balade-educative-vraie-vie": {
+   "titre": "Alternance photo et texte avec herbes",
+   "role": "manifeste",
+   "description": "Texte en deux temps à côté d'une photo détourée, avec herbes qui ondulent en canvas au bas du bloc.",
+   "animations": [
+    "canvas-2d",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-educative-exercices": {
+   "titre": "Exercices illustrés en boucle",
+   "role": "services",
+   "description": "Cartes d'exercices avec photo et petit schéma SVG animé en boucle (chien qui suit un tracé, laisse qui se tend puis se relâche, vélo qui croise) ; chaque boucle est en pause hors écran.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-educative-groupes": {
+   "titre": "Collage de photos qui se compose",
+   "role": "preuves",
+   "description": "Trois photos qui arrivent de directions différentes en tournant pour former un collage, puis bougent en parallaxe, à côté d'un panneau de tarif.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-educative-tarifs": {
+   "titre": "Tarifs en panneaux de randonnée",
+   "role": "tarifs",
+   "description": "Tarifs posés sur des panneaux jaunes de randonnée qui pivotent sur leur poteau à l'apparition, à côté d'une photo.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-educative-bilan": {
+   "ignorer": "même appel que apasdechien-maquette/bilan"
+  },
+  "balade-hero": {
+   "ignorer": "variante intérieure du héros, décrite dans apasdechien-maquette/hero"
+  },
+  "balade-principe": {
+   "titre": "Principe avec photo détourée",
+   "role": "manifeste",
+   "description": "Bloc de principe en deux colonnes avec photo de chien détourée qui déborde du cadre au défilement.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-deroule": {
+   "titre": "Horloge de la balade",
+   "role": "étapes",
+   "description": "Horloge SVG fixée à gauche dont l'aiguille et un arc coloré avancent avec le défilement de 0 à 2 h, pendant que les trois moments de la balade défilent à droite et se dévoilent par le bas.",
+   "animations": [
+    "progression-fixée",
+    "section-fixée",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "horloge sticky seulement au-dessus de 980 px, en ligne au-dessus des moments en dessous",
+    "arc calculé en chemin SVG, pas en stroke-dasharray, pour garder les extrémités rondes",
+    "état final (2 h) en mode calme"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "balade.html:99-119",
+    "css": "assets/css/main.css:647-663",
+    "js": "assets/js/pages.js:458-484"
+   }
+  },
+  "balade-groupe": {
+   "ignorer": "même mécanique que apasdechien-maquette/balade-educative-groupes"
+  },
+  "balade-galerie": {
+   "titre": "Galerie et visionneuse",
+   "role": "galerie",
+   "description": "Grille de photos à révélation couleur au survol, ouvrant une visionneuse plein écran au clavier et au glissé.",
+   "animations": [
+    "survol-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "balade-visionneuse": {
+   "ignorer": "visionneuse de la galerie, décrite dans apasdechien-maquette/balade-galerie"
+  },
+  "balade-bilan": {
+   "ignorer": "même appel que apasdechien-maquette/bilan"
+  },
+  "confidentialite-bandeau-legal": {
+   "ignorer": "en-tête de page légale, décrit dans apasdechien-maquette/mentions-legales-section"
+  },
+  "confidentialite-section": {
+   "ignorer": "même gabarit que apasdechien-maquette/mentions-legales-section"
+  },
+  "contact-hero": {
+   "titre": "Héros court de contact",
+   "role": "ouverture",
+   "description": "Héros court sur photo avec lumière de sous-bois, titre à mot en italique et coordonnées directes.",
+   "animations": [
+    "webgl-shader",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-demande": {
+   "titre": "Demande de bilan en quatre étapes",
+   "role": "contact",
+   "description": "Formulaire simulé en quatre étapes à onglets numérotés, progression visible, choix en pastilles et récapitulatif final.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-horaires": {
+   "titre": "Horaires et prochain cours",
+   "role": "agenda",
+   "description": "Planning de la semaine en lignes et encart du prochain cours avec compte à rebours calculé sur le fuseau local du client.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-zone": {
+   "ignorer": "même carte que apasdechien-maquette/zone"
+  },
+  "contact-questions": {
+   "titre": "Questions en accordéon",
+   "role": "faq",
+   "description": "Questions fréquentes en accordéon, à côté d'une photo polaroïd.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "dogparkour-hero": {
+   "ignorer": "variante intérieure du héros, décrite dans apasdechien-maquette/hero"
+  },
+  "dogparkour-autrement": {
+   "titre": "Balle qui saute d'un mot à l'autre",
+   "role": "manifeste",
+   "description": "Titre géant sur lequel une balle suit au défilement une trajectoire pointillée calculée sur la position réelle de chaque mot, en rebondissant de l'un à l'autre ; les mots s'enfoncent au survol, puis trois photos en parallaxe.",
+   "animations": [
+    "progression-fixée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "trajectoire reconstruite au redimensionnement depuis getBoundingClientRect des mots",
+    "mots en inline-block pour pouvoir les animer",
+    "balle posée sur le dernier mot en mode calme"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "dogparkour.html:83-100",
+    "css": "assets/css/main.css:769-775",
+    "js": "assets/js/pages.js:548-581"
+   }
+  },
+  "dogparkour-figures": {
+   "titre": "Figures en piste horizontale épinglée",
+   "role": "galerie",
+   "description": "Section épinglée dont la piste de tuiles photo défile à l'horizontale ; sur chaque tuile, un tracé jaune (saut, slalom) se dessine quand elle arrive au centre, la photo glisse en parallaxe et une barre suit la progression ; défilement libre à aimantation sous 900 px.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "hauteur en 100svh moins --entete-h pour que la piste tienne sous l'en-tête",
+    "containerAnimation pour les déclencheurs des tuiles",
+    "rechargement si une tablette passe de part et d'autre de 900 px, sauf saisie en cours"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "dogparkour.html:102-108",
+    "css": "assets/css/main.css:471-526",
+    "js": "assets/js/pages.js:228-270"
+   }
+  },
+  "dogparkour-pour-qui": {
+   "titre": "Trois profils de chiens",
+   "role": "services",
+   "description": "Trois cartes photo de profils qui apparaissent en cascade.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "dogparkour-decors": {
+   "titre": "Comparateur forêt ou ville",
+   "role": "outil-interactif",
+   "description": "Comparateur à poignée glissable entre deux décors, qui se balance seul une fois à l'apparition puis se manipule à la souris, au doigt ou aux flèches.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "une des deux images est hors contexte (reste à remplacer selon l'audit)"
+   ]
+  },
+  "dogparkour-tarifs": {
+   "ignorer": "même mécanique que apasdechien-maquette/balade-educative-tarifs"
+  },
+  "dogparkour-bilan": {
+   "ignorer": "même appel que apasdechien-maquette/bilan"
+  },
+  "education-canine-hero": {
+   "ignorer": "variante intérieure du héros avec encart du prochain cours, décrite dans apasdechien-maquette/hero"
+  },
+  "education-canine-principe": {
+   "titre": "Trois cartes de principe",
+   "role": "services",
+   "description": "Trois cartes photo légendées qui apparaissent en cascade sous un titre court.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "education-canine-terrains": {
+   "ignorer": "même mécanique que apasdechien-maquette/dogparkour-figures"
+  },
+  "education-canine-croisements": {
+   "titre": "Pictogrammes des croisements",
+   "role": "méthode",
+   "description": "Ligne de pictogrammes sur fond forêt reliés par un tracé, pour illustrer les situations de rencontre.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "education-canine-classes": {
+   "titre": "Deux classes et prochain cours",
+   "role": "offre",
+   "description": "Présentation de deux classes avec encart du prochain cours et compte à rebours.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "education-canine-prives": {
+   "titre": "Sentier qui se dédouble",
+   "role": "offre",
+   "description": "Texte et photo détourée, avec un sentier SVG qui se trace puis se sépare en deux branches légendées.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "education-canine-tarifs": {
+   "titre": "Tarifs et calculateur",
+   "role": "calculateur",
+   "description": "Panneaux de tarifs jaunes à côté d'un calculateur de budget à quantités, total mis à jour en direct.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "education-canine-demande": {
+   "ignorer": "même formulaire que apasdechien-maquette/contact-demande"
+  },
+  "mentions-legales-bandeau-legal": {
+   "ignorer": "en-tête de page légale, décrit dans apasdechien-maquette/mentions-legales-section"
+  },
+  "mentions-legales-section": {
+   "titre": "Page légale",
+   "role": "texte-legal",
+   "description": "Bandeau photo atténué puis texte légal en colonne étroite, champs à compléter signalés en surligné.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

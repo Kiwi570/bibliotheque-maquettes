@@ -1,0 +1,46 @@
+{
+ "id": "ateliersources-maquette/journee",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "titre": "Journée au fil du ciel",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée des moments d'une journée ; le fond passe du ciel du matin au crépuscule et un astre traverse l'écran selon la progression. Sous 900 px, les moments s'empilent verticalement.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:188-231",
+  "css": "assets/css/style.css:255-268,438-439,742-743",
+  "js": "assets/js/animations.js:88-130,139-150"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/journee-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/journee-m390.jpg",
+  "video": "medias/ateliersources-maquette/journee-p960.mp4"
+ },
+ "pieges": [
+  "anticipatePin: 1 encore présent : à retirer avant reprise",
+  "les couleurs du ciel sont interpolées en dur dans le JS : les lire dans des variables",
+  "la mécanique d'épinglage existe déjà en module galerie-horizontale-epinglee : seul le ciel qui change est propre à cette section"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 666,
+  "epinglee": true,
+  "scrolltriggers": 12
+ }
+}

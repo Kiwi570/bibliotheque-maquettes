@@ -1,0 +1,43 @@
+{
+ "id": "edwin-sonorisation-maquette/ambiances",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "titre": "Pads d'ambiance",
+ "role": "outil-interactif",
+ "description": "Grille de quatre pads de styles musicaux : un appui recolore toute la page via une variable de teinte, lance un son de démonstration Web Audio, envoie une onde et fait pulser une lueur au tempo affiché.",
+ "animations": [
+  "filtre-anime"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:228-253",
+  "css": "assets/css/main.css:124-128,280-282,404-410,422-430,568,582-585,734,762,786",
+  "js": "assets/js/core/intro.js:9-34 ; assets/js/core/audio.js:161,195"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/ambiances-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/ambiances-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/ambiances-p960.mp4"
+ },
+ "pieges": [
+  "créer le contexte audio au premier geste seulement",
+  "une seule variable de teinte lue partout, sinon la recoloration oublie des éléments"
+ ],
+ "mesures": {
+  "hauteur_p1440": 786,
+  "hauteur_m390": 918,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "ateliersources-maquette/organiser-un-stage-coupe",
+ "maquette": "ateliersources-maquette",
+ "page": "organiser-un-stage",
+ "titre": "Maison en coupe",
+ "role": "outil-interactif",
+ "description": "Dessin SVG de la maison en coupe, étage par étage : des onglets accessibles (flèches, Début, Fin) ou un clic sur une pièce allument l'espace, ses traits se tracent et sa fiche photo s'ouvre en cercle.",
+ "animations": [
+  "masque",
+  "révélation-image"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "organiser-un-stage.html:175-273",
+  "css": "assets/css/style.css:122,497-520,587-589,772-774",
+  "js": "assets/js/organiser.js:17-60"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/organiser-un-stage-coupe-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/organiser-un-stage-coupe-m390.jpg",
+  "video": "medias/ateliersources-maquette/organiser-un-stage-coupe-p960.mp4"
+ },
+ "pieges": [
+  "garder pièces du dessin et onglets synchronisés (aria-selected, tabindex) quelle que soit l'entrée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1267,
+  "hauteur_m390": 1355,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

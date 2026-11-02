@@ -1,0 +1,436 @@
+{
+ "maquette": {
+  "client": "ostéopathe en cabinet",
+  "activite": ["santé"],
+  "concept": ["laboratoire"],
+  "ambiance": ["clair", "sobre", "minéral"],
+  "palette": { "fond": "--os", "texte": "--graphite", "accent": "--signal", "secondaire": "--tissu" },
+  "polices": { "titres": "Geist", "texte": "Geist", "mono": "Geist Mono" },
+  "points_forts": [
+   "ouverture au fil à plomb qui se stabilise avant le voile",
+   "colonne vertébrale en particules WebGL qui s'aligne au défilement",
+   "silhouette d'analyse posturale en quatre couches dans une section épinglée",
+   "galerie horizontale épinglée à révélation en rapporteur",
+   "réservation simulée en quatre étapes avec statokinésigramme"
+  ],
+  "reserves": [
+   "héros épinglé : canvas coupé et bouton trop bas sur écran bas (1000 × 560)",
+   "libellés du plan des cabinets à 9,5 px sur téléphone",
+   "en-tête sur trois lignes à 320 px",
+   "curseur « fil à plomb » non relevé par l'inventaire (canvas ajouté par script)"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "webgl-particules",
+   "canvas-2d",
+   "révélation-texte",
+   "section-fixée",
+   "galerie-horizontale",
+   "révélation-image",
+   "masque",
+   "compteur",
+   "parallaxe",
+   "apparition-au-défilement",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "réservation-simulee",
+   "formulaire-par-étapes",
+   "carte-interactive",
+   "filtres",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero"
+ },
+ "sections": {
+  "intro": {
+   "titre": "Ouverture au fil à plomb",
+   "role": "ouverture",
+   "description": "Écran d'ouverture : un fil à plomb descend du haut de l'écran, oscille puis se stabilise sur l'axe, le nom et la mention du métier apparaissent lettre par lettre, puis un voile monte et libère la page ; joué une fois par session, environ 2 s, absent en mode calme.",
+   "animations": ["chargement-orchestré", "révélation-texte", "masque"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "le titre du héros attend l'événement de fin d'ouverture : garder ce chaînage, sinon il s'anime sous le voile",
+    "masquer la page en CSS avant le premier rendu pour éviter le flash avant l'ouverture",
+    "code partagé avec le rideau de transition (même fonction) : les séparer à l'extraction"
+   ]
+  },
+  "curtain": {
+   "titre": "Rideau entre les pages",
+   "role": "transition-de-page",
+   "description": "Rideau sombre plein écran qui se déploie en hauteur au clic sur un lien interne, puis se retire sur la page suivante ; mémorisation de la navigation en sessionStorage et rétablissement au retour arrière (pageshow).",
+   "animations": ["transition-de-page", "masque"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "écouter pageshow (cache retour arrière) sinon le rideau reste fermé",
+    "normaliser les chemins avant de comparer avec la page en cours"
+   ]
+  },
+  "header": {
+   "titre": "En-tête technique",
+   "role": "menu",
+   "description": "En-tête fixe clair : nom et sous-titre en mono, six liens, bouton « Mode calme » et bouton d'appel bleu ; hauteur mesurée dans une variable pour les sections épinglées.",
+   "animations": ["aucune"],
+   "interactions": ["mode-calme"],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["à 320 px l'en-tête passe sur trois lignes : prévoir un nom raccourci"]
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Panneau de navigation plein écran sur téléphone, liens en grand corps, défilement de la page verrouillé (correctif iOS) et fermeture à Échap.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["verrou de défilement iOS : mémoriser la position et la restituer à la fermeture"]
+  },
+  "ruler": {
+   "titre": "Règle graduée de l'axe",
+   "role": "decor",
+   "description": "Règle verticale graduée fixée au bord gauche, dont le repère suit la progression dans la page avec l'étiquette « Axe » ; décor d'instrument de mesure masqué sur téléphone.",
+   "animations": ["progression-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["garder une marge à gauche du contenu pour que la règle ne recouvre pas le texte"]
+  },
+  "hero": {
+   "titre": "Colonne en particules",
+   "role": "ouverture",
+   "description": "Héros épinglé : grand titre sur deux lignes (la seconde en bleu) révélé ligne par ligne, colonne vertébrale en particules WebGL (repli canvas 2D) qui se redresse au défilement avec un angle d'inclinaison affiché, graduations vertébrales et petit statokinésigramme en canvas qui réagit à la vitesse de défilement.",
+   "animations": ["webgl-particules", "canvas-2d", "révélation-texte", "section-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "défaut restant : sur écran bas (1000 × 560) le canvas est coupé et le bouton descend sous le pli",
+    "anticipatePin encore présent : à retirer",
+    "le titre attend la fin de l'ouverture pour s'animer"
+   ]
+  },
+  "reperes": {
+   "titre": "Repères chiffrés",
+   "role": "chiffres",
+   "description": "Rangée de cinq repères (diplômes, années, nombre de patients) en grands chiffres avec unité en exposant, compteurs au défilement et filets qui se tracent de gauche à droite.",
+   "animations": ["compteur", "apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "motifs": {
+   "titre": "Motifs de consultation en galerie",
+   "role": "services",
+   "description": "Galerie horizontale épinglée de cartes de motifs (photo, étiquettes mono, titre, texte) : chaque photo se révèle par un balayage en rapporteur (aiguille sur 180°), inclinaison 3D légère au pointeur, barre de progression sous la rangée ; défilement natif sous 900 px.",
+   "animations": ["galerie-horizontale", "section-fixée", "révélation-image", "masque"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "js": "assets/js/home.js:65-111 ; assets/js/core.js:304-331" },
+   "pieges": [
+    "la révélation de chaque carte passe par containerAnimation : la créer après la tween horizontale",
+    "galerie tenue dans la hauteur d'écran sous l'en-tête (corrigé en 31bc06a)",
+    "inclinaison au pointeur avec quickTo, désactivée sur écran tactile"
+   ]
+  },
+  "approche": {
+   "titre": "Silhouette d'analyse en quatre couches",
+   "role": "méthode",
+   "description": "Section épinglée : à gauche quatre approches en liste, seule l'active est dépliée ; à droite une silhouette au trait en canvas sur grille millimétrée se charge couche par couche (structure, axes et niveaux, appuis, réseau) selon la progression du défilement, avec un compteur « couche n / 4 ».",
+   "animations": ["section-fixée", "canvas-2d", "progression-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "hauteur en 100svh moins l'en-tête mesuré, sinon la liste dépasse",
+    "piloter le dessin par une progression continue 0 → 4, pas par des étapes, pour que le retour arrière soit fluide",
+    "couleurs du canvas à lire dans les variables CSS"
+   ]
+  },
+  "seance": {
+   "titre": "Cycle de la séance",
+   "role": "étapes",
+   "description": "Déroulé d'une séance en quatre étapes : un cycle circulaire en SVG se trace au défilement, ses nœuds se remplissent un à un et l'étiquette centrale indique l'étape en cours ; la liste des étapes s'allume en regard.",
+   "animations": ["progression-fixée", "apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": ["couleurs des nœuds écrites en dur dans le script : passer par les variables"]
+  },
+  "tarifs": {
+   "titre": "Tarifs sur fond sombre",
+   "role": "tarifs",
+   "description": "Bloc sombre à grain : titre et note de prise de rendez-vous, puis lignes de prestations avec durée en mono et prix en grand chiffre, chaque ligne soulignée par une graduation qui se trace.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "code": { "js": "assets/js/home.js:501-525 ; assets/js/data.js:54-59" },
+   "pieges": []
+  },
+  "cabinets": {
+   "titre": "Plan schématique des cabinets",
+   "role": "carte",
+   "description": "Deux cabinets en onglets : plan SVG schématique généré à partir des coordonnées (cours d'eau, ligne de métro, repères), fiche adresse, accès et horaires avec statut ouvert ou fermé calculé à l'heure locale.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["carte-interactive"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": { "js": "assets/js/home.js:270-362 ; assets/js/hours.js:1-27" },
+   "pieges": [
+    "défaut restant : libellés du plan à 9,5 px sur téléphone",
+    "statut ouvert ou fermé calculé dans le fuseau du cabinet, pas celui du visiteur"
+   ]
+  },
+  "praticien": {
+   "titre": "Portrait et parcours",
+   "role": "équipe",
+   "description": "Portrait révélé de bas en haut derrière des lignes de niveau, puis parcours en frise verticale dont la ligne se trace au défilement et allume chaque diplôme.",
+   "animations": ["révélation-image", "progression-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal": {
+   "titre": "Articles filtrables",
+   "role": "galerie",
+   "description": "Grille de trois articles générés depuis les données, filtres en pastilles (aria-pressed) par thème, images en légère parallaxe, métadonnées en mono.",
+   "animations": ["parallaxe", "apparition-au-défilement"],
+   "interactions": ["filtres"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "faq": {
+   "titre": "Questions avant la venue",
+   "role": "faq",
+   "description": "Questions en accordéon à droite d'un titre et d'une photo, filets fins et signe plus qui pivote à l'ouverture.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rdv": {
+   "titre": "Réservation simulée",
+   "role": "contact",
+   "description": "Prise de rendez-vous : numéro en grand chiffre mono avec bouton de copie, et démonstration de réservation en quatre étapes (cabinet, motif, créneau, récapitulatif) avec barre de progression et petit statokinésigramme en canvas qui se calme quand la saisie avance.",
+   "animations": ["canvas-2d", "apparition-au-défilement"],
+   "interactions": ["réservation-simulee", "formulaire-par-étapes"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "js": "assets/js/home.js:402-499 ; assets/js/stabilo.js:1-82 ; assets/js/core.js:345-358" },
+   "pieges": [
+    "annoncer chaque changement d'étape aux lecteurs d'écran et déplacer le focus sur le titre d'étape",
+    "bien signaler qu'il s'agit d'une démonstration, sans envoi"
+   ]
+  },
+  "footer": {
+   "titre": "Pied de page à grand nom",
+   "role": "pied-de-page",
+   "description": "Pied de page sombre ouvert par le nom en très grand corps, puis quatre colonnes (cabinets, contact, pages) et mentions en petit.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mobilebar": {
+   "titre": "Barre d'appel téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixée en bas sur téléphone avec appel et prise de rendez-vous, masquée quand le pied de page ou le bloc de réservation est visible.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": ["déclarer sa hauteur dans une variable pour que rien ne passe dessous"]
+  },
+  "404-page-404": {
+   "titre": "Page introuvable",
+   "role": "page-404",
+   "description": "Page d'erreur sobre : surtitre mono, phrase d'excuse, deux boutons vers l'accueil et la prise de rendez-vous, pied de page commun.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["chemins relatifs : la page casse si elle est servie depuis un sous-dossier"]
+  },
+  "reflexes-archaiques-page-hero": {
+   "titre": "Ouverture de page à figure animée",
+   "role": "ouverture",
+   "description": "Ouverture de page intérieure : fil d'Ariane, grand titre sur deux lignes, chapeau et deux boutons ; à droite une figure au trait en canvas sur grille rejoue un mouvement réflexe en boucle.",
+   "animations": ["révélation-texte", "canvas-2d"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-photo-de-seance": {
+   "titre": "Photo de séance",
+   "role": "galerie",
+   "description": "Grande photo de séance pleine largeur, révélée au défilement, sans autre contenu.",
+   "animations": ["révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-comprendre": {
+   "titre": "Explication en deux colonnes",
+   "role": "manifeste",
+   "description": "Titre à gauche, paragraphes explicatifs à droite, puis une photo large décalée ; mise en page éditoriale simple.",
+   "animations": ["apparition-au-défilement", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-reflexes": {
+   "titre": "Fiches de figures au trait",
+   "role": "méthode",
+   "description": "Grille de fiches : chaque fiche porte une figure au trait en canvas sur grille millimétrée qui rejoue un mouvement en boucle (membres actifs en bleu), étiquettes mono et courte explication ; une fiche photo termine la grille.",
+   "animations": ["canvas-2d", "apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": { "js": "assets/js/reflexes.js:9-11 ; assets/js/figures.js:1-155" },
+   "pieges": [
+    "les poses sont écrites à la main pour chaque mouvement : mécanique liée au contenu",
+    "mettre les canvas en pause hors écran (cinq boucles simultanées)"
+   ]
+  },
+  "reflexes-archaiques-pour-qui": {
+   "titre": "Publics en photos",
+   "role": "services",
+   "description": "Titre et chapeau, puis rangée de quatre photos de publics différents qui apparaissent en décalé.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-deroule": {
+   "titre": "Suivi en frise",
+   "role": "étapes",
+   "description": "Frise verticale du suivi (bilan, séances, exercices, réévaluation) qui se trace au défilement et allume chaque étape, à côté d'une grande photo.",
+   "animations": ["progression-fixée", "apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-tarifs-reflexes": {
+   "titre": "Tarifs du bilan",
+   "role": "tarifs",
+   "ignorer": "variante du bloc tarifs, décrite dans brice-bourdon-maquette/tarifs",
+   "description": "Variante du bloc de tarifs sombre, limitée aux prestations de cette page.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-transmission": {
+   "titre": "Événements à venir et passés",
+   "role": "agenda",
+   "description": "Bloc sombre de formations : texte de présentation, liste d'événements triés automatiquement entre à venir et passés selon la date du jour, affiche à droite.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["tri à la date du visiteur : prévoir un état vide quand rien n'est à venir"]
+  },
+  "reflexes-archaiques-faq": {
+   "titre": "Questions avant le bilan",
+   "role": "faq",
+   "ignorer": "variante de l'accordéon, décrite dans brice-bourdon-maquette/faq",
+   "description": "Même accordéon que la foire aux questions de l'accueil, sans photo.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reflexes-archaiques-rdv": {
+   "titre": "Appel à réserver",
+   "role": "appel",
+   "description": "Appel final : titre, phrase de choix du motif, bouton de réservation externe, autres moyens de contact et numéro en grand chiffre mono.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

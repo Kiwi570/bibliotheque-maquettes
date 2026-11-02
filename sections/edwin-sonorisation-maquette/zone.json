@@ -1,0 +1,45 @@
+{
+ "id": "edwin-sonorisation-maquette/zone",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "titre": "Carte radar et recherche de commune",
+ "role": "carte",
+ "description": "Carte SVG en radar : cercle de 50 km avec balayage tournant et communes en points ; un champ de recherche dit si une commune est dans la zone et l'allume sur la carte, avec des communes citées en raccourcis.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "carte-interactive",
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:316-348",
+  "css": "assets/css/main.css:479-482,487-511,518,817,982-983",
+  "js": "assets/js/core/ui.js:74-93"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/zone-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/zone-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/zone-p960.mp4"
+ },
+ "pieges": [
+  "comparer les noms sans accents ni tirets",
+  "réponse annoncée dans une zone aria-live, pas seulement sur la carte"
+ ],
+ "mesures": {
+  "hauteur_p1440": 978,
+  "hauteur_m390": 1133,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

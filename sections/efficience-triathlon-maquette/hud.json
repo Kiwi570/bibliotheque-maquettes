@@ -1,0 +1,50 @@
+{
+ "id": "efficience-triathlon-maquette/hud",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "mentions-legales",
+  "stage-triathlon-montagne",
+  "test-effort"
+ ],
+ "titre": "HUD d'intensité au défilement",
+ "role": "decor",
+ "description": "Petit cadran fixé en bas à gauche : la vitesse de défilement est lissée en « effort », convertie en zone Z1 à Z5 (barres allumées, couleur), en fréquence cardiaque et en allure fictives ; un point descend le long d'une mini-courbe selon la progression dans la page. Il n'apparaît qu'après le héros.",
+ "animations": [
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "lenis"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:66-72",
+  "css": "assets/css/main.css:292,322,327-346",
+  "js": "assets/js/app.js:263-310"
+ },
+ "medias": {
+  "video": "medias/efficience-triathlon-maquette/science-p960.mp4"
+ },
+ "pieges": [
+  "couleurs des cinq zones écrites en dur dans le JS : les lire dans des variables CSS",
+  "lissage asymétrique (monte vite, redescend lentement) : sans lui, l'affichage clignote",
+  "mise à jour du DOM limitée à une fois toutes les 90 ms dans le ticker GSAP ; ne pas écrire à chaque image",
+  "masqué sous 1100 px et remplacé par une pastille de zone dans l'en-tête"
+ ],
+ "mesures": {
+  "hauteur_p1440": 304,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

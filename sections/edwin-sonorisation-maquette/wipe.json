@@ -1,0 +1,46 @@
+{
+ "id": "edwin-sonorisation-maquette/wipe",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "livre-d-or",
+  "mentions-legales",
+  "prestations"
+ ],
+ "titre": "Balayage laser entre pages",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : un panneau s'étend de gauche à droite derrière un trait laser et affiche le nom de la page d'arrivée, puis se retire à l'arrivée (état passé par sessionStorage, reprise au retour arrière via pageshow). Simple fondu en mode calme.",
+ "animations": [
+  "transition-de-page",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:62-62",
+  "css": "assets/css/main.css:292-297,736-737",
+  "js": "assets/js/core/intro.js:37-53,60-99"
+ },
+ "medias": {},
+ "pieges": [
+  "écouter pageshow avec persisted, sinon le cache arrière du navigateur rend une page couverte par le panneau",
+  "ignorer les liens externes, ancres et clics avec touche de modification"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

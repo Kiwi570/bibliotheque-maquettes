@@ -1,0 +1,49 @@
+{
+ "id": "coupdefood-maquette/sommaire",
+ "maquette": "coupdefood-maquette",
+ "page": "index",
+ "titre": "Sommaire des services",
+ "role": "services",
+ "description": "Sommaire épinglé qui défile à l'horizontale (dès 1000 px) : un service par panneau avec sa démonstration animée par containerAnimation (radar SVG, stylo rouge qui corrige, lampe « on air » et onde canvas réagissant au pointeur, carton d'invitation qui pivote, veille surlignée), barre de progression et nom du panneau suivant.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "progression-fixée",
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:172-313",
+  "css": "assets/css/style.css:97,308,335-368,372-421",
+  "js": "assets/js/home.js:159-277,437 ; assets/js/main.js:144,149"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/sommaire-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/sommaire-m390.jpg",
+  "video": "medias/coupdefood-maquette/sommaire-p960.mp4"
+ },
+ "pieges": [
+  "anticipatePin: 1 provoque un saut à l'épinglage : à retirer",
+  "étiquettes du radar à 9,5 px sur téléphone (restant d'audit)",
+  "sous 1000 px les panneaux s'empilent : chaque démonstration doit avoir son propre déclencheur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6634,
+  "hauteur_m390": 7006,
+  "epinglee": true,
+  "scrolltriggers": 8
+ }
+}

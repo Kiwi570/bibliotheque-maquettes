@@ -1,0 +1,42 @@
+{
+ "id": "btp-confort-avenir-maquette/realisations",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Avant, après au réglet",
+ "role": "portfolio",
+ "description": "Comparateur avant / après sur fond nuit : un curseur de type range déplace la séparation, avec un réglet gradué et un libellé de pourcentages ; à l'entrée, une ligne de balayage parcourt l'image puis la séparation glisse d'elle-même jusqu'au milieu.",
+ "animations": [
+  "révélation-texte"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:219-238",
+  "css": "assets/css/style.css:431-447",
+  "js": "assets/js/app.js:302-327 ; assets/js/drawings.js:287-299"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/realisations-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/realisations-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/realisations-p960.mp4"
+ },
+ "pieges": [
+  "le range natif reste l'élément accessible : la séparation suit sa valeur, jamais l'inverse"
+ ],
+ "mesures": {
+  "hauteur_p1440": 997,
+  "hauteur_m390": 962,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

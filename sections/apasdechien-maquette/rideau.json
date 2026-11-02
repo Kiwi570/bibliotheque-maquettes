@@ -1,0 +1,51 @@
+{
+ "id": "apasdechien-maquette/rideau",
+ "maquette": "apasdechien-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "balade-educative",
+  "balade",
+  "confidentialite",
+  "contact",
+  "dogparkour",
+  "education-canine",
+  "mentions-legales"
+ ],
+ "titre": "Rideau de pattes entre les pages",
+ "role": "transition-de-page",
+ "description": "Transition de page : un rideau vert monte en couvrant l'écran pendant qu'une ligne d'empreintes de pattes le traverse, la page suivante s'ouvre en le faisant remonter ; restauré correctement au retour arrière (pageshow).",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:254",
+  "css": "assets/css/main.css:711-714",
+  "js": "assets/js/app.js:446-495"
+ },
+ "medias": {
+  "video": "medias/apasdechien-maquette/rideau-p960.mp4"
+ },
+ "pieges": [
+  "drapeau sessionStorage pour savoir que la page suivante doit lever le rideau",
+  "pageshow persisted : retirer le rideau sinon l'écran reste vert au retour arrière",
+  "liens internes seulement, pas de rideau en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

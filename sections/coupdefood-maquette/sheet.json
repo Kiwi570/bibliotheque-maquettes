@@ -1,0 +1,45 @@
+{
+ "id": "coupdefood-maquette/sheet",
+ "maquette": "coupdefood-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "conditions",
+  "confidentialite",
+  "projet-incorrect",
+  "salle-de-presse"
+ ],
+ "titre": "Feuille de transition",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : une feuille couleur papier monte depuis le bas (yPercent) avant la navigation et se retire vers le haut à l'arrivée ; réinitialisée sur pageshow pour le retour arrière du navigateur.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:34",
+  "css": "assets/css/style.css:181-192",
+  "js": "assets/js/main.js:90-122"
+ },
+ "medias": {},
+ "pieges": [
+  "écouter pageshow (persisted) pour retirer la feuille au retour arrière, sinon la page reste couverte",
+  "ne pas intercepter les liens externes, les ancres ni les clics avec touche de modification"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

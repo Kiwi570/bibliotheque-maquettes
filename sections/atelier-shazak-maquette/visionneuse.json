@@ -1,0 +1,45 @@
+{
+ "id": "atelier-shazak-maquette/visionneuse",
+ "maquette": "atelier-shazak-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "presse",
+  "savoir-faire"
+ ],
+ "titre": "Visionneuse à transition en lanières",
+ "role": "galerie",
+ "description": "Visionneuse plein écran (dialog natif) ouverte depuis les galeries : flèches, clavier et balayage tactile ; le passage d'une photo à l'autre se fait par un shader WebGL qui découpe l'image en lanières décalées, avec repli en glissé-fondu sans WebGL et coupure en mode calme. Cartel et compteur suivent.",
+ "animations": [
+  "webgl-shader"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "ogl",
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:376-382",
+  "css": "assets/css/style.css:474-486,635,644",
+  "js": "assets/js/webgl.js:8-21,149-226 ; assets/js/main.js:865-910"
+ },
+ "medias": {},
+ "pieges": [
+  "précharger l'image suivante avant de lancer le shader",
+  "bloquer la navigation pendant la transition (drapeau occupé)",
+  "arrêter le défilement lissé tant que le dialogue est ouvert"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

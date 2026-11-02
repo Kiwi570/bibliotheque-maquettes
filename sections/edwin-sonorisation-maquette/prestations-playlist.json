@@ -1,0 +1,43 @@
+{
+ "id": "edwin-sonorisation-maquette/prestations-playlist",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "prestations",
+ "titre": "Bac de vinyles à feuilleter",
+ "role": "galerie",
+ "description": "Pile de cartes en 3D (rotationX) qu'on feuillette comme un bac de disques : flèches, clavier, glisser, compteur ; défilement automatique toutes les 3,6 s quand la section est visible et non survolée.",
+ "animations": [
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "prestations.html:199-219",
+  "css": "assets/css/main.css:474-476,597-609,818,910,948-950",
+  "js": "assets/js/core/ui.js:154-179"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/prestations-playlist-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/prestations-playlist-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/prestations-playlist-p960.mp4"
+ },
+ "pieges": [
+  "suspendre l'automatique au survol, au focus et hors écran",
+  "annoncer la carte courante en aria-live"
+ ],
+ "mesures": {
+  "hauteur_p1440": 802,
+  "hauteur_m390": 906,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "efficience-triathlon-maquette/header",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "mentions-legales",
+  "stage-triathlon-montagne",
+  "test-effort"
+ ],
+ "titre": "En-tête compact",
+ "role": "menu",
+ "description": "En-tête fixe sur fond translucide : logo, liens d'ancre, téléphone, bouton mode calme et bouton d'appel ; il se masque à la descente et revient à la remontée. Sa hauteur est mesurée pour les sections épinglées.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "mode-calme"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:38-53",
+  "css": "assets/css/main.css:246-277,285-292,317-319,324,999-1000,1142,1172",
+  "js": "assets/js/app.js:76-103"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/header-p1440.jpg"
+ },
+ "pieges": [
+  "la pastille de zone (Z1…Z5) remplace le HUD dans l'en-tête sous 1100 px : elle dépend du HUD pour sa valeur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 68,
+  "hauteur_m390": 68,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "edwin-sonorisation-maquette/evenements",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "titre": "Pochettes en défilement horizontal",
+ "role": "services",
+ "description": "Section épinglée au-dessus de 900 px : une piste horizontale de pochettes défile au défilement vertical, avec compteur 01/0N et barre ; à l'entrée de chaque carte le disque sort de sa pochette (containerAnimation). Défilement natif au doigt sur mobile.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:175-225",
+  "css": "assets/css/main.css:379-399,745,789-792,869-872,1019-1030,1051-1052",
+  "js": "assets/js/app.js:31-77"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/evenements-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/evenements-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/evenements-p960.mp4"
+ },
+ "pieges": [
+  "les animations internes doivent passer par containerAnimation, pas par un trigger vertical",
+  "recalculer la distance au refresh (images chargées), pas à l'initialisation"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 724,
+  "epinglee": true,
+  "scrolltriggers": 10
+ }
+}

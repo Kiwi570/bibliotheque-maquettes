@@ -1,0 +1,45 @@
+{
+ "id": "apasdechien-maquette/en-images",
+ "maquette": "apasdechien-maquette",
+ "page": "index",
+ "titre": "Bande de photos révélées au flair",
+ "role": "galerie",
+ "description": "Bande horizontale de photos désaturées qui défile ; sous la souris, un cercle révèle la photo en couleur comme une truffe qui renifle, le curseur prend l'étiquette « Renifler » ; au toucher, un appui ouvre toute la couleur.",
+ "animations": [
+  "galerie-horizontale",
+  "survol-image",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:183-187",
+  "css": "assets/css/main.css:318-329,396-401",
+  "js": "assets/js/app.js:315-334 ; assets/js/pages.js:206-226"
+ },
+ "medias": {
+  "capture": "medias/apasdechien-maquette/en-images-p1440.jpg",
+  "capture_m390": "medias/apasdechien-maquette/en-images-m390.jpg",
+  "video": "medias/apasdechien-maquette/en-images-p960.mp4"
+ },
+ "pieges": [
+  "position du cercle en variables --x/--y sur le calque couleur, pas de reflow",
+  "au toucher, le clic remplace le survol (classe is-ouvert)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1140,
+  "hauteur_m390": 764,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

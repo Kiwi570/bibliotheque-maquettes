@@ -1,0 +1,42 @@
+{
+ "id": "atelier-shazak-maquette/oeuvres",
+ "maquette": "atelier-shazak-maquette",
+ "page": "index",
+ "titre": "Essai d'une pièce au mur",
+ "role": "outil-interactif",
+ "description": "Configurateur : choix de la pièce et du décor (mur de galerie ou intérieur) par boutons radio, curseur de largeur supposée en centimètres ; la pièce est redimensionnée à l'échelle réelle à côté d'une silhouette de 1,70 m, avec une échelle graduée, et réapparaît en fondu à chaque changement.",
+ "animations": [
+  "révélation-image"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:164-197",
+  "css": "assets/css/style.css:309-319,326-328,334,626",
+  "js": "assets/js/main.js:313,613-665"
+ },
+ "medias": {
+  "capture": "medias/atelier-shazak-maquette/oeuvres-p1440.jpg",
+  "capture_m390": "medias/atelier-shazak-maquette/oeuvres-m390.jpg",
+  "video": "medias/atelier-shazak-maquette/oeuvres-p960.mp4"
+ },
+ "pieges": [
+  "calculer les pixels par centimètre à partir de la hauteur réelle de la silhouette affichée, au redimensionnement aussi",
+  "dire que l'échelle est indicative"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1124,
+  "hauteur_m390": 1307,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

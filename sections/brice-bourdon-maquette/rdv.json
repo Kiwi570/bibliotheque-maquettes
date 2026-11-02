@@ -1,0 +1,46 @@
+{
+ "id": "brice-bourdon-maquette/rdv",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Réservation simulée",
+ "role": "contact",
+ "description": "Prise de rendez-vous : numéro en grand chiffre mono avec bouton de copie, et démonstration de réservation en quatre étapes (cabinet, motif, créneau, récapitulatif) avec barre de progression et petit statokinésigramme en canvas qui se calme quand la saisie avance.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "réservation-simulee",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:438-470",
+  "css": "assets/css/style.css:177,405-415,431-435,439,629-633,638",
+  "js": "assets/js/home.js:402-499 ; assets/js/stabilo.js:1-82 ; assets/js/core.js:345-358"
+ },
+ "medias": {
+  "capture": "medias/brice-bourdon-maquette/rdv-p1440.jpg",
+  "capture_m390": "medias/brice-bourdon-maquette/rdv-m390.jpg",
+  "video": "medias/brice-bourdon-maquette/rdv-p960.mp4"
+ },
+ "pieges": [
+  "annoncer chaque changement d'étape aux lecteurs d'écran et déplacer le focus sur le titre d'étape",
+  "bien signaler qu'il s'agit d'une démonstration, sans envoi"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1364,
+  "hauteur_m390": 1638,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

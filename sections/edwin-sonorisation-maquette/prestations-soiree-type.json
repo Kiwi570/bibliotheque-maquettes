@@ -1,0 +1,44 @@
+{
+ "id": "edwin-sonorisation-maquette/prestations-soiree-type",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "prestations",
+ "titre": "Soirée type et égaliseur",
+ "role": "étapes",
+ "description": "Section épinglée au-dessus de 960 px : quatre moments de la soirée se succèdent au défilement, la photo change et un égaliseur de quatre colonnes monte d'un cran à chaque étape, puis pulse avec le niveau du son de démonstration. Empilée sous 960 px.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "prestations.html:153-196",
+  "css": "assets/css/main.css:280-282,407,568,572-593,734,783,945,1035-1046,1051-1057",
+  "js": "assets/js/core/intro.js:9-34"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/prestations-soiree-type-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/prestations-soiree-type-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/prestations-soiree-type-p960.mp4"
+ },
+ "pieges": [
+  "piloter l'étape depuis la progression du ScrollTrigger, pas depuis des triggers par étape",
+  "lire le niveau audio seulement quand le son joue"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3240,
+  "hauteur_m390": 2246,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

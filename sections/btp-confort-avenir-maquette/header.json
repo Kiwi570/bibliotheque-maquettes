@@ -1,0 +1,45 @@
+{
+ "id": "btp-confort-avenir-maquette/header",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "isolation",
+  "mentions-legales",
+  "realisations"
+ ],
+ "titre": "En-tête transparent puis opaque",
+ "role": "menu",
+ "description": "En-tête fixe transparent sur le héros, opaque ensuite, masqué en descendant et rappelé en remontant ; liens, statut d'ouverture, bouton mode calme et bouton de devis. Sa hauteur mesurée alimente --entete-h.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "mode-calme"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:38-56",
+  "css": "assets/css/style.css:171-188,192-203,210-212,218-219,732-745,775-776,780-787",
+  "js": "assets/js/home.js:410,482,489 ; assets/js/app.js:83,101-110,113,117-124,141,165"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/header-p1440.jpg"
+ },
+ "pieges": [
+  "rappeler l'en-tête au focus clavier, sinon un lien tabulé reste caché"
+ ],
+ "mesures": {
+  "hauteur_p1440": 72,
+  "hauteur_m390": 72,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "d3co-maquette/boutique-div-2",
+ "maquette": "d3co-maquette",
+ "page": "boutique",
+ "titre": "Grille de la boutique",
+ "role": "produits",
+ "description": "Grille des produits filtrable : réorganisation animée (Flip), pastilles de coloris qui changent la photo, ajout rapide au panier ; hauteur réservée pour éviter le décalage.",
+ "animations": [
+  "flip",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "boutique.html:116-119",
+  "css": "assets/css/style.css:752",
+  "js": "assets/js/boutique.js:87-240"
+ },
+ "medias": {
+  "capture": "medias/d3co-maquette/boutique-div-2-p1440.jpg",
+  "capture_m390": "medias/d3co-maquette/boutique-div-2-m390.jpg",
+  "video": "medias/d3co-maquette/boutique-div-2-p960.mp4"
+ },
+ "pieges": [
+  "réserver la hauteur de la grille (CLS 0,112 avant correction)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1836,
+  "hauteur_m390": 4313,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

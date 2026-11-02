@@ -1,0 +1,44 @@
+{
+ "id": "ateliersources-maquette/barre",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "mentions-legales",
+  "organiser-un-stage"
+ ],
+ "titre": "Barre de navigation",
+ "role": "menu",
+ "description": "Barre fixe avec logo, liens, boutons Son et Mode calme et bouton d'appel ; elle passe en version claire sur les sections sombres et prend un fond après le premier écran, en un seul calcul par image.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "mode-calme",
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:81-103",
+  "css": "assets/css/style.css:51,125-141,145-158,716-718,722-728,810-811,819-820",
+  "js": "assets/js/app.js:40-89,94 ; assets/js/organiser.js:126-280 ; assets/js/son.js:76-100 ; assets/js/interface.js:16-60,173-175"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/barre-p1440.jpg"
+ },
+ "pieges": [
+  "le changement de teinte lit les sections [data-theme=sombre] sous le milieu de la barre : marquer chaque section sombre"
+ ],
+ "mesures": {
+  "hauteur_p1440": 76,
+  "hauteur_m390": 64,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

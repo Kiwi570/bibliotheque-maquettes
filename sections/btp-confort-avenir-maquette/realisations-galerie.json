@@ -1,0 +1,48 @@
+{
+ "id": "btp-confort-avenir-maquette/realisations-galerie",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "realisations",
+ "titre": "Fiches chantier filtrables",
+ "role": "portfolio",
+ "description": "Grille de fiches chantier avec filtres en pastilles : les fiches se réorganisent en Flip, les entrantes grossissent, les sortantes s'effacent ; le filtre suit l'ancre de l'adresse. Une fiche ouvre une boîte de dialogue native qui pivote comme un volet, avec photo ou comparateur avant / après cloné.",
+ "animations": [
+  "flip",
+  "apparition-au-défilement",
+  "masque"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable",
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "realisations.html:91-146,165-182",
+  "css": "assets/css/style.css:669-695",
+  "js": "assets/js/realisations.js:16-81"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/realisations-galerie-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/realisations-galerie-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/realisations-galerie-p960.mp4"
+ },
+ "pieges": [
+  "rafraîchir ScrollTrigger à la fin du Flip, la hauteur de la grille change",
+  "arrêter le défilement lissé pendant la boîte de dialogue et le relancer à sa fermeture",
+  "un comparateur cloné doit recevoir un nouvel id de champ"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1718,
+  "hauteur_m390": 3885,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

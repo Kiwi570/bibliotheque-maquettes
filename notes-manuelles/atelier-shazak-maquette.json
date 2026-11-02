@@ -1,0 +1,442 @@
+{
+ "maquette": {
+  "client": "atelier de sellerie d'art",
+  "activite": ["artisanat"],
+  "concept": ["atelier", "galerie"],
+  "ambiance": ["artisanal", "chaleureux", "luxueux"],
+  "palette": {"fond": "--ivoire", "texte": "--encre", "accent": "--cognac", "secondaire": "--lin"},
+  "polices": {"titres": "Cormorant Garamond", "texte": "Inter Tight", "mono": null},
+  "points_forts": [
+   "ouverture : une tresse à trois brins se dessine puis le rideau s'ouvre en lanières",
+   "configurateur d'essai au mur avec silhouette à l'échelle",
+   "galerie horizontale épinglée qui teinte le fond salle par salle",
+   "méthode épinglée avec progression tressée et visuels révélés au masque",
+   "frise en sangle de cuir à trous et boucle qui avance",
+   "plaques de laiton gravées lettre à lettre, visionneuse à transition WebGL en lanières"
+  ],
+  "reserves": [
+   "fil tressé de progression qui chevauche les sections pleine largeur",
+   "accueil lourd (5,25 Mo en 1440)",
+   "une image d'ambiance provisoire dans la section cuir moulé"
+  ],
+  "animations": ["ouverture-orchestrée", "transition-de-page", "révélation-texte", "révélation-image", "masque", "section-fixée", "progression-fixée", "galerie-horizontale", "compteur", "marquee", "parallaxe", "webgl-shader", "canvas-2d", "curseur-personnalisé", "bouton-magnétique", "défilement-lissé"],
+  "interactions": ["configurateur", "jeu", "simulateur", "formulaire-par-étapes", "filtres", "galerie-cliquable", "mode-calme"],
+  "change_depuis_audit": null,
+  "accueil": "heros"
+ },
+ "sections": {
+  "ouverture": {
+   "titre": "Tresse puis rideau en lanières",
+   "role": "ouverture",
+   "description": "Écran d'ouverture : une tresse SVG à trois brins (croisements calculés, révélée par un rectangle de découpe) se dessine en un peu plus d'une seconde, le mot-symbole apparaît, puis six lanières verticales s'écartent alternativement vers le haut et vers le bas. Les mêmes lanières se referment avant chaque changement de page ; une visite déjà faite n'a droit qu'à l'ouverture courte.",
+   "animations": ["ouverture-orchestrée", "masque", "transition-de-page"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "medias": {"video": "medias/atelier-shazak-maquette/heros-p960.mp4"},
+   "code": {"js": "assets/js/main.js:58-125,303-329,336-358"},
+   "pieges": [
+    "la fin de l'ouverture déclenche le titre du héros (file quandOuvert) : garder ce chaînage",
+    "pageshow persisted : retirer le voile au retour arrière, sinon page couverte",
+    "couleurs des brins écrites en dur dans le générateur de tresse : les lire dans les variables"
+   ]
+  },
+  "entete": {
+   "titre": "En-tête avec bascule son",
+   "role": "menu",
+   "description": "En-tête fixe sur fond ivoire : logo, quatre liens, bouton son avec onde animée et bouton d'appel noir ; masqué au défilement vers le bas.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu-mobile": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone, liens en grand corps à empattements, page derrière bloquée, fermeture par Échap ou par le bouton.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fil": {
+   "titre": "Fil tressé de progression",
+   "role": "decor",
+   "description": "Fine tresse verticale fixée au bord droit, qui se dessine au fil de la lecture de la page (même générateur que l'ouverture, en vertical) ; masquée sur téléphone.",
+   "animations": ["progression-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["chevauche les sections pleine largeur (défaut non corrigé) : réserver une marge ou la masquer sur ces sections"]
+  },
+  "heros": {
+   "titre": "Titre en trois verbes et cadre photo",
+   "role": "ouverture",
+   "description": "Héros : titre en trois lignes décalées dont les lettres montent derrière un masque, photo principale révélée par le bas avec léger dézoom, vignette secondaire qui glisse, tresse horizontale qui se dessine sous le texte puis dérive au défilement.",
+   "animations": ["révélation-texte", "révélation-image", "parallaxe"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["découpe en words,chars obligatoire, sinon les mots se cassent en fin de ligne"]
+  },
+  "studio": {
+   "titre": "Présentation et chiffres",
+   "role": "manifeste",
+   "description": "Grande phrase d'intention, deux colonnes de texte, deux photos révélées par un tissage de bandes, coutures pointillées qui se piquent au défilement et rangée de quatre chiffres animés.",
+   "animations": ["révélation-image", "compteur"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "savoir-faire": {
+   "titre": "Trois salles en défilement horizontal",
+   "role": "services",
+   "description": "Galerie horizontale épinglée sous l'en-tête : trois « salles » (texte, trois photos, cartels) défilent de côté pendant le défilement vertical ; la teinte du fond s'interpole d'une salle à l'autre à partir d'un data-teinte, et les photos de chaque salle ne se révèlent qu'à son arrivée. Sous 961 px, les salles s'empilent et la teinte change à l'entrée de chacune.",
+   "animations": ["galerie-horizontale", "section-fixée", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "épingler la fenêtre sous la hauteur mesurée de l'en-tête, sinon le haut est masqué (défaut corrigé à l'audit)",
+    "les révélations d'images des salles 2 et 3 attendent la progression horizontale, pas leur position verticale"
+   ]
+  },
+  "methode": {
+   "titre": "Méthode épinglée en cinq étapes",
+   "role": "étapes",
+   "description": "Grille épinglée : cinq étapes numérotées à gauche s'allument tour à tour pendant que, à droite, le visuel correspondant se révèle par un masque (du bas ou du haut selon le sens) avec un léger dézoom ; une tresse verticale fait progresser la lecture le long des étapes, la légende du visuel change avec lui.",
+   "animations": ["section-fixée", "progression-fixée", "masque", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {"js": "assets/js/main.js:58-125,566-608"},
+   "pieges": [
+    "sens du masque selon l'étape précédente : garder l'index ancien",
+    "sous 961 px, plus d'épinglage : la tresse suit le défilement de la liste"
+   ]
+  },
+  "oeuvres": {
+   "titre": "Essai d'une pièce au mur",
+   "role": "outil-interactif",
+   "description": "Configurateur : choix de la pièce et du décor (mur de galerie ou intérieur) par boutons radio, curseur de largeur supposée en centimètres ; la pièce est redimensionnée à l'échelle réelle à côté d'une silhouette de 1,70 m, avec une échelle graduée, et réapparaît en fondu à chaque changement.",
+   "animations": ["révélation-image"],
+   "interactions": ["configurateur"],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "calculer les pixels par centimètre à partir de la hauteur réelle de la silhouette affichée, au redimensionnement aussi",
+    "dire que l'échelle est indicative"
+   ]
+  },
+  "matiere": {
+   "titre": "Engagements sur la matière",
+   "role": "manifeste",
+   "description": "Deux photos en quinconce et trois engagements courts en titre et texte, séparés par des coutures pointillées.",
+   "animations": ["révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnaissance": {
+   "titre": "Plaques de laiton gravées",
+   "role": "preuves",
+   "description": "Section sombre : distinctions présentées sur des plaques de laiton vissées dont le texte se grave lettre à lettre, chaque lettre passant d'une lueur incandescente à un relief gravé ; dessous, un défilant continu de noms de médias qui s'arrête au survol.",
+   "animations": ["révélation-texte", "marquee"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {"js": "assets/js/main.js:508-532"},
+   "pieges": [
+    "le texte découpé reste lisible : aria-label sur le lien ou copie visuellement cachée",
+    "défilant arrêté et replié en mode calme"
+   ]
+  },
+  "atelier": {
+   "titre": "Portrait et plan d'accès",
+   "role": "équipe",
+   "description": "Portrait de l'artisan, texte de présentation, photo de l'atelier et plan schématique SVG dont le trajet se trace au défilement, avec heure locale mise à jour.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projet": {
+   "titre": "Fiche de projet en quatre étapes",
+   "role": "contact",
+   "description": "Coordonnées avec boutons de copie et formulaire par étapes (profil, nature du projet, délais, coordonnées) à pastilles ; les liens d'appel de la page présélectionnent la première réponse. Envoi simulé.",
+   "animations": ["aucune"],
+   "interactions": ["formulaire-par-étapes"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page sombre",
+   "role": "pied-de-page",
+   "description": "Pied sombre : inscription à la lettre (simulée), quatre colonnes de liens et coordonnées, bascule « Réduire les animations ».",
+   "animations": ["aucune"],
+   "interactions": ["mode-calme"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "barre-bas": {
+   "titre": "Barre de contact du téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixée en bas sur téléphone avec appel et demande de projet, réservée par un padding sur le corps de page.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "legal": {
+   "titre": "Mentions légales en dialogue",
+   "role": "texte-legal",
+   "description": "Mentions légales dans un dialog natif ouvert depuis le pied de page, défilement interne protégé du défilement lissé.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "visionneuse": {
+   "titre": "Visionneuse à transition en lanières",
+   "role": "galerie",
+   "description": "Visionneuse plein écran (dialog natif) ouverte depuis les galeries : flèches, clavier et balayage tactile ; le passage d'une photo à l'autre se fait par un shader WebGL qui découpe l'image en lanières décalées, avec repli en glissé-fondu sans WebGL et coupure en mode calme. Cartel et compteur suivent.",
+   "animations": ["webgl-shader"],
+   "interactions": ["galerie-cliquable"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "dependances": ["ogl", "gsap"],
+   "code": {"js": "assets/js/webgl.js:8-21,149-226 ; assets/js/main.js:865-910"},
+   "pieges": [
+    "précharger l'image suivante avant de lancer le shader",
+    "bloquer la navigation pendant la transition (drapeau occupé)",
+    "arrêter le défilement lissé tant que le dialogue est ouvert"
+   ]
+  },
+  "curseur": {
+   "titre": "Curseur alène, loupe et point de couture",
+   "role": "decor",
+   "description": "Curseur personnalisé en losange qui suit avec inertie ; sur les photos marquées, une loupe ronde grossit 2,6 fois l'image en haute définition ; sur les liens, le passage du pointeur laisse une traînée pointillée qui s'efface en une demi-seconde, dessinée en canvas 2D.",
+   "animations": ["curseur-personnalisé", "canvas-2d"],
+   "interactions": ["aucune"],
+   "telephone": "masqué",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "calcul de la loupe à refaire avec object-fit cover (taille naturelle et décalage)",
+    "couleur de la traînée écrite en dur : la lire dans les variables"
+   ]
+  },
+  "loupe": {"ignorer": "décrite avec le curseur"},
+  "trace": {"ignorer": "décrite avec le curseur"},
+  "404-sf": {
+   "titre": "Page introuvable",
+   "role": "page-404",
+   "description": "Page 404 en une phrase de métier, deux boutons de retour, puis le pied de page.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presse-heros-page": {
+   "titre": "Héros de page intérieure",
+   "role": "ouverture",
+   "description": "Héros des pages intérieures : titre à empattements sur deux lignes décalées, chapeau court et photo révélée par un masque à droite.",
+   "animations": ["révélation-texte", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presse-sommaire": {
+   "titre": "Sommaire de page collant",
+   "role": "menu",
+   "description": "Sommaire d'ancres collé sous l'en-tête, lien de la section en cours souligné au défilement.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presse-presse": {
+   "titre": "Revue de presse filtrable",
+   "role": "preuves",
+   "description": "Liste chronologique des parutions groupées par année, filtrable par type (articles, télévision, podcasts) ; les années vides se masquent.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["filtres"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presse-distinctions": {
+   "titre": "Vitrine des distinctions",
+   "role": "preuves",
+   "description": "Variante sombre en vitrine des plaques de laiton gravées, sur deux rangées, suivie d'une photo d'ambiance.",
+   "animations": ["révélation-texte"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presse-parcours": {
+   "titre": "Frise en sangle à boucle",
+   "role": "agenda",
+   "description": "Frise chronologique épinglée : une sangle de cuir dessinée en SVG (piqûres pointillées) défile horizontalement ; ses trous numérotés portent les années et une boucle fixe désigne l'année active, dont le trou rebondit au passage. Sous 961 px ou en mode calme, la sangle devient verticale.",
+   "animations": ["galerie-horizontale", "section-fixée"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "redessiner la sangle au refresh de ScrollTrigger (largeur de piste)",
+    "année active mesurée par la distance au centre de la boucle, pas par la progression"
+   ]
+  },
+  "presse-pr-cta": {
+   "titre": "Appel de fin de page",
+   "role": "appel",
+   "description": "Bandeau ivoire ombré avec question en grand titre et deux boutons.",
+   "animations": ["révélation-texte"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "savoir-faire-heros-page": {"ignorer": "variante de presse-heros-page"},
+  "savoir-faire-sommaire": {"ignorer": "variante de presse-sommaire"},
+  "savoir-faire-developpement": {
+   "titre": "Savoir-faire en texte et photo",
+   "role": "services",
+   "description": "Bloc de savoir-faire : titre à gauche, texte et bouton à droite, grande photo décalée en dessous.",
+   "animations": ["révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "savoir-faire-div": {
+   "titre": "Couture séparatrice",
+   "role": "decor",
+   "description": "Séparateur en couture : rangée de trous pointillés sur laquelle les points obliques se piquent de gauche à droite à l'entrée dans l'écran.",
+   "animations": ["masque"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "savoir-faire-div-2": {"ignorer": "variante de savoir-faire-div"},
+  "savoir-faire-div-3": {"ignorer": "variante de savoir-faire-div"},
+  "savoir-faire-shallang": {
+   "titre": "Mini-atelier : croiser les brins",
+   "role": "outil-interactif",
+   "description": "Petit jeu : en glissant le pointeur (ou au clavier, curseur accessible) le long d'une tresse SVG, on allonge la tresse et un compteur de croisements avance, avec un petit son à chaque croisement ; bouton de remise à zéro animée. La tresse se lance seule au quart à l'arrivée dans l'écran. Suivi de la galerie du savoir-faire.",
+   "animations": ["masque"],
+   "interactions": ["jeu"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {"js": "assets/js/main.js:58-125,915-940"},
+   "pieges": [
+    "role slider avec aria-valuenow et aria-valuetext en croisements",
+    "à la souris sans clic, la tresse ne fait qu'avancer ; au doigt, setPointerCapture"
+   ]
+  },
+  "savoir-faire-cuir-moule": {
+   "titre": "Plaque de cuir moulée en WebGL",
+   "role": "outil-interactif",
+   "description": "Simulation WebGL : au défilement, une plaque de cuir grainé se moule sur une forme invisible à motif de feuilles ; le pointeur oriente une lumière rasante. Repli sur une vraie photo sans WebGL ou en mode calme ; galerie du savoir-faire dessous.",
+   "animations": ["webgl-shader"],
+   "interactions": ["simulateur"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "dependances": ["ogl"],
+   "code": {"js": "assets/js/webgl.js:8-89,90-144,229"},
+   "pieges": [
+    "image d'ambiance provisoire dans la légende, à remplacer (défaut non corrigé)",
+    "pause hors écran de la boucle de rendu"
+   ]
+  },
+  "savoir-faire-harnachement": {
+   "titre": "Savoir-faire et pictogrammes",
+   "role": "services",
+   "description": "Bloc de savoir-faire suivi de quatre cartes à pictogrammes au trait (boucle, matelassure, point sellier, briderie) puis d'une galerie.",
+   "animations": ["révélation-image"],
+   "interactions": ["galerie-cliquable"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "savoir-faire-sf-cta": {"ignorer": "variante de presse-pr-cta"}
+ }
+}

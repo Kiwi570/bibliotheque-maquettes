@@ -1,0 +1,47 @@
+{
+ "id": "brice-bourdon-maquette/hero",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Colonne en particules",
+ "role": "ouverture",
+ "description": "Héros épinglé : grand titre sur deux lignes (la seconde en bleu) révélé ligne par ligne, colonne vertébrale en particules WebGL (repli canvas 2D) qui se redresse au défilement avec un angle d'inclinaison affiché, graduations vertébrales et petit statokinésigramme en canvas qui réagit à la vitesse de défilement.",
+ "animations": [
+  "webgl-particules",
+  "canvas-2d",
+  "révélation-texte",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:79-114",
+  "css": "assets/css/style.css:91,164-208,645-648",
+  "js": "assets/js/home.js:14-62,528 ; assets/js/spine.js:181-276 ; assets/js/core.js:104-131"
+ },
+ "medias": {
+  "capture": "medias/brice-bourdon-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/brice-bourdon-maquette/hero-m390.jpg",
+  "video": "medias/brice-bourdon-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "défaut restant : sur écran bas (1000 × 560) le canvas est coupé et le bouton descend sous le pli",
+  "anticipatePin encore présent : à retirer",
+  "le titre attend la fin de l'ouverture pour s'animer"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1060,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

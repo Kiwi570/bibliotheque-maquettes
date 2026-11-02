@@ -1,0 +1,46 @@
+{
+ "id": "coupdefood-maquette/coupures",
+ "maquette": "coupdefood-maquette",
+ "page": "index",
+ "titre": "Coupures de presse",
+ "role": "portfolio",
+ "description": "Tableau de coupures : une carte inclinée par client, scotchée, avec photo développée en trame et nombre de communiqués, puis bandeau de logos en défilement continu.",
+ "animations": [
+  "révélation-image",
+  "webgl-shader",
+  "marquee"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:400-427",
+  "css": "assets/css/style.css:474,493-495,507-514",
+  "js": "assets/js/home.js:25-69,101-114,434"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/coupures-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/coupures-m390.jpg",
+  "video": "medias/coupdefood-maquette/coupures-p960.mp4"
+ },
+ "pieges": [
+  "rotations des cartes fixées dans le JS : les garder faibles pour ne pas couper le texte",
+  "bandeau de logos à arrêter au survol et en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3152,
+  "hauteur_m390": 4499,
+  "epinglee": false,
+  "scrolltriggers": 10
+ }
+}

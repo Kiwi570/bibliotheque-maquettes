@@ -1,0 +1,45 @@
+{
+ "id": "efficience-triathlon-maquette/test-effort-protocole",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "test-effort",
+ "titre": "Protocole épinglé palier par palier",
+ "role": "étapes",
+ "description": "Section épinglée en 100svh : au défilement, les paliers s'allument un à un sur un graphique SVG (points, courbe qui s'allonge, seuils colorés), la ligne correspondante du tableau se met en avant et la photo d'illustration change par groupes de paliers. Sous 960 px, même progression sans épinglage.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "test-effort.html:164-182",
+  "css": "assets/css/main.css:507-523,851-852,856-860,1179-1189,1214-1215,1222",
+  "js": "assets/js/test.js:28-84"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/test-effort-protocole-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/test-effort-protocole-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/test-effort-protocole-p960.mp4"
+ },
+ "pieges": [
+  "la hauteur du graphique est mesurée seulement une fois la classe d'épinglage posée : redessiner après",
+  "couleurs des seuils écrites en dur dans le SVG généré",
+  "le tableau passe en deux colonnes quand la section est épinglée, avec une seconde ligne d'en-tête masquée sinon",
+  "redessiner au redimensionnement seulement si la largeur ou la hauteur change vraiment (barre d'adresse mobile)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2928,
+  "hauteur_m390": 1190,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

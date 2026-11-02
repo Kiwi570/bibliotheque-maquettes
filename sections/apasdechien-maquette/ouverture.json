@@ -1,0 +1,42 @@
+{
+ "id": "apasdechien-maquette/ouverture",
+ "maquette": "apasdechien-maquette",
+ "page": "index",
+ "titre": "Logo tracé puis rideau qui monte",
+ "role": "ouverture",
+ "description": "Écran d'ouverture papier : le nom se dessine en contour SVG, une laisse ondulée se trace dessous, le remplissage arrive puis le sous-titre, et l'écran remonte comme un rideau pour lancer l'entrée du héros (titre découpé en lignes masquées, photo polaroïd qui tourne en montant) ; une seule fois par session, sauté en mode calme ou après une transition de page.",
+ "animations": [
+  "chargement-orchestré",
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:45-51",
+  "css": "assets/css/main.css:715-724",
+  "js": "assets/js/app.js:496-546"
+ },
+ "medias": {
+  "video": "medias/apasdechien-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "sessionStorage pour ne jouer qu'une fois, avec repli CSS (animation de secours à 6 s) si le JS échoue",
+  "enchaîner l'entrée du héros sur la fin de l'ouverture, sinon le titre s'anime sous l'écran",
+  "ne pas rejouer après un rideau de transition de page"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

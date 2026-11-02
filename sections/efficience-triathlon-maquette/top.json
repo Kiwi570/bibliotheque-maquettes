@@ -1,0 +1,48 @@
+{
+ "id": "efficience-triathlon-maquette/top",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Héros vidéo sous ondes",
+ "role": "ouverture",
+ "description": "Titre géant en capitales grasses sur quatre lignes, un mot en couleur d'accent, révélé ligne par ligne ; derrière, une vidéo passe dans un shader OGL qui fait des ondes d'eau au passage du curseur, avec parallaxe au défilement. En bas à droite, un encart de prochain rendez-vous avec prix ; bande de mots-clés défilants en pied.",
+ "animations": [
+  "révélation-texte",
+  "webgl-shader",
+  "parallaxe",
+  "marquee"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:79-112",
+  "css": "assets/css/main.css:150,167,398-426,431-432,949,962-963,975,980,1007,1017-1023,1032,1108-1109,1137,1145,1167-1168",
+  "js": "assets/js/home.js:85-92 ; assets/js/water.js:1-99 ; assets/js/app.js:200-215"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/top-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/top-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/top-p960.mp4"
+ },
+ "pieges": [
+  "vidéo de 3,1 Mo à l'accueil, non corrigée : prévoir une version courte et une affiche légère",
+  "le shader n'est chargé qu'avec un pointeur fin et WebGL ; sinon la vidéo seule reste affichée",
+  "sur téléphone la vidéo bascule sur une petite source et une petite affiche lues dans data-src-small"
+ ],
+ "mesures": {
+  "hauteur_p1440": 962,
+  "hauteur_m390": 938,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

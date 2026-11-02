@@ -1,0 +1,42 @@
+{
+ "id": "aquafit-maquette/horaires-tarifs-planning",
+ "maquette": "aquafit-maquette",
+ "page": "horaires-tarifs",
+ "titre": "Planning en lignes d'eau",
+ "role": "agenda",
+ "description": "Une ligne d'eau horizontale par jour, graduée en heures ; chaque cours est une bouée placée à son horaire, filtrable par lieu en pastilles ; choisir une bouée affiche le détail du créneau et le bouton de réservation.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "horaires-tarifs.html:154-172",
+  "css": "assets/css/site.css:337,418-419,424-427,447",
+  "js": "assets/js/horaires.js:18-95"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/horaires-tarifs-planning-p1440.jpg",
+  "capture_m390": "medias/aquafit-maquette/horaires-tarifs-planning-m390.jpg",
+  "video": "medias/aquafit-maquette/horaires-tarifs-planning-p960.mp4"
+ },
+ "pieges": [
+  "deux cours proches se chevauchent : prévoir un décalage vertical des bouées"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1602,
+  "hauteur_m390": 2161,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

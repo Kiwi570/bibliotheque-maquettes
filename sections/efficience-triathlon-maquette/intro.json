@@ -1,0 +1,42 @@
+{
+ "id": "efficience-triathlon-maquette/intro",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Ouverture : courbe tracée et compteur",
+ "role": "ouverture",
+ "description": "Écran d'ouverture sur grille SVG : la formule et le nom apparaissent en lettres brouillées, une courbe exponentielle se trace sur toute la largeur pendant qu'un compteur monte en mmol/L, puis le rideau se retire en clip-path vers le haut. Un bouton « Passer », et la première action (clic, touche, molette) accélère la fin ; une seule fois par session, absent en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "masque",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:28-37",
+  "css": "assets/css/main.css:372-387,1100",
+  "js": "assets/js/home.js:41-82,504"
+ },
+ "medias": {
+  "video": "medias/efficience-triathlon-maquette/top-p960.mp4"
+ },
+ "pieges": [
+  "la fin de l'ouverture lance l'entrée du titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
+  "la courbe et le compteur sont réglés pour une métrique sportive : la courbe et l'unité deviennent des options",
+  "l'accélération à la première action doit aussi écouter le clavier, pas seulement le pointeur"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

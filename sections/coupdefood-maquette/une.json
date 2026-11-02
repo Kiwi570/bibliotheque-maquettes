@@ -1,0 +1,46 @@
+{
+ "id": "coupdefood-maquette/une",
+ "maquette": "coupdefood-maquette",
+ "page": "index",
+ "titre": "La une",
+ "role": "ouverture",
+ "description": "Une de quotidien : filets qui se tracent, manchette « COUP DE FOOD » lettre à lettre (SplitText), photo qui se développe en trame WebGL, titre imprimé au rouleau, tampon rouge, sommaire « En bref » et fil de dépêches défilant accéléré par la vitesse de défilement et arrêté au survol ou au focus.",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "webgl-shader",
+  "marquee"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:81-138",
+  "css": "assets/css/style.css:245-294",
+  "js": "assets/js/home.js:136-157 ; assets/js/main.js:190-265 ; assets/js/halftone.js"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/une-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/une-m390.jpg",
+  "video": "medias/coupdefood-maquette/une-p960.mp4"
+ },
+ "pieges": [
+  "l'ouverture attend la fin de la feuille de transition : garder ce chaînage",
+  "le second groupe du fil est aria-hidden et ses liens en tabIndex -1",
+  "la manchette est ajustée à la largeur en JS (data-mast) : relancer l'ajustement après chargement des polices"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1023,
+  "hauteur_m390": 1653,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

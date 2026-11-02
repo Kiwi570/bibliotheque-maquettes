@@ -1,0 +1,44 @@
+{
+ "id": "aquafit-maquette/horizontal",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "titre": "Galerie horizontale épinglée",
+ "role": "galerie",
+ "description": "Six cartes photo avec légende défilent horizontalement pendant que la section est épinglée, avec une barre de progression et un léger décalage des images ; défilement natif au doigt sur téléphone.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:236-289",
+  "css": "assets/css/site.css:243-264,655-661",
+  "js": "assets/js/anim.js:108-134"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/horizontal-p1440.jpg",
+  "capture_m390": "medias/aquafit-maquette/horizontal-m390.jpg",
+  "video": "medias/aquafit-maquette/horizontal-p960.mp4"
+ },
+ "pieges": [
+  "recalculer la distance au refresh quand les images arrivent, sinon la dernière carte est coupée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 803,
+  "epinglee": true,
+  "scrolltriggers": 10
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "d3co-maquette/collection",
+ "maquette": "d3co-maquette",
+ "page": "index",
+ "titre": "Collection tracée par la buse",
+ "role": "produits",
+ "description": "Section épinglée : la piste des huit modèles défile à l'horizontale ; sur chaque carte, la buse trace d'abord le parcours de la silhouette sur une grille, puis la photo apparaît avec coloris, prix et ajout rapide. Compteur 01/08 et barre de progression.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "masque",
+  "révélation-image"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:133-149",
+  "css": "assets/css/style.css:441-442",
+  "js": "assets/js/accueil.js:175-301"
+ },
+ "medias": {
+  "capture": "medias/d3co-maquette/collection-p1440.jpg",
+  "capture_m390": "medias/d3co-maquette/collection-m390.jpg",
+  "video": "medias/d3co-maquette/collection-p960.mp4"
+ },
+ "pieges": [
+  "les cartes sont vides avant le tracé (reste de l'audit) : prévoir un état de départ visible",
+  "révéler sans animation en mode calme (revelerCarteSansAnim)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1097,
+  "epinglee": true,
+  "scrolltriggers": 11
+ }
+}

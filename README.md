@@ -9,7 +9,7 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 2. Chercher : `node outils/chercher.mjs --activite restauration --ambiance chaleureux --role ouverture` (filtres répétables : `--concept --animation --interaction --dependance --telephone --sans ogl --note-min 4 --module`, mots libres acceptés, `--json` pour un résultat machine). Activité, concept et ambiance départagent sans exclure ; `--strict` les rend obligatoires.
 3. Lire les fiches retenues (`sections/<maquette>/<id>.json`, `modules/<nom>/module.json` et `NOTES.md`), regarder captures et vidéos (`medias/`).
 4. Assembler : `node outils/assembler.mjs <module> <module> … --palette palette.json --sortie assemblages/projet` produit une page autonome (socle + modules) avec la nouvelle palette.
-5. Tester : `node outils/tester-module.mjs assemblages/projet/index.html` (11 formats, réduire les animations, sans WebGL, console, CLS, texte 12 px, cibles 44 px).
+5. Tester : `node outils/tester-module.mjs assemblages/projet/index.html` (13 formats, réduire les animations, sans WebGL, console, CLS, texte 12 px, cibles 44 px).
 6. Adapter : copier le dossier dans le projet, remplacer les contenus neutres, garder les classes et les `data-*` décrits dans chaque `NOTES.md`.
 
 ## Conventions des modules

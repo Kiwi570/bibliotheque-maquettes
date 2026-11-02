@@ -1,0 +1,48 @@
+{
+ "id": "d3co-maquette/heros",
+ "maquette": "d3co-maquette",
+ "page": "index",
+ "titre": "Héros imprimé couche par couche",
+ "role": "ouverture",
+ "description": "La vraie photo du vase s'imprime en WebGL (OGL) couche par couche sous une buse incandescente, les couches chaudes refroidissent ; cotes SVG du produit autour, puis vue éclatée en strates au défilement (épinglage, scrub). Repli Canvas 2D sans WebGL, image finale sous réduction des animations.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:85-112",
+  "css": "assets/css/style.css:375-420",
+  "js": "assets/js/impression.js ; assets/js/accueil.js:61-149"
+ },
+ "medias": {
+  "capture": "medias/d3co-maquette/heros-p1440.jpg",
+  "capture_m390": "medias/d3co-maquette/heros-m390.jpg",
+  "video": "medias/d3co-maquette/heros-p960.mp4"
+ },
+ "pieges": [
+  "la boîte UV de la silhouette (bbox) vient d'un fichier généré depuis la photo : sans elle la buse imprime le fond",
+  "attendre impression.pret avant imprimer()",
+  "image finale directe en mode calme (progres: 1)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 956,
+  "hauteur_m390": 901,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

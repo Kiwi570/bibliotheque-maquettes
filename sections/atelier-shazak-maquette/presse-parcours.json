@@ -1,0 +1,43 @@
+{
+ "id": "atelier-shazak-maquette/presse-parcours",
+ "maquette": "atelier-shazak-maquette",
+ "page": "presse",
+ "titre": "Frise en sangle à boucle",
+ "role": "agenda",
+ "description": "Frise chronologique épinglée : une sangle de cuir dessinée en SVG (piqûres pointillées) défile horizontalement ; ses trous numérotés portent les années et une boucle fixe désigne l'année active, dont le trou rebondit au passage. Sous 961 px ou en mode calme, la sangle devient verticale.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "presse.html:92-101",
+  "css": "assets/css/style.css:588-611",
+  "js": "assets/js/main.js:969-1013,1020"
+ },
+ "medias": {
+  "capture": "medias/atelier-shazak-maquette/presse-parcours-p1440.jpg",
+  "capture_m390": "medias/atelier-shazak-maquette/presse-parcours-m390.jpg",
+  "video": "medias/atelier-shazak-maquette/presse-parcours-p960.mp4"
+ },
+ "pieges": [
+  "redessiner la sangle au refresh de ScrollTrigger (largeur de piste)",
+  "année active mesurée par la distance au centre de la boucle, pas par la progression"
+ ],
+ "mesures": {
+  "hauteur_p1440": 877,
+  "hauteur_m390": 3162,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

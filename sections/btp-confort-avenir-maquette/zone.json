@@ -1,0 +1,43 @@
+{
+ "id": "btp-confort-avenir-maquette/zone",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Zone d'intervention au compas",
+ "role": "carte",
+ "description": "Carte SVG avec trois boutons d'échelle (ville, région, pays) : le cadre de la carte zoome en douceur, les étiquettes gardent leur taille, et un compas pivote pour tracer le cercle d'intervention autour du siège.",
+ "animations": [
+  "révélation-texte"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:297-313",
+  "css": "assets/css/style.css:497-517",
+  "js": "assets/js/home.js:316-399 ; assets/js/drawings.js:325-341"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/zone-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/zone-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/zone-p960.mp4"
+ },
+ "pieges": [
+  "animer viewBox et recalculer la taille des étiquettes à chaque image, sinon le texte grossit avec le zoom",
+  "les coordonnées des villes sont propres à la carte : prévoir une projection par projet"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1207,
+  "hauteur_m390": 1307,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

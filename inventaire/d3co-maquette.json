@@ -1,0 +1,2642 @@
+{
+ "depot": "d3co-maquette",
+ "commit": "a3843b2",
+ "date_commit": "2026-10-28T22:34:26+01:00",
+ "genere": "2026-11-02T23:01:20.856Z",
+ "pages": {
+  "404": {
+   "fichier": "404.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [],
+   "gabarit": null,
+   "url": "/404",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": true,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    }
+   ],
+   "gabarit_de": []
+  },
+  "index": {
+   "fichier": "index.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/accueil.js",
+    "assets/js/matiere.js",
+    "assets/js/core.js",
+    "assets/js/data.js",
+    "assets/js/formes.js",
+    "assets/js/i18n.js",
+    "assets/js/carte.js",
+    "assets/js/suisse.js",
+    "assets/js/composants.js",
+    "assets/js/impression.js"
+   ],
+   "gabarit": null,
+   "url": "/",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": true,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    }
+   ],
+   "gabarit_de": []
+  },
+  "boutique": {
+   "fichier": "boutique.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/boutique.js",
+    "assets/js/composants.js",
+    "assets/js/data.js",
+    "assets/js/formes.js",
+    "assets/js/core.js",
+    "assets/js/i18n.js"
+   ],
+   "gabarit": null,
+   "url": "/boutique",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": true,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    }
+   ],
+   "gabarit_de": []
+  },
+  "produit": {
+   "fichier": "produit.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/produit.js",
+    "assets/js/composants.js",
+    "assets/js/data.js",
+    "assets/js/formes.js",
+    "assets/js/core.js",
+    "assets/js/i18n.js",
+    "assets/js/impression.js"
+   ],
+   "gabarit": null,
+   "url": "/produit",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": true,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    }
+   ],
+   "gabarit_de": []
+  }
+ },
+ "blocs": [
+  {
+   "id": "entete",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "header#entete.entete",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:33-55",
+    "css": "assets/css/style.css:94,206-275,844-845,879-880,905-908,1082-1085,1101-1104",
+    "js": "assets/js/accueil.js:3 ; assets/js/core.js:1,24-70,128-134,137-167,170-190,371-384,393-486,527-535,689-710 ; assets/js/i18n.js:5-10 ; assets/js/carte.js:3"
+   },
+   "titre": "",
+   "hauteur": 64,
+   "hauteur_m390": 58,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 4,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 1,
+    "images": 0,
+    "liens": 5
+   },
+   "classes_exclusives": [
+    "entete",
+    "entete__in",
+    "nav",
+    "entete__droite",
+    "langue",
+    "panier-btn",
+    "libelle",
+    "compte",
+    "burger"
+   ],
+   "data": [
+    "data-curseur",
+    "data-page",
+    "data-i18n",
+    "data-lang",
+    "data-ouvrir-panier",
+    "data-compte",
+    "data-ouvrir-menu"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/entete-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/entete-m390.jpg"
+   }
+  },
+  {
+   "id": "menu-mobile",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div#menu-mobile.menu-mobile",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:57-72",
+    "css": "assets/css/style.css:277-294",
+    "js": "assets/js/core.js:137-167,170-190,193-215,464-486"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 6
+   },
+   "classes_exclusives": [
+    "menu-mobile",
+    "menu-mobile__haut",
+    "menu-mobile__bas"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-fermer-menu",
+    "data-i18n-attr",
+    "data-i18n"
+   ],
+   "medias": {
+    "capture_m390": "medias/d3co-maquette/menu-mobile-m390.jpg"
+   }
+  },
+  {
+   "id": "intro",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.intro",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:74-80",
+    "css": "assets/css/style.css:349-368",
+    "js": "assets/js/accueil.js:19-55,175-274,718"
+   },
+   "titre": "",
+   "hauteur": null,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": null,
+   "cache": null,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": null,
+   "classes_exclusives": [
+    "intro",
+    "intro__strates",
+    "intro__centre",
+    "intro__logo",
+    "intro__buse",
+    "intro__compteur"
+   ],
+   "data": [
+    "data-intro-strates",
+    "data-intro-z",
+    "data-intro-pct"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "heros",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#heros.heros",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:85-112",
+    "css": "assets/css/style.css:109-115,119,375-420,852-855,886-888,940-945,963-972",
+    "js": "assets/js/accueil.js:61-149,486-508,667-686,701 ; assets/js/core.js:40-70,83-93,193-216 ; assets/js/i18n.js:21-30 ; assets/js/composants.js:65-79"
+   },
+   "titre": "Imprimé à Bienne,couche par couche.",
+   "hauteur": 956,
+   "hauteur_m390": 901,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 0,
+     "fin": 630,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 630,
+     "fin": 1586,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -621,
+     "fin": 407,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 9,
+   "proprietes": [
+    "x",
+    "y",
+    "rotationX",
+    "rotationY",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "heros",
+    "heros__fond",
+    "heros__grid",
+    "heros__eyebrow",
+    "titre-xxl",
+    "heros__titre",
+    "heros__bas",
+    "lead",
+    "heros__actions",
+    "cartouche",
+    "heros__defiler",
+    "heros__defiler-axe",
+    "heros__scene",
+    "cotes"
+   ],
+   "data": [
+    "data-parallaxe",
+    "data-i18n",
+    "data-split",
+    "data-i18n-html",
+    "data-magnet",
+    "data-curseur",
+    "data-heros-scene",
+    "data-curseur-label",
+    "data-i18n-attr",
+    "data-cotes"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/heros-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/heros-m390.jpg",
+    "video": "medias/d3co-maquette/heros-p960.mp4"
+   }
+  },
+  {
+   "id": "bandeau",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.bandeau",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:115-130",
+    "css": "assets/css/style.css:423-427",
+    "js": "assets/js/accueil.js:152-171 ; assets/js/i18n.js:33-37"
+   },
+   "titre": "Livraison et paiement",
+   "hauteur": 86,
+   "hauteur_m390": 70,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 686,
+     "fin": 1672,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "x"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 15,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "bandeau",
+    "bandeau__piste",
+    "bandeau__groupe",
+    "bandeau__item",
+    "bandeau__img"
+   ],
+   "data": [
+    "data-bandeau",
+    "data-bandeau-piste",
+    "data-i18n"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/bandeau-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/bandeau-m390.jpg",
+    "video": "medias/d3co-maquette/bandeau-p960.mp4"
+   }
+  },
+  {
+   "id": "collection",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#collection.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:133-149",
+    "css": "assets/css/style.css:441-442,898-899,930-934,975-977,986-988,1054",
+    "js": "assets/js/accueil.js:175-274 ; assets/js/i18n.js:7,210"
+   },
+   "titre": "Huit formes, tracées par la buse.",
+   "hauteur": 900,
+   "hauteur_m390": 1097,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": 0.8,
+     "debut": 1672,
+     "fin": 4988,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 1,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 1,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 1,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1195,
+     "fin": 2173,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 2,
+   "animations_css": 2,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 6,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 12,
+    "liens": 17
+   },
+   "classes_exclusives": [
+    "collection",
+    "collection__fenetre",
+    "collection__piste",
+    "collection__progres",
+    "collection__barre"
+   ],
+   "data": [
+    "data-collection",
+    "data-i18n",
+    "data-split",
+    "data-collection-fenetre",
+    "data-collection-piste",
+    "data-coll-compteur",
+    "data-coll-barre",
+    "data-coll-aide"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/collection-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/collection-m390.jpg",
+    "video": "medias/d3co-maquette/collection-p960.mp4"
+   }
+  },
+  {
+   "id": "fabrication",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#fabrication.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:152-195",
+    "css": "assets/css/style.css:506-515,783,839,851,894,919-925,993-1007,1069-1071",
+    "js": "assets/js/accueil.js:304-406,618-664 ; assets/js/i18n.js:269"
+   },
+   "titre": "De la bobine à votre étagère.",
+   "hauteur": 2790,
+   "hauteur_m390": 1974,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": null,
+     "debut": 6236,
+     "fin": 7207,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.5,
+     "debut": 5597,
+     "fin": 7207,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5320,
+     "fin": 6275,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 7188,
+     "fin": 8491,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7342,
+     "fin": 8491,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7296,
+     "fin": 8491,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7342,
+     "fin": 8491,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "process__grid",
+    "process__visuel",
+    "process__lecture",
+    "etapes",
+    "etape",
+    "est-active",
+    "etape__num",
+    "process__images",
+    "mt-l",
+    "process__img",
+    "process__img--large"
+   ],
+   "data": [
+    "data-fabrication",
+    "data-i18n",
+    "data-split",
+    "data-process-visuel",
+    "data-process-canvas",
+    "data-process-couche",
+    "data-etapes",
+    "data-reveler",
+    "data-i18n-attr",
+    "data-parallaxe-img"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/fabrication-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/fabrication-m390.jpg",
+    "video": "medias/d3co-maquette/fabrication-p960.mp4"
+   }
+  },
+  {
+   "id": "couleurs",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#couleurs.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:198-217",
+    "css": "assets/css/style.css:519-526,530-531,836,851,869,1090",
+    "js": "assets/js/accueil.js:410-483 ; assets/js/core.js:575-605 ; assets/js/data.js:22-31,42,47,60,68,79,88,98,106,115,124,146-158 ; assets/js/formes.js:2 ; assets/js/composants.js:82-86"
+   },
+   "titre": "Trouvez la couleur de votre pièce.",
+   "hauteur": 1014,
+   "hauteur_m390": 1210,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8235,
+     "fin": 9505,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8118,
+     "fin": 9074,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 25,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "couleurs",
+    "couleurs__grid",
+    "onglets",
+    "nuance-nom",
+    "nuancier",
+    "rangee",
+    "couleurs__scene"
+   ],
+   "data": [
+    "data-couleurs",
+    "data-i18n",
+    "data-split",
+    "data-couleurs-onglets",
+    "data-couleurs-nom",
+    "data-couleurs-info",
+    "data-couleurs-nuancier",
+    "data-couleurs-ajouter",
+    "data-magnet",
+    "data-couleurs-lien",
+    "data-couleurs-scene"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/couleurs-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/couleurs-m390.jpg",
+    "video": "medias/d3co-maquette/couleurs-p960.mp4"
+   }
+  },
+  {
+   "id": "saison",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#saison.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:220-231",
+    "css": "assets/css/style.css:534-535,859",
+    "js": "assets/js/accueil.js:486-508 ; assets/js/i18n.js:66-68"
+   },
+   "titre": "Tons d’automne",
+   "hauteur": 712,
+   "hauteur_m390": 776,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9212,
+     "fin": 10289,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 4
+   },
+   "classes_exclusives": [
+    "saison",
+    "saison__liste"
+   ],
+   "data": [
+    "data-i18n",
+    "data-saison"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/saison-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/saison-m390.jpg",
+    "video": "medias/d3co-maquette/saison-p960.mp4"
+   }
+  },
+  {
+   "id": "ensemble",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#ensemble.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:234-262",
+    "css": "assets/css/style.css:192,542-543,548-553,560,564-566,851,884,927",
+    "js": "assets/js/accueil.js:4,410-483,515-615 ; assets/js/core.js:352-356,423-462,536-605 ; assets/js/composants.js:9"
+   },
+   "titre": "Trois pièces, une étagère.",
+   "hauteur": 1144,
+   "hauteur_m390": 1224,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10248,
+     "fin": 11361,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9836,
+     "fin": 10792,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 9,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 10,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "ensemble__grid",
+    "etagere",
+    "etagere__objets",
+    "etagere__vide",
+    "choix",
+    "choix__liste",
+    "totaux",
+    "jauge",
+    "btn--plein"
+   ],
+   "data": [
+    "data-ensemble",
+    "data-i18n",
+    "data-split",
+    "data-etagere",
+    "data-i18n-attr",
+    "data-etagere-objets",
+    "data-etagere-vide",
+    "data-ensemble-choix",
+    "data-ensemble-totaux",
+    "data-ensemble-jauge",
+    "data-ensemble-ajouter"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/ensemble-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/ensemble-m390.jpg",
+    "video": "medias/d3co-maquette/ensemble-p960.mp4"
+   }
+  },
+  {
+   "id": "conseils",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#conseils.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:265-288",
+    "css": "assets/css/style.css:569-575,846-847,881,1015",
+    "js": "assets/js/core.js:257-280 ; assets/js/data.js:39,57,78,86,97,105,113,122"
+   },
+   "titre": "Faites-les durer.",
+   "hauteur": 616,
+   "hauteur_m390": 1093,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10749,
+     "fin": 11977,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10857,
+     "fin": 11977,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10806,
+     "fin": 11635,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10806,
+     "fin": 11635,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10806,
+     "fin": 11635,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "yPercent",
+    "drawSVG"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "conseils__grid",
+    "conseils__intro",
+    "conseils__img",
+    "conseil"
+   ],
+   "data": [
+    "data-i18n",
+    "data-reveler",
+    "data-i18n-attr",
+    "data-parallaxe-img",
+    "data-trace"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/conseils-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/conseils-m390.jpg",
+    "video": "medias/d3co-maquette/conseils-p960.mp4"
+   }
+  },
+  {
+   "id": "matiere",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#matiere.matiere",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:291-305",
+    "css": "assets/css/style.css:578-586,851,868,1022",
+    "js": "assets/js/accueil.js:11,710 ; assets/js/matiere.js:44-145"
+   },
+   "titre": "Du PLA d’origine végétale.",
+   "hauteur": 855,
+   "hauteur_m390": 937,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11512,
+     "fin": 12879,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl",
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "matiere",
+    "matiere__repli",
+    "matiere__aide",
+    "matiere__contenu",
+    "matiere__carte",
+    "matiere__img"
+   ],
+   "data": [
+    "data-matiere",
+    "data-matiere-repli",
+    "data-i18n-attr",
+    "data-i18n",
+    "data-reveler"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/matiere-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/matiere-m390.jpg",
+    "video": "medias/d3co-maquette/matiere-p960.mp4"
+   }
+  },
+  {
+   "id": "atelier",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#atelier.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:308-341",
+    "css": "assets/css/style.css:484-497,503,589-608,851,885,913,1010-1011,1017,1087-1090",
+    "js": "assets/js/accueil.js:709 ; assets/js/core.js:282-296,689-710 ; assets/js/i18n.js:16,102,268 ; assets/js/composants.js:45-51"
+   },
+   "titre": "Imprimé à Bienne, livré dans toute la Suisse.",
+   "hauteur": 1623,
+   "hauteur_m390": 1548,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12899,
+     "fin": 14049,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12899,
+     "fin": 14049,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12451,
+     "fin": 13488,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 13255,
+     "fin": 14453,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13362,
+     "fin": 14454,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "drawSVG",
+    "scale",
+    "transformOrigin",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "atelier__grid",
+    "carte-suisse",
+    "citation",
+    "coordonnees",
+    "valeur",
+    "copier",
+    "atelier__photo",
+    "ph__etiquette"
+   ],
+   "data": [
+    "data-atelier",
+    "data-i18n",
+    "data-split",
+    "data-carte",
+    "data-i18n-attr",
+    "data-copier",
+    "data-reveler",
+    "data-parallaxe-img"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/atelier-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/atelier-m390.jpg",
+    "video": "medias/d3co-maquette/atelier-p960.mp4"
+   }
+  },
+  {
+   "id": "sur-mesure",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#sur-mesure.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:344-391",
+    "css": "assets/css/style.css:611-621,638-649,851,883,1016,1020-1021",
+    "js": "assets/js/accueil.js:618-664 ; assets/js/core.js:543-605"
+   },
+   "titre": "Une idée ? Nous l’imprimons.",
+   "hauteur": 1448,
+   "hauteur_m390": 1045,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14073,
+     "fin": 15029,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 14217,
+     "fin": 15902,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14325,
+     "fin": 15902,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 10,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "mesure__grid",
+    "croquis",
+    "formulaire",
+    "formulaire__etapes",
+    "est-fait",
+    "radios",
+    "radio",
+    "ligne-champs",
+    "message-simule",
+    "formulaire__nav"
+   ],
+   "data": [
+    "data-mesure",
+    "data-i18n",
+    "data-split",
+    "data-reveler",
+    "data-i18n-attr",
+    "data-parallaxe-img",
+    "data-mesure-form",
+    "data-mesure-etape",
+    "data-pas",
+    "data-mesure-ok",
+    "data-mesure-erreur",
+    "data-mesure-prec",
+    "data-mesure-suiv",
+    "data-magnet"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/sur-mesure-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/sur-mesure-m390.jpg",
+    "video": "medias/d3co-maquette/sur-mesure-p960.mp4"
+   }
+  },
+  {
+   "id": "communaute",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#communaute.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:394-419",
+    "css": "assets/css/style.css:646-647,652-658,851,860",
+    "js": "assets/js/accueil.js:667-698 ; assets/js/i18n.js:275"
+   },
+   "titre": "Rejoignez notre communauté.",
+   "hauteur": 1721,
+   "hauteur_m390": 1613,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 15663,
+     "fin": 17385,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 15663,
+     "fin": 17385,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 15663,
+     "fin": 17385,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 15663,
+     "fin": 17385,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 15521,
+     "fin": 16477,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 2,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 8,
+    "liens": 9
+   },
+   "classes_exclusives": [
+    "communaute__grid",
+    "newsletter",
+    "newsletter__ligne",
+    "case"
+   ],
+   "data": [
+    "data-split",
+    "data-i18n",
+    "data-communaute",
+    "data-newsletter",
+    "data-news-retour"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/communaute-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/communaute-m390.jpg",
+    "video": "medias/d3co-maquette/communaute-p960.mp4"
+   }
+  },
+  {
+   "id": "pied",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "footer#pied.pied",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:421-467",
+    "css": "assets/css/style.css:93,661-674,858,892,1087-1092",
+    "js": "assets/js/core.js:619-639,642-656 ; assets/js/i18n.js:136-145"
+   },
+   "titre": "Objets déco imprimés en 3D, couche par couche, à Bienne.",
+   "hauteur": 855,
+   "hauteur_m390": 1192,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 17373,
+     "fin": 18577,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 10,
+   "proprietes": [
+    "xPercent",
+    "opacity",
+    "x"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 9
+   },
+   "classes_exclusives": [
+    "pied",
+    "pied__haut",
+    "pied__titre",
+    "pied__mot",
+    "pied__bas",
+    "paiements",
+    "bouton-calme"
+   ],
+   "data": [
+    "data-i18n",
+    "data-mot-strates",
+    "data-calme"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/pied-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/pied-m390.jpg",
+    "video": "medias/d3co-maquette/pied-p960.mp4"
+   }
+  },
+  {
+   "id": "voile",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div.voile",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:469-469",
+    "css": null,
+    "js": "assets/js/core.js:464-512"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [],
+   "data": [
+    "data-voile"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/voile-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/voile-m390.jpg",
+    "video": "medias/d3co-maquette/voile-p960.mp4"
+   }
+  },
+  {
+   "id": "tiroir",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "aside#tiroir.tiroir",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:470-477",
+    "css": "assets/css/style.css:679-696,707",
+    "js": "assets/js/core.js:320,423-512"
+   },
+   "titre": "Votre panier",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "tiroir",
+    "tiroir__haut",
+    "tiroir__liste",
+    "tiroir__bas"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-i18n",
+    "data-fermer-panier",
+    "data-i18n-attr",
+    "data-panier-liste",
+    "data-panier-bas"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/tiroir-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/tiroir-m390.jpg"
+   }
+  },
+  {
+   "id": "modale",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div#modale.modale",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:478-481",
+    "css": "assets/css/style.css:678,711-713,811,946-947",
+    "js": "assets/js/core.js:116,320,464-512,516-535,543-605"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "modale",
+    "est-visible",
+    "modale__boite"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-fermer-modale",
+    "data-modale-boite"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "toasts",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div.toasts",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:482-482",
+    "css": "assets/css/style.css:724",
+    "js": "assets/js/core.js:298-318"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "toasts"
+   ],
+   "data": [
+    "data-toasts"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "curseur",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div.curseur",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:483-483",
+    "css": "assets/css/style.css:298-325",
+    "js": "assets/js/accueil.js:61-149,486-508,667-686 ; assets/js/matiere.js:1 ; assets/js/core.js:1,192-217,689-710 ; assets/js/composants.js:65-79"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "curseur",
+    "curseur__anneau",
+    "curseur__label",
+    "curseur__point",
+    "curseur__croix"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "rail",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "boutique",
+    "produit"
+   ],
+   "sig": "div.rail",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:484-484",
+    "css": "assets/css/style.css:330-346",
+    "js": "assets/js/core.js:236-254,689-710"
+   },
+   "titre": "",
+   "hauteur": 378,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "rail",
+    "rail__axe",
+    "rail__buse",
+    "rail__lecture"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/d3co-maquette/rail-p1440.jpg"
+   }
+  },
+  {
+   "id": "404-erreur-in",
+   "page": "404",
+   "pages": [
+    "404"
+   ],
+   "sig": "div.wrap",
+   "dans_main": true,
+   "code": {
+    "html": "404.html:64-73",
+    "css": "assets/css/style.css:109-119,123-132,154-190,194-195,797,836,979,1048-1051,1086,1090",
+    "js": null
+   },
+   "titre": "Cette page n’a pas encore été imprimée.",
+   "hauteur": 561,
+   "hauteur_m390": 414,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "erreur__in",
+    "eyebrow",
+    "erreur__code",
+    "titre-xl",
+    "lead",
+    "rangee",
+    "btn",
+    "btn--orange",
+    "btn--ligne"
+   ],
+   "data": [
+    "data-i18n",
+    "data-erreur-code"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/404-erreur-in-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/404-erreur-in-m390.jpg"
+   }
+  },
+  {
+   "id": "boutique-boutique-tete",
+   "page": "boutique",
+   "pages": [
+    "boutique"
+   ],
+   "sig": "section.boutique-tete",
+   "dans_main": true,
+   "code": {
+    "html": "boutique.html:69-85",
+    "css": "assets/css/style.css:109-115,123-132,735-738,834,889-891",
+    "js": "assets/js/boutique.js:29-85 ; assets/js/core.js:543-605 ; assets/js/i18n.js:21,39,43,59,66,70,79,90,97,110,152,159"
+   },
+   "titre": "Boutique",
+   "hauteur": 701,
+   "hauteur_m390": 574,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "boutique-tete",
+    "boutique-tete__grid",
+    "pile",
+    "eyebrow",
+    "titre-xxl",
+    "plateau"
+   ],
+   "data": [
+    "data-i18n",
+    "data-titre-boutique",
+    "data-plateau",
+    "data-i18n-attr"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/boutique-boutique-tete-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/boutique-boutique-tete-m390.jpg"
+   }
+  },
+  {
+   "id": "boutique-div",
+   "page": "boutique",
+   "pages": [
+    "boutique"
+   ],
+   "sig": "div.wrap",
+   "dans_main": true,
+   "code": {
+    "html": "boutique.html:87-94",
+    "css": "assets/css/style.css:739-743,862-864",
+    "js": "assets/js/boutique.js:239"
+   },
+   "titre": "",
+   "hauteur": 75,
+   "hauteur_m390": 193,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "reassurance"
+   ],
+   "data": [
+    "data-i18n"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/boutique-div-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/boutique-div-m390.jpg"
+   }
+  },
+  {
+   "id": "boutique-filtres",
+   "page": "boutique",
+   "pages": [
+    "boutique"
+   ],
+   "sig": "div.filtres",
+   "dans_main": true,
+   "code": {
+    "html": "boutique.html:96-114",
+    "css": "assets/css/style.css:744-751,890,909,1026-1034,1088",
+    "js": "assets/js/boutique.js:19,24-26,87,95-105,200,207 ; assets/js/i18n.js:172-176,286-287"
+   },
+   "titre": "",
+   "hauteur": 59,
+   "hauteur_m390": 177,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 1,
+    "boutons": 10,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "filtres",
+    "filtres__in",
+    "filtres__groupe",
+    "tri"
+   ],
+   "data": [
+    "data-filtres",
+    "data-f-cat",
+    "data-i18n",
+    "data-f-taille",
+    "data-compte-resultats",
+    "data-tri"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/boutique-filtres-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/boutique-filtres-m390.jpg"
+   }
+  },
+  {
+   "id": "boutique-div-2",
+   "page": "boutique",
+   "pages": [
+    "boutique"
+   ],
+   "sig": "div.wrap",
+   "dans_main": true,
+   "code": {
+    "html": "boutique.html:116-119",
+    "css": "assets/css/style.css:752,848,882,1109",
+    "js": "assets/js/boutique.js:23"
+   },
+   "titre": "",
+   "hauteur": 1836,
+   "hauteur_m390": 4313,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 91,
+     "fin": 1504,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 91,
+     "fin": 1504,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 91,
+     "fin": 1504,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 680,
+     "fin": 2092,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 680,
+     "fin": 2092,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 680,
+     "fin": 2092,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1268,
+     "fin": 2661,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1268,
+     "fin": 2661,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 16,
+   "proprietes": [
+    "rotationX",
+    "rotationY"
+   ],
+   "boucles_css": 2,
+   "animations_css": 2,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 6,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 12,
+    "liens": 16
+   },
+   "classes_exclusives": [
+    "grille-produits"
+   ],
+   "data": [
+    "data-grille"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/boutique-div-2-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/boutique-div-2-m390.jpg",
+    "video": "medias/d3co-maquette/boutique-div-2-p960.mp4"
+   }
+  },
+  {
+   "id": "produit-div",
+   "page": "produit",
+   "pages": [
+    "produit"
+   ],
+   "sig": "div.wrap",
+   "dans_main": true,
+   "code": {
+    "html": "produit.html:69-107",
+    "css": "assets/css/style.css:109-115,194,397,522,526,702-704,775-784,788-799,851,861,1063-1064,1089-1093",
+    "js": "assets/js/produit.js:30-35,43-99,169-190,204-228,231-245,262-264,283,288,291-299,306 ; assets/js/composants.js:1,9,21-36,82-86 ; assets/js/data.js:40,58,79,87,98,106,115,124,146-158 ; assets/js/core.js:220-234,423-462 ; assets/js/i18n.js:64,280 ; assets/js/impression.js:112"
+   },
+   "titre": "Linea",
+   "hauteur": 1089,
+   "hauteur_m390": 1576,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 29,
+    "details": 5,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 14,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "fil",
+    "produit__grid",
+    "galerie",
+    "scene-produit",
+    "impression__repli",
+    "loupe",
+    "vignettes",
+    "fiche",
+    "titre-xxl",
+    "fiche__prix",
+    "montant",
+    "fiche__bloc",
+    "finitions",
+    "nuancier",
+    "achat",
+    "quantite",
+    "fleche",
+    "livraison-estimee",
+    "accordeons"
+   ],
+   "data": [
+    "data-i18n",
+    "data-fil-cat",
+    "data-fil-nom",
+    "data-scene",
+    "data-repli",
+    "data-loupe",
+    "data-vignettes",
+    "data-cat",
+    "data-nom",
+    "data-montant",
+    "data-prix-note",
+    "data-bloc-fin",
+    "data-finitions",
+    "data-nom-couleur",
+    "data-nuancier",
+    "data-bloc-taille",
+    "data-taille-note",
+    "data-tailles",
+    "data-achat",
+    "data-q",
+    "data-i18n-attr",
+    "data-q-val",
+    "data-ajouter",
+    "data-magnet",
+    "data-livraison"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/produit-div-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/produit-div-m390.jpg",
+    "video": "medias/d3co-maquette/produit-div-p960.mp4"
+   }
+  },
+  {
+   "id": "produit-section",
+   "page": "produit",
+   "pages": [
+    "produit"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "produit.html:109-120",
+    "css": "assets/css/style.css:109-116,646-647,814-822,834,851,979,1042",
+    "js": "assets/js/produit.js:43-80,101-146,278,307 ; assets/js/core.js:543-605 ; assets/js/i18n.js:275"
+   },
+   "titre": "Les cotes de l’atelier.",
+   "hauteur": 1010,
+   "hauteur_m390": 786,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 644,
+     "fin": 1999,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 801,
+     "fin": 1675,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "clipPath",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 1,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "dessin",
+    "dessin__plan",
+    "pile",
+    "titre-xl",
+    "case"
+   ],
+   "data": [
+    "data-section-plan",
+    "data-plan",
+    "data-i18n",
+    "data-split",
+    "data-tailles-plan",
+    "data-voir-trajet"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/produit-section-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/produit-section-m390.jpg",
+    "video": "medias/d3co-maquette/produit-section-p960.mp4"
+   }
+  },
+  {
+   "id": "produit-section-2",
+   "page": "produit",
+   "pages": [
+    "produit"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "produit.html:122-138",
+    "css": "assets/css/style.css:109-116,523-525,814,823,828-829,834,851,905-908,979,1087",
+    "js": "assets/js/produit.js:101,149-167,267-271,274,280-281 ; assets/js/core.js:543-605"
+   },
+   "titre": "Imaginez-le chez vous.",
+   "hauteur": 981,
+   "hauteur_m390": 763,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1663,
+     "fin": 2619,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "dessin",
+    "pile",
+    "titre-xl",
+    "onglets",
+    "onglet",
+    "chez-vous",
+    "chez-vous__objet"
+   ],
+   "data": [
+    "data-section-chez",
+    "data-i18n",
+    "data-split",
+    "data-scenes",
+    "data-scene-id",
+    "data-chez",
+    "data-decor",
+    "data-chez-objet",
+    "data-chez-img"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/produit-section-2-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/produit-section-2-m390.jpg",
+    "video": "medias/d3co-maquette/produit-section-2-p960.mp4"
+   }
+  },
+  {
+   "id": "produit-section-3",
+   "page": "produit",
+   "pages": [
+    "produit"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "produit.html:140-145",
+    "css": "assets/css/style.css:109-117,433-436,831,856-857,865-866,874-877,931,982,1043",
+    "js": "assets/js/produit.js:192-201,231-245,281 ; assets/js/core.js:543-605 ; assets/js/i18n.js:194"
+   },
+   "titre": "Complétez avec",
+   "hauteur": 974,
+   "hauteur_m390": 622,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 6,
+    "liens": 6
+   },
+   "classes_exclusives": [
+    "entete-section",
+    "titre-l",
+    "connexes"
+   ],
+   "data": [
+    "data-i18n",
+    "data-connexes"
+   ],
+   "medias": {
+    "capture": "medias/d3co-maquette/produit-section-3-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/produit-section-3-m390.jpg"
+   }
+  },
+  {
+   "id": "barre-achat",
+   "page": "produit",
+   "pages": [
+    "produit"
+   ],
+   "sig": "div.barre-achat",
+   "dans_main": false,
+   "code": {
+    "html": "produit.html:147-150",
+    "css": "assets/css/style.css:193,810-813,867,1086,1106",
+    "js": "assets/js/produit.js:43-80,262-263,284 ; assets/js/composants.js:65-79"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": 74,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "barre-achat",
+    "barre-achat__info",
+    "btn--petit"
+   ],
+   "data": [
+    "data-barre",
+    "data-barre-nom",
+    "data-barre-prix",
+    "data-ajouter-barre",
+    "data-i18n"
+   ],
+   "medias": {
+    "capture_m390": "medias/d3co-maquette/barre-achat-m390.jpg"
+   }
+  }
+ ]
+}

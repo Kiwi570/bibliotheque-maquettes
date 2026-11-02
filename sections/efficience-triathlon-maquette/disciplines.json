@@ -1,0 +1,45 @@
+{
+ "id": "efficience-triathlon-maquette/disciplines",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Galerie horizontale à transitions",
+ "role": "services",
+ "description": "Trois panneaux (texte et photo ou vidéo superposées) défilent à l'horizontale dans une section épinglée ; entre chaque panneau, une étiquette de transition (T1, T2) et un tracé SVG en dégradé relient les étapes, une barre de progression suit le passage et les encarts apparaissent par containerAnimation.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:139-223",
+  "css": "assets/css/main.css:447-475,974,1122-1125,1192-1199,1210-1213,1219-1221",
+  "js": "assets/js/home.js:113-146"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/disciplines-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/disciplines-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/disciplines-p960.mp4"
+ },
+ "pieges": [
+  "épinglage seulement au-dessus de 900 px (matchMedia) ; dessous, panneaux empilés",
+  "dégradé du tracé écrit en dur dans le SVG",
+  "la scène doit tenir en 100svh sous l'en-tête mesuré : vérifier à 1000×560"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3712,
+  "hauteur_m390": 2464,
+  "epinglee": true,
+  "scrolltriggers": 5
+ }
+}

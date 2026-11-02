@@ -1,0 +1,43 @@
+{
+ "id": "brice-bourdon-maquette/curtain",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "reflexes-archaiques"
+ ],
+ "titre": "Rideau entre les pages",
+ "role": "transition-de-page",
+ "description": "Rideau sombre plein écran qui se déploie en hauteur au clic sur un lien interne, puis se retire sur la page suivante ; mémorisation de la navigation en sessionStorage et rétablissement au retour arrière (pageshow).",
+ "animations": [
+  "transition-de-page",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:37-37",
+  "css": "assets/css/style.css:143-146",
+  "js": "assets/js/core.js:232-277"
+ },
+ "medias": {},
+ "pieges": [
+  "écouter pageshow (cache retour arrière) sinon le rideau reste fermé",
+  "normaliser les chemins avant de comparer avec la page en cours"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "ateliersources-maquette/ouverture",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "titre": "Photo sous l'eau vive",
+ "role": "ouverture",
+ "description": "Héros plein écran dont la photo est rendue en WebGL sous une eau vive qui ondule ; l'eau se clarifie à mesure qu'on défile, le curseur et le toucher y déposent des ronds, puis le titre se révèle ligne par ligne. Sans WebGL ou en mode calme, la photo seule s'affiche, sans second téléchargement.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "chargement-orchestré"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:127-146",
+  "css": "assets/css/style.css:188-201,205-207,214,729-732,825",
+  "js": "assets/js/eau.js:1-223 ; assets/js/app.js:40-91 ; assets/js/animations.js:7-20"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/ouverture-m390.jpg",
+  "video": "medias/ateliersources-maquette/ouverture-p960.mp4"
+ },
+ "pieges": [
+  "la texture réutilise l'image déjà chargée par la page : attendre son décodage avant de l'envoyer au GPU",
+  "recadrage différent au téléphone (image -mobile-) : relire currentSrc pour le point focal",
+  "limiter le dpr à 1 au téléphone et arrêter la boucle hors écran (IntersectionObserver)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "id": "efficience-triathlon-maquette/rail",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "stage-triathlon-montagne",
+  "test-effort"
+ ],
+ "titre": "Rail de progression en courbe",
+ "role": "decor",
+ "description": "Rail vertical à droite : la progression dans la page suit une courbe (montée exponentielle puis récupération) tracée en SVG, avec repères de seuils qui s'allument et valeur courante ; sur la page de stage, la même mécanique suit un profil d'altitude. Variante du rail de sections déjà extrait.",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "masqué",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:73-73",
+  "css": "assets/css/main.css:1070-1089",
+  "js": "assets/js/app.js:311-363 ; assets/js/montagne.js:33-37"
+ },
+ "medias": {},
+ "pieges": [
+  "pastille de couleur écrite en dur dans le SVG généré",
+  "les repères portent sur la progression de la page, pas sur les sections : ils ne correspondent à aucun contenu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 792,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

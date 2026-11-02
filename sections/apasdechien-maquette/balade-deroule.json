@@ -1,0 +1,45 @@
+{
+ "id": "apasdechien-maquette/balade-deroule",
+ "maquette": "apasdechien-maquette",
+ "page": "balade",
+ "titre": "Horloge de la balade",
+ "role": "étapes",
+ "description": "Horloge SVG fixée à gauche dont l'aiguille et un arc coloré avancent avec le défilement de 0 à 2 h, pendant que les trois moments de la balade défilent à droite et se dévoilent par le bas.",
+ "animations": [
+  "progression-fixée",
+  "section-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "balade.html:99-119",
+  "css": "assets/css/main.css:647-663",
+  "js": "assets/js/pages.js:458-484"
+ },
+ "medias": {
+  "capture": "medias/apasdechien-maquette/balade-deroule-p1440.jpg",
+  "capture_m390": "medias/apasdechien-maquette/balade-deroule-m390.jpg",
+  "video": "medias/apasdechien-maquette/balade-deroule-p960.mp4"
+ },
+ "pieges": [
+  "horloge sticky seulement au-dessus de 980 px, en ligne au-dessus des moments en dessous",
+  "arc calculé en chemin SVG, pas en stroke-dasharray, pour garder les extrémités rondes",
+  "état final (2 h) en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2176,
+  "hauteur_m390": 2521,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

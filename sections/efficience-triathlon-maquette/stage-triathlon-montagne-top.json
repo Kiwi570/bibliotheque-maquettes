@@ -1,0 +1,47 @@
+{
+ "id": "efficience-triathlon-maquette/stage-triathlon-montagne-top",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "stage-triathlon-montagne",
+ "titre": "Héros à profil d'altitude",
+ "role": "ouverture",
+ "description": "Héros de page avec photo en zoom lent et parallaxe, titre révélé ligne par ligne, fiche technique en cases mono et compte à rebours ; en pied, un profil d'altitude SVG lissé se trace, ses sommets apparaissent un à un, et un point le parcourt ensuite au fil du défilement de toute la page en affichant l'altitude courante.",
+ "animations": [
+  "révélation-texte",
+  "parallaxe",
+  "progression-fixée",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "stage-triathlon-montagne.html:67-98",
+  "css": "assets/css/main.css:150,167,196,405-410,414-415,825-831,889-895,962-963,975,980-981,985-986,990-993,1008,1173",
+  "js": "assets/js/montagne.js:9-92,180"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/stage-triathlon-montagne-top-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/stage-triathlon-montagne-top-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/stage-triathlon-montagne-top-p960.mp4"
+ },
+ "pieges": [
+  "couleurs du dégradé et du point écrites en dur dans le SVG généré",
+  "profil schématique en données dans le JS : le passer en option (points, bornes, unité)",
+  "étiquettes d'altitude masquées sous 640 px pour éviter les chevauchements"
+ ],
+ "mesures": {
+  "hauteur_p1440": 946,
+  "hauteur_m390": 1073,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

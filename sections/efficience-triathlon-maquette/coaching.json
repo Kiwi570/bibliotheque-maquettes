@@ -1,0 +1,45 @@
+{
+ "id": "efficience-triathlon-maquette/coaching",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Semainier qui se réorganise",
+ "role": "outil-interactif",
+ "description": "Grille d'une semaine (jours × matin, midi, soir) sur papier quadrillé : des séances colorées par type occupent des cases. Trois boutons ajoutent des contraintes (réunion, déplacement, imprévu familial) qui bloquent des cases ; chaque séance se replace dans sa première case libre parmi une liste de candidates, animée par Flip, et un journal annonce les déplacements. À côté, les offres tarifées.",
+ "animations": [
+  "flip",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:353-414",
+  "css": "assets/css/main.css:237,545-570,587-618,625,980,1044-1046,1103-1104,1133-1135,1139",
+  "js": "assets/js/home.js:219-293"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/coaching-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/coaching-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/coaching-p960.mp4"
+ },
+ "pieges": [
+  "séances, candidates et contraintes sont des données en dur dans le JS : les passer en option",
+  "le journal des déplacements doit rester en aria-live pour que le changement soit annoncé",
+  "sur téléphone, la grille de 7 jours devient étroite : vérifier la lisibilité des étiquettes à 12 px",
+  "boutons de contrainte en aria-pressed, pas en cases à cocher visuelles seulement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1975,
+  "hauteur_m390": 2799,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

@@ -1,0 +1,423 @@
+{
+ "maquette": {
+  "client": "entreprise générale du bâtiment",
+  "activite": ["bâtiment"],
+  "concept": ["dossier", "atelier"],
+  "ambiance": ["clair", "industriel", "sobre"],
+  "palette": { "fond": "--paper", "texte": "--ink", "accent": "--orange", "secondaire": "--prusse" },
+  "polices": { "titres": "Archivo", "texte": "Archivo", "mono": "IBM Plex Mono" },
+  "points_forts": [
+   "photo du héros qui passe du plan au réel en WebGL",
+   "planches d'architecte épinglées à l'horizontale, tracées à l'activation",
+   "coupe thermique épinglée : particules de chaleur retenues par l'isolant au défilement",
+   "maison éclatée en six zones qui se rassemble",
+   "devis en quatre étapes avec maison dessinée étape par étape"
+  ],
+  "reserves": [
+   "ouverture du héros encore peu lisible à 3 s (finition restante de l'audit)",
+   "photos d'ambiance générées, mêlées aux photos de chantier",
+   "beaucoup de libellés mono en capitales de petite taille"
+  ],
+  "animations": [
+   "ouverture-orchestrée", "webgl-shader", "révélation-texte", "section-fixée", "galerie-horizontale",
+   "progression-fixée", "canvas-2d", "compteur", "parallaxe", "révélation-image", "masque", "flip",
+   "curseur-personnalisé", "bouton-magnétique", "transition-de-page", "défilement-lissé"
+  ],
+  "interactions": ["comparateur", "carte-interactive", "filtres", "galerie-cliquable", "formulaire-par-étapes", "mode-calme"],
+  "change_depuis_audit": "Après la correction 879ef1b : images d'ambiance Grok et textes alternatifs, puis retrait d'anticipatePin sur l'épinglage des planches (version 20261031, commit b2453a1).",
+  "accueil": "haut"
+ },
+ "sections": {
+  "reticle": {
+   "titre": "Curseur réticule",
+   "role": "decor",
+   "description": "Curseur en réticule de géomètre qui suit la souris avec un léger retard et affiche des coordonnées X / Y en millimètres ; il grossit sur les éléments cliquables et s'inverse sur les fonds sombres. Souris uniquement, absent en mode calme.",
+   "animations": ["curseur-personnalisé"],
+   "interactions": ["aucune"],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": ["la liste des zones sombres est écrite en dur dans le script : la remplacer par un attribut sur les sections"]
+  },
+  "sheet": {
+   "titre": "Calque de transition",
+   "role": "transition-de-page",
+   "description": "Feuille de calque pleine page qui monte depuis le bas avec le nom de la page visée avant chaque changement de page, puis se retire vers le haut à l'arrivée ; état mémorisé en session, rien en mode calme.",
+   "animations": ["transition-de-page"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": ["remettre la feuille hors champ au retour par le cache de navigation (pageshow persisted)"]
+  },
+  "header": {
+   "titre": "En-tête transparent puis opaque",
+   "role": "menu",
+   "description": "En-tête fixe transparent sur le héros, opaque ensuite, masqué en descendant et rappelé en remontant ; liens, statut d'ouverture, bouton mode calme et bouton de devis. Sa hauteur mesurée alimente --entete-h.",
+   "animations": ["aucune"],
+   "interactions": ["mode-calme"],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": ["rappeler l'en-tête au focus clavier, sinon un lien tabulé reste caché"]
+  },
+  "menu-mobile": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu mobile plein écran sur fond nuit, rendu inerte quand il est fermé, défilement lissé suspendu pendant l'ouverture, fermeture par Échap avec retour du focus au bouton.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "intro": {
+   "ignorer": "fait partie de l'ouverture du héros, décrite dans haut"
+  },
+  "haut": {
+   "titre": "Héros du plan au réel",
+   "role": "ouverture",
+   "description": "Ouverture : une façade se trace avec un compteur « Tracé NNN % » puis s'efface en rideau ; la photo plein écran apparaît d'abord en contours de plan, puis une coulée révèle l'image réelle en WebGL, avec une loupe qui inverse plan et photo sous le curseur. Onglets de métiers en bas qui changent de photo toutes les 7 s avec une barre de progression ; titre lettre par lettre.",
+   "animations": ["ouverture-orchestrée", "webgl-shader", "révélation-texte", "masque"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": { "html": "index.html:68-102", "css": "assets/css/style.css:241-307", "js": "assets/js/home.js:13-116 ; assets/js/gl.js:1-282" },
+   "pieges": [
+    "l'ouverture reste peu lisible à 3 s : finition non corrigée, d'où le refus en module",
+    "le WebGL est abandonné si les premières images sont lentes : la photo seule doit tenir le héros",
+    "attendre le chargement de chaque photo avant de créer sa texture"
+   ]
+  },
+  "entreprise": {
+   "titre": "Présentation et cote d'expérience",
+   "role": "manifeste",
+   "description": "Texte de présentation en deux colonnes avec photos révélées par masque ; une cote de dessin technique se mesure au défilement jusqu'au nombre d'années d'expérience.",
+   "animations": ["révélation-texte", "révélation-image", "compteur"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "metiers": {
+   "titre": "Planches métiers épinglées",
+   "role": "services",
+   "description": "Cinq planches d'architecte (cartouche, échelle, liste de prestations, dessin technique, photo) défilent à l'horizontale dans une section épinglée ; chaque planche qui devient active trace son dessin SVG, allume son repère et révèle sa photo. En dessous de 1100 px, les planches s'empilent sans épinglage.",
+   "animations": ["section-fixée", "galerie-horizontale", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "index.html:124-194", "css": "assets/css/style.css:338-396", "js": "assets/js/home.js:137-214 ; assets/js/app.js:244-263 ; assets/js/drawings.js:60-206" },
+   "pieges": [
+    "les déclencheurs des planches s'accrochent à l'animation horizontale (containerAnimation), pas au défilement de la page",
+    "anticipatePin provoquait un saut à l'entrée : il a été retiré",
+    "les sections suivantes mesurent leurs positions après l'espace d'épinglage : rafraîchir après le chargement des polices"
+   ]
+  },
+  "methode": {
+   "titre": "Méthode : le bâtiment monte",
+   "role": "méthode",
+   "description": "Cinq étapes en liste ; à côté, un bâtiment isométrique monte en cinq calques SVG au défilement (dalle, murs, ouvertures, toiture) et un niveau à bulle se cale progressivement, l'étape en cours en pleine couleur.",
+   "animations": ["progression-fixée", "révélation-texte"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "index.html:196-217", "css": "assets/css/style.css:403-427", "js": "assets/js/home.js:215-259 ; assets/js/drawings.js:207-255" },
+   "pieges": ["le bâtiment est généré en SVG par drawings.js : garder les groupes de calques numérotés"]
+  },
+  "realisations": {
+   "titre": "Avant, après au réglet",
+   "role": "portfolio",
+   "description": "Comparateur avant / après sur fond nuit : un curseur de type range déplace la séparation, avec un réglet gradué et un libellé de pourcentages ; à l'entrée, une ligne de balayage parcourt l'image puis la séparation glisse d'elle-même jusqu'au milieu.",
+   "animations": ["révélation-texte"],
+   "interactions": ["comparateur"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "index.html:219-238", "css": "assets/css/style.css:431-447", "js": "assets/js/app.js:302-327 ; assets/js/drawings.js:287-299" },
+   "pieges": ["le range natif reste l'élément accessible : la séparation suit sa valeur, jamais l'inverse"]
+  },
+  "activites": {
+   "titre": "Grille d'activités",
+   "role": "services",
+   "description": "Grille de tuiles photo qui se posent l'une après l'autre en partant d'un coin, puis s'inclinent légèrement sous la souris.",
+   "animations": ["apparition-au-défilement", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements": {
+   "titre": "Engagements tamponnés",
+   "role": "preuves",
+   "description": "Quatre engagements dans une grille de cartouche à côté d'une photo ; un tampon circulaire s'abat sur chaque case à l'entrée dans l'écran.",
+   "animations": ["apparition-au-défilement", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confiance": {
+   "titre": "Chiffres et informations vérifiables",
+   "role": "chiffres",
+   "description": "Bande nuit : quatre compteurs qui montent à l'entrée, puis des cartes d'informations administratives avec des emplacements « à compléter » et une photo de chantier.",
+   "animations": ["compteur", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "Zone d'intervention au compas",
+   "role": "carte",
+   "description": "Carte SVG avec trois boutons d'échelle (ville, région, pays) : le cadre de la carte zoome en douceur, les étiquettes gardent leur taille, et un compas pivote pour tracer le cercle d'intervention autour du siège.",
+   "animations": ["révélation-texte"],
+   "interactions": ["carte-interactive"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "index.html:297-313", "css": "assets/css/style.css:497-517", "js": "assets/js/home.js:316-399 ; assets/js/drawings.js:325-341" },
+   "pieges": [
+    "animer viewBox et recalculer la taille des étiquettes à chaque image, sinon le texte grossit avec le zoom",
+    "les coordonnées des villes sont propres à la carte : prévoir une projection par projet"
+   ]
+  },
+  "devis": {
+   "titre": "Devis en quatre étapes",
+   "role": "contact",
+   "description": "Formulaire de devis simulé en quatre étapes (travaux, bien, délai, coordonnées) avec barre d'étapes, validation par étape et messages d'erreur reliés aux champs ; une maison se dessine un peu plus à chaque étape et un récapitulatif s'affiche à la fin. Coordonnées et horaires en colonne.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["formulaire-par-étapes"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "index.html:315-416", "css": "assets/css/style.css:520-581", "js": "assets/js/home.js:400-503" },
+   "pieges": [
+    "les liens « Devis peinture » pré-cochent le métier via un événement et la session : garder ce relais",
+    "ne pas voler le focus au premier affichage, seulement après une action"
+   ]
+  },
+  "footer": {
+   "titre": "Pied de page en cartouche",
+   "role": "pied-de-page",
+   "description": "Pied de page nuit : logo, navigation, contacts, puis un cartouche de plan (projet, maître d'ouvrage, échelle, date) en guise de mentions.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bar-devis": {
+   "titre": "Barre de devis",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas de l'écran sur téléphone avec le bouton de devis ; elle apparaît après le premier écran et se retire quand le formulaire ou le pied de page est visible. Sa hauteur alimente --barres-h.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "404-page-hero": {
+   "titre": "Page introuvable",
+   "role": "page-404",
+   "description": "Page 404 sur papier quadrillé : titre, une phrase et un bouton de retour à l'accueil.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "isolation-page-hero": {
+   "titre": "Ouverture de page métier",
+   "role": "ouverture",
+   "description": "Ouverture de page intérieure : fil d'Ariane, numéro de planche, titre géant révélé lettre par lettre, texte, deux boutons et une photo révélée par masque.",
+   "animations": ["révélation-texte", "révélation-image"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "isolation-coupe": {
+   "titre": "Coupe thermique épinglée",
+   "role": "outil-interactif",
+   "description": "Coupe de maison en SVG épinglée sur un écran : des particules de chaleur en canvas montent et s'échappent par le toit et les murs ; au défilement, l'isolant se pose sous la toiture, dans les combles puis dans les murs et retient la chaleur, l'état du chantier s'affichant au-dessus. Sur téléphone, même effet au défilement sans épinglage.",
+   "animations": ["section-fixée", "progression-fixée", "canvas-2d"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "isolation.html:81-96", "css": "assets/css/style.css:621-631,803-811", "js": "assets/js/isolation.js:16-107 ; assets/js/drawings.js:364-412" },
+   "pieges": [
+    "la section entière est épinglée en 100svh avec la place de l'en-tête réservée (--entete-h) : vérifier qu'elle tient aux petites hauteurs",
+    "boucle canvas arrêtée hors écran (IntersectionObserver) ; en mode calme, état final précalculé",
+    "couleurs des particules écrites en dur : les lire dans les variables CSS"
+   ]
+  },
+  "isolation-zones": {
+   "titre": "Maison éclatée en six zones",
+   "role": "outil-interactif",
+   "description": "Maison isométrique en SVG dont les six couches (sous-sols, planchers, murs, ouvertures, combles, toiture) arrivent écartées puis se rassemblent ; une liste de boutons ou un clic sur la maison sélectionne une zone, la colore et déplie son texte.",
+   "animations": ["apparition-au-défilement"],
+   "interactions": ["galerie-cliquable"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "isolation.html:98-117", "css": "assets/css/style.css:632-646", "js": "assets/js/isolation.js:108-145 ; assets/js/drawings.js:342-364" },
+   "pieges": ["la sélection au survol est réservée aux pointeurs fins, sinon le toucher sélectionne deux fois"]
+  },
+  "isolation-chantiers": {
+   "titre": "Trois chantiers en photos",
+   "role": "galerie",
+   "description": "Trois photos de chantier côte à côte révélées par masque sous un titre et un texte court.",
+   "animations": ["révélation-image", "révélation-texte"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "isolation-questions": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Questions en accordéon natif (details) à droite d'un titre, avec des emplacements « à compléter » dans les réponses.",
+   "animations": ["révélation-texte"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "isolation-band": {
+   "titre": "Bandeau d'appel en parallaxe",
+   "role": "appel",
+   "description": "Bandeau nuit sur photo en parallaxe avec un titre-question et un bouton de devis magnétique.",
+   "animations": ["parallaxe", "bouton-magnétique"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "isolation-calque": {
+   "titre": "Les autres planches",
+   "role": "menu",
+   "description": "Rangée de cinq onglets numérotés vers les autres métiers, celui de la page en cours en plein.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-page-hero": {
+   "titre": "Ouverture des mentions",
+   "role": "ouverture",
+   "description": "Titre géant, sous-titre et date de mise à jour, sans animation.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-calque": {
+   "titre": "Mentions en fiche technique",
+   "role": "texte-legal",
+   "description": "Mentions légales en huit rubriques numérotées avec sommaire collant à gauche et données en tableau clé / valeur à la manière d'une fiche technique, bouton pour copier l'adresse.",
+   "animations": ["aucune"],
+   "interactions": ["aucune"],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-page-hero": {
+   "titre": "Ouverture avec comparateur",
+   "role": "ouverture",
+   "description": "Ouverture de la page des réalisations : titre lettre par lettre puis le comparateur avant / après au réglet accompagné d'un cartouche de chantier (même mécanique que la section realisations de l'accueil).",
+   "animations": ["révélation-texte"],
+   "interactions": ["comparateur"],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-galerie": {
+   "titre": "Fiches chantier filtrables",
+   "role": "portfolio",
+   "description": "Grille de fiches chantier avec filtres en pastilles : les fiches se réorganisent en Flip, les entrantes grossissent, les sortantes s'effacent ; le filtre suit l'ancre de l'adresse. Une fiche ouvre une boîte de dialogue native qui pivote comme un volet, avec photo ou comparateur avant / après cloné.",
+   "animations": ["flip", "apparition-au-défilement", "masque"],
+   "interactions": ["filtres", "galerie-cliquable", "comparateur"],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": { "html": "realisations.html:91-146,165-182", "css": "assets/css/style.css:669-695", "js": "assets/js/realisations.js:16-81" },
+   "pieges": [
+    "rafraîchir ScrollTrigger à la fin du Flip, la hauteur de la grille change",
+    "arrêter le défilement lissé pendant la boîte de dialogue et le relancer à sa fermeture",
+    "un comparateur cloné doit recevoir un nouvel id de champ"
+   ]
+  },
+  "realisations-calque": {
+   "titre": "Invitation à laisser un avis",
+   "role": "appel",
+   "description": "Ligne courte : titre, phrase et bouton magnétique vers la page d'avis.",
+   "animations": ["bouton-magnétique"],
+   "interactions": ["aucune"],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-band": {
+   "ignorer": "variante du bandeau d'appel décrit dans isolation-band"
+  },
+  "realisations-fiche-dlg": {
+   "ignorer": "boîte de dialogue décrite dans realisations-galerie"
+  }
+ }
+}

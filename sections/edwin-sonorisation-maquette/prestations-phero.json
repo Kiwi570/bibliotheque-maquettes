@@ -1,0 +1,43 @@
+{
+ "id": "edwin-sonorisation-maquette/prestations-phero",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "prestations",
+ "titre": "Photo en étiquette de disque",
+ "role": "ouverture",
+ "description": "Tête de la page prestations : la photo est découpée en cercle comme l'étiquette d'un disque, entourée d'un anneau, et s'ouvre en grand au défilement (clip-path circle).",
+ "animations": [
+  "masque",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "prestations.html:89-112",
+  "css": "assets/css/main.css:84-88,98-103,326,545-554,748-757,762-765,810,923-937",
+  "js": null
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/prestations-phero-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/prestations-phero-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/prestations-phero-p960.mp4"
+ },
+ "pieges": [
+  "animer le rayon du clip-path en pourcentage, la taille finale doit couvrir la diagonale de l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

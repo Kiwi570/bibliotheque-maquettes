@@ -1,0 +1,44 @@
+{
+ "id": "ateliersources-maquette/organiser-un-stage-demande",
+ "maquette": "ateliersources-maquette",
+ "page": "organiser-un-stage",
+ "titre": "Demande en cinq étapes",
+ "role": "contact",
+ "description": "Carte de formulaire sur photo en parallaxe : cinq étapes (type de séjour, dates sur un calendrier, groupe, besoins, coordonnées), progression dessinée par une rivière qui se remplit, retour possible, validation par étape et message de remerciement focalisé.",
+ "animations": [
+  "masque",
+  "parallaxe"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "organiser-un-stage.html:428-500",
+  "css": "assets/css/style.css:627-682,776,813,827-828",
+  "js": "assets/js/organiser.js:126-280"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/organiser-un-stage-demande-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/organiser-un-stage-demande-m390.jpg",
+  "video": "medias/ateliersources-maquette/organiser-un-stage-demande-p960.mp4"
+ },
+ "pieges": [
+  "le calendrier se pilote aux flèches (jour, semaine) : garder ce déplacement et annoncer la plage choisie",
+  "envoi simulé : brancher un vrai service avant mise en ligne"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1207,
+  "hauteur_m390": 1231,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

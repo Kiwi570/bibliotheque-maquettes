@@ -1,0 +1,667 @@
+{
+  "maquette": {
+    "client": "coach de triathlon, tests d'effort lactate et stages",
+    "activite": ["sport"],
+    "concept": ["laboratoire", "cahier"],
+    "ambiance": ["sombre", "énergique", "froid"],
+    "palette": {
+      "fond": "--ink",
+      "texte": "--paper",
+      "accent": "--lactate",
+      "secondaire": "--seuil"
+    },
+    "polices": {
+      "titres": "Archivo",
+      "texte": "Archivo",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "courbe de lactate interactive : curseur, zones d'intensité et seuils",
+      "semainier qui se réorganise selon les contraintes ajoutées (Flip)",
+      "protocole épinglé palier par palier : courbe, tableau et photos synchronisés",
+      "HUD qui transforme la vitesse de défilement en zone d'intensité",
+      "vidéo du héros sous un shader d'eau qui réagit au curseur",
+      "fond de page qui change de teinte de zone en zone (Z1 → Z5)"
+    ],
+    "reserves": [
+      "césure des titres sur téléphone (mots coupés par un trait d'union)",
+      "lumières des images générées mêlées d'une section à l'autre",
+      "accueil lourd (vidéo de 3,1 Mo)",
+      "image générée du principe « qualité » toujours incohérente après sa régénération",
+      "couleurs des zones et des seuils écrites en dur dans le JS et les SVG",
+      "section des avis réduite à des gabarits vides"
+    ],
+    "animations": [
+      "chargement-orchestré",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "progression-fixée",
+      "galerie-horizontale",
+      "empilement-de-fiches",
+      "parallaxe",
+      "compteur",
+      "marquee",
+      "masque",
+      "flip",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "simulateur",
+      "réservation-simulee",
+      "filtres",
+      "mode-calme"
+    ],
+    "change_depuis_audit": "Un commit après la correction (5bfda41) régénère l'image du principe « qualité » ; la nouvelle reste incohérente (cassette et dérailleur fondus, chaîne qui flotte). Les autres réserves de l'audit sont inchangées.",
+    "accueil": "top"
+  },
+  "sections": {
+    "intro": {
+      "titre": "Ouverture : courbe tracée et compteur",
+      "role": "ouverture",
+      "description": "Écran d'ouverture sur grille SVG : la formule et le nom apparaissent en lettres brouillées, une courbe exponentielle se trace sur toute la largeur pendant qu'un compteur monte en mmol/L, puis le rideau se retire en clip-path vers le haut. Un bouton « Passer », et la première action (clic, touche, molette) accélère la fin ; une seule fois par session, absent en mode calme.",
+      "animations": ["chargement-orchestré", "masque", "compteur"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "sans_capture": true,
+      "medias": {
+        "video": "medias/efficience-triathlon-maquette/top-p960.mp4"
+      },
+      "dependances": ["gsap"],
+      "pieges": [
+        "la fin de l'ouverture lance l'entrée du titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
+        "la courbe et le compteur sont réglés pour une métrique sportive : la courbe et l'unité deviennent des options",
+        "l'accélération à la première action doit aussi écouter le clavier, pas seulement le pointeur"
+      ]
+    },
+    "header": {
+      "titre": "En-tête compact",
+      "role": "menu",
+      "description": "En-tête fixe sur fond translucide : logo, liens d'ancre, téléphone, bouton mode calme et bouton d'appel ; il se masque à la descente et revient à la remontée. Sa hauteur est mesurée pour les sections épinglées.",
+      "animations": ["aucune"],
+      "interactions": ["mode-calme"],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "js": "assets/js/app.js:76-103"
+      },
+      "pieges": [
+        "la pastille de zone (Z1…Z5) remplace le HUD dans l'en-tête sous 1100 px : elle dépend du HUD pour sa valeur"
+      ]
+    },
+    "mnav": {
+      "titre": "Menu plein écran",
+      "role": "menu",
+      "description": "Menu téléphone en plein écran : grands liens en colonne, piège du focus, fermeture à Échap et verrou du défilement pendant l'ouverture.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "code": {
+        "js": "assets/js/app.js:128-160"
+      },
+      "pieges": []
+    },
+    "actionbar": {
+      "titre": "Barre d'action du bas",
+      "role": "barre-fixe",
+      "description": "Barre fixée en bas sur téléphone (appeler, prendre rendez-vous) qui n'apparaît qu'après le héros et se retire sur le formulaire, la prise de rendez-vous, le pied de page, le menu et la page 404 (IntersectionObserver).",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "code": {
+        "js": "assets/js/app.js:90-127"
+      },
+      "pieges": [
+        "sa hauteur est mesurée dans --barres-h : tout contenu fixé en bas doit en tenir compte"
+      ]
+    },
+    "hud": {
+      "titre": "HUD d'intensité au défilement",
+      "role": "decor",
+      "description": "Petit cadran fixé en bas à gauche : la vitesse de défilement est lissée en « effort », convertie en zone Z1 à Z5 (barres allumées, couleur), en fréquence cardiaque et en allure fictives ; un point descend le long d'une mini-courbe selon la progression dans la page. Il n'apparaît qu'après le héros.",
+      "animations": ["compteur"],
+      "interactions": ["aucune"],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "sans_capture": true,
+      "medias": {
+        "video": "medias/efficience-triathlon-maquette/science-p960.mp4"
+      },
+      "dependances": ["gsap", "scrolltrigger", "lenis"],
+      "code": {
+        "html": "index.html:66-72",
+        "css": "assets/css/main.css:292,322,327-346",
+        "js": "assets/js/app.js:263-310"
+      },
+      "pieges": [
+        "couleurs des cinq zones écrites en dur dans le JS : les lire dans des variables CSS",
+        "lissage asymétrique (monte vite, redescend lentement) : sans lui, l'affichage clignote",
+        "mise à jour du DOM limitée à une fois toutes les 90 ms dans le ticker GSAP ; ne pas écrire à chaque image",
+        "masqué sous 1100 px et remplacé par une pastille de zone dans l'en-tête"
+      ]
+    },
+    "rail": {
+      "titre": "Rail de progression en courbe",
+      "role": "decor",
+      "description": "Rail vertical à droite : la progression dans la page suit une courbe (montée exponentielle puis récupération) tracée en SVG, avec repères de seuils qui s'allument et valeur courante ; sur la page de stage, la même mécanique suit un profil d'altitude. Variante du rail de sections déjà extrait.",
+      "animations": ["progression-fixée"],
+      "interactions": ["aucune"],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "code": {
+        "js": "assets/js/app.js:311-363 ; assets/js/montagne.js:33-37"
+      },
+      "pieges": [
+        "pastille de couleur écrite en dur dans le SVG généré",
+        "les repères portent sur la progression de la page, pas sur les sections : ils ne correspondent à aucun contenu"
+      ]
+    },
+    "cursor": {
+      "titre": "Curseur point de mesure",
+      "role": "decor",
+      "description": "Point et anneau qui suivent la souris avec deux retards différents, anneau agrandi au survol des liens et étiquette contextuelle lue dans un attribut ; s'accompagne de boutons magnétiques et de cartes qui s'inclinent.",
+      "animations": ["curseur-personnalisé", "bouton-magnétique"],
+      "interactions": ["aucune"],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "code": {
+        "js": "assets/js/app.js:216-262"
+      },
+      "pieges": []
+    },
+    "sweep": {
+      "titre": "Transition de page en bandes",
+      "role": "transition-de-page",
+      "description": "Au clic sur un lien interne, des bandes verticales montent en décalé et couvrent l'écran avant la navigation, puis se retirent vers le haut sur la page suivante (drapeau en sessionStorage) ; désactivée en mode calme et réinitialisée au retour arrière.",
+      "animations": ["transition-de-page"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "code": {
+        "js": "assets/js/app.js:415-448"
+      },
+      "pieges": [
+        "l'entrée des titres de page attend la fin du retrait des bandes (délai décalé)"
+      ]
+    },
+    "top": {
+      "titre": "Héros vidéo sous ondes",
+      "role": "ouverture",
+      "description": "Titre géant en capitales grasses sur quatre lignes, un mot en couleur d'accent, révélé ligne par ligne ; derrière, une vidéo passe dans un shader OGL qui fait des ondes d'eau au passage du curseur, avec parallaxe au défilement. En bas à droite, un encart de prochain rendez-vous avec prix ; bande de mots-clés défilants en pied.",
+      "animations": ["révélation-texte", "webgl-shader", "parallaxe", "marquee"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "dependances": ["gsap", "scrolltrigger", "splittext", "ogl"],
+      "code": {
+        "js": "assets/js/home.js:85-92 ; assets/js/water.js:1-99 ; assets/js/app.js:200-215"
+      },
+      "pieges": [
+        "vidéo de 3,1 Mo à l'accueil, non corrigée : prévoir une version courte et une affiche légère",
+        "le shader n'est chargé qu'avec un pointeur fin et WebGL ; sinon la vidéo seule reste affichée",
+        "sur téléphone la vidéo bascule sur une petite source et une petite affiche lues dans data-src-small"
+      ]
+    },
+    "manifeste": {
+      "titre": "Manifeste qui s'allume mot à mot",
+      "role": "manifeste",
+      "description": "Long paragraphe d'intention en gros corps dont les mots passent du gris au blanc au fil du défilement (scrub), les mots-clés virant à la couleur d'accent ; colonne latérale collante avec photo et citation.",
+      "animations": ["révélation-texte"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "disciplines": {
+      "titre": "Galerie horizontale à transitions",
+      "role": "services",
+      "description": "Trois panneaux (texte et photo ou vidéo superposées) défilent à l'horizontale dans une section épinglée ; entre chaque panneau, une étiquette de transition (T1, T2) et un tracé SVG en dégradé relient les étapes, une barre de progression suit le passage et les encarts apparaissent par containerAnimation.",
+      "animations": ["galerie-horizontale", "section-fixée", "parallaxe"],
+      "interactions": ["aucune"],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": ["gsap", "scrolltrigger"],
+      "pieges": [
+        "épinglage seulement au-dessus de 900 px (matchMedia) ; dessous, panneaux empilés",
+        "dégradé du tracé écrit en dur dans le SVG",
+        "la scène doit tenir en 100svh sous l'en-tête mesuré : vérifier à 1000×560"
+      ]
+    },
+    "methode": {
+      "titre": "Cinq principes empilés",
+      "role": "méthode",
+      "description": "Cinq cartes de principe, chacune avec une grande image et un niveau, qui s'empilent au défilement : la carte précédente rétrécit et s'assombrit quand la suivante arrive ; schéma en pyramide en tête.",
+      "animations": ["empilement-de-fiches"],
+      "interactions": ["aucune"],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "js": "assets/js/home.js:149-158"
+      },
+      "pieges": [
+        "une image générée de cette section reste incohérente"
+      ]
+    },
+    "science": {
+      "titre": "Courbe interactive à curseur",
+      "role": "outil-interactif",
+      "description": "Graphique SVG d'une courbe exponentielle sur fond de cinq bandes de zones colorées, avec deux seuils marqués ; un curseur range sous le graphique déplace un point sur la courbe et met à jour trois lectures (abscisse, ordonnée, zone) et une phrase d'explication de la zone. La courbe se trace à l'arrivée ; photos et liste de mesures à côté.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["simulateur"],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": ["gsap", "scrolltrigger"],
+      "code": {
+        "js": "assets/js/home.js:159-218 ; assets/js/app.js:263-266"
+      },
+      "pieges": [
+        "couleurs des zones et des seuils écrites en dur dans le JS : les lire dans des variables CSS",
+        "la courbe est une fonction illustrative : la passer en option (fonction, bornes, zones, unités)",
+        "le curseur range doit garder une cible de 44 px et une valeur annoncée (aria-valuetext)",
+        "redessiner au redimensionnement avec un délai, pas à chaque événement"
+      ]
+    },
+    "coaching": {
+      "titre": "Semainier qui se réorganise",
+      "role": "outil-interactif",
+      "description": "Grille d'une semaine (jours × matin, midi, soir) sur papier quadrillé : des séances colorées par type occupent des cases. Trois boutons ajoutent des contraintes (réunion, déplacement, imprévu familial) qui bloquent des cases ; chaque séance se replace dans sa première case libre parmi une liste de candidates, animée par Flip, et un journal annonce les déplacements. À côté, les offres tarifées.",
+      "animations": ["flip", "apparition-au-défilement"],
+      "interactions": ["simulateur"],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": ["gsap", "flip"],
+      "code": {
+        "js": "assets/js/home.js:219-293"
+      },
+      "pieges": [
+        "séances, candidates et contraintes sont des données en dur dans le JS : les passer en option",
+        "le journal des déplacements doit rester en aria-live pour que le changement soit annoncé",
+        "sur téléphone, la grille de 7 jours devient étroite : vérifier la lisibilité des étiquettes à 12 px",
+        "boutons de contrainte en aria-pressed, pas en cases à cocher visuelles seulement"
+      ]
+    },
+    "coach": {
+      "titre": "Portrait et chiffres en chrono",
+      "role": "équipe",
+      "description": "Grand portrait à gauche, nom en très gros, et grille de performances dont les valeurs se brouillent comme un chronomètre avant de se fixer ; second bloc de résultats d'athlètes dans le même style.",
+      "animations": ["compteur", "apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "js": "assets/js/home.js:296-312"
+      },
+      "pieges": []
+    },
+    "stages": {
+      "titre": "Agenda à onglets et fiche",
+      "role": "agenda",
+      "description": "Agenda construit depuis un fichier de données, avec onglets « à venir » et « passés » ; chaque carte (photo, dates, lieu, places, prix) ouvre une fiche détaillée dans un dialog natif, avec compte à rebours jusqu'au départ.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["filtres"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "dialog marqué data-lenis-prevent pour que son contenu défile"
+      ]
+    },
+    "zone": {
+      "titre": "Carte de rayons d'intervention",
+      "role": "carte",
+      "description": "Carte SVG schématique sur fond de relief : cercles de rayon autour du point de base, liens tracés vers les villes desservies et un ping en boucle sur la base ; légende à gauche.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "js": "assets/js/home.js:419-458"
+      },
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Emplacement d'avis",
+      "role": "témoignages",
+      "description": "Bloc d'avis réduit à trois gabarits vides en pointillés et un lien vers la page d'avis externe, à côté d'une photo de groupe : emplacement en attente des vrais avis.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "js": null
+      },
+      "pieges": []
+    },
+    "faq": {
+      "titre": "Questions numérotées",
+      "role": "faq",
+      "description": "Liste de questions en details/summary numérotées, une réponse ouverte par défaut avec photo, ouverture animée en hauteur.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rdv": {
+      "titre": "Prise de rendez-vous simulée",
+      "role": "contact",
+      "description": "Coordonnées avec boutons copier, lien vers un questionnaire, et module de rendez-vous de démonstration : choix d'un jour puis d'un créneau, récapitulatif, et bouton vers l'agenda de réservation réel.",
+      "animations": ["aucune"],
+      "interactions": ["réservation-simulee"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "footer": {
+      "titre": "Pied de page à signature géante",
+      "role": "pied-de-page",
+      "description": "Pied de page en colonnes (contact, offres, informations) avec logo, et nom de marque géant en contour en bas de page.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-section": {
+      "titre": "Page introuvable",
+      "role": "page-404",
+      "description": "Titre « hors » de la page en deux couleurs, phrase courte, deux boutons de retour et photo nocturne en bandeau.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-section": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Page de mentions en colonne lisible avec intertitres, photo en tête et étiquettes « à compléter » sur les informations manquantes.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "titre coupé par un trait d'union sur téléphone"
+      ]
+    },
+    "stage-triathlon-montagne-top": {
+      "titre": "Héros à profil d'altitude",
+      "role": "ouverture",
+      "description": "Héros de page avec photo en zoom lent et parallaxe, titre révélé ligne par ligne, fiche technique en cases mono et compte à rebours ; en pied, un profil d'altitude SVG lissé se trace, ses sommets apparaissent un à un, et un point le parcourt ensuite au fil du défilement de toute la page en affichant l'altitude courante.",
+      "animations": ["révélation-texte", "parallaxe", "progression-fixée", "compteur"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": ["gsap", "scrolltrigger", "splittext"],
+      "code": {
+        "js": "assets/js/montagne.js:9-92,180"
+      },
+      "pieges": [
+        "couleurs du dégradé et du point écrites en dur dans le SVG généré",
+        "profil schématique en données dans le JS : le passer en option (points, bornes, unité)",
+        "étiquettes d'altitude masquées sous 640 px pour éviter les chevauchements"
+      ]
+    },
+    "stage-triathlon-montagne-pour-qui": {
+      "titre": "Public visé et bande défilante",
+      "role": "services",
+      "description": "Bande de noms d'épreuves qui défile en continu, puis titre, texte de public visé et liste à puces à côté d'une photo.",
+      "animations": ["marquee"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-briancon": {
+      "titre": "Carte des sommets",
+      "role": "carte",
+      "description": "Liste des sommets avec altitude à gauche et carte SVG schématique projetée depuis des coordonnées : routes tracées une à une puis points qui apparaissent en rebond.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-programme": {
+      "titre": "Programme en galerie épinglée",
+      "role": "étapes",
+      "description": "Programme en panneaux photo et vidéo défilant à l'horizontale dans une section épinglée, chaque panneau avec son numéro et sa liste de séances ; même mécanique que la galerie des disciplines de l'accueil, sans tracé de liaison.",
+      "animations": ["galerie-horizontale", "section-fixée"],
+      "interactions": ["aucune"],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-volumes": {
+      "titre": "Volumes en barres",
+      "role": "chiffres",
+      "description": "Volumes d'entraînement de la semaine en barres segmentées qui se remplissent au défilement, avec totaux en cases mono et photos.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-tarif": {
+      "titre": "Hébergement et tarif",
+      "role": "tarifs",
+      "description": "Section sur papier quadrillé clair : photo et texte d'hébergement à gauche, carte de tarif sombre avec ce qui est inclus et non inclus à droite.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-inscription": {
+      "titre": "Inscription et compte à rebours",
+      "role": "contact",
+      "description": "Texte d'appel, compte à rebours en cases jusqu'au départ et formulaire de pré-inscription de démonstration (aucun envoi), avec lien vers le formulaire réel.",
+      "animations": ["compteur"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-triathlon-montagne-autres": {
+      "titre": "Autres stages",
+      "role": "agenda",
+      "description": "Deux cartes de stages liés, tirées du même fichier de données que l'agenda de l'accueil.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "alti": {
+      "ignorer": "variante tablette (761–1100 px) du rail d'altitude, décrite dans efficience-triathlon-maquette/rail"
+    },
+    "test-effort-top": {
+      "titre": "Héros à lectures de seuils",
+      "role": "ouverture",
+      "description": "Héros de page avec vidéo, titre révélé ligne par ligne et trois lectures de seuils en cases mono qui s'allument l'une après l'autre.",
+      "animations": ["révélation-texte", "parallaxe"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "titre coupé par un trait d'union sur téléphone"
+      ]
+    },
+    "test-effort-objectif": {
+      "titre": "Objectif du test",
+      "role": "services",
+      "description": "Titre long, deux paragraphes d'explication et une photo de matériel avec légende mono.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-constat": {
+      "titre": "Erreurs fréquentes en mini-graphiques",
+      "role": "preuves",
+      "description": "Deux cartes d'erreurs fréquentes, chacune illustrée d'un petit graphique SVG schématique (prévu contre réalisé) qui se trace à l'arrivée.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-methodologie": {
+      "titre": "Méthode et vidéo",
+      "role": "méthode",
+      "description": "Vidéo verticale de geste technique à gauche, titre et texte de méthode à droite.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-protocole": {
+      "titre": "Protocole épinglé palier par palier",
+      "role": "étapes",
+      "description": "Section épinglée en 100svh : au défilement, les paliers s'allument un à un sur un graphique SVG (points, courbe qui s'allonge, seuils colorés), la ligne correspondante du tableau se met en avant et la photo d'illustration change par groupes de paliers. Sous 960 px, même progression sans épinglage.",
+      "animations": ["section-fixée", "progression-fixée"],
+      "interactions": ["aucune"],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": ["gsap", "scrolltrigger"],
+      "pieges": [
+        "la hauteur du graphique est mesurée seulement une fois la classe d'épinglage posée : redessiner après",
+        "couleurs des seuils écrites en dur dans le SVG généré",
+        "le tableau passe en deux colonnes quand la section est épinglée, avec une seconde ligne d'en-tête masquée sinon",
+        "redessiner au redimensionnement seulement si la largeur ou la hauteur change vraiment (barre d'adresse mobile)"
+      ]
+    },
+    "test-effort-donnees": {
+      "titre": "Livrables en tuiles",
+      "role": "services",
+      "description": "Grande image d'ambiance puis tuiles de livrables dont un trait de progression se remplit à l'arrivée (variable CSS animée).",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-etapes": {
+      "titre": "Six étapes illustrées",
+      "role": "étapes",
+      "description": "Grille de six étapes numérotées, chacune avec photo, titre et texte court, cartes légèrement inclinées au survol.",
+      "animations": ["apparition-au-défilement"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-tarifs": {
+      "titre": "Tarifs sur papier quadrillé",
+      "role": "tarifs",
+      "description": "Trois cartes de prix sur fond clair quadrillé, la carte centrale en négatif, puis informations pratiques et photo.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "test-effort-cta": {
+      "titre": "Appel final",
+      "role": "appel",
+      "description": "Titre d'appel, phrase courte, bouton de rendez-vous et téléphone sur photo nocturne assombrie.",
+      "animations": ["aucune"],
+      "interactions": ["aucune"],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

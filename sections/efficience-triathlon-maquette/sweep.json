@@ -1,0 +1,43 @@
+{
+ "id": "efficience-triathlon-maquette/sweep",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "mentions-legales",
+  "stage-triathlon-montagne",
+  "test-effort"
+ ],
+ "titre": "Transition de page en bandes",
+ "role": "transition-de-page",
+ "description": "Au clic sur un lien interne, des bandes verticales montent en décalé et couvrent l'écran avant la navigation, puis se retirent vers le haut sur la page suivante (drapeau en sessionStorage) ; désactivée en mode calme et réinitialisée au retour arrière.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:75-75",
+  "css": "assets/css/main.css:389-395",
+  "js": "assets/js/app.js:415-448"
+ },
+ "medias": {},
+ "pieges": [
+  "l'entrée des titres de page attend la fin du retrait des bandes (délai décalé)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

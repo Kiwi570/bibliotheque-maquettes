@@ -1,0 +1,605 @@
+{
+ "maquette": {
+  "client": "cours de gymnastique aquatique en eau profonde",
+  "activite": [
+   "sport",
+   "bien-être"
+  ],
+  "concept": [
+   "autre"
+  ],
+  "ambiance": [
+   "océanique",
+   "nocturne",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--corail",
+   "secondaire": "--lagon"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "ouverture « surface puis plongée » avec une ligne d'eau tracée",
+   "schéma épinglé d'une personne qui court en suspension, en trois étapes",
+   "caustiques WebGL dont la profondeur suit la jauge latérale",
+   "planning en lignes d'eau filtrable par lieu",
+   "curseur d'intensité qui pilote l'eau et les bulles"
+  ],
+  "reserves": [
+   "surtitre du héros peu lisible sur téléphone",
+   "deux familles d'images (photos réelles et générées)",
+   "grands vides sur grand écran",
+   "points de la carte et cases du sac sous 44 px",
+   "bouées du planning qui se chevauchent quand deux cours sont proches"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "révélation-texte",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "parallaxe",
+   "révélation-image",
+   "filtre-anime",
+   "compteur",
+   "morphing",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "lecteur-audio",
+   "carte-interactive",
+   "filtres",
+   "calculateur",
+   "formulaire-par-étapes",
+   "quiz",
+   "simulateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero"
+ },
+ "sections": {
+  "intro": {
+   "titre": "Surface puis plongée",
+   "role": "ouverture",
+   "description": "Écran d'ouverture clair : le logo apparaît, une ligne d'eau ondulée se trace dessous en SVG, puis un voile vague descend et révèle le héros sombre comme si l'on passait sous la surface ; joué une fois par session, absent en mode calme.",
+   "animations": [
+    "chargement-orchestré",
+    "morphing",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "medias": {
+    "video": "medias/aquafit-maquette/hero-p960.mp4"
+   },
+   "code": {
+    "js": "assets/js/ui.js:177-272"
+   },
+   "pieges": [
+    "le voile d'ouverture et le voile de transition de page sont le même SVG : la fonction de balayage sert aux deux",
+    "la promesse de fin d'ouverture déclenche l'animation du titre du héros ; sans ce chaînage les lettres montent sous le voile"
+   ]
+  },
+  "eau": {
+   "titre": "Caustiques en fond fixe",
+   "role": "decor",
+   "description": "Canvas WebGL fixé derrière toute la page : reflets de caustiques en mode de fusion écran, dont la profondeur (teinte et intensité) suit la position de lecture ; une version sans WebGL retombe sur un dégradé propre.",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/eau.js:1-201 ; assets/js/anim.js:189-209"
+   },
+   "pieges": [
+    "le shader se met en pause hors de l'onglet et en mode calme ; garder une image fixe",
+    "la profondeur est pilotée de l'extérieur (jauge, curseur d'intensité) : exposer une méthode plutôt que lire le défilement dans le shader"
+   ],
+   "medias": {
+    "video": "medias/aquafit-maquette/hero-p960.mp4"
+   }
+  },
+  "bulles": {
+   "titre": "Bulles en canvas",
+   "role": "decor",
+   "description": "Calque canvas 2D fixe de petites bulles qui remontent ; leur densité suit la profondeur et le curseur d'intensité.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "curseur": {
+   "titre": "Curseur bulle avec étiquette",
+   "role": "decor",
+   "description": "Curseur rond qui suit la souris avec retard et affiche une courte étiquette au survol des éléments marqués ; absent au toucher.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "jauge": {
+   "titre": "Jauge de profondeur",
+   "role": "decor",
+   "description": "Rail vertical fixé à droite : un repère descend avec la lecture et le nom de la section en cours s'affiche ; la même progression assombrit l'eau WebGL et densifie les bulles. Variante verticale du rail de sections, masquée sur téléphone.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "js": "assets/js/anim.js:189-209"
+   },
+   "pieges": [
+    "mesurer les sections au refresh de ScrollTrigger, pas pendant le défilement"
+   ],
+   "medias": {
+    "video": "medias/aquafit-maquette/gilet-p960.mp4"
+   }
+  },
+  "entete": {
+   "titre": "En-tête avec son et mode calme",
+   "role": "menu",
+   "description": "En-tête fixe : logo, quatre liens, bouton de musique, bouton mode calme et bouton d'appel en couleur d'accent ; fond translucide après le premier écran.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "lecteur-audio",
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu-mobile": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran sur téléphone, liens en grand corps et outils en bas ; défilement de la page bloqué pendant l'ouverture.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": []
+  },
+  "barre-essai": {
+   "titre": "Barre d'appel téléphone",
+   "role": "barre-fixe",
+   "description": "Barre fixée en bas sur téléphone avec le bouton d'appel principal ; elle mesure sa hauteur pour que le pied de page ne passe pas dessous.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hero": {
+   "titre": "Héros photo sous l'eau",
+   "role": "ouverture",
+   "description": "Grande photo sous-marine en fond avec zoom lent, titre serif sur deux lignes dont les lettres montent puis flottent en vague continue, deux boutons et trois repères pratiques en bas.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "surtitre trop fin et trop clair sur la photo en téléphone"
+   ]
+  },
+  "gilet": {
+   "titre": "Schéma épinglé en trois étapes",
+   "role": "étapes",
+   "description": "La section reste épinglée pendant que le défilement fait avancer trois étapes : à droite un schéma SVG montre une silhouette qui court en suspension sous une surface ondulée, avec repères qui s'allument (surface, tête hors de l'eau, fond éloigné) ; à gauche l'étape correspondante s'allume. Sans épinglage sous 900 px.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:160-233",
+    "css": "assets/css/site.css:226-240,697-719",
+    "js": "assets/js/anim.js:71-106"
+   },
+   "pieges": [
+    "les jambes et les bras bouclent en continu, indépendamment du scrub : les arrêter en mode calme",
+    "le schéma doit tenir dans l'écran pendant l'épinglage ; vérifier les hauteurs 700 px"
+   ]
+  },
+  "horizontal": {
+   "titre": "Galerie horizontale épinglée",
+   "role": "galerie",
+   "description": "Six cartes photo avec légende défilent horizontalement pendant que la section est épinglée, avec une barre de progression et un léger décalage des images ; défilement natif au doigt sur téléphone.",
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "html": "index.html:236-289",
+    "css": "assets/css/site.css:243-264,655-661",
+    "js": "assets/js/anim.js:108-134"
+   },
+   "pieges": [
+    "recalculer la distance au refresh quand les images arrivent, sinon la dernière carte est coupée"
+   ]
+  },
+  "section": {
+   "titre": "Chronomètre de séance",
+   "role": "chiffres",
+   "description": "Cadran SVG qui se remplit en comptant jusqu'à la durée d'une séance, avec trois phases annotées autour ; à côté, quatre repères courts sur le déroulé.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "section-2": {
+   "titre": "Publics en bouées flottantes",
+   "role": "services",
+   "description": "Photo encadrée sur laquelle flottent des étiquettes de publics en forme de bouées, apparues avec un rebond ; un clic sur une bouée pré-remplit le questionnaire de la page dédiée.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "piscines": {
+   "titre": "Carte des lieux et prochain cours",
+   "role": "carte",
+   "description": "Carte SVG dessinée (rive tracée au défilement, points qui apparaissent) avec les lieux de cours ; choisir un point affiche la fiche du lieu, ses créneaux et le prochain cours calculé à partir de l'heure courante.",
+   "animations": [
+    "morphing",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "html": "index.html:345-372",
+    "js": "assets/js/carte.js:1-90 ; assets/js/piscines.js:1-56 ; assets/js/anim.js:166-173"
+   },
+   "pieges": [
+    "points de la carte sous 44 px : agrandir la zone cliquable, pas le dessin"
+   ]
+  },
+  "section-3": {
+   "titre": "Équipe en cartes inclinables",
+   "role": "équipe",
+   "description": "Deux portraits décalés qui s'inclinent au survol avec une ondulation en filtre SVG, et une colonne de présentation.",
+   "animations": [
+    "survol-image",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rembourse": {
+   "titre": "Organismes partenaires",
+   "role": "preuves",
+   "description": "Rangée de noms d'organismes composés en typographie alternée, avec un court texte et un lien vers une attestation.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "section-4": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Accordéon de questions à droite, titre et image d'eau à gauche.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "remontee": {
+   "titre": "Remontée vers l'appel",
+   "role": "appel",
+   "description": "Grand titre centré sur une photo sous-marine, deux boutons ; la section prépare la remontée vers la surface du pied de page.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Pied de page à la surface",
+   "role": "pied-de-page",
+   "description": "Pied de page clair qui commence par une vague SVG animée en continu, comme un retour à la surface ; coordonnées avec boutons de copie et liens.",
+   "animations": [
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "page de mentions légales absente"
+   ]
+  },
+  "404-hero": {
+   "titre": "Page introuvable",
+   "role": "page-404",
+   "description": "Titre jouant sur le fond de l'eau, deux boutons de retour, sur le fond d'eau commun.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "horaires-tarifs-hero": {
+   "ignorer": "variante du héros de l'accueil"
+  },
+  "horaires-tarifs-planning": {
+   "titre": "Planning en lignes d'eau",
+   "role": "agenda",
+   "description": "Une ligne d'eau horizontale par jour, graduée en heures ; chaque cours est une bouée placée à son horaire, filtrable par lieu en pastilles ; choisir une bouée affiche le détail du créneau et le bouton de réservation.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "js": "assets/js/horaires.js:18-95"
+   },
+   "pieges": [
+    "deux cours proches se chevauchent : prévoir un décalage vertical des bouées"
+   ]
+  },
+  "horaires-tarifs-piscines": {
+   "ignorer": "variante de la carte de l'accueil"
+  },
+  "horaires-tarifs-calcul": {
+   "titre": "Calcul au prorata",
+   "role": "calculateur",
+   "description": "Choix d'un créneau dans une liste : trois compteurs animés donnent les séances de la session, les séances restantes et le prix au prorata.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "horaires-tarifs-tarifs": {
+   "titre": "Grille de tarifs par créneau",
+   "role": "tarifs",
+   "description": "Grille de cartes, une par créneau, avec lieu, horaire, prix et nombre de séances ; mentions « à confirmer » visibles.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "sur téléphone la grille devient très longue"
+   ]
+  },
+  "horaires-tarifs-inscription": {
+   "titre": "Inscription en trois étapes",
+   "role": "contact",
+   "description": "Formulaire simulé en trois étapes (type de demande, créneau, coordonnées) à côté d'une photo, avec progression et récapitulatif.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "horaires-tarifs-remontee": {
+   "ignorer": "variante de la remontée de l'accueil"
+  },
+  "pour-qui-hero": {
+   "ignorer": "variante du héros de l'accueil"
+  },
+  "pour-qui-quiz": {
+   "titre": "Questionnaire de trois questions",
+   "role": "outil-interactif",
+   "description": "Trois questions à pastilles à gauche ; à droite une carte claire collante compose la réponse au fur et à mesure des choix.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "quiz"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pour-qui-profils": {
+   "ignorer": "variante de la galerie horizontale de l'accueil"
+  },
+  "pour-qui-section": {
+   "titre": "Curseur d'intensité qui agit sur l'eau",
+   "role": "outil-interactif",
+   "description": "Un curseur de « tout en douceur » à « à fond » change le libellé d'intensité et pilote en direct l'agitation des caustiques WebGL et la densité des bulles du fond de page.",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "sans WebGL ou en mode calme, seul le libellé change : le dire dans le texte d'aide"
+   ]
+  },
+  "pour-qui-section-2": {
+   "titre": "Liste à cocher du sac",
+   "role": "outil-interactif",
+   "description": "Photo d'objets à plat et liste à cocher avec compteur d'objets prêts.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "cases sous 44 px"
+   ]
+  },
+  "pour-qui-remontee": {
+   "ignorer": "variante de la remontée de l'accueil"
+  }
+ }
+}

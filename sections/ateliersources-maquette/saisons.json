@@ -1,0 +1,45 @@
+{
+ "id": "ateliersources-maquette/saisons",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "titre": "Bascule été / hiver",
+ "role": "outil-interactif",
+ "description": "Deux ambiances superposées : un curseur et deux boutons font passer de l'été à l'hiver par un volet à bord ondulé (clip-path), textes et vignettes changent avec, et un canvas fait flotter du pollen ou des braises ; un indice esquisse la bascule pour inviter au geste.",
+ "animations": [
+  "masque",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:234-262",
+  "css": "assets/css/style.css:51,271-306,749-753",
+  "js": "assets/js/outils.js:20 ; assets/js/accueil.js:1,7-83,247-249"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/saisons-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/saisons-m390.jpg",
+  "video": "medias/ateliersources-maquette/saisons-p960.mp4"
+ },
+ "pieges": [
+  "garder le curseur range et les boutons aria-pressed synchronisés",
+  "les particules s'arrêtent hors écran et en mode calme ; leurs couleurs sont écrites en dur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 950,
+  "hauteur_m390": 908,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

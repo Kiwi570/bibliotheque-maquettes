@@ -1,0 +1,248 @@
+{
+ "maquette": {
+  "client": "agence de relations presse et de communication culinaire",
+  "activite": ["conseil", "média"],
+  "concept": ["journal"],
+  "ambiance": ["clair", "chaleureux", "artisanal"],
+  "palette": {"fond": "--paper", "texte": "--ink", "accent": "--tomato", "secondaire": "--sage"},
+  "polices": {"titres": "Anton", "texte": "Newsreader", "mono": "IBM Plex Mono"},
+  "points_forts": [
+   "une de quotidien avec titre qui s'imprime au rouleau et fil de dépêches défilant",
+   "photos qui se développent en trame (WebGL) à l'entrée dans l'écran",
+   "sommaire épinglé horizontal avec une démonstration animée par service",
+   "bon de commande en trois étapes qui se plie à l'envoi",
+   "salle de presse filtrable avec recherche sans accents"
+  ],
+  "reserves": [
+   "pointillés du ruban de la méthode sur les numéros 01 à 06",
+   "bas des lettres de « COQUILLE ! » coupé et CLS 0,124 sur la 404",
+   "image « événements » à régénérer (ligne d'horizon hors sujet)",
+   "étiquettes du radar à 9,5 px sur téléphone",
+   "méta description et chapô en écriture inclusive, à valider par le client"
+  ],
+  "animations": ["ouverture-orchestrée", "révélation-texte", "webgl-shader", "marquee", "section-fixée", "galerie-horizontale", "progression-fixée", "canvas-2d", "parallaxe", "compteur", "apparition-au-défilement", "révélation-image", "curseur-personnalisé", "bouton-magnétique", "transition-de-page", "défilement-lissé"],
+  "interactions": ["formulaire-par-étapes", "filtres", "recherche", "mode-calme"],
+  "change_depuis_audit": null,
+  "accueil": "une"
+ },
+ "sections": {
+  "sheet": {
+   "titre": "Feuille de transition",
+   "role": "transition-de-page",
+   "description": "Transition entre pages : une feuille couleur papier monte depuis le bas (yPercent) avant la navigation et se retire vers le haut à l'arrivée ; réinitialisée sur pageshow pour le retour arrière du navigateur.",
+   "animations": ["transition-de-page"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null, "sans_capture": true,
+   "code": {"html": "index.html:34", "css": "assets/css/style.css:181-192", "js": "assets/js/main.js:90-122"},
+   "pieges": ["écouter pageshow (persisted) pour retirer la feuille au retour arrière, sinon la page reste couverte", "ne pas intercepter les liens externes, les ancres ni les clics avec touche de modification"]
+  },
+  "cursor": {
+   "titre": "Curseur plume et boutons aimantés",
+   "role": "decor",
+   "description": "Curseur personnalisé en forme de plume qui suit la souris avec retard (quickTo x/y) et boutons .mag attirés par le pointeur ; désactivés au tactile et en mode calme.",
+   "animations": ["curseur-personnalisé", "bouton-magnétique"], "interactions": ["aucune"], "telephone": "masqué",
+   "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true,
+   "pieges": ["garder le curseur natif visible au clavier et sur les champs de saisie"]
+  },
+  "hd": {
+   "titre": "En-tête de quotidien",
+   "role": "menu",
+   "description": "En-tête façon manchette : ligne de date du jour et de lieu, logo, liens avec repère de section en cours (scrollSpy), bouton « Mode calme » et appel « Prendre un café » ; il se cache à la descente et revient à la remontée.",
+   "animations": ["aucune"], "interactions": ["mode-calme"], "telephone": "simplifié",
+   "note_qualite": 3, "reutilisable": false, "module": null,
+   "pieges": ["--entete-h est mesurée en JS : la remesurer au redimensionnement"]
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu téléphone plein écran avec liens en grandes capitales, ouvert par le bouton de l'en-tête, focus piégé et fermeture à Échap.",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true,
+   "pieges": []
+  },
+  "une": {
+   "titre": "La une",
+   "role": "ouverture",
+   "description": "Une de quotidien : filets qui se tracent, manchette « COUP DE FOOD » lettre à lettre (SplitText), photo qui se développe en trame WebGL, titre imprimé au rouleau, tampon rouge, sommaire « En bref » et fil de dépêches défilant accéléré par la vitesse de défilement et arrêté au survol ou au focus.",
+   "animations": ["ouverture-orchestrée", "révélation-texte", "webgl-shader", "marquee"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 5, "reutilisable": true, "module": null,
+   "code": {"html": "index.html:81-138", "css": "assets/css/style.css:245-294", "js": "assets/js/home.js:136-157 ; assets/js/main.js:190-265 ; assets/js/halftone.js"},
+   "pieges": ["l'ouverture attend la fin de la feuille de transition : garder ce chaînage", "le second groupe du fil est aria-hidden et ses liens en tabIndex -1", "la manchette est ajustée à la largeur en JS (data-mast) : relancer l'ajustement après chargement des polices"]
+  },
+  "edito": {
+   "titre": "Édito",
+   "role": "manifeste",
+   "description": "Édito en deux colonnes avec lettrine, titre mêlant capitales et italique, portrait noir et blanc en parallaxe légère qui se développe en trame à l'entrée, signature manuscrite.",
+   "animations": ["parallaxe", "webgl-shader", "apparition-au-défilement"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "pieges": ["parallaxe à couper en mode calme et sous réduire les animations"]
+  },
+  "sommaire": {
+   "titre": "Sommaire des services",
+   "role": "services",
+   "description": "Sommaire épinglé qui défile à l'horizontale (dès 1000 px) : un service par panneau avec sa démonstration animée par containerAnimation (radar SVG, stylo rouge qui corrige, lampe « on air » et onde canvas réagissant au pointeur, carton d'invitation qui pivote, veille surlignée), barre de progression et nom du panneau suivant.",
+   "animations": ["section-fixée", "galerie-horizontale", "progression-fixée", "canvas-2d", "révélation-texte"], "interactions": ["aucune"], "telephone": "simplifié",
+   "note_qualite": 4, "reutilisable": false, "module": null,
+   "pieges": ["anticipatePin: 1 provoque un saut à l'épinglage : à retirer", "étiquettes du radar à 9,5 px sur téléphone (restant d'audit)", "sous 1000 px les panneaux s'empilent : chaque démonstration doit avoir son propre déclencheur"]
+  },
+  "methode": {
+   "titre": "Méthode en six étapes",
+   "role": "méthode",
+   "description": "Six étapes en colonne dont l'entrée à 58 % de l'écran change une scène collante (photo développée, citations imprimées, maquettes jetées, enveloppes qui s'envolent) ; un ruban vertical se remplit au défilement.",
+   "animations": ["apparition-au-défilement", "progression-fixée", "révélation-image"], "interactions": ["aucune"], "telephone": "simplifié",
+   "note_qualite": 3, "reutilisable": false, "module": null,
+   "pieges": ["pointillés du ruban qui passent sur les numéros 01 à 06 (restant d'audit)"]
+  },
+  "coupures": {
+   "titre": "Coupures de presse",
+   "role": "portfolio",
+   "description": "Tableau de coupures : une carte inclinée par client, scotchée, avec photo développée en trame et nombre de communiqués, puis bandeau de logos en défilement continu.",
+   "animations": ["révélation-image", "webgl-shader", "marquee"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "pieges": ["rotations des cartes fixées dans le JS : les garder faibles pour ne pas couper le texte", "bandeau de logos à arrêter au survol et en mode calme"]
+  },
+  "entretien": {
+   "titre": "Entretien",
+   "role": "équipe",
+   "description": "Portrait en entretien sur fond encre : questions-réponses numérotées, deux photos en décalé et compteur d'années d'expérience.",
+   "animations": ["compteur", "révélation-image"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "charte": {
+   "titre": "Charte des engagements",
+   "role": "manifeste",
+   "description": "Engagements cochés d'un tampon rouge avec un trait qui s'étire, pendant qu'un vélo dessiné en SVG traverse la section au défilement (scrub), roues en rotation.",
+   "animations": ["apparition-au-défilement", "parallaxe"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "pieges": ["le vélo passe sous le texte : le garder dans la marge photo sur téléphone"]
+  },
+  "depeches": {
+   "titre": "Dernières dépêches",
+   "role": "portfolio",
+   "description": "Trois derniers communiqués en cartes photo avec date, client et titre, générés depuis les données, et lien vers toute la salle de presse.",
+   "animations": ["webgl-shader"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "contact": {
+   "titre": "Bon de commande",
+   "role": "contact",
+   "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
+   "animations": ["apparition-au-défilement"], "interactions": ["formulaire-par-étapes"], "telephone": "adapté",
+   "note_qualite": 5, "reutilisable": true, "module": null,
+   "code": {"html": "index.html:524-610", "css": "assets/css/style.css:587-640", "js": "assets/js/home.js:358-428 ; assets/js/main.js:173-185"},
+   "pieges": ["déplacer le focus sur le titre de l'étape à chaque changement", "le pliage 3D est sauté en mode calme : afficher directement l'écran de réussite"]
+  },
+  "ft": {
+   "titre": "Pied de page manchette",
+   "role": "pied-de-page",
+   "description": "Pied de page sur fond encre : nom en très grand ajusté à la largeur et imprimé à l'entrée, colonnes contact, pages, réseaux et mentions.",
+   "animations": ["révélation-texte"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "404-page-hero": {
+   "titre": "Page 404 « Coquille ! »",
+   "role": "page-404",
+   "description": "Page d'erreur en erratum de journal : « COQUILLE ! » en titre géant, phrase d'excuse et deux liens de retour.",
+   "animations": ["révélation-texte"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 2, "reutilisable": false, "module": null,
+   "pieges": ["bas des lettres coupé et CLS 0,124 à 1920 px (restants d'audit)"]
+  },
+  "conditions-page-hero": {"ignorer": "en-tête de page légale, identique à celui de la confidentialité"},
+  "conditions-section": {
+   "titre": "Conditions d'utilisation",
+   "role": "texte-legal",
+   "description": "Texte des conditions d'utilisation en articles numérotés, colonne de lecture étroite, date de mise à jour en mono.",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 2, "reutilisable": false, "module": null, "pieges": []
+  },
+  "confidentialite-page-hero": {"ignorer": "en-tête de page légale, identique à celui des conditions"},
+  "confidentialite-section": {
+   "titre": "Politique de confidentialité",
+   "role": "texte-legal",
+   "description": "Politique de confidentialité en questions numérotées, listes des données et des finalités, colonne de lecture étroite.",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 2, "reutilisable": false, "module": null, "pieges": []
+  },
+  "projet-incorrect-page-hero": {
+   "titre": "Dossier client",
+   "role": "ouverture",
+   "description": "Ouverture de cas client : nom du client en titre géant imprimé au rouleau (lettre retournée de la marque conservée), fiche technique en tableau à droite et chapô.",
+   "animations": ["révélation-texte"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "pieges": ["titre ajusté à la largeur en JS : prévoir sa hauteur en CSS pour éviter le CLS"]
+  },
+  "projet-incorrect-div": {
+   "titre": "Grande photo du dossier",
+   "role": "galerie",
+   "description": "Photo pleine largeur du client avec légende et crédit, développée en trame à l'entrée dans l'écran.",
+   "animations": ["webgl-shader"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "projet-incorrect-fil-titre": {
+   "titre": "Frise des communiqués",
+   "role": "étapes",
+   "description": "Frise verticale des communiqués d'un client : la ligne se trace au défilement (scaleY scrub), chaque point s'allume et la photo de l'épisode se développe en trame.",
+   "animations": ["apparition-au-défilement", "webgl-shader"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "pieges": ["même mécanique que le module frise-tracee : partir de lui"]
+  },
+  "projet-incorrect-on-ink": {
+   "titre": "Bandeau d'introduction",
+   "role": "manifeste",
+   "description": "Bandeau sur fond encre : titre « Une histoire racontée en épisodes » et paragraphe de résumé du dossier.",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "projet-incorrect-gallery": {
+   "titre": "Galerie épinglée",
+   "role": "galerie",
+   "description": "Galerie de photos épinglée qui défile à l'horizontale dès 900 px, chaque image se développant en trame au passage (containerAnimation) ; simple pile sur téléphone.",
+   "animations": ["section-fixée", "galerie-horizontale", "webgl-shader"], "interactions": ["aucune"], "telephone": "simplifié",
+   "note_qualite": 4, "reutilisable": true, "module": "galerie-horizontale-epinglee",
+   "pieges": ["déclencher le développement avec containerAnimation, pas sur la position verticale"]
+  },
+  "projet-incorrect-div-2": {
+   "titre": "Photo d'ambiance",
+   "role": "galerie",
+   "description": "Photo d'ambiance pleine largeur (four à bois) entre deux sections du dossier, développée en trame.",
+   "animations": ["webgl-shader"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "projet-incorrect-ret-titre": {
+   "titre": "Retombées presse",
+   "role": "preuves",
+   "description": "Trois cartes de retombées (média, date, titre de l'article) encore marquées « à compléter ».",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 2, "reutilisable": false, "module": null, "pieges": ["contenus à compléter par le client"]
+  },
+  "projet-incorrect-on-sage": {
+   "titre": "Appel « prochain dossier »",
+   "role": "appel",
+   "description": "Bandeau vert sauge « Votre maison, le prochain dossier ? » avec bouton de rendez-vous et lien vers les autres projets.",
+   "animations": ["aucune"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "salle-de-presse-page-hero": {
+   "titre": "Salle de presse",
+   "role": "ouverture",
+   "description": "Ouverture de la salle de presse : titre géant imprimé, chapô et fiche contact presse en tableau.",
+   "animations": ["révélation-texte"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []
+  },
+  "salle-de-presse-div": {
+   "titre": "Photo de salle",
+   "role": "galerie",
+   "description": "Photo pleine largeur d'une salle de restaurant sous l'ouverture, développée en trame.",
+   "animations": ["webgl-shader"], "interactions": ["aucune"], "telephone": "adapté",
+   "note_qualite": 2, "reutilisable": false, "module": null, "pieges": []
+  },
+  "salle-de-presse-communiques": {
+   "titre": "Communiqués filtrables",
+   "role": "portfolio",
+   "description": "Liste des communiqués avec boutons de filtre par client (aria-pressed et effectifs), recherche insensible aux accents, tri, nombre de résultats, message si vide ; l'ancre de l'adresse présélectionne un client ; colonne contact presse et kit média.",
+   "animations": ["webgl-shader"], "interactions": ["filtres", "recherche"], "telephone": "adapté",
+   "note_qualite": 4, "reutilisable": true, "module": null,
+   "code": {"html": "salle-de-presse.html:102-150", "css": "assets/css/style.css:711-749", "js": "assets/js/presse.js"},
+   "pieges": ["annoncer le nombre de résultats (aria-live)", "redévelopper la trame seulement pour les cartes nouvelles, pas à chaque frappe"]
+  }
+ }
+}

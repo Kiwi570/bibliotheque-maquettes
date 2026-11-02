@@ -1,0 +1,46 @@
+{
+ "id": "edwin-sonorisation-maquette/hero",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "titre": "Vinyle WebGL scratché",
+ "role": "ouverture",
+ "description": "Héros sombre : un disque vinyle WebGL (OGL) incliné, avec sillons, reflet anisotrope, étiquette et faisceaux laser, tourne à droite du titre ; le défilement le fait scratcher. Le titre arrive ligne par ligne sur les temps d'un tempo affiché. Repli en disque CSS qui tourne sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "chargement-orchestré"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:116-146",
+  "css": "assets/css/main.css:84-88,101-103,176-178,317-338,352-357,517,744,768,784-785,807-812,847-864,907,981",
+  "js": null
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/hero-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "arrêter le rendu hors écran et onglet caché",
+  "le scratch au défilement doit revenir à la vitesse normale par amortissement, pas d'un coup"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

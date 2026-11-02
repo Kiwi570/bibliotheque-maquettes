@@ -1,0 +1,43 @@
+{
+ "id": "edwin-sonorisation-maquette/contact-devis",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "contact",
+ "titre": "Devis en six pistes",
+ "role": "contact",
+ "description": "Formulaire de devis en six étapes présentées comme les pistes d'un disque : un disque tourne à côté et une liste de pistes se remplit n/6 ; recherche de commune en liste déroulante, erreurs sous les champs.",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "contact.html:112-239",
+  "css": "assets/css/main.css:341-353,367,393,492-517,540-542,639-646,673-700,725,744-745,775-781,812,817-818,854,862,907,956,977-987,1075-1078",
+  "js": "assets/js/core/placeholders.js:76-86 ; assets/js/core/intro.js:60-79 ; assets/js/core/ui.js:26-36,74-108,154-179 ; assets/js/core/audio.js:37,74,98,101-103"
+ },
+ "medias": {
+  "capture": "medias/edwin-sonorisation-maquette/contact-devis-p1440.jpg",
+  "capture_m390": "medias/edwin-sonorisation-maquette/contact-devis-m390.jpg",
+  "video": "medias/edwin-sonorisation-maquette/contact-devis-p960.mp4"
+ },
+ "pieges": [
+  "les barres d'étapes de 4 px ont besoin d'une zone tactile élargie par ::after"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1157,
+  "hauteur_m390": 1538,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

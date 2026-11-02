@@ -1,0 +1,40 @@
+{
+ "id": "brice-bourdon-maquette/intro",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Ouverture au fil à plomb",
+ "role": "ouverture",
+ "description": "Écran d'ouverture : un fil à plomb descend du haut de l'écran, oscille puis se stabilise sur l'axe, le nom et la mention du métier apparaissent lettre par lettre, puis un voile monte et libère la page ; joué une fois par session, environ 2 s, absent en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:31-36",
+  "css": "assets/css/style.css:149-155",
+  "js": "assets/js/core.js:232-277"
+ },
+ "medias": {},
+ "pieges": [
+  "le titre du héros attend l'événement de fin d'ouverture : garder ce chaînage, sinon il s'anime sous le voile",
+  "masquer la page en CSS avant le premier rendu pour éviter le flash avant l'ouverture",
+  "code partagé avec le rideau de transition (même fonction) : les séparer à l'extraction"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

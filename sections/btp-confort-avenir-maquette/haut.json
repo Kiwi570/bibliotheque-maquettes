@@ -1,0 +1,47 @@
+{
+ "id": "btp-confort-avenir-maquette/haut",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Héros du plan au réel",
+ "role": "ouverture",
+ "description": "Ouverture : une façade se trace avec un compteur « Tracé NNN % » puis s'efface en rideau ; la photo plein écran apparaît d'abord en contours de plan, puis une coulée révèle l'image réelle en WebGL, avec une loupe qui inverse plan et photo sous le curseur. Onglets de métiers en bas qui changent de photo toutes les 7 s avec une barre de progression ; titre lettre par lettre.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:68-102",
+  "css": "assets/css/style.css:241-307",
+  "js": "assets/js/home.js:13-116 ; assets/js/gl.js:1-282"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/haut-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/haut-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "l'ouverture reste peu lisible à 3 s : finition non corrigée, d'où le refus en module",
+  "le WebGL est abandonné si les premières images sont lentes : la photo seule doit tenir le héros",
+  "attendre le chargement de chaque photo avant de créer sa texture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 945,
+  "hauteur_m390": 894,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

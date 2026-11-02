@@ -1,0 +1,41 @@
+{
+ "id": "ateliersources-maquette/intention",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "titre": "Intention et reflet",
+ "role": "manifeste",
+ "description": "Paragraphe d'intention dont les mots remontent du flou un à un, à côté d'une photo de salle reflétée sous elle avec un filtre SVG de turbulence animé.",
+ "animations": [
+  "révélation-texte",
+  "filtre-anime",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:149-162",
+  "css": "assets/css/style.css:218-227,782",
+  "js": "assets/js/accueil.js:233-249 ; assets/js/animations.js:22-31,65-79"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/intention-p1440.jpg"
+ },
+ "pieges": [
+  "le feTurbulence animé en continu coûte cher : défaut signalé par l'audit, à remplacer par une image fixe ou un shader"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1208,
+  "hauteur_m390": 1246,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

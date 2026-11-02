@@ -1,0 +1,44 @@
+{
+ "id": "coupdefood-maquette/projet-incorrect-fil-titre",
+ "maquette": "coupdefood-maquette",
+ "page": "projet-incorrect",
+ "titre": "Frise des communiqués",
+ "role": "étapes",
+ "description": "Frise verticale des communiqués d'un client : la ligne se trace au défilement (scaleY scrub), chaque point s'allume et la photo de l'épisode se développe en trame.",
+ "animations": [
+  "apparition-au-défilement",
+  "webgl-shader"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "projet-incorrect.html:100-110",
+  "css": "assets/css/style.css:299-303,679-681",
+  "js": "assets/js/projet.js:9-12,17,39-41"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/projet-incorrect-fil-titre-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/projet-incorrect-fil-titre-m390.jpg",
+  "video": "medias/coupdefood-maquette/projet-incorrect-fil-titre-p960.mp4"
+ },
+ "pieges": [
+  "même mécanique que le module frise-tracee : partir de lui"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2793,
+  "hauteur_m390": 2932,
+  "epinglee": false,
+  "scrolltriggers": 7
+ }
+}

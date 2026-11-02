@@ -1,0 +1,43 @@
+{
+ "id": "brice-bourdon-maquette/seance",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Cycle de la séance",
+ "role": "étapes",
+ "description": "Déroulé d'une séance en quatre étapes : un cycle circulaire en SVG se trace au défilement, ses nœuds se remplissent un à un et l'étiquette centrale indique l'étape en cours ; la liste des étapes s'allume en regard.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:240-277",
+  "css": "assets/css/style.css:298-311",
+  "js": "assets/js/home.js:246-268,531"
+ },
+ "medias": {
+  "capture": "medias/brice-bourdon-maquette/seance-p1440.jpg",
+  "capture_m390": "medias/brice-bourdon-maquette/seance-m390.jpg",
+  "video": "medias/brice-bourdon-maquette/seance-p960.mp4"
+ },
+ "pieges": [
+  "couleurs des nœuds écrites en dur dans le script : passer par les variables"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1632,
+  "hauteur_m390": 1749,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

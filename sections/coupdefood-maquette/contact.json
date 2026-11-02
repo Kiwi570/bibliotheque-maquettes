@@ -1,0 +1,43 @@
+{
+ "id": "coupdefood-maquette/contact",
+ "maquette": "coupdefood-maquette",
+ "page": "index",
+ "titre": "Bon de commande",
+ "role": "contact",
+ "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:524-610",
+  "css": "assets/css/style.css:587-640",
+  "js": "assets/js/home.js:358-428 ; assets/js/main.js:173-185"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
+  "video": "medias/coupdefood-maquette/contact-p960.mp4"
+ },
+ "pieges": [
+  "déplacer le focus sur le titre de l'étape à chaque changement",
+  "le pliage 3D est sauté en mode calme : afficher directement l'écran de réussite"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1159,
+  "hauteur_m390": 2041,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

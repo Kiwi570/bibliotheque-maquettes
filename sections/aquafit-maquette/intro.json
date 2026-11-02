@@ -1,0 +1,46 @@
+{
+ "id": "aquafit-maquette/intro",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "horaires-tarifs",
+  "pour-qui"
+ ],
+ "titre": "Surface puis plongée",
+ "role": "ouverture",
+ "description": "Écran d'ouverture clair : le logo apparaît, une ligne d'eau ondulée se trace dessous en SVG, puis un voile vague descend et révèle le héros sombre comme si l'on passait sous la surface ; joué une fois par session, absent en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "morphing",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:60-66",
+  "css": "assets/css/site.css:112-117,596",
+  "js": "assets/js/ui.js:177-272"
+ },
+ "medias": {
+  "video": "medias/aquafit-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "le voile d'ouverture et le voile de transition de page sont le même SVG : la fonction de balayage sert aux deux",
+  "la promesse de fin d'ouverture déclenche l'animation du titre du héros ; sans ce chaînage les lettres montent sous le voile"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

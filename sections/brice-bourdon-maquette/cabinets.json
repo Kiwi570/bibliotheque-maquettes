@@ -1,0 +1,43 @@
+{
+ "id": "brice-bourdon-maquette/cabinets",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Plan schématique des cabinets",
+ "role": "carte",
+ "description": "Deux cabinets en onglets : plan SVG schématique généré à partir des coordonnées (cours d'eau, ligne de métro, repères), fiche adresse, accès et horaires avec statut ouvert ou fermé calculé à l'heure locale.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:306-348",
+  "css": "assets/css/style.css:330-352",
+  "js": "assets/js/home.js:270-362 ; assets/js/hours.js:1-27"
+ },
+ "medias": {
+  "capture": "medias/brice-bourdon-maquette/cabinets-p1440.jpg",
+  "capture_m390": "medias/brice-bourdon-maquette/cabinets-m390.jpg",
+  "video": "medias/brice-bourdon-maquette/cabinets-p960.mp4"
+ },
+ "pieges": [
+  "défaut restant : libellés du plan à 9,5 px sur téléphone",
+  "statut ouvert ou fermé calculé dans le fuseau du cabinet, pas celui du visiteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2466,
+  "hauteur_m390": 2509,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

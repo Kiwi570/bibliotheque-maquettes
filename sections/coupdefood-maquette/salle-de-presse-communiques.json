@@ -1,0 +1,44 @@
+{
+ "id": "coupdefood-maquette/salle-de-presse-communiques",
+ "maquette": "coupdefood-maquette",
+ "page": "salle-de-presse",
+ "titre": "Communiqués filtrables",
+ "role": "portfolio",
+ "description": "Liste des communiqués avec boutons de filtre par client (aria-pressed et effectifs), recherche insensible aux accents, tri, nombre de résultats, message si vide ; l'ancre de l'adresse présélectionne un client ; colonne contact presse et kit média.",
+ "animations": [
+  "webgl-shader"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "salle-de-presse.html:102-150",
+  "css": "assets/css/style.css:711-749",
+  "js": "assets/js/presse.js"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/salle-de-presse-communiques-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/salle-de-presse-communiques-m390.jpg",
+  "video": "medias/coupdefood-maquette/salle-de-presse-communiques-p960.mp4"
+ },
+ "pieges": [
+  "annoncer le nombre de résultats (aria-live)",
+  "redévelopper la trame seulement pour les cartes nouvelles, pas à chaque frappe"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4793,
+  "hauteur_m390": 9793,
+  "epinglee": false,
+  "scrolltriggers": 18
+ }
+}

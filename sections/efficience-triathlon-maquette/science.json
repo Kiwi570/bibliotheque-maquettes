@@ -1,0 +1,44 @@
+{
+ "id": "efficience-triathlon-maquette/science",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Courbe interactive à curseur",
+ "role": "outil-interactif",
+ "description": "Graphique SVG d'une courbe exponentielle sur fond de cinq bandes de zones colorées, avec deux seuils marqués ; un curseur range sous le graphique déplace un point sur la courbe et met à jour trois lectures (abscisse, ordonnée, zone) et une phrase d'explication de la zone. La courbe se trace à l'arrivée ; photos et liste de mesures à côté.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:296-350",
+  "css": "assets/css/main.css:120,239,507-529,535-542,1184,1215,1222",
+  "js": "assets/js/home.js:159-218 ; assets/js/app.js:263-266"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/science-p1440.jpg",
+  "capture_m390": "medias/efficience-triathlon-maquette/science-m390.jpg",
+  "video": "medias/efficience-triathlon-maquette/science-p960.mp4"
+ },
+ "pieges": [
+  "couleurs des zones et des seuils écrites en dur dans le JS : les lire dans des variables CSS",
+  "la courbe est une fonction illustrative : la passer en option (fonction, bornes, zones, unités)",
+  "le curseur range doit garder une cible de 44 px et une valeur annoncée (aria-valuetext)",
+  "redessiner au redimensionnement avec un délai, pas à chaque événement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1373,
+  "hauteur_m390": 1816,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

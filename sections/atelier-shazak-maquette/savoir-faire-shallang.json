@@ -1,0 +1,42 @@
+{
+ "id": "atelier-shazak-maquette/savoir-faire-shallang",
+ "maquette": "atelier-shazak-maquette",
+ "page": "savoir-faire",
+ "titre": "Mini-atelier : croiser les brins",
+ "role": "outil-interactif",
+ "description": "Petit jeu : en glissant le pointeur (ou au clavier, curseur accessible) le long d'une tresse SVG, on allonge la tresse et un compteur de croisements avance, avec un petit son à chaque croisement ; bouton de remise à zéro animée. La tresse se lance seule au quart à l'arrivée dans l'écran. Suivi de la galerie du savoir-faire.",
+ "animations": [
+  "masque"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "savoir-faire.html:88-111",
+  "css": "assets/css/style.css:434-435,534-542,636,654,658",
+  "js": "assets/js/main.js:58-125,915-940"
+ },
+ "medias": {
+  "capture": "medias/atelier-shazak-maquette/savoir-faire-shallang-p1440.jpg",
+  "capture_m390": "medias/atelier-shazak-maquette/savoir-faire-shallang-m390.jpg",
+  "video": "medias/atelier-shazak-maquette/savoir-faire-shallang-p960.mp4"
+ },
+ "pieges": [
+  "role slider avec aria-valuenow et aria-valuetext en croisements",
+  "à la souris sans clic, la tresse ne fait qu'avancer ; au doigt, setPointerCapture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3759,
+  "hauteur_m390": 4773,
+  "epinglee": false,
+  "scrolltriggers": 11
+ }
+}

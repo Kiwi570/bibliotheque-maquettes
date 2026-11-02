@@ -1,0 +1,44 @@
+{
+ "id": "coupdefood-maquette/projet-incorrect-gallery",
+ "maquette": "coupdefood-maquette",
+ "page": "projet-incorrect",
+ "titre": "Galerie épinglée",
+ "role": "galerie",
+ "description": "Galerie de photos épinglée qui défile à l'horizontale dès 900 px, chaque image se développant en trame au passage (containerAnimation) ; simple pile sur téléphone.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "webgl-shader"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "projet-incorrect.html:125-133",
+  "css": "assets/css/style.css:695-700",
+  "js": "assets/js/projet.js:28,55"
+ },
+ "medias": {
+  "capture": "medias/coupdefood-maquette/projet-incorrect-gallery-p1440.jpg",
+  "capture_m390": "medias/coupdefood-maquette/projet-incorrect-gallery-m390.jpg",
+  "video": "medias/coupdefood-maquette/projet-incorrect-gallery-p960.mp4"
+ },
+ "pieges": [
+  "déclencher le développement avec containerAnimation, pas sur la position verticale"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3077,
+  "hauteur_m390": 532,
+  "epinglee": true,
+  "scrolltriggers": 7
+ }
+}

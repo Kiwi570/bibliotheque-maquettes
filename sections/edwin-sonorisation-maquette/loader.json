@@ -1,0 +1,38 @@
+{
+ "id": "edwin-sonorisation-maquette/loader",
+ "maquette": "edwin-sonorisation-maquette",
+ "page": "index",
+ "titre": "Platine qui démarre",
+ "role": "ouverture",
+ "description": "Ouverture en SVG : le disque grandit et se met à tourner, le bras se pose, un anneau se trace et le compteur de tours monte jusqu'à 33⅓ ; le nom apparaît lettre par lettre puis l'écran remonte. Une fois par session, filet de sécurité à 3 s, fondu simple en mode calme.",
+ "animations": [
+  "chargement-orchestré",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:38-61",
+  "css": "assets/css/main.css:279-289,734-735",
+  "js": "assets/js/core/intro.js:9-34"
+ },
+ "medias": {},
+ "pieges": [
+  "garder le filet de 3 s : sans lui, une police lente bloque la page sous l'écran d'ouverture",
+  "bras posé avec svgOrigin, pas transformOrigin, sinon il pivote autour du mauvais point en SVG"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

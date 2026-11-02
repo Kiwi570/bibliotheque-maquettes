@@ -1,0 +1,45 @@
+{
+ "id": "aquafit-maquette/jauge",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "horaires-tarifs",
+  "pour-qui"
+ ],
+ "titre": "Jauge de profondeur",
+ "role": "decor",
+ "description": "Rail vertical fixé à droite : un repère descend avec la lecture et le nom de la section en cours s'affiche ; la même progression assombrit l'eau WebGL et densifie les bulles. Variante verticale du rail de sections, masquée sur téléphone.",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "masqué",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:73-77",
+  "css": "assets/css/site.css:97-103,596",
+  "js": "assets/js/anim.js:189-209"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/jauge-p1440.jpg",
+  "video": "medias/aquafit-maquette/gilet-p960.mp4"
+ },
+ "pieges": [
+  "mesurer les sections au refresh de ScrollTrigger, pas pendant le défilement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 504,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

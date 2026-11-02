@@ -1,0 +1,39 @@
+{
+ "id": "efficience-triathlon-maquette/stages",
+ "maquette": "efficience-triathlon-maquette",
+ "page": "index",
+ "titre": "Agenda à onglets et fiche",
+ "role": "agenda",
+ "description": "Agenda construit depuis un fichier de données, avec onglets « à venir » et « passés » ; chaque carte (photo, dates, lieu, places, prix) ouvre une fiche détaillée dans un dialog natif, avec compte à rebours jusqu'au départ.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:473-492",
+  "css": "assets/css/main.css:662-667,707-715,987",
+  "js": "assets/js/home.js:329-416"
+ },
+ "medias": {
+  "capture": "medias/efficience-triathlon-maquette/stages-p1440.jpg"
+ },
+ "pieges": [
+  "dialog marqué data-lenis-prevent pour que son contenu défile"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1853,
+  "hauteur_m390": 2588,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

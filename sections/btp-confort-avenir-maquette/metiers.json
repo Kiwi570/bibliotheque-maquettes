@@ -1,0 +1,46 @@
+{
+ "id": "btp-confort-avenir-maquette/metiers",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Planches métiers épinglées",
+ "role": "services",
+ "description": "Cinq planches d'architecte (cartouche, échelle, liste de prestations, dessin technique, photo) défilent à l'horizontale dans une section épinglée ; chaque planche qui devient active trace son dessin SVG, allume son repère et révèle sa photo. En dessous de 1100 px, les planches s'empilent sans épinglage.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:124-194",
+  "css": "assets/css/style.css:338-396",
+  "js": "assets/js/home.js:137-214 ; assets/js/app.js:244-263 ; assets/js/drawings.js:60-206"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/metiers-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/metiers-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/metiers-p960.mp4"
+ },
+ "pieges": [
+  "les déclencheurs des planches s'accrochent à l'animation horizontale (containerAnimation), pas au défilement de la page",
+  "anticipatePin provoquait un saut à l'entrée : il a été retiré",
+  "les sections suivantes mesurent leurs positions après l'espace d'épinglage : rafraîchir après le chargement des polices"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6063,
+  "hauteur_m390": 6017,
+  "epinglee": true,
+  "scrolltriggers": 12
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "atelier-shazak-maquette/ouverture",
+ "maquette": "atelier-shazak-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "presse",
+  "savoir-faire"
+ ],
+ "titre": "Tresse puis rideau en lanières",
+ "role": "ouverture",
+ "description": "Écran d'ouverture : une tresse SVG à trois brins (croisements calculés, révélée par un rectangle de découpe) se dessine en un peu plus d'une seconde, le mot-symbole apparaît, puis six lanières verticales s'écartent alternativement vers le haut et vers le bas. Les mêmes lanières se referment avant chaque changement de page ; une visite déjà faite n'a droit qu'à l'ouverture courte.",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque",
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:26-33",
+  "css": "assets/css/style.css:139-152,622,649-650",
+  "js": "assets/js/main.js:58-125,303-329,336-358"
+ },
+ "medias": {
+  "video": "medias/atelier-shazak-maquette/heros-p960.mp4"
+ },
+ "pieges": [
+  "la fin de l'ouverture déclenche le titre du héros (file quandOuvert) : garder ce chaînage",
+  "pageshow persisted : retirer le voile au retour arrière, sinon page couverte",
+  "couleurs des brins écrites en dur dans le générateur de tresse : les lire dans les variables"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

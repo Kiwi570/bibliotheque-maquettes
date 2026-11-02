@@ -1,0 +1,44 @@
+{
+ "id": "atelier-shazak-maquette/savoir-faire",
+ "maquette": "atelier-shazak-maquette",
+ "page": "index",
+ "titre": "Trois salles en défilement horizontal",
+ "role": "services",
+ "description": "Galerie horizontale épinglée sous l'en-tête : trois « salles » (texte, trois photos, cartels) défilent de côté pendant le défilement vertical ; la teinte du fond s'interpole d'une salle à l'autre à partir d'un data-teinte, et les photos de chaque salle ne se révèlent qu'à son arrivée. Sous 961 px, les salles s'empilent et la teinte change à l'entrée de chacune.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:94-142",
+  "css": "assets/css/style.css:97,242-277,679",
+  "js": "assets/js/main.js:417-421,437-470,534-561,1018"
+ },
+ "medias": {
+  "capture": "medias/atelier-shazak-maquette/savoir-faire-p1440.jpg",
+  "capture_m390": "medias/atelier-shazak-maquette/savoir-faire-m390.jpg",
+  "video": "medias/atelier-shazak-maquette/savoir-faire-p960.mp4"
+ },
+ "pieges": [
+  "épingler la fenêtre sous la hauteur mesurée de l'en-tête, sinon le haut est masqué (défaut corrigé à l'audit)",
+  "les révélations d'images des salles 2 et 3 attendent la progression horizontale, pas leur position verticale"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4097,
+  "hauteur_m390": 4160,
+  "epinglee": true,
+  "scrolltriggers": 6
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "apasdechien-maquette/dogparkour-autrement",
+ "maquette": "apasdechien-maquette",
+ "page": "dogparkour",
+ "titre": "Balle qui saute d'un mot à l'autre",
+ "role": "manifeste",
+ "description": "Titre géant sur lequel une balle suit au défilement une trajectoire pointillée calculée sur la position réelle de chaque mot, en rebondissant de l'un à l'autre ; les mots s'enfoncent au survol, puis trois photos en parallaxe.",
+ "animations": [
+  "progression-fixée",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "dogparkour.html:83-100",
+  "css": "assets/css/main.css:769-775",
+  "js": "assets/js/pages.js:548-581"
+ },
+ "medias": {
+  "capture": "medias/apasdechien-maquette/dogparkour-autrement-p1440.jpg",
+  "capture_m390": "medias/apasdechien-maquette/dogparkour-autrement-m390.jpg",
+  "video": "medias/apasdechien-maquette/dogparkour-autrement-p960.mp4"
+ },
+ "pieges": [
+  "trajectoire reconstruite au redimensionnement depuis getBoundingClientRect des mots",
+  "mots en inline-block pour pouvoir les animer",
+  "balle posée sur le dernier mot en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1235,
+  "hauteur_m390": 839,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

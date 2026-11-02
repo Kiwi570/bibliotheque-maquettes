@@ -1,0 +1,43 @@
+{
+ "id": "btp-confort-avenir-maquette/devis",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Devis en quatre étapes",
+ "role": "contact",
+ "description": "Formulaire de devis simulé en quatre étapes (travaux, bien, délai, coordonnées) avec barre d'étapes, validation par étape et messages d'erreur reliés aux champs ; une maison se dessine un peu plus à chaque étape et un récapitulatif s'affiche à la fin. Coordonnées et horaires en colonne.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:315-416",
+  "css": "assets/css/style.css:520-581",
+  "js": "assets/js/home.js:400-503"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/devis-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/devis-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/devis-p960.mp4"
+ },
+ "pieges": [
+  "les liens « Devis peinture » pré-cochent le métier via un événement et la session : garder ce relais",
+  "ne pas voler le focus au premier affichage, seulement après une action"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1513,
+  "hauteur_m390": 2166,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

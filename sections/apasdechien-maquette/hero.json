@@ -1,0 +1,50 @@
+{
+ "id": "apasdechien-maquette/hero",
+ "maquette": "apasdechien-maquette",
+ "page": "index",
+ "titre": "Sous-bois en lumière tachetée et balle à lancer",
+ "role": "ouverture",
+ "description": "Premier écran plein cadre sur photo de forêt : une lumière tachetée à travers le feuillage, animée en shader (OGL, repli CSS), bouge au vent et suit la souris ; un clic dans le décor lance une balle en canvas 2D qui rebondit avec ombre puis revient d'elle-même au bouton ; photo polaroïd scotchée et pastille de compte à rebours du prochain cours.",
+ "animations": [
+  "webgl-shader",
+  "canvas-2d",
+  "parallaxe",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:73-89",
+  "css": "assets/css/main.css:213-260",
+  "js": "assets/js/sousbois.js:1-92 ; assets/js/pages.js:303-370"
+ },
+ "medias": {
+  "capture": "medias/apasdechien-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/apasdechien-maquette/hero-m390.jpg",
+  "video": "medias/apasdechien-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "balle limitée à quatre à la fois, boucle rAF arrêtée dès qu'il n'y en a plus",
+  "lancer au clic désactivé au toucher, bouton dédié à la place",
+  "couleurs de la balle écrites en dur dans le canvas : les lire dans les variables CSS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 930,
+  "hauteur_m390": 1077,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

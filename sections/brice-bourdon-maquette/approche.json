@@ -1,0 +1,46 @@
+{
+ "id": "brice-bourdon-maquette/approche",
+ "maquette": "brice-bourdon-maquette",
+ "page": "index",
+ "titre": "Silhouette d'analyse en quatre couches",
+ "role": "méthode",
+ "description": "Section épinglée : à gauche quatre approches en liste, seule l'active est dépliée ; à droite une silhouette au trait en canvas sur grille millimétrée se charge couche par couche (structure, axes et niveaux, appuis, réseau) selon la progression du défilement, avec un compteur « couche n / 4 ».",
+ "animations": [
+  "section-fixée",
+  "canvas-2d",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:204-237",
+  "css": "assets/css/style.css:275-294,520,582-595,633",
+  "js": "assets/js/home.js:1,114-244,530 ; assets/js/core.js:104-131"
+ },
+ "medias": {
+  "capture": "medias/brice-bourdon-maquette/approche-p1440.jpg",
+  "capture_m390": "medias/brice-bourdon-maquette/approche-m390.jpg",
+  "video": "medias/brice-bourdon-maquette/approche-p960.mp4"
+ },
+ "pieges": [
+  "hauteur en 100svh moins l'en-tête mesuré, sinon la liste dépasse",
+  "piloter le dessin par une progression continue 0 → 4, pas par des étapes, pour que le retour arrière soit fluide",
+  "couleurs du canvas à lire dans les variables CSS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1596,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

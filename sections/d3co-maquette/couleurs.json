@@ -1,0 +1,43 @@
+{
+ "id": "d3co-maquette/couleurs",
+ "maquette": "d3co-maquette",
+ "page": "index",
+ "titre": "Configurateur de coloris",
+ "role": "outil-interactif",
+ "description": "Choix du modèle par onglets et du coloris dans un nuancier : la pièce se réimprime en WebGL dans la nouvelle teinte, nom et prix suivent, ajout au panier direct.",
+ "animations": [
+  "webgl-shader"
+ ],
+ "interactions": [
+  "configurateur",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:198-217",
+  "css": "assets/css/style.css:519-531",
+  "js": "assets/js/accueil.js:410-483 ; assets/js/impression.js"
+ },
+ "medias": {
+  "capture": "medias/d3co-maquette/couleurs-p1440.jpg",
+  "capture_m390": "medias/d3co-maquette/couleurs-m390.jpg",
+  "video": "medias/d3co-maquette/couleurs-p960.mp4"
+ },
+ "pieges": [
+  "chaque coloris est une vraie photo : précharger la suivante avant de lancer changer()"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1014,
+  "hauteur_m390": 1210,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

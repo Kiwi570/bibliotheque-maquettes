@@ -1,0 +1,47 @@
+{
+ "id": "aquafit-maquette/eau",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "horaires-tarifs",
+  "pour-qui"
+ ],
+ "titre": "Caustiques en fond fixe",
+ "role": "decor",
+ "description": "Canvas WebGL fixé derrière toute la page : reflets de caustiques en mode de fusion écran, dont la profondeur (teinte et intensité) suit la position de lecture ; une version sans WebGL retombe sur un dégradé propre.",
+ "animations": [
+  "webgl-shader"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:68-68",
+  "css": "assets/css/site.css:77-81,596",
+  "js": "assets/js/eau.js:1-201 ; assets/js/anim.js:189-209"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/eau-p1440.jpg",
+  "capture_m390": "medias/aquafit-maquette/eau-m390.jpg",
+  "video": "medias/aquafit-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "le shader se met en pause hors de l'onglet et en mode calme ; garder une image fixe",
+  "la profondeur est pilotée de l'extérieur (jauge, curseur d'intensité) : exposer une méthode plutôt que lire le défilement dans le shader"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

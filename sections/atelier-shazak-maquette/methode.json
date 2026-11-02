@@ -1,0 +1,45 @@
+{
+ "id": "atelier-shazak-maquette/methode",
+ "maquette": "atelier-shazak-maquette",
+ "page": "index",
+ "titre": "Méthode épinglée en cinq étapes",
+ "role": "étapes",
+ "description": "Grille épinglée : cinq étapes numérotées à gauche s'allument tour à tour pendant que, à droite, le visuel correspondant se révèle par un masque (du bas ou du haut selon le sens) avec un léger dézoom ; une tresse verticale fait progresser la lecture le long des étapes, la légende du visuel change avec lui.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "masque",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:144-162",
+  "css": "assets/css/style.css:281-305,689-697",
+  "js": "assets/js/main.js:58-125,566-608"
+ },
+ "medias": {
+  "capture": "medias/atelier-shazak-maquette/methode-p1440.jpg",
+  "capture_m390": "medias/atelier-shazak-maquette/methode-m390.jpg",
+  "video": "medias/atelier-shazak-maquette/methode-p960.mp4"
+ },
+ "pieges": [
+  "sens du masque selon l'étape précédente : garder l'index ancien",
+  "sous 961 px, plus d'épinglage : la tresse suit le défilement de la liste"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4557,
+  "hauteur_m390": 1524,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

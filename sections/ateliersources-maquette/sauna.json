@@ -1,0 +1,43 @@
+{
+ "id": "ateliersources-maquette/sauna",
+ "maquette": "ateliersources-maquette",
+ "page": "index",
+ "titre": "Rituel en cercle",
+ "role": "étapes",
+ "description": "Tarifs à gauche et, à droite, un cycle en trois temps dessiné en cercle : le trait se trace au défilement, une goutte tourne dessus en changeant de couleur et l'étape atteinte s'éclaire.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:352-384",
+  "css": "assets/css/style.css:357-384,765-769,782-784,825",
+  "js": "assets/js/accueil.js:126-146"
+ },
+ "medias": {
+  "capture": "medias/ateliersources-maquette/sauna-p1440.jpg",
+  "capture_m390": "medias/ateliersources-maquette/sauna-m390.jpg",
+  "video": "medias/ateliersources-maquette/sauna-p960.mp4"
+ },
+ "pieges": [
+  "couleurs de la goutte interpolées dans le JS : passer par des variables"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1452,
+  "hauteur_m390": 1549,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

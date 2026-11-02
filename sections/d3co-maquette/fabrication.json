@@ -1,0 +1,44 @@
+{
+ "id": "d3co-maquette/fabrication",
+ "maquette": "d3co-maquette",
+ "page": "index",
+ "titre": "De la bobine à l'étagère",
+ "role": "étapes",
+ "description": "Section sombre épinglée : un canvas 2D imprime une vraie silhouette rangée par rangée pendant que les quatre étapes défilent à côté, avec lecture de la couche en cours.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:152-195",
+  "css": "assets/css/style.css:506-515,993-1007",
+  "js": "assets/js/accueil.js:304-406"
+ },
+ "medias": {
+  "capture": "medias/d3co-maquette/fabrication-p1440.jpg",
+  "capture_m390": "medias/d3co-maquette/fabrication-m390.jpg",
+  "video": "medias/d3co-maquette/fabrication-p960.mp4"
+ },
+ "pieges": [
+  "redimensionner le canvas au devicePixelRatio au refresh, pas à chaque frame"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2790,
+  "hauteur_m390": 1974,
+  "epinglee": true,
+  "scrolltriggers": 7
+ }
+}

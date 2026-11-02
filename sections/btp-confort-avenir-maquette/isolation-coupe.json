@@ -1,0 +1,47 @@
+{
+ "id": "btp-confort-avenir-maquette/isolation-coupe",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "isolation",
+ "titre": "Coupe thermique épinglée",
+ "role": "outil-interactif",
+ "description": "Coupe de maison en SVG épinglée sur un écran : des particules de chaleur en canvas montent et s'échappent par le toit et les murs ; au défilement, l'isolant se pose sous la toiture, dans les combles puis dans les murs et retient la chaleur, l'état du chantier s'affichant au-dessus. Sur téléphone, même effet au défilement sans épinglage.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "isolation.html:81-96",
+  "css": "assets/css/style.css:621-631,803-811",
+  "js": "assets/js/isolation.js:16-107 ; assets/js/drawings.js:364-412"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/isolation-coupe-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/isolation-coupe-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/isolation-coupe-p960.mp4"
+ },
+ "pieges": [
+  "la section entière est épinglée en 100svh avec la place de l'en-tête réservée (--entete-h) : vérifier qu'elle tient aux petites hauteurs",
+  "boucle canvas arrêtée hors écran (IntersectionObserver) ; en mode calme, état final précalculé",
+  "couleurs des particules écrites en dur : les lire dans les variables CSS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 888,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

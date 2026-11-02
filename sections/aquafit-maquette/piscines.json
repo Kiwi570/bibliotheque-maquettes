@@ -1,0 +1,43 @@
+{
+ "id": "aquafit-maquette/piscines",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "titre": "Carte des lieux et prochain cours",
+ "role": "carte",
+ "description": "Carte SVG dessinée (rive tracée au défilement, points qui apparaissent) avec les lieux de cours ; choisir un point affiche la fiche du lieu, ses créneaux et le prochain cours calculé à partir de l'heure courante.",
+ "animations": [
+  "morphing",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:345-372",
+  "css": "assets/css/site.css:309-312,326-327,332-336,341,418-419,584-585,735",
+  "js": "assets/js/carte.js:1-90 ; assets/js/piscines.js:1-56 ; assets/js/anim.js:166-173"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/piscines-p1440.jpg",
+  "capture_m390": "medias/aquafit-maquette/piscines-m390.jpg",
+  "video": "medias/aquafit-maquette/piscines-p960.mp4"
+ },
+ "pieges": [
+  "points de la carte sous 44 px : agrandir la zone cliquable, pas le dessin"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1467,
+  "hauteur_m390": 1737,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

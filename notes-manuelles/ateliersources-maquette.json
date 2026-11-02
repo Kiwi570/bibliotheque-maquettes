@@ -1,0 +1,679 @@
+{
+ "maquette": {
+  "client": "lieu de stages et de retraites au bord d'une rivière",
+  "activite": [
+   "hébergement",
+   "bien-être"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "végétal",
+   "doux",
+   "minéral"
+  ],
+  "palette": {
+   "fond": "--calcaire",
+   "texte": "--texte",
+   "accent": "--rouille",
+   "secondaire": "--anglin"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "goutte d'ouverture qui découvre une photo sous une eau vive en WebGL",
+   "rivière tracée dans les marges de toute la page, avec une libellule à la pointe",
+   "bascule été / hiver en volet ondulé avec particules",
+   "demande de disponibilité en cinq étapes avec calendrier",
+   "mode calme complet et ambiance sonore générée"
+  ],
+  "reserves": [
+   "reflet animé de la salle coûteux (feTurbulence)",
+   "libellule qui passe sur les textes au téléphone",
+   "photos du client hétérogènes",
+   "accueil lourd (environ 4,5 Mo)"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "webgl-shader",
+   "révélation-texte",
+   "révélation-image",
+   "masque",
+   "galerie-horizontale",
+   "section-fixée",
+   "compteur",
+   "parallaxe",
+   "marquee",
+   "canvas-2d",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "filtre-anime",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "comparateur",
+   "carte-interactive",
+   "formulaire-par-étapes",
+   "réservation-simulee",
+   "galerie-cliquable",
+   "lecteur-audio",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "ouverture"
+ },
+ "sections": {
+  "intro": {
+   "titre": "Goutte d'ouverture",
+   "role": "ouverture",
+   "description": "Voile plein écran joué une fois par session : une goutte SVG tombe au centre, trois ondes concentriques s'élargissent, le logo apparaît en sortant du flou puis le voile s'efface et lance l'ouverture de l'eau de la photo du héros ; tout geste du visiteur accélère la séquence.",
+   "animations": [
+    "chargement-orchestré",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "sans_capture": true,
+   "code": {
+    "js": "assets/js/app.js:40-89"
+   },
+   "medias": {
+    "video": "medias/ateliersources-maquette/ouverture-p960.mp4"
+   },
+   "pieges": [
+    "mémoriser le passage dans sessionStorage et raccourcir la séquence sur les pages intérieures ou avec une ancre",
+    "la fin de la timeline lance l'eau du héros et la rivière de page : garder ce chaînage, sinon la rivière se mesure avant la fin du voile"
+   ]
+  },
+  "rideau": {
+   "titre": "Rideau en vague",
+   "role": "transition-de-page",
+   "description": "Rideau plein écran à bord supérieur en vague SVG qui monte depuis le bas avant de quitter la page, avec un petit son de goutte ; il est remis hors champ au retour par l'historique (pageshow persisted).",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "sans le reset sur pageshow, le bouton retour affiche une page couverte par le rideau"
+   ]
+  },
+  "curseur": {
+   "titre": "Curseur qui laisse des ronds",
+   "role": "decor",
+   "description": "Anneau qui suit la souris avec un léger retard et dépose des ronds concentriques qui s'effacent, comme sur l'eau ; il n'apparaît qu'au premier mouvement et seulement avec un pointeur fin, jamais en mode calme.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "sans_capture": true,
+   "pieges": [
+    "masquer le curseur personnalisé jusqu'au premier mouvement, sinon il reste figé en haut à gauche"
+   ]
+  },
+  "barre": {
+   "titre": "Barre de navigation",
+   "role": "menu",
+   "description": "Barre fixe avec logo, liens, boutons Son et Mode calme et bouton d'appel ; elle passe en version claire sur les sections sombres et prend un fond après le premier écran, en un seul calcul par image.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme",
+    "lecteur-audio"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "le changement de teinte lit les sections [data-theme=sombre] sous le milieu de la barre : marquer chaque section sombre"
+   ]
+  },
+  "menu": {
+   "titre": "Menu plein écran",
+   "role": "menu",
+   "description": "Menu plein écran pour téléphone, ouvert par le bouton de la barre, avec les liens principaux et les coordonnées en bas ; le défilement de la page est bloqué pendant l'ouverture.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture": {
+   "titre": "Photo sous l'eau vive",
+   "role": "ouverture",
+   "description": "Héros plein écran dont la photo est rendue en WebGL sous une eau vive qui ondule ; l'eau se clarifie à mesure qu'on défile, le curseur et le toucher y déposent des ronds, puis le titre se révèle ligne par ligne. Sans WebGL ou en mode calme, la photo seule s'affiche, sans second téléchargement.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "chargement-orchestré"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/eau.js:1-223 ; assets/js/app.js:40-91 ; assets/js/animations.js:7-20"
+   },
+   "pieges": [
+    "la texture réutilise l'image déjà chargée par la page : attendre son décodage avant de l'envoyer au GPU",
+    "recadrage différent au téléphone (image -mobile-) : relire currentSrc pour le point focal",
+    "limiter le dpr à 1 au téléphone et arrêter la boucle hors écran (IntersectionObserver)"
+   ]
+  },
+  "intention": {
+   "titre": "Intention et reflet",
+   "role": "manifeste",
+   "description": "Paragraphe d'intention dont les mots remontent du flou un à un, à côté d'une photo de salle reflétée sous elle avec un filtre SVG de turbulence animé.",
+   "animations": [
+    "révélation-texte",
+    "filtre-anime",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "le feTurbulence animé en continu coûte cher : défaut signalé par l'audit, à remplacer par une image fixe ou un shader"
+   ]
+  },
+  "maison": {
+   "titre": "Chiffres et mosaïque",
+   "role": "chiffres",
+   "description": "Présentation du lieu avec quatre chiffres comptés au défilement, puis une mosaïque de photos qui s'ouvrent en cercle depuis le centre de la grille, les plus éloignées en dernier.",
+   "animations": [
+    "compteur",
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "js": "assets/js/animations.js:33-63"
+   },
+   "pieges": []
+  },
+  "journee": {
+   "titre": "Journée au fil du ciel",
+   "role": "galerie",
+   "description": "Galerie horizontale épinglée des moments d'une journée ; le fond passe du ciel du matin au crépuscule et un astre traverse l'écran selon la progression. Sous 900 px, les moments s'empilent verticalement.",
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/animations.js:88-130,139-150"
+   },
+   "pieges": [
+    "anticipatePin: 1 encore présent : à retirer avant reprise",
+    "les couleurs du ciel sont interpolées en dur dans le JS : les lire dans des variables",
+    "la mécanique d'épinglage existe déjà en module galerie-horizontale-epinglee : seul le ciel qui change est propre à cette section"
+   ]
+  },
+  "saisons": {
+   "titre": "Bascule été / hiver",
+   "role": "outil-interactif",
+   "description": "Deux ambiances superposées : un curseur et deux boutons font passer de l'été à l'hiver par un volet à bord ondulé (clip-path), textes et vignettes changent avec, et un canvas fait flotter du pollen ou des braises ; un indice esquisse la bascule pour inviter au geste.",
+   "animations": [
+    "masque",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "garder le curseur range et les boutons aria-pressed synchronisés",
+    "les particules s'arrêtent hors écran et en mode calme ; leurs couleurs sont écrites en dur"
+   ]
+  },
+  "table": {
+   "titre": "Table et jardin",
+   "role": "services",
+   "description": "Présentation de la cuisine avec des pousses SVG qui se tracent au défilement autour du titre et des photos révélées par un masque qui monte.",
+   "animations": [
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "js": "assets/js/accueil.js:86-96"
+   },
+   "pieges": []
+  },
+  "village": {
+   "titre": "Carte du village",
+   "role": "carte",
+   "description": "Plan SVG stylisé où une rivière se trace au défilement, les repères apparaissent l'un après l'autre et une libellule suit le chemin ; chaque repère ouvre une fiche photo annoncée aux lecteurs d'écran. Une bande de photos défile ensuite au scrub.",
+   "animations": [
+    "masque",
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/accueil.js:99-123 ; assets/js/animations.js:132-136"
+   },
+   "pieges": [
+    "la libellule suit le chemin par getPointAtLength : mesurer la longueur au refresh, pas à chaque image"
+   ]
+  },
+  "sauna": {
+   "titre": "Rituel en cercle",
+   "role": "étapes",
+   "description": "Tarifs à gauche et, à droite, un cycle en trois temps dessiné en cercle : le trait se trace au défilement, une goutte tourne dessus en changeant de couleur et l'étape atteinte s'éclaire.",
+   "animations": [
+    "masque",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/accueil.js:126-146"
+   },
+   "pieges": [
+    "couleurs de la goutte interpolées dans le JS : passer par des variables"
+   ]
+  },
+  "programme": {
+   "titre": "Programme des stages",
+   "role": "agenda",
+   "description": "Stages à venir et frise des stages passés, alimentés par un fichier de données, avec un bouton « voir plus » et une photo en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hotes": {
+   "titre": "Les hôtes",
+   "role": "équipe",
+   "description": "Deux portraits décalés révélés par une onde circulaire (clip-path) et un court texte de présentation.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "temoignages": {
+   "titre": "Citations en rotation",
+   "role": "témoignages",
+   "description": "Une citation à la fois sur photo sombre en parallaxe, qui change toutes les sept secondes avec boutons précédent, suivant et pause et une annonce polie aux lecteurs d'écran.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "venir": {
+   "titre": "Ligne de train",
+   "role": "carte",
+   "description": "Carte d'accès sur photo en parallaxe : une ligne verticale se trace et allume les arrêts depuis les grandes villes jusqu'au lieu.",
+   "animations": [
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied avec grand appel",
+   "role": "pied-de-page",
+   "description": "Pied sombre ouvert par un très grand bouton d'appel en pilule, une photo en parallaxe, trois colonnes de liens et coordonnées.",
+   "animations": [
+    "parallaxe",
+    "bouton-magnétique"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-titre": {
+   "titre": "Page perdue",
+   "role": "page-404",
+   "description": "Page d'erreur sombre et sans animation : logo, ondes concentriques fixes, titre, phrase et deux boutons de retour.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "code": {
+    "html": "404.html:14-23"
+   },
+   "pieges": [
+    "chemins absolus vers les feuilles et images pour fonctionner à toute profondeur"
+   ]
+  },
+  "404-chapeau": {
+   "ignorer": "même page d'erreur que 404-titre, découpée en plusieurs blocs par l'inventaire"
+  },
+  "404-perdu-liens": {
+   "ignorer": "même page d'erreur que 404-titre, découpée en plusieurs blocs par l'inventaire"
+  },
+  "mentions-legales-legal": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Page de mentions en une colonne avec intertitres, éléments à fournir signalés par une étiquette, et la rivière de page en marge.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-ouverture": {
+   "titre": "Ouverture de page intérieure",
+   "role": "ouverture",
+   "description": "Variante de la photo sous l'eau vive pour une page intérieure, sans la goutte d'ouverture, avec une liste de chiffres clés sous le texte d'accroche.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-pour-qui": {
+   "titre": "Pratiques qui se rassemblent",
+   "role": "manifeste",
+   "description": "Texte d'accueil et liste de pratiques dont les étiquettes arrivent de positions aléatoires avec un rebond élastique, à côté d'une photo révélée par un masque.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-coupe": {
+   "titre": "Maison en coupe",
+   "role": "outil-interactif",
+   "description": "Dessin SVG de la maison en coupe, étage par étage : des onglets accessibles (flèches, Début, Fin) ou un clic sur une pièce allument l'espace, ses traits se tracent et sa fiche photo s'ouvre en cercle.",
+   "animations": [
+    "masque",
+    "révélation-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/organiser.js:17-60"
+   },
+   "pieges": [
+    "garder pièces du dessin et onglets synchronisés (aria-selected, tabindex) quelle que soit l'entrée"
+   ]
+  },
+  "organiser-un-stage-materiel": {
+   "titre": "Matériel en icônes",
+   "role": "services",
+   "description": "Photo révélée et grille d'icônes du matériel disponible qui apparaissent en cascade sur fond sombre.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-formules": {
+   "titre": "Deux formules",
+   "role": "offre",
+   "description": "Deux cartes de formule côte à côte, légèrement inclinables au survol, avec photo révélée par un masque et texte descriptif.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-bien-etre": {
+   "titre": "Jauge de chaleur",
+   "role": "étapes",
+   "description": "Section sombre où une jauge verticale de température monte au défilement ; chaque palier allume son étape et sa photo apparaît comme à travers la vapeur, sur un fond de braise et de brume.",
+   "animations": [
+    "progression-fixée",
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "l'étape active est portée par data-etape sur la section : le CSS en dépend"
+   ]
+  },
+  "organiser-un-stage-parcours": {
+   "titre": "Parcours d'accompagnement",
+   "role": "étapes",
+   "description": "Étapes numérotées le long d'un fil qui se trace au défilement, avec photos révélées.",
+   "animations": [
+    "masque",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "organiser-un-stage-chambres": {
+   "titre": "Chambres en galerie",
+   "role": "galerie",
+   "description": "Variante de la galerie horizontale épinglée pour les chambres, sur fond sombre fixe, empilée sous 900 px.",
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "anticipatePin: 1 encore présent"
+   ]
+  },
+  "organiser-un-stage-temoins": {
+   "titre": "Témoignages qui défilent",
+   "role": "témoignages",
+   "description": "Bandeau de témoignages en défilement continu, contenu dupliqué pour la boucle, avec bouton de pause visible.",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la copie dupliquée doit être aria-hidden"
+   ]
+  },
+  "organiser-un-stage-demande": {
+   "titre": "Demande en cinq étapes",
+   "role": "contact",
+   "description": "Carte de formulaire sur photo en parallaxe : cinq étapes (type de séjour, dates sur un calendrier, groupe, besoins, coordonnées), progression dessinée par une rivière qui se remplit, retour possible, validation par étape et message de remerciement focalisé.",
+   "animations": [
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "code": {
+    "js": "assets/js/organiser.js:126-280"
+   },
+   "pieges": [
+    "le calendrier se pilote aux flèches (jour, semaine) : garder ce déplacement et annoncer la plage choisie",
+    "envoi simulé : brancher un vrai service avant mise en ligne"
+   ]
+  },
+  "organiser-un-stage-acces": {
+   "titre": "Accès et contacts",
+   "role": "contact",
+   "description": "Bloc sombre avec adresse, téléphones et courriel à gauche et photo du paysage révélée à droite.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "apasdechien-maquette/dogparkour-figures",
+ "maquette": "apasdechien-maquette",
+ "page": "dogparkour",
+ "titre": "Figures en piste horizontale épinglée",
+ "role": "galerie",
+ "description": "Section épinglée dont la piste de tuiles photo défile à l'horizontale ; sur chaque tuile, un tracé jaune (saut, slalom) se dessine quand elle arrive au centre, la photo glisse en parallaxe et une barre suit la progression ; défilement libre à aimantation sous 900 px.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "dogparkour.html:102-108",
+  "css": "assets/css/main.css:471-526",
+  "js": "assets/js/pages.js:228-270"
+ },
+ "medias": {
+  "capture": "medias/apasdechien-maquette/dogparkour-figures-p1440.jpg",
+  "capture_m390": "medias/apasdechien-maquette/dogparkour-figures-m390.jpg",
+  "video": "medias/apasdechien-maquette/dogparkour-figures-p960.mp4"
+ },
+ "pieges": [
+  "hauteur en 100svh moins --entete-h pour que la piste tienne sous l'en-tête",
+  "containerAnimation pour les déclencheurs des tuiles",
+  "rechargement si une tablette passe de part et d'autre de 900 px, sauf saisie en cours"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 964,
+  "epinglee": true,
+  "scrolltriggers": 13
+ }
+}

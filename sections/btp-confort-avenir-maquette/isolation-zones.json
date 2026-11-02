@@ -1,0 +1,42 @@
+{
+ "id": "btp-confort-avenir-maquette/isolation-zones",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "isolation",
+ "titre": "Maison éclatée en six zones",
+ "role": "outil-interactif",
+ "description": "Maison isométrique en SVG dont les six couches (sous-sols, planchers, murs, ouvertures, combles, toiture) arrivent écartées puis se rassemblent ; une liste de boutons ou un clic sur la maison sélectionne une zone, la colore et déplie son texte.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "isolation.html:98-117",
+  "css": "assets/css/style.css:632-646",
+  "js": "assets/js/isolation.js:108-145 ; assets/js/drawings.js:342-364"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/isolation-zones-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/isolation-zones-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/isolation-zones-p960.mp4"
+ },
+ "pieges": [
+  "la sélection au survol est réservée aux pointeurs fins, sinon le toucher sélectionne deux fois"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1230,
+  "hauteur_m390": 1274,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "depot": "efficience-triathlon-maquette",
+ "url": "https://efficience-triathlon-maquette.vercel.app",
+ "client": "coach de triathlon, tests d'effort lactate et stages",
+ "activite": [
+  "sport"
+ ],
+ "concept": [
+  "laboratoire",
+  "cahier"
+ ],
+ "ambiance": [
+  "sombre",
+  "énergique",
+  "froid"
+ ],
+ "palette": {
+  "fond": "#0b1016",
+  "texte": "#eef2f5",
+  "accent": "#ff4b2b",
+  "secondaire": "#b8ff3b"
+ },
+ "polices": {
+  "titres": "Archivo",
+  "texte": "Archivo",
+  "mono": "JetBrains Mono"
+ },
+ "pages": [
+  "index",
+  "mentions-legales",
+  "stage-triathlon-montagne",
+  "test-effort",
+  "404"
+ ],
+ "commit": "5bfda41",
+ "date_commit": "2026-10-29",
+ "change_depuis_audit": "Un commit après la correction (5bfda41) régénère l'image du principe « qualité » ; la nouvelle reste incohérente (cassette et dérailleur fondus, chaîne qui flotte). Les autres réserves de l'audit sont inchangées.",
+ "note": 88,
+ "verdict": "Prête à envoyer",
+ "points_forts": [
+  "courbe de lactate interactive : curseur, zones d'intensité et seuils",
+  "semainier qui se réorganise selon les contraintes ajoutées (Flip)",
+  "protocole épinglé palier par palier : courbe, tableau et photos synchronisés",
+  "HUD qui transforme la vitesse de défilement en zone d'intensité",
+  "vidéo du héros sous un shader d'eau qui réagit au curseur",
+  "fond de page qui change de teinte de zone en zone (Z1 → Z5)"
+ ],
+ "reserves": [
+  "césure des titres sur téléphone (mots coupés par un trait d'union)",
+  "lumières des images générées mêlées d'une section à l'autre",
+  "accueil lourd (vidéo de 3,1 Mo)",
+  "image générée du principe « qualité » toujours incohérente après sa régénération",
+  "couleurs des zones et des seuils écrites en dur dans le JS et les SVG",
+  "section des avis réduite à des gabarits vides"
+ ],
+ "animations": [
+  "chargement-orchestré",
+  "webgl-shader",
+  "révélation-texte",
+  "section-fixée",
+  "progression-fixée",
+  "galerie-horizontale",
+  "empilement-de-fiches",
+  "parallaxe",
+  "compteur",
+  "marquee",
+  "masque",
+  "flip",
+  "curseur-personnalisé",
+  "bouton-magnétique",
+  "transition-de-page",
+  "défilement-lissé"
+ ],
+ "interactions": [
+  "simulateur",
+  "réservation-simulee",
+  "filtres",
+  "mode-calme"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "flip",
+  "lenis",
+  "ogl"
+ ],
+ "sections": [
+  "efficience-triathlon-maquette/intro",
+  "efficience-triathlon-maquette/header",
+  "efficience-triathlon-maquette/mnav",
+  "efficience-triathlon-maquette/actionbar",
+  "efficience-triathlon-maquette/hud",
+  "efficience-triathlon-maquette/rail",
+  "efficience-triathlon-maquette/cursor",
+  "efficience-triathlon-maquette/sweep",
+  "efficience-triathlon-maquette/top",
+  "efficience-triathlon-maquette/manifeste",
+  "efficience-triathlon-maquette/disciplines",
+  "efficience-triathlon-maquette/methode",
+  "efficience-triathlon-maquette/science",
+  "efficience-triathlon-maquette/coaching",
+  "efficience-triathlon-maquette/coach",
+  "efficience-triathlon-maquette/stages",
+  "efficience-triathlon-maquette/zone",
+  "efficience-triathlon-maquette/avis",
+  "efficience-triathlon-maquette/faq",
+  "efficience-triathlon-maquette/rdv",
+  "efficience-triathlon-maquette/footer",
+  "efficience-triathlon-maquette/404-section",
+  "efficience-triathlon-maquette/mentions-legales-section",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-top",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-pour-qui",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-briancon",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-programme",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-volumes",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-tarif",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-inscription",
+  "efficience-triathlon-maquette/stage-triathlon-montagne-autres",
+  "efficience-triathlon-maquette/test-effort-top",
+  "efficience-triathlon-maquette/test-effort-objectif",
+  "efficience-triathlon-maquette/test-effort-constat",
+  "efficience-triathlon-maquette/test-effort-methodologie",
+  "efficience-triathlon-maquette/test-effort-protocole",
+  "efficience-triathlon-maquette/test-effort-donnees",
+  "efficience-triathlon-maquette/test-effort-etapes",
+  "efficience-triathlon-maquette/test-effort-tarifs",
+  "efficience-triathlon-maquette/test-effort-cta"
+ ],
+ "captures": {
+  "accueil-ordinateur": "medias/efficience-triathlon-maquette/top-p1440.jpg",
+  "accueil-telephone": "medias/efficience-triathlon-maquette/top-m390.jpg"
+ },
+ "audit": "https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/efficience-triathlon-maquette.md",
+ "commit_audit": "f3ce8cf"
+}

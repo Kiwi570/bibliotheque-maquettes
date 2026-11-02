@@ -1,0 +1,43 @@
+{
+ "id": "btp-confort-avenir-maquette/methode",
+ "maquette": "btp-confort-avenir-maquette",
+ "page": "index",
+ "titre": "Méthode : le bâtiment monte",
+ "role": "méthode",
+ "description": "Cinq étapes en liste ; à côté, un bâtiment isométrique monte en cinq calques SVG au défilement (dalle, murs, ouvertures, toiture) et un niveau à bulle se cale progressivement, l'étape en cours en pleine couleur.",
+ "animations": [
+  "progression-fixée",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:196-217",
+  "css": "assets/css/style.css:403-427",
+  "js": "assets/js/home.js:215-259 ; assets/js/drawings.js:207-255"
+ },
+ "medias": {
+  "capture": "medias/btp-confort-avenir-maquette/methode-p1440.jpg",
+  "capture_m390": "medias/btp-confort-avenir-maquette/methode-m390.jpg",
+  "video": "medias/btp-confort-avenir-maquette/methode-p960.mp4"
+ },
+ "pieges": [
+  "le bâtiment est généré en SVG par drawings.js : garder les groupes de calques numérotés"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1380,
+  "hauteur_m390": 1754,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

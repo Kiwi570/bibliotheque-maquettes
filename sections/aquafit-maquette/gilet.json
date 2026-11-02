@@ -1,0 +1,45 @@
+{
+ "id": "aquafit-maquette/gilet",
+ "maquette": "aquafit-maquette",
+ "page": "index",
+ "titre": "Schéma épinglé en trois étapes",
+ "role": "étapes",
+ "description": "La section reste épinglée pendant que le défilement fait avancer trois étapes : à droite un schéma SVG montre une silhouette qui court en suspension sous une surface ondulée, avec repères qui s'allument (surface, tête hors de l'eau, fond éloigné) ; à gauche l'étape correspondante s'allume. Sans épinglage sous 900 px.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:160-233",
+  "css": "assets/css/site.css:226-240,697-719",
+  "js": "assets/js/anim.js:71-106"
+ },
+ "medias": {
+  "capture": "medias/aquafit-maquette/gilet-p1440.jpg",
+  "capture_m390": "medias/aquafit-maquette/gilet-m390.jpg",
+  "video": "medias/aquafit-maquette/gilet-p960.mp4"
+ },
+ "pieges": [
+  "les jambes et les bras bouclent en continu, indépendamment du scrub : les arrêter en mode calme",
+  "le schéma doit tenir dans l'écran pendant l'épinglage ; vérifier les hauteurs 700 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1340,
+  "epinglee": true,
+  "scrolltriggers": 4
+ }
+}

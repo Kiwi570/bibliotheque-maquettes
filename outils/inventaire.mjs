@@ -22,14 +22,25 @@ const IGNORER = new Set(['script', 'style', 'noscript', 'template', 'link', 'met
 const GENERIQUES = new Set('section sec wrap wrapper container cadre bloc block inner grid stack reveal is-visible on-dark dark light page site content contenu full fullbleed pad sm md lg xl hide-sm hide-md show-sm mono'.split(' '));
 
 // ---------- Analyse des sources ----------
-const fichiersPages = fs.readdirSync(DOS).filter(f => f.endsWith('.html') && !/^google[\w]+\.html$/.test(f)).sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)));
+// Pages à la racine et dans les sous-dossiers (journal/, blog/…), hors dossiers techniques.
+const EXCLUS_DOS = /^(\.|node_modules$|vendor$|assets?$|images?$|img$|medias?$|fonts?$|css$|js$|correction$|audit$|captures?$|test)/;
+function pagesHtml(rel = '', prof = 0) {
+  const out = [];
+  for (const e of fs.readdirSync(path.join(DOS, rel), { withFileTypes: true })) {
+    if (e.isFile() && e.name.endsWith('.html') && !/^google[\w]+\.html$/.test(e.name)) out.push(rel ? rel + '/' + e.name : e.name);
+    else if (e.isDirectory() && prof < 2 && !EXCLUS_DOS.test(e.name)) out.push(...pagesHtml(rel ? rel + '/' + e.name : e.name, prof + 1));
+  }
+  return out;
+}
+const fichiersPages = pagesHtml().sort((a, b) => (a === 'index.html' ? -1 : b === 'index.html' ? 1 : a.localeCompare(b)));
 function trouver(n, f) { if (f(n)) return n; for (const e of n.enfants || []) { const r = trouver(e, f); if (r) return r; } return null; }
 function contientMain(n) { return !!trouver(n, x => x.tag === 'main'); }
 function blocsSource(arbre) {
   const body = trouver(arbre, n => n.tag === 'body'); const out = [];
   const marcher = (parent, dansMain) => {
     for (const e of parent.enfants) {
-      if (IGNORER.has(e.tag)) continue;
+      if (e.tag === 'svg' && !dansMain && (e.attrs.class || e.attrs.id) && !trouver(e, n => n.tag === 'symbol')) { /* calque SVG (voile, décor) : on le garde */ }
+      else if (IGNORER.has(e.tag)) continue;
       if (e.tag === 'main') { marcher(e, true); continue; }
       if (!dansMain && e.tag === 'div' && contientMain(e)) { marcher(e, false); continue; }
       out.push({ tag: e.tag, id: e.attrs.id || '', classe: e.attrs.class || '', sig: signature(e.tag, e.attrs.id, e.attrs.class), debut: e.debut, fin: e.fin ?? e.debut, dansMain, attrs: e.attrs, noeud: e });
@@ -46,8 +57,9 @@ for (const f of fichiersPages) {
   const page = f.replace(/\.html$/, '');
   const src = fs.readFileSync(path.join(DOS, f), 'utf8');
   const arbre = arbreHtml(src);
-  const css = [...src.matchAll(/<link[^>]+href="([^"?#]+\.css)[^"]*"/g)].map(m => m[1].replace(/^\//, '')).filter(h => !/vendor|lenis\.css|^https?:/.test(h));
-  const js = [...src.matchAll(/<script[^>]+src="([^"?#]+\.m?js)[^"]*"/g)].map(m => m[1].replace(/^\//, '')).filter(h => !/vendor|\.min\.js$|^https?:/.test(h));
+  const resoudre = h => h.startsWith('/') ? h.slice(1) : path.posix.normalize(path.posix.join(path.posix.dirname(f), h));
+  const css = [...src.matchAll(/<link[^>]+href="([^"?#]+\.css)[^"]*"/g)].map(m => /^https?:/.test(m[1]) ? m[1] : resoudre(m[1])).filter(h => !/vendor|lenis\.css|^https?:/.test(h));
+  const js = [...src.matchAll(/<script[^>]+src="([^"?#]+\.m?js)[^"]*"/g)].map(m => /^https?:/.test(m[1]) ? m[1] : resoudre(m[1])).filter(h => !/vendor|\.min\.js$|^https?:/.test(h));
   ORDRE.push(page);
   sources[page] = { fichier: f, blocs: blocsSource(arbre), css, js };
 }
@@ -142,7 +154,8 @@ function mesurerDansPage(sigs) {
   const sigDe = e => e.tagName.toLowerCase() + (e.getAttribute('id') ? '#' + e.getAttribute('id') : '') + ((e.getAttribute('class') || '').trim() ? '.' + e.getAttribute('class').trim().split(/\s+/)[0] : '');
   const vivants = [];
   const marcher = (p, dansMain) => { for (const e of p.children) {
-    if (IGN.has(e.tagName.toUpperCase())) continue;
+    if (e.tagName.toLowerCase() === 'svg' && !dansMain && (e.getAttribute('class') || e.id) && !e.querySelector('symbol')) { /* calque SVG gardé */ }
+    else if (IGN.has(e.tagName.toUpperCase())) continue;
     if (e.classList.contains('pin-spacer')) { marcher(e, dansMain); continue; }
     if (e.tagName === 'MAIN') { marcher(e, true); continue; }
     if (!dansMain && e.tagName === 'DIV' && e.querySelector('main')) { marcher(e, false); continue; }
