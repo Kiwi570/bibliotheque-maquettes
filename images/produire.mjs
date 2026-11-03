@@ -2,12 +2,14 @@
 // node images/produire.mjs plan-images.json [--racine .] [--forcer]
 //
 // plan-images.json : [{ "source": "recu/salle.jpg", "nom": "ouverture", "role": "ouverture", "alt": "…", "mobile": true,
-//                       "zone_texte": "gauche", "ratio": "16:9", "largeurs": [640, 1280], "cadrage": [50, 40] }]
+//                       "zone_texte": "gauche", "ratio": "16:9", "largeurs": [640, 1280], "cadrage": [50, 40],
+//                       "source_mobile": "recu/grok/salle-portrait.webp" (facultatif : image à part pour le téléphone) }]
+//   Champs lus par grok.mjs (ignorés ici) : page, emplacement, priorite, gabarit, scene.
 // - Formats par rôle : images/emplacements.json ; ratio et largeurs du plan l'emportent. role "logo" : jamais recadré.
 // - Sujet et cadrage : analyse.json du dossier de la source (analyser.mjs est lancé seul s'il manque ou date d'avant l'image).
 //   Recadrage qui garde le sujet entier (tête entière pour un portrait), jamais au centre par défaut ;
 //   zone_texte (gauche, droite, haut, bas) : le sujet passe de l'autre côté, la zone calme reste libre pour le texte.
-// - WebP qualité 80, jamais agrandi plus de 1,5 fois : une largeur impossible est retirée et l'image marquée faible.
+// - WebP qualité 80 (baissée par paliers jusqu'à 56 si un fichier dépasse 300 Ko), jamais agrandi plus de 1,5 fois : une largeur impossible est retirée et l'image marquée faible.
 // - Écrit assets/images/<nom>-<largeur>.webp, <nom>-mobile-<largeur>.webp (9:16) comme le socle, et donnees/images.json
 //   (largeurs, ratio, cadrage, alt, rôle, mention « Illustration générée », code c.media prêt à coller).
 // - Idempotent : une image dont la source et les réglages n'ont pas changé n'est pas refaite (--forcer pour tout refaire).
@@ -80,18 +82,29 @@ async function variantes(entree, rect, largeurs, base, max) {
     const fichier = `${base}-${L}.webp`;
     const sortie = path.join(RACINE, 'assets', 'images', fichier);
     fs.mkdirSync(path.dirname(sortie), { recursive: true });
-    const info = await sharp(entree, { failOn: 'none' }).rotate().extract(rect).resize({ width: L, kernel: 'lanczos3' }).webp({ quality: 80, effort: 5 }).toFile(sortie);
-    faites.push({ largeur: L, hauteur: info.height, poids: info.size, fichier });
+    const info = await ecrireWebp(sharp(entree, { failOn: 'none' }).rotate().extract(rect).resize({ width: L, kernel: 'lanczos3' }), sortie);
+    faites.push({ largeur: L, hauteur: info.height, poids: info.size, qualite: info.qualite, fichier });
   }
   // Source trop petite pour toutes les largeurs : une seule variante à sa taille (au plus 1,5 fois).
   if (!faites.length && largeurs.length) {
     const L = Math.min(Math.round(rect.width * max), Math.min(...largeurs));
     const fichier = `${base}-${L}.webp`, sortie = path.join(RACINE, 'assets', 'images', fichier);
     fs.mkdirSync(path.dirname(sortie), { recursive: true });
-    const info = await sharp(entree, { failOn: 'none' }).rotate().extract(rect).resize({ width: L }).webp({ quality: 80, effort: 5 }).toFile(sortie);
-    faites.push({ largeur: L, hauteur: info.height, poids: info.size, fichier });
+    const info = await ecrireWebp(sharp(entree, { failOn: 'none' }).rotate().extract(rect).resize({ width: L }), sortie);
+    faites.push({ largeur: L, hauteur: info.height, poids: info.size, qualite: info.qualite, fichier });
   }
   return { faites, retirees };
+}
+// WebP qualité 80 ; au-dessus de 300 Ko (règle média), qualité baissée par paliers jusqu'à 56 au plus bas.
+const POIDS_MAX = 300 * 1024;
+async function ecrireWebp(pipeline, sortie) {
+  let buf, info, q;
+  for (q of [80, 74, 68, 62, 56]) {
+    ({ data: buf, info } = await pipeline.clone().webp({ quality: q, effort: 5 }).toBuffer({ resolveWithObject: true }));
+    if (buf.length <= POIDS_MAX) break;
+  }
+  fs.writeFileSync(sortie, buf);
+  return { height: info.height, size: buf.length, qualite: q };
 }
 // Retire les variantes d'un nom qui ne sont plus produites (largeurs changées).
 function nettoyer(base, garder) {
@@ -111,8 +124,9 @@ for (const e of plan) {
   const logo = role === 'logo' || em.recadrer === false;
   const svg = /\.svg$/i.test(source);
   const st = fs.statSync(source);
+  const stM = e.source_mobile && fs.existsSync(path.resolve(path.dirname(fPlan), e.source_mobile)) ? fs.statSync(path.resolve(path.dirname(fPlan), e.source_mobile)) : null;
   const reglages = JSON.stringify({ e, em, v: 4 });
-  const empreinte = crypto.createHash('sha1').update(`${source}|${st.size}|${st.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
+  const empreinte = crypto.createHash('sha1').update(`${source}|${st.size}|${st.mtimeMs}|${stM?.size}|${stM?.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
   const avant = ancienne[e.nom];
   if (!opts.forcer && avant?.empreinte === empreinte && avant.fichiers.every(f => fs.existsSync(path.join(RACINE, 'assets', 'images', f)))) {
     fiche[e.nom] = avant; inchangees++; console.log(`= ${e.nom} inchangée`); continue;
@@ -147,9 +161,17 @@ for (const e of plan) {
     if (!logo && (e.mobile ?? !!em.mobile)) {
       const rm = ratioNum(typeof e.mobile === 'string' ? e.mobile : em.mobile || '9:16') || 9 / 16;
       const cibleMobile = zone === 'haut' ? [0.5, 0.62] : zone === 'bas' ? [0.5, 0.36] : [0.5, 0.42];
-      const r2 = cadre(W, H, rm, sujet, point, cibleMobile);
-      const v = await variantes(source, r2, LARGEURS_MOBILE, `${e.nom}-mobile`, AGRANDISSEMENT_MAX);
-      mobile = { ratio: typeof e.mobile === 'string' ? e.mobile : em.mobile || '9:16', ...v, cadrage: pointDans(r2, point, W, H), rect: r2 };
+      // source_mobile : image à part pour le téléphone (une image Grok en portrait, par exemple), sinon la même source.
+      let srcM = source, Wm = W, Hm = H, sujetM = sujet, pointM = point;
+      if (e.source_mobile) {
+        srcM = path.resolve(path.dirname(fPlan), e.source_mobile);
+        if (!fs.existsSync(srcM)) throw new Error(`source_mobile introuvable (${e.source_mobile})`);
+        const mm = await sharp(srcM, { failOn: 'none' }).metadata(), am = analyse(srcM);
+        Wm = mm.autoOrient?.width ?? mm.width; Hm = mm.autoOrient?.height ?? mm.height; sujetM = am?.sujet || null; pointM = e.cadrage_mobile || am?.cadrage || [50, 50];
+      }
+      const r2 = cadre(Wm, Hm, rm, sujetM, pointM, cibleMobile);
+      const v = await variantes(srcM, r2, LARGEURS_MOBILE, `${e.nom}-mobile`, AGRANDISSEMENT_MAX);
+      mobile = { ratio: typeof e.mobile === 'string' ? e.mobile : em.mobile || '9:16', ...v, cadrage: pointDans(r2, pointM, Wm, Hm), rect: r2 };
     }
     const fichiers = [...faites.map(f => f.fichier), ...(mobile?.faites || []).map(f => f.fichier)];
     nettoyer(e.nom, fichiers);
