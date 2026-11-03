@@ -8,6 +8,7 @@ const TEXTES = {
   total: 'Total estimé',
   surDevis: 'Sur devis',
   surDemande: 'sur demande',
+  inclus: 'inclus',
   indisponible: 'Indisponible avec cette base',
   parUnite: 'soit {prix} par {unite}',
   astuce: '{libelle} : −{pourcent} %',
@@ -63,6 +64,7 @@ export async function init(root, options = {}) {
   const prixCarte = (item, estBase) => {
     if (!item) return '';
     if (item.prix === null || item.prix === undefined) return estBase ? t.surDevis : t.surDemande;
+    if (item.prix === 0) return t.inclus;
     const par = (item.par || []).filter(k => parQte[k]).map(k => 'par ' + unite(parQte[k], 1));
     return fmt(item.prix) + (par.length ? ' ' + par.join(' et ') : '');
   };
@@ -114,7 +116,7 @@ export async function init(root, options = {}) {
       if (item.prix === null || item.prix === undefined) { lignes.push({ id, nom, detail: '', montant: null }); return true; }
       const m = item.prix * facteur(item); total += m;
       const det = detail(item);
-      lignes.push({ id, nom, detail: det.length ? `${fmt(item.prix)} × ${det.join(' × ')}` : '', montant: m });
+      lignes.push({ id, nom, detail: det.length && item.prix ? `${fmt(item.prix)} × ${det.join(' × ')}` : '', montant: m, inclus: item.prix === 0 });
     };
     if (radio && ajouter('base', nomDe(radio), bases[baseId])) devis = true;
     for (const c of cases) if (c.checked && ajouter('opt-' + c.value, nomDe(c), opts[c.value])) demande = true;
@@ -150,7 +152,7 @@ export async function init(root, options = {}) {
       li.classList.toggle('est-remise', !!l.remise);
       li.querySelector('b').textContent = l.nom;
       li.querySelector('small').textContent = l.detail;
-      li.querySelector('.cdf__ligne-montant').textContent = l.montant === null ? (l.id === 'base' ? t.surDevis : t.surDemande) : (l.montant < 0 ? '− ' + fmt(-l.montant) : fmt(l.montant));
+      li.querySelector('.cdf__ligne-montant').textContent = l.montant === null ? (l.id === 'base' ? t.surDevis : t.surDemande) : l.inclus ? t.inclus : (l.montant < 0 ? '− ' + fmt(-l.montant) : fmt(l.montant));
       const attendu = prec ? prec.nextSibling : elLignes.firstChild;
       if (attendu !== li) elLignes.insertBefore(li, attendu);
       prec = li; gardees.add(l.id);

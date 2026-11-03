@@ -1,6 +1,7 @@
 // Teste une page de démonstration (module ou assemblage) sur 14 formats (dont tablettes 768×1024, 820×1180 et 1180×820, et 1024×640), en mode réduit et sans WebGL.
-// node outils/tester-module.mjs <module | chemin/vers/page.html> [--ecrire] [--medias]
+// node outils/tester-module.mjs <module | chemin/vers/page.html> [--ecrire] [--captures] [--medias]
 //   --ecrire : reporte le résultat dans modules/<nom>/module.json (tests, poids_ko)
+//   --captures : captures de la page (1440×900, 820×1180, 390×844 ; haut de page puis chaque [data-module]) dans <dossier>/captures/
 //   --medias : produit apercu.jpg (1440×900) et apercu.mp4 (si animé, ou le scénario s'il existe) dans le dossier du module
 // Contrôles : erreurs console, CLS, débordement horizontal, éléments marqués [data-tient] coupés par l'écran
 // (sous l'en-tête mesuré ou sous les barres du bas), éléments en position: sticky collés mais coupés (détectés seuls, sans marquage),
@@ -23,6 +24,7 @@ import { RACINE, servir, lireJson, ecrireJson } from './commun.mjs';
 const arg = process.argv[2];
 const ecrire = process.argv.includes('--ecrire');
 const medias = process.argv.includes('--medias');
+const captures = process.argv.includes('--captures');
 const estModule = !arg.endsWith('.html');
 const fichier = estModule ? path.join(RACINE, 'modules', arg, 'index.html') : path.resolve(arg);
 const relatif = '/' + path.relative(RACINE, fichier).split(path.sep).join('/');
@@ -145,7 +147,7 @@ const tous = [...resultats, ...reduit, sansWebgl, ...scen.map(r => ({ ...r, coup
 const erreurs = [...new Set(tous.flatMap(r => r.erreurs))];
 const clsMax = Math.max(...tous.map(r => r.cls));
 const html = fs.readFileSync(fichier, 'utf8');
-const usesWebgl = /webgl|OGL|ogl/.test(html + (estModule ? fs.readFileSync(path.join(path.dirname(fichier), 'module.js'), 'utf8') : ''));
+const usesWebgl = /webgl|\bogl\b/i.test(html + (estModule ? fs.readFileSync(path.join(path.dirname(fichier), 'module.js'), 'utf8') : ''));
 const tests = {
   formats: resultats.every(r => !r.coupes.length && r.debord <= 1) ? 'ok' : 'échec : ' + resultats.filter(r => r.coupes.length || r.debord > 1).map(r => `${r.format} ${r.coupes.join(', ')}${r.debord > 1 ? ' débord ' + r.debord + 'px' : ''}`).join(' ; '),
   'reduire-animations': reduit.every(r => !r.invisibles.length && !r.erreurs.length && !r.coupes.length) ? 'ok' : 'échec : ' + reduit.map(r => r.invisibles.join(',')).join(' ; '),
@@ -195,6 +197,22 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   if (fs.statSync(out).size > 2 * 1024 * 1024) { execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '33', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out + '.mp4']); fs.renameSync(out + '.mp4', out); }
   fs.rmSync(video, { force: true });
   console.log(`apercu.jpg ${Math.round(buf.length / 1024)} Ko, apercu.mp4 ${Math.round(fs.statSync(out).size / 1024)} Ko`);
+}
+if (captures) {
+  // Captures de contrôle, pour un module comme pour un assemblage : haut de page, puis chaque module amené sous l'en-tête.
+  const dos = path.join(path.dirname(fichier), 'captures'); fs.mkdirSync(dos, { recursive: true }); let nb = 0;
+  for (const [w, h, tactile] of [[1440, 900], [820, 1180, 1], [390, 844, 1]]) {
+    const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, hasTouch: !!tactile, isMobile: !!tactile && w < 500 });
+    const pg = await ctx.newPage(); await pg.goto(srv.url + relatif, { waitUntil: 'load' }); await attendre(2600);
+    await pg.screenshot({ path: path.join(dos, `${w}x${h}-0-haut.jpg`), type: 'jpeg', quality: 70 }); nb++;
+    const mods = await pg.evaluate(() => [...document.querySelectorAll('main [data-module]')].map(m => m.dataset.module));
+    for (let i = 0; i < mods.length; i++) {
+      await pg.evaluate(i => { const m = document.querySelectorAll('main [data-module]')[i]; const eh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--entete-h')) || 0; scrollTo(0, m.getBoundingClientRect().top + scrollY - eh); }, i);
+      await attendre(1400); await pg.screenshot({ path: path.join(dos, `${w}x${h}-${i + 1}-${mods[i]}.jpg`), type: 'jpeg', quality: 70 }); nb++;
+    }
+    await ctx.close();
+  }
+  console.log(`${nb} captures dans ${path.relative(RACINE, dos)}/`);
 }
 await nav.close(); await srv.fermer();
 

@@ -5,11 +5,11 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Au début d'un projet (Claude)
 
-1. Lire `index.json` en entier : une ligne par maquette, par section et par module ; `taxonomie.json` donne les valeurs permises.
+1. Parcourir `index.json` (120 Ko : une ligne par maquette, par section et par module, colonnes en tête) ; `taxonomie.json` donne les valeurs permises.
 2. Chercher : `node outils/chercher.mjs --activite restauration --ambiance chaleureux --role ouverture` (filtres répétables : `--concept --animation --interaction --dependance --telephone --sans ogl --note-min 4 --module`, mots libres acceptés, `--json` pour un résultat machine). Activité, concept et ambiance départagent sans exclure ; `--strict` les rend obligatoires.
 3. Lire les fiches retenues (`sections/<maquette>/<id>.json`, `modules/<nom>/module.json` et `NOTES.md`), regarder captures et vidéos (`medias/`).
-4. Assembler : `node outils/assembler.mjs <module> <module> … --palette palette.json --sortie assemblages/projet` produit une page autonome (socle + modules) avec la nouvelle palette.
-5. Tester : `node outils/tester-module.mjs assemblages/projet/index.html` (14 formats, réduire les animations, sans WebGL, console, CLS, éléments collants, scénario de clics, texte 12 px, cibles 44 px).
+4. Assembler : poser `palette.json` (couleurs, polices) et éventuellement `options.json` dans `assemblages/projet/`, puis `node outils/assembler.mjs <module> … --sortie assemblages/projet`. Page autonome, polices chargées, scripts anti-flash, `scenario.json` fusionné ; rien n'est effacé (`--ecraser` pour refaire `index.html`). Les options fonctions vont dans `assemblage.js`, jamais réécrit. Les liens sans cible sont signalés.
+5. Tester : `node outils/tester-module.mjs assemblages/projet/index.html --captures` (captures dans `captures/` ; 14 formats, réduire les animations, sans WebGL, console, CLS, éléments collants, scénario de clics, texte 12 px, cibles 44 px).
 6. Adapter : copier le dossier dans le projet, remplacer les contenus neutres, garder les classes et les `data-*` décrits dans chaque `NOTES.md`.
 
 ## Conventions des modules

@@ -20,7 +20,7 @@ Origine : fusion de `tiki-cassis-maquette/formules-composeur` (« Composeur de s
 
 `init(section, options)` renvoie `{ rendre, detruire }`. À chaque changement, la section émet `composeur:change` (`detail` : `total`, `lignes`, `quantites`, `base`, `resume`) pour préremplir un formulaire de contact.
 
-Données : `bases` et `options` sont indexées par la `value` des champs. Chaque tarif vaut `{ "prix": 30, "par": ["personnes", "seances"] }` (multiplié par ces quantités ; sans `par`, c'est un forfait). `"prix": null` affiche « Sur devis » pour une base (le total devient « Sur devis ») et « sur demande » pour une option (exclue du total). `"avec": ["base-a"]` désactive une option avec les autres bases. `remises` : `{ "quantite", "des", "pourcent", "libelle" }`, appliquée au sous-total dès le seuil, annoncée avant (« Remise dès 5 séances : −10 % »).
+Données : `bases` et `options` sont indexées par la `value` des champs. Chaque tarif vaut `{ "prix": 30, "par": ["personnes", "seances"] }` (multiplié par ces quantités ; sans `par`, c'est un forfait). `"prix": null` affiche « Sur devis » pour une base (le total devient « Sur devis ») et « sur demande » pour une option (exclue du total) ; `"prix": 0` affiche « inclus » (texte `inclus`). `"avec": ["base-a"]` désactive une option avec les autres bases. `remises` : `{ "quantite", "des", "pourcent", "libelle" }`, appliquée au sous-total dès le seuil, annoncée avant (« Remise dès 5 séances : −10 % »).
 
 ## Réglages
 
