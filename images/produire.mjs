@@ -11,7 +11,8 @@
 //   zone_texte (gauche, droite, haut, bas) : le sujet passe de l'autre côté, la zone calme reste libre pour le texte.
 // - WebP qualité 80 (baissée par paliers jusqu'à 56 si un fichier dépasse 300 Ko), jamais agrandi plus de 1,5 fois : une largeur impossible est retirée et l'image marquée faible.
 // - Écrit assets/images/<nom>-<largeur>.webp, <nom>-mobile-<largeur>.webp (9:16) comme le socle, et donnees/images.json
-//   (largeurs, ratio, cadrage, alt, rôle, mention « Illustration générée », code c.media prêt à coller).
+//   (largeurs, ratio, cadrage, alt, rôle, mention « Illustration générée », faible et ses raisons, avertissements à regarder,
+//   code c.media prêt à coller).
 // - Idempotent : une image dont la source et les réglages n'ont pas changé n'est pas refaite (--forcer pour tout refaire).
 import fs from 'node:fs';
 import path from 'node:path';
@@ -126,7 +127,7 @@ for (const e of plan) {
   const st = fs.statSync(source);
   const stM = e.source_mobile && fs.existsSync(path.resolve(path.dirname(fPlan), e.source_mobile)) ? fs.statSync(path.resolve(path.dirname(fPlan), e.source_mobile)) : null;
   const reglages = JSON.stringify({ e, em, v: 4 });
-  const empreinte = crypto.createHash('sha1').update(`${source}|${st.size}|${st.mtimeMs}|${stM?.size}|${stM?.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
+  const empreinte = crypto.createHash('sha1').update(`v5|${source}|${st.size}|${st.mtimeMs}|${stM?.size}|${stM?.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
   const avant = ancienne[e.nom];
   if (!opts.forcer && avant?.empreinte === empreinte && avant.fichiers.every(f => fs.existsSync(path.join(RACINE, 'assets', 'images', f)))) {
     fiche[e.nom] = avant; inchangees++; console.log(`= ${e.nom} inchangée`); continue;
@@ -175,7 +176,16 @@ for (const e of plan) {
     }
     const fichiers = [...faites.map(f => f.fichier), ...(mobile?.faites || []).map(f => f.fichier)];
     nettoyer(e.nom, fichiers);
-    const faible = retirees.length > 0 || !!a?.qualite?.faible;   // une largeur téléphone manquante est notée, pas rédhibitoire
+    const faible = retirees.length > 0 || !!a?.qualite?.faible;
+    // À regarder sans être rédhibitoire : largeur téléphone manquante, agrandissement, recadrage fort d'une image à texte.
+    const avertissements = [];
+    if (mobile?.retirees.length) avertissements.push(`version téléphone sans ${mobile.retirees.join(', ')} px (source trop petite)`);
+    const agr = logo || !faites.length ? 1 : Math.max(...faites.map(f => f.largeur)) / rect.width;
+    if (agr > 1.05) avertissements.push(`agrandie ${String(Math.round(agr * 100) / 100).replace('.', ',')} fois (source de ${rect.width} px après recadrage)`);
+    const garde = logo ? 1 : (rect.width * rect.height) / (W * H);
+    if (garde < 0.6 && a?.lisible?.niveau && a.lisible.niveau !== 'decoratif')
+      avertissements.push(`recadrage fort (${Math.round(garde * 100)} % de l'image gardée) sur une image qui contient du texte (${a.lisible.niveau}) : texte coupé probable, choisir un autre rôle ou une autre image`);
+    else if (garde < 0.45) avertissements.push(`recadrage fort : ${Math.round(garde * 100)} % de l'image gardée`);
     const cadrage = cad ? `${cad[0]}% ${cad[1]}%` : null, cadrageMobile = mobile ? `${mobile.cadrage[0]}% ${mobile.cadrage[1]}%` : null;
     const r = logo ? null : (e.ratio || em.ratio || null);
     const appel = [`nom: '${e.nom}'`, `alt: ${JSON.stringify(e.alt ?? '')}`, cadrage && cadrage !== '50% 50%' ? `cadrage: '${cadrage}'` : '', cadrageMobile ? `cadrageMobile: '${cadrageMobile}'` : '',
@@ -183,10 +193,12 @@ for (const e of plan) {
     fiche[e.nom] = { ...base, ratio: r, largeurs: faites.map(f => f.largeur), mobile: mobile ? { ratio: mobile.ratio, largeurs: mobile.faites.map(f => f.largeur), cadrage: cadrageMobile } : null,
       cadrage, sujet: sujet && !logo ? sujetDans(rect, sujet, W, H) : null, zones_calmes: a?.zones_calmes?.map(z => ({ cote: z.cote, score: z.score, ton: z.ton })) || null,
       zone_texte: zone, recadrage: logo ? null : { ...rect, source: [W, H] }, faible,
-      raisons_faible: [...(retirees.length ? [`largeurs retirées (source trop petite) : ${retirees.join(', ')}`] : []), ...(mobile?.retirees.length ? [`mobile : ${mobile.retirees.join(', ')}`] : []), ...(a?.qualite?.raisons || [])],
+      raisons_faible: [...(retirees.length ? [`largeurs retirées (source trop petite) : ${retirees.join(', ')}`] : []), ...(a?.qualite?.raisons || [])],
+      avertissements,
       fichiers, poids: Object.fromEntries([...faites, ...(mobile?.faites || [])].map(f => [f.fichier, f.poids])), media: `c.media({ ${appel} })` };
     for (const f of [...faites, ...(mobile?.faites || [])]) console.log(`OK ${f.fichier} ${f.largeur}x${f.hauteur} ${ko(f.poids)}${f.poids > 300_000 ? '  (plus de 300 Ko)' : ''}`);
     if (retirees.length) console.log(`   ${e.nom} : ${retirees.join(', ')} retirées du srcset (source ${rect.width} px de large après recadrage) : faible`);
+    for (const x of avertissements) console.log(`   A REGARDER ${e.nom} : ${x}`);
     refaites++;
   } catch (err) {
     console.log(`ECHEC ${e.nom} : ${err.message}`); erreurs++;
