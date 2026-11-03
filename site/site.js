@@ -154,7 +154,7 @@ grille.addEventListener('click', async e => {
 // Démonstration d'un module dans un cadre (dialog natif).
 const cadre = $('#cadre'); let retour = null;
 function ouvrirDemo(nom, depuis) {
-  retour = depuis; const url = `/modules/${nom}/index.html`;
+  retour = depuis; const url = `/modules/${nom}/`;
   $('#cadre-titre').textContent = `Démonstration : ${nom}`; $('#cadre-ouvrir').href = url; $('#cadre-page').title = `Démonstration du module ${nom}`;
   $('#cadre-page').src = url; cadre.showModal(); $('#cadre-fermer').focus();
 }
