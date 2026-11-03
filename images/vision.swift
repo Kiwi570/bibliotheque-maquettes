@@ -1,5 +1,5 @@
 // Détection locale avec le framework Vision de macOS (fourni par le système, aucun modèle à télécharger, sans GPU requis).
-// Usage : vision <image>... → une ligne JSON par image : visages, corps, objets saillants, texte lu.
+// Usage : vision <image>... → une ligne JSON par image : visages, corps, mains, objets saillants, texte lu.
 // Coordonnées en pourcentage de l'image, origine en haut à gauche.
 import Foundation
 import Vision
@@ -24,19 +24,33 @@ for chemin in CommandLine.arguments.dropFirst() {
   corps.upperBodyOnly = false
   let saillance = VNGenerateAttentionBasedSaliencyImageRequest()
   let objets = VNGenerateObjectnessBasedSaliencyImageRequest()
+  let mains = VNDetectHumanHandPoseRequest()
+  mains.maximumHandCount = 8
   let texte = VNRecognizeTextRequest()
   texte.recognitionLevel = .accurate
   texte.recognitionLanguages = ["fr-FR", "en-US", "de-DE"]
   texte.usesLanguageCorrection = true
   texte.minimumTextHeight = 0.02
   let h = VNImageRequestHandler(cgImage: img, options: [:])
-  do { try h.perform([visages, corps, saillance, objets, texte]) } catch { sortie["erreur"] = "\(error)" }
+  do { try h.perform([visages, corps, saillance, objets, texte, mains]) } catch { sortie["erreur"] = "\(error)" }
   sortie["visages"] = (visages.results ?? []).map { o -> [String: Any] in
     var b: [String: Any] = boite(o.boundingBox); b["confiance"] = Double(o.confidence); return b }
   sortie["corps"] = (corps.results ?? []).filter { $0.confidence > 0.5 }.map { o -> [String: Any] in
     var b: [String: Any] = boite(o.boundingBox); b["confiance"] = Double(o.confidence); return b }
   sortie["saillance"] = ((saillance.results?.first)?.salientObjects ?? []).map { o -> [String: Any] in
     var b: [String: Any] = boite(o.boundingBox); b["confiance"] = Double(o.confidence); return b }
+  // Mains : boîte des articulations et nombre de bouts de doigts reconnus (indicatif : un sixième doigt ne se voit pas ici).
+  sortie["mains"] = (mains.results ?? []).compactMap { o -> [String: Any]? in
+    guard let pts = try? o.recognizedPoints(.all) else { return nil }
+    let surs = pts.values.filter { $0.confidence > 0.3 }
+    guard surs.count >= 6 else { return nil }
+    let xs = surs.map { $0.location.x }, ys = surs.map { $0.location.y }
+    let r = CGRect(x: xs.min()!, y: ys.min()!, width: xs.max()! - xs.min()!, height: ys.max()! - ys.min()!)
+    let bouts: [VNHumanHandPoseObservation.JointName] = [.thumbTip, .indexTip, .middleTip, .ringTip, .littleTip]
+    var b: [String: Any] = boite(r)
+    b["doigts"] = bouts.filter { (pts[$0]?.confidence ?? 0) > 0.3 }.count
+    b["confiance"] = Double(o.confidence)
+    return b }
   sortie["objets"] = ((objets.results?.first)?.salientObjects ?? []).map { o -> [String: Any] in
     var b: [String: Any] = boite(o.boundingBox); b["confiance"] = Double(o.confidence); return b }
   // Carte d'attention (environ 68×68) : barycentre et boîte des points au-dessus de la moitié du maximum.

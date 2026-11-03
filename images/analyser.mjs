@@ -1,11 +1,11 @@
 // Analyse les images reçues, sans jamais les modifier : sujet et cadrage, zones calmes, qualité, doublons, texte lisible.
 // node images/analyser.mjs <dossier> [--sortie <dossier>/analyse.json]
 //
-// - sujet : visages (Vision de macOS), sinon corps, sinon objets saillants ; à défaut, contraste et contours.
+// - sujet : visages (Vision de macOS), sinon corps (sauf scène de mains), sinon objets saillants ; à défaut, contraste et contours.
 //   Rectangle en % de l'image ; cadrage [cx, cy] en %, à reporter dans c.media({ nom, cadrage: 'cx% cy%' }).
 // - zones calmes : gauche, droite, haut, bas, avec un score de 0 à 1 (texte lisible au-dessus) et le ton (clair, sombre).
 // - qualité : netteté, bruit, blocs de compression, dimensions ; drapeau faible si l'image ne tiendra pas en grand.
-// - doublons et quasi-doublons (empreinte perceptuelle) : la meilleure est gardée, les autres notées.
+// - doublons et quasi-doublons (empreinte perceptuelle, puis corrélation des contours) : la meilleure est gardée, les autres notées.
 // - lisible : texte lu dans l'image (Vision), en trois niveaux : document ou écran (à écarter pour les métiers au secret),
 //   marque ou filigrane (à vérifier), texte décoratif (broderie, enseigne, étiquette de produit : rien à faire).
 //   --marques "Nom, Autre" ajoute des noms de marque à reconnaître (en plus du site et des logos de recuperation.json).
@@ -14,7 +14,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { args, lireJson, ecrireJson, empreinte, hamming, vision, arrondi, slug, EXT_IMAGES } from './commun.mjs';
+import { args, lireJson, ecrireJson, empreinte, hamming, vision, arrondi, slug, planche, EXT_IMAGES } from './commun.mjs';
 
 const { pos, opts } = args();
 if (!pos[0]) { console.error('usage : node images/analyser.mjs <dossier> [--sortie <dossier>/analyse.json]'); process.exit(1); }
@@ -73,23 +73,29 @@ function saillanceMaison(rgb, w, h) {
 function sujetEtCadrage(v, rgb, w, h) {
   const visages = (v?.visages || []).filter(f => f.confiance >= 0.5 && f.l >= 2.5);
   const corps = (v?.corps || []).filter(c => c.confiance >= 0.6 && c.l * c.h >= 300);
-  // Visage petit dans une scène (moins de 12 % de la largeur) : le sujet est la personne entière, pas la tête.
-  if (visages.length && corps.length && Math.max(...visages.map(f => f.l)) < 12) {
+  // Visage petit dans une scène (moins de 15 % de la largeur) : le sujet est la personne entière, pas la tête.
+  // Plus de corps que de visages (un collègue de dos) : le cadrage vise le groupe, pas le seul visage vu.
+  if (visages.length && corps.length && Math.max(...visages.map(f => f.l)) < 15) {
     const u = union(corps), f = union(visages);
-    return { sujet: { ...net(u), source: 'corps' }, cadrage: [f.x + f.l / 2, (f.y + f.h / 2 + u.y + u.h * 0.4) / 2], visages: visages.length };
+    const cadrage = corps.length > visages.length ? [u.x + u.l / 2, u.y + u.h * 0.3] : [f.x + f.l / 2, (f.y + f.h / 2 + u.y + u.h * 0.4) / 2];
+    return { sujet: { ...net(u), source: 'corps' }, cadrage, visages: visages.length };
   }
   if (visages.length) {
     const u = union(visages);
     // Tête entière et épaules : cheveux au-dessus, menton et cou en dessous.
     const fw = Math.max(...visages.map(f => f.l)), fh = Math.max(...visages.map(f => f.h));
-    return { sujet: { ...net({ x: u.x - fw * 0.6, y: u.y - fh * 0.75, l: u.l + fw * 1.2, h: u.h + fh * 1.9 }), source: 'visage' }, cadrage: [u.x + u.l / 2, u.y + u.h / 2], visages: visages.length };
+    const epaules = fh > 20 ? 0.6 : 1.15;   // gros plan : les épaules sont juste sous le menton
+    return { sujet: { ...net({ x: u.x - fw * 0.6, y: u.y - fh * 0.75, l: u.l + fw * 1.2, h: u.h + fh * (0.75 + epaules) }), source: 'visage' }, cadrage: [u.x + u.l / 2, u.y + u.h / 2], visages: visages.length };
   }
-  if (corps.length) {
+  // Sans visage mais avec des mains : scène de gestes (mains, avant-bras), Vision y voit un « corps » ; la carte d'attention dit mieux où est le sujet.
+  if (corps.length && !(v?.mains?.length && v?.attention)) {
     const u = union(corps);
     return { sujet: { ...net(u), source: 'corps' }, cadrage: [u.x + u.l / 2, u.y + u.h * 0.3], visages: 0 };
   }
   if (v?.objets?.length || v?.attention) {
-    const objets = (v.objets || []).filter(o => o.l * o.h >= 300).sort((a, b) => b.confiance - a.confiance);
+    const recouvre = (o, a) => a ? Math.max(0, Math.min(o.x + o.l, a.x + a.l) - Math.max(o.x, a.x)) * Math.max(0, Math.min(o.y + o.h, a.y + a.h) - Math.max(o.y, a.y)) / (o.l * o.h) : 1;
+    // Objet peu sûr (confiance < 0,5) : gardé seulement s'il recouvre la carte d'attention (sinon c'est un coin de décor).
+    const objets = (v.objets || []).filter(o => o.l * o.h >= 300 && (o.confiance >= 0.5 || recouvre(o, v.attention) >= 0.3)).sort((a, b) => b.confiance - a.confiance);
     let boite = objets.length ? union(objets.slice(0, 3)) : null;
     const a = v.attention;
     // Objets trop petits (un détail) ou toute l'image : la carte d'attention dit mieux où regarder.
@@ -165,6 +171,35 @@ async function qualite(fichier, meta, logo = false) {
   return { nettete: arrondi(nettete), bruit: arrondi(bruit, 2), compression: arrondi(blocs, 2), faible: raisons.length > 0, raisons };
 }
 
+// Corrélation des contours (64 × 64, recadrages centrés de 100 à 88 %) : 1 = même image, même recadrée ou recompressée.
+const BORDS = new Map();
+async function bords(f, c) {
+  const cle = `${f}|${c}`;
+  if (BORDS.has(cle)) return BORDS.get(cle);
+  const N = 64, m = await sharp(f, { failOn: 'none' }).rotate().metadata();
+  const W = m.autoOrient?.width || m.width, H = m.autoOrient?.height || m.height;
+  const { data } = await sharp(f, { failOn: 'none' }).rotate().flatten({ background: '#fff' })
+    .extract({ left: Math.round(W * (1 - c) / 2), top: Math.round(H * (1 - c) / 2), width: Math.round(W * c), height: Math.round(H * c) })
+    .resize(N, N, { fit: 'fill' }).greyscale().raw().toBuffer({ resolveWithObject: true });
+  const g = new Float32Array(N * N);
+  for (let y = 1; y < N - 1; y++) for (let x = 1; x < N - 1; x++) { const i = y * N + x; g[i] = Math.hypot(data[i + 1] - data[i - 1], data[i + N] - data[i - N]); }
+  BORDS.set(cle, g);
+  return g;
+}
+function correlation(a, b) {
+  let ma = 0, mb = 0;
+  for (let i = 0; i < a.length; i++) { ma += a[i]; mb += b[i]; }
+  ma /= a.length; mb /= b.length;
+  let s = 0, sa = 0, sb = 0;
+  for (let i = 0; i < a.length; i++) { const x = a[i] - ma, y = b[i] - mb; s += x * y; sa += x * x; sb += y * y; }
+  return sa && sb ? s / Math.sqrt(sa * sb) : 0;
+}
+async function ressemblance(fa, fb) {
+  let mieux = -1;
+  for (const c of [1, 0.96, 0.92, 0.88]) mieux = Math.max(mieux, correlation(await bords(fa, 1), await bords(fb, c)), correlation(await bords(fa, c), await bords(fb, 1)));
+  return mieux;
+}
+
 // Texte lu dans l'image, en trois niveaux :
 // - document : document, écran, dossier ou étiquette administrative lisible (à écarter pour les métiers au secret) ;
 // - marque : marque, signature ou filigrane posé sur la photo (à vérifier : il ne doit pas rester sur le site) ;
@@ -194,7 +229,7 @@ function lisible(v, lum, w, h, logo) {
   const details = blocs.map(t => {
     const mots = slug(t.texte, 99, 9999).split('-');
     const niveau = SIGNE_DOCUMENT.test(t.texte) ? 'document'
-      : (SIGNE_MARQUE.test(t.texte) || mots.some(m => MARQUES.has(m)) || vus.get(norm(t)) >= 2 || pale(t)) ? 'marque' : 'decoratif';
+      : (SIGNE_MARQUE.test(t.texte) || mots.some(m => MARQUES.has(m)) || [...MARQUES].some(m => norm(t).includes(m)) || vus.get(norm(t)) >= 2 || pale(t)) ? 'marque' : 'decoratif';
     return { texte: t.texte, niveau };
   });
   // Le filigrane répété ne compte pas comme document : seuls les autres blocs disent s'il y a un texte à lire.
@@ -249,13 +284,16 @@ async function main() {
     for (let j = i + 1; j < avecEmpreinte.length; j++) {
       const b = avecEmpreinte[j];
       if (b.doublon_de) continue;
-      // Couleurs sur une grille 6 × 6 : deux produits de teintes différentes sur le même fond ne sont pas des doublons.
+      // Présélection large (empreinte, teinte, ratio), puis confirmation par corrélation des contours à 64 px, tolérante
+      // à un recadrage de 12 % : deux produits différents sur le même fond (même carton, même studio) restent sous 0,6.
       const d = hamming(a.empreinte, b.empreinte), ecarts = a.couleur.map((c, k) => Math.abs(c - b.couleur[k]));
-      const dc = ecarts.reduce((s, x) => s + x, 0) / ecarts.length, pire = Math.max(...ecarts);
+      const dc = ecarts.reduce((s, x) => s + x, 0) / ecarts.length;
       const dr = Math.abs(a.ratio_valeur / b.ratio_valeur - 1);
-      if ((d <= 4 && dr < 0.08 && dc < 20 && pire < 45) || (d <= 10 && dc < 9 && pire < 45 && dr < 0.2)) {
-        b.doublon_de = { fichier: a.fichier, type: d <= 4 ? 'doublon' : 'quasi-doublon', distance: d };
-        doublons.push({ garder: a.fichier, ecarter: b.fichier, type: b.doublon_de.type, distance: d });
+      if (d > 16 || dc > 25 || dr > 0.2) continue;
+      const sim = await ressemblance(path.join(DOSSIER, a.fichier), path.join(DOSSIER, b.fichier));
+      if (sim >= 0.8) {
+        b.doublon_de = { fichier: a.fichier, type: sim >= 0.95 ? 'doublon' : 'quasi-doublon', distance: d, ressemblance: arrondi(sim, 2) };
+        doublons.push({ garder: a.fichier, ecarter: b.fichier, type: b.doublon_de.type, distance: d, ressemblance: arrondi(sim, 2) });
       }
     }
   }
@@ -274,46 +312,10 @@ async function main() {
   }
 
   // Planches contact : 20 images (5 × 4) par planche.
-  const planches = [];
-  const PAR = 20, COL = 5, CW = 312, TH = 234, LEG = 78, G = 8;
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const coupe = (s, n) => s.length > n ? `${s.slice(0, n - 1)}…` : s;
-  for (let p = 0; p * PAR < resultats.length; p++) {
-    const lot = resultats.slice(p * PAR, (p + 1) * PAR), lignes = Math.ceil(lot.length / COL);
-    const W = COL * CW + (COL + 1) * G, H = lignes * (TH + LEG) + (lignes + 1) * G;
-    const calques = [];
-    for (const [k, e] of lot.entries()) {
-      const x = G + (k % COL) * (CW + G), y = G + Math.floor(k / COL) * (TH + LEG + G), num = p * PAR + k + 1;
-      let vignette, vw = CW, vh = TH;
-      try {
-        const buf = await sharp(path.join(DOSSIER, e.fichier), { failOn: 'none' }).rotate().resize({ width: CW, height: TH, fit: 'inside' }).flatten({ background: '#d8d8d8' }).png().toBuffer({ resolveWithObject: true });
-        vignette = buf.data; vw = buf.info.width; vh = buf.info.height;
-      } catch { vignette = null; }
-      const ox = x + Math.floor((CW - vw) / 2), oy = y + Math.floor((TH - vh) / 2);
-      calques.push({ input: { create: { width: CW, height: TH, channels: 3, background: '#d8d8d8' } }, left: x, top: y });
-      if (vignette) calques.push({ input: vignette, left: ox, top: oy });
-      const alerte = (e.drapeaux || []).some(d => /faible|floue|petite|compression|bruit|document lisible|filigrane|doublon|illisible/.test(d));
-      let svg = '';
-      if (e.sujet) {
-        const s = e.sujet;
-        svg += `<rect x="${ox + s.x / 100 * vw}" y="${oy + s.y / 100 * vh}" width="${s.l / 100 * vw}" height="${s.h / 100 * vh}" fill="none" stroke="#ffe600" stroke-width="2.5"/>`;
-        svg += `<rect x="${ox + s.x / 100 * vw}" y="${oy + s.y / 100 * vh}" width="${s.l / 100 * vw}" height="${s.h / 100 * vh}" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="4 4"/>`;
-        const cx = ox + e.cadrage[0] / 100 * vw, cy = oy + e.cadrage[1] / 100 * vh;
-        svg += `<g stroke-width="3" stroke="#000"><line x1="${cx - 9}" y1="${cy}" x2="${cx + 9}" y2="${cy}"/><line x1="${cx}" y1="${cy - 9}" x2="${cx}" y2="${cy + 9}"/></g>`;
-        svg += `<g stroke-width="1.5" stroke="#ff2d55"><line x1="${cx - 8}" y1="${cy}" x2="${cx + 8}" y2="${cy}"/><line x1="${cx}" y1="${cy - 8}" x2="${cx}" y2="${cy + 8}"/></g>`;
-      }
-      const ty = y + TH;
-      svg += `<rect x="${x}" y="${ty}" width="${CW}" height="${LEG}" fill="${alerte ? '#fff1ec' : '#ffffff'}"/>`;
-      svg += `<text x="${x + 8}" y="${ty + 21}" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#111">${esc(coupe(`${num}. ${e.nom || e.fichier}`, 32))}</text>`;
-      svg += `<text x="${x + 8}" y="${ty + 42}" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#333">${esc(e.largeur ? `${e.largeur}×${e.hauteur} · ${e.ratio} · ${Math.round(e.poids / 1024)} Ko` : 'illisible')}</text>`;
-      svg += `<text x="${x + 8}" y="${ty + 64}" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="${alerte ? '#b3261e' : '#2f5d50'}">${esc(coupe((e.drapeaux || []).join(' · '), 44))}</text>`;
-      calques.push({ input: Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">${svg}</svg>`), left: 0, top: 0 });
-    }
-    const nom = p ? `planche-${p + 1}.jpg` : 'planche.jpg';
-    await sharp({ create: { width: W, height: H, channels: 3, background: '#f2f2f2' } }).composite(calques).jpeg({ quality: 82 }).toFile(path.join(DOSSIER, nom));
-    planches.push(nom);
-  }
-  for (let p = planches.length + 1; fs.existsSync(path.join(DOSSIER, `planche-${p}.jpg`)); p++) fs.rmSync(path.join(DOSSIER, `planche-${p}.jpg`));
+  const ALERTE = /faible|floue|petite|compression|bruit|document lisible|filigrane|doublon|illisible/;
+  const planches = await planche(DOSSIER, resultats.map(e => ({ fichier: e.fichier, titre: e.nom || e.fichier, sujet: e.sujet, cadrage: e.cadrage,
+    ligne: e.largeur ? `${e.largeur}×${e.hauteur} · ${e.ratio} · ${Math.round(e.poids / 1024)} Ko` : 'illisible',
+    drapeaux: e.drapeaux || [], alerte: (e.drapeaux || []).some(d => ALERTE.test(d)) })));
 
   ecrireJson(SORTIE, { dossier: DOSSIER, date: new Date().toISOString(), detection: vis ? 'Vision (macOS) + mesures sharp' : 'mesures sharp seulement', planches,
     legende_planche: 'cadre jaune : sujet ; croix rouge : cadrage ; fond rose : à vérifier', doublons, images: resultats });
