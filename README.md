@@ -11,6 +11,7 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 4. Assembler : poser `palette.json` (couleurs, polices) et éventuellement `options.json` dans `assemblages/projet/`, puis `node outils/assembler.mjs <module> … --sortie assemblages/projet`. Page autonome, polices chargées, scripts anti-flash, `scenario.json` fusionné ; rien n'est effacé (`--ecraser` pour refaire `index.html`). Les options fonctions vont dans `assemblage.js`, jamais réécrit. Les liens sans cible sont signalés.
 5. Tester : `node outils/tester-module.mjs assemblages/projet/index.html --captures` (captures dans `captures/` ; 14 formats, réduire les animations, sans WebGL, console, CLS, éléments collants, scénario de clics, texte 12 px, cibles 44 px).
 6. Adapter : copier le dossier dans le projet, remplacer les contenus neutres, garder les classes et les `data-*` décrits dans chaque `NOTES.md`.
+7. Images : suivre `images/README.md`. Six commandes : récupérer, analyser, grok, vérifier-grok, produire, partage. Claude n'écrit que `plan-images.json`.
 
 ## Conventions des modules
 
@@ -29,4 +30,4 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Contenu
 
-`maquettes/` fiches maquettes · `sections/` fiches sections · `modules/` modules · `socle/` socle commun et `vendor/` · `audits/` rapports d'audit et de correction · `inventaire/` relevés automatiques · `notes-manuelles/` jugements humains · `medias/` captures et vidéos (jamais lues par Claude) · `outils/` scripts.
+`maquettes/` fiches maquettes · `sections/` fiches sections · `modules/` modules · `socle/` socle commun et `vendor/` · `audits/` rapports d'audit et de correction · `inventaire/` relevés automatiques · `notes-manuelles/` jugements humains · `medias/` captures et vidéos (jamais lues par Claude) · `outils/` scripts · `images/` pipeline d'images (commandes, `emplacements.json`, `gabarits-grok/`, tests).
