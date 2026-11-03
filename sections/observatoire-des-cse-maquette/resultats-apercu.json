@@ -1,0 +1,43 @@
+{
+ "id": "observatoire-des-cse-maquette/resultats-apercu",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "resultats",
+ "titre": "Tableau de bord de démonstration",
+ "role": "outil-interactif",
+ "description": "Aperçu des futurs résultats sur fond nuit, données fictives étiquetées : filtres par type de mandat qui font varier quatre indicateurs (compteurs), un radar et une courbe de tendance avec petites courbes.",
+ "animations": [
+  "compteur",
+  "morphing"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "resultats.html:213-237",
+  "css": "assets/css/main.css:731-747",
+  "js": "assets/js/main.js:127-146 ; assets/js/charts.js:171-238"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/resultats-apercu-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/resultats-apercu-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/resultats-apercu-p960.mp4"
+ },
+ "pieges": [
+  "étiqueter clairement les données fictives",
+  "valeurs pseudo-aléatoires à graine fixe pour que chaque filtre donne toujours le même résultat"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1519,
+  "hauteur_m390": 1895,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

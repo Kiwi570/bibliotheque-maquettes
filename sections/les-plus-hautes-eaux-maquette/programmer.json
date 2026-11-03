@@ -1,0 +1,42 @@
+{
+ "id": "les-plus-hautes-eaux-maquette/programmer",
+ "maquette": "les-plus-hautes-eaux-maquette",
+ "page": "index",
+ "titre": "Programmer un spectacle",
+ "role": "contact",
+ "description": "Formulaire simulé en 4 étapes (spectacles, structure, date et lieu, coordonnées) avec validation par étape et message d'erreur annoncé ; une jauge d'eau verticale monte à chaque étape jusqu'à l'écran de remerciement.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:238-300",
+  "css": "assets/css/main.css:491-535",
+  "js": "assets/js/pages/accueil.js:186-262"
+ },
+ "medias": {
+  "capture": "medias/les-plus-hautes-eaux-maquette/programmer-p1440.jpg",
+  "capture_m390": "medias/les-plus-hautes-eaux-maquette/programmer-m390.jpg",
+  "video": "medias/les-plus-hautes-eaux-maquette/programmer-p960.mp4"
+ },
+ "pieges": [
+  "annoncer clairement que l'envoi est simulé",
+  "déplacer le focus sur le titre de l'étape à chaque changement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 815,
+  "hauteur_m390": 1574,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

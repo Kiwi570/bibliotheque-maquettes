@@ -1,0 +1,42 @@
+{
+ "id": "laure-polin-maquette/oeuvre-echelle",
+ "maquette": "laure-polin-maquette",
+ "page": "oeuvre",
+ "titre": "Voir à l'échelle",
+ "role": "outil-interactif",
+ "description": "L'œuvre détourée posée à sa vraie hauteur à côté d'une silhouette de 1,70 m, sur une console, au sol ou au mur selon la pièce ; cotes de l'œuvre et de la silhouette, bascule console / sol.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "oeuvre.html:73-82",
+  "css": "assets/css/site.css:543-557",
+  "js": "assets/js/oeuvre.js:213-271"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/oeuvre-echelle-p1440.jpg",
+  "capture_m390": "medias/laure-polin-maquette/oeuvre-echelle-m390.jpg",
+  "video": "medias/laure-polin-maquette/oeuvre-echelle-p960.mp4"
+ },
+ "pieges": [
+  "l'échelle se calcule sur la hauteur disponible de la scène à chaque redimensionnement",
+  "œuvre murale centrée à 150 cm du sol",
+  "retirer le bloc quand la hauteur n'est pas connue"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1117,
+  "hauteur_m390": 764,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

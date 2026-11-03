@@ -1,0 +1,43 @@
+{
+ "id": "loeilsingulier-maquette/ob-t",
+ "maquette": "loeilsingulier-maquette",
+ "page": "index",
+ "titre": "Plan de table",
+ "role": "outil-interactif",
+ "description": "Plan de table dessiné en SVG au scrub (tables tracées, chaises qui apparaissent) avec cartons de placement qui tombent ; choisir un carton ouvre le carton-réponse du contact prérempli avec l'intention choisie.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:135-152",
+  "css": "assets/css/site.css:374-389",
+  "js": "assets/js/main.js:440-454"
+ },
+ "medias": {
+  "capture": "medias/loeilsingulier-maquette/ob-t-p1440.jpg",
+  "capture_m390": "medias/loeilsingulier-maquette/ob-t-m390.jpg",
+  "video": "medias/loeilsingulier-maquette/ob-t-p960.mp4"
+ },
+ "pieges": [
+  "passer l'intention à la page contact par paramètre d'URL, relu par le formulaire",
+  "mesurer getTotalLength de chaque ellipse avant de fixer le dasharray"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1214,
+  "hauteur_m390": 846,
+  "epinglee": false,
+  "scrolltriggers": 7
+ }
+}

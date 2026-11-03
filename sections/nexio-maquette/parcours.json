@@ -1,0 +1,45 @@
+{
+ "id": "nexio-maquette/parcours",
+ "maquette": "nexio-maquette",
+ "page": "index",
+ "titre": "Parcours avec câble qui charge",
+ "role": "étapes",
+ "description": "Section épinglée : les quatre étapes (estimation, rendez-vous, diagnostic, réparation) défilent à l'horizontale pendant qu'un câble SVG ondulé se dessine jusqu'à une prise et qu'une batterie se charge de 0 à 100 % ; en vertical sur téléphone et en mode calme.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:148-186",
+  "css": "assets/css/site.css:302-338,572-582",
+  "js": "assets/js/home.js:154-231"
+ },
+ "medias": {
+  "capture": "medias/nexio-maquette/parcours-p1440.jpg",
+  "capture_m390": "medias/nexio-maquette/parcours-m390.jpg",
+  "video": "medias/nexio-maquette/parcours-p960.mp4"
+ },
+ "pieges": [
+  "recalculer le tracé du câble (cableH / cableV) au refresh, sa longueur dépend de la largeur de la piste",
+  "version verticale lisible sans JS et en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2915,
+  "hauteur_m390": 3622,
+  "epinglee": true,
+  "scrolltriggers": 12
+ }
+}

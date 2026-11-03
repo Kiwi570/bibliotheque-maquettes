@@ -1,0 +1,41 @@
+{
+ "id": "loeilsingulier-maquette/liner",
+ "maquette": "loeilsingulier-maquette",
+ "page": "index",
+ "titre": "Références et témoignage recto verso",
+ "role": "témoignages",
+ "description": "Défilé des noms de clients, puis carte de témoignage qui se retourne (recto verso) au clic, au clavier avec focus déplacé sur la face visible.",
+ "animations": [
+  "marquee"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:171-191",
+  "css": "assets/css/site.css:413-439",
+  "js": "assets/js/main.js:513-524"
+ },
+ "medias": {
+  "capture": "medias/loeilsingulier-maquette/liner-p1440.jpg",
+  "capture_m390": "medias/loeilsingulier-maquette/liner-m390.jpg",
+  "video": "medias/loeilsingulier-maquette/liner-p960.mp4"
+ },
+ "pieges": [
+  "aria-hidden et tabindex à basculer sur chaque face",
+  "retournement en CSS 3D (backface-visibility), pas le plugin Flip"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1323,
+  "hauteur_m390": 1217,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

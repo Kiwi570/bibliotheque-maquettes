@@ -1,0 +1,45 @@
+{
+ "id": "loeilsingulier-maquette/hs-sec",
+ "maquette": "loeilsingulier-maquette",
+ "page": "index",
+ "titre": "Lieux, tables, musiques",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée de tirages qui se développent en série, avec parallaxe alternée des cartes ; défilement natif sur téléphone et en mode calme.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:154-159",
+  "css": "assets/css/site.css:396-404,820-828",
+  "js": "assets/js/main.js:470-494"
+ },
+ "medias": {
+  "capture": "medias/loeilsingulier-maquette/hs-sec-p1440.jpg",
+  "capture_m390": "medias/loeilsingulier-maquette/hs-sec-m390.jpg",
+  "video": "medias/loeilsingulier-maquette/hs-sec-p960.mp4"
+ },
+ "pieges": [
+  "hauteur de piste et légende mesurées en variables CSS pour que la section tienne dans l'écran",
+  "containerAnimation pour la parallaxe des cartes"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 735,
+  "epinglee": true,
+  "scrolltriggers": 11
+ }
+}

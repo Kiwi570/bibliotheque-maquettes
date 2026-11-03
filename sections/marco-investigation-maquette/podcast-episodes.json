@@ -1,0 +1,44 @@
+{
+ "id": "marco-investigation-maquette/podcast-episodes",
+ "maquette": "marco-investigation-maquette",
+ "page": "podcast",
+ "titre": "Liste des épisodes",
+ "role": "agenda",
+ "description": "Six épisodes générés depuis les données : numéro, pochette en trame, date, durée, thème, extrait de 30 s avec onde à l'encre par épisode et lien Spotify.",
+ "animations": [
+  "canvas-2d",
+  "révélation-image",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "podcast.html:100-109",
+  "css": "assets/css/main.css:781",
+  "js": "assets/js/main.js:329-442,828-863"
+ },
+ "medias": {
+  "capture": "medias/marco-investigation-maquette/podcast-episodes-p1440.jpg",
+  "capture_m390": "medias/marco-investigation-maquette/podcast-episodes-m390.jpg",
+  "video": "medias/marco-investigation-maquette/podcast-episodes-p960.mp4"
+ },
+ "pieges": [
+  "une onde par épisode : les canvas hors écran doivent s'arrêter",
+  "dates formatées selon la langue (1er en français)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1800,
+  "hauteur_m390": 2577,
+  "epinglee": false,
+  "scrolltriggers": 7
+ }
+}

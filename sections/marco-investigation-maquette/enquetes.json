@@ -1,0 +1,44 @@
+{
+ "id": "marco-investigation-maquette/enquetes",
+ "maquette": "marco-investigation-maquette",
+ "page": "index",
+ "titre": "Catalogue des enquêtes",
+ "role": "portfolio",
+ "description": "Catalogue de 38 contenus (vidéos, podcasts, magazines, formations) filtrable par thème et par format, avec compteur de résultats ; les vidéos s'ouvrent dans un lecteur sans cookie sans quitter la page.",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-image"
+ ],
+ "interactions": [
+  "filtres",
+  "lecteur-vidéo",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:247-266",
+  "css": "assets/css/main.css:447-481",
+  "js": "assets/js/main.js:286-328,628-716 ; assets/js/data.js"
+ },
+ "medias": {
+  "capture": "medias/marco-investigation-maquette/enquetes-p1440.jpg",
+  "capture_m390": "medias/marco-investigation-maquette/enquetes-m390.jpg",
+  "video": "medias/marco-investigation-maquette/enquetes-p960.mp4"
+ },
+ "pieges": [
+  "lecteur YouTube en domaine sans cookie, chargé seulement au clic",
+  "rendre le focus à la carte à la fermeture du lecteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1462,
+  "hauteur_m390": 2582,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "laure-polin-maquette/disponibles",
+ "maquette": "laure-polin-maquette",
+ "page": "index",
+ "titre": "Œuvres disponibles en salle horizontale",
+ "role": "produits",
+ "description": "Galerie horizontale épinglée des œuvres disponibles avec compteur, titre en cours et barre de progression ; le fond se teinte de la couleur de l'œuvre active ; défilement natif avec accroche sur téléphone.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:142-150",
+  "css": "assets/css/site.css:304-333",
+  "js": "assets/js/accueil.js:311-366"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/disponibles-p1440.jpg",
+  "capture_m390": "medias/laure-polin-maquette/disponibles-m390.jpg",
+  "video": "medias/laure-polin-maquette/disponibles-p960.mp4"
+ },
+ "pieges": [
+  "hauteur de piste bornée par l'écran disponible sous l'en-tête (hauteurDispo)",
+  "teinte du fond via une variable --teinte, assombrie pour garder le contraste"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 885,
+  "epinglee": true,
+  "scrolltriggers": 13
+ }
+}

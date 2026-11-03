@@ -1,0 +1,45 @@
+{
+ "id": "lien-numerique-solidaire-maquette/tarifs",
+ "maquette": "lien-numerique-solidaire-maquette",
+ "page": "index",
+ "titre": "Prix coupé et simulateur",
+ "role": "calculateur",
+ "description": "Le prix de l'heure se coupe en deux au trait (30 € → 15 €) pour montrer le crédit d'impôt, puis un simulateur (curseur d'heures, choix de formule, raccourcis) calcule payé, crédit et coût réel, annoncé aux lecteurs d'écran.",
+ "animations": [
+  "masque",
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:198-257",
+  "css": "assets/css/site.css:400-454",
+  "js": "assets/js/site.js:271-295,544-570"
+ },
+ "medias": {
+  "capture": "medias/lien-numerique-solidaire-maquette/tarifs-p1440.jpg",
+  "capture_m390": "medias/lien-numerique-solidaire-maquette/tarifs-m390.jpg",
+  "video": "medias/lien-numerique-solidaire-maquette/tarifs-p960.mp4"
+ },
+ "pieges": [
+  "radios à zone de 44 px avec cercle de 24 px dessiné au centre",
+  "annonce aria-live temporisée pour ne pas parler à chaque cran du curseur",
+  "les taux et plafonds sont des données client, à valider"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2073,
+  "hauteur_m390": 3851,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

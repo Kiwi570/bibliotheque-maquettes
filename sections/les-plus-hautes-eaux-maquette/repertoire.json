@@ -1,0 +1,45 @@
+{
+ "id": "les-plus-hautes-eaux-maquette/repertoire",
+ "maquette": "les-plus-hautes-eaux-maquette",
+ "page": "index",
+ "titre": "Répertoire en piste",
+ "role": "portfolio",
+ "description": "Sept spectacles en cartes sur une piste horizontale épinglée (au-dessus de 1100 px), barre de progression, filtres par public ; la photo reprend ses couleurs en entrant, l'objet du spectacle s'anime au survol et la couleur du projecteur change. Défilement natif en dessous.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-image",
+  "survol-image"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:110-124",
+  "css": "assets/css/main.css:341-366",
+  "js": "assets/js/pages/accueil.js:30-102 ; assets/js/pages/objets.js"
+ },
+ "medias": {
+  "capture": "medias/les-plus-hautes-eaux-maquette/repertoire-p1440.jpg",
+  "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
+  "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p960.mp4"
+ },
+ "pieges": [
+  "au focus clavier d'une carte, défiler jusqu'à sa position dans l'épinglage",
+  "après un filtre, repositionner la piste sur la première carte visible"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3155,
+  "hauteur_m390": 1217,
+  "epinglee": true,
+  "scrolltriggers": 17
+ }
+}

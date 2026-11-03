@@ -1,0 +1,979 @@
+{
+  "maquette": {
+    "client": "agence franco-britannique d'événementiel d'entreprise et de design graphique",
+    "activite": [
+      "services-b2b",
+      "spectacle"
+    ],
+    "concept": [
+      "carnet",
+      "galerie"
+    ],
+    "ambiance": [
+      "clair",
+      "luxueux",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--paper",
+      "texte": "--ink",
+      "accent": "--gold",
+      "secondaire": "--navy"
+    },
+    "polices": {
+      "titres": "Bodoni Moda",
+      "texte": "Hanken Grotesk",
+      "mono": null
+    },
+    "points_forts": [
+      "ouverture en enveloppe : cachet de cire qui se fend et rabat qui s'ouvre, repris en transition de page",
+      "titres dorés à chaud en WebGL, texte réel conservé",
+      "plan de table dessiné au scrub qui préremplit le carton-réponse",
+      "témoignage recto verso, carte Paris–Londres avec horloges réelles",
+      "ambiance sonore composée en direct avec rosace guillochée"
+    ],
+    "reserves": [
+      "ouverture lisible à 3 s seulement",
+      "héros étroit en 1920×1080",
+      "virgule orpheline dans un titre de design graphique",
+      "image Grok du héros de /son à régénérer",
+      "galerie de 3,7 Mo"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "transition-de-page",
+      "webgl-shader",
+      "révélation-texte",
+      "révélation-image",
+      "section-fixée",
+      "galerie-horizontale",
+      "parallaxe",
+      "empilement-de-fiches",
+      "masque",
+      "compteur",
+      "marquee",
+      "canvas-2d",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "survol-image",
+      "apparition-au-défilement",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "configurateur",
+      "formulaire-par-étapes",
+      "filtres",
+      "galerie-cliquable",
+      "carte-interactive",
+      "lecteur-audio",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "hero"
+  },
+  "sections": {
+    "loader": {
+      "titre": "Ouverture : cachet de cire et enveloppe",
+      "role": "ouverture",
+      "description": "Écran d'ouverture : un cachet de cire se fend, le rabat bleu nuit de l'enveloppe s'ouvre et laisse place au titre doré ; joué une fois par session, ignoré en mode calme.",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "titre lisible à 3 s seulement (reste de l'audit) : raccourcir avant de réutiliser",
+        "mémoriser l'ouverture en sessionStorage pour ne pas la rejouer à chaque page"
+      ],
+      "sans_capture": true,
+      "code": {
+        "html": "index.html:26-40",
+        "css": "assets/css/site.css:220-235",
+        "js": "assets/js/main.js:304-342"
+      }
+    },
+    "veil": {
+      "titre": "Transition : rabat d'enveloppe",
+      "role": "transition-de-page",
+      "description": "Transition entre pages : le rabat de l'enveloppe descend et couvre la page avec le monogramme, puis remonte à l'arrivée sur la page suivante ; liens externes, ancres et touches de modification ignorés, réinitialisé sur pageshow.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "écouter pageshow (persisted) pour retirer le voile au retour arrière",
+        "drapeau de passage en sessionStorage pour jouer la sortie sur la page d'arrivée"
+      ],
+      "sans_capture": true,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:40-54",
+        "css": "assets/css/site.css:238-242",
+        "js": "assets/js/main.js:270-302"
+      }
+    },
+    "cursor": {
+      "titre": "Curseur œil et loupe",
+      "role": "decor",
+      "description": "Curseur personnalisé en forme d'œil qui devient loupe sur les photos, avec boutons magnétiques ; masqué au toucher.",
+      "animations": [
+        "curseur-personnalisé",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "toast": {
+      "titre": "Message bref",
+      "role": "decor",
+      "description": "Message bref en bas d'écran pour la copie d'une adresse ou d'un numéro.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "hdr": {
+      "titre": "En-tête",
+      "role": "menu",
+      "description": "En-tête fixe ivoire : monogramme, liens des pages, bascule FR/EN, mode calme, son d'ambiance et bouton « Confier un projet ».",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu téléphone",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, fermé par Échap, avec liens en grandes capitales serif.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "hero": {
+      "titre": "Héros à titre doré",
+      "role": "ouverture",
+      "description": "Titre « Donner de la mémoire à l'éphémère » dont les mots dorés sont redessinés en WebGL comme une dorure à chaud froissée (le texte reste dans le DOM), avec tirages photo posés en biais qui se développent.",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "héros étroit en 1920×1080 (reste de l'audit)",
+        "le canevas suit les positions exactes des lettres du DOM : recalculer après le chargement des polices et au redimensionnement"
+      ],
+      "dependances": [
+        "gsap",
+        "ogl"
+      ],
+      "code": {
+        "html": "index.html:72-94",
+        "css": "assets/css/site.css:285-323",
+        "js": "assets/js/foil.mjs ; assets/js/main.js:407-423,813-818"
+      }
+    },
+    "quote-sec": {
+      "titre": "Citation en cartouche",
+      "role": "manifeste",
+      "description": "Citation centrée sous un médaillon photo qui s'ouvre en ellipse au défilement.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sf-t": {
+      "titre": "Chiffres de l'agence",
+      "role": "chiffres",
+      "description": "Quatre chiffres clés avec compteurs, traits dessinés et liste d'engagements.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "promise": {
+      "titre": "Triple promesse en cartes",
+      "role": "services",
+      "description": "Trois cartes de menu empilées qui se déploient en éventail au scrub, puis s'inclinent en 3D sous la souris.",
+      "animations": [
+        "empilement-de-fiches",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "déploiement seulement sur ordinateur (desk) ; inclinaison seulement avec pointeur fin"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:123-133",
+        "css": "assets/css/site.css:358-371",
+        "js": "assets/js/main.js:425-438"
+      }
+    },
+    "ob-t": {
+      "titre": "Plan de table",
+      "role": "outil-interactif",
+      "description": "Plan de table dessiné en SVG au scrub (tables tracées, chaises qui apparaissent) avec cartons de placement qui tombent ; choisir un carton ouvre le carton-réponse du contact prérempli avec l'intention choisie.",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "passer l'intention à la page contact par paramètre d'URL, relu par le formulaire",
+        "mesurer getTotalLength de chaque ellipse avant de fixer le dasharray"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:135-152",
+        "css": "assets/css/site.css:374-389",
+        "js": "assets/js/main.js:440-454"
+      }
+    },
+    "hs-sec": {
+      "titre": "Lieux, tables, musiques",
+      "role": "galerie",
+      "description": "Galerie horizontale épinglée de tirages qui se développent en série, avec parallaxe alternée des cartes ; défilement natif sur téléphone et en mode calme.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": [
+        "hauteur de piste et légende mesurées en variables CSS pour que la section tienne dans l'écran",
+        "containerAnimation pour la parallaxe des cartes"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:154-159",
+        "css": "assets/css/site.css:396-404,820-828",
+        "js": "assets/js/main.js:470-494"
+      }
+    },
+    "dg-t": {
+      "titre": "Pile de supports imprimés",
+      "role": "services",
+      "description": "Présentation du design graphique : pile de supports imprimés qui s'écarte en éventail au défilement.",
+      "animations": [
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "liner": {
+      "titre": "Références et témoignage recto verso",
+      "role": "témoignages",
+      "description": "Défilé des noms de clients, puis carte de témoignage qui se retourne (recto verso) au clic, au clavier avec focus déplacé sur la face visible.",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "aria-hidden et tabindex à basculer sur chaque face",
+        "retournement en CSS 3D (backface-visibility), pas le plugin Flip"
+      ],
+      "dependances": [
+        "aucune"
+      ],
+      "code": {
+        "html": "index.html:171-191",
+        "css": "assets/css/site.css:413-439",
+        "js": "assets/js/main.js:513-524"
+      }
+    },
+    "map-t": {
+      "titre": "Carte Paris ⇄ Londres et horloges",
+      "role": "carte",
+      "description": "Carte épurée Paris–Londres avec trajet tracé, distance et deux horloges qui donnent l'heure réelle de chaque ville.",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "horloges calculées par fuseau (Intl), pas par décalage fixe"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:193-212",
+        "css": "assets/css/site.css:442-462",
+        "js": "assets/js/main.js:526-581"
+      }
+    },
+    "rsvp": {
+      "titre": "Appel R.S.V.P.",
+      "role": "appel",
+      "description": "Bloc d'appel bleu nuit avec carton R.S.V.P. qui se redresse au scrub et coordonnées à copier ; répété en fin de chaque page.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "next": {
+      "titre": "Page suivante",
+      "role": "appel",
+      "description": "Lien vers la page suivante en grand titre serif, au-dessus du pied de page.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mbar": {
+      "titre": "Barre d'actions téléphone",
+      "role": "barre-fixe",
+      "description": "Barre fixe du téléphone avec appel, courriel et carton-réponse ; sa hauteur est publiée dans --barres-h.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "ftr": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page ivoire en colonnes : adresses de Paris et Londres, contacts à copier, réseaux et retour en haut.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-lost": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable : « Cette page s'est éclipsée », photo d'un salon vide et deux boutons de retour.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-ph": {
+      "titre": "Fondatrice",
+      "role": "équipe",
+      "description": "Portrait de la fondatrice en médaillon avec présentation de son parcours.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-parcours": {
+      "titre": "Parcours de l'agence",
+      "role": "étapes",
+      "description": "Parcours en étapes reliées par un fil, avec photos qui se développent.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-foil-quote": {
+      "titre": "Devise dorée",
+      "role": "manifeste",
+      "description": "La devise de l'agence en grand, avec les mots dorés rendus en WebGL (dorure à chaud) ; texte réel conservé pour la lecture.",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "repli : le texte doré en CSS reste visible sans WebGL"
+      ],
+      "dependances": [
+        "ogl"
+      ],
+      "code": {
+        "html": "agence.html:68-72",
+        "css": "assets/css/site.css:313-323,597-598",
+        "js": "assets/js/foil.mjs ; assets/js/main.js:813-818"
+      }
+    },
+    "agence-tr-t": {
+      "titre": "Huit métiers",
+      "role": "équipe",
+      "description": "Huit métiers en étiquettes cartonnées qui tombent et tintent légèrement à l'entrée.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ph": {
+      "titre": "Tête de contact",
+      "role": "ouverture",
+      "description": "Titre « Confier un projet » et introduction de la page contact.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-carton-reponse": {
+      "titre": "Carton-réponse en 4 étapes",
+      "role": "contact",
+      "description": "Formulaire en quatre étapes en forme de carton-réponse (intention, détails, date, coordonnées), prérempli depuis le plan de table, avec étiquettes bilingues et erreurs accessibles.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "case à cocher de 24 px (reste de l'audit)"
+      ]
+    },
+    "design-graphique-ph": {
+      "titre": "Titre composé",
+      "role": "ouverture",
+      "description": "Tête de la page design graphique : liste de supports dont les mots se composent un à un, avec maquette imprimée.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "virgule orpheline dans le titre (reste de l'audit)"
+      ]
+    },
+    "design-graphique-realisations": {
+      "titre": "Vingt-deux supports",
+      "role": "portfolio",
+      "description": "Grille de réalisations filtrable par catégorie, avec visionneuse au clavier (flèches, Échap) et légendes.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "rendre le focus à la vignette à la fermeture de la visionneuse"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "design-graphique.html:69-141",
+        "css": "assets/css/site.css:533-544,602-605",
+        "js": "assets/js/main.js:583-645"
+      }
+    },
+    "design-graphique-su-t": {
+      "titre": "Métiers de l'édition",
+      "role": "services",
+      "description": "Liste des supports en grands mots ; un aperçu flottant suit le curseur au survol de chacun.",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-graphique-float-prev": {
+      "titre": "Aperçu flottant",
+      "role": "decor",
+      "description": "Vignette flottante qui suit le curseur au survol de la liste des supports.",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "evenementiel-ph": {
+      "titre": "Tête de l'événementiel",
+      "role": "ouverture",
+      "description": "Tête de la page événementiel avec photos en parallaxe autour du titre.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenementiel-fold-sec": {
+      "titre": "Souhaits et idées",
+      "role": "services",
+      "description": "Deux colonnes pliées « Vous souhaitez / Vous imaginez » qui se déplient à l'entrée.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenementiel-sv-t": {
+      "titre": "Chaque détail compte",
+      "role": "services",
+      "description": "Texte et photos en parallaxe sur le soin des détails.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenementiel-st-t": {
+      "titre": "Six temps",
+      "role": "étapes",
+      "description": "Six étapes d'un événement en liste numérotée, chaque étape avec photo.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "galerie-ph": {
+      "titre": "Planche contact",
+      "role": "galerie",
+      "description": "Tête de la galerie en planche contact de petites photos qui se développent ; un clic agrandit.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "galerie-toutes-les-photos": {
+      "titre": "Toutes les photos",
+      "role": "galerie",
+      "description": "Mur de photos filtrable avec visionneuse au clavier.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "galerie de 3,7 Mo"
+      ]
+    },
+    "mentions-legales-ph": {
+      "titre": "Tête des mentions",
+      "role": "texte-legal",
+      "description": "Titre de la page mentions légales et confidentialité.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-section": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Mentions légales et politique de confidentialité en sections avec sommaire latéral.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-ph": {
+      "titre": "Trente références",
+      "role": "chiffres",
+      "description": "Tête des références avec un compteur à rouleau jusqu'à 30.",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-gl-t": {
+      "titre": "Liste des invités",
+      "role": "preuves",
+      "description": "Clients présentés comme une liste d'invités, en onglets par secteur accessibles au clavier.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-lt-t": {
+      "titre": "Six lettres de clients",
+      "role": "témoignages",
+      "description": "Six témoignages mis en page comme des lettres manuscrites.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "son-son-hero": {
+      "titre": "Rosace guillochée sonore",
+      "role": "ouverture",
+      "description": "Tête de la page son : rosace guillochée en canvas 2D qui vibre avec l'ambiance musicale composée en direct (Web Audio), lancée par un bouton.",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "lecteur-audio"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "image Grok du héros à régénérer (reste de l'audit)",
+        "ne lancer le son qu'après un geste explicite"
+      ],
+      "dependances": [
+        "canvas"
+      ]
+    },
+    "son-pp-t": {
+      "titre": "Traversée musicale de Paris",
+      "role": "services",
+      "description": "Prestation musicale avec photo et liste des lieux.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "son-pf-t": {
+      "titre": "Montez le volume",
+      "role": "services",
+      "description": "Seconde prestation musicale avec photo et liste de titres.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-rsvp": {
+      "ignorer": true
+    },
+    "design-graphique-rsvp": {
+      "ignorer": true
+    },
+    "evenementiel-rsvp": {
+      "ignorer": true
+    },
+    "galerie-rsvp": {
+      "ignorer": true
+    },
+    "references-rsvp": {
+      "ignorer": true
+    },
+    "son-rsvp": {
+      "ignorer": true
+    },
+    "agence-next": {
+      "ignorer": true
+    },
+    "contact-next": {
+      "ignorer": true
+    },
+    "design-graphique-next": {
+      "ignorer": true
+    },
+    "evenementiel-next": {
+      "ignorer": true
+    },
+    "galerie-next": {
+      "ignorer": true
+    },
+    "mentions-legales-next": {
+      "ignorer": true
+    },
+    "references-next": {
+      "ignorer": true
+    },
+    "son-next": {
+      "ignorer": true
+    },
+    "contact-map-t": {
+      "ignorer": true
+    },
+    "evenementiel-map-t": {
+      "ignorer": true
+    },
+    "evenementiel-hs-sec": {
+      "ignorer": true
+    },
+    "evenementiel-liner": {
+      "ignorer": true
+    },
+    "evenementiel-tr-t": {
+      "ignorer": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "menuizim-maquette/deroule",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Sentier topographique",
+ "role": "étapes",
+ "description": "Les quatre étapes du projet le long d'un sentier SVG tracé sur des courbes de niveau : le sentier se dessine au scrub et chaque borne s'allume quand le tracé l'atteint, pendant que les étapes défilent à côté.",
+ "animations": [
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:333-349",
+  "css": "assets/css/main.css:432-451",
+  "js": "assets/js/home.js:135-169 ; assets/js/main.js:413-453"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/deroule-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/deroule-m390.jpg",
+  "video": "medias/menuizim-maquette/deroule-p960.mp4"
+ },
+ "pieges": [
+  "seuils des bornes calculés une fois par getPointAtLength, pas à chaque frame",
+  "état final direct en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3337,
+  "hauteur_m390": 2487,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

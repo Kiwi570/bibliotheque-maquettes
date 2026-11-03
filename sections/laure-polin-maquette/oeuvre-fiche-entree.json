@@ -1,0 +1,40 @@
+{
+ "id": "laure-polin-maquette/oeuvre-fiche-entree",
+ "maquette": "laure-polin-maquette",
+ "page": "oeuvre",
+ "titre": "Entrée de la fiche d'œuvre",
+ "role": "ouverture",
+ "description": "La vraie photo de l'œuvre sur fond d'ardoise WebGL, avec fil d'Ariane, cartel détaillé (matière, dimensions, édition, statut), prix et actions.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "oeuvre.html:33-46",
+  "css": "assets/css/site.css:205-207,471-472,507-522,675,758",
+  "js": "assets/js/oeuvre.js:26-34,42-44,53,96,99,103-105,109,114,197,220 ; assets/js/base.js:83,98 ; data/oeuvres.js:17,106,180,225,278,329,396,432,471,544,595,672,730,799,881,932,1034,1122,1185,1238,1309,1370,1423,1474,1556,1604,1656,1706,1752,1800,1848,1896,1954,2008,2083,2172,2240,2330,2419,2473,2538,2618,2671,2753,2821,2882,2933-2935,2986,3075,3148,3405,3476,3543,3591,3660,3729,3802,3841,3921,3973,4018,4090-4092,4162,4213,4285,4347,4420,4498,4551,4624,4703,4759,4811,4898,4940,4978,5065,5122,5195,5248,5338,5389,5437,5475,5526,5588,5640,5692,5765,5815,5865,5941,5996,6048,6087,6136,6178,6268,6333,6404,6456,6506,6554,6595,6673,6721,6761,6834,6904,6943,6984,7070,7126,7176,7260-7262,7353,7418"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/oeuvre-fiche-entree-p1440.jpg"
+ },
+ "pieges": [
+  "ne pas retenir la photo principale invisible par l'animation d'entrée (LCP corrigé de 3,8 à 1,2 s)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1307,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

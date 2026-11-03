@@ -1,0 +1,43 @@
+{
+ "id": "menuizim-maquette/approche",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Les mots s'encrent",
+ "role": "manifeste",
+ "description": "Longue phrase d'approche dont les mots passent de 16 % à 100 % d'opacité au fil du défilement (SplitText, scrub), à côté de photos en parallaxe interne.",
+ "animations": [
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "manifeste-mot-a-mot",
+ "code": {
+  "html": "index.html:91-118",
+  "css": "assets/css/main.css:303-331",
+  "js": "assets/js/home.js:32-46"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/approche-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/approche-m390.jpg",
+  "video": "medias/menuizim-maquette/approche-p960.mp4"
+ },
+ "pieges": [
+  "bloc désépinglé sur écran bas pour garder le lien visible à 1000×560"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1872,
+  "hauteur_m390": 1365,
+  "epinglee": false,
+  "scrolltriggers": 13
+ }
+}

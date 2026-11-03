@@ -1,0 +1,47 @@
+{
+ "id": "laure-polin-maquette/hero",
+ "maquette": "laure-polin-maquette",
+ "page": "index",
+ "titre": "Œuvres recomposées en poussière d'ardoise",
+ "role": "ouverture",
+ "description": "Diaporama d'œuvres sur un mur d'ardoise en lumière rasante (WebGL, le relief suit le curseur) : chaque œuvre se rassemble depuis un nuage de particules (OGL) puis la vraie photo s'affiche intacte ; minuteur avec pause, points de navigation, cartel et parallaxe de sortie.",
+ "animations": [
+  "webgl-particules",
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:37-63",
+  "css": "assets/css/site.css:204-250",
+  "js": "assets/js/accueil.js:26-144 ; assets/js/poussiere.js:1-123 ; assets/js/ardoise-gl.js:49-200"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/laure-polin-maquette/hero-m390.jpg",
+  "video": "medias/laure-polin-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "les particules ne servent qu'à la transition : la vraie photo reste affichée ensuite, jamais retouchée",
+  "points du diaporama à 33 px sur téléphone (reste de l'audit)",
+  "pause du minuteur au survol, hors écran et onglet caché"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1090,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

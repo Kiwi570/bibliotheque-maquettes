@@ -1,0 +1,48 @@
+{
+ "id": "laure-polin-maquette/salle-salle-zone",
+ "maquette": "laure-polin-maquette",
+ "page": "salle",
+ "titre": "Salle horizontale à l'échelle",
+ "role": "galerie",
+ "description": "Salle d'exposition horizontale épinglée : la hauteur de chaque œuvre suit ses vraies dimensions, le fond d'ardoise se teinte de la couleur de l'œuvre en cours, cartels qui apparaissent avec le défilement, compteur et fin de salle ; bascule en grille.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "webgl-shader",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "salle.html:76-76",
+  "css": "assets/css/site.css:492-493,586-596",
+  "js": "assets/js/salle.js:160-249"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/salle-salle-zone-p1440.jpg",
+  "capture_m390": "medias/laure-polin-maquette/salle-salle-zone-m390.jpg",
+  "video": "medias/laure-polin-maquette/salle-salle-zone-p960.mp4"
+ },
+ "pieges": [
+  "hauteurs relatives par racine (puissance 0,65) pour que les petites pièces restent lisibles",
+  "tout reconstruire au changement de filtre (nettoyer les ScrollTrigger avant)",
+  "cartels animés avec containerAnimation"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 8636,
+  "epinglee": true,
+  "scrolltriggers": 43
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "lien-numerique-solidaire-maquette/rendez-vous",
+ "maquette": "lien-numerique-solidaire-maquette",
+ "page": "index",
+ "titre": "Visite découverte en étapes",
+ "role": "contact",
+ "description": "Formulaire de rendez-vous en étapes (pour qui, besoin, coordonnées) avec validation accessible, à côté du téléphone à copier et de l'e-mail.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:337-419",
+  "css": "assets/css/site.css:542-592",
+  "js": "assets/js/site.js:129-227"
+ },
+ "medias": {
+  "capture": "medias/lien-numerique-solidaire-maquette/rendez-vous-p1440.jpg",
+  "capture_m390": "medias/lien-numerique-solidaire-maquette/rendez-vous-m390.jpg",
+  "video": "medias/lien-numerique-solidaire-maquette/rendez-vous-p960.mp4"
+ },
+ "pieges": [
+  "masquer la barre d'appel pendant la saisie",
+  "brouillon gardé en sessionStorage avec try/catch"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1198,
+  "hauteur_m390": 1682,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

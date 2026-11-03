@@ -1,0 +1,47 @@
+{
+ "id": "lien-numerique-solidaire-maquette/heros",
+ "maquette": "lien-numerique-solidaire-maquette",
+ "page": "index",
+ "titre": "Héros à la persienne",
+ "role": "ouverture",
+ "description": "Ouverture orchestrée : le fil rouge s'écrit, la photo se dévoile, le prix 30 € se coupe en deux et laisse 15 € ; fond papier traversé par une lumière de persienne en WebGL brut (un triangle plein écran, 30 i/s), remplacée par un dégradé CSS sur tactile, en économie de données et en mode confort.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "révélation-image",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:48-67",
+  "css": "assets/css/site.css:235-284",
+  "js": "assets/js/site.js:544-602,809-816 ; assets/js/persienne.js"
+ },
+ "medias": {
+  "capture": "medias/lien-numerique-solidaire-maquette/heros-p1440.jpg",
+  "capture_m390": "medias/lien-numerique-solidaire-maquette/heros-m390.jpg",
+  "video": "medias/lien-numerique-solidaire-maquette/heros-p960.mp4"
+ },
+ "pieges": [
+  "premier écran du téléphone sans action visible (reste de l'audit)",
+  "WebGL en mode figé sur tactile : lancer() doit renvoyer false avant getContext, sinon fond noir après défilement",
+  "limiter le shader à 30 i/s"
+ ],
+ "mesures": {
+  "hauteur_p1440": 763,
+  "hauteur_m390": 1115,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

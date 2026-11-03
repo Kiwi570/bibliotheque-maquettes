@@ -1,0 +1,44 @@
+{
+ "id": "observatoire-des-cse-maquette/participer",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "index",
+ "titre": "Téléphone épinglé du parcours",
+ "role": "étapes",
+ "description": "Section sombre épinglée : à gauche les quatre étapes, à droite un téléphone dont l'écran rejoue le parcours au scrub (adresse tapée lettre à lettre, case cochée, questionnaire, cadeaux, notification) ; l'étape en cours s'allume.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:226-276",
+  "css": "assets/css/main.css:410-469",
+  "js": "assets/js/main.js:255-299"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/participer-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/participer-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/participer-p960.mp4"
+ },
+ "pieges": [
+  "section en 100svh et colonne flex quand elle est épinglée (classe is-pinned), sinon bouton coupé à 1024×640",
+  "durée d'épinglage plus courte sur téléphone (1,4 écran au lieu de 1,7)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

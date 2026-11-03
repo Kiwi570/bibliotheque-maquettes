@@ -1,0 +1,45 @@
+{
+ "id": "libre-solidaire-maquette/haut",
+ "maquette": "libre-solidaire-maquette",
+ "page": "index",
+ "titre": "Héros : sol vivant et livres en 3D",
+ "role": "ouverture",
+ "description": "La photo de sol devient une matière vivante en WebGL (OGL, Flowmap) : le curseur laisse une trace liquide et porte une lumière dorée rasante. Trois nouveautés en livres 3D inclinables au pointeur à côté du titre.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:69-92",
+  "css": "assets/css/style.css:208-235",
+  "js": "assets/js/heros-gl.js:1-122 ; assets/js/accueil.js:12-21"
+ },
+ "medias": {
+  "capture": "medias/libre-solidaire-maquette/haut-p1440.jpg",
+  "capture_m390": "medias/libre-solidaire-maquette/haut-m390.jpg",
+  "video": "medias/libre-solidaire-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "la photo fixe reste affichée sans WebGL ou en mode calme : ne pas la retirer",
+  "accueil lourd (5,3 Mo) : alléger la photo de fond et les couvertures"
+ ],
+ "mesures": {
+  "hauteur_p1440": 914,
+  "hauteur_m390": 959,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

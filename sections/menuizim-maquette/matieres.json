@@ -1,0 +1,43 @@
+{
+ "id": "menuizim-maquette/matieres",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Matériauthèque à retourner",
+ "role": "outil-interactif",
+ "description": "Grille de matériaux en cartes qui entrent comme des échantillons qu'on déploie (rotation Y), puis se retournent au clic pour montrer leur dos (essence, réalisations liées) ; Échap et bouton fermer rendent le focus.",
+ "animations": [
+  "apparition-au-défilement",
+  "morphing"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:249-331",
+  "css": "assets/css/main.css:399-429",
+  "js": "assets/js/home.js:110-134"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/matieres-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/matieres-m390.jpg",
+  "video": "medias/menuizim-maquette/matieres-p960.mp4"
+ },
+ "pieges": [
+  "dos de carte : aria-hidden et tabIndex -1 tant qu'elle n'est pas retournée",
+  "rendre le focus au bouton à la fermeture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1788,
+  "hauteur_m390": 2980,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

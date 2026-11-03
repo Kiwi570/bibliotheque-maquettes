@@ -1,0 +1,42 @@
+{
+ "id": "libre-solidaire-maquette/reseau",
+ "maquette": "libre-solidaire-maquette",
+ "page": "index",
+ "titre": "Réseau mycélien du catalogue",
+ "role": "outil-interactif",
+ "description": "Canvas 2D : chaque livre est un nœud (sa couverture) relié par un filament vivant au cœur de son territoire ; survol avec infobulle, clic vers la fiche, légende des territoires, animation suspendue hors écran.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:155-169",
+  "css": "assets/css/style.css:375-385,723-725",
+  "js": "assets/js/reseau.js:1-236 ; assets/js/accueil.js:214-217"
+ },
+ "medias": {
+  "capture": "medias/libre-solidaire-maquette/reseau-p1440.jpg",
+  "capture_m390": "medias/libre-solidaire-maquette/reseau-m390.jpg",
+  "video": "medias/libre-solidaire-maquette/reseau-p960.mp4"
+ },
+ "pieges": [
+  "IntersectionObserver pour arrêter la boucle hors écran",
+  "prévoir une liste de liens équivalente : le canvas n'est pas lisible au clavier",
+  "charger les couvertures de façon paresseuse"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1408,
+  "hauteur_m390": 1142,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

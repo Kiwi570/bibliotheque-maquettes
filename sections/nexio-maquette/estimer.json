@@ -1,0 +1,39 @@
+{
+ "id": "nexio-maquette/estimer",
+ "maquette": "nexio-maquette",
+ "page": "index",
+ "titre": "Estimation rapide",
+ "role": "calculateur",
+ "description": "Estimation rapide sur l'accueil : schéma SVG du téléphone dont la pièce choisie s'allume, choix de la marque, du modèle et de la panne, ticket d'estimation (vide tant que la grille tarifaire manque).",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:213-226",
+  "css": "assets/css/site.css:356-369,373-393,488,591,596",
+  "js": "assets/js/home.js:249,253,265 ; assets/js/main.js:182-205"
+ },
+ "medias": {
+  "capture": "medias/nexio-maquette/estimer-p1440.jpg"
+ },
+ "pieges": [
+  "ticket vide sans tarifs (donnée manquante)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1063,
+  "hauteur_m390": 1540,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

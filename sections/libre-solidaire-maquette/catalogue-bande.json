@@ -1,0 +1,45 @@
+{
+ "id": "libre-solidaire-maquette/catalogue-bande",
+ "maquette": "libre-solidaire-maquette",
+ "page": "catalogue",
+ "titre": "Catalogue en grille ou en réseau",
+ "role": "produits",
+ "description": "Résultats du catalogue (117 titres) en grille de couvertures avec badges et ajout au panier, ou en réseau mycélien canvas ; filtres et tri appliqués en direct, état dans l'adresse.",
+ "animations": [
+  "apparition-au-défilement",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "catalogue.html:74-107",
+  "css": "assets/css/style.css:523-572",
+  "js": "assets/js/catalogue.js:1-131 ; assets/js/reseau.js:1-236"
+ },
+ "medias": {
+  "capture": "medias/libre-solidaire-maquette/catalogue-bande-p1440.jpg",
+  "capture_m390": "medias/libre-solidaire-maquette/catalogue-bande-m390.jpg",
+  "video": "medias/libre-solidaire-maquette/catalogue-bande-p960.mp4"
+ },
+ "pieges": [
+  "garder l'état des filtres dans l'adresse (?t=) pour le retour arrière",
+  "117 couvertures : chargement paresseux"
+ ],
+ "mesures": {
+  "hauteur_p1440": 12910,
+  "hauteur_m390": 26995,
+  "epinglee": false,
+  "scrolltriggers": 105
+ }
+}

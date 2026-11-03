@@ -1,0 +1,43 @@
+{
+ "id": "menuizim-maquette/projet-projet-grille",
+ "maquette": "menuizim-maquette",
+ "page": "projet",
+ "titre": "Projet en six étapes",
+ "role": "contact",
+ "description": "Formulaire de démonstration en six étapes (profil, pièce, matériaux, dimensions, délai, coordonnées) : un sentier à six bornes monte à chaque étape, un exemple de réalisation suit la pièce cochée, aperçu des photos jointes restant dans le navigateur, validation par étape et récapitulatif final ; mini-carte d'accès à côté.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "projet.html:79-181",
+  "css": "assets/css/main.css:645-715",
+  "js": "assets/js/projet.js:1-157"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/projet-projet-grille-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/projet-projet-grille-m390.jpg",
+  "video": "medias/menuizim-maquette/projet-projet-grille-p960.mp4"
+ },
+ "pieges": [
+  "annoncer clairement que rien n'est envoyé (démonstration)",
+  "pièce présélectionnée par l'ancre #piece-… depuis une fiche",
+  "les libellés de la mini-carte à 11 px viennent d'un reste de l'audit : à agrandir si on la garde"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1201,
+  "hauteur_m390": 1842,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

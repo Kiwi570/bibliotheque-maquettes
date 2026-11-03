@@ -1,0 +1,43 @@
+{
+ "id": "marco-investigation-maquette/audio",
+ "maquette": "marco-investigation-maquette",
+ "page": "index",
+ "titre": "Supplément audio",
+ "role": "outil-interactif",
+ "description": "Épisode de podcast mis en avant : bouton d'extrait de 30 s avec anneau de progression et onde dessinée à l'encre en canvas 2D qui s'anime au son ; le son ne part qu'au clic.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:269-303",
+  "css": "assets/css/main.css:484-495",
+  "js": "assets/js/main.js:329-442"
+ },
+ "medias": {
+  "capture": "medias/marco-investigation-maquette/audio-p1440.jpg",
+  "capture_m390": "medias/marco-investigation-maquette/audio-m390.jpg",
+  "video": "medias/marco-investigation-maquette/audio-p960.mp4"
+ },
+ "pieges": [
+  "un seul extrait à la fois, état annoncé en aria-live",
+  "canvas suspendus hors écran (IntersectionObserver), dimensionnés au devicePixelRatio plafonné à 2"
+ ],
+ "mesures": {
+  "hauteur_p1440": 927,
+  "hauteur_m390": 1595,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "id": "menuizim-maquette/rideau",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "projet",
+  "realisations",
+  "realisations/banc-exterieur",
+  "realisations/bibliotheque-banc-entree",
+  "realisations/bureau-accueil-osb",
+  "realisations/bureau-placard-claustra",
+  "realisations/bureau-teletravail",
+  "realisations/clapier",
+  "realisations/claustra-bouleau-mezzanine",
+  "realisations/cuisine-ilot-chene",
+  "realisations/dressing-deux-parties",
+  "realisations/dressing-mural",
+  "realisations/dressing-rampants",
+  "realisations/etageres-latte-chene",
+  "realisations/ilot-cuisine-hetre",
+  "realisations/lit-cabane",
+  "realisations/local-poubelles",
+  "realisations/local-velo",
+  "realisations/meuble-entree-banc",
+  "realisations/meuble-salle-de-bain",
+  "realisations/meuble-sdb-suspendu",
+  "realisations/placard-bureau-niche",
+  "realisations/placard-studio",
+  "realisations/rampants-laque-taupe",
+  "realisations/table-basse-merisier",
+  "realisations/tabourets-trois-pieds"
+ ],
+ "titre": "Transition en bande de crayon",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : une bande couleur crayon balaie l'écran au départ puis se retire à l'arrivée ; animations CSS de transform seulement, donc fluides pendant le chargement de la page suivante, et la chronologie GSAP de la page attend que la bande se retire.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:30",
+  "css": "assets/css/main.css:721-742",
+  "js": "assets/js/main.js:454-505"
+ },
+ "medias": {
+  "video": "medias/menuizim-maquette/rideau-p960.mp4"
+ },
+ "pieges": [
+  "sécurité par minuterie : jamais de bande bloquée si animationend ne vient pas",
+  "mettre la timeline globale GSAP en pause pendant l'arrivée, sinon l'ouverture joue sous la bande"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

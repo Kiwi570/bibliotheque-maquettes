@@ -1,0 +1,44 @@
+{
+ "id": "loeilsingulier-maquette/hero",
+ "maquette": "loeilsingulier-maquette",
+ "page": "index",
+ "titre": "Héros à titre doré",
+ "role": "ouverture",
+ "description": "Titre « Donner de la mémoire à l'éphémère » dont les mots dorés sont redessinés en WebGL comme une dorure à chaud froissée (le texte reste dans le DOM), avec tirages photo posés en biais qui se développent.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:72-94",
+  "css": "assets/css/site.css:285-323",
+  "js": "assets/js/foil.mjs ; assets/js/main.js:407-423,813-818"
+ },
+ "medias": {
+  "capture": "medias/loeilsingulier-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/loeilsingulier-maquette/hero-m390.jpg",
+  "video": "medias/loeilsingulier-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "héros étroit en 1920×1080 (reste de l'audit)",
+  "le canevas suit les positions exactes des lettres du DOM : recalculer après le chargement des polices et au redimensionnement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 945,
+  "hauteur_m390": 1109,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

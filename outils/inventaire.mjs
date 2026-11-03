@@ -76,8 +76,12 @@ for (const s of Object.values(sources)) s.js = importsJs(s.js);
 const gabarits = {};
 for (const page of ORDRE) { const s = sources[page];
   const cle = s.blocs.filter(b => b.dansMain).map(b => b.tag + '#' + b.id + '.' + b.classe.trim().split(/\s+/).sort().join('.') + '[' + Object.keys(b.attrs).filter(k => k.startsWith('data-')).sort().join(',') + ']').join('|');
-  const deja = Object.entries(gabarits).find(([, g]) => g.cle === cle && cle.split('|').length > 2);
-  if (deja) { deja[1].pages.push(page); s.gabarit = deja[0]; } else gabarits[page] = { cle, pages: [page] };
+  // Même séquence exacte, ou (pages d'un même dossier) au moins 60 % de blocs communs : fiches services/*, etc.
+  const dos = page.includes('/') ? page.slice(0, page.lastIndexOf('/')) : '';
+  const parts = new Set(cle.split('|'));
+  const proche = g => { if (!dos || g.dos !== dos) return false; const a = g.cle.split('|'); const commun = a.filter(x => parts.has(x)).length; return commun >= 3 && commun / new Set([...a, ...parts]).size >= 0.6; };
+  const deja = Object.entries(gabarits).find(([, g]) => (g.cle === cle && cle.split('|').length > 2) || proche(g));
+  if (deja) { deja[1].pages.push(page); s.gabarit = deja[0]; } else gabarits[page] = { cle, dos, pages: [page] };
 }
 
 // Identifiants des blocs (communs hors main dédoublonnés par signature).
@@ -104,6 +108,7 @@ for (const page of ORDRE) { const s = sources[page];
   }
 }
 
+if (process.env.GABARITS_SEULS) { for (const [k, g] of Object.entries(gabarits)) if (g.pages.length > 1) console.log(k, '←', g.pages.length - 1, 'pages'); console.log(blocs.length, 'blocs'); process.exit(0); }
 // Lignes CSS et JS : règles qui citent une classe exclusive du bloc (ou son id).
 const usageClasses = {};
 for (const [page, s] of Object.entries(sources)) for (const b of s.blocs) for (const c of classesDe(b.noeud)) (usageClasses[page + '|' + c] ??= new Set()).add(b.sig);
@@ -203,7 +208,8 @@ function mesurerDansPage(sigs) {
 const INTRO_MS = 4200;
 const navigateur = await chromium.launch();
 const srv = await servir(DOS);
-const pagesAVisiter = ORDRE.filter(p => !sources[p].gabarit && (!filtrePages || filtrePages.includes(p)));
+// Une page rattachée à un gabarit est visitée quand même si elle apporte des blocs propres (à mesurer et capturer).
+const pagesAVisiter = ORDRE.filter(p => (!sources[p].gabarit || sources[p].blocs.some(b => b.dansMain && b.ref?.page === p)) && (!filtrePages || filtrePages.includes(p)));
 const resultatPages = {};
 const faire = async (p, ms) => { try { return await p.evaluate(ms); } catch (e) { return null; } };
 const scrollerA = (p, y) => p.evaluate(y => { const l = window.lenis || window.__lenis; if (l?.scrollTo) l.scrollTo(y, { immediate: true, force: true }); window.scrollTo(0, y); }, y);

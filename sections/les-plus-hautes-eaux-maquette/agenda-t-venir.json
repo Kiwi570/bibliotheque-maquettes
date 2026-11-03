@@ -1,0 +1,41 @@
+{
+ "id": "les-plus-hautes-eaux-maquette/agenda-t-venir",
+ "maquette": "les-plus-hautes-eaux-maquette",
+ "page": "agenda",
+ "titre": "Prochaines représentations",
+ "role": "agenda",
+ "description": "Liste des prochaines dates générée depuis un fichier unique de données, triée selon la date du jour réelle, avec compte à rebours de la prochaine, ajout à l'agenda (.ics) et lien vers chaque fiche ; filtrable.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "agenda.html:79-86",
+  "css": "assets/css/main.css:606-629",
+  "js": "assets/js/dates.js ; assets/js/pages/agenda.js"
+ },
+ "medias": {
+  "capture": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-p1440.jpg",
+  "capture_m390": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-m390.jpg",
+  "video": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-p960.mp4"
+ },
+ "pieges": [
+  "comparer les dates au jour réel côté client (aucune date passée affichée à venir)",
+  "générer le .ics à la volée par Blob"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2659,
+  "hauteur_m390": 4268,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

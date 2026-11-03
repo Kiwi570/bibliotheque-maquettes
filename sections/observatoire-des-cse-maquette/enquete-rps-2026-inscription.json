@@ -1,0 +1,41 @@
+{
+ "id": "observatoire-des-cse-maquette/enquete-rps-2026-inscription",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "enquete-rps-2026",
+ "titre": "Inscription en trois étapes",
+ "role": "contact",
+ "description": "Formulaire d'inscription simulé en trois étapes (adresse, certification du mandat, choix des avantages) avec indicateur d'étape, validation accessible et message de réussite.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "enquete-rps-2026.html:273-313",
+  "css": "assets/css/main.css:639-649,693-705",
+  "js": "assets/js/forms.js:1-57,77-115"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/enquete-rps-2026-inscription-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/enquete-rps-2026-inscription-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/enquete-rps-2026-inscription-p960.mp4"
+ },
+ "pieges": [
+  "focus déplacé sur le titre de l'étape suivante",
+  "case à cocher agrandie à 44 px sur téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1034,
+  "hauteur_m390": 992,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

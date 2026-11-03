@@ -1,0 +1,45 @@
+{
+ "id": "menuizim-maquette/savoir-faire",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Trois actes épinglés",
+ "role": "méthode",
+ "description": "Concevoir, fabriquer, poser : trois actes sur une piste horizontale épinglée ; dans chaque acte, un dessin technique SVG se trace pendant que la photo se dévoile. Sur téléphone, empilement vertical avec tracé à l'entrée.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "masque",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:120-184",
+  "css": "assets/css/main.css:335-366",
+  "js": "assets/js/home.js:47-97"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/savoir-faire-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/savoir-faire-m390.jpg",
+  "video": "medias/menuizim-maquette/savoir-faire-p960.mp4"
+ },
+ "pieges": [
+  "matchMedia GSAP pour basculer à 900 px : tuer les tweens du mode bureau",
+  "tracés par strokeDasharray mesurés après le chargement des polices"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4163,
+  "hauteur_m390": 2410,
+  "epinglee": true,
+  "scrolltriggers": 8
+ }
+}

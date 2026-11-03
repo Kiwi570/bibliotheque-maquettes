@@ -1,0 +1,43 @@
+{
+ "id": "observatoire-des-cse-maquette/resultats-etude-1",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "resultats",
+ "titre": "Bascule avec ou sans syndicat",
+ "role": "chiffres",
+ "description": "Résultats de l'étude n° 1 avec un sélecteur à pastille glissante « avec présence syndicale / sans organisation syndicale » : barres, jauge et barres horizontales se recalculent en animation, filtre appliqué annoncé en texte.",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "resultats.html:127-168",
+  "css": "assets/css/main.css:398-406,717-723",
+  "js": "assets/js/main.js:103-125 ; assets/js/charts.js:23-134"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/resultats-etude-1-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/resultats-etude-1-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/resultats-etude-1-p960.mp4"
+ },
+ "pieges": [
+  "chaque graphique expose set(clé) pour changer de jeu de données sans se reconstruire",
+  "replacer la pastille après chargement des polices"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1677,
+  "hauteur_m390": 1928,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

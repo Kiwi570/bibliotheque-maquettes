@@ -1,0 +1,48 @@
+{
+ "id": "menuizim-maquette/hero",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Cernes en courbes de niveau",
+ "role": "ouverture",
+ "description": "Ouverture : un champ WebGL (OGL) dessine les cernes d'un tronc qui se résolvent en courbes de niveau et se déforment autour du curseur ; titre en trois verbes découpé lettre par lettre, photo qui se dévoile par masque avec lignes de cote, parallaxe au défilement. Repli SVG des courbes sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "masque",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:65-89",
+  "css": "assets/css/main.css:243-289",
+  "js": "assets/js/contours.js ; assets/js/home.js:9-31 ; assets/js/main.js:413-453"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/hero-m390.jpg",
+  "video": "medias/menuizim-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "courbes qui passent sous l'en-tête sur téléphone et sous la légende à 1440 (reste de l'audit)",
+  "calculer l'altitude sous la souris par sommet, pas par pixel",
+  "repli SVG sans message en console"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1176,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

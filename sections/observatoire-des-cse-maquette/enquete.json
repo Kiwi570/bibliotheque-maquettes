@@ -1,0 +1,43 @@
+{
+ "id": "observatoire-des-cse-maquette/enquete",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "index",
+ "titre": "L'enquête, images qui changent",
+ "role": "manifeste",
+ "description": "Texte en temps forts qui défile à côté d'une image collante ; chaque temps fort, en atteignant le milieu de l'écran, fait changer l'image avec un léger zoom arrière et met à jour le compteur.",
+ "animations": [
+  "section-fixée",
+  "révélation-image",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:118-172",
+  "css": "assets/css/main.css:314-336",
+  "js": "assets/js/main.js:236-253"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/enquete-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/enquete-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/enquete-p960.mp4"
+ },
+ "pieges": [
+  "le changement se fait sur onToggle de chaque temps fort (start et end à 62 %), pas sur la progression globale"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2259,
+  "hauteur_m390": 2610,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

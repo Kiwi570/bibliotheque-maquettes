@@ -1,0 +1,3457 @@
+{
+ "depot": "libre-solidaire-maquette",
+ "commit": "75551cb",
+ "date_commit": "2026-10-28T18:21:12+01:00",
+ "genere": "2026-11-03T00:26:52.376Z",
+ "pages": {
+  "404": {
+   "fichier": "404.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/core.js",
+    "assets/data/livres.js"
+   ],
+   "gabarit": null,
+   "url": "/404",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    },
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "index": {
+   "fichier": "index.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/heros-gl.js",
+    "assets/js/accueil.js",
+    "assets/js/reseau.js",
+    "assets/js/core.js",
+    "assets/data/livres.js"
+   ],
+   "gabarit": null,
+   "url": "/",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    },
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "catalogue": {
+   "fichier": "catalogue.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/catalogue.js",
+    "assets/js/reseau.js",
+    "assets/js/core.js",
+    "assets/data/livres.js"
+   ],
+   "gabarit": null,
+   "url": "/catalogue",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": true,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    },
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "livre": {
+   "fichier": "livre.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/livre.js",
+    "assets/js/core.js",
+    "assets/data/livres.js"
+   ],
+   "gabarit": null,
+   "url": "/livre",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.rideau",
+     "fixe": true,
+     "h": 900
+    },
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  }
+ },
+ "blocs": [
+  {
+   "id": "grain",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "div.grain",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:29-29",
+    "css": "assets/css/style.css:78,636,640,734",
+    "js": null
+   },
+   "titre": "",
+   "hauteur": 1800,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "grain"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/grain-p1440.jpg"
+   }
+  },
+  {
+   "id": "entete",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "header.entete",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:30-41",
+    "css": "assets/css/style.css:105-121,125-133,525,649-650,668,742,756-759",
+    "js": "assets/js/core.js:121-168,209-247,251-302,305-321,454-467,470-496"
+   },
+   "titre": "",
+   "hauteur": 72,
+   "hauteur_m390": 72,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 4,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 1,
+    "images": 0,
+    "liens": 6
+   },
+   "classes_exclusives": [
+    "entete",
+    "entete__in",
+    "marque",
+    "marque__esperluette",
+    "nav",
+    "entete__actions",
+    "recherche-bouton",
+    "recherche-libelle",
+    "raccourci",
+    "calme-libelle",
+    "panier-bouton",
+    "panier-compte",
+    "menu-bouton"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/entete-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/entete-m390.jpg"
+   }
+  },
+  {
+   "id": "menu-plein",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "div#menu-plein.menu-plein",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:42-46",
+    "css": "assets/css/style.css:136-140,743,758",
+    "js": "assets/js/core.js:209-247"
+   },
+   "titre": "Menu",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 5
+   },
+   "classes_exclusives": [
+    "menu-plein",
+    "menu-plein__fermer",
+    "menu-plein__calme"
+   ],
+   "data": [
+    "data-lenis-prevent"
+   ],
+   "medias": {
+    "capture_m390": "medias/libre-solidaire-maquette/menu-plein-m390.jpg"
+   }
+  },
+  {
+   "id": "recherche-rapide",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "div#recherche-rapide.recherche-rapide",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:47-59",
+    "css": "assets/css/style.css:649-669",
+    "js": "assets/js/core.js:251-302"
+   },
+   "titre": "Recherche dans le catalogue",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 1,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 1,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "recherche-rapide",
+    "recherche-rapide__fond",
+    "recherche-rapide__boite",
+    "recherche-rapide__champ",
+    "recherche-rapide__resultats",
+    "recherche-rapide__pied"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-fermer-recherche"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "ouverture",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.ouverture",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:60-65",
+    "css": "assets/css/style.css:179-185",
+    "js": "assets/js/accueil.js:1,23,55,58-59,64"
+   },
+   "titre": "",
+   "hauteur": null,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": null,
+   "cache": null,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": null,
+   "classes_exclusives": [
+    "ouverture",
+    "ouverture__mot",
+    "ouverture__compteur",
+    "ouverture__passer"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "haut",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#haut.heros",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:69-92",
+    "css": "assets/css/style.css:208-235,761",
+    "js": "assets/js/heros-gl.js:11 ; assets/js/accueil.js:13-14,26,30-32,72-75 ; assets/data/livres.js:2"
+   },
+   "titre": "Des livres pour appréhender l’avenir de notre société.",
+   "hauteur": 914,
+   "hauteur_m390": 959,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 914,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 914,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 914,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 914,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 14,
+   "proprietes": [
+    "x",
+    "y",
+    "rotationX",
+    "rotationY",
+    "yPercent",
+    "opacity"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 5,
+    "liens": 5
+   },
+   "classes_exclusives": [
+    "heros",
+    "heros__fond",
+    "heros__grille",
+    "heros__titre",
+    "heros__sous",
+    "heros__actions",
+    "heros__livres",
+    "heros__legende",
+    "heros__defiler"
+   ],
+   "data": [
+    "data-photo",
+    "data-heros-livres"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/haut-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/haut-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/haut-p960.mp4"
+   }
+  },
+  {
+   "id": "maison",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#maison.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:94-107",
+    "css": "assets/css/style.css:247-262,637,641",
+    "js": "assets/js/accueil.js:1,79,82,87,90,94-98,179-180,293,329-347"
+   },
+   "titre": "La ligne éditoriale",
+   "hauteur": 1068,
+   "hauteur_m390": 847,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 426,
+     "fin": 1113,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 726,
+     "fin": 906,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 726,
+     "fin": 906,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 804,
+     "fin": 984,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 804,
+     "fin": 984,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 804,
+     "fin": 984,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 894,
+     "fin": 1766,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 894,
+     "fin": 1766,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 894,
+     "fin": 1766,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 894,
+     "fin": 1766,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 14,
+     "fin": 1982,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 7,
+   "proprietes": [
+    "opacity",
+    "strokeDashoffset",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "ligne",
+    "ligne__fond",
+    "ligne__phrase",
+    "cle",
+    "ligne__source",
+    "chiffres",
+    "chiffre",
+    "chiffre__valeur",
+    "chiffre__libelle"
+   ],
+   "data": [
+    "data-parallaxe",
+    "data-ligne",
+    "data-compteur",
+    "data-nb"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/maison-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/maison-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/maison-p960.mp4"
+   }
+  },
+  {
+   "id": "horizon",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.horizon",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:109-109",
+    "css": "assets/css/style.css:705-708",
+    "js": "assets/js/accueil.js:294"
+   },
+   "titre": "",
+   "hauteur": 56,
+   "hauteur_m390": 56,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 1127,
+     "fin": 1577,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1307,
+     "fin": 2038,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "strokeDashoffset",
+    "scale",
+    "transformOrigin"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "horizon"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/horizon-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/horizon-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/horizon-p960.mp4"
+   }
+  },
+  {
+   "id": "nouveautes",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#nouveautes.nouveautes",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:110-122",
+    "css": "assets/css/style.css:265-270,280-286,292-302,306-310",
+    "js": "assets/js/accueil.js:104,107,114,119-120,123,138,142"
+   },
+   "titre": "Ce qui vient de germer",
+   "hauteur": 2324,
+   "hauteur_m390": 891,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.8,
+     "debut": 2038,
+     "fin": 3462,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1408,
+     "fin": 4362,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1415,
+     "fin": 2244,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 32,
+   "proprietes": [
+    "rotationX",
+    "rotationY",
+    "skewX",
+    "x",
+    "yPercent",
+    "rotateZ",
+    "opacity",
+    "rotateX",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 8,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 9,
+    "liens": 16
+   },
+   "classes_exclusives": [
+    "nouveautes",
+    "nouveautes__epingle",
+    "nouveautes__fond",
+    "compteur-piste",
+    "piste",
+    "barre-piste"
+   ],
+   "data": [
+    "data-photo",
+    "data-titre-split",
+    "data-compteur-piste",
+    "data-piste",
+    "data-barre-piste"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/nouveautes-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/nouveautes-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/nouveautes-p960.mp4"
+   }
+  },
+  {
+   "id": "a-paraitre",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#a-paraitre.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:124-138",
+    "css": "assets/css/style.css:313-328,339-344",
+    "js": "assets/js/accueil.js:146-147,153,167-168,175"
+   },
+   "titre": "Ce qui pousse sous la surface",
+   "hauteur": 1463,
+   "hauteur_m390": 2292,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 4099,
+     "fin": 5127,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3982,
+     "fin": 4876,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4054,
+     "fin": 4876,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4084,
+     "fin": 4957,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4156,
+     "fin": 4957,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4165,
+     "fin": 5037,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4237,
+     "fin": 5037,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4245,
+     "fin": 5140,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4317,
+     "fin": 5140,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4348,
+     "fin": 5220,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4428,
+     "fin": 5301,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4509,
+     "fin": 5382,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4590,
+     "fin": 5484,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4692,
+     "fin": 5565,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4773,
+     "fin": 5667,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4388,
+     "fin": 5391,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3802,
+     "fin": 4694,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 16,
+   "proprietes": [
+    "scaleY",
+    "x",
+    "opacity",
+    "scale",
+    "rotate",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 11,
+    "liens": 10
+   },
+   "classes_exclusives": [
+    "parutions",
+    "parutions__visuel",
+    "decompte",
+    "frise",
+    "frise__trait"
+   ],
+   "data": [
+    "data-titre-split",
+    "data-photo",
+    "data-decompte",
+    "data-frise"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/a-paraitre-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/a-paraitre-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/a-paraitre-p960.mp4"
+   }
+  },
+  {
+   "id": "horizon-2",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.horizon",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:140-140",
+    "css": "assets/css/style.css:705-708",
+    "js": "assets/js/accueil.js:294"
+   },
+   "titre": "",
+   "hauteur": 56,
+   "hauteur_m390": 56,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 4970,
+     "fin": 5420,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5150,
+     "fin": 5881,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "strokeDashoffset",
+    "scale",
+    "transformOrigin"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "horizon"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/horizon-2-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/horizon-2-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/horizon-2-p960.mp4"
+   }
+  },
+  {
+   "id": "territoires",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#territoires.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:141-152",
+    "css": "assets/css/style.css:348-350,368-369",
+    "js": "assets/js/accueil.js:185"
+   },
+   "titre": "Un catalogue en strates",
+   "hauteur": 3470,
+   "hauteur_m390": 3137,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 5689,
+     "fin": 8652,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5554,
+     "fin": 6969,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5599,
+     "fin": 6969,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 5329,
+     "fin": 6969,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5689,
+     "fin": 6969,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5689,
+     "fin": 6429,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6294,
+     "fin": 7710,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6339,
+     "fin": 7710,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6069,
+     "fin": 7710,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6429,
+     "fin": 7710,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6429,
+     "fin": 7170,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7035,
+     "fin": 8451,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7080,
+     "fin": 8451,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6810,
+     "fin": 8451,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7170,
+     "fin": 8451,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7170,
+     "fin": 7911,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7776,
+     "fin": 9192,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7821,
+     "fin": 9192,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 7551,
+     "fin": 9192,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7911,
+     "fin": 9192,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7911,
+     "fin": 8652,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5321,
+     "fin": 6149,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 18,
+   "proprietes": [
+    "top",
+    "clipPath",
+    "y",
+    "opacity",
+    "scale",
+    "yPercent",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 16,
+    "liens": 16
+   },
+   "classes_exclusives": [
+    "territoires__scene",
+    "carotte",
+    "carotte__tube"
+   ],
+   "data": [
+    "data-titre-split",
+    "data-carotte",
+    "data-strates"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/territoires-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/territoires-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/territoires-p960.mp4"
+   }
+  },
+  {
+   "id": "horizon-3",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.horizon",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:154-154",
+    "css": "assets/css/style.css:705-708",
+    "js": "assets/js/accueil.js:294"
+   },
+   "titre": "",
+   "hauteur": 56,
+   "hauteur_m390": 56,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 8496,
+     "fin": 8946,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8676,
+     "fin": 9407,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "strokeDashoffset",
+    "scale",
+    "transformOrigin"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "horizon"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/horizon-3-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/horizon-3-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/horizon-3-p960.mp4"
+   }
+  },
+  {
+   "id": "reseau",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#reseau.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:155-169",
+    "css": "assets/css/style.css:375-385,723-725",
+    "js": "assets/js/accueil.js:215 ; assets/js/reseau.js:4-24,90"
+   },
+   "titre": "Tout le catalogue, relié comme un sol vivant",
+   "hauteur": 1408,
+   "hauteur_m390": 1142,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8846,
+     "fin": 9739,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent",
+    "opacity",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "reseau",
+    "reseau__cadre",
+    "reseau__infobulle",
+    "reseau__legende",
+    "reseau__aide"
+   ],
+   "data": [
+    "data-titre-split",
+    "data-reseau"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/reseau-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/reseau-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/reseau-p960.mp4"
+   }
+  },
+  {
+   "id": "vin",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#vin.vin",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:171-191",
+    "css": "assets/css/style.css:388-408",
+    "js": "assets/js/accueil.js:218-221,229-236,240 ; assets/js/reseau.js:63 ; assets/js/core.js:121-136 ; assets/data/livres.js:2"
+   },
+   "titre": "De la vigne au livre",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10185,
+     "fin": 11355,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 9915,
+     "fin": 11715,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10095,
+     "fin": 10905,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10149,
+     "fin": 10905,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10203,
+     "fin": 10905,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10538,
+     "fin": 11272,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10275,
+     "fin": 11104,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 7,
+   "proprietes": [
+    "--teinte",
+    "scale",
+    "strokeDashoffset",
+    "y",
+    "opacity",
+    "yPercent",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 12,
+    "liens": 11
+   },
+   "classes_exclusives": [
+    "vin",
+    "vin__scene",
+    "vin__photo",
+    "vin__teinte",
+    "vin__voile",
+    "vin__vrilles",
+    "vin__grille",
+    "vin__vedette",
+    "vin__etagere"
+   ],
+   "data": [
+    "data-vin",
+    "data-photo",
+    "data-titre-split",
+    "data-vin-nb",
+    "data-vin-vedette",
+    "data-vin-etagere"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/vin-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/vin-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/vin-p960.mp4"
+   }
+  },
+  {
+   "id": "horizon-4",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.horizon",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:193-193",
+    "css": "assets/css/style.css:705-708",
+    "js": "assets/js/accueil.js:294"
+   },
+   "titre": "",
+   "hauteur": 56,
+   "hauteur_m390": 56,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10860,
+     "fin": 11310,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11040,
+     "fin": 11771,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "strokeDashoffset",
+    "scale",
+    "transformOrigin"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "horizon"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/horizon-4-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/horizon-4-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/horizon-4-p960.mp4"
+   }
+  },
+  {
+   "id": "auteurs",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#auteurs.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:194-205",
+    "css": "assets/css/style.css:412-425",
+    "js": "assets/js/accueil.js:1,110,164,225,244,248,252-254 ; assets/js/reseau.js:127 ; assets/js/core.js:31,251-302,500 ; assets/data/livres.js:2"
+   },
+   "titre": "Celles et ceux qui écrivent",
+   "hauteur": 1901,
+   "hauteur_m390": 2017,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11399,
+     "fin": 13469,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10871,
+     "fin": 13672,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11210,
+     "fin": 12039,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "x",
+    "y",
+    "opacity",
+    "yPercent",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 14
+   },
+   "classes_exclusives": [
+    "auteurs",
+    "auteurs__fond",
+    "auteurs__liste",
+    "auteurs__note",
+    "auteurs__flottant"
+   ],
+   "data": [
+    "data-parallaxe",
+    "data-photo",
+    "data-titre-split",
+    "data-nb-auteurs",
+    "data-auteurs"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/auteurs-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/auteurs-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/auteurs-p960.mp4"
+   }
+  },
+  {
+   "id": "manuscrits",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#manuscrits.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:207-244",
+    "css": "assets/css/style.css:428-444,455,676-702,746",
+    "js": "assets/js/accueil.js:273-281,286-288,301-303,313-327 ; assets/data/livres.js:2"
+   },
+   "titre": "Vous écrivez sur notre époque ?",
+   "hauteur": 1433,
+   "hauteur_m390": 1904,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 13212,
+     "fin": 13871,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13168,
+     "fin": 14060,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 6,
+   "proprietes": [
+    "x",
+    "y",
+    "scaleX",
+    "transformOrigin",
+    "yPercent",
+    "rotateX",
+    "opacity",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 6,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "papier",
+    "manuscrits__grille",
+    "conditions",
+    "adresse",
+    "formulaire",
+    "formulaire__ligne",
+    "champ__titre",
+    "fichier",
+    "fichier__bouton",
+    "fichier__nom",
+    "enveloppe-scene",
+    "enveloppe",
+    "enveloppe__dos",
+    "enveloppe__feuille",
+    "enveloppe__devant",
+    "enveloppe__rabat"
+   ],
+   "data": [
+    "data-titre-split",
+    "data-form-manuscrit",
+    "data-fichier-nom",
+    "data-photo",
+    "data-enveloppe"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/manuscrits-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/manuscrits-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/manuscrits-p960.mp4"
+   }
+  },
+  {
+   "id": "lettre",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#lettre.lettre",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:246-265",
+    "css": "assets/css/style.css:458-465",
+    "js": "assets/js/accueil.js:1,287-289"
+   },
+   "titre": "Recevoir les nouvelles pousses",
+   "hauteur": 892,
+   "hauteur_m390": 1011,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14685,
+     "fin": 15577,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent",
+    "opacity",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 3,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "lettre",
+    "lettre__cadre",
+    "lettre__visuel",
+    "lettre__graine",
+    "lettre__form",
+    "champ--large"
+   ],
+   "data": [
+    "data-photo",
+    "data-titre-split",
+    "data-form-lettre"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/lettre-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/lettre-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/lettre-p960.mp4"
+   }
+  },
+  {
+   "id": "contact",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "footer#contact.pied",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:268-298",
+    "css": "assets/css/style.css:468-484,672-673,733,738-741,747-751",
+    "js": "assets/js/core.js:305-321,406-439,442-451,470-496"
+   },
+   "titre": "La maison",
+   "hauteur": 656,
+   "hauteur_m390": 1151,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 15694,
+     "fin": 16667,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent",
+    "opacity",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 15
+   },
+   "classes_exclusives": [
+    "pied",
+    "pied__fond",
+    "pied__racines",
+    "pied__colonnes",
+    "pied__titre",
+    "pied__coord",
+    "selectionnable",
+    "copier",
+    "pied__marque",
+    "pied__bas",
+    "haut-de-page"
+   ],
+   "data": [
+    "data-copier",
+    "data-haut"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/contact-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/contact-p960.mp4"
+   }
+  },
+  {
+   "id": "tiroir-fond",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "div.tiroir-fond",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:299-299",
+    "css": "assets/css/style.css:487-490",
+    "js": "assets/js/core.js:454-467"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "tiroir-fond"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "tiroir",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "catalogue",
+    "livre"
+   ],
+   "sig": "aside.tiroir",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:300-307",
+    "css": "assets/css/style.css:95,488-493,502-509",
+    "js": "assets/js/accueil.js:164 ; assets/js/core.js:137-172,454-467"
+   },
+   "titre": "Panier",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "tiroir",
+    "tiroir__tete",
+    "tiroir__fermer",
+    "tiroir__liste",
+    "tiroir__totaux",
+    "tiroir__note",
+    "tiroir__commande",
+    "paiement",
+    "a-completer"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-commander"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/tiroir-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/tiroir-m390.jpg"
+   }
+  },
+  {
+   "id": "404-cat-heros",
+   "page": "404",
+   "pages": [
+    "404"
+   ],
+   "sig": "section.cat-heros",
+   "dans_main": true,
+   "code": {
+    "html": "404.html:60-72",
+    "css": "assets/css/style.css:92-93,146-148,152,219,516-522",
+    "js": "assets/js/core.js:137-162,346-353"
+   },
+   "titre": "Cette page n’a pas encore poussé.",
+   "hauteur": 702,
+   "hauteur_m390": 658,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "cat-heros",
+    "cat-heros__fond",
+    "surtitre",
+    "cat-heros__titre",
+    "cat-heros__sous",
+    "heros__actions",
+    "magnetique",
+    "bouton--creux"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/404-cat-heros-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/404-cat-heros-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/404-cat-heros-p960.mp4"
+   }
+  },
+  {
+   "id": "catalogue-cat-heros",
+   "page": "catalogue",
+   "pages": [
+    "catalogue"
+   ],
+   "sig": "section.cat-heros",
+   "dans_main": true,
+   "code": {
+    "html": "catalogue.html:60-72",
+    "css": "assets/css/style.css:92-93,516-522",
+    "js": "assets/js/catalogue.js:20,26-29"
+   },
+   "titre": "Le catalogue",
+   "hauteur": 524,
+   "hauteur_m390": 360,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "cat-heros",
+    "cat-heros__fond",
+    "surtitre",
+    "cat-heros__titre",
+    "cat-heros__sous"
+   ],
+   "data": [
+    "data-photo",
+    "data-nb-total"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/catalogue-cat-heros-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/catalogue-cat-heros-m390.jpg"
+   }
+  },
+  {
+   "id": "catalogue-filtres",
+   "page": "catalogue",
+   "pages": [
+    "catalogue"
+   ],
+   "sig": "div.filtres",
+   "dans_main": true,
+   "code": {
+    "html": "catalogue.html:74-90",
+    "css": "assets/css/style.css:523-531,537-546,565-571,730,737,748-749",
+    "js": "assets/js/catalogue.js:1,32-34,42,85,111,117-121"
+   },
+   "titre": "",
+   "hauteur": 120,
+   "hauteur_m390": 250,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 4,
+    "boutons": 7,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "filtres",
+    "filtres__in",
+    "recherche",
+    "puces",
+    "filtres__droite",
+    "select-mini",
+    "prix-max",
+    "vue-bascule"
+   ],
+   "data": [
+    "data-puces",
+    "data-prix-max",
+    "data-vue"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/catalogue-filtres-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/catalogue-filtres-m390.jpg"
+   }
+  },
+  {
+   "id": "catalogue-bande",
+   "page": "catalogue",
+   "pages": [
+    "catalogue"
+   ],
+   "sig": "section.bande",
+   "dans_main": true,
+   "code": {
+    "html": "catalogue.html:92-107",
+    "css": "assets/css/style.css:146-149,376-385,544-547,560-562,572,723-725,731",
+    "js": "assets/js/catalogue.js:38,86,89-92,95,125 ; assets/js/reseau.js:4-24,90 ; assets/js/core.js:137-162"
+   },
+   "titre": "Agir grâce à l'écoconstruction",
+   "hauteur": 12910,
+   "hauteur_m390": 26995,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 910,
+     "fin": 2255,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 910,
+     "fin": 2255,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 910,
+     "fin": 2255,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1440,
+     "fin": 2785,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1440,
+     "fin": 2785,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1440,
+     "fin": 2785,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1440,
+     "fin": 2785,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1440,
+     "fin": 2785,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1970,
+     "fin": 3337,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1970,
+     "fin": 3337,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1970,
+     "fin": 3337,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1970,
+     "fin": 3337,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1970,
+     "fin": 3337,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2522,
+     "fin": 3867,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2522,
+     "fin": 3867,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2522,
+     "fin": 3867,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2522,
+     "fin": 3867,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2522,
+     "fin": 3867,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3052,
+     "fin": 4398,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3052,
+     "fin": 4398,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3052,
+     "fin": 4398,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3052,
+     "fin": 4398,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3052,
+     "fin": 4398,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3583,
+     "fin": 4928,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3583,
+     "fin": 4928,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3583,
+     "fin": 4928,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3583,
+     "fin": 4928,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3583,
+     "fin": 4928,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4113,
+     "fin": 5458,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4113,
+     "fin": 5458,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4113,
+     "fin": 5458,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4113,
+     "fin": 5458,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4113,
+     "fin": 5458,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4643,
+     "fin": 5989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4643,
+     "fin": 5989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4643,
+     "fin": 5989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4643,
+     "fin": 5989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4643,
+     "fin": 5989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5174,
+     "fin": 6540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5174,
+     "fin": 6540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5174,
+     "fin": 6540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5174,
+     "fin": 6540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5174,
+     "fin": 6540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5725,
+     "fin": 7071,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5725,
+     "fin": 7071,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5725,
+     "fin": 7071,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5725,
+     "fin": 7071,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5725,
+     "fin": 7071,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6256,
+     "fin": 7601,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6256,
+     "fin": 7601,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6256,
+     "fin": 7601,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6256,
+     "fin": 7601,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6256,
+     "fin": 7601,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6786,
+     "fin": 8131,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6786,
+     "fin": 8131,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6786,
+     "fin": 8131,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6786,
+     "fin": 8131,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6786,
+     "fin": 8131,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7316,
+     "fin": 8662,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7316,
+     "fin": 8662,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7316,
+     "fin": 8662,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7316,
+     "fin": 8662,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7316,
+     "fin": 8662,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7847,
+     "fin": 9192,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7847,
+     "fin": 9192,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7847,
+     "fin": 9192,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7847,
+     "fin": 9192,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7847,
+     "fin": 9192,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8377,
+     "fin": 9723,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8377,
+     "fin": 9723,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8377,
+     "fin": 9723,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8377,
+     "fin": 9723,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8377,
+     "fin": 9723,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8908,
+     "fin": 10253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8908,
+     "fin": 10253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8908,
+     "fin": 10253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8908,
+     "fin": 10253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8908,
+     "fin": 10253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9438,
+     "fin": 10783,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9438,
+     "fin": 10783,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9438,
+     "fin": 10783,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9438,
+     "fin": 10783,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9438,
+     "fin": 10783,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9968,
+     "fin": 11314,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9968,
+     "fin": 11314,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9968,
+     "fin": 11314,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9968,
+     "fin": 11314,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9968,
+     "fin": 11314,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10499,
+     "fin": 11844,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10499,
+     "fin": 11844,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10499,
+     "fin": 11844,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10499,
+     "fin": 11844,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10499,
+     "fin": 11844,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11029,
+     "fin": 12374,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11029,
+     "fin": 12374,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11029,
+     "fin": 12374,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11029,
+     "fin": 12374,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11029,
+     "fin": 12374,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11559,
+     "fin": 12905,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11559,
+     "fin": 12905,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11559,
+     "fin": 12905,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11559,
+     "fin": 12905,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11559,
+     "fin": 12905,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12090,
+     "fin": 13414,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12090,
+     "fin": 13414,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 118,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 117,
+    "liens": 234
+   },
+   "classes_exclusives": [
+    "resultats-info",
+    "grille-livres",
+    "vide",
+    "bouton--creux",
+    "bouton--petit",
+    "cat-reseau",
+    "reseau__cadre",
+    "reseau__infobulle",
+    "reseau__legende",
+    "reseau__aide"
+   ],
+   "data": [
+    "data-info",
+    "data-grille",
+    "data-vide",
+    "data-reinit",
+    "data-cat-reseau",
+    "data-reseau"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/catalogue-bande-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/catalogue-bande-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/catalogue-bande-p960.mp4"
+   }
+  },
+  {
+   "id": "livre-fiche",
+   "page": "livre",
+   "pages": [
+    "livre"
+   ],
+   "sig": "section.fiche",
+   "dans_main": true,
+   "code": {
+    "html": "livre.html:60-94",
+    "css": "assets/css/style.css:146-152,576-587,591-611,621-622,627-630,717-719,731-733,751,765-766",
+    "js": "assets/js/livre.js:1,17,28,45,51-52,55-56,63-74,82,85,93,105,109-111,124 ; assets/js/core.js:56-58,121-162,346-353 ; assets/data/livres.js:2"
+   },
+   "titre": "Le Principe fertilité",
+   "hauteur": 2363,
+   "hauteur_m390": 2532,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 163,
+     "fin": 1347,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 5,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "fiche",
+    "fiche__fond",
+    "fil",
+    "fiche__grille",
+    "fiche__scene",
+    "fiche__aide",
+    "fiche__infos",
+    "fiche__titre",
+    "fiche__auteur",
+    "fiche__achat",
+    "fiche__prix",
+    "fiche__dispo",
+    "quantite",
+    "magnetique",
+    "fiche__loi",
+    "bouton--creux",
+    "bouton--petit",
+    "fiche__partage",
+    "fiche__bloc",
+    "fiche__texte",
+    "caracteristiques",
+    "extrait",
+    "extrait__nav"
+   ],
+   "data": [
+    "data-photo",
+    "data-fil",
+    "data-scene",
+    "data-label",
+    "data-titre",
+    "data-auteur",
+    "data-avis",
+    "data-prix",
+    "data-dispo",
+    "data-qte-pas",
+    "data-qte-out",
+    "data-ajouter-fiche",
+    "data-partage",
+    "data-resume",
+    "data-bio",
+    "data-carac",
+    "data-extrait",
+    "data-tourner"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/livre-fiche-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/livre-fiche-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/livre-fiche-p960.mp4"
+   }
+  },
+  {
+   "id": "livre-meme-sol",
+   "page": "livre",
+   "pages": [
+    "livre"
+   ],
+   "sig": "section.meme-sol",
+   "dans_main": true,
+   "code": {
+    "html": "livre.html:95-100",
+    "css": "assets/css/style.css:92-93,240-244,293,623-625",
+    "js": "assets/js/livre.js:101-102,106"
+   },
+   "titre": "Du même auteur",
+   "hauteur": 803,
+   "hauteur_m390": 699,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1643,
+     "fin": 3165,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "meme-sol",
+    "section__tete",
+    "surtitre",
+    "section__titre",
+    "meme-sol__piste"
+   ],
+   "data": [
+    "data-meme-titre",
+    "data-meme-sol"
+   ],
+   "medias": {
+    "capture": "medias/libre-solidaire-maquette/livre-meme-sol-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/livre-meme-sol-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/livre-meme-sol-p960.mp4"
+   }
+  }
+ ]
+}

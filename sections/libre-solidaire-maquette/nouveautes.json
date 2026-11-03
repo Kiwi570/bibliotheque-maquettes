@@ -1,0 +1,42 @@
+{
+ "id": "libre-solidaire-maquette/nouveautes",
+ "maquette": "libre-solidaire-maquette",
+ "page": "index",
+ "titre": "Nouveautés en galerie épinglée",
+ "role": "produits",
+ "description": "Galerie horizontale épinglée des nouveautés : livres en 3D inclinables, territoire, prix et ajout au panier, compteur 01/08.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:110-122",
+  "css": "assets/css/style.css:265-310",
+  "js": "assets/js/accueil.js:103-145"
+ },
+ "medias": {
+  "capture": "medias/libre-solidaire-maquette/nouveautes-p1440.jpg",
+  "capture_m390": "medias/libre-solidaire-maquette/nouveautes-m390.jpg",
+  "video": "medias/libre-solidaire-maquette/nouveautes-p960.mp4"
+ },
+ "pieges": [
+  "couvertures en flex: 1 et min-height: 0 pour tenir à 1024×640 (corrigé après l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2324,
+  "hauteur_m390": 891,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

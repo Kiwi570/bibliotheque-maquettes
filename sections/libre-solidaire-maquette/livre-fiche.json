@@ -1,0 +1,42 @@
+{
+ "id": "libre-solidaire-maquette/livre-fiche",
+ "maquette": "libre-solidaire-maquette",
+ "page": "livre",
+ "titre": "Fiche livre en 3D",
+ "role": "produits",
+ "description": "Fiche livre : le livre en 3D tourne au défilement et au glisser (quatrième provisoire au dos), prix, disponibilité, quantité, ajout au panier, caractéristiques et extrait ; manques marqués « à compléter ».",
+ "animations": [
+  "section-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "livre.html:60-94",
+  "css": "assets/css/style.css:146-152,576-587,591-611,621-622,627-630,717-719,731-733,751,765-766",
+  "js": "assets/js/livre.js:1,17,28,45,51-52,55-56,63-74,82,85,93,105,109-111,124 ; assets/js/core.js:56-58,121-162,346-353 ; assets/data/livres.js:2"
+ },
+ "medias": {
+  "capture": "medias/libre-solidaire-maquette/livre-fiche-p1440.jpg",
+  "capture_m390": "medias/libre-solidaire-maquette/livre-fiche-m390.jpg",
+  "video": "medias/libre-solidaire-maquette/livre-fiche-p960.mp4"
+ },
+ "pieges": [
+  "CLS 0,22 en mode réduit : réserver la scène 3D par aspect-ratio (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2363,
+  "hauteur_m390": 2532,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

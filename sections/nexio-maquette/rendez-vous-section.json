@@ -1,0 +1,42 @@
+{
+ "id": "nexio-maquette/rendez-vous-section",
+ "maquette": "nexio-maquette",
+ "page": "rendez-vous",
+ "titre": "Rendez-vous en quatre étapes",
+ "role": "contact",
+ "description": "Prise de rendez-vous en quatre étapes (appareil, créneau, coordonnées, récapitulatif) : choix du modèle et des pannes, jours et créneaux disponibles calculés, validation accessible par étape, récapitulatif avant envoi simulé ; plan et horaires à côté.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "rendez-vous.html:59-134",
+  "css": "assets/css/site.css:510-553",
+  "js": "assets/js/rdv.js"
+ },
+ "medias": {
+  "capture": "medias/nexio-maquette/rendez-vous-section-p1440.jpg",
+  "capture_m390": "medias/nexio-maquette/rendez-vous-section-m390.jpg",
+  "video": "medias/nexio-maquette/rendez-vous-section-p960.mp4"
+ },
+ "pieges": [
+  "les créneaux dépendent des horaires réels du client : tant qu'ils manquent, le dire",
+  "champs à 16 px pour éviter le zoom iOS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1099,
+  "hauteur_m390": 1927,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

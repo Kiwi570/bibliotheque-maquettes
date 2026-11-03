@@ -1,0 +1,44 @@
+{
+ "id": "laure-polin-maquette/manifeste",
+ "maquette": "laure-polin-maquette",
+ "page": "index",
+ "titre": "Manifeste au portrait collant",
+ "role": "manifeste",
+ "description": "Portrait de l'artiste collant à gauche, borné à la hauteur de l'écran ; le texte s'éclaire mot à mot au défilement (scrub), puis trois gestes animés chacun à sa manière : éclats qui se rassemblent, flou qui se dissipe, secousse.",
+ "animations": [
+  "révélation-texte",
+  "section-fixée",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:66-86",
+  "css": "assets/css/site.css:256-272",
+  "js": "assets/js/accueil.js:146-165"
+ },
+ "medias": {
+  "capture": "medias/laure-polin-maquette/manifeste-p1440.jpg",
+  "capture_m390": "medias/laure-polin-maquette/manifeste-m390.jpg",
+  "video": "medias/laure-polin-maquette/manifeste-p960.mp4"
+ },
+ "pieges": [
+  "borner le portrait collant à 100svh moins l'en-tête, légende comprise",
+  "texte complet visible en mode calme (pas de découpage en mots)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1723,
+  "hauteur_m390": 1635,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "marco-investigation-maquette/une",
+ "maquette": "marco-investigation-maquette",
+ "page": "index",
+ "titre": "La une du jour",
+ "role": "ouverture",
+ "description": "Ouverture en une de quotidien : calage de la presse (repères de coupe, compteur en %), titre de journal qui s'imprime lettre à lettre, filets qui se tracent, sommaire folioté et article principal dont la photo se révèle en trame de demi-teintes WebGL (repli CSS en points).",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "webgl-shader",
+  "révélation-image"
+ ],
+ "interactions": [
+  "lecteur-vidéo"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:77-159",
+  "css": "assets/css/main.css:309-362",
+  "js": "assets/js/main.js:523-554 ; assets/js/halftone.js:86-211"
+ },
+ "medias": {
+  "capture": "medias/marco-investigation-maquette/une-p1440.jpg",
+  "capture_m390": "medias/marco-investigation-maquette/une-m390.jpg",
+  "video": "medias/marco-investigation-maquette/une-p960.mp4"
+ },
+ "pieges": [
+  "l'intro de calage ne joue qu'à la première visite (sessionStorage) et pas après une transition de page",
+  "titre de journal en nowrap : prévoir un plancher de taille pour 320 px",
+  "révéler la photo d'un coup (api.set(1)) en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1276,
+  "hauteur_m390": 2219,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

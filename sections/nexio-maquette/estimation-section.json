@@ -1,0 +1,44 @@
+{
+ "id": "nexio-maquette/estimation-section",
+ "maquette": "nexio-maquette",
+ "page": "estimation",
+ "titre": "Radiographie 3D et estimation",
+ "role": "calculateur",
+ "description": "Estimateur en quatre champs (marque, modèle avec recherche, panne, type de pièce) à côté d'un téléphone 3D en radiographie (three.js) collant : la pièce choisie s'allume et se nomme ; ticket qui se compose.",
+ "animations": [
+  "webgl-shader",
+  "section-fixée"
+ ],
+ "interactions": [
+  "calculateur",
+  "simulateur"
+ ],
+ "dependances": [
+  "three",
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "estimation.html:58-103",
+  "css": "assets/css/site.css:471-509",
+  "js": "assets/js/estimation.js ; assets/js/phone3d.js"
+ },
+ "medias": {
+  "capture": "medias/nexio-maquette/estimation-section-p1440.jpg",
+  "capture_m390": "medias/nexio-maquette/estimation-section-m390.jpg",
+  "video": "medias/nexio-maquette/estimation-section-p960.mp4"
+ },
+ "pieges": [
+  "ticket vide tant que la grille tarifaire manque (reste de l'audit)",
+  "un seul renderer three.js partagé entre les modes hero et xray"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1454,
+  "hauteur_m390": 2183,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "nexio-maquette/site-header",
+ "maquette": "nexio-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "estimation",
+  "mentions-legales",
+  "rendez-vous"
+ ],
+ "titre": "En-tête",
+ "role": "menu",
+ "description": "En-tête fixe : logo, quatre liens, téléphone à compléter, bouton « Animations activées » (mode calme) et bouton Prendre RDV ; masqué à la descente, réapparaît au focus.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "mode-calme"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:28-39",
+  "css": "assets/css/site.css:118,134-145,152-158,593-598",
+  "js": "assets/js/main.js:113-167,295-322,358-375"
+ },
+ "medias": {
+  "capture": "medias/nexio-maquette/site-header-p1440.jpg"
+ },
+ "pieges": [
+  "l'en-tête masqué doit revenir dès qu'un de ses éléments reçoit le focus"
+ ],
+ "mesures": {
+  "hauteur_p1440": 74,
+  "hauteur_m390": 74,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

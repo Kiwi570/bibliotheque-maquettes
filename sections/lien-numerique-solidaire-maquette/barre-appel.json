@@ -1,0 +1,42 @@
+{
+ "id": "lien-numerique-solidaire-maquette/barre-appel",
+ "maquette": "lien-numerique-solidaire-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "reinsertion",
+  "services"
+ ],
+ "titre": "Barre d'appel",
+ "role": "barre-fixe",
+ "description": "Barre fixe du téléphone avec appel et rendez-vous, visible seulement une fois le héros dépassé, masquée sur le pied, les formulaires et la 404.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:444-447",
+  "css": "assets/css/site.css:148,191-202,675-676",
+  "js": "assets/js/site.js:254-267"
+ },
+ "medias": {},
+ "pieges": [
+  "IntersectionObserver sur le héros, le pied et les formulaires ; le pied réserve la hauteur mesurée de la barre"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

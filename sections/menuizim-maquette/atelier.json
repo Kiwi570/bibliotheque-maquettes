@@ -1,0 +1,42 @@
+{
+ "id": "menuizim-maquette/atelier",
+ "maquette": "menuizim-maquette",
+ "page": "index",
+ "titre": "Atelier et carte avec loupe",
+ "role": "carte",
+ "description": "Présentation de l'atelier participatif sur fond nuit, carte schématique jusqu'à Strasbourg et loupe qui montre une carte ancienne sous le curseur.",
+ "animations": [
+  "apparition-au-défilement",
+  "masque"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:351-389",
+  "css": "assets/css/main.css:455-462,466-481",
+  "js": "assets/js/home.js:170-171,199-202,207-209,217 ; assets/js/main.js:408 ; assets/js/data.js:8,125-132"
+ },
+ "medias": {
+  "capture": "medias/menuizim-maquette/atelier-p1440.jpg",
+  "capture_m390": "medias/menuizim-maquette/atelier-m390.jpg",
+  "video": "medias/menuizim-maquette/atelier-p960.mp4"
+ },
+ "pieges": [
+  "libellés SVG de la carte à 11 px d'unité (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2094,
+  "hauteur_m390": 2647,
+  "epinglee": false,
+  "scrolltriggers": 11
+ }
+}

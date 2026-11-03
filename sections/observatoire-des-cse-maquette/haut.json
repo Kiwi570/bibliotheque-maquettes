@@ -1,0 +1,47 @@
+{
+ "id": "observatoire-des-cse-maquette/haut",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "index",
+ "titre": "Héros prise de pouls",
+ "role": "ouverture",
+ "description": "Ouverture « Prise de pouls » : titre éditorial en Fraunces, lentille ronde où la photo ondule en WebGL à chaque battement et au survol, graduations SVG autour, puis la ligne de pouls (canvas fixe) part du héros, agitée, et traverse toute la page en s'apaisant ; ses points de passage sont des éléments [data-pulse] posés dans les sections.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:85-115",
+  "css": "assets/css/main.css:263-300",
+  "js": "assets/js/heroGL.js ; assets/js/pulse.js ; assets/js/main.js:90-101,167-186,327-394"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/haut-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/haut-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "la ligne de pouls recalcule ses ancres au refresh de ScrollTrigger (pulse.rebuild), jamais au défilement",
+  "bouton principal sous la ligne de flottaison sur tablette et téléphone (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 820,
+  "hauteur_m390": 1054,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

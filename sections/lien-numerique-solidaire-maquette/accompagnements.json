@@ -1,0 +1,43 @@
+{
+ "id": "lien-numerique-solidaire-maquette/accompagnements",
+ "maquette": "lien-numerique-solidaire-maquette",
+ "page": "index",
+ "titre": "Galerie des accompagnements",
+ "role": "services",
+ "description": "Galerie horizontale épinglée : les cartes d'accompagnement défilent avec le défilement vertical (scrub), étiquettes qui pivotent ; flèches précédent/suivant et défilement natif sans GSAP.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-image"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:89-132",
+  "css": "assets/css/site.css:304-338",
+  "js": "assets/js/site.js:650-705,841-846"
+ },
+ "medias": {
+  "capture": "medias/lien-numerique-solidaire-maquette/accompagnements-p1440.jpg",
+  "capture_m390": "medias/lien-numerique-solidaire-maquette/accompagnements-m390.jpg",
+  "video": "medias/lien-numerique-solidaire-maquette/accompagnements-p960.mp4"
+ },
+ "pieges": [
+  "méthode « tout tenir dans l'écran » : .galerie__collant en 100svh, colonne flex, padding-top à la hauteur mesurée de l'en-tête (coupé à 1366×768 avant correction)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2670,
+  "hauteur_m390": 1253,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

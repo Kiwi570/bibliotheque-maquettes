@@ -1,0 +1,43 @@
+{
+ "id": "observatoire-des-cse-maquette/pouls",
+ "maquette": "observatoire-des-cse-maquette",
+ "page": "index",
+ "titre": "Les chiffres de la 1re étude",
+ "role": "chiffres",
+ "description": "Résultat d'une vraie étude en jauge demi-cercle et barres verticales SVG qui se tracent à l'entrée dans l'écran, avec légendes et sources.",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:175-223",
+  "css": "assets/css/main.css:340-391",
+  "js": "assets/js/charts.js:1-134 ; assets/js/main.js:103-110"
+ },
+ "medias": {
+  "capture": "medias/observatoire-des-cse-maquette/pouls-p1440.jpg",
+  "capture_m390": "medias/observatoire-des-cse-maquette/pouls-m390.jpg",
+  "video": "medias/observatoire-des-cse-maquette/pouls-p960.mp4"
+ },
+ "pieges": [
+  "les couleurs des graphiques sont lues dans les variables CSS (css())",
+  "texte des SVG mis à l'échelle par --fs pour rester ≥ 12 px sur téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2202,
+  "hauteur_m390": 2749,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

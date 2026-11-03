@@ -1,0 +1,49 @@
+{
+ "id": "les-plus-hautes-eaux-maquette/vague",
+ "maquette": "les-plus-hautes-eaux-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "agenda",
+  "spectacles/carnet-de-routes",
+  "spectacles/cellule-247",
+  "spectacles/cosmagonie",
+  "spectacles/hippolyte-et-jody",
+  "spectacles/mimo-et-tuf",
+  "spectacles/roxanne-et-la-maladie-du-bully",
+  "spectacles/tout-ce-que-je-veux-pour-noel"
+ ],
+ "titre": "Transition en vague",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : deux vagues SVG texturées montent et couvrent l'écran avant la navigation, puis la nappe se retire vers le haut à l'arrivée ; réinitialisée au retour arrière.",
+ "animations": [
+  "transition-de-page",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "transition-vague",
+ "code": {
+  "html": "index.html:66",
+  "css": "assets/css/main.css:275-278",
+  "js": "assets/js/app.js:371-400"
+ },
+ "medias": {},
+ "pieges": [
+  "écouter pageshow (persisted) pour masquer la vague au retour arrière"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

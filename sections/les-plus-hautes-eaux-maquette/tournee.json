@@ -1,0 +1,43 @@
+{
+ "id": "les-plus-hautes-eaux-maquette/tournee",
+ "maquette": "les-plus-hautes-eaux-maquette",
+ "page": "index",
+ "titre": "Carte de la tournée",
+ "role": "carte",
+ "description": "Carte SVG du Grand Ouest (et de la France) où chaque commune jouée s'allume en ondes année après année au défilement ; curseur d'années et bascule de vue ; chiffres clés à côté. La carte n'est chargée qu'à l'approche de la section.",
+ "animations": [
+  "progression-fixée",
+  "compteur"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:150-173",
+  "css": "assets/css/main.css:404-432",
+  "js": "assets/js/pages/accueil.js:125-146 ; assets/js/carte.js"
+ },
+ "medias": {
+  "capture": "medias/les-plus-hautes-eaux-maquette/tournee-p1440.jpg",
+  "capture_m390": "medias/les-plus-hautes-eaux-maquette/tournee-m390.jpg",
+  "video": "medias/les-plus-hautes-eaux-maquette/tournee-p960.mp4"
+ },
+ "pieges": [
+  "points de la carte sous 44 px (reste de l'audit)",
+  "contours (170 Ko) chargés par IntersectionObserver"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1037,
+  "hauteur_m390": 1032,
+  "epinglee": false,
+  "scrolltriggers": 10
+ }
+}

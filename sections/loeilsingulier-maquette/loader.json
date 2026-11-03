@@ -1,0 +1,37 @@
+{
+ "id": "loeilsingulier-maquette/loader",
+ "maquette": "loeilsingulier-maquette",
+ "page": "index",
+ "titre": "Ouverture : cachet de cire et enveloppe",
+ "role": "ouverture",
+ "description": "Écran d'ouverture : un cachet de cire se fend, le rabat bleu nuit de l'enveloppe s'ouvre et laisse place au titre doré ; joué une fois par session, ignoré en mode calme.",
+ "animations": [
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:26-40",
+  "css": "assets/css/site.css:220-235",
+  "js": "assets/js/main.js:304-342"
+ },
+ "medias": {},
+ "pieges": [
+  "titre lisible à 3 s seulement (reste de l'audit) : raccourcir avant de réutiliser",
+  "mémoriser l'ouverture en sessionStorage pour ne pas la rejouer à chaque page"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}
