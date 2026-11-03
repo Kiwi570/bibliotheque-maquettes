@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Eau qui réfracte · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #061418; --couleur-texte: #eaf4f2; --couleur-accent: #9fd8c8; --couleur-secondaire: #2f7f8c; --police-titres: "Helvetica Neue", Arial, sans-serif; --rayon: 4px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="eau" data-module="eau-qui-refracte" aria-labelledby="eau-titre">
+    <div class="eau__fond" aria-hidden="true"></div>
+    <canvas class="eau__canvas" aria-hidden="true"></canvas>
+    <div class="eau__voile" aria-hidden="true"></div>
+    <div class="eau__cadre socle-cadre">
+      <p class="socle-surtitre">Surtitre de la page</p>
+      <h1 class="eau__titre" id="eau-titre">Titre de la page en deux lignes.</h1>
+      <div class="eau__bas">
+        <p class="eau__texte">Un paragraphe de deux lignes qui présente l'activité, ce que l'on propose et à qui, avant les deux boutons d'action.</p>
+        <div class="eau__actions">
+          <a class="socle-bouton socle-bouton--plein" href="#suite">Action principale</a>
+          <a class="socle-bouton" href="#suite">Action secondaire</a>
+        </div>
+      </div>
+      <div class="eau__indice" aria-hidden="true"><span class="eau__indice-souris">Passez la souris sur l'eau</span><span class="eau__indice-doigt">Touchez l'eau</span></div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Remontez : l'eau se calme à mesure que l'on défile, et chaque passage du pointeur y dépose des ronds.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Encore une section</p>
+    <h2>Un dernier bloc pour tester le défilement</h2>
+    <p>Hors écran, la boucle s'arrête ; elle reprend dès que l'ouverture revient dans la fenêtre.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  // Option : init(el, { image: 'photo.jpg', focus: [.5, .7] }) ; sans image, un fond de bassin neutre est généré.
+  for (const el of document.querySelectorAll('[data-module="eau-qui-refracte"]')) init(el).then(api => { window.__eau = api; });
+</script>
+</body>
+</html>

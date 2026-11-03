@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Objet à l'échelle · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f1efea; --couleur-texte: #1e2024; --couleur-accent: #2f6a8a; --couleur-secondaire: #b07a4f; --couleur-sur-accent: #f7f6f2; --police-titres: "Iowan Old Style", Georgia, serif; --rayon: 8px; }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, choisissez un objet, sa taille, sa pose et un décor : il se redimensionne à côté d'une silhouette de 1,70 m.</p>
+  </section>
+
+  <section class="oae socle-cadre" data-module="objet-a-l-echelle" aria-labelledby="oae-titre">
+    <div class="oae__corps">
+      <div class="oae__tete">
+        <p class="socle-surtitre">Essai à l'échelle</p>
+        <h2 class="oae__titre" id="oae-titre">Voir l'objet à sa vraie taille</h2>
+        <p class="oae__texte">Un paragraphe court qui invite à comparer les formats avant de choisir : la pièce est montrée à ses dimensions réelles, à côté d'une silhouette et d'un meuble de référence.</p>
+      </div>
+      <div class="oae__scene" data-scene aria-label="Objet à l'échelle"><p class="oae__repli">Dimensions : tableau 60 × 80 cm, lampadaire 40 × 160 cm, sculpture 30 × 45 cm, tenture 90 × 120 cm.</p></div>
+      <div class="oae__commandes" data-commandes></div>
+    </div>
+
+    <template data-objet="tableau" data-nom="Tableau encadré" data-pose="mur" data-variantes="Petit:40x50x3|Moyen:60x80x3|Grand:90x120x4" data-choisie="1">
+      <div class="oae-v--cadre"><span class="socle-visuel"></span></div>
+    </template>
+    <template data-objet="lampadaire" data-nom="Lampadaire" data-pose="sol" data-variantes="Bas:40x140|Standard:40x160|Haut:45x185">
+      <svg class="oae-v--svg" viewBox="0 0 40 160" preserveAspectRatio="none" focusable="false"><path class="oae-v__plein" d="M8 0h24l8 30H0z"/><rect class="oae-v__trait" x="19" y="30" width="2" height="124"/><rect class="oae-v__trait" x="9" y="154" width="22" height="6" rx="2"/></svg>
+    </template>
+    <template data-objet="sculpture" data-nom="Sculpture" data-pose="console sol" data-variantes="Petite:30x45x20|Moyenne:45x70x30|Grande:60x100x40" data-note="Posée sur une console ou au sol">
+      <svg class="oae-v--svg" viewBox="0 0 30 45" preserveAspectRatio="none" focusable="false"><path class="oae-v__second" d="M11 0h8c1 5-1 7-2 9 6 3 11 9 11 18 0 9-4 14-8 16H9c-4-2-8-7-8-16 0-9 5-15 11-18-1-2-3-4-1-9z"/><rect class="oae-v__trait" x="6" y="43" width="18" height="2"/></svg>
+    </template>
+    <template data-objet="tenture" data-nom="Tenture murale" data-pose="mur" data-variantes="Sur mesure:90x120" data-libre="30-200" data-pas="5" data-note="Largeur au choix, hauteur proportionnelle">
+      <div class="oae-v--tenture"></div>
+    </template>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, l'objet change de taille d'un coup, sans animation ; les dimensions sont toujours écrites en clair.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="objet-a-l-echelle"]')) init(el);
+</script>
+</body>
+</html>

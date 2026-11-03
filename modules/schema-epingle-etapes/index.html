@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Schéma épinglé en étapes · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f2f1ec; --couleur-texte: #1c2127; --couleur-accent: #2d6a99; --couleur-secondaire: #9a5a2e; --couleur-sur-accent: #f7f6f2; --rayon: 10px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le schéma reste à l'écran et chaque étape en allume une partie.</p>
+  </section>
+
+  <!-- Exemple 1 : quatre étapes, boîtes, flèches, zone et jauge. Téléphone : schéma compact collé en haut. -->
+  <section class="see" data-module="schema-epingle-etapes" data-epingle aria-labelledby="see1-titre">
+    <div class="see__scene">
+      <div class="see__grille socle-cadre">
+        <div class="see__texte" data-tient="texte">
+          <p class="socle-surtitre see__surtitre">Le principe</p>
+          <h2 class="see__titre" id="see1-titre">Comment cela fonctionne, en quatre temps</h2>
+          <ol class="see__etapes">
+            <li class="see__etape" data-see-jauge="20" data-see-valeur="20 %">
+              <p class="see__n">Étape 01</p>
+              <h3>Une entrée</h3>
+              <p>Un paragraphe de deux ou trois lignes qui explique ce qui entre dans le système et d'où cela vient.</p>
+            </li>
+            <li class="see__etape" data-see-jauge="45" data-see-valeur="45 %">
+              <p class="see__n">Étape 02</p>
+              <h3>Le cœur transforme</h3>
+              <p>Un paragraphe qui décrit la transformation : ce qui change, à quel endroit, et pourquoi c'est utile.</p>
+            </li>
+            <li class="see__etape" data-see-jauge="70" data-see-valeur="70 %">
+              <p class="see__n">Étape 03</p>
+              <h3>Une zone de contrôle encadre le tout</h3>
+              <p>Un paragraphe qui présente la partie qui surveille ou protège le cœur du système.</p>
+            </li>
+            <li class="see__etape" data-see-jauge="100" data-see-valeur="100 %">
+              <p class="see__n">Étape 04</p>
+              <h3>La sortie, puis le retour</h3>
+              <p>Un paragraphe qui décrit le résultat et la boucle qui ramène au point de départ.</p>
+            </li>
+          </ol>
+        </div>
+        <figure class="see__schema" data-tient="schéma">
+          <div class="see__plan">
+            <svg class="see__svg" viewBox="0 0 400 300" aria-hidden="true" focusable="false">
+              <rect class="see__fond" width="400" height="300"/>
+              <g data-see-des="3"><rect class="see__zone" x="134" y="56" width="132" height="170" rx="14"/></g>
+              <g data-see-partie="4">
+                <path class="see__trait" d="M340 185 V262 H60 V192"/>
+                <path class="see__flux" d="M340 185 V262 H60 V192"/>
+                <path class="see__pointe" d="M53 200 L60 189 L67 200"/>
+              </g>
+              <g data-see-partie="1 2">
+                <path class="see__trait" d="M100 150 H152"/>
+                <path class="see__flux" d="M100 150 H152"/>
+                <path class="see__pointe" d="M150 143 L160 150 L150 157"/>
+              </g>
+              <g data-see-partie="4">
+                <path class="see__trait" d="M240 150 H292"/>
+                <path class="see__flux" d="M240 150 H292"/>
+                <path class="see__pointe" d="M290 143 L300 150 L290 157"/>
+              </g>
+              <g data-see-partie="1"><rect class="see__boite" x="20" y="115" width="80" height="70" rx="8"/><path class="see__detail" d="M36 140 H84 M36 152 H84 M36 164 H70"/></g>
+              <g data-see-partie="2 3"><rect class="see__boite" x="160" y="100" width="80" height="100" rx="10"/><circle class="see__detail" cx="200" cy="168" r="14"/><path class="see__detail" d="M188 168 H212 M200 156 V180"/></g>
+              <g data-see-partie="4"><rect class="see__boite" x="300" y="115" width="80" height="70" rx="8"/><path class="see__detail" d="M316 140 H364 M316 152 H364 M316 164 H350"/></g>
+            </svg>
+            <span class="see__etiquette" data-see-partie="1" style="--x: 15%; --y: 31%">Entrée</span>
+            <span class="see__etiquette" data-see-partie="2 3" style="--x: 50%; --y: 42%">Cœur</span>
+            <span class="see__etiquette" data-see-partie="4" style="--x: 85%; --y: 31%">Sortie</span>
+            <span class="see__etiquette" data-see-des="3" style="--x: 50%; --y: 18.5%">Zone de contrôle</span>
+            <span class="see__etiquette" data-see-partie="4" style="--x: 50%; --y: 87.3%">Retour</span>
+          </div>
+          <div class="see__jauge">
+            <div class="see__tube" aria-hidden="true"><span class="see__niveau"></span></div>
+            <p class="see__valeur" data-see-valeur>100 %</p>
+          </div>
+          <figcaption class="socle-sr">Schéma de principe : une entrée alimente un cœur entouré d'une zone de contrôle, qui mène à une sortie ; une boucle de retour revient à l'entrée. Une jauge indique l'avancement.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section intermédiaire</p>
+    <h2>Une seconde variante, sans jauge</h2>
+    <p>Ci-dessous, les couches s'ajoutent d'étape en étape. Sur téléphone, le schéma est répété dans chaque étape.</p>
+  </section>
+
+  <!-- Exemple 2 : trois étapes, calques qui s'ajoutent (data-see-des), sans jauge. Téléphone : schéma répété par étape. -->
+  <section class="see" data-module="schema-epingle-etapes" data-epingle data-see-telephone="repete" aria-labelledby="see2-titre">
+    <div class="see__scene">
+      <div class="see__grille socle-cadre">
+        <div class="see__texte" data-tient="texte">
+          <p class="socle-surtitre see__surtitre">En coupe</p>
+          <h2 class="see__titre" id="see2-titre">Trois couches, trois effets</h2>
+          <ol class="see__etapes">
+            <li class="see__etape">
+              <p class="see__n">Étape 01</p>
+              <h3>Une première couche</h3>
+              <p>Un paragraphe qui explique ce que la première couche apporte et ce qu'elle laisse encore passer.</p>
+            </li>
+            <li class="see__etape">
+              <p class="see__n">Étape 02</p>
+              <h3>Une deuxième couche</h3>
+              <p>Un paragraphe qui décrit la deuxième couche et la différence qu'elle fait.</p>
+            </li>
+            <li class="see__etape">
+              <p class="see__n">Étape 03</p>
+              <h3>La finition</h3>
+              <p>Un paragraphe qui décrit la dernière couche et le résultat d'ensemble.</p>
+            </li>
+          </ol>
+        </div>
+        <figure class="see__schema" data-tient="schéma">
+          <div class="see__plan">
+            <svg class="see__svg" viewBox="0 0 400 300" aria-hidden="true" focusable="false">
+              <rect class="see__fond" width="400" height="300"/>
+              <g data-see-partie="1 2 3"><path class="see__trait" d="M12 170 H380"/><path class="see__flux" d="M12 170 H380"/><path class="see__pointe" d="M374 163 L384 170 L374 177"/></g>
+              <g data-see-partie="1 2"><path class="see__trait" d="M12 212 H380"/><path class="see__flux" d="M12 212 H380"/><path class="see__pointe" d="M374 205 L384 212 L374 219"/></g>
+              <g data-see-partie="1"><path class="see__trait" d="M12 254 H380"/><path class="see__flux" d="M12 254 H380"/><path class="see__pointe" d="M374 247 L384 254 L374 261"/></g>
+              <rect class="see__boite see__boite--fixe" x="40" y="24" width="60" height="252"/>
+              <g data-see-des="1"><rect class="see__couche" x="100" y="24" width="56" height="252"/></g>
+              <g data-see-des="2"><rect class="see__couche see__couche--2" x="156" y="24" width="56" height="252"/></g>
+              <g data-see-des="3"><rect class="see__couche see__couche--3" x="212" y="24" width="18" height="252"/></g>
+              <g data-see-des="1"><path class="see__detail" d="M128 45 H290"/></g>
+              <g data-see-des="2"><path class="see__detail" d="M184 85 H290"/></g>
+              <g data-see-des="3"><path class="see__detail" d="M221 125 H290"/></g>
+            </svg>
+            <span class="see__etiquette" data-see-des="1" style="--x: 85%; --y: 15%">Couche 1</span>
+            <span class="see__etiquette" data-see-des="2" style="--x: 85%; --y: 28.3%">Couche 2</span>
+            <span class="see__etiquette" data-see-des="3" style="--x: 85%; --y: 41.6%">Finition</span>
+          </div>
+          <figcaption class="socle-sr">Coupe d'une paroi : un support, puis trois couches ajoutées l'une après l'autre ; à chaque couche, un flux de moins traverse la paroi.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Après la dernière étape, le schéma reste dans son état final. En mode calme, tout est allumé d'emblée.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="schema-epingle-etapes"]')) init(el, { telephone: el.dataset.seeTelephone || 'compact' });
+</script>
+</body>
+</html>

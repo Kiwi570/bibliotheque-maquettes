@@ -1,0 +1,65 @@
+{
+ "nom": "telephone-epingle",
+ "titre": "Téléphone épinglé dont l'écran change à chaque étape d'un parcours",
+ "role": "étapes",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "visite-guidee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "observatoire-des-cse-maquette/participer",
+  "warmline-app-maquette/scene-texte"
+ ],
+ "convient_a": [
+  "numérique",
+  "services-b2b",
+  "conseil",
+  "formation",
+  "association",
+  "collectivité",
+  "santé",
+  "bien-être",
+  "finance",
+  "immobilier",
+  "commerce",
+  "hébergement",
+  "restauration",
+  "sport"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "sobre",
+  "nocturne",
+  "doux",
+  "énergique",
+  "froid"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "cote": "place du téléphone épinglé : 'droite' (défaut, ou data-cote), 'gauche', 'centre'",
+  "transition": "passage d'un écran au suivant : 'glissement' (défaut) ou 'fondu'",
+  "parEtape": "défilement par étape en hauteurs d'écran, 0.8",
+  "lissage": "valeur scrub, 0.6",
+  "largeurMin": "900 : en dessous, un écran par étape dans le flux",
+  "hauteurMin": "500 : en dessous, un écran par étape dans le flux"
+ },
+ "poids_ko": 18.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

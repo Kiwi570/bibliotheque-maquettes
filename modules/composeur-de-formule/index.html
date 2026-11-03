@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Composeur de formule · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #eef0ec; --couleur-texte: #1d2422; --couleur-accent: #2f6b5a; --couleur-secondaire: #c9853a; --couleur-sur-accent: #f4f6f2; --police-titres: "Avenir Next", "Segoe UI", system-ui, sans-serif; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, composez une formule : le récapitulatif et le total se mettent à jour à chaque choix.</p>
+  </section>
+
+  <section class="cdf socle-cadre" data-module="composeur-de-formule" data-epingle aria-labelledby="cdf-titre">
+    <!-- Tarifs : uniquement ici, jamais dans module.js. Les clés sont les value des champs du formulaire. -->
+    <script type="application/json" class="cdf__donnees">
+    {
+      "devise": "EUR",
+      "bases": {
+        "essentielle": { "prix": 30, "par": ["personnes", "seances"] },
+        "complete": { "prix": 45, "par": ["personnes", "seances"] },
+        "sur-mesure": { "prix": null }
+      },
+      "options": {
+        "materiel": { "prix": 8, "par": ["personnes"] },
+        "support": { "prix": 15 },
+        "deplacement": { "prix": 20, "par": ["seances"], "avec": ["essentielle", "complete"] },
+        "soiree": { "prix": 10, "par": ["seances"] }
+      },
+      "remises": [
+        { "quantite": "seances", "des": 5, "pourcent": 10, "libelle": "Remise dès 5 séances" }
+      ]
+    }
+    </script>
+    <div class="cdf__tete">
+      <p class="socle-surtitre">Composer sa formule</p>
+      <h2 class="cdf__titre" id="cdf-titre">Votre formule, votre tarif</h2>
+      <p class="cdf__intro">Choisissez une base, le nombre de personnes et de séances, puis les options utiles : le total s'ajuste à chaque choix.</p>
+    </div>
+
+    <div class="cdf__grille">
+      <form class="cdf__form" novalidate>
+        <fieldset class="cdf__groupe">
+          <legend class="cdf__legende"><span class="cdf__num" aria-hidden="true">1</span>Une base</legend>
+          <div class="cdf__choix-liste">
+            <label class="cdf__choix"><input type="radio" name="base" value="essentielle" checked><span class="cdf__carte"><b class="cdf__nom">Essentielle</b><small>Le cœur de la prestation, sans détour.</small><span class="cdf__prix" data-prix></span></span></label>
+            <label class="cdf__choix"><input type="radio" name="base" value="complete"><span class="cdf__carte"><b class="cdf__nom">Complète</b><small>Plus de temps et un suivi entre deux séances.</small><span class="cdf__prix" data-prix></span></span></label>
+            <label class="cdf__choix"><input type="radio" name="base" value="sur-mesure"><span class="cdf__carte"><b class="cdf__nom">Sur mesure</b><small>Un programme construit avec vous.</small><span class="cdf__prix" data-prix></span></span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="cdf__groupe">
+          <legend class="cdf__legende"><span class="cdf__num" aria-hidden="true">2</span>Combien</legend>
+          <div class="cdf__qte">
+            <label for="cdf-personnes">Personnes <small>de 1 à 12</small></label>
+            <div class="cdf__pas">
+              <button type="button" data-pas="-1" aria-label="Une personne de moins">−</button>
+              <input id="cdf-personnes" name="personnes" type="number" min="1" max="12" step="1" value="2" inputmode="numeric" data-unites="personne|personnes">
+              <button type="button" data-pas="1" aria-label="Une personne de plus">+</button>
+            </div>
+          </div>
+          <div class="cdf__qte">
+            <label for="cdf-seances">Séances <small>de 1 à 10</small></label>
+            <div class="cdf__pas">
+              <button type="button" data-pas="-1" aria-label="Une séance de moins">−</button>
+              <input id="cdf-seances" name="seances" type="number" min="1" max="10" step="1" value="3" inputmode="numeric" data-unites="séance|séances">
+              <button type="button" data-pas="1" aria-label="Une séance de plus">+</button>
+            </div>
+          </div>
+          <p class="cdf__astuce" data-astuce></p>
+        </fieldset>
+
+        <fieldset class="cdf__groupe">
+          <legend class="cdf__legende"><span class="cdf__num" aria-hidden="true">3</span>Des options</legend>
+          <div class="cdf__choix-liste">
+            <label class="cdf__choix"><input type="checkbox" name="options" value="materiel" checked><span class="cdf__carte"><b class="cdf__nom">Matériel fourni</b><small>Tout est prêt à l'arrivée.</small><span class="cdf__prix" data-prix></span></span></label>
+            <label class="cdf__choix"><input type="checkbox" name="options" value="support"><span class="cdf__carte"><b class="cdf__nom">Support imprimé</b><small>Un livret à garder.</small><span class="cdf__prix" data-prix></span></span></label>
+            <label class="cdf__choix"><input type="checkbox" name="options" value="deplacement"><span class="cdf__carte"><b class="cdf__nom">Déplacement</b><small>Chez vous ou sur votre lieu.</small><span class="cdf__prix" data-prix></span></span></label>
+            <label class="cdf__choix"><input type="checkbox" name="options" value="soiree"><span class="cdf__carte"><b class="cdf__nom">Créneau du soir</b><small>Après 19 h.</small><span class="cdf__prix" data-prix></span></span></label>
+          </div>
+        </fieldset>
+
+        <div class="cdf__mini" aria-hidden="true">
+          <span class="cdf__mini-total"><small>Total</small> <b data-total-mini>—</b></span>
+          <a class="socle-bouton" href="#cdf-recap" tabindex="-1">Voir le détail</a>
+        </div>
+      </form>
+
+      <aside class="cdf__recap" id="cdf-recap" data-tient aria-labelledby="cdf-recap-titre">
+        <p class="socle-surtitre" id="cdf-recap-titre">Votre formule</p>
+        <p class="cdf__total"><span class="socle-sr">Total estimé : </span><span data-total>—</span></p>
+        <p class="cdf__par" data-par-unite></p>
+        <p class="cdf__mention">Tarifs indicatifs de démonstration</p>
+        <a class="socle-bouton socle-bouton--plein cdf__appel" href="#contact">Demander cette formule</a>
+        <ul class="cdf__lignes" data-lignes aria-label="Détail du calcul"></ul>
+        <p class="socle-sr" aria-live="polite" aria-atomic="true" data-annonce></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="contact">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le composeur fonctionne au clavier : flèches dans les bases, espace sur les options, boutons plus et moins.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="composeur-de-formule"]')) init(el);
+</script>
+</body>
+</html>

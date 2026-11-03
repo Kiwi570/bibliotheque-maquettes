@@ -1,0 +1,109 @@
+/* Téléphone épinglé — identité uniquement par les variables du socle.
+   Sans JavaScript, en mode calme et sous la largeur ou la hauteur minimales : chaque étape montre son propre écran (.tep__mini).
+   Mode épinglé (classe tep--epinglee posée par module.js) : un seul téléphone, les écrans y sont déplacés et défilent. */
+.tep {
+  --tep-coque: color-mix(in oklab, var(--couleur-fond) 84%, var(--couleur-texte));
+  --tep-papier: color-mix(in oklab, var(--couleur-texte) 94%, var(--couleur-fond));
+  --tep-encre: color-mix(in oklab, var(--couleur-fond) 94%, var(--couleur-texte));
+  --tep-encre-douce: color-mix(in oklab, var(--tep-encre) 68%, var(--tep-papier));
+  --tep-trait: color-mix(in oklab, var(--tep-encre) 16%, var(--tep-papier));
+  --tep-carte: color-mix(in oklab, var(--tep-papier) 70%, var(--couleur-texte));
+  --tep-pad: clamp(12px, 3.6vh, 40px);
+  position: relative; padding-block: clamp(56px, 8vw, 112px);
+}
+.tep__cadre { display: grid; gap: clamp(28px, 5vh, 56px); }
+.tep__tete { display: grid; gap: 12px; align-content: end; }
+.tep__titre { font-size: clamp(2rem, 4.4vw, 3.8rem); line-height: 1.02; padding-block: .06em; max-width: 18ch; }
+.tep__intro { color: var(--couleur-texte-doux); max-width: 44ch; }
+.tep__action { margin-top: 6px; }
+
+/* Étapes */
+.tep__etapes { list-style: none; margin: 0; padding: 0; display: grid; align-content: start; }
+.tep__etape { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: clamp(12px, 1.6vw, 20px); row-gap: 18px; padding-block: clamp(18px, 3vh, 32px); border-top: 1px solid var(--couleur-ligne); scroll-margin-top: calc(var(--entete-h) + 16px); }
+.tep__etape:last-child { border-bottom: 1px solid var(--couleur-ligne); }
+.tep__n, .tep__aller { font-family: var(--police-mono); font-size: max(12px, .82rem); letter-spacing: .08em; color: var(--couleur-accent); font-variant-numeric: tabular-nums; }
+.tep__n { display: block; padding-top: .35em; }
+.tep__aller { display: grid; place-items: center; width: 44px; height: 44px; margin-top: -10px; padding: 0; border: 1px solid var(--couleur-ligne); border-radius: 50%; background: transparent; cursor: pointer; transition: background .35s, color .35s, border-color .35s; }
+.tep__aller .tep__n { padding: 0; color: inherit; }
+.tep__aller:hover { border-color: var(--couleur-accent); }
+.tep__etape.est-active .tep__aller { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.tep__texte { display: grid; gap: 6px; align-content: start; }
+.tep__t { font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); line-height: 1.2; }
+.tep__d { color: var(--couleur-texte-doux); max-width: 46ch; }
+
+/* Écran par étape (flux) : téléphone réduit à côté du texte, ou dessous sur petit téléphone. */
+.tep__mini { grid-column: 2; justify-self: start; width: min(176px, 52vw); }
+@media (min-width: 480px) {
+  .tep__etape { grid-template-columns: 44px minmax(0, 1fr) clamp(124px, 26vw, 180px); }
+  .tep__mini { grid-column: 3; grid-row: 1; width: 100%; }
+}
+@media (min-width: 900px) {
+  .tep__cadre { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+  .tep__tete { position: sticky; top: calc(var(--entete-h) + 32px); align-content: start; }
+}
+
+/* Téléphone (mini ou épinglé) : coque, encoche, écran clair. Les tailles internes sont en em, l'em suit la largeur de l'écran. */
+.tep__appareil { position: relative; aspect-ratio: 9 / 19.5; padding: 4.2%; border-radius: 15% / 7%; background: var(--tep-coque); box-shadow: 0 0 0 1px var(--couleur-ligne), 0 40px 80px -40px color-mix(in oklab, var(--couleur-fond) 40%, transparent); container-type: inline-size; }
+.tep__appareil::before { content: ""; position: absolute; z-index: 3; top: 3.3%; left: 50%; width: 30%; height: 3.4%; translate: -50% 0; border-radius: 999px; background: var(--tep-coque); }
+.tep__ecran { position: relative; height: 100%; overflow: hidden; border-radius: 11% / 5.2%; background: var(--tep-papier); color: var(--tep-encre); font-size: calc(100cqw / 20.5); line-height: 1.4; font-family: var(--police-texte); }
+.tep__ecran::before { content: "9:41"; position: absolute; z-index: 2; top: 1.05em; left: 1.6em; font-size: .9em; font-weight: 600; }
+.tep__ecran::after { content: ""; position: absolute; z-index: 2; left: 50%; bottom: .55em; width: 34%; height: .3em; translate: -50% 0; border-radius: 9px; background: var(--tep-encre); opacity: .35; }
+.tep__vue { position: absolute; inset: 0; display: flex; flex-direction: column; gap: .8em; padding: 4.2em 1.3em 2em; background: var(--tep-papier); will-change: transform; }
+.tep__vue--centre { justify-content: center; text-align: center; align-items: stretch; }
+.tep__vue > p { margin: 0; }
+
+/* Éléments d'écran de démonstration (neutres) */
+.tep-marque { font-family: var(--police-mono); font-size: .78em; letter-spacing: .1em; text-transform: uppercase; color: var(--tep-encre-douce); }
+.tep-titre { font-family: var(--police-titres); font-size: 1.6em; line-height: 1.08; font-weight: 600; }
+.tep-titre--bas { margin-top: 3.6em !important; }
+.tep-texte { color: var(--tep-encre-douce); }
+.tep-libelle { font-size: .85em; font-weight: 600; margin-bottom: -.4em !important; }
+.tep-champ { display: flex; align-items: center; min-height: 2.9em; padding: 0 .85em; border: 1px solid var(--tep-trait); border-radius: .75em; background: var(--tep-carte); font-family: var(--police-mono); font-size: .9em; white-space: nowrap; overflow: hidden; }
+.tep-champ::after { content: ""; width: 1px; height: 1.1em; margin-left: 1px; background: var(--tep-encre); animation: tep-curseur 1s steps(1) infinite; }
+@keyframes tep-curseur { 50% { opacity: 0; } }
+.tep-case { display: grid; grid-template-columns: 1.4em 1fr; gap: .7em; align-items: start; font-size: .88em; }
+.tep-boite { display: grid; place-items: center; width: 1.4em; height: 1.4em; border-radius: .35em; border: 1.5px solid var(--tep-encre); }
+.tep-boite svg { width: .95em; height: .95em; fill: none; stroke: var(--tep-encre); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tep-bouton { margin-top: auto !important; display: grid; place-items: center; min-height: 3.2em; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-weight: 600; }
+.tep-notif { position: absolute; z-index: 1; left: .7em; right: .7em; top: 3.2em; display: grid; grid-template-columns: 2.4em 1fr; gap: .75em; align-items: center; padding: .8em .9em; border-radius: 1.2em; background: var(--tep-carte); box-shadow: 0 1em 2.2em -1em color-mix(in oklab, var(--tep-encre) 45%, transparent); font-size: .88em; line-height: 1.3; }
+.tep-notif i { width: 2.4em; height: 2.4em; border-radius: .7em; background: var(--couleur-secondaire); }
+.tep-notif b { display: block; }
+.tep-ligne { display: grid; grid-template-columns: 1.6em 1fr auto; gap: .7em; align-items: center; padding: .75em 0; border-bottom: 1px solid var(--tep-trait); }
+.tep-pastille { width: 1.6em; height: 1.6em; border-radius: 50%; background: color-mix(in oklab, var(--couleur-secondaire) 45%, var(--tep-papier)); }
+.tep-ok { font-size: .8em; font-weight: 600; padding: .2em .7em; border-radius: 999px; background: color-mix(in oklab, var(--couleur-accent) 40%, var(--tep-papier)); }
+.tep-jauge { height: .45em; border-radius: 9px; background: var(--tep-trait); overflow: hidden; margin-top: .4em !important; }
+.tep-jauge span { display: block; height: 100%; background: var(--couleur-accent); transform-origin: left; }
+.tep-choix { --tep-choix: 0; display: grid; gap: .15em; padding: .85em 1em; border-radius: .9em; border: 1.5px solid color-mix(in oklab, var(--couleur-accent) calc(var(--tep-choix) * 100%), var(--tep-trait)); background: color-mix(in oklab, var(--couleur-accent) calc(var(--tep-choix) * 22%), var(--tep-carte)); }
+.tep-choix[data-tep-choisi] { --tep-choix: 1; }
+.tep-choix span { font-size: .85em; color: var(--tep-encre-douce); }
+.tep-rond { display: grid; place-items: center; width: 5em; height: 5em; margin-inline: auto !important; border-radius: 50%; background: var(--couleur-accent); }
+.tep-rond svg { width: 2.6em; height: 2.6em; fill: none; stroke: var(--couleur-sur-accent); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.tep-tuiles { display: grid; grid-template-columns: 1fr 1fr; gap: .6em; margin-top: .6em !important; }
+.tep-tuiles span { aspect-ratio: 4 / 3; border-radius: .8em; background: var(--tep-carte); box-shadow: inset 0 0 0 1px var(--tep-trait); }
+.tep-tuiles span:nth-child(1) { background: color-mix(in oklab, var(--couleur-secondaire) 35%, var(--tep-papier)); }
+.tep-tuiles span:nth-child(4) { background: color-mix(in oklab, var(--couleur-accent) 35%, var(--tep-papier)); }
+
+/* ---------- Mode épinglé (ordinateur et tablette en paysage) ----------
+   La section occupe exactement la hauteur visible sous l'en-tête mesuré ; le téléphone est dimensionné par cette hauteur. */
+.tep.tep--epinglee { height: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h)); padding-block: var(--tep-pad); --tep-tel-h: min(680px, calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--tep-pad))); }
+.tep--epinglee .tep__cadre { height: 100%; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "tete tel" "etapes tel"; grid-template-rows: auto auto; align-content: center; column-gap: clamp(32px, 7vw, 120px); row-gap: clamp(14px, 3vh, 32px); }
+.tep--epinglee[data-cote="gauche"] .tep__cadre { grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "tel tete" "tel etapes"; }
+.tep--epinglee[data-cote="centre"] .tep__cadre { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); grid-template-areas: "tete tel etapes"; grid-template-rows: auto; align-items: center; column-gap: clamp(28px, 5vw, 88px); }
+.tep--epinglee .tep__tete { grid-area: tete; position: static; gap: clamp(6px, 1.4vh, 12px); }
+.tep--epinglee .tep__titre { font-size: clamp(1.6rem, min(3.6vw, 6.2vh), 3.4rem); }
+.tep--epinglee .tep__etapes { grid-area: etapes; }
+.tep--epinglee .tep__telephone { grid-area: tel; align-self: center; justify-self: center; }
+.tep--epinglee .tep__telephone .tep__appareil { height: var(--tep-tel-h); width: auto; }
+.tep--epinglee .tep__mini { display: none; }
+.tep--epinglee .tep__etape { grid-template-columns: 44px minmax(0, 1fr); padding-block: clamp(6px, 1.5vh, 14px); align-items: start; }
+.tep--epinglee .tep__aller { margin-top: 0; }
+.tep--epinglee .tep__texte { padding-top: 9px; gap: 0; }
+.tep--epinglee .tep__t { font-size: clamp(1.05rem, .7rem + 1.2vh, 1.4rem); transition: color .35s; }
+.tep--epinglee .tep__etape:not(.est-active) .tep__t { color: var(--couleur-texte-doux); }
+/* Seule la description de l'étape en cours est déployée : la liste garde une hauteur stable et tient dans l'écran. */
+.tep--epinglee .tep__d { overflow: hidden; max-height: 6em; padding-top: 4px; transition: max-height .45s, opacity .45s, padding .45s; }
+.tep--epinglee .tep__etape:not(.est-active) .tep__d { max-height: 0; opacity: 0; padding-top: 0; }
+.tep--epinglee[data-cote="centre"] .tep__tete { align-content: center; }
+@media (max-height: 700px) { .tep--epinglee .tep__intro { display: none; } }
+@media (max-height: 600px) { .tep--epinglee .tep__d { font-size: .92rem; line-height: 1.4; } .tep--epinglee .tep__action { margin-top: 0; } }
+.tep--epinglee[data-cote="centre"] .tep__titre { font-size: clamp(1.5rem, min(2.9vw, 5.4vh), 2.9rem); }

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Formulaire par étapes · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f4f1ea; --couleur-texte: #1d2321; --couleur-accent: #1f6f5c; --couleur-secondaire: #c8873a; --couleur-sur-accent: #f7f5ef; --couleur-erreur: #a8321f; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+  .demo-journal { margin-top: 1rem; padding: 1rem; border: 1px dashed var(--couleur-ligne); border-radius: var(--rayon); font-family: var(--police-mono); font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, une demande en quatre étapes : un choix en grandes cartes, des précisions, les coordonnées, puis un récapitulatif modifiable.</p>
+  </section>
+
+  <section class="fpe" data-module="formulaire-par-etapes" aria-labelledby="fpe-titre">
+    <div class="fpe__cadre socle-cadre">
+      <div class="fpe__tete">
+        <p class="socle-surtitre">Contact</p>
+        <h2 class="fpe__h2" id="fpe-titre">Parlons de votre projet</h2>
+        <p class="fpe__intro">Quatre étapes courtes, une seule question à la fois. Vous pouvez revenir en arrière à tout moment et tout vérifier avant l'envoi.</p>
+        <p class="fpe__note">Démonstration : aucune donnée n'est envoyée.</p>
+      </div>
+
+      <div class="fpe__carton">
+        <form class="fpe__form" action="#" method="post" novalidate>
+          <div class="fpe__progression">
+            <ol class="fpe__reperes" aria-label="Progression"></ol>
+            <div class="fpe__barre" aria-hidden="true"><span></span></div>
+            <p class="fpe__etat" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="fpe__etape" data-etape="Votre demande">
+            <legend class="fpe__legende"><h3 class="fpe__titre">Quel est l'objet de votre demande ?</h3></legend>
+            <div class="fpe__groupe fpe__cartes" data-libelle="Objet">
+              <label class="fpe__carte"><input type="radio" name="objet" value="information" required>
+                <svg class="fpe__icone" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 14v8M16 10v.5"/></svg>
+                <span class="fpe__carte-titre">Une information</span><span class="fpe__carte-texte">Une question sur un service ou un délai.</span></label>
+              <label class="fpe__carte"><input type="radio" name="objet" value="devis">
+                <svg class="fpe__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M9 5h10l5 5v17H9z"/><path d="M19 5v5h5M13 16h7M13 21h7"/></svg>
+                <span class="fpe__carte-titre">Un devis</span><span class="fpe__carte-texte">Un chiffrage à partir de votre besoin.</span></label>
+              <label class="fpe__carte"><input type="radio" name="objet" value="rendez-vous">
+                <svg class="fpe__icone" viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="8" width="20" height="18" rx="2"/><path d="M6 13h20M11 5v6M21 5v6"/></svg>
+                <span class="fpe__carte-titre">Un rendez-vous</span><span class="fpe__carte-texte">Un échange par téléphone ou sur place.</span></label>
+              <label class="fpe__carte"><input type="radio" name="objet" value="autre">
+                <svg class="fpe__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 9h20v13H13l-5 4v-4H6z"/></svg>
+                <span class="fpe__carte-titre">Autre chose</span><span class="fpe__carte-texte">Un partenariat, une idée, une remarque.</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fpe__etape" data-etape="Précisions">
+            <legend class="fpe__legende"><h3 class="fpe__titre">Quelques précisions</h3></legend>
+            <fieldset class="fpe__groupe" data-min="1">
+              <legend class="fpe__groupe-titre">Quand préférez-vous être recontacté ? <i aria-hidden="true">*</i></legend>
+              <div class="fpe__puces">
+                <label class="fpe__puce"><input type="checkbox" name="moment" value="matin"><span class="fpe__choix-texte">Le matin</span></label>
+                <label class="fpe__puce"><input type="checkbox" name="moment" value="midi"><span class="fpe__choix-texte">Entre midi et deux</span></label>
+                <label class="fpe__puce"><input type="checkbox" name="moment" value="apres-midi"><span class="fpe__choix-texte">L'après-midi</span></label>
+                <label class="fpe__puce"><input type="checkbox" name="moment" value="soir"><span class="fpe__choix-texte">En fin de journée</span></label>
+              </div>
+            </fieldset>
+            <div class="fpe__champ">
+              <label for="fpe-delai">Échéance</label>
+              <select id="fpe-delai" name="delai">
+                <option value="">Pas d'échéance particulière</option>
+                <option value="mois">Dans le mois</option>
+                <option value="trimestre">Dans les trois mois</option>
+                <option value="plus-tard">Plus tard</option>
+              </select>
+            </div>
+            <div class="fpe__champ">
+              <label for="fpe-message">Votre message <i aria-hidden="true">*</i></label>
+              <textarea id="fpe-message" name="message" rows="5" minlength="10" required placeholder="Quelques lignes sur votre projet ou votre question"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="fpe__etape" data-etape="Coordonnées">
+            <legend class="fpe__legende"><h3 class="fpe__titre">Comment vous joindre ?</h3></legend>
+            <div class="fpe__grille">
+              <div class="fpe__champ"><label for="fpe-prenom">Prénom <i aria-hidden="true">*</i></label><input id="fpe-prenom" name="prenom" autocomplete="given-name" required></div>
+              <div class="fpe__champ"><label for="fpe-nom">Nom <i aria-hidden="true">*</i></label><input id="fpe-nom" name="nom" autocomplete="family-name" required></div>
+              <div class="fpe__champ"><label for="fpe-email">E-mail <i aria-hidden="true">*</i></label><input id="fpe-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="fpe__champ"><label for="fpe-tel">Téléphone</label><input id="fpe-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" pattern="[0-9 +().\-]{8,20}"></div>
+            </div>
+            <label class="fpe__case"><input type="checkbox" name="accord" value="oui" required data-libelle="Accord" data-hors-recap><span class="fpe__choix-texte">J'accepte que ces informations servent uniquement à répondre à ma demande. <i aria-hidden="true">*</i></span></label>
+            <p class="fpe__aide">Les champs marqués d'un astérisque sont obligatoires.</p>
+          </fieldset>
+
+          <fieldset class="fpe__etape" data-etape="Récapitulatif" data-recap>
+            <legend class="fpe__legende"><h3 class="fpe__titre">Tout est juste ?</h3></legend>
+            <div class="fpe__recap"><p>Le récapitulatif de vos réponses s'affiche ici.</p></div>
+          </fieldset>
+
+          <div class="fpe__nav">
+            <button class="fpe__bouton fpe__bouton--ligne" type="button" data-precedent>Retour</button>
+            <button class="fpe__bouton" type="button" data-suivant data-retour="Revenir au récapitulatif">Continuer</button>
+            <button class="fpe__bouton" type="submit">Envoyer la demande</button>
+          </div>
+        </form>
+
+        <div class="fpe__fin" hidden>
+          <svg class="fpe__coche" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
+          <h3>Merci, votre demande est prête.</h3>
+          <p data-resume></p>
+          <p>Démonstration : rien n'a été envoyé. Sur le site en ligne, la demande serait transmise et une réponse vous parviendrait par e-mail.</p>
+          <div class="fpe__fin-actions">
+            <a class="fpe__bouton" href="#" data-mailto hidden>Envoyer par e-mail</a>
+            <button class="fpe__bouton fpe__bouton--ligne" type="button" data-recommencer>Nouvelle demande</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>À l'envoi, le module émet l'événement « formulaire:envoye » avec les données ; la page décide quoi en faire.</p>
+    <p class="demo-journal" aria-live="polite" data-journal>Aucun événement reçu pour l'instant.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="formulaire-par-etapes"]')) init(el, { mailto: 'contact@exemple.fr' });
+  document.addEventListener('formulaire:envoye', e => { document.querySelector('[data-journal]').textContent = 'formulaire:envoye\n' + JSON.stringify(e.detail.valeurs, null, 1); });
+</script>
+</body>
+</html>

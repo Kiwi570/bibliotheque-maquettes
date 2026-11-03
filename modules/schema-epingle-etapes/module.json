@@ -1,0 +1,65 @@
+{
+ "nom": "schema-epingle-etapes",
+ "titre": "Schéma de principe épinglé dont chaque étape de texte allume une partie (calque, flèche, zone, jauge)",
+ "role": "méthode",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "aquafit-maquette/gilet",
+  "nelis-maquette/groupes-eau-glacee-principe",
+  "btp-confort-avenir-maquette/isolation-coupe",
+  "nelis-maquette/puissances"
+ ],
+ "convient_a": [
+  "bâtiment",
+  "industrie",
+  "services-b2b",
+  "conseil",
+  "santé",
+  "bien-être",
+  "sport",
+  "formation",
+  "numérique",
+  "artisanat",
+  "auto-moto",
+  "finance",
+  "collectivité"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "sobre",
+  "industriel",
+  "froid",
+  "minéral",
+  "océanique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "largeurMin": "900 : en dessous, pas d'épinglage",
+  "hauteurMin": "500 : sous cette hauteur d'écran, pas d'épinglage",
+  "pas": "défilement par étape pendant l'épinglage, en % d'écran, 70",
+  "telephone": "'compact' (schéma collé sous l'en-tête, étapes dessous) ou 'repete' (schéma figé répété dans chaque étape)",
+  "lecture": "ligne de lecture hors épinglage, '55%'"
+ },
+ "poids_ko": 19.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vue éclatée · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #14161a; --couleur-texte: #ecebe6; --couleur-accent: #f0a23c; --couleur-secondaire: #6f8fb8; --rayon: 10px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 14vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : l'objet se décompose pièce par pièce, chaque pièce reçoit sa légende, puis il se recompose.</p>
+  </section>
+
+  <section class="vec" data-module="vue-eclatee" data-epingle aria-labelledby="vec-titre">
+    <div class="vec__cadre socle-cadre">
+      <div class="vec__tete" data-tient="tête">
+        <p class="socle-surtitre">Vue éclatée</p>
+        <h2 class="vec__titre" id="vec-titre">Titre de la section</h2>
+        <p class="vec__intro">Un paragraphe de deux lignes qui présente l'objet et invite à survoler une pièce pour la repérer.</p>
+      </div>
+      <div class="vec__scene">
+        <div class="vec__plan" data-tient="schéma">
+          <svg class="vec__svg" viewBox="0 0 640 560" data-etiquettes="404" aria-hidden="true" focusable="false">
+          <g class="vec__piece" data-piece="5" data-ancre="380 301">
+            <polygon class="vec__flanc vec__flanc--g" points="80 301 230 376 230 398 80 323"/>
+            <polygon class="vec__flanc vec__flanc--d" points="230 376 380 301 380 323 230 398"/>
+            <polygon class="vec__dessus" points="230 226 380 301 230 376 80 301"/>
+            <ellipse class="vec__creux" cx="230" cy="250" rx="9" ry="4.5"/>
+            <ellipse class="vec__creux" cx="332" cy="301" rx="9" ry="4.5"/>
+            <ellipse class="vec__creux" cx="230" cy="352" rx="9" ry="4.5"/>
+            <ellipse class="vec__creux" cx="128" cy="301" rx="9" ry="4.5"/>
+          </g>
+          <g class="vec__piece" data-piece="4" data-ancre="380 287">
+            <polygon class="vec__flanc vec__flanc--g" points="80 287 230 362 230 376 80 301"/>
+            <polygon class="vec__flanc vec__flanc--d" points="230 362 380 287 380 301 230 376"/>
+            <polygon class="vec__dessus" points="230 212 380 287 230 362 80 287"/>
+            <polygon class="vec__creux" points="230 245 314 287 230 329 146 287"/>
+          </g>
+          <g class="vec__piece" data-piece="3" data-ancre="380 253">
+            <polygon class="vec__flanc vec__flanc--g" points="80 253 230 328 230 362 80 287"/>
+            <polygon class="vec__flanc vec__flanc--d" points="230 328 380 253 380 287 230 362"/>
+            <polygon class="vec__dessus" points="230 178 380 253 230 328 80 253"/>
+            <path class="vec__detail" d="M248.8 318.6v34M211.3 318.6v34M267.5 309.3v34M192.5 309.3v34M286.3 299.9v34M173.8 299.9v34M305 290.5v34M155 290.5v34M323.8 281.1v34M136.3 281.1v34M342.5 271.8v34M117.5 271.8v34M361.3 262.4v34M98.8 262.4v34"/>
+          </g>
+          <g class="vec__piece" data-piece="2" data-ancre="380 247">
+            <polygon class="vec__flanc vec__flanc--g" points="80 247 230 322 230 328 80 253"/>
+            <polygon class="vec__flanc vec__flanc--d" points="230 322 380 247 380 253 230 328"/>
+            <polygon class="vec__dessus" points="230 172 380 247 230 322 80 247"/>
+            <polygon class="vec__detail vec__detail--tirets" points="230 193 338 247 230 301 122 247"/>
+          </g>
+          <g class="vec__piece" data-piece="1" data-ancre="380 237">
+            <polygon class="vec__flanc vec__flanc--g" points="80 237 230 312 230 322 80 247"/>
+            <polygon class="vec__flanc vec__flanc--d" points="230 312 380 237 380 247 230 322"/>
+            <polygon class="vec__dessus" points="230 162 380 237 230 312 80 237"/>
+            <path class="vec__detail" d="M267.5 180.8L117.5 255.8M192.5 180.8L342.5 255.8M305 199.5L155 274.5M155 199.5L305 274.5M342.5 218.3L192.5 293.3M117.5 218.3L267.5 293.3"/>
+          </g>
+          </svg>
+          <p class="vec__mention">Schéma illustratif</p>
+        </div>
+      </div>
+      <div class="vec__pieces" data-tient="légendes">
+        <p class="vec__liste-titre socle-surtitre" id="vec-liste">Les pièces, de haut en bas</p>
+        <ol class="vec__liste" aria-labelledby="vec-liste">
+          <li><button type="button" class="vec__legende" data-piece="1" aria-pressed="false"><span class="vec__num">01</span><span class="vec__nom">Couche de surface</span></button></li>
+          <li><button type="button" class="vec__legende" data-piece="2" aria-pressed="false"><span class="vec__num">02</span><span class="vec__nom">Membrane</span></button></li>
+          <li><button type="button" class="vec__legende" data-piece="3" aria-pressed="false"><span class="vec__num">03</span><span class="vec__nom">Âme centrale</span></button></li>
+          <li><button type="button" class="vec__legende" data-piece="4" aria-pressed="false"><span class="vec__num">04</span><span class="vec__nom">Cadre de maintien</span></button></li>
+          <li><button type="button" class="vec__legende" data-piece="5" aria-pressed="false"><span class="vec__num">05</span><span class="vec__nom">Socle</span></button></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, l'objet reste éclaté avec toutes ses légendes, et rien ne bouge.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="vue-eclatee"]')) init(el);
+</script>
+</body>
+</html>

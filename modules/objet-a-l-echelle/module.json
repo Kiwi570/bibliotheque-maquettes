@@ -1,0 +1,57 @@
+{
+ "nom": "objet-a-l-echelle",
+ "titre": "Objet à sa vraie taille dans un décor, à côté d'une silhouette, avec tailles, pose et cotes",
+ "role": "outil-interactif",
+ "animations": [
+  "révélation-image"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "atelier-shazak-maquette/oeuvres",
+  "laure-polin-maquette/oeuvre-echelle",
+  "patchacha-maquette/voir-au-mur",
+  "pierre-becq-lanterne-maquette/objet-echelle"
+ ],
+ "convient_a": [
+  "artisanat",
+  "culture",
+  "commerce",
+  "immobilier",
+  "bâtiment",
+  "hébergement",
+  "industrie"
+ ],
+ "ambiances": [
+  "clair",
+  "sobre",
+  "artisanal",
+  "luxueux",
+  "chaleureux",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "objets": "liste d'objets { nom, poses, variantes:[{nom,l,h,p}], choisie, libre:[min,max], pas, visuel, note } ; par défaut lus dans les <template data-objet>",
+  "decors": "liste { id, nom, meuble: 'canape' | 'bureau' | absent }, mur nu, salon, bureau",
+  "reference": "hauteur de la silhouette en cm, 170",
+  "centreMur": "hauteur du centre d'un objet mural en cm, 150",
+  "hauteurConsole": "hauteur de la console en cm, 80",
+  "regle": "booléen, true : règle graduée au sol",
+  "duree": "durée des redimensionnements en s, 0.6 (0 pour couper)"
+ },
+ "poids_ko": 24.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

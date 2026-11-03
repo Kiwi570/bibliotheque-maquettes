@@ -1,0 +1,30 @@
+/* Trame photo — identité uniquement par les variables du socle.
+   --trame-encre (défaut --couleur-texte) et --trame-papier (défaut --couleur-fond) : à poser sur .trame ou un ancêtre, ou à passer à init. */
+.trame { --trame-cellule: 8px; --trame-angle: 15deg; --trame-duree: 1.8s; --trame-delai: 0s;
+  margin: 0; display: grid; gap: .6rem; min-width: 0; }
+.trame__cadre { position: relative; overflow: hidden; aspect-ratio: var(--trame-ratio, 3 / 2); border-radius: var(--rayon); background: var(--trame-papier, var(--couleur-fond)); isolation: isolate; }
+.trame__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.trame__canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.trame--gl .trame__img { opacity: 0; }
+.trame__legende { font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .04em; color: var(--couleur-texte-doux); }
+
+/* Repli sans WebGL (et attente du chargement) : la photo vue à travers un masque de points ou de lignes, qui s'ouvre. */
+@property --trame-k { syntax: "<number>"; inherits: false; initial-value: 1.5; }
+.trame--attente .trame__img, .trame--css .trame__img { --trame-k: .55; transition: --trame-k var(--trame-duree) cubic-bezier(.65, 0, .35, 1) var(--trame-delai); }
+.trame--points.trame--attente .trame__img, .trame--points.trame--css .trame__img {
+  -webkit-mask-image: radial-gradient(circle closest-side, currentColor calc(var(--trame-k) * 100%), transparent calc(var(--trame-k) * 100% + 1px));
+  mask-image: radial-gradient(circle closest-side, currentColor calc(var(--trame-k) * 100%), transparent calc(var(--trame-k) * 100% + 1px));
+  -webkit-mask-size: var(--trame-cellule) var(--trame-cellule); mask-size: var(--trame-cellule) var(--trame-cellule); }
+.trame--lignes.trame--attente .trame__img, .trame--lignes.trame--css .trame__img {
+  -webkit-mask-image: repeating-linear-gradient(var(--trame-angle), currentColor 0 calc(var(--trame-k) * var(--trame-cellule) * .5), transparent 0 var(--trame-cellule));
+  mask-image: repeating-linear-gradient(var(--trame-angle), currentColor 0 calc(var(--trame-k) * var(--trame-cellule) * .5), transparent 0 var(--trame-cellule)); }
+.trame--css.trame--revelee .trame__img { --trame-k: 2.2; }
+.trame--css.trame--nette .trame__img { -webkit-mask-image: none; mask-image: none; }
+
+/* Réduire les animations et mode calme : photo nette, aucune trame. */
+@media (prefers-reduced-motion: reduce) {
+  .trame .trame__img { opacity: 1; -webkit-mask-image: none; mask-image: none; }
+  .trame .trame__canvas { display: none; }
+}
+.calme .trame .trame__img { opacity: 1; -webkit-mask-image: none; mask-image: none; }
+.calme .trame .trame__canvas { display: none; }

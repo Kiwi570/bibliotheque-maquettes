@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Trame photo · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #efe9dd; --couleur-texte: #1d1b18; --couleur-accent: #b8402a; --couleur-secondaire: #284b86; --police-titres: Georgia, "Times New Roman", serif; --rayon: 3px; }
+  .demo-bloc { min-height: 92vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h1, .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); max-width: 18ch; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 56ch; }
+  .demo-une { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 64px); align-items: center; padding-block: 6vh; }
+  .demo-une__texte { display: grid; gap: 1rem; }
+  .demo-une__texte h2 { font-size: clamp(1.7rem, 3.2vw, 2.8rem); }
+  .demo-cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(20px, 3vw, 40px); padding-block: 10vh; }
+  .demo-carte { display: grid; gap: .8rem; align-content: start; }
+  .demo-carte h3 { font-size: 1.35rem; }
+  .demo-carte p { color: var(--couleur-texte-doux); }
+  .demo-carte .socle-bouton { justify-self: start; }
+  .demo-carte--encre { --trame-encre: var(--couleur-secondaire); }
+  @media (max-width: 900px) { .demo-une { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h1>Une photo qui sort de la trame d'impression</h1>
+    <p>Faites défiler : la photo apparaît en points de demi-teinte, puis se résout en image nette. Avec une souris, un compte-fils fait revenir la trame sous le pointeur.</p>
+  </section>
+
+  <section class="demo-une socle-cadre" aria-labelledby="une-titre">
+    <figure class="trame" data-module="trame-photo" id="trame-une">
+      <div class="trame__cadre"><img class="trame__img" src="demo-paysage.jpg" width="1500" height="1000" alt="Paysage de collines au soleil couchant, dans la brume (image de démonstration)"></div>
+      <figcaption class="trame__legende">Points, 15°, à l'apparition</figcaption>
+    </figure>
+    <div class="demo-une__texte">
+      <p class="socle-surtitre">Article principal</p>
+      <h2 id="une-titre">Titre de l'article mis en avant</h2>
+      <p>Un chapeau de deux ou trois lignes qui présente le sujet, avant le lien vers la suite.</p>
+      <a class="socle-bouton socle-bouton--plein" href="#suite">Lire l'article</a>
+    </div>
+  </section>
+
+  <section class="socle-cadre" aria-labelledby="cartes-titre">
+    <p class="socle-surtitre" id="cartes-titre">Trois réglages</p>
+    <div class="demo-cartes">
+      <article class="demo-carte demo-carte--encre" id="carte-survol">
+        <figure class="trame" data-module="trame-photo" id="trame-survol">
+          <div class="trame__cadre"><img class="trame__img" src="demo-nature-morte.jpg" width="1200" height="900" alt="Nature morte de trois sphères et d'un vase (image de démonstration)" loading="lazy"></div>
+          <figcaption class="trame__legende">Points, 45°, encre secondaire, au survol</figcaption>
+        </figure>
+        <h3>Au survol de la carte</h3>
+        <p>La trame reste en place et se résout quand la carte est survolée ou que son lien reçoit le focus.</p>
+        <a class="socle-bouton" href="#suite">Voir la fiche</a>
+      </article>
+      <article class="demo-carte">
+        <figure class="trame" data-module="trame-photo" id="trame-lignes">
+          <div class="trame__cadre"><img class="trame__img" src="demo-arches.jpg" width="1200" height="900" alt="Trois arches dans une lumière rasante (image de démonstration)" loading="lazy"></div>
+          <figcaption class="trame__legende">Lignes, -30°, à l'apparition</figcaption>
+        </figure>
+        <h3>En lignes de gravure</h3>
+        <p>La même mécanique avec des lignes dont l'épaisseur suit la lumière de la photo.</p>
+        <a class="socle-bouton" href="#suite">Voir la fiche</a>
+      </article>
+      <article class="demo-carte">
+        <figure class="trame" data-module="trame-photo" id="trame-defilement">
+          <div class="trame__cadre"><img class="trame__img" src="demo-paysage.jpg" width="1500" height="1000" alt="Paysage de collines au soleil couchant (image de démonstration)" loading="lazy"></div>
+          <figcaption class="trame__legende">Points teintés, 12 px, au défilement</figcaption>
+        </figure>
+        <h3>Au rythme du défilement</h3>
+        <p>La photo se résout à mesure qu'elle monte dans l'écran, et redevient trame en remontant.</p>
+        <a class="socle-bouton" href="#suite">Voir la fiche</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sans WebGL, la photo s'ouvre à travers un masque de points ou de lignes ; en mode calme, elle est nette d'emblée.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  const reglages = {
+    'trame-une': { forme: 'points', angle: 15, cellule: 8, duree: 2.6 },
+    'trame-survol': { declencheur: 'survol', angle: 45, cellule: 7, zone: '.demo-carte' },
+    'trame-lignes': { forme: 'lignes', angle: -30, cellule: 7, encre: 'var(--couleur-accent)', delai: .15 },
+    'trame-defilement': { declencheur: 'defilement', cellule: 12, angle: 45, teinte: .55 },
+  };
+  for (const el of document.querySelectorAll('[data-module="trame-photo"]')) init(el, reglages[el.id]);
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+ "nom": "trame-photo",
+ "titre": "Photo en trame d'impression (points ou lignes) qui se résout en photo nette à l'apparition, au survol ou au défilement",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader",
+  "révélation-image",
+  "survol-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "origine": [
+  "francis-gerardin-maquette/hero",
+  "coupdefood-maquette/une",
+  "marco-investigation-maquette/une"
+ ],
+ "convient_a": [
+  "média",
+  "culture",
+  "spectacle",
+  "artisanat",
+  "restauration",
+  "commerce",
+  "conseil",
+  "formation",
+  "association",
+  "tourisme",
+  "immobilier",
+  "numérique"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "artisanal",
+  "brut",
+  "sobre",
+  "énergique",
+  "chaleureux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "forme": "'points' (demi-teinte) ou 'lignes' (gravure), 'points'",
+  "cellule": "taille de la cellule de trame en px CSS, 8",
+  "angle": "angle de la trame en degrés, 15 (45 classique, 0 droite)",
+  "encre": "couleur CSS de l'encre, var(--trame-encre, var(--couleur-texte))",
+  "papier": "couleur CSS du papier, var(--trame-papier, var(--couleur-fond))",
+  "teinte": "part des couleurs de la photo dans l'encre, 0 (0 à 1)",
+  "declencheur": "'apparition' | 'survol' | 'defilement' | 'manuel', 'apparition' (survol devient apparition sur écran tactile)",
+  "duree": "durée de la résolution en s, 1.8",
+  "delai": "attente avant la résolution en s, 0",
+  "debut": "début (apparition, défilement), 'top 85%'",
+  "fin": "fin (défilement), 'center 45%'",
+  "depart": "grossissement de la trame au départ, 2.4 (1 en survol)",
+  "loupe": "rayon du compte-fils en px, 90 (0 pour couper ; jamais en survol)",
+  "zone": "ancêtre qui déclenche le survol (sélecteur ou élément), root par défaut"
+ },
+ "poids_ko": 16,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

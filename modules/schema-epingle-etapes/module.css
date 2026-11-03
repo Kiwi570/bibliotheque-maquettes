@@ -1,0 +1,124 @@
+/* Schéma épinglé en étapes — identité uniquement par les variables du socle.
+   États : sans classe (sans JavaScript, mode calme) = liste complète et schéma tout allumé ;
+   .see--pile = scène épinglée, étapes empilées ; .see--compact = schéma compact collé en haut ;
+   .see--repete = schéma répété dans chaque étape. */
+.see { --see-marge: clamp(16px, 4vh, 40px); --see-jauge-l: 64px; --see-eteint: .28; position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.see__grille { display: grid; gap: clamp(20px, 4vw, 64px); }
+.see__texte { display: grid; align-content: start; gap: 12px; min-width: 0; }
+.see__titre { font-size: clamp(1.9rem, 4.6vw, 3.8rem); line-height: 1.02; padding-block: .06em; }
+
+/* Étapes : liste lisible par défaut */
+.see__etapes { list-style: none; margin: clamp(8px, 2vh, 24px) 0 0; padding: 0; display: grid; }
+.see__etape { display: grid; gap: 8px; padding-block: clamp(18px, 3vh, 32px); border-top: 1px solid var(--couleur-ligne); scroll-margin-top: calc(var(--entete-h) + 16px); }
+.see__etape:last-child { border-bottom: 1px solid var(--couleur-ligne); }
+.see__etape h3 { font-size: clamp(1.25rem, 1.05rem + .9vw, 1.9rem); }
+.see__etape > p:not(.see__n) { color: var(--couleur-texte-doux); max-width: 52ch; }
+.see__n { font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-accent); }
+.see--vivant .see__etape .see__n { transition: color .4s; }
+.see--vivant .see__etape:not(.est-active) .see__n { color: var(--couleur-texte-doux); }
+
+/* Schéma : plan 4/3 (SVG + étiquettes HTML), jauge facultative à droite */
+.see__schema { margin: 0; display: flex; justify-content: center; align-items: stretch; gap: 14px; min-width: 0; }
+.see__plan { position: relative; flex: 0 1 auto; width: 100%; aspect-ratio: 4 / 3; border-radius: var(--rayon); overflow: hidden; box-shadow: 0 0 0 1px var(--couleur-ligne); }
+.see__schema:has(.see__jauge) .see__plan { width: calc(100% - var(--see-jauge-l) - 14px); }
+.see__svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.see__fond { fill: var(--couleur-surface); }
+.see__boite { fill: var(--couleur-fond); stroke: var(--couleur-ligne); stroke-width: 1.5; transition: fill .5s, stroke .5s; }
+.see__boite--fixe { fill: color-mix(in oklab, var(--couleur-texte) 14%, var(--couleur-fond)); stroke: none; }
+.see__detail { fill: none; stroke: var(--couleur-texte-doux); stroke-width: 1.4; stroke-linecap: round; }
+.see__zone { fill: color-mix(in oklab, var(--couleur-secondaire) 10%, transparent); stroke: var(--couleur-secondaire); stroke-width: 1.5; stroke-dasharray: 5 6; }
+.see__couche { fill: color-mix(in oklab, var(--couleur-secondaire) 34%, var(--couleur-fond)); }
+.see__couche--2 { fill: color-mix(in oklab, var(--couleur-secondaire) 58%, var(--couleur-fond)); }
+.see__couche--3 { fill: var(--couleur-accent); }
+.see__trait { fill: none; stroke: var(--couleur-ligne); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.see__flux { fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 7 9; }
+.see__pointe { fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Partie allumée : tout allumé sans JavaScript et en mode calme ; sinon, seulement les parties de l'étape en cours. */
+.see:not(.see--vivant) .see__boite:not(.see__boite--fixe), .see--vivant .est-allume .see__boite:not(.see__boite--fixe) { fill: color-mix(in oklab, var(--couleur-accent) 14%, var(--couleur-fond)); stroke: var(--couleur-accent); stroke-width: 2.5; }
+.see--vivant :is([data-see-partie], [data-see-des]) { transition: opacity .5s, background-color .4s, color .4s; }
+.see--vivant [data-see-partie]:not(.est-allume) { opacity: var(--see-eteint); }
+.see--vivant [data-see-des]:not(.est-allume) { opacity: 0; }
+.see--vivant.see--visible .est-allume .see__flux { animation: see-flux 1.1s linear infinite; }
+@keyframes see-flux { to { stroke-dashoffset: -32; } }
+
+/* Étiquettes : texte HTML posé en % du plan (même repère que le viewBox 400 × 300), jamais sous 12 px. */
+.see__etiquette { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); padding: 3px 9px; border-radius: 999px; white-space: nowrap; font-family: var(--police-mono); font-size: max(12px, .78rem); line-height: 1.3; letter-spacing: .04em; background: var(--couleur-fond); color: var(--couleur-texte); box-shadow: 0 0 0 1px var(--couleur-ligne); }
+.see:not(.see--vivant) .see__etiquette, .see--vivant .see__etiquette.est-allume { background: var(--couleur-accent); color: var(--couleur-sur-accent); box-shadow: none; }
+.see--vivant .see__etiquette[data-see-partie]:not(.est-allume) { opacity: .6; }
+
+/* Jauge verticale : niveau --see-niv (0 → 1) posé par le module, valeur lue en dessous. */
+.see__jauge { flex: none; width: var(--see-jauge-l); display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 10px; justify-items: center; }
+.see__tube { position: relative; width: 28px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--couleur-ligne); background: var(--couleur-surface); overflow: hidden; }
+.see__niveau { position: absolute; inset: 4px; border-radius: 999px; background: linear-gradient(0deg, var(--couleur-secondaire), var(--couleur-accent)); transform-origin: 50% 100%; transform: scaleY(var(--see-niv, 1)); transition: transform .9s cubic-bezier(.2, .8, .2, 1); }
+.see__valeur { font-family: var(--police-mono); font-size: max(12px, .85rem); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Puces de navigation (mode épinglé seulement) */
+.see__puces { display: none; gap: 2px; margin-left: -8px; }
+.see__puce { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; }
+.see__puce > span[aria-hidden] { width: 28px; height: 3px; border-radius: 2px; background: var(--couleur-ligne); transition: background-color .4s; }
+.see__puce.est-vue > span[aria-hidden] { background: color-mix(in oklab, var(--couleur-accent) 45%, var(--couleur-ligne)); }
+.see__puce[aria-current] > span[aria-hidden] { background: var(--couleur-accent); }
+.see__puce:focus-visible { outline-offset: -6px; }
+
+/* Sans JavaScript et mode calme : ordinateur, schéma collant à droite ; téléphone, schéma en haut. */
+@media (min-width: 900px) {
+  .see__grille { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
+  .see__schema { position: sticky; top: calc(var(--entete-h) + var(--see-marge)); }
+  .see__plan { width: min(100%, calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--see-marge)) * 4 / 3)); }
+  .see__schema:has(.see__jauge) .see__plan { width: min(calc(100% - var(--see-jauge-l) - 14px), calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--see-marge)) * 4 / 3)); }
+}
+@media (max-width: 899px) {
+  .see__texte { display: contents; }
+  .see__surtitre, .see__titre { order: -2; }
+  .see__schema { order: -1; }
+  .see__surtitre + .see__titre { margin-top: -8px; }
+}
+
+/* Téléphone et petites hauteurs, animé : schéma compact collé sous l'en-tête, étapes dessous. */
+.see.see--compact .see__grille, .see.see--repete .see__grille { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.see.see--compact .see__texte, .see.see--repete .see__texte { display: contents; }
+.see--compact :is(.see__surtitre, .see__titre), .see--repete :is(.see__surtitre, .see__titre) { order: -2; }
+.see--compact .see__schema { order: -1; position: sticky; top: var(--entete-h); z-index: 2; padding-block: 10px; background: var(--couleur-fond); box-shadow: 0 1px 0 var(--couleur-ligne); }
+.see--compact .see__plan { width: min(100%, calc(var(--ecran-h) * .34 * 4 / 3)); }
+.see--compact .see__schema:has(.see__jauge) .see__plan { width: min(calc(100% - var(--see-jauge-l) - 14px), calc(var(--ecran-h) * .34 * 4 / 3)); }
+.see--compact .see__etapes { margin-top: 0; }
+.see--compact .see__etape { scroll-margin-top: calc(var(--entete-h) + var(--ecran-h) * .34 + 36px); }
+
+/* Schéma répété dans chaque étape (copie figée, décorative) */
+.see--repete .see__schema:not(.see__schema--copie) { display: none; }
+.see__schema--copie { order: -1; margin-bottom: 8px; }
+.see--repete .see__etape { padding-block: clamp(24px, 4vh, 40px); }
+
+/* Mode épinglé : la scène tient exactement dans l'écran, de l'en-tête mesuré aux barres du bas mesurées. */
+.see.see--pile { padding-block: 0; }
+.see--pile .see__scene { height: var(--ecran-h); display: flex; align-items: center; padding-top: calc(var(--entete-h) + var(--see-marge)); padding-bottom: calc(var(--barres-h) + var(--see-marge)); }
+.see--pile .see__grille { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: center; max-height: 100%; }
+.see--pile .see__texte { gap: clamp(8px, 1.6vh, 14px); max-height: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--see-marge)); }
+.see--pile .see__titre { font-size: clamp(1.6rem, min(3.6vw, 6.2vh), 3.4rem); }
+.see--pile .see__etapes { margin-top: clamp(4px, 1.5vh, 16px); }
+.see--pile .see__etape { grid-area: 1 / 1; border: 0; padding-block: 0; align-content: start; opacity: 0; visibility: hidden; transform: translateY(24px); transition: opacity .5s, transform .7s cubic-bezier(.2, .8, .2, 1), visibility 0s .5s; }
+.see--pile .see__etape.est-active { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.see--pile .see__etape h3 { font-size: clamp(1.2rem, min(2.2vw, 4vh), 2rem); }
+.see--pile .see__puces { display: flex; }
+.see--pile .see__schema { position: relative; top: auto; }
+.see--pile .see__plan { width: min(100%, calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--see-marge)) * 4 / 3)); }
+.see--pile .see__schema:has(.see__jauge) .see__plan { width: min(calc(100% - var(--see-jauge-l) - 14px), calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--see-marge)) * 4 / 3)); }
+
+/* Écran étroit : la jauge passe à l'horizontale sous le plan, qui garde toute la largeur pour ses étiquettes. */
+@media (max-width: 480px) {
+  .see { --see-plan-l: 100%; }
+  .see--compact { --see-plan-l: min(100%, calc(var(--ecran-h) * .34 * 4 / 3)); }
+  .see__schema:has(.see__jauge) { flex-direction: column; align-items: center; gap: 8px; }
+  .see .see__schema:has(.see__jauge) .see__plan { width: var(--see-plan-l); }
+  .see__jauge { width: var(--see-plan-l); grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: none; align-items: center; justify-items: stretch; gap: 12px; }
+  .see__tube { width: auto; height: 14px; }
+  .see__niveau { inset: 3px; background: linear-gradient(90deg, var(--couleur-secondaire), var(--couleur-accent)); transform-origin: 0 50%; transform: scaleX(var(--see-niv, 1)); }
+}
+
+/* Réduire les animations et mode calme : état final complet, rien ne bouge. */
+@media (prefers-reduced-motion: reduce) {
+  .see__flux { animation: none !important; }
+  .see--pile .see__etape { transform: none; }
+}
+.calme .see__flux { animation: none !important; }

@@ -1,0 +1,65 @@
+{
+ "nom": "eau-qui-refracte",
+ "titre": "Image d'ouverture vue à travers une eau vive : réfraction WebGL, ronds sous le pointeur, titre lisible au-dessus",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "origine": [
+  "ateliersources-maquette/ouverture",
+  "esaie-55-1-maquette/ouverture",
+  "willowcamp-maquette/hero"
+ ],
+ "convient_a": [
+  "bien-être",
+  "santé",
+  "tourisme",
+  "hébergement",
+  "sport",
+  "association",
+  "culture",
+  "restauration",
+  "artisanat",
+  "collectivité"
+ ],
+ "ambiances": [
+  "océanique",
+  "doux",
+  "nocturne",
+  "sombre",
+  "végétal",
+  "froid"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "image": "URL de l'image d'ouverture ; sinon l'<img> de .eau__fond ; sinon fond de bassin neutre généré",
+  "focus": "point focal [x, y] du recadrage, [.5, .5]",
+  "force": "intensité de la réfraction, 1 (0,4 à 1,6)",
+  "ouverture": "une goutte ouvre l'eau depuis le centre, true",
+  "clarifie": "l'eau se calme au défilement, true",
+  "gouttes": "gouttes spontanées toutes les 3 à 6 s, true",
+  "reflet": "couleur CSS des reflets, --couleur-texte",
+  "teinte": "couleur CSS de l'eau, --couleur-secondaire",
+  "teinteForce": "part de la teinte, .18 (0 à .5)",
+  "dpr": "densité de pixels maximale sur ordinateur, 1.5 (1 sous 700 px)",
+  "repli": "'svg' (distorsion figée) ou 'net' (image seule) sans WebGL et en mode calme, 'svg'"
+ },
+ "poids_ko": 18.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0.036,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

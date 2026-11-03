@@ -1,0 +1,96 @@
+/* Composeur de formule — identité uniquement par les variables du socle. */
+.cdf { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.cdf__donnees { display: none; }
+.cdf__tete { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vh, 56px); }
+.cdf__titre { font-size: clamp(2.1rem, 5vw, 4.2rem); line-height: 1; padding-block: .06em; }
+.cdf__intro { color: var(--couleur-texte-doux); max-width: 52ch; }
+
+.cdf__grille { display: grid; gap: clamp(24px, 4vw, 56px); align-items: start; }
+@media (min-width: 900px) { .cdf__grille { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); } }
+
+/* Formulaire */
+.cdf__form { display: grid; gap: clamp(20px, 3vh, 32px); min-width: 0; }
+.cdf__groupe { border: 0; margin: 0; padding: 0 0 clamp(20px, 3vh, 32px); min-width: 0; border-bottom: 1px solid var(--couleur-ligne); display: grid; gap: 12px; }
+.cdf__legende { display: flex; align-items: center; gap: 12px; padding: 0; margin-bottom: 14px; font-family: var(--police-titres); font-size: clamp(1.25rem, 1.05rem + .8vw, 1.7rem); font-weight: 600; }
+.cdf__num { display: inline-grid; place-items: center; width: 2em; height: 2em; border-radius: 50%; font-family: var(--police-mono); font-size: max(12px, .78rem); background: var(--couleur-accent); color: var(--couleur-sur-accent); flex: none; }
+
+/* Cartes de choix : le champ natif couvre toute la carte (cible = la carte entière), l'indicateur est dessiné. */
+.cdf__choix-liste { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 10px; }
+.cdf__choix { position: relative; display: grid; }
+.cdf__choix input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; z-index: 1; }
+.cdf__carte { display: grid; align-content: start; gap: 4px; padding: 14px 16px 14px 48px; min-height: 100%; border: 1.5px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-surface); position: relative; transition: border-color .25s, background-color .25s, box-shadow .25s; }
+.cdf__carte::before { content: ""; position: absolute; left: 16px; top: 17px; width: 20px; height: 20px; border: 2px solid var(--couleur-texte-doux); border-radius: 50%; background: var(--couleur-fond); transition: border-color .2s, box-shadow .2s, background-color .2s; }
+.cdf__choix input[type="checkbox"] + .cdf__carte::before { border-radius: 5px; }
+.cdf__nom { font-weight: 700; line-height: 1.25; }
+.cdf__carte small { font-size: max(12px, .85rem); color: var(--couleur-texte-doux); line-height: 1.4; }
+.cdf__prix { display: block; min-height: 1.5em; margin-top: 4px; font-family: var(--police-mono); font-size: max(12px, .82rem); color: var(--couleur-accent); font-variant-numeric: tabular-nums; }
+.cdf__choix:hover .cdf__carte { border-color: color-mix(in oklab, var(--couleur-accent) 55%, var(--couleur-ligne)); }
+.cdf__choix input:checked + .cdf__carte { border-color: var(--couleur-accent); background: color-mix(in oklab, var(--couleur-accent) 9%, var(--couleur-surface)); box-shadow: 0 0 0 1px var(--couleur-accent); }
+.cdf__choix input[type="radio"]:checked + .cdf__carte::before { border-color: var(--couleur-accent); box-shadow: inset 0 0 0 4px var(--couleur-fond); background: var(--couleur-accent); }
+.cdf__choix input[type="checkbox"]:checked + .cdf__carte::before { border-color: var(--couleur-accent); background: var(--couleur-accent); }
+.cdf__choix input[type="checkbox"] + .cdf__carte::after { content: ""; position: absolute; left: 23px; top: 21px; width: 6px; height: 11px; border: solid var(--couleur-sur-accent); border-width: 0 2px 2px 0; transform: rotate(45deg) scale(0); transition: transform .2s; }
+.cdf__choix input[type="checkbox"]:checked + .cdf__carte::after { transform: rotate(45deg) scale(1); }
+.cdf__choix input:focus-visible + .cdf__carte { outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+.cdf__indispo { display: none; }
+.cdf__choix.est-indispo .cdf__carte { opacity: .55; border-style: dashed; }
+.cdf__choix.est-indispo input { cursor: not-allowed; }
+.cdf__choix.est-indispo .cdf__indispo { display: block; color: var(--couleur-texte); }
+.cdf__choix.est-indispo .cdf__prix { text-decoration: line-through; }
+
+/* Quantités : champ nombre natif entre deux boutons de 44 px */
+.cdf__qte { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-block: 6px; }
+.cdf__qte label { font-weight: 700; display: grid; }
+.cdf__qte label small { font-weight: 400; font-size: max(12px, .82rem); color: var(--couleur-texte-doux); }
+.cdf__pas { display: inline-grid; grid-template-columns: 44px 3.6em 44px; align-items: center; border: 1.5px solid var(--couleur-ligne); border-radius: 999px; overflow: hidden; background: var(--couleur-surface); }
+.cdf__pas button { width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.35rem; line-height: 1; cursor: pointer; transition: background-color .2s; }
+.cdf__pas button:hover { background: color-mix(in oklab, var(--couleur-accent) 14%, transparent); }
+.cdf__pas button[aria-disabled="true"] { opacity: .35; cursor: not-allowed; background: transparent; }
+.cdf__pas button:focus-visible, .cdf__pas input:focus-visible { outline-offset: -3px; }
+.cdf__pas input { width: 100%; height: 44px; border: 0; background: transparent; color: inherit; text-align: center; font: inherit; font-weight: 700; font-size: 1.15rem; font-variant-numeric: tabular-nums; -moz-appearance: textfield; appearance: textfield; }
+.cdf__pas input::-webkit-inner-spin-button, .cdf__pas input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.cdf__astuce { min-height: 1.55em; font-size: max(12px, .88rem); color: var(--couleur-accent); font-weight: 600; }
+
+/* Récapitulatif */
+.cdf__recap { display: grid; gap: 14px; padding: clamp(20px, 2.6vw, 34px); border-radius: calc(var(--rayon) + 6px); background: var(--couleur-surface); box-shadow: 0 0 0 1px var(--couleur-ligne); scroll-margin-top: calc(var(--entete-h) + 16px); min-width: 0; }
+.cdf__total { font-family: var(--police-titres); font-size: clamp(2.6rem, 2rem + 3vw, 4.6rem); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; letter-spacing: -.01em; white-space: nowrap; color: var(--couleur-texte); }
+.cdf.est-devis .cdf__total { font-size: clamp(2rem, 1.6rem + 2vw, 3.2rem); }
+.cdf__par { min-height: 1.5em; color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.cdf__mention { font-family: var(--police-mono); font-size: max(12px, .76rem); letter-spacing: .08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cdf__appel { justify-self: start; }
+.cdf__lignes { list-style: none; margin: 6px 0 0; padding: 0; display: grid; border-top: 1px solid var(--couleur-ligne); }
+.cdf__ligne { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; padding-block: 10px; border-bottom: 1px dashed var(--couleur-ligne); }
+.cdf__ligne-nom { display: grid; min-width: 0; }
+.cdf__ligne-nom b { font-weight: 600; }
+.cdf__ligne-nom small { font-size: max(12px, .82rem); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.cdf__ligne-nom small:empty { display: none; }
+.cdf__ligne-montant { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.cdf__ligne.est-remise .cdf__ligne-montant { color: var(--couleur-accent); }
+/* Nouvelle ligne : écrite de gauche à droite (masque), comme une ligne ajoutée au calcul. */
+.cdf__ligne.est-neuve { animation: cdf-ecrire .55s cubic-bezier(.3, .7, .2, 1) both; }
+@keyframes cdf-ecrire { from { clip-path: inset(-20% 100% -20% 0); } to { clip-path: inset(-20% 0 -20% 0); } }
+
+/* Barre du total sur téléphone et tablette : colle en bas tant que le formulaire est à l'écran, sans JavaScript. */
+.cdf__mini { display: none; }
+@media (max-width: 899px) {
+  .cdf--vivant .cdf__mini { display: flex; position: sticky; bottom: 0; z-index: 2; align-items: center; justify-content: space-between; gap: 12px; margin-inline: calc(-1 * var(--espace) / 2); padding: 10px calc(var(--espace) / 2) calc(10px + env(safe-area-inset-bottom)); background: color-mix(in oklab, var(--couleur-fond) 94%, transparent); border-top: 1px solid var(--couleur-ligne); }
+  .cdf__mini-total { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+  .cdf__mini-total small { font-family: var(--police-mono); font-size: max(12px, .76rem); letter-spacing: .08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+  .cdf__mini-total b { font-family: var(--police-titres); font-size: 1.5rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .cdf__mini .socle-bouton { padding-inline: 1em; white-space: nowrap; }
+}
+
+/* Ordinateur assez haut : le récapitulatif colle sous l'en-tête et ne dépasse jamais l'écran. */
+@media (min-width: 900px) and (min-height: 700px) {
+  .cdf__recap { position: sticky; top: calc(var(--entete-h) + 24px); max-height: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 48px); overflow: auto; overscroll-behavior: contain; }
+}
+
+@media (max-width: 420px) {
+  .cdf__carte { padding: 12px 14px 12px 44px; }
+  .cdf__carte::before { left: 13px; top: 15px; }
+  .cdf__choix input[type="checkbox"] + .cdf__carte::after { left: 20px; top: 19px; }
+  .cdf__total { font-size: clamp(2.2rem, 11vw, 2.8rem); }
+}
+
+/* Réduire les animations et mode calme : état final immédiat (le compteur écrit directement la valeur). */
+@media (prefers-reduced-motion: reduce) { .cdf__ligne.est-neuve { animation: none; clip-path: none; } }
+.calme .cdf__ligne.est-neuve { animation: none; clip-path: none; }

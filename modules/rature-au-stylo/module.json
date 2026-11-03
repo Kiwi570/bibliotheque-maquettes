@@ -1,0 +1,68 @@
+{
+ "nom": "rature-au-stylo",
+ "titre": "Mot barré d'un trait de stylo qui se dessine, puis remplacé par un mot écrit à la main (titre ou liste jargon → mot simple)",
+ "role": "manifeste",
+ "animations": [
+  "rature",
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "iprof-maquette/jargon",
+  "francis-gerardin-maquette/hero"
+ ],
+ "convient_a": [
+  "conseil",
+  "formation",
+  "services-b2b",
+  "numérique",
+  "artisanat",
+  "association",
+  "culture",
+  "média",
+  "santé",
+  "bien-être",
+  "juridique",
+  "finance",
+  "immobilier",
+  "collectivité"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "artisanal",
+  "chaleureux",
+  "sobre",
+  "ludique",
+  "énergique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "declencheur": "'apparition' (joue une fois) ou 'defilement' (suit la molette ; apparition sur téléphone) ; data-declencheur sur un groupe ou un parent",
+  "depart": "seuil d'apparition, 'top 85%'",
+  "debut": "début du tracé en mode défilement, 'top 78%'",
+  "fin": "fin du tracé en mode défilement, 'top 40%'",
+  "delai": "attente avant de jouer en secondes, 0",
+  "duree": "multiplicateur des durées, 1",
+  "souligner": "souligne le nouveau mot dans les titres, true",
+  "variante": "forme du trait 0 ondulé, 1 aller-retour, 2 diagonale, 3 gribouillis ; null alterne (data-trait sur un <del>)",
+  "epaisseur": "épaisseur du trait en fraction de la taille du texte, 0.075"
+ },
+ "poids_ko": 14.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

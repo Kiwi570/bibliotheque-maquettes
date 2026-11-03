@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Téléphone épinglé · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #10161a; --couleur-texte: #eef1ed; --couleur-accent: #86d3ad; --couleur-secondaire: #8e9cf2; --rayon: 12px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 14vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le téléphone reste à l'écran et son écran change à chaque étape.</p>
+  </section>
+
+  <section class="tep" data-module="telephone-epingle" data-epingle data-cote="droite" aria-labelledby="tep-titre">
+    <div class="tep__cadre socle-cadre">
+      <div class="tep__tete" data-tient="tête">
+        <p class="socle-surtitre">Comment ça marche</p>
+        <h2 class="tep__titre" id="tep-titre">Quatre étapes, quelques minutes, et c'est prêt.</h2>
+        <p class="tep__intro">Un paragraphe court qui annonce le parcours et ce que l'on obtient à la fin.</p>
+        <p class="tep__action"><a class="socle-bouton socle-bouton--plein" href="#suite">Commencer</a></p>
+      </div>
+
+      <ol class="tep__etapes" data-tient="étapes">
+        <li class="tep__etape">
+          <span class="tep__n">01</span>
+          <div class="tep__texte">
+            <h3 class="tep__t">Vous créez votre compte</h3>
+            <p class="tep__d">Une adresse e-mail suffit pour commencer. Le lien de confirmation arrive aussitôt.</p>
+          </div>
+          <div class="tep__mini" aria-hidden="true"><div class="tep__appareil"><div class="tep__ecran">
+            <div class="tep__vue">
+              <p class="tep-marque">Votre service</p>
+              <p class="tep-titre">Créer votre compte</p>
+              <p class="tep-texte">Indiquez votre adresse e-mail pour recevoir le lien de confirmation.</p>
+              <p class="tep-libelle">Adresse e-mail</p>
+              <p class="tep-champ"><span data-tep-tape>prenom.nom@exemple.fr</span></p>
+              <p class="tep-case"><span class="tep-boite"><svg viewBox="0 0 12 12" data-tep-pop="coche"><path d="M2 6.5l2.5 2.5L10 3"/></svg></span><span>J'accepte les conditions d'utilisation.</span></p>
+              <p class="tep-bouton" data-tep-pop="appui">Continuer</p>
+            </div>
+          </div></div></div>
+        </li>
+        <li class="tep__etape">
+          <span class="tep__n">02</span>
+          <div class="tep__texte">
+            <h3 class="tep__t">Vous complétez votre profil</h3>
+            <p class="tep__d">Trois rubriques courtes, enregistrées au fur et à mesure.</p>
+          </div>
+          <div class="tep__mini" aria-hidden="true"><div class="tep__appareil"><div class="tep__ecran">
+            <div class="tep__vue">
+              <p class="tep-notif" data-tep-pop="notif"><i></i><span><b>Votre service</b>Votre adresse est confirmée.</span></p>
+              <p class="tep-titre tep-titre--bas">Votre profil</p>
+              <p class="tep-ligne" data-tep-pop><span class="tep-pastille"></span><span>Identité</span><span class="tep-ok">Fait</span></p>
+              <p class="tep-ligne" data-tep-pop><span class="tep-pastille"></span><span>Préférences</span><span class="tep-ok">Fait</span></p>
+              <p class="tep-ligne" data-tep-pop><span class="tep-pastille"></span><span>Documents</span><span class="tep-ok">Fait</span></p>
+              <p class="tep-jauge"><span data-tep-jauge></span></p>
+              <p class="tep-bouton">Suivant</p>
+            </div>
+          </div></div></div>
+        </li>
+        <li class="tep__etape">
+          <span class="tep__n">03</span>
+          <div class="tep__texte">
+            <h3 class="tep__t">Vous choisissez votre formule</h3>
+            <p class="tep__d">Comparez les options sur un seul écran et changez d'avis quand vous le souhaitez.</p>
+          </div>
+          <div class="tep__mini" aria-hidden="true"><div class="tep__appareil"><div class="tep__ecran">
+            <div class="tep__vue">
+              <p class="tep-marque">Étape 3 sur 4</p>
+              <p class="tep-titre">Choisissez votre formule</p>
+              <p class="tep-choix" data-tep-pop><b>Essentiel</b><span>Les fonctions de base</span></p>
+              <p class="tep-choix" data-tep-pop data-tep-choisi><b>Complet</b><span>Toutes les options</span></p>
+              <p class="tep-choix" data-tep-pop><b>Sur mesure</b><span>Selon vos besoins</span></p>
+              <p class="tep-bouton" data-tep-pop="appui">Valider</p>
+            </div>
+          </div></div></div>
+        </li>
+        <li class="tep__etape">
+          <span class="tep__n">04</span>
+          <div class="tep__texte">
+            <h3 class="tep__t">Vous retrouvez votre espace</h3>
+            <p class="tep__d">Tout est prêt : votre espace vous attend, sur téléphone comme sur ordinateur.</p>
+          </div>
+          <div class="tep__mini" aria-hidden="true"><div class="tep__appareil"><div class="tep__ecran">
+            <div class="tep__vue tep__vue--centre">
+              <p class="tep-rond" data-tep-pop="coche"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></p>
+              <p class="tep-titre">C'est prêt</p>
+              <p class="tep-texte">Votre espace est ouvert. Vous pouvez y revenir à tout moment.</p>
+              <p class="tep-tuiles"><span data-tep-pop></span><span data-tep-pop></span><span data-tep-pop></span><span data-tep-pop></span></p>
+              <p class="tep-bouton">Ouvrir mon espace</p>
+            </div>
+          </div></div></div>
+        </li>
+      </ol>
+      <p class="socle-sr">Illustration : un téléphone montre l'écran correspondant à chaque étape du parcours.</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sur téléphone, en mode calme ou sans JavaScript, chaque étape montre son propre écran, dans le flux.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="telephone-epingle"]')) init(el);
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+ "nom": "composeur-de-formule",
+ "titre": "Composeur de formule : base, quantités et options, détail réécrit et total qui compte",
+ "role": "calculateur",
+ "animations": [
+  "compteur",
+  "masque"
+ ],
+ "interactions": [
+  "calculateur",
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "tiki-cassis-maquette/formules-composeur",
+  "iprof-maquette/tarifs-calculateur"
+ ],
+ "convient_a": [
+  "formation",
+  "bien-être",
+  "sport",
+  "tourisme",
+  "restauration",
+  "hébergement",
+  "culture",
+  "services-b2b",
+  "conseil",
+  "santé",
+  "artisanat",
+  "animaux",
+  "association"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "sobre",
+  "doux",
+  "chaleureux",
+  "énergique",
+  "artisanal"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "donnees": "tarifs { devise, bases, options, remises } ; par défaut lus dans <script type=\"application/json\" class=\"cdf__donnees\">",
+  "devise": "code ISO 4217, prioritaire sur donnees.devise ; 'EUR' par défaut",
+  "locale": "mise en forme Intl.NumberFormat, 'fr-FR'",
+  "decimales": "null : 0 si tous les prix sont entiers, sinon 2",
+  "duree": "durée du compteur en secondes, 0.8",
+  "parUnite": "quantité pour « soit X par personne », 'personnes' (null pour masquer)",
+  "champResume": "sélecteur d'un champ qui reçoit le résumé texte, null",
+  "textes": "libellés : total, surDevis, surDemande, indisponible, parUnite, astuce, astuceAtteinte"
+ },
+ "poids_ko": 21.7,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

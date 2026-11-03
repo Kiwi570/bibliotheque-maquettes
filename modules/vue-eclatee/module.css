@@ -1,0 +1,73 @@
+/* Vue éclatée — identité uniquement par les variables du socle. */
+.vec { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.vec__cadre { display: grid; gap: clamp(20px, 3vw, 40px); grid-template-areas: "tete" "scene" "pieces"; grid-template-columns: minmax(0, 1fr); }
+.vec__tete { grid-area: tete; display: grid; gap: 10px; align-content: start; }
+.vec__titre { font-size: clamp(2rem, 4.6vw, 4rem); line-height: 1; padding-block: .06em; }
+.vec__intro { color: var(--couleur-texte-doux); max-width: 46ch; }
+
+/* Scène : le plan garde le rapport du viewBox (640 × 560) ; les étiquettes HTML y sont posées en %. */
+.vec__scene { grid-area: scene; min-width: 0; display: grid; place-items: center; }
+.vec__plan { --vec-ratio: 640 / 560; position: relative; width: 100%; aspect-ratio: var(--vec-ratio); container-type: inline-size; }
+.vec__svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.vec__mention { position: absolute; left: 0; bottom: 0; margin: 0; font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+
+/* Pièces : faces calculées à partir du fond, du texte et de la teinte secondaire. */
+.vec__piece { transition: opacity .35s; }
+.vec__dessus { fill: color-mix(in oklab, var(--couleur-secondaire) 22%, var(--couleur-surface)); }
+.vec__flanc--g { fill: color-mix(in oklab, var(--couleur-secondaire) 12%, var(--couleur-fond)); }
+.vec__flanc--d { fill: color-mix(in oklab, var(--couleur-texte) 4%, var(--couleur-fond)); }
+.vec__dessus, .vec__flanc { stroke: color-mix(in oklab, var(--couleur-texte) 52%, var(--couleur-fond)); stroke-width: 1.2; stroke-linejoin: round; transition: fill .35s, stroke .35s; }
+.vec__detail { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 30%, var(--couleur-fond)); stroke-width: 1; }
+.vec__detail--tirets { stroke-dasharray: 5 5; }
+.vec__creux { fill: var(--couleur-fond); stroke: color-mix(in oklab, var(--couleur-texte) 40%, var(--couleur-fond)); stroke-width: 1; }
+.vec__trait { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 62%, var(--couleur-fond)); stroke-width: 1.2; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.vec__point { fill: var(--couleur-accent); opacity: 0; }
+
+/* Étiquettes posées au bout des traits (décoratives : la liste est l'équivalent lisible). */
+.vec__etiquette { position: absolute; left: var(--x); top: var(--y); max-width: calc(100% - var(--x)); translate: calc((1 - var(--a, 0)) * -10px) -50%; opacity: var(--a, 0);
+  display: flex; align-items: center; gap: 8px; padding: 4px 10px 4px 8px; border-radius: 999px; background: color-mix(in oklab, var(--couleur-fond) 88%, transparent);
+  font-size: max(12px, .86rem); line-height: 1.2; white-space: nowrap; pointer-events: auto; transition: background .3s, color .3s; }
+.vec__etiquette b { font-family: var(--police-mono); font-weight: 700; color: var(--couleur-accent); font-variant-numeric: tabular-nums; }
+.vec__etiquette > span { overflow: hidden; text-overflow: ellipsis; }
+/* Plan étroit : le numéro seul, le nom reste dans la liste. */
+@container (max-width: 400px) { .vec__etiquette > span { display: none; } }
+
+/* Liste des légendes : boutons de 44 px, survol et focus mettent la pièce en valeur, clic la garde en valeur. */
+.vec__pieces { grid-area: pieces; display: grid; gap: 10px; align-content: start; }
+.vec__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); }
+.vec__legende { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 44px; padding: 4px 12px 4px 6px; border: 0; border-radius: var(--rayon); background: transparent; text-align: left; cursor: pointer; transition: background .3s, color .3s; }
+.vec__num { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--couleur-ligne); font-family: var(--police-mono); font-size: max(12px, .75rem); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--couleur-texte-doux); transition: background .3s, color .3s, box-shadow .3s; }
+.vec__legende.est-vue .vec__num { box-shadow: inset 0 0 0 1.5px var(--couleur-accent); color: var(--couleur-texte); }
+.vec__legende:hover, .vec__legende.est-mise { background: var(--couleur-surface); }
+.vec__legende.est-mise .vec__num, .vec__legende[aria-pressed="true"] .vec__num { background: var(--couleur-accent); color: var(--couleur-sur-accent); box-shadow: inset 0 0 0 1.5px var(--couleur-accent); }
+.vec__legende:focus-visible { outline-offset: -2px; }
+
+/* Mise en valeur : les autres pièces s'estompent, la pièce choisie prend l'accent. */
+.vec--focus .vec__piece:not(.est-mise) { opacity: .28; }
+.vec__piece.est-mise .vec__dessus { fill: color-mix(in oklab, var(--couleur-accent) 34%, var(--couleur-surface)); }
+.vec__piece.est-mise .vec__dessus, .vec__piece.est-mise .vec__flanc, .vec__piece.est-mise .vec__trait { stroke: var(--couleur-accent); }
+.vec--focus .vec__etiquette:not(.est-mise) { color: var(--couleur-texte-doux); }
+.vec__etiquette.est-mise { background: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.vec__etiquette.est-mise b { color: inherit; }
+
+/* Écran large et paysage : texte et légendes à gauche, schéma à droite. */
+@media (min-width: 900px) and (min-aspect-ratio: 1/1) {
+  .vec__cadre { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); grid-template-areas: "tete scene" "pieces scene"; grid-template-rows: auto 1fr; column-gap: clamp(28px, 4vw, 72px); }
+  .vec__liste { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Épinglée : la section tient exactement dans l'écran, de l'en-tête mesuré aux barres du bas mesurées. */
+.vec.vec--epinglee { padding-block: 0; }
+.vec.vec--epinglee .vec__cadre { height: var(--ecran-h); grid-template-rows: auto minmax(0, 1fr) auto; row-gap: clamp(12px, 2.2vh, 28px);
+  padding-top: calc(var(--entete-h) + clamp(12px, 3vh, 36px)); padding-bottom: calc(var(--barres-h) + clamp(12px, 3vh, 36px)); }
+.vec.vec--epinglee .vec__scene { container-type: size; min-height: 0; height: 100%; }
+.vec.vec--epinglee .vec__plan { width: min(100cqw, 100cqh * 640 / 560); }
+@media (min-width: 900px) and (min-aspect-ratio: 1/1) {
+  .vec.vec--epinglee .vec__cadre { grid-template-rows: auto minmax(0, 1fr); align-content: center; }
+  .vec.vec--epinglee .vec__titre { font-size: clamp(2rem, min(4.6vw, 8vh), 4rem); }
+}
+@media (max-height: 720px) { .vec.vec--epinglee .vec__tete { gap: 6px; } .vec.vec--epinglee .vec__liste { gap: 0; } }
+@media (max-height: 600px) { .vec.vec--epinglee .vec__intro { display: none; } }
+@media (max-aspect-ratio: 1/1) { .vec.vec--epinglee .vec__titre { font-size: clamp(2rem, 5.4vw, 3.4rem); } }
+
+@media (max-width: 420px) { .vec__legende { padding-inline: 4px 8px; gap: 10px; } }

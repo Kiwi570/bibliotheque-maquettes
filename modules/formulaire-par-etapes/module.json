@@ -1,0 +1,71 @@
+{
+ "nom": "formulaire-par-etapes",
+ "titre": "Formulaire de contact en étapes : choix en grandes cartes, champs, récapitulatif modifiable et envoi simulé",
+ "role": "contact",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "coupdefood-maquette/contact",
+  "nexio-maquette/rendez-vous-section",
+  "goodlife-maquette/reserver"
+ ],
+ "convient_a": [
+  "restauration",
+  "hébergement",
+  "commerce",
+  "artisanat",
+  "bâtiment",
+  "services-b2b",
+  "conseil",
+  "santé",
+  "bien-être",
+  "sport",
+  "culture",
+  "formation",
+  "association",
+  "collectivité",
+  "tourisme",
+  "numérique",
+  "immobilier",
+  "juridique",
+  "finance",
+  "auto-moto",
+  "animaux"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "sobre",
+  "chaleureux",
+  "doux",
+  "froid",
+  "artisanal",
+  "luxueux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "animation": "glissement entre les étapes, true (coupé en mode calme)",
+  "decalage": "amplitude du glissement en px, 32",
+  "defilement": "remet le haut du formulaire à l'écran au changement d'étape, true",
+  "mailto": "adresse de repli : lien « envoyer par e-mail » prérempli après l'envoi simulé, '' (aucun)",
+  "sujet": "objet du mail de repli, 'Demande depuis le site'",
+  "messages": "remplace tout ou partie des messages d'erreur et d'état (obligatoire, choix, plusieurs, case, email, tel, url, court, format, nombre, erreurs, etape, vide)"
+ },
+ "poids_ko": 28.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

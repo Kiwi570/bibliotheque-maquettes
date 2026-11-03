@@ -1,0 +1,62 @@
+{
+ "nom": "constellation",
+ "titre": "Constellation de métiers ou de services : réseau de points en canvas qui se forme, respire et réagit au pointeur, nœuds cliquables en HTML",
+ "role": "services",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": [
+  "gdreseau-maquette/constellation",
+  "icc-maquette/hero",
+  "libre-solidaire-maquette/reseau"
+ ],
+ "convient_a": [
+  "services-b2b",
+  "conseil",
+  "numérique",
+  "association",
+  "collectivité",
+  "formation",
+  "culture",
+  "bâtiment",
+  "artisanat",
+  "santé",
+  "média"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "sobre",
+  "froid",
+  "luxueux"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "points": "points secondaires sur ordinateur, 110",
+  "pointsTelephone": "points secondaires en mode liste, 36",
+  "largeurListe": "largeur de section sous laquelle les nœuds passent en liste, 700",
+  "duree": "durée de la formation en ms, 2400",
+  "distance": "distance max des liens entre points secondaires en px, 95",
+  "rayonPointeur": "rayon d'influence du pointeur en px, 140 (0 pour couper)",
+  "respiration": "amplitude de la respiration en px, 5",
+  "dprMax": "plafond de densité de pixels du canvas, 2",
+  "graine": "graine du tirage des points, 7"
+ },
+ "poids_ko": 19.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

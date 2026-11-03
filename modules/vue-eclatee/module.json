@@ -1,0 +1,64 @@
+{
+ "nom": "vue-eclatee",
+ "titre": "Vue éclatée épinglée : l'objet se décompose au défilement, pièces légendées par un trait qui se dessine, liste de légendes qui met la pièce en valeur",
+ "role": "produits",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "winsbike-maquette/eclatee",
+  "swiss-cloisons-solutions-maquette/metiers",
+  "winsbike-atelier/beast"
+ ],
+ "convient_a": [
+  "artisanat",
+  "bâtiment",
+  "industrie",
+  "commerce",
+  "auto-moto",
+  "sport",
+  "numérique",
+  "services-b2b",
+  "formation",
+  "santé",
+  "bien-être"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "industriel",
+  "sobre",
+  "minéral",
+  "artisanal",
+  "brut"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "ecart": "écartement entre pièces voisines en unités du viewBox, 68 (data-ecart pour une pièce)",
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 3",
+  "lissage": "valeur scrub, 0.6",
+  "recomposer": "true : l'objet se recompose en fin d'épinglage",
+  "leve": "soulèvement de la pièce mise en valeur en unités du viewBox, 10 (0 pour couper)",
+  "largeurMin": "700 : en dessous, pas d'épinglage, l'objet s'éclate en traversant l'écran",
+  "hauteurMin": "520 : idem en hauteur"
+ },
+ "poids_ko": 15.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}
