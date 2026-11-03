@@ -6,13 +6,15 @@
 // - zones calmes : gauche, droite, haut, bas, avec un score de 0 à 1 (texte lisible au-dessus) et le ton (clair, sombre).
 // - qualité : netteté, bruit, blocs de compression, dimensions ; drapeau faible si l'image ne tiendra pas en grand.
 // - doublons et quasi-doublons (empreinte perceptuelle) : la meilleure est gardée, les autres notées.
-// - lisible : texte, étiquette, écran ou document lisible (lecture de texte de Vision), utile pour les métiers au secret.
+// - lisible : texte lu dans l'image (Vision), en trois niveaux : document ou écran (à écarter pour les métiers au secret),
+//   marque ou filigrane (à vérifier), texte décoratif (broderie, enseigne, étiquette de produit : rien à faire).
+//   --marques "Nom, Autre" ajoute des noms de marque à reconnaître (en plus du site et des logos de recuperation.json).
 // - planches contact <dossier>/planche.jpg (puis planche-2.jpg…, 20 images par planche) : nom, dimensions, drapeaux,
 //   rectangle du sujet et croix du cadrage, pour tout regarder en une fois.
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { args, lireJson, ecrireJson, empreinte, hamming, vision, arrondi, EXT_IMAGES } from './commun.mjs';
+import { args, lireJson, ecrireJson, empreinte, hamming, vision, arrondi, slug, EXT_IMAGES } from './commun.mjs';
 
 const { pos, opts } = args();
 if (!pos[0]) { console.error('usage : node images/analyser.mjs <dossier> [--sortie <dossier>/analyse.json]'); process.exit(1); }
@@ -163,11 +165,47 @@ async function qualite(fichier, meta, logo = false) {
   return { nettete: arrondi(nettete), bruit: arrondi(bruit, 2), compression: arrondi(blocs, 2), faible: raisons.length > 0, raisons };
 }
 
-function lisible(v) {
+// Texte lu dans l'image, en trois niveaux :
+// - document : document, écran, dossier ou étiquette administrative lisible (à écarter pour les métiers au secret) ;
+// - marque : marque, signature ou filigrane posé sur la photo (à vérifier : il ne doit pas rester sur le site) ;
+// - decoratif : broderie, enseigne, étiquette de produit, texte qui fait partie du sujet (rien à faire).
+const MARQUES = new Set();
+{
+  const mots = s => slug(s, 99, 9999).split('-').filter(m => m.length >= 4 && !/^(logo|clair|sombre|blanc|noir|paysage|services?|groupe|www|https?)$/.test(m));
+  try { for (const m of mots(new URL(recup.site).hostname.replace(/^www\./, '').split('.')[0])) MARQUES.add(m); } catch {}
+  for (const i of recup.images) if (i.drapeau === 'logo') for (const m of mots(i.nom.replace(/^logo-?/, ''))) MARQUES.add(m);
+  if (typeof opts.marques === 'string') for (const m of mots(opts.marques)) MARQUES.add(m);
+}
+const SIGNE_MARQUE = /(©|®|™|\bwww\.|https?:|\.(fr|com|ch|be|net|org|eu)\b|@[a-z]|\bphoto(graphie|graphy)?\b|\bstudio\b|\bcopyright\b)/i;
+const SIGNE_DOCUMENT = /(\b\d{2}[ .]\d{2}[ .]\d{2}[ .]\d{2}\b|[\w.-]+@[\w-]+\.\w+|\b(dossier|patient|client|n[ée]e? le|nom\s?:|pr[ée]nom|adresse|facture|ordonnance|confidentiel|total|date\s?:|iban|n°\s?\d)\b)/i;
+function lisible(v, lum, w, h, logo) {
   const blocs = (v?.texte || []).filter(t => t.confiance >= 0.5 && (t.texte.match(/[\p{L}\p{N}]/gu) || []).length >= 3);
   const car = blocs.reduce((s, t) => s + t.texte.length, 0);
   if (car < 6) return false;
-  return { texte: blocs.map(t => t.texte).join(' · ').slice(0, 160), blocs: blocs.length, surface: arrondi(blocs.reduce((s, t) => s + t.l * t.h, 0) / 100, 1) };
+  const norm = t => t.texte.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+  const vus = blocs.reduce((m, t) => m.set(norm(t), (m.get(norm(t)) || 0) + 1), new Map());
+  const pale = t => {   // texte peu contrasté sur son fond : la marque d'un filigrane
+    const x0 = Math.floor(t.x / 100 * w), y0 = Math.floor(t.y / 100 * h), x1 = Math.ceil((t.x + t.l) / 100 * w), y1 = Math.ceil((t.y + t.h) / 100 * h);
+    if ((x1 - x0) * (y1 - y0) < 24) return false;
+    let s = 0, s2 = 0, n = 0;
+    for (let y = y0; y < y1; y++) for (let x = x0; x < x1; x++) { const l = lum[y * w + x]; s += l; s2 += l * l; n++; }
+    return Math.sqrt(Math.max(0, s2 / n - (s / n) ** 2)) < 9;
+  };
+  const details = blocs.map(t => {
+    const mots = slug(t.texte, 99, 9999).split('-');
+    const niveau = SIGNE_DOCUMENT.test(t.texte) ? 'document'
+      : (SIGNE_MARQUE.test(t.texte) || mots.some(m => MARQUES.has(m)) || vus.get(norm(t)) >= 2 || pale(t)) ? 'marque' : 'decoratif';
+    return { texte: t.texte, niveau };
+  });
+  // Le filigrane répété ne compte pas comme document : seuls les autres blocs disent s'il y a un texte à lire.
+  const autres = blocs.filter((t, i) => details[i].niveau !== 'marque');
+  const carAutres = autres.reduce((s, t) => s + t.texte.length, 0);
+  const petits = autres.filter(t => t.h < 3.5).length;
+  let niveau = (petits >= 5 && carAutres >= 60) || carAutres >= 160 || details.filter(d => d.niveau === 'document').length >= 2 ? 'document'
+    : details.some(d => d.niveau === 'marque') ? 'marque' : 'decoratif';
+  if (logo) niveau = 'logo';
+  return { niveau, a_verifier: niveau === 'document' || niveau === 'marque', texte: blocs.map(t => t.texte).join(' · ').slice(0, 160), blocs: blocs.length,
+    surface: arrondi(blocs.reduce((s, t) => s + t.l * t.h, 0) / 100, 1), details: details.slice(0, 12) };
 }
 
 async function main() {
@@ -191,10 +229,10 @@ async function main() {
       const { sujet, cadrage, visages } = sujetEtCadrage(v, rgb, w, h);
       const cad = cadrage.map(c => Math.round(borne(c)));
       const e = { ...base, sujet, visages, cadrage: cad, cadrage_css: `${cad[0]}% ${cad[1]}%`, zones_calmes: zonesCalmes(lum, w, h, sujet),
-        qualite: await qualite(chemin, { ...meta, width: largeur, height: hauteur }, r?.drapeau === 'logo'), lisible: vis ? lisible(v) : null,
+        qualite: await qualite(chemin, { ...meta, width: largeur, height: hauteur }, r?.drapeau === 'logo'), lisible: vis ? lisible(v, lum, w, h, r?.drapeau === 'logo') : null,
         empreinte: await empreinte(chemin), couleur: [...(await sharp(chemin, { failOn: 'none' }).rotate().flatten({ background: '#fff' }).resize(6, 6, { fit: 'fill' }).removeAlpha().raw().toBuffer())] };
       resultats.push(e);
-      console.log(`OK ${f} sujet ${sujet.source} ${e.cadrage_css}${e.qualite.faible ? ` faible (${e.qualite.raisons.join(', ')})` : ''}${e.lisible ? ' texte' : ''}`);
+      console.log(`OK ${f} sujet ${sujet.source} ${e.cadrage_css}${e.qualite.faible ? ` faible (${e.qualite.raisons.join(', ')})` : ''}${e.lisible ? ` texte ${e.lisible.niveau}` : ''}`);
     } catch (err) {
       console.log(`ECHEC ${f} : ${err.message}`);
       resultats.push({ fichier: f, erreur: err.message, drapeaux: ['illisible'] });
@@ -227,7 +265,7 @@ async function main() {
     if (e.drapeau) d.push(e.drapeau);
     if (e.visages) d.push(e.visages > 1 ? `${e.visages} visages` : 'visage');
     if (e.qualite.faible) d.push(...e.qualite.raisons.map(r => /px de large/.test(r) ? 'petite' : r));
-    if (e.lisible) d.push('texte');
+    if (e.lisible) d.push({ document: 'document lisible', marque: 'filigrane ou marque', decoratif: 'texte décoratif', logo: 'texte du logo' }[e.lisible.niveau]);
     if (e.doublon_de) d.push(`${e.doublon_de.type} de ${e.doublon_de.fichier}`);
     const calme = e.zones_calmes.filter(z => z.score >= 0.65).map(z => z.cote);
     if (calme.length) d.push(`calme ${calme.join('/')}`);
@@ -254,7 +292,7 @@ async function main() {
       const ox = x + Math.floor((CW - vw) / 2), oy = y + Math.floor((TH - vh) / 2);
       calques.push({ input: { create: { width: CW, height: TH, channels: 3, background: '#d8d8d8' } }, left: x, top: y });
       if (vignette) calques.push({ input: vignette, left: ox, top: oy });
-      const alerte = (e.drapeaux || []).some(d => /faible|floue|petite|compression|bruit|texte|doublon|illisible/.test(d));
+      const alerte = (e.drapeaux || []).some(d => /faible|floue|petite|compression|bruit|document lisible|filigrane|doublon|illisible/.test(d));
       let svg = '';
       if (e.sujet) {
         const s = e.sujet;
@@ -280,7 +318,7 @@ async function main() {
   ecrireJson(SORTIE, { dossier: DOSSIER, date: new Date().toISOString(), detection: vis ? 'Vision (macOS) + mesures sharp' : 'mesures sharp seulement', planches,
     legende_planche: 'cadre jaune : sujet ; croix rouge : cadrage ; fond rose : à vérifier', doublons, images: resultats });
   const n = k => resultats.filter(e => e.drapeaux?.some(d => d.startsWith(k))).length;
-  console.log(`\n${resultats.length} images : ${n('visage') + n('2 ') + n('3 ')} avec visage, ${resultats.filter(e => e.qualite?.faible).length} faibles, ${n('texte')} avec texte, ${doublons.length} doublons ou quasi-doublons.`);
+  console.log(`\n${resultats.length} images : ${resultats.filter(e => e.visages).length} avec visage, ${resultats.filter(e => e.qualite?.faible).length} faibles, texte : ${n('document')} document, ${n('filigrane')} filigrane ou marque, ${n('texte d')} décoratif ; ${doublons.length} doublons ou quasi-doublons.`);
   const court = f => { const r = path.relative(process.cwd(), f); return r.startsWith('..') ? f : r; };
   console.log(`Écrit : ${court(SORTIE)} ; planches : ${planches.map(p => court(path.join(DOSSIER, p))).join(', ')}`);
 }

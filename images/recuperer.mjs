@@ -6,7 +6,8 @@
 // - Remonte à l'original : Wix (coupé avant /v1/), WordPress (sans -300x200 ni -scaled), Squarespace (sans ?format=),
 //   Shopify (sans _1024x), et tout paramètre de taille de l'adresse.
 // - Écarte icônes, pictogrammes, SVG décoratifs, images de moins de 400 px, images répétées sur presque toutes les pages
-//   (sauf le logo), pixels de suivi, drapeaux, avatars et icônes de réseaux sociaux. Garde toutes les variantes du logo.
+//   (sauf le logo), pixels de suivi, drapeaux, avatars et icônes de réseaux sociaux. Garde toutes les variantes du logo,
+//   avec un champ marque : principale, sous-marque ou partenaire.
 // - Écrit <sortie>/<nom>.<ext> et <sortie>/recuperation.json, puis ~/Downloads/<client>-images.zip, montré dans le Finder.
 // Relançable : les fichiers de la récupération précédente (et eux seuls) sont effacés au départ ; grok/, analyse.json restent.
 import fs from 'node:fs';
@@ -272,11 +273,15 @@ async function main() {
     const duSite = x => [...NOM_SITE].some(m => m.length > 3 && slug(`${x.urls.map(u => path.basename(new URL(u).pathname)).join(' ')} ${x.wix?.nom || ''}`, 99, 9999).split('-').includes(m));
     const base = x => `${x.urls.map(u => path.basename(new URL(u).pathname)).join(' ')} ${x.wix?.nom || ''}`;
     const social = x => x.lien && RESEAUX.test(x.lien);
-    const logo = !pasLogo && r.some(x => !social(x) && (
+    // Logo du client (principal) : en-tête, lien vers l'accueil, ou mot logo avec le nom du site.
+    let principal = !pasLogo && (r.some(x => !social(x) && (
       (x.zone === 'entete' && (/logo/i.test(`${base(x)} ${x.classes}`) || (x.vers_accueil && x.type === 'img')))
-      || (/logo/i.test(base(x)) && duSite(x))
-      || (x.zone === 'pied' && /logo/i.test(x.classes) && duSite(x))))
-      || (premiersEntete.has(g.cle) && !r.some(social));
+      || (/logo/i.test(base(x)) && duSite(x))))
+      || (premiersEntete.has(g.cle) && !r.some(social)));
+    // Autres logos (sous-marques, partenaires, labels) : mot logo dans le fichier ou sur un petit conteneur dédié.
+    const autreLogo = !principal && r.some(x => !social(x) && (/logo/i.test(base(x)) || /\blogo\b/i.test(x.classes)));
+    if (autreLogo && r.some(duSite)) principal = true;      // variante du logo du client (blanche, réduite…)
+    const logo = principal || autreLogo;
     if (!logo) {
       if (DRAPEAU.test(g.cle)) { ecartees.push({ url: g.cle, raison: 'drapeau' }); continue; }
       if (ICONE.test(g.cle) || r.every(x => ICONE.test(`${x.alt} ${x.classes}`))) { ecartees.push({ url: g.cle, raison: 'icone' }); continue; }
@@ -284,7 +289,7 @@ async function main() {
       if (nbPages >= 4 && g.pages.size >= Math.max(3, Math.ceil(nbPages * 0.8))) { ecartees.push({ url: g.cle, raison: `repetee sur ${g.pages.size}/${nbPages} pages` }); continue; }
       if (r.every(x => x.rendu[0] && x.rendu[0] < 48 && x.rendu[1] < 48)) { ecartees.push({ url: g.cle, raison: 'icone' }); continue; }
     }
-    candidats.push({ ...g, logo, indices });
+    candidats.push({ ...g, logo, principal, indices });
   }
 
   // Télécharger (6 à la fois), en essayant l'original d'abord.
@@ -299,6 +304,8 @@ async function main() {
       }
       if (!ok) { console.log(`ECHEC ${c.cle} : ${erreur}`); ecartees.push({ url: c.cle, raison: `echec : ${erreur}` }); continue; }
       if (c.logo && !ok.svg && Math.max(ok.largeur, ok.hauteur) < 64) { ecartees.push({ url: ok.url, raison: 'icone' }); continue; }
+      // Une grande photo sans transparence n'est pas un logo, même rangée dans un conteneur « logo ».
+      if (c.logo && !ok.svg && !ok.alpha && ok.largeur >= 1000 && !c.releves.some(x => x.zone === 'entete')) c.logo = c.principal = false;
       if (!c.logo && ok.svg) { ecartees.push({ url: ok.url, raison: 'svg decoratif' }); continue; }
       if (!c.logo && ok.largeur < LARGEUR_MIN) { ecartees.push({ url: ok.url, raison: `${ok.largeur} px de large` }); continue; }
       if (!c.logo && ok.largeur * ok.hauteur < 400 * 250) { ecartees.push({ url: ok.url, raison: `${ok.largeur}x${ok.hauteur}` }); continue; }
@@ -319,12 +326,21 @@ async function main() {
     garde.push(t);
   }
 
+  // Logos : marque principale, sous-marque (dans l'en-tête, le pied, ou même nom qu'une sous-marque) ou partenaire.
+  const GENERIQUES = new Set('logo blanc noir white black couleur color png svg jpg webp services service paysage groupe footer header small petit grand'.split(' '));
+  const motsMarque = t => new Set(slug(`${path.basename(new URL(t.url).pathname)} ${t.releves.map(x => x.alt).join(' ')}`, 99, 9999).split('-').filter(m => m.length > 3 && !GENERIQUES.has(m) && !/^\d+/.test(m) && !NOM_SITE.has(m)));
+  const logos = garde.filter(t => t.logo);
+  for (const t of logos) t.marque = t.principal ? 'principale' : t.releves.some(x => x.zone !== 'contenu') ? 'sous-marque' : null;
+  const motsSous = new Set(logos.filter(t => t.marque === 'sous-marque').flatMap(t => [...motsMarque(t)]));
+  for (const t of logos) if (!t.marque) t.marque = [...motsMarque(t)].some(m => motsSous.has(m)) ? 'sous-marque' : 'partenaire';
+  const ordreMarque = { principale: 0, 'sous-marque': 1, partenaire: 2 };
+
   // Noms et drapeaux.
   const pris = new Set();
   const unique = n => { let x = n || 'image', i = 2; while (pris.has(x)) x = `${n}-${i++}`; pris.add(x); return x; };
   const resultat = [];
   const premiere = t => pages.findIndex(p => t.pages.has(p.url));
-  for (const t of garde.sort((a, b) => (b.logo - a.logo) || premiere(a) - premiere(b))) {
+  for (const t of garde.sort((a, b) => (b.logo - a.logo) || (ordreMarque[a.marque] ?? 9) - (ordreMarque[b.marque] ?? 9) || premiere(a) - premiere(b))) {
     const r = t.releves.find(x => x.type === 'img' && x.zone === 'contenu') || t.releves.find(x => x.type !== 'og') || t.releves[0];
     const alt = t.releves.map(x => x.alt || x.wix?.alt).find(a => a && !inutile(a)) || '';
     const legende = t.releves.map(x => x.legende).find(Boolean) || '';
@@ -337,7 +353,8 @@ async function main() {
       const l = t.svg ? null : await luminance(t.data);
       const variante = slug(brut.replace(/\.(png|jpe?g|svg)$/i, ''), 3).split('-').filter(m => !/^(logo|png|svg|jpg|\d+px)$/.test(m)).join('-');
       const ton = t.svg ? '' : l > 0.62 && t.alpha ? 'clair' : l < 0.4 ? 'sombre' : '';
-      nom = unique(['logo', ORIGINE_UTILE(brut) ? variante : '', ton].filter(Boolean).join('-'));
+      const seul = t.marque === 'principale' && !pris.has('logo') && !pris.has(['logo', ton].filter(Boolean).join('-'));
+      nom = unique(['logo', !seul && ORIGINE_UTILE(brut) ? variante : '', ton].filter(Boolean).join('-'));
       drapeau = 'logo';
     } else {
       nom = unique(slug(alt) || slug(legende) || slug(titre) || slug(fichierOrigine) || slug(section) || slug(page) || 'image');
@@ -347,9 +364,10 @@ async function main() {
     const fichier = `${nom}.${t.ext}`;
     fs.writeFileSync(path.join(SORTIE, fichier), t.data);
     const e = { fichier, nom, origine: t.url, page: r.page, pages: t.pages.size, emplacement: `${r.type}${r.zone !== 'contenu' ? ` (${r.zone})` : ''}`,
-      contexte: { alt, legende, titre, section, page, fichier_origine: fichierOrigine }, largeur: t.largeur, hauteur: t.hauteur, poids: t.data.length, format: t.format, transparence: t.alpha, drapeau };
+      contexte: { alt, legende, titre, section, page, fichier_origine: fichierOrigine }, largeur: t.largeur, hauteur: t.hauteur, poids: t.data.length, format: t.format, transparence: t.alpha, drapeau,
+      ...(t.logo ? { marque: t.marque } : {}) };
     resultat.push(e);
-    console.log(`OK ${fichier} ${t.largeur}x${t.hauteur} ${ko(t.data.length)} ${drapeau}`);
+    console.log(`OK ${fichier} ${t.largeur}x${t.hauteur} ${ko(t.data.length)} ${drapeau}${t.logo ? ` (${t.marque})` : ''}`);
   }
 
   const resume = ecartees.reduce((o, e) => { const k = e.raison.replace(/ .*/, '').replace(/^\d+$/, 'petite'); o[k] = (o[k] || 0) + 1; return o; }, {});
