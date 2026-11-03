@@ -54,14 +54,17 @@
    "bouton-magnétique",
    "survol-image",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "reactif-vitesse",
+   "trace-svg"
   ],
   "interactions": [
    "formulaire-par-étapes",
    "configurateur",
    "filtres",
    "mode-calme",
-   "lecteur-audio"
+   "ambiance-sonore",
+   "schema-interactif"
   ],
   "change_depuis_audit": "Commit 8ab8326 postérieur à la correction (240ad09) : images Grok définitives et textes alternatifs seulement ; vérifié en ligne, l'image aux trois mains est remplacée (deux gants, manomètres à cadran), la mise en page et les effets sont inchangés.",
   "accueil": "haut"
@@ -85,7 +88,7 @@
    "reutilisable": true,
    "module": null,
    "medias": {
-    "video": "medias/nelis-maquette/haut-p960.mp4"
+    "video": "medias/nelis-maquette/haut-p720.mp4"
    },
    "code": {
     "js": "assets/js/main.js:244-281 ; assets/js/media.js:22-59"
@@ -122,7 +125,7 @@
     "bouton-magnétique"
    ],
    "interactions": [
-    "lecteur-audio"
+    "ambiance-sonore"
    ],
    "telephone": "adapté",
    "note_qualite": 3,
@@ -176,7 +179,8 @@
    "role": "manifeste",
    "description": "Ruban de mots-clés en capitales qui défile en boucle (contenu dupliqué, xPercent −50) ; sa vitesse et son sens suivent la vitesse du défilement de la page.",
    "animations": [
-    "marquee"
+    "marquee",
+    "reactif-vitesse"
    ],
    "interactions": [
     "aucune"
@@ -200,7 +204,8 @@
    "animations": [
     "révélation-texte",
     "progression-fixée",
-    "parallaxe"
+    "parallaxe",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -528,7 +533,7 @@
     "progression-fixée"
    ],
    "interactions": [
-    "aucune"
+    "schema-interactif"
    ],
    "telephone": "simplifié",
    "note_qualite": 5,

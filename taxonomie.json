@@ -1,6 +1,6 @@
 {
- "version": 2,
- "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés.",
+ "version": 3,
+ "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés. v3 : rôle articles, animations reactif-vitesse, fil-conducteur, trace-svg et rature, interactions ambiance-sonore, schema-interactif, saisie-personnalisee et visite-guidee, dépendance drawsvg-morphsvg. Les mécaniques rares (une seule maquette) vont dans le champ libre particularites des fiches, pas ici.",
  "activite": [
   "restauration",
   "hébergement",
@@ -95,7 +95,8 @@
   "outil-interactif",
   "decor",
   "barre-fixe",
-  "texte-legal"
+  "texte-legal",
+  "articles"
  ],
  "animation": [
   "révélation-texte",
@@ -123,6 +124,10 @@
   "chargement-orchestré",
   "ouverture-orchestrée",
   "défilement-lissé",
+  "reactif-vitesse",
+  "fil-conducteur",
+  "trace-svg",
+  "rature",
   "aucune"
  ],
  "interaction": [
@@ -142,6 +147,10 @@
   "comparateur",
   "galerie-cliquable",
   "mode-calme",
+  "ambiance-sonore",
+  "schema-interactif",
+  "saisie-personnalisee",
+  "visite-guidee",
   "aucune"
  ],
  "dependance": [
@@ -153,11 +162,25 @@
   "ogl",
   "three",
   "canvas",
+  "drawsvg-morphsvg",
   "aucune"
  ],
  "telephone": [
   "adapté",
   "simplifié",
   "masqué"
- ]
+ ],
+ "definitions": {
+  "articles": "rôle : liste ou page d article, journal, blog, revue de presse",
+  "reactif-vitesse": "animation : un élément réagit à la vitesse du défilement (inclinaison, étirement, accélération d un bandeau)",
+  "fil-conducteur": "animation : un tracé ou un objet accompagne le visiteur sur toute la page, d une section à l autre",
+  "trace-svg": "animation : un trait SVG se dessine (stroke-dashoffset ou DrawSVG), au défilement ou à l apparition",
+  "rature": "animation : un mot est barré puis remplacé",
+  "ambiance-sonore": "interaction : son d ambiance que le visiteur allume ou coupe",
+  "schema-interactif": "interaction : schéma ou vue éclatée dont on explore les parties (survol, clic, défilement)",
+  "saisie-personnalisee": "interaction : le visiteur tape un texte (prénom, message) que la page met en scène",
+  "visite-guidee": "interaction : parcours pas à pas qui montre les fonctions d une interface",
+  "drawsvg-morphsvg": "dépendance : plugins GSAP DrawSVG ou MorphSVG",
+  "particularites": "champ libre des fiches (maquette et section) pour une mécanique rare : texte-brouille, scene-par-section, reprise-des-couleurs, retournement-carte, reactif-au-son, physique-pendule…"
+ }
 }

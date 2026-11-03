@@ -51,7 +51,9 @@
       "apparition-au-défilement",
       "curseur-personnalisé",
       "bouton-magnétique",
-      "canvas-2d"
+      "canvas-2d",
+      "reactif-vitesse",
+      "trace-svg"
     ],
     "interactions": [
       "recherche",
@@ -60,10 +62,21 @@
       "formulaire-par-étapes",
       "galerie-cliquable",
       "configurateur",
-      "mode-calme"
+      "mode-calme",
+      "schema-interactif"
     ],
     "change_depuis_audit": null,
-    "accueil": "top"
+    "accueil": "top",
+    "dependances": [
+      "gsap",
+      "scrolltrigger",
+      "splittext",
+      "flip",
+      "lenis",
+      "ogl",
+      "canvas",
+      "drawsvg-morphsvg"
+    ]
   },
   "sections": {
     "hd": {
@@ -172,7 +185,8 @@
         "masque"
       ],
       "interactions": [
-        "galerie-cliquable"
+        "galerie-cliquable",
+        "schema-interactif"
       ],
       "telephone": "adapté",
       "note_qualite": 5,
@@ -241,7 +255,8 @@
       "description": "Mur à crochets : les meilleures ventes pendent comme des étiquettes qui se balancent selon la vitesse de défilement puis reviennent en oscillant ; teintes anodisées, aperçu rapide et ajout au panier.",
       "animations": [
         "apparition-au-défilement",
-        "parallaxe"
+        "parallaxe",
+        "reactif-vitesse"
       ],
       "interactions": [
         "panier-simule",
@@ -262,7 +277,10 @@
         "html": "index.html:147-157",
         "css": "assets/css/site.css:1",
         "js": "assets/js/home.js:48-56 (minifié : plages indicatives, sources absentes du dépôt)"
-      }
+      },
+      "particularites": [
+        "physique-pendule : étiquettes pendues à des crochets qui oscillent selon la vitesse"
+      ]
     },
     "beast": {
       "titre": "Planche du cadre Beast",
@@ -270,7 +288,8 @@
       "description": "Planche de géométrie du cadre sur papier millimétré : photo du cadre, tracé coté qui se dessine, caractéristiques chiffrées.",
       "animations": [
         "masque",
-        "apparition-au-défilement"
+        "apparition-au-défilement",
+        "trace-svg"
       ],
       "interactions": [
         "aucune"
@@ -279,7 +298,12 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "pieges": []
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "drawsvg-morphsvg"
+      ]
     },
     "protections": {
       "titre": "Protections",
@@ -460,7 +484,8 @@
         "masque"
       ],
       "interactions": [
-        "galerie-cliquable"
+        "galerie-cliquable",
+        "schema-interactif"
       ],
       "telephone": "adapté",
       "note_qualite": 4,

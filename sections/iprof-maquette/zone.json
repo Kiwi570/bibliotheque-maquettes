@@ -7,14 +7,16 @@
  "description": "Carte SVG du lac : la rive se trace (DrawSVG), l'eau et la zone surlignée apparaissent, les villes surgissent une à une, flèches et notes manuscrites se dessinent, puis une bulle « en visio » s'ouvre ; photo panoramique dessous.",
  "animations": [
   "apparition-au-défilement",
-  "révélation-image"
+  "révélation-image",
+  "trace-svg"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
   "gsap",
-  "scrolltrigger"
+  "scrolltrigger",
+  "drawsvg-morphsvg"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -28,7 +30,7 @@
  "medias": {
   "capture": "medias/iprof-maquette/zone-p1440.jpg",
   "capture_m390": "medias/iprof-maquette/zone-m390.jpg",
-  "video": "medias/iprof-maquette/zone-p960.mp4"
+  "video": "medias/iprof-maquette/zone-p720.mp4"
  },
  "pieges": [
   "dépend de DrawSVGPlugin",

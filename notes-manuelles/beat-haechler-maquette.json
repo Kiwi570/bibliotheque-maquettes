@@ -52,7 +52,8 @@
    "bouton-magnétique",
    "survol-image",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "trace-svg"
   ],
   "interactions": [
    "formulaire-par-étapes",
@@ -60,10 +61,22 @@
    "carte-interactive",
    "simulateur",
    "configurateur",
-   "mode-calme"
+   "mode-calme",
+   "saisie-personnalisee"
   ],
   "change_depuis_audit": null,
-  "accueil": "hero"
+  "accueil": "hero",
+  "dependances": [
+   "gsap",
+   "scrolltrigger",
+   "splittext",
+   "lenis",
+   "canvas",
+   "drawsvg-morphsvg"
+  ],
+  "particularites": [
+   "retournement-carte : bon cadeau qui se retourne"
+  ]
  },
  "sections": {
   "intro": {
@@ -81,7 +94,7 @@
    "note_qualite": 4,
    "reutilisable": false,
    "medias": {
-    "video": "medias/beat-haechler-maquette/hero-p960.mp4"
+    "video": "medias/beat-haechler-maquette/hero-p720.mp4"
    },
    "pieges": [
     "chaînée au shader du héros, dont la version sans WebGL laisse une erreur console",
@@ -293,7 +306,8 @@
    "role": "carte",
    "description": "Carte SVG simplifiée d'un lac : la route entre les deux lieux se dessine au défilement et le repère du lieu ouvert aujourd'hui pulse, à côté de deux fiches de lieu.",
    "animations": [
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "carte-interactive"
@@ -310,6 +324,12 @@
    "pieges": [
     "couleurs du dégradé de l'eau en dur dans le SVG",
     "lieu du jour calculé d'après le jour de la semaine"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "splittext",
+    "drawsvg-morphsvg"
    ]
   },
   "t-plus": {
@@ -484,7 +504,8 @@
     "webgl-shader"
    ],
    "interactions": [
-    "configurateur"
+    "configurateur",
+    "saisie-personnalisee"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
@@ -498,6 +519,9 @@
    "pieges": [
     "en mode calme, poser directement l'état final (rabat ouvert, carte sortie)",
     "la carte retournable est un bouton avec aria-pressed"
+   ],
+   "particularites": [
+    "retournement-carte : la carte cadeau se retourne au clic ou au clavier pour montrer le verso"
    ]
   },
   "bons-cadeaux-t-bon": {
@@ -586,7 +610,8 @@
    "description": "Quatre vignettes où un trait SVG se dessine en imitant le mouvement de la main (vague, spirales, petits cercles, ligne appuyée), un point suivant le bout du tracé ; citation et liste du programme à côté.",
    "animations": [
     "apparition-au-défilement",
-    "morphing"
+    "morphing",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"

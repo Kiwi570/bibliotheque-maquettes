@@ -7,10 +7,12 @@
  "description": "Dessin SVG de la maison en coupe, étage par étage : des onglets accessibles (flèches, Début, Fin) ou un clic sur une pièce allument l'espace, ses traits se tracent et sa fiche photo s'ouvre en cercle.",
  "animations": [
   "masque",
-  "révélation-image"
+  "révélation-image",
+  "trace-svg"
  ],
  "interactions": [
-  "galerie-cliquable"
+  "galerie-cliquable",
+  "schema-interactif"
  ],
  "dependances": [
   "gsap",
@@ -29,7 +31,7 @@
  "medias": {
   "capture": "medias/ateliersources-maquette/organiser-un-stage-coupe-p1440.jpg",
   "capture_m390": "medias/ateliersources-maquette/organiser-un-stage-coupe-m390.jpg",
-  "video": "medias/ateliersources-maquette/organiser-un-stage-coupe-p960.mp4"
+  "video": "medias/ateliersources-maquette/organiser-un-stage-coupe-p720.mp4"
  },
  "pieges": [
   "garder pièces du dessin et onglets synchronisés (aria-selected, tabindex) quelle que soit l'entrée"

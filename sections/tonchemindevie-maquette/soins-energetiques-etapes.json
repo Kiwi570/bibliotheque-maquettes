@@ -7,7 +7,8 @@
  "description": "Liste des quatre étapes du soin à gauche, visuel collant à droite qui change d'image à chaque étape ; pendule de radiesthésie SVG qui se balance selon la vitesse de défilement, voile qui se colore à l'étape 3.",
  "animations": [
   "progression-fixée",
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "reactif-vitesse"
  ],
  "interactions": [
   "aucune"
@@ -28,11 +29,14 @@
  "medias": {
   "capture": "medias/tonchemindevie-maquette/soins-energetiques-etapes-p1440.jpg",
   "capture_m390": "medias/tonchemindevie-maquette/soins-energetiques-etapes-m390.jpg",
-  "video": "medias/tonchemindevie-maquette/soins-energetiques-etapes-p960.mp4"
+  "video": "medias/tonchemindevie-maquette/soins-energetiques-etapes-p720.mp4"
  },
  "pieges": [
   "le pendule lit lenis.velocity : sans Lenis, il ne fait que se balancer",
   "visuel collant masqué sous 900 px, images reprises dans chaque étape"
+ ],
+ "particularites": [
+  "physique-pendule : pendule de radiesthésie SVG qui se balance selon la vitesse (lenis.velocity)"
  ],
  "mesures": {
   "hauteur_p1440": 3128,

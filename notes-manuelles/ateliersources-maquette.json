@@ -54,7 +54,8 @@
    "bouton-magnétique",
    "filtre-anime",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "trace-svg"
   ],
   "interactions": [
    "comparateur",
@@ -62,8 +63,9 @@
    "formulaire-par-étapes",
    "réservation-simulee",
    "galerie-cliquable",
-   "lecteur-audio",
-   "mode-calme"
+   "mode-calme",
+   "ambiance-sonore",
+   "schema-interactif"
   ],
   "change_depuis_audit": null,
   "accueil": "ouverture"
@@ -89,7 +91,7 @@
     "js": "assets/js/app.js:40-89"
    },
    "medias": {
-    "video": "medias/ateliersources-maquette/ouverture-p960.mp4"
+    "video": "medias/ateliersources-maquette/ouverture-p720.mp4"
    },
    "pieges": [
     "mémoriser le passage dans sessionStorage et raccourcir la séquence sur les pages intérieures ou avec une ancre",
@@ -143,7 +145,7 @@
    ],
    "interactions": [
     "mode-calme",
-    "lecteur-audio"
+    "ambiance-sonore"
    ],
    "telephone": "simplifié",
    "note_qualite": 3,
@@ -286,7 +288,8 @@
    "description": "Présentation de la cuisine avec des pousses SVG qui se tracent au défilement autour du titre et des photos révélées par un masque qui monte.",
    "animations": [
     "révélation-image",
-    "masque"
+    "masque",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -307,7 +310,8 @@
    "animations": [
     "masque",
     "apparition-au-défilement",
-    "parallaxe"
+    "parallaxe",
+    "trace-svg"
    ],
    "interactions": [
     "carte-interactive"
@@ -329,7 +333,8 @@
    "description": "Tarifs à gauche et, à droite, un cycle en trois temps dessiné en cercle : le trait se trace au défilement, une goutte tourne dessus en changeant de couleur et l'étape atteinte s'éclaire.",
    "animations": [
     "masque",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -401,7 +406,8 @@
    "description": "Carte d'accès sur photo en parallaxe : une ligne verticale se trace et allume les arrêts depuis les grandes villes jusqu'au lieu.",
    "animations": [
     "masque",
-    "parallaxe"
+    "parallaxe",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -512,10 +518,12 @@
    "description": "Dessin SVG de la maison en coupe, étage par étage : des onglets accessibles (flèches, Début, Fin) ou un clic sur une pièce allument l'espace, ses traits se tracent et sa fiche photo s'ouvre en cercle.",
    "animations": [
     "masque",
-    "révélation-image"
+    "révélation-image",
+    "trace-svg"
    ],
    "interactions": [
-    "galerie-cliquable"
+    "galerie-cliquable",
+    "schema-interactif"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
@@ -587,7 +595,8 @@
    "description": "Étapes numérotées le long d'un fil qui se trace au défilement, avec photos révélées.",
    "animations": [
     "masque",
-    "révélation-image"
+    "révélation-image",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"

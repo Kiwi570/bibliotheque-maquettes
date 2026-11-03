@@ -47,14 +47,16 @@
    "canvas-2d",
    "curseur-personnalisé",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "trace-svg"
   ],
   "interactions": [
    "lecteur-audio",
    "carte-interactive",
    "comparateur",
    "formulaire-par-étapes",
-   "mode-calme"
+   "mode-calme",
+   "ambiance-sonore"
   ],
   "change_depuis_audit": null,
   "accueil": "hero"
@@ -77,7 +79,7 @@
    "reutilisable": true,
    "module": null,
    "medias": {
-    "video": "medias/surffm-maquette/hero-p960.mp4"
+    "video": "medias/surffm-maquette/hero-p720.mp4"
    },
    "pieges": [
     "la promesse de fin d'ouverture lance le titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
@@ -218,6 +220,9 @@
    "reutilisable": false,
    "pieges": [
     "données de démonstration à étiqueter"
+   ],
+   "particularites": [
+    "reactif-au-son : barres de spectre en canvas 2D animées quand le son joue"
    ]
   },
   "manifeste": {
@@ -284,7 +289,8 @@
    "animations": [
     "compteur",
     "progression-fixée",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -369,7 +375,8 @@
     "canvas-2d"
    ],
    "interactions": [
-    "lecteur-audio"
+    "lecteur-audio",
+    "ambiance-sonore"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
@@ -538,7 +545,8 @@
    "role": "carte",
    "description": "Carte SVG générée depuis des coordonnées : le trait de côte se dessine, les villes apparaissent l'une après l'autre, les zones FM et DAB+ grandissent et des ondes partent des émetteurs en boucle ; deux boutons allument ou éteignent chaque calque.",
    "animations": [
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "carte-interactive",

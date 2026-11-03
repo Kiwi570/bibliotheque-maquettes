@@ -7,13 +7,15 @@
  "description": "Tableau des caractéristiques dont les lignes se dessinent, à côté d'un graphique qui situe l'appareil parmi les cinq selon le prix et le stockage (un point par appareil, infobulles).",
  "animations": [
   "apparition-au-défilement",
-  "masque"
+  "masque",
+  "trace-svg"
  ],
  "interactions": [
   "comparateur"
  ],
  "dependances": [
-  "gsap"
+  "gsap",
+  "drawsvg-morphsvg"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -27,7 +29,7 @@
  "medias": {
   "capture": "medias/tvcentreduquebec-maquette/appareil-specs-sec-p1440.jpg",
   "capture_m390": "medias/tvcentreduquebec-maquette/appareil-specs-sec-m390.jpg",
-  "video": "medias/tvcentreduquebec-maquette/appareil-specs-sec-p960.mp4"
+  "video": "medias/tvcentreduquebec-maquette/appareil-specs-sec-p720.mp4"
  },
  "pieges": [
   "les infobulles du graphique doivent rester accessibles au clavier (bindTips)"

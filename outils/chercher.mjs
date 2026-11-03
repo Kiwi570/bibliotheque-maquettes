@@ -3,7 +3,7 @@
 // Filtres : --activite --concept --ambiance (sur la maquette d'origine, ou convient_a/ambiances pour un module),
 //           --role --animation --interaction --dependance --telephone, --module (seulement les sections extraites en module),
 //           --sans <dependance> (exclut ce qui dépend de gsap, ogl…), --note-min N (1-5).
-// Les filtres d'une même famille répétés valent « l'un ou l'autre » ; les mots libres cherchent dans titre, description et pièges,
+// Les filtres d'une même famille répétés valent « l'un ou l'autre » ; les mots libres cherchent dans titre, description, pièges et particularités,
 // sans tenir compte des accents ni des majuscules. Un filtre de maquette (activité, concept, ambiance) départage le classement
 // au lieu d'exclure : une section d'une autre activité reste proposée, plus bas.
 import fs from 'node:fs';
@@ -50,7 +50,7 @@ for (const m of Object.values(maquettes)) for (const id of m.sections) {
   if (f.sans.length && s.dependances.some(d => f.sans.includes(d))) continue;
   const aff = (inter(m.activite, f.activite) && f.activite.length ? 1.5 : 0) + (inter(m.concept, f.concept) && f.concept.length ? 1 : 0) + (f.ambiance.length ? m.ambiance.filter(a => f.ambiance.includes(a)).length * 0.75 : 0);
   if (strict && ((f.activite.length && !inter(m.activite, f.activite)) || (f.ambiance.length && !inter(m.ambiance, f.ambiance)) || (f.concept.length && !inter(m.concept, f.concept)))) continue;
-  const sc = score(s.note_qualite * 2 + (s.reutilisable ? 1 : 0) + (s.module ? 1 : 0), aff, [s.titre, s.description, ...(s.pieges || []), m.client, ...m.activite].join(' '));
+  const sc = score(s.note_qualite * 2 + (s.reutilisable ? 1 : 0) + (s.module ? 1 : 0), aff, [s.titre, s.description, ...(s.pieges || []), ...(s.particularites || []), m.client, ...m.activite].join(' '));
   if (sc === null) continue;
   res.push({ type: 'section', id: s.id, score: sc, note: s.note_qualite, role: s.role, titre: s.titre, animations: s.animations, module: s.module, fiche: `sections/${s.id}.json`, capture: s.medias.capture || null, video: s.medias.video || null, en_ligne: m.url + (s.page === 'index' ? '' : '/' + s.page) });
 }

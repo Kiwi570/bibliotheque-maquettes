@@ -287,15 +287,15 @@ for (const page of pagesAVisiter) {
     for (const sg of segments) {
       const fi = s.blocs[sg.i].ref; const inf = mes.infos[sg.i];
       if (!animee(inf) || fi._video) continue;
-      const out = path.join(MED, `${fi.id}-p960.mp4`);
+      const out = path.join(MED, `${fi.id}-p720.mp4`);
       const dur = Math.min(8, Math.max(4, (sg.b - sg.a) / 1000));
-      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(sg.a / 1000), '-i', video, '-t', String(dur), '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-vf', 'scale=960:600', out]);
+      execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(sg.a / 1000), '-i', video, '-t', String(dur), '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-vf', 'scale=720:450', out]);
       if (fs.statSync(out).size > 2 * 1024 * 1024) execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '33', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out + '.mp4']), fs.renameSync(out + '.mp4', out);
-      fi._video = `medias/${depot}/${fi.id}-p960.mp4`;
+      fi._video = `medias/${depot}/${fi.id}-p720.mp4`;
     }
     if (transition) {
       const voile = s.blocs.map(b => b.ref).find(f => /veil|voile|transition|curtain|rideau/.test(f.sig));
-      if (voile) { const out = path.join(MED, `${voile.id}-p960.mp4`); execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(transition.a / 1000 - 0.2), '-i', video, '-t', '4', '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out]); voile._video = `medias/${depot}/${voile.id}-p960.mp4`; }
+      if (voile) { const out = path.join(MED, `${voile.id}-p720.mp4`); execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(transition.a / 1000 - 0.2), '-i', video, '-t', '4', '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-vf', 'scale=720:450', out]); voile._video = `medias/${depot}/${voile.id}-p720.mp4`; }
     }
     fs.rmSync(video, { force: true });
   }

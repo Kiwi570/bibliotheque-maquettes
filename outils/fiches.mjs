@@ -10,7 +10,7 @@
 //                 "points_forts": [...], "reserves": [...], "animations": [...], "interactions": [...],
 //                 "change_depuis_audit": "texte ou null", "accueil": "<id du bloc d'ouverture>" },
 //   "sections": { "<id inventaire>": { "titre", "role", "description", "animations", "interactions", "telephone",
-//                 "note_qualite", "reutilisable", "module", "pieges", "dependances"?, "code"?: {...}, "ignorer"?: "raison" } }
+//                 "note_qualite", "reutilisable", "module", "pieges", "dependances"?, "particularites"?: ["mécanique rare, texte libre"], "code"?: {...}, "ignorer"?: "raison" } }
 // }
 import fs from 'node:fs';
 import path from 'node:path';
@@ -62,6 +62,7 @@ for (const depot of process.argv.slice(2)) {
       animations: n.animations, interactions: n.interactions, dependances: deps,
       telephone: n.telephone, note_qualite: n.note_qualite, reutilisable: !!n.reutilisable, module: n.module || null,
       code: { ...b.code, ...(n.code || {}) }, medias, pieges: n.pieges || [],
+      ...(n.particularites?.length ? { particularites: n.particularites } : {}),
       mesures: { hauteur_p1440: b.hauteur, hauteur_m390: b.hauteur_m390, epinglee: b.scrolltriggers.some(s => s.pin), scrolltriggers: b.scrolltriggers.length },
     };
     ecrireJson(path.join(dossierSec, `${b.id}.json`), fiche);
@@ -82,6 +83,7 @@ for (const depot of process.argv.slice(2)) {
     note: audit.correction?.note ?? audit.note, verdict: audit.verdict,
     points_forts: nm.points_forts, reserves: nm.reserves,
     animations: nm.animations, interactions: nm.interactions, dependances: nm.dependances || depsMaquette,
+    ...(nm.particularites?.length ? { particularites: nm.particularites } : {}),
     sections: ids,
     captures: { 'accueil-ordinateur': accueil?.medias.capture, 'accueil-telephone': accueil?.medias.capture_m390 },
     audit: `https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/${depot}.md`,

@@ -52,7 +52,9 @@
    "curseur-personnalisé",
    "bouton-magnétique",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "rature",
+   "trace-svg"
   ],
   "interactions": [
    "filtres",
@@ -68,10 +70,14 @@
    "flip",
    "lenis",
    "ogl",
-   "canvas"
+   "canvas",
+   "drawsvg-morphsvg"
   ],
   "change_depuis_audit": "Commit a725ee6 postérieur à la correction (4d8670f) : visuels remplacés par les images Grok définitives et textes alternatifs mis à jour, sans changement de mise en page ni de code ; vérifié en ligne le 02/11/2026.",
-  "accueil": "hero"
+  "accueil": "hero",
+  "particularites": [
+   "retournement-carte : fiches de conseils retournées"
+  ]
  },
  "sections": {
   "margin-line": {
@@ -278,7 +284,8 @@
    "animations": [
     "section-fixée",
     "révélation-texte",
-    "masque"
+    "masque",
+    "rature"
    ],
    "interactions": [
     "aucune"
@@ -326,7 +333,8 @@
    "description": "Carte SVG du lac : la rive se trace (DrawSVG), l'eau et la zone surlignée apparaissent, les villes surgissent une à une, flèches et notes manuscrites se dessinent, puis une bulle « en visio » s'ouvre ; photo panoramique dessous.",
    "animations": [
     "apparition-au-défilement",
-    "révélation-image"
+    "révélation-image",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -341,6 +349,11 @@
    "pieges": [
     "dépend de DrawSVGPlugin",
     "zone et étiquettes marquées « indicatives »"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "drawsvg-morphsvg"
    ]
   },
   "prof": {
@@ -386,7 +399,8 @@
    "role": "pied-de-page",
    "description": "Grand appel avec numéro de téléphone entouré d'un trait manuscrit SVG qui se dessine (tracé calculé sur la taille du texte), boutons Copier le numéro et l'e-mail, photo et liens de pages.",
    "animations": [
-    "révélation-texte"
+    "révélation-texte",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -537,6 +551,9 @@
     "face cachée en inert et focus déplacé sur l'autre face après le retournement",
     "ScrollTrigger.refresh() à la fin du Flip (la hauteur change)",
     "le sujet choisi passe au formulaire de contact par sessionStorage"
+   ],
+   "particularites": [
+    "retournement-carte : fiches retournées en 3D, face cachée inerte"
    ]
   },
   "conseils-indep": {
@@ -560,7 +577,8 @@
    "description": "Tête de page contact : numéro de téléphone en très grand, entouré d'un trait manuscrit qui se dessine, boutons Copier, coordonnées en liste et photo révélée à l'encre.",
    "animations": [
     "révélation-texte",
-    "webgl-shader"
+    "webgl-shader",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -683,7 +701,8 @@
    "role": "services",
    "description": "Texte à gauche et croquis SVG d'un écran de visio dont les traits se dessinent dans un ordre aléatoire (DrawSVG) sur des lavis qui s'étalent.",
    "animations": [
-    "révélation-image"
+    "révélation-image",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -691,7 +710,12 @@
    "telephone": "adapté",
    "note_qualite": 3,
    "reutilisable": false,
-   "pieges": []
+   "pieges": [],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "drawsvg-morphsvg"
+   ]
   },
   "cours-individuels-topics": {
    "titre": "Sujets possibles",

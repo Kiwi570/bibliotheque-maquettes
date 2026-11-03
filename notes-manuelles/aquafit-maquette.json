@@ -54,17 +54,19 @@
    "curseur-personnalisé",
    "bouton-magnétique",
    "transition-de-page",
-   "défilement-lissé"
+   "défilement-lissé",
+   "trace-svg"
   ],
   "interactions": [
-   "lecteur-audio",
    "carte-interactive",
    "filtres",
    "calculateur",
    "formulaire-par-étapes",
    "quiz",
    "simulateur",
-   "mode-calme"
+   "mode-calme",
+   "ambiance-sonore",
+   "schema-interactif"
   ],
   "change_depuis_audit": null,
   "accueil": "hero"
@@ -77,7 +79,8 @@
    "animations": [
     "chargement-orchestré",
     "morphing",
-    "masque"
+    "masque",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -88,7 +91,7 @@
    "module": null,
    "sans_capture": true,
    "medias": {
-    "video": "medias/aquafit-maquette/hero-p960.mp4"
+    "video": "medias/aquafit-maquette/hero-p720.mp4"
    },
    "code": {
     "js": "assets/js/ui.js:177-272"
@@ -120,7 +123,7 @@
     "la profondeur est pilotée de l'extérieur (jauge, curseur d'intensité) : exposer une méthode plutôt que lire le défilement dans le shader"
    ],
    "medias": {
-    "video": "medias/aquafit-maquette/hero-p960.mp4"
+    "video": "medias/aquafit-maquette/hero-p720.mp4"
    }
   },
   "bulles": {
@@ -178,7 +181,7 @@
     "mesurer les sections au refresh de ScrollTrigger, pas pendant le défilement"
    ],
    "medias": {
-    "video": "medias/aquafit-maquette/gilet-p960.mp4"
+    "video": "medias/aquafit-maquette/gilet-p720.mp4"
    }
   },
   "entete": {
@@ -189,8 +192,8 @@
     "aucune"
    ],
    "interactions": [
-    "lecteur-audio",
-    "mode-calme"
+    "mode-calme",
+    "ambiance-sonore"
    ],
    "telephone": "adapté",
    "note_qualite": 3,
@@ -261,7 +264,7 @@
     "morphing"
    ],
    "interactions": [
-    "aucune"
+    "schema-interactif"
    ],
    "telephone": "simplifié",
    "note_qualite": 5,
@@ -342,7 +345,8 @@
    "description": "Carte SVG dessinée (rive tracée au défilement, points qui apparaissent) avec les lieux de cours ; choisir un point affiche la fiche du lieu, ses créneaux et le prochain cours calculé à partir de l'heure courante.",
    "animations": [
     "morphing",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "carte-interactive"

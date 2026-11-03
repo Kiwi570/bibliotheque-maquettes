@@ -7,14 +7,16 @@
  "description": "Résultat d'une vraie étude en jauge demi-cercle et barres verticales SVG qui se tracent à l'entrée dans l'écran, avec légendes et sources.",
  "animations": [
   "compteur",
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "trace-svg"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
   "gsap",
-  "scrolltrigger"
+  "scrolltrigger",
+  "drawsvg-morphsvg"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -28,7 +30,7 @@
  "medias": {
   "capture": "medias/observatoire-des-cse-maquette/pouls-p1440.jpg",
   "capture_m390": "medias/observatoire-des-cse-maquette/pouls-m390.jpg",
-  "video": "medias/observatoire-des-cse-maquette/pouls-p960.mp4"
+  "video": "medias/observatoire-des-cse-maquette/pouls-p720.mp4"
  },
  "pieges": [
   "les couleurs des graphiques sont lues dans les variables CSS (css())",

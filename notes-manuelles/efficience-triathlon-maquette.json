@@ -4,17 +4,8 @@
     "activite": ["sport"],
     "concept": ["laboratoire", "cahier"],
     "ambiance": ["sombre", "énergique", "froid"],
-    "palette": {
-      "fond": "--ink",
-      "texte": "--paper",
-      "accent": "--lactate",
-      "secondaire": "--seuil"
-    },
-    "polices": {
-      "titres": "Archivo",
-      "texte": "Archivo",
-      "mono": "JetBrains Mono"
-    },
+    "palette": {"fond": "--ink", "texte": "--paper", "accent": "--lactate", "secondaire": "--seuil"},
+    "polices": {"titres": "Archivo", "texte": "Archivo", "mono": "JetBrains Mono"},
     "points_forts": [
       "courbe de lactate interactive : curseur, zones d'intensité et seuils",
       "semainier qui se réorganise selon les contraintes ajoutées (Flip)",
@@ -47,14 +38,12 @@
       "curseur-personnalisé",
       "bouton-magnétique",
       "transition-de-page",
-      "défilement-lissé"
+      "défilement-lissé",
+      "trace-svg",
+      "reactif-vitesse",
+      "fil-conducteur"
     ],
-    "interactions": [
-      "simulateur",
-      "réservation-simulee",
-      "filtres",
-      "mode-calme"
-    ],
+    "interactions": ["simulateur", "réservation-simulee", "filtres", "mode-calme"],
     "change_depuis_audit": "Un commit après la correction (5bfda41) régénère l'image du principe « qualité » ; la nouvelle reste incohérente (cassette et dérailleur fondus, chaîne qui flotte). Les autres réserves de l'audit sont inchangées.",
     "accueil": "top"
   },
@@ -63,22 +52,21 @@
       "titre": "Ouverture : courbe tracée et compteur",
       "role": "ouverture",
       "description": "Écran d'ouverture sur grille SVG : la formule et le nom apparaissent en lettres brouillées, une courbe exponentielle se trace sur toute la largeur pendant qu'un compteur monte en mmol/L, puis le rideau se retire en clip-path vers le haut. Un bouton « Passer », et la première action (clic, touche, molette) accélère la fin ; une seule fois par session, absent en mode calme.",
-      "animations": ["chargement-orchestré", "masque", "compteur"],
+      "animations": ["chargement-orchestré", "masque", "compteur", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "adapté",
       "note_qualite": 4,
       "reutilisable": true,
       "module": null,
       "sans_capture": true,
-      "medias": {
-        "video": "medias/efficience-triathlon-maquette/top-p960.mp4"
-      },
+      "medias": {"video": "medias/efficience-triathlon-maquette/top-p720.mp4"},
       "dependances": ["gsap"],
       "pieges": [
         "la fin de l'ouverture lance l'entrée du titre du héros : garder ce chaînage, sinon le titre s'anime sous le rideau",
         "la courbe et le compteur sont réglés pour une métrique sportive : la courbe et l'unité deviennent des options",
         "l'accélération à la première action doit aussi écouter le clavier, pas seulement le pointeur"
-      ]
+      ],
+      "particularites": ["texte-brouille : la formule et le nom apparaissent en lettres brouillées avant de se fixer"]
     },
     "header": {
       "titre": "En-tête compact",
@@ -90,9 +78,7 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "code": {
-        "js": "assets/js/app.js:76-103"
-      },
+      "code": {"js": "assets/js/app.js:76-103"},
       "pieges": [
         "la pastille de zone (Z1…Z5) remplace le HUD dans l'en-tête sous 1100 px : elle dépend du HUD pour sa valeur"
       ]
@@ -108,9 +94,7 @@
       "reutilisable": false,
       "module": null,
       "sans_capture": true,
-      "code": {
-        "js": "assets/js/app.js:128-160"
-      },
+      "code": {"js": "assets/js/app.js:128-160"},
       "pieges": []
     },
     "actionbar": {
@@ -124,33 +108,23 @@
       "reutilisable": false,
       "module": null,
       "sans_capture": true,
-      "code": {
-        "js": "assets/js/app.js:90-127"
-      },
-      "pieges": [
-        "sa hauteur est mesurée dans --barres-h : tout contenu fixé en bas doit en tenir compte"
-      ]
+      "code": {"js": "assets/js/app.js:90-127"},
+      "pieges": ["sa hauteur est mesurée dans --barres-h : tout contenu fixé en bas doit en tenir compte"]
     },
     "hud": {
       "titre": "HUD d'intensité au défilement",
       "role": "decor",
       "description": "Petit cadran fixé en bas à gauche : la vitesse de défilement est lissée en « effort », convertie en zone Z1 à Z5 (barres allumées, couleur), en fréquence cardiaque et en allure fictives ; un point descend le long d'une mini-courbe selon la progression dans la page. Il n'apparaît qu'après le héros.",
-      "animations": ["compteur"],
+      "animations": ["compteur", "reactif-vitesse"],
       "interactions": ["aucune"],
       "telephone": "simplifié",
       "note_qualite": 4,
       "reutilisable": true,
       "module": null,
       "sans_capture": true,
-      "medias": {
-        "video": "medias/efficience-triathlon-maquette/science-p960.mp4"
-      },
+      "medias": {"video": "medias/efficience-triathlon-maquette/science-p720.mp4"},
       "dependances": ["gsap", "scrolltrigger", "lenis"],
-      "code": {
-        "html": "index.html:66-72",
-        "css": "assets/css/main.css:292,322,327-346",
-        "js": "assets/js/app.js:263-310"
-      },
+      "code": {"html": "index.html:66-72", "css": "assets/css/main.css:292,322,327-346", "js": "assets/js/app.js:263-310"},
       "pieges": [
         "couleurs des cinq zones écrites en dur dans le JS : les lire dans des variables CSS",
         "lissage asymétrique (monte vite, redescend lentement) : sans lui, l'affichage clignote",
@@ -162,16 +136,14 @@
       "titre": "Rail de progression en courbe",
       "role": "decor",
       "description": "Rail vertical à droite : la progression dans la page suit une courbe (montée exponentielle puis récupération) tracée en SVG, avec repères de seuils qui s'allument et valeur courante ; sur la page de stage, la même mécanique suit un profil d'altitude. Variante du rail de sections déjà extrait.",
-      "animations": ["progression-fixée"],
+      "animations": ["progression-fixée", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "masqué",
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
       "sans_capture": true,
-      "code": {
-        "js": "assets/js/app.js:311-363 ; assets/js/montagne.js:33-37"
-      },
+      "code": {"js": "assets/js/app.js:311-363 ; assets/js/montagne.js:33-37"},
       "pieges": [
         "pastille de couleur écrite en dur dans le SVG généré",
         "les repères portent sur la progression de la page, pas sur les sections : ils ne correspondent à aucun contenu"
@@ -188,9 +160,7 @@
       "reutilisable": false,
       "module": null,
       "sans_capture": true,
-      "code": {
-        "js": "assets/js/app.js:216-262"
-      },
+      "code": {"js": "assets/js/app.js:216-262"},
       "pieges": []
     },
     "sweep": {
@@ -204,12 +174,8 @@
       "reutilisable": false,
       "module": null,
       "sans_capture": true,
-      "code": {
-        "js": "assets/js/app.js:415-448"
-      },
-      "pieges": [
-        "l'entrée des titres de page attend la fin du retrait des bandes (délai décalé)"
-      ]
+      "code": {"js": "assets/js/app.js:415-448"},
+      "pieges": ["l'entrée des titres de page attend la fin du retrait des bandes (délai décalé)"]
     },
     "top": {
       "titre": "Héros vidéo sous ondes",
@@ -222,9 +188,7 @@
       "reutilisable": false,
       "module": null,
       "dependances": ["gsap", "scrolltrigger", "splittext", "ogl"],
-      "code": {
-        "js": "assets/js/home.js:85-92 ; assets/js/water.js:1-99 ; assets/js/app.js:200-215"
-      },
+      "code": {"js": "assets/js/home.js:85-92 ; assets/js/water.js:1-99 ; assets/js/app.js:200-215"},
       "pieges": [
         "vidéo de 3,1 Mo à l'accueil, non corrigée : prévoir une version courte et une affiche légère",
         "le shader n'est chargé qu'avec un pointeur fin et WebGL ; sinon la vidéo seule reste affichée",
@@ -247,7 +211,7 @@
       "titre": "Galerie horizontale à transitions",
       "role": "services",
       "description": "Trois panneaux (texte et photo ou vidéo superposées) défilent à l'horizontale dans une section épinglée ; entre chaque panneau, une étiquette de transition (T1, T2) et un tracé SVG en dégradé relient les étapes, une barre de progression suit le passage et les encarts apparaissent par containerAnimation.",
-      "animations": ["galerie-horizontale", "section-fixée", "parallaxe"],
+      "animations": ["galerie-horizontale", "section-fixée", "parallaxe", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "simplifié",
       "note_qualite": 4,
@@ -270,27 +234,21 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "code": {
-        "js": "assets/js/home.js:149-158"
-      },
-      "pieges": [
-        "une image générée de cette section reste incohérente"
-      ]
+      "code": {"js": "assets/js/home.js:149-158"},
+      "pieges": ["une image générée de cette section reste incohérente"]
     },
     "science": {
       "titre": "Courbe interactive à curseur",
       "role": "outil-interactif",
       "description": "Graphique SVG d'une courbe exponentielle sur fond de cinq bandes de zones colorées, avec deux seuils marqués ; un curseur range sous le graphique déplace un point sur la courbe et met à jour trois lectures (abscisse, ordonnée, zone) et une phrase d'explication de la zone. La courbe se trace à l'arrivée ; photos et liste de mesures à côté.",
-      "animations": ["apparition-au-défilement"],
+      "animations": ["apparition-au-défilement", "trace-svg"],
       "interactions": ["simulateur"],
       "telephone": "adapté",
       "note_qualite": 5,
       "reutilisable": true,
       "module": null,
       "dependances": ["gsap", "scrolltrigger"],
-      "code": {
-        "js": "assets/js/home.js:159-218 ; assets/js/app.js:263-266"
-      },
+      "code": {"js": "assets/js/home.js:159-218 ; assets/js/app.js:263-266"},
       "pieges": [
         "couleurs des zones et des seuils écrites en dur dans le JS : les lire dans des variables CSS",
         "la courbe est une fonction illustrative : la passer en option (fonction, bornes, zones, unités)",
@@ -309,9 +267,7 @@
       "reutilisable": true,
       "module": null,
       "dependances": ["gsap", "flip"],
-      "code": {
-        "js": "assets/js/home.js:219-293"
-      },
+      "code": {"js": "assets/js/home.js:219-293"},
       "pieges": [
         "séances, candidates et contraintes sont des données en dur dans le JS : les passer en option",
         "le journal des déplacements doit rester en aria-live pour que le changement soit annoncé",
@@ -329,10 +285,9 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "code": {
-        "js": "assets/js/home.js:296-312"
-      },
-      "pieges": []
+      "code": {"js": "assets/js/home.js:296-312"},
+      "pieges": [],
+      "particularites": ["texte-brouille : les valeurs de performance défilent comme un chronomètre avant de se fixer"]
     },
     "stages": {
       "titre": "Agenda à onglets et fiche",
@@ -344,23 +299,19 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "pieges": [
-        "dialog marqué data-lenis-prevent pour que son contenu défile"
-      ]
+      "pieges": ["dialog marqué data-lenis-prevent pour que son contenu défile"]
     },
     "zone": {
       "titre": "Carte de rayons d'intervention",
       "role": "carte",
       "description": "Carte SVG schématique sur fond de relief : cercles de rayon autour du point de base, liens tracés vers les villes desservies et un ping en boucle sur la base ; légende à gauche.",
-      "animations": ["apparition-au-défilement"],
+      "animations": ["apparition-au-défilement", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "adapté",
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "code": {
-        "js": "assets/js/home.js:419-458"
-      },
+      "code": {"js": "assets/js/home.js:419-458"},
       "pieges": []
     },
     "avis": {
@@ -373,9 +324,7 @@
       "note_qualite": 2,
       "reutilisable": false,
       "module": null,
-      "code": {
-        "js": null
-      },
+      "code": {"js": null},
       "pieges": []
     },
     "faq": {
@@ -436,24 +385,20 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "pieges": [
-        "titre coupé par un trait d'union sur téléphone"
-      ]
+      "pieges": ["titre coupé par un trait d'union sur téléphone"]
     },
     "stage-triathlon-montagne-top": {
       "titre": "Héros à profil d'altitude",
       "role": "ouverture",
       "description": "Héros de page avec photo en zoom lent et parallaxe, titre révélé ligne par ligne, fiche technique en cases mono et compte à rebours ; en pied, un profil d'altitude SVG lissé se trace, ses sommets apparaissent un à un, et un point le parcourt ensuite au fil du défilement de toute la page en affichant l'altitude courante.",
-      "animations": ["révélation-texte", "parallaxe", "progression-fixée", "compteur"],
+      "animations": ["révélation-texte", "parallaxe", "progression-fixée", "compteur", "fil-conducteur", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "adapté",
       "note_qualite": 4,
       "reutilisable": true,
       "module": null,
       "dependances": ["gsap", "scrolltrigger", "splittext"],
-      "code": {
-        "js": "assets/js/montagne.js:9-92,180"
-      },
+      "code": {"js": "assets/js/montagne.js:9-92,180"},
       "pieges": [
         "couleurs du dégradé et du point écrites en dur dans le SVG généré",
         "profil schématique en données dans le JS : le passer en option (points, bornes, unité)",
@@ -476,7 +421,7 @@
       "titre": "Carte des sommets",
       "role": "carte",
       "description": "Liste des sommets avec altitude à gauche et carte SVG schématique projetée depuis des coordonnées : routes tracées une à une puis points qui apparaissent en rebond.",
-      "animations": ["apparition-au-défilement"],
+      "animations": ["apparition-au-défilement", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "adapté",
       "note_qualite": 3,
@@ -557,9 +502,7 @@
       "note_qualite": 3,
       "reutilisable": false,
       "module": null,
-      "pieges": [
-        "titre coupé par un trait d'union sur téléphone"
-      ]
+      "pieges": ["titre coupé par un trait d'union sur téléphone"]
     },
     "test-effort-objectif": {
       "titre": "Objectif du test",
@@ -577,7 +520,7 @@
       "titre": "Erreurs fréquentes en mini-graphiques",
       "role": "preuves",
       "description": "Deux cartes d'erreurs fréquentes, chacune illustrée d'un petit graphique SVG schématique (prévu contre réalisé) qui se trace à l'arrivée.",
-      "animations": ["apparition-au-défilement"],
+      "animations": ["apparition-au-défilement", "trace-svg"],
       "interactions": ["aucune"],
       "telephone": "adapté",
       "note_qualite": 3,

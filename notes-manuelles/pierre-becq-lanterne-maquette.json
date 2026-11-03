@@ -6,18 +6,56 @@
     "ambiance": ["sombre", "luxueux", "chaleureux"],
     "palette": {"fond": "--laque-0", "texte": "--ivoire", "accent": "--or", "secondaire": "--rubis"},
     "polices": {"titres": "Bodoni Moda", "texte": "Jost", "mono": "Jost"},
-    "points_forts": ["flamme de bougie qui éclaire une boiserie laquée en WebGL, nom à la feuille d'or", "salle des coups de cœur épinglée dont le fond prend la teinte de la pièce et dont les étiquettes se balancent selon la vitesse", "frise des siècles 1670-2000 épinglée, verticale sur téléphone", "fiche pièce : sortie de l'ombre, loupe d'expert, vue à l'échelle à côté d'une silhouette", "transitions en iris à la bougie, curseur flamme, son de pendule et mode calme"],
-    "reserves": ["grands vides sombres après la frise, en fin de galerie et avant le pied de /expertise", "en-tête, menu, sélection, curseur, ouverture et transition créés par le JS (base.js), absents de l'inventaire", "noms de fichiers d'ambiance trompeurs (1x1 / 16x9 en réalité 3:2)"],
-    "animations": ["ouverture-orchestrée", "webgl-shader", "révélation-texte", "section-fixée", "galerie-horizontale", "progression-fixée", "apparition-au-défilement", "parallaxe", "masque", "flip", "curseur-personnalisé", "bouton-magnétique", "transition-de-page", "défilement-lissé"],
-    "interactions": ["filtres", "formulaire-par-étapes", "galerie-cliquable", "panier-simule", "comparateur", "mode-calme"],
+    "points_forts": [
+      "flamme de bougie qui éclaire une boiserie laquée en WebGL, nom à la feuille d'or",
+      "salle des coups de cœur épinglée dont le fond prend la teinte de la pièce et dont les étiquettes se balancent selon la vitesse",
+      "frise des siècles 1670-2000 épinglée, verticale sur téléphone",
+      "fiche pièce : sortie de l'ombre, loupe d'expert, vue à l'échelle à côté d'une silhouette",
+      "transitions en iris à la bougie, curseur flamme, son de pendule et mode calme"
+    ],
+    "reserves": [
+      "grands vides sombres après la frise, en fin de galerie et avant le pied de /expertise",
+      "en-tête, menu, sélection, curseur, ouverture et transition créés par le JS (base.js), absents de l'inventaire",
+      "noms de fichiers d'ambiance trompeurs (1x1 / 16x9 en réalité 3:2)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "progression-fixée",
+      "apparition-au-défilement",
+      "parallaxe",
+      "masque",
+      "flip",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "transition-de-page",
+      "défilement-lissé",
+      "reactif-vitesse"
+    ],
+    "interactions": [
+      "filtres",
+      "formulaire-par-étapes",
+      "galerie-cliquable",
+      "panier-simule",
+      "comparateur",
+      "mode-calme",
+      "ambiance-sonore"
+    ],
     "change_depuis_audit": null,
-    "accueil": "haut"
+    "accueil": "haut",
+    "particularites": [
+      "physique-pendule : étiquettes et balancier qui oscillent selon la vitesse",
+      "reprise-des-couleurs : la salle des coups de cœur prend la teinte de la pièce"
+    ]
   },
   "sections": {
     "haut": {"titre": "Flamme sur la boiserie", "role": "ouverture", "description": "Héros sombre : une lumière de bougie WebGL (OGL) vacille sur une boiserie laquée et suit le pointeur, éclats de vitrail ; nom en Bodoni à la feuille d'or et pendule Empire détourée qui sort de l'ombre avec son étiquette. Repli image fixe sans WebGL.", "animations": ["webgl-shader", "révélation-texte", "parallaxe"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 5, "reutilisable": true, "module": null, "dependances": ["gsap", "scrolltrigger", "ogl"], "code": {"html": "index.html:32-59", "css": "assets/css/site.css:248-274", "js": "assets/js/lumiere-gl.js:74-143 ; assets/js/accueil.js:17-31"}, "pieges": ["la lumière ne s'applique qu'au fond, jamais sur la pièce (sinon la photo du produit est faussée)", "image mobile 9:16 distincte pour le repli"]},
     "maison": {"titre": "La maison", "role": "manifeste", "description": "Portrait de l'antiquaire avec médaillon « depuis 1969 » qui tourne, texte de présentation et trois chiffres (années, siècles, villes).", "animations": ["apparition-au-défilement", "compteur"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
-    "coups-de-coeur": {"titre": "Salle des coups de cœur", "role": "produits", "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.", "animations": ["section-fixée", "galerie-horizontale", "progression-fixée", "révélation-image"], "interactions": ["panier-simule"], "telephone": "simplifié", "note_qualite": 5, "reutilisable": true, "module": "galerie-horizontale-epinglee", "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:103-115", "css": "assets/css/site.css:320-332", "js": "assets/js/accueil.js:87-171"}, "pieges": ["vitesse lue par st.getVelocity() et ramenée à zéro par un elastic.out à onScrubComplete", "les révélations par pièce utilisent containerAnimation", "charger les images avant le premier geste sur téléphone (IntersectionObserver large)"]},
-    "frise": {"titre": "Trois siècles en vitrine", "role": "chiffres", "description": "Frise des années 1670 à 2000 épinglée : l'axe et ses repères défilent, l'année en tête suit, les pièces se posent à leur date avec leur siècle. Sur téléphone, frise verticale au fil du défilement avec un balancier fixe au milieu.", "animations": ["section-fixée", "galerie-horizontale", "progression-fixée", "compteur"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 4, "reutilisable": false, "module": null, "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:118-128", "css": "assets/css/site.css:359-413", "js": "assets/js/accueil.js:173-278"}, "pieges": ["grand vide sombre après la frise (reste de l'audit)", "échelle en pixels par année recalculée au refresh"]},
+    "coups-de-coeur": {"titre": "Salle des coups de cœur", "role": "produits", "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.", "animations": ["section-fixée", "galerie-horizontale", "progression-fixée", "révélation-image", "reactif-vitesse"], "interactions": ["panier-simule"], "telephone": "simplifié", "note_qualite": 5, "reutilisable": true, "module": "galerie-horizontale-epinglee", "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:103-115", "css": "assets/css/site.css:320-332", "js": "assets/js/accueil.js:87-171"}, "pieges": ["vitesse lue par st.getVelocity() et ramenée à zéro par un elastic.out à onScrubComplete", "les révélations par pièce utilisent containerAnimation", "charger les images avant le premier geste sur téléphone (IntersectionObserver large)"], "particularites": ["physique-pendule : les étiquettes se balancent selon la vitesse puis reviennent en oscillant (elastic.out)", "reprise-des-couleurs : le fond prend la teinte de la pièce centrale"]},
+    "frise": {"titre": "Trois siècles en vitrine", "role": "chiffres", "description": "Frise des années 1670 à 2000 épinglée : l'axe et ses repères défilent, l'année en tête suit, les pièces se posent à leur date avec leur siècle. Sur téléphone, frise verticale au fil du défilement avec un balancier fixe au milieu.", "animations": ["section-fixée", "galerie-horizontale", "progression-fixée", "compteur"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 4, "reutilisable": false, "module": null, "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:118-128", "css": "assets/css/site.css:359-413", "js": "assets/js/accueil.js:173-278"}, "pieges": ["grand vide sombre après la frise (reste de l'audit)", "échelle en pixels par année recalculée au refresh"], "particularites": ["physique-pendule : balancier fixe au milieu de la frise sur téléphone"]},
     "lorraine": {"titre": "Trésors de Lorraine", "role": "galerie", "description": "Deux grandes cartes de pièces régionales (bois de Sainte-Lucie, Daum Nancy) avec photo et notice.", "animations": ["apparition-au-défilement", "parallaxe"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "expertise": {"titre": "Faire expertiser", "role": "services", "description": "Trois publics de l'expertise (particuliers, notaires et héritiers, entreprises) en cartes ornées de marqueterie à cubes.", "animations": ["apparition-au-défilement"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "successions": {"titre": "Successions et caisse d'expédition", "role": "services", "description": "Achat de successions avec la photo d'une caisse, puis service d'expédition : une caisse SVG en vrai bois s'ouvre au défilement (les planches du couvercle s'écartent, le marquage reste) et une carte montre la zone desservie.", "animations": ["apparition-au-défilement", "progression-fixée"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 4, "reutilisable": true, "module": null, "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:178-203", "css": "assets/css/site.css:473-506", "js": "assets/js/decors.js:60-82 ; assets/js/accueil.js:342-364"}, "pieges": ["la texture bois passe par un pattern SVG : un id unique par caisse"]},

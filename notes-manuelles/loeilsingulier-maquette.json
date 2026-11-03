@@ -57,7 +57,8 @@
       "bouton-magnétique",
       "survol-image",
       "apparition-au-défilement",
-      "défilement-lissé"
+      "défilement-lissé",
+      "trace-svg"
     ],
     "interactions": [
       "configurateur",
@@ -66,10 +67,15 @@
       "galerie-cliquable",
       "carte-interactive",
       "lecteur-audio",
-      "mode-calme"
+      "mode-calme",
+      "ambiance-sonore"
     ],
     "change_depuis_audit": null,
-    "accueil": "hero"
+    "accueil": "hero",
+    "particularites": [
+      "retournement-carte : témoignage recto verso",
+      "reactif-au-son : rosace qui vibre avec l ambiance"
+    ]
   },
   "sections": {
     "loader": {
@@ -168,7 +174,8 @@
         "aucune"
       ],
       "interactions": [
-        "mode-calme"
+        "mode-calme",
+        "ambiance-sonore"
       ],
       "telephone": "simplifié",
       "note_qualite": 3,
@@ -290,7 +297,8 @@
       "description": "Plan de table dessiné en SVG au scrub (tables tracées, chaises qui apparaissent) avec cartons de placement qui tombent ; choisir un carton ouvre le carton-réponse du contact prérempli avec l'intention choisie.",
       "animations": [
         "masque",
-        "apparition-au-défilement"
+        "apparition-au-défilement",
+        "trace-svg"
       ],
       "interactions": [
         "configurateur"
@@ -385,7 +393,10 @@
         "html": "index.html:171-191",
         "css": "assets/css/site.css:413-439",
         "js": "assets/js/main.js:513-524"
-      }
+      },
+      "particularites": [
+        "retournement-carte : témoignage recto verso en CSS 3D (backface-visibility)"
+      ]
     },
     "map-t": {
       "titre": "Carte Paris ⇄ Londres et horloges",
@@ -393,7 +404,8 @@
       "description": "Carte épurée Paris–Londres avec trajet tracé, distance et deux horloges qui donnent l'heure réelle de chaque ville.",
       "animations": [
         "masque",
-        "apparition-au-défilement"
+        "apparition-au-défilement",
+        "trace-svg"
       ],
       "interactions": [
         "carte-interactive"
@@ -872,7 +884,8 @@
         "canvas-2d"
       ],
       "interactions": [
-        "lecteur-audio"
+        "lecteur-audio",
+        "ambiance-sonore"
       ],
       "telephone": "adapté",
       "note_qualite": 4,
@@ -884,6 +897,9 @@
       ],
       "dependances": [
         "canvas"
+      ],
+      "particularites": [
+        "reactif-au-son : la rosace guillochée vibre avec l ambiance musicale (Web Audio)"
       ]
     },
     "son-pp-t": {

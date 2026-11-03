@@ -52,17 +52,24 @@
       "apparition-au-défilement",
       "curseur-personnalisé",
       "transition-de-page",
-      "défilement-lissé"
+      "défilement-lissé",
+      "trace-svg",
+      "reactif-vitesse",
+      "fil-conducteur"
     ],
     "interactions": [
       "formulaire-par-étapes",
       "filtres",
       "galerie-cliquable",
       "simulateur",
-      "mode-calme"
+      "mode-calme",
+      "ambiance-sonore"
     ],
     "change_depuis_audit": "2 commits après la correction efeb828 : eda7b54 (images Grok définitives et textes alternatifs) et fabc895 (image du héros Soins décorative, alt vide). Ni code ni mise en page ; la version en ligne est identique au dépôt (index et soins-energetiques comparés octet pour octet).",
-    "accueil": "ouv"
+    "accueil": "ouv",
+    "particularites": [
+      "physique-pendule : pendule de radiesthésie piloté par la vitesse"
+    ]
   },
   "sections": {
     "ouverture": {
@@ -71,7 +78,8 @@
       "description": "Calque d'ouverture : le nom se trace à la plume dorée (trait SVG suivi d'un point lumineux), puis le calque se retire par le haut ; joué une fois par session.",
       "animations": [
         "ouverture-orchestrée",
-        "masque"
+        "masque",
+        "trace-svg"
       ],
       "interactions": [
         "aucune"
@@ -127,7 +135,8 @@
         "aucune"
       ],
       "interactions": [
-        "mode-calme"
+        "mode-calme",
+        "ambiance-sonore"
       ],
       "telephone": "adapté",
       "note_qualite": 3,
@@ -364,7 +373,7 @@
     },
     "blog": {
       "titre": "Lire, comprendre",
-      "role": "galerie",
+      "role": "articles",
       "description": "Trois cartes d'articles du blog (image, date, titre) tirées des données.",
       "animations": [
         "apparition-au-défilement"
@@ -697,7 +706,8 @@
       "description": "Liste des quatre étapes du soin à gauche, visuel collant à droite qui change d'image à chaque étape ; pendule de radiesthésie SVG qui se balance selon la vitesse de défilement, voile qui se colore à l'étape 3.",
       "animations": [
         "progression-fixée",
-        "apparition-au-défilement"
+        "apparition-au-défilement",
+        "reactif-vitesse"
       ],
       "interactions": [
         "aucune"
@@ -718,7 +728,10 @@
         "html": "soins-energetiques.html:105-141",
         "css": "assets/css/site.css:658-678",
         "js": "assets/js/pages.js:126-133 ; assets/js/site.js:398-416"
-      }
+      },
+      "particularites": [
+        "physique-pendule : pendule de radiesthésie SVG qui se balance selon la vitesse (lenis.velocity)"
+      ]
     },
     "soins-energetiques-couches": {
       "titre": "Couche après couche",
@@ -754,7 +767,8 @@
       "description": "Chemin SVG tracé entre des galets numérotés pour le rythme des séances, suivi des deux cartes de prix.",
       "animations": [
         "masque",
-        "apparition-au-défilement"
+        "apparition-au-défilement",
+        "trace-svg"
       ],
       "interactions": [
         "aucune"
@@ -841,7 +855,7 @@
     },
     "soins-energetiques-questions": {
       "titre": "Pour aller plus loin",
-      "role": "galerie",
+      "role": "articles",
       "description": "Trois articles du blog liés aux soins.",
       "animations": [
         "apparition-au-défilement"

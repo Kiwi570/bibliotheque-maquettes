@@ -6,16 +6,53 @@
     "ambiance": ["sombre", "nocturne", "océanique"],
     "palette": {"fond": "--nuit", "texte": "--ecume", "accent": "--repere", "secondaire": "--laiton"},
     "polices": {"titres": "Fraunces", "texte": "Schibsted Grotesk", "mono": "DM Mono"},
-    "points_forts": ["photos en bichromie qui reprennent leurs couleurs quand une nappe d'eau WebGL monte au défilement", "échelle de crue fixe qui monte jusqu'à 8,62 m avec la lecture de la page", "carte de la tournée qui s'allume en ondes année après année, avec curseur d'années", "répertoire en piste horizontale épinglée avec filtres et objets de spectacle animés au survol", "formulaire de programmation en 4 étapes avec jauge d'eau, transition de page en vague"],
-    "reserves": ["héros entièrement composé vers 3,5 à 4 s", "points de la carte sous 44 px et case du calendrier à 40 px à 320 px", "étiquettes des coupures de presse cachées sous l'éventail", "image d'ambiance « foule de concert » à remplacer", "mentions légales à compléter"],
-    "animations": ["ouverture-orchestrée", "webgl-shader", "révélation-texte", "section-fixée", "galerie-horizontale", "progression-fixée", "compteur", "parallaxe", "apparition-au-défilement", "masque", "révélation-image", "curseur-personnalisé", "bouton-magnétique", "filtre-anime", "transition-de-page", "défilement-lissé"],
-    "interactions": ["carte-interactive", "filtres", "formulaire-par-étapes", "galerie-cliquable", "lecteur-vidéo", "lecteur-audio", "mode-calme"],
+    "points_forts": [
+      "photos en bichromie qui reprennent leurs couleurs quand une nappe d'eau WebGL monte au défilement",
+      "échelle de crue fixe qui monte jusqu'à 8,62 m avec la lecture de la page",
+      "carte de la tournée qui s'allume en ondes année après année, avec curseur d'années",
+      "répertoire en piste horizontale épinglée avec filtres et objets de spectacle animés au survol",
+      "formulaire de programmation en 4 étapes avec jauge d'eau, transition de page en vague"
+    ],
+    "reserves": [
+      "héros entièrement composé vers 3,5 à 4 s",
+      "points de la carte sous 44 px et case du calendrier à 40 px à 320 px",
+      "étiquettes des coupures de presse cachées sous l'éventail",
+      "image d'ambiance « foule de concert » à remplacer",
+      "mentions légales à compléter"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "progression-fixée",
+      "compteur",
+      "parallaxe",
+      "apparition-au-défilement",
+      "masque",
+      "révélation-image",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "filtre-anime",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "carte-interactive",
+      "filtres",
+      "formulaire-par-étapes",
+      "galerie-cliquable",
+      "lecteur-vidéo",
+      "mode-calme",
+      "ambiance-sonore"
+    ],
     "change_depuis_audit": null,
     "accueil": "haut"
   },
   "sections": {
     "ouverture": {"titre": "Ouverture à la barque", "role": "ouverture", "description": "Calque de chargement : une eau ondulée monte sur le nom de la compagnie et le repère « Crue de 1910 · 8,62 m », puis se retire ; joué une fois par session, sauté en mode calme.", "animations": ["ouverture-orchestrée"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true, "pieges": ["mémoriser en sessionStorage pour ne pas rejouer à chaque page"]},
-    "hd": {"titre": "En-tête", "role": "menu", "description": "En-tête fixe sur fond nuit : logo, liens, bouton son, bouton mode calme et appel « Programmer » ; il se masque à la descente.", "animations": ["aucune"], "interactions": ["lecteur-audio", "mode-calme"], "telephone": "simplifié", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
+    "hd": {"titre": "En-tête", "role": "menu", "description": "En-tête fixe sur fond nuit : logo, liens, bouton son, bouton mode calme et appel « Programmer » ; il se masque à la descente.", "animations": ["aucune"], "interactions": ["mode-calme", "ambiance-sonore"], "telephone": "simplifié", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "menu": {"titre": "Menu téléphone", "role": "menu", "description": "Menu plein écran du téléphone ouvert par le bouton de l'en-tête, avec verrou du défilement.", "animations": ["apparition-au-défilement"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "echelle": {"titre": "Échelle de crue", "role": "decor", "description": "Règle verticale fixe graduée de 0 à 9 m sur le bord gauche : l'eau y monte avec la progression de lecture de la page et un repère affiche la hauteur atteinte, jusqu'aux 8,62 m de la crue de 1910.", "animations": ["progression-fixée"], "interactions": ["aucune"], "telephone": "masqué", "note_qualite": 4, "reutilisable": true, "module": null, "sans_capture": true, "dependances": ["aucune"], "code": {"html": "index.html:57-62", "css": "assets/css/main.css:165-182", "js": "assets/js/app.js:140-156"}, "pieges": ["recalculer la hauteur de la règle au redimensionnement", "même mécanique que le rail de sections, sans repères cliquables"]},
     "barre": {"titre": "Barre de progression", "role": "decor", "description": "Fine barre de progression de lecture qui remplace l'échelle de crue sur téléphone.", "animations": ["progression-fixée"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true, "pieges": []},

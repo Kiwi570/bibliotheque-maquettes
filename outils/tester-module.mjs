@@ -1,4 +1,4 @@
-// Teste une page de démonstration (module ou assemblage) sur 13 formats (dont tablettes 768×1024 et 820×1180, et 1024×640), en mode réduit et sans WebGL.
+// Teste une page de démonstration (module ou assemblage) sur 14 formats (dont tablettes 768×1024, 820×1180 et 1180×820, et 1024×640), en mode réduit et sans WebGL.
 // node outils/tester-module.mjs <module | chemin/vers/page.html> [--ecrire] [--medias]
 //   --ecrire : reporte le résultat dans modules/<nom>/module.json (tests, poids_ko)
 //   --medias : produit apercu.jpg (1440×900) et apercu.mp4 (si animé) dans le dossier du module
@@ -16,8 +16,8 @@ const medias = process.argv.includes('--medias');
 const estModule = !arg.endsWith('.html');
 const fichier = estModule ? path.join(RACINE, 'modules', arg, 'index.html') : path.resolve(arg);
 const relatif = '/' + path.relative(RACINE, fichier).split(path.sep).join('/');
-// Tablettes (768×1024, 820×1180, tactiles) et 1024×640 : formats où un élément collant manque le plus souvent de hauteur.
-const FORMATS = [[1000, 560], [1024, 640], [768, 1024, 1], [820, 1180, 1], [1280, 720], [1366, 768], [1440, 900], [1728, 1000], [1920, 1080], [2560, 1440], [390, 844, 1], [360, 780, 1], [320, 568, 1]];
+// Tablettes (768×1024, 820×1180, 1180×820, tactiles) et 1024×640 : formats où un élément collant manque le plus souvent de hauteur.
+const FORMATS = [[1000, 560], [1024, 640], [768, 1024, 1], [820, 1180, 1], [1180, 820, 1], [1280, 720], [1366, 768], [1440, 900], [1728, 1000], [1920, 1080], [2560, 1440], [390, 844, 1], [360, 780, 1], [320, 568, 1]];
 
 const srv = await servir(RACINE);
 const nav = await chromium.launch({ args: ['--enable-unsafe-swiftshader'] });

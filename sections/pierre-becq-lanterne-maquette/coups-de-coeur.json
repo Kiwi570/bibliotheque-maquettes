@@ -9,7 +9,8 @@
   "section-fixée",
   "galerie-horizontale",
   "progression-fixée",
-  "révélation-image"
+  "révélation-image",
+  "reactif-vitesse"
  ],
  "interactions": [
   "panier-simule"
@@ -30,12 +31,16 @@
  "medias": {
   "capture": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p1440.jpg",
   "capture_m390": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-m390.jpg",
-  "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p960.mp4"
+  "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p720.mp4"
  },
  "pieges": [
   "vitesse lue par st.getVelocity() et ramenée à zéro par un elastic.out à onScrubComplete",
   "les révélations par pièce utilisent containerAnimation",
   "charger les images avant le premier geste sur téléphone (IntersectionObserver large)"
+ ],
+ "particularites": [
+  "physique-pendule : les étiquettes se balancent selon la vitesse puis reviennent en oscillant (elastic.out)",
+  "reprise-des-couleurs : le fond prend la teinte de la pièce centrale"
  ],
  "mesures": {
   "hauteur_p1440": 900,

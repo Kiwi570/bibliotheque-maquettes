@@ -6,15 +6,53 @@
     "ambiance": ["océanique", "chaleureux", "doux"],
     "palette": {"fond": "--ai-900", "texte": "--ink", "accent": "--sango", "secondaire": "--washi"},
     "polices": {"titres": "Cormorant Garamond", "texte": "Zen Kaku Gothic New", "mono": "DM Mono"},
-    "points_forts": ["mer WebGL dont le ciel suit la vraie position du soleil et de la lune sur place, horloge réglable", "table épinglée : plats qui défilent à l'horizontale en 3D avec un banc de poissons en canvas", "carte de la baie à la vraie côte qui se dessine, trajet pas à pas à pied ou en voiture", "calculateur de séjour et demande de réservation en trois étapes", "trois langues appliquées avant le premier affichage, son et mode calme"],
-    "reserves": ["jauge de marée fixe qui chevauche le contenu au-delà de 1200 px", "étapes du formulaire qui se touchent, case à cocher de 22 px", "accueil d'environ 3 Mo", "mentions légales encore à compléter"],
-    "animations": ["ouverture-orchestrée", "webgl-shader", "révélation-texte", "section-fixée", "galerie-horizontale", "canvas-2d", "parallaxe", "masque", "morphing", "marquee", "apparition-au-défilement", "révélation-image", "curseur-personnalisé", "bouton-magnétique", "transition-de-page", "compteur"],
-    "interactions": ["carte-interactive", "calculateur", "formulaire-par-étapes", "réservation-simulee", "galerie-cliquable", "lecteur-audio", "mode-calme"],
+    "points_forts": [
+      "mer WebGL dont le ciel suit la vraie position du soleil et de la lune sur place, horloge réglable",
+      "table épinglée : plats qui défilent à l'horizontale en 3D avec un banc de poissons en canvas",
+      "carte de la baie à la vraie côte qui se dessine, trajet pas à pas à pied ou en voiture",
+      "calculateur de séjour et demande de réservation en trois étapes",
+      "trois langues appliquées avant le premier affichage, son et mode calme"
+    ],
+    "reserves": [
+      "jauge de marée fixe qui chevauche le contenu au-delà de 1200 px",
+      "étapes du formulaire qui se touchent, case à cocher de 22 px",
+      "accueil d'environ 3 Mo",
+      "mentions légales encore à compléter"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "canvas-2d",
+      "parallaxe",
+      "masque",
+      "morphing",
+      "marquee",
+      "apparition-au-défilement",
+      "révélation-image",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "transition-de-page",
+      "compteur",
+      "trace-svg"
+    ],
+    "interactions": [
+      "carte-interactive",
+      "calculateur",
+      "formulaire-par-étapes",
+      "réservation-simulee",
+      "galerie-cliquable",
+      "mode-calme",
+      "ambiance-sonore"
+    ],
     "change_depuis_audit": null,
-    "accueil": "hero"
+    "accueil": "hero",
+    "dependances": ["gsap", "scrolltrigger", "splittext", "lenis", "canvas", "drawsvg-morphsvg"]
   },
   "sections": {
-    "hd": {"titre": "En-tête", "role": "menu", "description": "En-tête fixe en pilule sur fond indigo : logo en kanji, liens, choix de langue, son et bouton de réservation corail ; il se compacte au défilement.", "animations": ["aucune"], "interactions": ["lecteur-audio"], "telephone": "simplifié", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
+    "hd": {"titre": "En-tête", "role": "menu", "description": "En-tête fixe en pilule sur fond indigo : logo en kanji, liens, choix de langue, son et bouton de réservation corail ; il se compacte au défilement.", "animations": ["aucune"], "interactions": ["ambiance-sonore"], "telephone": "simplifié", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "mnav": {"titre": "Menu téléphone", "role": "menu", "description": "Menu plein écran du téléphone, ouvert depuis l'en-tête, avec verrou de défilement.", "animations": ["apparition-au-défilement"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true, "pieges": []},
     "mbar": {"titre": "Barre de contact", "role": "barre-fixe", "description": "Barre fixe en bas du téléphone avec appel et réservation, qui se retire quand le bas de page arrive.", "animations": ["apparition-au-défilement"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "cursor": {"titre": "Curseur", "role": "decor", "description": "Curseur personnalisé en anneau qui grossit sur les liens, masqué au toucher.", "animations": ["curseur-personnalisé"], "interactions": ["aucune"], "telephone": "masqué", "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true, "pieges": []},
@@ -24,7 +62,7 @@
     "loader": {"titre": "Ouverture kanji", "role": "ouverture", "description": "Voile d'ouverture : le nom en kanji s'écrit puis une marée le découvre, ramené à 1,6 s après l'audit.", "animations": ["ouverture-orchestrée"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "sans_capture": true, "pieges": []},
     "hero": {"titre": "Mer et ciel en direct", "role": "ouverture", "description": "Héros sur une mer WebGL dont le ciel, la lumière et la lune suivent la vraie position du soleil sur place (calcul astronomique) ; carte « ciel en direct » avec horloge réglable pour voir l'île à une autre heure, photo cadrée en arche, titre en italique corail. Repli CSS sans WebGL.", "animations": ["webgl-shader", "révélation-texte", "parallaxe", "ouverture-orchestrée"], "interactions": ["simulateur"], "telephone": "adapté", "note_qualite": 5, "reutilisable": true, "module": null, "dependances": ["gsap", "scrolltrigger", "splittext", "ogl"], "code": {"html": "index.html:152-197", "css": "assets/css/site.css:329-403", "js": "assets/js/sea.js ; assets/js/home.js:21-66 ; assets/js/core.js:295-424"}, "pieges": ["coordonnées et fuseau du lieu en options : le ciel est faux sinon", "carte de l'horloge en grille minmax(0, 1fr) et largeur en clamp(), sinon les libellés débordent", "voile vertical sur téléphone pour garder le titre lisible"]},
     "stay": {"titre": "La maison pour vous seul", "role": "offre", "description": "Présentation de la maison louée entière : photos décalées, chiffre « 1 groupe à la fois », pastille en fleur qui tourne, étiquettes de services.", "animations": ["apparition-au-défilement", "révélation-image", "révélation-texte"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
-    "crossing": {"titre": "Traversée sur la carte", "role": "carte", "description": "Carte de la baie à partir de la vraie côte : le littoral se dessine, l'île se remplit, les routes et les bateaux suivent, débarcadères qui pulsent ; distance en grand chiffre et légende des trajets.", "animations": ["masque", "compteur", "apparition-au-défilement"], "interactions": ["carte-interactive"], "telephone": "adapté", "note_qualite": 4, "reutilisable": true, "module": null, "dependances": ["gsap", "scrolltrigger"], "code": {"html": "index.html:237-258", "css": "assets/css/site.css:426-453", "js": "assets/js/home.js:69-78 ; assets/js/map.js:30-169"}, "pieges": ["la côte vient de données publiques simplifiées : garder la source et l'échelle", "routes et débarcadères marqués indicatifs"]},
+    "crossing": {"titre": "Traversée sur la carte", "role": "carte", "description": "Carte de la baie à partir de la vraie côte : le littoral se dessine, l'île se remplit, les routes et les bateaux suivent, débarcadères qui pulsent ; distance en grand chiffre et légende des trajets.", "animations": ["masque", "compteur", "apparition-au-défilement", "trace-svg"], "interactions": ["carte-interactive"], "telephone": "adapté", "note_qualite": 4, "reutilisable": true, "module": null, "dependances": ["gsap", "scrolltrigger", "drawsvg-morphsvg"], "code": {"html": "index.html:237-258", "css": "assets/css/site.css:426-453", "js": "assets/js/home.js:69-78 ; assets/js/map.js:30-169"}, "pieges": ["la côte vient de données publiques simplifiées : garder la source et l'échelle", "routes et débarcadères marqués indicatifs"]},
     "table": {"titre": "Table de l'île", "role": "galerie", "description": "Section épinglée : les plats défilent à l'horizontale en légère rotation 3D, une ligne de pêche glisse plus lentement, et un banc de petits poissons en canvas 2D suit le défilement ; grand nom de poisson en filigrane. Sur téléphone, carrousel natif avec scroll-padding.", "animations": ["section-fixée", "galerie-horizontale", "canvas-2d", "parallaxe"], "interactions": ["galerie-cliquable"], "telephone": "simplifié", "note_qualite": 5, "reutilisable": true, "module": "galerie-horizontale-epinglee", "dependances": ["gsap", "scrolltrigger", "canvas"], "code": {"html": "index.html:261-291", "css": "assets/css/site.css:456-477,884-903", "js": "assets/js/home.js:81-146"}, "pieges": ["hauteur 100svh avec padding sous l'en-tête et largeur des plats liée à la hauteur, sinon les légendes sont coupées à 1280×720", "matchMedia : épinglage seulement au-dessus de 900 px"]},
     "island": {"titre": "Le temps de l'île", "role": "manifeste", "description": "Section « profitez de l'inconfort » : courbes de niveau tirées du contour réel de l'île, photos en rangée et braises qui montent en canvas.", "animations": ["canvas-2d", "apparition-au-défilement", "révélation-image"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
     "myth": {"titre": "Mythe du puits", "role": "manifeste", "description": "Légende du lieu racontée à côté d'un puits où l'eau ondule (SVG animé) et monte avec le défilement.", "animations": ["morphing", "parallaxe"], "interactions": ["aucune"], "telephone": "adapté", "note_qualite": 3, "reutilisable": false, "module": null, "pieges": []},
