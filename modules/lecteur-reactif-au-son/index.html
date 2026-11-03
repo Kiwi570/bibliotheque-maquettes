@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lecteur réactif au son · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #0e0b0a; --couleur-texte: #f3ece2; --couleur-accent: #f0a24a; --couleur-secondaire: #c8452f; --police-titres: Georgia, "Times New Roman", serif; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, un lecteur de trois extraits : le visuel suit la musique. Aucun son ne part tant que vous n'avez pas cliqué.</p>
+  </section>
+
+  <section class="lrs" data-module="lecteur-reactif-au-son" aria-labelledby="lrs-titre">
+    <div class="lrs__cadre socle-cadre">
+      <div class="lrs__scene" aria-hidden="true">
+        <div class="lrs__fond"><span class="socle-visuel socle-visuel--2"></span></div>
+        <div class="lrs__halo"></div>
+        <canvas class="lrs__canvas"></canvas>
+      </div>
+      <div class="lrs__texte">
+        <p class="socle-surtitre">À écouter</p>
+        <h2 class="lrs__h" id="lrs-titre">Trois extraits à écouter ici</h2>
+        <p class="lrs__chapo">Lancez un extrait : les braises, le halo et l'onde suivent les basses et le volume, en direct.</p>
+
+        <ol class="lrs__pistes">
+          <li class="lrs__piste" data-src="audio/pulsation.mp3">
+            <button class="lrs__jouer" type="button" aria-pressed="false" aria-label="Écouter Pulsation"><span class="lrs__ico" aria-hidden="true"></span></button>
+            <span class="lrs__corps"><span class="lrs__titre">Pulsation</span><span class="lrs__detail">Basse régulière</span><span class="lrs__fil" aria-hidden="true"><i></i></span></span>
+            <span class="lrs__duree">0:09</span>
+          </li>
+          <li class="lrs__piste" data-src="audio/nappe.mp3">
+            <button class="lrs__jouer" type="button" aria-pressed="false" aria-label="Écouter Nappe"><span class="lrs__ico" aria-hidden="true"></span></button>
+            <span class="lrs__corps"><span class="lrs__titre">Nappe</span><span class="lrs__detail">Accord tenu qui respire</span><span class="lrs__fil" aria-hidden="true"><i></i></span></span>
+            <span class="lrs__duree">0:09</span>
+          </li>
+          <li class="lrs__piste" data-src="audio/carillon.mp3">
+            <button class="lrs__jouer" type="button" aria-pressed="false" aria-label="Écouter Carillon"><span class="lrs__ico" aria-hidden="true"></span></button>
+            <span class="lrs__corps"><span class="lrs__titre">Carillon</span><span class="lrs__detail">Notes claires et battement</span><span class="lrs__fil" aria-hidden="true"><i></i></span></span>
+            <span class="lrs__duree">0:09</span>
+          </li>
+        </ol>
+
+        <div class="lrs__commandes" role="group" aria-label="Commandes de lecture">
+          <button class="lrs__btn" type="button" data-lrs="precedente" aria-label="Extrait précédent"><span class="lrs__ico lrs__ico--prec" aria-hidden="true"></span></button>
+          <button class="lrs__btn lrs__btn--principal" type="button" data-lrs="lecture" aria-label="Lecture"><span class="lrs__ico" aria-hidden="true"></span></button>
+          <button class="lrs__btn" type="button" data-lrs="suivante" aria-label="Extrait suivant"><span class="lrs__ico lrs__ico--suiv" aria-hidden="true"></span></button>
+          <span class="lrs__barres" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="lrs__encours" data-lrs="titre">Aucun extrait</span>
+          <label class="lrs__position"><span class="socle-sr">Position dans l'extrait</span><input type="range" min="0" max="100" step="0.1" value="0" data-lrs="position" disabled></label>
+          <span class="lrs__temps" data-lrs="temps">0:00 / 0:00</span>
+        </div>
+        <p class="lrs__note">Extraits de démonstration de 9 secondes, composés par synthèse.</p>
+        <p class="socle-sr" data-lrs="etat" aria-live="polite"></p>
+      </div>
+    </div>
+    <audio class="lrs__audio" preload="none"></audio>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, le visuel reste figé ; le lecteur fonctionne toujours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="lecteur-reactif-au-son"]')) init(el);
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+ "etapes": [
+  { "defiler": "[data-module=\"semainier\"]" },
+  { "cliquer": "button[data-formule=\"matinale\"]" },
+  { "attendre": 1100 },
+  { "cliquer": "[role=\"tab\"][data-j=\"1\"]", "si": "[role=\"tab\"][data-j=\"1\"]" },
+  { "cliquer": "button[data-formule=\"concentree\"]" },
+  { "attendre": 1100 },
+  { "cliquer": "button[data-formule=\"allegee\"]" },
+  { "attendre": 1100 },
+  { "cliquer": "[role=\"tab\"][data-j=\"5\"]", "si": "[role=\"tab\"][data-j=\"5\"]" },
+  { "verifier": "button[data-formule=\"allegee\"][aria-pressed=\"true\"]" }
+ ],
+ "pause": 600
+}

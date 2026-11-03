@@ -56,7 +56,7 @@ for (const m of modules) {
   if (!Array.isArray(mj.images)) err.push(`${ou} : images manquant (liste des emplacements, [] si aucun)`);
   else mj.images.forEach((im, i) => { for (const k of ['role', 'selecteur', 'nombre', 'ratio', 'largeur', 'zone_calme']) if (im[k] === undefined || im[k] === '') err.push(`${ou} : images[${i}].${k} manquant`);
     if (typeof im.largeur !== 'number' || im.largeur < 200 || im.largeur > 4000) err.push(`${ou} : images[${i}].largeur en pixels (200 à 4000)`); });
-  if (fs.existsSync(path.join(RACINE, 'modules', m, 'scenario.json'))) { const sc = lireJson(path.join(RACINE, 'modules', m, 'scenario.json')); if (!Array.isArray(sc.etapes) || !sc.etapes.length) err.push(`${ou} : scenario.json sans étapes`); }
+  if (fs.existsSync(path.join(RACINE, 'modules', m, 'scenario.json'))) { const sc = lireJson(path.join(RACINE, 'modules', m, 'scenario.json')); if (!(Array.isArray(sc.etapes) && sc.etapes.length) && !sc.capture) err.push(`${ou} : scenario.json sans étapes ni capture`); }
   if (fs.existsSync(path.join(RACINE, 'modules', m, 'apercu.mp4'))) poids(`modules/${m}/apercu.mp4`, 2 * 1024 * 1024, ou);
   const css = fs.readFileSync(path.join(RACINE, 'modules', m, 'module.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
   const dur = css.match(/#[0-9a-f]{3,8}\b|rgba?\(\s*\d|hsla?\(\s*\d|font-family\s*:(?!\s*(?:var\(|inherit))[^;]+/gi);

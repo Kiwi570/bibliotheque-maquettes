@@ -1,0 +1,28 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"cadenas-a-molettes\"] .cam__cadenas"},
+  {"cliquer": ".cam__molette:nth-child(1) [data-dir=\"1\"]"},
+  {"cliquer": ".cam__molette:nth-child(1) [data-dir=\"1\"]"},
+  {"cliquer": ".cam__molette:nth-child(2) [data-dir=\"1\"]"},
+  {"cliquer": ".cam__molette:nth-child(2) [data-dir=\"1\"]"},
+  {"cliquer": ".cam__molette:nth-child(3) .cam__fenetre"},
+  {"touche": "ArrowDown"},
+  {"touche": "ArrowDown"},
+  {"attendre": 900},
+  {"verifier": ".cam.est-ouvert .cam__carte"},
+  {"defiler": ".cam__carte"},
+  {"attendre": 700},
+  {"cliquer": ".cam__rapide:nth-child(1)"},
+  {"attendre": 900},
+  {"verifier": ".cam__rapide[aria-pressed=\"true\"]"}
+ ],
+ "pause": 550,
+ "capture": {
+  "attendre": 400,
+  "etapes": [
+   {"defiler": ".cam__cadenas"},
+   {"cliquer": ".cam__rapide:nth-child(2)"}
+  ],
+  "apres": 1400
+ }
+}

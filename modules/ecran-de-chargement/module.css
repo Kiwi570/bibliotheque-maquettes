@@ -1,0 +1,59 @@
+/* Écran de chargement — identité uniquement par les variables du socle.
+   Réglables sur .edc : --edc-fond (fond du calque), --edc-chiffre (couleur du compteur), --edc-taille (taille du compteur). */
+.edc {
+  --edc-fond: color-mix(in oklab, var(--couleur-fond) 90%, var(--couleur-secondaire));
+  --edc-chiffre: var(--couleur-texte);
+  --edc-taille: clamp(3.8rem, min(15vw, 21vh), 9.5rem);
+  --edc-trou: -14%;
+  --edc-car: 4;
+  position: fixed; inset: 0; z-index: 90; display: none; place-items: center;
+  pointer-events: none; overflow: clip; contain: layout paint;
+  background: var(--edc-fond); color: var(--couleur-texte);
+  /* Le trou circulaire de la sortie « ouverture » : masque piloté par --edc-trou (de -14 % à 116 %). */
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, transparent var(--edc-trou), black calc(var(--edc-trou) + 14%));
+  mask-image: radial-gradient(circle at 50% 50%, transparent var(--edc-trou), black calc(var(--edc-trou) + 14%));
+}
+/* Affiché seulement quand il doit jouer : classe posée par le script du <head> (avant le premier affichage) ou par le module.
+   Secours : si le module ne se charge jamais, le calque disparaît seul au bout de 5 s. */
+html.edc-joue .edc, .edc.est-pilote { display: grid; }
+html.edc-joue .edc:not(.est-pilote) { animation: edc-secours 0s linear 5s forwards; }
+@keyframes edc-secours { to { visibility: hidden; } }
+.edc.est-fini { display: none; }
+
+.edc__motif { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+.edc[data-motif="aucun"] .edc__motif { display: none; }
+
+.edc__coeur {
+  position: relative; z-index: 1; display: grid; justify-items: center; gap: clamp(10px, 2vh, 18px);
+  padding: calc(var(--espace) * 1.5) var(--espace); text-align: center;
+  /* Halo sous le compteur : les cristaux et l'onde ne gênent jamais la lecture. */
+  background: radial-gradient(closest-side, var(--edc-fond) 55%, transparent);
+}
+.edc__legende { font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.edc__compteur { display: flex; align-items: baseline; justify-content: center; gap: .12em; font-family: var(--police-titres); font-size: var(--edc-taille); line-height: 1; color: var(--edc-chiffre); white-space: nowrap; }
+.edc__valeur { display: inline-block; min-width: calc(var(--edc-car) * 1ch); text-align: end; font-variant-numeric: tabular-nums lining-nums; letter-spacing: -.02em; }
+.edc__unite { font-family: var(--police-mono); font-size: max(14px, .24em); letter-spacing: .06em; color: var(--couleur-accent); }
+
+.edc__jauge { --edc-p: 0; position: relative; width: min(340px, 70vw); height: 2px; background: var(--couleur-ligne); border-radius: 2px; }
+.edc__jauge::after { content: ""; position: absolute; inset: 0; background: var(--couleur-accent); border-radius: inherit; transform: scaleX(var(--edc-p)); transform-origin: 0 50%; }
+.edc__bornes { display: flex; justify-content: space-between; width: min(340px, 70vw); margin-top: -4px; font-family: var(--police-mono); font-size: max(12px, .75rem); font-variant-numeric: tabular-nums; color: var(--couleur-texte-doux); }
+
+.edc__passer {
+  position: absolute; z-index: 2; right: var(--espace); bottom: calc(var(--espace) + env(safe-area-inset-bottom, 0px));
+  pointer-events: auto;
+  font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--couleur-texte); background: color-mix(in oklab, var(--edc-fond) 82%, transparent); border-color: var(--couleur-ligne);
+}
+
+@media (max-width: 420px) {
+  .edc__coeur { padding-inline: 12px; }
+  .edc__passer { right: 50%; translate: 50% 0; }
+}
+@media (max-height: 480px) {
+  .edc { --edc-taille: clamp(2.6rem, 18vh, 5rem); }
+}
+
+/* Réduire les animations, mode calme et impression : pas d'écran de chargement, la page est là. */
+@media (prefers-reduced-motion: reduce) { .edc { display: none !important; } }
+html.calme .edc { display: none !important; }
+@media print { .edc { display: none !important; } }

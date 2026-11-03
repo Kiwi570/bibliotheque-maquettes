@@ -1,0 +1,78 @@
+/* Globe d'itinéraire — identité uniquement par les variables du socle. */
+.gi {
+  --gi-ocean: color-mix(in oklab, var(--couleur-secondaire) 22%, var(--couleur-fond));
+  --gi-terre: color-mix(in oklab, var(--couleur-texte) 78%, var(--couleur-secondaire));
+  --gi-grille: color-mix(in oklab, var(--couleur-texte) 12%, var(--gi-ocean));
+  --gi-trace: var(--couleur-accent);
+  --gi-halo: var(--couleur-secondaire);
+  --gi-marge: clamp(12px, 2.4vh, 28px);
+  position: relative; padding-block: clamp(56px, 8vw, 120px);
+}
+.gi__tete { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vh, 56px); }
+.gi__titre { font-size: clamp(2.2rem, 5.4vw, 4.6rem); line-height: 1; padding-block: .06em; }
+.gi__intro { color: var(--couleur-texte-doux); max-width: 48ch; }
+
+.gi__corps { display: grid; gap: clamp(24px, 4vw, 64px); align-items: start; }
+
+/* Scène : globe + boutons d'étape. Dans le flux par défaut (téléphone, écrans bas, mode calme). */
+.gi__scene { display: flex; flex-direction: column; gap: 12px; height: min(92vw, calc((var(--ecran-h) - var(--entete-h)) * .7)); min-height: 280px; }
+.gi__globe { position: relative; flex: 1; min-height: 0; border-radius: var(--rayon);
+  /* sans script : un disque d'océan tient la place du globe */
+  background: radial-gradient(closest-side, var(--gi-ocean) 0 82%, color-mix(in oklab, var(--gi-halo) 22%, transparent) 86%, transparent 94%); }
+.gi--pret .gi__globe { background: none; }
+.gi--sans-toile .gi__scene { display: none; }
+.gi__toile { position: absolute; inset: 0; width: 100%; height: 100%; }
+.gi__compteur { position: absolute; left: 0; top: 0; margin: 0; padding: 6px 12px; border-radius: 999px; background: color-mix(in oklab, var(--couleur-fond) 88%, transparent); box-shadow: 0 0 0 1px var(--couleur-ligne); font-size: max(12px, .8rem); font-weight: 700; font-variant-numeric: tabular-nums; }
+.gi__teintes { position: absolute; width: 0; height: 0; overflow: hidden; }
+.gi__t-ocean { color: var(--gi-ocean); } .gi__t-terre { color: var(--gi-terre); } .gi__t-grille { color: var(--gi-grille); }
+.gi__t-trace { color: var(--gi-trace); } .gi__t-halo { color: var(--gi-halo); } .gi__t-fond { color: var(--couleur-fond); } .gi__t-texte { color: var(--couleur-texte); }
+
+.gi__nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; flex: none; }
+.gi__bouton { display: grid; place-items: center; min-width: 44px; height: 44px; padding: 0 4px; border: 0; border-radius: 999px; background: none; cursor: pointer; font-family: var(--police-mono); font-size: max(12px, .8rem); font-weight: 700; }
+.gi__bouton > span[aria-hidden] { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; box-shadow: 0 0 0 2px var(--couleur-ligne); transition: background .35s, color .35s, box-shadow .35s; }
+.gi__bouton.est-vu > span[aria-hidden] { box-shadow: 0 0 0 2px var(--couleur-accent); }
+.gi__bouton.est-active > span[aria-hidden] { background: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.gi__ensemble { padding-inline: 14px; box-shadow: inset 0 0 0 1px var(--couleur-ligne); letter-spacing: .04em; }
+.gi__ensemble[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--couleur-accent); }
+.gi--vivant .gi__ensemble { display: none; }
+.gi__bouton:focus-visible { outline-offset: 0; }
+
+/* Étapes */
+.gi__etapes { list-style: none; margin: 0; padding: 0; display: grid; }
+.gi__etape { display: grid; gap: 10px; align-content: start; padding-block: clamp(22px, 4vh, 40px); border-top: 1px solid var(--couleur-ligne); }
+.gi__etape:last-child { border-bottom: 1px solid var(--couleur-ligne); }
+.gi__n { display: flex; align-items: baseline; gap: 14px; margin: 0; font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .08em; color: var(--couleur-texte-doux); }
+.gi__n b { font-family: var(--police-titres); font-size: clamp(2rem, 3.4vw, 3rem); line-height: .95; font-weight: 400; letter-spacing: 0; font-variant-numeric: tabular-nums; color: var(--couleur-texte); transition: color .4s, opacity .5s; }
+.gi__etape h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); }
+.gi__etape > p:last-child { color: var(--couleur-texte-doux); max-width: 52ch; }
+.gi__etape.est-active .gi__n b { color: var(--couleur-accent); }
+/* Étapes inactives : le texte reste lisible, seul le numéro s'estompe. */
+.gi--vivant .gi__etape:not(.est-active) .gi__n b { opacity: .5; }
+
+/* Ordinateur : globe collant à gauche, étapes qui défilent à droite. */
+@media (min-width: 900px) and (min-height: 500px) {
+  .gi__corps { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+  .gi__scene { position: sticky; top: calc(var(--entete-h) + var(--gi-marge)); height: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--gi-marge)); min-height: 0; }
+  .gi__etape { min-height: calc((var(--ecran-h) - var(--entete-h)) * .62); }
+  .gi__etapes { padding-bottom: calc((var(--ecran-h) - var(--entete-h)) * .3); }
+}
+/* Tablette en portrait : bandeau collant en haut, les étapes défilent dessous. */
+@media (min-width: 600px) and (max-width: 899px) and (min-height: 860px) {
+  .gi__corps { gap: 0; }
+  .gi__scene { position: sticky; z-index: 2; top: var(--entete-h); height: calc((var(--ecran-h) - var(--entete-h)) * .48); min-height: 0; padding-block: var(--gi-marge) 10px; background: var(--couleur-fond); box-shadow: 0 1px 0 var(--couleur-ligne); }
+  .gi__etape { min-height: calc((var(--ecran-h) - var(--entete-h)) * .34); }
+  .gi__etape:first-child { border-top: 0; }
+  .gi__etapes { padding-bottom: calc((var(--ecran-h) - var(--entete-h)) * .2); }
+}
+@media (max-width: 420px) { .gi__bouton { min-width: 44px; } .gi__nav { gap: 2px; } }
+
+/* Réduire les animations et mode calme : globe immobile dans le flux, tracé complet. */
+@media (prefers-reduced-motion: reduce) {
+  .gi__scene { position: static !important; }
+  .gi__etape { min-height: 0 !important; }
+  .gi__etapes { padding-bottom: 0 !important; }
+}
+.calme .gi__scene { position: static !important; }
+.calme .gi__etape { min-height: 0 !important; }
+.calme .gi__etapes { padding-bottom: 0 !important; }
+.gi:not(.gi--vivant) .gi__compteur { display: none; }

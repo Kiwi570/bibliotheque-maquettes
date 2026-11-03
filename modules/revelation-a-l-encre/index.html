@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Révélation à l'encre · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f1ece2; --couleur-texte: #1e2230; --couleur-accent: #a8482a; --couleur-secondaire: #2c4c78; --couleur-sur-accent: #fbf7f0; --rayon: 6px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <!-- Mode « etale », à l'arrivée : la tache d'encre s'étale dans le papier. -->
+  <section class="rae rae--cote" id="rae-ouverture" data-module="revelation-a-l-encre" data-mode="etale" data-rae-attente aria-labelledby="rae-titre">
+    <div class="rae__cadre socle-cadre">
+      <div class="rae__texte">
+        <p class="socle-surtitre">Surtitre de la page</p>
+        <h1 class="rae__titre" id="rae-titre">Un titre d'ouverture en deux lignes.</h1>
+        <p class="rae__intro">Un paragraphe de deux lignes qui présente l'activité : ce que l'on propose, pour qui, et la façon de le faire.</p>
+        <div class="rae__actions">
+          <a class="socle-bouton socle-bouton--plein" href="#rae-montee">Action principale</a>
+          <button class="socle-bouton" type="button" data-rejouer>Rejouer l'ouverture</button>
+        </div>
+      </div>
+      <div class="rae__scene">
+        <figure class="rae__image"><span class="rae__fond socle-visuel" aria-hidden="true"></span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Faites défiler : plus bas, une nappe monte et rend ses couleurs à l'image, puis un voile de papier passe d'une étape à l'autre.</p>
+  </section>
+
+  <!-- Mode « montee », au défilement : bichromie, puis la nappe monte du bas. -->
+  <section class="rae rae--plein" id="rae-montee" data-module="revelation-a-l-encre" data-mode="montee" aria-labelledby="rae-montee-titre">
+    <div class="rae__scene">
+      <figure class="rae__image" data-focus=".6 .5"><span class="rae__fond socle-visuel socle-visuel--2" aria-hidden="true"></span></figure>
+    </div>
+    <div class="rae__texte socle-cadre">
+      <p class="socle-surtitre">Surtitre</p>
+      <h2 class="rae__titre" id="rae-montee-titre">L'image reprend ses couleurs.</h2>
+      <p class="rae__intro">Une phrase courte posée sur la zone calme de l'image, en bas à gauche.</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Intermède</p>
+    <h2>Un bloc de texte entre deux images</h2>
+    <p>Remontez : la nappe redescend et l'image retrouve sa bichromie.</p>
+  </section>
+
+  <!-- Mode « voile » en étapes épinglées : le voile recouvre l'image puis se retire sur la suivante. -->
+  <section class="rae rae--etapes" id="rae-voile" data-module="revelation-a-l-encre" data-mode="voile" data-epingle aria-labelledby="rae-voile-titre">
+    <div class="rae__grille socle-cadre">
+      <div class="rae__etapes" data-tient="texte">
+        <div class="rae__tete">
+          <p class="socle-surtitre">Méthode</p>
+          <h2 id="rae-voile-titre">Trois temps pour un même geste</h2>
+          <p>Une phrase d'introduction qui annonce les trois étapes.</p>
+        </div>
+        <div class="rae__etape">
+          <h3>Première étape</h3>
+          <p>Deux ou trois lignes qui décrivent ce qui se passe à cette étape et ce que l'on voit sur l'image.</p>
+        </div>
+        <div class="rae__etape">
+          <h3>Deuxième étape</h3>
+          <p>Deux ou trois lignes qui décrivent ce qui se passe à cette étape et ce que l'on voit sur l'image.</p>
+        </div>
+        <div class="rae__etape">
+          <h3>Troisième étape</h3>
+          <p>Deux ou trois lignes qui décrivent ce qui se passe à cette étape et ce que l'on voit sur l'image.</p>
+        </div>
+      </div>
+      <div class="rae__scene" data-tient="image">
+        <figure class="rae__image"><span class="rae__fond socle-visuel" aria-hidden="true"></span></figure>
+        <figure class="rae__image"><span class="rae__fond socle-visuel socle-visuel--2" aria-hidden="true"></span></figure>
+        <figure class="rae__image"><span class="rae__fond socle-visuel socle-visuel--3" aria-hidden="true"></span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Fin de la démonstration</h2>
+    <p>En mode calme, sans WebGL ou sans JavaScript, chaque image est entière et nette ; les étapes deviennent une liste.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  const reglages = {
+    'rae-ouverture': { mode: 'etale', declencheur: 'arrivee' },
+    'rae-montee': { mode: 'montee', declencheur: 'defilement', depart: .1, debut: 'top 70%', fin: 'bottom 80%' },
+    'rae-voile': { mode: 'voile', retrait: true },
+  };
+  const api = {};
+  await Promise.all([...document.querySelectorAll('[data-module="revelation-a-l-encre"]')].map(async el => { api[el.id] = await init(el, reglages[el.id]); }));
+  window.__rae = api;
+  document.querySelector('[data-rejouer]')?.addEventListener('click', () => api['rae-ouverture']?.rejouer());
+</script>
+</body>
+</html>

@@ -23,7 +23,7 @@ export async function init(root, options = {}) {
   const html = document.documentElement;
   const vague = root.querySelector('.tv__vague path');
   const etiquette = root.querySelector('.tv__nom');
-  const s = await pret([]);
+  const s = await pret(['gsap']);
   const { gsap } = s;
   let enCours = false;
 

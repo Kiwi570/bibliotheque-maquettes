@@ -69,7 +69,7 @@ function rgb(root, valeur) {
  */
 export async function init(root, options = {}) {
   const o = { pousse: 2.4, fonteTitre: true, force: 1, delai: 150, glace: 'var(--givre-clair)', blanc: 'var(--couleur-texte)', cellule: 'var(--couleur-accent)', ...options };
-  const s = await pret(['ogl']);
+  const s = await pret(['gsap', 'ogl']);
   const canvas = root.querySelector('.givre__canvas');
   const cible = root.querySelector('[data-givre-cible]');
   if (!canvas || s.calme || !s.webgl() || !s.OGL) return { detruire() {} };

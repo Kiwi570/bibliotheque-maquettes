@@ -1,0 +1,15 @@
+{
+ "etapes": [
+  { "defiler": "[data-module=\"fond-qui-se-consume\"]" },
+  { "attendre": 700 },
+  { "cliquer": ".fqc__puce:visible >> nth=2", "si": ".fqc__puce:visible" },
+  { "attendre": 1600 },
+  { "cliquer": ".fqc__puce:visible >> nth=4", "si": ".fqc__puce:visible" },
+  { "attendre": 1600 },
+  { "cliquer": ".fqc__puce:visible >> nth=1", "si": ".fqc__puce:visible" },
+  { "attendre": 1400 },
+  { "verifier": "[data-module=\"fond-qui-se-consume\"] .fqc__titre" }
+ ],
+ "pause": 500,
+ "video": "les-deux"
+}

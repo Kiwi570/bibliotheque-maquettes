@@ -1,0 +1,64 @@
+/* Lumière au pointeur — identité uniquement par les variables du socle.
+   --lum-x / --lum-y / --lum-r : position et rayon de la lumière (posés par le script) ; --lum-fx / --lum-fy : point d'intérêt. */
+.lum { --lum-fx: 66%; --lum-fy: 42%; --lum-x: var(--lum-fx); --lum-y: var(--lum-fy); --lum-r: 34vmax;
+  position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: max(540px, calc(var(--ecran-h) - var(--entete-h))); padding-top: clamp(32px, 8vh, 96px); background: var(--couleur-fond);
+  touch-action: pan-y; }
+
+/* Image (photo sombre ou planches neutres en CSS sans JavaScript ; le script y pose l'image neutre peinte). */
+.lum__fond { position: absolute; inset: 0; z-index: -4; background-size: cover; background-position: var(--lum-fx) var(--lum-fy);
+  background-color: color-mix(in oklab, var(--couleur-secondaire) 40%, var(--couleur-fond)); }
+.lum:not(.lum--peinte) .lum__fond:not(:has(img)) {
+  background-image:
+    linear-gradient(180deg, transparent 85%, color-mix(in oklab, var(--couleur-texte) 22%, transparent) 85% calc(85% + 2px), color-mix(in oklab, var(--couleur-secondaire) 55%, var(--couleur-fond)) calc(85% + 2px)),
+    repeating-linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) 50%, transparent) 0 3px, transparent 3px 7.7%),
+    linear-gradient(90deg, color-mix(in oklab, var(--couleur-secondaire) 62%, var(--couleur-texte)), color-mix(in oklab, var(--couleur-secondaire) 70%, var(--couleur-fond))); }
+.lum__fond picture, .lum__fond img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Rendu WebGL : visible une fois prêt. */
+.lum__canvas { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity .6s; }
+.lum--gl .lum__canvas { opacity: 1; }
+
+/* Ombre en CSS : sans JavaScript, sans WebGL, en mode calme. Un trou de lumière dans un voile de nuit, halo teinté par-dessus. */
+.lum__ombre { position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  background: radial-gradient(circle calc(var(--lum-r) * 1.5) at var(--lum-x) var(--lum-y),
+    transparent 0%,
+    color-mix(in oklab, var(--couleur-fond) 18%, transparent) 28%,
+    color-mix(in oklab, var(--couleur-fond) 70%, transparent) 62%,
+    color-mix(in oklab, var(--couleur-fond) 88%, transparent) 100%); }
+.lum__ombre::before { content: ""; position: absolute; inset: 0; mix-blend-mode: overlay;
+  background: radial-gradient(circle var(--lum-r) at var(--lum-x) var(--lum-y), var(--couleur-accent), color-mix(in oklab, var(--couleur-accent) 40%, transparent) 45%, transparent 80%); }
+.lum__ombre::after { content: ""; position: absolute; inset: 0; mix-blend-mode: screen;
+  background: radial-gradient(circle calc(var(--lum-r) * .8) at var(--lum-x) var(--lum-y), color-mix(in oklab, var(--couleur-accent) 30%, transparent), transparent 75%); }
+.lum[data-source="torche"] .lum__ombre { background: radial-gradient(circle calc(var(--lum-r) * 1.1) at var(--lum-x) var(--lum-y),
+  transparent 0%, color-mix(in oklab, var(--couleur-fond) 12%, transparent) 72%, color-mix(in oklab, var(--couleur-fond) 92%, transparent) 86%, color-mix(in oklab, var(--couleur-fond) 94%, transparent) 100%); }
+.lum--gl .lum__ombre { display: none; }
+
+/* Voile : le texte reste lisible même quand la lumière passe derrière lui. */
+.lum__voile { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(0deg, color-mix(in oklab, var(--couleur-fond) 82%, transparent) 0%, color-mix(in oklab, var(--couleur-fond) 40%, transparent) 38%, transparent 62%),
+              linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) 62%, transparent) 0%, color-mix(in oklab, var(--couleur-fond) 25%, transparent) 42%, transparent 62%); }
+
+.lum__cadre { position: relative; display: grid; gap: clamp(16px, 2.6vh, 32px); padding-bottom: clamp(28px, 6vh, 72px); }
+.lum__cadre > * { max-width: min(46rem, 100%); }
+.lum__titre { font-size: clamp(2.3rem, min(6.6vw, 10.5vh), 6rem); line-height: 1.02; letter-spacing: -.015em; max-width: 13ch; padding-block: .06em;
+  text-shadow: 0 2px 28px var(--couleur-fond), 0 0 3px color-mix(in oklab, var(--couleur-fond) 70%, transparent); }
+.lum__texte { max-width: 46ch; text-shadow: 0 1px 14px var(--couleur-fond), 0 0 2px var(--couleur-fond); }
+.lum__cadre .socle-surtitre { color: var(--couleur-texte); text-shadow: 0 1px 10px var(--couleur-fond); }
+.lum__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.lum__actions .socle-bouton:not(.socle-bouton--plein) { background: color-mix(in oklab, var(--couleur-fond) 55%, transparent); }
+.lum__indice { font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.lum__indice-doigt { display: none; }
+@media (hover: none) { .lum__indice-souris { display: none; } .lum__indice-doigt { display: inline; } }
+.lum:not(.lum--vivant) .lum__indice { visibility: hidden; }
+
+@media (max-width: 760px) {
+  .lum__voile { background: linear-gradient(0deg, color-mix(in oklab, var(--couleur-fond) 90%, transparent) 0%, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 45%, transparent 70%); }
+}
+@media (max-height: 600px) and (min-width: 761px) { .lum__texte { display: none; } }
+@media (max-width: 380px) { .lum__actions .socle-bouton { flex: 1 1 100%; } }
+
+/* Réduire les animations et mode calme : canvas absent, lumière fixée au point d'intérêt. */
+@media (prefers-reduced-motion: reduce) { .lum__canvas { display: none; } .lum .lum__ombre { display: block; } }
+.calme .lum__canvas { display: none; }
+.calme .lum .lum__ombre { display: block; }

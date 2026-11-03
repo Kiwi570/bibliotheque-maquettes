@@ -1,0 +1,82 @@
+{
+ "nom": "dissolution-en-particules",
+ "titre": "Une fiche ou une image se défait en carrés ou en points (canvas 2D), rejoint un nuage ou une grille de milliers de points, puis se recompose",
+ "role": "preuves",
+ "animations": [
+  "canvas-2d",
+  "section-fixée",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "origine": [
+  "observatoire-des-cse-maquette/garanties",
+  "laure-polin-maquette/hero"
+ ],
+ "convient_a": [
+  "association",
+  "collectivité",
+  "conseil",
+  "services-b2b",
+  "numérique",
+  "média",
+  "culture",
+  "formation",
+  "santé",
+  "finance",
+  "juridique",
+  "artisanat",
+  "commerce"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "sobre",
+  "froid",
+  "luxueux",
+  "énergique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "mode": "'defilement' (section épinglée, progression à la molette) ou 'apparition' (joué une fois à l'arrivée, bouton [data-ddp-rejouer]), 'defilement'",
+  "disposition": "rangement intermédiaire, 'nuage' ou 'grille'",
+  "forme": "particules 'carre' ou 'point', 'carre'",
+  "image": "URL de l'image recomposée ; sinon l'<img> de .ddp__cible",
+  "alt": "texte alternatif si l'image est créée par le module, ''",
+  "nombre": "particules au plus par élément sur ordinateur, 3200",
+  "nombreTelephone": "particules au plus sous 700 px, 1100",
+  "champ": "points d'ambiance, 1800 (40 % sous 700 px)",
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 1.6",
+  "epingle": "condition d'épinglage, '(min-width: 700px) and (min-height: 500px)' ; sinon progression au passage de la scène",
+  "duree": "recomposition en mode apparition, en s, 2.6",
+  "dpr": "densité de pixels maximale du canvas, 1.5 (1 sous 700 px)"
+ },
+ "images": [
+  {
+   "role": "image recomposée par les particules (œuvre, réalisation, produit, visuel de synthèse)",
+   "selecteur": ".ddp__cible img",
+   "nombre": "1",
+   "ratio": "4:3",
+   "largeur": 1600,
+   "zone_calme": "aucune (texte à côté) ; en mode calme la fiche se pose sur le tiers bas gauche : y éviter le sujet principal"
+  }
+ ],
+ "poids_ko": 24.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

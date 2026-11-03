@@ -1,0 +1,83 @@
+/* Cadenas à molettes — identité uniquement par les variables du socle. */
+.cam { display: grid; gap: clamp(28px, 4vw, 56px); padding-block: clamp(64px, 12vh, 140px); }
+@media (min-width: 1000px) { .cam { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); column-gap: clamp(40px, 5vw, 80px); align-items: center; } .cam__resultats { grid-column: 1 / -1; } }
+.cam__intro { display: grid; gap: 1rem; align-content: start; }
+.cam__titre { font-size: clamp(1.9rem, 4vw, 3.2rem); }
+.cam__texte { color: var(--couleur-texte-doux); max-width: 52ch; }
+.cam__rapides { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .6rem; }
+.cam__rapide { min-height: 44px; padding: .55em 1.1em; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-surface); cursor: pointer; font-size: max(14px, .92rem); }
+.cam__rapide:hover { border-color: var(--couleur-texte-doux); }
+.cam__rapide[aria-pressed="true"] { border-color: var(--couleur-accent); background: color-mix(in oklab, var(--couleur-accent) 18%, var(--couleur-fond)); }
+.cam:not(.est-pret) .cam__rapides, .cam:not(.est-pret) .cam__ouvrir { visibility: hidden; }
+
+/* Le cadenas : anse en SVG au-dessus d'un corps arrondi */
+.cam__cadenas { position: relative; padding-top: clamp(70px, 9vw, 96px); }
+.cam__anse { position: absolute; left: 50%; top: 0; width: min(46%, 240px); height: auto; aspect-ratio: 200 / 130; translate: -50% 0; overflow: visible; pointer-events: none; z-index: 0; }
+.cam__anse path { fill: none; stroke: var(--couleur-texte-doux); stroke-width: 22; stroke-linecap: round; transform-box: fill-box; transform-origin: 100% 100%; }
+.cam__corps { position: relative; z-index: 1; margin-top: clamp(-40px, -3vw, -24px); padding: clamp(20px, 3vw, 34px) clamp(14px, 2.6vw, 32px); border-radius: calc(var(--rayon) * 2); background: linear-gradient(160deg, color-mix(in oklab, var(--couleur-texte) 12%, var(--couleur-fond)), var(--couleur-surface)); border: 1px solid var(--couleur-ligne); box-shadow: 0 30px 70px -20px color-mix(in oklab, var(--couleur-fond) 40%, black); transition: box-shadow .5s; }
+.cam__nom { text-align: center; font-family: var(--police-titres); font-weight: 600; font-size: clamp(1.1rem, 2vw, 1.35rem); margin-bottom: 1.1rem; }
+.cam__molettes { min-height: calc(2.5 * max(12px, .85rem) * 1.25 + 232px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(6px, 1vw, 12px); }
+.cam__molettes[data-n="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cam__molettes[data-n="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cam__molette { display: grid; gap: 6px; justify-items: stretch; min-width: 0; }
+.cam__libelle { font-size: max(12px, .85rem); color: var(--couleur-texte-doux); text-align: center; line-height: 1.25; min-height: 2.5em; display: flex; align-items: end; justify-content: center; }
+.cam__fleche { height: 44px; border-radius: calc(var(--rayon) * .7); border: 1px solid var(--couleur-ligne); background: var(--couleur-surface); cursor: pointer; display: grid; place-items: center; }
+.cam__fleche:hover { background: color-mix(in oklab, var(--couleur-texte) 12%, var(--couleur-fond)); }
+.cam__fleche svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.cam__fenetre {
+  position: relative; height: 132px; border-radius: var(--rayon); overflow: hidden; perspective: 600px; cursor: ns-resize; touch-action: none; user-select: none; -webkit-user-select: none;
+  background: linear-gradient(var(--couleur-fond), var(--couleur-surface) 30%, var(--couleur-surface) 70%, var(--couleur-fond));
+  box-shadow: inset 0 0 0 1px var(--couleur-ligne), inset 0 18px 22px -6px color-mix(in oklab, var(--couleur-fond) 70%, black), inset 0 -18px 22px -6px color-mix(in oklab, var(--couleur-fond) 70%, black);
+}
+.cam__fenetre::after { content: ""; position: absolute; inset: 50% 5px auto; height: 46px; translate: 0 -50%; border-radius: calc(var(--rayon) * .6); border: 1.5px solid color-mix(in oklab, var(--couleur-accent) 75%, transparent); box-shadow: 0 0 18px color-mix(in oklab, var(--couleur-accent) 30%, transparent); pointer-events: none; transition: border-color .4s, box-shadow .4s; }
+.cam__fenetre:focus-visible { outline-offset: 2px; }
+.cam__tambour { position: absolute; inset: 0; transform-style: preserve-3d; }
+.cam__cran {
+  position: absolute; inset: 50% 0 auto; height: 44px; margin-top: -22px; display: grid; place-items: center; padding-inline: 6px; text-align: center; backface-visibility: hidden;
+  font-family: var(--police-titres); font-weight: 600; font-size: clamp(14px, 1.5vw, 1.15rem); line-height: 1.08; text-wrap: balance; color: var(--couleur-texte-doux);
+}
+.cam__cran.est-actif { color: var(--couleur-texte); }
+.cam__cran--vide { letter-spacing: .1em; }
+.cam__ouvrir { width: 100%; margin-top: 1.3rem; font-weight: 600; }
+.cam__etat { min-height: 3em; margin-top: .8rem; text-align: center; font-size: max(13px, .9rem); color: var(--couleur-texte-doux); }
+
+/* Ouverture : l'anse se lève puis pivote sur sa branche droite */
+.cam.est-ouvert .cam__anse path { animation: cam-anse .8s both; }
+.cam.est-ouvert .cam__fenetre::after { border-color: var(--couleur-accent); box-shadow: 0 0 26px color-mix(in oklab, var(--couleur-accent) 55%, transparent); }
+.cam.est-ouvert .cam__corps { box-shadow: 0 0 0 6px color-mix(in oklab, var(--couleur-accent) 22%, transparent), 0 30px 70px -20px color-mix(in oklab, var(--couleur-fond) 40%, black); }
+@keyframes cam-anse { 0% { transform: none; } 35% { transform: translateY(-18px); } 100% { transform: translateY(-18px) rotate(-16deg); } }
+.cam.est-refuse .cam__corps { animation: cam-refus .45s; }
+@keyframes cam-refus { 20%, 60% { translate: -6px 0; } 40%, 80% { translate: 6px 0; } }
+
+/* Résultats */
+.cam__resultats { display: grid; gap: 1rem; outline: none; }
+.cam__ferme { padding: 1.4rem; border-radius: var(--rayon); border: 1px dashed var(--couleur-ligne); color: var(--couleur-texte-doux); text-align: center; }
+.cam__resultats-titre { font-size: clamp(1.3rem, 2.4vw, 1.8rem); }
+.cam__proches { font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cam__liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: clamp(12px, 1.6vw, 22px); }
+.cam__carte { display: grid; grid-template-rows: auto 1fr; border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); animation: cam-carte .6s cubic-bezier(.2, .8, .2, 1) both; animation-delay: calc(var(--i, 0) * 70ms); }
+.cam__carte.est-proche { border-style: dashed; }
+.cam__visuel { aspect-ratio: 4 / 3; }
+.cam__visuel > img { width: 100%; height: 100%; object-fit: cover; }
+.cam__carte-texte { display: grid; gap: .5rem; align-content: start; padding: 1rem 1.1rem 1.2rem; }
+.cam__carte-texte > p { color: var(--couleur-texte-doux); font-size: max(14px, .95rem); }
+.cam__meta { font-family: var(--police-mono); font-size: max(12px, .76rem) !important; letter-spacing: .08em; text-transform: uppercase; }
+.cam__carte-titre { font-size: 1.25rem; }
+.cam__sauf { color: var(--couleur-accent) !important; }
+.cam__lien { justify-self: start; margin-top: .3rem; font-size: max(14px, .9rem); }
+@keyframes cam-carte { from { opacity: 0; transform: translateY(28px); } }
+
+/* Téléphone : quatre molettes en deux rangées */
+@media (max-width: 560px) {
+  .cam__molettes[data-n="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+  .cam__fenetre { height: 120px; }
+}
+@media (max-width: 380px) { .cam__cran { font-size: 13px; padding-inline: 3px; } }
+
+/* Réduire les animations et mode calme : état final, aucune entrée décalée */
+@media (prefers-reduced-motion: reduce) {
+  .cam__carte, .cam.est-refuse .cam__corps { animation: none; }
+  .cam.est-ouvert .cam__anse path { animation: none; transform: translateY(-18px) rotate(-16deg); }
+}
+.calme .cam__carte, .calme .cam.est-refuse .cam__corps { animation: none; }
+.calme .cam.est-ouvert .cam__anse path { animation: none; transform: translateY(-18px) rotate(-16deg); }

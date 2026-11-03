@@ -1,0 +1,33 @@
+{
+ "etapes": [
+  { "choisir": ["#demo-compteur", "temperature"] },
+  { "choisir": ["#demo-motif", "cristaux"] },
+  { "cliquer": "[data-rejouer]" },
+  { "attendre": 2600 },
+  { "choisir": ["#demo-compteur", "pourcentage"] },
+  { "choisir": ["#demo-motif", "onde"] },
+  { "choisir": ["#demo-sortie", "haut"] },
+  { "cliquer": "[data-rejouer]" },
+  { "attendre": 2600 },
+  { "choisir": ["#demo-compteur", "altitude"] },
+  { "choisir": ["#demo-motif", "aucun"] },
+  { "choisir": ["#demo-sortie", "ouverture"] },
+  { "cliquer": "[data-rejouer]" },
+  { "attendre": 700 },
+  { "touche": "Escape" },
+  { "attendre": 700 },
+  { "verifier": ".demo-heros.est-ouvert h1" },
+  { "verifier": "#demo-titre" }
+ ],
+ "pause": 450,
+ "video": "scenario",
+ "capture": {
+  "attendre": 0,
+  "etapes": [
+   { "choisir": ["#demo-compteur", "temperature"] },
+   { "choisir": ["#demo-motif", "cristaux"] },
+   { "cliquer": "[data-rejouer]" }
+  ],
+  "apres": 700
+ }
+}

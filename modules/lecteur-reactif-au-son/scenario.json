@@ -1,0 +1,26 @@
+{
+ "etapes": [
+  { "defiler": "[data-module=\"lecteur-reactif-au-son\"]" },
+  { "cliquer": ".lrs__piste:nth-child(1) .lrs__jouer" },
+  { "verifier": ".lrs__piste:nth-child(1).est-en-lecture" },
+  { "attendre": 2600 },
+  { "cliquer": ".lrs__piste:nth-child(3) .lrs__jouer" },
+  { "verifier": ".lrs__piste:nth-child(3).est-en-lecture" },
+  { "attendre": 2400 },
+  { "cliquer": "[data-lrs=\"suivante\"]" },
+  { "verifier": ".lrs__piste:nth-child(1).est-en-lecture" },
+  { "attendre": 1600 },
+  { "cliquer": "[data-lrs=\"lecture\"]" },
+  { "verifier": ".lrs__piste:nth-child(1).est-courante:not(.est-en-lecture)" }
+ ],
+ "pause": 450,
+ "video": "scenario",
+ "capture": {
+  "attendre": 300,
+  "etapes": [
+   { "defiler": "[data-module=\"lecteur-reactif-au-son\"]" },
+   { "cliquer": ".lrs__piste:nth-child(1) .lrs__jouer" }
+  ],
+  "apres": 2200
+ }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dissolution en particules · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0f1220; --couleur-texte: #eeeae2; --couleur-accent: #f0a35e; --couleur-secondaire: #7d93e0; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la section se fixe, la fiche se défait en carrés qui rejoignent un nuage de points, puis l'ensemble se recompose en image.</p>
+  </section>
+
+  <section class="ddp" id="ddp-1" data-module="dissolution-en-particules" data-epingle aria-labelledby="ddp-1-titre">
+    <div class="ddp__cadre socle-cadre">
+      <div class="ddp__tete" data-tient="tête">
+        <p class="socle-surtitre">Surtitre de la section</p>
+        <h2 class="ddp__titre" id="ddp-1-titre">Une fiche devient un point parmi d'autres</h2>
+        <p class="ddp__intro">Un paragraphe court qui explique ce que deviennent les informations, et ce que l'ensemble permet de voir.</p>
+      </div>
+      <div class="ddp__scene" data-tient="scène">
+        <div class="ddp__plan">
+          <figure class="ddp__cible">
+            <img src="demo-nature-morte.jpg" width="1200" height="900" alt="Nature morte : trois sphères et un vase sur une table">
+          </figure>
+          <article class="ddp__source" aria-label="Exemple de fiche">
+            <p class="ddp__fiche-k">Exemple fictif</p>
+            <p class="ddp__fiche-titre">Fiche individuelle n° 0427</p>
+            <p class="ddp__fiche-meta">Catégorie · Région · Ancienneté</p>
+            <p class="ddp__fiche-tags"><span>Réponse 1</span><span>Réponse 2</span><span>Réponse 3</span></p>
+          </article>
+        </div>
+      </div>
+      <ol class="ddp__etapes" data-tient="étapes">
+        <li class="ddp__etape"><h3>La fiche se défait</h3><p>Ses informations se séparent en petits carrés.</p></li>
+        <li class="ddp__etape"><h3>Elle rejoint les autres</h3><p>Chaque carré devient un point parmi des milliers.</p></li>
+        <li class="ddp__etape"><h3>L'ensemble prend forme</h3><p>Les points se rangent et composent une image.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Variante à l'apparition</p>
+    <h2>Une image qui se rassemble</h2>
+    <p>Plus bas, sans épinglage : à son arrivée à l'écran, l'image se rassemble depuis une grille de points. Le bouton la défait et la recompose.</p>
+  </section>
+
+  <section class="ddp ddp--simple" id="ddp-2" data-module="dissolution-en-particules" aria-labelledby="ddp-2-titre">
+    <div class="ddp__cadre socle-cadre">
+      <div class="ddp__tete">
+        <p class="socle-surtitre">Œuvre, réalisation, produit</p>
+        <h2 class="ddp__titre" id="ddp-2-titre">Titre de l'image mise en avant</h2>
+        <p class="ddp__intro">Une légende de deux lignes : ce que l'on voit, quand, où, et pourquoi cette image compte.</p>
+        <p><button class="socle-bouton" type="button" data-ddp-rejouer hidden>Recomposer l'image</button></p>
+      </div>
+      <div class="ddp__scene">
+        <div class="ddp__plan">
+          <figure class="ddp__cible">
+            <img src="demo-arches.jpg" width="1200" height="900" loading="lazy" alt="Trois arches claires dans une lumière rasante">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme et sans JavaScript, la fiche et l'image sont affichées d'emblée, sans mouvement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('#ddp-1'), { mode: 'defilement', disposition: 'nuage' });
+  init(document.querySelector('#ddp-2'), { mode: 'apparition', disposition: 'grille', forme: 'point' });
+</script>
+</body>
+</html>

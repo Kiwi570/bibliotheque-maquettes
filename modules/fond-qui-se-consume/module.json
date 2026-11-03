@@ -1,0 +1,85 @@
+{
+ "nom": "fond-qui-se-consume",
+ "titre": "Section épinglée en plusieurs écrans dont le fond se consume (brûlure ou dissolution WebGL, liseré lumineux) pendant que les textes se relaient, avec compteur et rail de puces",
+ "role": "services",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "webgl-shader",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "origine": [
+  "gwenanou-print-maquette/matieres",
+  "nelis-maquette/applications",
+  "icc-maquette/architecture"
+ ],
+ "convient_a": [
+  "artisanat",
+  "commerce",
+  "industrie",
+  "bâtiment",
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "culture",
+  "spectacle",
+  "bien-être",
+  "services-b2b",
+  "immobilier",
+  "auto-moto"
+ ],
+ "ambiances": [
+  "sombre",
+  "chaleureux",
+  "nocturne",
+  "artisanal",
+  "minéral",
+  "industriel",
+  "énergique",
+  "luxueux"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "images": "URL d'une image par écran ; sinon l'<img> (src ou data-src) de chaque .fqc__fond ; sinon matière neutre générée en canvas",
+  "effet": "'brulure' (front qui avance de gauche à droite en suivant le bruit) ou 'dissolution' (partout à la fois), 'brulure'",
+  "lisere": "couleur CSS du liseré lue sur chaque écran, 'var(--fqc-lisere)' (= --couleur-accent, surchargeable par écran)",
+  "epaisseur": "épaisseur du bord de cendre et du liseré, .045 (0,02 à 0,08)",
+  "refroidit": "l'image qui arrive est teintée chaud puis refroidit, aussi en cartes sur téléphone, true",
+  "pas": "défilement par écran pendant l'épinglage, en % d'écran, 90",
+  "transition": "part de chaque intervalle occupée par la transition, .45 (le reste est au repos)",
+  "lissage": "scrub de ScrollTrigger, .4",
+  "largeurMin": "700 : en dessous, pas d'épinglage (cartes)",
+  "hauteurMin": "500 : sous cette hauteur d'écran, pas d'épinglage",
+  "dpr": "densité de pixels maximale du canvas, 1.5 (plafond 3,5 millions de pixels)",
+  "libelleRail": "nom du groupe de puces, 'Aller à un écran'"
+ },
+ "images": [
+  {
+   "role": "fond plein écran d'un écran (matière, offre, univers)",
+   "selecteur": ".fqc__fond",
+   "nombre": "1 par écran (2 à 6)",
+   "ratio": "16:10 (recadré en 3:4 sur tablette portrait et en 9:16 en carte sur téléphone)",
+   "largeur": 2560,
+   "zone_calme": "gauche : moitié gauche, 60 % de la hauteur au centre (titre de l'écran, paragraphe, lien) et bandeau haut (titre de section) ; en portrait, 45 % du bas"
+  }
+ ],
+ "poids_ko": 28,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "nom": "semainier",
+ "titre": "Semainier : grille jours × moments dont les créneaux colorés par type se réorganisent en Flip selon le profil choisi, avec légende et heures par type",
+ "role": "outil-interactif",
+ "animations": [
+  "flip"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "origine": "efficience-triathlon-maquette/coaching",
+ "convient_a": [
+  "sport",
+  "bien-être",
+  "santé",
+  "formation",
+  "conseil",
+  "services-b2b",
+  "association",
+  "culture",
+  "numérique",
+  "collectivité"
+ ],
+ "ambiances": [
+  "clair",
+  "sobre",
+  "doux",
+  "énergique",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "donnees": "objet { libelle, jours, courts, moments, types, creneaux, formules }, sinon lu dans script[type=application/json][data-donnees]",
+  "formule": "id de la formule de départ, la première par défaut",
+  "jour": "jour affiché d'abord sur téléphone, 0",
+  "largeurTelephone": "largeur en px sous laquelle la semaine se lit un jour à la fois avec onglets, 700",
+  "duree": "durée du Flip en s, 0.8",
+  "decalage": "décalage entre créneaux en s, 0.03",
+  "format": "fonction (minutes) => texte, « 1 h 30 » / « 45 min » par défaut",
+  "mots": "[singulier, pluriel], ['créneau', 'créneaux']"
+ },
+ "images": [],
+ "poids_ko": 21.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.001,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -52,7 +52,7 @@ Origine : fusion de `gdreseau-maquette/constellation` (« Constellation des mét
 - Boucle par `socle.boucle` : arrêtée hors écran et onglet caché. Mode calme et réduire les animations : une seule image, formation terminée, ni respiration ni pointeur ; les bulles restent utilisables.
 - Pendant la formation, les pastilles n'apparaissent qu'en opacité (pas d'échelle) : une pastille réduite passerait sous 44 px.
 - Les bulles des liens sont masquées par découpage (pas `display: none`) pour rester lues par les lecteurs d'écran.
-- Le socle charge GSAP par `pret()`, mais le module ne s'en sert pas.
+- `pret([])` ne charge pas GSAP : le module ne s'en sert pas.
 
 ## Variantes
 

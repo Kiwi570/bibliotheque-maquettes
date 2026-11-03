@@ -59,7 +59,7 @@ export async function init(root, options = {}) {
   const scene = root.querySelector('[data-scene]');
   const commandes = root.querySelector('[data-commandes]');
   if (!scene || !commandes || !objets.length) return { detruire() {} };
-  const s = await pret([]);
+  const s = await pret(['gsap']);
   const { gsap } = s;
   const uid = 'oae-' + Math.random().toString(36).slice(2, 7);
 

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fond qui se consume · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #141113; --couleur-texte: #f4eee6; --couleur-accent: #ff9a4a; --couleur-secondaire: #7d97b3; --couleur-sur-accent: #1a1209; --police-titres: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; --rayon: 6px; }
+  .demo-bloc { min-height: 92vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la section reste à l'écran et chaque fond se consume pour laisser place au suivant.</p>
+  </section>
+
+  <section class="fqc" data-module="fond-qui-se-consume" data-epingle aria-labelledby="fqc-titre">
+    <div class="fqc__scene">
+      <canvas class="fqc__canvas" aria-hidden="true"></canvas>
+      <div class="fqc__voile" aria-hidden="true"></div>
+      <div class="fqc__contenu socle-cadre">
+        <div class="fqc__tete" data-tient="tête">
+          <p class="socle-surtitre">Surtitre</p>
+          <h2 class="fqc__titre" id="fqc-titre">Titre de la section</h2>
+        </div>
+        <p class="fqc__compteur" aria-hidden="true"><b data-fqc-n>01</b><span> / <span data-fqc-total>05</span></span></p>
+        <ol class="fqc__ecrans" data-tient="écran">
+          <li class="fqc__ecran">
+            <div class="fqc__fond socle-visuel" aria-hidden="true"></div>
+            <div class="fqc__texte">
+              <h3>Première matière</h3>
+              <p>Un paragraphe de deux ou trois lignes qui présente cet écran : ce que l'on y trouve, pour qui, et ce qui le distingue des autres.</p>
+              <p><a class="fqc__lien" href="#suite">Lien vers la page</a></p>
+            </div>
+          </li>
+          <li class="fqc__ecran">
+            <div class="fqc__fond socle-visuel socle-visuel--2" aria-hidden="true"></div>
+            <div class="fqc__texte">
+              <h3>Deuxième offre</h3>
+              <p>Un paragraphe de deux ou trois lignes qui présente cet écran : ce que l'on y trouve, pour qui, et ce qui le distingue des autres.</p>
+              <p><a class="fqc__lien" href="#suite">Lien vers la page</a></p>
+            </div>
+          </li>
+          <li class="fqc__ecran">
+            <div class="fqc__fond socle-visuel socle-visuel--3" aria-hidden="true"></div>
+            <div class="fqc__texte">
+              <h3>Un univers au nom plus long</h3>
+              <p>Un paragraphe un peu plus long, pour vérifier que les écrans de hauteurs différentes partagent la même place sans faire sauter la mise en page.</p>
+              <p><a class="fqc__lien" href="#suite">Lien vers la page</a></p>
+            </div>
+          </li>
+          <li class="fqc__ecran" style="--fqc-lisere: var(--couleur-secondaire)">
+            <div class="fqc__fond socle-visuel" aria-hidden="true"></div>
+            <div class="fqc__texte">
+              <h3>Quatrième écran</h3>
+              <p>Ici le liseré du front prend la couleur secondaire : une variable posée sur l'écran suffit.</p>
+              <p><a class="fqc__lien" href="#suite">Lien vers la page</a></p>
+            </div>
+          </li>
+          <li class="fqc__ecran">
+            <div class="fqc__fond socle-visuel socle-visuel--2" aria-hidden="true"></div>
+            <div class="fqc__texte">
+              <h3>Dernier écran</h3>
+              <p>Un paragraphe de deux ou trois lignes qui présente cet écran : ce que l'on y trouve, pour qui, et ce qui le distingue des autres.</p>
+              <p><a class="fqc__lien" href="#suite">Lien vers la page</a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sur téléphone, en mode calme et sans JavaScript, les écrans se suivent en cartes, chacune sur son fond.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  // Options : init(el, { effet: 'dissolution', images: ['a.jpg', 'b.jpg', …] }) ; sans image, des matières neutres sont générées.
+  for (const el of document.querySelectorAll('[data-module="fond-qui-se-consume"]')) init(el).then(api => { window.__fqc = api; });
+</script>
+</body>
+</html>

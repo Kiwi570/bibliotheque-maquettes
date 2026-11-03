@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Visite guidée · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3f2ee; --couleur-texte: #1c1f24; --couleur-accent: #2f5bd3; --couleur-secondaire: #d9822b; --couleur-sur-accent: #ffffff; --rayon: 12px;
+    --police-titres: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+  .demo-journal { margin-top: 1rem; padding: 1rem; border: 1px dashed var(--couleur-ligne); border-radius: var(--rayon); font-family: var(--police-mono); font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, une interface de démonstration et sa visite guidée en six étapes : un projecteur éclaire chaque zone, une bulle l'explique.</p>
+  </section>
+
+  <section class="vgd" data-module="visite-guidee" aria-labelledby="vgd-titre">
+    <div class="vgd__cadre socle-cadre">
+      <div class="vgd__tete">
+        <p class="socle-surtitre">Découvrir l'outil</p>
+        <h2 class="vgd__h2" id="vgd-titre">Faites le tour de votre espace</h2>
+        <p class="vgd__intro">Six étapes courtes pour repérer l'essentiel. Les zones montrées restent utilisables : vous pouvez essayer pendant la visite.</p>
+        <p class="vgd__lancer">
+          <button class="vgd__bouton" type="button" data-visite-lancer>Lancer la visite guidée</button>
+          <small>6 étapes · flèches ← → pour avancer · Échap pour quitter</small>
+        </p>
+      </div>
+
+      <div class="vgd__app" role="region" aria-label="Interface de démonstration (données fictives)">
+        <nav class="vgd__nav" aria-label="Rubriques" data-visite="1" data-visite-titre="Toutes les rubriques, au même endroit" data-visite-texte="La barre latérale mène à chaque partie de l'outil. La rubrique ouverte est mise en évidence.">
+          <span class="vgd__logo" aria-hidden="true"><i></i>Espace</span>
+          <a href="#vgd-titre" aria-current="page">Vue d'ensemble</a>
+          <a href="#vgd-titre">Dossiers</a>
+          <a href="#vgd-titre">Contacts</a>
+          <a href="#vgd-titre">Rapports</a>
+          <a href="#vgd-titre">Réglages</a>
+        </nav>
+
+        <div class="vgd__corps">
+          <div class="vgd__barre-haut">
+            <label class="vgd__recherche" data-visite="3" data-visite-titre="Retrouver une fiche" data-visite-texte="Tapez un nom ou une référence : la recherche porte sur tous les dossiers, même archivés.">
+              <span class="socle-sr">Rechercher</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+              <input type="search" placeholder="Rechercher un dossier" data-demo-recherche>
+            </label>
+            <button class="vgd__bouton vgd__bouton--ligne" type="button" data-visite="6" data-visite-titre="Partager en un clic" data-visite-texte="Exportez la vue en cours, avec ses filtres, pour la transmettre à votre équipe. C'est la fin de la visite.">Exporter</button>
+          </div>
+
+          <ul class="vgd__tuiles" data-visite="2" data-visite-titre="Les indicateurs du jour" data-visite-texte="Trois chiffres résument l'activité, comparés à la semaine précédente. Ils se mettent à jour d'eux-mêmes.">
+            <li class="vgd__tuile"><span>Demandes reçues</span><b>128</b><small>+12 % sur 7 jours</small></li>
+            <li class="vgd__tuile"><span>Délai de réponse</span><b>2 h 10</b><small>−25 min sur 7 jours</small></li>
+            <li class="vgd__tuile"><span>Dossiers terminés</span><b>94 %</b><small>stable sur 7 jours</small></li>
+          </ul>
+
+          <div class="vgd__panneau">
+            <div class="vgd__panneau-tete">
+              <h3>Dossiers récents</h3>
+              <div class="vgd__filtres" role="group" aria-label="Filtrer les dossiers" data-visite="4" data-visite-titre="Filtrer la liste" data-visite-texte="Essayez : les filtres restent utilisables pendant la visite. La liste se met à jour aussitôt.">
+                <button type="button" aria-pressed="true" data-filtre="tous">Tous</button>
+                <button type="button" aria-pressed="false" data-filtre="cours">En cours</button>
+                <button type="button" aria-pressed="false" data-filtre="fini">Terminés</button>
+              </div>
+            </div>
+            <div class="vgd__tableau" data-visite="5" data-visite-titre="Le détail de chaque dossier" data-visite-texte="Référence, contact, état et montant. Sur téléphone, le tableau défile de côté.">
+              <table>
+                <thead><tr><th scope="col">Référence</th><th scope="col">Contact</th><th scope="col">État</th><th scope="col" class="vgd__num">Montant</th></tr></thead>
+                <tbody>
+                  <tr data-etat="cours"><td>D-1042</td><td>A. Martin</td><td><span class="vgd__etat">En cours</span></td><td class="vgd__num">1 240 €</td></tr>
+                  <tr data-etat="fini"><td>D-1041</td><td>C. Bernard</td><td><span class="vgd__etat vgd__etat--fini">Terminé</span></td><td class="vgd__num">860 €</td></tr>
+                  <tr data-etat="cours"><td>D-1039</td><td>L. Petit</td><td><span class="vgd__etat">En cours</span></td><td class="vgd__num">2 410 €</td></tr>
+                  <tr data-etat="fini"><td>D-1037</td><td>S. Robert</td><td><span class="vgd__etat vgd__etat--fini">Terminé</span></td><td class="vgd__num">530 €</td></tr>
+                  <tr data-etat="cours"><td>D-1036</td><td>M. Durand</td><td><span class="vgd__etat">En cours</span></td><td class="vgd__num">1 975 €</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="vgd__mention">Données fictives, pour la démonstration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le module émet « visite:etape » à chaque étape et « visite:fin » à la sortie ; la page décide quoi en faire.</p>
+    <p class="demo-journal" aria-live="polite" data-journal>Aucun événement reçu pour l'instant.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="visite-guidee"]')) init(el);
+  // Interface de démonstration : filtres du tableau (indépendants du module, pour montrer que la zone visée reste utilisable).
+  for (const b of document.querySelectorAll('[data-filtre]')) b.addEventListener('click', () => {
+    for (const x of document.querySelectorAll('[data-filtre]')) x.setAttribute('aria-pressed', String(x === b));
+    for (const tr of document.querySelectorAll('.vgd__tableau tbody tr')) tr.hidden = b.dataset.filtre !== 'tous' && tr.dataset.etat !== b.dataset.filtre;
+  });
+  const journal = document.querySelector('[data-journal]');
+  document.addEventListener('visite:etape', e => { journal.textContent = `visite:etape\nétape ${e.detail.index + 1} sur ${e.detail.total} : ${e.detail.etape.titre}`; });
+  document.addEventListener('visite:fin', e => { journal.textContent = `visite:fin\n${e.detail.terminee ? 'visite terminée' : 'visite quittée à l\'étape ' + (e.detail.index + 1)}`; });
+</script>
+</body>
+</html>

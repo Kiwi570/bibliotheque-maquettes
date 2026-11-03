@@ -1,0 +1,74 @@
+/* Lecteur réactif au son : liste d'extraits, commandes natives, scène (halo, braises, onde, barres) qui suit la musique.
+   Identité uniquement par variables. --niveau (0 à 1) est posé par module.js sur la section. */
+.lrs { --niveau: .2; --basse: .2; position: relative; padding-block: clamp(56px, 10vh, 120px); overflow: hidden; }
+.lrs__cadre { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+
+/* ---------- Scène ---------- */
+.lrs__scene { position: relative; order: 2; aspect-ratio: 1 / 1; max-height: min(78vh, 680px); width: 100%; justify-self: center; border-radius: var(--rayon); overflow: hidden; background: color-mix(in oklab, var(--couleur-fond) 88%, var(--couleur-secondaire)); isolation: isolate; }
+.lrs__fond { position: absolute; inset: 0; z-index: 0; opacity: .38; }
+.lrs__fond > *, .lrs__fond img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.lrs__scene::after { content: ''; position: absolute; inset: 0; z-index: 1; background: radial-gradient(75% 75% at 50% 62%, transparent 30%, color-mix(in oklab, var(--couleur-fond) 85%, transparent) 100%); pointer-events: none; }
+.lrs__halo { position: absolute; z-index: 1; left: 50%; top: 62%; width: 92%; aspect-ratio: 1; border-radius: 50%; translate: -50% -50%; scale: calc(.78 + var(--basse) * .3); opacity: calc(.28 + var(--niveau) * .72);
+  background: radial-gradient(circle, color-mix(in oklab, var(--couleur-accent) 70%, transparent), color-mix(in oklab, var(--couleur-secondaire) 30%, transparent) 42%, transparent 68%); mix-blend-mode: screen; pointer-events: none; }
+.lrs__canvas { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; }
+
+/* ---------- Texte et pistes ---------- */
+.lrs__texte { order: 1; display: grid; gap: 14px; min-width: 0; }
+.lrs__h { font-size: clamp(1.9rem, 4vw, 3.4rem); }
+.lrs__chapo { color: var(--couleur-texte-doux); font-size: clamp(1rem, 1.2vw, 1.15rem); max-width: 46ch; }
+.lrs__pistes { list-style: none; margin: 14px 0 0; padding: 0; border-top: 1px solid var(--couleur-ligne); }
+.lrs__piste { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--couleur-ligne); }
+.lrs__jouer, .lrs__btn { position: relative; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; border: 1px solid color-mix(in oklab, var(--couleur-accent) 60%, transparent); background: color-mix(in oklab, var(--couleur-fond) 70%, transparent); color: var(--couleur-accent); cursor: pointer; transition: background-color .3s, color .3s, box-shadow .3s; }
+.lrs__jouer:hover, .lrs__btn:hover, .lrs__piste.est-en-lecture .lrs__jouer { background: var(--couleur-accent); color: var(--couleur-sur-accent); border-color: var(--couleur-accent); box-shadow: 0 0 24px color-mix(in oklab, var(--couleur-accent) 55%, transparent); }
+.lrs__corps { display: grid; gap: 2px; min-width: 0; }
+.lrs__titre { font-family: var(--police-titres); font-size: clamp(1.15rem, 1.5vw, 1.35rem); line-height: 1.2; overflow-wrap: anywhere; }
+.lrs__detail { font-size: max(12px, .85rem); color: var(--couleur-texte-doux); }
+.lrs__fil { display: block; height: 3px; margin-top: 8px; border-radius: 2px; overflow: hidden; background: var(--couleur-ligne); }
+.lrs__fil i { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(var(--p, 0)); background: linear-gradient(90deg, var(--couleur-secondaire), var(--couleur-accent)); }
+.lrs__duree, .lrs__temps { font-family: var(--police-mono); font-size: max(12px, .85rem); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lrs__piste.est-courante .lrs__titre { color: var(--couleur-accent); }
+
+/* Icônes en CSS : triangle de lecture, deux barres de pause, flèches précédent / suivant */
+.lrs__ico { width: 16px; height: 18px; background: currentColor; clip-path: polygon(15% 0, 100% 50%, 15% 100%); }
+.est-en-lecture > .lrs__ico, .lrs__btn--principal.est-en-lecture .lrs__ico { clip-path: polygon(8% 0, 38% 0, 38% 100%, 8% 100%, 8% 0, 62% 0, 92% 0, 92% 100%, 62% 100%, 62% 0); }
+.lrs__piste.est-en-lecture .lrs__jouer .lrs__ico { clip-path: polygon(8% 0, 38% 0, 38% 100%, 8% 100%, 8% 0, 62% 0, 92% 0, 92% 100%, 62% 100%, 62% 0); }
+.lrs__ico--prec { width: 16px; height: 16px; clip-path: polygon(0 0, 18% 0, 18% 45%, 100% 0, 100% 100%, 18% 55%, 18% 100%, 0 100%); }
+.lrs__ico--suiv { width: 16px; height: 16px; clip-path: polygon(0 0, 82% 45%, 82% 0, 100% 0, 100% 100%, 82% 100%, 82% 55%, 0 100%); }
+
+/* ---------- Commandes ---------- */
+.lrs__commandes { display: grid; grid-template-columns: repeat(3, 52px) auto minmax(0, 1fr) auto; grid-template-areas: "prec lect suiv barres titre temps" "pos pos pos pos pos pos"; align-items: center; gap: 8px 12px; margin-top: 10px; padding: 14px; border-radius: var(--rayon); background: color-mix(in oklab, var(--couleur-surface) 85%, transparent); border: 1px solid var(--couleur-ligne); }
+.lrs__btn[data-lrs="precedente"] { grid-area: prec; }
+.lrs__btn--principal { grid-area: lect; }
+.lrs__btn[data-lrs="suivante"] { grid-area: suiv; }
+.lrs__barres { grid-area: barres; display: flex; align-items: flex-end; gap: 3px; height: 22px; }
+.lrs__barres i { width: 4px; height: 100%; border-radius: 2px; background: var(--couleur-accent); transform-origin: 50% 100%; transform: scaleY(.15); }
+.lrs__encours { grid-area: titre; font-size: max(12px, .92rem); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.lrs__position { grid-area: pos; display: flex; align-items: center; min-height: 44px; }
+.lrs__position input { width: 100%; height: 44px; margin: 0; accent-color: var(--couleur-accent); cursor: pointer; background: transparent; }
+.lrs__position input:disabled { cursor: default; opacity: .5; }
+.lrs__temps { grid-area: temps; justify-self: end; }
+.lrs__note { font-size: max(12px, .82rem); color: var(--couleur-texte-doux); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .lrs__cadre { grid-template-columns: minmax(0, 1fr); }
+  .lrs__scene { order: 0; aspect-ratio: 16 / 10; max-height: 46vh; }
+}
+@media (max-width: 480px) {
+  .lrs__piste { grid-template-columns: 48px minmax(0, 1fr) auto; gap: 12px; }
+  .lrs__jouer, .lrs__btn { width: 48px; height: 48px; }
+  .lrs__commandes { grid-template-columns: repeat(3, 48px) minmax(0, 1fr); grid-template-areas: "prec lect suiv barres" "titre titre titre temps" "pos pos pos pos"; padding: 12px; gap: 6px 10px; }
+  .lrs__barres { justify-self: end; }
+}
+@media (max-width: 340px) {
+  .lrs__commandes { grid-template-areas: "prec lect suiv barres" "titre titre titre titre" "temps temps temps temps" "pos pos pos pos"; }
+  .lrs__temps { justify-self: start; }
+}
+
+/* ---------- Réduire les animations et mode calme : visuel figé (dessiné une fois), lecteur intact ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .lrs__halo { scale: .9; opacity: .55; }
+  .lrs__barres i { transform: scaleY(.4); }
+}
+.calme .lrs__halo { scale: .9; opacity: .55; }
+.calme .lrs__barres i { transform: scaleY(.4); }

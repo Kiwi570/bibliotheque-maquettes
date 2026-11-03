@@ -1,0 +1,71 @@
+{
+ "nom": "lecteur-reactif-au-son",
+ "titre": "Lecteur de quelques extraits dont le visuel (halo, braises, onde en arc, barres) suit la musique en direct",
+ "role": "outil-interactif",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": [
+  "will-midoux-maquette/ecouter",
+  "marco-investigation-maquette/audio",
+  "loeilsingulier-maquette/son-son-hero"
+ ],
+ "particularites": [
+  "reactif-au-son : le visuel suit l'analyse des fréquences (AnalyserNode : basses, médiums, volume) de l'extrait"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "média",
+  "association",
+  "restauration",
+  "hébergement",
+  "bien-être",
+  "tourisme",
+  "formation",
+  "numérique"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "chaleureux",
+  "énergique",
+  "doux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "visuel": "couches actives, ['halo','braises','onde','barres']",
+  "braises": "braises au maximum sur ordinateur, 120",
+  "braisesTelephone": "braises au maximum sous 700 px, 60",
+  "sensibilite": "multiplie la réaction au son, 1 (0,5 à 2)",
+  "enchainer": "passer à l'extrait suivant à la fin, false",
+  "fft": "taille de l'analyse Web Audio, 512"
+ },
+ "images": [
+  {
+   "role": "fond facultatif de la scène, sous le halo et les braises (opacité 38 %)",
+   "selecteur": ".lrs__fond",
+   "nombre": "1",
+   "ratio": "1:1 (16:10 sous 860 px), recadré en cover",
+   "largeur": 1400,
+   "zone_calme": "aucune (pas de texte) ; centre et bas couverts par le halo, l'onde et les braises : image sombre, sujet discret en périphérie"
+  }
+ ],
+ "poids_ko": 20.4,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,135 @@
+/* Visite guidée — identité uniquement par les variables du socle.
+   Deux parties : le calque de la visite (.vgd-calque, posé dans <body> par le module) et l'interface de démonstration (.vgd__…). */
+
+/* ---------- Calque de la visite ---------- */
+.vgd-calque {
+  --vgd-r: var(--rayon);
+  /* Voile : par défaut la couleur du texte, assez couvrante pour assombrir une interface claire.
+     Sur une identité sombre, prendre le fond : --vgd-voile: color-mix(in oklab, var(--couleur-fond) 78%, transparent). */
+  --vgd-voile: color-mix(in oklab, var(--couleur-texte) 64%, transparent);
+  position: fixed; inset: 0; z-index: 1000; pointer-events: none;
+}
+.vgd-voile { position: fixed; inset: 0; background: var(--vgd-voile); pointer-events: auto; }
+.vgd-halo { position: fixed; left: 0; top: 0; width: 0; height: 0; border-radius: var(--vgd-r); pointer-events: none;
+  box-shadow: 0 0 0 2px var(--couleur-accent), 0 0 0 6px color-mix(in oklab, var(--couleur-accent) 28%, transparent);
+  animation: vgd-halo 2.4s ease-in-out infinite; }
+.vgd--centre .vgd-halo { display: none; }
+@keyframes vgd-halo { 50% { box-shadow: 0 0 0 2px var(--couleur-accent), 0 0 0 10px color-mix(in oklab, var(--couleur-accent) 0%, transparent); } }
+
+.vgd-bulle {
+  position: fixed; left: 24px; top: 24px; width: min(380px, 100vw - 32px); max-height: calc(var(--ecran-h) - 24px); overflow: auto;
+  padding: 16px 18px 14px; pointer-events: auto; outline: none;
+  background: var(--couleur-fond); color: var(--couleur-texte); font-family: var(--police-texte);
+  border: 1px solid var(--couleur-ligne); border-radius: calc(var(--rayon) + 4px);
+  box-shadow: 0 18px 50px -12px color-mix(in oklab, var(--couleur-texte) 45%, transparent);
+  animation: vgd-entree .35s cubic-bezier(.2, .8, .2, 1);
+}
+.vgd-bulle:focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+@keyframes vgd-entree { from { opacity: 0; translate: 0 8px; scale: .98; } }
+.vgd--bas .vgd-bulle { left: 12px !important; right: 12px; top: auto !important; bottom: calc(12px + var(--barres-h) + env(safe-area-inset-bottom)); width: auto; max-height: 52vh; }
+
+.vgd-bulle__tete { display: flex; align-items: center; gap: 10px; margin: -6px -8px 6px 0; }
+.vgd-bulle__marque { font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-accent); font-weight: 600; }
+.vgd-bulle__num { font-family: var(--police-mono); font-size: max(12px, .78rem); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.vgd-bulle__passer { margin-left: auto; min-height: 44px; min-width: 44px; padding: 0 12px; border: 0; border-radius: 999px; background: transparent; color: var(--couleur-texte-doux); font-size: max(13px, .85rem); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.vgd-bulle__passer:hover { color: var(--couleur-texte); background: var(--couleur-surface); }
+.vgd-bulle__barre { height: 3px; border-radius: 2px; background: var(--couleur-ligne); overflow: hidden; margin-bottom: 14px; }
+.vgd-bulle__barre i { display: block; height: 100%; width: var(--v, 0%); background: var(--couleur-accent); border-radius: 2px; transition: width .45s cubic-bezier(.2, .8, .2, 1); }
+.vgd-bulle__titre { font-family: var(--police-titres); font-size: 1.16rem; line-height: 1.2; margin-bottom: 6px; }
+.vgd-bulle__texte { font-size: max(14px, .92rem); line-height: 1.55; color: var(--couleur-texte-doux); }
+.vgd-bulle__pied { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.vgd-bulle__pied [data-prec] { margin-right: auto; }
+.vgd-bulle__bouton { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--couleur-accent); background: var(--couleur-accent); color: var(--couleur-sur-accent); font-weight: 600; cursor: pointer; }
+.vgd-bulle__bouton--ligne { background: transparent; color: var(--couleur-texte); border-color: var(--couleur-ligne); }
+.vgd-bulle__bouton:hover { filter: brightness(1.08); }
+.vgd-bulle__bouton--ligne:hover { background: var(--couleur-surface); filter: none; }
+.vgd-bulle__aide { margin-top: 10px; font-size: 12px; color: var(--couleur-texte-doux); }
+.vgd--centre .vgd-bulle { width: min(440px, 100vw - 32px); }
+.vgd--bas .vgd-bulle__aide { display: none; }
+@media (hover: none) { .vgd-bulle__aide { display: none; } }
+
+/* L'élément visé peut recevoir un style propre : [data-visite-actif]. */
+
+/* Réduire les animations et mode calme : pas de halo pulsé, pas d'entrée animée ; les déplacements sont instantanés (module.js). */
+@media (prefers-reduced-motion: reduce) { .vgd-halo, .vgd-bulle { animation: none; } .vgd-bulle__barre i { transition: none; } }
+html.calme .vgd-halo, html.calme .vgd-bulle { animation: none; }
+html.calme .vgd-bulle__barre i { transition: none; }
+
+/* ---------- Section et interface de démonstration ---------- */
+.vgd { padding-block: clamp(56px, 8vw, 112px); }
+.vgd__cadre { display: grid; gap: clamp(24px, 3vw, 40px); }
+.vgd__tete { display: grid; gap: 12px; max-width: 62ch; }
+.vgd__h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); line-height: 1.02; }
+.vgd__intro { color: var(--couleur-texte-doux); }
+.vgd__lancer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 6px; }
+.vgd__lancer small { font-size: max(13px, .84rem); color: var(--couleur-texte-doux); }
+.vgd__bouton { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid var(--couleur-accent); background: var(--couleur-accent); color: var(--couleur-sur-accent); font-weight: 600; cursor: pointer; }
+.vgd__bouton--ligne { min-height: 44px; background: transparent; color: var(--couleur-texte); border-color: var(--couleur-ligne); }
+.vgd__bouton--ligne:hover { background: var(--couleur-surface); }
+
+.vgd__app { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-width: 0; border: 1px solid var(--couleur-ligne); border-radius: calc(var(--rayon) + 6px); overflow: hidden;
+  background: color-mix(in oklab, var(--couleur-texte) 2%, var(--couleur-fond)); box-shadow: 0 30px 70px -40px color-mix(in oklab, var(--couleur-texte) 50%, transparent); }
+.vgd__nav { display: flex; flex-direction: column; gap: 4px; padding: 18px 12px; background: var(--couleur-texte); color: var(--couleur-fond); }
+.vgd__logo { display: flex; align-items: center; gap: 10px; padding: 6px 12px 18px; font-family: var(--police-titres); font-weight: 700; font-size: 1.05rem; }
+.vgd__logo i { width: 22px; height: 22px; border-radius: 7px; background: linear-gradient(135deg, var(--couleur-accent), var(--couleur-secondaire)); }
+.vgd__nav a { display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: calc(var(--rayon) - 2px); text-decoration: none; font-size: max(14px, .92rem);
+  color: color-mix(in oklab, var(--couleur-fond) 82%, var(--couleur-texte)); }
+.vgd__nav a:hover { background: color-mix(in oklab, var(--couleur-fond) 10%, var(--couleur-texte)); }
+.vgd__nav a[aria-current="page"] { background: color-mix(in oklab, var(--couleur-fond) 16%, var(--couleur-texte)); color: var(--couleur-fond); font-weight: 600; box-shadow: inset 3px 0 0 var(--couleur-accent); }
+.vgd__nav a:focus-visible { outline-color: var(--couleur-fond); outline-offset: -2px; }
+
+.vgd__corps { display: grid; gap: 18px; padding: clamp(16px, 2.4vw, 28px); min-width: 0; align-content: start; }
+.vgd__barre-haut { display: flex; gap: 12px; align-items: center; }
+.vgd__recherche { flex: 1; display: flex; align-items: center; gap: 8px; min-height: 44px; max-width: 440px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); }
+.vgd__recherche:focus-within { outline: 2px solid var(--couleur-accent); outline-offset: 2px; }
+.vgd__recherche svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--couleur-texte-doux); stroke-width: 1.8; stroke-linecap: round; }
+.vgd__recherche input { flex: 1; min-width: 0; min-height: 44px; border: 0; background: transparent; font: inherit; font-size: max(16px, 1rem); color: inherit; outline: none; }
+.vgd__recherche input::placeholder { color: var(--couleur-texte-doux); }
+.vgd__barre-haut .vgd__bouton--ligne { margin-left: auto; }
+
+.vgd__tuiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 0; padding: 0; list-style: none; }
+.vgd__tuile { display: grid; gap: 4px; padding: 16px 18px; border-radius: var(--rayon); border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); }
+.vgd__tuile span { font-size: max(13px, .84rem); color: var(--couleur-texte-doux); }
+.vgd__tuile b { font-family: var(--police-titres); font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.vgd__tuile small { font-size: max(12px, .78rem); color: var(--couleur-texte-doux); }
+.vgd__tuile:first-child b { color: var(--couleur-accent); }
+
+.vgd__panneau { border-radius: var(--rayon); border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); min-width: 0; }
+.vgd__panneau-tete { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; padding: 12px 16px; border-bottom: 1px solid var(--couleur-ligne); }
+.vgd__panneau-tete h3 { font-size: 1.05rem; }
+.vgd__filtres { display: inline-flex; gap: 4px; padding: 3px; border-radius: 999px; background: var(--couleur-surface); }
+.vgd__filtres button { min-height: 44px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; font-size: max(14px, .88rem); color: var(--couleur-texte-doux); cursor: pointer; }
+.vgd__filtres button[aria-pressed="true"] { background: var(--couleur-fond); color: var(--couleur-texte); font-weight: 600; box-shadow: 0 1px 3px color-mix(in oklab, var(--couleur-texte) 18%, transparent); }
+.vgd__tableau { overflow-x: auto; }
+.vgd__tableau table { width: 100%; min-width: 460px; border-collapse: collapse; font-size: max(14px, .92rem); }
+.vgd__tableau th { text-align: left; font-weight: 600; font-size: max(12px, .78rem); letter-spacing: .06em; text-transform: uppercase; color: var(--couleur-texte-doux); padding: 10px 16px; border-bottom: 1px solid var(--couleur-ligne); }
+.vgd__tableau td { padding: 12px 16px; border-bottom: 1px solid var(--couleur-ligne); white-space: nowrap; }
+.vgd__tableau tbody tr:last-child td { border-bottom: 0; }
+.vgd__tableau td:first-child { font-family: var(--police-mono); font-size: max(13px, .86rem); }
+.vgd__num { text-align: right !important; font-variant-numeric: tabular-nums; }
+.vgd__etat { display: inline-flex; align-items: center; gap: 6px; font-size: max(13px, .84rem); }
+.vgd__etat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--couleur-secondaire); }
+.vgd__etat--fini::before { background: var(--couleur-accent); }
+.vgd__mention { font-size: max(12px, .78rem); color: var(--couleur-texte-doux); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .vgd__app { grid-template-columns: minmax(0, 1fr); }
+  .vgd__nav { flex-direction: row; align-items: center; overflow-x: auto; padding: 8px; gap: 2px; }
+  .vgd__logo { padding: 0 10px 0 6px; flex: none; }
+  .vgd__nav a { flex: none; }
+  .vgd__nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--couleur-accent); }
+}
+@media (max-width: 640px) {
+  .vgd__tuiles { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .vgd__tuile { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; padding: 12px 14px; }
+  .vgd__tuile b { grid-row: span 2; grid-column: 2; font-size: 1.6rem; }
+  .vgd__barre-haut { flex-wrap: wrap; }
+  .vgd__recherche { flex-basis: 100%; max-width: none; }
+  .vgd__barre-haut .vgd__bouton--ligne { margin-left: 0; }
+  .vgd-bulle__titre { font-size: 1.04rem; }
+}
+@media (max-width: 380px) {
+  .vgd__filtres button { padding: 0 10px; }
+  .vgd-bulle { padding: 14px 14px 12px; }
+}

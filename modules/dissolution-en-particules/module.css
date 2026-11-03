@@ -1,0 +1,77 @@
+/* Dissolution en particules — identité uniquement par les variables du socle.
+   Sans JavaScript et en mode calme : composition fixe (image, fiche posée dessus, étapes lisibles).
+   .ddp--vivant : la fiche et l'image sont superposées, le canvas les remplace pendant l'effet.
+   .ddp--epingle : la section tient exactement dans l'écran, de l'en-tête mesuré aux barres du bas mesurées. */
+.ddp { position: relative; isolation: isolate; overflow: hidden; padding-block: clamp(56px, 9vw, 120px); }
+.ddp__canvas { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
+.ddp__cadre { position: relative; z-index: 1; display: grid; gap: clamp(20px, 3.5vw, 48px); align-items: start; }
+@media (min-width: 900px) {
+  .ddp__cadre { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-rows: auto 1fr; column-gap: clamp(32px, 5vw, 88px); }
+  .ddp__tete { grid-column: 1; grid-row: 1; }
+  .ddp__etapes { grid-column: 1; grid-row: 2; }
+  .ddp__scene { grid-column: 2; grid-row: 1 / span 2; }
+  .ddp--simple .ddp__cadre { grid-template-rows: auto; align-items: center; }
+  .ddp--simple .ddp__scene { grid-row: 1; }
+}
+
+/* En-tête */
+.ddp__tete { display: grid; gap: 12px; align-content: start; }
+.ddp__titre { font-size: clamp(2rem, 4.6vw, 3.8rem); line-height: 1.02; padding-block: .04em; }
+.ddp__intro { color: var(--couleur-texte-doux); max-width: 46ch; }
+.ddp__tete .socle-bouton { margin-top: 8px; }
+
+/* Étapes : toutes lisibles, l'étape en cours est soulignée par l'accent. */
+.ddp__etapes { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: ddp; }
+.ddp__etape { position: relative; display: grid; gap: 4px; padding: 14px 0 14px 44px; border-top: 1px solid var(--couleur-ligne); counter-increment: ddp; }
+.ddp__etape::before { content: counter(ddp, decimal-leading-zero); position: absolute; left: 0; top: 15px; font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .08em; color: var(--couleur-texte-doux); transition: color .4s; }
+.ddp__etape::after { content: ""; position: absolute; left: 0; top: -1px; width: 100%; height: 1px; background: var(--couleur-accent); transform: scaleX(0); transform-origin: left; transition: transform .6s; }
+.ddp__etape h3 { font-size: clamp(1.1rem, .95rem + .6vw, 1.45rem); font-weight: 500; }
+.ddp__etape p { color: var(--couleur-texte-doux); font-size: max(14px, .95rem); }
+.ddp__etape.est-active::before { color: var(--couleur-accent); }
+.ddp__etape.est-active::after { transform: scaleX(1); }
+
+/* Scène : un cadre 4:3 qui contient l'image (cible) et la fiche (source). */
+.ddp__scene { min-width: 0; }
+.ddp__plan { position: relative; width: 100%; aspect-ratio: 4 / 3; }
+.ddp__cible { position: absolute; inset: 0; margin: 0; border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); transition: opacity .35s; }
+.ddp__cible > img { width: 100%; height: 100%; object-fit: cover; }
+
+/* La fiche : posée en bas à gauche de l'image (composition fixe), centrée pendant l'effet. */
+.ddp__source { position: absolute; left: 5%; bottom: 6%; z-index: 1; width: min(340px, 78%); display: grid; gap: 6px; padding: 16px 18px; border-radius: var(--rayon);
+  background: color-mix(in oklab, var(--couleur-texte) 94%, var(--couleur-fond)); color: var(--couleur-fond); box-shadow: 0 30px 50px -28px color-mix(in oklab, var(--couleur-fond) 80%, transparent); transition: opacity .3s; }
+.ddp__source p { margin: 0; }
+.ddp__fiche-k { font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .12em; text-transform: uppercase; color: color-mix(in oklab, var(--couleur-accent) 55%, var(--couleur-fond)); }
+.ddp__fiche-titre { font-family: var(--police-titres); font-size: clamp(1.1rem, 1rem + .5vw, 1.35rem); line-height: 1.2; }
+.ddp__fiche-meta { font-family: var(--police-mono); font-size: max(12px, .8rem); color: color-mix(in oklab, var(--couleur-fond) 72%, var(--couleur-texte)); }
+.ddp__fiche-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px !important; }
+.ddp__fiche-tags span { padding: 3px 9px; border-radius: 999px; font-size: max(12px, .75rem); background: color-mix(in oklab, var(--couleur-accent) 30%, var(--couleur-texte)); color: var(--couleur-fond); }
+
+.ddp--vivant .ddp__source { left: 50%; top: 50%; bottom: auto; translate: -50% -50%; box-shadow: none; }
+.ddp--vivant .ddp__source.est-defait { opacity: 0; }
+.ddp--vivant .ddp__cible:not(.est-forme) { opacity: 0; }
+
+/* Mode épinglé */
+.ddp.ddp--epingle { padding-block: 0; height: var(--ecran-h); }
+.ddp--epingle .ddp__cadre { height: 100%; padding-top: calc(var(--entete-h) + clamp(12px, 3.5vh, 40px)); padding-bottom: calc(var(--barres-h) + clamp(12px, 3.5vh, 40px));
+  grid-template-rows: auto minmax(0, 1fr) auto; row-gap: clamp(12px, 2.4vh, 28px); align-items: stretch; }
+.ddp--epingle .ddp__titre { font-size: clamp(1.7rem, min(4.2vw, 6.4vh), 3.6rem); }
+.ddp--epingle .ddp__scene { min-height: 0; container-type: size; display: grid; place-items: center; }
+.ddp--epingle .ddp__plan { width: min(100cqw, 100cqh * 4 / 3); }
+@media (max-width: 899px) {
+  .ddp--epingle .ddp__etapes { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 20px; }
+  .ddp--epingle .ddp__etape { padding: 12px 0 0; align-content: start; }
+  .ddp--epingle .ddp__etape::before { position: static; }
+}
+@media (min-width: 900px) {
+  .ddp--epingle .ddp__cadre { grid-template-rows: auto minmax(0, 1fr); }
+  .ddp--epingle .ddp__etapes { align-self: end; }
+}
+@media (max-height: 720px) { .ddp--epingle .ddp__etape p { display: none; } .ddp--epingle .ddp__etape { padding-block: 10px; } .ddp--epingle .ddp__etape::before { top: 11px; } }
+@media (max-height: 720px) and (max-width: 899px) { .ddp--epingle .ddp__etape { padding: 8px 0 0; } }
+@media (max-height: 600px) { .ddp--epingle .ddp__intro { display: none; } }
+
+/* Téléphone */
+@media (max-width: 520px) {
+  .ddp__source { padding: 12px 14px; width: min(300px, 84%); gap: 4px; }
+  .ddp__fiche-tags span:nth-child(3) { display: none; }
+}

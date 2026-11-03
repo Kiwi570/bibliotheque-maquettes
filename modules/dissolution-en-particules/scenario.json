@@ -1,0 +1,42 @@
+{
+ "etapes": [
+  {
+   "defiler": "#ddp-2 [data-ddp-rejouer]"
+  },
+  {
+   "attendre": 2800
+  },
+  {
+   "cliquer": "#ddp-2 [data-ddp-rejouer]"
+  },
+  {
+   "attendre": 1300
+  },
+  {
+   "verifier": "#ddp-2 .ddp__plan"
+  },
+  {
+   "attendre": 1800
+  },
+  {
+   "verifier": "#ddp-2 .ddp__cible.est-forme img"
+  }
+ ],
+ "pause": 450,
+ "video": "les-deux",
+ "capture": {
+  "attendre": 600,
+  "etapes": [
+   {
+    "defiler": "#ddp-2 [data-ddp-rejouer]"
+   },
+   {
+    "attendre": 3000
+   },
+   {
+    "cliquer": "#ddp-2 [data-ddp-rejouer]"
+   }
+  ],
+  "apres": 1800
+ }
+}

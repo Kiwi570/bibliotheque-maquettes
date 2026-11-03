@@ -1,0 +1,110 @@
+{
+ "nom": "revelation-a-l-encre",
+ "titre": "Image révélée comme une encre ou une eau qui s'étale dans le papier : tache, voile de papier en étapes épinglées ou nappe qui rend les couleurs",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader",
+  "révélation-image",
+  "masque",
+  "ouverture-orchestrée",
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "ogl",
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "oppenheimer-maquette/accueil",
+  "patchacha-maquette/lenteur",
+  "les-plus-hautes-eaux-maquette/haut"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "artisanat",
+  "santé",
+  "bien-être",
+  "conseil",
+  "tourisme",
+  "hébergement",
+  "restauration",
+  "association",
+  "média",
+  "formation"
+ ],
+ "ambiances": [
+  "artisanal",
+  "doux",
+  "clair",
+  "chaleureux",
+  "sobre",
+  "océanique",
+  "nocturne",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "mode": "'etale' (tache d'encre), 'voile' (papier qui recouvre puis se retire, en étapes épinglées s'il y a plusieurs images) ou 'montee' (nappe qui rend les couleurs) ; sinon data-mode",
+  "declencheur": "'arrivee' (etale), 'apparition' ou 'defilement' (voile, montee)",
+  "retrait": "se retire de la même façon en sortie d'écran et se rejoue au retour, false",
+  "duree": "révélation en s, 1.9 (etale) ou 1.4",
+  "delai": "avant l'arrivée en s, 0.15",
+  "forme": "etale : 'tache' (l'image garde une forme de tache) ou 'plein' (la tache gagne tout le cadre)",
+  "centre": "etale : point de départ [x, y], [.5, .5]",
+  "depart": "progression avant le défilement (montee : niveau d'eau), 0",
+  "debut": "défilement : début ScrollTrigger, 'top 80%'",
+  "fin": "défilement : fin, 'center 55%' ou 'bottom 75%' (montee)",
+  "respire": "la tache respire, l'eau ondule, true",
+  "souris": "etale : la tache s'écarte sous la souris, true",
+  "focus": "point focal [x, y], [.5, .5] (ou data-focus sur la figure)",
+  "encre": "couleur CSS du liseré et du voile, --couleur-secondaire assombrie",
+  "papier": "couleur CSS du voile, --couleur-texte à 7 % dans --couleur-fond",
+  "bichromie": "montee : [sombre, clair], dérivées de --couleur-fond, --couleur-texte et --couleur-secondaire",
+  "largeurMin": "étapes : épinglage à partir de 900 px de large",
+  "hauteurMin": "étapes : et de 600 px de haut (sinon liste)",
+  "pas": "étapes : défilement par étape en % d'écran, 80",
+  "dpr": "densité maximale sur ordinateur, 1.5 (1 sous 700 px)"
+ },
+ "images": [
+  {
+   "role": "image révélée par la tache d'encre (mode etale, texte à côté)",
+   "selecteur": ".rae--etale .rae__fond",
+   "nombre": "1",
+   "ratio": "1:1 (5:4 sur téléphone), forme 'plein' en fond : 16:9",
+   "largeur": 1600,
+   "zone_calme": "aucune (texte à côté) ; le pourtour est mangé par la tache : sujet au centre, à 70 % de la largeur au plus"
+  },
+  {
+   "role": "fond plein cadre en bichromie puis en couleurs (mode montee)",
+   "selecteur": ".rae--montee .rae__fond",
+   "nombre": "1",
+   "ratio": "16:9 (recadré en 9:16 sur téléphone, point d intérêt réglable par data-focus)",
+   "largeur": 2560,
+   "zone_calme": "bas gauche : moitié gauche, 50 % du bas (surtitre, titre, phrase) ; image contrastée et colorée pour que la bichromie se distingue"
+  },
+  {
+   "role": "image d étape sous le voile de papier (mode voile)",
+   "selecteur": ".rae--voile .rae__fond",
+   "nombre": "1 par étape",
+   "ratio": "4:5 (4:3 sur téléphone)",
+   "largeur": 1400,
+   "zone_calme": "aucune (texte à côté)"
+  }
+ ],
+ "poids_ko": 38.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0.015,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "nom": "globe-itineraire",
+ "titre": "Globe en canvas 2D qui tourne et trace un itinéraire d'étape en étape au défilement",
+ "role": "carte",
+ "animations": [
+  "progression-fixée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": "stanislas-urbi-orbi-maquette/ligne",
+ "convient_a": [
+  "tourisme",
+  "hébergement",
+  "sport",
+  "culture",
+  "association",
+  "formation",
+  "industrie",
+  "services-b2b",
+  "média",
+  "collectivité"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "océanique",
+  "froid",
+  "sobre",
+  "clair"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "lecture": "ligne de lecture, fraction de la hauteur visible sous le globe, 0.55",
+  "douceur": "vitesse de rattrapage du globe, 6",
+  "inclinaison": "part de la latitude du repère suivie par la caméra, 0.7",
+  "grille": "pas des méridiens et parallèles en degrés, 30 (0 = sans grille)",
+  "numeros": "numéros des étapes dessinés sur le globe, true"
+ },
+ "images": [],
+ "poids_ko": 19.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,119 @@
+/* Semainier — identité uniquement par les variables du socle.
+   Teintes des types : --smn-teinte-1 à 4, dérivées de l'accent et de la couleur secondaire ; une page peut les redéfinir.
+   Chaque type a aussi sa forme (rond, carré, losange, triangle) pour ne pas reposer sur la couleur seule. */
+.smn {
+  --smn-teinte-1: var(--couleur-accent);
+  --smn-teinte-2: var(--couleur-secondaire);
+  --smn-teinte-3: color-mix(in oklch, var(--couleur-accent), var(--couleur-secondaire));
+  --smn-teinte-4: color-mix(in oklab, var(--couleur-texte) 42%, var(--couleur-fond));
+  --smn-case: color-mix(in oklab, var(--couleur-texte) 4%, var(--couleur-fond));
+  padding-block: clamp(56px, 8vw, 120px);
+}
+.smn [data-teinte="1"] { --t: var(--smn-teinte-1); }
+.smn [data-teinte="2"] { --t: var(--smn-teinte-2); }
+.smn [data-teinte="3"] { --t: var(--smn-teinte-3); }
+.smn [data-teinte="4"] { --t: var(--smn-teinte-4); }
+
+.smn__tete { display: grid; gap: 12px; margin-bottom: clamp(20px, 4vh, 36px); }
+.smn__titre { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.04; padding-block: .06em; max-width: 18ch; }
+.smn__texte { color: var(--couleur-texte-doux); max-width: 56ch; }
+.smn__sans-js { color: var(--couleur-texte-doux); }
+
+/* Commandes */
+.smn__commandes { display: grid; gap: 10px; margin-bottom: clamp(16px, 2.4vw, 26px); }
+.smn__choix { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.smn__etiquette { font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .14em; text-transform: uppercase; color: var(--couleur-texte-doux); margin-right: 6px; }
+.smn__formule { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); color: var(--couleur-texte); cursor: pointer; font-size: max(12px, .95rem); transition: background-color .25s, border-color .25s, color .25s; }
+.smn__formule:hover { border-color: var(--couleur-texte-doux); }
+.smn__formule[aria-pressed="true"] { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.smn__description { color: var(--couleur-texte-doux); font-size: max(12px, .95rem); min-height: 1.55em; }
+
+/* Corps : feuille + récapitulatif */
+.smn__corps { display: grid; gap: clamp(14px, 2vw, 24px); align-items: start; }
+@media (min-width: 1280px) { .smn__corps { grid-template-columns: minmax(0, 1fr) 300px; } }
+.smn__feuille, .smn__recap { border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-surface); padding: clamp(12px, 1.8vw, 22px); }
+.smn__feuille { min-width: 0; }
+
+/* Légende */
+.smn__legende { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: max(12px, .85rem); }
+.smn__legende li { display: inline-flex; align-items: center; gap: 8px; }
+.smn__marque { display: inline-block; flex: none; width: 11px; height: 11px; background: var(--t); border-radius: 50%; }
+.smn__marque[data-teinte="2"] { border-radius: 2px; }
+.smn__marque[data-teinte="3"] { border-radius: 0; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); width: 13px; height: 13px; }
+.smn__marque[data-teinte="4"] { border-radius: 0; clip-path: polygon(50% 4%, 100% 96%, 0 96%); width: 12px; height: 12px; }
+
+/* Table */
+.smn__table { table-layout: fixed; border-collapse: separate; border-spacing: 4px; margin: -4px; width: calc(100% + 8px); }
+.smn__table th { font-family: var(--police-mono); font-size: max(12px, .72rem); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.smn__table thead th { text-align: center; padding: 2px 2px 6px; }
+.smn__table tbody th { width: 92px; text-align: left; vertical-align: middle; padding-right: 4px; letter-spacing: .06em; overflow-wrap: anywhere; }
+.smn__coin { width: 92px; }
+.smn__j-court { display: none; }
+.smn__table td { position: relative; height: 84px; vertical-align: top; padding: 4px; border-radius: calc(var(--rayon) * .6); background: var(--smn-case); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--couleur-texte) 7%, transparent); }
+.smn__table td.smn__coin { height: auto; background: none; box-shadow: none; padding: 0; }
+.smn__table td.est-bloque { background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--couleur-texte) 9%, transparent) 0 6px, transparent 6px 12px), var(--smn-case); }
+.smn__bloque { display: block; padding: 4px; font-size: max(12px, .78rem); font-style: italic; overflow-wrap: anywhere; color: var(--couleur-texte-doux); animation: smn-apparait .5s ease both; }
+
+/* Créneau */
+.smn__creneau { display: grid; gap: 2px; padding: 7px 8px 7px 10px; border-radius: calc(var(--rayon) * .5); background: color-mix(in oklab, var(--t) 22%, var(--couleur-fond)); box-shadow: inset 3px 0 0 var(--t); color: var(--couleur-texte); font-size: max(12px, .84rem); line-height: 1.22; overflow-wrap: anywhere; will-change: transform; }
+.smn__creneau + .smn__creneau, .smn__bloque + .smn__creneau { margin-top: 4px; }
+.smn__creneau-titre { font-weight: 600; }
+.smn__creneau-titre .smn__marque { width: 9px; height: 9px; margin-right: 6px; vertical-align: .05em; }
+.smn__creneau-titre .smn__marque[data-teinte="3"] { width: 11px; height: 11px; vertical-align: -.05em; }
+.smn__creneau-titre .smn__marque[data-teinte="4"] { width: 10px; height: 10px; }
+.smn__creneau-duree { font-family: var(--police-mono); font-size: max(12px, .72rem); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+
+.smn__journal { margin-top: 12px; font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-texte-doux); min-height: 1.55em; }
+
+/* Récapitulatif */
+.smn__recap-titre { font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .14em; text-transform: uppercase; font-weight: 600; color: var(--couleur-texte-doux); margin-bottom: 14px; }
+.smn__recap-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.smn__recap-ligne { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 6px 10px; font-size: max(12px, .92rem); }
+.smn__recap-valeur { font-family: var(--police-mono); font-variant-numeric: tabular-nums; font-weight: 600; }
+.smn__barre { grid-column: 1 / -1; height: 6px; border-radius: 99px; background: var(--couleur-ligne); overflow: hidden; }
+.smn__barre i { display: block; height: 100%; background: var(--t); border-radius: inherit; transform: scaleX(var(--part, 0)); transform-origin: left center; transition: transform .7s cubic-bezier(.65, 0, .35, 1); }
+.smn__recap-total { display: flex; justify-content: space-between; align-items: baseline; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--couleur-ligne); font-size: max(12px, .92rem); }
+.smn__recap-total b { font-family: var(--police-mono); font-variant-numeric: tabular-nums; font-size: 1.25rem; }
+@media (min-width: 700px) and (max-width: 1279px) {
+  .smn__recap-liste { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px 24px; }
+}
+
+/* Onglets : seulement en mode téléphone (classe posée par le module) */
+.smn__onglets { display: none; }
+.smn.est-telephone .smn__onglets { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; margin-bottom: 12px; }
+.smn__onglet { display: grid; place-items: center; gap: 0; min-height: 54px; min-width: 44px; padding: 4px 0; border-radius: calc(var(--rayon) * .6); border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); cursor: pointer; line-height: 1.15; transition: background-color .25s, color .25s, border-color .25s; }
+.smn__onglet-j { font-family: var(--police-mono); font-size: max(12px, .78rem); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.smn__onglet-n { font-size: 12px; color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.smn__onglet[aria-selected="true"] { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.smn__onglet[aria-selected="true"] .smn__onglet-n { color: inherit; }
+.smn__panneau:focus-visible { outline-offset: 4px; border-radius: 4px; }
+.smn.est-telephone .smn__table tbody th { width: 96px; }
+.smn.est-telephone .smn__coin { width: 96px; }
+.smn.est-telephone .smn__table td { height: 72px; }
+.smn.est-telephone .smn__table thead th { text-align: left; font-size: max(12px, .8rem); }
+.smn.est-telephone .smn__creneau { font-size: max(12px, .92rem); }
+.smn__panneau.est-nouveau tbody td { animation: smn-apparait .35s ease both; }
+@keyframes smn-apparait { from { opacity: 0; } to { opacity: 1; } }
+
+/* Jours abrégés sous 1100 px (le nom complet reste lu) */
+@media (max-width: 1099px) {
+  .smn:not(.est-telephone) .smn__j-long { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .smn:not(.est-telephone) .smn__j-court { display: inline; }
+  .smn__table tbody th, .smn__coin { width: 70px; }
+  .smn__table td { height: 76px; }
+  .smn__creneau { padding: 6px 6px 6px 8px; }
+}
+@media (max-width: 359px) {
+  .smn.est-telephone .smn__onglets { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .smn.est-telephone .smn__table tbody th, .smn.est-telephone .smn__coin { width: 78px; }
+}
+
+/* Réduire les animations et mode calme : état final, rien ne glisse (le module saute aussi le Flip). */
+@media (prefers-reduced-motion: reduce) {
+  .smn__creneau { will-change: auto; }
+  .smn__barre i { transition: none; }
+  .smn__bloque, .smn__panneau.est-nouveau tbody td { animation: none; }
+}
+.calme .smn__creneau { will-change: auto; }
+.calme .smn__barre i { transition: none; }
+.calme .smn__bloque, .calme .smn__panneau.est-nouveau tbody td { animation: none; }

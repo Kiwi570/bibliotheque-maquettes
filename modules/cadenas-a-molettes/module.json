@@ -1,0 +1,73 @@
+{
+ "nom": "cadenas-a-molettes",
+ "titre": "Cadenas à molettes : on règle deux à quatre critères comme un code, le cadenas s'ouvre sur les cartes qui correspondent",
+ "role": "outil-interactif",
+ "animations": [
+  "apparition-au-défilement",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres",
+  "configurateur",
+  "jeu"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": "games42-maquette/trouver",
+ "convient_a": [
+  "tourisme",
+  "culture",
+  "spectacle",
+  "sport",
+  "bien-être",
+  "formation",
+  "restauration",
+  "hébergement",
+  "commerce",
+  "association",
+  "animaux",
+  "services-b2b"
+ ],
+ "ambiances": [
+  "ludique",
+  "sombre",
+  "nocturne",
+  "énergique",
+  "chaleureux",
+  "clair",
+  "sobre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "donnees": "{ molettes: [{ id, libelle, valeurs: [{ v, t, dit? }] }], resultats: [{ titre, meta?, texte?, lien?, criteres: { id: [valeurs] | { min, max } } }] } ; par défaut lus dans <script type=\"application/json\" class=\"cam__donnees\">",
+  "auto": "le cadenas s'ouvre seul quand toutes les molettes sont réglées, true",
+  "delai": "attente en ms après le dernier réglage avant l'ouverture automatique, 500",
+  "vide": "chaque molette commence sur une position vide « — », true (false : sur sa première valeur)",
+  "proches": "sans résultat exact, montrer les résultats qui ne diffèrent que d'un critère, true",
+  "defiler": "à la première ouverture à la souris ou au doigt, amener les résultats à l'écran s'ils sont en bas, true",
+  "pas": "angle entre deux crans du tambour en degrés, 24",
+  "textes": "libellés : vide, videDit, ouvrir, raz, ferme, manque, ouvert, titre, aucun, proches, pasPareil, voir, precedent, suivant"
+ },
+ "images": [
+  {
+   "role": "vignette de carte résultat",
+   "selecteur": ".cam__visuel",
+   "nombre": "1 par résultat",
+   "ratio": "4:3",
+   "largeur": 800,
+   "zone_calme": "aucune"
+  }
+ ],
+ "poids_ko": 20.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

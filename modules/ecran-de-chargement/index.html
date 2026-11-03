@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Écran de chargement · module</title>
+<!-- Avant le premier affichage : mode calme mémorisé, et écran de chargement seulement s'il doit jouer (ni calme, ni « réduire les animations », ni déjà vu dans la session). -->
+<script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');else if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&sessionStorage.getItem('ecran-de-chargement-vu')!=='1')d.classList.add('edc-joue')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0f1418; --couleur-texte: #eef1ee; --couleur-accent: #7fd1c3; --couleur-secondaire: #2f4d6b; --rayon: 10px; }
+  .demo-heros { position: relative; isolation: isolate; overflow: hidden; min-height: calc(var(--ecran-h) - 72px); /* en-tête de démonstration ≈ 72 px, sans attendre sa mesure (CLS) */ display: grid; align-items: end; padding-block: 14vh clamp(40px, 9vh, 96px); }
+  .demo-heros__fond { position: absolute; inset: 0; z-index: -1; transform: scale(1.05); transition: transform 1.6s cubic-bezier(.2, .7, .2, 1); }
+  .demo-heros.est-ouvert .demo-heros__fond { transform: none; }
+  .demo-heros__fond::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, color-mix(in oklab, var(--couleur-fond) 85%, transparent)); }
+  .demo-heros__cadre { display: grid; gap: clamp(14px, 2.4vh, 24px); }
+  .demo-heros h1 { font-size: clamp(2.4rem, 7vw, 6rem); max-width: 14ch; }
+  .demo-heros__texte { max-width: 48ch; color: var(--couleur-texte-doux); }
+  .demo-reglages { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 16px; }
+  .demo-reglages label { display: grid; gap: 4px; font-size: max(12px, .8rem); font-family: var(--police-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+  .demo-reglages select { min-height: 44px; min-width: 9.5em; padding: 0 .8em; border-radius: var(--rayon); border: 1px solid var(--couleur-ligne); background: var(--couleur-surface); color: var(--couleur-texte); font: inherit; font-family: var(--police-texte); text-transform: none; letter-spacing: 0; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<div class="edc" data-module="ecran-de-chargement">
+  <canvas class="edc__motif" aria-hidden="true"></canvas>
+  <div class="edc__coeur" aria-hidden="true">
+    <p class="edc__legende">Recherche du signal</p>
+    <p class="edc__compteur"><span class="edc__valeur">87,5</span><span class="edc__unite">MHz</span></p>
+    <span class="edc__jauge"></span>
+    <span class="edc__bornes"><span class="edc__borne">87,5</span><span class="edc__borne">108,0</span></span>
+  </div>
+  <button type="button" class="edc__passer socle-bouton">Passer</button>
+</div>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-heros" aria-labelledby="demo-titre">
+    <div class="demo-heros__fond socle-visuel" aria-hidden="true"></div>
+    <div class="demo-heros__cadre socle-cadre">
+      <p class="socle-surtitre">Page d'accueil</p>
+      <h1 id="demo-titre">Le héros est déjà là, sous l'écran de chargement</h1>
+      <p class="demo-heros__texte">Un compteur défile d'une valeur à une autre, avec son unité, pendant qu'une onde s'amplifie ou que des cristaux poussent. Une fois par session, deux secondes au plus, et «&nbsp;Passer&nbsp;» ou la touche Échap l'écartent tout de suite.</p>
+      <div class="demo-reglages">
+        <label>Compteur
+          <select id="demo-compteur">
+            <option value="frequence">Fréquence</option>
+            <option value="temperature">Température</option>
+            <option value="pourcentage">Pourcentage</option>
+            <option value="altitude">Altitude</option>
+          </select>
+        </label>
+        <label>Motif
+          <select id="demo-motif">
+            <option value="onde">Onde</option>
+            <option value="cristaux">Cristaux</option>
+            <option value="aucun">Aucun</option>
+          </select>
+        </label>
+        <label>Sortie
+          <select id="demo-sortie">
+            <option value="ouverture">Ouverture</option>
+            <option value="haut">Vers le haut</option>
+            <option value="fondu">Fondu</option>
+          </select>
+        </label>
+        <button type="button" class="socle-bouton socle-bouton--plein" data-rejouer>Rejouer</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme ou avec « réduire les animations », il n'y a pas d'écran de chargement : la page s'affiche directement.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Encore une section</p>
+    <h2>Le reste de la page</h2>
+    <p>Le calque est fixé au-dessus de tout, mais il laisse passer les clics et le clavier : seul le bouton « Passer » les capte.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  const COMPTEURS = {
+    frequence: { de: 87.5, a: 108, unite: 'MHz', format: 1, signe: false, legende: 'Recherche du signal', fin: null },
+    temperature: { de: 24, a: -40, unite: '°C', format: 0, signe: true, legende: 'Descente en température', fin: null },
+    pourcentage: { de: 0, a: 100, unite: '%', format: 0, signe: false, legende: 'Préparation', fin: null },
+    altitude: { de: 0, a: 2000, unite: 'm', format: 0, signe: false, legende: 'Montée', fin: null },
+  };
+  const choix = () => ({ ...COMPTEURS[document.getElementById('demo-compteur').value], motif: document.getElementById('demo-motif').value, sortie: document.getElementById('demo-sortie').value });
+  const heros = document.querySelector('.demo-heros');
+  const ecran = await init(document.querySelector('[data-module="ecran-de-chargement"]'), { ...choix(), apres: () => heros.classList.add('est-ouvert') });
+  document.querySelector('[data-rejouer]').addEventListener('click', () => {
+    heros.classList.remove('est-ouvert');
+    ecran.rejouer(choix());
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+{
+ "nom": "visite-guidee",
+ "titre": "Visite guidée d'une interface : projecteur qui éclaire chaque zone, bulle pas à pas (Précédent, Suivant, Passer), élément visé utilisable",
+ "role": "outil-interactif",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "visite-guidee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "warmline-app-maquette/app",
+  "warmline-app-maquette/acc-heros"
+ ],
+ "convient_a": [
+  "numérique",
+  "services-b2b",
+  "conseil",
+  "finance",
+  "immobilier",
+  "formation",
+  "santé",
+  "commerce",
+  "industrie",
+  "juridique",
+  "collectivité",
+  "association",
+  "hébergement",
+  "restauration",
+  "auto-moto"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "sobre",
+  "froid",
+  "doux",
+  "industriel"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "etapes": "liste JSON {cible, titre, texte} (cible : sélecteur, liste de sélecteurs ou null pour une bulle centrée), null ; sinon <script type=application/json data-visite-etapes>, sinon les éléments [data-visite=ordre][data-visite-titre][data-visite-texte]",
+  "lanceur": "bouton(s) qui lancent la visite, '[data-visite-lancer]'",
+  "largeurBas": "sous cette largeur, bulle posée en bas de l'écran, 700",
+  "marge": "marge du projecteur autour de l'élément en px, 8",
+  "duree": "déplacement du projecteur et de la bulle en ms, 450 (0 en mode calme)",
+  "clicVoileQuitte": "un clic sur la zone assombrie quitte la visite, false",
+  "fleches": "← → changent d'étape quand le focus est dans la bulle, true",
+  "textes": "libellés : lancer, precedent, suivant, terminer, passer, passerAide, etape ('Étape {n} sur {total}'), aide, marque"
+ },
+ "images": [],
+ "poids_ko": 27.7,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

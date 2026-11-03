@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Semainier · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f2f0ea; --couleur-texte: #1e2228; --couleur-accent: #3b5ba5; --couleur-secondaire: #cf7434; --couleur-sur-accent: #f7f6f2; --police-titres: "Avenir Next", "Segoe UI", system-ui, sans-serif; --rayon: 10px; }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Choisissez un profil : chaque créneau glisse vers sa nouvelle place et le récapitulatif se met à jour.</p>
+  </section>
+
+  <section class="smn socle-cadre" data-module="semainier" aria-labelledby="smn-titre">
+    <div class="smn__tete">
+      <p class="socle-surtitre">Semaine type</p>
+      <h2 class="smn__titre" id="smn-titre">Une semaine qui s'adapte à votre rythme</h2>
+      <p class="smn__texte">Un paragraphe de deux lignes qui explique le principe : choisissez un profil, la semaine se réorganise sous vos yeux.</p>
+    </div>
+    <div class="smn__commandes" data-commandes></div>
+    <div class="smn__corps">
+      <div class="smn__feuille" data-feuille>
+        <p class="smn__sans-js" data-sans-js>Le semainier interactif demande JavaScript. Le principe : une semaine de neuf créneaux, répartis entre travail de fond, échanges, mouvement et pauses.</p>
+      </div>
+      <aside class="smn__recap" data-recap aria-labelledby="smn-recap-titre">
+        <h3 class="smn__recap-titre" id="smn-recap-titre">Heures par type</h3>
+      </aside>
+    </div>
+    <script type="application/json" data-donnees>
+    {
+      "libelle": "Profil de semaine",
+      "jours": ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"],
+      "courts": ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+      "moments": ["Matin", "Après-midi", "Soir"],
+      "types": [
+        { "id": "fond", "nom": "Travail de fond", "teinte": 1 },
+        { "id": "echanges", "nom": "Échanges", "teinte": 2 },
+        { "id": "mouvement", "nom": "Mouvement", "teinte": 3 },
+        { "id": "pause", "nom": "Pause", "teinte": 4 }
+      ],
+      "creneaux": [
+        { "id": "c1", "type": "fond", "titre": "Dossier principal", "minutes": 180 },
+        { "id": "c2", "type": "fond", "titre": "Rédaction", "minutes": 120 },
+        { "id": "c3", "type": "echanges", "titre": "Point d'équipe", "minutes": 60 },
+        { "id": "c4", "type": "echanges", "titre": "Rendez-vous", "minutes": 90 },
+        { "id": "c5", "type": "mouvement", "titre": "Marche", "minutes": 60 },
+        { "id": "c6", "type": "mouvement", "titre": "Séance longue", "minutes": 120 },
+        { "id": "c7", "type": "pause", "titre": "Lecture", "minutes": 60 },
+        { "id": "c8", "type": "pause", "titre": "Atelier libre", "minutes": 90 },
+        { "id": "c9", "type": "fond", "titre": "Relecture", "minutes": 60 }
+      ],
+      "formules": [
+        { "id": "equilibree", "nom": "Équilibrée", "description": "Les créneaux sont répartis sur toute la semaine, un temps fort par jour.",
+          "places": { "c1": "0-0", "c2": "2-0", "c3": "0-1", "c4": "3-1", "c5": "1-2", "c6": "5-0", "c7": "4-2", "c8": "6-1", "c9": "3-0" } },
+        { "id": "matinale", "nom": "Matinale", "description": "Le travail de fond passe le matin, les soirées restent légères.",
+          "places": { "c1": "0-0", "c2": "1-0", "c3": "3-0", "c4": "4-0", "c5": "1-1", "c6": "5-0", "c7": "2-1", "c8": "6-0", "c9": "2-0" },
+          "bloques": { "2-2": "Indisponible" } },
+        { "id": "concentree", "nom": "Concentrée", "description": "Trois jours de fond en début de semaine, les échanges ensuite.",
+          "places": { "c1": "0-0", "c2": "1-0", "c3": "3-1", "c4": "4-1", "c5": "0-2", "c6": "6-0", "c7": "1-2", "c8": "5-1", "c9": "2-0" },
+          "bloques": { "3-0": "Déplacement" } },
+        { "id": "allegee", "nom": "Allégée", "description": "Moins de créneaux, plus de marge : deux créneaux sont retirés.",
+          "places": { "c1": "1-0", "c3": "2-1", "c4": "3-1", "c5": "0-2", "c6": "5-0", "c7": "4-1", "c8": "6-1" },
+          "bloques": { "0-0": "Indisponible", "4-2": "Indisponible" } }
+      ]
+    }
+    </script>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Sur téléphone, la semaine se lit un jour à la fois, avec des onglets au clavier (flèches, Début, Fin).</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="semainier"]')) init(el);
+</script>
+</body>
+</html>

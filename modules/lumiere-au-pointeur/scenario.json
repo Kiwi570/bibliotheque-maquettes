@@ -1,0 +1,21 @@
+{
+ "etapes": [
+  {"survoler": ".lum__titre"},
+  {"attendre": 900},
+  {"verifier": ".lum[data-etat=\"suit\"]"},
+  {"survoler": ".lum__actions .socle-bouton:not(.socle-bouton--plein)"},
+  {"attendre": 900},
+  {"survoler": "#suite h2"},
+  {"attendre": 1400},
+  {"verifier": ".lum[data-etat=\"repos\"]"},
+  {"choisir": ["#demo-source", "bougie"]},
+  {"survoler": ".lum__texte"},
+  {"attendre": 1200},
+  {"choisir": ["#demo-source", "torche"]},
+  {"survoler": ".lum__titre"},
+  {"attendre": 1200},
+  {"verifier": ".lum[data-source=\"torche\"]"}
+ ],
+ "pause": 450,
+ "video": "scenario"
+}

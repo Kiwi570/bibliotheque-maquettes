@@ -51,7 +51,7 @@ La carte, le curseur et les raccourcis sont facultatifs : sans eux, le ciel suit
 - Les couleurs de la page doivent être en `#hex` ou `rgb()` pour que le module les lise (pas de `color-mix` dans `--couleur-texte` / `--couleur-fond`, ou passer `clair` et `sombre`).
 - Le bouton plein reste aux couleurs de la palette (accent) : vérifier son contraste propre, il ne dépend pas du ciel.
 - Jour ou nuit polaire : lever et coucher retombent sur `lever` / `coucher`.
-- `pret([])` charge GSAP (toujours chargé par le socle) même si le module ne s'en sert pas.
+- `pret([])` ne charge rien : le module n'utilise ni GSAP ni ScrollTrigger.
 - Mode calme et « réduire les animations » : image fixe, transitions coupées, redessinée seulement quand l'heure change (curseur, minuterie).
 
 ## Variantes

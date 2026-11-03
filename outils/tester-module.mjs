@@ -10,7 +10,10 @@
 //                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"} ],
 //     chaque étape accepte "si": "sélecteur" (jouée seulement si ce sélecteur est visible à ce format),
 //     "pause": 450,            // entre deux étapes (ms), pour la vidéo
-//     "video": "scenario" }    // "scenario" (par défaut : la vidéo montre le scénario), "defilement" (vidéo de défilement seule) ou "les-deux"
+//     "video": "scenario",     // "scenario" (par défaut : la vidéo montre le scénario), "defilement" ou "les-deux"
+//     "capture": { "attendre": 600, "etapes": [ … ], "apres": 300 } }  // instant d'apercu.jpg : ms après le chargement
+//                                                                     // (sans défilement), étapes, puis pause ; sinon capture au milieu du module
+//   Un scenario.json peut ne contenir que "capture" (module sans interaction) : le test « scenario » vaut alors n/a.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -137,7 +140,7 @@ const resultats = [];
 for (const f of FORMATS) resultats.push(await essai(f));
 const reduit = [await essai([1440, 900], { reduit: true }), await essai([390, 844, 1], { reduit: true })];
 const sansWebgl = await essai([1440, 900], { sansWebgl: true });
-const scen = scenario ? [await essaiScenario([1440, 900]), await essaiScenario([820, 1180, 1]), await essaiScenario([390, 844, 1])] : [];
+const scen = scenario?.etapes?.length ? [await essaiScenario([1440, 900]), await essaiScenario([820, 1180, 1]), await essaiScenario([390, 844, 1])] : [];
 const tous = [...resultats, ...reduit, sansWebgl, ...scen.map(r => ({ ...r, coupes: [], petits: [], cibles: [], cls: 0 }))];
 const erreurs = [...new Set(tous.flatMap(r => r.erreurs))];
 const clsMax = Math.max(...tous.map(r => r.cls));
@@ -149,7 +152,7 @@ const tests = {
   'sans-webgl': usesWebgl ? (!sansWebgl.erreurs.length && !sansWebgl.coupes.length ? 'ok' : 'échec : ' + sansWebgl.erreurs.join(', ')) : 'n/a',
   console: erreurs.length ? `${erreurs.length} erreur${erreurs.length > 1 ? 's' : ''} : ${erreurs.slice(0, 2).join(' | ')}` : '0 erreur',
   cls: clsMax,
-  scenario: !scenario ? 'n/a' : scen.every(r => !r.pbs.length && !r.erreurs.length) ? 'ok' : 'échec : ' + scen.filter(r => r.pbs.length || r.erreurs.length).map(r => `${r.format} ${[...r.pbs, ...r.erreurs].slice(0, 2).join(', ')}`).join(' ; '),
+  scenario: !scenario?.etapes?.length ? 'n/a' : scen.every(r => !r.pbs.length && !r.erreurs.length) ? 'ok' : 'échec : ' + scen.filter(r => r.pbs.length || r.erreurs.length).map(r => `${r.format} ${[...r.pbs, ...r.erreurs].slice(0, 2).join(', ')}`).join(' ; '),
   'texte-12px': [...new Set(tous.flatMap(r => r.petits))].length ? 'échec : ' + [...new Set(tous.flatMap(r => r.petits))].slice(0, 3).join(', ') : 'ok',
   'cibles-44px': [...new Set(tous.flatMap(r => r.cibles))].length ? 'échec : ' + [...new Set(tous.flatMap(r => r.cibles))].slice(0, 3).join(', ') : 'ok',
 };
@@ -160,7 +163,13 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   const dos = path.dirname(fichier);
   const ctx = await nav.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, recordVideo: { dir: path.join(RACINE, 'inventaire', 'brut'), size: { width: 1440, height: 900 } } });
   const pg = await ctx.newPage(); const t0 = Date.now();
-  await pg.goto(srv.url + relatif, { waitUntil: 'load' }); await attendre(2600);
+  const cap = scenario?.capture;
+  await pg.goto(srv.url + relatif, { waitUntil: 'load' }); await attendre(cap ? (cap.attendre ?? 2600) : 2600);
+  if (cap) {
+    // Instant de capture choisi par le module : étapes éventuelles (défiler, cliquer…), puis la photo.
+    if (cap.etapes?.length) await jouer(pg, { etapes: cap.etapes }, 0);
+    if (cap.apres) await attendre(cap.apres);
+  } else
   // Capture : le module à l'écran (au milieu de son épinglage s'il est épinglé).
   await pg.evaluate(async () => { const m = document.querySelector('[data-module]'); if (!m) return; const st = window.ScrollTrigger?.getAll().find(s => s.pin); const y = st ? st.start + (st.end - st.start) * 0.4 : Math.max(0, m.getBoundingClientRect().top + scrollY - (parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--entete-h')) || 0)); scrollTo(0, y); await new Promise(r => setTimeout(r, 1400)); });
   let q = 80, buf = await pg.screenshot({ type: 'jpeg', quality: q }); while (buf.length > 300 * 1024 && q > 50) { q -= 6; buf = await pg.screenshot({ type: 'jpeg', quality: q }); }
@@ -169,7 +178,7 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   const [y0, y1] = await pg.evaluate(() => { const m = document.querySelector('[data-module]'); const max = document.documentElement.scrollHeight - innerHeight;
     if (!m) return [0, max]; const top = m.getBoundingClientRect().top + scrollY; const pins = (window.ScrollTrigger?.getAll() || []).filter(s => s.pin && m.contains(s.pin));
     const fin = pins.length ? Math.max(...pins.map(s => s.end)) : top + m.offsetHeight - innerHeight * .6; return [Math.max(0, Math.min(max, top - innerHeight * .5)), Math.max(0, Math.min(max, fin))]; });
-  const modeVideo = scenario ? (scenario.video || 'scenario') : 'defilement';
+  const modeVideo = scenario?.etapes?.length ? (scenario.video || 'scenario') : 'defilement';
   await pg.evaluate(y => scrollTo(0, y), y0); await attendre(600);
   let duree = 0; const tDemo = Date.now();
   if (modeVideo !== 'scenario') { duree = Math.min(6400, Math.max(2500, (y1 - y0) * 1.6));

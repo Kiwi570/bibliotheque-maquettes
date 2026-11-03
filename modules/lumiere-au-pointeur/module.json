@@ -1,0 +1,77 @@
+{
+ "nom": "lumiere-au-pointeur",
+ "titre": "Image plongée dans l'ombre qu'une lampe, une bougie ou une torche éclaire sous le pointeur ou le doigt : halo chaud, poussière qui brille, vacillement",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "ogl"
+ ],
+ "origine": [
+  "winsbike-maquette/top",
+  "pierre-becq-lanterne-maquette/haut",
+  "instinct-aventure-maquette/contact"
+ ],
+ "convient_a": [
+  "artisanat",
+  "commerce",
+  "restauration",
+  "hébergement",
+  "culture",
+  "tourisme",
+  "bien-être",
+  "auto-moto",
+  "industrie",
+  "spectacle"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "chaleureux",
+  "artisanal",
+  "luxueux",
+  "brut",
+  "industriel"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "image": "URL de la photo ; sinon l'<img> (ou <picture>) de .lum__fond ; sinon scène neutre peinte (planches, étagère, objets)",
+  "focus": "point d'intérêt [x, y] : recadrage, repos de la lumière, état calme et sans JavaScript, [.66, .42]",
+  "repos": "sans pointeur : 'promenade' (la lumière erre doucement autour du point d'intérêt) ou 'focus' (elle s'y fixe), 'promenade'",
+  "source": "préréglage 'lampe', 'bougie' ou 'torche' (rayon, ombre, vacillement, poussière, bord net, chaleur), 'lampe'",
+  "rayon": "rayon du halo en part du plus grand côté, .3 (bougie .24, torche .16), ×1,35 sous 700 px",
+  "ombre": "lumière ambiante hors du halo, .15 (bougie .12, torche .07)",
+  "vacillement": "amplitude du vacillement, .04 (bougie .16, torche 0)",
+  "poussiere": "poussière qui brille dans la lumière, 1 (0 pour couper)",
+  "relief": "relief tiré de la luminance de l'image, 6 (0 : lumière plate)",
+  "teinte": "couleur CSS de la lumière, mêlée de blanc selon la chaleur, --couleur-accent",
+  "delai": "ms avant le retour lent au repos quand le pointeur part, 900",
+  "dpr": "densité de pixels maximale sur ordinateur, 1.5 (1 sous 700 px)"
+ },
+ "images": [
+  {
+   "role": "photo de fond plongée dans l'ombre, éclairée par la lumière",
+   "selecteur": ".lum__fond",
+   "nombre": "1",
+   "ratio": "16:9 (recadré en 9:16 sur téléphone autour du point d intérêt, option focus ; <picture> possible pour une version portrait)",
+   "largeur": 2560,
+   "zone_calme": "bas gauche : moitié gauche, 55 % du bas (surtitre, titre, texte, boutons) ; sujet en relief (bois, métal, objets) vers 66 % / 42 %, photo prise en pleine lumière ou pénombre douce, sans noirs bouchés : le module l assombrit"
+  }
+ ],
+ "poids_ko": 24.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0.043,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

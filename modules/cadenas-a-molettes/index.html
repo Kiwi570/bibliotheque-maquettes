@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cadenas à molettes · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #15171f; --couleur-texte: #eef0f4; --couleur-accent: #e9a63f; --couleur-secondaire: #4f8fbf; --couleur-sur-accent: #1a1406; --police-titres: "Avenir Next", "Segoe UI", system-ui, sans-serif; --rayon: 16px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, réglez les molettes du cadenas : il s'ouvre sur les formules qui correspondent.</p>
+  </section>
+
+  <section class="cam socle-cadre" data-module="cadenas-a-molettes" aria-labelledby="cam-titre">
+    <!-- Molettes et résultats : uniquement ici, jamais dans module.js. -->
+    <script type="application/json" class="cam__donnees">
+    {
+      "molettes": [
+        { "id": "public", "libelle": "Pour qui ?", "valeurs": [
+          { "v": "un", "t": "Une personne" }, { "v": "duo", "t": "En duo" }, { "v": "famille", "t": "En famille" }, { "v": "groupe", "t": "En groupe" } ] },
+        { "id": "duree", "libelle": "Combien de temps ?", "valeurs": [
+          { "v": "1h", "t": "1 heure" }, { "v": "2h", "t": "2 heures" }, { "v": "demi", "t": "Demi-journée" }, { "v": "jour", "t": "Journée" } ] },
+        { "id": "moment", "libelle": "Quel moment ?", "valeurs": [
+          { "v": "semaine", "t": "En semaine" }, { "v": "weekend", "t": "Le week-end" }, { "v": "soir", "t": "En soirée" } ] }
+      ],
+      "resultats": [
+        { "titre": "Atelier découverte", "meta": "1 heure", "texte": "Une première séance courte pour prendre ses repères, sans engagement.", "lien": "#", "criteres": { "public": ["un", "duo"], "duree": ["1h"], "moment": ["semaine", "soir"] } },
+        { "titre": "Séance à deux", "meta": "1 à 2 heures", "texte": "Un format pensé pour deux personnes, au rythme de chacun.", "lien": "#", "criteres": { "public": ["duo"], "duree": ["1h", "2h"] } },
+        { "titre": "Parcours en famille", "meta": "2 heures à une demi-journée", "texte": "Des étapes courtes et variées pour que chacun trouve sa place.", "lien": "#", "criteres": { "public": ["famille"], "duree": ["2h", "demi"], "moment": ["weekend"] } },
+        { "titre": "Après-midi en groupe", "meta": "Demi-journée", "texte": "Un programme complet pour un groupe, encadré du début à la fin.", "lien": "#", "criteres": { "public": ["groupe"], "duree": ["demi"], "moment": ["semaine", "weekend"] } },
+        { "titre": "Journée complète", "meta": "Journée", "texte": "Une journée entière, avec une pause au milieu et un temps d'échange en fin de journée.", "lien": "#", "criteres": { "public": ["famille", "groupe"], "duree": ["jour"], "moment": ["weekend"] } },
+        { "titre": "Soirée à thème", "meta": "2 heures", "texte": "Un rendez-vous du soir autour d'un thème qui change chaque mois.", "lien": "#", "criteres": { "public": ["duo", "groupe"], "duree": ["2h"], "moment": ["soir"] } },
+        { "titre": "Initiation individuelle", "meta": "1 à 2 heures", "texte": "Un accompagnement seul à seul pour avancer à votre rythme.", "lien": "#", "criteres": { "public": ["un"], "duree": ["1h", "2h"], "moment": ["semaine"] } },
+        { "titre": "Formule sur mesure", "meta": "Demi-journée ou journée", "texte": "Un contenu construit avec vous, selon la taille et les envies du groupe.", "lien": "#", "criteres": { "public": ["groupe"], "duree": ["demi", "jour"] } },
+        { "titre": "Rendez-vous du week-end", "meta": "2 heures à une demi-journée", "texte": "Un créneau du samedi ou du dimanche, ouvert à tous.", "lien": "#", "criteres": { "public": ["un", "duo", "famille"], "duree": ["2h", "demi"], "moment": ["weekend"] } }
+      ]
+    }
+    </script>
+    <div class="cam__intro">
+      <p class="socle-surtitre">Trouver sa formule</p>
+      <h2 class="cam__titre" id="cam-titre">Réglez le cadenas, il s'ouvre sur ce qui vous convient</h2>
+      <p class="cam__texte">Tournez chaque molette au doigt, à la molette de la souris ou avec les flèches du clavier. Quand la combinaison est complète, le cadenas s'ouvre.</p>
+      <div class="cam__rapides" role="group" aria-label="Réglages rapides">
+        <button type="button" class="cam__rapide" data-reglage='{"public":"famille","duree":"demi","moment":"weekend"}'>En famille le week-end</button>
+        <button type="button" class="cam__rapide" data-reglage='{"public":"duo","duree":"2h","moment":"soir"}'>Une soirée à deux</button>
+        <button type="button" class="cam__rapide" data-reglage='{"public":"groupe","duree":"jour","moment":"weekend"}'>Une journée en groupe</button>
+      </div>
+    </div>
+    <div class="cam__cadenas">
+      <svg class="cam__anse" viewBox="0 0 200 130" aria-hidden="true"><path d="M40 130 V66 a60 60 0 0 1 120 0 V130"/></svg>
+      <div class="cam__corps">
+        <p class="cam__nom">Le cadenas des formules</p>
+        <div class="cam__molettes"></div>
+        <button type="button" class="cam__ouvrir socle-bouton socle-bouton--plein">Ouvrir le cadenas</button>
+        <p class="cam__etat" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="cam__resultats" tabindex="-1">
+      <p class="cam__ferme">Le cadenas est fermé : réglez les molettes pour voir les formules.</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, les molettes se posent sans rebond et le cadenas s'ouvre sans animation.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="cadenas-a-molettes"]')) init(el);
+</script>
+</body>
+</html>

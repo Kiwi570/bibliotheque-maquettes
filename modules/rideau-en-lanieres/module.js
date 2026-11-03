@@ -33,7 +33,7 @@ export async function init(root, options = {}) {
   const piste = root.querySelector('.rdl__lanieres');
   if (!piste) return vide;
   const deja = lire(o.cle);
-  const s = await pret([]);
+  const s = await pret(['gsap']);
   const { gsap } = s;
   const coeur = root.querySelector('.rdl__coeur');
   const bouton = root.querySelector('.rdl__passer');

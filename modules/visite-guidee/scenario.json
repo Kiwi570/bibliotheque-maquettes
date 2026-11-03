@@ -1,0 +1,38 @@
+{
+ "etapes": [
+  {"cliquer": "[data-visite-lancer]"},
+  {"verifier": ".vgd-bulle"},
+  {"attendre": 700},
+  {"cliquer": ".vgd-bulle [data-suiv]"},
+  {"attendre": 700},
+  {"cliquer": ".vgd-bulle [data-suiv]"},
+  {"attendre": 700},
+  {"cliquer": ".vgd-bulle [data-suiv]"},
+  {"attendre": 700},
+  {"cliquer": "[data-filtre=\"cours\"]"},
+  {"verifier": "[data-filtre=\"cours\"][aria-pressed=\"true\"]"},
+  {"attendre": 400},
+  {"cliquer": ".vgd-bulle [data-prec]"},
+  {"attendre": 700},
+  {"touche": "ArrowRight"},
+  {"attendre": 700},
+  {"touche": "Escape"},
+  {"attendre": 500},
+  {"verifier": "[data-visite-lancer]"},
+  {"cliquer": "[data-visite-lancer]"},
+  {"attendre": 500},
+  {"cliquer": ".vgd-bulle [data-passer]"},
+  {"verifier": "[data-visite-lancer]"}
+ ],
+ "pause": 450,
+ "video": "scenario",
+ "capture": {
+  "attendre": 600,
+  "etapes": [
+   {"cliquer": "[data-visite-lancer]"},
+   {"attendre": 500},
+   {"cliquer": ".vgd-bulle [data-suiv]"}
+  ],
+  "apres": 1200
+ }
+}

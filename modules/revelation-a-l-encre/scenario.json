@@ -1,0 +1,20 @@
+{
+ "etapes": [
+  { "cliquer": "[data-rejouer]" },
+  { "attendre": 2600 },
+  { "defiler": "#rae-montee .rae__titre" },
+  { "attendre": 1200 },
+  { "defiler": "#rae-montee + .demo-bloc h2" },
+  { "attendre": 1400 },
+  { "defiler": "#rae-voile-titre" },
+  { "attendre": 1600 },
+  { "cliquer": ".rae__puces li:nth-child(2) .rae__puce", "si": ".rae__puce" },
+  { "attendre": 2200 },
+  { "cliquer": ".rae__puces li:nth-child(3) .rae__puce", "si": ".rae__puce" },
+  { "attendre": 2200 },
+  { "verifier": "#rae-voile-titre" }
+ ],
+ "pause": 400,
+ "video": "scenario",
+ "capture": { "attendre": 1500, "etapes": [ { "cliquer": "[data-rejouer]" } ], "apres": 1900 }
+}

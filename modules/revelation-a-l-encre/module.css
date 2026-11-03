@@ -1,0 +1,123 @@
+/* Révélation à l'encre — identité uniquement par les variables du socle.
+   État par défaut (sans JavaScript, mode calme, réduire les animations) : l'image est entière et nette.
+   Le script ajoute rae--etale / rae--voile / rae--montee, puis rae--gl (WebGL) ou rae--css (repli). */
+.rae {
+  position: relative; isolation: isolate;
+  --rae-p: 1; --rae-taille: 100%; --rae-marge: clamp(14px, 3vh, 32px);
+  /* Tache d'encre figée : un disque déformé par un bruit (feTurbulence), utilisé comme masque. */
+  --rae-tache: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' preserveAspectRatio='none'%3E%3Cfilter id='f' x='-30%25' y='-30%25' width='160%25' height='160%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.022' numOctaves='4' seed='5'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='34' xChannelSelector='R' yChannelSelector='G'/%3E%3CfeGaussianBlur stdDeviation='.5'/%3E%3C/filter%3E%3Cellipse cx='100' cy='100' rx='80' ry='78' filter='url(%23f)'/%3E%3C/svg%3E");
+  /* Grain de papier pour le voile de repli. */
+  --rae-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.rae__scene { position: relative; overflow: hidden; }
+.rae__image { position: absolute; inset: 0; margin: 0; }
+.rae__fond { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
+.rae__canvas { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+/* WebGL a pris le relais : l'image du DOM reste dans la page (texte alternatif) mais n'est plus peinte. */
+.rae--gl:not(.rae--etapes) .rae__fond, .rae--gl.rae--pile .rae__fond { opacity: 0; }
+/* En attendant le script (ouverture au chargement) : l'image n'apparaît pas puis disparaît. */
+.rae--attente .rae__image { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  /* data-rae-attente : posé dans le HTML pour une image au-dessus de la ligne de flottaison ; secours si le script ne vient pas. */
+  html:not(.calme) .rae[data-rae-attente]:not(.rae--pris) .rae__scene { opacity: 0; animation: rae-secours .6s 2.5s forwards; }
+}
+@keyframes rae-secours { to { opacity: 1; } }
+
+/* ---------- Étale : la tache ---------- */
+.rae--forme-tache:not(.rae--gl) .rae__image,
+.rae--css.rae--etale .rae__image {
+  -webkit-mask: var(--rae-tache) center / calc(var(--rae-p) * var(--rae-taille)) calc(var(--rae-p) * var(--rae-taille)) no-repeat;
+  mask: var(--rae-tache) center / calc(var(--rae-p) * var(--rae-taille)) calc(var(--rae-p) * var(--rae-taille)) no-repeat;
+}
+.rae--css.rae--etale.rae--fini .rae__image { -webkit-mask: none; mask: none; }
+
+/* ---------- Voile de repli (fondu) ---------- */
+.rae__voile { position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: calc(1 - var(--rae-p));
+  background: var(--rae-grain), color-mix(in oklab, var(--couleur-texte) 7%, var(--couleur-fond)); }
+
+/* ---------- Montée : bichromie sous la nappe ---------- */
+.rae__duo { position: absolute; inset: 0; filter: grayscale(1) contrast(1.06); }
+.rae__duo > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.rae__duo::after { content: ""; position: absolute; inset: 0; background: var(--couleur-secondaire); mix-blend-mode: color; opacity: .8; }
+.rae--css.rae--montee .rae__fond {
+  -webkit-mask-image: linear-gradient(to top, black calc(var(--rae-p) * 104% - 3%), transparent calc(var(--rae-p) * 104% + 1%));
+  mask-image: linear-gradient(to top, black calc(var(--rae-p) * 104% - 3%), transparent calc(var(--rae-p) * 104% + 1%));
+}
+
+/* ---------- Textes communs ---------- */
+.rae__texte { display: grid; gap: clamp(16px, 2.6vh, 28px); align-content: center; min-width: 0; }
+.rae__titre { font-size: clamp(2.3rem, min(5.6vw, 10vh), 5.2rem); line-height: 1.02; letter-spacing: -.015em; padding-block: .05em; max-width: 14ch; }
+.rae__intro { color: var(--couleur-texte-doux); max-width: 46ch; }
+.rae__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Disposition « côte à côte » : texte et image ---------- */
+.rae--cote { padding-block: clamp(28px, 6vh, 72px); }
+.rae--cote .rae__cadre { display: grid; gap: clamp(24px, 4vw, 64px); align-items: center; }
+.rae--cote .rae__scene { aspect-ratio: 5 / 4; order: -1; width: 100%; }
+@media (min-width: 900px) {
+  .rae--cote .rae__cadre { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); min-height: calc(var(--ecran-h) - var(--entete-h) - 2 * clamp(28px, 6vh, 72px)); }
+  .rae--cote .rae__scene { order: 0; aspect-ratio: 1; width: min(100%, calc((var(--ecran-h) - var(--entete-h)) * .92)); justify-self: center; }
+}
+
+/* ---------- Disposition « plein cadre » : image en fond, texte posé en bas à gauche ---------- */
+.rae--plein { display: grid; align-items: end; overflow: hidden; min-height: max(520px, calc(var(--ecran-h) - var(--entete-h))); }
+.rae--plein .rae__scene { position: absolute; inset: 0; z-index: -1; background: var(--couleur-surface); }
+.rae--plein .rae__scene::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(0deg, color-mix(in oklab, var(--couleur-fond) 92%, transparent) 0%, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 30%, transparent 58%),
+              linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) 70%, transparent), transparent 62%); }
+.rae--plein .rae__texte { position: relative; padding-block: clamp(40px, 9vh, 104px); }
+
+/* ---------- Disposition « étapes » : liste (sans JS, calme, téléphone) puis scène épinglée ---------- */
+.rae--etapes { padding-block: clamp(56px, 9vw, 128px); }
+.rae--etapes .rae__grille { display: grid; gap: clamp(20px, 3.4vw, 48px) clamp(24px, 4vw, 64px); align-items: center; }
+.rae--etapes .rae__etapes, .rae--etapes .rae__scene { display: contents; }
+.rae__tete { display: grid; gap: 12px; grid-column: 1 / -1; }
+.rae__tete h2 { font-size: clamp(2rem, min(4.4vw, 8vh), 3.8rem); }
+.rae__tete p { color: var(--couleur-texte-doux); max-width: 46ch; }
+.rae__etape { display: grid; gap: 10px; padding-left: 20px; border-left: 2px solid var(--couleur-ligne); }
+.rae__etape h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 2rem); }
+.rae__etape p { color: var(--couleur-texte-doux); max-width: 34em; }
+.rae--etapes .rae__image { position: relative; aspect-ratio: 4 / 5; border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); }
+.rae--etapes .rae__canvas, .rae--etapes .rae__voile { display: none; }
+/* Téléphone : chaque image suit son texte. */
+.rae__etape:nth-child(1 of .rae__etape) { order: 1; } .rae__image:nth-child(1 of .rae__image) { order: 2; }
+.rae__etape:nth-child(2 of .rae__etape) { order: 3; } .rae__image:nth-child(2 of .rae__image) { order: 4; }
+.rae__etape:nth-child(3 of .rae__etape) { order: 5; } .rae__image:nth-child(3 of .rae__image) { order: 6; }
+.rae__etape:nth-child(4 of .rae__etape) { order: 7; } .rae__image:nth-child(4 of .rae__image) { order: 8; }
+.rae__etape:nth-child(5 of .rae__etape) { order: 9; } .rae__image:nth-child(5 of .rae__image) { order: 10; }
+.rae__etape:nth-child(6 of .rae__etape) { order: 11; } .rae__image:nth-child(6 of .rae__image) { order: 12; }
+@media (max-width: 759px) { .rae--etapes .rae__image { aspect-ratio: 4 / 3; } }
+/* Plus large : une ligne par étape, texte à gauche, image à droite. */
+@media (min-width: 760px) {
+  .rae--etapes .rae__grille { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+  .rae__etape:nth-child(1 of .rae__etape) { grid-row: 2; } .rae__image:nth-child(1 of .rae__image) { grid-row: 2; }
+  .rae__etape:nth-child(2 of .rae__etape) { grid-row: 3; } .rae__image:nth-child(2 of .rae__image) { grid-row: 3; }
+  .rae__etape:nth-child(3 of .rae__etape) { grid-row: 4; } .rae__image:nth-child(3 of .rae__image) { grid-row: 4; }
+  .rae__etape:nth-child(4 of .rae__etape) { grid-row: 5; } .rae__image:nth-child(4 of .rae__image) { grid-row: 5; }
+  .rae__etape:nth-child(5 of .rae__etape) { grid-row: 6; } .rae__image:nth-child(5 of .rae__image) { grid-row: 6; }
+  .rae__etape:nth-child(6 of .rae__etape) { grid-row: 7; } .rae__image:nth-child(6 of .rae__image) { grid-row: 7; }
+  .rae--etapes .rae__etape { grid-column: 1; } .rae--etapes .rae__image { grid-column: 2; max-height: 78vh; justify-self: center; width: 100%; }
+}
+
+/* Épinglée (rae--pile, posée par le script) : tout tient entre l'en-tête et le bas de l'écran. */
+.rae.rae--pile { padding-block: 0; }
+.rae.rae--pile .rae__grille { height: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h)); padding-block: var(--rae-marge);
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); grid-template-rows: minmax(0, 1fr); }
+.rae.rae--pile .rae__etapes { display: grid; grid-template-areas: "tete" "puces" "etape"; gap: clamp(14px, 3vh, 28px); align-content: center; grid-column: 1; grid-row: 1; min-height: 0; }
+.rae.rae--pile .rae__tete { grid-area: tete; }
+.rae.rae--pile .rae__etape { grid-area: etape; order: 0; opacity: 0; transform: translateY(10px); transition: opacity .5s, transform .5s; border-left-color: var(--couleur-accent); }
+.rae.rae--pile .rae__etape.est-active { opacity: 1; transform: none; }
+.rae.rae--pile .rae__scene { display: block; position: relative; grid-column: 2; grid-row: 1; height: 100%; aspect-ratio: 4 / 5; max-width: 100%; justify-self: center; border-radius: var(--rayon); background: var(--couleur-surface); }
+.rae.rae--pile .rae__image { position: absolute; inset: 0; order: 0; aspect-ratio: auto; max-height: none; border-radius: 0; opacity: 0; }
+.rae.rae--pile .rae__image.est-visible { opacity: 1; }
+.rae.rae--pile .rae__canvas, .rae.rae--pile .rae__voile { display: block; }
+.rae.rae--pile.rae--gl .rae__image { opacity: 1; }
+.rae__puces { grid-area: puces; display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.rae__puce { display: inline-grid; place-items: center; min-width: 44px; min-height: 44px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; cursor: pointer;
+  font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .08em; font-variant-numeric: tabular-nums; color: var(--couleur-texte-doux); transition: background .35s, color .35s, border-color .35s; }
+.rae__puce[aria-current="step"] { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+
+@media (max-width: 420px) { .rae__actions .socle-bouton { flex: 1 1 100%; } }
+/* Réduire les animations et mode calme : état final, aucun canevas. */
+@media (prefers-reduced-motion: reduce) { .rae__canvas, .rae__voile, .rae__duo { display: none; } }
+.calme .rae__canvas, .calme .rae__voile, .calme .rae__duo { display: none; }

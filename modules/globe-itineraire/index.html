@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Globe d'itinéraire · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0e1320; --couleur-texte: #ebe7de; --couleur-accent: #f2a65a; --couleur-secondaire: #4d7fc4; --rayon: 10px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le globe reste à l'écran, tourne et trace le parcours d'étape en étape.</p>
+  </section>
+
+  <section class="gi" data-module="globe-itineraire" data-epingle aria-labelledby="gi-titre">
+    <div class="gi__tete socle-cadre">
+      <p class="socle-surtitre">Surtitre</p>
+      <h2 class="gi__titre" id="gi-titre">Titre de la section</h2>
+      <p class="gi__intro">Un paragraphe de deux lignes qui annonce le parcours, sa longueur et le nombre d'étapes.</p>
+    </div>
+    <div class="gi__corps socle-cadre">
+      <div class="gi__scene" data-tient="globe">
+        <div class="gi__globe">
+          <canvas class="gi__toile" aria-hidden="true"></canvas>
+          <p class="gi__compteur" aria-hidden="true">Étape <b data-gi-n>1</b> / <span data-gi-total>6</span></p>
+        </div>
+        <nav class="gi__nav" aria-label="Étapes du parcours sur le globe"></nav>
+      </div>
+      <ol class="gi__etapes" aria-label="Étapes du parcours">
+        <li class="gi__etape" id="gi-etape-1" data-lat="48.9" data-lon="2.4">
+          <p class="gi__n"><b>01</b><span>48,9° N · 2,4° E</span></p>
+          <h3>Point de départ</h3>
+          <p>Un paragraphe de deux ou trois lignes qui présente le lieu de départ, ce que l'on y prépare et ce que l'on emporte.</p>
+        </li>
+        <li class="gi__etape" id="gi-etape-2" data-lat="64.1" data-lon="-21.9">
+          <p class="gi__n"><b>02</b><span>64,1° N · 21,9° O</span></p>
+          <h3>Deuxième étape</h3>
+          <p>Un paragraphe de deux ou trois lignes qui décrit cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+        </li>
+        <li class="gi__etape" id="gi-etape-3" data-lat="47.6" data-lon="-52.7">
+          <p class="gi__n"><b>03</b><span>47,6° N · 52,7° O</span></p>
+          <h3>Une étape plus longue à lire</h3>
+          <p>Un paragraphe de deux ou trois lignes qui décrit cette étape. Une deuxième phrase précise la durée ou le moyen de transport, à adapter au projet.</p>
+        </li>
+        <li class="gi__etape" id="gi-etape-4" data-lat="25.8" data-lon="-80.2">
+          <p class="gi__n"><b>04</b><span>25,8° N · 80,2° O</span></p>
+          <h3>Quatrième étape</h3>
+          <p>Un paragraphe de deux ou trois lignes qui décrit cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+        </li>
+        <li class="gi__etape" id="gi-etape-5" data-lat="-12.0" data-lon="-77.0">
+          <p class="gi__n"><b>05</b><span>12,0° S · 77,0° O</span></p>
+          <h3>Cinquième étape</h3>
+          <p>Un paragraphe de deux ou trois lignes qui décrit cette étape, ce que l'on y voit et ce que l'on y fait.</p>
+        </li>
+        <li class="gi__etape" id="gi-etape-6" data-lat="-33.4" data-lon="-70.6">
+          <p class="gi__n"><b>06</b><span>33,4° S · 70,6° O</span></p>
+          <h3>Point d'arrivée</h3>
+          <p>Un paragraphe de deux ou trois lignes qui conclut le parcours et renvoie vers la suite de la page.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le tracé reste complet après la dernière étape. En mode calme, il est dessiné d'emblée et le globe ne bouge pas.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="globe-itineraire"]')) init(el);
+</script>
+</body>
+</html>

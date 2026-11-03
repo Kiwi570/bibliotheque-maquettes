@@ -1,4 +1,4 @@
-// Socle commun des modules : charge GSAP, ScrollTrigger, SplitText, Flip, Lenis et OGL depuis vendor/ (une seule fois),
+// Socle commun des modules : charge à la demande GSAP, ScrollTrigger, SplitText, Flip, Lenis et OGL depuis vendor/ (une seule fois),
 // mesure --entete-h et --barres-h, respecte « réduire les animations » et le mode calme,
 // et regroupe les ScrollTrigger.refresh() (polices, images, changements de hauteur).
 // Les modules n'instancient jamais GSAP ni Lenis eux-mêmes : ils appellent pret([...]) et reçoivent le socle.
@@ -68,16 +68,17 @@ function boucle(el, fn) {
 
 // ---------- Démarrage ----------
 let demarre = null;
-/** pret(['scrolltrigger','splittext',...]) charge ce qui manque et renvoie le socle. gsap est toujours chargé. */
+/** pret(['gsap','scrolltrigger','splittext',...]) charge ce qui manque et renvoie le socle.
+ *  GSAP n'est chargé que s'il est demandé, ou requis par ScrollTrigger, SplitText ou Flip : un module en CSS ou canvas seul appelle pret([]). */
 export async function pret(besoins = []) {
-  const voulus = new Set(['gsap', ...besoins.map(b => b.toLowerCase())]);
-  if (voulus.has('splittext') || voulus.has('flip')) voulus.add('gsap');
+  const voulus = new Set(besoins.map(b => b.toLowerCase()));
+  if (voulus.has('scrolltrigger') || voulus.has('splittext') || voulus.has('flip')) voulus.add('gsap');
   for (const nom of ORDRE) if (voulus.has(nom)) await script(nom);
-  const g = window.gsap;
+  const g = window.gsap || null;
   socle.gsap = g;
-  if (window.ScrollTrigger && !socle.ScrollTrigger) { g.registerPlugin(window.ScrollTrigger); socle.ScrollTrigger = window.ScrollTrigger; }
-  if (window.SplitText && !socle.SplitText) { g.registerPlugin(window.SplitText); socle.SplitText = window.SplitText; }
-  if (window.Flip && !socle.Flip) { g.registerPlugin(window.Flip); socle.Flip = window.Flip; }
+  if (g && window.ScrollTrigger && !socle.ScrollTrigger) { g.registerPlugin(window.ScrollTrigger); socle.ScrollTrigger = window.ScrollTrigger; }
+  if (g && window.SplitText && !socle.SplitText) { g.registerPlugin(window.SplitText); socle.SplitText = window.SplitText; }
+  if (g && window.Flip && !socle.Flip) { g.registerPlugin(window.Flip); socle.Flip = window.Flip; }
   if (window.OGL) socle.OGL = window.OGL;
   if (!demarre) demarre = demarrer();
   await demarre;
@@ -100,8 +101,8 @@ async function demarrer() {
     await script('lenis');
     socle.lenis = new window.Lenis({ autoRaf: false, anchors: { offset: () => -parseFloat(getComputedStyle(html).getPropertyValue('--entete-h')) || 0 } });
     if (socle.ScrollTrigger) socle.lenis.on('scroll', socle.ScrollTrigger.update);
-    socle.gsap.ticker.add(t => socle.lenis.raf(t * 1000));
-    socle.gsap.ticker.lagSmoothing(0);
+    if (socle.gsap) { socle.gsap.ticker.add(t => socle.lenis.raf(t * 1000)); socle.gsap.ticker.lagSmoothing(0); }
+    else { const tour = t => { socle.lenis.raf(t); requestAnimationFrame(tour); }; requestAnimationFrame(tour); }
   }
   // Retour à la position après un changement de mode calme.
   const retour = sessionStorage.getItem('socle-retour');

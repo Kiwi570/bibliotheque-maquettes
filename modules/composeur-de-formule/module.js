@@ -211,7 +211,7 @@ export async function init(root, options = {}) {
   root.classList.add('cdf--vivant');
   rendre();
   colle();
-  s = await pret([]);
+  s = await pret(['gsap']);
 
   return {
     rendre,

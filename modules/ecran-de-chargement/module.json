@@ -1,0 +1,76 @@
+{
+ "nom": "ecran-de-chargement",
+ "titre": "Écran de chargement court : un compteur défile avec son unité pendant qu'une onde s'amplifie ou que des cristaux poussent, puis s'ouvre sur le héros déjà rendu",
+ "role": "ouverture",
+ "animations": [
+  "chargement-orchestré",
+  "compteur",
+  "canvas-2d",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": [
+  "surffm-maquette/loader",
+  "nelis-maquette/gel",
+  "edwin-sonorisation-maquette/loader"
+ ],
+ "convient_a": [
+  "média",
+  "culture",
+  "spectacle",
+  "bâtiment",
+  "industrie",
+  "services-b2b",
+  "numérique",
+  "sport",
+  "tourisme",
+  "formation",
+  "auto-moto",
+  "santé"
+ ],
+ "ambiances": [
+  "sombre",
+  "froid",
+  "industriel",
+  "énergique",
+  "nocturne",
+  "sobre",
+  "montagne",
+  "océanique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "de": "valeur de départ du compteur, 0",
+  "a": "valeur d'arrivée, 100",
+  "unite": "unité affichée après la valeur ('' pour aucune), '%'",
+  "format": "nombre de décimales (par défaut celles de de et a) ou fonction v => texte",
+  "signe": "affiche « + » devant les valeurs positives (températures), false",
+  "motif": "'onde' (s'amplifie avec la progression), 'cristaux' (dendrites à graine qui poussent des bords), 'aucun' ; 'onde'",
+  "duree": "durée totale en s, sortie comprise, bornée entre 1,2 et 4 ; 2.2",
+  "sortie": "'ouverture' (trou circulaire depuis le centre), 'haut' (retrait vers le haut), 'fondu' ; 'ouverture'",
+  "legende": "texte au-dessus du compteur, celui du HTML par défaut",
+  "fin": "texte qui remplace la valeur à l'arrivée (l'unité est alors masquée), null",
+  "graine": "graine du motif cristaux, 7",
+  "unique": "true : une fois par session ; false : à chaque chargement ; true",
+  "cle": "clé sessionStorage, 'ecran-de-chargement-vu' (la même que dans le script du head)",
+  "apres": "fonction appelée quand le héros commence à être découvert (aussi l'évènement 'chargement:fini')",
+  "couleurs (CSS)": "--edc-fond, --edc-chiffre, --edc-taille sur .edc"
+ },
+ "images": [],
+ "poids_ko": 17.4,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.009,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lumière au pointeur · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0d0b09; --couleur-texte: #f2ebe0; --couleur-accent: #e8b46a; --couleur-secondaire: #7a5a40; --police-titres: "Iowan Old Style", "Palatino Linotype", Georgia, serif; --rayon: 6px; }
+  .demo-outils { display: flex; align-items: center; gap: .6rem; }
+  .demo-outils label { display: flex; align-items: center; gap: .5rem; }
+  .demo-outils select { min-height: 44px; padding: 0 .8rem; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); color: var(--couleur-texte); font: inherit; }
+  @media (max-width: 520px) { .demo-nom, .demo-outils label span { display: none; } }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete>
+  <span class="demo-nom">Démonstration</span>
+  <div class="demo-outils">
+    <label><span>Source</span>
+      <select id="demo-source" aria-label="Source de lumière">
+        <option value="lampe">Lampe</option>
+        <option value="bougie">Bougie</option>
+        <option value="torche">Torche</option>
+      </select>
+    </label>
+    <button type="button" data-calme>Mode calme</button>
+  </div>
+</header>
+<main>
+  <section class="lum" data-module="lumiere-au-pointeur" aria-labelledby="lum-titre">
+    <div class="lum__fond" aria-hidden="true"></div>
+    <canvas class="lum__canvas" aria-hidden="true"></canvas>
+    <div class="lum__ombre" aria-hidden="true"></div>
+    <div class="lum__voile" aria-hidden="true"></div>
+    <div class="lum__cadre socle-cadre">
+      <p class="socle-surtitre">Surtitre de la page</p>
+      <h1 class="lum__titre" id="lum-titre">Un titre qui sort de l'ombre.</h1>
+      <p class="lum__texte">Un paragraphe de deux lignes qui présente l'activité, ce que l'on propose et à qui, avant les deux boutons d'action.</p>
+      <div class="lum__actions">
+        <a class="socle-bouton socle-bouton--plein" href="#suite">Action principale</a>
+        <a class="socle-bouton" href="#suite">Action secondaire</a>
+      </div>
+      <div class="lum__indice" aria-hidden="true"><span class="lum__indice-souris">Promenez la souris sur l'image</span><span class="lum__indice-doigt">Touchez l'image : la lumière suit le doigt</span></div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Quand le pointeur quitte l'image, la lumière revient lentement à son repos, puis se promène seule autour du point d'intérêt.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Encore une section</p>
+    <h2>Un dernier bloc pour tester le défilement</h2>
+    <p>Hors écran, la boucle s'arrête ; elle reprend dès que l'image revient dans la fenêtre. En mode calme, l'image reste éclairée à son point d'intérêt.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  // Option : init(el, { image: 'photo.jpg', focus: [.7, .4], source: 'bougie', repos: 'focus' }) ; sans image, une scène neutre est peinte.
+  const el = document.querySelector('[data-module="lumiere-au-pointeur"]');
+  const choix = document.getElementById('demo-source');
+  let api = await init(el, { source: choix.value });
+  window.__lum = api;
+  choix.addEventListener('change', async () => {
+    api.detruire();
+    const c = el.querySelector('.lum__canvas'); c.replaceWith(c.cloneNode()); // contexte WebGL neuf
+    api = await init(el, { source: choix.value }); window.__lum = api;
+  });
+</script>
+</body>
+</html>

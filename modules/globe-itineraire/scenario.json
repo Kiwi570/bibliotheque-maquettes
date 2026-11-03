@@ -1,0 +1,16 @@
+{
+ "etapes": [
+  {"defiler": ".gi__nav"},
+  {"cliquer": ".gi__nav .gi__bouton:nth-child(3)"},
+  {"attendre": 1400},
+  {"verifier": ".gi__nav .gi__bouton:nth-child(3)[aria-current=\"step\"]"},
+  {"cliquer": ".gi__nav .gi__bouton:nth-child(5)"},
+  {"attendre": 1400},
+  {"verifier": ".gi__nav .gi__bouton:nth-child(5)[aria-current=\"step\"]"},
+  {"cliquer": ".gi__ensemble", "si": ".gi__ensemble"},
+  {"attendre": 1200}
+ ],
+ "pause": 600,
+ "video": "les-deux",
+ "capture": { "attendre": 800, "etapes": [ {"defiler": "#gi-etape-3"} ], "apres": 1600 }
+}
