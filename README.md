@@ -14,7 +14,7 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Conventions des modules
 
-- `module.js` exporte `init(root, options)` et obtient GSAP, ScrollTrigger, SplitText, Flip, Lenis ou OGL par `pret([...])` de `socle/socle.js` ; il ne les instancie jamais.
+- `module.js` exporte `init(root, options)` et obtient GSAP, ScrollTrigger, SplitText, Flip, Lenis ou OGL par `pret([...])` de `socle/socle.js` (chargés à la demande : `pret([])` ne charge rien) ; il ne les instancie jamais.
 - Identité uniquement par variables (`--couleur-fond`, `--couleur-texte`, `--couleur-accent`, `--couleur-secondaire`, `--police-titres`, `--police-texte`, `--police-mono`, `--rayon`, `--espace`). `--entete-h` et `--barres-h` sont mesurées par le socle sur `[data-entete]` et `[data-barre]`.
 - Section épinglée : `[data-epingle]`, classe `est-epingle` pendant l'épinglage, éléments qui doivent tenir dans l'écran marqués `[data-tient]` ; tout `position: sticky` collé est aussi vérifié, sans marquage.
 - `module.json` déclare ses emplacements d'images (`images` : rôle, sélecteur, nombre, ratio, largeur source, zone calme pour le texte) ; `scenario.json` (clics, saisie) est joué et filmé par le testeur.
@@ -23,11 +23,9 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Ajouter une maquette (fin de projet)
 
-1. `node outils/inventaire.mjs <dépôt>` : pages, blocs, lignes de code, ScrollTrigger, captures 1440 et 390, vidéos.
-2. `node outils/identite.mjs <dépôt>` : palette et polices lues dans le CSS.
-3. Écrire `notes-manuelles/<dépôt>.json` (rôle, description, note, pièges ; format en tête de `outils/fiches.mjs`), en regardant les captures (`python3 outils/planche.py <dépôt> planche.jpg`).
-4. `node outils/fiches.mjs <dépôt> && node outils/indexer.mjs && node outils/valider.mjs` (zéro erreur).
-   (`outils/ajouter.mjs` enchaînera ces étapes à l'étape 4 du chantier.)
+1. `node outils/ajouter.mjs <dépôt>` : pull, inventaire (captures 1440 et 390, vidéos) et identité ; écrit le gabarit `notes-manuelles/<dépôt>.json` et une planche contact s'il manque.
+2. Compléter le gabarit (rôle, description, note, pièges ; valeurs dans `taxonomie.json`, format en tête de `outils/fiches.mjs`) en regardant la planche.
+3. `node outils/ajouter.mjs <dépôt> --sans-inventaire` : fiches, liens vers les modules, `index.json`, validation (zéro erreur). Commiter.
 
 ## Contenu
 
