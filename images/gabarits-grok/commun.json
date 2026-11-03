@@ -1,0 +1,133 @@
+{
+  "source": "Synthèse des 84 documents ~/Downloads/*images-grok*.docx (version la plus récente quand il y en a plusieurs : baptisteconte v6, exco v2, elka à refaire et pages, ice-attitude 2, castelactu (2), brasserieassur partie 2), de 9 documents Grok complémentaires des maquettes notées (nelis, h-renovation v2, oppenheimer, ollizfx v3, efficience-triathlon, menuizim, tvcentreduquebec, beat-haechler v2, winsbike images manquantes), des README des maquettes, des fiches de sections notées 4 ou 5 de la bibliothèque, des rapports d'audit (audit-maquettes/*/rapport.md et notes.json), de images-grok-12-maquettes/integration.md et des règles « Grok : » de la skill maquette-premium-client.",
+  "variables": {
+    "{ambiance}": "adjectifs anglais, ex. « calm and warm » (s'emploie devant « mood »)",
+    "{palette}": "liste de couleurs anglaise, ex. « deep charcoal black, ember orange and soft cream »",
+    "{lumiere}": "groupe nominal de lumière, ex. « soft raking window light from the left »",
+    "{matieres}": "liste de matières, ex. « raw linen, pale oak and limestone »",
+    "{saison}": "moment avec article, ex. « a misty autumn morning », « a winter night » (s'emploie après « on »)",
+    "{lieu}": "lieu générique avec article, jamais un lieu réel nommé comme tel, ex. « a rural village of eastern France » (s'emploie après « in »)",
+    "{sujet}": "groupe nominal décrit par le plan d'images, ex. « a spool of waxed linen thread »"
+  },
+  "assemblage": "consigne du rôle + format (formats) + zone de texte (zone_texte) si l'image porte un titre + style de l'activité + interdits de l'activité + interdits_toujours. Une seule consigne par image, collée telle quelle dans Grok.",
+  "interdits_toujours": "No text, no letters, no numbers, no logos, no brand names, no signage, no watermark, no signature, no recognizable person, no visible face, no real or famous people, not a specific real building or landmark.",
+  "formats": {
+    "16:9": "Wide horizontal composition, aspect ratio 16:9",
+    "9:16": "Vertical composition, aspect ratio 9:16, highest resolution available, at least 1080 pixels wide",
+    "4:5": "Vertical composition, aspect ratio 4:5",
+    "3:2": "Landscape composition, aspect ratio 3:2",
+    "1:1": "Square composition, aspect ratio 1:1, subject centered",
+    "4:3": "Horizontal composition, aspect ratio 4:3",
+    "2:1": "Panoramic composition, aspect ratio 2:1",
+    "2:3": "Vertical composition, aspect ratio 2:3",
+    "3:4": "Vertical composition, aspect ratio 3:4",
+    "21:9": "Panoramic composition, aspect ratio 21:9",
+    "texture": "Wide horizontal composition, aspect ratio 16:9, even texture across the whole frame",
+    "note": "Grok rend souvent du 3:2 ou du 2:3 en 1168 × 784 px quel que soit le format demandé : choisir 2:3 pour du 4:5 ou du 9:16, 3:2 pour du 16:9, prendre la 2k quand elle est proposée, et recadrer à la réception (jamais d'agrandissement au-delà de 1,5 fois)."
+  },
+  "zone_texte": {
+    "gauche": "generous empty space on the left third of the frame for a title",
+    "droite": "calm empty area in the right third of the frame for a title",
+    "haut": "quiet uncluttered area in the upper half for a title",
+    "bas": "the lower third stays dark and simple for text overlay",
+    "centre": "calm empty space in the middle of the frame for a title",
+    "telephone": "main subject in the lower half, quiet uncluttered area in the upper half for a title"
+  },
+  "pieges": [
+    {
+      "sujet": "mains en trop",
+      "constat": "Troisième main ou troisième poing ganté : nelis (g-service-manometres, trois mains autour du collecteur), esaie-55-1 (axe-numerique, une main qui sort de l'écran pendant que deux autres tapent), iprof (deux paires de mains vues du dessus, refaite sans vue plongeante). Toutes trois ont dû être régénérées.",
+      "parade": "only two hands, both belonging to one single person and clearly attached to the same forearms, no other hand anywhere in the frame"
+    },
+    {
+      "sujet": "doigts",
+      "constat": "Doigts en trop ou déformés : interdit écrit en toutes lettres dans tonchemindevie et sondage-cse après relecture. Les audits notent au contraire que les mains gantées sont toujours correctes (brasserieassur, btp-confort-avenir, h-renovation, nelis corrigée : « deux gants »).",
+      "parade": "hands in plain dark work gloves, fingers relaxed and partly hidden, hands cropped at the edge of the frame"
+    },
+    {
+      "sujet": "mains à sortir du cadre",
+      "constat": "Quand le geste n'est pas le sujet, les mains créent plus de risques qu'elles n'apportent : laure-polin, atelier-shazak, patchacha et baptisteconte les interdisent toutes et leurs séries sont jugées « sans défaut ».",
+      "parade": "no hands, no people, only the objects at rest on the surface"
+    },
+    {
+      "sujet": "mécanismes",
+      "constat": "Objets mécaniquement impossibles : winsbike-atelier (étrier de frein tenu à la main au milieu du disque, sans fixation), efficience-triathlon (chaîne qui traverse la cassette en ligne droite, pignons empilés), talon-libre (chaussure de télémark fixée par l'arrière, pointe en l'air : l'inverse du vrai geste). Un client du métier le voit tout de suite.",
+      "parade": "the assembly shown complete and mechanically accurate, every part mounted exactly as on a real working machine, nothing floating or held loose by hand; or the parts lying still on the bench, not assembled"
+    },
+    {
+      "sujet": "posture et geste technique",
+      "constat": "talon-libre : le « skieur de télémark » a la posture d'un skieur alpin ; l'audit demande de décrire la posture elle-même.",
+      "parade": "seen in backlit silhouette, the exact posture described step by step (for example one knee bent low, rear heel lifted off the ski)"
+    },
+    {
+      "sujet": "échafaudages et chantiers",
+      "constat": "h-renovation : échafaudage d'isolation posé à l'écart du mur, sans garde-corps, planches en escalier ; remplacé après audit (« contre le mur, garde-corps »).",
+      "parade": "scaffolding standing flush against the facade, guardrails and toe boards on every working level, straight level planks, a tidy and safe site"
+    },
+    {
+      "sujet": "visages",
+      "constat": "marcordi : 404 et tarifs montrent une personne en « prise américaine » (cadrée à mi-cuisse, visage visible) malgré la consigne ; exco v2, qui autorisait des visages fictifs, demande de relancer tout « visage étrange ». Les séries jugées sans défaut ne montrent jamais de visage.",
+      "parade": "seen strictly from behind, face never visible, head turned away, or cropped at the shoulders"
+    },
+    {
+      "sujet": "silhouettes en trop",
+      "constat": "loeilsingulier : le quatuor compte une silhouette en trop (un bras et un violon sortent du deuxième musicien) ; baptisteconte : Grok ajoute une silhouette lointaine dans les lieux vides ; edwin : silhouette en trop dans un héros.",
+      "parade": "each figure clearly separated with space between them, hands mostly hidden; or an empty place, nobody, not even a distant silhouette"
+    },
+    {
+      "sujet": "texte parasite",
+      "constat": "« Grok écrit souvent des lettres sans le vouloir » (panneaux, papiers, livres, numéros de sièges, cadrans, plans, emballages, camions : baptisteconte, brasserieassur, dbl-avocat). Les consignes qui ont marché décrivent les supports comme vierges.",
+      "parade": "pages completely blank, blank book spines, abstract unreadable marks, plain unmarked surfaces, dials with tick marks only and no numbers"
+    },
+    {
+      "sujet": "écrans",
+      "constat": "Écrans lisibles ou interfaces inventées : règle ajoutée dans warmline, marcordi, bvcomm, sondage-cse, iprof (pas de logo Apple).",
+      "parade": "screen turned away from the camera, or showing only a soft abstract glow with no interface; plain unbranded devices"
+    },
+    {
+      "sujet": "véhicules",
+      "constat": "Plaques, logos et inscriptions sur camions et voitures (brasserieassur, talon-libre) ; les séries de route réussies n'en montrent aucun (instinct-aventure, will-midoux : seulement des traînées de phares).",
+      "parade": "no vehicles visible, only blurred light trails; or a plain unmarked vehicle with no license plate, no badge and no lettering"
+    },
+    {
+      "sujet": "paysage qui dérive",
+      "constat": "elka : collines bocagères rendues en plantation de thé ou rizières, pylônes ; gdreseau : pitons tropicaux étrangers au lieu du site ; apasdechien : promenade méditerranéenne au lieu des quais du lac. Grok va vers le paysage le plus « photogénique ».",
+      "parade": "{lieu} landscape only, described by its real features: no tea plantation, no rice terraces, no high mountains, no tropical vegetation, no power lines, no pylons, no modern buildings"
+    },
+    {
+      "sujet": "image hors série",
+      "constat": "winsbike : la vignette VTT, froide et en 654 px, détonne au milieu de vignettes chaudes ; edwin, petitenature : photos de jour du client à côté d'images Grok nocturnes.",
+      "parade": "restate the palette and the light of the series inside the scene itself, then append the common style unchanged"
+    },
+    {
+      "sujet": "faux produit, fausse œuvre",
+      "constat": "Règle de la skill et de chasse-elegance, kabooca, kosons, laure-polin, baptisteconte, aronovitch : Grok ne crée jamais un produit, un emballage, une œuvre ni un plat présenté comme ceux du client.",
+      "parade": "empty frames, empty plinths, blank material samples, no finished product, no artwork, no packaging"
+    },
+    {
+      "sujet": "clichés de banque d'images",
+      "constat": "observatoire-des-cse, dmca, sondage-cse : poignées de main, pièces de puzzle, pouces levés, sourires posés et regards caméra signalent une image générique.",
+      "parade": "candid and unposed, nobody looking at the camera, no handshakes, no puzzle pieces, no thumbs up, no glossy CGI, no lens flare"
+    },
+    {
+      "sujet": "clichés culturels et symboles",
+      "constat": "Exclus nommément : torii, cerisiers, kanji (laurent-barrera), bouddha, mandala, encens (tonchemindevie), marteau de juge et balance (dbl-avocat), lanternes et dragons (dmca), école de sorciers et hiéroglyphes (games42), chalets de carte postale (talon-libre, artic).",
+      "parade": "no cultural or religious symbols, no postcard clichés of {lieu}"
+    },
+    {
+      "sujet": "lieu réel",
+      "constat": "Toutes les règles le répètent : une ambiance n'est jamais présentée comme le vrai local, la vraie salle ou le vrai lieu de tournée. bendandpeel l'écrit dans la consigne même.",
+      "parade": "an atmospheric mood image, not a portrait of a real venue, generic and unidentifiable"
+    },
+    {
+      "sujet": "enfants",
+      "constat": "games42 interdit tout enfant ; elka n'autorise que des mains d'enfant qui dessinent.",
+      "parade": "only a child's hands drawing at a table, no face, no body"
+    }
+  ],
+  "conseils": [
+    "Une nouvelle génération par image : repartir d'un résultat précédent renvoie la même image (elka).",
+    "Générer deux à quatre variantes et garder la plus calme ; vérifier en taille réelle mains, mécanismes, texte et visages avant de nommer le fichier.",
+    "Chaque image Grok porte sur le site la mention « Illustration générée », vignettes comprises."
+  ]
+}
