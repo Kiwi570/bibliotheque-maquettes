@@ -1,0 +1,73 @@
+{
+ "nom": "carte-a-calques",
+ "titre": "Carte SVG à calques allumables (couverture, secteurs, points de rendez-vous) avec légende qui sert de liste des zones",
+ "role": "carte",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive",
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": "surffm-maquette/nous-capter-couverture",
+ "convient_a": [
+  "services-b2b",
+  "bâtiment",
+  "artisanat",
+  "santé",
+  "bien-être",
+  "formation",
+  "association",
+  "collectivité",
+  "média",
+  "tourisme",
+  "commerce",
+  "restauration",
+  "immobilier",
+  "animaux",
+  "sport"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "sobre",
+  "océanique",
+  "nocturne",
+  "artisanal",
+  "végétal",
+  "froid"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "debut": "déclenchement de l'entrée sur la carte, 'top 72%'",
+  "duree": "tracé d'un contour en s, 1.2",
+  "decalage": "écart entre deux zones d'un calque en s, 0.14",
+  "ondes": "ondes en boucle autour des cercles [data-ondes], true (retirées en mode calme)"
+ },
+ "images": [
+  {
+   "role": "fond de carte (SVG du projet, ou image dans un <image> placé dans .cac__fond)",
+   "selecteur": ".cac__fond",
+   "nombre": "1",
+   "ratio": "5:4 (viewBox 600 × 480)",
+   "largeur": 1600,
+   "zone_calme": "aucune pour le texte (étiquettes posées sur les zones) ; coin bas gauche pour la mention « carte illustrative » ; fond peu chargé et peu contrasté pour que les calques ressortent"
+  }
+ ],
+ "poids_ko": 18.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

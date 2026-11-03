@@ -1,0 +1,67 @@
+{
+ "nom": "courbe-interactive",
+ "titre": "Courbe SVG qui se trace à l'arrivée, explorée au curseur : repère, valeur lue et texte explicatif par zone",
+ "role": "outil-interactif",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "efficience-triathlon-maquette/science"
+ ],
+ "convient_a": [
+  "sport",
+  "santé",
+  "bien-être",
+  "conseil",
+  "formation",
+  "services-b2b",
+  "industrie",
+  "finance",
+  "immobilier",
+  "numérique",
+  "collectivité",
+  "association",
+  "média"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "sobre",
+  "froid",
+  "énergique",
+  "nocturne",
+  "industriel"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "donnees": "objet qui remplace ou complète le JSON de la page (x, y, points, zones, seuils, depart, description), aucun",
+  "selecteurDonnees": "où lire le JSON dans la section, 'script[type=\"application/json\"]'",
+  "x": "axe horizontal { min, max, unite, libelle, pas, pasCurseur, decimales }, lu dans le JSON (0 → 100, pas 10)",
+  "y": "axe vertical { min, max, unite, libelle, pas, decimales }, lu dans le JSON (0 → 10, pas 2, 1 décimale)",
+  "lisse": "courbe cubique monotone (true) ou segments droits (false), true",
+  "duree": "durée du tracé en secondes, 1.6",
+  "balayage": "le repère glisse du début de l'axe jusqu'à la valeur de départ à l'arrivée, true",
+  "locale": "format des nombres, 'fr-FR'",
+  "debut": "déclenchement du tracé, 'top 75%'"
+ },
+ "images": [],
+ "poids_ko": 22,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

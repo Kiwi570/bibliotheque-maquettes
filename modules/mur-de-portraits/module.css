@@ -1,0 +1,106 @@
+/* Mur de portraits : grille dense de vignettes 3:4, barre d'outils collante, fiche en <dialog> natif.
+   Identité uniquement par variables ; --mdp-min (largeur mini d'une vignette) et --mdp-gap règlent la densité. */
+.mdp { --mdp-min: 74px; --mdp-gap: 6px; --mdp-rayon: calc(var(--rayon) * .45); position: relative; padding-block: clamp(56px, 9vw, 128px); }
+.mdp__tete { display: grid; gap: .9rem; max-width: 46rem; margin-bottom: clamp(20px, 3vw, 36px); }
+.mdp__titre { font-size: clamp(2rem, 5vw, 3.6rem); }
+.mdp__texte { color: var(--couleur-texte-doux); max-width: 38rem; }
+
+/* Barre d'outils : recherche, groupes, compteur ; collée sous l'en-tête pendant la traversée du mur. */
+.mdp__outils { position: sticky; top: var(--entete-h); z-index: 6; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; padding: .7rem 0; background: color-mix(in oklab, var(--couleur-fond) 93%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--couleur-ligne); }
+.mdp__recherche { flex: 1 1 15rem; max-width: 24rem; display: flex; align-items: center; gap: .5rem; min-height: 44px; padding: 0 .4rem 0 1rem; border: 1px solid var(--couleur-ligne); border-radius: 999px; background: var(--couleur-surface); margin: 0; }
+.mdp__recherche:focus-within { outline: 2px solid var(--couleur-accent); outline-offset: 2px; }
+.mdp__recherche svg { flex: none; width: 18px; height: 18px; color: var(--couleur-texte-doux); }
+.mdp__recherche input { flex: 1; min-width: 0; min-height: 44px; border: 0; background: transparent; color: inherit; font: inherit; font-size: max(16px, 1rem); outline: none; }
+.mdp__recherche input::placeholder { color: var(--couleur-texte-doux); opacity: 1; }
+.mdp__filtres { display: flex; gap: .4rem; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; padding: 3px; margin: -3px; }
+.mdp__filtres::-webkit-scrollbar { display: none; }
+.mdp__filtre { flex: none; min-height: 44px; padding: 0 1.05rem; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; font-size: max(12px, .9rem); white-space: nowrap; cursor: pointer; transition: background-color .25s, color .25s, border-color .25s; }
+.mdp__filtre:hover { border-color: var(--couleur-texte-doux); }
+.mdp__filtre[aria-pressed="true"] { background: var(--couleur-accent); color: var(--couleur-sur-accent); border-color: var(--couleur-accent); }
+.mdp__compte { margin-left: auto; font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .06em; color: var(--couleur-texte-doux); white-space: nowrap; }
+
+/* Le mur */
+.mdp__grille { position: relative; list-style: none; margin: clamp(16px, 2vw, 24px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(var(--mdp-min), 1fr)); gap: var(--mdp-gap); }
+.mdp__case { position: relative; }
+.mdp__carte { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; background: none; border-radius: var(--mdp-rayon); cursor: pointer; container-type: inline-size; }
+.mdp__carte:focus-visible { outline-offset: 2px; z-index: 4; }
+.mdp__corps { position: absolute; inset: 0; display: block; transition: opacity .7s ease, transform .7s cubic-bezier(.2, .75, .2, 1); transition-delay: calc(var(--d, 0) * 1ms); }
+.mdp--anime .mdp__carte:not(.est-vu) .mdp__corps { opacity: 0; transform: translateY(22px) scale(.82); }
+
+/* Vignette générée : silhouette, initiales et dégradé tirés de l'identité ; une photo (.mdp__photo) la recouvre. */
+.mdp__visuel {
+  --c-teinte: color-mix(in oklab, var(--couleur-accent) calc(var(--a, 50) * 1%), var(--couleur-secondaire));
+  --c-fond: color-mix(in oklab, var(--c-teinte) calc(var(--l, 45) * 1%), var(--couleur-fond));
+  --c-clair: color-mix(in oklab, var(--c-fond) 72%, var(--couleur-texte));
+  --c-forme: color-mix(in oklab, var(--couleur-texte) 82%, var(--c-teinte));
+  position: absolute; inset: 0; display: block; overflow: hidden; border-radius: var(--mdp-rayon);
+  background:
+    radial-gradient(circle closest-side at 50% 37%, var(--c-forme) 0 35%, transparent 36%),
+    radial-gradient(ellipse 50% 34% at 50% 100%, var(--c-forme) 0 97%, transparent 100%),
+    linear-gradient(165deg, var(--c-clair), var(--c-fond) 70%);
+  transform: scale(var(--k, 1)); transform-origin: 50% 50%;
+  transition: transform .28s cubic-bezier(.2, .8, .3, 1), box-shadow .28s;
+}
+.mdp__visuel[data-forme="1"] { background: radial-gradient(circle closest-side at 50% 37%, var(--c-forme) 0 35%, transparent 36%), radial-gradient(ellipse 50% 34% at 50% 100%, var(--c-forme) 0 97%, transparent 100%), conic-gradient(from 210deg at 70% 25%, var(--c-clair), var(--c-fond), var(--c-clair)); }
+.mdp__visuel[data-forme="2"] { background: radial-gradient(circle closest-side at 50% 37%, var(--c-forme) 0 35%, transparent 36%), radial-gradient(ellipse 50% 34% at 50% 100%, var(--c-forme) 0 97%, transparent 100%), repeating-linear-gradient(135deg, color-mix(in oklab, var(--c-clair) 60%, transparent) 0 3px, transparent 3px 9px), var(--c-fond); }
+.mdp__visuel[data-forme="3"] { background: radial-gradient(circle closest-side at 50% 37%, var(--c-forme) 0 35%, transparent 36%), radial-gradient(ellipse 50% 34% at 50% 100%, var(--c-forme) 0 97%, transparent 100%), radial-gradient(120% 70% at 50% 0%, var(--c-clair), var(--c-fond) 75%); }
+.mdp__init { position: absolute; left: 0; right: 0; bottom: 7%; text-align: center; font-family: var(--police-titres); font-weight: 600; font-size: max(12px, 19cqi); line-height: 1; letter-spacing: .02em; color: color-mix(in oklab, var(--couleur-fond) 82%, var(--c-teinte)); }
+.mdp__photo, .mdp__fiche-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Survol et focus : la vignette grossit (loupe en JS sur souris), le nom s'affiche dessous. */
+.mdp__carte:is(:hover, :focus-visible) { z-index: 5; }
+.mdp:not(.mdp--loupe) .mdp__carte:is(:hover, :focus-visible) .mdp__visuel { --k: 1.35; }
+.mdp--loupe .mdp__carte:focus-visible .mdp__visuel { --k: 1.35; }
+.mdp__carte:is(:hover, :focus-visible) .mdp__visuel { box-shadow: 0 14px 30px -12px color-mix(in oklab, var(--couleur-fond) 40%, transparent), 0 0 0 2px var(--couleur-accent); }
+.mdp__nom { position: absolute; top: calc(100% + 14px); left: 50%; translate: -50% 4px; z-index: 6; padding: .3em .7em; border-radius: 999px; background: var(--couleur-texte); color: var(--couleur-fond); font-size: max(12px, .78rem); line-height: 1.3; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .2s, translate .2s; }
+.mdp__case[data-bord="g"] .mdp__nom { left: 0; translate: 0 4px; }
+.mdp__case[data-bord="d"] .mdp__nom { left: auto; right: 0; translate: 0 4px; }
+.mdp__carte:is(:hover, :focus-visible) .mdp__nom { opacity: 1; translate: -50% 0; }
+.mdp__case[data-bord] .mdp__carte:is(:hover, :focus-visible) .mdp__nom { translate: 0 0; }
+.mdp__case[data-bord=""] .mdp__carte:is(:hover, :focus-visible) .mdp__nom { translate: -50% 0; }
+@media (hover: none) { .mdp__nom { display: none; } }
+
+.mdp__vide { display: grid; justify-items: start; gap: 1rem; padding: 2rem 0; color: var(--couleur-texte-doux); }
+.mdp__aide { margin-top: 1rem; font-size: max(12px, .85rem); color: var(--couleur-texte-doux); }
+
+/* Fiche */
+.mdp__fiche { width: min(100% - 2 * var(--espace), 860px); max-width: none; max-height: min(92svh, 760px); padding: 0; border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-fond); color: var(--couleur-texte); overflow: auto; overscroll-behavior: contain;
+  opacity: 1; translate: 0 0; transition: opacity .3s, translate .35s cubic-bezier(.2, .8, .3, 1), overlay .35s allow-discrete, display .35s allow-discrete; }
+.mdp__fiche:not([open]) { opacity: 0; translate: 0 24px; }
+@starting-style { .mdp__fiche[open] { opacity: 0; translate: 0 24px; } }
+.mdp__fiche::backdrop { background: color-mix(in oklab, var(--couleur-fond) 78%, transparent); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+:root:has(.mdp__fiche[open]) { overflow: hidden; }
+.mdp__fiche-cadre { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+.mdp__fiche-image { position: relative; aspect-ratio: 3 / 4; max-height: min(92svh, 760px); container-type: inline-size; }
+.mdp__visuel--grand { border-radius: 0; transform: none; }
+.mdp__visuel--grand .mdp__init { font-size: max(16px, 16cqi); }
+.mdp__fiche-texte { display: grid; align-content: center; gap: .8rem; padding: clamp(24px, 4vw, 48px); padding-top: clamp(56px, 6vw, 64px); }
+.mdp__fiche-nom { font-size: clamp(1.7rem, 3.4vw, 2.6rem); }
+.mdp__fiche-role { font-size: 1.1rem; color: var(--couleur-accent); }
+.mdp__fiche-desc { color: var(--couleur-texte-doux); }
+.mdp__fiche-nav { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--couleur-ligne); }
+.mdp__fiche-bouton { min-height: 44px; padding: 0 1.1rem; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; cursor: pointer; }
+.mdp__fiche-bouton:hover { border-color: var(--couleur-texte-doux); }
+.mdp__fiche-pos { font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-texte-doux); }
+.mdp__fiche-fermer { position: absolute; top: 10px; right: 10px; margin: 0; }
+.mdp__fiche-fermer button { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+
+@media (max-width: 700px) {
+  .mdp { --mdp-min: 58px; --mdp-gap: 4px; }
+  .mdp__outils { gap: .5rem; }
+  .mdp__recherche { flex-basis: 100%; max-width: none; }
+  .mdp__filtres { flex-basis: calc(100% - 7.5rem); }
+  .mdp__fiche { width: 100%; max-height: 94svh; margin-bottom: 0; border-radius: var(--rayon) var(--rayon) 0 0; }
+  .mdp__fiche-cadre { grid-template-columns: 1fr; }
+  .mdp__fiche-image { aspect-ratio: 4 / 3; max-height: 40svh; }
+  .mdp__fiche-texte { padding-top: 20px; }
+}
+@media (max-width: 360px) { .mdp { --mdp-min: 52px; } }
+
+/* Réduire les animations et mode calme : tout est visible tout de suite, rien ne glisse. */
+@media (prefers-reduced-motion: reduce) {
+  .mdp__corps { opacity: 1 !important; transform: none !important; }
+  .mdp__fiche { translate: none; }
+}
+.calme .mdp__corps { opacity: 1 !important; transform: none !important; }
+.calme .mdp__fiche { translate: none; }

@@ -1,0 +1,26 @@
+{
+ "etapes": [
+  {
+   "defiler": "[data-module=\"schema-epingle-etapes\"]"
+  },
+  {
+   "attendre": 600
+  },
+  {
+   "cliquer": ".see__puce:visible >> nth=2",
+   "si": ".see__puce:visible"
+  },
+  {
+   "attendre": 1000
+  },
+  {
+   "cliquer": ".see__puce:visible >> nth=3",
+   "si": ".see__puce:visible"
+  },
+  {
+   "verifier": "[data-module=\"schema-epingle-etapes\"]"
+  }
+ ],
+ "pause": 600,
+ "video": "les-deux"
+}

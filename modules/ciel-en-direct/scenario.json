@@ -1,0 +1,20 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"ciel-en-direct\"] .ced__carte"},
+  {"cliquer": "[data-ced-moment=\"aube\"]"},
+  {"verifier": ".ced[data-phase=\"aube\"]"},
+  {"cliquer": "[data-ced-moment=\"midi\"]"},
+  {"verifier": ".ced[data-phase=\"jour\"]"},
+  {"cliquer": "[data-ced-moment=\"crepuscule\"]"},
+  {"verifier": ".ced[data-phase=\"crepuscule\"]"},
+  {"cliquer": "[data-ced-moment=\"nuit\"]"},
+  {"verifier": ".ced[data-phase=\"nuit\"]"},
+  {"cliquer": "#ced-curseur"},
+  {"touche": "ArrowRight"},
+  {"touche": "ArrowRight"},
+  {"verifier": "[data-ced-drapeau]"},
+  {"cliquer": "[data-ced-maintenant]"},
+  {"verifier": "[data-ced-maintenant][aria-pressed=\"true\"]"}
+ ],
+ "pause": 1100
+}

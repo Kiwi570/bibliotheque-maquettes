@@ -1,0 +1,97 @@
+/* Carte à calques — identité uniquement par les variables du socle. */
+.cac { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.cac__tete { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vh, 56px); }
+.cac__titre { font-size: clamp(2.2rem, 5.4vw, 4.6rem); line-height: 1; padding-block: .06em; }
+.cac__intro { color: var(--couleur-texte-doux); max-width: 52ch; }
+
+/* Teintes des calques : 1 accent, 2 secondaire, 3 texte. */
+.cac [data-teinte="1"] { --cac-teinte: var(--couleur-accent); }
+.cac [data-teinte="2"] { --cac-teinte: var(--couleur-secondaire); }
+.cac [data-teinte="3"] { --cac-teinte: var(--couleur-texte); }
+
+.cac__corps { display: grid; gap: clamp(20px, 4vw, 64px); align-items: start; }
+@media (min-width: 900px) { .cac__corps { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); } }
+
+/* Légende interactive et liste texte des zones (équivalent de la carte) */
+.cac__legende { display: grid; gap: 14px; min-width: 0; }
+.cac__groupe { border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-surface); overflow: hidden; }
+.cac__calque { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; align-items: center; gap: 14px; width: 100%; min-height: 64px; padding: 12px 16px; border: 0; background: transparent; text-align: left; cursor: pointer; }
+.cac__calque:focus-visible, .cac__zone-bouton:focus-visible { outline-offset: -3px; }
+.cac__calque-texte { display: grid; gap: 2px; min-width: 0; }
+.cac__calque-texte b { font-family: var(--police-titres); font-size: clamp(1.1rem, 1rem + .5vw, 1.4rem); line-height: 1.15; font-weight: 600; }
+.cac__calque-texte > span { font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cac__pastille { width: 26px; height: 26px; border: 2px solid var(--cac-teinte); background: color-mix(in oklab, var(--cac-teinte) 24%, transparent); transition: opacity .3s; }
+.cac__pastille--zone { border-radius: 50%; }
+.cac__pastille--secteur { border-radius: 6px 12px 8px 14px; }
+.cac__pastille--point { border-radius: 50%; background: var(--cac-teinte); box-shadow: inset 0 0 0 6px var(--couleur-surface); }
+/* Interrupteur visuel (l'état est porté par aria-pressed). */
+.cac__interrupteur { position: relative; width: 40px; height: 22px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-fond); transition: background .3s, border-color .3s; }
+.cac__interrupteur::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--couleur-texte-doux); transition: translate .3s, background .3s; }
+.cac__calque[aria-pressed="true"] .cac__interrupteur { background: color-mix(in oklab, var(--cac-teinte) 30%, var(--couleur-fond)); border-color: var(--cac-teinte); }
+.cac__calque[aria-pressed="true"] .cac__interrupteur::after { translate: 18px 0; background: var(--cac-teinte); }
+.cac__calque[aria-pressed="false"] .cac__pastille { opacity: .35; }
+.cac__calque:hover .cac__interrupteur { border-color: var(--cac-teinte); }
+
+.cac__zones { list-style: none; margin: 0; padding: 0 0 6px; border-top: 1px solid var(--couleur-ligne); }
+.cac__zone-bouton { display: grid; gap: 1px; width: 100%; min-height: 44px; padding: 9px 16px 9px 58px; border: 0; background: transparent; text-align: left; cursor: pointer; position: relative; transition: background .25s; }
+.cac__zone-bouton::before { content: ""; position: absolute; left: 25px; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; border: 2px solid var(--cac-teinte); transition: background .25s, scale .25s; }
+.cac__zone-bouton:hover { background: color-mix(in oklab, var(--cac-teinte) 8%, transparent); }
+.cac__zone-bouton[aria-pressed="true"] { background: color-mix(in oklab, var(--cac-teinte) 14%, transparent); }
+.cac__zone-bouton[aria-pressed="true"]::before { background: var(--cac-teinte); scale: 1.3; }
+.cac__nom { font-weight: 600; line-height: 1.3; }
+.cac__detail { font-size: max(12px, .85rem); line-height: 1.4; color: var(--couleur-texte-doux); }
+/* Calque éteint : la liste reste lisible (c'est l'équivalent texte), seul le repère s'estompe. */
+.cac__groupe.est-eteint .cac__zone-bouton::before { opacity: .4; }
+.cac__note { font-size: max(12px, .85rem); color: var(--couleur-texte-doux); }
+
+/* Carte : collante, bornée par la hauteur visible (en-tête et barres mesurés). Ratio du viewBox : 5:4. */
+.cac__carte { --cac-marge: 0px; position: sticky; top: calc(var(--entete-h) + var(--cac-marge)); z-index: 2; order: -1; margin: 0; display: flex; justify-content: center; padding-block: 8px; background: var(--couleur-fond); }
+.cac__plan { position: relative; width: min(100%, calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 16px) * .46 * 5 / 4)); aspect-ratio: 5 / 4; border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); box-shadow: 0 0 0 1px var(--couleur-ligne); container: cac-plan / inline-size; }
+@media (min-width: 900px) {
+  .cac__carte { --cac-marge: clamp(12px, 3vh, 32px); order: 2; padding-block: 0; background: none; }
+  .cac__plan { width: min(100%, calc((var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--cac-marge)) * 5 / 4)); }
+}
+.cac__svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Fond de carte de démonstration (remplaçable par le SVG ou l'image du projet dans .cac__fond). */
+.cac__mer { fill: color-mix(in oklab, var(--couleur-secondaire) 24%, var(--couleur-fond)); }
+.cac__houle path { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 14%, transparent); stroke-width: 1.5; stroke-linecap: round; }
+.cac__terre { fill: color-mix(in oklab, var(--couleur-texte) 9%, var(--couleur-fond)); }
+.cac__ile { fill: color-mix(in oklab, var(--couleur-texte) 9%, var(--couleur-fond)); stroke: var(--couleur-texte-doux); stroke-width: 1.5; }
+.cac__relief path { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 16%, transparent); stroke-width: 1.2; }
+.cac__lac { fill: color-mix(in oklab, var(--couleur-secondaire) 22%, var(--couleur-fond)); stroke: color-mix(in oklab, var(--couleur-secondaire) 50%, transparent); stroke-width: 1.5; }
+.cac__trait { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.cac__cote { stroke: var(--couleur-texte-doux); stroke-width: 2.2; }
+.cac__riviere { stroke: color-mix(in oklab, var(--couleur-secondaire) 60%, transparent); stroke-width: 2.4; }
+.cac__nord path { fill: none; stroke: var(--couleur-texte-doux); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Calques */
+.cac__couche { transition: opacity .3s; }
+.cac__zone { fill: color-mix(in oklab, var(--cac-teinte) 20%, transparent); stroke: var(--cac-teinte); stroke-width: 2.4; stroke-linejoin: round; transition: fill .35s, stroke-width .35s, opacity .35s; }
+[data-calque="couverture"] .cac__zone { fill: color-mix(in oklab, var(--cac-teinte) 13%, transparent); }
+.cac__point { fill: var(--cac-teinte); stroke: var(--couleur-fond); stroke-width: 3; transition: opacity .35s; }
+.cac__onde { fill: none; stroke: var(--cac-teinte); stroke-width: 1.6; opacity: 0; pointer-events: none; transform-box: fill-box; transform-origin: center; animation: cac-onde 4s linear infinite; animation-delay: calc(var(--i, 0) * -1.33s); animation-play-state: paused; }
+.cac--visible .cac__onde { animation-play-state: running; }
+@keyframes cac-onde { 0% { transform: scale(.08); opacity: .8; } 100% { transform: scale(1); opacity: 0; } }
+/* Zone choisie dans la liste : elle ressort, les autres s'estompent. */
+.cac__plan.cac--vise .cac__zone:not(.est-vise), .cac__plan.cac--vise .cac__point:not(.est-vise) { opacity: .3; }
+.cac__zone.est-vise { fill: color-mix(in oklab, var(--cac-teinte) 34%, transparent); stroke-width: 4; }
+.cac__point.est-vise { stroke: var(--cac-teinte); stroke-width: 6; stroke-opacity: .45; }
+
+/* Étiquettes HTML posées en % du plan (lisibles à toute taille de carte). */
+.cac__etiquettes { position: absolute; inset: 0; pointer-events: none; }
+.cac__etiquette { position: absolute; left: var(--x); top: var(--y); translate: -50% -50%; padding: 3px 9px; border-radius: 999px; white-space: nowrap; font-size: max(12px, .78rem); font-weight: 600; line-height: 1.3; background: color-mix(in oklab, var(--couleur-fond) 86%, transparent); color: var(--couleur-texte); box-shadow: 0 0 0 1px color-mix(in oklab, var(--cac-teinte) 55%, transparent); transition: opacity .4s, translate .4s, box-shadow .3s; }
+.cac__etiquette--droite { translate: 14px -50%; }
+.cac__etiquette--gauche { translate: calc(-100% - 14px) -50%; }
+.cac__etiquette.est-cache { opacity: 0; visibility: hidden; transition: opacity .3s, visibility 0s .3s; }
+.cac__etiquette.est-vise { z-index: 1; background: var(--cac-teinte); color: var(--couleur-fond); box-shadow: 0 0 0 1px var(--cac-teinte); }
+.cac__plan.cac--vise .cac__etiquette:not(.est-vise) { opacity: .35; }
+/* Petite carte : seules les étiquettes choisies restent (la liste donne tous les noms) ; la mention « indicatif » passe à la note sous la légende. */
+@container cac-plan (max-width: 480px) { .cac__etiquette:not(.est-vise), .cac__mention { display: none; } }
+
+.cac__mention { position: absolute; left: 10px; bottom: 10px; max-width: calc(100% - 20px); margin: 0; padding: 4px 10px; border-radius: 999px; background: color-mix(in oklab, var(--couleur-fond) 90%, transparent); color: var(--couleur-texte-doux); font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .04em; }
+
+/* Réduire les animations et mode calme : carte complète, aucune onde. */
+@media (prefers-reduced-motion: reduce) { .cac__onde { display: none; } }
+.calme .cac__onde { display: none; }
+@media (max-width: 360px) { .cac__calque { gap: 10px; padding-inline: 12px; } .cac__zone-bouton { padding-left: 48px; } .cac__zone-bouton::before { left: 21px; } }

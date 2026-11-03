@@ -1,0 +1,18 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"mur-de-portraits\"] .mdp__grille"},
+  {"survoler": ".mdp__case:nth-child(14) .mdp__carte"},
+  {"attendre": 500},
+  {"cliquer": ".mdp__filtre[data-groupe=\"Terrain\"]"},
+  {"saisir": ["#mdp-cherche", "livraison"]},
+  {"attendre": 900},
+  {"verifier": ".mdp__filtre[data-groupe=\"Terrain\"][aria-pressed=\"true\"]"},
+  {"cliquer": ".mdp__case:not([hidden]) .mdp__carte >> nth=2"},
+  {"verifier": ".mdp__fiche[open] .mdp__fiche-nom"},
+  {"cliquer": ".mdp__fiche[open] [data-suiv]"},
+  {"attendre": 400},
+  {"touche": "Escape"}
+ ],
+ "pause": 600,
+ "video": "les-deux"
+}

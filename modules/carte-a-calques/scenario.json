@@ -1,0 +1,20 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"carte-a-calques\"] .cac__plan"},
+  {"attendre": 2400},
+  {"cliquer": "[data-cac-calque=\"secteurs\"]"},
+  {"verifier": "[data-cac-calque=\"secteurs\"][aria-pressed=\"false\"]"},
+  {"cliquer": "[data-cac-calque=\"couverture\"]"},
+  {"attendre": 600},
+  {"cliquer": "[data-cac-calque=\"couverture\"]"},
+  {"attendre": 1400},
+  {"cliquer": "[data-cac-zone=\"est\"]"},
+  {"verifier": "[data-cac-calque=\"secteurs\"][aria-pressed=\"true\"]"},
+  {"attendre": 1400},
+  {"cliquer": "[data-cac-zone=\"port\"]"},
+  {"verifier": ".cac__etiquette.est-vise"},
+  {"attendre": 800},
+  {"touche": "Escape"}
+ ],
+ "pause": 600
+}

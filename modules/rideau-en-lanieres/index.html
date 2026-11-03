@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rideau en lanières · module</title>
+<!-- Avant le premier affichage : mode calme mémorisé et rideau déjà vu dans la session (pas d'éclair du rideau). -->
+<script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');if(sessionStorage.getItem('rideau-en-lanieres-vu')==='1')d.classList.add('rdl-vu')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #15171d; --couleur-texte: #f1eee7; --couleur-accent: #e3a857; --couleur-secondaire: #3e6f92; --rayon: 10px; }
+  .demo-heros { position: relative; isolation: isolate; overflow: hidden; min-height: calc(var(--ecran-h) - 72px); /* en-tête de démonstration ≈ 72 px, sans attendre sa mesure (CLS) */ display: grid; align-items: end; padding-block: 14vh clamp(40px, 9vh, 96px); }
+  .demo-heros__fond { position: absolute; inset: 0; z-index: -1; transform: scale(1.06); transition: transform 1.6s cubic-bezier(.2, .7, .2, 1); }
+  .demo-heros.est-ouvert .demo-heros__fond { transform: none; }
+  .demo-heros__fond::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, color-mix(in oklab, var(--couleur-fond) 85%, transparent)); }
+  .demo-heros__cadre { display: grid; gap: clamp(14px, 2.4vh, 24px); }
+  .demo-heros h1 { font-size: clamp(2.4rem, 7vw, 6rem); max-width: 14ch; }
+  .demo-heros__texte { max-width: 46ch; color: var(--couleur-texte-doux); }
+  .demo-reglages { display: flex; flex-wrap: wrap; align-items: end; gap: 12px 16px; }
+  .demo-reglages label { display: grid; gap: 4px; font-size: max(12px, .8rem); font-family: var(--police-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+  .demo-reglages select { min-height: 44px; min-width: 9.5em; padding: 0 .8em; border-radius: var(--rayon); border: 1px solid var(--couleur-ligne); background: var(--couleur-surface); color: var(--couleur-texte); font: inherit; font-family: var(--police-texte); text-transform: none; letter-spacing: 0; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<div class="rdl" data-module="rideau-en-lanieres">
+  <div class="rdl__lanieres" aria-hidden="true"></div>
+  <div class="rdl__coeur" aria-hidden="true">
+    <svg class="rdl__signe" viewBox="0 0 100 100"><circle data-trace cx="50" cy="50" r="44"/><path data-trace d="M24 50 C 38 30, 62 70, 76 50"/></svg>
+    <span class="rdl__mot">Nom du site</span>
+  </div>
+  <button type="button" class="rdl__passer socle-bouton">Passer l'ouverture</button>
+</div>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-heros" aria-labelledby="demo-titre">
+    <div class="demo-heros__fond socle-visuel" aria-hidden="true"></div>
+    <div class="demo-heros__cadre socle-cadre">
+      <p class="socle-surtitre">Page d'accueil</p>
+      <h1 id="demo-titre">Le titre est déjà là, sous le rideau</h1>
+      <p class="demo-heros__texte">Le rideau s'ouvre une seule fois par session, sans jamais retarder la page : le héros est rendu dessous dès le départ. «&nbsp;Passer&nbsp;» ou la touche Échap l'écartent tout de suite.</p>
+      <div class="demo-reglages">
+        <label>Effet
+          <select id="demo-effet">
+            <option value="glisse">Glissement</option>
+            <option value="chute">Chute</option>
+            <option value="pivot">Pivot</option>
+            <option value="ecarte">Écartement</option>
+          </select>
+        </label>
+        <label>Forme
+          <select id="demo-forme">
+            <option value="droite">Bandes droites</option>
+            <option value="feuille">Feuilles</option>
+          </select>
+        </label>
+        <button type="button" class="socle-bouton socle-bouton--plein" data-rejouer>Rejouer l'ouverture</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme ou avec « réduire les animations », il n'y a pas de rideau : la page s'affiche directement.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Encore une section</p>
+    <h2>Le reste de la page</h2>
+    <p>Le rideau est fixé au-dessus de tout, mais il laisse passer les clics et le clavier pendant qu'il s'ouvre.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  const heros = document.querySelector('.demo-heros');
+  const rideau = await init(document.querySelector('[data-module="rideau-en-lanieres"]'), { apres: () => heros.classList.add('est-ouvert') });
+  document.querySelector('[data-rejouer]').addEventListener('click', () => {
+    heros.classList.remove('est-ouvert');
+    rideau.rejouer({ effet: document.getElementById('demo-effet').value, forme: document.getElementById('demo-forme').value });
+  });
+</script>
+</body>
+</html>

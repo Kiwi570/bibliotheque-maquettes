@@ -1,9 +1,16 @@
 // Teste une page de démonstration (module ou assemblage) sur 14 formats (dont tablettes 768×1024, 820×1180 et 1180×820, et 1024×640), en mode réduit et sans WebGL.
 // node outils/tester-module.mjs <module | chemin/vers/page.html> [--ecrire] [--medias]
 //   --ecrire : reporte le résultat dans modules/<nom>/module.json (tests, poids_ko)
-//   --medias : produit apercu.jpg (1440×900) et apercu.mp4 (si animé) dans le dossier du module
+//   --medias : produit apercu.jpg (1440×900) et apercu.mp4 (si animé, ou le scénario s'il existe) dans le dossier du module
 // Contrôles : erreurs console, CLS, débordement horizontal, éléments marqués [data-tient] coupés par l'écran
-// (sous l'en-tête mesuré ou sous les barres du bas), texte < 12 px, cibles < 44 px, état final sous « réduire les animations ».
+// (sous l'en-tête mesuré ou sous les barres du bas), éléments en position: sticky collés mais coupés (détectés seuls, sans marquage),
+// texte < 12 px, cibles < 44 px, état final sous « réduire les animations ».
+// Scénario facultatif : modules/<nom>/scenario.json, joué en 1440×900, 820×1180 et 390×844 (test « scenario ») et filmé dans apercu.mp4.
+//   { "etapes": [ {"defiler": "sélecteur"}, {"cliquer": "sélecteur"}, {"survoler": "sélecteur"}, {"saisir": ["sélecteur", "texte"]},
+//                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"} ],
+//     chaque étape accepte "si": "sélecteur" (jouée seulement si ce sélecteur est visible à ce format),
+//     "pause": 450,            // entre deux étapes (ms), pour la vidéo
+//     "video": "scenario" }    // "scenario" (par défaut : la vidéo montre le scénario), "defilement" (vidéo de défilement seule) ou "les-deux"
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -19,6 +26,46 @@ const relatif = '/' + path.relative(RACINE, fichier).split(path.sep).join('/');
 // Tablettes (768×1024, 820×1180, 1180×820, tactiles) et 1024×640 : formats où un élément collant manque le plus souvent de hauteur.
 const FORMATS = [[1000, 560], [1024, 640], [768, 1024, 1], [820, 1180, 1], [1180, 820, 1], [1280, 720], [1366, 768], [1440, 900], [1728, 1000], [1920, 1080], [2560, 1440], [390, 844, 1], [360, 780, 1], [320, 568, 1]];
 
+const fScenario = path.join(path.dirname(fichier), 'scenario.json');
+const scenario = fs.existsSync(fScenario) ? lireJson(fScenario) : null;
+
+async function jouer(pg, sc, pause = 0) {
+  // Joue les étapes ; renvoie la liste des problèmes (sélecteur absent, vérification ratée).
+  const pbs = [];
+  for (const e of sc.etapes) {
+    const [k, v] = Object.entries(e).find(([c]) => c !== 'si');
+    // « si » : l'étape n'est jouée que si ce sélecteur est visible (ex. commandes qui n'existent qu'en mode épinglé).
+    if (e.si && !(await pg.locator(e.si).first().isVisible().catch(() => false))) continue;
+    try {
+      if (k === 'attendre') { await attendre(v); continue; }
+      if (k === 'touche') await pg.keyboard.press(v);
+      else {
+        const sel = Array.isArray(v) ? v[0] : v; const loc = pg.locator(sel).first();
+        if (k === 'verifier') { await loc.waitFor({ state: 'visible', timeout: 2500 }); continue; }
+        await loc.scrollIntoViewIfNeeded({ timeout: 2500 });
+        if (k === 'cliquer') await loc.click({ timeout: 2500 });
+        else if (k === 'survoler') await loc.hover({ timeout: 2500 });
+        else if (k === 'saisir') { await loc.click({ timeout: 2500 }); await loc.pressSequentially(v[1], { delay: pause ? 70 : 0 }); }
+        else if (k === 'choisir') await loc.selectOption(v[1], { timeout: 2500 });
+        else if (k !== 'defiler') pbs.push(`étape inconnue ${k}`);
+      }
+    } catch (err) { pbs.push(`${k} ${JSON.stringify(v)} : ${err.message.split('\n')[0].slice(0, 80)}`); }
+    await attendre(pause || 120);
+  }
+  return pbs;
+}
+
+async function essaiScenario([w, h, mobile]) {
+  const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, isMobile: !!mobile, hasTouch: !!mobile });
+  const pg = await ctx.newPage(); const erreurs = [];
+  pg.on('pageerror', e => erreurs.push(e.message.slice(0, 160)));
+  pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text())) erreurs.push(m.text().slice(0, 160)); });
+  await pg.goto(srv.url + relatif, { waitUntil: 'load' }); await attendre(1500);
+  const pbs = await jouer(pg, scenario);
+  await ctx.close();
+  return { format: `${w}×${h}`, pbs, erreurs };
+}
+
 const srv = await servir(RACINE);
 const nav = await chromium.launch({ args: ['--enable-unsafe-swiftshader'] });
 const attendre = ms => new Promise(r => setTimeout(r, ms));
@@ -31,6 +78,7 @@ async function parcourir(pg) {
     const h = innerHeight; let y = 0;
     const lenis = window.__socleLenis;
     const max = () => document.documentElement.scrollHeight - h;
+    const collants = [...document.querySelectorAll('body *')].filter(e => getComputedStyle(e).position === 'sticky' && !e.closest('[data-entete], [data-barre]'));
     const controle = () => {
       const eh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--entete-h')) || 0;
       const bh = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--barres-h')) || 0;
@@ -40,6 +88,17 @@ async function parcourir(pg) {
         if (!sec || !sec.classList.contains('est-epingle')) continue;
         const r = el.getBoundingClientRect(); if (!r.height) continue;
         if (r.top < eh - 1 || r.bottom > h - bh + 1) pb.coupes.add((el.dataset.tient || el.className || el.tagName).toString().slice(0, 40) + ` (${Math.round(r.top)}→${Math.round(r.bottom)} / ${Math.round(eh)}-${Math.round(h - bh)})`);
+      }
+      // Éléments en position: sticky (hors en-tête et barres) : collés, ils doivent tenir entre l'en-tête et le bas de l'écran.
+      for (const el of collants) {
+        const cs = getComputedStyle(el); if (cs.position !== 'sticky' || cs.display === 'none') continue;
+        const r = el.getBoundingClientRect(); if (!r.height || !r.width) continue;
+        const parent = el.parentElement.getBoundingClientRect();
+        const haut = parseFloat(cs.top), bas = parseFloat(cs.bottom);
+        const colleHaut = !isNaN(haut) && Math.abs(r.top - haut) < 1.5 && parent.top < r.top - 1 && parent.bottom > r.bottom + 1;
+        const colleBas = !isNaN(bas) && Math.abs(h - r.bottom - bas) < 1.5 && parent.bottom > r.bottom + 1 && parent.top < r.top - 1;
+        if (!colleHaut && !colleBas) continue;
+        if (r.top < eh - 1 || r.bottom > h - bh + 1) pb.coupes.add('collant ' + (el.className || el.tagName).toString().split(' ')[0].slice(0, 30) + ` (${Math.round(r.top)}→${Math.round(r.bottom)} / ${Math.round(eh)}-${Math.round(h - bh)})`);
       }
       const yy = scrollY; scrollTo(100000, yy); pb.debord = Math.max(pb.debord, scrollX); if (scrollX) scrollTo(0, yy);
     };
@@ -78,7 +137,8 @@ const resultats = [];
 for (const f of FORMATS) resultats.push(await essai(f));
 const reduit = [await essai([1440, 900], { reduit: true }), await essai([390, 844, 1], { reduit: true })];
 const sansWebgl = await essai([1440, 900], { sansWebgl: true });
-const tous = [...resultats, ...reduit, sansWebgl];
+const scen = scenario ? [await essaiScenario([1440, 900]), await essaiScenario([820, 1180, 1]), await essaiScenario([390, 844, 1])] : [];
+const tous = [...resultats, ...reduit, sansWebgl, ...scen.map(r => ({ ...r, coupes: [], petits: [], cibles: [], cls: 0 }))];
 const erreurs = [...new Set(tous.flatMap(r => r.erreurs))];
 const clsMax = Math.max(...tous.map(r => r.cls));
 const html = fs.readFileSync(fichier, 'utf8');
@@ -89,6 +149,7 @@ const tests = {
   'sans-webgl': usesWebgl ? (!sansWebgl.erreurs.length && !sansWebgl.coupes.length ? 'ok' : 'échec : ' + sansWebgl.erreurs.join(', ')) : 'n/a',
   console: erreurs.length ? `${erreurs.length} erreur${erreurs.length > 1 ? 's' : ''} : ${erreurs.slice(0, 2).join(' | ')}` : '0 erreur',
   cls: clsMax,
+  scenario: !scenario ? 'n/a' : scen.every(r => !r.pbs.length && !r.erreurs.length) ? 'ok' : 'échec : ' + scen.filter(r => r.pbs.length || r.erreurs.length).map(r => `${r.format} ${[...r.pbs, ...r.erreurs].slice(0, 2).join(', ')}`).join(' ; '),
   'texte-12px': [...new Set(tous.flatMap(r => r.petits))].length ? 'échec : ' + [...new Set(tous.flatMap(r => r.petits))].slice(0, 3).join(', ') : 'ok',
   'cibles-44px': [...new Set(tous.flatMap(r => r.cibles))].length ? 'échec : ' + [...new Set(tous.flatMap(r => r.cibles))].slice(0, 3).join(', ') : 'ok',
 };
@@ -108,16 +169,21 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   const [y0, y1] = await pg.evaluate(() => { const m = document.querySelector('[data-module]'); const max = document.documentElement.scrollHeight - innerHeight;
     if (!m) return [0, max]; const top = m.getBoundingClientRect().top + scrollY; const pins = (window.ScrollTrigger?.getAll() || []).filter(s => s.pin && m.contains(s.pin));
     const fin = pins.length ? Math.max(...pins.map(s => s.end)) : top + m.offsetHeight - innerHeight * .6; return [Math.max(0, Math.min(max, top - innerHeight * .5)), Math.max(0, Math.min(max, fin))]; });
+  const modeVideo = scenario ? (scenario.video || 'scenario') : 'defilement';
   await pg.evaluate(y => scrollTo(0, y), y0); await attendre(600);
-  const duree = Math.min(6400, Math.max(2500, (y1 - y0) * 1.6));
+  let duree = 0; const tDemo = Date.now();
+  if (modeVideo !== 'scenario') { duree = Math.min(6400, Math.max(2500, (y1 - y0) * 1.6));
   await pg.evaluate(([y0, y1, duree]) => new Promise(ok => { const t0 = performance.now(); const pas = () => { const k = Math.min(1, (performance.now() - t0) / duree); scrollTo(0, y0 + (y1 - y0) * (k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2)); k < 1 ? requestAnimationFrame(pas) : ok(); }; requestAnimationFrame(pas); }), [y0, y1, duree]);
-  const debutFilm = (Date.now() - t0) / 1000 - duree / 1000 - 0.8;
+  }
+  if (modeVideo !== 'defilement') { await jouer(pg, scenario, scenario.pause ?? 450); await attendre(800); }
+  const debutFilm = (tDemo - t0) / 1000 - 0.2;
   await attendre(400);
   await ctx.close();
   const video = await pg.video().path();
   const out = path.join(dos, 'apercu.mp4');
-  const dureeTotale = Math.min(8, (Date.now() - t0) / 1000 - debutFilm);
-  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(Math.max(0, debutFilm).toFixed(2)), '-i', video, '-t', String(Math.max(4, dureeTotale)), '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out]);
+  const dureeTotale = Math.min(modeVideo === 'defilement' ? 8 : 14, (Date.now() - t0) / 1000 - debutFilm);
+  execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(Math.max(0, debutFilm).toFixed(2)), '-i', video, '-t', String(Math.max(4, dureeTotale)), '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-vf', 'scale=960:600', out]);
+  if (fs.statSync(out).size > 2 * 1024 * 1024) { execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '33', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out + '.mp4']); fs.renameSync(out + '.mp4', out); }
   fs.rmSync(video, { force: true });
   console.log(`apercu.jpg ${Math.round(buf.length / 1024)} Ko, apercu.mp4 ${Math.round(fs.statSync(out).size / 1024)} Ko`);
 }

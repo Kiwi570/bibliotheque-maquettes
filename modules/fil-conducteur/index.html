@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fil conducteur · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3efe7; --couleur-texte: #1f2126; --couleur-accent: #b8461b; --couleur-secondaire: #2f5d62; --couleur-sur-accent: #fbf7f1; --rayon: 10px; }
+  .demo { padding-block: clamp(72px, 10vw, 140px); }
+  .demo h2 { font-size: clamp(2rem, 4.6vw, 3.6rem); margin: .3em 0 .5em; }
+  .demo p + p { margin-top: .8em; }
+  .demo__doux { color: var(--couleur-texte-doux); max-width: 56ch; }
+  .demo--fond { background: var(--couleur-surface); }
+
+  .demo-ouv { min-height: calc(var(--ecran-h) * .9); display: grid; align-content: center; }
+  .demo-ouv__grille { display: grid; gap: 2rem; align-items: center; }
+  .demo-ouv h1 { font-size: clamp(2.6rem, 7.4vw, 6.4rem); margin: .25em 0 .4em; max-width: 12ch; }
+  .demo-ouv__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.6rem; }
+  .demo-ouv__depart { display: block; align-self: stretch; justify-self: end; width: 40%; } /* sur téléphone : hauteur nulle, le fil part sous le texte */
+  @media (min-width: 900px) { .demo-ouv__grille { grid-template-columns: minmax(0, 1fr) 30%; } .demo-ouv__depart { min-height: 260px; width: auto; justify-self: stretch; } }
+
+  .demo-cartes { display: grid; gap: 16px; margin-top: 2rem; }
+  @media (min-width: 760px) { .demo-cartes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .demo-carte { padding: 24px; border-radius: var(--rayon); background: var(--couleur-fond); border: 1px solid var(--couleur-ligne); }
+  .demo-carte h3 { font-size: 1.3rem; margin-bottom: .4em; }
+  .demo-carte p { color: var(--couleur-texte-doux); }
+
+  .demo-duo { display: grid; gap: 2rem; align-items: center; }
+  @media (min-width: 900px) { .demo-duo { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4rem; } }
+  .demo-duo__visuel { aspect-ratio: 4 / 3; border-radius: var(--rayon); }
+
+  .demo-etapes { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1.6rem; max-width: 60ch; }
+  .demo-etapes li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: baseline; }
+  .demo-etapes b { font-family: var(--police-mono); font-size: max(12px, .85rem); color: var(--couleur-texte-doux); transition: color .4s; }
+  .demo-etapes li.est-atteinte b { color: var(--couleur-accent); }
+  .demo-etapes h3 { font-size: 1.25rem; margin-bottom: .2em; }
+
+  .demo-citation { font-family: var(--police-titres); font-size: clamp(1.6rem, 3.6vw, 2.8rem); line-height: 1.2; max-width: 22ch; margin: 0; }
+  .demo-citation + p { margin-top: 1rem; }
+
+  .demo-fin__grille { display: grid; gap: 2rem; align-items: center; }
+  .demo-fin__arrivee { display: block; justify-self: end; width: 40%; } /* empilé : le fil finit à droite, sous le texte */
+  @media (min-width: 900px) { .demo-fin__grille { grid-template-columns: minmax(0, 1fr) 30%; } .demo-fin__arrivee { height: 160px; width: auto; justify-self: stretch; } }
+
+  .demo-pied { padding: 48px 0; border-top: 1px solid var(--couleur-ligne); color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main data-module="fil-conducteur">
+  <section class="demo demo-ouv" aria-labelledby="t-ouv">
+    <div class="socle-cadre demo-ouv__grille">
+      <div>
+        <p class="socle-surtitre">Fil conducteur</p>
+        <h1 id="t-ouv">Un fil qui vous suit de section en section</h1>
+        <p class="demo__doux">Faites défiler : le fil part d'ici, longe les marges, passe derrière les images et s'arrête au dernier appel.</p>
+        <div class="demo-ouv__actions"><a class="socle-bouton socle-bouton--plein" href="#t-fin">Aller à la fin</a><a class="socle-bouton" href="#t-services">Commencer</a></div>
+      </div>
+      <span class="demo-ouv__depart" data-fil-point="0.35 0.42" data-fil-boucle aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <section class="demo" data-fil="gauche" aria-labelledby="t-services">
+    <div class="socle-cadre">
+      <p class="socle-surtitre">Première étape</p>
+      <h2 id="t-services">Titre de la section des services</h2>
+      <p class="demo__doux">Un paragraphe de deux lignes qui présente ce que l'on propose. Le fil longe la marge gauche, derrière rien, devant le fond.</p>
+      <div class="demo-cartes">
+        <article class="demo-carte"><h3>Premier service</h3><p>Deux lignes qui décrivent ce service sans détour, pour savoir tout de suite de quoi il s'agit.</p></article>
+        <article class="demo-carte"><h3>Deuxième service</h3><p>Deux lignes qui décrivent ce service sans détour, pour savoir tout de suite de quoi il s'agit.</p></article>
+        <article class="demo-carte"><h3>Troisième service</h3><p>Deux lignes qui décrivent ce service sans détour, pour savoir tout de suite de quoi il s'agit.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo demo--fond" data-fil="droite" aria-labelledby="t-duo">
+    <div class="socle-cadre demo-duo">
+      <div>
+        <p class="socle-surtitre">Deuxième étape</p>
+        <h2 id="t-duo">Le fil passe derrière l'image</h2>
+        <p class="demo__doux">Un point de passage posé au centre du visuel : le fil quitte la marge droite, glisse sous l'image et repart. Le texte n'est jamais traversé.</p>
+      </div>
+      <span class="demo-duo__visuel socle-visuel" data-fil-point="0.5 0.5" data-fil-sans-perle aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <section class="demo" data-fil="gauche" aria-labelledby="t-etapes">
+    <div class="socle-cadre">
+      <p class="socle-surtitre">Troisième étape</p>
+      <h2 id="t-etapes">Des repères sur le fil</h2>
+      <p class="demo__doux">Chaque étape porte un repère : une perle se pose sur le fil à sa hauteur et s'allume quand le fil l'atteint.</p>
+      <ol class="demo-etapes">
+        <li data-fil-repere><b>01</b><div><h3>Titre de la première étape</h3><p class="demo__doux">Une phrase qui dit ce qui se passe à ce moment-là.</p></div></li>
+        <li data-fil-repere><b>02</b><div><h3>Titre de la deuxième étape</h3><p class="demo__doux">Une phrase qui dit ce qui se passe à ce moment-là.</p></div></li>
+        <li data-fil-repere><b>03</b><div><h3>Titre de la troisième étape</h3><p class="demo__doux">Une phrase qui dit ce qui se passe à ce moment-là.</p></div></li>
+        <li data-fil-repere><b>04</b><div><h3>Titre de la quatrième étape</h3><p class="demo__doux">Une phrase qui dit ce qui se passe à ce moment-là.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo demo--fond" data-fil="droite" aria-labelledby="t-citation">
+    <div class="socle-cadre">
+      <p class="socle-surtitre" id="t-citation">Témoignage</p>
+      <blockquote class="demo-citation">« Une phrase de témoignage assez longue pour tenir sur deux ou trois lignes. »</blockquote>
+      <p class="demo__doux">Prénom N., fonction</p>
+    </div>
+  </section>
+
+  <section class="demo" aria-labelledby="t-fin">
+    <div class="socle-cadre demo-fin__grille">
+      <div>
+        <p class="socle-surtitre">Arrivée</p>
+        <h2 id="t-fin">Le fil s'arrête ici</h2>
+        <p class="demo__doux">Le bout du fil se noue à côté de l'appel. Sans JavaScript, en mode calme ou avec « réduire les animations », le fil est tracé en entier, sans objet qui bouge.</p>
+        <div class="demo-ouv__actions"><a class="socle-bouton socle-bouton--plein" href="#t-ouv">Revenir en haut</a></div>
+      </div>
+      <span class="demo-fin__arrivee" data-fil-point="0.3 0.5" data-fil-boucle aria-hidden="true"></span>
+    </div>
+  </section>
+</main>
+<footer class="demo-pied"><p class="socle-cadre">Pied de page de démonstration, hors du fil.</p></footer>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="fil-conducteur"]')) init(el);
+</script>
+</body>
+</html>

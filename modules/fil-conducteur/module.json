@@ -1,0 +1,77 @@
+{
+ "nom": "fil-conducteur",
+ "titre": "Fil SVG qui accompagne le visiteur sur toute la page, d'une section à l'autre, et se dessine au défilement",
+ "role": "decor",
+ "animations": [
+  "fil-conducteur",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "atelier-shazak-maquette/fil",
+  "stanislas-urbi-orbi-maquette/thread",
+  "petitenature-maquette/hero",
+  "lien-numerique-solidaire-maquette/heros",
+  "observatoire-des-cse-maquette/haut",
+  "talon-libre-maquette/ouverture",
+  "apasdechien-maquette (assets/js/app.js, laisse)",
+  "francis-gerardin-maquette (assets/js/main.js, fil d'encre)",
+  "tonchemindevie-maquette (assets/js/site.js, fil d'or)"
+ ],
+ "convient_a": [
+  "artisanat",
+  "association",
+  "culture",
+  "bien-être",
+  "santé",
+  "conseil",
+  "formation",
+  "tourisme",
+  "animaux",
+  "sport",
+  "média",
+  "hébergement",
+  "restauration",
+  "collectivité"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "artisanal",
+  "chaleureux",
+  "doux",
+  "sobre",
+  "ludique"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "regard": "hauteur de l'écran suivie par le bout du fil (0 à 1), 0.62",
+  "marge": "position du fil dans la gouttière (0 bord de l'écran, 1 bord du contenu), 0.5",
+  "cadre": "colonne de contenu mesurée dans chaque section, '.socle-cadre'",
+  "onde": "ondulation le long d'une section en px, 10 (0 : droit)",
+  "boucle": "rayon des boucles en px, 34",
+  "lissage": "retard du bout du fil en secondes, 0.5 (0 : immédiat)",
+  "rail": "trace pâle du chemin complet, true",
+  "objet": "objet au bout du fil (template[data-fil-objet] ou tête ronde), true",
+  "orienter": "l'objet tourne avec le fil, false",
+  "largeurTelephone": "en dessous : fil droit en marge gauche, 700"
+ },
+ "images": [],
+ "poids_ko": 12.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

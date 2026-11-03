@@ -1,0 +1,74 @@
+{
+ "nom": "rideau-en-lanieres",
+ "titre": "Rideau d'ouverture en lanières verticales qui s'écartent l'une après l'autre sur le héros déjà rendu",
+ "role": "ouverture",
+ "animations": [
+  "ouverture-orchestrée",
+  "trace-svg",
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "atelier-shazak-maquette/ouverture",
+  "goodlife-maquette/hero"
+ ],
+ "convient_a": [
+  "artisanat",
+  "culture",
+  "spectacle",
+  "restauration",
+  "hébergement",
+  "commerce",
+  "sport",
+  "bien-être",
+  "tourisme",
+  "média",
+  "association"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "chaleureux",
+  "luxueux",
+  "artisanal",
+  "végétal",
+  "énergique",
+  "nocturne",
+  "sobre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "nombre": "lanières sur ordinateur et tablette, 6",
+  "nombreTelephone": "lanières sous 700 px, 4",
+  "effet": "'glisse' (haut/bas), 'chute' (tombe en tournant), 'pivot' (pivote sur la tranche), 'ecarte' (s'écarte vers les côtés en grandissant) ; 'glisse'",
+  "sens": "'alterne', 'haut' ou 'bas' ; 'alterne'",
+  "ordre": "première lanière à partir : 'gauche', 'droite', 'centre', 'bords', 'hasard' ; 'centre' pour ecarte, 'gauche' sinon",
+  "forme": "'droite' (bandes) ou 'feuille' (amandes qui se chevauchent, avec nervure) ; 'droite'",
+  "duree": "durée du départ d'une lanière en s, 0.8",
+  "decalage": "décalage entre deux lanières en s, 0.07",
+  "delai": "attente avant le début en s, 0.15",
+  "coeur": "temps d'affichage du cœur (signe tracé et nom) avant l'ouverture en s, 0.9 (0 pour le sauter)",
+  "unique": "true : une fois par session ; 'court' : ouverture courte aux visites suivantes ; false : à chaque chargement ; true",
+  "cle": "clé sessionStorage, 'rideau-en-lanieres-vu' (la même que dans le script du head)",
+  "liens": "referme le rideau avant de suivre un lien interne vers une autre page, false",
+  "apres": "fonction appelée quand le héros commence à apparaître (aussi l'évènement 'rideau:ouvert')",
+  "couleurs (CSS)": "--rdl-couleur-1, --rdl-couleur-2, --rdl-couleur-3, --rdl-ombre sur .rdl"
+ },
+ "images": [],
+ "poids_ko": 11.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

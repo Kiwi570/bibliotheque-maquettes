@@ -1,0 +1,91 @@
+{
+ "nom": "mur-de-portraits",
+ "titre": "Mur dense de portraits qui s'allume au défilement, loupe et nom sous le pointeur, filtre et recherche, fiche en dialog natif",
+ "role": "équipe",
+ "animations": [
+  "apparition-au-défilement",
+  "survol-image",
+  "flip",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "origine": [
+  "stanislas-urbi-orbi-maquette/portraits-mur",
+  "libre-solidaire-maquette/auteurs",
+  "instinct-aventure-maquette/lightbox"
+ ],
+ "convient_a": [
+  "association",
+  "culture",
+  "collectivité",
+  "formation",
+  "services-b2b",
+  "conseil",
+  "santé",
+  "sport",
+  "spectacle",
+  "média",
+  "artisanat",
+  "industrie",
+  "bâtiment",
+  "commerce"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "sobre",
+  "chaleureux",
+  "ludique",
+  "énergique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "portraits": "liste [{ nom, role?, groupe?, texte?, initiales?, vignette?, image?, position? }] ; sinon JSON de <script type=\"application/json\" data-portraits> dans la section",
+  "groupes": "ordre des boutons de groupe, ordre d'apparition dans les données par défaut",
+  "tous": "libellé du bouton sans filtre, 'Tous'",
+  "mots": "[singulier, pluriel] du compteur, ['portrait', 'portraits']",
+  "loupe": "agrandissement maximal sous la souris, 1.6 (0 pour couper : simple agrandissement CSS)",
+  "rayon": "portée de la loupe en largeurs de vignette, 2.4",
+  "cascade": "décalage en ms entre deux vignettes qui s'allument ensemble, 22",
+  "duree": "durée du Flip au filtrage en s, 0.5",
+  "textes": "{ fermer, precedent, suivant } de la fiche",
+  "css --mdp-min / --mdp-gap": "largeur minimale d'une vignette (74 px, 58 px sur téléphone) et écart (6 px) : la densité du mur"
+ },
+ "images": [
+  {
+   "role": "vignette portrait du mur",
+   "selecteur": ".mdp__photo",
+   "nombre": "1 par portrait (facultatif : sans photo, vignette générée avec initiales)",
+   "ratio": "3:4, visage dans le tiers haut (agrandie 1,6 fois sous la loupe)",
+   "largeur": 320,
+   "zone_calme": "aucune (le nom s'affiche sous la vignette, hors de l'image)"
+  },
+  {
+   "role": "grande photo de la fiche",
+   "selecteur": ".mdp__fiche-photo",
+   "nombre": "1 par portrait (facultatif : sinon la vignette)",
+   "ratio": "3:4 (recadrée en 4:3 sur téléphone : garder le visage au centre, point réglable par position)",
+   "largeur": 900,
+   "zone_calme": "aucune (texte à côté de l'image, dessous sur téléphone)"
+  }
+ ],
+ "poids_ko": 25.3,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

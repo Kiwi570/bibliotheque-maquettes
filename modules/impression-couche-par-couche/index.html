@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Impression couche par couche · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #ece8e1; --couleur-texte: #1f2125; --couleur-accent: #e2541c; --couleur-secondaire: #3f5f7f; --couleur-sur-accent: #fff8f2; --rayon: 6px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 14vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : l'objet s'imprime couche par couche, puis s'ouvre en strates.</p>
+  </section>
+
+  <section class="icc" data-module="impression-couche-par-couche" data-epingle aria-labelledby="icc-titre">
+    <div class="icc__cadre socle-cadre">
+      <div class="icc__tete" data-tient="tête">
+        <p class="socle-surtitre">Fabrication</p>
+        <h2 class="icc__titre" id="icc-titre">Construit couche après couche</h2>
+        <p class="icc__intro">Un paragraphe court qui explique le procédé : chaque couche se pose sur la précédente, puis la pièce s'ouvre pour montrer ses strates.</p>
+      </div>
+      <div class="icc__scene" data-tient="objet">
+        <div class="icc__toile" role="img" aria-label="Schéma : un vase de démonstration se construit en 64 couches, puis s'ouvre en 6 strates."></div>
+      </div>
+      <div class="icc__mesure" data-tient="progression">
+        <p class="icc__etat" data-etat>Impression en cours</p>
+        <p class="icc__compte">Couche <b data-couche>0</b> / <span data-total>64</span><span class="icc__pourcent"><b data-pourcent>0</b> %</span></p>
+        <div class="icc__barre" aria-hidden="true"><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, l'objet est entier, ouvert en strates, et rien ne bouge.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="impression-couche-par-couche"]')) init(el);
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* Courbe interactive à curseur — identité uniquement par les variables du socle.
+   Teinte d'une zone : --t de 0 (première zone, couleur secondaire) à 1 (dernière zone, couleur d'accent). */
+.cbi { padding-block: clamp(72px, 10vw, 140px); }
+.cbi__entete { display: grid; gap: 14px; margin-bottom: clamp(28px, 4vw, 56px); max-width: 62ch; }
+.cbi__titre { font-size: clamp(2rem, 4.6vw, 4rem); }
+.cbi__intro { color: var(--couleur-texte-doux); }
+
+.cbi__corps { display: grid; gap: clamp(20px, 3vw, 40px); }
+@media (min-width: 960px) { .cbi__corps { grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1fr); align-items: start; } }
+
+.cbi__graphe { margin: 0; padding: clamp(12px, 2vw, 24px); background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); min-width: 0; }
+.cbi__haut { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 8px; }
+.cbi__haut .socle-surtitre { margin: 0; }
+.cbi__demo { font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; border: 1px dashed var(--couleur-ligne); color: var(--couleur-texte-doux); }
+
+/* Le SVG garde sa place avant le dessin (pas de décalage) ; le viewBox prend sa taille réelle. */
+.cbi__svg { width: 100%; aspect-ratio: 16 / 9; overflow: visible; touch-action: pan-y; cursor: ew-resize; user-select: none; -webkit-user-select: none; }
+@media (max-width: 599px) { .cbi__svg { aspect-ratio: 4 / 3.4; } }
+.cbi__svg text { font-family: var(--police-mono); font-size: 12px; }
+.cbi__grille { stroke: var(--couleur-ligne); stroke-width: 1; }
+.cbi__axe { stroke: color-mix(in oklab, var(--couleur-texte) 45%, var(--couleur-fond)); stroke-width: 1; }
+.cbi__grad { fill: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.cbi__libelle { fill: var(--couleur-texte-doux); letter-spacing: .06em; }
+
+.cbi__bande { --zone: color-mix(in oklab, var(--couleur-accent) calc(var(--t, 0) * 100%), var(--couleur-secondaire)); }
+.cbi__bande-fond { fill: var(--zone); fill-opacity: .07; transition: fill-opacity .3s; }
+.cbi__bande-trait { fill: var(--zone); opacity: .55; transition: opacity .3s; }
+.cbi__bande-nom { fill: var(--couleur-texte-doux); letter-spacing: .06em; }
+.cbi__bande.est-active .cbi__bande-fond { fill-opacity: .2; }
+.cbi__bande.est-active .cbi__bande-trait { opacity: 1; }
+.cbi__bande.est-active .cbi__bande-nom { fill: var(--couleur-texte); }
+
+.cbi__courbe { fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.cbi__stop-haut { stop-color: var(--couleur-accent); stop-opacity: .3; }
+.cbi__stop-bas { stop-color: var(--couleur-accent); stop-opacity: 0; }
+.cbi__seuil line { stroke: var(--couleur-texte-doux); stroke-width: 1; stroke-dasharray: 3 4; }
+.cbi__seuil circle { fill: var(--couleur-fond); stroke: var(--couleur-texte); stroke-width: 2; }
+.cbi__seuil text { fill: var(--couleur-texte); font-weight: 700; paint-order: stroke; stroke: var(--couleur-surface); stroke-width: 4px; stroke-linejoin: round; }
+.cbi__sonde { pointer-events: none; }
+.cbi__sonde line { stroke: var(--couleur-texte); stroke-width: 1; opacity: .5; }
+.cbi__sonde circle { fill: var(--couleur-texte); stroke: var(--couleur-fond); stroke-width: 3; }
+.cbi__bulle rect { fill: var(--couleur-texte); }
+.cbi__bulle text { fill: var(--couleur-fond); font-weight: 700; font-variant-numeric: tabular-nums; }
+.cbi__bande, .cbi__seuil, .cbi__grad, .cbi__libelle, .cbi__courbe, .cbi__aire, .cbi__grille, .cbi__axe { pointer-events: none; }
+.cbi__bande-fond { pointer-events: all; }
+
+/* Curseur natif : cible de 44 px, aligné sur la zone tracée (--cbi-g et --cbi-d posées par le script). */
+.cbi__commande { display: block; margin: 6px var(--cbi-d, 14px) 0 var(--cbi-g, 52px); }
+.cbi__curseur { -webkit-appearance: none; appearance: none; display: block; width: 100%; height: 44px; margin: 0; background: transparent; cursor: pointer; touch-action: pan-y; }
+.cbi__curseur::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--couleur-secondaire), var(--couleur-accent)); }
+.cbi__curseur::-moz-range-track { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--couleur-secondaire), var(--couleur-accent)); }
+.cbi__curseur::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: -10px; border-radius: 50%; background: var(--couleur-texte); border: 4px solid var(--couleur-fond); box-shadow: 0 0 0 1px var(--couleur-ligne); }
+.cbi__curseur::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--couleur-texte); border: 4px solid var(--couleur-fond); }
+.cbi__curseur:focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: 2px; border-radius: 8px; }
+.cbi__aide { margin: 4px 0 0 var(--cbi-g, 52px); font-size: max(12px, .82rem); color: var(--couleur-texte-doux); }
+
+/* Lectures et explication de zone */
+.cbi__cote { display: grid; gap: 16px; min-width: 0; }
+.cbi__lectures { --zone: color-mix(in oklab, var(--couleur-accent) calc(var(--t, 0) * 100%), var(--couleur-secondaire)); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin: 0; background: var(--couleur-ligne); border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); overflow: hidden; }
+@media (min-width: 960px) { .cbi__lectures { grid-template-columns: 1fr; } }
+.cbi__lectures > div { background: var(--couleur-fond); padding: 12px 14px; min-width: 0; }
+.cbi__lectures dt { font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cbi__lectures dd { margin: 2px 0 0; font-family: var(--police-mono); font-weight: 700; font-size: clamp(1rem, 1.6vw, 1.4rem); font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cbi__lectures [data-lecture="zone"] { display: flex; align-items: center; gap: 8px; }
+.cbi__lectures [data-lecture="zone"]::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--zone); }
+.cbi__explication { min-height: 3.2em; padding-left: 14px; border-left: 3px solid color-mix(in oklab, var(--couleur-accent) 60%, var(--couleur-ligne)); color: var(--couleur-texte-doux); }
+
+.cbi__donnees summary { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .06em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.cbi__donnees summary:hover { color: var(--couleur-texte); }
+.cbi__tableau { width: 100%; border-collapse: collapse; font-size: max(12px, .85rem); font-variant-numeric: tabular-nums; }
+.cbi__tableau caption { text-align: left; padding-bottom: 8px; color: var(--couleur-texte-doux); }
+.cbi__tableau th, .cbi__tableau td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--couleur-ligne); }
+.cbi__tableau thead th { font-family: var(--police-mono); font-weight: 400; color: var(--couleur-texte-doux); }
+
+@media (max-width: 599px) {
+  .cbi__lectures { grid-template-columns: 1fr 1fr; }
+  .cbi__lectures > div:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .cbi__lectures dd { font-size: .95rem; }
+  .cbi__lectures > div { padding: 10px; }
+}
+
+/* Réduire les animations et mode calme : courbe, aire, seuils et repère affichés d'emblée (le script ne les cache pas). */
+@media (prefers-reduced-motion: reduce) { .cbi__bande-fond, .cbi__bande-trait { transition: none; } }
+.calme .cbi__bande-fond, .calme .cbi__bande-trait { transition: none; }

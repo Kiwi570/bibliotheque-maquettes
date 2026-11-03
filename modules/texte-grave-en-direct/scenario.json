@@ -1,0 +1,17 @@
+{
+ "etapes": [
+  {"defiler": ".tgd__scene"},
+  {"attendre": 1800},
+  {"saisir": ["#tgd-texte", "Camille"]},
+  {"attendre": 1400},
+  {"cliquer": "label.tgd__choix:has(input[value=\"brode\"])"},
+  {"attendre": 1800},
+  {"cliquer": "label.tgd__choix:has(input[value=\"etiquette\"])"},
+  {"attendre": 1800},
+  {"cliquer": "label.tgd__choix:has(input[value=\"ecrit\"])"},
+  {"attendre": 1600},
+  {"verifier": "label.tgd__choix:has(input[value=\"ecrit\"]:checked)"},
+  {"verifier": ".tgd__compteur:text('7 / 20')"}
+ ],
+ "pause": 450
+}

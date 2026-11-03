@@ -1,0 +1,49 @@
+/* Pluie sur la vitre — identité uniquement par les variables du socle. */
+.pluie { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: max(520px, calc(var(--ecran-h) - var(--entete-h))); padding-top: clamp(32px, 8vh, 96px); background: var(--couleur-fond);
+  touch-action: pan-y; }
+/* Image d'ouverture (ou crépuscule neutre en CSS) : seule visible sans JavaScript ; sous les gouttes figées sans WebGL. */
+.pluie__fond { position: absolute; inset: 0; z-index: -4;
+  background:
+    radial-gradient(circle at 12% 58%, color-mix(in oklab, var(--couleur-accent) 70%, transparent) 0 1.1vh, transparent 2.2vh),
+    radial-gradient(circle at 31% 46%, color-mix(in oklab, var(--couleur-texte) 45%, transparent) 0 .8vh, transparent 2vh),
+    radial-gradient(circle at 47% 66%, color-mix(in oklab, var(--couleur-accent) 60%, transparent) 0 1.6vh, transparent 3.4vh),
+    radial-gradient(circle at 63% 52%, color-mix(in oklab, var(--couleur-accent) 55%, transparent) 0 .9vh, transparent 2.4vh),
+    radial-gradient(circle at 78% 62%, color-mix(in oklab, var(--couleur-texte) 40%, transparent) 0 1.3vh, transparent 3vh),
+    radial-gradient(circle at 90% 40%, color-mix(in oklab, var(--couleur-accent) 50%, transparent) 0 .7vh, transparent 2vh),
+    linear-gradient(0deg, color-mix(in oklab, var(--couleur-fond) 85%, var(--couleur-secondaire)) 0 14%, transparent 30%),
+    radial-gradient(60% 55% at 72% 60%, color-mix(in oklab, var(--couleur-accent) 45%, transparent), transparent 70%),
+    radial-gradient(55% 50% at 20% 30%, color-mix(in oklab, var(--couleur-secondaire) 55%, transparent), transparent 70%),
+    linear-gradient(180deg, color-mix(in oklab, var(--couleur-secondaire) 50%, var(--couleur-fond)), color-mix(in oklab, var(--couleur-secondaire) 85%, var(--couleur-accent)) 62%, var(--couleur-fond)); }
+.pluie__fond > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.pluie__canvas { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity 1.2s ease; }
+.pluie--actif .pluie__canvas { opacity: 1; }
+/* Repli : gouttes figées en SVG (couleur des reflets = --couleur-texte, ombres = --couleur-fond). */
+.pluie__fige { position: absolute; inset: 0; z-index: -2; pointer-events: none; color: var(--couleur-texte); display: none; }
+.pluie__fige svg { width: 100%; height: 100%; }
+.pluie__fige .pluie__ombre { fill: var(--couleur-fond); opacity: .12; }
+.pluie--fige .pluie__fige { display: block; }
+.pluie--fige.pluie--buee .pluie__fond { filter: saturate(.8) brightness(.9); }
+/* Voile : garde le titre et le texte lisibles au-dessus de la vitre. */
+.pluie__voile { position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 0%, transparent 26%, color-mix(in oklab, var(--couleur-fond) 35%, transparent) 45%, color-mix(in oklab, var(--couleur-fond) 90%, transparent) 88%, var(--couleur-fond) 100%),
+              linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) 55%, transparent), transparent 60%); }
+.pluie__cadre { position: relative; display: grid; gap: clamp(18px, 3vh, 40px); padding-bottom: clamp(28px, 6vh, 72px); }
+.pluie__titre { font-size: clamp(2.3rem, min(7.2vw, 11vh), 6.6rem); line-height: 1; letter-spacing: -.02em; max-width: 14ch; padding-block: .06em;
+  text-shadow: 0 2px 24px color-mix(in oklab, var(--couleur-fond) 70%, transparent); }
+.pluie__bas { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem 2rem; align-items: end; }
+.pluie__texte { max-width: 52ch; color: var(--couleur-texte); text-shadow: 0 1px 12px var(--couleur-fond), 0 0 2px var(--couleur-fond); }
+.pluie__actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.pluie__indice { font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux);
+  text-shadow: 0 1px 8px var(--couleur-fond); }
+.pluie__indice-doigt { display: none; }
+@media (hover: none) { .pluie__indice-souris { display: none; } .pluie__indice-doigt { display: inline; } }
+/* L'indice garde sa place (pas de décalage) mais ne s'affiche que si la buée s'essuie vraiment. */
+.pluie:not(.pluie--actif) .pluie__indice, .pluie:not(.pluie--buee) .pluie__indice { visibility: hidden; }
+@media (max-width: 860px) { .pluie__bas { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .pluie__voile { background: linear-gradient(180deg, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 0%, transparent 24%, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 48%, color-mix(in oklab, var(--couleur-fond) 92%, transparent) 80%, var(--couleur-fond) 100%); } }
+@media (max-height: 600px) and (min-width: 761px) { .pluie__texte { display: none; } }
+@media (max-width: 380px) { .pluie__actions .socle-bouton { flex: 1 1 100%; } }
+/* Réduire les animations et mode calme : image et gouttes figées (le script n'anime rien), canvas absent. */
+@media (prefers-reduced-motion: reduce) { .pluie__canvas { display: none; } }
+.calme .pluie__canvas { display: none; }

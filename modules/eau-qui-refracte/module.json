@@ -52,6 +52,16 @@
   "dpr": "densité de pixels maximale sur ordinateur, 1.5 (1 sous 700 px)",
   "repli": "'svg' (distorsion figée) ou 'net' (image seule) sans WebGL et en mode calme, 'svg'"
  },
+ "images": [
+  {
+   "role": "fond plein écran",
+   "selecteur": ".eau__fond",
+   "nombre": "1",
+   "ratio": "16:9 (recadré en 9:16 sur téléphone, point d intérêt réglable par l option focus)",
+   "largeur": 2560,
+   "zone_calme": "bas gauche : moitié gauche, 55 % du bas (surtitre, titre, paragraphe) et bandeau bas à droite (boutons)"
+  }
+ ],
  "poids_ko": 18.1,
  "tests": {
   "formats": "ok",
@@ -59,6 +69,7 @@
   "sans-webgl": "ok",
   "console": "0 erreur",
   "cls": 0.036,
+  "scenario": "n/a",
   "texte-12px": "ok",
   "cibles-44px": "ok"
  }

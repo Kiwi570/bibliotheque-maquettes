@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Courbe interactive à curseur · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #10141a; --couleur-texte: #edf0f3; --couleur-accent: #f0a24a; --couleur-secondaire: #4a9ad4; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la courbe se trace, puis déplacez le curseur au clavier, au clic ou au doigt.</p>
+  </section>
+
+  <section class="cbi" data-module="courbe-interactive" aria-labelledby="cbi-titre">
+    <script type="application/json">
+    {
+      "description": "Courbe de démonstration : l'indice reste bas puis monte de plus en plus vite avec l'intensité. Données fictives.",
+      "x": { "min": 0, "max": 100, "pas": 10, "pasCurseur": 1, "decimales": 0, "unite": "%", "libelle": "Intensité" },
+      "y": { "min": 0, "max": 10, "pas": 2, "decimales": 1, "unite": "pts", "libelle": "Indice" },
+      "points": [[0, 0.8], [10, 0.9], [20, 1.1], [30, 1.4], [40, 1.8], [50, 2.4], [60, 3.2], [70, 4.4], [80, 6], [90, 7.9], [100, 9.6]],
+      "zones": [
+        { "jusqua": 35, "nom": "Zone 1 · Basse", "court": "Z1", "texte": "Texte explicatif de la première zone : ce qui se passe ici, en une ou deux phrases courtes." },
+        { "jusqua": 55, "nom": "Zone 2 · Modérée", "court": "Z2", "texte": "Texte explicatif de la deuxième zone : la valeur commence à monter, sans à-coup." },
+        { "jusqua": 70, "nom": "Zone 3 · Soutenue", "court": "Z3", "texte": "Texte explicatif de la troisième zone : le point d'équilibre, à décrire selon le métier." },
+        { "jusqua": 85, "nom": "Zone 4 · Élevée", "court": "Z4", "texte": "Texte explicatif de la quatrième zone : la courbe s'accélère nettement." },
+        { "jusqua": 100, "nom": "Zone 5 · Maximale", "court": "Z5", "texte": "Texte explicatif de la dernière zone : le haut de l'échelle, à tenir peu de temps." }
+      ],
+      "seuils": [{ "x": 35, "nom": "Seuil A" }, { "x": 70, "nom": "Seuil B" }],
+      "depart": 42
+    }
+    </script>
+    <div class="socle-cadre">
+      <header class="cbi__entete">
+        <p class="socle-surtitre">Comprendre</p>
+        <h2 class="cbi__titre" id="cbi-titre">Titre de la section avec la courbe</h2>
+        <p class="cbi__intro">Une phrase d'introduction qui dit ce que montre la courbe et ce que le visiteur peut y lire en déplaçant le curseur.</p>
+      </header>
+      <div class="cbi__corps">
+        <figure class="cbi__graphe">
+          <div class="cbi__haut">
+            <p class="socle-surtitre">Indice selon l'intensité</p>
+            <span class="cbi__demo">Données de démonstration</span>
+          </div>
+          <svg class="cbi__svg" role="img" aria-label="Courbe de l'indice selon l'intensité, données de démonstration"></svg>
+          <label class="cbi__commande"><span class="socle-sr">Intensité</span><input class="cbi__curseur" type="range" min="0" max="100" value="42"></label>
+          <p class="cbi__aide">Glissez le curseur, touchez la courbe ou utilisez les flèches du clavier.</p>
+        </figure>
+        <div class="cbi__cote">
+          <dl class="cbi__lectures" aria-label="Lecture du repère">
+            <div><dt>Intensité</dt><dd data-lecture="x">—</dd></div>
+            <div><dt>Indice</dt><dd data-lecture="y">—</dd></div>
+            <div><dt>Zone</dt><dd data-lecture="zone">—</dd></div>
+          </dl>
+          <p class="cbi__explication" aria-live="polite">Texte explicatif de la zone en cours.</p>
+          <details class="cbi__donnees">
+            <summary>Voir les données en tableau</summary>
+            <table class="cbi__tableau">
+              <caption>Données de démonstration de la courbe</caption>
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, la courbe est affichée d'emblée et le curseur reste utilisable.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="courbe-interactive"]')) init(el);
+</script>
+</body>
+</html>

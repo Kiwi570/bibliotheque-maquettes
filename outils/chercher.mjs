@@ -44,7 +44,7 @@ function score(base, affinite, texte) {
 // Sections
 for (const m of Object.values(maquettes)) for (const id of m.sections) {
   const s = lireJson(path.join(RACINE, 'sections', id + '.json'));
-  if (seulModules && !s.module) continue;
+  if (seulModules && !s.modules?.length && !s.module) continue;
   if (s.note_qualite < noteMin) continue;
   if (!inter([s.role], f.role) || !inter(s.animations, f.animation) || !inter(s.interactions, f.interaction) || !inter(s.dependances, f.dependance) || !inter([s.telephone], f.telephone)) continue;
   if (f.sans.length && s.dependances.some(d => f.sans.includes(d))) continue;
@@ -52,7 +52,7 @@ for (const m of Object.values(maquettes)) for (const id of m.sections) {
   if (strict && ((f.activite.length && !inter(m.activite, f.activite)) || (f.ambiance.length && !inter(m.ambiance, f.ambiance)) || (f.concept.length && !inter(m.concept, f.concept)))) continue;
   const sc = score(s.note_qualite * 2 + (s.reutilisable ? 1 : 0) + (s.module ? 1 : 0), aff, [s.titre, s.description, ...(s.pieges || []), ...(s.particularites || []), m.client, ...m.activite].join(' '));
   if (sc === null) continue;
-  res.push({ type: 'section', id: s.id, score: sc, note: s.note_qualite, role: s.role, titre: s.titre, animations: s.animations, module: s.module, fiche: `sections/${s.id}.json`, capture: s.medias.capture || null, video: s.medias.video || null, en_ligne: m.url + (s.page === 'index' ? '' : '/' + s.page) });
+  res.push({ type: 'section', id: s.id, score: sc, note: s.note_qualite, role: s.role, titre: s.titre, animations: s.animations, module: s.module, modules: s.modules, fiche: `sections/${s.id}.json`, capture: s.medias.capture || null, video: s.medias.video || null, en_ligne: m.url + (s.page === 'index' ? '' : '/' + s.page) });
 }
 // Modules
 for (const d of liste(path.join(RACINE, 'modules'))) {

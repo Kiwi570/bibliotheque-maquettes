@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ciel en direct · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #0f1420; --couleur-texte: #f4f1ea; --couleur-accent: #f0b84a; --couleur-secondaire: #3d6fa6; --police-titres: "Avenir Next", "Segoe UI", system-ui, sans-serif; --rayon: 10px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="ced" data-module="ciel-en-direct" aria-labelledby="ced-titre">
+    <div class="ced__ciel" aria-hidden="true"><canvas class="ced__toile"></canvas></div>
+    <div class="ced__cadre socle-cadre">
+      <div class="ced__texte">
+        <p class="socle-surtitre ced__surtitre">Surtitre de la page</p>
+        <h1 class="ced__titre" id="ced-titre">Un titre posé sous le ciel de l'heure.</h1>
+        <p class="ced__chapo">Un paragraphe de deux lignes qui présente l'activité, ce que l'on propose et à qui, avant les deux boutons d'action.</p>
+        <div class="ced__actions">
+          <a class="socle-bouton socle-bouton--plein" href="#suite">Action principale</a>
+          <a class="socle-bouton" href="#suite">Action secondaire</a>
+        </div>
+      </div>
+      <div class="ced__carte" role="group" aria-labelledby="ced-carte-titre">
+        <p class="ced__carte-haut"><span id="ced-carte-titre">Sur place, en ce moment</span><span data-ced-phase>Nuit</span></p>
+        <p class="ced__heure"><span data-ced-heure>--:--</span><em class="ced__drapeau" data-ced-drapeau hidden>heure choisie</em></p>
+        <p class="ced__soleil"><span>Lever <b data-ced-lever>--:--</b></span><span>Coucher <b data-ced-coucher>--:--</b></span></p>
+        <div class="ced__reglage">
+          <label for="ced-curseur">Voir le ciel à une autre heure</label>
+          <input class="ced__curseur" id="ced-curseur" type="range" min="0" max="1435" step="5" value="720" data-ced-curseur>
+          <div class="ced__raccourcis" role="group" aria-label="Moments de la journée">
+            <button type="button" data-ced-moment="aube" aria-pressed="false">Aube</button>
+            <button type="button" data-ced-moment="midi" aria-pressed="false">Midi</button>
+            <button type="button" data-ced-moment="crepuscule" aria-pressed="false">Crépuscule</button>
+            <button type="button" data-ced-moment="nuit" aria-pressed="false">Nuit</button>
+            <button type="button" data-ced-maintenant aria-pressed="true">Maintenant</button>
+          </div>
+        </div>
+        <p class="ced__note">Couleurs du ciel, soleil et lune calculés pour l'heure et la position du lieu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Revenez plus tard : le ciel de l'ouverture aura changé avec l'heure. Le curseur et les boutons montrent la journée entière.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Encore une section</p>
+    <h2>Un dernier bloc pour tester le défilement</h2>
+    <p>Hors écran, la boucle s'arrête ; en mode calme, le ciel est une image fixe redessinée seulement quand l'heure change.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  // Lieu de démonstration neutre (Paris) ; sans lat/lon, journée type (lever 07:00, coucher 19:30). ?heure=21:30 force une heure.
+  for (const el of document.querySelectorAll('[data-module="ciel-en-direct"]')) init(el, { timeZone: 'Europe/Paris', lat: 48.86, lon: 2.35 }).then(api => { window.__ciel = api; });
+</script>
+</body>
+</html>

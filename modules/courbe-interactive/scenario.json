@@ -1,0 +1,18 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"courbe-interactive\"] .cbi__graphe"},
+  {"attendre": 2600},
+  {"cliquer": "[data-module=\"courbe-interactive\"] .cbi__bande:nth-of-type(4) .cbi__bande-fond"},
+  {"verifier": "[data-module=\"courbe-interactive\"] .cbi__lectures[data-zone=\"4\"]"},
+  {"cliquer": "[data-module=\"courbe-interactive\"] .cbi__curseur"},
+  {"touche": "PageUp"},
+  {"touche": "PageUp"},
+  {"touche": "ArrowRight"},
+  {"touche": "ArrowRight"},
+  {"touche": "Home"},
+  {"verifier": "[data-module=\"courbe-interactive\"] .cbi__lectures[data-zone=\"1\"]"},
+  {"touche": "End"},
+  {"verifier": "[data-module=\"courbe-interactive\"] .cbi__lectures[data-zone=\"5\"]"}
+ ],
+ "pause": 600
+}

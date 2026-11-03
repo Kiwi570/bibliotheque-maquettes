@@ -36,6 +36,10 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
     if (!s.description || s.description.length < 30) err.push(`${os} : description trop courte`);
     if (s.reutilisable && s.note_qualite < 4) err.push(`${os} : réutilisable avec une note < 4`);
     if (s.module && !modules.has(s.module)) avert.push(`${os} : module « ${s.module} » pas encore extrait`);
+    if (!Array.isArray(s.modules)) err.push(`${os} : modules doit être une liste`);
+    else { if (s.module && s.modules[0] !== s.module) err.push(`${os} : modules doit commencer par le module principal`);
+      if (!s.module && s.modules.length) err.push(`${os} : modules sans module principal`);
+      for (const x of s.modules.slice(1)) if (!modules.has(x)) avert.push(`${os} : module « ${x} » pas encore extrait`); }
     for (const [k, v] of Object.entries(s.medias || {})) poids(v, k === 'video' ? 2 * 1024 * 1024 : 300 * 1024, os);
     if (s.note_qualite >= 4 && s.animations.some(a => a !== 'aucune') && !s.medias.video && s.medias.capture) avert.push(`${os} : animée sans vidéo`);
   }
@@ -48,6 +52,11 @@ for (const m of modules) {
   verifie(ou, 'convient_a', mj.convient_a, 'activite', 1); verifie(ou, 'ambiances', mj.ambiances, 'ambiance', 1);
   for (const f of ['index.html', 'module.css', 'module.js', 'NOTES.md', 'apercu.jpg']) if (!fs.existsSync(path.join(RACINE, 'modules', m, f))) err.push(`${ou} : ${f} manquant`);
   poids(`modules/${m}/apercu.jpg`, 300 * 1024, ou);
+  // Emplacements d'images (pipeline d'images) : liste, vide si le module n'a aucune image.
+  if (!Array.isArray(mj.images)) err.push(`${ou} : images manquant (liste des emplacements, [] si aucun)`);
+  else mj.images.forEach((im, i) => { for (const k of ['role', 'selecteur', 'nombre', 'ratio', 'largeur', 'zone_calme']) if (im[k] === undefined || im[k] === '') err.push(`${ou} : images[${i}].${k} manquant`);
+    if (typeof im.largeur !== 'number' || im.largeur < 200 || im.largeur > 4000) err.push(`${ou} : images[${i}].largeur en pixels (200 à 4000)`); });
+  if (fs.existsSync(path.join(RACINE, 'modules', m, 'scenario.json'))) { const sc = lireJson(path.join(RACINE, 'modules', m, 'scenario.json')); if (!Array.isArray(sc.etapes) || !sc.etapes.length) err.push(`${ou} : scenario.json sans étapes`); }
   if (fs.existsSync(path.join(RACINE, 'modules', m, 'apercu.mp4'))) poids(`modules/${m}/apercu.mp4`, 2 * 1024 * 1024, ou);
   const css = fs.readFileSync(path.join(RACINE, 'modules', m, 'module.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
   const dur = css.match(/#[0-9a-f]{3,8}\b|rgba?\(\s*\d|hsla?\(\s*\d|font-family\s*:(?!\s*(?:var\(|inherit))[^;]+/gi);

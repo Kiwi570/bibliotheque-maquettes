@@ -1,0 +1,69 @@
+{
+ "nom": "pluie-sur-vitre",
+ "titre": "Image d'ouverture vue à travers une vitre mouillée : gouttes qui ruissellent et réfractent, buée que le pointeur essuie, éclaircie au défilement",
+ "role": "ouverture",
+ "animations": [
+  "webgl-shader"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "origine": [
+  "h-renovation-maquette/haut"
+ ],
+ "convient_a": [
+  "bâtiment",
+  "artisanat",
+  "immobilier",
+  "hébergement",
+  "tourisme",
+  "restauration",
+  "culture",
+  "bien-être",
+  "média",
+  "conseil"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "froid",
+  "doux",
+  "minéral",
+  "sobre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "image": "URL de l'image d'ouverture ; sinon l'<img> de .pluie__fond ; sinon crépuscule neutre généré",
+  "focus": "point focal [x, y] du recadrage, [.5, .5]",
+  "intensite": "quantité de pluie, 1 (0,1 à 1)",
+  "buee": "buée essuyée par le pointeur, qui se reforme lentement, true",
+  "eclaircie": "la pluie se raréfie et la buée disparaît au défilement, true",
+  "dpr": "densité de pixels maximale sur ordinateur, 1.25 (1 sous 700 px)",
+  "repli": "'gouttes' (gouttes figées en SVG) ou 'net' (image seule) sans WebGL et en mode calme, 'gouttes'"
+ },
+ "images": [
+  {
+   "role": "fond plein écran",
+   "selecteur": ".pluie__fond",
+   "nombre": "1",
+   "ratio": "16:9 (recadré en 9:16 sur téléphone, point d intérêt réglable par l option focus)",
+   "largeur": 2560,
+   "zone_calme": "bas gauche : moitié gauche, 55 % du bas (surtitre, titre, paragraphe) et bandeau bas à droite (boutons) ; image plutôt sombre ou de soir, lumières et contrastes dans le haut et à droite pour que les gouttes se lisent"
+  }
+ ],
+ "poids_ko": 23,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0.036,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

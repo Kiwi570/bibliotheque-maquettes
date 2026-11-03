@@ -1,0 +1,32 @@
+/* Fil conducteur — identité uniquement par les variables du socle.
+   Le tracé passe au-dessus des fonds de section et sous leur contenu : les enfants directs des sections
+   (petits-enfants de la racine) sont remontés d'un cran (z-index 2), le texte reste toujours lisible par-dessus le fil. */
+.fic { position: relative; --fic-epaisseur: 2px; }
+.fic__svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+:where(.fic > * > *, .fic [data-fil-dessus]) { position: relative; z-index: 2; }
+
+.fic__rail, .fic__trace { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.fic__rail { stroke: var(--couleur-ligne); stroke-width: 1px; stroke-dasharray: 2 6; }
+.fic__trace { stroke: var(--couleur-accent); stroke-width: var(--fic-epaisseur); }
+
+.fic__perle { fill: var(--couleur-fond); stroke: var(--couleur-accent); stroke-width: 2px; transition: fill .4s; }
+.fic__perle.est-atteinte { fill: var(--couleur-accent); }
+
+.fic__objet { opacity: 0; transition: opacity .3s; }
+.fic__objet.est-visible { opacity: 1; }
+.fic__tete { fill: var(--couleur-accent); }
+.fic__halo { fill: color-mix(in oklab, var(--couleur-accent) 18%, transparent); stroke: color-mix(in oklab, var(--couleur-accent) 45%, transparent); stroke-width: 1px; }
+
+@media (max-width: 699px) { .fic { --fic-epaisseur: 1.6px; } }
+
+/* Réduire les animations et mode calme : fil entier, perles pleines, pas d'objet. */
+@media (prefers-reduced-motion: reduce) {
+  .fic__objet { display: none; }
+  .fic__trace { stroke-dashoffset: 0 !important; }
+  .fic__perle { fill: var(--couleur-accent); }
+}
+.calme .fic__objet { display: none; }
+.calme .fic__trace { stroke-dashoffset: 0 !important; }
+.calme .fic__perle { fill: var(--couleur-accent); }
+
+@media print { .fic__svg { display: none; } }

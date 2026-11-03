@@ -1,0 +1,73 @@
+{
+ "nom": "texte-grave-en-direct",
+ "titre": "Prénom ou court message gravé, brodé, imprimé ou écrit en direct sur un objet dessiné en canvas, avec choix du style et du support, et image PNG téléchargeable",
+ "role": "outil-interactif",
+ "animations": [
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "saisie-personnalisee",
+  "configurateur"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": [
+  "gwenanou-print-maquette/heros",
+  "beat-haechler-maquette/bons-cadeaux-hero",
+  "gwenanou-print-maquette/simulateur",
+  "pixncroq-maquette/boutique-cadeau"
+ ],
+ "convient_a": [
+  "artisanat",
+  "commerce",
+  "bien-être",
+  "restauration",
+  "hébergement",
+  "culture",
+  "association",
+  "sport",
+  "animaux",
+  "tourisme",
+  "spectacle"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "chaleureux",
+  "artisanal",
+  "luxueux",
+  "ludique",
+  "sobre",
+  "doux",
+  "nocturne"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "max": "longueur maximale en caractères visibles (graphèmes), 20",
+  "texteVide": "texte d'exemple dessiné quand le champ est vide, 'Votre prénom'",
+  "style": "style de départ : grave, brode, imprime ou ecrit ; sinon le bouton coché",
+  "support": "support de départ : plaque, etiquette ou carte ; sinon le bouton coché",
+  "courbure": "force l'arc du texte : 0 droit, 1 arc de l'étiquette, négatif = arc inversé ; par défaut selon le support",
+  "vitesse": "multiplie la vitesse d'apparition des lettres, 1",
+  "etincelles": "lueur du laser et étincelles en style gravé, true",
+  "jouerALaVue": "rejoue l'apparition la première fois que l'objet entre dans l'écran, true",
+  "telechargement": "bouton [data-telecharger] : PNG du rendu final, true",
+  "largeurPng": "largeur du PNG téléchargé en px, 1600",
+  "nomFichier": "début du nom du PNG, 'apercu' (suivi du texte sans accents)",
+  "annonce": "phrase lue par les lecteurs d'écran, 'Aperçu : « {texte} », {style} sur {support}.'"
+ },
+ "images": [],
+ "poids_ko": 34.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

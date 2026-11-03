@@ -41,6 +41,24 @@
   "tension": "courbure du tracé, 0.5 (0 = segments droits)",
   "largeurMin": "900 : en dessous, carte dans le flux et barre « Étape n / total » en bas"
  },
+ "images": [
+  {
+   "role": "carte ou plan du parcours",
+   "selecteur": ".cic__fond",
+   "nombre": "1",
+   "ratio": "4:3",
+   "largeur": 1300,
+   "zone_calme": "aucune : le module pose les repères numérotés dessus, garder un fond peu chargé"
+  },
+  {
+   "role": "photo d étape",
+   "selecteur": ".cic__visuel",
+   "nombre": "1 par étape",
+   "ratio": "16:9",
+   "largeur": 1000,
+   "zone_calme": "aucune (texte à côté)"
+  }
+ ],
  "poids_ko": 13.9,
  "tests": {
   "formats": "ok",
@@ -48,6 +66,7 @@
   "sans-webgl": "n/a",
   "console": "0 erreur",
   "cls": 0,
+  "scenario": "n/a",
   "texte-12px": "ok",
   "cibles-44px": "ok"
  }

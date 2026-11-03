@@ -1,0 +1,76 @@
+{
+ "nom": "planches-empilees",
+ "titre": "Planches de services collantes qui s'empilent au défilement, la précédente recule et s'assombrit",
+ "role": "services",
+ "animations": [
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "btp-confort-avenir-maquette/metiers",
+  "iprof-maquette/cours-individuels-stackcards",
+  "esaie-55-1-maquette/histoires",
+  "francis-gerardin-maquette/band-2"
+ ],
+ "convient_a": [
+  "bâtiment",
+  "artisanat",
+  "services-b2b",
+  "conseil",
+  "formation",
+  "santé",
+  "bien-être",
+  "sport",
+  "association",
+  "immobilier",
+  "juridique",
+  "auto-moto",
+  "numérique",
+  "restauration",
+  "hébergement"
+ ],
+ "ambiances": [
+  "sobre",
+  "clair",
+  "sombre",
+  "artisanal",
+  "industriel",
+  "chaleureux",
+  "minéral",
+  "brut"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "reduction": "recul (échelle) par planche posée dessus, 0.05",
+  "voile": "assombrissement maximal de la planche recouverte, 0.45 (0 = aucun)",
+  "rotation": "inclinaison alternée de la planche recouverte en degrés, 0 (1 à 1.5 pour des fiches posées)",
+  "profondeur": "nombre de planches au-delà duquel le recul n'augmente plus, 3",
+  "css --ple-marge / --ple-decalage / --ple-hmax": "écart sous l'en-tête, bord visible des planches recouvertes, hauteur maximale d'une planche (640px, 900px en portrait)"
+ },
+ "images": [
+  {
+   "role": "photo de la planche (métier, service ou offre)",
+   "selecteur": ".ple__visuel",
+   "nombre": "1 par planche (2 à 8)",
+   "ratio": "4:3, recadrée par object-fit: cover (de 3:4 en tablette paysage basse à 16:10 sur téléphone et en tablette portrait) : sujet centré",
+   "largeur": 1600,
+   "zone_calme": "aucune (texte à côté ou au-dessus, jamais sur l'image)"
+  }
+ ],
+ "poids_ko": 11.4,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

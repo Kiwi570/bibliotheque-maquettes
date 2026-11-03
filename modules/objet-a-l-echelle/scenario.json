@@ -1,0 +1,13 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"objet-a-l-echelle\"]"},
+  {"cliquer": "[data-groupe] button:has-text(\"Grand\")"},
+  {"attendre": 500},
+  {"cliquer": "[data-groupe] button:has-text(\"Salon\")"},
+  {"cliquer": "[data-groupe] button:has-text(\"Lampadaire\")"},
+  {"attendre": 500},
+  {"cliquer": "[data-groupe] button:has-text(\"Sculpture\")"},
+  {"verifier": ".oae__scene"}
+ ],
+ "pause": 700
+}

@@ -1,0 +1,71 @@
+{
+ "nom": "ciel-en-direct",
+ "titre": "Ciel et mer qui suivent l'heure réelle du lieu (aube, jour, crépuscule, nuit), avec sélecteur d'heure et texte toujours lisible",
+ "role": "ouverture",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "origine": [
+  "hanamizuki-maquette/hero",
+  "tiki-cassis-maquette/sky",
+  "aquafit-maquette/eau"
+ ],
+ "convient_a": [
+  "tourisme",
+  "hébergement",
+  "restauration",
+  "bien-être",
+  "sport",
+  "culture",
+  "spectacle",
+  "association",
+  "collectivité",
+  "commerce",
+  "artisanat"
+ ],
+ "ambiances": [
+  "océanique",
+  "nocturne",
+  "doux",
+  "chaleureux",
+  "sombre",
+  "clair"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "timeZone": "fuseau IANA du lieu ('Europe/Paris'), null = fuseau du visiteur",
+  "lat": "latitude du lieu, null ; avec lon : lever, coucher et hauteur du soleil calculés",
+  "lon": "longitude du lieu, null",
+  "lever": "lever du soleil sans coordonnées, '07:00'",
+  "coucher": "coucher du soleil sans coordonnées, '19:30'",
+  "heure": "heure forcée 'HH:MM', null = heure réelle",
+  "parametre": "paramètre d'adresse qui force l'heure (?heure=21:30), 'heure' ; null pour ignorer",
+  "mer": "mer sous l'horizon avec reflets du soleil et de la lune, true ; false = ciel seul",
+  "horizon": "'auto' (juste au-dessus du bloc de texte) ou fraction fixe, 'auto'",
+  "etoiles": "densité d'étoiles, 1 (0 pour couper)",
+  "intervalle": "rafraîchissement de l'heure réelle en ms, 30000",
+  "contraste": "contraste visé pour le texte, 4.6",
+  "clair": "couleur claire du texte, la plus claire de --couleur-texte / --couleur-fond",
+  "sombre": "couleur sombre du texte, la plus sombre des deux",
+  "palette": "lignes [altitude, haut, horizon, mer, mer profonde, soleil] en #rrggbb, palette naturelle neutre",
+  "libelles": "noms des moments { aube, jour, crepuscule, nuit }"
+ },
+ "images": [],
+ "poids_ko": 26.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.051,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

@@ -10,7 +10,7 @@
 //                 "points_forts": [...], "reserves": [...], "animations": [...], "interactions": [...],
 //                 "change_depuis_audit": "texte ou null", "accueil": "<id du bloc d'ouverture>" },
 //   "sections": { "<id inventaire>": { "titre", "role", "description", "animations", "interactions", "telephone",
-//                 "note_qualite", "reutilisable", "module", "pieges", "dependances"?, "particularites"?: ["mécanique rare, texte libre"], "code"?: {...}, "ignorer"?: "raison" } }
+//                 "note_qualite", "reutilisable", "module", "modules"?: ["autres modules tirés de la section"], "pieges", "dependances"?, "particularites"?: ["mécanique rare, texte libre"], "code"?: {...}, "ignorer"?: "raison" } }
 // }
 import fs from 'node:fs';
 import path from 'node:path';
@@ -61,6 +61,7 @@ for (const depot of process.argv.slice(2)) {
       titre: n.titre, role: n.role, description: n.description,
       animations: n.animations, interactions: n.interactions, dependances: deps,
       telephone: n.telephone, note_qualite: n.note_qualite, reutilisable: !!n.reutilisable, module: n.module || null,
+      modules: [...new Set([n.module, ...(n.modules || [])].filter(Boolean))], // module principal en tête, puis les autres modules tirés de cette section
       code: { ...b.code, ...(n.code || {}) }, medias, pieges: n.pieges || [],
       ...(n.particularites?.length ? { particularites: n.particularites } : {}),
       mesures: { hauteur_p1440: b.hauteur, hauteur_m390: b.hauteur_m390, epinglee: b.scrolltriggers.some(s => s.pin), scrolltriggers: b.scrolltriggers.length },

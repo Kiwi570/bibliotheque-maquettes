@@ -1,0 +1,59 @@
+{
+ "etapes": [
+  {
+   "defiler": "[data-module=\"formulaire-par-etapes\"]"
+  },
+  {
+   "cliquer": "label.fpe__carte:has(input[value=\"devis\"])"
+  },
+  {
+   "cliquer": "[data-suivant]:visible"
+  },
+  {
+   "cliquer": "label.fpe__puce:has(input[value=\"matin\"])"
+  },
+  {
+   "saisir": [
+    "#fpe-message",
+    "Une demande de démonstration."
+   ]
+  },
+  {
+   "cliquer": "[data-suivant]:visible"
+  },
+  {
+   "saisir": [
+    "#fpe-prenom",
+    "Camille"
+   ]
+  },
+  {
+   "saisir": [
+    "#fpe-nom",
+    "Martin"
+   ]
+  },
+  {
+   "saisir": [
+    "#fpe-email",
+    "camille@exemple.fr"
+   ]
+  },
+  {
+   "cliquer": "label.fpe__case:has(input[name=\"accord\"])"
+  },
+  {
+   "cliquer": "[data-suivant]:visible"
+  },
+  {
+   "attendre": 800
+  },
+  {
+   "cliquer": "[data-module=\"formulaire-par-etapes\"] button[type=\"submit\"]"
+  },
+  {
+   "verifier": "[data-recommencer]"
+  }
+ ],
+ "pause": 500
+}

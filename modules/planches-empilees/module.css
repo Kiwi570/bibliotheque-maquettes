@@ -1,0 +1,85 @@
+/* Planches empilées — identité uniquement par les variables du socle.
+   Empilement en CSS pur (position: sticky) ; module.js ajoute le recul et le voile de la planche recouverte,
+   et le repli .ple--plat quand une planche déborde de la hauteur utile. */
+.ple {
+  --ple-marge: clamp(10px, 2.2vh, 24px);        /* écart entre l'en-tête et la première planche, et en bas de l'écran */
+  --ple-decalage: clamp(8px, 1.6vh, 16px);      /* bord visible de chaque planche recouverte */
+  --ple-hmax: 640px;                             /* hauteur maximale d'une planche empilée */
+  --ple-n: 4;                                    /* nombre de planches (fixé par module.js) */
+  --ple-reduction: .05;                          /* recul par planche posée dessus */
+  --ple-voile: .45;                              /* assombrissement maximal */
+  --ple-rotation: 0deg;
+  --ple-fond-planche: color-mix(in oklab, var(--couleur-texte) 7%, var(--couleur-fond));
+  position: relative; padding-block: clamp(56px, 8vw, 120px);
+}
+.ple__tete { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vh, 56px); }
+.ple__titre { font-size: clamp(2.2rem, 5vw, 4.2rem); line-height: 1; padding-block: .06em; }
+.ple__intro { color: var(--couleur-texte-doux); max-width: 52ch; }
+
+.ple__pile { display: grid; gap: clamp(20px, 3vw, 40px); }
+
+/* Planche : contenu (cartouche, titre, texte, liste, lien) et visuel. */
+.ple__planche {
+  --ple-i: 0; --ple-p: 0; --ple-signe: 1;
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr);
+  background: var(--ple-fond-planche); border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); overflow: hidden;
+  transform-origin: 50% 0;
+}
+.ple__planche:nth-child(2) { --ple-i: 1; --ple-signe: -1; }
+.ple__planche:nth-child(3) { --ple-i: 2; }
+.ple__planche:nth-child(4) { --ple-i: 3; --ple-signe: -1; }
+.ple__planche:nth-child(5) { --ple-i: 4; }
+.ple__planche:nth-child(6) { --ple-i: 5; --ple-signe: -1; }
+.ple__planche:nth-child(7) { --ple-i: 6; }
+.ple__planche:nth-child(8) { --ple-i: 7; --ple-signe: -1; }
+/* Voile de la planche recouverte (piloté par --ple-p). */
+.ple__planche::after { content: ""; position: absolute; inset: 0; z-index: 2; background: var(--couleur-fond); opacity: calc(min(var(--ple-p), 1) * var(--ple-voile)); pointer-events: none; }
+
+.ple__contenu { display: flex; flex-direction: column; gap: clamp(12px, 1.8vh, 18px); min-width: 0; min-height: 0; padding: clamp(20px, 3vw, 40px); }
+.ple__cartouche { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding-bottom: 10px; border-bottom: 1px solid var(--couleur-ligne); font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.ple__cartouche span:first-child { color: var(--couleur-accent); font-variant-numeric: tabular-nums; }
+.ple__nom { font-size: clamp(1.7rem, 1.1rem + 2vw, 2.8rem); line-height: 1.02; overflow-wrap: anywhere; }
+.ple__texte { color: var(--couleur-texte-doux); max-width: 52ch; }
+.ple__liste { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--couleur-ligne); }
+.ple__liste li { position: relative; padding: 7px 0 7px 1.4em; border-bottom: 1px solid var(--couleur-ligne); font-size: .97rem; line-height: 1.4; }
+.ple__liste li::before { content: ""; position: absolute; left: .1em; top: calc(7px + .7em - 3px); width: 6px; height: 6px; background: var(--couleur-accent); }
+.ple__lien { flex: none; align-self: flex-start; margin-top: auto; transform-origin: 0 100%; }
+.ple__lien:hover { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+
+.ple__visuel { position: relative; display: block; min-width: 0; min-height: 0; aspect-ratio: 16 / 10; overflow: hidden; }
+.ple__visuel > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Deux colonnes dès la tablette en paysage (et en liste à plat dès 700 px). */
+@media (min-width: 700px) {
+  .ple__planche { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); }
+  .ple__visuel { aspect-ratio: auto; min-height: 300px; }
+}
+
+/* ---------- Empilement : écran assez large et assez haut, animations permises, pas de mode calme ni de repli ---------- */
+@media (min-width: 700px) and (min-height: 520px) and (prefers-reduced-motion: no-preference) {
+  html:not(.calme) .ple:not(.ple--plat) .ple__planche {
+    position: sticky;
+    top: calc(var(--entete-h) + var(--ple-marge) + var(--ple-i) * var(--ple-decalage));
+    height: min(var(--ple-hmax), calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--ple-marge) - (var(--ple-n) - 1) * var(--ple-decalage)));
+    scale: calc(1 - var(--ple-p) * var(--ple-reduction));
+    rotate: calc(min(var(--ple-p), 1) * var(--ple-rotation) * var(--ple-signe));
+    box-shadow: 0 -18px 40px -28px color-mix(in oklab, var(--couleur-fond) 30%, black);
+  }
+  html:not(.calme) .ple:not(.ple--plat) .ple__visuel { min-height: 0; }
+  /* Le lien garde ses 44 px quand sa planche recule (contre-échelle : aucune incidence sur la mise en page). */
+  html:not(.calme) .ple:not(.ple--plat) .ple__lien { scale: calc(1 / (1 - var(--ple-p) * var(--ple-reduction))); }
+  /* Écrans bas : contenu plus serré pour tenir dès 1000 × 560. */
+  @media (max-height: 760px) {
+    html:not(.calme) .ple:not(.ple--plat) .ple__contenu { padding: clamp(16px, 2.6vh, 28px) clamp(18px, 2.4vw, 32px); gap: 10px; }
+    html:not(.calme) .ple:not(.ple--plat) .ple__nom { font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem); }
+    html:not(.calme) .ple:not(.ple--plat) .ple__texte { font-size: .95rem; line-height: 1.45; }
+    html:not(.calme) .ple:not(.ple--plat) .ple__liste li { padding-block: 5px; font-size: .92rem; }
+    html:not(.calme) .ple:not(.ple--plat) .ple__liste li::before { top: calc(5px + .7em - 3px); }
+    html:not(.calme) .ple:not(.ple--plat) .ple__cartouche { padding-bottom: 6px; }
+  }
+  /* Tablette en portrait : une colonne, le visuel prend la hauteur qui reste sous le texte. */
+  @media (orientation: portrait) {
+    .ple { --ple-hmax: 900px; }
+    html:not(.calme) .ple:not(.ple--plat) .ple__planche { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  }
+}

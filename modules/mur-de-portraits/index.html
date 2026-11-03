@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mur de portraits · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #14161c; --couleur-texte: #f2efe8; --couleur-accent: #e8a64c; --couleur-secondaire: #4f78c9; --police-titres: "Avenir Next", "Segoe UI", system-ui, sans-serif; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le mur s'allume par vagues. Survolez une vignette, cherchez un nom ou choisissez un groupe, puis ouvrez une fiche.</p>
+  </section>
+
+  <section class="mdp socle-cadre" data-module="mur-de-portraits" aria-labelledby="mdp-titre">
+    <div class="mdp__tete">
+      <p class="socle-surtitre">Équipe</p>
+      <h2 class="mdp__titre" id="mdp-titre">Toutes les personnes qui font la maison</h2>
+      <p class="mdp__texte">Un paragraphe de deux lignes qui présente le mur : qui y figure, depuis quand, et comment retrouver quelqu'un.</p>
+    </div>
+    <div class="mdp__outils">
+      <form class="mdp__recherche" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <label class="socle-sr" for="mdp-cherche">Rechercher un nom ou un rôle</label>
+        <input id="mdp-cherche" type="search" placeholder="Rechercher un nom, un rôle" autocomplete="off">
+      </form>
+      <div class="mdp__filtres" role="group" aria-label="Groupes"></div>
+      <p class="mdp__compte" data-compte aria-live="polite"></p>
+    </div>
+    <ul class="mdp__grille" aria-label="Portraits"></ul>
+    <div class="mdp__vide" hidden><p>Aucun portrait ne correspond à cette recherche.</p><button type="button" class="socle-bouton" data-tout>Tout afficher</button></div>
+    <p class="mdp__aide">Au clavier : Tab pour entrer dans le mur, flèches pour le parcourir, Entrée pour ouvrir une fiche.</p>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, toutes les vignettes sont visibles d'emblée et la loupe est remplacée par un simple agrandissement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  // Portraits de démonstration : noms fictifs tirés au sort, aucune photo (vignettes générées par le module).
+  const prenoms = ['Camille', 'Louis', 'Inès', 'Hugo', 'Léa', 'Nathan', 'Chloé', 'Jules', 'Manon', 'Arthur', 'Zoé', 'Paul', 'Lina', 'Sacha', 'Emma', 'Noé', 'Alice', 'Tom', 'Jeanne', 'Malo', 'Rose', 'Victor', 'Anna', 'Lucas', 'Margaux', 'Théo', 'Elsa', 'Gabriel', 'Lou', 'Simon'];
+  const noms = ['Martin', 'Bernard', 'Durand', 'Petit', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefèvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier', 'Morel', 'Girard', 'André', 'Mercier', 'Blanc', 'Guérin', 'Boyer', 'Garnier', 'Chevalier', 'Faure', 'Rousseau', 'Clément', 'Gauthier', 'Perrin'];
+  const groupes = { Atelier: ['Fabrication', 'Finitions', 'Contrôle', 'Maintenance'], Bureau: ['Comptabilité', 'Accueil', 'Planning', 'Achats'], Terrain: ['Pose', 'Livraison', 'Chantier', 'Relevés'], Conseil: ['Conception', 'Devis', 'Suivi client', 'Formation'] };
+  const g = Object.keys(groupes);
+  let x = 7; const alea = n => Math.floor((x = (x * 1103515245 + 12345) % 2147483648) / 2147483648 * n);
+  const portraits = Array.from({ length: 240 }, (_, i) => {
+    const groupe = g[alea(4)], role = groupes[groupe][alea(4)];
+    return { nom: `${prenoms[alea(30)]} ${noms[alea(30)]}`, groupe, role, texte: `Fiche de démonstration : une ou deux phrases de présentation, un souvenir, une date d'arrivée dans l'équipe (${2004 + alea(21)}).` };
+  });
+  for (const el of document.querySelectorAll('[data-module="mur-de-portraits"]')) init(el, { portraits, groupes: g });
+</script>
+</body>
+</html>

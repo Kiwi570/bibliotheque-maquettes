@@ -1,0 +1,29 @@
+{
+ "etapes": [
+  {
+   "defiler": "[data-module=\"catalogue-filtres-flip\"]"
+  },
+  {
+   "cliquer": "button[data-valeur=\"atelier\"]"
+  },
+  {
+   "cliquer": "button[data-valeur=\"court\"]"
+  },
+  {
+   "attendre": 600
+  },
+  {
+   "cliquer": "button[data-valeur=\"tout\"] >> nth=0"
+  },
+  {
+   "cliquer": "button[data-valeur=\"tout\"] >> nth=1"
+  },
+  {
+   "cliquer": "button[data-valeur=\"nature\"]"
+  },
+  {
+   "verifier": "button[data-valeur=\"nature\"][aria-pressed=\"true\"]"
+  }
+ ],
+ "pause": 700
+}

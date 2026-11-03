@@ -1,0 +1,93 @@
+/* Texte gravé en direct : objet dessiné en canvas 2D + formulaire (texte, style, support).
+   Identité uniquement par variables ; les couleurs et polices du rendu canvas sont lues ici par module.js. */
+.tgd {
+  /* Couleurs du rendu (canvas) : matière de l'objet, encre (gravure, impression, écriture), fil (broderie), lueur du laser. */
+  --tgd-support: color-mix(in srgb, var(--couleur-secondaire) 16%, var(--couleur-texte));
+  --tgd-encre: var(--couleur-fond);
+  --tgd-fil: var(--couleur-accent);
+  --tgd-lueur: var(--couleur-accent);
+  /* Polices des quatre styles (l'écriture manuscrite reprend --police-manuscrite si la page en fixe une). */
+  --tgd-police-gravee: var(--police-titres);
+  --tgd-police-brodee: var(--police-texte);
+  --tgd-police-imprimee: var(--police-mono);
+  --tgd-police-ecrite: var(--police-manuscrite, var(--police-titres));
+  padding-block: clamp(56px, 11vh, 128px);
+}
+.tgd__cadre { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+.tgd__tete { grid-column: 1 / -1; display: grid; gap: .8rem; max-width: 46rem; }
+.tgd__h2 { font-size: clamp(2rem, 4.4vw, 3.6rem); }
+.tgd__intro { color: var(--couleur-texte-doux); max-width: 40rem; }
+
+/* Scène : fond neutre en dégradé, toile en position absolue (hauteur fixée par le ratio : aucun décalage). */
+.tgd__scene {
+  position: relative; margin: 0; aspect-ratio: 16 / 11; overflow: hidden;
+  border-radius: calc(var(--rayon) * 1.4); border: 1px solid var(--couleur-ligne);
+  background:
+    radial-gradient(70% 60% at 50% 42%, color-mix(in srgb, var(--couleur-secondaire) 22%, transparent), transparent 70%),
+    radial-gradient(120% 90% at 50% 120%, color-mix(in srgb, var(--couleur-accent) 14%, transparent), transparent 60%),
+    var(--couleur-surface);
+}
+.tgd__toile { position: absolute; inset: 0; width: 100%; height: 100%; }
+.tgd__legende {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: .65rem 1rem;
+  font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .04em; color: var(--couleur-texte-doux);
+}
+
+/* Repli sans JavaScript : une plaque simple en CSS avec le texte d'exemple. */
+.tgd__repli { display: none; }
+@media (scripting: none) {
+  .tgd__repli {
+    position: absolute; inset: 22% 10% 30%; display: grid; place-items: center; border-radius: var(--rayon);
+    background: var(--tgd-support); color: var(--tgd-encre); font-family: var(--tgd-police-gravee); font-size: clamp(1.4rem, 4vw, 2.6rem);
+  }
+  .tgd__actions [data-telecharger] { display: none; }
+}
+
+/* Formulaire */
+.tgd__form { display: grid; gap: 1.4rem; min-width: 0; }
+.tgd__champ { display: grid; gap: .45rem; }
+.tgd__etiquette, .tgd__groupe legend { font-weight: 600; padding: 0; }
+.tgd__saisie {
+  display: flex; align-items: center; gap: .6rem; padding-inline: 1rem .9rem;
+  border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-surface);
+  transition: border-color .25s;
+}
+.tgd__saisie:focus-within { border-color: var(--couleur-accent); outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+.tgd__entree {
+  flex: 1; min-width: 0; min-height: 52px; border: 0; background: transparent; color: inherit;
+  font: inherit; font-size: max(16px, 1.15rem); outline: none;
+}
+.tgd__entree::placeholder { color: var(--couleur-texte-doux); opacity: 1; }
+.tgd__compteur { flex: none; font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-texte-doux); font-variant-numeric: tabular-nums; }
+.tgd__aide { font-size: max(13px, .85rem); color: var(--couleur-texte-doux); }
+
+.tgd__groupe { display: grid; gap: .6rem; min-width: 0; margin: 0; padding: 0; border: 0; }
+.tgd__liste { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tgd__choix {
+  position: relative; display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: .45rem 1.05rem .45rem .8rem;
+  border: 1px solid var(--couleur-ligne); border-radius: 999px; cursor: pointer;
+  transition: background-color .25s, border-color .25s, color .25s;
+}
+.tgd__choix input { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); margin: 0; opacity: 0; cursor: pointer; }
+.tgd__choix:hover { border-color: var(--couleur-texte-doux); }
+.tgd__choix:has(input:checked) { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.tgd__choix:has(input:focus-visible) { outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+.tgd__echantillon { display: inline-grid; place-items: center; min-width: 1.7em; font-size: 1.15em; line-height: 1; }
+.tgd__echantillon[data-style="grave"] { font-family: var(--tgd-police-gravee); font-weight: 600; }
+.tgd__echantillon[data-style="brode"] { font-family: var(--tgd-police-brodee); font-weight: 800; text-decoration: underline dashed; text-underline-offset: .2em; }
+.tgd__echantillon[data-style="imprime"] { font-family: var(--tgd-police-imprimee); font-weight: 700; }
+.tgd__echantillon[data-style="ecrit"] { font-family: var(--tgd-police-ecrite); font-size: 1.35em; }
+.tgd__forme { width: 1.6em; height: 1.1em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; }
+
+.tgd__actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.tgd__note { font-size: max(13px, .85rem); color: var(--couleur-texte-doux); }
+
+@media (max-width: 900px) {
+  .tgd__cadre { grid-template-columns: minmax(0, 1fr); }
+  .tgd__scene { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 420px) {
+  .tgd__scene { aspect-ratio: 1 / 1; }
+  .tgd__choix { padding-inline: .7rem .85rem; }
+  .tgd__actions .socle-bouton { flex: 1 1 100%; }
+}

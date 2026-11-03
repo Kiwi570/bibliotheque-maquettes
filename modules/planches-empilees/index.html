@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Planches empilées · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #16181d; --couleur-texte: #eceae4; --couleur-accent: #d6a84a; --couleur-secondaire: #4c8a83; --rayon: 10px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : chaque planche se colle sous l'en-tête, la suivante vient la recouvrir et la précédente recule.</p>
+  </section>
+
+  <section class="ple" data-module="planches-empilees" aria-labelledby="ple-titre">
+    <div class="ple__tete socle-cadre">
+      <p class="socle-surtitre">Nos services</p>
+      <h2 class="ple__titre" id="ple-titre">Titre de la section des services</h2>
+      <p class="ple__intro">Un paragraphe de deux lignes qui présente les services et invite à les parcourir un par un.</p>
+    </div>
+    <div class="ple__pile socle-cadre">
+      <article class="ple__planche" data-epingle data-tient="planche 01" aria-labelledby="ple-t01">
+        <div class="ple__contenu">
+          <p class="ple__cartouche"><span>Planche 01 / 04</span><span>Atelier</span></p>
+          <h3 class="ple__nom" id="ple-t01">Titre du premier service</h3>
+          <p class="ple__texte">Un paragraphe de deux ou trois lignes qui dit ce que recouvre ce service, pour qui il est pensé et ce que l'on obtient à la fin.</p>
+          <ul class="ple__liste"><li>Une prestation courte</li><li>Une deuxième prestation</li><li>Une troisième prestation</li><li>Une quatrième prestation</li></ul>
+          <a class="ple__lien socle-bouton" href="#suite">Découvrir<span class="socle-sr"> le premier service</span></a>
+        </div>
+        <div class="ple__visuel socle-visuel " aria-hidden="true"></div>
+      </article>
+      <article class="ple__planche" data-epingle data-tient="planche 02" aria-labelledby="ple-t02">
+        <div class="ple__contenu">
+          <p class="ple__cartouche"><span>Planche 02 / 04</span><span>Chantier</span></p>
+          <h3 class="ple__nom" id="ple-t02">Deuxième service</h3>
+          <p class="ple__texte">Un paragraphe de deux ou trois lignes qui dit ce que recouvre ce service, pour qui il est pensé et ce que l'on obtient à la fin.</p>
+          <ul class="ple__liste"><li>Une prestation courte</li><li>Une prestation un peu plus longue à lire</li><li>Une troisième prestation</li><li>Une quatrième prestation</li></ul>
+          <a class="ple__lien socle-bouton" href="#suite">Découvrir<span class="socle-sr"> le deuxième service</span></a>
+        </div>
+        <div class="ple__visuel socle-visuel socle-visuel--2" aria-hidden="true"></div>
+      </article>
+      <article class="ple__planche" data-epingle data-tient="planche 03" aria-labelledby="ple-t03">
+        <div class="ple__contenu">
+          <p class="ple__cartouche"><span>Planche 03 / 04</span><span>Conseil</span></p>
+          <h3 class="ple__nom" id="ple-t03">Un troisième service au titre plus long</h3>
+          <p class="ple__texte">Un paragraphe de deux ou trois lignes qui dit ce que recouvre ce service, pour qui il est pensé et ce que l'on obtient à la fin.</p>
+          <ul class="ple__liste"><li>Une prestation courte</li><li>Une deuxième prestation</li><li>Une troisième prestation</li></ul>
+          <a class="ple__lien socle-bouton" href="#suite">Découvrir<span class="socle-sr"> le troisième service</span></a>
+        </div>
+        <div class="ple__visuel socle-visuel socle-visuel--3" aria-hidden="true"></div>
+      </article>
+      <article class="ple__planche" data-epingle data-tient="planche 04" aria-labelledby="ple-t04">
+        <div class="ple__contenu">
+          <p class="ple__cartouche"><span>Planche 04 / 04</span><span>Suivi</span></p>
+          <h3 class="ple__nom" id="ple-t04">Quatrième service</h3>
+          <p class="ple__texte">Un paragraphe de deux ou trois lignes qui dit ce que recouvre ce service, pour qui il est pensé et ce que l'on obtient à la fin.</p>
+          <ul class="ple__liste"><li>Une prestation courte</li><li>Une deuxième prestation</li><li>Une troisième prestation</li><li>Une quatrième prestation</li><li>Une cinquième prestation</li></ul>
+          <a class="ple__lien socle-bouton" href="#suite">Découvrir<span class="socle-sr"> le quatrième service</span></a>
+        </div>
+        <div class="ple__visuel socle-visuel " aria-hidden="true"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, sur téléphone ou quand la hauteur manque, les planches se suivent simplement, sans empilement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="planches-empilees"]')) init(el);
+</script>
+</body>
+</html>

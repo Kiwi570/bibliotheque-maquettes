@@ -1,0 +1,21 @@
+{
+ "etapes": [
+  {"choisir": ["#demo-effet", "ecarte"]},
+  {"choisir": ["#demo-forme", "feuille"]},
+  {"cliquer": "[data-rejouer]"},
+  {"attendre": 2600},
+  {"choisir": ["#demo-effet", "chute"]},
+  {"choisir": ["#demo-forme", "droite"]},
+  {"cliquer": "[data-rejouer]"},
+  {"attendre": 2600},
+  {"choisir": ["#demo-effet", "pivot"]},
+  {"cliquer": "[data-rejouer]"},
+  {"attendre": 700},
+  {"touche": "Escape"},
+  {"attendre": 900},
+  {"verifier": ".demo-heros.est-ouvert h1"},
+  {"verifier": "#demo-titre"}
+ ],
+ "pause": 450,
+ "video": "scenario"
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte à calques · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #10171d; --couleur-texte: #edf0ea; --couleur-accent: #eaa23f; --couleur-secondaire: #5bb7a8; --couleur-sur-accent: #10171d; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le trait de côte se dessine, puis chaque calque apparaît. Allumez ou éteignez les calques, ou choisissez une zone dans la liste.</p>
+  </section>
+
+  <section class="cac" data-module="carte-a-calques" aria-labelledby="cac-titre">
+    <div class="cac__tete socle-cadre">
+      <p class="socle-surtitre">Surtitre</p>
+      <h2 class="cac__titre" id="cac-titre">Titre de la section</h2>
+      <p class="cac__intro">Un paragraphe de deux lignes qui présente le territoire couvert et explique comment lire la carte.</p>
+    </div>
+    <div class="cac__corps socle-cadre">
+      <div class="cac__legende">
+        <div class="cac__groupe" data-calque="couverture" data-teinte="1">
+          <button class="cac__calque" type="button" data-cac-calque="couverture" aria-pressed="true" aria-controls="cac-zones-couverture">
+            <span class="cac__pastille cac__pastille--zone" aria-hidden="true"></span>
+            <span class="cac__calque-texte"><b>Zones de couverture</b><span><span data-cac-compte>2</span> zones</span></span>
+            <span class="cac__interrupteur" aria-hidden="true"></span>
+          </button>
+          <ul class="cac__zones" id="cac-zones-couverture">
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="centre" aria-pressed="false"><b class="cac__nom">Zone centre</b><span class="cac__detail">Rayon indicatif autour du lieu principal.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="sud-est" aria-pressed="false"><b class="cac__nom">Zone sud-est</b><span class="cac__detail">Rayon indicatif autour du second lieu.</span></button></li>
+          </ul>
+        </div>
+        <div class="cac__groupe" data-calque="secteurs" data-teinte="2">
+          <button class="cac__calque" type="button" data-cac-calque="secteurs" aria-pressed="true" aria-controls="cac-zones-secteurs">
+            <span class="cac__pastille cac__pastille--secteur" aria-hidden="true"></span>
+            <span class="cac__calque-texte"><b>Secteurs d'intervention</b><span><span data-cac-compte>3</span> secteurs</span></span>
+            <span class="cac__interrupteur" aria-hidden="true"></span>
+          </button>
+          <ul class="cac__zones" id="cac-zones-secteurs">
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="nord" aria-pressed="false"><b class="cac__nom">Secteur nord</b><span class="cac__detail">Une ligne qui dit ce que couvre ce secteur.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="est" aria-pressed="false"><b class="cac__nom">Secteur est</b><span class="cac__detail">Une ligne qui dit ce que couvre ce secteur.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="littoral" aria-pressed="false"><b class="cac__nom">Secteur littoral</b><span class="cac__detail">Une ligne qui dit ce que couvre ce secteur.</span></button></li>
+          </ul>
+        </div>
+        <div class="cac__groupe" data-calque="rendez-vous" data-teinte="3">
+          <button class="cac__calque" type="button" data-cac-calque="rendez-vous" aria-pressed="true" aria-controls="cac-zones-rendez-vous">
+            <span class="cac__pastille cac__pastille--point" aria-hidden="true"></span>
+            <span class="cac__calque-texte"><b>Points de rendez-vous</b><span><span data-cac-compte>4</span> points</span></span>
+            <span class="cac__interrupteur" aria-hidden="true"></span>
+          </button>
+          <ul class="cac__zones" id="cac-zones-rendez-vous">
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="gare" aria-pressed="false"><b class="cac__nom">Parvis de la gare</b><span class="cac__detail">Jour et horaire à préciser.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="marche" aria-pressed="false"><b class="cac__nom">Place du marché</b><span class="cac__detail">Jour et horaire à préciser.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="port" aria-pressed="false"><b class="cac__nom">Port</b><span class="cac__detail">Jour et horaire à préciser.</span></button></li>
+            <li><button class="cac__zone-bouton" type="button" data-cac-zone="belvedere" aria-pressed="false"><b class="cac__nom">Belvédère</b><span class="cac__detail">Jour et horaire à préciser.</span></button></li>
+          </ul>
+        </div>
+        <p class="cac__note">Zones dessinées à titre indicatif. Pour une adresse précise, contactez-nous.</p>
+        <p class="socle-sr" aria-live="polite" data-cac-annonce></p>
+      </div>
+
+      <figure class="cac__carte">
+        <div class="cac__plan">
+          <svg class="cac__svg" viewBox="0 0 600 480" aria-hidden="true" focusable="false">
+            <g class="cac__fond">
+              <rect class="cac__mer" x="-10" y="-10" width="620" height="500"/>
+              <g class="cac__houle"><path d="M10 70 q20 -8 40 0 t40 0"/><path d="M30 190 q20 -8 40 0 t40 0"/><path d="M-10 420 q20 -8 40 0 t40 0"/><path d="M20 280 q15 -6 30 0 t30 0"/></g>
+              <path class="cac__terre" d="M610 -10 L160 -10 C140 30 175 75 145 118 C115 160 62 172 80 222 C98 270 152 282 132 332 C112 382 44 404 58 490 L610 490 Z"/>
+              <path class="cac__ile" d="M44 300 C34 284 52 268 70 274 C88 280 86 300 72 308 C60 314 50 310 44 300 Z"/>
+              <g class="cac__relief"><path d="M430 96 C432 62 500 52 528 76 C552 98 530 130 492 130 C456 130 428 122 430 96 Z"/><path d="M452 96 C454 76 494 70 510 84 C524 98 510 114 488 114 C466 114 450 110 452 96 Z"/><path d="M472 94 C474 86 490 84 496 90 C502 98 494 102 486 102 C478 102 470 100 472 94 Z"/></g>
+              <ellipse class="cac__lac" cx="478" cy="384" rx="44" ry="24"/>
+              <path class="cac__trait cac__riviere" d="M598 206 C520 194 486 252 410 242 C336 232 306 172 236 162 C196 156 172 140 150 122"/>
+              <path class="cac__trait cac__cote" d="M160 -10 C140 30 175 75 145 118 C115 160 62 172 80 222 C98 270 152 282 132 332 C112 382 44 404 58 490"/>
+              <g class="cac__nord" transform="translate(566 40)"><path d="M0 16 L0 -10 M-6 -2 L0 -12 L6 -2"/></g>
+            </g>
+            <g class="cac__couche" data-calque="couverture" data-teinte="1">
+              <circle class="cac__zone" data-zone="centre" cx="262" cy="206" r="118" data-x="360" data-y="250" data-ondes/>
+              <circle class="cac__zone" data-zone="sud-est" cx="452" cy="332" r="92" data-x="414" data-y="404" data-ondes/>
+            </g>
+            <g class="cac__couche" data-calque="secteurs" data-teinte="2">
+              <path class="cac__zone" data-zone="nord" d="M216 38 C268 18 344 26 400 48 C434 76 424 128 384 148 C324 166 252 160 218 130 C192 102 192 62 216 38 Z"/>
+              <path class="cac__zone" data-zone="est" d="M446 150 C504 128 568 146 584 192 C596 240 562 288 504 294 C458 298 428 262 428 218 C428 184 428 160 446 150 Z"/>
+              <path class="cac__zone" data-zone="littoral" data-y="405" d="M168 304 C208 282 284 290 322 320 C352 350 342 410 302 438 C252 464 186 454 158 420 C130 386 138 324 168 304 Z"/>
+            </g>
+            <g class="cac__couche" data-calque="rendez-vous" data-teinte="3">
+              <circle class="cac__point" data-zone="gare" cx="296" cy="214" r="7"/>
+              <circle class="cac__point" data-zone="marche" cx="226" cy="252" r="7" data-cote="gauche"/>
+              <circle class="cac__point" data-zone="port" cx="164" cy="350" r="7"/>
+              <circle class="cac__point" data-zone="belvedere" cx="486" cy="96" r="7"/>
+            </g>
+          </svg>
+          <figcaption class="cac__mention">Carte illustrative, zones indicatives</figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>En mode calme, la carte est complète dès l'arrivée et les ondes sont retirées ; les calques s'allument et s'éteignent sans animation.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="carte-a-calques"]')) init(el);
+</script>
+</body>
+</html>

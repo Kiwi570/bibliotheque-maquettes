@@ -1,0 +1,66 @@
+{
+ "nom": "impression-couche-par-couche",
+ "titre": "Objet imprimé couche par couche dans une section épinglée, buse et couches chaudes qui refroidissent, indicateur couche n / N et pourcentage, puis vue éclatée en strates",
+ "role": "méthode",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "d3co-maquette/heros"
+ ],
+ "convient_a": [
+  "artisanat",
+  "industrie",
+  "numérique",
+  "commerce",
+  "bâtiment",
+  "formation",
+  "services-b2b",
+  "santé"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "industriel",
+  "artisanal",
+  "sobre",
+  "minéral",
+  "chaleureux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "couches": "nombre de couches imprimées, 64",
+  "strates": "nombre de strates de la vue éclatée, 6 (0 : pas de vue éclatée)",
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 3",
+  "lissage": "valeur scrub, 0.6",
+  "rotation": "rotation de l'objet pendant la séquence en radians, 0.9 (0 pour couper)",
+  "nervures": "nombre de nervures du vase, 12 (0 : lisse)",
+  "torsion": "torsion des nervures du pied au col en radians, 0.9",
+  "matiere": "variable CSS de la couleur de la matière, '--couleur-secondaire'",
+  "profil": "fonction t (0 → 1) → rayon (≈ 0,3 à 1) : forme de l'objet",
+  "textes": "{ impression, termine, eclate } : libellés de l'état, {n} = nombre de strates",
+  "largeurMin": "700 : en dessous, pas d'épinglage, l'impression avance pendant que la scène traverse l'écran",
+  "hauteurMin": "520 : idem en hauteur"
+ },
+ "images": [],
+ "poids_ko": 16.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}
