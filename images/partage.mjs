@@ -3,7 +3,7 @@
 //
 // - Lit donnees/site.json (couleurs, nom, langues), donnees/textes/<langue>.json (pages.<cle>.accroche), source/pages/*.mjs
 //   (cle, partage: false, imagePartage), donnees/images.json (sujet, zones calmes, rôle, page) et le logo d'assets/images/.
-// - Image de la page : imagePartage de la page, sinon l'entrée de images.json avec "page": "<cle>" et le rôle ouverture,
+// - Image de la page : imagePartage de la page si elle est dans images.json (sinon visuel provisoire, remplacé et signalé), sinon l'entrée de images.json avec "page": "<cle>" et le rôle ouverture,
 //   sinon la première ouverture.
 // - Deux gabarits, choisis d'après le sujet et la zone calme : « photo à droite » (texte à gauche, sur fond uni) et
 //   « plein cadre » (bandeau bas en dégradé, seulement si le sujet reste au-dessus du bandeau). Le texte n'est jamais sur le sujet.
@@ -41,21 +41,37 @@ const lumFond = (() => { const h = (site.couleurs?.fond || '#ffffff').replace('#
 const dosImages = path.join(RACINE, 'assets', 'images');
 const logos = fs.existsSync(dosImages) ? fs.readdirSync(dosImages).filter(f => /^logo(-(clair|sombre))?(-\d+)?\.(svg|webp|png)$/.test(f)) : [];
 const prefere = lumFond < 0.4 ? /clair/ : /sombre/;
-const logo = logos.find(f => prefere.test(f) && f.endsWith('.svg')) || logos.filter(f => prefere.test(f)).sort((a, b) => (+(b.match(/-(\d+)\./)?.[1]) || 0) - (+(a.match(/-(\d+)\./)?.[1]) || 0))[0]
-  || ['logo.svg', 'logo-480.webp', 'logo-240.webp', 'logo.webp', 'logo.png'].find(f => logos.includes(f));
+// Logo du client produit par produire.mjs (rôle logo dans images.json) d'abord : le logo.svg du socle n'est qu'un exemple.
+const logosClient = Object.values(images).filter(e => e.role === 'logo').flatMap(e => e.fichiers || []);
+const plusGrand = l => l.slice().sort((a, b) => (+(b.match(/-(\d+)\./)?.[1]) || 0) - (+(a.match(/-(\d+)\./)?.[1]) || 0))[0];
+const logo = logosClient.length
+  ? (logosClient.find(f => prefere.test(f) && f.endsWith('.svg')) || plusGrand(logosClient.filter(f => prefere.test(f))) || logosClient.find(f => f.endsWith('.svg')) || plusGrand(logosClient))
+  : logos.find(f => prefere.test(f) && f.endsWith('.svg')) || plusGrand(logos.filter(f => prefere.test(f))) || ['logo.svg', 'logo-480.webp', 'logo-240.webp', 'logo.webp', 'logo.png'].find(f => logos.includes(f));
+const avertissements = [];
+if (logo && !logosClient.length) avertissements.push(`logo pris dans assets/images (${logo}) : aucun logo dans donnees/images.json, vérifier que ce n'est pas celui du socle`);
 const fichierDe = nom => {
   const e = images[nom];
   if (!e) return fs.existsSync(path.join(RACINE, 'assets', 'images', nom)) ? nom : null;
   const L = e.largeurs?.find(w => w >= 1200) || e.largeurs?.[e.largeurs.length - 1];
   return L ? `${nom}-${L}.webp` : e.fichiers?.[0];
 };
+// Image de la page. imagePartage n'est suivie que si elle vient de donnees/images.json : sinon c'est un visuel provisoire
+// (les pages du socle pointent vers ses images d'exemple), remplacé par une image du client quand il y en a une.
+const dejaPrises = new Set(Object.values(images).filter(e => e.role !== 'logo' && pages.some(p => p.imagePartage && p.imagePartage.replace(/-\d+\.webp$/, '').replace(/\.\w+$/, '') === e.nom)).map(e => e.nom));
 function imagePour(p) {
-  if (p.imagePartage) {
-    const nom = p.imagePartage.replace(/-\d+\.webp$/, '');
-    return { fichier: fichierDe(p.imagePartage) || fichierDe(nom), e: images[nom] };
-  }
   const liste = Object.values(images).filter(e => e.role !== 'logo');
-  const e = liste.find(x => x.page === p.cle && x.role === 'ouverture') || liste.find(x => x.page === p.cle) || liste.find(x => x.role === 'ouverture') || liste[0];
+  if (p.imagePartage) {
+    const nom = p.imagePartage.replace(/-\d+\.webp$/, '').replace(/\.\w+$/, '');
+    if (images[nom]) { dejaPrises.add(nom); return { fichier: fichierDe(nom), e: images[nom] }; }
+    if (liste.length) avertissements.push(`${p.cle} : imagePartage « ${p.imagePartage} » absente de donnees/images.json (visuel provisoire), remplacée par une image du client`);
+    else { avertissements.push(`${p.cle} : visuel provisoire « ${p.imagePartage} » gardé, aucune image du client produite`); return { fichier: fichierDe(p.imagePartage) || fichierDe(nom), e: null }; }
+  }
+  // Sans image propre à la page : une image du client pas encore prise par une autre page (portrait d'abord pour « à propos »).
+  const libre = x => !dejaPrises.has(x.nom), ordre = ['ouverture', 'section-fond', 'portrait', 'galerie', 'carte-service', 'produit', 'vignette'];
+  if (/propos|equipe|histoire/.test(p.cle)) ordre.unshift('portrait');
+  const e = liste.find(x => x.page === p.cle && x.role === 'ouverture') || liste.find(x => x.page === p.cle)
+    || ordre.map(r => liste.find(x => x.role === r && libre(x))).find(Boolean) || liste.find(x => x.role === 'ouverture') || liste[0];
+  if (e) dejaPrises.add(e.nom);
   return e ? { fichier: fichierDe(e.nom), e } : { fichier: null, e: null };
 }
 
@@ -169,5 +185,6 @@ for (const p of pages) {
 }
 await nav.close();
 serveur.close();
-fs.writeFileSync(path.join(RACINE, '_partage', 'partage.json'), JSON.stringify(rapport, null, 2) + '\n');
+fs.writeFileSync(path.join(RACINE, '_partage', 'partage.json'), JSON.stringify({ avertissements, cartes: rapport }, null, 2) + '\n');
+for (const a of avertissements) console.log(`A REGARDER ${a}`);
 console.log(`\n${n} images de partage. Gabarits modifiables : _partage/*.html`);

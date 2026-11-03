@@ -260,7 +260,7 @@ function testerPartage(projet, fiche) {
     ecrireJson(path.join(r, 'donnees', 'textes', 'fr.json'), { pages: { [t.cle]: { accroche: t.accroche } } });
     ecrireJson(path.join(r, 'donnees', 'images.json'), { [t.image]: { ...e, page: t.cle, role: 'ouverture' } });
     node('partage.mjs', '--racine', r);
-    const rap = lireJson(path.join(r, '_partage', 'partage.json'), []);
+    const rap = lireJson(path.join(r, '_partage', 'partage.json'), {}).cartes || [];
     for (const x of rap) {
       verif(x.sujet && x.recouvrement === 0, `partage ${t.cle} (${x.gabarit}) : texte hors du sujet (recouvrement ${x.recouvrement} px²)`);
       verif(x.poids <= 300 * 1024, `partage ${t.cle} : ${Math.round(x.poids / 1024)} Ko (≤ 300 Ko)`);
