@@ -1,0 +1,47 @@
+{
+ "id": "petitenature-maquette/agenda-ouverture",
+ "maquette": "petitenature-maquette",
+ "page": "agenda",
+ "pages": [
+  "agenda",
+  "contact",
+  "labos",
+  "programmer"
+ ],
+ "titre": "Ouverture des pages intérieures",
+ "role": "ouverture",
+ "description": "Modèle d'ouverture des pages intérieures (agenda, contact, labos, programmer) : surtitre tapuscrit, titre en néon qui s'allume, chapô et grande photo en cyanotype qui s'insole. Sur la page labos, l'ouverture porte en plus les aimants à mots : des mots à déplacer à la souris, au doigt ou au clavier pour composer une phrase, avec bouton « Remettre la phrase » (labos.html:57-64, app.js:1057-1163).",
+ "animations": [
+  "révélation-texte",
+  "webgl-shader"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "agenda.html:52-58",
+  "css": "assets/css/site.css:108,260-261,451-453,666",
+  "js": "assets/js/gl.js:70-73,79-174 ; assets/js/app.js:1057-1163,1269-1317"
+ },
+ "medias": {
+  "capture": "medias/petitenature-maquette/agenda-ouverture-p1440.jpg"
+ },
+ "pieges": [
+  "aimants à mots de 37×33 et amortissement calculé par image (restes de l'audit)",
+  "déplacement des aimants au clavier obligatoire"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1085,
+  "hauteur_m390": 755,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

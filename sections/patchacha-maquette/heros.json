@@ -1,0 +1,46 @@
+{
+ "id": "patchacha-maquette/heros",
+ "maquette": "patchacha-maquette",
+ "page": "index",
+ "titre": "Héros signature et cadre suspendu",
+ "role": "ouverture",
+ "description": "Ouverture : un voile de papiers photographiés se déchire en WebGL pendant que la signature se dessine, puis le nom apparaît lettre à lettre à côté d'une œuvre encadrée suspendue à son fil, avec ses dimensions et son prix.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:66-94",
+  "css": "assets/css/style.css:172-191",
+  "js": "assets/js/accueil.js:9-86 ; assets/js/core.js:77-187"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/heros-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/heros-m390.jpg",
+  "video": "medias/patchacha-maquette/heros-p960.mp4"
+ },
+ "pieges": [
+  "ouverture jouée une seule fois par session (sessionStorage), sinon directe",
+  "sans effet signature sur téléphone : prévoir une version simplifiée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 890,
+  "hauteur_m390": 1190,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

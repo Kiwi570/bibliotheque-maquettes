@@ -1,0 +1,44 @@
+{
+ "id": "oppenheimer-maquette/bibliotheque",
+ "maquette": "oppenheimer-maquette",
+ "page": "index",
+ "titre": "Étagère de livres épinglée",
+ "role": "galerie",
+ "description": "Étagère de couvertures qui défile à l'horizontale pendant que la section est épinglée (glisser sur téléphone) ; chaque livre ouvre une fiche, les parutions à venir ont un compte à rebours en jours.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "compteur"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:180-200",
+  "css": "assets/css/site.css:375-414",
+  "js": "assets/js/site.js:389-496"
+ },
+ "medias": {
+  "capture": "medias/oppenheimer-maquette/bibliotheque-p1440.jpg",
+  "capture_m390": "medias/oppenheimer-maquette/bibliotheque-m390.jpg",
+  "video": "medias/oppenheimer-maquette/bibliotheque-p960.mp4"
+ },
+ "pieges": [
+  "hPin utilise encore anticipatePin, à retirer",
+  "compte à rebours calculé sur la date du jour, prévoir le cas « paru »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2985,
+  "hauteur_m390": 1052,
+  "epinglee": true,
+  "scrolltriggers": 4
+ }
+}

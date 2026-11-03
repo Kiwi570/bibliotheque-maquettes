@@ -1,0 +1,46 @@
+{
+ "id": "pizzalyght-maquette/panier",
+ "maquette": "pizzalyght-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "carte",
+  "cayenne",
+  "kourou",
+  "saint-laurent"
+ ],
+ "titre": "Tiroir de commande",
+ "role": "outil-interactif",
+ "description": "Tiroir de commande simulée : lignes avec quantité, choix de la pizzeria, créneaux de retrait de 15 min calculés à l'heure locale (préparation 30 min, sinon le lendemain), règle d'âge pour l'alcool, validation des champs et paiement simulé annoncé ; panier revalidé entre onglets.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "panier-simule",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:207-211",
+  "css": "assets/css/style.css:512-561",
+  "js": "assets/js/core.js:112-147,188-468"
+ },
+ "medias": {},
+ "pieges": [
+  "relire le panier stocké avant chaque modification (autre onglet, retour arrière)",
+  "rendre le focus au même contrôle après chaque nouveau rendu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

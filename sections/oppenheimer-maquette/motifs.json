@@ -1,0 +1,44 @@
+{
+ "id": "oppenheimer-maquette/motifs",
+ "maquette": "oppenheimer-maquette",
+ "page": "index",
+ "titre": "Motifs reliés à l'encre",
+ "role": "services",
+ "description": "Situations qui amènent à consulter, en photos noir et blanc décalées ; des fils d'encre en canvas 2D se tracent entre les motifs au défilement, comme une association libre.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:93-141",
+  "css": "assets/css/site.css:336-349",
+  "js": "assets/js/accueil.js:55-103"
+ },
+ "medias": {
+  "capture": "medias/oppenheimer-maquette/motifs-p1440.jpg",
+  "capture_m390": "medias/oppenheimer-maquette/motifs-m390.jpg",
+  "video": "medias/oppenheimer-maquette/motifs-p960.mp4"
+ },
+ "pieges": [
+  "recalculer les points d'ancrage des fils au refresh, pas pendant le défilement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2501,
+  "hauteur_m390": 4535,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

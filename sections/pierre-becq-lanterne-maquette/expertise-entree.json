@@ -1,0 +1,41 @@
+{
+ "id": "pierre-becq-lanterne-maquette/expertise-entree",
+ "maquette": "pierre-becq-lanterne-maquette",
+ "page": "expertise",
+ "titre": "Loupe d'expert sur le bureau",
+ "role": "ouverture",
+ "description": "Ouverture de la page expertise : une loupe WebGL suit le pointeur sur la photo du bureau de l'expert et grossit ce qu'elle survole, sous le titre doré.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "expertise.html:26-37",
+  "css": "assets/css/site.css:248-254,727-734",
+  "js": "assets/js/lumiere-gl.js:145-187 ; assets/js/expertise.js:11-14"
+ },
+ "medias": {
+  "capture": "medias/pierre-becq-lanterne-maquette/expertise-entree-p1440.jpg",
+  "capture_m390": "medias/pierre-becq-lanterne-maquette/expertise-entree-m390.jpg",
+  "video": "medias/pierre-becq-lanterne-maquette/expertise-entree-p960.mp4"
+ },
+ "pieges": [
+  "sur tactile, la loupe se pose au centre et ne suit pas le doigt"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

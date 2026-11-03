@@ -1,0 +1,39 @@
+{
+ "id": "pizzalyght-maquette/carte-t-pizzas",
+ "maquette": "pizzalyght-maquette",
+ "page": "carte",
+ "titre": "Rubriques de la carte",
+ "role": "produits",
+ "description": "Toute la carte par rubriques : photo de rubrique, plats en cartes avec illustration dessinée d'après la vraie composition, ingrédients, prix et ajout rapide ; une seule apparition par rubrique.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "carte.html:71-490",
+  "css": "assets/css/style.css:84,88-93,258,294,327-328,332-335,345-347,457,535,544-545,612-643,682-683,830",
+  "js": "assets/js/carte.js:1,7-32,42,59,70-72,78 ; assets/js/composeur.js:7,26-32,39,65 ; assets/js/core.js:72,198-216,241-256,290-295,309-313,329-388,399-404,410-427,453,584-595,608-638,754,759 ; assets/js/pizza-art.js:12,25-42,89-90,111-123,168-189,214 ; assets/js/data.js:64,80,90-91,99,103-104,110-112,164,248,253-255,269"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/carte-t-pizzas-p1440.jpg"
+ },
+ "pieges": [
+  "une apparition par rubrique et non par plat, pour limiter les déclencheurs"
+ ],
+ "mesures": {
+  "hauteur_p1440": 12181,
+  "hauteur_m390": 27685,
+  "epinglee": false,
+  "scrolltriggers": 36
+ }
+}

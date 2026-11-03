@@ -1,0 +1,1027 @@
+{
+ "maquette": {
+  "client": "photographe de mariage, famille et portraits avec home studio et boutique de tirages",
+  "activite": [
+   "culture",
+   "commerce"
+  ],
+  "concept": [
+   "galerie",
+   "atelier"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "doux",
+   "clair"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--encre",
+   "accent": "--ocre",
+   "secondaire": "--miel"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "photo d'ouverture qui se développe en WebGL comme un tirage, puis soleil rasant au pointeur",
+   "salle d'exposition épinglée dont le fond prend la couleur de la photo active",
+   "diaphragme SVG collant à sept lames réelles pour le déroulé",
+   "voir au mur à l'échelle réelle et composeur de séance avec prix",
+   "flash et son d'obturateur synthétisés, mode calme"
+  ],
+  "reserves": [
+   "image d'ambiance « Entreprises & projets » peu parlante (image Grok)",
+   "plusieurs univers illustrés par des ambiances en attendant les vraies photos"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "révélation-texte",
+   "révélation-image",
+   "section-fixée",
+   "galerie-horizontale",
+   "progression-fixée",
+   "morphing",
+   "parallaxe",
+   "filtre-anime",
+   "masque",
+   "apparition-au-défilement",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "calculateur",
+   "configurateur",
+   "carte-interactive",
+   "panier-simule",
+   "filtres",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "ouverture"
+ },
+ "sections": {
+  "chargement": {
+   "titre": "Chargement boîtier photo",
+   "role": "ouverture",
+   "description": "Calque de chargement de l'accueil : un boîtier photo s'ouvre puis le diaphragme se retire pour révéler la photo d'ouverture ; titre lisible vers 2 s.",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "entete": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "En-tête fixe crème : logo, liens, compteur de vues façon pellicule, mode calme, son, panier et bouton Réserver ; hauteur reprise par --entete-h.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone avec focus piégé, adresse e-mail entière jusqu'à 320 px.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "flash": {
+   "titre": "Flash du déclencheur",
+   "role": "decor",
+   "description": "Flash blanc plein écran déclenché une seule fois avec un son d'obturateur synthétisé (Web Audio), coupé si le son est désactivé.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture": {
+   "titre": "Ouverture développée",
+   "role": "ouverture",
+   "description": "Photo de mariage plein cadre qui se développe en WebGL comme un tirage dans le bain, puis soleil rasant qui suit le pointeur ; titre en lignes qui montent, données EXIF de la prise de vue. Repli sans WebGL : fondu depuis le papier.",
+   "animations": [
+    "webgl-shader",
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "attendre que l'image soit décodée (imagePrete) avant de développer",
+    "rendre la vraie image <img> à la fin, le canvas ne sert qu'à l'effet"
+   ],
+   "code": {
+    "html": "index.html:81-111",
+    "css": "assets/css/main.css:182-209",
+    "js": "assets/js/accueil.js:291-325 ; assets/js/gl.js:75-181"
+   },
+   "dependances": [
+    "gsap",
+    "ogl"
+   ]
+  },
+  "manifeste": {
+   "titre": "Manifeste allumé mot à mot",
+   "role": "manifeste",
+   "description": "Texte du manifeste dont les mots s'allument au passage d'une lumière au défilement (scrub), avec des tirages flottants en parallaxe sur fond sombre.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "manifeste-mot-a-mot",
+   "pieges": [],
+   "code": {
+    "html": "index.html:113-127",
+    "css": "assets/css/main.css:215-232",
+    "js": "assets/js/accueil.js:89-113"
+   },
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ]
+  },
+  "seances": {
+   "titre": "Salle d'exposition des séances",
+   "role": "galerie",
+   "description": "Section épinglée : les onze univers défilent à l'horizontale comme des tirages accrochés, le fond se teinte de la couleur moyenne de la photo active, compteur 03 / 11 sous la piste. Légendes à hauteur réelle mesurée.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "galerie-horizontale-epinglee",
+   "pieges": [
+    "colonne flex 100svh sans hauteur estimée (correction de l'audit)",
+    "mesurer la plus haute légende (--legende-h) avant de dimensionner les photos"
+   ],
+   "code": {
+    "html": "index.html:129-145",
+    "css": "assets/css/main.css:245-280",
+    "js": "assets/js/accueil.js:9-88"
+   },
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ]
+  },
+  "mini": {
+   "titre": "Mini-séances",
+   "role": "offre",
+   "description": "Bloc des mini-séances en studio : photos, prochaines dates à compléter et lien qui préremplit la demande.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "deroule": {
+   "titre": "Déroulé au diaphragme",
+   "role": "étapes",
+   "description": "Les étapes d'une séance défilent à côté d'un diaphragme SVG collant à sept lames réelles (rayon proportionnel à 1/N) qui s'ouvre et tourne d'une étape à l'autre, avec bague graduée.",
+   "animations": [
+    "progression-fixée",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "recalculer les lames à chaque mise à jour plutôt que de les animer en CSS"
+   ],
+   "code": {
+    "html": "index.html:164-206",
+    "css": "assets/css/main.css:282-303",
+    "js": "assets/js/accueil.js:114-145"
+   },
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ]
+  },
+  "zone": {
+   "titre": "Zone et frais de déplacement",
+   "role": "calculateur",
+   "description": "Carte stylisée des communes autour du studio avec cercles de distance : on choisit sa commune et les kilomètres et frais de déplacement se calculent ; noms de la carte en pixels réels.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur",
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "--carte-s convertit les unités de la carte en pixels affichés pour garder des libellés lisibles"
+   ],
+   "code": {
+    "html": "index.html:208-238",
+    "css": "assets/css/main.css:307-331",
+    "js": "assets/js/accueil.js:146-199"
+   },
+   "dependances": [
+    "gsap"
+   ]
+  },
+  "liz": {
+   "titre": "À propos",
+   "role": "équipe",
+   "description": "Portrait de la photographe avec fuite de lumière argentique, présentation et quatre qualités.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Avis",
+   "role": "témoignages",
+   "description": "Avis client en grand, avec une mise au point mot par mot (flou qui se résout) au défilement.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadeau": {
+   "titre": "Carte cadeau",
+   "role": "offre",
+   "description": "Carte cadeau à la feuille d'or avec choix du montant qui se reporte sur la carte.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "questions": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Questions fréquentes en accordéon à l'ouverture douce, à côté d'une photo collante.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reserver": {
+   "titre": "Réservation en quatre vues",
+   "role": "contact",
+   "description": "Demande de réservation en quatre vues (séance, date, coordonnées, récapitulatif) avec onglets d'étapes, validation par vue, préremplissage depuis les liens de la page et récapitulatif final.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "les liens « Réserver » portent le choix dans l'adresse pour préremplir la première vue"
+   ],
+   "code": {
+    "html": "index.html:324-394",
+    "css": "assets/css/main.css:384-429",
+    "js": "assets/js/accueil.js:225-290"
+   },
+   "dependances": [
+    "gsap"
+   ]
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Pied de page sombre en colonnes avec la signature Pix'n Croq tracée en contour au défilement.",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "barre-cta": {
+   "titre": "Barre de réservation",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas sur téléphone avec bouton de réservation rapide.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-div": {
+   "titre": "Page 404",
+   "role": "page-404",
+   "description": "Page introuvable « Hors champ » avec retour à l'accueil.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-b-hero": {
+   "titre": "Tête de la boutique",
+   "role": "ouverture",
+   "description": "Titre de la boutique et étal de tirages et albums qui se posent en éventail au défilement.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-produits": {
+   "titre": "Produits",
+   "role": "produits",
+   "description": "Grille de douze produits filtrable par type, chaque produit rendu avec une photo de la photographe ; fiche produit en fenêtre et ajout au panier.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-mur": {
+   "titre": "Voir au mur",
+   "role": "outil-interactif",
+   "description": "Le tirage choisi est posé à l'échelle réelle sur un mur de salon photographié ; choix de la pièce, de la photo, du support et du format, le tableau se redimensionne.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "configurateur",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "l'échelle dépend de la largeur réelle du mur dans la photo : la stocker avec chaque décor"
+   ],
+   "code": {
+    "html": "boutique.html:98-125",
+    "css": "assets/css/main.css:614-640",
+    "js": "assets/js/boutique.js:107-176"
+   },
+   "dependances": [
+    "gsap"
+   ]
+  },
+  "boutique-cadeau": {
+   "titre": "Composer une carte cadeau",
+   "role": "outil-interactif",
+   "description": "Composeur de carte cadeau : montant, destinataire et message se reportent sur la carte dorée, ajout au panier.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "configurateur",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-co-titre": {
+   "titre": "Coffret en bois gravé",
+   "role": "produits",
+   "description": "Présentation du coffret gravé avec trois photos.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-fi-titre": {
+   "titre": "Finitions",
+   "role": "produits",
+   "description": "Nuancier des couvertures et matières d'album en vignettes, puis modes de livraison.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-livraison-et-retours": {
+   "titre": "Livraison et retours",
+   "role": "faq",
+   "description": "Trois colonnes sur le retrait, la livraison et la personnalisation.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fiche": {
+   "titre": "Fiche produit",
+   "role": "produits",
+   "description": "Fenêtre de fiche produit avec options et prix, focus piégé.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "mentions-h1": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Page des mentions légales en texte courant, éléments à compléter signalés.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-etiquette": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-maquette": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-dl": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2-2": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2-3": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-2": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-3": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2-4": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-4": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-5": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2-5": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-6": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-h2-6": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "mentions-p-7": {
+   "titre": "Mentions légales (fragment)",
+   "role": "texte-legal",
+   "description": "Fragment de la page des mentions légales, décrit avec mentions-h1.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": true
+  },
+  "seances-u-titre": {
+   "titre": "Héros d'univers",
+   "role": "ouverture",
+   "description": "Tête de la page séances, un seul modèle rempli par les données pour les onze univers : titre, prix d'appel, photo et puces des univers.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-div": {
+   "titre": "Puces des univers",
+   "role": "menu",
+   "description": "Barre collante des onze univers sous l'en-tête.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-sommaire": {
+   "titre": "Sommaire des univers",
+   "role": "galerie",
+   "description": "Sommaire en grille des onze univers, affiché quand l'adresse ne désigne pas d'univers.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-formules": {
+   "titre": "Formules",
+   "role": "tarifs",
+   "description": "Formules de l'univers choisi en cartes, avec un éventail de photos par formule.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "seances-composer": {
+   "titre": "Composer ma séance",
+   "role": "calculateur",
+   "description": "Composeur de séance : nombre de personnes, durée, lieu et options, prix recalculé et ajout à la demande.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "section masquée dans la vue sommaire : l'inventaire la mesure à 0 px, voir seances.html#mariage"
+   ],
+   "code": {
+    "html": "seances.html:109-118",
+    "css": "assets/css/main.css:489-512",
+    "js": "assets/js/seances.js:136-215"
+   },
+   "dependances": [
+    "gsap"
+   ],
+   "sans_capture": true
+  },
+  "seances-galerie": {
+   "titre": "Galerie de l'univers",
+   "role": "galerie",
+   "description": "Galerie de l'univers et visionneuse plein écran au clavier.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "seances-infos-pratiques": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Trois colonnes d'informations pratiques.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-sombre": {
+   "titre": "Autres univers",
+   "role": "galerie",
+   "description": "Liens vers les univers voisins sur fond sombre.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "visionneuse": {
+   "titre": "Visionneuse",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos d'un univers, flèches et clavier.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  }
+ }
+}

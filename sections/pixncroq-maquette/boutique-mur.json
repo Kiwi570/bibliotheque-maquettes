@@ -1,0 +1,41 @@
+{
+ "id": "pixncroq-maquette/boutique-mur",
+ "maquette": "pixncroq-maquette",
+ "page": "boutique",
+ "titre": "Voir au mur",
+ "role": "outil-interactif",
+ "description": "Le tirage choisi est posé à l'échelle réelle sur un mur de salon photographié ; choix de la pièce, de la photo, du support et du format, le tableau se redimensionne.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "configurateur",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "boutique.html:98-125",
+  "css": "assets/css/main.css:614-640",
+  "js": "assets/js/boutique.js:107-176"
+ },
+ "medias": {
+  "capture": "medias/pixncroq-maquette/boutique-mur-p1440.jpg",
+  "capture_m390": "medias/pixncroq-maquette/boutique-mur-m390.jpg",
+  "video": "medias/pixncroq-maquette/boutique-mur-p960.mp4"
+ },
+ "pieges": [
+  "l'échelle dépend de la largeur réelle du mur dans la photo : la stocker avec chaque décor"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1337,
+  "hauteur_m390": 1668,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

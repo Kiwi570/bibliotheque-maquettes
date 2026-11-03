@@ -1,0 +1,42 @@
+{
+ "id": "patchacha-maquette/tableaux-salles",
+ "maquette": "patchacha-maquette",
+ "page": "tableaux",
+ "titre": "Cinq salles",
+ "role": "galerie",
+ "description": "Cinq salles horizontales épinglées, une par série, avec la même ligne d'accrochage et les œuvres à l'échelle ; pastille rouge pour les œuvres vendues.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "masqué",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "tableaux.html:82-92",
+  "css": "assets/css/style.css:252-265",
+  "js": "assets/js/galerie.js:89-148"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/tableaux-salles-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/tableaux-salles-m390.jpg",
+  "video": "medias/patchacha-maquette/tableaux-salles-p960.mp4"
+ },
+ "pieges": [
+  "petites œuvres très réduites à 1000×560 (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 888,
+  "hauteur_m390": 855,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

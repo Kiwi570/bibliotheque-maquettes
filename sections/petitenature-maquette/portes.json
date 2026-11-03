@@ -1,0 +1,44 @@
+{
+ "id": "petitenature-maquette/portes",
+ "maquette": "petitenature-maquette",
+ "page": "index",
+ "titre": "Trois portes",
+ "role": "offre",
+ "description": "Section épinglée qui défile à l'horizontale : trois façons de faire entendre un texte (lectures, labos, créations), chacune avec photo et grand mot en néon ; le rouge-gorge saute de porte en porte.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:88-120",
+  "css": "assets/css/site.css:313-324",
+  "js": "assets/js/app.js:734-745"
+ },
+ "medias": {
+  "capture": "medias/petitenature-maquette/portes-p1440.jpg",
+  "capture_m390": "medias/petitenature-maquette/portes-m390.jpg",
+  "video": "medias/petitenature-maquette/portes-p960.mp4"
+ },
+ "pieges": [
+  "défilement horizontal seulement au-dessus de 960 px, pile verticale en dessous",
+  "tenir à 1000×560 (corrigé à l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 2069,
+  "epinglee": true,
+  "scrolltriggers": 6
+ }
+}

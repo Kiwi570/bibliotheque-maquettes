@@ -1,0 +1,45 @@
+{
+ "id": "pixncroq-maquette/ouverture",
+ "maquette": "pixncroq-maquette",
+ "page": "index",
+ "titre": "Ouverture développée",
+ "role": "ouverture",
+ "description": "Photo de mariage plein cadre qui se développe en WebGL comme un tirage dans le bain, puis soleil rasant qui suit le pointeur ; titre en lignes qui montent, données EXIF de la prise de vue. Repli sans WebGL : fondu depuis le papier.",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:81-111",
+  "css": "assets/css/main.css:182-209",
+  "js": "assets/js/accueil.js:291-325 ; assets/js/gl.js:75-181"
+ },
+ "medias": {
+  "capture": "medias/pixncroq-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/pixncroq-maquette/ouverture-m390.jpg",
+  "video": "medias/pixncroq-maquette/ouverture-p960.mp4"
+ },
+ "pieges": [
+  "attendre que l'image soit décodée (imagePrete) avant de développer",
+  "rendre la vraie image <img> à la fin, le canvas ne sert qu'à l'effet"
+ ],
+ "mesures": {
+  "hauteur_p1440": 720,
+  "hauteur_m390": 906,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

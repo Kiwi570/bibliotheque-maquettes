@@ -1,0 +1,41 @@
+{
+ "id": "petitenature-maquette/agenda-rendez-vous",
+ "maquette": "petitenature-maquette",
+ "page": "agenda",
+ "titre": "Agenda filtrable",
+ "role": "agenda",
+ "description": "Liste des dates à venir et passées, regroupées par année, filtrables par type, chaque date exportable en fichier .ics ; les données manquantes sont marquées « à compléter ».",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "agenda.html:84-101",
+  "css": "assets/css/site.css:458-461,591-607",
+  "js": "assets/js/app.js:215-265,803-849"
+ },
+ "medias": {
+  "capture": "medias/petitenature-maquette/agenda-rendez-vous-p1440.jpg",
+  "capture_m390": "medias/petitenature-maquette/agenda-rendez-vous-m390.jpg",
+  "video": "medias/petitenature-maquette/agenda-rendez-vous-p960.mp4"
+ },
+ "pieges": [
+  "dates passées et à venir calculées à l'affichage, pas au build",
+  "fichier .ics avec fin par défaut quand l'heure de fin manque"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2692,
+  "hauteur_m390": 4675,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

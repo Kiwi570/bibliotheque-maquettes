@@ -1,0 +1,46 @@
+{
+ "id": "pierre-becq-lanterne-maquette/coups-de-coeur",
+ "maquette": "pierre-becq-lanterne-maquette",
+ "page": "index",
+ "titre": "Salle des coups de cœur",
+ "role": "produits",
+ "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "progression-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:103-115",
+  "css": "assets/css/site.css:320-332",
+  "js": "assets/js/accueil.js:87-171"
+ },
+ "medias": {
+  "capture": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p1440.jpg",
+  "capture_m390": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-m390.jpg",
+  "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p960.mp4"
+ },
+ "pieges": [
+  "vitesse lue par st.getVelocity() et ramenée à zéro par un elastic.out à onScrubComplete",
+  "les révélations par pièce utilisent containerAnimation",
+  "charger les images avant le premier geste sur téléphone (IntersectionObserver large)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 929,
+  "epinglee": true,
+  "scrolltriggers": 32
+ }
+}

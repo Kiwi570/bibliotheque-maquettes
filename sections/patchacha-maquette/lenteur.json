@@ -1,0 +1,49 @@
+{
+ "id": "patchacha-maquette/lenteur",
+ "maquette": "patchacha-maquette",
+ "page": "index",
+ "titre": "Une peinture de la lenteur",
+ "role": "méthode",
+ "description": "Section épinglée en trois étapes (superposer, effacer, laisser la trace) : à chaque étape, un voile de papier WebGL recouvre l'image puis se retire sur la suivante ; le défilement ralentit (Lenis) pendant la section et la phrase « ralentir » s'écrit lettre à lettre.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl",
+  "lenis"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:96-139",
+  "css": "assets/css/style.css:189-191,223-249",
+  "js": "assets/js/accueil.js:88-129 ; assets/js/core.js:77-187"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/lenteur-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/lenteur-m390.jpg",
+  "video": "medias/patchacha-maquette/lenteur-p960.mp4"
+ },
+ "pieges": [
+  "chaîner les transitions du voile dans une promesse pour ne jamais en superposer deux",
+  "remettre le lerp de Lenis à sa valeur en sortie (onToggle)",
+  "sur téléphone et en mode calme, les trois images s'empilent sans voile"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3329,
+  "hauteur_m390": 3257,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

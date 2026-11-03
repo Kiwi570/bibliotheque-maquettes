@@ -1,0 +1,44 @@
+{
+ "id": "pizzalyght-maquette/pays",
+ "maquette": "pizzalyght-maquette",
+ "page": "index",
+ "titre": "Le goût du pays",
+ "role": "produits",
+ "description": "Galerie horizontale épinglée des recettes locales en cartes (illustration dessinée, ingrédients, prix, ajout au panier), sur une fumée qui dérive lentement ; navigation clavier qui ramène la carte focalisée dans l'écran.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:96-107",
+  "css": "assets/css/style.css:307-352",
+  "js": "assets/js/home.js:17-33,223-253"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/pays-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/pays-m390.jpg",
+  "video": "medias/pizzalyght-maquette/pays-p960.mp4"
+ },
+ "pieges": [
+  "fumée animée seulement quand la section est à l'écran",
+  "au clavier, faire défiler jusqu'à la carte qui prend le focus"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2773,
+  "hauteur_m390": 971,
+  "epinglee": true,
+  "scrolltriggers": 17
+ }
+}

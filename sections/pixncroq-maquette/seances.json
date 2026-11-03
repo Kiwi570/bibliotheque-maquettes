@@ -1,0 +1,44 @@
+{
+ "id": "pixncroq-maquette/seances",
+ "maquette": "pixncroq-maquette",
+ "page": "index",
+ "titre": "Salle d'exposition des séances",
+ "role": "galerie",
+ "description": "Section épinglée : les onze univers défilent à l'horizontale comme des tirages accrochés, le fond se teinte de la couleur moyenne de la photo active, compteur 03 / 11 sous la piste. Légendes à hauteur réelle mesurée.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:129-145",
+  "css": "assets/css/main.css:245-280",
+  "js": "assets/js/accueil.js:9-88"
+ },
+ "medias": {
+  "capture": "medias/pixncroq-maquette/seances-p1440.jpg",
+  "capture_m390": "medias/pixncroq-maquette/seances-m390.jpg",
+  "video": "medias/pixncroq-maquette/seances-p960.mp4"
+ },
+ "pieges": [
+  "colonne flex 100svh sans hauteur estimée (correction de l'audit)",
+  "mesurer la plus haute légende (--legende-h) avant de dimensionner les photos"
+ ],
+ "mesures": {
+  "hauteur_p1440": 5961,
+  "hauteur_m390": 898,
+  "epinglee": true,
+  "scrolltriggers": 14
+ }
+}

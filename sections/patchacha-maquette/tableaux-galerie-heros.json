@@ -1,0 +1,41 @@
+{
+ "id": "patchacha-maquette/tableaux-galerie-heros",
+ "maquette": "patchacha-maquette",
+ "page": "tableaux",
+ "titre": "Mur d'ouverture de la galerie",
+ "role": "ouverture",
+ "description": "Ouverture de la galerie : sur une photo de salle d'exposition calée (sol, mur du fond, centimètres par pixel), les œuvres viennent s'accrocher une à une à l'échelle sur la ligne d'accrochage ; version portrait pour téléphone.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "tableaux.html:65-80",
+  "css": "assets/css/style.css:483-491",
+  "js": "assets/js/galerie.js:9-88"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/tableaux-galerie-heros-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/tableaux-galerie-heros-m390.jpg",
+  "video": "medias/patchacha-maquette/tableaux-galerie-heros-p960.mp4"
+ },
+ "pieges": [
+  "chaque photo de salle demande son calage (cmPx, ligne du sol, bords du mur) en paysage et en portrait",
+  "repli sans photo : mur simple"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1156,
+  "hauteur_m390": 1145,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

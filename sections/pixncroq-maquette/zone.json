@@ -1,0 +1,41 @@
+{
+ "id": "pixncroq-maquette/zone",
+ "maquette": "pixncroq-maquette",
+ "page": "index",
+ "titre": "Zone et frais de déplacement",
+ "role": "calculateur",
+ "description": "Carte stylisée des communes autour du studio avec cercles de distance : on choisit sa commune et les kilomètres et frais de déplacement se calculent ; noms de la carte en pixels réels.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur",
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:208-238",
+  "css": "assets/css/main.css:307-331",
+  "js": "assets/js/accueil.js:146-199"
+ },
+ "medias": {
+  "capture": "medias/pixncroq-maquette/zone-p1440.jpg",
+  "capture_m390": "medias/pixncroq-maquette/zone-m390.jpg",
+  "video": "medias/pixncroq-maquette/zone-p960.mp4"
+ },
+ "pieges": [
+  "--carte-s convertit les unités de la carte en pixels affichés pour garder des libellés lisibles"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1005,
+  "hauteur_m390": 1132,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

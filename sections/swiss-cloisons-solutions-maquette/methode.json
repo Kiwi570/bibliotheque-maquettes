@@ -1,0 +1,43 @@
+{
+ "id": "swiss-cloisons-solutions-maquette/methode",
+ "maquette": "swiss-cloisons-solutions-maquette",
+ "page": "index",
+ "titre": "Cinq étapes, bord à bord",
+ "role": "méthode",
+ "description": "Section épinglée (scrub) : cinq panneaux d'étapes glissent et viennent se poser bord à bord comme des cloisons vitrées ; en dessous de 960 px, simple apparition au défilement.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:318-339",
+  "css": "assets/css/site.css:354-366,639-651",
+  "js": "assets/js/home.js:156-176"
+ },
+ "medias": {
+  "capture": "medias/swiss-cloisons-solutions-maquette/methode-p1440.jpg",
+  "capture_m390": "medias/swiss-cloisons-solutions-maquette/methode-m390.jpg",
+  "video": "medias/swiss-cloisons-solutions-maquette/methode-p960.mp4"
+ },
+ "pieges": [
+  "le titre doit rester sous l'en-tête pendant l'épinglage (corrigé à l'audit, à tester de 1280 à 1728 px)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 2017,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

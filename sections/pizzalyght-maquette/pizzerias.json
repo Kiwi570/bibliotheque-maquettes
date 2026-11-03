@@ -1,0 +1,43 @@
+{
+ "id": "pizzalyght-maquette/pizzerias",
+ "maquette": "pizzalyght-maquette",
+ "page": "index",
+ "titre": "Les trois pizzerias sur la RN1",
+ "role": "carte",
+ "description": "Plan simplifié de la route nationale où un point lumineux file de Saint-Laurent à Cayenne au défilement, avec le statut ouvert ou fermé de chaque adresse à l'heure locale.",
+ "animations": [
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:153-165",
+  "css": "assets/css/style.css:445-480",
+  "js": "assets/js/home.js:80-94,273-292 ; assets/js/core.js:22-69"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/pizzerias-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/pizzerias-m390.jpg",
+  "video": "medias/pizzalyght-maquette/pizzerias-p960.mp4"
+ },
+ "pieges": [
+  "dire que le tracé est simplifié",
+  "le statut ne connaît pas les jours de fermeture : ajouter « horaires indicatifs »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1839,
+  "hauteur_m390": 2660,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

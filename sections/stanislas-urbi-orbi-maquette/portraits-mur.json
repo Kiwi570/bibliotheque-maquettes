@@ -1,0 +1,46 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/portraits-mur",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "portraits",
+ "titre": "Mur des 1 455 portraits",
+ "role": "galerie",
+ "description": "Mur interactif en canvas 2D : 1 455 portraits arrivent en désordre puis se rangent ; mélanger, trier par fiche ou par couleur de vêtement, zoomer, ouvrir une fiche agrandie avec précédente, suivante et « C'est moi ». Pilotable au clavier ; sur tactile, la page défile et « Explorer » ouvre le mur en plein écran.",
+ "animations": [
+  "canvas-2d",
+  "flip"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "portraits.html:130-156",
+  "css": "assets/css/style.css:661-670",
+  "js": "assets/js/wall.js"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/portraits-mur-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/portraits-mur-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/portraits-mur-p960.mp4"
+ },
+ "pieges": [
+  "un atlas d'images pour le mur, planches haute définition chargées à la demande",
+  "lire la couleur dominante une seule fois dans l'atlas",
+  "sur tactile, ne pas capturer le défilement de la page"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

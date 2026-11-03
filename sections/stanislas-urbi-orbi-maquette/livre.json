@@ -1,0 +1,43 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/livre",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "index",
+ "titre": "Le Livre sous la Place",
+ "role": "galerie",
+ "description": "Section épinglée au scrub : le livre rouge et bleu descend et se glisse sous un pavé de la place qui se soulève, puis la galerie des pages écrites par le public se déploie ; état final complet sous « réduire les animations ».",
+ "animations": [
+  "section-fixée",
+  "révélation-image",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:438-493",
+  "css": "assets/css/style.css:437-468",
+  "js": "assets/js/home.js:288-316"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/livre-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/livre-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/livre-p960.mp4"
+ },
+ "pieges": [
+  "afficher la galerie sous réduction des animations (corrigé après l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3880,
+  "hauteur_m390": 2028,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

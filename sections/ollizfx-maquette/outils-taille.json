@@ -1,0 +1,41 @@
+{
+ "id": "ollizfx-maquette/outils-taille",
+ "maquette": "ollizfx-maquette",
+ "page": "outils",
+ "titre": "Calculateur de taille de position",
+ "role": "calculateur",
+ "description": "Calculateur de taille de position : capital, risque, paire, stop et cours donnent la taille en lots, la valeur du pip et la perte au stop, avec la formule affichée et un graphique de stop en canvas.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "outils.html:55-86",
+  "css": "assets/css/style.css:389",
+  "js": "assets/js/outils.js:1-60"
+ },
+ "medias": {
+  "capture": "medias/ollizfx-maquette/outils-taille-p1440.jpg",
+  "capture_m390": "medias/ollizfx-maquette/outils-taille-m390.jpg",
+  "video": "medias/ollizfx-maquette/outils-taille-p960.mp4"
+ },
+ "pieges": [
+  "lire les saisies avec virgule et espaces insécables (num())",
+  "arrondir la taille au micro-lot inférieur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1082,
+  "hauteur_m390": 1773,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

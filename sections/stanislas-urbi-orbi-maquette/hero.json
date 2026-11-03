@@ -1,0 +1,46 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/hero",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "index",
+ "titre": "L'index de Stanislas",
+ "role": "ouverture",
+ "description": "Photo de la main de bronze sur la place, question en grand titre serif ; une ligne rouge suit exactement l'axe de l'index jusqu'au bord de l'écran et se redessine pendant le mouvement, coordonnées en mono.",
+ "animations": [
+  "révélation-texte",
+  "canvas-2d",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:118-136",
+  "css": "assets/css/style.css:265-293",
+  "js": "assets/js/home.js:7-60 ; assets/js/app.js:572-599"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/hero-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "ne redessiner le fil que pendant un mouvement, couper le ticker hors écran",
+  "titre lisible tard à cause de l'ouverture (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

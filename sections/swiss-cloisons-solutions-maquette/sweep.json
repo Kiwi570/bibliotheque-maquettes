@@ -1,0 +1,42 @@
+{
+ "id": "swiss-cloisons-solutions-maquette/sweep",
+ "maquette": "swiss-cloisons-solutions-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "devis",
+  "mentions-legales",
+  "realisation-axa"
+ ],
+ "titre": "Vitre qui balaie",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : un panneau vitré traverse l'écran avant la navigation puis se retire à l'arrivée, mémorisé par sessionStorage ; aussi utilisé au changement de langue ou de mode calme.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:34-34",
+  "css": "assets/css/site.css:181-182",
+  "js": "assets/js/core.js:34,49"
+ },
+ "medias": {},
+ "pieges": [
+  "remettre le panneau hors écran sur pageshow (retour arrière)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

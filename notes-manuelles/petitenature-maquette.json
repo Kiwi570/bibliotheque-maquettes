@@ -1,0 +1,881 @@
+{
+ "maquette": {
+  "client": "compagnie de lectures à voix haute et de labos littéraires",
+  "activite": [
+   "culture",
+   "spectacle"
+  ],
+  "concept": [
+   "carnet",
+   "scène"
+  ],
+  "ambiance": [
+   "clair",
+   "nocturne",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--encre",
+   "accent": "--neon",
+   "secondaire": "--prusse"
+  },
+  "polices": {
+   "titres": "Tilt Neon",
+   "texte": "Literata",
+   "mono": "Courier Prime"
+  },
+  "points_forts": [
+   "titres en néon qui s'allument lettre à lettre, fil rouge en néon qui traverse chaque page",
+   "photos en tirage cyanotype qui s'insolent jusqu'à leurs couleurs (WebGL)",
+   "rouge-gorge qui se pose de titre en titre",
+   "page qui se tourne entre les pages, avec préchargement à l'approche du lien",
+   "aimants à mots, chœur en canon, agenda filtrable avec export .ics, carte des voix épinglée"
+  ],
+  "reserves": [
+   "visuels provisoires (portrait, Faire un feu, Territoires, Le Repas)",
+   "fil rouge qui passe sur le texte en tablette",
+   "aimants à mots de 37×33 et amortissement par image",
+   "page contact courte"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "webgl-shader",
+   "révélation-image",
+   "section-fixée",
+   "galerie-horizontale",
+   "progression-fixée",
+   "compteur",
+   "parallaxe",
+   "canvas-2d",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé",
+   "apparition-au-défilement"
+  ],
+  "interactions": [
+   "filtres",
+   "formulaire-par-étapes",
+   "carte-interactive",
+   "jeu",
+   "lecteur-audio",
+   "mode-calme"
+  ],
+  "change_depuis_audit": "Cinq commits après la correction (95b2c08) : v5, v6 et v7 « audit complet » (app.js largement réécrit : page qui se tourne, en-tête), images Grok réintégrées et en-tête X-Robots-Tag. La version en ligne est identique au dépôt (index.html octet pour octet) ; l'inventaire porte sur ce commit (0fb12f3).",
+  "accueil": "hero"
+ },
+ "sections": {
+  "entete": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "En-tête fixe sur papier : logo, liens dont les mots s'allument en néon au survol, bouton « Programmer une lecture » et mode calme ; il se cache à la descente franche et revient à la remontée.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone, liens en néon, fermé au retour arrière depuis le cache du navigateur.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "hero": {
+   "titre": "Ouverture en néon",
+   "role": "ouverture",
+   "description": "Le nom de la compagnie s'allume lettre à lettre comme un néon (Tilt Neon, axes de rotation variables), un rouge-gorge détouré se pose sur les titres et la photo de paysage apparaît en tirage cyanotype qui s'insole jusqu'à ses vraies couleurs (WebGL OGL), puis ondule doucement au survol. Le fil rouge en néon part d'ici et traverse toute la page. Titre lisible dès 0,5 s.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "webgl-shader",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "sans WebGL ou en mode calme, l'image reste en couleurs, jamais en bleu",
+    "découper le néon en lettres en gardant le mot entier pour les lecteurs d'écran",
+    "ne pas laisser le rouge-gorge se percher dans une section qui défile à l'horizontale"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "ogl"
+   ],
+   "code": {
+    "html": "index.html:52-72",
+    "css": "assets/css/site.css:112-135,287-299",
+    "js": "assets/js/app.js:341-406,1269-1299 ; assets/js/gl.js:70-174"
+   }
+  },
+  "section": {
+   "titre": "Un texte, une voix",
+   "role": "manifeste",
+   "description": "Paragraphe d'intention dont les mots se disent un à un au défilement, à côté de deux photos de lectures.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "portes": {
+   "titre": "Trois portes",
+   "role": "offre",
+   "description": "Section épinglée qui défile à l'horizontale : trois façons de faire entendre un texte (lectures, labos, créations), chacune avec photo et grand mot en néon ; le rouge-gorge saute de porte en porte.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "galerie-horizontale-epinglee",
+   "pieges": [
+    "défilement horizontal seulement au-dessus de 960 px, pile verticale en dessous",
+    "tenir à 1000×560 (corrigé à l'audit)"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:88-120",
+    "css": "assets/css/site.css:313-324",
+    "js": "assets/js/app.js:734-745"
+   }
+  },
+  "section-2": {
+   "titre": "Prochaine lecture",
+   "role": "agenda",
+   "description": "Billet de la prochaine date calculée depuis les données, avec compte à rebours jours, heures, minutes, secondes ; les champs absents sont marqués « à compléter ».",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "la prochaine date se recalcule à chaque visite : prévoir l'état « aucune date à venir »",
+    "annoncer le compte à rebours sans le relire chaque seconde aux lecteurs d'écran"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "index.html:122-145",
+    "css": "assets/css/site.css:328-343",
+    "js": "assets/js/app.js:215-250,770-800"
+   }
+  },
+  "section-3": {
+   "titre": "Corde à linge des labos",
+   "role": "galerie",
+   "description": "Les créations des labos pendues à un fil de néon comme du linge, qui se balancent au défilement, suivies de quatre compteurs.",
+   "animations": [
+    "parallaxe",
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "la piste déborde volontairement : overflow hidden sur la section, pas sur la page"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:147-166",
+    "css": "assets/css/site.css:347-362",
+    "js": "assets/js/app.js:717-767"
+   }
+  },
+  "section-4": {
+   "titre": "Carte des voix",
+   "role": "carte",
+   "description": "Carte de la région épinglée : depuis le siège, un trajet en néon rejoint chaque lieu où la compagnie a lu, au rythme de la liste qui défile à côté.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "viewBox recadré sur la région, coordonnées des lieux dans la projection de la carte de France",
+    "épinglage tenu à 1000×560 (corrigé à l'audit)"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:168-183",
+    "css": "assets/css/site.css:365-390",
+    "js": "assets/js/app.js:998-1054"
+   }
+  },
+  "section-5": {
+   "titre": "Une compagnie de lecture",
+   "role": "manifeste",
+   "description": "Présentation courte de la compagnie à côté d'une grande illustration du rouge-gorge, avec lien vers la page compagnie.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nuit": {
+   "titre": "À vous",
+   "role": "appel",
+   "description": "Bloc d'appel sur fond nuit : « À vous », titre en néon, photo, bouton vers la demande de programmation et adresse à copier.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Pied de page nuit en colonnes : liens, contact, lettre d'information avec validation, mentions et crédits.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feuillet": {
+   "titre": "Page qui se tourne",
+   "role": "transition-de-page",
+   "description": "Transition entre pages : une feuille de papier bordée d'un trait de néon passe de droite à gauche avec le nom de la page d'arrivée, couvre la page quittée puis découvre la nouvelle ; la page suivante se précharge dès que le pointeur ou le doigt approche du lien.",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "poser html.js-arrivee dans l'en-tête pour tenir la place avant le script",
+    "retirer la feuille au retour arrière (pageshow persisted)",
+    "ignorer liens externes, ancres et clics avec touche de modification"
+   ],
+   "sans_capture": true,
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "index.html:263",
+    "css": "assets/css/site.css:240-248",
+    "js": "assets/js/app.js:57-213"
+   }
+  },
+  "sr": {
+   "ignorer": true
+  },
+  "404-ouverture": {
+   "titre": "Page 404",
+   "role": "page-404",
+   "description": "Page introuvable : « Introuvable » en néon, phrase sur le rouge-gorge qui connaît d'autres chemins et trois boutons de retour.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-ouverture": {
+   "titre": "Ouverture des pages intérieures",
+   "role": "ouverture",
+   "description": "Modèle d'ouverture des pages intérieures (agenda, contact, labos, programmer) : surtitre tapuscrit, titre en néon qui s'allume, chapô et grande photo en cyanotype qui s'insole. Sur la page labos, l'ouverture porte en plus les aimants à mots : des mots à déplacer à la souris, au doigt ou au clavier pour composer une phrase, avec bouton « Remettre la phrase » (labos.html:57-64, app.js:1057-1163).",
+   "animations": [
+    "révélation-texte",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "aimants à mots de 37×33 et amortissement calculé par image (restes de l'audit)",
+    "déplacement des aimants au clavier obligatoire"
+   ]
+  },
+  "agenda-section": {
+   "ignorer": true
+  },
+  "agenda-rendez-vous": {
+   "titre": "Agenda filtrable",
+   "role": "agenda",
+   "description": "Liste des dates à venir et passées, regroupées par année, filtrables par type, chaque date exportable en fichier .ics ; les données manquantes sont marquées « à compléter ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "dates passées et à venir calculées à l'affichage, pas au build",
+    "fichier .ics avec fin par défaut quand l'heure de fin manque"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "agenda.html:84-101",
+    "css": "assets/css/site.css:458-461,591-607",
+    "js": "assets/js/app.js:215-265,803-849"
+   }
+  },
+  "agenda-section-2": {
+   "ignorer": true
+  },
+  "agenda-nuit": {
+   "ignorer": true
+  },
+  "compagnie-nuit": {
+   "ignorer": true
+  },
+  "creations-sceniques-nuit": {
+   "ignorer": true
+  },
+  "dire-ensemble-nuit-2": {
+   "ignorer": true
+  },
+  "ecrire-ensemble-nuit-2": {
+   "ignorer": true
+  },
+  "imaginer-ensemble-nuit-2": {
+   "ignorer": true
+  },
+  "labos-nuit": {
+   "ignorer": true
+  },
+  "lectures-nuit-2": {
+   "ignorer": true
+  },
+  "lectures-atelier-paysans-paysages-nuit": {
+   "ignorer": true
+  },
+  "ecrire-ensemble-nuit": {
+   "ignorer": true
+  },
+  "imaginer-ensemble-nuit": {
+   "ignorer": true
+  },
+  "compagnie-ouverture": {
+   "ignorer": true
+  },
+  "confidentialite-ouverture": {
+   "ignorer": true
+  },
+  "cookies-ouverture": {
+   "ignorer": true
+  },
+  "confidentialite-section": {
+   "ignorer": true
+  },
+  "cookies-section": {
+   "ignorer": true
+  },
+  "mentions-legales-section": {
+   "ignorer": true
+  },
+  "dire-ensemble-ouverture": {
+   "ignorer": true
+  },
+  "ecrire-ensemble-ouverture": {
+   "ignorer": true
+  },
+  "imaginer-ensemble-ouverture": {
+   "ignorer": true
+  },
+  "lectures-ouverture": {
+   "ignorer": true
+  },
+  "ecrire-ensemble-alizoa": {
+   "ignorer": true
+  },
+  "ecrire-ensemble-jeunes-pousses": {
+   "ignorer": true
+  },
+  "imaginer-ensemble-sauvage": {
+   "ignorer": true
+  },
+  "imaginer-ensemble-le-repas": {
+   "ignorer": true
+  },
+  "dire-ensemble-parole-dhomme": {
+   "ignorer": true
+  },
+  "compagnie-section": {
+   "titre": "Portrait de la metteuse en scène",
+   "role": "équipe",
+   "description": "Portrait et parcours d'Élise Truchard, avec une phrase en exergue dont un mot s'allume en néon ; portrait provisoire.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "portrait provisoire à fournir par le client (reste de l'audit)"
+   ]
+  },
+  "compagnie-gestes": {
+   "titre": "La démarche",
+   "role": "méthode",
+   "description": "Section épinglée horizontale des gestes de la démarche (choisir le texte, construire la dramaturgie, travailler la voix…) en cartes photo.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": "galerie-horizontale-epinglee",
+   "pieges": []
+  },
+  "compagnie-section-2": {
+   "titre": "Origines",
+   "role": "étapes",
+   "description": "Frise chronologique de la compagnie, années en tapuscrit et paragraphes qui apparaissent au défilement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "compagnie-section-3": {
+   "titre": "Deux pôles de travail",
+   "role": "services",
+   "description": "Deux pôles de la compagnie (lectures, labos) avec photo et liens.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-ouverture": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Page de mentions légales en tapuscrit, champs manquants marqués « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "neige": {
+   "titre": "Neige",
+   "role": "decor",
+   "description": "Canvas fixe de flocons qui tombent sur la page de la création Faire un feu, arrêté hors écran et en mode calme.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true,
+   "dependances": [
+    "canvas"
+   ]
+  },
+  "creations-sceniques-ouverture": {
+   "titre": "Ouverture Faire un feu",
+   "role": "ouverture",
+   "description": "Ouverture sombre de la création : titre en néon, neige en canvas, forêt enneigée et lumière d'une flamme qui suit le curseur.",
+   "animations": [
+    "révélation-texte",
+    "canvas-2d",
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "photos de Faire un feu provisoires (reste de l'audit)"
+   ],
+   "dependances": [
+    "gsap",
+    "canvas"
+   ],
+   "code": {
+    "html": "creations-sceniques.html:49-60,152",
+    "css": "assets/css/site.css:575-586",
+    "js": "assets/js/app.js:1185-1238"
+   }
+  },
+  "creations-sceniques-section": {
+   "titre": "Le spectacle",
+   "role": "manifeste",
+   "description": "Texte de présentation du spectacle sur fond nuit, avec photo de flamme.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-sceniques-bande-givre": {
+   "titre": "Bande de givre",
+   "role": "decor",
+   "description": "Bande photo de givre en parallaxe entre deux sections.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-sceniques-section-2": {
+   "titre": "Le spectacle en pratique",
+   "role": "offre",
+   "description": "Fiche pratique du spectacle (distribution, durée, public, fiche technique), champs absents marqués « à compléter ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "flamme-lumiere": {
+   "titre": "Lumière de flamme",
+   "role": "decor",
+   "description": "Halo chaud fixe qui suit le curseur comme la lumière d'une flamme sur la page Faire un feu.",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "dire-ensemble-poesies-amoureuses": {
+   "titre": "Fiche projet de labo",
+   "role": "portfolio",
+   "description": "Modèle de fiche projet des labos : titre, lieu et public en tapuscrit, texte, photo provisoire ou visuel.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "dire-ensemble-faire-un-feu": {
+   "titre": "Le chœur",
+   "role": "outil-interactif",
+   "description": "Le début d'un texte lu en canon par plusieurs voix : chaque voix surligne ses mots à son tour, comme un chœur, dans un cadre sombre.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "le texte entier reste lisible et dans l'ordre pour les lecteurs d'écran (aria-label du chœur)"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "dire-ensemble.html:78-95",
+    "css": "assets/css/site.css:557-566",
+    "js": "assets/js/app.js:1166-1182"
+   }
+  },
+  "ecrire-ensemble-paysage-a-soi": {
+   "titre": "Projet avec chiffre",
+   "role": "portfolio",
+   "description": "Fiche projet avec un grand compteur (80 élèves) et mosaïque de photos.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "imaginer-ensemble-territoires": {
+   "titre": "Projet avec extrait sonore",
+   "role": "portfolio",
+   "description": "Fiche projet avec emplacement d'extrait sonore (onde dessinée en canvas) en attente du fichier du client.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "photos provisoires (reste de l'audit)"
+   ]
+  },
+  "labos-section": {
+   "titre": "Chapitres des labos",
+   "role": "services",
+   "description": "Chapitres de la page labos (dire, écrire, imaginer) : titre en néon, texte et mosaïque de photos menant à chaque page de labo.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lectures-nuit": {
+   "titre": "Trois formats de lecture",
+   "role": "offre",
+   "description": "Trois cartes sur fond nuit (en tournée, en immersion, sur mesure) avec image en cyanotype.",
+   "animations": [
+    "webgl-shader",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lectures-section": {
+   "titre": "Répertoire filtrable",
+   "role": "produits",
+   "description": "Catalogue des lectures filtrable par catégorie (pastilles colorées, compteurs par filtre), cartes avec photo, durée et public.",
+   "animations": [
+    "apparition-au-défilement",
+    "flip"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "aria-pressed sur les filtres et annonce du nombre de résultats"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "lectures.html:75-144",
+    "css": "assets/css/site.css:458-483",
+    "js": "assets/js/app.js:864-886"
+   }
+  },
+  "lectures-atelier-paysans-paysages-ouverture": {
+   "titre": "Ouverture de fiche lecture",
+   "role": "ouverture",
+   "description": "Modèle d'ouverture des 13 fiches lecture : photo, titre, chapô en tapuscrit.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lectures-atelier-paysans-paysages-section": {
+   "titre": "À propos de la lecture",
+   "role": "offre",
+   "description": "Fiche pratique de la lecture (format, public, durée, besoins) avec visuel et emplacement d'extrait sonore.",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "dire-ensemble-nuit": {
+   "titre": "Les autres labos",
+   "role": "galerie",
+   "description": "Bloc de liens vers les deux autres labos, en cartes photo sur fond nuit ; même modèle sur les trois pages de labos.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

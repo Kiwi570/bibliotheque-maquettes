@@ -1,0 +1,48 @@
+{
+ "id": "pizzalyght-maquette/cayenne-titre-horaires",
+ "maquette": "pizzalyght-maquette",
+ "page": "cayenne",
+ "pages": [
+  "cayenne",
+  "kourou",
+  "saint-laurent"
+ ],
+ "titre": "Cadran des horaires",
+ "role": "agenda",
+ "description": "Cadran 24 h en SVG : minuit en haut, créneaux d'ouverture tracés en braise, aiguille qui tourne jusqu'à l'heure locale à l'entrée ; liste midi et soir et statut du moment à côté.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "cayenne.html:69-79",
+  "css": "assets/css/style.css:666-677",
+  "js": "assets/js/resto.js:9-40 ; assets/js/core.js:22-47"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/cayenne-titre-horaires-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/cayenne-titre-horaires-m390.jpg",
+  "video": "medias/pizzalyght-maquette/cayenne-titre-horaires-p960.mp4"
+ },
+ "pieges": [
+  "heure du lieu et non du visiteur",
+  "ajouter « horaires indicatifs » tant que les fermetures exceptionnelles ne sont pas connues"
+ ],
+ "mesures": {
+  "hauteur_p1440": 866,
+  "hauteur_m390": 886,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

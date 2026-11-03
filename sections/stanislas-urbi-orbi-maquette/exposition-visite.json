@@ -1,0 +1,44 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/exposition-visite",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "exposition",
+ "titre": "Visite salle par salle",
+ "role": "galerie",
+ "description": "Visite horizontale épinglée de l'exposition : chaque salle est un panneau avec grand numéro rouge, texte et photos ; un repère en bas suit la salle en cours, et la salle 3 propose un curseur pour retrouver le point de vue de l'anamorphose.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "simulateur",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "exposition.html:179-402",
+  "css": "assets/css/style.css:608-637",
+  "js": "assets/js/expo.js:38-123"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/exposition-visite-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/exposition-visite-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/exposition-visite-p960.mp4"
+ },
+ "pieges": [
+  "tenir dans l'écran de 1000×560 (corrigé après l'audit)",
+  "repère de salle piloté par un ScrollTrigger par panneau (containerAnimation)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 10980,
+  "hauteur_m390": 6368,
+  "epinglee": true,
+  "scrolltriggers": 17
+ }
+}

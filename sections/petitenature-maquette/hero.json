@@ -1,0 +1,47 @@
+{
+ "id": "petitenature-maquette/hero",
+ "maquette": "petitenature-maquette",
+ "page": "index",
+ "titre": "Ouverture en néon",
+ "role": "ouverture",
+ "description": "Le nom de la compagnie s'allume lettre à lettre comme un néon (Tilt Neon, axes de rotation variables), un rouge-gorge détouré se pose sur les titres et la photo de paysage apparaît en tirage cyanotype qui s'insole jusqu'à ses vraies couleurs (WebGL OGL), puis ondule doucement au survol. Le fil rouge en néon part d'ici et traverse toute la page. Titre lisible dès 0,5 s.",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "webgl-shader",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:52-72",
+  "css": "assets/css/site.css:112-135,287-299",
+  "js": "assets/js/app.js:341-406,1269-1299 ; assets/js/gl.js:70-174"
+ },
+ "medias": {
+  "capture": "medias/petitenature-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/petitenature-maquette/hero-m390.jpg",
+  "video": "medias/petitenature-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "sans WebGL ou en mode calme, l'image reste en couleurs, jamais en bleu",
+  "découper le néon en lettres en gardant le mot entier pour les lecteurs d'écran",
+  "ne pas laisser le rouge-gorge se percher dans une section qui défile à l'horizontale"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1415,
+  "hauteur_m390": 1051,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

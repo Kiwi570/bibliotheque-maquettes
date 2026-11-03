@@ -1,0 +1,42 @@
+{
+ "id": "petitenature-maquette/section-2",
+ "maquette": "petitenature-maquette",
+ "page": "index",
+ "titre": "Prochaine lecture",
+ "role": "agenda",
+ "description": "Billet de la prochaine date calculée depuis les données, avec compte à rebours jours, heures, minutes, secondes ; les champs absents sont marqués « à compléter ».",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:122-145",
+  "css": "assets/css/site.css:328-343",
+  "js": "assets/js/app.js:215-250,770-800"
+ },
+ "medias": {
+  "capture": "medias/petitenature-maquette/section-2-p1440.jpg",
+  "capture_m390": "medias/petitenature-maquette/section-2-m390.jpg",
+  "video": "medias/petitenature-maquette/section-2-p960.mp4"
+ },
+ "pieges": [
+  "la prochaine date se recalcule à chaque visite : prévoir l'état « aucune date à venir »",
+  "annoncer le compte à rebours sans le relire chaque seconde aux lecteurs d'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1125,
+  "hauteur_m390": 961,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

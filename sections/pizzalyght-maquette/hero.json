@@ -1,0 +1,47 @@
+{
+ "id": "pizzalyght-maquette/hero",
+ "maquette": "pizzalyght-maquette",
+ "page": "index",
+ "titre": "Pizza qui cuit sur les braises",
+ "role": "ouverture",
+ "description": "Titre condensé à trois lignes, vraie photo de pizza qui tourne dans un anneau de texte et passe de crue à dorée en WebGL (OGL) avec l'air chaud qui ondule, braises en canvas 2D ; heure de Guyane et statut ouvert ou fermé des trois adresses en bas. Cuisson en CSS sur tactile et sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:42-70",
+  "css": "assets/css/style.css:199-238,247-253",
+  "js": "assets/js/home.js:140-170 ; assets/js/gl.js ; assets/js/core.js:22-69,484-523"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/hero-m390.jpg",
+  "video": "medias/pizzalyght-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "WebGL seulement avec une souris : sur téléphone la cuisson se fait en CSS",
+  "mettre en pause la rotation hors écran (onToggle)",
+  "l'heure locale du lieu (UTC-3) et non celle du visiteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 949,
+  "hauteur_m390": 1057,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

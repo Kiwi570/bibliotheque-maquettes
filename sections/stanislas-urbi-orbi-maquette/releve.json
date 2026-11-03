@@ -1,0 +1,43 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/releve",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "index",
+ "titre": "Le relevé en pellicule",
+ "role": "galerie",
+ "description": "Le relevé de l'IGN raconté par une antenne GPS et un angle mesuré, puis une bande de pellicule photo qui défile à l'horizontale dans une section épinglée.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "compteur"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:183-252",
+  "css": "assets/css/style.css:328-353",
+  "js": "assets/js/home.js:125-168"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/releve-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/releve-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/releve-p960.mp4"
+ },
+ "pieges": [
+  "la distance de la bande est recalculée au refresh (invalidateOnRefresh)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3044,
+  "hauteur_m390": 3029,
+  "epinglee": true,
+  "scrolltriggers": 4
+ }
+}

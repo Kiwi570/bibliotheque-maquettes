@@ -1,0 +1,43 @@
+{
+ "id": "pizzalyght-maquette/fait-maison",
+ "maquette": "pizzalyght-maquette",
+ "page": "index",
+ "titre": "Atelier fait maison épinglé",
+ "role": "étapes",
+ "description": "Scène épinglée au scrub : la pâte s'étale, la sauce se pose, la garniture tombe puis la pizza part à table, pendant que les quatre étapes s'allument à gauche sur fond de farine.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:73-94",
+  "css": "assets/css/style.css:263-303",
+  "js": "assets/js/home.js:95-115,177-222"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/fait-maison-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/fait-maison-m390.jpg",
+  "video": "medias/pizzalyght-maquette/fait-maison-p960.mp4"
+ },
+ "pieges": [
+  "sur téléphone la scène n'est pas épinglée : la fin du montage passe inaperçue (reste de l'audit)",
+  "étapes calculées par seuils de progression (0,28 / 0,52 / 0,8)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2970,
+  "hauteur_m390": 1139,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

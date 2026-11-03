@@ -1,0 +1,43 @@
+{
+ "id": "ollizfx-maquette/sessions",
+ "maquette": "ollizfx-maquette",
+ "page": "index",
+ "titre": "Horloge des sessions épinglée",
+ "role": "outil-interactif",
+ "description": "Horloge SVG des quatre places (Sydney, Tokyo, Londres, New York) en heure de Paris, ouverte ou fermée en direct ; pendant l'épinglage, la journée entière défile au scrub, puis l'horloge revient au direct. Curseur pour explorer la journée.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:68-88",
+  "css": "assets/css/style.css:253-271",
+  "js": "assets/js/home.js:63-81 ; assets/js/main.js:318-424"
+ },
+ "medias": {
+  "capture": "medias/ollizfx-maquette/sessions-p1440.jpg",
+  "capture_m390": "medias/ollizfx-maquette/sessions-m390.jpg",
+  "video": "medias/ollizfx-maquette/sessions-p960.mp4"
+ },
+ "pieges": [
+  "fuseaux horaires calculés par Intl (zonedToUtc), pas par décalage fixe",
+  "épinglage seulement au-dessus de 900 × 760 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1422,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "ollizfx-maquette/hero",
+ "maquette": "ollizfx-maquette",
+ "page": "index",
+ "titre": "Baie de nuit en bougies",
+ "role": "ouverture",
+ "description": "La vraie photo de la baie de nuit est rendue en WebGL (OGL) : les lumières de la côte deviennent des bougies de graphique qui se dressent sur l'horizon, l'eau ondule et reflète leurs couleurs, une lanterne suit le curseur. Repli sur la photo fixe sans WebGL, sur rendu logiciel ou appareil lent.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "ogl",
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:48-64",
+  "css": "assets/css/style.css:211-221",
+  "js": "assets/js/hero.js ; assets/js/home.js:8-38"
+ },
+ "medias": {
+  "capture": "medias/ollizfx-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/ollizfx-maquette/hero-m390.jpg"
+ },
+ "pieges": [
+  "le profil des lumières est lu dans la photo (lightProfile) : changer d'image demande de régler la ligne d'horizon",
+  "détecter le rendu logiciel (SwiftShader) et rester sur la photo"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

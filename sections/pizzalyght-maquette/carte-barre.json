@@ -1,0 +1,42 @@
+{
+ "id": "pizzalyght-maquette/carte-barre",
+ "maquette": "pizzalyght-maquette",
+ "page": "carte",
+ "titre": "Barre de la carte",
+ "role": "outil-interactif",
+ "description": "Barre collante de la carte : rubriques avec rubrique active suivie au défilement, filtres (sans viande, boucané, poisson…) et recherche tolérante aux accents, apostrophes et pluriels.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "carte.html:56-70",
+  "css": "assets/css/style.css:596-610",
+  "js": "assets/js/carte.js:6-70"
+ },
+ "medias": {
+  "capture": "medias/pizzalyght-maquette/carte-barre-p1440.jpg",
+  "capture_m390": "medias/pizzalyght-maquette/carte-barre-m390.jpg"
+ },
+ "pieges": [
+  "ne recalculer les déclencheurs que si la liste affichée a changé",
+  "normaliser accents et pluriels avant la comparaison"
+ ],
+ "mesures": {
+  "hauteur_p1440": 124,
+  "hauteur_m390": 118,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

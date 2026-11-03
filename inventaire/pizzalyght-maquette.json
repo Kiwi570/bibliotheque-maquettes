@@ -1,0 +1,2951 @@
+{
+ "depot": "pizzalyght-maquette",
+ "commit": "2aad0f8",
+ "date_commit": "2026-10-28T19:20:56+01:00",
+ "genere": "2026-11-03T00:49:35.524Z",
+ "pages": {
+  "404": {
+   "fichier": "404.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/404",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [],
+   "gabarit_de": []
+  },
+  "index": {
+   "fichier": "index.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/home.js",
+    "assets/js/composeur.js",
+    "assets/js/gl.js",
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": true,
+    "three": false
+   },
+   "ajoutes_par_js": [],
+   "gabarit_de": []
+  },
+  "carte": {
+   "fichier": "carte.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/carte.js",
+    "assets/js/composeur.js",
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/carte",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [],
+   "gabarit_de": []
+  },
+  "cayenne": {
+   "fichier": "cayenne.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/resto.js",
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/cayenne",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [],
+   "gabarit_de": [
+    "kourou",
+    "saint-laurent"
+   ]
+  },
+  "kourou": {
+   "fichier": "kourou.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/resto.js",
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": "cayenne"
+  },
+  "saint-laurent": {
+   "fichier": "saint-laurent.html",
+   "css": [
+    "assets/css/style.css"
+   ],
+   "js": [
+    "assets/js/resto.js",
+    "assets/js/core.js",
+    "assets/js/pizza-art.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": "cayenne"
+  }
+ },
+ "blocs": [
+  {
+   "id": "ouverture",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.ouverture",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:30-30",
+    "css": "assets/css/style.css:193-196,711",
+    "js": "assets/js/home.js:125,128-134"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "ouverture",
+    "fente"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "nav",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "header.nav",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:32-40",
+    "css": "assets/css/style.css:61,122-125,129-164,456,462,471,528,697,709,771-772,809,828",
+    "js": "assets/js/core.js:1,30-47,50-69,88-96,150-165,258-288,298-308,329-388,472-474,525-544,640-654,710-723,760-780"
+   },
+   "titre": "",
+   "hauteur": 72,
+   "hauteur_m390": 62,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 5
+   },
+   "classes_exclusives": [
+    "nav",
+    "logo",
+    "nav-liens",
+    "nav-droite",
+    "pilule",
+    "ville-btn",
+    "statut",
+    "sr-only",
+    "calme-btn",
+    "ico",
+    "panier-btn"
+   ],
+   "data": [
+    "data-appel",
+    "data-panier",
+    "data-n"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/nav-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/nav-m390.jpg"
+   }
+  },
+  {
+   "id": "hero",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section.hero",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:42-70",
+    "css": "assets/css/style.css:199-238,247-253,709,730-731,774-778",
+    "js": "assets/js/home.js:34-46,80-93,96-114,141,152-158,162-163,166 ; assets/js/core.js:73-86,150-165,176-177,229-233,552-566,760-780,783-794 ; assets/js/pizza-art.js:25-42,125-133,145-157,168-189 ; assets/js/data.js:19,34,50,117,122,137-145,150,158,178,189,205,218,259"
+   },
+   "titre": "L’important c’est le goût !",
+   "hauteur": 949,
+   "hauteur_m390": 1057,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -900,
+     "fin": 949,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 949,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "rotation",
+    "transformOrigin",
+    "yPercent",
+    "scale"
+   ],
+   "boucles_css": 3,
+   "animations_css": 3,
+   "canvas": [
+    "2d",
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 4,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "hero",
+    "hero-fond",
+    "hero-grille",
+    "hero-texte",
+    "gout",
+    "hero-actions",
+    "hero-heure",
+    "horloge",
+    "hero-visuel",
+    "four-halo",
+    "anneau-texte",
+    "pizza-tourne",
+    "base",
+    "vivant",
+    "titre-vivant",
+    "ville-carte"
+   ],
+   "data": [
+    "data-grok",
+    "data-grok-m",
+    "data-grok-vite",
+    "data-aimant",
+    "data-appel",
+    "data-horloge",
+    "data-choisir-ville",
+    "data-statut"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/hero-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/hero-m390.jpg",
+    "video": "medias/pizzalyght-maquette/hero-p960.mp4"
+   }
+  },
+  {
+   "id": "defile",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.defile",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:71-71",
+    "css": "assets/css/style.css:240-244,695",
+    "js": "assets/js/home.js:170,173"
+   },
+   "titre": "",
+   "hauteur": 72,
+   "hauteur_m390": 57,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 49,
+     "fin": 1021,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "xPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "defile",
+    "defile-piste"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/defile-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/defile-m390.jpg",
+    "video": "medias/pizzalyght-maquette/defile-p960.mp4"
+   }
+  },
+  {
+   "id": "fait-maison",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#fait-maison.maison",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:73-94",
+    "css": "assets/css/style.css:263-287,291-303,735-736,745-748,811-816",
+    "js": "assets/js/home.js:95-114,177-180,188,196-207,211-214,300 ; assets/js/core.js:2 ; assets/js/data.js:116,157"
+   },
+   "titre": "Pâte et sauce tomate maison",
+   "hauteur": 2970,
+   "hauteur_m390": 1139,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 421,
+     "fin": 1362,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.8,
+     "debut": 1021,
+     "fin": 3091,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 14,
+   "proprietes": [
+    "yPercent",
+    "scale",
+    "rotation",
+    "opacity",
+    "y",
+    "rotate",
+    "x",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 1,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 5,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "maison",
+    "maison-scene",
+    "farine",
+    "etapes",
+    "etape-liste",
+    "atelier",
+    "montage",
+    "etape-photo",
+    "photo-finale",
+    "video-carte"
+   ],
+   "data": [
+    "data-grok",
+    "data-titre"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/fait-maison-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/fait-maison-m390.jpg",
+    "video": "medias/pizzalyght-maquette/fait-maison-p960.mp4"
+   }
+  },
+  {
+   "id": "pays",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#pays.pays",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:96-107",
+    "css": "assets/css/style.css:307-320,338-343,350-352,696,706,717,732-734,798-799",
+    "js": "assets/js/home.js:17-32,170,223-227,231-232,237 ; assets/js/data.js:106-107,287"
+   },
+   "titre": "Le goût du pays",
+   "hauteur": 2773,
+   "hauteur_m390": 971,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1253,
+     "fin": 2130,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3091,
+     "fin": 4891,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 3991,
+     "fin": 5864,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 31,
+   "proprietes": [
+    "rotationX",
+    "rotationY",
+    "yPercent",
+    "scale",
+    "xPercent",
+    "x",
+    "rotation"
+   ],
+   "boucles_css": 12,
+   "animations_css": 12,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 7,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 9,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "pays",
+    "pays-scene",
+    "fumee-fond",
+    "fumee-css",
+    "pays-tete",
+    "piste-wrap",
+    "piste",
+    "glisser"
+   ],
+   "data": [
+    "data-grok",
+    "data-grok-m",
+    "data-titre"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/pays-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/pays-m390.jpg",
+    "video": "medias/pizzalyght-maquette/pays-p960.mp4"
+   }
+  },
+  {
+   "id": "la-carte",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#la-carte.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:109-117",
+    "css": "assets/css/style.css:357,382",
+    "js": "assets/js/home.js:34-46"
+   },
+   "titre": "Pas que des pizzas",
+   "hauteur": 1594,
+   "hauteur_m390": 1558,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2240,
+     "fin": 3118,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6349,
+     "fin": 7661,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6349,
+     "fin": 7661,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6349,
+     "fin": 7390,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6349,
+     "fin": 7390,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6620,
+     "fin": 7661,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6620,
+     "fin": 7661,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6891,
+     "fin": 7923,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7153,
+     "fin": 8185,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7153,
+     "fin": 8185,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7153,
+     "fin": 8185,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7153,
+     "fin": 8185,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 33,
+   "proprietes": [
+    "rotationX",
+    "rotationY",
+    "yPercent",
+    "--b",
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 8,
+    "liens": 9
+   },
+   "classes_exclusives": [
+    "cats"
+   ],
+   "data": [
+    "data-titre"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/la-carte-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/la-carte-m390.jpg",
+    "video": "medias/pizzalyght-maquette/la-carte-p960.mp4"
+   }
+  },
+  {
+   "id": "allasani",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#allasani.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:119-127",
+    "css": null,
+    "js": null
+   },
+   "titre": "8 ingrédients au choix, 20 €",
+   "hauteur": 1237,
+   "hauteur_m390": 1584,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3834,
+     "fin": 4799,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 26,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [],
+   "data": [
+    "data-titre"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/allasani-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/allasani-m390.jpg",
+    "video": "medias/pizzalyght-maquette/allasani-p960.mp4"
+   }
+  },
+  {
+   "id": "formules",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#formules.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:129-151",
+    "css": "assets/css/style.css:414-421,431-432",
+    "js": "assets/js/home.js:34-46,50-72,75-77,269-270 ; assets/js/data.js:204,269"
+   },
+   "titre": "Le repas complet",
+   "hauteur": 1291,
+   "hauteur_m390": 1288,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5071,
+     "fin": 5950,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8965,
+     "fin": 10886,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9253,
+     "fin": 10713,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent",
+    "clipPath"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 6,
+    "details": 0,
+    "onglets": 1,
+    "deplies": 0,
+    "images": 3,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "formules",
+    "formules-grille",
+    "formule-photo",
+    "onglets",
+    "paliers"
+   ],
+   "data": [
+    "data-titre",
+    "data-groupe"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/formules-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/formules-m390.jpg",
+    "video": "medias/pizzalyght-maquette/formules-p960.mp4"
+   }
+  },
+  {
+   "id": "pizzerias",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#pizzerias.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:153-165",
+    "css": "assets/css/style.css:445-447,461-464,480",
+    "js": "assets/js/home.js:80-93,274,284,287-288,300 ; assets/js/core.js:739"
+   },
+   "titre": "De Saint-Laurent à Cayenne",
+   "hauteur": 1839,
+   "hauteur_m390": 2660,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6362,
+     "fin": 7327,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 10675,
+     "fin": 11367,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10720,
+     "fin": 11772,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10936,
+     "fin": 12552,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10936,
+     "fin": 12552,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10936,
+     "fin": 12552,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 6,
+   "proprietes": [
+    "yPercent",
+    "strokeDashoffset",
+    "opacity"
+   ],
+   "boucles_css": 9,
+   "animations_css": 9,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 5,
+    "liens": 15
+   },
+   "classes_exclusives": [
+    "rn1",
+    "rn1-carte",
+    "rn1-legende",
+    "restos"
+   ],
+   "data": [
+    "data-titre",
+    "data-horloge"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/pizzerias-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/pizzerias-m390.jpg",
+    "video": "medias/pizzalyght-maquette/pizzerias-p960.mp4"
+   }
+  },
+  {
+   "id": "final",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section.final",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:167-176",
+    "css": "assets/css/style.css:484-496,750-751",
+    "js": "assets/js/home.js:34-46,80-93,167,295 ; assets/js/composeur.js:1,44 ; assets/js/core.js:52-69,400,410-427,440,754 ; assets/js/data.js:104,140-141,208-213,269"
+   },
+   "titre": "On allume le four ?",
+   "hauteur": 875,
+   "hauteur_m390": 648,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8258,
+     "fin": 9211,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 11825,
+     "fin": 13600,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent",
+    "scale"
+   ],
+   "boucles_css": 4,
+   "animations_css": 4,
+   "canvas": [
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "final",
+    "final-fond",
+    "lit-braises",
+    "choix",
+    "paiements"
+   ],
+   "data": [
+    "data-titre",
+    "data-aimant",
+    "data-commander",
+    "data-statut",
+    "data-court"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/final-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/final-m390.jpg",
+    "video": "medias/pizzalyght-maquette/final-p960.mp4"
+   }
+  },
+  {
+   "id": "dock",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "nav.dock",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:178-182",
+    "css": "assets/css/style.css:168-177,771,783-786,802-805",
+    "js": "assets/js/core.js:258-270,760-780"
+   },
+   "titre": "Actions rapides",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "dock",
+    "panier-dock",
+    "est-vide"
+   ],
+   "data": [
+    "data-appel",
+    "data-panier",
+    "data-n"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "pied",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "footer.pied",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:183-204",
+    "css": "assets/css/style.css:499-507,836-837",
+    "js": "assets/js/core.js:329-388,759-780"
+   },
+   "titre": "La carte",
+   "hauteur": 395,
+   "hauteur_m390": 961,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 14
+   },
+   "classes_exclusives": [
+    "pied",
+    "pied-grille",
+    "logo-pied",
+    "pied-titre",
+    "bas-pied"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/pied-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/pied-m390.jpg"
+   }
+  },
+  {
+   "id": "panier-flottant",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "button.panier-flottant",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:205-205",
+    "css": "assets/css/style.css:96,334,410,429,629,639,684,787-797,823",
+    "js": "assets/js/home.js:17-46,50-69 ; assets/js/composeur.js:46 ; assets/js/core.js:198-216,238,241-266,290-295,329-388,410-427,524 ; assets/js/data.js:64,104,112,220"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "panier-flottant",
+    "lib",
+    "prix"
+   ],
+   "data": [
+    "data-panier",
+    "data-n"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "voile",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div.voile",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:206-206",
+    "css": "assets/css/style.css:510-511,772-773",
+    "js": "assets/js/core.js:114-136,180"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "voile"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/voile-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/voile-m390.jpg",
+    "video": "medias/pizzalyght-maquette/voile-p960.mp4"
+   }
+  },
+  {
+   "id": "panier",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "aside#panier.tiroir",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:207-211",
+    "css": "assets/css/style.css:512-524,561",
+    "js": "assets/js/core.js:179,315-388,466,783-794"
+   },
+   "titre": "Votre commande",
+   "hauteur": 900,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "tiroir",
+    "tiroir-tete",
+    "tiroir-corps",
+    "tiroir-pied"
+   ],
+   "data": [
+    "data-fermer"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "appel",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div#appel.feuille",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:212-216",
+    "css": "assets/css/style.css:94-95,564-572,825-828",
+    "js": "assets/js/home.js:80-93 ; assets/js/composeur.js:45 ; assets/js/core.js:150-165,168,177,329-388,410-427,783-794"
+   },
+   "titre": "Nos pizzerias",
+   "hauteur": 139,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "feuille",
+    "todo-note",
+    "appel-liste"
+   ],
+   "data": [
+    "data-fermer",
+    "data-horloge"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "messages",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div.messages",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:217-217",
+    "css": "assets/css/style.css:576-578,832",
+    "js": "assets/js/core.js:100-109"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "messages"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "passage",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div.passage",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:218-218",
+    "css": "assets/css/style.css:189-190,712",
+    "js": "assets/js/home.js:267 ; assets/js/core.js:669-675,701-708"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "passage"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/passage-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/passage-m390.jpg"
+   }
+  },
+  {
+   "id": "curseur",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div.curseur",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:219-219",
+    "css": "assets/css/style.css:180-184",
+    "js": "assets/js/core.js:2,584-595,710-723"
+   },
+   "titre": "",
+   "hauteur": 8,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "curseur"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/curseur-p1440.jpg"
+   }
+  },
+  {
+   "id": "curseur-anneau",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "carte",
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "div.curseur-anneau",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:219-219",
+    "css": "assets/css/style.css:180-184",
+    "js": "assets/js/core.js:584-595"
+   },
+   "titre": "",
+   "hauteur": 40,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "curseur-anneau"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/curseur-anneau-p1440.jpg"
+   }
+  },
+  {
+   "id": "404-r-hero",
+   "page": "404",
+   "pages": [
+    "404"
+   ],
+   "sig": "section.r-hero",
+   "dans_main": true,
+   "code": {
+    "html": "404.html:42-50",
+    "css": "assets/css/style.css:79-85,109,294,479,646-649,653-657,716,764",
+    "js": "assets/js/core.js:552-566,597-606,744,760-780"
+   },
+   "titre": "Partie en livraison",
+   "hauteur": 820,
+   "hauteur_m390": 820,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "r-hero",
+    "photo-fond",
+    "eyebrow",
+    "chaud",
+    "lead",
+    "actions",
+    "btn-in"
+   ],
+   "data": [
+    "data-grok",
+    "data-grok-m",
+    "data-grok-vite",
+    "data-aimant"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/404-r-hero-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/404-r-hero-m390.jpg"
+   }
+  },
+  {
+   "id": "carte-carte-hero",
+   "page": "carte",
+   "pages": [
+    "carte"
+   ],
+   "sig": "section.carte-hero",
+   "dans_main": true,
+   "code": {
+    "html": "carte.html:41-55",
+    "css": "assets/css/style.css:200-202,525-530,585-594,730-731",
+    "js": "assets/js/carte.js:63-69 ; assets/js/composeur.js:39 ; assets/js/core.js:52-69,73-86,150-165,176-177,229-233,329-388,552-566,744,754,760-780,783-794"
+   },
+   "titre": "La carte",
+   "hauteur": 760,
+   "hauteur_m390": 509,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 760,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "rotation",
+    "yPercent"
+   ],
+   "boucles_css": 3,
+   "animations_css": 3,
+   "canvas": [
+    "2d"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "carte-hero",
+    "hero-fond",
+    "grille",
+    "infos",
+    "compte",
+    "bloc-titre",
+    "choix-ligne",
+    "pizza-cote"
+   ],
+   "data": [
+    "data-grok",
+    "data-grok-m",
+    "data-grok-vite",
+    "data-choisir-ville",
+    "data-statut",
+    "data-court"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/carte-carte-hero-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/carte-carte-hero-m390.jpg",
+    "video": "medias/pizzalyght-maquette/carte-carte-hero-p960.mp4"
+   }
+  },
+  {
+   "id": "carte-barre",
+   "page": "carte",
+   "pages": [
+    "carte"
+   ],
+   "sig": "div.barre",
+   "dans_main": true,
+   "code": {
+    "html": "carte.html:56-70",
+    "css": "assets/css/style.css:400-408,596-610,714,720-726,771,780,818-819",
+    "js": "assets/js/carte.js:1,6,10-36,51-56,82 ; assets/js/composeur.js:44,60,80,89,93 ; assets/js/core.js:659-668,759"
+   },
+   "titre": "",
+   "hauteur": 124,
+   "hauteur_m390": 118,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 1,
+    "boutons": 4,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 9
+   },
+   "classes_exclusives": [
+    "barre",
+    "defil-h",
+    "cat-lien",
+    "filtres",
+    "filtre-label",
+    "puces",
+    "puce",
+    "recherche"
+   ],
+   "data": [
+    "data-lien",
+    "data-filtre"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/carte-barre-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/carte-barre-m390.jpg"
+   }
+  },
+  {
+   "id": "carte-t-pizzas",
+   "page": "carte",
+   "pages": [
+    "carte"
+   ],
+   "sig": "div.wrap",
+   "dans_main": true,
+   "code": {
+    "html": "carte.html:71-490",
+    "css": "assets/css/style.css:84,88-93,258,294,327-328,332-335,345-347,457,535,544-545,612-643,682-683,830",
+    "js": "assets/js/carte.js:1,7-32,42,59,70-72,78 ; assets/js/composeur.js:7,26-32,39,65 ; assets/js/core.js:72,198-216,241-256,290-295,309-313,329-388,399-404,410-427,453,584-595,608-638,754,759 ; assets/js/pizza-art.js:12,25-42,89-90,111-123,168-189,214 ; assets/js/data.js:64,80,90-91,99,103-104,110-112,164,248,253-255,269"
+   },
+   "titre": "Pizzas",
+   "hauteur": 12181,
+   "hauteur_m390": 27685,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 451,
+     "fin": 1330,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5496,
+     "fin": 6374,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6296,
+     "fin": 7261,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7122,
+     "fin": 8001,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7676,
+     "fin": 8555,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8698,
+     "fin": 9577,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9450,
+     "fin": 10329,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10305,
+     "fin": 11184,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11156,
+     "fin": 12035,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 497,
+     "fin": 5542,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5542,
+     "fin": 6429,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6429,
+     "fin": 7168,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7168,
+     "fin": 7722,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7722,
+     "fin": 8776,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8776,
+     "fin": 9496,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9496,
+     "fin": 10351,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10351,
+     "fin": 11234,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11234,
+     "fin": 12518,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 157,
+     "fin": 1373,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 5202,
+     "fin": 6418,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6089,
+     "fin": 7305,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6828,
+     "fin": 8045,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 7382,
+     "fin": 8598,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 8436,
+     "fin": 9652,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 9156,
+     "fin": 10372,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10011,
+     "fin": 11228,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10894,
+     "fin": 12110,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 607,
+     "fin": 5992,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5652,
+     "fin": 6879,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6539,
+     "fin": 7618,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7279,
+     "fin": 8172,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7832,
+     "fin": 9226,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8886,
+     "fin": 9946,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9606,
+     "fin": 10801,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10462,
+     "fin": 11684,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11344,
+     "fin": 12968,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 101,
+   "proprietes": [
+    "rotationX",
+    "rotationY",
+    "yPercent",
+    "y",
+    "opacity",
+    "clearProps"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 109,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 46,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "avis",
+    "allergenes",
+    "aucun",
+    "rubrique",
+    "rubrique-tete",
+    "gauche",
+    "lead",
+    "banniere",
+    "grille-pizzas",
+    "carte-pizza",
+    "art",
+    "tags",
+    "ing",
+    "bas",
+    "ajout",
+    "tag",
+    "boucan",
+    "texte",
+    "liste-plats",
+    "plat",
+    "nom",
+    "desc",
+    "todo"
+   ],
+   "data": [
+    "data-rubrique",
+    "data-titre",
+    "data-art",
+    "data-incline",
+    "data-filtres",
+    "data-texte",
+    "data-ajouter",
+    "data-composer",
+    "data-formule"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/carte-t-pizzas-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/carte-t-pizzas-m390.jpg",
+    "video": "medias/pizzalyght-maquette/carte-t-pizzas-p960.mp4"
+   }
+  },
+  {
+   "id": "composer-feuille",
+   "page": "carte",
+   "pages": [
+    "carte"
+   ],
+   "sig": "div#composer-feuille.feuille",
+   "dans_main": false,
+   "code": {
+    "html": "carte.html:492-495",
+    "css": "assets/css/style.css:566,760",
+    "js": "assets/js/carte.js:45"
+   },
+   "titre": "Pizza Allasani · 20 €",
+   "hauteur": 104,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "large"
+   ],
+   "data": [
+    "data-fermer"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "cayenne-r-hero",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.r-hero",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:41-57",
+    "css": "assets/css/style.css:646-657,696,716,758-766",
+    "js": "assets/js/resto.js:45-51 ; assets/js/core.js:400,552-566,744,760-780"
+   },
+   "titre": "Cayenne",
+   "hauteur": 900,
+   "hauteur_m390": 863,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 900,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 900,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent",
+    "scale"
+   ],
+   "boucles_css": 13,
+   "animations_css": 13,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "r-hero",
+    "photo-fond",
+    "bokeh",
+    "r-grille",
+    "infos-l",
+    "r-photo"
+   ],
+   "data": [
+    "data-grok",
+    "data-grok-m",
+    "data-grok-vite",
+    "data-statut",
+    "data-commander",
+    "data-aimant",
+    "data-appel"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-r-hero-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-r-hero-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-r-hero-p960.mp4"
+   }
+  },
+  {
+   "id": "cayenne-titre-services",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:59-67",
+    "css": "assets/css/style.css:84,257-260,294,428,434,541,617,659-664,754-756,830-831,837-838",
+    "js": "assets/js/resto.js:52-54 ; assets/js/core.js:150-165,290-295,754"
+   },
+   "titre": "À emporter ou en livraison",
+   "hauteur": 917,
+   "hauteur_m390": 930,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 319,
+     "fin": 1284,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 580,
+     "fin": 1688,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 580,
+     "fin": 1688,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 508,
+     "fin": 1688,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 508,
+     "fin": 1688,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 698,
+     "fin": 1572,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 698,
+     "fin": 1572,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "yPercent",
+    "scale",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "tete",
+    "gauche",
+    "droite",
+    "lead",
+    "services-grille",
+    "service",
+    "fond"
+   ],
+   "data": [
+    "data-titre",
+    "data-lot"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-titre-services-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-titre-services-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-titre-services-p960.mp4"
+   }
+  },
+  {
+   "id": "cayenne-titre-horaires",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:69-79",
+    "css": "assets/css/style.css:666-677",
+    "js": "assets/js/resto.js:1,13-40,60-61"
+   },
+   "titre": "Midi et soir",
+   "hauteur": 866,
+   "hauteur_m390": 886,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1302,
+     "fin": 2181,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1270,
+     "fin": 2510,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1270,
+     "fin": 2510,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1270,
+     "fin": 2510,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "yPercent",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "horaires-grille",
+    "cadran",
+    "centre",
+    "horaires-liste"
+   ],
+   "data": [
+    "data-cadran",
+    "data-horloge",
+    "data-titre",
+    "data-statut"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-titre-horaires-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-titre-horaires-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-titre-horaires-p960.mp4"
+   }
+  },
+  {
+   "id": "cayenne-titre-acces",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:81-95",
+    "css": "assets/css/style.css:445-447,461-462,477,679-680,691,715",
+    "js": "assets/js/resto.js:7,63-64 ; assets/js/core.js:150-165,182-186,329-388,451,454,460,739"
+   },
+   "titre": "Accès",
+   "hauteur": 742,
+   "hauteur_m390": 654,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2225,
+     "fin": 3162,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "strokeDashoffset"
+   ],
+   "boucles_css": 6,
+   "animations_css": 6,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 7
+   },
+   "classes_exclusives": [
+    "acces-grille",
+    "adresse-xl",
+    "tel",
+    "rn1",
+    "rn1-carte",
+    "rn1-legende"
+   ],
+   "data": [
+    "data-focus"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-titre-acces-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-titre-acces-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-titre-acces-p960.mp4"
+   }
+  },
+  {
+   "id": "cayenne-titre-signature",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:97-109",
+    "css": "assets/css/style.css:84,294,327-328,345-346,623-625,681-684,691",
+    "js": "assets/js/resto.js:66 ; assets/js/core.js:401-404 ; assets/js/pizza-art.js:214 ; assets/js/data.js:20,35,51"
+   },
+   "titre": "Cayennaise",
+   "hauteur": 866,
+   "hauteur_m390": 986,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2894,
+     "fin": 3773,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 2697,
+     "fin": 4117,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent",
+    "rotation"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "signature",
+    "art",
+    "lead"
+   ],
+   "data": [
+    "data-art",
+    "data-titre",
+    "data-ajouter",
+    "data-aimant"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-titre-signature-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-titre-signature-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-titre-signature-p960.mp4"
+   }
+  },
+  {
+   "id": "cayenne-section",
+   "page": "cayenne",
+   "pages": [
+    "cayenne",
+    "kourou",
+    "saint-laurent"
+   ],
+   "sig": "section.section",
+   "dans_main": true,
+   "code": {
+    "html": "cayenne.html:111-116",
+    "css": "assets/css/style.css:685-691",
+    "js": "assets/js/core.js:196,225,329-388,657"
+   },
+   "titre": "Les autres pizzerias",
+   "hauteur": 477,
+   "hauteur_m390": 656,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3550,
+     "fin": 4638,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3550,
+     "fin": 4638,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 2,
+   "animations_css": 2,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "autres",
+    "autre"
+   ],
+   "data": [
+    "data-lot",
+    "data-statut"
+   ],
+   "medias": {
+    "capture": "medias/pizzalyght-maquette/cayenne-section-p1440.jpg",
+    "capture_m390": "medias/pizzalyght-maquette/cayenne-section-m390.jpg",
+    "video": "medias/pizzalyght-maquette/cayenne-section-p960.mp4"
+   }
+  }
+ ]
+}

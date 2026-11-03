@@ -1,0 +1,44 @@
+{
+ "id": "oppenheimer-maquette/accueil",
+ "maquette": "oppenheimer-maquette",
+ "page": "index",
+ "titre": "Ouverture à l'encre",
+ "role": "ouverture",
+ "description": "La photo d'ouverture apparaît comme une goutte d'encre qui s'étale dans le papier (WebGL, OGL), puis respire lentement et s'écarte sous le curseur ; polaroïd du praticien scellé d'un cachet de cire, titre révélé ligne à ligne, ouverture orchestrée en moins de 3 s. Sans WebGL, masque de tache fixe.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:57-78",
+  "css": "assets/css/site.css:279-308",
+  "js": "assets/js/encre-gl.js ; assets/js/accueil.js:9-48 ; assets/js/site.js:30-65,127-130"
+ },
+ "medias": {
+  "capture": "medias/oppenheimer-maquette/accueil-p1440.jpg",
+  "capture_m390": "medias/oppenheimer-maquette/accueil-m390.jpg",
+  "video": "medias/oppenheimer-maquette/accueil-p960.mp4"
+ },
+ "pieges": [
+  "afficher l'image de repli si WebGL n'a pas répondu à temps (pas de flash)",
+  "éviter le message console quand le contexte WebGL échoue"
+ ],
+ "mesures": {
+  "hauteur_p1440": 998,
+  "hauteur_m390": 1250,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

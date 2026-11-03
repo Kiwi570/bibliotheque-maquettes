@@ -1,0 +1,46 @@
+{
+ "id": "stanislas-urbi-orbi-maquette/ligne",
+ "maquette": "stanislas-urbi-orbi-maquette",
+ "page": "index",
+ "titre": "Le tour du monde sur le globe",
+ "role": "carte",
+ "description": "Section sombre collante : un globe WebGL (OGL) tourne en suivant la ligne géodésique de l'index autour de la Terre ; le défilement fait avancer un compteur de kilomètres, lentement sur les terres et vite sur les océans, avec cartes par pays. Carte SVG de repli sans WebGL et texte d'accessibilité.",
+ "animations": [
+  "webgl-shader",
+  "progression-fixée",
+  "compteur"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:260-330",
+  "css": "assets/css/style.css:357-400",
+  "js": "assets/js/globe.js ; assets/js/home.js:169-184"
+ },
+ "medias": {
+  "capture": "medias/stanislas-urbi-orbi-maquette/ligne-p1440.jpg",
+  "capture_m390": "medias/stanislas-urbi-orbi-maquette/ligne-m390.jpg",
+  "video": "medias/stanislas-urbi-orbi-maquette/ligne-p960.mp4"
+ },
+ "pieges": [
+  "OGL écrit une erreur console sans WebGL : tester le contexte avant d'instancier le Renderer (reste de l'audit)",
+  "une carte reste vide sur fond nuit (reste de l'audit)",
+  "suspendre le rendu hors écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6122,
+  "hauteur_m390": 6748,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

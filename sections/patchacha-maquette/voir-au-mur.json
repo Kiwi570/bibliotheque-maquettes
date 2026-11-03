@@ -1,0 +1,42 @@
+{
+ "id": "patchacha-maquette/voir-au-mur",
+ "maquette": "patchacha-maquette",
+ "page": "index",
+ "titre": "Voir au mur",
+ "role": "outil-interactif",
+ "description": "Choix d'une pièce dessinée en SVG (salon, bureau, alcôve) et d'une œuvre : elle s'affiche à l'échelle au-dessus du meuble de référence, avec une cote, et un curseur règle la lumière de la pièce ; photo calée quand elle existe.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "configurateur",
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:153-161",
+  "css": "assets/css/style.css:268-298",
+  "js": "assets/js/core.js:642-825"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/voir-au-mur-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/voir-au-mur-m390.jpg",
+  "video": "medias/patchacha-maquette/voir-au-mur-p960.mp4"
+ },
+ "pieges": [
+  "les pièces sont dessinées en centimètres : un seul facteur cm vers px pour la pièce et l'œuvre",
+  "annoncer la dimension de l'œuvre en texte, pas seulement par l'image"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1197,
+  "hauteur_m390": 1516,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

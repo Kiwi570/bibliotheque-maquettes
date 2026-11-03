@@ -1,0 +1,42 @@
+{
+ "id": "swiss-cloisons-solutions-maquette/devis-devis",
+ "maquette": "swiss-cloisons-solutions-maquette",
+ "page": "devis",
+ "titre": "Devis en cinq étapes",
+ "role": "contact",
+ "description": "Formulaire de devis en 5 étapes (travaux, précisions conditionnelles, lieu et surface, coordonnées, récapitulatif) avec aperçu axonométrique du projet qui se met à jour, curseur de surface, brouillon conservé et écran de remerciement ; rien n'est envoyé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "devis.html:75-244",
+  "css": "assets/css/site.css:91-93,102-113,119-126,157,197-198,281-284,289,304-307,472-473,478-481,496-558,589,594-597,627-628,656,661-662",
+  "js": "assets/js/devis.js:1,8-11,24-40,66,69,74-76,79,82,93-100,127-155,158-178,187-189,197-199,213 ; assets/js/core.js:23-24,90,220,229,249,257,266-268 ; assets/js/iso.js:2,15,32-57,106,209 ; assets/js/i18n.js:6,19,23,43,76-77,140,174-176,182-184,189,194,210"
+ },
+ "medias": {
+  "capture": "medias/swiss-cloisons-solutions-maquette/devis-devis-p1440.jpg",
+  "capture_m390": "medias/swiss-cloisons-solutions-maquette/devis-devis-m390.jpg",
+  "video": "medias/swiss-cloisons-solutions-maquette/devis-devis-p960.mp4"
+ },
+ "pieges": [
+  "bouton Copier hors écran en 1000×560 et 1024×640 (reste de l'audit)",
+  "questions conditionnelles affichées selon les travaux cochés"
+ ],
+ "mesures": {
+  "hauteur_p1440": 893,
+  "hauteur_m390": 1761,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

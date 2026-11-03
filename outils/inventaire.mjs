@@ -41,7 +41,15 @@ function blocsSource(arbre) {
     for (const e of parent.enfants) {
       if (e.tag === 'svg' && !dansMain && (e.attrs.class || e.attrs.id) && !trouver(e, n => n.tag === 'symbol')) { /* calque SVG (voile, décor) : on le garde */ }
       else if (IGNORER.has(e.tag)) continue;
-      if (e.tag === 'main') { marcher(e, true); continue; }
+      if (e.tag === 'main') {
+        // Main sans section ni article (page légale, 404 à plat) : un seul bloc, pas un bloc par paragraphe.
+        const enfants = e.enfants.filter(x => !IGNORER.has(x.tag));
+        if (enfants.length > 3 && !enfants.some(x => ['section', 'article', 'header', 'footer', 'aside', 'nav', 'form'].includes(x.tag))) {
+          out.push({ tag: e.tag, id: e.attrs.id || '', classe: e.attrs.class || '', sig: signature(e.tag, e.attrs.id, e.attrs.class), debut: e.debut, fin: e.fin ?? e.debut, dansMain: true, attrs: e.attrs, noeud: e });
+          continue;
+        }
+        marcher(e, true); continue;
+      }
       if (!dansMain && e.tag === 'div' && contientMain(e)) { marcher(e, false); continue; }
       out.push({ tag: e.tag, id: e.attrs.id || '', classe: e.attrs.class || '', sig: signature(e.tag, e.attrs.id, e.attrs.class), debut: e.debut, fin: e.fin ?? e.debut, dansMain, attrs: e.attrs, noeud: e });
     }
@@ -67,7 +75,9 @@ for (const f of fichiersPages) {
 function importsJs(fichiers) {
   const vus = new Set(); const pile = [...fichiers];
   while (pile.length) { const f = pile.pop(); if (vus.has(f)) continue; vus.add(f); const p = path.join(DOS, f); if (!fs.existsSync(p)) continue;
-    for (const m of fs.readFileSync(p, 'utf8').matchAll(/(?:import\s[^'"]*|import\()\s*['"](\.{1,2}\/[^'"?]+)/g)) { const g = path.normalize(path.join(path.dirname(f), m[1])); if (!/vendor/.test(g)) pile.push(g); } }
+    for (const m of fs.readFileSync(p, 'utf8').matchAll(/(?:import\s[^'"]*|import\()\s*['"](\.{1,2}\/[^'"?]+)/g)) { const g = path.normalize(path.join(path.dirname(f), m[1])); if (!/vendor/.test(g)) pile.push(g); }
+    // Import dynamique par gabarit de chaîne (`./pages/${PAGE}.js`) : tous les scripts du dossier.
+    for (const m of fs.readFileSync(p, 'utf8').matchAll(/import\(\s*`(\.{1,2}\/[^`$]*)\$\{[^`]*`/g)) { const d = path.normalize(path.join(path.dirname(f), m[1])); const dir = d.endsWith('/') ? d : path.dirname(d); if (/vendor/.test(dir) || !fs.existsSync(path.join(DOS, dir))) continue; for (const x of fs.readdirSync(path.join(DOS, dir))) if (/\.m?js$/.test(x)) pile.push(path.join(dir, x)); } }
   return [...vus];
 }
 for (const s of Object.values(sources)) s.js = importsJs(s.js);
@@ -76,12 +86,12 @@ for (const s of Object.values(sources)) s.js = importsJs(s.js);
 const gabarits = {};
 for (const page of ORDRE) { const s = sources[page];
   const cle = s.blocs.filter(b => b.dansMain).map(b => b.tag + '#' + b.id + '.' + b.classe.trim().split(/\s+/).sort().join('.') + '[' + Object.keys(b.attrs).filter(k => k.startsWith('data-')).sort().join(',') + ']').join('|');
-  // Même séquence exacte, ou (pages d'un même dossier) au moins 60 % de blocs communs : fiches services/*, etc.
+  // Même séquence exacte, ou pages d'un même dossier avec au moins 60 % de blocs communs (75 % à la racine, accueil exclu).
   const dos = page.includes('/') ? page.slice(0, page.lastIndexOf('/')) : '';
   const parts = new Set(cle.split('|'));
-  const proche = g => { if (!dos || g.dos !== dos) return false; const a = g.cle.split('|'); const commun = a.filter(x => parts.has(x)).length; return commun >= 3 && commun / new Set([...a, ...parts]).size >= 0.6; };
+  const proche = g => { if (g.dos !== dos || page === 'index' || g.pages[0] === 'index') return false; const a = g.cle.split('|'); const commun = a.filter(x => parts.has(x)).length; return commun >= 3 && commun / new Set([...a, ...parts]).size >= (dos ? 0.6 : 0.75); };
   const deja = Object.entries(gabarits).find(([, g]) => (g.cle === cle && cle.split('|').length > 2) || proche(g));
-  if (deja) { deja[1].pages.push(page); s.gabarit = deja[0]; } else gabarits[page] = { cle, dos, pages: [page] };
+  if (deja) { deja[1].pages.push(page); s.gabarit = deja[0]; s.gabaritLache = deja[1].cle !== cle; } else gabarits[page] = { cle, dos, pages: [page] };
 }
 
 // Identifiants des blocs (communs hors main dédoublonnés par signature).
@@ -99,7 +109,9 @@ for (const page of ORDRE) { const s = sources[page];
     if (!b.dansMain) {
       if (communs[b.sig]) { communs[b.sig].pages.push(page); b.ref = communs[b.sig]; continue; }
     } else if (s.gabarit) {
-      const ref = blocs.find(x => x.page === s.gabarit && x.sig === b.sig && !x._pris?.has(page));
+      // Gabarit approché : même signature ne suffit pas, le contenu (classes internes) doit aussi se ressembler.
+      const semblable = x => { if (!s.gabaritLache) return true; const a = classesDe(x._b.noeud), c = classesDe(b.noeud); const u = new Set([...a, ...c]); return !u.size || [...a].filter(k => c.has(k)).length / u.size >= 0.7; };
+      const ref = blocs.find(x => x.page === s.gabarit && x.sig === b.sig && !x._pris?.has(page) && semblable(x));
       if (ref) { ref.pages.push(page); (ref._pris ??= new Set()).add(page); b.ref = ref; continue; }
     }
     const fiche = { id: idPour(page, b), page, pages: [page], sig: b.sig, tag: b.tag, dansMain: b.dansMain, html: `${s.fichier}:${b.debut}-${b.fin}`, _b: b, _s: s };
@@ -162,7 +174,7 @@ function mesurerDansPage(sigs) {
     if (e.tagName.toLowerCase() === 'svg' && !dansMain && (e.getAttribute('class') || e.id) && !e.querySelector('symbol')) { /* calque SVG gardé */ }
     else if (IGN.has(e.tagName.toUpperCase())) continue;
     if (e.classList.contains('pin-spacer')) { marcher(e, dansMain); continue; }
-    if (e.tagName === 'MAIN') { marcher(e, true); continue; }
+    if (e.tagName === 'MAIN') { const en = [...e.children].filter(x => !IGN.has(x.tagName.toUpperCase()) && !x.classList.contains('pin-spacer')); if (en.length > 3 && !en.some(x => ['SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'ASIDE', 'NAV', 'FORM'].includes(x.tagName))) { vivants.push(e); continue; } marcher(e, true); continue; }
     if (!dansMain && e.tagName === 'DIV' && e.querySelector('main')) { marcher(e, false); continue; }
     vivants.push(e); } };
   marcher(document.body, false);
@@ -236,7 +248,9 @@ for (const page of pagesAVisiter) {
   const segments = [];
   if (avecMedias) {
     // Le premier bloc du main reçoit la vidéo du chargement (ouverture).
-    const premierMain = s.blocs.findIndex(b => b.dansMain);
+    // (le premier visible : un calque d'intro de 0 px de haut ne garde pas la vidéo)
+    let premierMain = s.blocs.findIndex((b, i) => b.dansMain && mes.infos[i] && !mes.infos[i].cache && mes.infos[i].hauteur > 40);
+    if (premierMain < 0) premierMain = s.blocs.findIndex(b => b.dansMain);
     if (premierMain >= 0) segments.push({ i: premierMain, a: 300, b: 300 + 5200, nom: 'p1440' });
     for (let i = 0; i < s.blocs.length; i++) {
       const fi = s.blocs[i].ref; const inf = mes.infos[i];

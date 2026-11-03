@@ -1,0 +1,42 @@
+{
+ "id": "patchacha-maquette/oeuvre-enveloppe",
+ "maquette": "patchacha-maquette",
+ "page": "oeuvre",
+ "titre": "Fiche d'une œuvre",
+ "role": "produits",
+ "description": "Fiche œuvre : visionneuse collante (vues en situation, détail, loupe au survol), prix, adoption au panier, caractéristiques complètes et lien vers voir au mur, œuvres voisines en bas.",
+ "animations": [
+  "section-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "galerie-cliquable",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "oeuvre.html:65-117",
+  "css": "assets/css/style.css:524-559",
+  "js": "assets/js/oeuvre.js:22-135"
+ },
+ "medias": {
+  "capture": "medias/patchacha-maquette/oeuvre-enveloppe-p1440.jpg",
+  "capture_m390": "medias/patchacha-maquette/oeuvre-enveloppe-m390.jpg",
+  "video": "medias/patchacha-maquette/oeuvre-enveloppe-p960.mp4"
+ },
+ "pieges": [
+  "la fiche est lue depuis l'ancre (#slug) : prévoir le cas d'une ancre inconnue"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3918,
+  "hauteur_m390": 5444,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

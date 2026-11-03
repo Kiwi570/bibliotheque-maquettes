@@ -1,0 +1,651 @@
+{
+  "maquette": {
+    "client": "entreprise d'aménagement intérieur de bureaux (cloisons, faux-plafonds, planchers techniques) à Genève",
+    "activite": [
+      "bâtiment",
+      "services-b2b"
+    ],
+    "concept": [
+      "atelier",
+      "dossier"
+    ],
+    "ambiance": [
+      "clair",
+      "minéral",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--calcaire",
+      "texte": "--graphite",
+      "accent": "--vert",
+      "secondaire": "--verre"
+    },
+    "polices": {
+      "titres": "Instrument Sans",
+      "texte": "Instrument Sans",
+      "mono": "ui-monospace"
+    },
+    "points_forts": [
+      "vitre WebGL qui coulisse sur la photo d'ouverture (réfraction sur les chants, bande dépolie, profilés alu)",
+      "coupe axonométrique SVG d'un plateau qui se construit couche par couche au défilement, reconfigurable par puces",
+      "avant/après à essuyer au doigt sur une vitre dépolie, avec curseur clavier",
+      "devis en 5 étapes avec aperçu axonométrique du projet et brouillon conservé",
+      "ambiance sonore synthétisée qui s'étouffe derrière la vitre (sur clic seulement)"
+    ],
+    "reserves": [
+      "bouton Copier du devis hors écran en 1000×560 et 1024×640",
+      "erreur console OGL sans WebGL",
+      "page AXA de 3,9 Mo",
+      "loader de 1,7 s à chaque visite",
+      "pas d'og:image sur les mentions légales"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "progression-fixée",
+      "galerie-horizontale",
+      "masque",
+      "parallaxe",
+      "apparition-au-défilement",
+      "canvas-2d",
+      "curseur-personnalisé",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "configurateur",
+      "formulaire-par-étapes",
+      "comparateur",
+      "carte-interactive",
+      "galerie-cliquable",
+      "lecteur-audio",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "hero"
+  },
+  "sections": {
+    "loader": {
+      "titre": "Chargement",
+      "role": "ouverture",
+      "description": "Calque de chargement : logo-maison tracé et compteur de 000 à 100 avant l'ouverture du héros ; rejoué à chaque visite (1,7 s).",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": [
+        "ne le jouer qu'à la première visite de la session"
+      ]
+    },
+    "sweep": {
+      "titre": "Vitre qui balaie",
+      "role": "transition-de-page",
+      "description": "Transition entre pages : un panneau vitré traverse l'écran avant la navigation puis se retire à l'arrivée, mémorisé par sessionStorage ; aussi utilisé au changement de langue ou de mode calme.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": [
+        "remettre le panneau hors écran sur pageshow (retour arrière)"
+      ]
+    },
+    "cursor": {
+      "titre": "Curseur",
+      "role": "decor",
+      "description": "Petit curseur personnalisé qui suit la souris et grossit sur les liens, absent au toucher.",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "hd": {
+      "titre": "En-tête",
+      "role": "menu",
+      "description": "En-tête fixe sur fond calcaire : logo, liens, téléphone copiable, langue EN, son, mode calme et bouton devis ; se cache à la descente et change de teinte sur les sections sombres.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "mode-calme",
+        "lecteur-audio"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "mesurer sa hauteur en variable pour les épinglages"
+      ]
+    },
+    "menu": {
+      "titre": "Menu téléphone",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec piège du focus, fermeture à Échap et bouton du mode calme.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "hero": {
+      "titre": "Vitre coulissante",
+      "role": "ouverture",
+      "description": "Sur la photo d'un plateau de bureaux, deux panneaux vitrés bord à bord rendus en WebGL (OGL) avec réfraction sur les chants, liseré chromatique, reflet, bande dépolie et profilés alu ; la vitre suit le pointeur puis se referme au défilement. Sans WebGL ou en mode calme, une vitre CSS reste et la photo est intacte.",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte",
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "ogl"
+      ],
+      "code": {
+        "html": "index.html:78-103",
+        "css": "assets/css/site.css:205-234",
+        "js": "assets/js/glass.js ; assets/js/home.js:46-91"
+      },
+      "pieges": [
+        "erreur console OGL sans WebGL encore présente (reste de l'audit) : tester webgl() avant de créer le Renderer",
+        "le loader retarde le titre : viser un titre lisible avant 2,5 s"
+      ]
+    },
+    "manifeste": {
+      "titre": "Approche",
+      "role": "manifeste",
+      "description": "Phrase d'approche en grand avec mots en italique serif, photo et liste « Pourquoi nous choisir » qui apparaît au défilement.",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres": {
+      "titre": "Détails de chantier",
+      "role": "galerie",
+      "description": "Bande de quatre photos de détails de chantier en légère parallaxe.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers": {
+      "titre": "Coupe axonométrique",
+      "role": "services",
+      "description": "Section sombre : une coupe axonométrique SVG calculée d'un plateau de bureaux reste collante et se construit couche par couche (plancher technique, cloisons, faux-plafond) pendant que les trois métiers défilent ; des puces changent le type de cloison (vitrée bord à bord, amovible, pleine…) et la légende suit.",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:155-215",
+        "css": "assets/css/site.css:273-307",
+        "js": "assets/js/iso.js ; assets/js/home.js:9-17,103-126"
+      },
+      "pieges": [
+        "les couleurs du dessin sont écrites en dur dans iso.js (objet COL) : les lire dans les variables CSS à l'extraction",
+        "révéler toutes les couches d'un coup en mode calme"
+      ]
+    },
+    "realisations": {
+      "titre": "Réalisations en galerie épinglée",
+      "role": "portfolio",
+      "description": "Huit projets en cartes photo qui défilent à l'horizontale dans une section épinglée (scrub), avec barre de progression ; défilement natif au téléphone.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:218-289",
+        "css": "assets/css/site.css:310-332",
+        "js": "assets/js/home.js:128-154"
+      },
+      "pieges": [
+        "matchMedia : piste native sous 760 px"
+      ]
+    },
+    "avant-apres": {
+      "titre": "Essuyez la vitre",
+      "role": "preuves",
+      "description": "Avant/après d'un chantier : la photo « phase travaux » est derrière une vitre dépolie qu'on essuie au doigt ou à la souris (canvas 2D) pour découvrir la phase finale ; curseur clavier et bouton « tout essuyer » en secours.",
+      "animations": [
+        "canvas-2d",
+        "révélation-image"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "canvas"
+      ],
+      "code": {
+        "html": "index.html:292-315",
+        "css": "assets/css/site.css:336-351",
+        "js": "assets/js/wipe.js"
+      },
+      "pieges": [
+        "garder le curseur range synchronisé avec le masque pour le clavier"
+      ]
+    },
+    "methode": {
+      "titre": "Cinq étapes, bord à bord",
+      "role": "méthode",
+      "description": "Section épinglée (scrub) : cinq panneaux d'étapes glissent et viennent se poser bord à bord comme des cloisons vitrées ; en dessous de 960 px, simple apparition au défilement.",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:318-339",
+        "css": "assets/css/site.css:354-366,639-651",
+        "js": "assets/js/home.js:156-176"
+      },
+      "pieges": [
+        "le titre doit rester sous l'en-tête pendant l'épinglage (corrigé à l'audit, à tester de 1280 à 1728 px)"
+      ]
+    },
+    "confiance": {
+      "titre": "Ils nous font confiance",
+      "role": "témoignages",
+      "description": "Section sombre : avis client en grande citation serif et logos de références, avec secteurs qui changent en boucle.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zone": {
+      "titre": "Carte du Léman",
+      "role": "carte",
+      "description": "Carte schématique du Léman dessinée en SVG depuis des coordonnées, villes et zone Suisse/France, points qui pulsent ; coordonnées copiables à côté.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact": {
+      "titre": "Appel final",
+      "role": "appel",
+      "description": "Grand appel sur photo sombre avec bouton de devis et coordonnées.",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ft": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page graphite : logo, adresse, contact, liens et bouton de réduction des animations.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dock": {
+      "titre": "Barre d'appel",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas sur téléphone avec Appeler et Demander un devis, masquée tant que le héros est visible ; sa hauteur est mesurée dans --barres-h.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "404-p404-pane": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-eyebrow": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-eyebrow-2": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-h2": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-h2-2": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-lead": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-lead-2": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-div": {
+      "ignorer": "morceau de la page 404, décrite dans 404-p404-num"
+    },
+    "404-p404-num": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable : grand 404, phrase « Cette pièce n'a pas encore été cloisonnée » et panneaux vitrés en fond, deux boutons de retour.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-devis-hero": {
+      "titre": "Tête du devis",
+      "role": "ouverture",
+      "description": "Titre de la page devis avec mot en italique serif et avertissement de démonstration.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-devis": {
+      "titre": "Devis en cinq étapes",
+      "role": "contact",
+      "description": "Formulaire de devis en 5 étapes (travaux, précisions conditionnelles, lieu et surface, coordonnées, récapitulatif) avec aperçu axonométrique du projet qui se met à jour, curseur de surface, brouillon conservé et écran de remerciement ; rien n'est envoyé.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "bouton Copier hors écran en 1000×560 et 1024×640 (reste de l'audit)",
+        "questions conditionnelles affichées selon les travaux cochés"
+      ]
+    },
+    "mentions-legales-legal-hero": {
+      "titre": "Tête des mentions",
+      "role": "texte-legal",
+      "description": "Titre des mentions légales et de la confidentialité avec avertissement de maquette.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-legal": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Mentions légales en deux colonnes avec sommaire collant et éléments à compléter marqués.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisation-axa-fiche-hero": {
+      "titre": "Tête de réalisation",
+      "role": "ouverture",
+      "description": "Ouverture d'une fiche réalisation : grand nom du client sur photo avec la même vitre WebGL qui se referme au défilement, fiche technique (client, maître d'ouvrage, ville, année).",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisation-axa-projet": {
+      "titre": "Le projet",
+      "role": "manifeste",
+      "description": "Présentation du projet en deux colonnes : titre serif et paragraphe.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisation-axa-lots": {
+      "titre": "Lots dessinés",
+      "role": "services",
+      "description": "Liste des lots réalisés dont les pictogrammes SVG se tracent à l'entrée, avec photo à droite.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisation-axa-travaux": {
+      "titre": "Frise du chantier",
+      "role": "galerie",
+      "description": "Frise des photos de chantier en galerie horizontale épinglée avec progression ; défilement natif au téléphone.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": [
+        "anticipatePin: 1 encore présent (axa.js:52)",
+        "page de 3,9 Mo (reste de l'audit)"
+      ]
+    },
+    "realisation-axa-avant-apres": {
+      "ignorer": "variante de avant-apres (même wipe.js)"
+    },
+    "realisation-axa-finale": {
+      "titre": "Mosaïque et visionneuse",
+      "role": "galerie",
+      "description": "Mosaïque des photos de fin de chantier qui s'ouvrent dans une visionneuse au clavier.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisation-axa-suivant": {
+      "titre": "Projet suivant",
+      "role": "appel",
+      "description": "Bloc vers le projet suivant avec photo, résumé et deux boutons.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lightbox": {
+      "titre": "Visionneuse",
+      "role": "outil-interactif",
+      "description": "Visionneuse plein écran des photos de la fiche réalisation, navigable au clavier.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    }
+  }
+}

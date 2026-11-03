@@ -1,0 +1,42 @@
+{
+ "id": "pixncroq-maquette/deroule",
+ "maquette": "pixncroq-maquette",
+ "page": "index",
+ "titre": "Déroulé au diaphragme",
+ "role": "étapes",
+ "description": "Les étapes d'une séance défilent à côté d'un diaphragme SVG collant à sept lames réelles (rayon proportionnel à 1/N) qui s'ouvre et tourne d'une étape à l'autre, avec bague graduée.",
+ "animations": [
+  "progression-fixée",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:164-206",
+  "css": "assets/css/main.css:282-303",
+  "js": "assets/js/accueil.js:114-145"
+ },
+ "medias": {
+  "capture": "medias/pixncroq-maquette/deroule-p1440.jpg",
+  "capture_m390": "medias/pixncroq-maquette/deroule-m390.jpg",
+  "video": "medias/pixncroq-maquette/deroule-p960.mp4"
+ },
+ "pieges": [
+  "recalculer les lames à chaque mise à jour plutôt que de les animer en CSS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2090,
+  "hauteur_m390": 2123,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

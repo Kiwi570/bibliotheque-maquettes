@@ -1,0 +1,68 @@
+{
+ "id": "petitenature-maquette/feuillet",
+ "maquette": "petitenature-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "agenda",
+  "compagnie",
+  "confidentialite",
+  "contact",
+  "cookies",
+  "creations-sceniques",
+  "dire-ensemble",
+  "ecrire-ensemble",
+  "imaginer-ensemble",
+  "labos",
+  "lectures",
+  "lectures/atelier-paysans-paysages",
+  "lectures/au-bord-de-leau",
+  "lectures/au-musee",
+  "lectures/au-supermarche",
+  "lectures/dans-une-gare",
+  "lectures/ecrire-une-aventure-a-soi",
+  "lectures/en-entreprise",
+  "lectures/george-sand",
+  "lectures/habiter-le-monde",
+  "lectures/histoires-dados",
+  "lectures/observer-le-vivant",
+  "lectures/paysans-paysages",
+  "lectures/toutes-petites-lectures",
+  "mentions-legales",
+  "programmer"
+ ],
+ "titre": "Page qui se tourne",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : une feuille de papier bordée d'un trait de néon passe de droite à gauche avec le nom de la page d'arrivée, couvre la page quittée puis découvre la nouvelle ; la page suivante se précharge dès que le pointeur ou le doigt approche du lien.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:263",
+  "css": "assets/css/site.css:240-248",
+  "js": "assets/js/app.js:57-213"
+ },
+ "medias": {},
+ "pieges": [
+  "poser html.js-arrivee dans l'en-tête pour tenir la place avant le script",
+  "retirer la feuille au retour arrière (pageshow persisted)",
+  "ignorer liens externes, ancres et clics avec touche de modification"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}
