@@ -8,7 +8,8 @@
 // - Deux gabarits, choisis d'après le sujet et la zone calme : « photo à droite » (texte à gauche, sur fond uni) et
 //   « plein cadre » (bandeau bas en dégradé, seulement si le sujet reste au-dessus du bandeau). Le texte n'est jamais sur le sujet.
 // - Écrit _partage/<cle>-<langue>.html (à ajuster à la main si besoin : avec data-ajuste sur <html>, il n'est plus réécrit)
-//   et assets/partage/<cle>-<langue>.jpg (JPG, jamais de WebP pour le partage). Remplace outils/images-partage.mjs du socle.
+//   et assets/partage/<cle>-<langue>.jpg (JPG qualité 80, jamais de WebP pour le partage), et _partage/partage.json :
+//   boîte du sujet telle que rendue, boîtes du texte et du logo, recouvrement en px² (doit valoir 0). Remplace outils/images-partage.mjs du socle.
 import fs from 'node:fs';
 import path from 'node:path';
 import { createServer } from 'node:http';
@@ -75,7 +76,29 @@ function disposer(e, W0, H0) {
   const wImg = 630 * r;
   const cx = (s.x + s.l / 2) / 100 * wImg;
   const decal = Math.max(0, Math.min(wImg - 600, cx - 300));
-  return { gabarit: 'droite', position: `${wImg > 600 ? Math.round(decal / (wImg - 600) * 100) : 50}% ${Math.round(s.y + s.h / 2)}%` };
+  // Voile de raccord (dégradé du fond sur le bord gauche de la photo) : il s'arrête avant le sujet, et disparaît sous 24 px.
+  const gauche = wImg > 600 ? s.x / 100 * wImg - decal : s.x / 100 * 600;
+  const voile = Math.max(0, Math.min(90, Math.round(gauche - 8)));
+  return { gabarit: 'droite', position: `${wImg > 600 ? Math.round(decal / (wImg - 600) * 100) : 50}% ${Math.round(s.y + s.h / 2)}%`, voile: voile < 24 ? 0 : voile };
+}
+
+const sujetAttr = d => d.sujet ? ` data-sujet="${[d.sujet.x, d.sujet.y, d.sujet.l, d.sujet.h].join(',')}"` : '';
+// Mesure dans la page rendue : boîte du sujet (object-fit: cover et object-position compris) contre les boîtes du texte, du logo et du voile.
+function mesurer() {
+  const img = document.querySelector('.pg-photo[data-sujet]');
+  const textes = [...document.querySelectorAll('.pg-accroche, .pg-nom, .pg-logo, .pg-voile')].map(x => x.getBoundingClientRect()).filter(r => r.width && r.height);
+  if (!img || !img.naturalWidth) return { sujet: null, recouvrement: 0 };
+  const [sx, sy, sl, sh] = img.dataset.sujet.split(',').map(Number);
+  const b = img.getBoundingClientRect(), k = Math.max(b.width / img.naturalWidth, b.height / img.naturalHeight);
+  const W = img.naturalWidth * k, H = img.naturalHeight * k;
+  const [px, py] = getComputedStyle(img).objectPosition.split(' ').map(v => parseFloat(v) / 100);
+  const ox = b.left + (b.width - W) * px, oy = b.top + (b.height - H) * py;
+  const x0 = Math.max(b.left, ox + sx / 100 * W), y0 = Math.max(b.top, oy + sy / 100 * H);
+  const x1 = Math.min(b.right, ox + (sx + sl) / 100 * W), y1 = Math.min(b.bottom, oy + (sy + sh) / 100 * H);
+  const sujet = { x: Math.round(x0), y: Math.round(y0), l: Math.round(x1 - x0), h: Math.round(y1 - y0) };
+  let rec = 0;
+  for (const r of textes) rec += Math.max(0, Math.min(r.right, x1) - Math.max(r.left, x0)) * Math.max(0, Math.min(r.bottom, y1) - Math.max(r.top, y0));
+  return { sujet, textes: textes.map(r => ({ x: Math.round(r.left), y: Math.round(r.top), l: Math.round(r.width), h: Math.round(r.height) })), recouvrement: Math.round(rec) };
 }
 
 function html(p, l, img, d) {
@@ -94,7 +117,7 @@ html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--fo
 .pg-nom{font-size:22px;font-weight:600;margin:0;opacity:.85}
 </style></head><body><div class="pg-carte">`;
   if (d.gabarit === 'plein') return `${commun}
-<img class="pg-photo" src="/assets/images/${img}" alt="" style="inset:0;width:1200px;height:630px">
+<img class="pg-photo" src="/assets/images/${img}" alt=""${sujetAttr(d)} style="inset:0;width:1200px;height:630px">
 <div style="position:absolute;inset:auto 0 0 0;height:300px;background:linear-gradient(to top, color-mix(in srgb, var(--fond) 96%, transparent) 0%, color-mix(in srgb, var(--fond) 82%, transparent) 55%, transparent 100%)"></div>
 <div style="position:absolute;left:64px;right:64px;bottom:48px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px">
   <div style="display:grid;gap:14px;max-width:820px"><p class="pg-accroche">${esc(accroche)}</p><p class="pg-nom">${esc(site.nom)}</p></div>
@@ -106,8 +129,8 @@ html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:var(--fo
   <p class="pg-accroche">${esc(accroche)}</p>
   <p class="pg-nom">${esc(site.nom)}</p>
 </div>
-${img ? `<img class="pg-photo" src="/assets/images/${img}" alt="" style="left:600px;top:0;width:600px;height:630px">
-<div style="position:absolute;left:600px;top:0;width:90px;height:630px;background:linear-gradient(to right, var(--fond), transparent)"></div>` : ''}
+${img ? `<img class="pg-photo" src="/assets/images/${img}" alt=""${sujetAttr(d)} style="left:600px;top:0;width:600px;height:630px">
+${d.voile ?? 90 ? `<div class="pg-voile" style="position:absolute;left:600px;top:0;width:${d.voile ?? 90}px;height:630px;background:linear-gradient(to right, var(--fond), transparent)"></div>` : ''}` : ''}
 </div></body></html>`;
 }
 
@@ -125,21 +148,26 @@ fs.mkdirSync(path.join(RACINE, '_partage'), { recursive: true });
 fs.mkdirSync(path.join(RACINE, 'assets', 'partage'), { recursive: true });
 const { default: sharp } = await import('sharp');
 let n = 0;
+const rapport = [];
 for (const p of pages) {
   for (const l of p.langues || langues) {
     const { fichier: img, e } = imagePour(p);
     let d = { gabarit: 'droite', position: '50% 50%' };
-    if (img) { const m = await sharp(path.join(RACINE, 'assets', 'images', img)).metadata(); d = disposer(e, m.width, m.height); }
+    if (img) { const m = await sharp(path.join(RACINE, 'assets', 'images', img)).metadata(); d = { ...disposer(e, m.width, m.height), sujet: e?.sujet || null }; }
     const fHtml = path.join(RACINE, '_partage', `${p.cle}-${l}.html`);
     if (!(fs.existsSync(fHtml) && /<html[^>]*\bdata-ajuste/.test(fs.readFileSync(fHtml, 'utf8')))) fs.writeFileSync(fHtml, html(p, l, img, d));
     await onglet.goto(`http://localhost:${port}/_partage/${p.cle}-${l}.html`, { waitUntil: 'networkidle' });
     await onglet.evaluate(() => document.fonts.ready);
     const sortie = path.join(RACINE, 'assets', 'partage', `${p.cle}-${l}.jpg`);
-    await onglet.screenshot({ path: sortie, type: 'jpeg', quality: 86 });
-    console.log(`OK assets/partage/${p.cle}-${l}.jpg (${d.gabarit}${img ? `, ${img}` : ', sans photo'})`);
+    await onglet.screenshot({ path: sortie, type: 'jpeg', quality: 80 });
+    const m = await onglet.evaluate(mesurer);
+    const poids = fs.statSync(sortie).size;
+    rapport.push({ page: p.cle, langue: l, fichier: `assets/partage/${p.cle}-${l}.jpg`, gabarit: d.gabarit, image: img, poids, ...m });
+    console.log(`${m.recouvrement ? 'A VERIFIER' : 'OK'} assets/partage/${p.cle}-${l}.jpg (${d.gabarit}${img ? `, ${img}` : ', sans photo'}, ${Math.round(poids / 1024)} Ko)${m.recouvrement ? ` : texte sur le sujet (${m.recouvrement} px²)` : ''}`);
     n++;
   }
 }
 await nav.close();
 serveur.close();
+fs.writeFileSync(path.join(RACINE, '_partage', 'partage.json'), JSON.stringify(rapport, null, 2) + '\n');
 console.log(`\n${n} images de partage. Gabarits modifiables : _partage/*.html`);
