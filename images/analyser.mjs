@@ -194,10 +194,27 @@ function correlation(a, b) {
   for (let i = 0; i < a.length; i++) { const x = a[i] - ma, y = b[i] - mb; s += x * y; sa += x * x; sb += y * y; }
   return sa && sb ? s / Math.sqrt(sa * sb) : 0;
 }
+// Centre de l'image (60 %) en luminance, 24 × 24 : deux maquettes d'écran sur le même gabarit (même cadre, contenu différent)
+// ont des contours proches mais un centre différent.
+async function centre(f, c) {
+  const cle = `${f}|centre|${c}`;
+  if (BORDS.has(cle)) return BORDS.get(cle);
+  const m = await sharp(f, { failOn: 'none' }).rotate().metadata();
+  const W = m.autoOrient?.width || m.width, H = m.autoOrient?.height || m.height, w = W * c * 0.6, h = H * c * 0.6;
+  const { data } = await sharp(f, { failOn: 'none' }).rotate().flatten({ background: '#fff' })
+    .extract({ left: Math.round((W - w) / 2), top: Math.round((H - h) / 2), width: Math.round(w), height: Math.round(h) })
+    .resize(24, 24, { fit: 'fill' }).greyscale().raw().toBuffer({ resolveWithObject: true });
+  const v = Float32Array.from(data);
+  BORDS.set(cle, v);
+  return v;
+}
 async function ressemblance(fa, fb) {
-  let mieux = -1;
-  for (const c of [1, 0.96, 0.92, 0.88]) mieux = Math.max(mieux, correlation(await bords(fa, 1), await bords(fb, c)), correlation(await bords(fa, c), await bords(fb, 1)));
-  return mieux;
+  let mieux = -1, coeur = -1;
+  for (const c of [1, 0.96, 0.92, 0.88]) {
+    mieux = Math.max(mieux, correlation(await bords(fa, 1), await bords(fb, c)), correlation(await bords(fa, c), await bords(fb, 1)));
+    coeur = Math.max(coeur, correlation(await centre(fa, 1), await centre(fb, c)), correlation(await centre(fa, c), await centre(fb, 1)));
+  }
+  return coeur >= 0.9 ? mieux : 0;   // centre différent : pas un doublon
 }
 
 // Texte lu dans l'image, en trois niveaux :
@@ -285,7 +302,8 @@ async function main() {
       const b = avecEmpreinte[j];
       if (b.doublon_de) continue;
       // Présélection large (empreinte, teinte, ratio), puis confirmation par corrélation des contours à 64 px, tolérante
-      // à un recadrage de 12 % : deux produits différents sur le même fond (même carton, même studio) restent sous 0,6.
+      // à un recadrage de 12 % : deux produits différents sur le même fond (même carton, même studio) restent sous 0,6 ;
+      // le centre doit aussi se ressembler (0,9) : écarte les maquettes d'écran faites sur le même gabarit.
       const d = hamming(a.empreinte, b.empreinte), ecarts = a.couleur.map((c, k) => Math.abs(c - b.couleur[k]));
       const dc = ecarts.reduce((s, x) => s + x, 0) / ecarts.length;
       const dr = Math.abs(a.ratio_valeur / b.ratio_valeur - 1);
