@@ -1,0 +1,47 @@
+{
+ "id": "francis-gerardin-maquette/flip",
+ "maquette": "francis-gerardin-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "animateur",
+  "coach",
+  "contact",
+  "formateur",
+  "mentions-legales",
+  "parcours"
+ ],
+ "titre": "Page tournée",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : une feuille de papier monte en pivotant légèrement (rotateX) avant la navigation, puis se retourne vers le haut à l'arrivée ; liens externes, ancres et clics avec touche de modification exclus, retour arrière géré par pageshow.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:32",
+  "css": "assets/css/main.css:281-290",
+  "js": "assets/js/main.js:228-250"
+ },
+ "medias": {},
+ "pieges": [
+  "mémoriser en sessionStorage qu'une transition est en cours pour jouer l'arrivée (classe play-flip posée dans le head)",
+  "pageshow persisted : remettre la feuille hors écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 904,
+  "hauteur_m390": 848,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

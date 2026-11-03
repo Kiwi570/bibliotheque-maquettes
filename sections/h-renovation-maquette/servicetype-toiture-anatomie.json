@@ -1,0 +1,42 @@
+{
+ "id": "h-renovation-maquette/servicetype-toiture-anatomie",
+ "maquette": "h-renovation-maquette",
+ "page": "servicetype/toiture",
+ "titre": "Anatomie du toit",
+ "role": "outil-interactif",
+ "description": "Schéma SVG d'un toit en coupe avec onglets des pièces (couverture, faîtage, noue, solin, gouttière) : chaque onglet allume la pièce sur le schéma et affiche son rôle et la prestation liée ; navigable au clavier.",
+ "animations": [
+  "apparition-au-défilement",
+  "masque"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "servicetype/toiture.html:102-206",
+  "css": "assets/css/main.css:615-628",
+  "js": "assets/js/toiture.js"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/servicetype-toiture-anatomie-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/servicetype-toiture-anatomie-m390.jpg",
+  "video": "medias/h-renovation-maquette/servicetype-toiture-anatomie-p960.mp4"
+ },
+ "pieges": [
+  "onglets en motif tablist (flèches, Début, Fin)",
+  "les zones du SVG portent le même identifiant que l'onglet"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1085,
+  "hauteur_m390": 1283,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

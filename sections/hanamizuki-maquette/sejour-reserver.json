@@ -1,0 +1,40 @@
+{
+ "id": "hanamizuki-maquette/sejour-reserver",
+ "maquette": "hanamizuki-maquette",
+ "page": "sejour",
+ "titre": "Demande de réservation",
+ "role": "contact",
+ "description": "Demande de réservation simulée en trois étapes (séjour, voyageurs, contact) avec reprise des valeurs du calculateur.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "sejour.html:316-381",
+  "css": "assets/css/site.css:161-162,169-170,683-698,921-924",
+  "js": "assets/js/sejour.js:100-154,157-254 ; assets/js/core.js:45-61,635-649 ; assets/js/i18n.js:2"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/sejour-reserver-p1440.jpg"
+ },
+ "pieges": [
+  "étapes qui se touchent (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1216,
+  "hauteur_m390": 1618,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

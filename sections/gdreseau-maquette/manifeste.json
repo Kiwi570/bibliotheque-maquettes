@@ -1,0 +1,44 @@
+{
+ "id": "gdreseau-maquette/manifeste",
+ "maquette": "gdreseau-maquette",
+ "page": "index",
+ "titre": "Organigramme qui devient réseau",
+ "role": "manifeste",
+ "description": "Texte du manifeste à côté d'un schéma SVG collant : un organigramme hiérarchique dont les traits se défont et dont les cases glissent jusqu'à former un réseau maillé, au fil du défilement.",
+ "animations": [
+  "morphing",
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:152-176",
+  "css": "assets/css/main.css:308-326,816-847",
+  "js": "assets/js/site.js:608-669"
+ },
+ "medias": {
+  "capture": "medias/gdreseau-maquette/manifeste-p1440.jpg",
+  "capture_m390": "medias/gdreseau-maquette/manifeste-m390.jpg",
+  "video": "medias/gdreseau-maquette/manifeste-p960.mp4"
+ },
+ "pieges": [
+  "les positions de l'organigramme et du réseau sont deux tableaux de même longueur : l'ordre des nœuds fait le mouvement",
+  "tracés en stroke-dasharray, à recalculer si le viewBox change"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2070,
+  "hauteur_m390": 1177,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

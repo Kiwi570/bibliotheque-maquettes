@@ -1,0 +1,43 @@
+{
+ "id": "esaie-55-1-maquette/don",
+ "maquette": "esaie-55-1-maquette",
+ "page": "index",
+ "titre": "Faire un don",
+ "role": "calculateur",
+ "description": "Don simulé : fréquence, montant en pastilles ou libre, affectation ; un récipient d'eau en canvas 2D se remplit avec le montant et une phrase traduit le don ; fenêtre de remerciement.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:399-460",
+  "css": "assets/css/main.css:424-475",
+  "js": "assets/js/accueil.js:263-330 ; assets/js/main.js:361-452"
+ },
+ "medias": {
+  "capture": "medias/esaie-55-1-maquette/don-p1440.jpg",
+  "capture_m390": "medias/esaie-55-1-maquette/don-m390.jpg",
+  "video": "medias/esaie-55-1-maquette/don-p960.mp4"
+ },
+ "pieges": [
+  "le récipient (classe Recipient) arrête sa boucle hors écran",
+  "paiement annoncé comme simulé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1261,
+  "hauteur_m390": 1744,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

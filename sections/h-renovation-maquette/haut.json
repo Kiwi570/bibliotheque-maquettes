@@ -1,0 +1,47 @@
+{
+ "id": "h-renovation-maquette/haut",
+ "maquette": "h-renovation-maquette",
+ "page": "index",
+ "titre": "Pluie sur la vitre",
+ "role": "ouverture",
+ "description": "Héros sombre : la photo est vue à travers la vitre d'une fenêtre de toit où la pluie ruisselle en WebGL (OGL), gouttelettes de buée et traînées claires ; on essuie la buée du doigt ou de la souris, et la pluie se raréfie jusqu'à l'éclaircie au défilement. Titre en capitales cuivre, deux boutons. Repli sur la photo seule sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée",
+  "parallaxe",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:86-109",
+  "css": "assets/css/main.css:299-344",
+  "js": "assets/js/pluie.js ; assets/js/accueil.js:8-33"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/haut-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/haut-m390.jpg",
+  "video": "medias/h-renovation-maquette/haut-p960.mp4"
+ },
+ "pieges": [
+  "démarrer la pluie quand le navigateur est disponible (requestIdleCallback), jamais avant l'affichage du titre",
+  "l'éclaircie au défilement doit couper la boucle WebGL quand le héros sort de l'écran",
+  "sans WebGL ou en mode calme : photo seule, sans second téléchargement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

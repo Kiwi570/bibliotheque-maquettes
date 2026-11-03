@@ -1,0 +1,43 @@
+{
+ "id": "games42-maquette/machine-a-remonter-le-temps-mission",
+ "maquette": "games42-maquette",
+ "page": "machine-a-remonter-le-temps",
+ "titre": "Horloge épinglée",
+ "role": "étapes",
+ "description": "Section épinglée : les engrenages d'une horloge SVG tournent avec le défilement, les aiguilles s'emballent à la fin et les trois objets à retrouver se cochent un à un. Simple apparition sur téléphone.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "machine-a-remonter-le-temps.html:144-183",
+  "css": "assets/css/main.css:834-862",
+  "js": "assets/js/machine.js:39-47,59-74"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/machine-a-remonter-le-temps-mission-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-mission-m390.jpg",
+  "video": "medias/games42-maquette/machine-a-remonter-le-temps-mission-p960.mp4"
+ },
+ "pieges": [
+  "rotations SVG par svgOrigin, pas transformOrigin",
+  "gsap.matchMedia pour basculer entre épinglage et simple apparition"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2500,
+  "hauteur_m390": 1101,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

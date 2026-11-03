@@ -1,0 +1,42 @@
+{
+ "id": "games42-maquette/chrono",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "anniversaire",
+  "machine-a-remonter-le-temps"
+ ],
+ "titre": "Chrono 60:00",
+ "role": "decor",
+ "description": "Chrono fixe en forme d'anneau qui décompte de 60:00 au fil de la lecture de la page ; sur téléphone il rejoint la barre d'actions du bas.",
+ "animations": [
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:658-661",
+  "css": "assets/css/main.css:583-600",
+  "js": "assets/js/core.js:334-356"
+ },
+ "medias": {},
+ "pieges": [
+  "le texte du chrono est aria-hidden : c'est un décor, pas un minuteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 295,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

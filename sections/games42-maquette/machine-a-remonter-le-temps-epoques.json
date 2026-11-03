@@ -1,0 +1,43 @@
+{
+ "id": "games42-maquette/machine-a-remonter-le-temps-epoques",
+ "maquette": "games42-maquette",
+ "page": "machine-a-remonter-le-temps",
+ "titre": "Trois époques",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée : une aiguille glisse sur une règle d'époques pendant que chaque décor se révèle par un cercle qui s'ouvre et que les médaillons pivotent.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "machine-a-remonter-le-temps.html:185-205",
+  "css": "assets/css/main.css:834-862",
+  "js": "assets/js/machine.js:75-90"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-m390.jpg",
+  "video": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-p960.mp4"
+ },
+ "pieges": [
+  "les révélations utilisent containerAnimation : déclencher par rapport à la piste, pas à la page"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2412,
+  "hauteur_m390": 964,
+  "epinglee": true,
+  "scrolltriggers": 12
+ }
+}

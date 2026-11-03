@@ -1,0 +1,44 @@
+{
+ "id": "esaie-55-1-maquette/vague",
+ "maquette": "esaie-55-1-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "parrainage",
+  "projets"
+ ],
+ "titre": "Vague de passage",
+ "role": "transition-de-page",
+ "description": "Transition entre pages : une vague SVG dont le tracé est recalculé à chaque image monte et couvre l'écran avant la navigation, puis redescend à l'arrivée ; page suivante préchargée au survol.",
+ "animations": [
+  "transition-de-page",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:37-39",
+  "css": "assets/css/main.css:198-203",
+  "js": "assets/js/main.js:212-286"
+ },
+ "medias": {},
+ "pieges": [
+  "ignorer liens externes, ancres et clics avec touche de modification",
+  "retirer la vague au retour arrière (pageshow) sinon la page reste couverte"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

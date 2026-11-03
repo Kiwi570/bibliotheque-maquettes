@@ -1,0 +1,42 @@
+{
+ "id": "games42-maquette/trouver",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "titre": "Cadenas des missions",
+ "role": "outil-interactif",
+ "description": "Trois molettes de cadenas (équipe, âge, nombre de joueurs) à faire tourner au doigt, à la molette ou au clavier ; le cadenas s'ouvre sur les missions adaptées avec leur prix calculé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur",
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:188-228",
+  "css": "assets/css/main.css:315-363",
+  "js": "assets/js/home.js:48-221"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/trouver-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/trouver-m390.jpg",
+  "video": "medias/games42-maquette/trouver-p960.mp4"
+ },
+ "pieges": [
+  "chaque molette est un spinbutton (aria-valuenow, flèches, Page haut/bas)",
+  "les règles de suggestion et les prix viennent de data.js, jamais du HTML"
+ ],
+ "mesures": {
+  "hauteur_p1440": 776,
+  "hauteur_m390": 1188,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

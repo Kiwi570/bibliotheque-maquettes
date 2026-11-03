@@ -1,0 +1,49 @@
+{
+ "id": "icc-maquette/advisory-renversements",
+ "maquette": "icc-maquette",
+ "page": "advisory",
+ "pages": [
+  "advisory",
+  "en/advisory"
+ ],
+ "titre": "Renversements épinglés",
+ "role": "manifeste",
+ "description": "Section épinglée sur quatre écrans : chaque paire commence par « Nous ne faisons pas… », barrée progressivement au défilement, puis la phrase positive apparaît en texte brouillé ; compteur et barres de progression par paire. Sans épinglage sur les petits écrans bas.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "advisory.html:82-92",
+  "css": "assets/css/main.css:537-557",
+  "js": "assets/js/advisory.js:75-111"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/advisory-renversements-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/advisory-renversements-m390.jpg",
+  "video": "medias/icc-maquette/advisory-renversements-p960.mp4"
+ },
+ "pieges": [
+  "ScrambleTextPlugin optionnel : prévoir le texte complet s'il manque",
+  "anticipatePin encore présent : à retirer",
+  "en mode calme, afficher toutes les paires en entier"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4500,
+  "hauteur_m390": 4220,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

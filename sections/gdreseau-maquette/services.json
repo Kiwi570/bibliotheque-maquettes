@@ -1,0 +1,44 @@
+{
+ "id": "gdreseau-maquette/services",
+ "maquette": "gdreseau-maquette",
+ "page": "index",
+ "titre": "Services qui composent l'équipe",
+ "role": "services",
+ "description": "Accordéon des services : en ouvrir un allume dans la constellation les métiers mobilisés, ancrés à côté de la liste avec leurs noms.",
+ "animations": [
+  "webgl-particules",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:179-220",
+  "css": "assets/css/main.css:329-349",
+  "js": "assets/js/site.js:292-295,671-714"
+ },
+ "medias": {
+  "capture": "medias/gdreseau-maquette/services-p1440.jpg",
+  "capture_m390": "medias/gdreseau-maquette/services-m390.jpg",
+  "video": "medias/gdreseau-maquette/services-p960.mp4"
+ },
+ "pieges": [
+  "dépend de la constellation (setTeam) : sans elle, afficher la liste des métiers en texte",
+  "fermer net les autres éléments en cas de clics rapprochés (killTweensOf)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1220,
+  "hauteur_m390": 1308,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

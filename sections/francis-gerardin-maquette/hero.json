@@ -1,0 +1,47 @@
+{
+ "id": "francis-gerardin-maquette/hero",
+ "maquette": "francis-gerardin-maquette",
+ "page": "index",
+ "titre": "Héros raturé et photo en trame",
+ "role": "ouverture",
+ "description": "Titre en lignes masquées, puis « Pour vous animer former coacher » rayés un à un au stylo rouge (DrawSVG) et remplacés par « accompagner » souligné à la main ; la photo naît d'une trame offset en WebGL (OGL) avec loupe sous le curseur et se dissout au défilement. Repli : l'image simple.",
+ "animations": [
+  "révélation-texte",
+  "masque",
+  "webgl-shader",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:82-112",
+  "css": "assets/css/main.css:243-254,299-348",
+  "js": "assets/js/main.js:279-330 ; assets/js/webgl.js:1-171"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/hero-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "créer le WebGL après le chargement de l'image, et garder l'img visible si initHalftonePhoto échoue (classe gl-off)",
+  "les ratures se calent sur la timeline du héros (heroStart), lancée par l'ouverture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1021,
+  "hauteur_m390": 1067,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

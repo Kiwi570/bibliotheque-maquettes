@@ -1,0 +1,43 @@
+{
+ "id": "hanamizuki-maquette/acces-trajet",
+ "maquette": "hanamizuki-maquette",
+ "page": "acces",
+ "titre": "Trajet pas à pas",
+ "role": "étapes",
+ "description": "Carte collante de la baie à gauche, étapes du trajet à droite : à chaque étape, le bateau avance sur sa route ; bascule à pied ou en voiture qui change le parcours.",
+ "animations": [
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "acces.html:165-198",
+  "css": "assets/css/site.css:711-734",
+  "js": "assets/js/acces.js:23-71 ; assets/js/map.js:30-169"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/acces-trajet-p1440.jpg",
+  "capture_m390": "medias/hanamizuki-maquette/acces-trajet-m390.jpg",
+  "video": "medias/hanamizuki-maquette/acces-trajet-p960.mp4"
+ },
+ "pieges": [
+  "max-height calculée sur la carte collante pour qu'elle tienne sous l'en-tête",
+  "progression du trajet mémorisée par mode (à pied, en voiture)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2502,
+  "hauteur_m390": 2269,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

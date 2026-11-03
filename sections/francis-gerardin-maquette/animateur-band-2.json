@@ -1,0 +1,43 @@
+{
+ "id": "francis-gerardin-maquette/animateur-band-2",
+ "maquette": "francis-gerardin-maquette",
+ "page": "animateur",
+ "titre": "Au micro, galerie épinglée",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée de photos de presse avec légendes ; la largeur de chaque photo est recalculée pour que la photo et sa légende tiennent dans la hauteur disponible.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "animateur.html:141-162",
+  "css": "assets/css/main.css:501-511,911-915",
+  "js": "assets/js/main.js:453-484"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/animateur-band-2-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/animateur-band-2-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/animateur-band-2-p960.mp4"
+ },
+ "pieges": [
+  "ajuster la largeur (--fit-w) au refreshInit pour que la légende reste dans l'écran (défaut bloquant corrigé à l'audit)",
+  "même mécanique que le module galerie-horizontale-epinglee"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 681,
+  "epinglee": true,
+  "scrolltriggers": 12
+ }
+}

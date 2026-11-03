@@ -1,0 +1,48 @@
+{
+ "id": "hanamizuki-maquette/hero",
+ "maquette": "hanamizuki-maquette",
+ "page": "index",
+ "titre": "Mer et ciel en direct",
+ "role": "ouverture",
+ "description": "Héros sur une mer WebGL dont le ciel, la lumière et la lune suivent la vraie position du soleil sur place (calcul astronomique) ; carte « ciel en direct » avec horloge réglable pour voir l'île à une autre heure, photo cadrée en arche, titre en italique corail. Repli CSS sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:152-197",
+  "css": "assets/css/site.css:329-403",
+  "js": "assets/js/sea.js ; assets/js/home.js:21-66 ; assets/js/core.js:295-424"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/hanamizuki-maquette/hero-m390.jpg",
+  "video": "medias/hanamizuki-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "coordonnées et fuseau du lieu en options : le ciel est faux sinon",
+  "carte de l'horloge en grille minmax(0, 1fr) et largeur en clamp(), sinon les libellés débordent",
+  "voile vertical sur téléphone pour garder le titre lisible"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1374,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

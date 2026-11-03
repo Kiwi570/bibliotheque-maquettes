@@ -1,0 +1,45 @@
+{
+ "id": "h-renovation-maquette/realisations-galerie-sec",
+ "maquette": "h-renovation-maquette",
+ "page": "realisations",
+ "titre": "Chantiers filtrables",
+ "role": "galerie",
+ "description": "Grille de tous les chantiers filtrable par univers, réorganisation animée, photos et vidéos ouvertes dans une visionneuse plein écran (flèches, clavier, Échap) ; avant/après en fin de page.",
+ "animations": [
+  "flip",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable",
+  "lecteur-vidéo",
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "realisations.html:92-246",
+  "css": "assets/css/main.css:932-944,1001-1006",
+  "js": "assets/js/realisations.js ; assets/js/main.js:458-515"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/realisations-galerie-sec-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/realisations-galerie-sec-m390.jpg",
+  "video": "medias/h-renovation-maquette/realisations-galerie-sec-p960.mp4"
+ },
+ "pieges": [
+  "la visionneuse rend le focus à la vignette d'origine",
+  "les vidéos ne se chargent qu'à l'ouverture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6272,
+  "hauteur_m390": 6946,
+  "epinglee": false,
+  "scrolltriggers": 44
+ }
+}

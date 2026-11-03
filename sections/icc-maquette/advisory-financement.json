@@ -1,0 +1,47 @@
+{
+ "id": "icc-maquette/advisory-financement",
+ "maquette": "icc-maquette",
+ "page": "advisory",
+ "pages": [
+  "advisory",
+  "en/advisory"
+ ],
+ "titre": "Schéma de financement",
+ "role": "méthode",
+ "description": "Schéma SVG généré depuis les données : les sources de financement convergent vers un pivot puis vers deux usages, les tracés se dessinent au défilement et des points circulent le long des chemins.",
+ "animations": [
+  "masque",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "advisory.html:107-118",
+  "css": "assets/css/main.css:575-578",
+  "js": "assets/js/advisory.js:126-181"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/advisory-financement-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/advisory-financement-m390.jpg",
+  "video": "medias/icc-maquette/advisory-financement-p960.mp4"
+ },
+ "pieges": [
+  "recalculer la disposition sous 820 px (schéma vertical)",
+  "longueur de chaque tracé mesurée une fois puis animée par strokeDashoffset"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1488,
+  "hauteur_m390": 1081,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

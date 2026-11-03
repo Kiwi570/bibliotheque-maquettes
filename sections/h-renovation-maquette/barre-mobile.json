@@ -1,0 +1,83 @@
+{
+ "id": "h-renovation-maquette/barre-mobile",
+ "maquette": "h-renovation-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "a-propos",
+  "conditions-generales",
+  "contact",
+  "declaration-daccessibilite",
+  "devis-gratuit",
+  "mentions-legales",
+  "politique-de-confidentialite",
+  "realisations",
+  "services/accessoires-et-finitions-toiture",
+  "services/bande-de-rive",
+  "services/cache-moineau",
+  "services/cave-humide",
+  "services/combles-amenageables",
+  "services/combles-perdus",
+  "services/combles",
+  "services/demoussage-facade",
+  "services/demoussage-toiture",
+  "services/faitage",
+  "services/gouttiere",
+  "services/hydrofuge-facade",
+  "services/hydrofuge-toiture",
+  "services/infiltrations-eau",
+  "services/isolation-sous-sol-et-vide-sanitaire",
+  "services/isolation-thermique-exterieure",
+  "services/isolation-thermique-interieure",
+  "services/nettoyage-facade",
+  "services/nettoyage-terrasse",
+  "services/nettoyage-toiture-amiante",
+  "services/nettoyage-toiture",
+  "services/noue",
+  "services/peinture-toiture",
+  "services/ravalement-de-facade",
+  "services/refection-toiture",
+  "services/remontees-capillaires",
+  "services/revetement-de-facade",
+  "services/salpetre",
+  "services/solin",
+  "services/traitement-de-bois-de-charpente",
+  "services/traitement-humidite",
+  "services/velux",
+  "servicetype/facade",
+  "servicetype/isolation",
+  "servicetype/toiture"
+ ],
+ "titre": "Barre Appeler / Devis",
+ "role": "barre-fixe",
+ "description": "Barre fixe en bas du téléphone avec Appeler et Devis gratuit : elle n'apparaît qu'après le héros et se retire sur les formulaires, le pied de page et le menu ouvert (IntersectionObserver) ; sa hauteur est mesurée pour les sections qui doivent tenir dans l'écran.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:535-538",
+  "css": "assets/css/main.css:250-260",
+  "js": "assets/js/main.js:40-87"
+ },
+ "medias": {},
+ "pieges": [
+  "retirer la barre sur tout formulaire et sur le pied de page, sinon elle masque les champs et les liens",
+  "publier sa hauteur réelle dans une variable pour les sections épinglées"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": 72,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

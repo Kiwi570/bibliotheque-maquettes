@@ -1,0 +1,43 @@
+{
+ "id": "games42-maquette/anniversaire-deroule",
+ "maquette": "games42-maquette",
+ "page": "anniversaire",
+ "titre": "Le mercredi minute par minute",
+ "role": "étapes",
+ "description": "Déroulé horaire en frise verticale dont les points s'allument un à un ; deux onglets accessibles (départ à 14 h ou 15 h) changent les horaires.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "anniversaire.html:196-227",
+  "css": "assets/css/main.css:863-900",
+  "js": "assets/js/anniv.js:21-72"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/anniversaire-deroule-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/anniversaire-deroule-m390.jpg",
+  "video": "medias/games42-maquette/anniversaire-deroule-p960.mp4"
+ },
+ "pieges": [
+  "onglets au clavier (flèches, tabIndex roulant, aria-selected)",
+  "tout allumer d'un coup en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 728,
+  "hauteur_m390": 1022,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

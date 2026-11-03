@@ -1,0 +1,48 @@
+{
+ "id": "icc-maquette/contact",
+ "maquette": "icc-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index"
+ ],
+ "titre": "Rendez-vous et graine",
+ "role": "contact",
+ "description": "Prise de rendez-vous en quatre étapes (profil, besoin, créneau, coordonnées) avec contrôles, récapitulatif et créneaux en jours ouvrables ; à côté, une graine dessinée en canvas 2D pousse en réseau ramifié au défilement.",
+ "animations": [
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:285-338",
+  "css": "assets/css/main.css:426-498",
+  "js": "assets/js/wizard.js:6-157 ; assets/js/visuals.js:33-90"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/contact-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/contact-m390.jpg",
+  "video": "medias/icc-maquette/contact-p960.mp4"
+ },
+ "pieges": [
+  "chaque étape annonce sa progression et renvoie le focus sur son titre",
+  "le réseau est tiré au hasard avec une graine fixe pour rester identique d'une visite à l'autre"
+ ],
+ "mesures": {
+  "hauteur_p1440": 952,
+  "hauteur_m390": 1219,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

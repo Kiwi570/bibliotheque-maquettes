@@ -1,0 +1,49 @@
+{
+ "id": "icc-maquette/hero",
+ "maquette": "icc-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index"
+ ],
+ "titre": "Ouverture en constellation",
+ "role": "ouverture",
+ "description": "Ciel nocturne en WebGL (OGL) : des particules d'or dessinent l'arbre du logo puis s'ouvrent en constellation derrière le titre en serif fin ; carte « Vous êtes… » qui oriente vers trois publics. Repli 2D sans WebGL, image fixe en mode calme, bascule silencieuse si le contexte GPU est perdu.",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-particules",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:61-80",
+  "css": "assets/css/main.css:190-222",
+  "js": "assets/js/home.js:10-50 ; assets/js/constellation.js:80-327"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/hero-m390.jpg",
+  "video": "medias/icc-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "intro encore un peu longue et indication « Défiler » sur la carte en grand écran (restes de l'audit)",
+  "le canvas du ciel est ajouté au body par le script : éteindre son rendu une fois la section d'arrivée dépassée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 937,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

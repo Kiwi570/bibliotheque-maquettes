@@ -1,0 +1,42 @@
+{
+ "id": "hanamizuki-maquette/sejour-calcul",
+ "maquette": "hanamizuki-maquette",
+ "page": "sejour",
+ "titre": "Calculateur de séjour",
+ "role": "calculateur",
+ "description": "Dates, nuits, adultes et enfants par compteurs +/-, formule et réduction de campagne : le total se recalcule dans un panneau sombre avec le détail, puis demande de dates.",
+ "animations": [
+  "compteur"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "sejour.html:223-266",
+  "css": "assets/css/site.css:633-671",
+  "js": "assets/js/sejour.js:50-154"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/sejour-calcul-p1440.jpg",
+  "capture_m390": "medias/hanamizuki-maquette/sejour-calcul-m390.jpg",
+  "video": "medias/hanamizuki-maquette/sejour-calcul-p960.mp4"
+ },
+ "pieges": [
+  "case à cocher de 22 px (reste de l'audit)",
+  "dates calculées dans le fuseau du lieu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1027,
+  "hauteur_m390": 1402,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

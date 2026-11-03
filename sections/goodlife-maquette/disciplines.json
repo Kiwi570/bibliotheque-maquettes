@@ -1,0 +1,45 @@
+{
+ "id": "goodlife-maquette/disciplines",
+ "maquette": "goodlife-maquette",
+ "page": "index",
+ "titre": "Disciplines en piste horizontale",
+ "role": "services",
+ "description": "Galerie horizontale épinglée des cours (cartes photo avec durée, prix et bouton Réserver), filtres par famille et inclinaison des cartes au pointeur ; défilement natif avec barre de progression sous 900 px.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "flip"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:151-166",
+  "css": "assets/css/style.css:226-235",
+  "js": "assets/js/home.js:50-96,149-162"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/disciplines-p1440.jpg",
+  "capture_m390": "medias/goodlife-maquette/disciplines-m390.jpg",
+  "video": "medias/goodlife-maquette/disciplines-p960.mp4"
+ },
+ "pieges": [
+  "recalculer la distance de la piste après un filtre (ScrollTrigger.refresh)",
+  "matchMedia : épinglage seulement au-dessus de 900 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1156,
+  "epinglee": true,
+  "scrolltriggers": 4
+ }
+}

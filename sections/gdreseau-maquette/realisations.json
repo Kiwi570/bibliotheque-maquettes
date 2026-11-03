@@ -1,0 +1,45 @@
+{
+ "id": "gdreseau-maquette/realisations",
+ "maquette": "gdreseau-maquette",
+ "page": "index",
+ "titre": "Banc de montage des réalisations",
+ "role": "portfolio",
+ "description": "Section épinglée : les réalisations défilent à l'horizontale comme des plans sur une timeline de montage, avec un timecode qui avance, des barres de clip et un reflet liquide au survol (filtre SVG). En mode calme, défilement horizontal natif.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "survol-image",
+  "compteur"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:316-366",
+  "css": "assets/css/main.css:416-446,851-873",
+  "js": "assets/js/site.js:586-605,814-892"
+ },
+ "medias": {
+  "capture": "medias/gdreseau-maquette/realisations-p1440.jpg",
+  "capture_m390": "medias/gdreseau-maquette/realisations-m390.jpg",
+  "video": "medias/gdreseau-maquette/realisations-p960.mp4"
+ },
+ "pieges": [
+  "légendes coupées en 1280×720 et 1366×768 avant correction : borner la hauteur des plans",
+  "le timecode suit aussi le défilement natif (scrollLeft) en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2403,
+  "hauteur_m390": 790,
+  "epinglee": true,
+  "scrolltriggers": 15
+ }
+}

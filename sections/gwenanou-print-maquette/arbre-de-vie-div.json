@@ -1,0 +1,45 @@
+{
+ "id": "gwenanou-print-maquette/arbre-de-vie-div",
+ "maquette": "gwenanou-print-maquette",
+ "page": "arbre-de-vie",
+ "titre": "Fiche produit à prénoms",
+ "role": "produits",
+ "description": "Fiche produit : galerie collante à loupe, nombre de prénoms (3 à 10), champs générés et aperçu des prénoms gravé en direct par le laser, quantité et ajout au panier bloqué tant que les prénoms manquent.",
+ "animations": [
+  "canvas-2d",
+  "section-fixée"
+ ],
+ "interactions": [
+  "configurateur",
+  "panier-simule",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "arbre-de-vie.html:77-124",
+  "css": "assets/css/site.css:578-616",
+  "js": "assets/js/produit.js:7-95 ; assets/js/engrave.js"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/arbre-de-vie-div-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/arbre-de-vie-div-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/arbre-de-vie-div-p960.mp4"
+ },
+ "pieges": [
+  "« Survolez la photo » encore affiché sur téléphone (reste de l'audit)",
+  "borner la galerie collante à la hauteur de l'écran (coupée de 1000×560 à 1366×768 avant correction)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1782,
+  "hauteur_m390": 2241,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

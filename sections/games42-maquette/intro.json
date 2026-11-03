@@ -1,0 +1,38 @@
+{
+ "id": "games42-maquette/intro",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "titre": "Ouverture au cadenas",
+ "role": "ouverture",
+ "description": "Calque d'ouverture : un cadenas s'ouvre, puis un trou circulaire s'agrandit depuis lui et révèle la page ; joué une seule fois par session et sauté à l'arrivée par le voile ou en mode calme.",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:63-83",
+  "css": "assets/css/main.css:265-281",
+  "js": "assets/js/home.js:239-288"
+ },
+ "medias": {},
+ "pieges": [
+  "mémoriser la vue en sessionStorage (avec try) pour ne pas rejouer l'ouverture à chaque page",
+  "ne lancer l'ouverture qu'une fois polices, scènes et premier fond prêts"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

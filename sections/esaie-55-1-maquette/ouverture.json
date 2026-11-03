@@ -1,0 +1,46 @@
+{
+ "id": "esaie-55-1-maquette/ouverture",
+ "maquette": "esaie-55-1-maquette",
+ "page": "index",
+ "titre": "Venez aux eaux",
+ "role": "ouverture",
+ "description": "Héros plein écran : une surface d'eau WebGL (OGL) réfracte la photo de lumière sous l'eau, ondes au mouvement du curseur et au clic ; titre en grande serif qui monte de l'eau ligne par ligne, parallaxe au défilement. Repli image fixe sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:93-108",
+  "css": "assets/css/main.css:213-235",
+  "js": "assets/js/eau.js ; assets/js/accueil.js:10-42 ; assets/js/main.js:329-345"
+ },
+ "medias": {
+  "capture": "medias/esaie-55-1-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/esaie-55-1-maquette/ouverture-m390.jpg",
+  "video": "medias/esaie-55-1-maquette/ouverture-p960.mp4"
+ },
+ "pieges": [
+  "eau.js résout une promesse (null sans WebGL) que main.js attend avant de lancer le titre",
+  "mettre la photo en arrière-plan CSS pour qu'elle reste seule sans WebGL"
+ ],
+ "mesures": {
+  "hauteur_p1440": 914,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

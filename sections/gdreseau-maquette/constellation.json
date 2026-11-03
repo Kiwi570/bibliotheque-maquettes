@@ -1,0 +1,49 @@
+{
+ "id": "gdreseau-maquette/constellation",
+ "maquette": "gdreseau-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "mentions-legales",
+  "rencontrer",
+  "wope"
+ ],
+ "titre": "Constellation des métiers",
+ "role": "decor",
+ "description": "Canvas fixe commun à tout le site : une constellation WebGL (OGL, repli Canvas 2D) dont chaque point est un métier du réseau. À chaque section (data-scene) elle change de disposition : ciel, ciel atténué, équipe ancrée sur un élément avec étiquettes, ligne entre deux points de carte, convergence en ellipse autour d'un bouton. Les points actifs s'allument selon le service choisi.",
+ "animations": [
+  "webgl-particules",
+  "morphing"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:56-57",
+  "css": "assets/css/main.css:108-114",
+  "js": "assets/js/constellation.js ; assets/js/site.js:229-310"
+ },
+ "medias": {},
+ "pieges": [
+  "les ancres sont des fonctions qui relisent getBoundingClientRect à chaque frame : la disposition suit l'élément pendant le défilement",
+  "déclencher les scènes à 55 % / 45 % de l'écran, la première à top top",
+  "moins de points sur téléphone (option mobile) et image fixe en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

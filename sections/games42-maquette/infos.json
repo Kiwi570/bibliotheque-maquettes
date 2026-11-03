@@ -1,0 +1,43 @@
+{
+ "id": "games42-maquette/infos",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "titre": "Infos pratiques",
+ "role": "contact",
+ "description": "Plan d'accès dont le trajet se dessine, horaires de la semaine et statut d'ouverture calculé en direct à l'heure de Paris (« Fermé, ouvre demain à 14 h »).",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:516-577",
+  "css": "assets/css/main.css:524-547",
+  "js": "assets/js/core.js:272-333 ; assets/js/home.js:454-457"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/infos-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/infos-m390.jpg",
+  "video": "medias/games42-maquette/infos-p960.mp4"
+ },
+ "pieges": [
+  "calculer l'heure dans le fuseau du lieu (Intl, Europe/Paris), pas celui du visiteur",
+  "les horaires viennent de data.js, avec les vacances scolaires à part"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1283,
+  "hauteur_m390": 1918,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

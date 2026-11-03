@@ -1,0 +1,47 @@
+{
+ "id": "gwenanou-print-maquette/matieres",
+ "maquette": "gwenanou-print-maquette",
+ "page": "index",
+ "titre": "Six matières qui se consument",
+ "role": "services",
+ "description": "Section épinglée : le fond passe d'une matière à la suivante par une brûlure WebGL dont le front suit le grain, pendant que texte, photo détourée au laser (cadre tracé en canvas) et sélecteur à curseur glissant suivent le même défilement. Rendu à la demande, repli par fondu d'images sans WebGL, état accessible sur la matière la plus proche.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "webgl-shader",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:129-146",
+  "css": "assets/css/site.css:223-272",
+  "js": "assets/js/matter.js ; assets/js/home.js:84-246"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/matieres-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/matieres-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/matieres-p960.mp4"
+ },
+ "pieges": [
+  "non réutilisable en l'état : les textures 2 à 6 (1600 px) sont chargées d'emblée (3,6 et 4,0 Mo en tablette et grand écran, reste de l'audit) ; les charger au premier changement",
+  "les six textes partagent la même cellule de grille pour éviter les sauts de hauteur",
+  "ne rendre le WebGL que quand la progression change"
+ ],
+ "mesures": {
+  "hauteur_p1440": 5040,
+  "hauteur_m390": 971,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

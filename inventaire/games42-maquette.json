@@ -1,0 +1,3635 @@
+{
+ "depot": "games42-maquette",
+ "commit": "4ae8c42",
+ "date_commit": "2026-10-29T18:06:49+01:00",
+ "genere": "2026-11-02T23:39:47.757Z",
+ "pages": {
+  "404": {
+   "fichier": "404.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/core.js",
+    "assets/js/portal.js",
+    "assets/js/data.js",
+    "assets/js/art.js",
+    "assets/js/images.js"
+   ],
+   "gabarit": null,
+   "url": "/404",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": false,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.lantern",
+     "fixe": true,
+     "h": 560
+    },
+    {
+     "sig": "div.cursor",
+     "fixe": true,
+     "h": 34
+    }
+   ],
+   "gabarit_de": []
+  },
+  "index": {
+   "fichier": "index.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/home.js",
+    "assets/js/data.js",
+    "assets/js/core.js",
+    "assets/js/portal.js",
+    "assets/js/art.js",
+    "assets/js/images.js"
+   ],
+   "gabarit": null,
+   "url": "/",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": false,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.lantern",
+     "fixe": true,
+     "h": 560
+    },
+    {
+     "sig": "div.cursor",
+     "fixe": true,
+     "h": 34
+    }
+   ],
+   "gabarit_de": []
+  },
+  "anniversaire": {
+   "fichier": "anniversaire.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/anniv.js",
+    "assets/js/data.js",
+    "assets/js/core.js",
+    "assets/js/portal.js",
+    "assets/js/art.js",
+    "assets/js/images.js"
+   ],
+   "gabarit": null,
+   "url": "/anniversaire",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": false,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.lantern",
+     "fixe": true,
+     "h": 560
+    },
+    {
+     "sig": "div.cursor",
+     "fixe": true,
+     "h": 34
+    }
+   ],
+   "gabarit_de": []
+  },
+  "machine-a-remonter-le-temps": {
+   "fichier": "machine-a-remonter-le-temps.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/machine.js",
+    "assets/js/data.js",
+    "assets/js/art.js",
+    "assets/js/core.js",
+    "assets/js/portal.js",
+    "assets/js/images.js"
+   ],
+   "gabarit": null,
+   "url": "/machine-a-remonter-le-temps",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": false,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.lantern",
+     "fixe": true,
+     "h": 560
+    },
+    {
+     "sig": "div.cursor",
+     "fixe": true,
+     "h": 34
+    }
+   ],
+   "gabarit_de": []
+  }
+ },
+ "blocs": [
+  {
+   "id": "intro",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "div.intro",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:63-83",
+    "css": "assets/css/main.css:266-280,808,829",
+    "js": "assets/js/home.js:239-284,483 ; assets/js/core.js:171"
+   },
+   "titre": "",
+   "hauteur": null,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": null,
+   "cache": null,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": null,
+   "classes_exclusives": [
+    "intro",
+    "intro__ring",
+    "intro__lock",
+    "intro__shackle",
+    "intro__strip",
+    "intro__win",
+    "intro__led"
+   ],
+   "data": [
+    "data-final"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "portal",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "div#portal",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:117-117",
+    "css": "assets/css/main.css:140-145,808",
+    "js": "assets/js/core.js:151"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [],
+   "data": [],
+   "medias": {
+    "capture": "medias/games42-maquette/portal-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/portal-m390.jpg"
+   }
+  },
+  {
+   "id": "notice",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "div.notice",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:118-121",
+    "css": "assets/css/main.css:148-152,312",
+    "js": "assets/js/data.js:46 ; assets/js/core.js:216,279-283,296-316"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "notice"
+   ],
+   "data": [
+    "data-notice",
+    "data-notice-text"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "header",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "header.header",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:122-145",
+    "css": "assets/css/main.css:153-186,202-217",
+    "js": "assets/js/core.js:212-213,217-231,252-254,257,376,380-385,579"
+   },
+   "titre": "",
+   "hauteur": 72,
+   "hauteur_m390": 72,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 1,
+    "images": 1,
+    "liens": 8
+   },
+   "classes_exclusives": [
+    "header",
+    "brand",
+    "brand__mark",
+    "brand__name",
+    "nav",
+    "header__tools",
+    "tool",
+    "tool--keys",
+    "tool--calm",
+    "tool--phone",
+    "burger"
+   ],
+   "data": [
+    "data-calm-toggle",
+    "data-phone",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/header-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/header-m390.jpg",
+    "video": "medias/games42-maquette/header-p960.mp4"
+   }
+  },
+  {
+   "id": "menu",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "nav#menu.menu",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:146-158",
+    "css": "assets/css/main.css:187-200",
+    "js": "assets/js/core.js:180,211,214-231,439"
+   },
+   "titre": "Menu mobile",
+   "hauteur": 900,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 8
+   },
+   "classes_exclusives": [
+    "menu",
+    "menu__meta"
+   ],
+   "data": [
+    "data-calm-toggle"
+   ],
+   "medias": {
+    "capture_m390": "medias/games42-maquette/menu-m390.jpg"
+   }
+  },
+  {
+   "id": "haut",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#haut.hero",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:163-185",
+    "css": "assets/css/main.css:128,283-311,636,790,815-821",
+    "js": "assets/js/home.js:122-163,166-193,222-237,309-310 ; assets/js/portal.js:17,217,222,225,275,385,393-411"
+   },
+   "titre": "Passez le portail. Escape game à Saint-Étienne pour enfants, familles et adultes",
+   "hauteur": 828,
+   "hauteur_m390": 941,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -423,
+     "fin": 405,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 72,
+     "fin": 405,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 72,
+     "fin": 900,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -252,
+     "fin": 700,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 11,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent",
+    "opacity",
+    "rotate",
+    "force3D"
+   ],
+   "boucles_css": 2,
+   "animations_css": 2,
+   "canvas": [],
+   "decoupe": 2,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "hero",
+    "hero__grid",
+    "hero__text",
+    "hero__big",
+    "line",
+    "hero__sub",
+    "proofs",
+    "hero__portal-space",
+    "scroll-cue"
+   ],
+   "data": [
+    "data-scene",
+    "data-dive",
+    "data-magnetic",
+    "data-key"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/haut-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/haut-m390.jpg",
+    "video": "medias/games42-maquette/haut-p960.mp4"
+   }
+  },
+  {
+   "id": "trouver",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#trouver.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:188-228",
+    "css": "assets/css/main.css:229-230,316-334,340-343,359-362,629,804-805,823-824,831-832,873",
+    "js": "assets/js/home.js:1,26,48-108,111,118-119,195-209,212-214,239-284,287,448 ; assets/js/core.js:601 ; assets/js/images.js:35,441"
+   },
+   "titre": "Avec qui jouez-vous ?",
+   "hauteur": 776,
+   "hauteur_m390": 1188,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 405,
+     "fin": 1181,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 243,
+     "fin": 1188,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 10,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "cadenas",
+    "cadenas__intro",
+    "who",
+    "lock",
+    "lock__shackle",
+    "lock__title",
+    "wheels",
+    "wheel",
+    "wheel__label",
+    "wheel__btn",
+    "wheel__window",
+    "wheel__drum",
+    "btn--glow",
+    "lock__open",
+    "lock__hint",
+    "results"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-dive",
+    "data-split",
+    "data-preset",
+    "data-media",
+    "data-alt",
+    "data-fit",
+    "data-lock",
+    "data-wheel",
+    "data-dir",
+    "data-open"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/trouver-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/trouver-m390.jpg",
+    "video": "medias/games42-maquette/trouver-p960.mp4"
+   }
+  },
+  {
+   "id": "missions",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#missions.couloir",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:231-242",
+    "css": "assets/css/main.css:128,365-368,384-397,828",
+    "js": "assets/js/home.js:1,10,33-34,315,324,333,345,395 ; assets/js/core.js:185"
+   },
+   "titre": "Cinq mondes, une heure pour réussir",
+   "hauteur": 6671,
+   "hauteur_m390": 5448,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": 0.35,
+     "debut": 1812,
+     "fin": 7572,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 974,
+     "fin": 1903,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 0,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 0,
+     "fin": 1,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 12,
+   "proprietes": [
+    "x",
+    "clipPath",
+    "scale",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 5,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 5,
+    "liens": 10
+   },
+   "classes_exclusives": [
+    "couloir",
+    "couloir__head",
+    "couloir__pin",
+    "couloir__viewport",
+    "couloir__track",
+    "couloir__progress"
+   ],
+   "data": [
+    "data-split",
+    "data-track",
+    "data-progress"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/missions-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/missions-m390.jpg",
+    "video": "medias/games42-maquette/missions-p960.mp4"
+   }
+  },
+  {
+   "id": "coffres",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#coffres.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:245-345",
+    "css": "assets/css/main.css:383,401-419",
+    "js": "assets/js/home.js:23,122-163,403-404,415-417,421-422,429-430 ; assets/js/images.js:301"
+   },
+   "titre": "Un coffre… vraiment ?",
+   "hauteur": 1421,
+   "hauteur_m390": 2486,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7852,
+     "fin": 9273,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7690,
+     "fin": 8620,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.7,
+     "debut": 8026,
+     "fin": 8830,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.8,
+     "debut": 8192,
+     "fin": 8570,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 98,
+   "proprietes": [
+    "y",
+    "scaleY",
+    "transformOrigin",
+    "opacity",
+    "x",
+    "rotate",
+    "yPercent"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 3,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "coffres",
+    "coffres__stage",
+    "chest",
+    "chest__lid-in",
+    "chest__rays",
+    "chest__body",
+    "chest__mouth",
+    "chest__sparks",
+    "chest__lid",
+    "chest__cards",
+    "tag-card",
+    "price-line",
+    "why-chest"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-key",
+    "data-media",
+    "data-pos"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/coffres-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/coffres-m390.jpg",
+    "video": "medias/games42-maquette/coffres-p960.mp4"
+   }
+  },
+  {
+   "id": "frayeur",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#frayeur.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:348-369",
+    "css": "assets/css/main.css:422-442",
+    "js": "assets/js/home.js:433-438"
+   },
+   "titre": "Zéro frayeur",
+   "hauteur": 808,
+   "hauteur_m390": 1184,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9273,
+     "fin": 10081,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 9156,
+     "fin": 9812,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9158,
+     "fin": 10021,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9362,
+     "fin": 10421,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 6,
+   "proprietes": [
+    "scale",
+    "opacity",
+    "scaleX",
+    "x",
+    "yPercent"
+   ],
+   "boucles_css": 16,
+   "animations_css": 16,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "frayeur",
+    "frayeur__grid",
+    "door",
+    "door__floor",
+    "door__media",
+    "door__shade",
+    "door__glow",
+    "door__dust",
+    "door__frame",
+    "reassure"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-media",
+    "data-alt",
+    "data-sizes",
+    "data-split"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/frayeur-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/frayeur-m390.jpg",
+    "video": "medias/games42-maquette/frayeur-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaires",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#anniversaires.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:372-396",
+    "css": "assets/css/main.css:251-252,445-459,712-714,781,786-787,799-800",
+    "js": "assets/js/home.js:2,15,440-446,481 ; assets/js/core.js:534-548 ; assets/js/art.js:30-145"
+   },
+   "titre": "Un anniversaire, zéro logistique",
+   "hauteur": 902,
+   "hauteur_m390": 1450,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10576,
+     "fin": 10578,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9919,
+     "fin": 10865,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9999,
+     "fin": 11335,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10229,
+     "fin": 11088,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10408,
+     "fin": 11286,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 11,
+   "proprietes": [
+    "x",
+    "y",
+    "scaleX",
+    "opacity",
+    "scale",
+    "yPercent",
+    "clipPath"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "anniv-teaser",
+    "anniv-teaser__grid",
+    "big-price",
+    "frise",
+    "frise__line",
+    "frise__steps",
+    "frise__step",
+    "candle",
+    "candle__flame",
+    "candle__body",
+    "frise__time",
+    "frise__what",
+    "anniv-teaser__media",
+    "arch",
+    "ratio-45",
+    "portal-reveal"
+   ],
+   "data": [
+    "data-split",
+    "data-magnetic",
+    "data-media",
+    "data-sizes"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaires-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaires-m390.jpg",
+    "video": "medias/games42-maquette/anniversaires-p960.mp4"
+   }
+  },
+  {
+   "id": "avis",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#avis.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:399-426",
+    "css": "assets/css/main.css:253,462-465,478-485",
+    "js": "assets/js/home.js:239-284,289-301,411 ; assets/js/core.js:339,352 ; assets/js/art.js:19-145,152"
+   },
+   "titre": "Ce qu’en pensent les joueurs",
+   "hauteur": 615,
+   "hauteur_m390": 683,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10983,
+     "fin": 11599,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10758,
+     "fin": 11916,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "yPercent",
+    "scale",
+    "rotate",
+    "clearProps"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "preuves",
+    "preuves__grid",
+    "score",
+    "score__num",
+    "score__stars",
+    "fill",
+    "preuves__side",
+    "badge-card",
+    "ratio-34"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-roll",
+    "data-media",
+    "data-fit"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/avis-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/avis-m390.jpg",
+    "video": "medias/games42-maquette/avis-p960.mp4"
+   }
+  },
+  {
+   "id": "pros",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#pros.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:429-487",
+    "css": "assets/css/main.css:256,488-509,827",
+    "js": "assets/js/home.js:452"
+   },
+   "titre": "Écoles, seniors, entreprises",
+   "hauteur": 1588,
+   "hauteur_m390": 3309,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12094,
+     "fin": 12782,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11437,
+     "fin": 12366,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11655,
+     "fin": 13574,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "pros__grid",
+    "pro",
+    "pro--feature",
+    "ratio-169",
+    "quote",
+    "pro--wide"
+   ],
+   "data": [
+    "data-split",
+    "data-world",
+    "data-media",
+    "data-pos"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/pros-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/pros-m390.jpg",
+    "video": "medias/games42-maquette/pros-p960.mp4"
+   }
+  },
+  {
+   "id": "cadeau",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#cadeau.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:490-513",
+    "css": "assets/css/main.css:512-522,564-569",
+    "js": "assets/js/home.js:2,458-459,463-464,467-471 ; assets/js/art.js:30-145 ; assets/js/images.js:287"
+   },
+   "titre": "Offrez une heure d’aventure",
+   "hauteur": 717,
+   "hauteur_m390": 820,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13187,
+     "fin": 13904,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13025,
+     "fin": 13970,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13185,
+     "fin": 14327,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 6,
+   "proprietes": [
+    "x",
+    "y",
+    "rotationX",
+    "rotationY",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "cadeau",
+    "cadeau__grid",
+    "ticket-wrap",
+    "ticket",
+    "ticket__notch",
+    "ticket__notch--l",
+    "ticket__notch--r",
+    "ticket__shine",
+    "cadeau__copy",
+    "checks"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-tilt",
+    "data-media",
+    "data-sizes",
+    "data-split",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/cadeau-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/cadeau-m390.jpg",
+    "video": "medias/games42-maquette/cadeau-p960.mp4"
+   }
+  },
+  {
+   "id": "infos",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#infos.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:516-577",
+    "css": "assets/css/main.css:525-546,790",
+    "js": "assets/js/home.js:455-456 ; assets/js/data.js:51 ; assets/js/core.js:296-317,323"
+   },
+   "titre": "Infos pratiques",
+   "hauteur": 1283,
+   "hauteur_m390": 1918,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14399,
+     "fin": 14781,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13742,
+     "fin": 14605,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 14141,
+     "fin": 14684,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14549,
+     "fin": 15362,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "strokeDashoffset",
+    "scale",
+    "transformOrigin",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "status",
+    "infos__grid",
+    "map-card",
+    "route",
+    "map-pin",
+    "map-legend",
+    "hours",
+    "info-blocks",
+    "info-block"
+   ],
+   "data": [
+    "data-split",
+    "data-open-status",
+    "data-map",
+    "data-hours"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/infos-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/infos-m390.jpg",
+    "video": "medias/games42-maquette/infos-p960.mp4"
+   }
+  },
+  {
+   "id": "faq",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#faq.sec",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:580-598",
+    "css": "assets/css/main.css:122-123,549-559",
+    "js": "assets/js/home.js:22-23,122-163,166-193,288,332-333,345,358 ; assets/js/data.js:90-92,96-98,106,113,120 ; assets/js/core.js:46,358,456-468,503-531,659-661 ; assets/js/portal.js:210,269,346"
+   },
+   "titre": "Vos questions",
+   "hauteur": 1034,
+   "hauteur_m390": 952,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 15186,
+     "fin": 16220,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 15024,
+     "fin": 15872,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 9,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "faq-sec",
+    "faq",
+    "plus",
+    "answer",
+    "flag"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-split",
+    "data-key"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/faq-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/faq-m390.jpg",
+    "video": "medias/games42-maquette/faq-p960.mp4"
+   }
+  },
+  {
+   "id": "final",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section.final",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:601-610",
+    "css": "assets/css/main.css:128,562-570",
+    "js": "assets/js/home.js:239-284 ; assets/js/core.js:38,473,476-500 ; assets/js/portal.js:18"
+   },
+   "titre": "Prêts à passer le portail ?",
+   "hauteur": 579,
+   "hauteur_m390": 612,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 16220,
+     "fin": 16799,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 16094,
+     "fin": 17000,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "final"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-split",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/final-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/final-m390.jpg",
+    "video": "medias/games42-maquette/final-p960.mp4"
+   }
+  },
+  {
+   "id": "footer",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "footer.footer",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:612-657",
+    "css": "assets/css/main.css:573-581,620,822",
+    "js": "assets/js/core.js:216,439,578"
+   },
+   "titre": "Missions",
+   "hauteur": 623,
+   "hauteur_m390": 1339,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 19
+   },
+   "classes_exclusives": [
+    "footer",
+    "footer__grid",
+    "footer__note",
+    "footer__legal"
+   ],
+   "data": [
+    "data-year",
+    "data-calm-toggle"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/footer-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/footer-m390.jpg"
+   }
+  },
+  {
+   "id": "chrono",
+   "page": "index",
+   "pages": [
+    "index",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "div#chrono.chrono",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:658-661",
+    "css": "assets/css/main.css:584-599,808",
+    "js": "assets/js/data.js:106 ; assets/js/core.js:2,334-335,339"
+   },
+   "titre": "",
+   "hauteur": 295,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "chrono",
+    "chrono__rail",
+    "chrono__fill",
+    "chrono__time"
+   ],
+   "data": [
+    "data-chrono-text"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/chrono-p1440.jpg"
+   }
+  },
+  {
+   "id": "actionbar",
+   "page": "index",
+   "pages": [
+    "index",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "nav.actionbar",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:662-670",
+    "css": "assets/css/main.css:596,602-622,808",
+    "js": "assets/js/core.js:216,335,338,359,365-369,379"
+   },
+   "titre": "Actions rapides",
+   "hauteur": 0,
+   "hauteur_m390": 61,
+   "masque_m390": false,
+   "position": "static",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "actionbar",
+    "actionbar__chrono",
+    "chrono__ring",
+    "actionbar__keys",
+    "actionbar__call"
+   ],
+   "data": [
+    "data-chrono-text",
+    "data-keys-count"
+   ],
+   "medias": {
+    "capture_m390": "medias/games42-maquette/actionbar-m390.jpg"
+   }
+  },
+  {
+   "id": "veil",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "div.veil",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:671-671",
+    "css": "assets/css/main.css:632,808",
+    "js": "assets/js/core.js:551,556,560,568-569"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "veil"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/games42-maquette/veil-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/veil-m390.jpg",
+    "video": "medias/games42-maquette/veil-p960.mp4"
+   }
+  },
+  {
+   "id": "keys-live",
+   "page": "index",
+   "pages": [
+    "index",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "p#keys-live.sr-only",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:672-672",
+    "css": null,
+    "js": "assets/js/core.js:377"
+   },
+   "titre": "",
+   "hauteur": 1,
+   "hauteur_m390": 1,
+   "masque_m390": false,
+   "position": "absolute",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [],
+   "data": [],
+   "medias": {
+    "capture": "medias/games42-maquette/keys-live-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/keys-live-m390.jpg"
+   }
+  },
+  {
+   "id": "keys-dialog",
+   "page": "index",
+   "pages": [
+    "index",
+    "anniversaire",
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "dialog#keys-dialog.dialog",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:673-687",
+    "css": "assets/css/main.css:646-651",
+    "js": "assets/js/core.js:378,415"
+   },
+   "titre": "Les trois clés sont à vous",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "absolute",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "dialog",
+    "dialog__body",
+    "dialog__keys"
+   ],
+   "data": [
+    "data-close"
+   ],
+   "medias": {}
+  },
+  {
+   "id": "404-page-hero",
+   "page": "404",
+   "pages": [
+    "404"
+   ],
+   "sig": "section.page-hero",
+   "dans_main": true,
+   "code": {
+    "html": "404.html:104-112",
+    "css": "assets/css/main.css:112,128,132,238,289-290,308-311,357,497,569-570,654,662,727,821,877",
+    "js": "assets/js/core.js:334,357"
+   },
+   "titre": "Ce portail ne mène nulle part",
+   "hauteur": 756,
+   "hauteur_m390": 704,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "page-hero",
+    "lead",
+    "actions"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/games42-maquette/404-page-hero-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/404-page-hero-m390.jpg"
+   }
+  },
+  {
+   "id": "anniversaire-page-hero",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section.page-hero",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:121-148",
+    "css": "assets/css/main.css:128,252,291-294,310,452-454,636,654-662,709-714,787,871,875-877",
+    "js": "assets/js/anniv.js:94-106 ; assets/js/core.js:50-83 ; assets/js/art.js:30-145"
+   },
+   "titre": "Fêtez son anniversaire dans un escape game",
+   "hauteur": 778,
+   "hauteur_m390": 1062,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -423,
+     "fin": 355,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -271,
+     "fin": 681,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "page-hero",
+    "page-hero__grid",
+    "crumbs",
+    "a-title",
+    "proofs",
+    "candles-hero",
+    "ratio-45",
+    "candles-row",
+    "candle",
+    "candle__flame",
+    "candle__body"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-magnetic",
+    "data-media",
+    "data-eager",
+    "data-pos"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-page-hero-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-page-hero-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-page-hero-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-formules",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#formules.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:150-194",
+    "css": "assets/css/main.css:116-123,227-228,233,715-727",
+    "js": "assets/js/anniv.js:3-4,73-86,94-116 ; assets/js/data.js:48,92 ; assets/js/core.js:3-7,282,296-316,456-468,476-500 ; assets/js/portal.js:5-10"
+   },
+   "titre": "Trois façons de faire la fête",
+   "hauteur": 1017,
+   "hauteur_m390": 2205,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 850,
+     "fin": 967,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 193,
+     "fin": 1122,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 411,
+     "fin": 1759,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity",
+    "rotate",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "formules",
+    "formule",
+    "formule--star",
+    "from",
+    "flag",
+    "btn--primary",
+    "tbd"
+   ],
+   "data": [
+    "data-split"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-formules-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-formules-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-formules-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-deroule",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#deroule.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:196-227",
+    "css": "assets/css/main.css:728-740,787,801-803,864-867",
+    "js": "assets/js/anniv.js:20-31,37,43-58,94-106 ; assets/js/portal.js:308"
+   },
+   "titre": "Le mercredi, minute par minute",
+   "hauteur": 728,
+   "hauteur_m390": 1022,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1372,
+     "fin": 2100,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1300,
+     "fin": 2365,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1210,
+     "fin": 2237,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 6,
+   "proprietes": [
+    "scaleY",
+    "x",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 1,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "deroule",
+    "tabs",
+    "tabs--dark",
+    "timeline",
+    "timeline__rail",
+    "timeline__list",
+    "timeline__item",
+    "timeline__time",
+    "timeline__dot",
+    "timeline__body"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-deroule-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-deroule-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-deroule-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-calcul",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#calcul.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:229-262",
+    "css": "assets/css/main.css:741-759",
+    "js": "assets/js/anniv.js:67-86,108-116"
+   },
+   "titre": "Combien ça coûte ?",
+   "hauteur": 956,
+   "hauteur_m390": 1409,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2100,
+     "fin": 3055,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1938,
+     "fin": 2785,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2134,
+     "fin": 3502,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "x",
+    "y",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 4,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "calc",
+    "choice",
+    "stepper",
+    "calc__result",
+    "calc__total",
+    "calc__detail",
+    "calc__incl"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-calc",
+    "data-kids",
+    "data-step",
+    "data-total",
+    "data-detail",
+    "data-incl",
+    "data-note",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-calcul-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-calcul-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-calcul-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-gouter",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#gouter.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:264-280",
+    "css": "assets/css/main.css:254,760-767,781,786",
+    "js": "assets/js/anniv.js:108-116,122 ; assets/js/core.js:534-548"
+   },
+   "titre": "Le goûter comprend",
+   "hauteur": 846,
+   "hauteur_m390": 1506,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3550,
+     "fin": 3550,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2938,
+     "fin": 4288,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2901,
+     "fin": 3846,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3097,
+     "fin": 4156,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "y",
+    "opacity",
+    "yPercent",
+    "clipPath",
+    "scale"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "gouter__grid",
+    "ratio-23",
+    "portal-reveal",
+    "gouter-list",
+    "alert"
+   ],
+   "data": [
+    "data-media",
+    "data-split"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-gouter-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-gouter-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-gouter-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-invitations",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#invitations.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:282-290",
+    "css": "assets/css/main.css:768",
+    "js": "assets/js/anniv.js:2,7,108-116"
+   },
+   "titre": "Invitations à imprimer",
+   "hauteur": 624,
+   "hauteur_m390": 2260,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4396,
+     "fin": 4396,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3631,
+     "fin": 4561,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3850,
+     "fin": 4912,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "rotate",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 5
+   },
+   "classes_exclusives": [
+    "enveloppes"
+   ],
+   "data": [
+    "data-split",
+    "data-invitations"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-invitations-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-invitations-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-invitations-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-faq",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section#faq.sec",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:292-304",
+    "css": "assets/css/main.css:549-559",
+    "js": "assets/js/anniv.js:70,73-86,108-116 ; assets/js/data.js:90,96-98,106,113,120 ; assets/js/core.js:46,358,456-468,503-531,659-661 ; assets/js/portal.js:210,269,346"
+   },
+   "titre": "Les questions des parents",
+   "hauteur": 803,
+   "hauteur_m390": 808,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4525,
+     "fin": 5328,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4363,
+     "fin": 5210,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4499,
+     "fin": 5715,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 6,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "faq",
+    "plus",
+    "answer"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-split"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-faq-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-faq-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-faq-p960.mp4"
+   }
+  },
+  {
+   "id": "anniversaire-final",
+   "page": "anniversaire",
+   "pages": [
+    "anniversaire"
+   ],
+   "sig": "section.final",
+   "dans_main": true,
+   "code": {
+    "html": "anniversaire.html:306-315",
+    "css": "assets/css/main.css:128,562-570",
+    "js": "assets/js/core.js:38,473,476-500 ; assets/js/portal.js:18"
+   },
+   "titre": "On s’occupe de tout",
+   "hauteur": 579,
+   "hauteur_m390": 612,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5328,
+     "fin": 5908,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5202,
+     "fin": 6108,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "final"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-split",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/anniversaire-final-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/anniversaire-final-m390.jpg",
+    "video": "medias/games42-maquette/anniversaire-final-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-page-hero",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section.page-hero",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:121-142",
+    "css": "assets/css/main.css:128,285,300,304,636,654-662,668-670,877",
+    "js": "assets/js/machine.js:22,48-57 ; assets/js/portal.js:217"
+   },
+   "titre": "La Machine à remonter le temps",
+   "hauteur": 764,
+   "hauteur_m390": 1082,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -423,
+     "fin": 341,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": -196,
+     "fin": 756,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 4,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 4
+   },
+   "classes_exclusives": [
+    "page-hero",
+    "page-hero__grid",
+    "crumbs",
+    "badge-new",
+    "m-title",
+    "countdown",
+    "countdown__num",
+    "hero__portal-space"
+   ],
+   "data": [
+    "data-scene",
+    "data-world",
+    "data-countdown",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-page-hero-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-page-hero-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-page-hero-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-mission",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#mission.objets",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:144-183",
+    "css": "assets/css/main.css:128,671-683,835,848",
+    "js": "assets/js/machine.js:8-13,34-45,59-112"
+   },
+   "titre": "Trois objets à retrouver",
+   "hauteur": 2500,
+   "hauteur_m390": 1101,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 836,
+     "fin": 2436,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 341,
+     "fin": 2841,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 178,
+     "fin": 1124,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "rotation",
+    "svgOrigin",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "objets",
+    "objets__pin",
+    "objets__grid",
+    "objets__list",
+    "objet",
+    "objet__num",
+    "gear-obj",
+    "slots",
+    "clk-gear",
+    "clk-gear--a",
+    "clk-gear--b",
+    "clk-ticks",
+    "slot",
+    "slot__fill",
+    "slot__gear",
+    "clk-min",
+    "clk-hour",
+    "objets__status"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-objet",
+    "data-clock",
+    "data-slot",
+    "data-status"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-mission-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-mission-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-mission-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-epoques",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#epoques.sec",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:185-205",
+    "css": "assets/css/main.css:254-255,684-687,781,786,836-851",
+    "js": "assets/js/machine.js:59-112 ; assets/js/core.js:50-83,534-548"
+   },
+   "titre": "Trois époques, trois décors",
+   "hauteur": 2412,
+   "hauteur_m390": 964,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": true,
+     "scrub": 0.35,
+     "debut": 3564,
+     "fin": 4839,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2841,
+     "fin": 5253,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2679,
+     "fin": 3608,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.35,
+     "debut": 3564,
+     "fin": 4839,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": -1,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 11,
+   "proprietes": [
+    "x",
+    "xPercent",
+    "clipPath",
+    "scale",
+    "rotate",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 8,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "epoques",
+    "epoques__pin",
+    "epoques__ruler",
+    "epoques__hand",
+    "epoques__viewport",
+    "epoques__track",
+    "epoque",
+    "epoque--badge",
+    "ratio-11",
+    "ratio-23",
+    "portal-reveal"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-media",
+    "data-fit"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-epoques-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-modes",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#modes.sec",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:207-234",
+    "css": "assets/css/main.css:116-123,688-694",
+    "js": "assets/js/machine.js:59-112 ; assets/js/data.js:73,92,105 ; assets/js/core.js:2,101,168,260"
+   },
+   "titre": "Trois modes de jeu",
+   "hauteur": 685,
+   "hauteur_m390": 1240,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5253,
+     "fin": 5938,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5132,
+     "fin": 5980,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5269,
+     "fin": 6325,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5491,
+     "fin": 6308,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "strokeDashoffset",
+    "y",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 1,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "modes",
+    "mode",
+    "gauge",
+    "gauge__arc",
+    "tbd",
+    "flag"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-value"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-modes-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-modes-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-modes-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-diplome",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#diplome.sec",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:236-253",
+    "css": "assets/css/main.css:695-696,852-858",
+    "js": "assets/js/machine.js:12,59-112 ; assets/js/core.js:50-83"
+   },
+   "titre": "Rien ne fera peur",
+   "hauteur": 741,
+   "hauteur_m390": 903,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6433,
+     "fin": 6433,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 5695,
+     "fin": 7173,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 5695,
+     "fin": 7173,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5890,
+     "fin": 6753,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "rotate",
+    "y",
+    "transformOrigin",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 1,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "diplome__grid",
+    "diplome",
+    "diplome__text",
+    "diplome__seal",
+    "seal-gear"
+   ],
+   "data": [
+    "data-split",
+    "data-media",
+    "data-alt"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-diplome-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-diplome-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-diplome-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-tarifs",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#tarifs.sec",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:255-292",
+    "css": "assets/css/main.css:114-115,697-699,741-744,750-756,859-861",
+    "js": "assets/js/machine.js:59-112,115-120,126-127,130 ; assets/js/data.js:71-73"
+   },
+   "titre": "Tarifs 2026",
+   "hauteur": 572,
+   "hauteur_m390": 988,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7174,
+     "fin": 7174,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6409,
+     "fin": 7273,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6514,
+     "fin": 7548,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "tarifs",
+    "price-table",
+    "small",
+    "calc",
+    "calc--mini",
+    "stepper",
+    "calc__result",
+    "calc__total",
+    "num",
+    "calc__detail"
+   ],
+   "data": [
+    "data-split",
+    "data-world",
+    "data-stepper",
+    "data-min",
+    "data-max",
+    "data-value",
+    "data-step",
+    "data-total",
+    "data-detail"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-tarifs-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-tarifs-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-tarifs-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-autres",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section#autres.sec",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:294-304",
+    "css": "assets/css/main.css:700-706",
+    "js": "assets/js/machine.js:59-112"
+   },
+   "titre": "Les autres mondes",
+   "hauteur": 808,
+   "hauteur_m390": 2341,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7251,
+     "fin": 8059,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7089,
+     "fin": 7936,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7225,
+     "fin": 8446,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 4
+   },
+   "classes_exclusives": [
+    "others",
+    "other"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-split",
+    "data-world",
+    "data-media"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-autres-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-autres-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-autres-p960.mp4"
+   }
+  },
+  {
+   "id": "machine-a-remonter-le-temps-final",
+   "page": "machine-a-remonter-le-temps",
+   "pages": [
+    "machine-a-remonter-le-temps"
+   ],
+   "sig": "section.final",
+   "dans_main": true,
+   "code": {
+    "html": "machine-a-remonter-le-temps.html:306-315",
+    "css": "assets/css/main.css:128,562-570",
+    "js": "assets/js/core.js:38,473,476-500 ; assets/js/portal.js:18"
+   },
+   "titre": "L’horloge vous attend",
+   "hauteur": 579,
+   "hauteur_m390": 585,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8059,
+     "fin": 8638,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7933,
+     "fin": 8839,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "x",
+    "y",
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "final"
+   ],
+   "data": [
+    "data-scene",
+    "data-dim",
+    "data-ring",
+    "data-swirl",
+    "data-world",
+    "data-split",
+    "data-magnetic"
+   ],
+   "medias": {
+    "capture": "medias/games42-maquette/machine-a-remonter-le-temps-final-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/machine-a-remonter-le-temps-final-m390.jpg",
+    "video": "medias/games42-maquette/machine-a-remonter-le-temps-final-p960.mp4"
+   }
+  }
+ ]
+}

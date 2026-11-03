@@ -1,0 +1,46 @@
+{
+ "id": "hanamizuki-maquette/table",
+ "maquette": "hanamizuki-maquette",
+ "page": "index",
+ "titre": "Table de l'île",
+ "role": "galerie",
+ "description": "Section épinglée : les plats défilent à l'horizontale en légère rotation 3D, une ligne de pêche glisse plus lentement, et un banc de petits poissons en canvas 2D suit le défilement ; grand nom de poisson en filigrane. Sur téléphone, carrousel natif avec scroll-padding.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "canvas-2d",
+  "parallaxe"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:261-291",
+  "css": "assets/css/site.css:456-477,884-903",
+  "js": "assets/js/home.js:81-146"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/table-p1440.jpg",
+  "capture_m390": "medias/hanamizuki-maquette/table-m390.jpg",
+  "video": "medias/hanamizuki-maquette/table-p960.mp4"
+ },
+ "pieges": [
+  "hauteur 100svh avec padding sous l'en-tête et largeur des plats liée à la hauteur, sinon les légendes sont coupées à 1280×720",
+  "matchMedia : épinglage seulement au-dessus de 900 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 980,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

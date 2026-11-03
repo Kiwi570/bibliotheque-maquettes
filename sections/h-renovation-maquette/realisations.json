@@ -1,0 +1,46 @@
+{
+ "id": "h-renovation-maquette/realisations",
+ "maquette": "h-renovation-maquette",
+ "page": "index",
+ "titre": "Galerie des chantiers épinglée",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée des derniers chantiers : photos et vidéos de chantier qui se lancent à l'écran, légendes, compteur, avant/après d'une gouttière en curseur ; cartes dimensionnées en hauteur pour tenir de 1000×560 à 1920×1080.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "comparateur",
+  "lecteur-vidéo"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:299-373",
+  "css": "assets/css/main.css:485-515",
+  "js": "assets/js/accueil.js:118-156 ; assets/js/main.js:374-407"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/realisations-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/realisations-m390.jpg",
+  "video": "medias/h-renovation-maquette/realisations-p960.mp4"
+ },
+ "pieges": [
+  "hauteur des images = place restante sous le titre, mesurée en JS, jamais estimée",
+  "vidéos en preload=none, lancées par IntersectionObserver ; un clic les met en pause",
+  "même mécanique que le module galerie-horizontale-epinglee"
+ ],
+ "mesures": {
+  "hauteur_p1440": 7414,
+  "hauteur_m390": 1690,
+  "epinglee": true,
+  "scrolltriggers": 17
+ }
+}

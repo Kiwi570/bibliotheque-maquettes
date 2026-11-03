@@ -1,0 +1,39 @@
+{
+ "id": "francis-gerardin-maquette/intro",
+ "maquette": "francis-gerardin-maquette",
+ "page": "index",
+ "titre": "Ouverture conducteur",
+ "role": "ouverture",
+ "description": "Ouverture une fois par visite : une feuille de conducteur d'émission avec timecode qui défile, rubriques cochées une à une, puis la feuille se tourne vers le haut et lance le héros ; un clic, une touche ou la molette la passent.",
+ "animations": [
+  "ouverture-orchestrée",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:66-80",
+  "css": "assets/css/main.css:262-280",
+  "js": "assets/js/main.js:251-278"
+ },
+ "medias": {},
+ "pieges": [
+  "titre du héros lisible vers 2 s : l'ouverture dure 1,9 s et le héros démarre à 1,6 s",
+  "jouer une seule fois par visite (sessionStorage), sinon passer directement au héros",
+  "toujours permettre de la passer"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

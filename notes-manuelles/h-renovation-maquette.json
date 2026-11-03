@@ -1,0 +1,1417 @@
+{
+ "maquette": {
+  "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
+  "activite": [
+   "bâtiment"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "sombre",
+   "minéral",
+   "brut"
+  ],
+  "palette": {
+   "fond": "--ardoise",
+   "texte": "--chaux",
+   "accent": "--cuivre",
+   "secondaire": "--zinc"
+  },
+  "polices": {
+   "titres": "Manrope",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "pluie WebGL sur la vitre d'une fenêtre de toit, buée à essuyer, éclaircie au défilement",
+   "diagnostic sur une maison en coupe et anatomie du toit à onglets, qui mènent au devis prérempli",
+   "toit SVG qui se construit rang par rang pendant les étapes du chantier",
+   "galerie épinglée de chantiers avec vidéos et avant/après, tenue de 1000×560 à 1920×1080",
+   "45 pages dont 32 fiches prestations riches, devis en quatre étapes"
+  ],
+  "reserves": [
+   "accueil lourd sur grand écran (vidéos de la galerie)",
+   "décalages d'apparition des fiches masqués par le clip du body",
+   "contraste des libellés de coordonnées sur fond chaux limite",
+   "portrait du dirigeant à fournir"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "révélation-texte",
+   "parallaxe",
+   "marquee",
+   "progression-fixée",
+   "section-fixée",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "masque",
+   "morphing",
+   "apparition-au-défilement",
+   "révélation-image",
+   "compteur",
+   "flip",
+   "filtre-anime",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "défilement-lissé"
+  ],
+  "interactions": [
+   "simulateur",
+   "comparateur",
+   "lecteur-vidéo",
+   "galerie-cliquable",
+   "filtres",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": "commit fb1da1b du 29/10, postérieur à la correction (1972932) : images Grok définitives (échafaudage d'isolation extérieure régénéré, contre le mur) et textes alternatifs ; aucun changement de code ni de mise en page. Inventaire et captures faits sur ce commit.",
+  "accueil": "haut"
+ },
+ "sections": {
+  "grain": {
+   "titre": "Grain d'orage",
+   "role": "decor",
+   "description": "Calque fixe de grain très léger posé sur toute la page pour donner une matière photographique au fond ardoise.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "volet": {
+   "titre": "Volet de transition",
+   "role": "transition-de-page",
+   "description": "Volet couleur ardoise qui couvre l'écran avant une navigation interne et se retire à l'arrivée ; les ancres de la même page défilent sans volet.",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "curseur": {
+   "titre": "Curseur goutte",
+   "role": "decor",
+   "description": "Curseur personnalisé en goutte de pluie qui grossit sur les éléments cliquables, avec boutons aimantés ; masqué au toucher.",
+   "animations": [
+    "curseur-personnalisé",
+    "bouton-magnétique"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "tete": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "En-tête fixe ardoise : logo dessiné sous un toit, liens avec menu déroulant des savoir-faire (fermé par Échap), téléphone et bouton devis cuivre.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu téléphone",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone avec les trois univers, les liens et les coordonnées, verrou du défilement et retour du focus.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture": {
+   "titre": "Ouverture logo sous le toit",
+   "role": "ouverture",
+   "description": "Calque d'ouverture : le trait du toit se dessine, les lettres du nom se posent, puis un volet découvre le héros ; jouée une seule fois par session et raccourcie après l'audit.",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "titre du héros lisible avant 2,5 s : lancer le héros au début du volet"
+   ],
+   "sans_capture": true
+  },
+  "haut": {
+   "titre": "Pluie sur la vitre",
+   "role": "ouverture",
+   "description": "Héros sombre : la photo est vue à travers la vitre d'une fenêtre de toit où la pluie ruisselle en WebGL (OGL), gouttelettes de buée et traînées claires ; on essuie la buée du doigt ou de la souris, et la pluie se raréfie jusqu'à l'éclaircie au défilement. Titre en capitales cuivre, deux boutons. Repli sur la photo seule sans WebGL.",
+   "animations": [
+    "webgl-shader",
+    "ouverture-orchestrée",
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "démarrer la pluie quand le navigateur est disponible (requestIdleCallback), jamais avant l'affichage du titre",
+    "l'éclaircie au défilement doit couper la boucle WebGL quand le héros sort de l'écran",
+    "sans WebGL ou en mode calme : photo seule, sans second téléchargement"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger",
+    "ogl"
+   ],
+   "code": {
+    "html": "index.html:86-109",
+    "css": "assets/css/main.css:299-344",
+    "js": "assets/js/pluie.js ; assets/js/accueil.js:8-33"
+   }
+  },
+  "bandeau": {
+   "titre": "Bandeau de zinc",
+   "role": "preuves",
+   "description": "Bandeau défilant façon tôle de zinc qui égrène les 32 prestations en deux lignes de sens opposés.",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "diagnostic": {
+   "titre": "Diagnostic sur la maison",
+   "role": "outil-interactif",
+   "description": "« Montrez-nous ce que vous voyez » : une maison en coupe dessinée en SVG avec des repères et des puces de symptômes ; choisir un symptôme allume la zone de la maison et affiche le diagnostic probable, la prestation liée et un lien vers le devis prérempli.",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "puces d'au moins 44 px sur téléphone (43 px avant correction)",
+    "le lien vers le devis passe le symptôme en ancre, relu par la page devis"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:116-215",
+    "css": "assets/css/main.css:386-431",
+    "js": "assets/js/accueil.js:53-87"
+   }
+  },
+  "savoir-faire": {
+   "titre": "Trois savoir-faire",
+   "role": "services",
+   "description": "Trois univers (toiture, façade, isolation) en colonnes avec photo et liste de prestations, sur fond chaux.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "methode": {
+   "titre": "Chantier rang par rang",
+   "role": "étapes",
+   "description": "Les étapes du chantier défilent pendant qu'un toit SVG se construit au scrub : rangs d'ardoises qui tombent un à un, faîtage qui s'étire, gouttières tracées, cheminée posée ; le dessin reste collant à côté des étapes.",
+   "animations": [
+    "progression-fixée",
+    "morphing",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "le dessin est en position sticky, pas épinglé : la colonne des étapes donne la durée",
+    "grouper les ardoises par rang (data-row) pour une timeline lisible"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:250-297",
+    "css": "assets/css/main.css:464-481",
+    "js": "assets/js/accueil.js:88-117"
+   }
+  },
+  "realisations": {
+   "titre": "Galerie des chantiers épinglée",
+   "role": "galerie",
+   "description": "Galerie horizontale épinglée des derniers chantiers : photos et vidéos de chantier qui se lancent à l'écran, légendes, compteur, avant/après d'une gouttière en curseur ; cartes dimensionnées en hauteur pour tenir de 1000×560 à 1920×1080.",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "parallaxe"
+   ],
+   "interactions": [
+    "comparateur",
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "hauteur des images = place restante sous le titre, mesurée en JS, jamais estimée",
+    "vidéos en preload=none, lancées par IntersectionObserver ; un clic les met en pause",
+    "même mécanique que le module galerie-horizontale-epinglee"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:299-373",
+    "css": "assets/css/main.css:485-515",
+    "js": "assets/js/accueil.js:118-156 ; assets/js/main.js:374-407"
+   }
+  },
+  "samuel": {
+   "titre": "Le dirigeant",
+   "role": "équipe",
+   "description": "Présentation du dirigeant : portrait (à fournir), citation qui s'allume mot à mot au défilement et trois chiffres.",
+   "animations": [
+    "révélation-texte",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "portrait à fournir par le client"
+   ]
+  },
+  "avis": {
+   "titre": "Pile d'ardoises",
+   "role": "témoignages",
+   "description": "Avis clients sur des ardoises empilées et légèrement tournées ; les flèches font passer l'ardoise du dessus au fond de la pile, compteur 1/3, cartes cachées rendues inertes.",
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "inert et aria-hidden sur les cartes qui ne sont pas au-dessus",
+    "rangement instantané en mode calme"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "index.html:403-434",
+    "css": "assets/css/main.css:534-556",
+    "js": "assets/js/accueil.js:157-202"
+   }
+  },
+  "contact": {
+   "titre": "Zone d'intervention",
+   "role": "carte",
+   "description": "Coordonnées avec bouton copier le numéro, à côté d'une carte SVG de la zone : routes tracées, villes qui apparaissent, épingle qui tombe sur la ville du siège et ondes qui s'en échappent.",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "contraste des libellés de coordonnées sur fond chaux encore limite (reste de l'audit)"
+   ]
+  },
+  "appel": {
+   "titre": "Appel par la gouttière",
+   "role": "appel",
+   "description": "Appel final : une gouttière dessinée longe la section et une goutte y descend jusqu'au bouton Appeler, qui s'éclaire à son arrivée.",
+   "animations": [
+    "masque",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "recalculer le tracé au redimensionnement à partir du padding réel du conteneur",
+    "goutte fixe en mode calme"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "index.html:485-499",
+    "css": "assets/css/main.css:581-592",
+    "js": "assets/js/main.js:283-373"
+   }
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Pied de page ardoise en colonnes (savoir-faire, pages, coordonnées) avec interrupteur Réduire les animations.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "barre-mobile": {
+   "titre": "Barre Appeler / Devis",
+   "role": "barre-fixe",
+   "description": "Barre fixe en bas du téléphone avec Appeler et Devis gratuit : elle n'apparaît qu'après le héros et se retire sur les formulaires, le pied de page et le menu ouvert (IntersectionObserver) ; sa hauteur est mesurée pour les sections qui doivent tenir dans l'écran.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "retirer la barre sur tout formulaire et sur le pied de page, sinon elle masque les champs et les liens",
+    "publier sa hauteur réelle dans une variable pour les sections épinglées"
+   ],
+   "dependances": [
+    "aucune"
+   ],
+   "code": {
+    "html": "index.html:535-538",
+    "css": "assets/css/main.css:250-260",
+    "js": "assets/js/main.js:40-87"
+   },
+   "sans_capture": true
+  },
+  "404-doc": {
+   "titre": "Page 404",
+   "role": "page-404",
+   "description": "« Cette page s'est envolée » : grand titre, deux boutons et liens vers les trois univers.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-page-tete": {
+   "titre": "Tête À propos",
+   "role": "ouverture",
+   "description": "Tête de page sombre avec titre, texte de présentation et photo d'outils en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-engagement-titre": {
+   "titre": "Engagement",
+   "role": "chiffres",
+   "description": "Citation d'engagement du dirigeant et trois chiffres sous des étiquettes à valider.",
+   "animations": [
+    "compteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-gamme-titre": {
+   "titre": "Gamme de prestations",
+   "role": "services",
+   "description": "Texte long sur la gamme de prestations en deux colonnes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-avis-statiques": {
+   "titre": "Avis clients",
+   "role": "témoignages",
+   "description": "Trois avis clients reproduits tels quels en cartes ardoise.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "conditions-generales-doc": {
+   "ignorer": "texte légal sur le même modèle que mentions-legales-doc"
+  },
+  "contact-page-tete": {
+   "titre": "Formulaire de contact",
+   "role": "contact",
+   "description": "Page contact : coordonnées avec copie du numéro et formulaire simple (simulé) avec consentement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "case de consentement à 24 px, libellé cliquable"
+   ]
+  },
+  "contact-zone": {
+   "ignorer": "même bloc que h-renovation-maquette/contact"
+  },
+  "declaration-daccessibilite-doc": {
+   "ignorer": "texte légal sur le même modèle que mentions-legales-doc"
+  },
+  "devis-gratuit-devis": {
+   "titre": "Devis en quatre étapes",
+   "role": "contact",
+   "description": "Demande de devis en quatre étapes : univers, prestations à cocher selon l'univers, urgence et photos (aperçu des fichiers), coordonnées, puis récapitulatif ; validation accessible étape par étape, ancre lue pour préremplir depuis le diagnostic. Rien n'est envoyé, c'est annoncé.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "focus sur le premier champ invalide, erreurs reliées par aria-invalid",
+    "les cases de l'étape 2 dépendent de l'univers choisi : les reconstruire, pas les masquer"
+   ],
+   "dependances": [
+    "aucune"
+   ],
+   "code": {
+    "html": "devis-gratuit.html:78-186",
+    "css": "assets/css/main.css:648-709",
+    "js": "assets/js/devis.js"
+   }
+  },
+  "mentions-legales-doc": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales en tableau éditeur, hébergeur et assurance, champs à compléter marqués.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "politique-de-confidentialite-doc": {
+   "ignorer": "texte légal sur le même modèle que mentions-legales-doc"
+  },
+  "realisations-page-tete": {
+   "titre": "Tête des réalisations",
+   "role": "ouverture",
+   "description": "Titre des réalisations sur une mosaïque de photos de chantier assombrie.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-galerie-sec": {
+   "titre": "Chantiers filtrables",
+   "role": "galerie",
+   "description": "Grille de tous les chantiers filtrable par univers, réorganisation animée, photos et vidéos ouvertes dans une visionneuse plein écran (flèches, clavier, Échap) ; avant/après en fin de page.",
+   "animations": [
+    "flip",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable",
+    "lecteur-vidéo",
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "la visionneuse rend le focus à la vignette d'origine",
+    "les vidéos ne se chargent qu'à l'ouverture"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "realisations.html:92-246",
+    "css": "assets/css/main.css:932-944,1001-1006",
+    "js": "assets/js/realisations.js ; assets/js/main.js:458-515"
+   }
+  },
+  "realisations-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-accessoires-et-finitions-toitur-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-accessoires-et-finitions-toitur-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-cave-humide-fiche-hero": {
+   "titre": "Tête de fiche prestation",
+   "role": "ouverture",
+   "description": "Tête des 32 fiches prestations : fil d'Ariane, le nom de la prestation se pose et la photo se dévoile en forme de pignon, plaque d'informations et boutons.",
+   "animations": [
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-essentiel": {
+   "titre": "L'essentiel",
+   "role": "offre",
+   "description": "Points clés de la prestation cochés un à un au défilement, à côté d'un texte d'introduction.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "décalage d'apparition masqué par le clip du body (reste de l'audit)"
+   ]
+  },
+  "services-cave-humide-desc": {
+   "titre": "Description du service",
+   "role": "services",
+   "description": "Description de la prestation en titre et paragraphe sur fond ardoise.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-methode": {
+   "titre": "Méthode en gouttière",
+   "role": "méthode",
+   "description": "Étapes de la méthode le long d'une gouttière verticale où l'eau descend au défilement et allume chaque étape.",
+   "animations": [
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "les étapes partent de x: 30 et dépassent de l'écran, masqué par le clip (reste de l'audit)"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "services/cave-humide.html:134-150",
+    "css": "assets/css/main.css:834-860",
+    "js": "assets/js/fiche.js:31-53"
+   }
+  },
+  "services-cave-humide-avantages": {
+   "titre": "Ardoises qui basculent",
+   "role": "offre",
+   "description": "Avantages de la prestation sur des ardoises numérotées qui basculent sur leur clou en entrant dans l'écran.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "transform-origin en haut au centre (le clou), rotation de départ alternée"
+   ],
+   "dependances": [
+    "gsap",
+    "scrolltrigger"
+   ],
+   "code": {
+    "html": "services/cave-humide.html:152-163",
+    "css": "assets/css/main.css:863-873",
+    "js": "assets/js/fiche.js:54-71"
+   }
+  },
+  "services-cave-humide-conclu": {
+   "titre": "En résumé",
+   "role": "appel",
+   "description": "Résumé de la prestation sur une photo de fond qui se dézoome, avec bouton devis.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-pourquoi": {
+   "titre": "Pourquoi nous",
+   "role": "preuves",
+   "description": "Cinq raisons de faire appel à l'entreprise en colonnes numérotées.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-galerie-fiche": {
+   "titre": "Chantiers liés",
+   "role": "galerie",
+   "description": "Bande horizontale de chantiers du même univers, glissable à la souris.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-autres": {
+   "titre": "Autres prestations",
+   "role": "services",
+   "description": "Grille des autres prestations de l'univers avec pictogramme et lien.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-cave-humide-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-combles-amenageables-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-methode": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-amenageables-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-combles-perdus-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-combles-perdus-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-faitage-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-liste-sec": {
+   "titre": "Liste de prestations",
+   "role": "services",
+   "description": "Liste numérotée des prestations incluses, rangée par rangée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-faitage-signes": {
+   "titre": "Signes à cocher",
+   "role": "outil-interactif",
+   "description": "Liste de signes à cocher (« Pourquoi refaire son faîtage ? ») qui active un appel au diagnostic dès qu'une case est cochée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-faitage-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-faitage-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-hydrofuge-toiture-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-hydrofuge-toiture-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-infiltrations-eau-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-alertes": {
+   "titre": "Alertes",
+   "role": "faq",
+   "description": "Liste d'alertes avec pictogramme d'avertissement (sources ou conséquences d'un problème).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-infiltrations-eau-methode": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-alertes-2": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-infiltrations-eau-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-isolation-thermique-interieure-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-liste-sec-2": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-isolation-thermique-interieure-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-nettoyage-toiture-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-nettoyage-toiture-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-remontees-capillaires-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-methode": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-signes": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-remontees-capillaires-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-salpetre-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-methode": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-alertes": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-salpetre-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-traitement-humidite-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-signes": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-traitement-humidite-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "services-velux-fiche-hero": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-essentiel": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-desc": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-methode": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-liste-sec": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-avantages": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-conclu": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-pourquoi": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-galerie-fiche": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-autres": {
+   "ignorer": "fiche prestation construite sur le même modèle que services/cave-humide (décrite une fois)"
+  },
+  "services-velux-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "servicetype-facade-haut": {
+   "ignorer": "même héros pluie que h-renovation-maquette/haut"
+  },
+  "servicetype-facade-diagnostic-facade": {
+   "titre": "Coupe de mur",
+   "role": "outil-interactif",
+   "description": "Coupe d'un mur de façade avec puces de symptômes (crépi, humidité, salpêtre) qui allument la couche concernée ; même mécanique que la maison thermique.",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "servicetype-facade-prestations": {
+   "ignorer": "variante de la page univers toiture"
+  },
+  "servicetype-facade-real": {
+   "ignorer": "variante de la page univers toiture"
+  },
+  "servicetype-facade-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "servicetype-isolation-haut": {
+   "ignorer": "même héros pluie que h-renovation-maquette/haut"
+  },
+  "servicetype-isolation-pertes-chaleur": {
+   "titre": "Maison thermique",
+   "role": "outil-interactif",
+   "description": "Maison vue en caméra thermique : un interrupteur isoler / ne pas isoler fait passer les zones de déperdition du rouge au bleu, avec le pourcentage de pertes par zone (chiffre sourcé).",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "le chiffre de pertes doit être sourcé",
+    "l'interrupteur est un vrai bouton aria-pressed"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "servicetype/isolation.html:102-187",
+    "css": "assets/css/main.css:962-985",
+    "js": "assets/js/univers.js:9-71"
+   }
+  },
+  "servicetype-isolation-prestations": {
+   "ignorer": "variante de la page univers toiture"
+  },
+  "servicetype-isolation-aides-titre": {
+   "titre": "Aides sous conditions",
+   "role": "offre",
+   "description": "Encadré sur les aides à la rénovation, formulées sous conditions.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "servicetype-isolation-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  },
+  "servicetype-toiture-haut": {
+   "ignorer": "même héros pluie que h-renovation-maquette/haut"
+  },
+  "servicetype-toiture-anatomie": {
+   "titre": "Anatomie du toit",
+   "role": "outil-interactif",
+   "description": "Schéma SVG d'un toit en coupe avec onglets des pièces (couverture, faîtage, noue, solin, gouttière) : chaque onglet allume la pièce sur le schéma et affiche son rôle et la prestation liée ; navigable au clavier.",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "onglets en motif tablist (flèches, Début, Fin)",
+    "les zones du SVG portent le même identifiant que l'onglet"
+   ],
+   "dependances": [
+    "gsap"
+   ],
+   "code": {
+    "html": "servicetype/toiture.html:102-206",
+    "css": "assets/css/main.css:615-628",
+    "js": "assets/js/toiture.js"
+   }
+  },
+  "servicetype-toiture-prestations": {
+   "titre": "Prestations de l'univers",
+   "role": "services",
+   "description": "Grandes cartes des prestations de l'univers avec photo, résumé et lien vers la fiche.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "servicetype-toiture-amiante": {
+   "titre": "Méthode amiante",
+   "role": "méthode",
+   "description": "Texte et étapes de la méthode sur toiture amiantée, sur une photo de tôle ondulée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "servicetype-toiture-real": {
+   "titre": "Chantiers de l'univers",
+   "role": "galerie",
+   "description": "Bande de photos de chantiers de l'univers avec légendes.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "servicetype-toiture-appel": {
+   "ignorer": "même appel que h-renovation-maquette/appel"
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "francis-gerardin-maquette/band-2",
+ "maquette": "francis-gerardin-maquette",
+ "page": "index",
+ "titre": "Trois façons de vous accompagner",
+ "role": "services",
+ "description": "Section épinglée sur grand écran : trois fiches bristol s'empilent l'une sur l'autre en tournant légèrement, la précédente recule et s'assombrit ; index des fiches à gauche. Liste simple sous 900 px ou si une fiche déborde.",
+ "animations": [
+  "section-fixée",
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:137-181",
+  "css": "assets/css/main.css:360-390,916-928",
+  "js": "assets/js/main.js:428-452"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/band-2-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/band-2-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/band-2-p960.mp4"
+ },
+ "pieges": [
+  "fiche suivante en attente visible en bas sur grand écran (yPercent 115, reste de l'audit)",
+  "désépingler si une fiche déborde de sa hauteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 2561,
+  "epinglee": true,
+  "scrolltriggers": 6
+ }
+}

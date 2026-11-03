@@ -1,0 +1,46 @@
+{
+ "id": "games42-maquette/missions",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "titre": "Couloir des portails",
+ "role": "galerie",
+ "description": "Section épinglée : les cinq mondes défilent à l'horizontale, chacun change le monde affiché par le portail ; à l'arrêt, aimantation douce sur le monde le plus proche, et un bouton atteint au clavier fait venir son monde. Pile verticale sur téléphone.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:231-242",
+  "css": "assets/css/main.css:364-399",
+  "js": "assets/js/home.js:9-47,313-401"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/missions-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/missions-m390.jpg",
+  "video": "medias/games42-maquette/missions-p960.mp4"
+ },
+ "pieges": [
+  "anticipatePin encore présent dans le code : à retirer en réutilisant",
+  "calculer la distance jusqu'au dernier monde, pas scrollWidth (un débordement décoratif la fausse)",
+  "refreshPriority plus haut que les scènes situées dessous",
+  "suspendre l'aimantation pendant un défilement automatique ou une prise en main clavier"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6671,
+  "hauteur_m390": 5448,
+  "epinglee": true,
+  "scrolltriggers": 17
+ }
+}

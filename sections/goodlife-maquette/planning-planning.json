@@ -1,0 +1,45 @@
+{
+ "id": "goodlife-maquette/planning-planning",
+ "maquette": "goodlife-maquette",
+ "page": "planning",
+ "titre": "Planning de la semaine",
+ "role": "agenda",
+ "description": "Planning glissant des six prochains jours : onglets de jours, filtres par famille, cartes de cours avec heure, durée et prix, cours passés grisés, catalogue des cours ; chaque bouton ouvre la réservation.",
+ "animations": [
+  "flip",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "planning.html:102-137",
+  "css": "assets/css/style.css:416-457",
+  "js": "assets/js/planning.js:9-86"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/planning-planning-p1440.jpg",
+  "capture_m390": "medias/goodlife-maquette/planning-planning-m390.jpg",
+  "video": "medias/goodlife-maquette/planning-planning-p960.mp4"
+ },
+ "pieges": [
+  "barre d'outils sous l'étiquette et le dock en 1440 (reste de l'audit)",
+  "jour courant et cours passés à l'heure locale du club",
+  "réserver la hauteur du catalogue (CLS 0,34 avant correction)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2649,
+  "hauteur_m390": 4384,
+  "epinglee": false,
+  "scrolltriggers": 18
+ }
+}

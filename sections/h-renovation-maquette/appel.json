@@ -1,0 +1,43 @@
+{
+ "id": "h-renovation-maquette/appel",
+ "maquette": "h-renovation-maquette",
+ "page": "index",
+ "titre": "Appel par la gouttière",
+ "role": "appel",
+ "description": "Appel final : une gouttière dessinée longe la section et une goutte y descend jusqu'au bouton Appeler, qui s'éclaire à son arrivée.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:485-499",
+  "css": "assets/css/main.css:581-592",
+  "js": "assets/js/main.js:283-373"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/appel-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/appel-m390.jpg",
+  "video": "medias/h-renovation-maquette/appel-p960.mp4"
+ },
+ "pieges": [
+  "recalculer le tracé au redimensionnement à partir du padding réel du conteneur",
+  "goutte fixe en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 755,
+  "hauteur_m390": 656,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

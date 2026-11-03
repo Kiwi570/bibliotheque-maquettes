@@ -1,0 +1,38 @@
+{
+ "id": "goodlife-maquette/reserver",
+ "maquette": "goodlife-maquette",
+ "page": "planning",
+ "titre": "Réservation en 3 étapes",
+ "role": "outil-interactif",
+ "description": "Panneau de réservation simulée en trois étapes : cours et créneau, coordonnées, puis ticket imprimé récapitulatif ; barres d'étapes et retour au bouton d'origine.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "réservation-simulee",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "planning.html:159-176",
+  "css": "assets/css/style.css:374-386",
+  "js": "assets/js/planning.js:88-186"
+ },
+ "medias": {},
+ "pieges": [
+  "rendre le focus au bouton qui a ouvert le panneau",
+  "annoncer clairement que la réservation est simulée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

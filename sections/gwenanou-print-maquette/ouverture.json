@@ -1,0 +1,39 @@
+{
+ "id": "gwenanou-print-maquette/ouverture",
+ "maquette": "gwenanou-print-maquette",
+ "page": "index",
+ "titre": "Ouverture gravée",
+ "role": "ouverture",
+ "description": "Calque d'ouverture sur une planche de noyer : le laser grave le nom de l'atelier, puis le calque se retire sur le héros. Une fois par session, décidée dans le head avant le premier affichage, avec bouton Passer.",
+ "animations": [
+  "ouverture-orchestrée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:28,32-37",
+  "css": "assets/css/site.css:172-184",
+  "js": "assets/js/home.js:48-75 ; assets/js/engrave.js"
+ },
+ "medias": {},
+ "pieges": [
+  "décider dans un script du head (sessionStorage) pour éviter le flash du contenu",
+  "titre du héros lisible vers 2,6 s : ne pas allonger"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

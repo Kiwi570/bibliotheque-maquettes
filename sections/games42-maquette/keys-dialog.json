@@ -1,0 +1,42 @@
+{
+ "id": "games42-maquette/keys-dialog",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "anniversaire",
+  "machine-a-remonter-le-temps"
+ ],
+ "titre": "Chasse aux trois clés",
+ "role": "outil-interactif",
+ "description": "Trois clés sont cachées dans les pages ; un clic fait voler la clé jusqu'au compteur de l'en-tête (ou de la barre du bas), l'annonce passe par une région aria-live, et la troisième ouvre une fenêtre de récompense. Progression mémorisée.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:672-687",
+  "css": "assets/css/main.css:583-600",
+  "js": "assets/js/core.js:372-415"
+ },
+ "medias": {},
+ "pieges": [
+  "voler vers le compteur visible (en-tête ou barre du bas selon le format)",
+  "dialog natif avec showModal ; stockage local entouré de try"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

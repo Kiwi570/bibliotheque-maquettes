@@ -1,0 +1,43 @@
+{
+ "id": "francis-gerardin-maquette/band-5",
+ "maquette": "francis-gerardin-maquette",
+ "page": "index",
+ "titre": "De Saint-Dié à Strasbourg",
+ "role": "carte",
+ "description": "Carte du Grand Est dessinée en SVG à la main (projection simple) : la route du parcours se trace d'étape en étape, villes et années annotées au stylo.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:242-254",
+  "css": "assets/css/main.css:419-443",
+  "js": "assets/js/route.js:1-77 ; assets/js/main.js:417-427"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/band-5-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/band-5-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/band-5-p960.mp4"
+ },
+ "pieges": [
+  "coordonnées réelles projetées (LON0, LAT0, KX, KY) : recalculer pour une autre région",
+  "la route est lissée (smooth) avant le tracé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 978,
+  "hauteur_m390": 809,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

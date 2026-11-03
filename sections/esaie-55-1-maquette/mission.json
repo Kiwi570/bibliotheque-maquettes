@@ -1,0 +1,44 @@
+{
+ "id": "esaie-55-1-maquette/mission",
+ "maquette": "esaie-55-1-maquette",
+ "page": "index",
+ "titre": "Six axes de mission",
+ "role": "services",
+ "description": "Section épinglée : les six axes défilent en galerie horizontale de cartes photo, chacune avec son nombre d'actions ; compteur et indication « continuez à défiler ».",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:150-217",
+  "css": "assets/css/main.css:269-301",
+  "js": "assets/js/accueil.js:137-180"
+ },
+ "medias": {
+  "capture": "medias/esaie-55-1-maquette/mission-p1440.jpg",
+  "capture_m390": "medias/esaie-55-1-maquette/mission-m390.jpg",
+  "video": "medias/esaie-55-1-maquette/mission-p960.mp4"
+ },
+ "pieges": [
+  "sans anticipatePin depuis 5cf9ad0 (à-coup à l'entrée)",
+  "même mécanique que le module galerie-horizontale-epinglee"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 741,
+  "epinglee": true,
+  "scrolltriggers": 15
+ }
+}

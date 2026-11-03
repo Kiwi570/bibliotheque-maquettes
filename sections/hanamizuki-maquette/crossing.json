@@ -1,0 +1,44 @@
+{
+ "id": "hanamizuki-maquette/crossing",
+ "maquette": "hanamizuki-maquette",
+ "page": "index",
+ "titre": "Traversée sur la carte",
+ "role": "carte",
+ "description": "Carte de la baie à partir de la vraie côte : le littoral se dessine, l'île se remplit, les routes et les bateaux suivent, débarcadères qui pulsent ; distance en grand chiffre et légende des trajets.",
+ "animations": [
+  "masque",
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:237-258",
+  "css": "assets/css/site.css:426-453",
+  "js": "assets/js/home.js:69-78 ; assets/js/map.js:30-169"
+ },
+ "medias": {
+  "capture": "medias/hanamizuki-maquette/crossing-p1440.jpg",
+  "capture_m390": "medias/hanamizuki-maquette/crossing-m390.jpg",
+  "video": "medias/hanamizuki-maquette/crossing-p960.mp4"
+ },
+ "pieges": [
+  "la côte vient de données publiques simplifiées : garder la source et l'échelle",
+  "routes et débarcadères marqués indicatifs"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1312,
+  "hauteur_m390": 1395,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

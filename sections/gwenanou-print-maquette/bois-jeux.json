@@ -1,0 +1,45 @@
+{
+ "id": "gwenanou-print-maquette/bois-jeux",
+ "maquette": "gwenanou-print-maquette",
+ "page": "bois",
+ "titre": "Galeries découpées au laser",
+ "role": "galerie",
+ "description": "Galeries de photos par collection : un cache se retire derrière le trait du laser qui découpe chaque photo, visionneuse au clic ; billes de dames chinoises qui roulent jusqu'à leur trou sur la collection jeux.",
+ "animations": [
+  "masque",
+  "révélation-image",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "bois.html:99",
+  "css": "assets/css/site.css:539-577",
+  "js": "assets/js/bois.js:27-54,95-135"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/bois-jeux-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/bois-jeux-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/bois-jeux-p960.mp4"
+ },
+ "pieges": [
+  "les galeries sont générées depuis les données : la révélation se branche après le rendu",
+  "les billes ne roulent qu'une fois, et sont posées directement en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1497,
+  "hauteur_m390": 1192,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

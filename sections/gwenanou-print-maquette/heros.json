@@ -1,0 +1,46 @@
+{
+ "id": "gwenanou-print-maquette/heros",
+ "maquette": "gwenanou-print-maquette",
+ "page": "index",
+ "titre": "Prénom gravé en direct",
+ "role": "ouverture",
+ "description": "Héros : le visiteur tape un prénom et le laser le grave en direct sur la photo d'une planche de noyer posée en perspective (homographie), balayage ligne à ligne avec brûlure qui garde le grain, braise, fumée et étincelles en canvas 2D. Repli : texte gravé final sous réduction des animations.",
+ "animations": [
+  "canvas-2d",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:87-119",
+  "css": "assets/css/site.css:185-215",
+  "js": "assets/js/engrave.js ; assets/js/home.js:12-47"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/heros-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/heros-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/heros-p960.mp4"
+ },
+ "pieges": [
+  "attendre les polices avant de graver, sinon le tracé part avec la police de repli",
+  "le quadrilatère de la planche dépend de la photo (object-fit: cover) : le recalculer au redimensionnement",
+  "le balayage s'arrête hors écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 956,
+  "hauteur_m390": 1045,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

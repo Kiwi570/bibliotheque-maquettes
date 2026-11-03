@@ -1,0 +1,41 @@
+{
+ "id": "h-renovation-maquette/servicetype-isolation-pertes-chaleur",
+ "maquette": "h-renovation-maquette",
+ "page": "servicetype/isolation",
+ "titre": "Maison thermique",
+ "role": "outil-interactif",
+ "description": "Maison vue en caméra thermique : un interrupteur isoler / ne pas isoler fait passer les zones de déperdition du rouge au bleu, avec le pourcentage de pertes par zone (chiffre sourcé).",
+ "animations": [
+  "filtre-anime"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "servicetype/isolation.html:102-187",
+  "css": "assets/css/main.css:962-985",
+  "js": "assets/js/univers.js:9-71"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/servicetype-isolation-pertes-chaleur-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/servicetype-isolation-pertes-chaleur-m390.jpg",
+  "video": "medias/h-renovation-maquette/servicetype-isolation-pertes-chaleur-p960.mp4"
+ },
+ "pieges": [
+  "le chiffre de pertes doit être sourcé",
+  "l'interrupteur est un vrai bouton aria-pressed"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1185,
+  "hauteur_m390": 1370,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

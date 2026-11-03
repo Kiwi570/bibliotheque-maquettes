@@ -1,0 +1,44 @@
+{
+ "id": "goodlife-maquette/nav",
+ "maquette": "goodlife-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "planning",
+  "tarifs"
+ ],
+ "titre": "Navigation",
+ "role": "menu",
+ "description": "Barre de navigation fixe en pastille : logo, cinq liens, état d'ouverture en direct (« Fermé bientôt · 20h ») et bouton Réserver ; menu plein écran sur téléphone.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:47-64",
+  "css": "assets/css/style.css:87-110,119,509-514,555",
+  "js": "assets/js/core.js:188-206,251-277,280-294"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/nav-p1440.jpg"
+ },
+ "pieges": [
+  "l'état ouvert/fermé se calcule à l'heure locale du club, pas à celle du visiteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 74,
+  "hauteur_m390": 64,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

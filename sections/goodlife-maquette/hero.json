@@ -1,0 +1,50 @@
+{
+ "id": "goodlife-maquette/hero",
+ "maquette": "goodlife-maquette",
+ "page": "index",
+ "titre": "Rideau de palmes",
+ "role": "ouverture",
+ "description": "Héros épinglé : trois couches de palmes en WebGL (OGL) avec vent, ombres portées et translucidité dorée s'écartent au défilement pour révéler la photo de la salle ; titre découpé par lettres, pastille du prix qui tombe en rebond. Repli en canvas 2D par couches sans WebGL ou en mode calme.",
+ "animations": [
+  "webgl-shader",
+  "section-fixée",
+  "progression-fixée",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:91-118",
+  "css": "assets/css/style.css:171-203",
+  "js": "assets/js/leaves-gl.js ; assets/js/home.js:16-64,105-137"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/goodlife-maquette/hero-m390.jpg",
+  "video": "medias/goodlife-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "photo de fond amateur non remplacée (reste important de l'audit) : la mécanique vaut 5, la section n'est pas reprenable telle quelle",
+  "le repli 2D doit suivre la même progression que le WebGL (setFallback)",
+  "trois textures de palmes à charger avant d'ouvrir"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

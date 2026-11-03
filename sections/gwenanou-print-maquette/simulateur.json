@@ -1,0 +1,42 @@
+{
+ "id": "gwenanou-print-maquette/simulateur",
+ "maquette": "gwenanou-print-maquette",
+ "page": "index",
+ "titre": "Essayez avant de commander",
+ "role": "outil-interactif",
+ "description": "Simulateur : choix de la matière (six pastilles), de l'écriture (trois polices) et du texte sur deux lignes ; le laser grave l'aperçu sur la plaque de la matière choisie, avec prix de départ et lien vers la demande.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "simulateur",
+  "configurateur"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:148-191",
+  "css": "assets/css/site.css:273-302",
+  "js": "assets/js/home.js:247-273 ; assets/js/engrave.js"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/simulateur-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/simulateur-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/simulateur-p960.mp4"
+ },
+ "pieges": [
+  "limiter le texte (longueur et lignes) avant de graver",
+  "annuler la gravure en cours quand le choix change"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1036,
+  "hauteur_m390": 1313,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

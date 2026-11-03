@@ -1,0 +1,41 @@
+{
+ "id": "francis-gerardin-maquette/formateur-page-hero",
+ "maquette": "francis-gerardin-maquette",
+ "page": "formateur",
+ "titre": "Mots qui improvisent",
+ "role": "ouverture",
+ "description": "En-tête nuit de la page formateur : les mots-clés (imagination, écoute, concentration…) se brouillent puis se recomposent (ScrambleText) à largeur figée par un double invisible, sans décaler la mise en page.",
+ "animations": [
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "formateur.html:65-84",
+  "css": "assets/css/main.css:590-600,929-932",
+  "js": "assets/js/main.js:386-397"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/formateur-page-hero-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/formateur-page-hero-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/formateur-page-hero-p960.mp4"
+ },
+ "pieges": [
+  "double invisible (w-ghost) pour figer la largeur : sans lui, CLS de 0,25 à 0,86 avant correction"
+ ],
+ "mesures": {
+  "hauteur_p1440": 914,
+  "hauteur_m390": 893,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}

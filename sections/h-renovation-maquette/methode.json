@@ -1,0 +1,44 @@
+{
+ "id": "h-renovation-maquette/methode",
+ "maquette": "h-renovation-maquette",
+ "page": "index",
+ "titre": "Chantier rang par rang",
+ "role": "étapes",
+ "description": "Les étapes du chantier défilent pendant qu'un toit SVG se construit au scrub : rangs d'ardoises qui tombent un à un, faîtage qui s'étire, gouttières tracées, cheminée posée ; le dessin reste collant à côté des étapes.",
+ "animations": [
+  "progression-fixée",
+  "morphing",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:250-297",
+  "css": "assets/css/main.css:464-481",
+  "js": "assets/js/accueil.js:88-117"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/methode-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/methode-m390.jpg",
+  "video": "medias/h-renovation-maquette/methode-p960.mp4"
+ },
+ "pieges": [
+  "le dessin est en position sticky, pas épinglé : la colonne des étapes donne la durée",
+  "grouper les ardoises par rang (data-row) pour une timeline lisible"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3398,
+  "hauteur_m390": 2992,
+  "epinglee": false,
+  "scrolltriggers": 13
+ }
+}

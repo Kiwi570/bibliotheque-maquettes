@@ -1,0 +1,55 @@
+{
+ "id": "h-renovation-maquette/services-cave-humide-methode",
+ "maquette": "h-renovation-maquette",
+ "page": "services/cave-humide",
+ "pages": [
+  "services/cave-humide",
+  "services/demoussage-facade",
+  "services/demoussage-toiture",
+  "services/hydrofuge-facade",
+  "services/nettoyage-facade",
+  "services/nettoyage-terrasse",
+  "services/nettoyage-toiture-amiante",
+  "services/peinture-toiture",
+  "services/ravalement-de-facade",
+  "services/refection-toiture",
+  "services/traitement-de-bois-de-charpente"
+ ],
+ "titre": "Méthode en gouttière",
+ "role": "méthode",
+ "description": "Étapes de la méthode le long d'une gouttière verticale où l'eau descend au défilement et allume chaque étape.",
+ "animations": [
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "services/cave-humide.html:134-150",
+  "css": "assets/css/main.css:834-860",
+  "js": "assets/js/fiche.js:31-53"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/services-cave-humide-methode-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/services-cave-humide-methode-m390.jpg",
+  "video": "medias/h-renovation-maquette/services-cave-humide-methode-p960.mp4"
+ },
+ "pieges": [
+  "les étapes partent de x: 30 et dépassent de l'écran, masqué par le clip (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1033,
+  "hauteur_m390": 1294,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

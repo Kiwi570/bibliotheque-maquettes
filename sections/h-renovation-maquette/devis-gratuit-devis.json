@@ -1,0 +1,41 @@
+{
+ "id": "h-renovation-maquette/devis-gratuit-devis",
+ "maquette": "h-renovation-maquette",
+ "page": "devis-gratuit",
+ "titre": "Devis en quatre étapes",
+ "role": "contact",
+ "description": "Demande de devis en quatre étapes : univers, prestations à cocher selon l'univers, urgence et photos (aperçu des fichiers), coordonnées, puis récapitulatif ; validation accessible étape par étape, ancre lue pour préremplir depuis le diagnostic. Rien n'est envoyé, c'est annoncé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "devis-gratuit.html:78-186",
+  "css": "assets/css/main.css:648-709",
+  "js": "assets/js/devis.js"
+ },
+ "medias": {
+  "capture": "medias/h-renovation-maquette/devis-gratuit-devis-p1440.jpg",
+  "capture_m390": "medias/h-renovation-maquette/devis-gratuit-devis-m390.jpg",
+  "video": "medias/h-renovation-maquette/devis-gratuit-devis-p960.mp4"
+ },
+ "pieges": [
+  "focus sur le premier champ invalide, erreurs reliées par aria-invalid",
+  "les cases de l'étape 2 dépendent de l'univers choisi : les reconstruire, pas les masquer"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1209,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

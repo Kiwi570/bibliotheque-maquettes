@@ -1,0 +1,46 @@
+{
+ "id": "icc-maquette/en-junior-impact-maker-travaux",
+ "maquette": "icc-maquette",
+ "page": "en/junior-impact-maker",
+ "pages": [
+  "en/junior-impact-maker",
+  "junior-impact-maker"
+ ],
+ "titre": "Couvertures génératives",
+ "role": "portfolio",
+ "description": "Grille des travaux de recherche dont chaque couverture est une constellation générée en canvas 2D à partir du titre (même titre, même dessin), avec inclinaison au survol.",
+ "animations": [
+  "canvas-2d",
+  "survol-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "en/junior-impact-maker.html:200-207",
+  "css": "assets/css/main.css:724-735",
+  "js": "assets/js/jim.js:88-119"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/en-junior-impact-maker-travaux-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/en-junior-impact-maker-travaux-m390.jpg",
+  "video": "medias/icc-maquette/en-junior-impact-maker-travaux-p960.mp4"
+ },
+ "pieges": [
+  "hacher le titre (FNV) pour la graine du dessin",
+  "redessiner au changement de taille, pas à chaque frame"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2025,
+  "hauteur_m390": 2324,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

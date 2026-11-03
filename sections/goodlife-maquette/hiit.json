@@ -1,0 +1,44 @@
+{
+ "id": "goodlife-maquette/hiit",
+ "maquette": "goodlife-maquette",
+ "page": "index",
+ "titre": "Chrono H.I.I.T",
+ "role": "outil-interactif",
+ "description": "Section sombre épinglée : un anneau SVG et un chrono décomptent trois rounds de 20 s d'effort et 10 s de récupération au rythme du défilement, la section change de teinte entre effort et récup, bips optionnels.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:169-191",
+  "css": "assets/css/style.css:253-272",
+  "js": "assets/js/home.js:163-184"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/hiit-p1440.jpg",
+  "capture_m390": "medias/goodlife-maquette/hiit-m390.jpg",
+  "video": "medias/goodlife-maquette/hiit-p960.mp4"
+ },
+ "pieges": [
+  "anti-rebond sur le changement de phase (500 ms) sinon la teinte clignote au défilement rapide",
+  "le son reste coupé par défaut"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": true,
+  "scrolltriggers": 4
+ }
+}

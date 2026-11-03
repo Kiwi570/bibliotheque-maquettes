@@ -1,0 +1,41 @@
+{
+ "id": "games42-maquette/anniversaire-calcul",
+ "maquette": "games42-maquette",
+ "page": "anniversaire",
+ "titre": "Combien ça coûte ?",
+ "role": "calculateur",
+ "description": "Calculateur : choix de la formule et du nombre d'enfants (bornes par formule), total et détail mis à jour avec une pulsation.",
+ "animations": [
+  "compteur"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "anniversaire.html:229-262",
+  "css": "assets/css/main.css:708-778",
+  "js": "assets/js/anniv.js:73-93"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/anniversaire-calcul-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/anniversaire-calcul-m390.jpg",
+  "video": "medias/games42-maquette/anniversaire-calcul-p960.mp4"
+ },
+ "pieges": [
+  "les prix et bornes viennent de data.js (FORMULES)",
+  "annoncer le total par aria-live"
+ ],
+ "mesures": {
+  "hauteur_p1440": 956,
+  "hauteur_m390": 1409,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,836 @@
+{
+  "maquette": {
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "activite": [
+      "spectacle",
+      "tourisme"
+    ],
+    "concept": [
+      "jeu",
+      "voyage"
+    ],
+    "ambiance": [
+      "sombre",
+      "nocturne",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--nuit",
+      "texte": "--lune",
+      "accent": "--marque",
+      "secondaire": "--sorcier"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "portail lumineux en WebGL fixe qui suit le défilement et change de monde à chaque salle",
+      "ouverture par un cadenas qui s'ouvre sur un trou circulaire",
+      "cadenas à molettes qui propose les missions et le prix selon l'équipe",
+      "couloir des portails épinglé avec aimantation sur chaque monde",
+      "chasse aux trois clés cachées avec récompense, chrono 60:00 qui suit la lecture"
+    ],
+    "reserves": [
+      "texte de « Zéro frayeur » peu lisible sur l'anneau lumineux en 1920 px",
+      "aplat blanc à l'entrée des cartes claires",
+      "âge minimum de la FAQ à trancher par le client"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "progression-fixée",
+      "compteur",
+      "masque",
+      "parallaxe",
+      "apparition-au-défilement",
+      "révélation-image",
+      "curseur-personnalisé",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "calculateur",
+      "configurateur",
+      "jeu",
+      "carte-interactive",
+      "mode-calme"
+    ],
+    "change_depuis_audit": "5 commits après la correction (82dad2e → 4ae8c42) : démarrage fluide, défilement natif, portail recentré et stabilisé, nouveau cadenas, note des avis en molettes. Version en ligne vérifiée identique au dépôt ; classée sur cette version.",
+    "accueil": "haut"
+  },
+  "sections": {
+    "intro": {
+      "titre": "Ouverture au cadenas",
+      "role": "ouverture",
+      "description": "Calque d'ouverture : un cadenas s'ouvre, puis un trou circulaire s'agrandit depuis lui et révèle la page ; joué une seule fois par session et sauté à l'arrivée par le voile ou en mode calme.",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "sans_capture": true,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:63-83",
+        "css": "assets/css/main.css:265-281",
+        "js": "assets/js/home.js:239-288"
+      },
+      "pieges": [
+        "mémoriser la vue en sessionStorage (avec try) pour ne pas rejouer l'ouverture à chaque page",
+        "ne lancer l'ouverture qu'une fois polices, scènes et premier fond prêts"
+      ]
+    },
+    "portal": {
+      "titre": "Portail vivant",
+      "role": "decor",
+      "description": "Fond WebGL fixe (OGL) : l'image du monde traversé tourbillonne autour d'un anneau lumineux et passe d'un monde à l'autre par une dissolution ; il plonge dans le portail en quittant l'ouverture. Sans WebGL, fondu enchaîné d'images en CSS.",
+      "animations": [
+        "webgl-shader",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "ogl",
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:117",
+        "css": "assets/css/main.css:139-146",
+        "js": "assets/js/portal.js:142-411 ; assets/js/home.js:307-312 ; assets/js/core.js:158-215"
+      },
+      "pieges": [
+        "mettre le rendu en pause sous les sections claires qui le cachent (pauseUnderLightSections)",
+        "la position de l'anneau est donnée en fraction de l'image : la recalculer au redimensionnement selon le cadrage cover",
+        "repli CSS sans WebGL, sans second téléchargement"
+      ]
+    },
+    "notice": {
+      "titre": "Bandeau d'information",
+      "role": "barre-fixe",
+      "description": "Bandeau d'annonce au-dessus de l'en-tête, masqué une fois fermé ; sa hauteur est réservée pour ne pas faire sauter la page.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "header": {
+      "titre": "En-tête",
+      "role": "menu",
+      "description": "En-tête collant : logo, liens des missions et occasions, compteur des clés trouvées, bouton Mode calme, téléphone et bouton Réserver.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu téléphone",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone ; le reste de la page devient inerte pendant l'ouverture et Échap le ferme.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "haut": {
+      "titre": "Passez le portail",
+      "role": "ouverture",
+      "description": "Héros de l'accueil : grand titre, accroche, deux boutons et preuves (note Google, accès) devant le portail ; au défilement la caméra plonge dans l'anneau.",
+      "animations": [
+        "révélation-texte",
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "tout l'effet vient du portail en fond : la section seule n'est qu'un titre"
+      ]
+    },
+    "trouver": {
+      "titre": "Cadenas des missions",
+      "role": "outil-interactif",
+      "description": "Trois molettes de cadenas (équipe, âge, nombre de joueurs) à faire tourner au doigt, à la molette ou au clavier ; le cadenas s'ouvre sur les missions adaptées avec leur prix calculé.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:188-228",
+        "css": "assets/css/main.css:315-363",
+        "js": "assets/js/home.js:48-221"
+      },
+      "pieges": [
+        "chaque molette est un spinbutton (aria-valuenow, flèches, Page haut/bas)",
+        "les règles de suggestion et les prix viennent de data.js, jamais du HTML"
+      ]
+    },
+    "missions": {
+      "titre": "Couloir des portails",
+      "role": "galerie",
+      "description": "Section épinglée : les cinq mondes défilent à l'horizontale, chacun change le monde affiché par le portail ; à l'arrêt, aimantation douce sur le monde le plus proche, et un bouton atteint au clavier fait venir son monde. Pile verticale sur téléphone.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:231-242",
+        "css": "assets/css/main.css:364-399",
+        "js": "assets/js/home.js:9-47,313-401"
+      },
+      "pieges": [
+        "anticipatePin encore présent dans le code : à retirer en réutilisant",
+        "calculer la distance jusqu'au dernier monde, pas scrollWidth (un débordement décoratif la fausse)",
+        "refreshPriority plus haut que les scènes situées dessous",
+        "suspendre l'aimantation pendant un défilement automatique ou une prise en main clavier"
+      ]
+    },
+    "coffres": {
+      "titre": "Un coffre, vraiment ?",
+      "role": "offre",
+      "description": "Un coffre en SVG s'ouvre au défilement : le couvercle se soulève, des étincelles en jaillissent, puis les cartes des coffres apparaissent.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:245-345",
+        "css": "assets/css/main.css:400-420",
+        "js": "assets/js/home.js:402-431"
+      },
+      "pieges": [
+        "les étincelles sont créées en JS : les limiter sur téléphone"
+      ]
+    },
+    "frayeur": {
+      "titre": "Zéro frayeur",
+      "role": "preuves",
+      "description": "Une porte entrouverte laisse passer une lumière qui gagne la pièce à mesure qu'on approche, à côté de quatre engagements rassurants.",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "texte peu lisible sur l'anneau lumineux en 1920 px (reste de l'audit)"
+      ]
+    },
+    "anniversaires": {
+      "titre": "Anniversaire, zéro logistique",
+      "role": "offre",
+      "description": "Offre anniversaire sur fond clair : prix mis en avant et frise horaire dont les bougies s'allument au défilement, avec photo en arche.",
+      "animations": [
+        "apparition-au-défilement",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "aplat blanc à l'entrée des cartes claires (reste de l'audit)"
+      ]
+    },
+    "avis": {
+      "titre": "Note en molettes",
+      "role": "preuves",
+      "description": "La note Google roule chiffre par chiffre comme les molettes du cadenas, puis les étoiles se remplissent ; recommandation Petit Futé et chèques vacances à côté.",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:399-426",
+        "css": "assets/css/main.css:461-486",
+        "js": "assets/js/home.js:448-450 ; assets/js/core.js:476-531"
+      },
+      "pieges": [
+        "le chiffre final transparent réserve la largeur : rien ne bouge autour pendant le roulement"
+      ]
+    },
+    "pros": {
+      "titre": "Écoles, seniors, entreprises",
+      "role": "services",
+      "description": "Offres de groupe en cartes qui s'empilent au défilement, avec affiche et listes de conditions.",
+      "animations": [
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadeau": {
+      "titre": "Bon cadeau",
+      "role": "offre",
+      "description": "Bon cadeau illustré qui s'incline sous la souris, avec conditions et deux boutons.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "infos": {
+      "titre": "Infos pratiques",
+      "role": "contact",
+      "description": "Plan d'accès dont le trajet se dessine, horaires de la semaine et statut d'ouverture calculé en direct à l'heure de Paris (« Fermé, ouvre demain à 14 h »).",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:516-577",
+        "css": "assets/css/main.css:524-547",
+        "js": "assets/js/core.js:272-333 ; assets/js/home.js:454-457"
+      },
+      "pieges": [
+        "calculer l'heure dans le fuseau du lieu (Intl, Europe/Paris), pas celui du visiteur",
+        "les horaires viennent de data.js, avec les vacances scolaires à part"
+      ]
+    },
+    "faq": {
+      "titre": "Vos questions",
+      "role": "faq",
+      "description": "Questions fréquentes en accordéons details/summary sur fond nuit.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "âge minimum à trancher par le client (reste de l'audit)"
+      ]
+    },
+    "final": {
+      "titre": "Prêts à passer le portail ?",
+      "role": "appel",
+      "description": "Appel final centré devant le portail : titre, phrase, Réserver et téléphone.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "footer": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page en quatre colonnes (missions, occasions, réseaux, coordonnées), liens légaux et bouton Mode calme.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chrono": {
+      "titre": "Chrono 60:00",
+      "role": "decor",
+      "description": "Chrono fixe en forme d'anneau qui décompte de 60:00 au fil de la lecture de la page ; sur téléphone il rejoint la barre d'actions du bas.",
+      "animations": [
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:658-661",
+        "css": "assets/css/main.css:583-600",
+        "js": "assets/js/core.js:334-356"
+      },
+      "pieges": [
+        "le texte du chrono est aria-hidden : c'est un décor, pas un minuteur"
+      ]
+    },
+    "actionbar": {
+      "titre": "Barre d'actions",
+      "role": "barre-fixe",
+      "description": "Barre fixe du téléphone (chrono, Appeler, Réserver) qui n'apparaît qu'une fois le bouton du héros sorti de l'écran.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "veil": {
+      "titre": "Voile de transition",
+      "role": "transition-de-page",
+      "description": "Voile qui couvre la page avant une navigation interne et se retire à l'arrivée ; la page reste couverte dès le premier affichage quand on arrive par le voile.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": []
+    },
+    "keys-live": {
+      "ignorer": "région aria-live de la chasse aux clés, décrite dans keys-dialog"
+    },
+    "keys-dialog": {
+      "titre": "Chasse aux trois clés",
+      "role": "outil-interactif",
+      "description": "Trois clés sont cachées dans les pages ; un clic fait voler la clé jusqu'au compteur de l'en-tête (ou de la barre du bas), l'annonce passe par une région aria-live, et la troisième ouvre une fenêtre de récompense. Progression mémorisée.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "sans_capture": true,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:672-687",
+        "css": "assets/css/main.css:583-600",
+        "js": "assets/js/core.js:372-415"
+      },
+      "pieges": [
+        "voler vers le compteur visible (en-tête ou barre du bas selon le format)",
+        "dialog natif avec showModal ; stockage local entouré de try"
+      ]
+    },
+    "404-page-hero": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable aux couleurs du portail : « Ce portail ne mène nulle part » et retour à l'accueil.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "anniversaire-page-hero": {
+      "titre": "Héros anniversaire",
+      "role": "ouverture",
+      "description": "Héros de la page anniversaire : titre, accroche, deux boutons et photo d'enfants en arche.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "anniversaire-formules": {
+      "titre": "Trois formules",
+      "role": "tarifs",
+      "description": "Trois formules anniversaire en cartes avec prix, contenu et bouton, celle du mercredi mise en avant.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "anniversaire-deroule": {
+      "titre": "Le mercredi minute par minute",
+      "role": "étapes",
+      "description": "Déroulé horaire en frise verticale dont les points s'allument un à un ; deux onglets accessibles (départ à 14 h ou 15 h) changent les horaires.",
+      "animations": [
+        "progression-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "anniversaire.html:196-227",
+        "css": "assets/css/main.css:863-900",
+        "js": "assets/js/anniv.js:21-72"
+      },
+      "pieges": [
+        "onglets au clavier (flèches, tabIndex roulant, aria-selected)",
+        "tout allumer d'un coup en mode calme"
+      ]
+    },
+    "anniversaire-calcul": {
+      "titre": "Combien ça coûte ?",
+      "role": "calculateur",
+      "description": "Calculateur : choix de la formule et du nombre d'enfants (bornes par formule), total et détail mis à jour avec une pulsation.",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "anniversaire.html:229-262",
+        "css": "assets/css/main.css:708-778",
+        "js": "assets/js/anniv.js:73-93"
+      },
+      "pieges": [
+        "les prix et bornes viennent de data.js (FORMULES)",
+        "annoncer le total par aria-live"
+      ]
+    },
+    "anniversaire-gouter": {
+      "titre": "Le goûter comprend",
+      "role": "services",
+      "description": "Contenu du goûter en liste illustrée, avec un encadré allergies à compléter.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "anniversaire-invitations": {
+      "titre": "Invitations à imprimer",
+      "role": "galerie",
+      "description": "Enveloppes colorées par mission, chacune avec son invitation à télécharger.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "anniversaire-faq": {
+      "ignorer": "variante de faq"
+    },
+    "anniversaire-final": {
+      "ignorer": "variante de final"
+    },
+    "machine-a-remonter-le-temps-page-hero": {
+      "titre": "Héros d'une mission",
+      "role": "ouverture",
+      "description": "Héros d'une page mission : titre, chrono de la mission, caractéristiques en étiquettes et image du monde dans l'anneau.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machine-a-remonter-le-temps-mission": {
+      "titre": "Horloge épinglée",
+      "role": "étapes",
+      "description": "Section épinglée : les engrenages d'une horloge SVG tournent avec le défilement, les aiguilles s'emballent à la fin et les trois objets à retrouver se cochent un à un. Simple apparition sur téléphone.",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "machine-a-remonter-le-temps.html:144-183",
+        "css": "assets/css/main.css:834-862",
+        "js": "assets/js/machine.js:39-47,59-74"
+      },
+      "pieges": [
+        "rotations SVG par svgOrigin, pas transformOrigin",
+        "gsap.matchMedia pour basculer entre épinglage et simple apparition"
+      ]
+    },
+    "machine-a-remonter-le-temps-epoques": {
+      "titre": "Trois époques",
+      "role": "galerie",
+      "description": "Galerie horizontale épinglée : une aiguille glisse sur une règle d'époques pendant que chaque décor se révèle par un cercle qui s'ouvre et que les médaillons pivotent.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "machine-a-remonter-le-temps.html:185-205",
+        "css": "assets/css/main.css:834-862",
+        "js": "assets/js/machine.js:75-90"
+      },
+      "pieges": [
+        "les révélations utilisent containerAnimation : déclencher par rapport à la piste, pas à la page"
+      ]
+    },
+    "machine-a-remonter-le-temps-modes": {
+      "titre": "Trois modes de jeu",
+      "role": "offre",
+      "description": "Trois modes de jeu en cartes avec jauge de difficulté en arc qui se remplit.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machine-a-remonter-le-temps-diplome": {
+      "titre": "Diplôme",
+      "role": "preuves",
+      "description": "Diplôme de fin de mission qui pivote en parallaxe avec son sceau qui tourne.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machine-a-remonter-le-temps-tarifs": {
+      "titre": "Tarifs et calcul",
+      "role": "tarifs",
+      "description": "Grille des prix par nombre de joueurs et petit calculateur à boutons plus et moins.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machine-a-remonter-le-temps-autres": {
+      "titre": "Les autres mondes",
+      "role": "galerie",
+      "description": "Les autres missions en cartes arquées avec photo et caractéristiques.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machine-a-remonter-le-temps-final": {
+      "ignorer": "variante de final"
+    }
+  }
+}

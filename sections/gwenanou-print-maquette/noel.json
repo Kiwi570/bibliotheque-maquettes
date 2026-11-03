@@ -1,0 +1,44 @@
+{
+ "id": "gwenanou-print-maquette/noel",
+ "maquette": "gwenanou-print-maquette",
+ "page": "index",
+ "titre": "Noël se prépare",
+ "role": "offre",
+ "description": "Section saisonnière : décompte jusqu'à Noël (jours, heures, minutes), décorations suspendues à des fils qui se balancent, fond en parallaxe et produits de Noël avec ajout au panier.",
+ "animations": [
+  "parallaxe",
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:218-245",
+  "css": "assets/css/site.css:387-421",
+  "js": "assets/js/home.js:330-377"
+ },
+ "medias": {
+  "capture": "medias/gwenanou-print-maquette/noel-p1440.jpg",
+  "capture_m390": "medias/gwenanou-print-maquette/noel-m390.jpg",
+  "video": "medias/gwenanou-print-maquette/noel-p960.mp4"
+ },
+ "pieges": [
+  "après le 25 décembre, viser l'année suivante et changer le message",
+  "longueur des fils en pourcentage de la zone, recalculée au redimensionnement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1060,
+  "hauteur_m390": 1652,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

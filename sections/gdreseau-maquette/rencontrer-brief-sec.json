@@ -1,0 +1,44 @@
+{
+ "id": "gdreseau-maquette/rencontrer-brief-sec",
+ "maquette": "gdreseau-maquette",
+ "page": "rencontrer",
+ "titre": "Brief en cinq étapes",
+ "role": "contact",
+ "description": "Formulaire en cinq étapes (structure, besoin, lieu, créneau, coordonnées) avec barre de progression ; à chaque besoin coché, l'équipe proposée se compose dans la constellation à côté, puis des créneaux sont proposés selon le lieu et l'écran final récapitule la demande.",
+ "animations": [
+  "webgl-particules",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "rencontrer.html:87-156",
+  "css": "assets/css/main.css:589-647",
+  "js": "assets/js/site.js:1062-1236"
+ },
+ "medias": {
+  "capture": "medias/gdreseau-maquette/rencontrer-brief-sec-p1440.jpg",
+  "capture_m390": "medias/gdreseau-maquette/rencontrer-brief-sec-m390.jpg",
+  "video": "medias/gdreseau-maquette/rencontrer-brief-sec-p960.mp4"
+ },
+ "pieges": [
+  "valider chaque étape avant d'avancer et annoncer « Étape i sur n »",
+  "les créneaux sont calculés en heure de La Réunion : garder le fuseau du lieu choisi"
+ ],
+ "mesures": {
+  "hauteur_p1440": 885,
+  "hauteur_m390": 1142,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "icc-maquette/advisory-cartographie",
+ "maquette": "icc-maquette",
+ "page": "advisory",
+ "pages": [
+  "advisory",
+  "en/advisory"
+ ],
+ "titre": "Cartographie d'écosystème",
+ "role": "outil-interactif",
+ "description": "Graphe d'acteurs en canvas 2D (grappes par type disposées en couronne), légende en boutons qui filtre les types, infobulle au survol et bouton qui révèle les connexions potentielles avec compteurs ; données d'illustration annoncées.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "carte-interactive",
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "advisory.html:120-138",
+  "css": "assets/css/main.css:589-604",
+  "js": "assets/js/advisory.js:183-272"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/advisory-cartographie-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/advisory-cartographie-m390.jpg",
+  "video": "medias/icc-maquette/advisory-cartographie-p960.mp4"
+ },
+ "pieges": [
+  "dire que les données sont illustratives",
+  "graine aléatoire fixe pour un dessin stable"
+ ],
+ "mesures": {
+  "hauteur_p1440": 946,
+  "hauteur_m390": 1174,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

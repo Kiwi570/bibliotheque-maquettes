@@ -1,0 +1,50 @@
+{
+ "id": "games42-maquette/portal",
+ "maquette": "games42-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "anniversaire",
+  "machine-a-remonter-le-temps"
+ ],
+ "titre": "Portail vivant",
+ "role": "decor",
+ "description": "Fond WebGL fixe (OGL) : l'image du monde traversé tourbillonne autour d'un anneau lumineux et passe d'un monde à l'autre par une dissolution ; il plonge dans le portail en quittant l'ouverture. Sans WebGL, fondu enchaîné d'images en CSS.",
+ "animations": [
+  "webgl-shader",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "ogl",
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:117",
+  "css": "assets/css/main.css:139-146",
+  "js": "assets/js/portal.js:142-411 ; assets/js/home.js:307-312 ; assets/js/core.js:158-215"
+ },
+ "medias": {
+  "capture": "medias/games42-maquette/portal-p1440.jpg",
+  "capture_m390": "medias/games42-maquette/portal-m390.jpg"
+ },
+ "pieges": [
+  "mettre le rendu en pause sous les sections claires qui le cachent (pauseUnderLightSections)",
+  "la position de l'anneau est donnée en fraction de l'image : la recalculer au redimensionnement selon le cadrage cover",
+  "repli CSS sans WebGL, sans second téléchargement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

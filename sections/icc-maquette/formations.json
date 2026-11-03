@@ -1,0 +1,49 @@
+{
+ "id": "icc-maquette/formations",
+ "maquette": "icc-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index"
+ ],
+ "titre": "Catalogue épinglé filtrable",
+ "role": "offre",
+ "description": "Catalogue de formations en cartes (lieu, durée, public, prix) qui défile à l'horizontale pendant l'épinglage, barre de progression, filtres par public avec réorganisation Flip et annonce du nombre affiché ; au clavier, la carte qui reçoit le focus est amenée à l'écran. Défilement natif sur téléphone.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "flip"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "flip"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:135-210",
+  "css": "assets/css/main.css:311-340,816-840",
+  "js": "assets/js/home.js:164-207"
+ },
+ "medias": {
+  "capture": "medias/icc-maquette/formations-p1440.jpg",
+  "capture_m390": "medias/icc-maquette/formations-m390.jpg",
+  "video": "medias/icc-maquette/formations-p960.mp4"
+ },
+ "pieges": [
+  "refaire l'épinglage après chaque filtrage (la largeur de la piste change)",
+  "mise en page compacte pendant l'épinglage pour que titre, filtres et cartes tiennent dans l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1442,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

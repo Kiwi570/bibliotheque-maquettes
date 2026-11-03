@@ -1,0 +1,45 @@
+{
+ "id": "goodlife-maquette/zen",
+ "maquette": "goodlife-maquette",
+ "page": "index",
+ "titre": "Respiration zen",
+ "role": "offre",
+ "description": "Forfait zen : cercle de respiration qui guide inspiration et expiration (4 s), image qui ondule au survol par filtre SVG de turbulence et défilement ralenti dans la section.",
+ "animations": [
+  "filtre-anime",
+  "parallaxe",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "lenis"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:194-220",
+  "css": "assets/css/style.css:275-283",
+  "js": "assets/js/home.js:97-104,185-197"
+ },
+ "medias": {
+  "capture": "medias/goodlife-maquette/zen-p1440.jpg",
+  "capture_m390": "medias/goodlife-maquette/zen-m390.jpg",
+  "video": "medias/goodlife-maquette/zen-p960.mp4"
+ },
+ "pieges": [
+  "rendre le lerp de Lenis à la sortie de la section",
+  "cercle de respiration figé en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1046,
+  "hauteur_m390": 1148,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

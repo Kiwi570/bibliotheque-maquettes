@@ -1,0 +1,44 @@
+{
+ "id": "francis-gerardin-maquette/parcours-band",
+ "maquette": "francis-gerardin-maquette",
+ "page": "parcours",
+ "titre": "Frise 1987 → aujourd'hui",
+ "role": "étapes",
+ "description": "Frise horizontale épinglée sur trois lignes (journalisme, impro, formation) ; un grand compteur d'années avance avec le défilement. Glisser au doigt sous 900 px ou si l'écran fait moins de 860 px de haut.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "parcours.html:77-88",
+  "css": "assets/css/main.css:732-765",
+  "js": "assets/js/main.js:453-484 ; assets/js/interactions.js:25-62"
+ },
+ "medias": {
+  "capture": "medias/francis-gerardin-maquette/parcours-band-p1440.jpg",
+  "capture_m390": "medias/francis-gerardin-maquette/parcours-band-m390.jpg",
+  "video": "medias/francis-gerardin-maquette/parcours-band-p960.mp4"
+ },
+ "pieges": [
+  "compteur d'années calculé depuis la progression (1987 + p × 39,8)",
+  "pas d'épinglage sous 860 px de haut"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1165,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}
