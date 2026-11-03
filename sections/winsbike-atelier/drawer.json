@@ -1,0 +1,44 @@
+{
+ "id": "winsbike-atelier/drawer",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "boutique",
+  "mentions-legales",
+  "produit"
+ ],
+ "titre": "Tiroir panier",
+ "role": "outil-interactif",
+ "description": "Tiroir latéral du panier : la vignette du produit s'envole jusqu'au bouton panier, lignes avec options et quantités, jauge dynamométrique vers la livraison offerte, total et paiement simulé annoncé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:326-338",
+  "css": "assets/css/main.css:579-606",
+  "js": "assets/js/core.js:212-302"
+ },
+ "medias": {},
+ "pieges": [
+  "panier gardé en localStorage avec la clé des options : relire à chaque page",
+  "l'envol se coupe en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

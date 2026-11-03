@@ -1,0 +1,42 @@
+{
+ "id": "talon-libre-maquette/annexe-tarifs",
+ "maquette": "talon-libre-maquette",
+ "page": "annexe",
+ "titre": "Tarifs à la semaine",
+ "role": "tarifs",
+ "description": "Calendrier des semaines par saison où chaque semaine est un bouton avec son prix ; le récapitulatif épinglé calcule total, acompte, échéancier en jours ouvrables (fériés compris) et frise d'annulation.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "annexe.html:207-234",
+  "css": "assets/css/main.css:570-622",
+  "js": "assets/js/booking.js:1-208,302-331 ; assets/js/data.js"
+ },
+ "medias": {
+  "capture": "medias/talon-libre-maquette/annexe-tarifs-p1440.jpg",
+  "capture_m390": "medias/talon-libre-maquette/annexe-tarifs-m390.jpg",
+  "video": "medias/talon-libre-maquette/annexe-tarifs-p960.mp4"
+ },
+ "pieges": [
+  "le récapitulatif collant se cale sous la sous-navigation mesurée",
+  "les prix viennent des données du client, jamais inventés"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2104,
+  "hauteur_m390": 3077,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

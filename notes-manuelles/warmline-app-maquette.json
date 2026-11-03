@@ -1,0 +1,271 @@
+{
+  "maquette": {
+    "client": "prototype du logiciel Warmline (agent de réponse et de qualification des demandes pour agences immobilières de Dubaï) : console du directeur et appli du conseiller, données fictives",
+    "activite": [
+      "numérique",
+      "immobilier"
+    ],
+    "concept": [
+      "cockpit"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "#f3f1ec",
+      "texte": "#141a22",
+      "accent": "#ffb547",
+      "secondaire": "#0f1621"
+    },
+    "polices": {
+      "titres": "Instrument Sans",
+      "texte": "Instrument Sans",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "console SaaS entièrement jouable : demandes qui arrivent en direct (7 scénarios), reprise de la main d'un clic, compteurs et notifications",
+      "visite guidée en 12 étapes avec projecteur qui se déplace d'un élément à l'autre et déclenche une vraie demande",
+      "tableau des prospects par étape avec glisser-déposer, poignée au toucher et touche Espace au clavier",
+      "recherche ⌘K, thème clair ou sombre, transitions d'écran par View Transitions",
+      "appli du conseiller dans un téléphone sur ordinateur, synchronisée en direct avec la console"
+    ],
+    "reserves": [
+      "accueil statique sans ouverture ni effet signature (audit)",
+      "trois photos de biens hors sujet",
+      "titre « Conver… » tronqué et h1 absent sur Conversations et l'appli en téléphone",
+      "mentions légales à compléter"
+    ],
+    "animations": [
+      "apparition-au-défilement",
+      "compteur",
+      "transition-de-page",
+      "flip"
+    ],
+    "interactions": [
+      "simulateur",
+      "filtres",
+      "recherche",
+      "galerie-cliquable",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "acc-heros",
+    "dependances": [
+      "aucune"
+    ]
+  },
+  "sections": {
+    "acc-barre": {
+      "titre": "Barre de l'accueil",
+      "role": "menu",
+      "description": "Barre d'en-tête de l'accueil du prototype : marque, pastille « Prototype · données fictives » et lien vers le site vitrine.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "acc-heros": {
+      "titre": "Accueil du prototype",
+      "role": "ouverture",
+      "description": "Ouverture sobre sur fond crème : surtitre, titre avec accent en italique serif, promesse, puis bouton qui lance la visite guidée de la console (12 étapes, 3 minutes). Statique, sans effet d'entrée.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "l'audit note l'absence de moment fort à l'accueil"
+      ],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "acc-cartes": {
+      "titre": "Deux portes d'entrée",
+      "role": "offre",
+      "description": "Deux grandes cartes cliquables vers la console du directeur (aperçu écran) et l'appli du conseiller (aperçu téléphone), chacune avec libellé d'appareil, résumé et bouton.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "acc-conseils": {
+      "titre": "Conseils de démonstration",
+      "role": "faq",
+      "description": "Bloc repliable (details) qui donne en cinq points la marche à suivre pour présenter la démonstration, raccourcis clavier compris.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "mention-demo": {
+      "titre": "Mention de démonstration",
+      "role": "texte-legal",
+      "description": "Mention de bas de page qui précise que l'agence, les prospects, les biens, les prix et les chiffres sont fictifs.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "sans_capture": true,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "mention-demo-2": {
+      "ignorer": "lien vers les mentions légales, décrit avec mention-demo"
+    },
+    "404-acc-heros": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable sobre : « Cette page a refroidi. » avec accent en italique et lien de retour à l'accueil du prototype.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "scene-texte": {
+      "titre": "Appli du conseiller dans un téléphone",
+      "role": "outil-interactif",
+      "description": "Page de l'appli du conseiller : texte de présentation à gauche, téléphone dessiné en CSS à droite où l'appli tourne (Aujourd'hui, Dossiers, Messages, Agenda, Profil). Les dossiers qualifiés arrivent en notification ; l'appli se synchronise en direct avec une console ouverte dans un autre onglet. En plein écran sur téléphone.",
+      "animations": [
+        "apparition-au-défilement",
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "code": {
+        "html": "conseiller.html:25-43",
+        "css": "css/app.css:848-900",
+        "js": "js/conseiller.js ; js/noyau.js"
+      },
+      "pieges": [
+        "h1 absent de l'appli en téléphone (reste de l'audit)",
+        "la synchronisation entre onglets passe par le stockage local : prévoir le cas d'un seul onglet (l'appli simule alors ses propres demandes)"
+      ],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "app": {
+      "titre": "Console du directeur",
+      "role": "outil-interactif",
+      "description": "Application monopage rendue en JS : navigation latérale sombre, barre de recherche ⌘K, heure de Dubaï, pastille « Démo · fictif » et neuf écrans (En direct, Conversations, Prospects, Visites, Relances, Biens, Performance, Équipe, Réglages) chargés à la demande avec transition en fondu. Les demandes arrivent toutes seules, l'agent répond en direct, le directeur reprend la main d'un clic ; visite guidée en 12 étapes avec projecteur qui suit l'élément commenté ; tableau des prospects en glisser-déposer accessible au clavier.",
+      "animations": [
+        "compteur",
+        "transition-de-page",
+        "flip",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "simulateur",
+        "filtres",
+        "recherche",
+        "galerie-cliquable",
+        "mode-calme"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "medias": {
+        "capture": "medias/warmline-app-maquette/app-audit-p1440.jpg",
+        "capture_visite": "medias/warmline-app-maquette/app-audit-visite-p1440.jpg",
+        "capture_kanban": "medias/warmline-app-maquette/app-audit-kanban-p1440.jpg",
+        "capture_recherche": "medias/warmline-app-maquette/app-audit-recherche-p1440.jpg"
+      },
+      "code": {
+        "html": "console.html:26-30",
+        "css": "css/app.css:568-569,1182-1184",
+        "js": "js/console.js:59-112 ; js/guide.js:50-189 ; js/vues/prospects.js:38-182 ; js/composants.js:136-170"
+      },
+      "pieges": [
+        "titre « Conver… » tronqué sur téléphone et h1 absent sur Conversations (restes de l'audit)",
+        "un conteneur neuf à chaque écran pour que les écouteurs de l'écran précédent disparaissent",
+        "le projecteur de la visite guidée se replace au redimensionnement (replacer), jamais pendant l'animation"
+      ],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "mentions-legales-acc-heros": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Page de mentions légales en liste de définitions dont l'éditeur, l'hébergeur et le contact restent à compléter.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    }
+  }
+}

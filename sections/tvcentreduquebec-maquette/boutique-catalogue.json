@@ -1,0 +1,44 @@
+{
+ "id": "tvcentreduquebec-maquette/boutique-catalogue",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "boutique",
+ "titre": "Catalogue filtrable et comparateur",
+ "role": "produits",
+ "description": "Grille des cinq appareils avec filtres (prix maximum, stockage, tri, port Ethernet), cartes avec ajout au panier, puis comparateur côte à côte où les valeurs manquantes sont marquées « à compléter ».",
+ "animations": [
+  "flip",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "comparateur",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "boutique.html:97-125",
+  "css": "css/style.css:1065-1103",
+  "js": "js/boutique.js:115-204"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/boutique-catalogue-p1440.jpg",
+  "capture_m390": "medias/tvcentreduquebec-maquette/boutique-catalogue-m390.jpg",
+  "video": "medias/tvcentreduquebec-maquette/boutique-catalogue-p960.mp4"
+ },
+ "pieges": [
+  "CLS de 0,089 : réserver la hauteur de la grille (reste de l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2594,
+  "hauteur_m390": 4593,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

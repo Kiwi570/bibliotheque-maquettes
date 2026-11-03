@@ -1,0 +1,43 @@
+{
+ "id": "winsbike-atelier/atelier",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "titre": "Atelier et cassette horaire",
+ "role": "agenda",
+ "description": "Présentation de l'atelier sur fond clair : statut ouvert ou fermé calculé à l'heure de Paris, cassette de vélo en SVG dont les dents marquent les heures d'ouverture et l'aiguille l'heure actuelle, tableau des horaires et créneaux de rendez-vous.",
+ "animations": [
+  "apparition-au-défilement",
+  "masque"
+ ],
+ "interactions": [
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:197-246",
+  "css": "assets/css/main.css:432-495",
+  "js": "assets/js/home.js:278-342 ; assets/js/core.js:71-92"
+ },
+ "medias": {
+  "capture": "medias/winsbike-atelier/atelier-p1440.jpg",
+  "capture_m390": "medias/winsbike-atelier/atelier-m390.jpg",
+  "video": "medias/winsbike-atelier/atelier-p960.mp4"
+ },
+ "pieges": [
+  "fond clair qui casse le rythme de la page (reste de l'audit)",
+  "calculer l'heure dans le fuseau du lieu, pas celui du visiteur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2977,
+  "hauteur_m390": 3694,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "willowcamp-maquette/hero",
+ "maquette": "willowcamp-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index",
+  "nl/index"
+ ],
+ "titre": "Ronds dans l'étang",
+ "role": "ouverture",
+ "description": "Titre manuscrit et branches de saule qui pendent ; la photo aérienne du camp est une texture WebGL (OGL, Flowmap) où le curseur et le doigt font des ronds dans l'eau ; repli en cercles d'encre CSS sans WebGL ou en mode calme ; cadran des arrivées du jour sous les boutons.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:112-151",
+  "css": "assets/css/style.css:248-282",
+  "js": "assets/js/etang.js ; assets/js/accueil.js:83-105"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/hero-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/hero-m390.jpg",
+  "video": "medias/willowcamp-maquette/hero-p960.mp4"
+ },
+ "pieges": [
+  "limiter les ondes simultanées (6) et espacer celles du survol (260 ms)",
+  "tester WebGL avant de créer le Renderer, sinon erreur console"
+ ],
+ "mesures": {
+  "hauteur_p1440": 906,
+  "hauteur_m390": 998,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

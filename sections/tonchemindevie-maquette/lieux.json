@@ -1,0 +1,41 @@
+{
+ "id": "tonchemindevie-maquette/lieux",
+ "maquette": "tonchemindevie-maquette",
+ "page": "index",
+ "titre": "Nettoyage énergétique des lieux",
+ "role": "services",
+ "description": "Photo d'un intérieur couverte d'un voile de poussière en canvas 2D qui se nettoie pièce par pièce au défilement (trajet en zigzag) et sous le curseur ; liste des étapes et choix lieu de vie / environnement professionnel.",
+ "animations": [
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:201-226",
+  "css": "assets/css/site.css:380-383",
+  "js": "assets/js/site.js:418-501"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/lieux-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/lieux-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/lieux-p960.mp4"
+ },
+ "pieges": [
+  "couleurs du voile écrites en dur dans le JS (rgba) : à passer en variables à l'extraction",
+  "boucle arrêtée hors écran par IntersectionObserver, voile figé en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1335,
+  "hauteur_m390": 1689,
+  "epinglee": false,
+  "scrolltriggers": 8
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "id": "tonchemindevie-maquette/journees-bien-etre-chemin",
+ "maquette": "tonchemindevie-maquette",
+ "page": "journees-bien-etre",
+ "titre": "Gué des Journées",
+ "role": "agenda",
+ "description": "Les Journées à venir ou passées en pierres de gué : piste horizontale à défilement natif et aimantation, filtre à venir / déjà parcourues avec compteurs, flèches, et tiroir de détail au clic.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "journees-bien-etre.html:128-143",
+  "css": "assets/css/site.css:585-600",
+  "js": "assets/js/pages.js:11-88"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/journees-bien-etre-chemin-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/journees-bien-etre-chemin-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/journees-bien-etre-chemin-p960.mp4"
+ },
+ "pieges": [
+  "remettre scrollLeft à 0 au changement de filtre",
+  "boutons-filtres en aria-pressed"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1158,
+  "hauteur_m390": 1093,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

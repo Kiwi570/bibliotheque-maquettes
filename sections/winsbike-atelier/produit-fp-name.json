@@ -1,0 +1,45 @@
+{
+ "id": "winsbike-atelier/produit-fp-name",
+ "maquette": "winsbike-atelier",
+ "page": "produit",
+ "titre": "Fiche produit",
+ "role": "produits",
+ "description": "Fiche produit rendue depuis les données : galerie collante sur métal WebGL avec loupe, prix, référence, variantes, ajout au panier, points clés, géométrie du cadre en tableau et barre d'achat qui apparaît quand le bouton principal sort de l'écran.",
+ "animations": [
+  "webgl-shader",
+  "section-fixée"
+ ],
+ "interactions": [
+  "configurateur",
+  "panier-simule",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "produit.html:42-66",
+  "css": "assets/css/main.css:697-733",
+  "js": "assets/js/produit.js:10-103"
+ },
+ "medias": {
+  "capture": "medias/winsbike-atelier/produit-fp-name-p1440.jpg",
+  "capture_m390": "medias/winsbike-atelier/produit-fp-name-m390.jpg",
+  "video": "medias/winsbike-atelier/produit-fp-name-p960.mp4"
+ },
+ "pieges": [
+  "galerie trop haute en 1000×560 et 1024×640 (reste de l'audit)",
+  "réserver la hauteur avant le rendu JS (CLS 0,83 avant correction)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2652,
+  "hauteur_m390": 3086,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

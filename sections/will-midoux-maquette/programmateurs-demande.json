@@ -1,0 +1,41 @@
+{
+ "id": "will-midoux-maquette/programmateurs-demande",
+ "maquette": "will-midoux-maquette",
+ "page": "programmateurs",
+ "titre": "Demander une date",
+ "role": "contact",
+ "description": "Demande de date en quatre étapes (type d'événement, date et lieu, formule, coordonnées) avec barre de progression, validation par étape et récapitulatif.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "programmateurs.html:204-275",
+  "css": "css/main.css:687-753",
+  "js": "js/booking.js:57-169"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/programmateurs-demande-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/programmateurs-demande-m390.jpg",
+  "video": "medias/will-midoux-maquette/programmateurs-demande-p960.mp4"
+ },
+ "pieges": [
+  "focus sur le titre de l'étape à chaque changement",
+  "une adresse longue ne doit pas sortir de la carte du récapitulatif"
+ ],
+ "mesures": {
+  "hauteur_p1440": 824,
+  "hauteur_m390": 1190,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

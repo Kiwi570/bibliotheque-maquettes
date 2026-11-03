@@ -1,0 +1,42 @@
+{
+ "id": "tiki-cassis-maquette/evenements",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "titre": "Feu d'artifice depuis la mer",
+ "role": "agenda",
+ "description": "Liste des sorties feu d'artifice avec statut calculé (à venir, passé) et feux d'artifice en canvas 2D qui éclatent à côté.",
+ "animations": [
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:334-346",
+  "css": "css/style.css:467-472",
+  "js": "js/fireworks.js ; js/core.js:447-467 ; js/pricing.js:83-88"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/evenements-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/evenements-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/evenements-p960.mp4"
+ },
+ "pieges": [
+  "arrêter les feux hors écran ; image fixe sous réduction des animations",
+  "statut des dates calculé, jamais écrit en dur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1140,
+  "hauteur_m390": 1380,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

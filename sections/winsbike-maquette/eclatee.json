@@ -1,0 +1,44 @@
+{
+ "id": "winsbike-maquette/eclatee",
+ "maquette": "winsbike-maquette",
+ "page": "index",
+ "titre": "Vue éclatée du moyeu",
+ "role": "produits",
+ "description": "Planche technique sur papier millimétré épinglée : le moyeu se démonte pièce par pièce au défilement, avec cotes, légende numérotée qui allume la pièce correspondante (survol et clavier).",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "masque"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:97-118",
+  "css": "assets/css/site.css:1",
+  "js": "assets/js/home.js:29-36 (minifié : plages indicatives, sources absentes du dépôt)"
+ },
+ "medias": {
+  "capture": "medias/winsbike-maquette/eclatee-p1440.jpg",
+  "capture_m390": "medias/winsbike-maquette/eclatee-m390.jpg",
+  "video": "medias/winsbike-maquette/eclatee-p960.mp4"
+ },
+ "pieges": [
+  "anticipatePin encore présent dans home.js : à retirer à l'extraction",
+  "pièces SVG générées depuis un tableau de tracés : garder les data-n alignés avec la légende"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2811,
+  "hauteur_m390": 1565,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

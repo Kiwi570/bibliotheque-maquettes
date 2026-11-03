@@ -1,0 +1,42 @@
+{
+ "id": "winsbike-atelier/composeur",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "titre": "Kit atelier sur panneau perforé",
+ "role": "outil-interactif",
+ "description": "Liste d'outils à cocher : chaque outil coché s'accroche sur un panneau perforé et s'y balance avec une petite physique au pointeur ; le total roule au centime et une jauge dynamométrique indique la livraison offerte.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "configurateur",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:146-163",
+  "css": "assets/css/main.css:354-380",
+  "js": "assets/js/home.js:185-246 ; assets/js/core.js:212-230"
+ },
+ "medias": {
+  "capture": "medias/winsbike-atelier/composeur-p1440.jpg",
+  "capture_m390": "medias/winsbike-atelier/composeur-m390.jpg",
+  "video": "medias/winsbike-atelier/composeur-p960.mp4"
+ },
+ "pieges": [
+  "panneau d'outils serré en 1000×560 et 1024×640 (reste de l'audit)",
+  "physique coupée en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1426,
+  "hauteur_m390": 2216,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

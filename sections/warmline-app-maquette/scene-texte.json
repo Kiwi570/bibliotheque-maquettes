@@ -1,0 +1,41 @@
+{
+ "id": "warmline-app-maquette/scene-texte",
+ "maquette": "warmline-app-maquette",
+ "page": "conseiller",
+ "titre": "Appli du conseiller dans un téléphone",
+ "role": "outil-interactif",
+ "description": "Page de l'appli du conseiller : texte de présentation à gauche, téléphone dessiné en CSS à droite où l'appli tourne (Aujourd'hui, Dossiers, Messages, Agenda, Profil). Les dossiers qualifiés arrivent en notification ; l'appli se synchronise en direct avec une console ouverte dans un autre onglet. En plein écran sur téléphone.",
+ "animations": [
+  "apparition-au-défilement",
+  "compteur"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "conseiller.html:25-43",
+  "css": "css/app.css:848-900",
+  "js": "js/conseiller.js ; js/noyau.js"
+ },
+ "medias": {
+  "capture": "medias/warmline-app-maquette/scene-texte-p1440.jpg",
+  "video": "medias/warmline-app-maquette/scene-texte-p960.mp4"
+ },
+ "pieges": [
+  "h1 absent de l'appli en téléphone (reste de l'audit)",
+  "la synchronisation entre onglets passe par le stockage local : prévoir le cas d'un seul onglet (l'appli simule alors ses propres demandes)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 590,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

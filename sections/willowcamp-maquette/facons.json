@@ -1,0 +1,50 @@
+{
+ "id": "willowcamp-maquette/facons",
+ "maquette": "willowcamp-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index",
+  "nl/index"
+ ],
+ "titre": "Planche des façons de camper",
+ "role": "offre",
+ "description": "Quatre façons de camper défilent à droite pendant qu'une planche quadrillée collante à gauche redessine à la plume le croquis de la façon lue (tente, véhicule, cabane, roulotte) et fait glisser le lavis d'une silhouette à l'autre ; nuancier accessible pour la couleur de la cabane.",
+ "animations": [
+  "morphing",
+  "masque",
+  "section-fixée"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:183-333",
+  "css": "assets/css/style.css:311-353",
+  "js": "assets/js/accueil.js:19-82"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/facons-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/facons-m390.jpg",
+  "video": "medias/willowcamp-maquette/facons-p960.mp4"
+ },
+ "pieges": [
+  "les teintes du lavis et du nuancier sont écrites en dur dans le JS (COUL, TEINTES) : à lire dans les variables CSS",
+  "DrawSVG et MorphSVG nécessaires ; sans eux ou en mode calme, basculer les croquis par classe",
+  "le nuancier est un groupe radio : flèches du clavier et tabIndex itinérant"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3222,
+  "hauteur_m390": 4433,
+  "epinglee": false,
+  "scrolltriggers": 11
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "tiki-cassis-maquette/bateau",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "titre": "Le bateau et son hublot",
+ "role": "chiffres",
+ "description": "Hublot en laiton qui grossit et tourne au défilement, avec une vidéo sous l'eau à l'intérieur, à côté de l'histoire du bateau et de quatre chiffres comptés.",
+ "animations": [
+  "parallaxe",
+  "compteur"
+ ],
+ "interactions": [
+  "lecteur-vidéo"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:219-255",
+  "css": "css/style.css:372-394",
+  "js": "js/core.js:470-489"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/bateau-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/bateau-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/bateau-p960.mp4"
+ },
+ "pieges": [
+  "vidéo du hublot lourde (reste de l'audit)",
+  "rivets posés en JS en pourcentage du cercle"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1677,
+  "hauteur_m390": 2076,
+  "epinglee": false,
+  "scrolltriggers": 14
+ }
+}

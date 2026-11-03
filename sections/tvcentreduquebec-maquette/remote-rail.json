@@ -1,0 +1,43 @@
+{
+ "id": "tvcentreduquebec-maquette/remote-rail",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "index",
+ "titre": "Télécommande 3D de navigation",
+ "role": "menu",
+ "description": "Télécommande construite en code avec three.js, collée sur le côté droit de l'accueil : elle suit la souris, ses touches (chiffres, flèches, OK) changent de chaîne, c'est-à-dire de section, et elle s'écarte devant les sections larges. Repli SVG sans WebGL ; image fixe sur téléphone.",
+ "animations": [
+  "webgl-shader",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "three",
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "masqué",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:58-61",
+  "css": "css/style.css:352-369",
+  "js": "js/remote3d.js ; js/home.js:50-137"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/remote-rail-p1440.jpg"
+ },
+ "pieges": [
+  "effet signature absent sur téléphone (reste de l'audit)",
+  "repérer la chaîne courante seulement après la mise en place des épinglages (trackChannels en dernier)",
+  "raccourcis 1 à 8 désactivés quand un champ a le focus et en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

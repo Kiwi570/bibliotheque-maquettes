@@ -1,0 +1,49 @@
+{
+ "id": "willowcamp-maquette/en-roulottes-r-hero",
+ "maquette": "willowcamp-maquette",
+ "page": "en/roulottes",
+ "pages": [
+  "en/roulottes",
+  "nl/roulottes",
+  "roulottes"
+ ],
+ "titre": "Rideau de saule",
+ "role": "ouverture",
+ "description": "Deux rideaux de branches de saule générées en SVG s'écartent sur la photo des roulottes, les brins se balancent, la carte du titre se pose ; parallaxe de la photo au défilement.",
+ "animations": [
+  "ouverture-orchestrée",
+  "parallaxe",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "en/roulottes.html:112-142",
+  "css": "assets/css/style.css:543-556",
+  "js": "assets/js/roulottes.js:97-117 ; assets/js/dessins.js:32-67"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/en-roulottes-r-hero-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/en-roulottes-r-hero-m390.jpg",
+  "video": "medias/willowcamp-maquette/en-roulottes-r-hero-p960.mp4"
+ },
+ "pieges": [
+  "générateur pseudo-aléatoire à graine pour que les branches soient identiques à chaque visite",
+  "pas de rideau en mode calme : photo directe"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1069,
+  "hauteur_m390": 1027,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

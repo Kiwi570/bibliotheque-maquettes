@@ -1,0 +1,41 @@
+{
+ "id": "will-midoux-maquette/boutique",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "Porte-clés",
+ "role": "produits",
+ "description": "Deux porte-clés suspendus qui se balancent selon la vitesse de défilement et reviennent en oscillant ; ajout au panier.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:393-404",
+  "css": "css/main.css:528-543",
+  "js": "js/home.js:46-51,348-354"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/boutique-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/boutique-m390.jpg",
+  "video": "medias/will-midoux-maquette/boutique-p960.mp4"
+ },
+ "pieges": [
+  "borner la vitesse (clamp) et ramener à 0 après l'arrêt du défilement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 618,
+  "hauteur_m390": 741,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

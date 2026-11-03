@@ -1,0 +1,42 @@
+{
+ "id": "tvcentreduquebec-maquette/ouverture",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "index",
+ "titre": "Allumage cathodique",
+ "role": "ouverture",
+ "description": "Héros sombre : l'écran s'allume comme un tube cathodique (trait horizontal qui s'ouvre), puis le titre en deux couleurs, les deux boutons et la ligne des engagements ; bandeau OSD « CH 01 ».",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:66-87",
+  "css": "css/style.css:449-472,517-532",
+  "js": "js/home.js:138-181 ; js/core.js:226-258"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/tvcentreduquebec-maquette/ouverture-m390.jpg",
+  "video": "medias/tvcentreduquebec-maquette/ouverture-p960.mp4"
+ },
+ "pieges": [
+  "titre lisible avant 2 s : l'allumage reste sous 1,5 s",
+  "même effet en transition de page : écouter pageshow pour le retour arrière"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1199,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

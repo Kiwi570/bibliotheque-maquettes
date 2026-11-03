@@ -1,0 +1,47 @@
+{
+ "id": "tonchemindevie-maquette/ouv",
+ "maquette": "tonchemindevie-maquette",
+ "page": "index",
+ "titre": "Ouverture nuit et lumière",
+ "role": "ouverture",
+ "description": "Héros nuit : forêt en fond qui se resserre, titre en lignes masquées, portrait en arche qui monte ; des particules WebGL (OGL) contournent la main au pointeur comme un magnétisme sans contact. Sur la page Soins, même canvas en mode brume qui se dissipe. Sans WebGL ou en mode calme, l'image seule.",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "webgl-particules",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:54-79",
+  "css": "assets/css/site.css:236-262",
+  "js": "assets/js/lumiere.js ; assets/js/site.js:222-255"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/ouv-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/ouv-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/ouv-p960.mp4"
+ },
+ "pieges": [
+  "tester WebGL avant de créer le Renderer (message console OGL resté après l'audit)",
+  "photo de portrait fournie par la cliente : soigner le recadrage en arche"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1116,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

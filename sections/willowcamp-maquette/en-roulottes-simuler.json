@@ -1,0 +1,47 @@
+{
+ "id": "willowcamp-maquette/en-roulottes-simuler",
+ "maquette": "willowcamp-maquette",
+ "page": "en/roulottes",
+ "pages": [
+  "en/roulottes",
+  "nl/roulottes",
+  "roulottes"
+ ],
+ "titre": "Simulateur de séjour",
+ "role": "calculateur",
+ "description": "Choix de la roulotte, calendrier mensuel des arrivées, compteurs d'adultes et d'enfants, options ; l'estimation se recalcule ligne à ligne avec remises, puis une réservation simulée s'ouvre dans une fenêtre accessible.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "en/roulottes.html:279-337",
+  "css": "assets/css/style.css:606-655",
+  "js": "assets/js/roulottes.js:7-96"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/en-roulottes-simuler-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/en-roulottes-simuler-m390.jpg",
+  "video": "medias/willowcamp-maquette/en-roulottes-simuler-p960.mp4"
+ },
+ "pieges": [
+  "dire clairement que l'estimation n'est pas une réservation",
+  "rendre le focus au déclencheur à la fermeture de la fenêtre et suspendre le défilement lissé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1459,
+  "hauteur_m390": 1980,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

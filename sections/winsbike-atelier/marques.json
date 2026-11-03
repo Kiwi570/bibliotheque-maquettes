@@ -1,0 +1,45 @@
+{
+ "id": "winsbike-atelier/marques",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "titre": "Galerie des marques épinglée",
+ "role": "galerie",
+ "description": "Section épinglée où les six marques défilent à l'horizontale : bannière en parallaxe, produits détourés qui flottent et tournent, compteur de produits, badge d'exclusivité et barre de progression en points.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "parallaxe",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:84-89",
+  "css": "assets/css/main.css:227-265",
+  "js": "assets/js/home.js:89-129"
+ },
+ "medias": {
+  "capture": "medias/winsbike-atelier/marques-p1440.jpg",
+  "capture_m390": "medias/winsbike-atelier/marques-m390.jpg",
+  "video": "medias/winsbike-atelier/marques-p960.mp4"
+ },
+ "pieges": [
+  "piste construite en JS depuis les données : mesurer après l'injection (invalidateOnRefresh)",
+  "défilement natif vertical sous 901 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6084,
+  "hauteur_m390": 777,
+  "epinglee": true,
+  "scrolltriggers": 26
+ }
+}

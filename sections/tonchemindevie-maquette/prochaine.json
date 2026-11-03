@@ -1,0 +1,42 @@
+{
+ "id": "tonchemindevie-maquette/prochaine",
+ "maquette": "tonchemindevie-maquette",
+ "page": "index",
+ "titre": "Prochaine Journée",
+ "role": "agenda",
+ "description": "Carte de la prochaine Journée tirée des données : visuel, pastille de date, compte à rebours jours/heures/minutes/secondes, places restantes en points et inscription.",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:228-248",
+  "css": "assets/css/site.css:394-405",
+  "js": "assets/js/site.js:503-540"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/prochaine-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/prochaine-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/prochaine-p960.mp4"
+ },
+ "pieges": [
+  "si aucune date n'est à venir, retirer le compte et afficher « de nouvelles dates arrivent »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 831,
+  "hauteur_m390": 1078,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

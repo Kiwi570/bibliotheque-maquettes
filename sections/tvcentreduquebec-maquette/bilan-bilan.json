@@ -1,0 +1,44 @@
+{
+ "id": "tvcentreduquebec-maquette/bilan-bilan",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "bilan",
+ "titre": "Bilan au pavé numérique",
+ "role": "calculateur",
+ "description": "Calculateur en trois questions : montant de la facture saisi au pavé numérique (clavier ou clic), types d'émissions regardées, téléviseur et priorité ; un panneau à droite met à jour en direct l'économie mensuelle et annuelle, l'appareil conseillé et le délai de remboursement, annoncés aux lecteurs d'écran.",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur",
+  "formulaire-par-étapes",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "bilan.html:69-156",
+  "css": "css/style.css:927-1008",
+  "js": "js/bilan.js"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/bilan-bilan-p1440.jpg",
+  "capture_m390": "medias/tvcentreduquebec-maquette/bilan-bilan-m390.jpg",
+  "video": "medias/tvcentreduquebec-maquette/bilan-bilan-p960.mp4"
+ },
+ "pieges": [
+  "annonce aria-live temporisée, pas à chaque chiffre tapé",
+  "résultat sauvegardé localement : le relire au retour sur la page"
+ ],
+ "mesures": {
+  "hauteur_p1440": 889,
+  "hauteur_m390": 1849,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,876 @@
+{
+  "maquette": {
+    "client": "magnétiseuse énergéticienne à Bruxelles (soins énergétiques, nettoyage de lieux, Journées bien-être, formations)",
+    "activite": [
+      "bien-être"
+    ],
+    "concept": [
+      "voyage"
+    ],
+    "ambiance": [
+      "nocturne",
+      "chaleureux",
+      "doux"
+    ],
+    "palette": {
+      "fond": "--ivoire",
+      "texte": "--nuit",
+      "accent": "--framboise",
+      "secondaire": "--or"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "fil d'or du chemin de vie qui serpente d'une section à l'autre et se trace au défilement, avec une luciole au bout",
+      "ouverture nuit : nom tracé à la plume dorée, particules WebGL qui contournent la main sans la toucher",
+      "voile de poussière en canvas qui se nettoie pièce par pièce au défilement et sous le curseur",
+      "séance en quatre temps sur piste horizontale épinglée, pendule de radiesthésie qui réagit à la vitesse",
+      "rendez-vous en 4 étapes dans un dialog, gué des Journées filtrable, compte à rebours, pause respiration guidée"
+    ],
+    "reserves": [
+      "formulaire de contact qui accepte un envoi vide",
+      "message console OGL sans WebGL",
+      "photos du site actuel hétérogènes et visuels provisoires",
+      "le fil d'or est créé par le JS (site.js:257-320) et n'a pas de bloc propre"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "webgl-particules",
+      "canvas-2d",
+      "section-fixée",
+      "galerie-horizontale",
+      "progression-fixée",
+      "parallaxe",
+      "compteur",
+      "révélation-image",
+      "masque",
+      "marquee",
+      "apparition-au-défilement",
+      "curseur-personnalisé",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "formulaire-par-étapes",
+      "filtres",
+      "galerie-cliquable",
+      "simulateur",
+      "mode-calme"
+    ],
+    "change_depuis_audit": "2 commits après la correction efeb828 : eda7b54 (images Grok définitives et textes alternatifs) et fabc895 (image du héros Soins décorative, alt vide). Ni code ni mise en page ; la version en ligne est identique au dépôt (index et soins-energetiques comparés octet pour octet).",
+    "accueil": "ouv"
+  },
+  "sections": {
+    "ouverture": {
+      "titre": "Ouverture à la plume",
+      "role": "ouverture",
+      "description": "Calque d'ouverture : le nom se trace à la plume dorée (trait SVG suivi d'un point lumineux), puis le calque se retire par le haut ; joué une fois par session.",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "mémoriser en sessionStorage pour ne pas rejouer à chaque page"
+      ],
+      "sans_capture": true
+    },
+    "voile": {
+      "titre": "Voile de transition",
+      "role": "transition-de-page",
+      "description": "Voile nuit plein écran qui couvre la page avant une navigation interne et se retire à l'arrivée.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "curseur": {
+      "titre": "Curseur lumineux",
+      "role": "decor",
+      "description": "Curseur personnalisé en halo doré, masqué au toucher et en mode calme.",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "entete": {
+      "titre": "En-tête",
+      "role": "menu",
+      "description": "En-tête fixe ivoire : logo, liens des pages, bascule mode calme et son, bouton « Prendre rendez-vous » qui ouvre le dialog.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "mode-calme"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu-mobile": {
+      "titre": "Menu téléphone",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec verrou du défilement.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "ouv": {
+      "titre": "Ouverture nuit et lumière",
+      "role": "ouverture",
+      "description": "Héros nuit : forêt en fond qui se resserre, titre en lignes masquées, portrait en arche qui monte ; des particules WebGL (OGL) contournent la main au pointeur comme un magnétisme sans contact. Sur la page Soins, même canvas en mode brume qui se dissipe. Sans WebGL ou en mode calme, l'image seule.",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "webgl-particules",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "tester WebGL avant de créer le Renderer (message console OGL resté après l'audit)",
+        "photo de portrait fournie par la cliente : soigner le recadrage en arche"
+      ],
+      "code": {
+        "html": "index.html:54-79",
+        "css": "assets/css/site.css:236-262",
+        "js": "assets/js/lumiere.js ; assets/js/site.js:222-255"
+      }
+    },
+    "joelle": {
+      "titre": "Moi, c'est Joëlle",
+      "role": "équipe",
+      "description": "Présentation de la praticienne : portrait révélé, texte à la première personne, citation et petit arbre qui pousse.",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chemins": {
+      "titre": "Quatre chemins",
+      "role": "services",
+      "description": "Quatre cartes photo des prestations qui montent en décalé, numérotées.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seance": {
+      "titre": "Une séance, quatre temps",
+      "role": "étapes",
+      "description": "Section épinglée : la piste des quatre temps de la séance défile à l'horizontale, barres de progression par étape, photos qui se resserrent et numéros qui montent (containerAnimation). Sous 900 px, simple pile révélée.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "progression-fixée",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": [
+        "la section épinglée était coupée en 1280×720 et 1366×768 avant correction : garder 100svh et la piste en flex: 1",
+        "Lenis retarde l'épinglage de quelques pour cent en défilement rapide"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:139-169",
+        "css": "assets/css/site.css:312-334",
+        "js": "assets/js/pages.js:105-125"
+      }
+    },
+    "tarifs": {
+      "titre": "Tarifs",
+      "role": "tarifs",
+      "description": "Deux cartes de prix (premier rendez-vous, séances suivantes) et une ligne des autres tarifs.",
+      "animations": [
+        "apparition-au-défilement",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lieux": {
+      "titre": "Nettoyage énergétique des lieux",
+      "role": "services",
+      "description": "Photo d'un intérieur couverte d'un voile de poussière en canvas 2D qui se nettoie pièce par pièce au défilement (trajet en zigzag) et sous le curseur ; liste des étapes et choix lieu de vie / environnement professionnel.",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "couleurs du voile écrites en dur dans le JS (rgba) : à passer en variables à l'extraction",
+        "boucle arrêtée hors écran par IntersectionObserver, voile figé en mode calme"
+      ],
+      "dependances": [
+        "canvas"
+      ],
+      "code": {
+        "html": "index.html:201-226",
+        "css": "assets/css/site.css:380-383",
+        "js": "assets/js/site.js:418-501"
+      }
+    },
+    "prochaine": {
+      "titre": "Prochaine Journée",
+      "role": "agenda",
+      "description": "Carte de la prochaine Journée tirée des données : visuel, pastille de date, compte à rebours jours/heures/minutes/secondes, places restantes en points et inscription.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "si aucune date n'est à venir, retirer le compte et afficher « de nouvelles dates arrivent »"
+      ],
+      "code": {
+        "html": "index.html:228-248",
+        "css": "assets/css/site.css:394-405",
+        "js": "assets/js/site.js:503-540"
+      }
+    },
+    "valeurs": {
+      "titre": "Valeurs",
+      "role": "manifeste",
+      "description": "Trois valeurs illustrées en arches photo, sous un petit arbre qui pousse au défilement.",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formations": {
+      "titre": "Formations",
+      "role": "offre",
+      "description": "Présentation des formations avec photo en parallaxe et liste des modules.",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Avis",
+      "role": "témoignages",
+      "description": "Grande citation qui s'allume mot à mot au défilement, puis deux bandeaux d'avis courts qui défilent en sens contraire.",
+      "animations": [
+        "révélation-texte",
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "manifeste-mot-a-mot",
+      "pieges": []
+    },
+    "blog": {
+      "titre": "Lire, comprendre",
+      "role": "galerie",
+      "description": "Trois cartes d'articles du blog (image, date, titre) tirées des données.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact": {
+      "titre": "Contact",
+      "role": "contact",
+      "description": "Plan schématique du cabinet, coordonnées et formulaire de contact simple.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "le formulaire accepte un envoi vide (reste de l'audit)"
+      ]
+    },
+    "appel": {
+      "titre": "Appel final",
+      "role": "appel",
+      "description": "Appel de fin sur ciel de crépuscule et silhouettes d'arbres : rendez-vous, WhatsApp, téléphone.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page nuit en colonnes (explorer, cabinet, suivre) sous le crépuscule de l'appel.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre-mobile": {
+      "titre": "Barre de contact rapide",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas sur téléphone (rendez-vous, WhatsApp, appel), masquée sur le héros, le formulaire, le pied et le menu.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "rdv": {
+      "titre": "Rendez-vous en quatre étapes",
+      "role": "contact",
+      "description": "Dialog natif de prise de rendez-vous : type de demande, préférences adaptées au type (soin, lieu, Journée, formation), coordonnées, puis récapitulatif ; barre d'étapes et focus déplacé à chaque pas.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "les champs de l'étape 2 changent selon le type : valider seulement les champs visibles"
+      ],
+      "sans_capture": true,
+      "code": {
+        "html": "index.html:426-505",
+        "css": "assets/css/site.css:529-545",
+        "js": "assets/js/site.js:632-708"
+      }
+    },
+    "404-ouv": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable sur fond nuit : « Ce chemin n'existe pas » et retour à l'accueil.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "journees-bien-etre-ouv": {
+      "titre": "Ouverture des Journées",
+      "role": "ouverture",
+      "description": "Variante de l'ouverture nuit pour la page des Journées.",
+      "animations": [
+        "webgl-particules"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "journees-bien-etre-format": {
+      "titre": "Format des Journées",
+      "role": "offre",
+      "description": "Chiffres clés de la Journée (participants, horaires, prix) en cartes, puis déroulé en pastilles qui apparaissent une à une.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "journees-bien-etre-prochaine": {
+      "titre": "Prochaine Journée (page Journées)",
+      "role": "agenda",
+      "description": "Même carte que sur l'accueil.",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "journees-bien-etre-chemin": {
+      "titre": "Gué des Journées",
+      "role": "agenda",
+      "description": "Les Journées à venir ou passées en pierres de gué : piste horizontale à défilement natif et aimantation, filtre à venir / déjà parcourues avec compteurs, flèches, et tiroir de détail au clic.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "remettre scrollLeft à 0 au changement de filtre",
+        "boutons-filtres en aria-pressed"
+      ],
+      "code": {
+        "html": "journees-bien-etre.html:128-143",
+        "css": "assets/css/site.css:585-600",
+        "js": "assets/js/pages.js:11-88"
+      }
+    },
+    "journees-bien-etre-toiles": {
+      "titre": "Chaque thème a sa toile",
+      "role": "galerie",
+      "description": "Toiles des thèmes en piste horizontale épinglée, entrées en biais ; pile simple sous 900 px.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": [
+        "galerie coupée avant le second commit de correction : piste en height 100% dans la section épinglée"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "journees-bien-etre.html:145-157",
+        "css": "assets/css/site.css:606-630",
+        "js": "assets/js/pages.js:142-150"
+      }
+    },
+    "journees-bien-etre-avis-journees": {
+      "titre": "Avis des Journées",
+      "role": "témoignages",
+      "description": "Variante du bloc avis de l'accueil.",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "journees-bien-etre-acces": {
+      "titre": "Accès à la salle",
+      "role": "carte",
+      "description": "Plan schématique de la salle louée, photo et informations d'accès.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "journees-bien-etre-appel": {
+      "titre": "Appel des Journées",
+      "role": "appel",
+      "description": "Variante de l'appel final.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "tiroir": {
+      "titre": "Tiroir de Journée",
+      "role": "agenda",
+      "description": "Tiroir latéral qui détaille une Journée choisie dans le gué.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "soins-energetiques-ouv": {
+      "titre": "Ouverture des soins",
+      "role": "ouverture",
+      "description": "Variante de l'ouverture nuit, en mode brume qui se dissipe.",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "soins-energetiques-nettoyer": {
+      "titre": "On nettoie les murs",
+      "role": "services",
+      "description": "Même voile de poussière que la section lieux, en coups de pinceau horizontaux.",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "soins-energetiques-etapes": {
+      "titre": "Quatre étapes, à votre rythme",
+      "role": "étapes",
+      "description": "Liste des quatre étapes du soin à gauche, visuel collant à droite qui change d'image à chaque étape ; pendule de radiesthésie SVG qui se balance selon la vitesse de défilement, voile qui se colore à l'étape 3.",
+      "animations": [
+        "progression-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "le pendule lit lenis.velocity : sans Lenis, il ne fait que se balancer",
+        "visuel collant masqué sous 900 px, images reprises dans chaque étape"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "soins-energetiques.html:105-141",
+        "css": "assets/css/site.css:658-678",
+        "js": "assets/js/pages.js:126-133 ; assets/js/site.js:398-416"
+      }
+    },
+    "soins-energetiques-couches": {
+      "titre": "Couche après couche",
+      "role": "méthode",
+      "description": "Anneaux concentriques nommés (blessures, mémoires) qui s'effacent un à un au scrub pendant que le cœur grossit et s'éclaire.",
+      "animations": [
+        "progression-fixée",
+        "morphing"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "libellés des anneaux à garder lisibles (12 px mini) sur téléphone"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "soins-energetiques.html:143-163",
+        "css": "assets/css/site.css:683-686",
+        "js": "assets/js/pages.js:134-139"
+      }
+    },
+    "soins-energetiques-seances": {
+      "titre": "Le chemin des séances",
+      "role": "étapes",
+      "description": "Chemin SVG tracé entre des galets numérotés pour le rythme des séances, suivi des deux cartes de prix.",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "soins-energetiques-accompagnement": {
+      "titre": "Ce que les soins peuvent accompagner",
+      "role": "services",
+      "description": "Liste de puces des situations accompagnées, avec mention de complément au suivi médical, à côté d'une photo.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "soins-energetiques-apres": {
+      "titre": "Pause respiration",
+      "role": "outil-interactif",
+      "description": "Conseils d'après séance et petite pause respiration guidée : un cercle qui s'ouvre en 4 s et se referme en 6 s, six cycles, bouton commencer / arrêter en aria-pressed.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "simulateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "ne rien lancer automatiquement : la pause démarre au bouton"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "soins-energetiques.html:204-219",
+        "js": "assets/js/pages.js:89-103"
+      }
+    },
+    "soins-energetiques-lieu-de-vie": {
+      "titre": "Quand la maison pèse aussi",
+      "role": "appel",
+      "description": "Encart nuit qui renvoie vers le nettoyage des lieux, avec photo de fenêtre.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "soins-energetiques-avis-soins": {
+      "titre": "Avis des soins",
+      "role": "témoignages",
+      "description": "Variante du bloc avis.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    },
+    "soins-energetiques-questions": {
+      "titre": "Pour aller plus loin",
+      "role": "galerie",
+      "description": "Trois articles du blog liés aux soins.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "soins-energetiques-appel": {
+      "titre": "Appel des soins",
+      "role": "appel",
+      "description": "Variante de l'appel final.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": true
+    }
+  }
+}

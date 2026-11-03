@@ -1,0 +1,41 @@
+{
+ "id": "tvcentreduquebec-maquette/appareil-specs-sec",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "appareil",
+ "titre": "Fiche technique et position dans la gamme",
+ "role": "outil-interactif",
+ "description": "Tableau des caractéristiques dont les lignes se dessinent, à côté d'un graphique qui situe l'appareil parmi les cinq selon le prix et le stockage (un point par appareil, infobulles).",
+ "animations": [
+  "apparition-au-défilement",
+  "masque"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "appareil.html:85-98",
+  "css": "css/style.css:1134-1161",
+  "js": "js/appareil.js:39-125,186-201"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/appareil-specs-sec-p1440.jpg",
+  "capture_m390": "medias/tvcentreduquebec-maquette/appareil-specs-sec-m390.jpg",
+  "video": "medias/tvcentreduquebec-maquette/appareil-specs-sec-p960.mp4"
+ },
+ "pieges": [
+  "les infobulles du graphique doivent rester accessibles au clavier (bindTips)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1040,
+  "hauteur_m390": 1283,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

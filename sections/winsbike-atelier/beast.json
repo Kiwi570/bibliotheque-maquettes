@@ -1,0 +1,43 @@
+{
+ "id": "winsbike-atelier/beast",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "titre": "Le Beast pièce par pièce",
+ "role": "produits",
+ "description": "Section épinglée au scrub : la photo du cadre arrive, les cotes se tracent au trait (DrawSVG) avec leurs valeurs qui comptent, puis le cadre recule et les pièces compatibles du kit volent depuis les bords jusqu'à leur emplacement ; panneau du kit avec prix, raison de compatibilité, total et ajout des pièces en stock.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "masque",
+  "compteur"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:91-135",
+  "css": "assets/css/main.css:269-304",
+  "js": "assets/js/home.js:131-174"
+ },
+ "medias": {
+  "video": "medias/winsbike-atelier/beast-p960.mp4"
+ },
+ "pieges": [
+  "emplacements et points de départ en fractions de l'écran : les recalculer au refresh",
+  "sur téléphone, liste du kit sans vue éclatée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3240,
+  "hauteur_m390": 1547,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

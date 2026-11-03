@@ -1,0 +1,46 @@
+{
+ "id": "winsbike-maquette/top",
+ "maquette": "winsbike-maquette",
+ "page": "index",
+ "titre": "Établi éclairé à la lampe",
+ "role": "ouverture",
+ "description": "Héros sur une photo d'établi plongée dans le noir : une lampe WebGL (OGL) suit le curseur, réchauffe la zone éclairée et fait briller la poussière qui tombe ; titre, recherche instantanée et bandeau défilant des engagements. Repli sur la photo sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "marquee",
+  "parallaxe"
+ ],
+ "interactions": [
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:62-85",
+  "css": "assets/css/site.css:1",
+  "js": "assets/js/home.js:1-28 (minifié : plages indicatives, sources absentes du dépôt)"
+ },
+ "medias": {
+  "capture": "medias/winsbike-maquette/top-p1440.jpg",
+  "capture_m390": "medias/winsbike-maquette/top-m390.jpg",
+  "video": "medias/winsbike-maquette/top-p960.mp4"
+ },
+ "pieges": [
+  "shader de lumière : le fond reste à 13 % hors du halo, prévoir un texte posé hors de la zone noire",
+  "sur tactile, poser la lampe au centre (pas de curseur)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 812,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

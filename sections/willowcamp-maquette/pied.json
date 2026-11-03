@@ -1,0 +1,56 @@
+{
+ "id": "willowcamp-maquette/pied",
+ "maquette": "willowcamp-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "en/index",
+  "en/le-camp",
+  "en/roulottes",
+  "le-camp",
+  "nl/index",
+  "nl/le-camp",
+  "nl/roulottes",
+  "roulottes"
+ ],
+ "titre": "La nuit tombe",
+ "role": "pied-de-page",
+ "description": "Pied de page nocturne : photo de saules à la nuit, lucioles en canvas 2D qui clignotent et dérivent (boucle arrêtée hors écran, image fixe en mode calme), titre « Couvre-feu » révélé ligne à ligne, puis colonnes de liens.",
+ "animations": [
+  "canvas-2d",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:594-649",
+  "css": "assets/css/style.css:486-513",
+  "js": "assets/js/commun.js:203-230,409-416"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/pied-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/pied-m390.jpg",
+  "video": "medias/willowcamp-maquette/pied-p960.mp4"
+ },
+ "pieges": [
+  "nombre de lucioles proportionnel à la largeur (70 au plus)",
+  "la couleur des lucioles est écrite en rgba dans le JS"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1148,
+  "hauteur_m390": 1503,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

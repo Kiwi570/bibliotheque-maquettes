@@ -1,0 +1,43 @@
+{
+ "id": "tiki-cassis-maquette/formules-composeur",
+ "maquette": "tiki-cassis-maquette",
+ "page": "formules",
+ "titre": "Composeur de sortie",
+ "role": "calculateur",
+ "description": "Composeur : moment, date, durée au curseur, passagers et option barbecue ; le prix se met à jour en direct selon la saison (fêtes de mai et Pâques calculées), la carte allume les calanques atteignables et le programme indicatif s'écrit.",
+ "animations": [
+  "compteur",
+  "masque"
+ ],
+ "interactions": [
+  "calculateur",
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "formules.html:92-155",
+  "css": "css/style.css:543-588",
+  "js": "js/formules.js:56-152 ; js/pricing.js ; js/chart.js"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/formules-composeur-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/formules-composeur-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/formules-composeur-p960.mp4"
+ },
+ "pieges": [
+  "les tarifs viennent du site du client : les garder dans pricing.js, jamais dans le HTML",
+  "dates des saisons calculées (Pâques, ponts de mai)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1180,
+  "hauteur_m390": 1846,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "tvcentreduquebec-maquette/appareils",
+ "maquette": "tvcentreduquebec-maquette",
+ "page": "index",
+ "titre": "Galerie des appareils",
+ "role": "produits",
+ "description": "Galerie horizontale épinglée des cinq appareils : cartes avec photo, prix, fiche technique dont les valeurs se brouillent puis s'affichent, ajout au panier et lien vers la fiche.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:120-132",
+  "css": "css/style.css:606-662",
+  "js": "js/home.js:14-49,215-260"
+ },
+ "medias": {
+  "capture": "medias/tvcentreduquebec-maquette/appareils-p1440.jpg",
+  "capture_m390": "medias/tvcentreduquebec-maquette/appareils-m390.jpg",
+  "video": "medias/tvcentreduquebec-maquette/appareils-p960.mp4"
+ },
+ "pieges": [
+  "cartes générées depuis data.js : une valeur absente s'affiche « à compléter »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1170,
+  "epinglee": true,
+  "scrolltriggers": 13
+ }
+}

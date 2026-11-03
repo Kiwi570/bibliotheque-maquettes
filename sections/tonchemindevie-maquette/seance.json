@@ -1,0 +1,45 @@
+{
+ "id": "tonchemindevie-maquette/seance",
+ "maquette": "tonchemindevie-maquette",
+ "page": "index",
+ "titre": "Une séance, quatre temps",
+ "role": "étapes",
+ "description": "Section épinglée : la piste des quatre temps de la séance défile à l'horizontale, barres de progression par étape, photos qui se resserrent et numéros qui montent (containerAnimation). Sous 900 px, simple pile révélée.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "progression-fixée",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:139-169",
+  "css": "assets/css/site.css:312-334",
+  "js": "assets/js/pages.js:105-125"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/seance-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/seance-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/seance-p960.mp4"
+ },
+ "pieges": [
+  "la section épinglée était coupée en 1280×720 et 1366×768 avant correction : garder 100svh et la piste en flex: 1",
+  "Lenis retarde l'épinglage de quelques pour cent en défilement rapide"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 2270,
+  "epinglee": true,
+  "scrolltriggers": 10
+ }
+}

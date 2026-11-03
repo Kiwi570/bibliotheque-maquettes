@@ -1,0 +1,45 @@
+{
+ "id": "talon-libre-maquette/ouverture",
+ "maquette": "talon-libre-maquette",
+ "page": "index",
+ "titre": "Ouverture poudreuse",
+ "role": "ouverture",
+ "description": "Photo de poudreuse à l'aube sous un shader WebGL où la neige s'écarte sous le curseur ; titre en italique « Talon libre, esprit libre. » qui se plie, et départ de la trace rouge de télémark qui suivra toute la page. Repli canvas 2D sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:72-90",
+  "css": "assets/css/main.css:233-235,281-295",
+  "js": "assets/js/webgl.js:11-116 ; assets/js/main.js:282-421"
+ },
+ "medias": {
+  "capture": "medias/talon-libre-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/talon-libre-maquette/ouverture-m390.jpg",
+  "video": "medias/talon-libre-maquette/ouverture-p960.mp4"
+ },
+ "pieges": [
+  "tester WebGL avant d'instancier OGL, sinon erreur console avant le repli 2D",
+  "la trace (svg.trace) se recalcule quand la hauteur du contenu change"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "willowcamp-maquette/en-le-camp-plan",
+ "maquette": "willowcamp-maquette",
+ "page": "en/le-camp",
+ "pages": [
+  "en/le-camp",
+  "le-camp",
+  "nl/le-camp"
+ ],
+ "titre": "Plan du camp à la plume",
+ "role": "carte",
+ "description": "Plan du camp tracé à la plume au défilement, arbres générés autour ; chaque zone est un bouton qui ouvre une fiche avec photo en tirage ; liste de boutons équivalente et loupe au survol qui grossit le plan.",
+ "animations": [
+  "masque",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "en/le-camp.html:137-335",
+  "css": "assets/css/style.css:671-711",
+  "js": "assets/js/camp.js:7-53,83-100"
+ },
+ "medias": {
+  "capture": "medias/willowcamp-maquette/en-le-camp-plan-p1440.jpg",
+  "capture_m390": "medias/willowcamp-maquette/en-le-camp-plan-m390.jpg",
+  "video": "medias/willowcamp-maquette/en-le-camp-plan-p960.mp4"
+ },
+ "pieges": [
+  "zones sous 44 px sur téléphone et plan défilant sans indication (restes de l'audit)",
+  "la loupe clone le SVG : retirer defs et role du clone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1286,
+  "hauteur_m390": 1549,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

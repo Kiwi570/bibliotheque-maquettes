@@ -1,0 +1,43 @@
+{
+ "id": "will-midoux-maquette/musique",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "Les disques",
+ "role": "galerie",
+ "description": "Disques posés sur des planches en défilement horizontal épinglé ; les tirages se balancent selon la vitesse de défilement et s'inclinent sous le pointeur ; défilement natif sous 900 px ou sous 600 px de haut.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:211-222",
+  "css": "css/main.css:347-383,841-881",
+  "js": "js/home.js:24-45,281-318"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/musique-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/musique-m390.jpg",
+  "video": "medias/will-midoux-maquette/musique-p960.mp4"
+ },
+ "pieges": [
+  "au focus clavier d'une carte, faire défiler jusqu'à sa position dans l'épinglage",
+  "sous-grille pour que toutes les pochettes aient la même taille"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1089,
+  "epinglee": true,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "will-midoux-maquette/top",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "Héros forêt de nuit",
+ "role": "ouverture",
+ "description": "Forêt de nuit avec la cabane, logo, accroche découpée en mots, polaroïd de l'artiste et carte du prochain concert avec compte à rebours ; braises WebGL qui montent du feu et fuient le curseur, parallaxe au défilement et à la souris.",
+ "animations": [
+  "webgl-particules",
+  "révélation-texte",
+  "parallaxe",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:87-131",
+  "css": "css/main.css:232-281",
+  "js": "js/home.js:146-176,237-258 ; js/embers.js"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/top-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/top-m390.jpg",
+  "video": "medias/will-midoux-maquette/top-p960.mp4"
+ },
+ "pieges": [
+  "polaroïd qui chevauche « Prochain concert » en 1440 (reste de l'audit)",
+  "les points d'émission des braises sont mesurés sur l'image : les recalculer au redimensionnement (coverPoint)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 952,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

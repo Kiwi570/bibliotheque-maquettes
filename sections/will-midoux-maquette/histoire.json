@@ -1,0 +1,45 @@
+{
+ "id": "will-midoux-maquette/histoire",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "La route de l'artiste",
+ "role": "étapes",
+ "description": "Frise des années : une piste SVG se trace au défilement et chaque étape s'allume comme une lanterne, colonne de photos collante à côté avec parallaxes.",
+ "animations": [
+  "progression-fixée",
+  "masque",
+  "parallaxe",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:231-319",
+  "css": "css/main.css:392-436,904-908",
+  "js": "js/home.js:87-107,209-214,324-332"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/histoire-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/histoire-m390.jpg",
+  "video": "medias/will-midoux-maquette/histoire-p960.mp4"
+ },
+ "pieges": [
+  "recalculer la longueur de la piste au redimensionnement (ResizeObserver)",
+  "colonne collante sous l'en-tête mesuré"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2747,
+  "hauteur_m390": 4003,
+  "epinglee": false,
+  "scrolltriggers": 21
+ }
+}

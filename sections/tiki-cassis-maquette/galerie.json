@@ -1,0 +1,45 @@
+{
+ "id": "tiki-cassis-maquette/galerie",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "titre": "Galerie épinglée",
+ "role": "galerie",
+ "description": "Galerie horizontale épinglée de photos du bateau ; les photos se cisaillent légèrement selon la vitesse du défilement.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "lenis"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:282-298",
+  "css": "css/style.css:415-435",
+  "js": "js/core.js:491-506"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/galerie-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/galerie-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/galerie-p960.mp4"
+ },
+ "pieges": [
+  "cisaillement lu sur lenis.velocity : rien sans Lenis",
+  "anticipatePin encore présent",
+  "l'horloge fixe passe sur les photos"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 765,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

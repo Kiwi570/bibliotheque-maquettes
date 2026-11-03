@@ -1,0 +1,43 @@
+{
+ "id": "tonchemindevie-maquette/journees-bien-etre-toiles",
+ "maquette": "tonchemindevie-maquette",
+ "page": "journees-bien-etre",
+ "titre": "Chaque thème a sa toile",
+ "role": "galerie",
+ "description": "Toiles des thèmes en piste horizontale épinglée, entrées en biais ; pile simple sous 900 px.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "journees-bien-etre.html:145-157",
+  "css": "assets/css/site.css:606-630",
+  "js": "assets/js/pages.js:142-150"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/journees-bien-etre-toiles-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/journees-bien-etre-toiles-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/journees-bien-etre-toiles-p960.mp4"
+ },
+ "pieges": [
+  "galerie coupée avant le second commit de correction : piste en height 100% dans la section épinglée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 830,
+  "epinglee": true,
+  "scrolltriggers": 10
+ }
+}

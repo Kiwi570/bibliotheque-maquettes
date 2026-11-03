@@ -1,0 +1,4379 @@
+{
+ "depot": "talon-libre-maquette",
+ "commit": "2f48857",
+ "date_commit": "2026-10-31T17:35:34+01:00",
+ "genere": "2026-11-03T01:04:05.983Z",
+ "pages": {
+  "404": {
+   "fichier": "404.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/webgl.js",
+    "assets/js/lightbox.js",
+    "assets/js/main.js",
+    "assets/js/placeholders.js",
+    "assets/js/images.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/404",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [],
+   "gabarit_de": []
+  },
+  "index": {
+   "fichier": "index.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/webgl.js",
+    "assets/js/lightbox.js",
+    "assets/js/main.js",
+    "assets/js/placeholders.js",
+    "assets/js/images.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.lightbox",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "annexe": {
+   "fichier": "annexe.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/webgl.js",
+    "assets/js/lightbox.js",
+    "assets/js/booking.js",
+    "assets/js/main.js",
+    "assets/js/placeholders.js",
+    "assets/js/images.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/annexe",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.selbar",
+     "fixe": false,
+     "h": 0
+    },
+    {
+     "sig": "div.lightbox",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "chalet": {
+   "fichier": "chalet.html",
+   "css": [
+    "assets/css/main.css"
+   ],
+   "js": [
+    "assets/js/webgl.js",
+    "assets/js/lightbox.js",
+    "assets/js/booking.js",
+    "assets/js/main.js",
+    "assets/js/placeholders.js",
+    "assets/js/images.js",
+    "assets/js/data.js"
+   ],
+   "gabarit": null,
+   "url": "/chalet",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": true,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.selbar",
+     "fixe": false,
+     "h": 0
+    },
+    {
+     "sig": "div.lightbox",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  }
+ },
+ "blocs": [
+  {
+   "id": "loader",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div.loader",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:32-32",
+    "css": "assets/css/main.css:225-228,654,886",
+    "js": "assets/js/main.js:19,91,313,320-325,330"
+   },
+   "titre": "",
+   "hauteur": null,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": null,
+   "cache": null,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": null,
+   "classes_exclusives": [
+    "loader",
+    "ld-a",
+    "ld-b"
+   ],
+   "data": [],
+   "medias": {}
+  },
+  {
+   "id": "cursor-trail",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "canvas.cursor-trail",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:33-33",
+    "css": "assets/css/main.css:219-222",
+    "js": "assets/js/main.js:226"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "cursor-trail"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/cursor-trail-p1440.jpg"
+   }
+  },
+  {
+   "id": "cursor",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div.cursor",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:34-34",
+    "css": "assets/css/main.css:216-218,222",
+    "js": "assets/js/main.js:225"
+   },
+   "titre": "",
+   "hauteur": 34,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 2,
+   "proprietes": [
+    "x",
+    "y"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "cursor"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/cursor-p1440.jpg"
+   }
+  },
+  {
+   "id": "site-header",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "header.site-header",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:35-53",
+    "css": "assets/css/main.css:129,137-157,162-176,192-198,598,896,904",
+    "js": "assets/js/main.js:73-77,118,140,169"
+   },
+   "titre": "",
+   "hauteur": 72,
+   "hauteur_m390": 72,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 4,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 1,
+    "images": 0,
+    "liens": 6
+   },
+   "classes_exclusives": [
+    "site-header",
+    "brand",
+    "brand-mark",
+    "brand-name",
+    "nav",
+    "header-tools",
+    "sound-btn",
+    "spk",
+    "off",
+    "btn-s",
+    "menu-toggle"
+   ],
+   "data": [
+    "data-header",
+    "data-en-aria-label",
+    "data-en",
+    "data-sound",
+    "data-en-title",
+    "data-lang"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/site-header-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/site-header-m390.jpg"
+   }
+  },
+  {
+   "id": "mbar",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div.mbar",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:54-54",
+    "css": "assets/css/main.css:695-710",
+    "js": "assets/js/main.js:141,687,690,693-694"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": 66,
+   "masque_m390": false,
+   "position": "static",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "mbar"
+   ],
+   "data": [
+    "data-en"
+   ],
+   "medias": {
+    "capture_m390": "medias/talon-libre-maquette/mbar-m390.jpg"
+   }
+  },
+  {
+   "id": "menu",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div#menu.menu",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:55-69",
+    "css": "assets/css/main.css:177-189,196,833,890-894",
+    "js": "assets/js/main.js:117,120-127,137-139,142-152,155-156,162"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 8
+   },
+   "classes_exclusives": [
+    "menu",
+    "menu-lang",
+    "menu-contact"
+   ],
+   "data": [
+    "data-lenis-prevent",
+    "data-en",
+    "data-en-aria-label",
+    "data-lang"
+   ],
+   "medias": {
+    "capture_m390": "medias/talon-libre-maquette/menu-m390.jpg"
+   }
+  },
+  {
+   "id": "altimeter",
+   "page": "index",
+   "pages": [
+    "index",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div.altimeter",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:70-70",
+    "css": "assets/css/main.css:201-214,697,827-828",
+    "js": "assets/js/main.js:141,423-425"
+   },
+   "titre": "",
+   "hauteur": 36,
+   "hauteur_m390": null,
+   "masque_m390": true,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "altimeter",
+    "alt-scale",
+    "alt-val"
+   ],
+   "data": [
+    "data-alt-from",
+    "data-alt-to",
+    "data-alt"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/altimeter-p1440.jpg"
+   }
+  },
+  {
+   "id": "ouverture",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#ouverture.hero",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:74-90",
+    "css": "assets/css/main.css:70-71,127-130,281-295,507-518,528,611-613,622,659,870,902",
+    "js": "assets/js/webgl.js:30-98,159,162 ; assets/js/lightbox.js:7 ; assets/js/main.js:291,316-318,338 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Talon libre, esprit libre.",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 2,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "hero",
+    "hero-media",
+    "snow",
+    "hero-inner",
+    "hero-title",
+    "line",
+    "hero-foot",
+    "btn-group",
+    "btn-line",
+    "scroll-cue"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-img-mobile",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-eager",
+    "data-sizes",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/ouverture-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/ouverture-m390.jpg",
+    "video": "medias/talon-libre-maquette/ouverture-p960.mp4"
+   }
+  },
+  {
+   "id": "telemark",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#telemark.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:92-107",
+    "css": "assets/css/main.css:243-244,261,299-319,728,812-819",
+    "js": "assets/js/main.js:29-53,472-474,484,488,494 ; assets/js/placeholders.js:31,97-156"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 1261,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 229,
+     "fin": 1556,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 139,
+     "fin": 1556,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 900,
+     "fin": 1440,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 3,
+   "proprietes": [
+    "yPercent",
+    "opacity",
+    "rotate",
+    "svgOrigin"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "manifest",
+    "manifest-grid",
+    "manifest-text",
+    "kicker",
+    "manifest-quote",
+    "heel",
+    "ski",
+    "binding",
+    "boot-g",
+    "boot",
+    "boot-line",
+    "hinge",
+    "manifest-media",
+    "ratio-1x1",
+    "detail"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-alt",
+    "data-alt-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/telemark-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/telemark-m390.jpg",
+    "video": "medias/talon-libre-maquette/telemark-p960.mp4"
+   }
+  },
+  {
+   "id": "refuges",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#refuges.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:109-147",
+    "css": "assets/css/main.css:131,323-345,512,520,745-746,899-900",
+    "js": "assets/js/lightbox.js:7 ; assets/js/main.js:338,503-504,672 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Deux adresses au cœur du Grand Massif",
+   "hauteur": 1807,
+   "hauteur_m390": 1721,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1181,
+     "fin": 2125,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2216,
+     "fin": 3510,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2828,
+     "fin": 3897,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2828,
+     "fin": 3897,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "compare",
+    "compare-a",
+    "compare-b",
+    "compare-label",
+    "compare-handle",
+    "compare-knob",
+    "compare-cards",
+    "home-card",
+    "place",
+    "facts",
+    "trk"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-en-aria-label"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/refuges-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/refuges-m390.jpg",
+    "video": "medias/talon-libre-maquette/refuges-p960.mp4"
+   }
+  },
+  {
+   "id": "inclus",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#inclus.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:149-167",
+    "css": "assets/css/main.css:242,349-385,546,729,750-752,853,876-881",
+    "js": "assets/js/webgl.js:117-156,160-162 ; assets/js/main.js:441,533-534,539,584"
+   },
+   "titre": "Déjà compris dans votre séjour",
+   "hauteur": 900,
+   "hauteur_m390": 1014,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2939,
+     "fin": 3789,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2851,
+     "fin": 3839,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 4147,
+     "fin": 5050,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 17,
+   "proprietes": [
+    "x",
+    "xPercent",
+    "scale",
+    "y",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 12,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "on-frost",
+    "hscroll",
+    "hscroll-head",
+    "counter-box",
+    "counter-big",
+    "link-on",
+    "hscroll-track",
+    "h-card",
+    "fondue-art",
+    "steam",
+    "flame"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-count",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/inclus-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/inclus-m390.jpg",
+    "video": "medias/talon-libre-maquette/inclus-p960.mp4"
+   }
+  },
+  {
+   "id": "sur-demande",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#sur-demande.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:169-186",
+    "css": "assets/css/main.css:388-409",
+    "js": "assets/js/lightbox.js:7 ; assets/js/main.js:593,596,601"
+   },
+   "titre": "Et pour aller plus loin",
+   "hauteur": 1551,
+   "hauteur_m390": 2124,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3888,
+     "fin": 4756,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5680,
+     "fin": 6973,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5684,
+     "fin": 6827,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5684,
+     "fin": 6827,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6049,
+     "fin": 7206,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6211,
+     "fin": 7222,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "rotateX",
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 10,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "ondemand-grid",
+    "od-card",
+    "od-chef",
+    "od-body",
+    "where",
+    "glare",
+    "od-traiteur",
+    "od-massage",
+    "od-transfert",
+    "od-menage",
+    "ondemand-foot"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/sur-demande-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/sur-demande-m390.jpg",
+    "video": "medias/talon-libre-maquette/sur-demande-p960.mp4"
+   }
+  },
+  {
+   "id": "grand-massif",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#grand-massif.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:188-229",
+    "css": "assets/css/main.css:85,412-431,755-756",
+    "js": "assets/js/lightbox.js:7 ; assets/js/main.js:467,607-609,632-638 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Le Grand Massif, un terrain de jeu immense",
+   "hauteur": 1735,
+   "hauteur_m390": 1698,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5439,
+     "fin": 6383,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6467,
+     "fin": 7361,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6467,
+     "fin": 7361,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6459,
+     "fin": 7369,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6459,
+     "fin": 7369,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6467,
+     "fin": 7361,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 7157,
+     "fin": 8626,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "scale"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 2,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "massif-head",
+    "season",
+    "massif-stage",
+    "layer-summer",
+    "layer-winter",
+    "stats-cap",
+    "massif-stats",
+    "stat",
+    "season-panels",
+    "season-panel",
+    "title-s"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-en-aria-label",
+    "data-season",
+    "data-img",
+    "data-img-mobile",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-count",
+    "data-count-from",
+    "data-panel"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/grand-massif-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/grand-massif-m390.jpg",
+    "video": "medias/talon-libre-maquette/grand-massif-p960.mp4"
+   }
+  },
+  {
+   "id": "acces",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#acces.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:231-285",
+    "css": "assets/css/main.css:263,435-460,538-543,658,822-824",
+    "js": "assets/js/lightbox.js:64 ; assets/js/main.js:478,532,559,644,650 ; assets/js/placeholders.js:92-95"
+   },
+   "titre": "Moins d’une heure depuis Genève",
+   "hauteur": 1767,
+   "hauteur_m390": 1868,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7815,
+     "fin": 8759,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7156,
+     "fin": 8535,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 7066,
+     "fin": 8535,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 9330,
+     "fin": 10061,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 9420,
+     "fin": 10061,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 9510,
+     "fin": 10061,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 9600,
+     "fin": 10061,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "yPercent",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 2,
+   "animations_css": 2,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "ratio-21x9",
+    "access-banner",
+    "access-grid",
+    "access-text",
+    "times",
+    "access-map",
+    "map",
+    "map-d",
+    "relief",
+    "road",
+    "route",
+    "town",
+    "big",
+    "dim",
+    "station",
+    "home",
+    "pulse",
+    "dot",
+    "time",
+    "map-m",
+    "map-note"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-en",
+    "data-map",
+    "data-route"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/acces-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/acces-m390.jpg",
+    "video": "medias/talon-libre-maquette/acces-p960.mp4"
+   }
+  },
+  {
+   "id": "livre-or",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#livre-or.section",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:287-300",
+    "css": "assets/css/main.css:464-466,764-769",
+    "js": "assets/js/lightbox.js:7 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Livre d’or",
+   "hauteur": 602,
+   "hauteur_m390": 588,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8941,
+     "fin": 9809,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 8660,
+     "fin": 10162,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "guest",
+    "guest-bg",
+    "guest-grid",
+    "guest-card"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/livre-or-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/livre-or-m390.jpg",
+    "video": "medias/talon-libre-maquette/livre-or-p960.mp4"
+   }
+  },
+  {
+   "id": "reserver",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#reserver.book-cta",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:302-316",
+    "css": "assets/css/main.css:476-489,716,772",
+    "js": "assets/js/lightbox.js:7 ; assets/js/main.js:665,668,698 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Choisissez vos dates",
+   "hauteur": 828,
+   "hauteur_m390": 776,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9615,
+     "fin": 10511,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 10705,
+     "fin": 11533,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11356,
+     "fin": 12237,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "scale",
+    "x",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 4
+   },
+   "classes_exclusives": [
+    "book-cta",
+    "book-title",
+    "book-links",
+    "book-link",
+    "contact-line"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/reserver-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/reserver-m390.jpg",
+    "video": "medias/talon-libre-maquette/reserver-p960.mp4"
+   }
+  },
+  {
+   "id": "site-footer",
+   "page": "index",
+   "pages": [
+    "index",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "footer.site-footer",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:319-360",
+    "css": "assets/css/main.css:492-503,711,716-718",
+    "js": "assets/js/lightbox.js:7 ; assets/js/main.js:670,698"
+   },
+   "titre": "Séjourner",
+   "hauteur": 466,
+   "hauteur_m390": 1136,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11707,
+     "fin": 12617,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent",
+    "opacity",
+    "skewX"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 12
+   },
+   "classes_exclusives": [
+    "site-footer",
+    "footer-grid",
+    "footer-brand",
+    "footer-legal"
+   ],
+   "data": [
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/site-footer-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/site-footer-m390.jpg",
+    "video": "medias/talon-libre-maquette/site-footer-p960.mp4"
+   }
+  },
+  {
+   "id": "curtain",
+   "page": "index",
+   "pages": [
+    "index",
+    "annexe",
+    "chalet"
+   ],
+   "sig": "div.curtain",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:361-361",
+    "css": "assets/css/main.css:229-230",
+    "js": "assets/js/main.js:100-115"
+   },
+   "titre": "",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "curtain"
+   ],
+   "data": [],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/curtain-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/curtain-m390.jpg",
+    "video": "medias/talon-libre-maquette/curtain-p960.mp4"
+   }
+  },
+  {
+   "id": "404-ouverture",
+   "page": "404",
+   "pages": [
+    "404"
+   ],
+   "sig": "section#ouverture.hero",
+   "dans_main": true,
+   "code": {
+    "html": "404.html:71-87",
+    "css": "assets/css/main.css:60-71,87-95,106-108,125-130,256-258,272,281-288,294,324,353-356,371,376,390,417,477-478,507-519,528,539-543,566,611-613,622,659-662,808,870,880,902",
+    "js": "assets/js/webgl.js:30-98,159,162 ; assets/js/lightbox.js:7,12-13,19,30,66-82 ; assets/js/main.js:283,291,316-318,338,391-406,453,559,577,640,667 ; assets/js/placeholders.js:40-88,97-158"
+   },
+   "titre": "Hors piste.",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 2,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "hero",
+    "lost",
+    "media",
+    "hero-media",
+    "snow",
+    "hero-inner",
+    "display",
+    "hero-title",
+    "bend",
+    "line",
+    "hero-foot",
+    "lede",
+    "btn-group",
+    "btn-ink",
+    "btn-line"
+   ],
+   "data": [
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-eager",
+    "data-sizes",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/404-ouverture-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/404-ouverture-m390.jpg",
+    "video": "medias/talon-libre-maquette/404-ouverture-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-ouverture",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#ouverture.p-hero",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:73-91",
+    "css": "assets/css/main.css:60-71,130,282-288,294,338,506-528,611-613,622,659-662,732-740,870,902",
+    "js": "assets/js/lightbox.js:7,151 ; assets/js/booking.js:64-117 ; assets/js/main.js:291,316-318,336-338,391-406 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "L’Annexe, skis aux pieds",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 2,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "p-hero",
+    "hero-media",
+    "hero-mask",
+    "hero-inner",
+    "hero-title",
+    "place",
+    "display",
+    "line",
+    "hero-foot",
+    "hero-facts",
+    "btn-group",
+    "hero-ctas",
+    "btn-ghost"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-eager",
+    "data-sizes",
+    "data-en",
+    "data-gallery"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-ouverture-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-ouverture-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-ouverture-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-subnav",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "nav.subnav",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:92-94",
+    "css": "assets/css/main.css:146,530-534,831-832,894",
+    "js": "assets/js/main.js:73-77,132-133,554,676"
+   },
+   "titre": "Sur cette page",
+   "hauteur": 51,
+   "hauteur_m390": 53,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 9
+   },
+   "classes_exclusives": [
+    "subnav"
+   ],
+   "data": [
+    "data-en-aria-label",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-subnav-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-subnav-m390.jpg"
+   }
+  },
+  {
+   "id": "annexe-appartements",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#appartements.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:96-119",
+    "css": "assets/css/main.css:131,262,339-342,564-567,778-780",
+    "js": "assets/js/booking.js:14-16,62,184-204,246-253,288 ; assets/js/main.js:672"
+   },
+   "titre": "Deux appartements",
+   "hauteur": 1438,
+   "hauteur_m390": 1545,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 332,
+     "fin": 1200,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 566,
+     "fin": 1889,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 601,
+     "fin": 1753,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1214,
+     "fin": 2139,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1123,
+     "fin": 2000,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 546,
+     "fin": 1984,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "apartments",
+    "apt",
+    "ratio-3x2",
+    "facts",
+    "trk",
+    "apt-alt",
+    "apt-tag"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-pick-apt"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-appartements-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-appartements-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-appartements-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-vie",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#vie.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:121-135",
+    "css": "assets/css/main.css:349-378,729,853,876-881",
+    "js": "assets/js/main.js:441,533-534,539,584"
+   },
+   "titre": "Des espaces de vie lumineux",
+   "hauteur": 900,
+   "hauteur_m390": 767,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1747,
+     "fin": 2597,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 2389,
+     "fin": 3591,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1984,
+     "fin": 2884,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 15,
+   "proprietes": [
+    "x",
+    "xPercent",
+    "scale",
+    "y",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 14,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "hscroll",
+    "hscroll-head",
+    "hscroll-track",
+    "h-card"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-vie-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-vie-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-vie-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-chambres",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#chambres.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:137-154",
+    "css": "assets/css/main.css:536-543",
+    "js": "assets/js/main.js:662-663"
+   },
+   "titre": "Chambres et salles de bain",
+   "hauteur": 2395,
+   "hauteur_m390": 3128,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2670,
+     "fin": 3614,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3442,
+     "fin": 3802,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 4007,
+     "fin": 4367,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 4767,
+     "fin": 5127,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 4767,
+     "fin": 5127,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 4767,
+     "fin": 5127,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 5183,
+     "fin": 5543,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 5183,
+     "fin": 5543,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 5183,
+     "fin": 5543,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 5542,
+     "fin": 5902,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4086,
+     "fin": 6481,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 9,
+   "proprietes": [
+    "rotateY",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 18,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "rooms",
+    "room"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-chambres-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-chambres-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-chambres-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-residence",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#residence.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:156-174",
+    "css": "assets/css/main.css:245-252,261,385,545-549,775",
+    "js": "assets/js/webgl.js:117-156,160-162"
+   },
+   "titre": "La résidence",
+   "hauteur": 1599,
+   "hauteur_m390": 1784,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5064,
+     "fin": 5933,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5639,
+     "fin": 7109,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5046,
+     "fin": 6659,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5865,
+     "fin": 6989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 5865,
+     "fin": 6989,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6481,
+     "fin": 8079,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 8,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "grid-2",
+    "col-text",
+    "well-list",
+    "side-img",
+    "col-media",
+    "wellness-media",
+    "steam",
+    "ratio-1x1"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-residence-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-residence-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-residence-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-flaine",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#flaine.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:176-192",
+    "css": "assets/css/main.css:419-421,430,722-723,756",
+    "js": "assets/js/main.js:463-464,467"
+   },
+   "titre": "Flaine, skis aux pieds",
+   "hauteur": 2267,
+   "hauteur_m390": 1830,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6663,
+     "fin": 7531,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6902,
+     "fin": 8281,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7751,
+     "fin": 8960,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7751,
+     "fin": 8960,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7751,
+     "fin": 8960,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7751,
+     "fin": 8960,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8167,
+     "fin": 9376,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8167,
+     "fin": 9376,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8167,
+     "fin": 9376,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8167,
+     "fin": 9376,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6812,
+     "fin": 8281,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7527,
+     "fin": 8422,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7527,
+     "fin": 8422,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7519,
+     "fin": 8429,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8079,
+     "fin": 10346,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 18,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "massif-stats",
+    "stat",
+    "photo-grid"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-count",
+    "data-count-from"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-flaine-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-flaine-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-flaine-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-commodites",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#commodites.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:194-205",
+    "css": "assets/css/main.css:551-562",
+    "js": "assets/js/main.js:653 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Tout est prévu",
+   "hauteur": 1907,
+   "hauteur_m390": 2188,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8930,
+     "fin": 9798,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9168,
+     "fin": 10547,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 9078,
+     "fin": 10547,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11055,
+     "fin": 11848,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11055,
+     "fin": 11882,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11055,
+     "fin": 11916,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11055,
+     "fin": 11909,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11055,
+     "fin": 12191,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10346,
+     "fin": 12253,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "amen",
+    "services-cols",
+    "chips"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-pos"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-commodites-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-commodites-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-commodites-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-tarifs",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#tarifs.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:207-234",
+    "css": "assets/css/main.css:570-574,589-613,622,781-786,856,860-872,894",
+    "js": "assets/js/booking.js:3,6,61,64-117,126,184-203,240-245,302-308 ; assets/js/main.js:698 ; assets/js/data.js:21,33"
+   },
+   "titre": "Tarifs à la semaine",
+   "hauteur": 2104,
+   "hauteur_m390": 3077,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10836,
+     "fin": 11705,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12180,
+     "fin": 13387,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 12090,
+     "fin": 13387,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12253,
+     "fin": 14357,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 2,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 2,
+    "boutons": 24,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "booking",
+    "apt-pick",
+    "season-tabs",
+    "weeks",
+    "date-pick",
+    "summary"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-home",
+    "data-en-aria-label",
+    "data-apt",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-tarifs-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-tarifs-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-tarifs-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-acces",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#acces.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:236-289",
+    "css": "assets/css/main.css:435-460,658,717,757-761,822-824",
+    "js": "assets/js/lightbox.js:64 ; assets/js/booking.js:6,16,19,39-43,126,129-154,161,220-239,274 ; assets/js/main.js:478,559,644,650 ; assets/js/placeholders.js:92-95"
+   },
+   "titre": "Flaine, à environ 1 h 20 de Genève",
+   "hauteur": 1660,
+   "hauteur_m390": 1638,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 13582,
+     "fin": 14526,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12923,
+     "fin": 14302,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 12833,
+     "fin": 14302,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 14856,
+     "fin": 15587,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 14946,
+     "fin": 15587,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 15036,
+     "fin": 15587,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 15126,
+     "fin": 15587,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14357,
+     "fin": 16017,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "yPercent",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "access-banner",
+    "access-grid",
+    "access-text",
+    "times",
+    "out-links",
+    "link-out",
+    "access-map",
+    "map",
+    "map-d",
+    "relief",
+    "road",
+    "route",
+    "town",
+    "dim",
+    "station",
+    "pulse",
+    "dot",
+    "home",
+    "time",
+    "map-m",
+    "map-note"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-en",
+    "data-map",
+    "data-route"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-acces-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-acces-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-acces-p960.mp4"
+   }
+  },
+  {
+   "id": "annexe-demande",
+   "page": "annexe",
+   "pages": [
+    "annexe"
+   ],
+   "sig": "section#demande.section",
+   "dans_main": true,
+   "code": {
+    "html": "annexe.html:291-343",
+    "css": "assets/css/main.css:55,625-630,639-647,789-801,805",
+    "js": "assets/js/booking.js:64-117,209-253,268-269,286,302-308,329 ; assets/js/main.js:698 ; assets/js/placeholders.js:13-21"
+   },
+   "titre": "Demander votre séjour",
+   "hauteur": 1211,
+   "hauteur_m390": 1567,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14601,
+     "fin": 15546,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 14844,
+     "fin": 15975,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 14754,
+     "fin": 15975,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 16017,
+     "fin": 17228,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 15,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "request",
+    "request-side",
+    "request-img",
+    "reassure",
+    "reassure-contact",
+    "steps",
+    "step-panel",
+    "recap",
+    "row-2",
+    "checks",
+    "sr-only",
+    "consent",
+    "form-nav"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-step",
+    "data-err",
+    "data-lenis-prevent",
+    "data-prev",
+    "data-next",
+    "data-submit"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/annexe-demande-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-demande-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-demande-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-ouverture",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#ouverture.p-hero",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:73-91",
+    "css": "assets/css/main.css:60-71,130,282-288,294,338,506-528,611-613,622,659-662,732-740,870,902",
+    "js": "assets/js/lightbox.js:7,151 ; assets/js/booking.js:64-117 ; assets/js/main.js:291,316-318,336-338,391-406 ; assets/js/placeholders.js:97-146"
+   },
+   "titre": "Chalet Le Talon Libre",
+   "hauteur": 900,
+   "hauteur_m390": 844,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 2,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 1,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "p-hero",
+    "hero-media",
+    "hero-mask",
+    "hero-inner",
+    "hero-title",
+    "place",
+    "display",
+    "line",
+    "hero-foot",
+    "hero-facts",
+    "btn-group",
+    "hero-ctas",
+    "btn-ghost"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en",
+    "data-eager",
+    "data-sizes",
+    "data-en",
+    "data-gallery"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-ouverture-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-ouverture-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-ouverture-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-subnav",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "nav.subnav",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:92-94",
+    "css": "assets/css/main.css:146,530-534,831-832,894",
+    "js": "assets/js/main.js:73-77,132-133,554,676"
+   },
+   "titre": "Sur cette page",
+   "hauteur": 51,
+   "hauteur_m390": 53,
+   "masque_m390": false,
+   "position": "sticky",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 8
+   },
+   "classes_exclusives": [
+    "subnav"
+   ],
+   "data": [
+    "data-en-aria-label",
+    "data-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-subnav-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-subnav-m390.jpg"
+   }
+  },
+  {
+   "id": "chalet-vie",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#vie.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:96-111",
+    "css": "assets/css/main.css:84,349-378,729,853,876-881",
+    "js": "assets/js/main.js:441,533-534,539,584"
+   },
+   "titre": "Des espaces de vie généreux",
+   "hauteur": 900,
+   "hauteur_m390": 796,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 309,
+     "fin": 1159,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": true,
+     "scrub": 0.6,
+     "debut": 951,
+     "fin": 2504,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 1,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 0,
+     "fin": 0,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 546,
+     "fin": 1446,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 17,
+   "proprietes": [
+    "x",
+    "xPercent",
+    "scale",
+    "y",
+    "rotate"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 16,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "hscroll",
+    "hscroll-head",
+    "hscroll-track",
+    "h-card",
+    "wide"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-vie-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-vie-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-vie-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-chambres",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#chambres.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:113-128",
+    "css": "assets/css/main.css:536-543",
+    "js": "assets/js/main.js:662-663"
+   },
+   "titre": "Quatre chambres doubles",
+   "hauteur": 1938,
+   "hauteur_m390": 2749,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1232,
+     "fin": 2176,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 2432,
+     "fin": 2792,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 2872,
+     "fin": 3232,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3632,
+     "fin": 3992,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3632,
+     "fin": 3992,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3632,
+     "fin": 3992,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3999,
+     "fin": 4359,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3999,
+     "fin": 4359,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3999,
+     "fin": 4359,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2999,
+     "fin": 4938,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 8,
+   "proprietes": [
+    "rotateY",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 16,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "rooms",
+    "room"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-chambres-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-chambres-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-chambres-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-bien-etre",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#bien-etre.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:130-144",
+    "css": "assets/css/main.css:245-252,262,385,545-549,775",
+    "js": "assets/js/webgl.js:117-156,160-162"
+   },
+   "titre": "Espace bien-être",
+   "hauteur": 1502,
+   "hauteur_m390": 1702,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3170,
+     "fin": 4039,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3645,
+     "fin": 5115,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3152,
+     "fin": 4765,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 3975,
+     "fin": 5119,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4938,
+     "fin": 6439,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [
+    "webgl"
+   ],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 6,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "grid-2",
+    "col-text",
+    "well-list",
+    "side-img",
+    "col-media",
+    "wellness-media",
+    "steam",
+    "ratio-3x2"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-bien-etre-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-bien-etre-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-bien-etre-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-commodites",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#commodites.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:146-153",
+    "css": "assets/css/main.css:551-556",
+    "js": "assets/js/main.js:653"
+   },
+   "titre": "Tout est prévu",
+   "hauteur": 1545,
+   "hauteur_m390": 1397,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4672,
+     "fin": 5540,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 4911,
+     "fin": 6290,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 4821,
+     "fin": 6290,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7149,
+     "fin": 7941,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7149,
+     "fin": 7976,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7149,
+     "fin": 8010,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7149,
+     "fin": 8003,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7149,
+     "fin": 8216,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6439,
+     "fin": 7984,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "amen"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-commodites-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-commodites-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-commodites-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-services",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#services.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:155-165",
+    "css": "assets/css/main.css:85,242,558-562,729",
+    "js": null
+   },
+   "titre": "Services",
+   "hauteur": 1457,
+   "hauteur_m390": 1237,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6217,
+     "fin": 7085,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 6455,
+     "fin": 7835,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 6365,
+     "fin": 7835,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7984,
+     "fin": 9441,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "on-frost",
+    "services-cols",
+    "title-s",
+    "chips"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-icon",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-services-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-services-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-services-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-tarifs",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#tarifs.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:167-191",
+    "css": "assets/css/main.css:339-342,570,589-613,622,856,860-872",
+    "js": "assets/js/booking.js:3,6,61,64-117,240-245,302-308 ; assets/js/main.js:672,698"
+   },
+   "titre": "Tarifs et conditions",
+   "hauteur": 1529,
+   "hauteur_m390": 2027,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 7674,
+     "fin": 8542,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 8442,
+     "fin": 9649,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 8352,
+     "fin": 9649,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9711,
+     "fin": 10779,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9441,
+     "fin": 10970,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 2,
+   "proprietes": [
+    "yPercent",
+    "y",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 2,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 2,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "booking",
+    "date-pick",
+    "facts",
+    "summary"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-home",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-tarifs-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-tarifs-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-tarifs-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-acces",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#acces.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:193-246",
+    "css": "assets/css/main.css:435-460,658,717,757-761,822-824",
+    "js": "assets/js/lightbox.js:64 ; assets/js/booking.js:6,16,19,39-43,126,129-154,161,220-239,274 ; assets/js/main.js:478,559,644,650 ; assets/js/placeholders.js:92-95"
+   },
+   "titre": "Les Carroz, la station la plus facile d’accès",
+   "hauteur": 1764,
+   "hauteur_m390": 1659,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9844,
+     "fin": 10864,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 9185,
+     "fin": 10564,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 9095,
+     "fin": 10564,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 11469,
+     "fin": 12200,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 11559,
+     "fin": 12200,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 11649,
+     "fin": 12200,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 1,
+     "debut": 11739,
+     "fin": 12200,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10970,
+     "fin": 12734,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 5,
+   "proprietes": [
+    "yPercent",
+    "strokeDashoffset"
+   ],
+   "boucles_css": 1,
+   "animations_css": 1,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "access-banner",
+    "access-grid",
+    "access-text",
+    "times",
+    "out-links",
+    "link-out",
+    "access-map",
+    "map",
+    "map-d",
+    "relief",
+    "road",
+    "route",
+    "town",
+    "dim",
+    "station",
+    "home",
+    "pulse",
+    "dot",
+    "time",
+    "map-m",
+    "map-note"
+   ],
+   "data": [
+    "data-trace",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-en",
+    "data-map",
+    "data-route"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-acces-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-acces-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-acces-p960.mp4"
+   }
+  },
+  {
+   "id": "chalet-demande",
+   "page": "chalet",
+   "pages": [
+    "chalet"
+   ],
+   "sig": "section#demande.section",
+   "dans_main": true,
+   "code": {
+    "html": "chalet.html:248-300",
+    "css": "assets/css/main.css:55,125-128,625-630,639-647,789-801,805",
+    "js": "assets/js/booking.js:64-117,209-253,268-269,286,302-308,329 ; assets/js/main.js:698 ; assets/js/placeholders.js:13-21"
+   },
+   "titre": "Demander votre séjour",
+   "hauteur": 1211,
+   "hauteur_m390": 1471,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 10966,
+     "fin": 11911,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 11209,
+     "fin": 12340,
+     "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 11119,
+     "fin": 12340,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 12734,
+     "fin": 13944,
+     "anime": false,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 15,
+    "boutons": 3,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "request",
+    "request-side",
+    "request-img",
+    "reassure",
+    "reassure-contact",
+    "steps",
+    "step-panel",
+    "recap",
+    "row-2",
+    "checks",
+    "sr-only",
+    "consent",
+    "form-nav",
+    "btn-line",
+    "btn-ink"
+   ],
+   "data": [
+    "data-trace",
+    "data-en",
+    "data-img",
+    "data-ph",
+    "data-label",
+    "data-label-en",
+    "data-step",
+    "data-err",
+    "data-lenis-prevent",
+    "data-prev",
+    "data-next",
+    "data-submit"
+   ],
+   "medias": {
+    "capture": "medias/talon-libre-maquette/chalet-demande-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/chalet-demande-m390.jpg",
+    "video": "medias/talon-libre-maquette/chalet-demande-p960.mp4"
+   }
+  }
+ ]
+}

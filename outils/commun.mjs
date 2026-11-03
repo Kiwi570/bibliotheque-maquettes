@@ -17,8 +17,19 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': '
 // Serveur statique façon Vercel (cleanUrls, 404.html). Renvoie { url, fermer }.
 export function servir(dossier, port = 0) {
   const root = path.resolve(dossier);
+  // Réécritures de vercel.json (« /v/:ver/:path* » → « /:path* »), comme en ligne.
+  let reecritures = [];
+  try {
+    const vj = JSON.parse(fs.readFileSync(path.join(root, 'vercel.json'), 'utf8'));
+    reecritures = (vj.rewrites || []).map(r => {
+      const noms = [];
+      const re = new RegExp('^' + r.source.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/:(\w+)(\*?)/g, (m, n, etoile) => { noms.push(n); return etoile ? '(.*)' : '([^/]+)'; }) + '$');
+      return { re, noms, dest: r.destination };
+    }).filter(r => !/^https?:/.test(r.dest));
+  } catch {}
   const srv = http.createServer((req, rsp) => {
     let u; try { u = decodeURIComponent(req.url.split('?')[0].split('#')[0]); } catch { u = '/'; }
+    for (const r of reecritures) { const m = u.match(r.re); if (m) { u = r.dest.replace(/:(\w+)\*?/g, (x, n) => m[r.noms.indexOf(n) + 1] ?? ''); break; } }
     const cands = u === '/' ? ['index.html'] : [u, u + '.html', path.join(u, 'index.html')];
     for (const c of cands) {
       const f = path.join(root, c);

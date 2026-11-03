@@ -1,0 +1,39 @@
+{
+ "id": "tiki-cassis-maquette/intro",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "titre": "Ouverture : lever du jour et plongée",
+ "role": "ouverture",
+ "description": "Calque d'ouverture : le jour se lève, le mot TIKI s'écrit, puis la caméra plonge dans le fût du I, mesuré dans la police, pour découvrir la vidéo du héros. Passable par un clic, une touche ou la molette ; jouée une fois par session.",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:28-44",
+  "css": "css/style.css:198,202-215",
+  "js": "js/home.js:47,51-59,80-98,110-118 ; js/i18n.js:131"
+ },
+ "medias": {},
+ "pieges": [
+  "titre en place vers 2,7 s seulement",
+  "verrou de défilement retiré au plus tard à 7 s, même si le script échoue",
+  "mesurer le fût de la lettre dans la police chargée, pas dans la police de repli"
+ ],
+ "mesures": {
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

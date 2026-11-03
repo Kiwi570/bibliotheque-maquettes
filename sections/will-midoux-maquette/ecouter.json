@@ -1,0 +1,47 @@
+{
+ "id": "will-midoux-maquette/ecouter",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "Au coin du feu",
+ "role": "outil-interactif",
+ "description": "Lecteur de trois extraits devant un feu de camp : les braises WebGL et la lueur de la section s'intensifient avec la basse de la musique, et une onde SVG en arc suit le spectre ; montée rapide, retombée lente, jamais de clignotement.",
+ "animations": [
+  "webgl-particules",
+  "canvas-2d",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "lecteur-audio"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:174-210",
+  "css": "css/main.css:317-346",
+  "js": "js/home.js:180-207,277-279 ; js/embers.js ; js/audio.js"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/ecouter-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/ecouter-m390.jpg",
+  "video": "medias/will-midoux-maquette/ecouter-p960.mp4"
+ },
+ "pieges": [
+  "l'analyse audio (AnalyserNode) n'existe qu'après un geste : démarrer la boucle sur play",
+  "lisser la basse (moyenne glissante) sinon la lueur clignote",
+  "braises créées seulement à l'approche (IntersectionObserver) et arrêtées en mode calme"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1097,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "tiki-cassis-maquette/sky",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "formules",
+  "mentions-legales"
+ ],
+ "titre": "Ciel de la journée",
+ "role": "decor",
+ "description": "Ciel fixe en fond de toute la page : le dégradé, le soleil puis les étoiles (canvas 2D) passent de l'aube à la nuit au fil du défilement, calés sur l'heure réelle de lever et de coucher du soleil à Cassis.",
+ "animations": [
+  "progression-fixée",
+  "canvas-2d"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:24",
+  "css": "css/style.css:105-107",
+  "js": "js/core.js:38-139 ; js/sun.js"
+ },
+ "medias": {},
+ "pieges": [
+  "les couleurs du ciel sont des variables (--sky-top, --sky-mid, --sky-bot) interpolées en JS : garder ces noms",
+  "soleil fixe sur téléphone (correction de l'audit) : ne pas le faire défiler sous 700 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

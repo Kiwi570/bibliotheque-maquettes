@@ -1,0 +1,44 @@
+{
+ "id": "will-midoux-maquette/ep",
+ "maquette": "will-midoux-maquette",
+ "page": "index",
+ "titre": "EP épinglé",
+ "role": "produits",
+ "description": "Section épinglée : le boîtier du CD tourne en 3D, le disque sort en tournant, une chaleur rouge monte et le titre passe de « country » à « rock » ; liste des titres et ajout au panier à côté.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "morphing"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:132-173",
+  "css": "css/main.css:282-316,825-840",
+  "js": "js/home.js:260-275"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/ep-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/ep-m390.jpg",
+  "video": "medias/will-midoux-maquette/ep-p960.mp4"
+ },
+ "pieges": [
+  "épinglage seulement au-dessus de 900 px, sinon scrub sans épingle",
+  "la section fait 100svh sous --entete-h mesurée : sinon le boîtier sort de l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1190,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,693 @@
+{
+  "maquette": {
+    "client": "chalet et appartements de location saisonnière pour skieurs de télémark dans le Grand Massif",
+    "activite": [
+      "hébergement",
+      "tourisme"
+    ],
+    "concept": [
+      "magazine",
+      "voyage"
+    ],
+    "ambiance": [
+      "froid",
+      "montagne",
+      "luxueux"
+    ],
+    "palette": {
+      "fond": "--snow",
+      "texte": "--ink",
+      "accent": "--red",
+      "secondaire": "--shadow-blue"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Inter Tight",
+      "mono": "Inter Tight"
+    },
+    "points_forts": [
+      "trace rouge de télémark qui serpente dans les marges de toute la page au défilement",
+      "poudreuse WebGL qui s'écarte sous le curseur à l'ouverture, repli 2D",
+      "manifeste épinglé : mots révélés et talon de la chaussure qui se lève",
+      "calendrier des semaines avec récapitulatif épinglé, échéancier et frise d'annulation",
+      "comparateur chalet / annexe, altimètre de lecture, ambiance sonore générée sans fichier"
+    ],
+    "reserves": [
+      "skieur Grok pas en position de télémark",
+      "comparateur repris par son animation au clavier",
+      "page Annexe à 5 Mo en 1440",
+      "contenus à faire confirmer par le client",
+      "la trace rouge et le loader n'ont pas de bloc propre dans l'inventaire"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "progression-fixée",
+      "masque",
+      "parallaxe",
+      "compteur",
+      "apparition-au-défilement",
+      "révélation-image",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "canvas-2d",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "comparateur",
+      "réservation-simulee",
+      "formulaire-par-étapes",
+      "galerie-cliquable",
+      "lecteur-audio",
+      "mode-calme"
+    ],
+    "change_depuis_audit": "Deux commits après la correction 177706d : 8c16ede remplace les images Grok par les visuels définitifs (textes alternatifs compris), 2f48857 retire anticipatePin des sections fixées (version 20261031). Pas de changement de mise en page ; inventaire fait sur 2f48857.",
+    "accueil": "ouverture"
+  },
+  "sections": {
+    "loader": {
+      "titre": "Chargement",
+      "role": "ouverture",
+      "description": "Calque de chargement plein écran qui se retire avant l'ouverture orchestrée du héros (titre en italique, trace rouge).",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "cursor-trail": {
+      "titre": "Traces du curseur",
+      "role": "decor",
+      "description": "Canvas 2D fixe : le curseur laisse dans la page une trace de ski qui s'efface, comme un sillage dans la neige ; absent au toucher et en mode calme.",
+      "animations": [
+        "curseur-personnalisé",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "cursor": {
+      "titre": "Curseur",
+      "role": "decor",
+      "description": "Curseur rond qui suit la souris avec retard et grossit sur les éléments cliquables.",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "site-header": {
+      "titre": "En-tête",
+      "role": "menu",
+      "description": "En-tête fixe : liens chalet, Annexe, Grand Massif, accès, choix FR/EN, bouton d'ambiance sonore (vent et poêle générés en Web Audio) et bouton Réserver ; masqué à la descente.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "lecteur-audio"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "l'ambiance sonore ne démarre qu'au clic, jamais à l'arrivée"
+      ]
+    },
+    "mbar": {
+      "titre": "Barre de réservation mobile",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas sur téléphone avec bouton de réservation, qui apparaît après le héros.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "menu": {
+      "titre": "Menu téléphone",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, avec verrou du défilement.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "altimeter": {
+      "titre": "Altimètre de lecture",
+      "role": "decor",
+      "description": "Altimètre fixe dans la marge : l'altitude affichée monte de la vallée au sommet à mesure que la page défile.",
+      "animations": [
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "ouverture": {
+      "titre": "Ouverture poudreuse",
+      "role": "ouverture",
+      "description": "Photo de poudreuse à l'aube sous un shader WebGL où la neige s'écarte sous le curseur ; titre en italique « Talon libre, esprit libre. » qui se plie, et départ de la trace rouge de télémark qui suivra toute la page. Repli canvas 2D sans WebGL.",
+      "animations": [
+        "webgl-shader",
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "tester WebGL avant d'instancier OGL, sinon erreur console avant le repli 2D",
+        "la trace (svg.trace) se recalcule quand la hauteur du contenu change"
+      ],
+      "dependances": [
+        "gsap",
+        "ogl",
+        "canvas"
+      ],
+      "code": {
+        "html": "index.html:72-90",
+        "css": "assets/css/main.css:233-235,281-295",
+        "js": "assets/js/webgl.js:11-116 ; assets/js/main.js:282-421"
+      }
+    },
+    "telemark": {
+      "titre": "Manifeste du télémark",
+      "role": "manifeste",
+      "description": "Section sombre épinglée : la citation se révèle mot à mot au scrub pendant que la chaussure de télémark dessinée lève le talon ; photos de skieur en composition décalée.",
+      "animations": [
+        "section-fixée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "manifeste-mot-a-mot",
+      "pieges": [
+        "photo de skieur pas en position de télémark (reste de l'audit)",
+        "rédécouper les mots au changement de langue"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:92-107",
+        "css": "assets/css/main.css:299-319",
+        "js": "assets/js/main.js:471-500"
+      }
+    },
+    "refuges": {
+      "titre": "Deux adresses et comparateur",
+      "role": "offre",
+      "description": "Présentation des deux logements avec un comparateur glissant chalet / Annexe qui se balade seul à l'entrée, poignée clavier, puis deux cartes de lien.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "l'animation d'entrée reprend la main sur le clavier (reste de l'audit) : la couper dès la première interaction"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:109-147",
+        "css": "assets/css/main.css:323-345",
+        "js": "assets/js/main.js:502-528"
+      }
+    },
+    "inclus": {
+      "titre": "Déjà compris dans le séjour",
+      "role": "galerie",
+      "description": "Bande horizontale épinglée des services inclus avec barre de progression, compteur 16 et cartes qui ondulent ; photos qui prennent la hauteur disponible pour tenir dans l'écran.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "compteur",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": [
+        "recalculer la hauteur des photos au refreshInit pour que légendes et bande tiennent dans l'écran",
+        "défilement natif sous 861 px et en mode réduit"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:149-167",
+        "css": "assets/css/main.css:349-385",
+        "js": "assets/js/main.js:530-590"
+      }
+    },
+    "sur-demande": {
+      "titre": "Services sur demande",
+      "role": "services",
+      "description": "Cartes de services (chef, traiteur, massage) qui basculent en 3D à l'entrée et s'inclinent au survol avec reflet.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "grand-massif": {
+      "titre": "Grand Massif hiver / été",
+      "role": "outil-interactif",
+      "description": "Présentation des stations avec bascule Hiver / Été qui change photo et liste d'activités.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces": {
+      "titre": "Accès depuis Genève",
+      "role": "carte",
+      "description": "Carte SVG dont les itinéraires se tracent au scrub depuis Genève, avec temps de trajet et coches.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "livre-or": {
+      "titre": "Livre d'or",
+      "role": "témoignages",
+      "description": "Emplacement de livre d'or, vide assumé, en attendant de vrais avis.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver": {
+      "titre": "Choisissez vos dates",
+      "role": "appel",
+      "description": "Appel final sur photo du chalet en zoom arrière, deux liens vers les tarifs des logements, téléphone et e-mail.",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "site-footer": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page sombre avec rappel des deux logements, colonnes de liens et coordonnées.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "curtain": {
+      "titre": "Rideau de transition",
+      "role": "transition-de-page",
+      "description": "Rideau plein écran qui couvre la page avant la navigation interne et se retire à l'arrivée.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "404-ouverture": {
+      "titre": "Hors piste",
+      "role": "page-404",
+      "description": "Page 404 « Hors piste. » sur la poudreuse WebGL, avec trace sinueuse et liens de retour.",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-ouverture": {
+      "titre": "Ouverture de l'Annexe",
+      "role": "ouverture",
+      "description": "Tête de page logement : photo plein écran, titre, chiffres clés (capacité, chambres, piscine, prix) et boutons photos et semaines.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-subnav": {
+      "titre": "Sous-navigation",
+      "role": "menu",
+      "description": "Sous-navigation collante sous l'en-tête, qui suit la section active de la page logement.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-appartements": {
+      "titre": "Deux appartements",
+      "role": "produits",
+      "description": "Choix entre deux appartements, qui préremplit la réservation.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-vie": {
+      "titre": "Espaces de vie",
+      "role": "galerie",
+      "description": "Bande horizontale épinglée des pièces de vie, même mécanique que les services inclus.",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "galerie-horizontale-epinglee",
+      "pieges": []
+    },
+    "annexe-chambres": {
+      "titre": "Chambres",
+      "role": "galerie",
+      "description": "Chambres présentées en cartes qui pivotent en 3D à l'entrée.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-residence": {
+      "ignorer": true
+    },
+    "annexe-flaine": {
+      "titre": "Flaine, skis aux pieds",
+      "role": "manifeste",
+      "description": "Présentation de la station avec grande photo en parallaxe.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-commodites": {
+      "titre": "Tout est prévu",
+      "role": "services",
+      "description": "Liste des équipements avec coches qui se tracent.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "annexe-tarifs": {
+      "titre": "Tarifs à la semaine",
+      "role": "tarifs",
+      "description": "Calendrier des semaines par saison où chaque semaine est un bouton avec son prix ; le récapitulatif épinglé calcule total, acompte, échéancier en jours ouvrables (fériés compris) et frise d'annulation.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "le récapitulatif collant se cale sous la sous-navigation mesurée",
+        "les prix viennent des données du client, jamais inventés"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "annexe.html:207-234",
+        "css": "assets/css/main.css:570-622",
+        "js": "assets/js/booking.js:1-208,302-331 ; assets/js/data.js"
+      }
+    },
+    "annexe-acces": {
+      "ignorer": true
+    },
+    "annexe-demande": {
+      "titre": "Demande de séjour",
+      "role": "contact",
+      "description": "Formulaire de demande en trois étapes (dates, voyageurs, coordonnées) prérempli depuis le calendrier, validation par étape et récapitulatif ; envoi simulé.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "messages d'erreur reliés aux champs (data-err)"
+      ],
+      "code": {
+        "html": "annexe.html:291-343",
+        "css": "assets/css/main.css:625-647",
+        "js": "assets/js/booking.js:209-300"
+      }
+    },
+    "chalet-ouverture": {
+      "ignorer": true
+    },
+    "chalet-subnav": {
+      "ignorer": true
+    },
+    "chalet-vie": {
+      "ignorer": true
+    },
+    "chalet-chambres": {
+      "ignorer": true
+    },
+    "chalet-bien-etre": {
+      "titre": "Espace bien-être",
+      "role": "services",
+      "description": "Spa, sauna et fitness présentés sur fond sombre avec une vapeur WebGL qui monte sur la photo ; repli sans effet.",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "arrêter le rendu hors écran (IntersectionObserver)"
+      ],
+      "dependances": [
+        "ogl"
+      ],
+      "code": {
+        "html": "chalet.html:130-144",
+        "css": "assets/css/main.css:245-252,545-549",
+        "js": "assets/js/webgl.js:117-163"
+      }
+    },
+    "chalet-commodites": {
+      "ignorer": true
+    },
+    "chalet-services": {
+      "titre": "Services du chalet",
+      "role": "services",
+      "description": "Liste des services du chalet avec photo.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chalet-tarifs": {
+      "titre": "Tarifs du chalet",
+      "role": "tarifs",
+      "description": "Tarif selon la période : date d'arrivée et nombre de nuits, récapitulatif épinglé avec échéancier ; variante du calendrier de l'Annexe.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chalet-acces": {
+      "ignorer": true
+    },
+    "chalet-demande": {
+      "ignorer": true
+    }
+  }
+}

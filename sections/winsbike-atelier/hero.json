@@ -1,0 +1,48 @@
+{
+ "id": "winsbike-atelier/hero",
+ "maquette": "winsbike-atelier",
+ "page": "index",
+ "titre": "Cadre irisé sur métal liquide",
+ "role": "ouverture",
+ "description": "Fond de métal liquide anodisé en WebGL (OGL) derrière un cadre de vélo détouré qui entre en rotation 3D et suit le pointeur ; pastilles de teintes qui recolorent le métal et annoncent le nombre de produits de cette couleur avec un lien filtré vers la boutique. Titre en lettres montantes (SplitText), parallaxe au défilement, dégradé CSS sans WebGL.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "index.html:51-72",
+  "css": "assets/css/main.css:177-216",
+  "js": "assets/js/metal.js ; assets/js/home.js:28-69"
+ },
+ "medias": {
+  "capture": "medias/winsbike-atelier/hero-p1440.jpg",
+  "capture_m390": "medias/winsbike-atelier/hero-m390.jpg",
+  "video": "medias/winsbike-atelier/hero-p960.mp4"
+ },
+ "pieges": [
+  "l'accueil pèse 6,85 Mo (reste de l'audit) : charger la photo du cadre en taille adaptée",
+  "plafonner le titre (92 px, nowrap par ligne) pour qu'aucun mot ne se coupe en 1920",
+  "dpr du canvas limité à 1,25"
+ ],
+ "mesures": {
+  "hauteur_p1440": 902,
+  "hauteur_m390": 1092,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

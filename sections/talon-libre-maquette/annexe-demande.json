@@ -1,0 +1,42 @@
+{
+ "id": "talon-libre-maquette/annexe-demande",
+ "maquette": "talon-libre-maquette",
+ "page": "annexe",
+ "titre": "Demande de séjour",
+ "role": "contact",
+ "description": "Formulaire de demande en trois étapes (dates, voyageurs, coordonnées) prérempli depuis le calendrier, validation par étape et récapitulatif ; envoi simulé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "annexe.html:291-343",
+  "css": "assets/css/main.css:625-647",
+  "js": "assets/js/booking.js:209-300"
+ },
+ "medias": {
+  "capture": "medias/talon-libre-maquette/annexe-demande-p1440.jpg",
+  "capture_m390": "medias/talon-libre-maquette/annexe-demande-m390.jpg",
+  "video": "medias/talon-libre-maquette/annexe-demande-p960.mp4"
+ },
+ "pieges": [
+  "messages d'erreur reliés aux champs (data-err)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1211,
+  "hauteur_m390": 1567,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

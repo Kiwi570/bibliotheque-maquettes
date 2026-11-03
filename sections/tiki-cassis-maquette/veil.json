@@ -1,0 +1,43 @@
+{
+ "id": "tiki-cassis-maquette/veil",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "formules",
+  "mentions-legales"
+ ],
+ "titre": "Voile de transition",
+ "role": "transition-de-page",
+ "description": "Voile plein écran qui couvre la page au départ d'un lien interne et se retire à l'arrivée, avec retour en haut doux.",
+ "animations": [
+  "transition-de-page"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "code": {
+  "html": "index.html:27-27",
+  "css": "css/style.css:194-201",
+  "js": "js/home.js:13 ; js/core.js:223-268,514-545"
+ },
+ "medias": {},
+ "pieges": [
+  "classe veil-pending posée dans le head, retirée au plus tard après 4 s"
+ ],
+ "mesures": {
+  "hauteur_p1440": 904,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

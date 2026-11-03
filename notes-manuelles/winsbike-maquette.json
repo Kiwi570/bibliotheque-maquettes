@@ -1,0 +1,643 @@
+{
+  "maquette": {
+    "client": "distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne",
+    "activite": [
+      "commerce",
+      "artisanat"
+    ],
+    "concept": [
+      "atelier",
+      "catalogue"
+    ],
+    "ambiance": [
+      "sombre",
+      "industriel",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--bg",
+      "texte": "--fg",
+      "accent": "--orange",
+      "secondaire": "--paper"
+    },
+    "polices": {
+      "titres": "Barlow Condensed",
+      "texte": "Barlow",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "ouverture à la clé dynamométrique qui serre jusqu'au clic",
+      "établi éclairé par une lampe WebGL qui suit le curseur",
+      "vue éclatée du moyeu épinglée sur papier millimétré",
+      "étiquettes des meilleures ventes qui se balancent avec la vitesse de défilement",
+      "tiroirs des marques, cadran des horaires réels et formulaire pro à engrenages"
+    ],
+    "reserves": [
+      "CSS et JS minifiés sans leurs sources dans le dépôt",
+      "vignette VTT hors style",
+      "défilement non verrouillé sous le menu mobile"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "marquee",
+      "section-fixée",
+      "progression-fixée",
+      "masque",
+      "parallaxe",
+      "compteur",
+      "flip",
+      "apparition-au-défilement",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "canvas-2d"
+    ],
+    "interactions": [
+      "recherche",
+      "panier-simule",
+      "filtres",
+      "formulaire-par-étapes",
+      "galerie-cliquable",
+      "configurateur",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "top"
+  },
+  "sections": {
+    "hd": {
+      "titre": "En-tête atelier",
+      "role": "menu",
+      "description": "En-tête fixe sombre : logo, méga-menu des pratiques, liens, statut d'ouverture en direct (ouvert ou fermé, réouverture), recherche, interrupteurs Son et Calme, panier.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "recherche",
+        "panier-simule",
+        "mode-calme"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "loader": {
+      "titre": "Ouverture à la clé dynamométrique",
+      "role": "ouverture",
+      "description": "Calque d'ouverture : une clé dynamométrique serre de 0 à 5 N·m jusqu'au « clic » puis la page se découvre ; passable d'un toucher, titre lisible à 2 s.",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "laisser passer l'intro au toucher et la retirer sous mode calme sans saut de mise en page (CLS 0,80 avant correction)"
+      ],
+      "sans_capture": true,
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:47-60",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/core.js (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "top": {
+      "titre": "Établi éclairé à la lampe",
+      "role": "ouverture",
+      "description": "Héros sur une photo d'établi plongée dans le noir : une lampe WebGL (OGL) suit le curseur, réchauffe la zone éclairée et fait briller la poussière qui tombe ; titre, recherche instantanée et bandeau défilant des engagements. Repli sur la photo sans WebGL.",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte",
+        "marquee",
+        "parallaxe"
+      ],
+      "interactions": [
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "shader de lumière : le fond reste à 13 % hors du halo, prévoir un texte posé hors de la zone noire",
+        "sur tactile, poser la lampe au centre (pas de curseur)"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "ogl"
+      ],
+      "code": {
+        "html": "index.html:62-85",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js:1-28 (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "pratiques": {
+      "titre": "Votre vélo, vos pièces",
+      "role": "produits",
+      "description": "Six pratiques en cartes photo (VTT, route, ville, BMX…) avec nombre de rubriques et liste des sous-familles, balayage laser au survol.",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "vignette VTT hors style à régénérer (reste de l'audit)"
+      ]
+    },
+    "eclatee": {
+      "titre": "Vue éclatée du moyeu",
+      "role": "produits",
+      "description": "Planche technique sur papier millimétré épinglée : le moyeu se démonte pièce par pièce au défilement, avec cotes, légende numérotée qui allume la pièce correspondante (survol et clavier).",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "anticipatePin encore présent dans home.js : à retirer à l'extraction",
+        "pièces SVG générées depuis un tableau de tracés : garder les data-n alignés avec la légende"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:97-118",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js:29-36 (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "marques": {
+      "titre": "Tiroirs des marques",
+      "role": "produits",
+      "description": "Cinq marques rangées dans des tiroirs d'établi : un clic ouvre le tiroir, compte les références et affiche trois produits et le lien de la marque.",
+      "animations": [
+        "apparition-au-défilement",
+        "compteur"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "un seul tiroir ouvert à la fois, aria-expanded sur le bouton"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:120-132",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js:37-44 (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "saison": {
+      "titre": "Sélection de saison",
+      "role": "produits",
+      "description": "Bande de quatre produits de saison en cartes avec prix et ajout au panier.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "meilleures-ventes": {
+      "titre": "Étiquettes des meilleures ventes",
+      "role": "produits",
+      "description": "Mur à crochets : les meilleures ventes pendent comme des étiquettes qui se balancent selon la vitesse de défilement puis reviennent en oscillant ; teintes anodisées, aperçu rapide et ajout au panier.",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "panier-simule",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "balancement piloté par la vitesse de défilement : coupé en mode calme"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:147-157",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js:48-56 (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "beast": {
+      "titre": "Planche du cadre Beast",
+      "role": "produits",
+      "description": "Planche de géométrie du cadre sur papier millimétré : photo du cadre, tracé coté qui se dessine, caractéristiques chiffrées.",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protections": {
+      "titre": "Protections",
+      "role": "produits",
+      "description": "Protections et casques : photo, deux normes en encadrés, rangée de produits ; motif en canvas 2D.",
+      "animations": [
+        "apparition-au-défilement",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier": {
+      "titre": "Atelier et horaires",
+      "role": "carte",
+      "description": "Photo de l'atelier collante avec polaroïd, cadran SVG des horaires dont l'aiguille montre l'heure et le jour réels, statut ouvert ou fermé, plan de situation en SVG et boutons Copier.",
+      "animations": [
+        "section-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "heure calculée dans le fuseau de l'atelier, pas celui du visiteur"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "code": {
+        "html": "index.html:215-266",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js:57-68 (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "pro": {
+      "titre": "Formulaire pro à engrenages",
+      "role": "contact",
+      "description": "Demande de compte professionnel en quatre étapes : un engrenage tourne et s'allume à chaque étape validée, retour arrière, récapitulatif.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "valider chaque étape avant de tourner l'engrenage"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "index.html:268-317",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/home.js (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "livraison": {
+      "titre": "Commandé, préparé, suivi",
+      "role": "étapes",
+      "description": "Ligne de suivi de commande dont le colis avance au défilement, suivie de trois engagements en grandes lettres.",
+      "animations": [
+        "progression-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre": {
+      "titre": "Barre d'action téléphone",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas sur téléphone : Rechercher et Appeler, masquée sur le formulaire pro et le pied de page.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "ft": {
+      "titre": "Pied de page",
+      "role": "pied-de-page",
+      "description": "Pied de page sombre en quatre colonnes, horaires, lettre d'information, mot WINSBIKE géant en filigrane.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-nf": {
+      "titre": "Page 404",
+      "role": "page-404",
+      "description": "Page introuvable sur papier millimétré : « Cette pièce n'est pas dans nos tiroirs », deux boutons et liens rapides.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-pp-hero": {
+      "titre": "Fiche produit Beast",
+      "role": "produits",
+      "description": "Tête de fiche produit : galerie avec agrandissement, finition et taille, quantité, prix, disponibilité et ajout au panier.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-pp-numbers": {
+      "titre": "Le cadre en chiffres",
+      "role": "chiffres",
+      "description": "Quatre chiffres clés du cadre en compteurs.",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-geometrie": {
+      "titre": "Géométrie cotée",
+      "role": "outil-interactif",
+      "description": "Schéma de géométrie du cadre : survoler ou toucher une cote dans le tableau l'allume sur le dessin, et inversement ; cotes du fabricant.",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "lier chaque ligne du tableau au tracé par data-*, accessible au clavier"
+      ],
+      "dependances": [
+        "gsap"
+      ],
+      "code": {
+        "html": "cadre-beast-weapon.html:94-107",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/product.js (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "cadre-beast-weapon-pp-specs": {
+      "titre": "Point par point",
+      "role": "preuves",
+      "description": "Fiche technique en tableau à deux colonnes.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-pp-terrain": {
+      "titre": "Fait pour descendre",
+      "role": "manifeste",
+      "description": "Bande photo en parallaxe avec citation de la marque.",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-pp-family": {
+      "titre": "Pour aller avec",
+      "role": "produits",
+      "description": "Trois produits de la même finition en cartes.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cadre-beast-weapon-sticky-buy": {
+      "titre": "Barre d'achat",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas avec nom, prix et bouton d'ajout, qui apparaît quand le bouton principal sort de l'écran.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "sumart-br-hero": {
+      "titre": "Tête de marque",
+      "role": "ouverture",
+      "description": "Tête de page marque : nom géant, citation, trois compteurs et produits suspendus en étiquettes.",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sumart-fams": {
+      "titre": "Familles de produits",
+      "role": "produits",
+      "description": "Bande de cinq familles en vignettes photo avec nombre de pièces.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sumart-catalogue": {
+      "titre": "Catalogue filtrable",
+      "role": "produits",
+      "description": "Catalogue de la marque : filtres par famille, recherche, tri et prix maximal ; les cartes se rangent en Flip.",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "voisin du module catalogue-filtres-flip"
+      ],
+      "dependances": [
+        "gsap",
+        "flip"
+      ],
+      "code": {
+        "html": "sumart.html:72-95",
+        "css": "assets/css/site.css:1",
+        "js": "assets/js/brand.js (minifié : plages indicatives, sources absentes du dépôt)"
+      }
+    },
+    "sumart-plaquettes": {
+      "titre": "Trouver sa plaquette",
+      "role": "outil-interactif",
+      "description": "Choix d'une forme de plaquette de frein dans une grille de silhouettes ; le catalogue n'affiche que les références correspondantes.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sumart-barre": {
+      "titre": "Barre d'action téléphone",
+      "role": "barre-fixe",
+      "description": "Barre fixe en bas sur téléphone : Rechercher et Appeler, masquée sur le formulaire pro et le pied de page.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "ignorer": true
+    }
+  }
+}

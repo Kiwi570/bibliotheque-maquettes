@@ -1,0 +1,42 @@
+{
+ "id": "tiki-cassis-maquette/contact-demande",
+ "maquette": "tiki-cassis-maquette",
+ "page": "contact",
+ "titre": "Demande en trois étapes",
+ "role": "contact",
+ "description": "Formulaire de privatisation en trois étapes (sortie, date et passagers, coordonnées) validé étape par étape, avec un récapitulatif qui calcule le prix selon la saison et la durée.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "calculateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "contact.html:100-164",
+  "css": "css/style.css:544-644",
+  "js": "js/contact.js ; js/pricing.js:27-64"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/contact-demande-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/contact-demande-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/contact-demande-p960.mp4"
+ },
+ "pieges": [
+  "la barre d'actions du téléphone se masque sur le formulaire",
+  "voisin du bon de commande de coupdefood et du rendez-vous de nexio"
+ ],
+ "mesures": {
+  "hauteur_p1440": 911,
+  "hauteur_m390": 1405,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

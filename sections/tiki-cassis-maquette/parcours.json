@@ -1,0 +1,46 @@
+{
+ "id": "tiki-cassis-maquette/parcours",
+ "maquette": "tiki-cassis-maquette",
+ "page": "index",
+ "titre": "Carte de navigation chronométrée",
+ "role": "étapes",
+ "description": "Section épinglée : un sillage se trace sur la carte des calanques pendant qu'un chronomètre compte la durée de navigation ; chaque palier (de 1 h à la journée) allume ses calanques et affiche sa photo, puis l'autre cap vers l'est.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "masque",
+  "compteur"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "carte-itineraire-collante",
+ "code": {
+  "html": "index.html:168-216",
+  "css": "css/style.css:314-368",
+  "js": "js/home.js:186-272 ; js/chart.js"
+ },
+ "medias": {
+  "capture": "medias/tiki-cassis-maquette/parcours-p1440.jpg",
+  "capture_m390": "medias/tiki-cassis-maquette/parcours-m390.jpg",
+  "video": "medias/tiki-cassis-maquette/parcours-p960.mp4"
+ },
+ "pieges": [
+  "une seule étape visible à la fois, même en défilement rapide ou en marche arrière (showStep)",
+  "anticipatePin encore présent : à retirer à la reprise",
+  "variante de carte-itineraire-collante avec chronomètre et deux caps"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 2757,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

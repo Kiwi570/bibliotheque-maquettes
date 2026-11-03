@@ -1,0 +1,44 @@
+{
+ "id": "will-midoux-maquette/concerts-phero",
+ "maquette": "will-midoux-maquette",
+ "page": "concerts",
+ "titre": "Concerts : traînées de phares",
+ "role": "ouverture",
+ "description": "Tête de la page concerts : route de nuit où des traînées de phares en canvas 2D suivent des courbes (Catmull-Rom), avec le prochain concert et un grand compte à rebours à chiffres qui roulent.",
+ "animations": [
+  "canvas-2d",
+  "compteur",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "concerts.html:77-103",
+  "css": "css/main.css:629-640",
+  "js": "js/concerts-page.js:114-199,208-211 ; js/core.js:399-428"
+ },
+ "medias": {
+  "capture": "medias/will-midoux-maquette/concerts-phero-p1440.jpg",
+  "capture_m390": "medias/will-midoux-maquette/concerts-phero-m390.jpg",
+  "video": "medias/will-midoux-maquette/concerts-phero-p960.mp4"
+ },
+ "pieges": [
+  "pas de shadowBlur à chaque image : halo large puis cœur fin, bien moins coûteux",
+  "tracés recalculés selon le format téléphone ou ordinateur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 828,
+  "hauteur_m390": 776,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

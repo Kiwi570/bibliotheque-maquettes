@@ -1,0 +1,45 @@
+{
+ "id": "talon-libre-maquette/inclus",
+ "maquette": "talon-libre-maquette",
+ "page": "index",
+ "titre": "Déjà compris dans le séjour",
+ "role": "galerie",
+ "description": "Bande horizontale épinglée des services inclus avec barre de progression, compteur 16 et cartes qui ondulent ; photos qui prennent la hauteur disponible pour tenir dans l'écran.",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "compteur",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "galerie-horizontale-epinglee",
+ "code": {
+  "html": "index.html:149-167",
+  "css": "assets/css/main.css:349-385",
+  "js": "assets/js/main.js:530-590"
+ },
+ "medias": {
+  "capture": "medias/talon-libre-maquette/inclus-p1440.jpg",
+  "capture_m390": "medias/talon-libre-maquette/inclus-m390.jpg",
+  "video": "medias/talon-libre-maquette/inclus-p960.mp4"
+ },
+ "pieges": [
+  "recalculer la hauteur des photos au refreshInit pour que légendes et bande tiennent dans l'écran",
+  "défilement natif sous 861 px et en mode réduit"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1014,
+  "epinglee": true,
+  "scrolltriggers": 19
+ }
+}

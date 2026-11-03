@@ -1,0 +1,43 @@
+{
+ "id": "tonchemindevie-maquette/soins-energetiques-etapes",
+ "maquette": "tonchemindevie-maquette",
+ "page": "soins-energetiques",
+ "titre": "Quatre étapes, à votre rythme",
+ "role": "étapes",
+ "description": "Liste des quatre étapes du soin à gauche, visuel collant à droite qui change d'image à chaque étape ; pendule de radiesthésie SVG qui se balance selon la vitesse de défilement, voile qui se colore à l'étape 3.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "code": {
+  "html": "soins-energetiques.html:105-141",
+  "css": "assets/css/site.css:658-678",
+  "js": "assets/js/pages.js:126-133 ; assets/js/site.js:398-416"
+ },
+ "medias": {
+  "capture": "medias/tonchemindevie-maquette/soins-energetiques-etapes-p1440.jpg",
+  "capture_m390": "medias/tonchemindevie-maquette/soins-energetiques-etapes-m390.jpg",
+  "video": "medias/tonchemindevie-maquette/soins-energetiques-etapes-p960.mp4"
+ },
+ "pieges": [
+  "le pendule lit lenis.velocity : sans Lenis, il ne fait que se balancer",
+  "visuel collant masqué sous 900 px, images reprises dans chaque étape"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3128,
+  "hauteur_m390": 2999,
+  "epinglee": false,
+  "scrolltriggers": 6
+ }
+}
