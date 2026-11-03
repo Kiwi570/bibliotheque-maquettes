@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bibliothèque des maquettes</title>
+<meta name="description" content="Sections classées et modules testés des maquettes, pour démarrer chaque nouveau projet.">
+<meta property="og:title" content="Bibliothèque des maquettes">
+<meta property="og:description" content="Sections classées et modules testés des maquettes.">
+<meta property="og:image" content="/site/partage.jpg">
+<meta name="theme-color" content="#f4f2ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171a" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/site/icone.svg" type="image/svg+xml">
+<style>html,body{background:#f4f2ee}@media (prefers-color-scheme:dark){html,body{background:#16171a}}</style>
+<link rel="stylesheet" href="/site/site.css?v=2">
+</head>
+<body>
+<a class="sr socle-sr" href="#resultats">Aller aux résultats</a>
+<header class="tete" data-entete>
+  <div class="tete__in">
+    <p class="tete__nom"><strong>Bibliothèque</strong> <span>des maquettes</span></p>
+    <div class="onglets" role="tablist" aria-label="Contenu">
+      <button type="button" role="tab" id="onglet-sections" aria-controls="panneau" aria-selected="true" data-vue="sections">Sections</button>
+      <button type="button" role="tab" id="onglet-modules" aria-controls="panneau" aria-selected="false" tabindex="-1" data-vue="modules">Modules</button>
+    </div>
+  </div>
+</header>
+
+<main id="panneau" role="tabpanel" aria-labelledby="onglet-sections">
+  <div class="intro">
+    <h1 id="titre">Sections et modules à réutiliser</h1>
+    <p class="intro__txt" id="totaux">Chargement de l'index…</p>
+  </div>
+
+  <form class="filtres" id="filtres" role="search" aria-label="Filtrer">
+    <button type="button" class="bouton bouton--ligne bascule-filtres" aria-expanded="false" aria-controls="filtres">Filtres</button>
+    <label class="champ champ--mots"><span>Mots</span><input type="search" name="q" placeholder="trame, épinglé, devis…" autocomplete="off"></label>
+    <label class="champ"><span>Activité</span><select name="activite"></select></label>
+    <label class="champ" data-pour="sections"><span>Concept</span><select name="concept"></select></label>
+    <label class="champ"><span>Ambiance</span><select name="ambiance"></select></label>
+    <label class="champ"><span>Rôle</span><select name="role"></select></label>
+    <label class="champ"><span>Animation</span><select name="animation"></select></label>
+    <label class="champ"><span>Interaction</span><select name="interaction"></select></label>
+    <label class="champ" data-pour="sections"><span>Module</span><select name="module"></select></label>
+    <label class="champ" data-pour="sections"><span>Note</span><select name="note"><option value="">4 et 5</option><option value="5">5 seulement</option></select></label>
+    <button type="reset" class="bouton bouton--ligne">Effacer</button>
+  </form>
+
+  <p class="compte" id="compte" aria-live="polite"></p>
+  <div class="grille" id="resultats" tabindex="-1"></div>
+  <p class="plus"><button type="button" class="bouton" id="plus" hidden>Afficher plus</button></p>
+  <noscript><p class="vide">Ce site lit <a href="/index.json">index.json</a> avec JavaScript.</p></noscript>
+</main>
+
+<footer class="pied">
+  <p>Usage interne, non indexé. Chaque carte renvoie à sa fiche JSON ; le dépôt : <a href="https://github.com/Kiwi570/bibliotheque-maquettes">Kiwi570/bibliotheque-maquettes</a>.</p>
+</footer>
+
+<dialog class="cadre" id="cadre" aria-labelledby="cadre-titre">
+  <div class="cadre__tete">
+    <h2 id="cadre-titre">Démonstration</h2>
+    <a class="bouton bouton--ligne" id="cadre-ouvrir" href="#" target="_blank" rel="noopener">Ouvrir seule</a>
+    <button type="button" class="bouton" id="cadre-fermer">Fermer</button>
+  </div>
+  <iframe id="cadre-page" title="Démonstration du module" loading="lazy"></iframe>
+</dialog>
+<p class="sr socle-sr" id="annonce" aria-live="polite"></p>
+<script type="module" src="/site/site.js?v=3"></script>
+</body>
+</html>
