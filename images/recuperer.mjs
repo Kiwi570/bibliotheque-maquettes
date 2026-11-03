@@ -67,6 +67,7 @@ function originaux(u) {
     c.push(`${x.origin}${p.replace(/-scaled(?=\.\w+$)/, '')}`, `${x.origin}${p}`);
   }
   if (/squarespace(-cdn)?\.com$/.test(x.hostname)) c.push(`${x.origin}${x.pathname}`);
+  if (/googleusercontent\.com$/.test(x.hostname) && /=[\w-]*$/.test(x.pathname)) c.push(`${x.origin}${x.pathname.replace(/=[\w-]*$/, '=s0')}`);   // Google Sites : =s0 donne l'original
   if (/cdn\.shopify\.com$/.test(x.hostname) || /\/cdn\/shop\//.test(x.pathname)) {
     c.push(`${x.origin}${x.pathname.replace(/_(\d+x\d*|\d*x\d+|pico|icon|thumb|small|compact|medium|large|grande|master)(_crop_\w+)?(@\dx)?(?=\.\w+$)/i, '')}`);
   }
@@ -81,7 +82,7 @@ const SUIVI = /(recaptcha|frog\.wix\.com|\/ptrk\/|panorama\?|\/collect\?|faceboo
 const ICONE = /(icon|picto|sprite|favicon|arrow|fleche|chevron|bullet|puce|emoji|spinner|loader|loading|placeholder|blank|spacer|transparent\.(png|gif)|1x1|social|reseaux|whatsapp|facebook|instagram|linkedin|twitter|youtube|tiktok|pinterest|payment|paiement|visa|mastercard|paypal|stars?[-_.]|etoile|rating)/i;
 const DRAPEAU = /(\/flags?\/|\/drapeaux?\/|flag[-_.]|drapeau|\/lang(ue)?s?\/[a-z]{2}\.(png|svg|gif)|\b(fr|en|de|it|es|nl|gb|us)\.(png|svg|gif)$)/i;
 const RESEAUX = /(facebook|instagram|linkedin|twitter|x\.com|youtube|tiktok|pinterest|whatsapp|tripadvisor|google\.com\/maps|g\.page)/i;
-const ORIGINE_UTILE = n => n && !/^(img|dsc|dscn|dcim|pxl|photo|image|capture|screenshot|screen shot|untitled|sans titre|file|fichier|picture|pic)[-_ ]?\d*/i.test(n) && !/^[a-f0-9_~-]{12,}/i.test(n) && /[a-z]{3}/i.test(n);
+const ORIGINE_UTILE = n => n && !/^(img|dsc|dscn|dcim|pxl|photo|image|capture|screenshot|screen shot|untitled|sans titre|file|fichier|picture|pic)[-_ ]?\d*/i.test(n) && !/^[a-f0-9_~-]{12,}/i.test(n) && !/[A-Za-z0-9]{20,}|=[a-z]\d+$/.test(n) && /[a-z]{3}/i.test(n);   // ni hash, ni identifiant Google
 
 // 3. Collecte dans la page (exécutée dans le navigateur).
 function collecter() {
@@ -144,7 +145,8 @@ async function parcourir() {
       if (!u.startsWith('data:') && !reseau.has(u)) reseau.set(u, url);
     });
     try {
-      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+        .catch(async e => { if (!/NETWORK_CHANGED|ECONNRESET|TIMED_OUT|Timeout/i.test(e.message)) throw e; await new Promise(r => setTimeout(r, 2000)); return page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30000 }); });   // une reprise sur coupure réseau
       await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {});
       await page.evaluate(async () => {
         const pause = ms => new Promise(r => setTimeout(r, ms));
