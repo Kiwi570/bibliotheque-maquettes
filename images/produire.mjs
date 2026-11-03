@@ -67,6 +67,12 @@ function cadre(W, H, ratio, sujet, point, cible = [0.5, 0.5]) {
 }
 const pointDans = (r, point, W, H) => [Math.round(borne((point[0] / 100 * W - r.left) / r.width * 100, 0, 100)), Math.round(borne((point[1] / 100 * H - r.top) / r.height * 100, 0, 100))];
 
+// Rectangle du sujet ramené au cadre recadré (en %), pour que partage.mjs ne pose jamais de texte dessus.
+function sujetDans(r, s, W, H) {
+  const x0 = borne((s.x / 100 * W - r.left) / r.width * 100, 0, 100), y0 = borne((s.y / 100 * H - r.top) / r.height * 100, 0, 100);
+  const x1 = borne(((s.x + s.l) / 100 * W - r.left) / r.width * 100, 0, 100), y1 = borne(((s.y + s.h) / 100 * H - r.top) / r.height * 100, 0, 100);
+  return { x: arrondi(x0), y: arrondi(y0), l: arrondi(x1 - x0), h: arrondi(y1 - y0) };
+}
 async function variantes(entree, rect, largeurs, base, max) {
   const faites = [], retirees = [];
   for (const L of largeurs) {
@@ -105,7 +111,7 @@ for (const e of plan) {
   const logo = role === 'logo' || em.recadrer === false;
   const svg = /\.svg$/i.test(source);
   const st = fs.statSync(source);
-  const reglages = JSON.stringify({ e, em, v: 3 });
+  const reglages = JSON.stringify({ e, em, v: 4 });
   const empreinte = crypto.createHash('sha1').update(`${source}|${st.size}|${st.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
   const avant = ancienne[e.nom];
   if (!opts.forcer && avant?.empreinte === empreinte && avant.fichiers.every(f => fs.existsSync(path.join(RACINE, 'assets', 'images', f)))) {
@@ -153,7 +159,8 @@ for (const e of plan) {
     const appel = [`nom: '${e.nom}'`, `alt: ${JSON.stringify(e.alt ?? '')}`, cadrage && cadrage !== '50% 50%' ? `cadrage: '${cadrage}'` : '', cadrageMobile ? `cadrageMobile: '${cadrageMobile}'` : '',
       `sizes: '${SIZES[role] || '100vw'}'`, role === 'ouverture' ? 'priorite: true' : '', r && !['ouverture', 'section-fond'].includes(role) ? `ratio: '${String(r).replace(':', ' / ')}'` : ''].filter(Boolean).join(', ');
     fiche[e.nom] = { ...base, ratio: r, largeurs: faites.map(f => f.largeur), mobile: mobile ? { ratio: mobile.ratio, largeurs: mobile.faites.map(f => f.largeur), cadrage: cadrageMobile } : null,
-      cadrage, zone_texte: zone, recadrage: logo ? null : { ...rect, source: [W, H] }, faible,
+      cadrage, sujet: sujet && !logo ? sujetDans(rect, sujet, W, H) : null, zones_calmes: a?.zones_calmes?.map(z => ({ cote: z.cote, score: z.score, ton: z.ton })) || null,
+      zone_texte: zone, recadrage: logo ? null : { ...rect, source: [W, H] }, faible,
       raisons_faible: [...(retirees.length ? [`largeurs retirées (source trop petite) : ${retirees.join(', ')}`] : []), ...(mobile?.retirees.length ? [`mobile : ${mobile.retirees.join(', ')}`] : []), ...(a?.qualite?.raisons || [])],
       fichiers, poids: Object.fromEntries([...faites, ...(mobile?.faites || [])].map(f => [f.fichier, f.poids])), media: `c.media({ ${appel} })` };
     for (const f of [...faites, ...(mobile?.faites || [])]) console.log(`OK ${f.fichier} ${f.largeur}x${f.hauteur} ${ko(f.poids)}${f.poids > 300_000 ? '  (plus de 300 Ko)' : ''}`);
