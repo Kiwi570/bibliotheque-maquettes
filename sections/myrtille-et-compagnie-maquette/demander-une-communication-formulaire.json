@@ -1,0 +1,41 @@
+{
+ "id": "myrtille-et-compagnie-maquette/demander-une-communication-formulaire",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "demander-une-communication",
+ "titre": "Votre demande, en cinq étapes",
+ "role": "contact",
+ "description": "Demande simulée en cinq étapes : erreurs à côté des champs, formule préremplie par l'adresse, récapitulatif fixe avec l'aperçu de la photo qui se développe, total en direct, gerbe de myrtilles à l'envoi",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "demander-une-communication.html:129-225",
+  "css": "assets/css/socle.css:37-40,193-200 ; assets/css/site.css:200-206,211,243,325,423-472,484,505-507",
+  "js": "assets/js/site.js:62-89 ; assets/js/vivant.js:521-560 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/entete.js:6 ; assets/js/socle/calme.js:1 ; assets/js/demande.js:1-2,10,17-29,39-143"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-m390.jpg"
+ },
+ "pieges": [
+  "Une colonne de grille minmax(0, 1fr) sur les champs : sinon le champ de fichier impose sa largeur et déborde sur téléphone.",
+  "Groupe de boutons radio obligatoire vérifié à l'étape, message sous le groupe."
+ ],
+ "mesures": {
+  "hauteur_p1440": 972,
+  "hauteur_m390": 1364,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

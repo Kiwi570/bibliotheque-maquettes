@@ -1,0 +1,745 @@
+{
+ "maquette": {
+  "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+  "activite": [
+   "animaux",
+   "bien-être"
+  ],
+  "concept": [
+   "carnet"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--pruine"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": ""
+  },
+  "points_forts": [
+   "images révélées par une tache de jus de myrtille en WebGL, la photo d'ouverture ensuite traversée d'ondes qui répondent au pointeur",
+   "myrtilles en physique à attraper et lancer (bande en bas de l'accueil, bol sur les pages intérieures)",
+   "photo reçue qui se développe comme un tirage dans une section épinglée, et témoignages suspendus à un fil qui se balancent"
+  ],
+  "reserves": [
+   "fluidité sur ordinateur au-dessus du seuil de l'audit le jour de la livraison, comme la v1 mesurée dans les mêmes conditions",
+   "pas de page contact dédiée : le contact passe par la demande en cinq étapes et l'e-mail"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "masque",
+   "révélation-texte",
+   "révélation-image",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "reactif-vitesse",
+   "canvas-2d",
+   "fil-conducteur",
+   "trace-svg",
+   "compteur",
+   "parallaxe",
+   "transition-de-page",
+   "curseur-personnalisé"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "jeu",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile myrtille qui monte avec un bord en vague d'encre animé, logo et nom de la page d'arrivée, puis se retire sur la page suivante",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Animer la vague (mask-position) seulement pendant le passage : sinon une animation infinie tourne sur un élément caché."
+   ]
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro « La goutte » : une baie tombe là où naît la tache de l'image d'ouverture, le nom s'écrit, un trait se tire",
+   "animations": [
+    "ouverture-orchestrée",
+    "chargement-orchestré"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête crème opaque avec le logo M&Co redessiné en vectoriel, trois liens et le bouton d'action ; se cache en descendant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran crème, liens qui arrivent l'un après l'autre, contact et réseaux, réduire les animations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Pour comprendre mon animal et transformer notre relation",
+   "role": "ouverture",
+   "description": "Grand titre dont le mot clé se « traduit » (des signes deviennent des lettres) ; image révélée par une tache de jus de myrtille en WebGL, puis traversée d'ondes violettes qui partent de la tête du chien et sous le pointeur",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Un canvas WebGL laissé affiché, même immobile, alourdit le défilement : le retirer de l'affichage dès que les ondes s'arrêtent, et ne le monter que quand la page est au repos.",
+    "main { overflow-x: clip } décale l'affichage des canvas WebGL composités dans Chrome (bande vide en haut de l'image) : couper le débordement au plus près, jamais sur main.",
+    "Ignorer les mouvements de souris immobiles envoyés pendant le défilement (movementX et movementY à 0), et au doigt ne lancer une onde que sur un toucher bref."
+   ],
+   "particularites": [
+    "ondes-au-pointeur",
+    "tache-qui-revele"
+   ]
+  },
+  "ruban-cadre": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban en biais « Ce qu'il vit · ce qu'il ressent · ce qu'il exprime » qui défile tout seul, change de sens, accélère et penche avec la vitesse du défilement ; baies qui tournent, bouton Pause",
+   "animations": [
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Couper le débordement sur un cadre propre au ruban (overflow-x: clip), will-change sur la piste seulement ; bouton Pause hors de la zone aria-hidden."
+   ]
+  },
+  "echange": {
+   "titre": "Échanger avec votre animal, au‑delà des mots",
+   "role": "manifeste",
+   "description": "Photo de Carole et d'un cheval qui ondule au défilement (onde WebGL du socle), titre dont le dernier mot se traduit, exergue mot par mot",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "travail": {
+   "titre": "Des problèmes de comportement aux états d’âme",
+   "role": "services",
+   "description": "Quatre cartes distribuées comme un jeu au défilement puis posées en arc, images révélées par une tache, inclinaison 3D au survol",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image",
+    "masque",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Recalculer la position du paquet dès le redimensionnement (sinon débordement entre 800 et 1000 px) et forcer le rendu après invalidate (progress à 1 puis à la valeur).",
+    "will-change: transform pendant la distribution seulement."
+   ],
+   "particularites": [
+    "distribution-de-cartes"
+   ]
+  },
+  "carole": {
+   "titre": "Carole Guyaz, psychologue et interprète animalière",
+   "role": "équipe",
+   "description": "Portrait révélé par une tache, certificat posé de travers, frise du parcours tracée au défilement, citation qui s'allume mot à mot",
+   "animations": [
+    "révélation-image",
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "deroule": {
+   "titre": "Une communication, en trois temps",
+   "role": "étapes",
+   "description": "Section sombre épinglée : la photo reçue se développe comme un tirage (voile, teinte, couleurs) au fil des trois étapes",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tirage-qui-se-developpe"
+   ]
+  },
+  "approches": {
+   "titre": "Choisir sa communication",
+   "role": "tarifs",
+   "description": "Bandeau de myrtilles en macro qui se resserre, trois cartes de prix qui se retournent l'une après l'autre, voile de pruine qui s'essuie, montants qui comptent",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Montant dans un span data-compteur séparé de la devise ; will-change le temps du retournement, retiré à la fin."
+   ],
+   "particularites": [
+    "retournement-carte"
+   ]
+  },
+  "temoignage": {
+   "titre": "Témoignage",
+   "role": "témoignages",
+   "description": "Carte sur une forêt en parallaxe, guillemets tracés, témoignage qui s'allume mot par mot au défilement",
+   "animations": [
+    "parallaxe",
+    "révélation-texte",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Pas de will-change sur les mots découpés : un calque par mot alourdit le défilement."
+   ]
+  },
+  "especes": {
+   "titre": "Au-delà des chats, des chiens et des chevaux",
+   "role": "preuves",
+   "description": "Les espèces rencontrées en empreintes dessinées qui apparaissent en cortège",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "empreintes-svg"
+   ]
+  },
+  "reperes": {
+   "titre": "Quelques repères avant de commencer",
+   "role": "carte",
+   "description": "Repères (santé, animaux perdus, distance, zone) à côté d'une carte schématique du Léman qui se trace",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Envie de mieux comprendre votre compagnon ?",
+   "role": "appel",
+   "description": "Appel final : image révélée par une tache, mot traduit, puis une bande où des myrtilles tombent, rebondissent, s'entassent, et se lancent à la souris ou au doigt",
+   "animations": [
+    "canvas-2d",
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les baies s'endorment quand plus rien ne bouge (la boucle s'arrête) ; en mode calme, le tas final est calculé d'avance et dessiné une fois."
+   ],
+   "particularites": [
+    "physique-myrtilles"
+   ]
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page myrtille : logo clair, zone, e-mail, réseaux, sommaire, confort de lecture, mentions à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette piste ne mène nulle part",
+   "role": "page-404",
+   "description": "« Cette piste ne mène nulle part » sur un sentier dans la brume",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "communications-debut": {
+   "titre": "Communications avec les animaux",
+   "role": "ouverture",
+   "description": "Tête de page : titre dont le mot se traduit, chat à la fenêtre révélé par une tache",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "communications-approches": {
+   "titre": "Deux approches complémentaires",
+   "role": "offre",
+   "description": "Deux approches numérotées, photos révélées par une tache, outils en pastilles, prix",
+   "animations": [
+    "révélation-image",
+    "masque",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "communications-reflet": {
+   "titre": "",
+   "role": "manifeste",
+   "description": "Phrase sur une flaque : des ronds s'y propagent en WebGL (et sous le pointeur), le mot « reflètent » ondule lettre par lettre",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Lettres séparées d'un même mot : marquer data-superpose (les boîtes des italiques se chevauchent)."
+   ],
+   "particularites": [
+    "ronds-dans-l-eau"
+   ]
+  },
+  "communications-tarifs": {
+   "titre": "Trois formules, en francs suisses",
+   "role": "tarifs",
+   "description": "Trois cartes de prix qui se retournent, pruine qui s'essuie, montants qui comptent",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "retournement-carte"
+   ]
+  },
+  "communications-limites": {
+   "titre": "Avant de demander",
+   "role": "faq",
+   "description": "Avant de demander : santé, animaux perdus, distance, à côté d'un cheval dans un pré révélé par une tache",
+   "animations": [
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "communications-temoignage": {
+   "titre": "Témoignage",
+   "role": "témoignages",
+   "description": "Témoignage mot à mot sur une femme et un cheval en parallaxe",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "communications-fin": {
+   "titre": "Une question pour votre compagnon ?",
+   "role": "appel",
+   "description": "Appel final avec un bol de myrtilles en physique à lancer",
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "physique-myrtilles"
+   ]
+  },
+  "demander-une-communication-debut": {
+   "titre": "Une photo, vos questions, et l’échange commence",
+   "role": "ouverture",
+   "description": "Tête de page compacte : titre traduit, carnet et thé révélés par une tache, bouton qui mène au formulaire",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "demander-une-communication-formulaire": {
+   "titre": "Votre demande, en cinq étapes",
+   "role": "contact",
+   "description": "Demande simulée en cinq étapes : erreurs à côté des champs, formule préremplie par l'adresse, récapitulatif fixe avec l'aperçu de la photo qui se développe, total en direct, gerbe de myrtilles à l'envoi",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Une colonne de grille minmax(0, 1fr) sur les champs : sinon le champ de fichier impose sa largeur et déborde sur téléphone.",
+    "Groupe de boutons radio obligatoire vérifié à l'étape, message sous le groupe."
+   ]
+  },
+  "formation-debut": {
+   "titre": "Vous aussi, communiquer avec les animaux",
+   "role": "ouverture",
+   "description": "Tête de page : groupe assis dans une prairie révélé par une tache, information « prochaine session : aucune pour le moment »",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formation-pour-le-moment": {
+   "titre": "Pas de session prévue",
+   "role": "contact",
+   "description": "Pas de session prévue : photo d'une personne face à un chaton révélée par une tache, mot traduit, bouton Écrire à Carole",
+   "animations": [
+    "révélation-image",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formation-temoignages": {
+   "titre": "Ce qu’en disent les participants",
+   "role": "témoignages",
+   "description": "Six témoignages suspendus à un fil d'encre par une myrtille ; section épinglée qui défile à l'horizontale sur grand écran, piste à faire glisser sur téléphone ; les cartes se balancent avec la vitesse du défilement",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Une piste role=region ne peut pas être la liste elle-même : role et tabindex sur un div englobant, ul à l'intérieur.",
+    "Écran bas (1000×560) : masquer l'accroche et réduire les cartes pour tenir sous l'en-tête ; data-entete-cache sur la section épinglée."
+   ],
+   "particularites": [
+    "physique-pendule"
+   ]
+  },
+  "formation-fin": {
+   "titre": "En attendant, une communication ?",
+   "role": "appel",
+   "description": "Appel final avec un bol de myrtilles à lancer",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "physique-myrtilles"
+   ]
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales et confidentialité",
+   "role": "texte-legal",
+   "description": "Tête de la page légale avec sommaire qui suit la lecture, myrtilles sous la rosée",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "Note de maquette : à fournir par Myrtille & Compagnie",
+   "role": "texte-legal",
+   "description": "Mentions et confidentialité, note de maquette des informations à fournir",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "questions-frequentes-debut": {
+   "titre": "Ce que l’on me demande souvent",
+   "role": "ouverture",
+   "description": "Tête de page : cheval dans la brume révélé par une tache, mot traduit",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "questions-frequentes-questions": {
+   "titre": "Les six questions fréquentes",
+   "role": "faq",
+   "description": "Six questions réelles en accordéon, à côté de deux photos révélées par une tache dans une colonne fixe",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "questions-frequentes-fin": {
+   "titre": "Une autre question ?",
+   "role": "appel",
+   "description": "Appel final après la FAQ avec un bol de myrtilles à lancer",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "physique-myrtilles"
+   ]
+  }
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "myrtille-et-compagnie-maquette/formation-temoignages",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "formation",
+ "titre": "Ce qu’en disent les participants",
+ "role": "témoignages",
+ "description": "Six témoignages suspendus à un fil d'encre par une myrtille ; section épinglée qui défile à l'horizontale sur grand écran, piste à faire glisser sur téléphone ; les cartes se balancent avec la vitesse du défilement",
+ "animations": [
+  "section-fixée",
+  "galerie-horizontale",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "formation.html:145-173",
+  "css": "assets/css/site.css:624-665",
+  "js": "assets/js/site.js:279 ; assets/js/vivant.js:588-610 ; assets/js/socle/effets.js:13,220-251 ; assets/js/socle/entete.js:63-141"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/formation-temoignages-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/formation-temoignages-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/formation-temoignages-p720.mp4"
+ },
+ "pieges": [
+  "Une piste role=region ne peut pas être la liste elle-même : role et tabindex sur un div englobant, ul à l'intérieur.",
+  "Écran bas (1000×560) : masquer l'accroche et réduire les cartes pour tenir sous l'en-tête ; data-entete-cache sur la section épinglée."
+ ],
+ "particularites": [
+  "physique-pendule"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 612,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "myrtille-et-compagnie-maquette/travail",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "index",
+ "titre": "Des problèmes de comportement aux états d’âme",
+ "role": "services",
+ "description": "Quatre cartes distribuées comme un jeu au défilement puis posées en arc, images révélées par une tache, inclinaison 3D au survol",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-image",
+  "masque",
+  "webgl-shader"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:146-185",
+  "css": "assets/css/site.css:158,164-168,310,343,544-556",
+  "js": "assets/js/socle/effets.js:267-311"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/travail-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/travail-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/travail-p720.mp4"
+ },
+ "pieges": [
+  "Recalculer la position du paquet dès le redimensionnement (sinon débordement entre 800 et 1000 px) et forcer le rendu après invalidate (progress à 1 puis à la valeur).",
+  "will-change: transform pendant la distribution seulement."
+ ],
+ "particularites": [
+  "distribution-de-cartes"
+ ],
+ "mesures": {
+  "hauteur_p1440": 867,
+  "hauteur_m390": 1013,
+  "epinglee": false,
+  "scrolltriggers": 9
+ }
+}

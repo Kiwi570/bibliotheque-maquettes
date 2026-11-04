@@ -1,0 +1,50 @@
+{
+ "id": "myrtille-et-compagnie-maquette/debut",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "index",
+ "titre": "Pour comprendre mon animal et transformer notre relation",
+ "role": "ouverture",
+ "description": "Grand titre dont le mot clé se « traduit » (des signes deviennent des lettres) ; image révélée par une tache de jus de myrtille en WebGL, puis traversée d'ondes violettes qui partent de la tête du chien et sous le pointeur",
+ "animations": [
+  "webgl-shader",
+  "masque",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:113-128",
+  "css": "assets/css/site.css:66,130-150,157,342,363-364,368,478,495-497,502,517",
+  "js": "assets/js/site.js:53-60,124-192,198-211,214-255,260,265,296,302,314-316 ; assets/js/vivant.js:111-242 ; assets/js/tache.js:80-154"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/debut-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Un canvas WebGL laissé affiché, même immobile, alourdit le défilement : le retirer de l'affichage dès que les ondes s'arrêtent, et ne le monter que quand la page est au repos.",
+  "main { overflow-x: clip } décale l'affichage des canvas WebGL composités dans Chrome (bande vide en haut de l'image) : couper le débordement au plus près, jamais sur main.",
+  "Ignorer les mouvements de souris immobiles envoyés pendant le défilement (movementX et movementY à 0), et au doigt ne lancer une onde que sur un toucher bref."
+ ],
+ "particularites": [
+  "ondes-au-pointeur",
+  "tache-qui-revele"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 834,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "id": "myrtille-et-compagnie-maquette/approches",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "index",
+ "titre": "Choisir sa communication",
+ "role": "tarifs",
+ "description": "Bandeau de myrtilles en macro qui se resserre, trois cartes de prix qui se retournent l'une après l'autre, voile de pruine qui s'essuie, montants qui comptent",
+ "animations": [
+  "apparition-au-défilement",
+  "compteur",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:237-268",
+  "css": "assets/css/site.css:48,158,218-242,326-330,343",
+  "js": "assets/js/site.js:3,113-121 ; assets/js/vivant.js:7-9,310-328,520 ; assets/js/socle/effets.js:31 ; assets/js/socle/compteurs.js:1,6-36 ; assets/js/demande.js:39-143"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/approches-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/approches-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/approches-p720.mp4"
+ },
+ "pieges": [
+  "Montant dans un span data-compteur séparé de la devise ; will-change le temps du retournement, retiré à la fin."
+ ],
+ "particularites": [
+  "retournement-carte"
+ ],
+ "mesures": {
+  "hauteur_p1440": 862,
+  "hauteur_m390": 1219,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}
