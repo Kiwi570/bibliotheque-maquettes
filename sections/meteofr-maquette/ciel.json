@@ -1,0 +1,47 @@
+{
+ "id": "meteofr-maquette/ciel",
+ "maquette": "meteofr-maquette",
+ "page": "index",
+ "titre": "Le ciel de votre commune, en direct.",
+ "role": "ouverture",
+ "description": "« Le ciel de votre commune, en direct » : ciel WebGL piloté par la météo réelle (nuages poussés par le vent, pluie sur la vitre), température en très grand, recherche de commune",
+ "animations": [
+  "webgl-shader",
+  "canvas-2d",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:106-143",
+  "css": "assets/css/site.css:50,89-102,106-125,129-150,367-370,616-617,656-659,664-667,671-679,687-688,692-695,701,720-721,1022-1026",
+  "js": "assets/js/site.js:2,23,35-68,79-192,240 ; assets/js/pages.js:17,43,64-65,158,340-341 ; assets/js/v2-accueil.js:21,63,169-212,288-330,334-387 ; assets/js/socle/curseur.js:5-34 ; assets/js/v2-pages.js:46-47,58-90 ; assets/js/ciel.js:1,9-18 ; assets/js/effets-meteo.js:13-68,193,199-211"
+ },
+ "medias": {
+  "capture": "medias/meteofr-maquette/ciel-p1440.jpg",
+  "capture_m390": "medias/meteofr-maquette/ciel-m390.jpg",
+  "video": "medias/meteofr-maquette/ciel-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "meteo-reelle-pilote-les-effets"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "meteofr-maquette/commune-debut",
+ "maquette": "meteofr-maquette",
+ "page": "commune",
+ "titre": "Paris",
+ "role": "ouverture",
+ "description": "Page commune : vitre en WebGL que la pluie mouille ou que le froid givre selon la météo, température et recherche",
+ "animations": [
+  "webgl-shader",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "recherche"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "commune.html:104-149",
+  "css": "assets/css/site.css:50,106-109,123,129-150,362-388,392-397,617,628-629,672-679,687-688,692,839-844",
+  "js": "assets/js/site.js:74-78,92-192,240 ; assets/js/pages.js:17,26,29,35-39,42,50,64-65,115-116,122,147,152,158,162,165,171-172,175 ; assets/js/v2-accueil.js:66 ; assets/js/rendu.js:4-16,20-35 ; assets/js/meteo.js:86-98,106-138 ; assets/js/vitre.js:1,4,36,146-152,157-290 ; assets/js/ciel.js:2,25,41,44-45,50 ; assets/js/radar.js:1 ; assets/js/effets-meteo.js:13-68,96-150,161-191,195,199-211"
+ },
+ "medias": {
+  "capture": "medias/meteofr-maquette/commune-debut-p1440.jpg",
+  "capture_m390": "medias/meteofr-maquette/commune-debut-m390.jpg",
+  "video": "medias/meteofr-maquette/commune-debut-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "vitre-meteo"
+ ],
+ "mesures": {
+  "hauteur_p1440": 910,
+  "hauteur_m390": 1161,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,2023 @@
+{
+ "maquette": {
+  "client": "praticienne en soins énergétiques, rituels, Roue Médecine, ateliers de création et art-thérapie dans la Drôme",
+  "activite": [
+   "bien-être",
+   "culture"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "clair",
+   "végétal",
+   "doux"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--lin"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Figtree",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « La Roue des saisons » : une palette par saison choisie selon la date du jour, la roue aux quatre directions en ouverture",
+   "Roue Médecine épinglée : la roue tourne au défilement et change de direction, de saison et d'image",
+   "l'année en cercle : chaque rendez-vous posé à sa date sur la roue de l'année, liste filtrable à côté",
+   "labyrinthes tracés en canvas, tapilunes, peintures en salle d'exposition épinglée avec visionneuse",
+   "poème « Transes poétiques » sous la lune, lunaisons"
+  ],
+  "reserves": [
+   "19 pages et 121 blocs : sections très répétées (esprit, pratique, témoignages, fin)",
+   "beaucoup d'images générées et de photos du site actuel de qualité inégale",
+   "mentions à fournir"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "filtres",
+   "formulaire-par-étapes",
+   "galerie-cliquable",
+   "schema-interactif",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "roue des saisons et des directions qui tourne au défilement",
+   "fil": "la saison du jour (palette et direction) sur tout le site"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile brun avec la marque entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "La Voiedu Sensible",
+   "role": "ouverture",
+   "description": "Intro : la roue des quatre directions se trace et tourne, le titre s'écrit au centre",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête lin : marque, sept liens, S'inscrire en terre cuite",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran lin avec une roue à côté des liens",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "La Voiedu Sensible",
+   "role": "ouverture",
+   "description": "« La Voie du Sensible » : portrait dans une roue aux quatre directions (N, E, S, O) dont l'arc de la saison du jour s'allume",
+   "animations": [
+    "trace-svg",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "roue-des-saisons"
+   ]
+  },
+  "voie": {
+   "titre": "Un art de vivre reliés",
+   "role": "manifeste",
+   "description": "Un art de vivre reliés : grand arbre sous une onde WebGL, texte",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualite": {
+   "titre": "L’actualité de la saison",
+   "role": "agenda",
+   "description": "L'actualité de la saison : rendez-vous en galerie épinglée horizontale avec date",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "portes": {
+   "titre": "Deux portes pour entrer",
+   "role": "offre",
+   "description": "Deux portes pour entrer : accompagnements individuels et ateliers en grandes photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue": {
+   "titre": "La Roue Médecine",
+   "role": "outil-interactif",
+   "description": "La Roue Médecine : section épinglée, la roue tourne au défilement, chaque direction change le texte, la saison et l'image",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "roue-qui-tourne"
+   ]
+  },
+  "creations": {
+   "titre": "Créations",
+   "role": "galerie",
+   "description": "Créations : labyrinthe qui se trace en canvas et trois œuvres",
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "labyrinthe-trace"
+   ]
+  },
+  "poeme": {
+   "titre": "Transes poétiques",
+   "role": "manifeste",
+   "description": "Transes poétiques : poème qui s'écrit sous une lune sur fond nuit",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées : trois témoignages et photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lieux": {
+   "titre": "Deux lieux, et la nature",
+   "role": "carte",
+   "description": "Deux lieux et la nature : carte de la Drôme qui se trace",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Emmanuelle Mounier · Emmalita",
+   "role": "pied-de-page",
+   "description": "Pied de page brun : marque, coordonnées, lieux, sommaire, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Ce sentier se perd dans la brume",
+   "role": "page-404",
+   "description": "« Ce sentier se perd dans la brume » avec une boussole",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-et-stages-debut": {
+   "titre": "Ateliers & stages",
+   "role": "ouverture",
+   "description": "Tête de page ateliers et stages : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-et-stages-agenda": {
+   "titre": "L’année en cercle",
+   "role": "agenda",
+   "description": "L'année en cercle : chaque rendez-vous posé à sa date sur la roue de l'année, liste filtrable par type à côté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "filtres",
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "annee-en-cercle"
+   ]
+  },
+  "ateliers-et-stages-propositions": {
+   "titre": "Les propositions",
+   "role": "offre",
+   "description": "Les propositions : six cartes photo d'ateliers et de stages",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-et-stages-infos": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques des ateliers en accordéon avec photo de laine",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-et-stages-fin": {
+   "titre": "Une question, un bon cadeau ?",
+   "role": "appel",
+   "description": "Appel final de la page ateliers et stages avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cercle-des-femmes-debout-debut": {
+   "titre": "Le Cercle des femmes debout",
+   "role": "ouverture",
+   "description": "Tête de page cercle des femmes debout : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cercle-des-femmes-debout-sororite": {
+   "titre": "Sororité",
+   "role": "manifeste",
+   "description": "Sororité : cercle qui respire (« Inspire ») et citation",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cercle-qui-respire"
+   ]
+  },
+  "cercle-des-femmes-debout-journees": {
+   "titre": "Quatre cercles, quatre portes",
+   "role": "agenda",
+   "description": "Dates de la page cercle des femmes debout posées sur la roue de l'année, liste à côté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cercle-des-femmes-debout-cercles": {
+   "titre": "DEUILS Se relier à la femme sage",
+   "role": "offre",
+   "description": "Les quatre cercles en fiches détaillées avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cercle-des-femmes-debout-fin": {
+   "titre": "Rejoindre le Cercle",
+   "role": "appel",
+   "description": "Appel final de la page cercle des femmes debout avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Écrire, s’inscrire, prendre rendez-vous",
+   "role": "ouverture",
+   "description": "Tête de page contact : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Votre demande",
+   "role": "contact",
+   "description": "Votre demande : inscription ou rendez-vous simulé avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-lieux": {
+   "titre": "Deux lieux pour vous accueillir",
+   "role": "carte",
+   "description": "Deux lieux pour vous accueillir : carte de la Drôme",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-lettre": {
+   "titre": "La lettre saisonnière",
+   "role": "appel",
+   "description": "La lettre saisonnière : inscription à la lettre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-debut": {
+   "titre": "Créations",
+   "role": "ouverture",
+   "description": "Tête de page creations : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-peintures": {
+   "titre": "Peintures",
+   "role": "galerie",
+   "description": "Peintures en salle d'exposition épinglée qui défile, avec visionneuse",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-visionneuse": {
+   "titre": "Visionneuse des peintures",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des peintures, clavier et flèches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "creations-tapilunes": {
+   "titre": "Les Tapilunes",
+   "role": "produits",
+   "description": "Les Tapilunes : fibres de laine dessinées en canvas, galerie et prix",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-labyrinthes": {
+   "titre": "Labyrinthes",
+   "role": "galerie",
+   "description": "Labyrinthes : œuvres de land art avec labyrinthe tracé et citation",
+   "animations": [
+    "canvas-2d",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-poesie": {
+   "titre": "Transes poétiques",
+   "role": "manifeste",
+   "description": "Transes poétiques : poème seul sur fond nuit",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-fin": {
+   "titre": "Une commande, une question ?",
+   "role": "appel",
+   "description": "Appel final de la page creations avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-debut": {
+   "titre": "Émergences",
+   "role": "ouverture",
+   "description": "Tête de page emergences : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-esprit": {
+   "titre": "Oser l’inconnu",
+   "role": "manifeste",
+   "description": "Citation et texte d'esprit de la page emergences",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-journees": {
+   "titre": "Seize rencontres",
+   "role": "agenda",
+   "description": "Dates de la page emergences posées sur la roue de l'année, liste à côté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-trois-temps": {
+   "titre": "Trois temps",
+   "role": "étapes",
+   "description": "Trois temps de l'atelier Émergences",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-miroir": {
+   "titre": "La peinture, un miroir",
+   "role": "manifeste",
+   "description": "La peinture, un miroir : texte et photo inversés",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page emergences en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées sur la page emergences : témoignages en colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "emergences-fin": {
+   "titre": "Rejoindre l’atelier",
+   "role": "appel",
+   "description": "Appel final de la page emergences avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-debut": {
+   "titre": "Co-créer avec la nature",
+   "role": "ouverture",
+   "description": "Tête de page enfants et groupes : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-ateliers": {
+   "titre": "Les ateliers",
+   "role": "offre",
+   "description": "Les ateliers pour enfants : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-accompagnement": {
+   "titre": "Au rythme de l’enfant",
+   "role": "manifeste",
+   "description": "Au rythme de l'enfant : citation et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-land-art": {
+   "titre": "Les rencontres land art",
+   "role": "galerie",
+   "description": "Les rencontres land art : œuvres et labyrinthes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-stages-vacances": {
+   "titre": "Stages vacances « Nature & Création »",
+   "role": "offre",
+   "description": "Stages vacances « Nature & Création » à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "enfants-et-groupes-fin": {
+   "titre": "Un projet pour votre groupe ?",
+   "role": "appel",
+   "description": "Appel final de la page enfants et groupes avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-debut": {
+   "titre": "Feutrage de la laine",
+   "role": "ouverture",
+   "description": "Tête de page feutrage de la laine : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-technique": {
+   "titre": "De l’eau, du savon",
+   "role": "méthode",
+   "description": "De l'eau, du savon : les étapes du feutrage en photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-journees": {
+   "titre": "Les prochaines dates",
+   "role": "agenda",
+   "description": "Dates de la page feutrage de la laine posées sur la roue de l'année, liste à côté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page feutrage de la laine en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-tapilune": {
+   "titre": "Créer son tapilune",
+   "role": "outil-interactif",
+   "description": "Créer son tapilune : fibres de laine qui se mêlent en canvas",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-sur-mesure": {
+   "titre": "Sur mesure",
+   "role": "offre",
+   "description": "Feutrage sur mesure : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feutrage-de-la-laine-fin": {
+   "titre": "Mettre les mains dans la laine",
+   "role": "appel",
+   "description": "Appel final de la page feutrage de la laine avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-debut": {
+   "titre": "HUMUS",
+   "role": "ouverture",
+   "description": "Tête de page humus : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-esprit": {
+   "titre": "Un parcours poétique",
+   "role": "manifeste",
+   "description": "Citation et texte d'esprit de la page humus",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-journees": {
+   "titre": "Sept journées et un week-end",
+   "role": "agenda",
+   "description": "Dates de la page humus posées sur la roue de l'année, liste à côté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-journee": {
+   "titre": "Au fil d’une journée",
+   "role": "étapes",
+   "description": "Au fil d'une journée HUMUS : étiquettes et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-dedans": {
+   "titre": "Dedans Dehors",
+   "role": "manifeste",
+   "description": "Dedans Dehors : texte sur fond photo",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-lieux": {
+   "titre": "La Chrysalide et les vallées",
+   "role": "carte",
+   "description": "La Chrysalide et les vallées : lieux de HUMUS",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées sur la page humus : témoignages en colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "humus-fin": {
+   "titre": "Rejoindre HUMUS",
+   "role": "appel",
+   "description": "Appel final de la page humus avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête avec sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par Emmalita",
+   "role": "texte-legal",
+   "description": "Informations à fournir par Emmalita et mentions",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-debut": {
+   "titre": "Mon parcours",
+   "role": "ouverture",
+   "description": "Tête de page mon parcours : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-nature": {
+   "titre": "La nature m’enseigne",
+   "role": "étapes",
+   "description": "La nature m'enseigne : premier chapitre du parcours",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-marche": {
+   "titre": "Une femme qui marche",
+   "role": "étapes",
+   "description": "Une femme qui marche : bande de photos de marche",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-voyages": {
+   "titre": "L’Inde, puis le Québec",
+   "role": "étapes",
+   "description": "L'Inde, puis le Québec : chapitre du parcours",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-art-therapie": {
+   "titre": "L’art-thérapie",
+   "role": "étapes",
+   "description": "L'art-thérapie : chapitre avec une œuvre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-tambour": {
+   "titre": "La Voie du tambour",
+   "role": "étapes",
+   "description": "La Voie du tambour : chapitre du parcours",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-aujourdhui": {
+   "titre": "Aujourd’hui",
+   "role": "étapes",
+   "description": "Aujourd'hui : dernier chapitre du parcours",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-fin": {
+   "titre": "Faire un bout de chemin ensemble",
+   "role": "appel",
+   "description": "Appel final de la page mon parcours avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-debut": {
+   "titre": "MUEs",
+   "role": "ouverture",
+   "description": "Tête de page mues : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-esprit": {
+   "titre": "Transformer le plomb en or",
+   "role": "manifeste",
+   "description": "Citation et texte d'esprit de la page mues",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-outils": {
+   "titre": "Ma palette d’outils",
+   "role": "services",
+   "description": "Ma palette d'outils de MUEs en étiquettes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-cadre": {
+   "titre": "Le cadre",
+   "role": "manifeste",
+   "description": "Le cadre de MUEs : cercle qui respire et texte",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-pour-qui": {
+   "titre": "C’est peut-être le moment…",
+   "role": "offre",
+   "description": "C'est peut-être le moment : à qui s'adresse MUEs",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page mues en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mues-fin": {
+   "titre": "Faire le premier pas",
+   "role": "appel",
+   "description": "Appel final de la page mues avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-debut": {
+   "titre": "Rituels sur mesure",
+   "role": "ouverture",
+   "description": "Tête de page rituels sur mesure : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-esprit": {
+   "titre": "Un acte poétique",
+   "role": "manifeste",
+   "description": "Citation et texte d'esprit de la page rituels sur mesure",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-passages": {
+   "titre": "Pour quels passages ?",
+   "role": "offre",
+   "description": "Pour quels passages ? : liste des rituels possibles",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-deroule": {
+   "titre": "Comment nous le créons",
+   "role": "étapes",
+   "description": "Comment nous créons le rituel, en étapes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page rituels sur mesure en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rituels-sur-mesure-fin": {
+   "titre": "Parlons de ton rituel",
+   "role": "appel",
+   "description": "Appel final de la page rituels sur mesure avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-debut": {
+   "titre": "La Roue Médecine",
+   "role": "ouverture",
+   "description": "Tête de page roue medecine : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-origine": {
+   "titre": "La Roue des Saisons et des Éléments",
+   "role": "manifeste",
+   "description": "La Roue des Saisons et des Éléments : origine et texte",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-directions": {
+   "titre": "Les sept directions",
+   "role": "outil-interactif",
+   "description": "Les sept directions : roue épinglée qui tourne au défilement",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-boussole": {
+   "titre": "Une boussole intérieure",
+   "role": "méthode",
+   "description": "Une boussole intérieure : les éléments en photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-approche": {
+   "titre": "Mon approche",
+   "role": "manifeste",
+   "description": "Mon approche de la Roue Médecine sur fond photo",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-arts": {
+   "titre": "Les Arts Médecine",
+   "role": "services",
+   "description": "Les Arts Médecine : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées sur la page roue medecine : témoignages en colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "roue-medecine-fin": {
+   "titre": "Vivre la Roue au fil des saisons",
+   "role": "appel",
+   "description": "Appel final de la page roue medecine avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-debut": {
+   "titre": "Soins énergétiques",
+   "role": "ouverture",
+   "description": "Tête de page soins energetiques : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-deroule": {
+   "titre": "Le déroulé d’une séance",
+   "role": "étapes",
+   "description": "Le déroulé d'une séance de soin en étapes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-souffle": {
+   "titre": "Tout en douceur et en profondeur",
+   "role": "manifeste",
+   "description": "Tout en douceur et en profondeur : cercle qui respire",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-outils": {
+   "titre": "Ma palette d’outils",
+   "role": "services",
+   "description": "Ma palette d'outils de soin en étiquettes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page soins energetiques en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées sur la page soins energetiques : témoignages en colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-autres": {
+   "titre": "D’autres accompagnements",
+   "role": "offre",
+   "description": "D'autres accompagnements en cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-energetiques-fin": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Appel final de la page soins energetiques avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-debut": {
+   "titre": "Les soins de l’être",
+   "role": "ouverture",
+   "description": "Tête de page soins et accompagnements : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-accompagnements": {
+   "titre": "Quatre façons d’être accompagné·e",
+   "role": "offre",
+   "description": "Quatre façons d'être accompagné·e en cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-outils": {
+   "titre": "Mes outils, mes pratiques",
+   "role": "services",
+   "description": "Mes outils, mes pratiques : cercle qui respire et liste",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-art-therapie": {
+   "titre": "Les séances d’art-thérapie",
+   "role": "services",
+   "description": "Les séances d'art-thérapie : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-pratique": {
+   "titre": "Infos pratiques",
+   "role": "faq",
+   "description": "Infos pratiques de la page soins et accompagnements en accordéon avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins-et-accompagnements-fin": {
+   "titre": "Un premier échange",
+   "role": "appel",
+   "description": "Appel final de la page soins et accompagnements avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-debut": {
+   "titre": "Stages de la Roue Médecine",
+   "role": "ouverture",
+   "description": "Tête de page stages roue medecine : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-esprit": {
+   "titre": "L’esprit des stages",
+   "role": "manifeste",
+   "description": "Citation et texte d'esprit de la page stages roue medecine",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-journees": {
+   "titre": "Trois passages",
+   "role": "agenda",
+   "description": "Trois passages : cartes des stages avec dates",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-passage": {
+   "titre": "Vivre un vrai passage",
+   "role": "manifeste",
+   "description": "Vivre un vrai passage : texte sur fond photo",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-temoignages": {
+   "titre": "Paroles partagées",
+   "role": "témoignages",
+   "description": "Paroles partagées sur la page stages roue medecine : témoignages en colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "stages-roue-medecine-fin": {
+   "titre": "Rejoindre un stage",
+   "role": "appel",
+   "description": "Appel final de la page stages roue medecine avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "transes-poetiques-debut": {
+   "titre": "Transes poétiques",
+   "role": "ouverture",
+   "description": "Tête de page transes poetiques : titre, prochaine date et photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "transes-poetiques-premier": {
+   "titre": "Transes poétiques en milieu sauvage",
+   "role": "manifeste",
+   "description": "Transes poétiques en milieu sauvage : poème sous la lune",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "transes-poetiques-lunaisons": {
+   "titre": "Au fil des lunaisons",
+   "role": "articles",
+   "description": "Au fil des lunaisons : les poèmes en fiches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "transes-poetiques-fin": {
+   "titre": "Marcher avec les mots",
+   "role": "appel",
+   "description": "Appel final de la page transes poetiques avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

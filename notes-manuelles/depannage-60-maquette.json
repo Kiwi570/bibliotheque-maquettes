@@ -1,0 +1,594 @@
+{
+ "maquette": {
+  "client": "dépannage plomberie et électricité, rénovation, autour de Longueil-Sainte-Marie (Oise)",
+  "activite": [
+   "bâtiment"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "énergique",
+   "industriel"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Bricolage Grotesque",
+   "texte": "IBM Plex Mono",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Deux réseaux » : eau en bleu et électricité en jaune, un tuyau et un câble qui courent dans la marge",
+   "eau qui coule du robinet en canvas à l'ouverture",
+   "tableau à interrupteurs « Rallumez la lumière sur votre panne », quatre vannes qui tournent pour les étapes",
+   "mur fissuré qui laisse voir les deux réseaux, chauffe-eau en vue éclatée pièce par pièce",
+   "questionnaire en carreaux de faïence avec 69 prestations et tickets de prix"
+  ],
+  "reserves": [
+   "même entreprise que Budgetravaux : deux maquettes à ne pas mélanger",
+   "beaucoup d'images générées",
+   "en-tête X-Frame-Options encore présent : la maquette ne s'affiche pas dans Wix"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "fil-conducteur",
+   "trace-svg",
+   "masque",
+   "marquee",
+   "flip",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "formulaire-par-étapes",
+   "filtres",
+   "recherche",
+   "calculateur",
+   "carte-interactive",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "interrupteurs qui rallument la panne, vannes qui tournent, mur qui laisse voir les réseaux",
+   "fil": "tuyau d'eau bleu et câble jaune dans la marge"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile bleu nuit entre deux pages avec le logo",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : deux moitiés s'ouvrent sur la page comme une trappe",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, quatre liens et numéro en jaune",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran papier avec les liens en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Fuite, panne, WC bouché ? On s’en occupe.",
+   "role": "ouverture",
+   "description": "« Fuite, panne, WC bouché ? On s'en occupe. » : robinet dont l'eau coule en canvas, tuyau et câble dans la marge",
+   "animations": [
+    "canvas-2d",
+    "fil-conducteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "eau-qui-coule"
+   ]
+  },
+  "probleme": {
+   "titre": "Rallumez la lumière sur votre panne.",
+   "role": "outil-interactif",
+   "description": "Rallumez la lumière sur votre panne : tableau d'interrupteurs, chaque panne courante s'allume avec sa prestation et son prix",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "interrupteurs-des-pannes"
+   ]
+  },
+  "prix": {
+   "titre": "Le prix, avant qu’on se déplace.",
+   "role": "tarifs",
+   "description": "Le prix avant qu'on se déplace : ticket de prix détaillé à côté d'une photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment": {
+   "titre": "Quatre vannes, et c’est réglé.",
+   "role": "étapes",
+   "description": "Quatre vannes et c'est réglé : section épinglée, chaque vanne tourne et ouvre une étape",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "vannes-qui-tournent"
+   ]
+  },
+  "reseaux": {
+   "titre": "Derrière le mur, deux réseaux.",
+   "role": "services",
+   "description": "Derrière le mur, deux réseaux : section épinglée, le mur se fissure et laisse voir l'eau et l'électricité",
+   "animations": [
+    "section-fixée",
+    "masque",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "mur-qui-se-fissure"
+   ]
+  },
+  "chauffe-eau": {
+   "titre": "Votre ballon, pièce par pièce.",
+   "role": "outil-interactif",
+   "description": "Votre ballon pièce par pièce : vue éclatée épinglée du chauffe-eau, pièces et prix",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "On vient chez vous ?",
+   "role": "carte",
+   "description": "On vient chez vous ? : cercles de distance autour de Longueil-Sainte-Marie et communes",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements": {
+   "titre": "Ce qui est vissé d’avance.",
+   "role": "preuves",
+   "description": "Ce qui est vissé d'avance : quatre engagements avec des écrous",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation": {
+   "titre": "Et quand il faut tout refaire.",
+   "role": "services",
+   "description": "Et quand il faut tout refaire : rénovations en galerie épinglée horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui": {
+   "titre": "Pedro Ricardo dos Reis Oliveira, et un réseau d’intervenants.",
+   "role": "équipe",
+   "description": "Pedro Ricardo dos Reis Oliveira et son réseau d'intervenants",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Un appel, et le problème est pris en main.",
+   "role": "appel",
+   "description": "Un appel, et le problème est pris en main : numéro en grand et ruban des communes",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Sommaire",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit : numéro, communes, sommaire, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-introuvable": {
+   "titre": "Fuite détectée : cette page n’existe pas.",
+   "role": "page-404",
+   "description": "« Fuite détectée : cette page n'existe pas. » avec un seau jaune",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-demande": {
+   "titre": "Demandez à être rappelé.",
+   "role": "contact",
+   "description": "Demandez à être rappelé : demande simulée en quatre étapes sur fond jaune",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "Au 9 bis rue de l’Abreuvoir, à Longueil-Sainte-Marie.",
+   "role": "carte",
+   "description": "Adresse à Longueil-Sainte-Marie et plan des communes",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-fin": {
+   "titre": "Une urgence, tout de suite ?",
+   "role": "appel",
+   "description": "Une urgence tout de suite ? : numéro en grand",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "decrivez-votre-besoin-questionnaire": {
+   "titre": "Qu’est-ce qui ne va pas ?",
+   "role": "outil-interactif",
+   "description": "Qu'est-ce qui ne va pas ? : questionnaire en carreaux de faïence (où, quoi, quand) qui mène à la prestation et à son prix",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "questionnaire-en-carreaux"
+   ]
+  },
+  "decrivez-votre-besoin-ensuite": {
+   "titre": "On vous rappelle pour fixer le détail.",
+   "role": "étapes",
+   "description": "On vous rappelle pour fixer le détail : ce qui se passe après",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "decrivez-votre-besoin-fin": {
+   "titre": "Vous préférez en parler ?",
+   "role": "appel",
+   "description": "Vous préférez en parler ? : numéro en grand",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-tarifs": {
+   "titre": "69 prestations,tarifs en clair.",
+   "role": "ouverture",
+   "description": "69 prestations, tarifs en clair : étiquettes de prix en ouverture",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-catalogue": {
+   "titre": "Toutes les prestations",
+   "role": "tarifs",
+   "description": "Toutes les prestations en catalogue filtrable avec recherche et tickets",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-inclus": {
+   "titre": "Un exemple, ligne par ligne.",
+   "role": "tarifs",
+   "description": "Un exemple ligne par ligne : ticket détaillé d'une intervention",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-faq": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Questions fréquentes sur les prestations en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-fin": {
+   "titre": "Vous ne trouvez pas ?",
+   "role": "appel",
+   "description": "Vous ne trouvez pas ? : appel vers le questionnaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rayon-d-action-zone": {
+   "titre": "On vient chez vous ?",
+   "role": "outil-interactif",
+   "description": "On vient chez vous ? : ondes autour de l'atelier, on tape sa commune et la page répond",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "saisie-personnalisee",
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rayon-d-action-communes": {
+   "titre": "Dix communes, un même numéro.",
+   "role": "carte",
+   "description": "Dix communes, un même numéro : liste des communes avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rayon-d-action-oise": {
+   "titre": "Et partout dans l’Oise.",
+   "role": "carte",
+   "description": "Et partout dans l'Oise : communes en pastilles",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

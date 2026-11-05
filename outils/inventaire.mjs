@@ -1,5 +1,5 @@
 // Inventaire automatique d'une maquette : pages, blocs de premier niveau, lignes de code, GSAP et ScrollTrigger, médias.
-// node outils/inventaire.mjs <depot> [--sans-medias] [--pages index,contact]
+// node outils/inventaire.mjs <depot> [--sans-medias] [--pages index,contact] [--stockage cle=valeur]
 // Écrit inventaire/<depot>.json et medias/<depot>/*. Lecture seule sur le dépôt de la maquette.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -12,6 +12,9 @@ if (!depot) { console.error('usage : node outils/inventaire.mjs <depot> [--sans-
 const avecMedias = !process.argv.includes('--sans-medias');
 const iPages = process.argv.indexOf('--pages');
 const filtrePages = iPages > 0 ? process.argv[iPages + 1].split(',') : null;
+// --stockage cle=valeur (répétable) : écrit dans le localStorage avant chaque page, par exemple pour passer un filtre d'âge (ahp-age=ok).
+const STOCKAGE = Object.fromEntries(process.argv.flatMap((v, i) => v === '--stockage' && process.argv[i + 1] ? [process.argv[i + 1].split(/=(.*)/s).slice(0, 2)] : []));
+const preparer = async (ctx) => { if (Object.keys(STOCKAGE).length) await ctx.addInitScript((o) => { try { for (const [k, v] of Object.entries(o)) localStorage.setItem(k, v); } catch {} }, STOCKAGE); return ctx; };
 const DOS = path.join(DOWNLOADS, depot);
 const MED = path.join(RACINE, 'medias', depot);
 const TMP = path.join(RACINE, 'inventaire', 'brut', depot);
@@ -239,6 +242,7 @@ for (const page of pagesAVisiter) {
   const url = srv.url + '/' + (page === 'index' ? '' : page);
   // Passe ordinateur, avec vidéo.
   const ctx = await navigateur.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1, ...(avecMedias ? { recordVideo: { dir: TMP, size: { width: 960, height: 600 } } } : {}) });
+  await preparer(ctx);
   const pg = await ctx.newPage(); const t0 = Date.now(); const erreurs = [];
   pg.on('pageerror', e => erreurs.push(String(e.message).slice(0, 200)));
   pg.on('console', m => { if (m.type() === 'error') erreurs.push(m.text().slice(0, 200)); });
@@ -302,6 +306,7 @@ for (const page of pagesAVisiter) {
   // Passe téléphone.
   if (avecMedias) {
     const ctxm = await navigateur.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true });
+    await preparer(ctxm);
     const pm = await ctxm.newPage();
     await pm.goto(url, { waitUntil: 'load' }).catch(() => {}); await attendre(INTRO_MS);
     const mm = await pm.evaluate(mesurerDansPage, s.blocs.map(b => b.sig));

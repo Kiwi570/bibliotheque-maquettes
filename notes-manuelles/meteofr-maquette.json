@@ -1,0 +1,683 @@
+{
+ "maquette": {
+  "client": "service de météo indépendant par commune avec application Android (prévisions, radar, vigilance)",
+  "activite": [
+   "média",
+   "numérique"
+  ],
+  "concept": [
+   "station",
+   "cockpit"
+  ],
+  "ambiance": [
+   "clair",
+   "froid",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--nuit"
+  },
+  "polices": {
+   "titres": "Outfit",
+   "texte": "DM Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "fil rouge « le site a la même météo que dehors » : le vent réel pousse les nuages, la pluie mouille la vitre, le froid la givre, l'heure colore le ciel",
+   "ciel WebGL de l'ouverture piloté par les données en direct, recherche de commune",
+   "altimètre fixe dans la marge et isobares qui courent sur la page",
+   "24 heures en accéléré dans une section épinglée, seize jours filtrables, villes en cartes de ciel",
+   "vitre de la page commune, rose des vents, course du soleil, radar image par image"
+  ],
+  "reserves": [
+   "dépend des données en direct (repli prévu si l'API ne répond pas, radar indisponible dans l'inventaire)",
+   "19 points « à regarder » au script, surtout des ouvertures brusques",
+   "mentions et sources à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "fil-conducteur",
+   "trace-svg",
+   "compteur",
+   "parallaxe",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "recherche",
+   "filtres",
+   "carte-interactive",
+   "schema-interactif",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "ciel",
+  "grille": {
+   "objet": "ciel vivant piloté par la météo réelle (vent, pluie, givre, heure)",
+   "fil": "altimètre dans la marge et isobares sur toute la page"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en front météo : deux bandes nuageuses se rejoignent entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-front-meteo"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un ciel de nuit s'éclaire et le soleil se lève au centre",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, cinq liens et bouton L'appli en orange",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran clair avec les liens en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "altimetre": {
+   "titre": "Repères de la page",
+   "role": "decor",
+   "description": "Altimètre fixe dans la marge : repères de la page à l'altitude, cliquables",
+   "animations": [
+    "fil-conducteur",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "altimetre-de-page"
+   ],
+   "sans_capture": true
+  },
+  "isobares": {
+   "titre": "",
+   "role": "decor",
+   "description": "Isobares qui courent derrière toute la page et se déforment au défilement",
+   "animations": [
+    "trace-svg",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ciel": {
+   "titre": "Le ciel de votre commune, en direct.",
+   "role": "ouverture",
+   "description": "« Le ciel de votre commune, en direct » : ciel WebGL piloté par la météo réelle (nuages poussés par le vent, pluie sur la vitre), température en très grand, recherche de commune",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "meteo-reelle-pilote-les-effets"
+   ]
+  },
+  "maintenant": {
+   "titre": "Le temps qu'il fait en ce moment",
+   "role": "chiffres",
+   "description": "Le temps qu'il fait en ce moment : boussole du vent, filets d'air en canvas, six mesures",
+   "animations": [
+    "canvas-2d",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "heures": {
+   "titre": "Les 24 prochaines heures, en accéléré",
+   "role": "outil-interactif",
+   "description": "Les 24 prochaines heures en accéléré : section épinglée, le ciel passe du jour à la nuit, courbe des températures à parcourir au doigt",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "journee-en-accelere"
+   ]
+  },
+  "vigilance": {
+   "titre": "Faut-il s'inquiéter aujourd'hui ?",
+   "role": "carte",
+   "description": "Faut-il s'inquiéter aujourd'hui ? : carte de France des vigilances par couleur et liste",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "radar": {
+   "titre": "La pluie des deux dernières heures",
+   "role": "carte",
+   "description": "La pluie des deux dernières heures : radar en canvas sur la France, repli si les images manquent",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "jours": {
+   "titre": "Seize jours, matin et après-midi",
+   "role": "chiffres",
+   "description": "Seize jours matin et après-midi en bandes filtrables (tous, jours secs, jours de pluie)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "villes": {
+   "titre": "Le ciel, d'une ville à l'autre",
+   "role": "galerie",
+   "description": "Le ciel d'une ville à l'autre : cartes de ciel animées en canvas sur une piste horizontale",
+   "animations": [
+    "canvas-2d",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appli": {
+   "titre": "Toute la météo, dans l'appli Android",
+   "role": "offre",
+   "description": "Toute la météo dans l'appli Android : téléphone épinglé dont l'écran change avec les fonctions",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sources": {
+   "titre": "Sources et fraîcheur",
+   "role": "preuves",
+   "description": "Sources et fraîcheur : un ballon-sonde monte avec l'altitude, la température et la pression",
+   "animations": [
+    "parallaxe",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ballon-sonde"
+   ]
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit : sources des données, sommaire, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Visibilité nulle",
+   "role": "page-404",
+   "description": "« Visibilité nulle » : brouillard en canvas et recherche de commune",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "application-debut": {
+   "titre": "MétéoFR dans votre poche",
+   "role": "ouverture",
+   "description": "MétéoFR dans votre poche : le téléphone émerge des nuages",
+   "animations": [
+    "parallaxe",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "application-fonctions": {
+   "titre": "Tout ce que fait l'appli",
+   "role": "offre",
+   "description": "Tout ce que fait l'appli : téléphone épinglé qui change d'écran",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "application-installer": {
+   "titre": "Installer l'APK en quatre étapes",
+   "role": "étapes",
+   "description": "Installer l'APK en quatre étapes avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "application-faq": {
+   "titre": "Avant d'installer",
+   "role": "faq",
+   "description": "Avant d'installer : questions en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commune-debut": {
+   "titre": "Paris",
+   "role": "ouverture",
+   "description": "Page commune : vitre en WebGL que la pluie mouille ou que le froid givre selon la météo, température et recherche",
+   "animations": [
+    "webgl-shader",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "vitre-meteo"
+   ]
+  },
+  "commune-heures": {
+   "titre": "Les 24 prochaines heures",
+   "role": "chiffres",
+   "description": "Les 24 prochaines heures en courbe et cartes heure par heure",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commune-jours": {
+   "titre": "Seize jours, du matin à l'après-midi",
+   "role": "chiffres",
+   "description": "Seize jours en bandes de températures du matin à l'après-midi",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commune-vent": {
+   "titre": "D'où vient le vent, et à quelle force",
+   "role": "outil-interactif",
+   "description": "D'où vient le vent et à quelle force : rose des vents et filets d'air en WebGL",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commune-soleil": {
+   "titre": "La course du soleil aujourd'hui",
+   "role": "chiffres",
+   "description": "La course du soleil aujourd'hui : arc du lever au coucher, étoiles la nuit",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commune-vigilance": {
+   "titre": "Et dans votre département ?",
+   "role": "carte",
+   "description": "Et dans votre département ? : zoom sur la carte des vigilances",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Écrivez-nous",
+   "role": "contact",
+   "description": "Écrivez-nous : formulaire simulé avec photo collante",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-coordonnees": {
+   "titre": "Où nous joindre",
+   "role": "contact",
+   "description": "Où nous joindre : trajectoire dessinée et coordonnées",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "radar-debut": {
+   "titre": "La pluie, image par image",
+   "role": "outil-interactif",
+   "description": "La pluie image par image : radar plein écran en canvas avec curseur du temps",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "radar-carte": {
+   "titre": "Vingt villes, trois moments de la journée",
+   "role": "carte",
+   "description": "Vingt villes, trois moments de la journée : calques à superposer",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "radar-lire": {
+   "titre": "Ce que montrent les couleurs",
+   "role": "faq",
+   "description": "Ce que montrent les couleurs du radar, avec photo d'averse",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "radar-faq": {
+   "titre": "Le radar, en clair",
+   "role": "faq",
+   "description": "Le radar en clair : questions en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vigilance-debut": {
+   "titre": "Vigilance",
+   "role": "ouverture",
+   "description": "Vigilance : nuancier des quatre couleurs en WebGL",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vigilance-carte": {
+   "titre": "Aujourd'hui et demain",
+   "role": "carte",
+   "description": "Aujourd'hui et demain : carte des vigilances filtrable par jour",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vigilance-couleurs": {
+   "titre": "Que faire selon la couleur",
+   "role": "méthode",
+   "description": "Que faire selon la couleur : quatre couleurs empilées au défilement",
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

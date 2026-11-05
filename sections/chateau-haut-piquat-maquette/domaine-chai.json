@@ -1,0 +1,42 @@
+{
+ "id": "chateau-haut-piquat-maquette/domaine-chai",
+ "maquette": "chateau-haut-piquat-maquette",
+ "page": "domaine",
+ "titre": "Le chai à barriquesThe barrel cellar",
+ "role": "preuves",
+ "description": "Le chai à barriques : 480 en très grand et faisceau de lumière (le dessin des barriques échoue, contexte canvas nul)",
+ "animations": [
+  "webgl-shader",
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "domaine.html:169-188",
+  "css": "assets/css/style.css:417-429,788-789,921,1086,1388,1512,1516,1539-1541",
+  "js": "assets/js/core.js:226-239 ; assets/js/data.js:372,1004 ; assets/js/pages/domain.js:1,6-16,96-97,123-129"
+ },
+ "medias": {
+  "capture": "medias/chateau-haut-piquat-maquette/domaine-chai-p1440.jpg"
+ },
+ "pieges": [
+  "Un canvas déjà pris en WebGL renvoie null à getContext('2d') : un canvas par contexte."
+ ],
+ "mesures": {
+  "hauteur_p1440": 1310,
+  "hauteur_m390": 1073,
+  "epinglee": false,
+  "scrolltriggers": 3
+ }
+}

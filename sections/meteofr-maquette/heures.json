@@ -1,0 +1,45 @@
+{
+ "id": "meteofr-maquette/heures",
+ "maquette": "meteofr-maquette",
+ "page": "index",
+ "titre": "Les 24 prochaines heures, en accéléré",
+ "role": "outil-interactif",
+ "description": "Les 24 prochaines heures en accéléré : section épinglée, le ciel passe du jour à la nuit, courbe des températures à parcourir au doigt",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:197-217",
+  "css": "assets/css/site.css:178-195,623,729-754,996-999",
+  "js": "assets/js/site.js:94-129,150-192 ; assets/js/pages.js:66-67,70,137 ; assets/js/v2-accueil.js:169-212 ; assets/js/rendu.js:4-18 ; assets/js/meteo.js:86-98,106-138 ; assets/js/socle/onde.js:67-190 ; assets/js/radar.js:1 ; assets/js/effets-meteo.js:95-150"
+ },
+ "medias": {
+  "capture": "medias/meteofr-maquette/heures-p1440.jpg",
+  "capture_m390": "medias/meteofr-maquette/heures-m390.jpg",
+  "video": "medias/meteofr-maquette/heures-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "journee-en-accelere"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 910,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

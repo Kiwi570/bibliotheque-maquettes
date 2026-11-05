@@ -1,0 +1,134 @@
+{
+ "depot": "meteofr-maquette",
+ "url": "https://meteofr-maquette.vercel.app",
+ "client": "service de météo indépendant par commune avec application Android (prévisions, radar, vigilance)",
+ "activite": [
+  "média",
+  "numérique"
+ ],
+ "concept": [
+  "station",
+  "cockpit"
+ ],
+ "ambiance": [
+  "clair",
+  "froid",
+  "énergique"
+ ],
+ "palette": {
+  "fond": "#f4f7fc",
+  "texte": "#0b1f45",
+  "accent": "#1f5fbf",
+  "secondaire": "#0a1a3a"
+ },
+ "polices": {
+  "titres": "Outfit",
+  "texte": "DM Sans",
+  "mono": null
+ },
+ "pages": [
+  "index",
+  "application",
+  "commune",
+  "contact",
+  "radar",
+  "vigilance",
+  "404"
+ ],
+ "commit": "6821379",
+ "date_commit": "2026-11-05",
+ "note": 83,
+ "verdict": "À peaufiner",
+ "points_forts": [
+  "fil rouge « le site a la même météo que dehors » : le vent réel pousse les nuages, la pluie mouille la vitre, le froid la givre, l'heure colore le ciel",
+  "ciel WebGL de l'ouverture piloté par les données en direct, recherche de commune",
+  "altimètre fixe dans la marge et isobares qui courent sur la page",
+  "24 heures en accéléré dans une section épinglée, seize jours filtrables, villes en cartes de ciel",
+  "vitre de la page commune, rose des vents, course du soleil, radar image par image"
+ ],
+ "reserves": [
+  "dépend des données en direct (repli prévu si l'API ne répond pas, radar indisponible dans l'inventaire)",
+  "19 points « à regarder » au script, surtout des ouvertures brusques",
+  "mentions et sources à compléter"
+ ],
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "canvas-2d",
+  "section-fixée",
+  "progression-fixée",
+  "galerie-horizontale",
+  "fil-conducteur",
+  "trace-svg",
+  "compteur",
+  "parallaxe",
+  "apparition-au-défilement",
+  "transition-de-page"
+ ],
+ "interactions": [
+  "recherche",
+  "filtres",
+  "carte-interactive",
+  "schema-interactif",
+  "mode-calme"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "flip",
+  "ogl",
+  "canvas"
+ ],
+ "grille": {
+  "voile": null,
+  "objet": "ciel vivant piloté par la météo réelle (vent, pluie, givre, heure)",
+  "fil": "altimètre dans la marge et isobares sur toute la page",
+  "intro_vers_objet": false,
+  "marques": []
+ },
+ "sections": [
+  "meteofr-maquette/div",
+  "meteofr-maquette/ouverture-panneau",
+  "meteofr-maquette/header",
+  "meteofr-maquette/menu",
+  "meteofr-maquette/altimetre",
+  "meteofr-maquette/isobares",
+  "meteofr-maquette/ciel",
+  "meteofr-maquette/maintenant",
+  "meteofr-maquette/heures",
+  "meteofr-maquette/vigilance",
+  "meteofr-maquette/radar",
+  "meteofr-maquette/jours",
+  "meteofr-maquette/villes",
+  "meteofr-maquette/appli",
+  "meteofr-maquette/sources",
+  "meteofr-maquette/pied",
+  "meteofr-maquette/404-debut",
+  "meteofr-maquette/application-debut",
+  "meteofr-maquette/application-fonctions",
+  "meteofr-maquette/application-installer",
+  "meteofr-maquette/application-faq",
+  "meteofr-maquette/commune-debut",
+  "meteofr-maquette/commune-heures",
+  "meteofr-maquette/commune-jours",
+  "meteofr-maquette/commune-vent",
+  "meteofr-maquette/commune-soleil",
+  "meteofr-maquette/commune-vigilance",
+  "meteofr-maquette/contact-debut",
+  "meteofr-maquette/contact-coordonnees",
+  "meteofr-maquette/radar-debut",
+  "meteofr-maquette/radar-carte",
+  "meteofr-maquette/radar-lire",
+  "meteofr-maquette/radar-faq",
+  "meteofr-maquette/vigilance-debut",
+  "meteofr-maquette/vigilance-carte",
+  "meteofr-maquette/vigilance-couleurs"
+ ],
+ "captures": {
+  "accueil-ordinateur": "medias/meteofr-maquette/ciel-p1440.jpg",
+  "accueil-telephone": "medias/meteofr-maquette/ciel-m390.jpg"
+ },
+ "audit": "https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/meteofr-maquette.md",
+ "commit_audit": null
+}

@@ -1,0 +1,885 @@
+{
+ "maquette": {
+  "client": "bureau d'études en conception mécanique et design (robotique sous-marine, mécatronique, prototypage SLA) dans l'Hérault",
+  "activite": [
+   "industrie",
+   "services-b2b"
+  ],
+  "concept": [
+   "dossier",
+   "laboratoire"
+  ],
+  "ambiance": [
+   "clair",
+   "froid",
+   "industriel"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Archivo",
+   "texte": "IBM Plex Sans",
+   "mono": "IBM Plex Mono"
+  },
+  "points_forts": [
+   "direction « Calque & cote » : papier calque à trame millimétrée, traits bleu de Prusse, cotes et cartouches de plan, accent orange signalisation",
+   "descente « De 0 à 6 000 mètres » : section collante où la profondeur défile sur une eau WebGL qui s'assombrit",
+   "planches qui passent de l'esquisse au rendu (encrage), vrais rendus 3D et ROV du bureau d'études",
+   "voile en trame de calque avec cote et folio, intro qui trace un cadre de plan",
+   "stéréolithographie couche par couche avec le volume d'impression coté"
+  ],
+  "reserves": [
+   "descriptions de projets et vidéos à fournir",
+   "domaines construits sur un même gabarit",
+   "mentions et outils « à confirmer »"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "trace-svg",
+   "masque",
+   "compteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "plan coté sur calque ; descente de 0 à 6 000 mètres",
+   "fil": "cotes, cartouches et folios de plan sur toutes les pages"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en trame de calque avec une cote et un folio de plan, entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-de-calque"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un cadre de plan et ses traits de construction se tracent, puis le logo au centre",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, deux liens, Décrire mon projet en orange et bouton Menu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Contact",
+   "role": "menu",
+   "description": "Menu plein écran bleu de Prusse numéroté avec contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Bureau d’étudesconception mécanique& design",
+   "role": "ouverture",
+   "description": "« Bureau d'études conception mécanique & design » : rendu d'un ROV sur une planche cotée avec cartouche, folio et échelle, traits qui se tracent",
+   "animations": [
+    "trace-svg",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "planche-cotee"
+   ]
+  },
+  "besoins": {
+   "titre": "Vous avez un projet et souhaitez :",
+   "role": "services",
+   "description": "Vous avez un projet et souhaitez : quatre besoins soulignés par des cotes qui se tirent, plan d'ensemble au trait",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "methode": {
+   "titre": "De l’idée au prototype",
+   "role": "méthode",
+   "description": "De l'idée au prototype : cinq étapes, la planche passe du trait au rendu à chaque étape (colonne collante)",
+   "animations": [
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaines": {
+   "titre": "Cinq domaines, un même bureau d’études",
+   "role": "services",
+   "description": "Cinq domaines en cartes avec rendus 3D qui apparaissent cotés",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations": {
+   "titre": "Sur la table à dessin",
+   "role": "portfolio",
+   "description": "Sur la table à dessin : réalisations en galerie épinglée à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique": {
+   "titre": "De 0 à 6 000 mètres",
+   "role": "manifeste",
+   "description": "De 0 à 6 000 mètres : section collante, la profondeur défile dans la marge sur une eau WebGL qui s'assombrit avec la descente",
+   "animations": [
+    "webgl-shader",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "descente-en-profondeur"
+   ]
+  },
+  "atelier": {
+   "titre": "Stéréolithographie",
+   "role": "preuves",
+   "description": "Stéréolithographie : volume d'impression coté, caractéristiques en cartouche, sur fond bleu nuit",
+   "animations": [
+    "trace-svg",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projet": {
+   "titre": "Un interlocuteur, de l’idée au prototype",
+   "role": "appel",
+   "description": "Un interlocuteur de l'idée au prototype : votre projet dans le cartouche, puis Décrire mon projet",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu de Prusse : coordonnées, plan du site, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cote hors tolérance",
+   "role": "page-404",
+   "description": "« Cote hors tolérance » : pièce usinée et repère",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-debut": {
+   "titre": "Compétences",
+   "role": "ouverture",
+   "description": "Compétences : plan au trait d'un ensemble, 25 ans d'expérience",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-secteurs": {
+   "titre": "Quel que soit votre secteur",
+   "role": "services",
+   "description": "Quel que soit votre secteur : secteurs soulignés par des cotes",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-savoir-faire": {
+   "titre": "Ce que BECOM‑D fait pour vous",
+   "role": "services",
+   "description": "Ce que BECOM-D fait pour vous : cinq savoir-faire en planches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-outils": {
+   "titre": "Sous SolidWorks Premium",
+   "role": "preuves",
+   "description": "Sous SolidWorks Premium : simulation en couleurs et outils",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-livrables": {
+   "titre": "Ce que vous recevez",
+   "role": "offre",
+   "description": "Ce que vous recevez : les livrables rangés dans un cartouche de plan",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cartouche-de-plan"
+   ]
+  },
+  "competences-domaines": {
+   "titre": "Les cinq domaines",
+   "role": "services",
+   "description": "Les cinq domaines en cartes complètes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "competences-fin": {
+   "titre": "Un projet à étudier ?",
+   "role": "appel",
+   "description": "Un projet à étudier ? : appel avec plan au trait",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Décrire votre projet",
+   "role": "ouverture",
+   "description": "Décrire votre projet : calque et compas, téléphone",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Votre demande en quatre étapes",
+   "role": "contact",
+   "description": "Demande simulée en quatre étapes (besoin, domaine, projet, coordonnées) avec cartouche récapitulatif",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-coordonnees": {
+   "titre": "BECOM‑D, à Saint‑Jean‑de‑la‑Blaquière",
+   "role": "carte",
+   "description": "Plan de situation entre Montpellier et Béziers qui se trace, coordonnées en cartouche",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "design-et-communication-debut": {
+   "titre": "Design et communication",
+   "role": "ouverture",
+   "description": "Page domaine Design et communication : grande photo, accroche orange, appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "design-et-communication-design": {
+   "titre": "La forme suit la fonction",
+   "role": "portfolio",
+   "description": "La forme suit la fonction : planches qui passent de l'esquisse au rendu (encrage)",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "esquisse-qui-s-encre"
+   ]
+  },
+  "design-et-communication-communication": {
+   "titre": "Montrer vos produits avant qu’ils existent",
+   "role": "portfolio",
+   "description": "Montrer vos produits avant qu'ils existent : triptyque esquisse, rendu, image de synthèse",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "design-et-communication-fin": {
+   "titre": "Un produit à dessiner, à présenter ?",
+   "role": "appel",
+   "description": "Appel final du domaine Design et communication avec un rendu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecanique-generale-debut": {
+   "titre": "Mécanique générale",
+   "role": "ouverture",
+   "description": "Page domaine Mécanique générale : grande photo, accroche orange, appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecanique-generale-conception": {
+   "titre": "De l’esquisse au rendu",
+   "role": "méthode",
+   "description": "De l'esquisse au rendu : la planche s'encre au défilement",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecanique-generale-realisations": {
+   "titre": "Deux projets, du trait à la pièce",
+   "role": "portfolio",
+   "description": "Deux projets du trait à la pièce en triptyques",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecanique-generale-outils": {
+   "titre": "Simulation et validation",
+   "role": "preuves",
+   "description": "Simulation et validation : rendus de contraintes en couleurs",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecanique-generale-fin": {
+   "titre": "Une pièce, un mécanisme à concevoir ?",
+   "role": "appel",
+   "description": "Appel final du domaine Mécanique générale avec un rendu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecatronique-debut": {
+   "titre": "Mécatronique",
+   "role": "ouverture",
+   "description": "Page domaine Mécatronique : grande photo, accroche orange, appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecatronique-ensemble": {
+   "titre": "La mécanique et l’électronique, ensemble",
+   "role": "méthode",
+   "description": "La mécanique et l'électronique ensemble : rôles répartis dans un cartouche",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecatronique-realisation": {
+   "titre": "Caisson électronique",
+   "role": "portfolio",
+   "description": "Caisson électronique : rendu éclaté et description à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mecatronique-fin": {
+   "titre": "Un projet de mécatronique ?",
+   "role": "appel",
+   "description": "Appel final du domaine Mécatronique avec un rendu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales et confidentialité",
+   "role": "texte-legal",
+   "description": "Mentions légales et confidentialité : tête avec sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par le client",
+   "role": "texte-legal",
+   "description": "Informations à fournir, éditeur, hébergeur, crédits, confidentialité",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prototypage-rapide-sla-debut": {
+   "titre": "Prototypage rapide SLA",
+   "role": "ouverture",
+   "description": "Page domaine Prototypage rapide SLA : grande photo, accroche orange, appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prototypage-rapide-sla-stereolithographie": {
+   "titre": "Couche par couche",
+   "role": "preuves",
+   "description": "Couche par couche : volume d'impression coté qui se remplit couche après couche",
+   "animations": [
+    "trace-svg",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prototypage-rapide-sla-resines": {
+   "titre": "Choisir la résine",
+   "role": "offre",
+   "description": "Choisir la résine : six familles en tableau à côté d'un rendu",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prototypage-rapide-sla-matiere": {
+   "titre": "Sur place, ou en bonne matière",
+   "role": "offre",
+   "description": "Sur place ou en bonne matière : plan légendé",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prototypage-rapide-sla-fin": {
+   "titre": "Un prototype à imprimer ?",
+   "role": "appel",
+   "description": "Appel final du domaine Prototypage rapide SLA avec un rendu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique-sous-marine-debut": {
+   "titre": "Robotique sous-marine",
+   "role": "ouverture",
+   "description": "Robotique sous-marine : photo sous l'eau avec effet WebGL",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique-sous-marine-descente": {
+   "titre": "Ce que BECOM‑D conçoit pour l’immersion",
+   "role": "manifeste",
+   "description": "Ce que BECOM-D conçoit pour l'immersion : la descente en profondeur, version page",
+   "animations": [
+    "webgl-shader",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique-sous-marine-du-trait-a-l-eau": {
+   "titre": "Du trait à l’eau",
+   "role": "portfolio",
+   "description": "Du trait à l'eau : triptyque du plan au ROV immergé",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique-sous-marine-recherche": {
+   "titre": "Avec la recherche sous-marine",
+   "role": "preuves",
+   "description": "Avec la recherche sous-marine : faits et articles",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "robotique-sous-marine-fin": {
+   "titre": "Un produit à immerger ?",
+   "role": "appel",
+   "description": "Un produit à immerger ? : appel final de la robotique",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

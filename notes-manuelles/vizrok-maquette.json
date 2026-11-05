@@ -1,0 +1,734 @@
+{
+ "maquette": {
+  "client": "boutique de vêtements de sport, accessoires et nutrition d'une marque fabriquée à la demande",
+  "activite": [
+   "commerce",
+   "sport"
+  ],
+  "concept": [
+   "vitrine",
+   "catalogue"
+  ],
+  "ambiance": [
+   "nocturne",
+   "énergique",
+   "industriel"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Big Shoulders Display",
+   "texte": "Archivo",
+   "mono": "JetBrains Mono"
+  },
+  "points_forts": [
+   "direction « Salle de nuit » : bleu nuit, vert néon de la marque, sections claires en alternance, barre de musculation en néon à l'ouverture",
+   "changement de page « disque » : un disque de fonte roule, couvre l'écran avec le nom de la page puis repart",
+   "quatre disques de fonte sur une barre épinglée : chaque disque ouvre une collection",
+   "« Accroche ton kit » : les pièces se suspendent à des crochets et le total se calcule",
+   "shaker qui se remplit au fil des cinq produits de nutrition, vue éclatée du maillot au scanner"
+  ],
+  "reserves": [
+   "fiches nutrition « à compléter » (valeurs, allergènes)",
+   "photos produits sur fond uni, peu de photos portées",
+   "mentions et tailles à confirmer"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "flip",
+   "compteur",
+   "trace-svg",
+   "parallaxe",
+   "transition-de-page",
+   "révélation-texte"
+  ],
+  "interactions": [
+   "panier-simule",
+   "filtres",
+   "recherche",
+   "configurateur",
+   "calculateur",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "disques de fonte sur la barre (collections) et disque qui roule entre les pages",
+   "fil": "la salle de musculation de nuit et ses néons"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Changement de page « disque » : un disque de fonte roule jusqu'au centre, grandit et couvre l'écran avec le nom de la page, puis repart en roulant",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "disque-qui-roule"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : le logo s'allume comme un néon dans la salle de nuit",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo néon, cinq liens, panier en vert",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran nuit avec réseaux",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Built to Perform.",
+   "role": "ouverture",
+   "description": "« Built to Perform. » : barre de musculation et néons dans une salle de nuit, lueur WebGL et poussière en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "ruban-section": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban vert néon de slogans qui défile, bouton Pause",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "collection": {
+   "titre": "Pensée pour la salle. Taillée pour la rue.",
+   "role": "produits",
+   "description": "La collection sur fond blanc : grande photo portée, seconde photo qui glisse plus vite, badge qui tourne, chiffres",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "collections": {
+   "titre": "Quatre disques, dix-huit pièces.",
+   "role": "produits",
+   "description": "Quatre disques, dix-huit pièces : section épinglée, une barre où chaque disque de fonte ouvre une collection",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "flip"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "barre-a-disques"
+   ]
+  },
+  "porte": {
+   "titre": "À la salle, puis dans la rue.",
+   "role": "galerie",
+   "description": "À la salle, puis dans la rue : photos portées qui glissent en décalé",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "maillot": {
+   "titre": "Le maillot mesh.",
+   "role": "produits",
+   "description": "Le maillot mesh : coloris à choisir qui changent la pièce, lueur en canvas",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nouveautes": {
+   "titre": "La sélection.",
+   "role": "produits",
+   "description": "La sélection : pièces en galerie épinglée horizontale avec ajout au panier",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "manifeste": {
+   "titre": "Performance. Muscle. Energy. Lifestyle.",
+   "role": "manifeste",
+   "description": "Performance. Muscle. Energy. Lifestyle. : mots qui s'allument un à un",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nutrition": {
+   "titre": "La gamme Vizrok Nutrition.",
+   "role": "produits",
+   "description": "La gamme Vizrok Nutrition : cinq produits en liste avec prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "garanties": {
+   "titre": "Fabriqué quand tu commandes.",
+   "role": "preuves",
+   "description": "Fabriqué quand tu commandes : délais et garanties chiffrés",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reseaux": {
+   "titre": "La salle continue sur les réseaux.",
+   "role": "contact",
+   "description": "La salle continue sur les réseaux : comptes en néon",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Nouvelle collection. Nouveau niveau.",
+   "role": "appel",
+   "description": "Nouvelle collection, nouveau niveau : appel final avec disques",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page nuit avec « Built to Perform. » en contour",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "panier": {
+   "titre": "Ton panier",
+   "role": "outil-interactif",
+   "description": "Tiroir du panier simulé présent sur toutes les pages",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-debut": {
+   "titre": "Cette page a quitté la barre.",
+   "role": "page-404",
+   "description": "« Cette page a quitté la barre. » avec un disque néon dans le 404",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-debut": {
+   "titre": "Boutique",
+   "role": "ouverture",
+   "description": "Boutique : 18 pièces et disques de couleur qui filtrent par catégorie",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-catalogue": {
+   "titre": "Maillot de sport",
+   "role": "produits",
+   "description": "Catalogue filtrable avec recherche et tri, cartes avec coloris et ajout au panier",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-rayon": {
+   "titre": "Il manque une pièce à ton kit ?",
+   "role": "appel",
+   "description": "Il manque une pièce à ton kit ? : rayon de cintres et appel vers la séance",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-fiche-volet": {
+   "titre": "",
+   "role": "produits",
+   "description": "Volet de fiche produit qui s'ouvre sur la pièce",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "contact-debut": {
+   "titre": "Écris-nous.",
+   "role": "contact",
+   "description": "Écris-nous : formulaire par sujet en étapes à côté du titre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "livraison-debut": {
+   "titre": "Qualité garantie.",
+   "role": "ouverture",
+   "description": "Qualité garantie : bordereau d'expédition tamponné sur une étagère",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "livraison-etapes": {
+   "titre": "De la commande à ta porte.",
+   "role": "étapes",
+   "description": "De la commande à ta porte : le trajet du colis se trace sur un plan",
+   "animations": [
+    "trace-svg",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "livraison-remboursements": {
+   "titre": "Remboursements et droits.",
+   "role": "chiffres",
+   "description": "Remboursements et droits : délais chiffrés et moyens de paiement",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "livraison-faq": {
+   "titre": "Les questions qu'on nous pose.",
+   "role": "faq",
+   "description": "Les questions qu'on nous pose en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nutrition-debut": {
+   "titre": "Vizrok Nutrition.",
+   "role": "ouverture",
+   "description": "Vizrok Nutrition : tableau des valeurs nutritionnelles et gouttes WebGL",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nutrition-gamme": {
+   "titre": "Cinq produits, un shaker.",
+   "role": "produits",
+   "description": "Cinq produits, un shaker : le shaker se remplit au fil des produits dans une colonne collante",
+   "animations": [
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "shaker-qui-se-remplit"
+   ]
+  },
+  "nutrition-saveurs": {
+   "titre": "Six saveurs.",
+   "role": "produits",
+   "description": "Six saveurs en pastilles colorées sur fond clair",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nutrition-mentions": {
+   "titre": "Fiches complètes à venir.",
+   "role": "faq",
+   "description": "Fiches complètes à venir : mentions à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nutrition-fin": {
+   "titre": "Prépare ton shaker.",
+   "role": "appel",
+   "description": "Prépare ton shaker : appel final de la nutrition",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance-debut": {
+   "titre": "Ta séance",
+   "role": "ouverture",
+   "description": "Ta séance : chrono rouge qui tourne dans la salle",
+   "animations": [
+    "compteur",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance-eclate": {
+   "titre": "Léger, respirant, coupé pour bouger.",
+   "role": "outil-interactif",
+   "description": "Léger, respirant, coupé pour bouger : un scanner passe sur le maillot épinglé et détaille chaque zone",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "scanner-du-vetement"
+   ]
+  },
+  "seance-tailles": {
+   "titre": "Mesure, puis choisis.",
+   "role": "outil-interactif",
+   "description": "Mesure, puis choisis : tableau des tailles et schéma du maillot coté",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance-kit": {
+   "titre": "Accroche ton kit.",
+   "role": "calculateur",
+   "description": "Accroche ton kit : les pièces se suspendent à des crochets et le total se calcule",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "configurateur",
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "kit-aux-crochets"
+   ]
+  },
+  "seance-accessoires": {
+   "titre": "Les accessoires.",
+   "role": "produits",
+   "description": "Les accessoires : cinq pièces avec ajout au panier",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance-fin": {
+   "titre": "Prêt pour la séance ?",
+   "role": "appel",
+   "description": "Prêt pour la séance ? : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

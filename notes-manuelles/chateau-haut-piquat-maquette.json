@@ -1,0 +1,920 @@
+{
+ "maquette": {
+  "client": "château viticole en Lussac Saint-Émilion : vins, boutique en ligne, visites et événements, site bilingue",
+  "activite": [
+   "commerce",
+   "tourisme"
+  ],
+  "concept": [
+   "vitrine",
+   "voyage"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "luxueux",
+   "minéral"
+  ],
+  "palette": {
+   "fond": "--calcaire",
+   "texte": "--argile",
+   "accent": "--ocre",
+   "secondaire": "--papier"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Calcaire à astéries » : bouteilles posées sur des blocs de calcaire, fossiles d'astéries, ocre et argile",
+   "coupe géologique épinglée sous la vigne (WebGL) : du feuillage aux 39 à 79 m de calcaire",
+   "tour de la cave épinglé, une bouteille par chapitre, et frise de 2 000 ans gravés dans la pierre",
+   "atelier écriVins : composer son assemblage aux curseurs (merlot, cabernets), boutique de 24 références filtrable avec panier",
+   "passage de l'arche en ouverture des visites, réservation simulée, plan vers Lussac à la boussole"
+  ],
+  "reserves": [
+   "base de code propre (v18), pas sur le socle de la skill",
+   "page Le domaine : 11 erreurs de console (le dessin des barriques du chai ne trouve pas son contexte canvas)",
+   "filtre d'âge obligatoire, à garder pour un site de vin"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "chargement-orchestré",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "compteur",
+   "parallaxe",
+   "flip",
+   "révélation-texte",
+   "curseur-personnalisé",
+   "transition-de-page",
+   "apparition-au-défilement"
+  ],
+  "interactions": [
+   "panier-simule",
+   "filtres",
+   "configurateur",
+   "calculateur",
+   "réservation-simulee",
+   "carte-interactive",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "hero",
+  "grille": {
+   "objet": "assemblage à composer aux curseurs ; coupe du sol sous la vigne",
+   "fil": "le calcaire à astéries, socle des bouteilles et des pages"
+  }
+ },
+ "sections": {
+  "loader": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Chargement : compteur de pourcentage avant l'ouverture",
+   "animations": [
+    "chargement-orchestré",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ptrans": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Transition de page en fondu sombre entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "hdr": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : marque, cinq liens, FR/EN, Réserver et panier, s'inverse sur fond sombre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mmenu": {
+   "titre": "",
+   "role": "menu",
+   "description": "Menu plein écran avec actions et outils (langue, calme)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "hero": {
+   "titre": "Château Haut-Piquat",
+   "role": "ouverture",
+   "description": "« Château Haut-Piquat » : vidéo des vignes et grappes sous un effet WebGL, titre en très grand",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "intro": {
+   "titre": "Le domaine en chiffres",
+   "role": "chiffres",
+   "description": "Le domaine en chiffres : citation du vigneron et six chiffres qui comptent",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terroir": {
+   "titre": "Sous la vigne, le calcaireBeneath the vines, limestone",
+   "role": "manifeste",
+   "description": "Sous la vigne, le calcaire : longue coupe géologique épinglée en WebGL, du feuillage aux couches de calcaire, cotes de profondeur",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "coupe-du-sol"
+   ]
+  },
+  "vins": {
+   "titre": "Trois vins, un socleThree wines, one bedrock",
+   "role": "produits",
+   "description": "Trois vins, un socle : bouteilles posées sur des blocs de calcaire qui entrent au défilement",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vintages": {
+   "titre": "De 2010 à 2022From 2010 to 2022",
+   "role": "produits",
+   "description": "De 2010 à 2022 : frise des millésimes à parcourir, détail du millésime choisi",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine": {
+   "titre": "2 000 ans gravés dans la pierre2,000 years carved in stone",
+   "role": "manifeste",
+   "description": "2 000 ans gravés dans la pierre : photo du château et dates clés",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites": {
+   "titre": "Vivre le domaineExperience the estate",
+   "role": "offre",
+   "description": "Vivre le domaine : quatre formules de visite en cartes avec prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ftr": {
+   "titre": "Le domaineThe estate",
+   "role": "pied-de-page",
+   "description": "Pied de page sombre : sommaire, lettre d'information, labels, nom en très grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "legal": {
+   "titre": "",
+   "ignorer": "bandeau de mention sur l'alcool"
+  },
+  "cart-ov": {
+   "titre": "",
+   "role": "outil-interactif",
+   "description": "Fond du panier qui assombrit la page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "cart": {
+   "titre": "Votre panierYour cart",
+   "role": "outil-interactif",
+   "description": "Tiroir du panier simulé : lignes, sous-total, livraison",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "modal": {
+   "titre": "",
+   "role": "outil-interactif",
+   "description": "Fenêtre modale des formulaires (lettre, réservation)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "agegate": {
+   "titre": "Avez-vous 18 ans ou plus ?Are you 18 or older?",
+   "role": "outil-interactif",
+   "description": "Filtre d'âge à l'arrivée (« Avez-vous 18 ans ou plus ? »), mémorisé, page inerte derrière",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "cursor": {
+   "titre": "",
+   "role": "decor",
+   "description": "Curseur personnalisé qui grossit sur les liens",
+   "animations": [
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "masqué",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "veil": {
+   "titre": "",
+   "role": "decor",
+   "description": "Voile d'assombrissement derrière le menu et les fenêtres",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "toast": {
+   "titre": "",
+   "role": "decor",
+   "description": "Message bref de confirmation (ajout au panier, inscription)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-nf": {
+   "titre": "404",
+   "role": "page-404",
+   "description": "404 gravée dans le calcaire avec un fossile d'astérie",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-phero": {
+   "titre": "Les vins de la propriétéWines from the estate",
+   "role": "ouverture",
+   "description": "Les vins de la propriété : bouteille et caisse bois sur la vigne",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-shipstrip": {
+   "titre": "Conditions de livraison",
+   "role": "decor",
+   "description": "Bandeau des conditions de livraison sous l'ouverture",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-cat-title": {
+   "titre": "CatalogueCatalogue",
+   "role": "produits",
+   "description": "Catalogue de 24 références filtrable (château, millésime, format, sélection) avec tri et panier",
+   "animations": [
+    "flip",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-formats": {
+   "titre": "De 37,5 cl à 6 litresFrom 37.5 cl to 6 litres",
+   "role": "produits",
+   "description": "De 37,5 cl à 6 litres : les formats en bouteilles alignées à l'échelle",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-cadeaux": {
+   "titre": "Composer sa caisseBuild your case",
+   "role": "calculateur",
+   "description": "Composer sa caisse : nombre de bouteilles et suppléments, prix calculé",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "calculateur",
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-phero": {
+   "titre": "L’histoire et le gesteHistory and craft",
+   "role": "ouverture",
+   "description": "L'histoire et le geste : château au crépuscule, sommaire de la page",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-histoire": {
+   "titre": "2 000 ans gravés dans la pierre2,000 years carved in stone",
+   "role": "étapes",
+   "description": "2 000 ans gravés dans la pierre : frise épinglée qui défile du Ier siècle à aujourd'hui, gravures et photos",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-savoir-faire": {
+   "titre": "Tradition et modernitéTradition and modernity",
+   "role": "méthode",
+   "description": "Tradition et modernité : cinq étapes du travail de la vigne et du chai avec chiffres",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-chai": {
+   "titre": "Le chai à barriquesThe barrel cellar",
+   "role": "preuves",
+   "description": "Le chai à barriques : 480 en très grand et faisceau de lumière (le dessin des barriques échoue, contexte canvas nul)",
+   "animations": [
+    "webgl-shader",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Un canvas déjà pris en WebGL renvoie null à getContext('2d') : un canvas par contexte."
+   ]
+  },
+  "domaine-dnext": {
+   "titre": "Goûter le domaineTaste the estate",
+   "role": "appel",
+   "description": "Goûter le domaine : photos en éventail et liens vers les vins et les visites",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "informations-doc": {
+   "titre": "Mentions et conditionsLegal and terms",
+   "role": "texte-legal",
+   "description": "Mentions et conditions : sommaire collant, mentions, données, conditions de vente",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-ohero": {
+   "titre": "Passer l’archeThrough the arch",
+   "role": "ouverture",
+   "description": "Passer l'arche : épinglée, on avance sous l'arche vers l'allée du château",
+   "animations": [
+    "section-fixée",
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "passer-l-arche"
+   ]
+  },
+  "oenotourisme-formules": {
+   "titre": "Choisir sa découverteChoose your discovery",
+   "role": "offre",
+   "description": "Choisir sa découverte : quatre formules en grandes cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-ecrivins": {
+   "titre": "Votre assemblageYour blend",
+   "role": "outil-interactif",
+   "description": "Votre assemblage : curseurs merlot, cabernet franc, cabernet sauvignon, le verre change de couleur et le texte décrit le vin",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "assemblage-aux-curseurs"
+   ]
+  },
+  "oenotourisme-journee": {
+   "titre": "Deux châteaux, une journéeTwo châteaux, one day",
+   "role": "étapes",
+   "description": "Deux châteaux, une journée : programme heure par heure et route qui se trace",
+   "animations": [
+    "trace-svg",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-reserver": {
+   "titre": "Réserver votre venueBook your visit",
+   "role": "contact",
+   "description": "Réserver votre venue : formule, date, nombre de personnes, total calculé (simulé)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee",
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-acces": {
+   "titre": "Cap sur LussacBearing for Lussac",
+   "role": "carte",
+   "description": "Cap sur Lussac : plan à la boussole dont l'aiguille tourne, distances",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-parc": {
+   "titre": "Un hectare pour vos événementsOne hectare for your events",
+   "role": "offre",
+   "description": "Un hectare pour vos événements : photos du parc et services",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oenotourisme-onext": {
+   "titre": "Avant de venirBefore you come",
+   "role": "appel",
+   "description": "Avant de venir : liens vers le domaine et la boutique",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vin-whero": {
+   "titre": "Château Haut-Piquat 2020",
+   "role": "produits",
+   "description": "Fiche vin (vin.html?id=) : bouteille avec médailles, prix, quantité, panier, appellation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vin-wcuvee": {
+   "titre": "Château Haut-Piquat",
+   "role": "produits",
+   "description": "La cuvée : bouteille sur un bloc de calcaire et fiche technique",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vin-serv-title": {
+   "titre": "Servir et garderServing and cellaring",
+   "role": "faq",
+   "description": "Servir et garder : température, carafe, accords",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vin-rel-title": {
+   "titre": "Vous aimerez aussiYou may also like",
+   "role": "produits",
+   "description": "Vous aimerez aussi : quatre autres références",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-vhero": {
+   "titre": "Trois vins, un socleThree wines, one bedrock",
+   "role": "ouverture",
+   "description": "Trois vins, un socle : trois bouteilles sur des blocs de calcaire qui s'allument",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-cave": {
+   "titre": "Le tour de la caveA tour of the cellar",
+   "role": "produits",
+   "description": "Le tour de la cave : section épinglée, un chapitre et une bouteille par cuvée",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "flip"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tour-de-la-cave"
+   ]
+  },
+  "vins-accords": {
+   "titre": "L’accord parfaitThe perfect match",
+   "role": "outil-interactif",
+   "description": "L'accord parfait : choisir un plat, les vins qui conviennent s'allument",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-servir": {
+   "titre": "Servir votre vinServing your wine",
+   "role": "faq",
+   "description": "Servir votre vin : bascule entre deux conseils",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-formats": {
+   "titre": "De 37,5 cl à 6 litresFrom 37.5 cl to 6 litres",
+   "role": "produits",
+   "description": "Les formats de 37,5 cl à 6 litres",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-pro-title": {
+   "titre": "Aussi au domaineAlso from the estate",
+   "role": "produits",
+   "description": "Aussi au domaine : les autres vins",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-onext": {
+   "titre": "À votre tableTo your table",
+   "role": "appel",
+   "description": "À votre table : liens vers la boutique et les visites",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
