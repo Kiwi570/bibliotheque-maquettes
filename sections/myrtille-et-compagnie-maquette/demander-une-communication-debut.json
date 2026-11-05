@@ -4,7 +4,7 @@
  "page": "demander-une-communication",
  "titre": "Une photo, vos questions, et l’échange commence",
  "role": "ouverture",
- "description": "Tête de page compacte : titre traduit, carnet et thé révélés par une tache, bouton qui mène au formulaire",
+ "description": "Tête de page compacte : titre traduit, carnet et thé révélés par une tache sur ordinateur ; sur tablette et téléphone l'image disparaît et le formulaire arrive dès le premier écran",
  "animations": [
   "webgl-shader",
   "masque",
@@ -14,7 +14,8 @@
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -22,19 +23,20 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "demander-une-communication.html:113-128",
-  "css": "assets/css/socle.css:183-190 ; assets/css/site.css:41-45,66,94-95,99-111,115-126,135-150,157,161,190-191,219,342,347-351,358-359,363-368,475-478,486,492-496,502,517,619,627,662",
-  "js": "assets/js/site.js:3,39-60,63-89,92-98,101-110,113-121,124-192,198-211,214-255,260,265,272-279,296,302,316 ; assets/js/vivant.js:1,81-242 ; assets/js/socle/effets.js:8,19,31,136-141 ; assets/js/socle/onde.js:1 ; assets/js/tache.js:56-59,80-154,201-203,206-216"
+  "html": "demander-une-communication.html:113-129",
+  "css": "assets/css/socle.css:183-190 ; assets/css/site.css:41-45,66,94-95,99-111,115-126,135-150,157,161,190-191,219,342,347-351,358-359,363-368,475-478,486,492-496,502,517,619,627,662,674-679,689,696,756-758,765,873-884",
+  "js": "assets/js/site.js:3,40-61,64-90,93-99,102-111,114-122,125-193,199-212,215-256,261,266,273-285,304,310,324 ; assets/js/v4.js:2,185-205,211-217 ; assets/js/socle/effets.js:8,19,31,136-141 ; assets/js/socle/onde.js:1 ; assets/js/vivant.js:1,82-250 ; assets/js/tache.js:56-59,80-154,201-203,206-216"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/demander-une-communication-debut-p1440.jpg",
-  "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-debut-m390.jpg"
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-debut-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/demander-une-communication-debut-p720.mp4"
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 553,
-  "hauteur_m390": 681,
+  "hauteur_p1440": 557,
+  "hauteur_m390": 388,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  }
 }

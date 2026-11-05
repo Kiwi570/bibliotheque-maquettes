@@ -4,7 +4,7 @@
  "page": "questions-frequentes",
  "titre": "Les six questions fréquentes",
  "role": "faq",
- "description": "Six questions réelles en accordéon, à côté de deux photos révélées par une tache dans une colonne fixe",
+ "description": "Six questions réelles en accordéon, à côté de deux vraies photos posées en tirages dans une colonne collante",
  "animations": [
   "apparition-au-défilement",
   "révélation-image",
@@ -14,9 +14,7 @@
   "aucune"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger",
-  "canvas"
+  "aucune"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -24,20 +22,22 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "questions-frequentes.html:129-146",
-  "css": "assets/css/socle.css:37-40 ; assets/css/site.css:286-293,410-419",
-  "js": null
+  "html": "questions-frequentes.html:122-139",
+  "css": "assets/css/socle.css:37-40,183-186 ; assets/css/site.css:286-293,410-419,682-689,755,761,829-830",
+  "js": "assets/js/site.js:228-256 ; assets/js/v4.js:185-205 ; assets/js/socle/effets.js:8 ; assets/js/socle/onde.js:1"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-p1440.jpg",
-  "capture_m390": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-m390.jpg",
-  "video": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-p720.mp4"
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-m390.jpg"
  },
- "pieges": [],
+ "pieges": [
+  "Pas de ScrollTrigger sur un élément dans une colonne collante : sa position dépend du défilement, les positions ne se recalculent jamais juste quand une réponse s'ouvre.",
+  "Ouvrir une réponse (details) change la hauteur : ScrollTrigger.refresh à l'événement toggle."
+ ],
  "mesures": {
-  "hauteur_p1440": 891,
-  "hauteur_m390": 1407,
+  "hauteur_p1440": 807,
+  "hauteur_m390": 1343,
   "epinglee": false,
-  "scrolltriggers": 4
+  "scrolltriggers": 0
  }
 }

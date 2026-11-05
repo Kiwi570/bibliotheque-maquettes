@@ -4,17 +4,18 @@
  "page": "formation",
  "titre": "Vous aussi, communiquer avec les animaux",
  "role": "ouverture",
- "description": "Tête de page : groupe assis dans une prairie révélé par une tache, information « prochaine session : aucune pour le moment »",
+ "description": "Ouverture : titre traduit, l'absence de session dite une seule fois, bouton « Être prévenu(e) de la prochaine session » (e-mail prérempli), tirage du groupe dans la prairie",
  "animations": [
-  "webgl-shader",
-  "masque",
-  "révélation-texte"
+  "révélation-texte",
+  "apparition-au-défilement",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -23,18 +24,19 @@
  "modules": [],
  "code": {
   "html": "formation.html:113-128",
-  "css": "assets/css/site.css:66,126,135-150,157,342,347-351,358-359,363-368,475-478,495-496,502,517",
-  "js": "assets/js/site.js:53-60,198-211,214-255,260,265,296,302,316 ; assets/js/tache.js:80-154"
+  "css": "assets/css/site.css:66,115-127,135-138,144-150,157,347-348,358,363-368,475-478,486,495-496,502,687,696,754-762,876-879",
+  "js": "assets/js/site.js:40-61,199-211,215-226,304 ; assets/js/v4.js:185-205"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/formation-debut-p1440.jpg",
-  "capture_m390": "medias/myrtille-et-compagnie-maquette/formation-debut-m390.jpg"
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/formation-debut-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/formation-debut-p720.mp4"
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 820,
-  "hauteur_m390": 823,
+  "hauteur_p1440": 563,
+  "hauteur_m390": 687,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  }
 }

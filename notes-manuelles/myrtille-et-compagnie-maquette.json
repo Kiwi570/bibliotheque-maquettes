@@ -25,34 +25,36 @@
    "mono": ""
   },
   "points_forts": [
-   "images révélées par une tache de jus de myrtille en WebGL, la photo d'ouverture ensuite traversée d'ondes qui répondent au pointeur",
-   "myrtilles en physique à attraper et lancer (bande en bas de l'accueil, bol sur les pages intérieures)",
-   "photo reçue qui se développe comme un tirage dans une section épinglée, et témoignages suspendus à un fil qui se balancent"
+   "images révélées par une tache de jus de myrtille en WebGL (réservée à trois moments), les autres posées en tirages ; ondes discrètes sur la photo d'ouverture",
+   "« On lui prête nos mots » : phrases courantes barrées au stylo puis traduites à la main (module rature-au-stylo)",
+   "composeur de Communications : la situation conseille l'approche, la fiche se réécrit et le total compte ; myrtilles en physique à lancer ; 404 à la lampe"
   ],
   "reserves": [
-   "fluidité sur ordinateur au-dessus du seuil de l'audit le jour de la livraison, comme la v1 mesurée dans les mêmes conditions",
-   "pas de page contact dédiée : le contact passe par la demande en cinq étapes et l'e-mail"
+   "fluidité sur ordinateur lent au-dessus du seuil de l'audit sur l'accueil (même niveau qu'en v1 et v3)",
+   "un seul témoignage client et beaucoup d'images générées, faute de photos et de retours fournis par la cliente"
   ],
   "animations": [
-   "ouverture-orchestrée",
-   "webgl-shader",
-   "masque",
-   "révélation-texte",
-   "révélation-image",
-   "section-fixée",
-   "progression-fixée",
+   "canvas-2d",
+   "compteur",
+   "curseur-personnalisé",
+   "fil-conducteur",
    "galerie-horizontale",
    "marquee",
-   "reactif-vitesse",
-   "canvas-2d",
-   "fil-conducteur",
-   "trace-svg",
-   "compteur",
+   "masque",
+   "ouverture-orchestrée",
    "parallaxe",
+   "progression-fixée",
+   "rature",
+   "reactif-vitesse",
+   "révélation-image",
+   "révélation-texte",
+   "section-fixée",
+   "trace-svg",
    "transition-de-page",
-   "curseur-personnalisé"
+   "webgl-shader"
   ],
   "interactions": [
+   "calculateur",
    "formulaire-par-étapes",
    "jeu",
    "mode-calme"
@@ -132,7 +134,7 @@
   "debut": {
    "titre": "Pour comprendre mon animal et transformer notre relation",
    "role": "ouverture",
-   "description": "Grand titre dont le mot clé se « traduit » (des signes deviennent des lettres) ; image révélée par une tache de jus de myrtille en WebGL, puis traversée d'ondes violettes qui partent de la tête du chien et sous le pointeur",
+   "description": "Grand titre dont le mot clé se « traduit », signature de Carole (portrait, psychologue depuis plus de 20 ans) dès le premier écran ; chien révélé par une tache de jus de myrtille en WebGL, puis ondes discrètes qui partent du coin vide de l'image et sous le pointeur",
    "animations": [
     "webgl-shader",
     "masque",
@@ -149,7 +151,9 @@
    "pieges": [
     "Un canvas WebGL laissé affiché, même immobile, alourdit le défilement : le retirer de l'affichage dès que les ondes s'arrêtent, et ne le monter que quand la page est au repos.",
     "main { overflow-x: clip } décale l'affichage des canvas WebGL composités dans Chrome (bande vide en haut de l'image) : couper le débordement au plus près, jamais sur main.",
-    "Ignorer les mouvements de souris immobiles envoyés pendant le défilement (movementX et movementY à 0), et au doigt ne lancer une onde que sur un toucher bref."
+    "Ignorer les mouvements de souris immobiles envoyés pendant le défilement (movementX et movementY à 0), et au doigt ne lancer une onde que sur un toucher bref.",
+    "Recadrer la source plutôt que zoomer en CSS : le WebGL lit object-position, pas les transformations ; la tête dans le tiers haut du cadre de la tache.",
+    "Ondes d'elles-mêmes lancées loin du visage et teinte faible : sur une image fixe, un anneau lilas sur l'œil se lit comme une erreur."
    ],
    "particularites": [
     "ondes-au-pointeur",
@@ -172,7 +176,8 @@
    "reutilisable": true,
    "module": null,
    "pieges": [
-    "Couper le débordement sur un cadre propre au ruban (overflow-x: clip), will-change sur la piste seulement ; bouton Pause hors de la zone aria-hidden."
+    "Couper le débordement sur un cadre propre au ruban (overflow-x: clip), will-change sur la piste seulement ; bouton Pause hors de la zone aria-hidden.",
+    "Bouton Pause sous la bande, jamais posé sur les mots qui défilent."
    ]
   },
   "echange": {
@@ -195,12 +200,10 @@
   "travail": {
    "titre": "Des problèmes de comportement aux états d’âme",
    "role": "services",
-   "description": "Quatre cartes distribuées comme un jeu au défilement puis posées en arc, images révélées par une tache, inclinaison 3D au survol",
+   "description": "Quatre cartes-tirages (photo carrée dans une marge blanche, titre en italique) distribuées comme un jeu au défilement puis posées en arc, inclinaison 3D au survol",
    "animations": [
     "apparition-au-défilement",
-    "révélation-image",
-    "masque",
-    "webgl-shader"
+    "reactif-vitesse"
    ],
    "interactions": [
     "aucune"
@@ -220,7 +223,7 @@
   "carole": {
    "titre": "Carole Guyaz, psychologue et interprète animalière",
    "role": "équipe",
-   "description": "Portrait révélé par une tache, certificat posé de travers, frise du parcours tracée au défilement, citation qui s'allume mot à mot",
+   "description": "Portrait révélé par une tache, certificat en document à part qui s'agrandit dans un dialog natif, frise du parcours tracée au défilement, citation qui s'allume mot à mot",
    "animations": [
     "révélation-image",
     "trace-svg",
@@ -233,7 +236,9 @@
    "note_qualite": 4,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Ne pas poser un document sur une photo : trop petit pour être lu, il ne prouve rien ; le sortir et le rendre agrandissable."
+   ]
   },
   "deroule": {
    "titre": "Une communication, en trois temps",
@@ -259,7 +264,7 @@
   "approches": {
    "titre": "Choisir sa communication",
    "role": "tarifs",
-   "description": "Bandeau de myrtilles en macro qui se resserre, trois cartes de prix qui se retournent l'une après l'autre, voile de pruine qui s'essuie, montants qui comptent",
+   "description": "Bandeau de myrtilles en macro qui se resserre, trois cartes de prix qui se retournent l'une après l'autre, voile de pruine qui s'essuie, montants qui comptent ; liens vers le détail et la FAQ",
    "animations": [
     "apparition-au-défilement",
     "compteur",
@@ -282,7 +287,7 @@
   "temoignage": {
    "titre": "Témoignage",
    "role": "témoignages",
-   "description": "Carte sur une forêt en parallaxe, guillemets tracés, témoignage qui s'allume mot par mot au défilement",
+   "description": "Carte sur une forêt en parallaxe, vrai guillemet français en grand (dessiné en ::before), témoignage qui s'allume mot par mot et se referme",
    "animations": [
     "parallaxe",
     "révélation-texte",
@@ -296,44 +301,9 @@
    "reutilisable": false,
    "module": null,
    "pieges": [
-    "Pas de will-change sur les mots découpés : un calque par mot alourdit le défilement."
+    "Pas de will-change sur les mots découpés : un calque par mot alourdit le défilement.",
+    "Grand guillemet en texte : sa boîte de ligne déborde et chevauche le texte ; le dessiner en pseudo-élément dans une boîte de hauteur fixe."
    ]
-  },
-  "especes": {
-   "titre": "Au-delà des chats, des chiens et des chevaux",
-   "role": "preuves",
-   "description": "Les espèces rencontrées en empreintes dessinées qui apparaissent en cortège",
-   "animations": [
-    "apparition-au-défilement"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
-   "module": null,
-   "pieges": [],
-   "particularites": [
-    "empreintes-svg"
-   ]
-  },
-  "reperes": {
-   "titre": "Quelques repères avant de commencer",
-   "role": "carte",
-   "description": "Repères (santé, animaux perdus, distance, zone) à côté d'une carte schématique du Léman qui se trace",
-   "animations": [
-    "trace-svg",
-    "apparition-au-défilement"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
   },
   "fin": {
    "titre": "Envie de mieux comprendre votre compagnon ?",
@@ -352,7 +322,8 @@
    "reutilisable": true,
    "module": null,
    "pieges": [
-    "Les baies s'endorment quand plus rien ne bouge (la boucle s'arrête) ; en mode calme, le tas final est calculé d'avance et dessiné une fois."
+    "Les baies s'endorment quand plus rien ne bouge (la boucle s'arrête) ; en mode calme, le tas final est calculé d'avance et dessiné une fois.",
+    "Un quart des baies déjà dans la bande à l'arrivée : jamais une bande vide sous « Touchez les myrtilles »."
    ],
    "particularites": [
     "physique-myrtilles"
@@ -375,29 +346,36 @@
    "pieges": []
   },
   "404-debut": {
-   "titre": "Cette piste ne mène nulle part",
+   "titre": "Perdu dans la nuit",
    "role": "page-404",
-   "description": "« Cette piste ne mène nulle part » sur un sentier dans la brume",
+   "description": "Sentier de nuit : une lampe suit le pointeur ou le doigt (masque radial CSS, halo chaud), erre seule au repos ; trois paires d'yeux s'allument quand la lampe s'attarde, compteur annoncé, bouton de retour qui appelle quand tout est trouvé",
    "animations": [
-    "révélation-texte"
+    "curseur-personnalisé",
+    "révélation-image"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "lumiere-au-pointeur",
+   "pieges": [
+    "touch-action: none sur la scène seulement ; en mode calme la scène est éclairée et les yeux visibles.",
+    "Mention « Illustration générée » au-dessus du voile de nuit (z-index), sinon illisible."
+   ],
+   "particularites": [
+    "jeu-de-la-lampe"
+   ]
   },
   "communications-debut": {
    "titre": "Communications avec les animaux",
    "role": "ouverture",
-   "description": "Tête de page : titre dont le mot se traduit, chat à la fenêtre révélé par une tache",
+   "description": "Ouverture sans grande image : titre dont le mot se traduit, trait d'encre tracé à la main qui se dessine au défilement, myrtille dessinée dans la marge qui roule au défilement ; bouton vers le composeur",
    "animations": [
-    "webgl-shader",
-    "masque",
-    "révélation-texte"
+    "trace-svg",
+    "révélation-texte",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -406,16 +384,18 @@
    "note_qualite": 4,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Une ouverture sans image reste une section : il lui faut un visuel de 60 px au moins et un effet qui bouge au défilement (contrôles de l'audit).",
+    "Sur tablette et téléphone, la myrtille entre dans le texte (float) : en absolu, elle recouvre le titre."
+   ]
   },
   "communications-approches": {
    "titre": "Deux approches complémentaires",
    "role": "offre",
-   "description": "Deux approches numérotées, photos révélées par une tache, outils en pastilles, prix",
+   "description": "Les deux approches dès le premier écran : tirage de la vraie photo posé de travers à côté du texte, numéro, outils en pastilles, prix juste sous chaque texte",
    "animations": [
-    "révélation-image",
-    "masque",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -429,7 +409,7 @@
   "communications-reflet": {
    "titre": "",
    "role": "manifeste",
-   "description": "Phrase sur une flaque : des ronds s'y propagent en WebGL (et sous le pointeur), le mot « reflètent » ondule lettre par lettre",
+   "description": "Phrase et flaque côte à côte : le mot « reflètent » ondule lettre par lettre, des ronds se propagent dans la flaque en WebGL (et sous le pointeur) ; le reflet n'est plus caché par une carte",
    "animations": [
     "webgl-shader",
     "révélation-texte"
@@ -442,40 +422,44 @@
    "reutilisable": false,
    "module": null,
    "pieges": [
-    "Lettres séparées d'un même mot : marquer data-superpose (les boîtes des italiques se chevauchent)."
+    "Lettres séparées d'un même mot : marquer data-superpose (les boîtes des italiques se chevauchent).",
+    "Ne jamais poser la carte de texte sur le sujet de l'image : texte d'un côté, image entière de l'autre."
    ],
    "particularites": [
     "ronds-dans-l-eau"
    ]
   },
   "communications-tarifs": {
-   "titre": "Trois formules, en francs suisses",
-   "role": "tarifs",
-   "description": "Trois cartes de prix qui se retournent, pruine qui s'essuie, montants qui comptent",
+   "titre": "Composer sa communication",
+   "role": "calculateur",
+   "description": "Composeur : la situation (quatre puces) conseille l'approche, trois cartes radio (base, avancée, forfait) ; fiche de carnet collante légèrement penchée qui se réécrit ligne par ligne (remise du forfait en vert), total qui compte et rebondit, bouton qui préremplit la demande",
    "animations": [
-    "apparition-au-défilement",
     "compteur",
-    "masque"
+    "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "calculateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
-   "module": null,
-   "pieges": [],
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "composeur-de-formule",
+   "pieges": [
+    "Tarifs lus dans les données de la page (JSON), jamais écrits dans le script.",
+    "Annonce du total en aria-live séparée, avec espace insécable avant les deux-points.",
+    "data-visuel et data-tient sur la fiche collante (contrôles de l'audit)."
+   ],
    "particularites": [
-    "retournement-carte"
+    "situation-qui-conseille"
    ]
   },
   "communications-limites": {
    "titre": "Avant de demander",
    "role": "faq",
-   "description": "Avant de demander : santé, animaux perdus, distance, à côté d'un cheval dans un pré révélé par une tache",
+   "description": "Avant de demander : santé, animaux perdus, distance, zone, en quatre repères à côté d'un tirage du cheval dans le pré ; lien vers la FAQ",
    "animations": [
-    "révélation-image",
-    "masque"
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -486,27 +470,10 @@
    "module": null,
    "pieges": []
   },
-  "communications-temoignage": {
-   "titre": "Témoignage",
-   "role": "témoignages",
-   "description": "Témoignage mot à mot sur une femme et un cheval en parallaxe",
-   "animations": [
-    "parallaxe",
-    "révélation-texte"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
-  },
   "communications-fin": {
    "titre": "Une question pour votre compagnon ?",
    "role": "appel",
-   "description": "Appel final avec un bol de myrtilles en physique à lancer",
+   "description": "Appel final avec un bol de myrtilles à lancer (petit, au-dessus du titre au téléphone)",
    "animations": [
     "canvas-2d",
     "apparition-au-défilement"
@@ -526,7 +493,7 @@
   "demander-une-communication-debut": {
    "titre": "Une photo, vos questions, et l’échange commence",
    "role": "ouverture",
-   "description": "Tête de page compacte : titre traduit, carnet et thé révélés par une tache, bouton qui mène au formulaire",
+   "description": "Tête de page compacte : titre traduit, carnet et thé révélés par une tache sur ordinateur ; sur tablette et téléphone l'image disparaît et le formulaire arrive dès le premier écran",
    "animations": [
     "webgl-shader",
     "masque",
@@ -563,35 +530,17 @@
   "formation-debut": {
    "titre": "Vous aussi, communiquer avec les animaux",
    "role": "ouverture",
-   "description": "Tête de page : groupe assis dans une prairie révélé par une tache, information « prochaine session : aucune pour le moment »",
+   "description": "Ouverture : titre traduit, l'absence de session dite une seule fois, bouton « Être prévenu(e) de la prochaine session » (e-mail prérempli), tirage du groupe dans la prairie",
    "animations": [
-    "webgl-shader",
-    "masque",
-    "révélation-texte"
+    "révélation-texte",
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
-  },
-  "formation-pour-le-moment": {
-   "titre": "Pas de session prévue",
-   "role": "contact",
-   "description": "Pas de session prévue : photo d'une personne face à un chaton révélée par une tache, mot traduit, bouton Écrire à Carole",
-   "animations": [
-    "révélation-image",
-    "masque",
-    "révélation-texte"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 3,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -623,12 +572,13 @@
   "formation-fin": {
    "titre": "En attendant, une communication ?",
    "role": "appel",
-   "description": "Appel final avec un bol de myrtilles à lancer",
+   "description": "Appel final à côté d'un tirage (personne face à un chaton)",
    "animations": [
-    "canvas-2d"
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
-    "jeu"
+    "aucune"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
@@ -689,11 +639,11 @@
   "questions-frequentes-debut": {
    "titre": "Ce que l’on me demande souvent",
    "role": "ouverture",
-   "description": "Tête de page : cheval dans la brume révélé par une tache, mot traduit",
+   "description": "Ouverture courte sans grande image : titre traduit, trait d'encre et myrtille dans la marge ; les questions arrivent dès le premier écran",
    "animations": [
-    "webgl-shader",
-    "masque",
-    "révélation-texte"
+    "trace-svg",
+    "révélation-texte",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -707,7 +657,7 @@
   "questions-frequentes-questions": {
    "titre": "Les six questions fréquentes",
    "role": "faq",
-   "description": "Six questions réelles en accordéon, à côté de deux photos révélées par une tache dans une colonne fixe",
+   "description": "Six questions réelles en accordéon, à côté de deux vraies photos posées en tirages dans une colonne collante",
    "animations": [
     "apparition-au-défilement",
     "révélation-image",
@@ -720,12 +670,15 @@
    "note_qualite": 4,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Pas de ScrollTrigger sur un élément dans une colonne collante : sa position dépend du défilement, les positions ne se recalculent jamais juste quand une réponse s'ouvre.",
+    "Ouvrir une réponse (details) change la hauteur : ScrollTrigger.refresh à l'événement toggle."
+   ]
   },
   "questions-frequentes-fin": {
    "titre": "Une autre question ?",
    "role": "appel",
-   "description": "Appel final après la FAQ avec un bol de myrtilles à lancer",
+   "description": "« Une autre question ? » : bouton « Écrire à Carole » d'abord, la demande en lien ; bol de myrtilles à lancer",
    "animations": [
     "canvas-2d"
    ],
@@ -739,6 +692,31 @@
    "pieges": [],
    "particularites": [
     "physique-myrtilles"
+   ]
+  },
+  "interpreter": {
+   "titre": "On lui prête nos mots",
+   "role": "manifeste",
+   "description": "Colonne de titre collante ; à côté, quatre phrases que l'on dit de son animal barrées d'un trait de stylo irrégulier (SVG calculé sur les lignes réelles du texte), puis ce qu'elles peuvent cacher écrit à la main en italique violet, au rythme de la molette sur ordinateur, d'un coup sur téléphone ; espèces rencontrées en puces dessous",
+   "animations": [
+    "rature",
+    "révélation-texte",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "rature-au-stylo",
+   "pieges": [
+    "GSAP remplace les propriétés CSS rotate et scale : reprendre l'inclinaison dans la rotation GSAP.",
+    "Sans JavaScript, les traits SVG n'existent pas : barré CSS de secours et data-visuel sur la liste (contrôle « section sans visuel »).",
+    "Lecture « les deux » : phrase barrée, « autrement dit », phrase écrite, sans doublon pour les lecteurs d'écran."
+   ],
+   "particularites": [
+    "traduction-du-metier"
    ]
   }
  }

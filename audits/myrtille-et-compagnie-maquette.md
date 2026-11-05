@@ -1,58 +1,59 @@
 # myrtille-et-compagnie-maquette
 
-<https://myrtille-et-compagnie-maquette.vercel.app> · audit du 04/11/2026 · dernier commit a14d7e0 du 04/11/2026
+<https://myrtille-et-compagnie-maquette.vercel.app> · audit du 05/11/2026 · dernier commit ebb6c68 du 05/11/2026 (v4)
 
-> Audit de livraison : script d'audit de la skill (niveau standard, version ?v=3) et relecture pendant la construction. Pas encore d'audit externe : la note est à confirmer.
+> Audit de livraison : script d'audit de la skill (standard, version ?v=4, puis étapes corrigées relancées) et regard neuf d'un second agent sur les 87 captures de la v3. Pas encore d'audit externe : la note est à confirmer.
 
 ## Verdict
 
-**82/100 · À peaufiner · 0 défaut bloquant**
+**85/100 · À peaufiner · 0 défaut bloquant**
 
-Direction « Encre de myrtille » tenue de bout en bout : carnet d'interprète crème et violet, images révélées par une tache de jus de myrtille, mots qui se « traduisent », myrtilles à lancer. Script d'audit : 0 échec sur 7 pages (mesures, écran, mouvement, bords, tient dans l'écran). Reste à surveiller : la fluidité sur ordinateur lent et Safari, non vérifié par le script.
+v4 « regard neuf et bibliothèque » : chaque page a son ouverture (fini le gabarit commun), Carole apparaît dès le premier écran de l'accueil, la tache est réservée à trois moments et les autres images deviennent des tirages. Mécaniques reprises de la bibliothèque : rature au stylo (« On lui prête nos mots »), composeur de formule (Communications), lampe au pointeur (404), garde-fou de fluidité. Script d'audit : 0 échec hors fluidité sur ordinateur lent.
 
 ## Notes
 
 | Critère | Note | Justification |
 |---|---|---|
-| 1. Effet « waouh » et niveau premium | 12/15 | Intro « La goutte » enchaînée sur la tache WebGL de l'ouverture, ondes qui répondent au pointeur, myrtilles en physique, tirage qui se développe : univers propre au métier ; certains effets (traduction, prix) ne se voient qu'une fois. |
-| 2. Direction artistique et harmonie | 12/15 | Fraunces et Instrument Sans, papier crème, encre et pruine : cohérent sur toutes les pages ; images Grok et photos du site étalonnées ensemble, mais peu de vraies photos de Carole. |
-| 3. Animations et effets | 11/15 | 14 effets du plan, tous présents et calmés en mode calme ; au profil ordinateur lent du script (CPU ×4, molette), 10 à 24 % d'images longues sur l'accueil et Communications (la v1 mesurée le même jour donne autant) ; téléphone sans image longue. |
-| 4. Expérience ludique et interactions | 9/10 | Demande en 5 étapes avec erreurs, formule préremplie, total en direct et envoi simulé une fois ; myrtilles à attraper et lancer ; témoignages à faire glisser ; ruban avec pause. |
-| 5. Tous les formats | 13/15 | 0 débordement, sections épinglées qui tiennent dans l'écran (1000×560 compris), contrôle des bords sur 6 formats ; Safari et iPhone réel non vérifiés. |
-| 6. Contenu et fiabilité | 8/10 | Textes du site actuel, six témoignages réels, rien d'inventé ; durée, format du retour, IDE, crédits photo et nLPD marqués « à fournir ». |
-| 7. Technique et performance | 8/10 | Aucune erreur de console, WebP en srcset, WebGL monté seulement au repos et caché quand rien ne bouge ; fluidité ordinateur au seuil (critère 3). |
-| 8. Mise en ligne | 5/5 | noindex dans les pages et X-Robots-Tag dans vercel.json, ?v=3 partout, images de partage 1200×630, 404 aux couleurs du site, robots.txt. |
-| 9. Accessibilité | 4/5 | Mode calme et « réduire les animations » respectés, axe-core sans erreur, focus visible, cibles de 44 px ; traînée du curseur et ondes à confirmer pour les personnes sensibles au mouvement. |
-| **Total** | **82/100** | |
+| 1. Effet « waouh » et niveau premium | 13/15 | Tache WebGL et ondes plus discrètes, ratures écrites à la main, myrtilles à lancer, tirage qui se développe, 404 à la lampe : une idée par page, toutes tirées du métier. |
+| 2. Direction artistique et harmonie | 13/15 | Carnet crème et encre tenu partout ; ouvertures différentes par page ; tirages et étiquettes papier au lieu de pastilles d'interface ; encore beaucoup d'images générées faute de photos de clientes. |
+| 3. Animations et effets | 11/15 | 17 effets du plan présents et calmés en mode calme ; au profil ordinateur lent (CPU ×4, molette) 23 % d'images longues sur l'accueil (v1 et v3 au même niveau), aucune au téléphone. |
+| 4. Expérience ludique et interactions | 10/10 | Composeur (la situation conseille l'approche, total en direct, demande préremplie), demande en 5 étapes, myrtilles, témoignages à faire glisser, lampe de la 404, certificat qui s'agrandit. |
+| 5. Tous les formats | 13/15 | 0 débordement ni recouvrement, épinglages qui tiennent dans l'écran, formulaire au premier écran au téléphone ; Safari et iPhone réel non vérifiés. |
+| 6. Contenu et fiabilité | 8/10 | Textes et tarifs du site actuel ; exemples de la section « Interpréter » à valider par Carole ; un seul témoignage client ; données légales « à fournir ». |
+| 7. Technique et performance | 8/10 | Aucune erreur de console, WebGL monté au repos et caché quand rien ne bouge, garde-fou de fluidité ; fluidité ordinateur au seuil (critère 3). |
+| 8. Mise en ligne | 5/5 | noindex et X-Robots-Tag, ?v=4 partout, images de partage 1200×630, 404 aux couleurs du site. |
+| 9. Accessibilité | 4/5 | Mode calme respecté, axe-core sans erreur, cibles de 44 px, dialog natif, annonce du total aux lecteurs d'écran ; animations nombreuses pour les personnes sensibles au mouvement. |
+| **Total** | **85/100** | |
 
 ## Points forts
 
-- La tache de jus de myrtille comme fil visuel : chaque image se révèle par une tache WebGL (repli CSS), puis l'ouverture vit avec des ondes violettes.
-- Des myrtilles en physique à attraper et lancer (bande en bas de l'accueil, bol sur les pages intérieures), qui s'endorment quand rien ne bouge.
-- La photo reçue qui se développe comme un tirage dans une section épinglée : les étapes de la communication racontées par l'image.
-- Page Formation honnête (aucune session pour le moment) avec les témoignages suspendus à un fil qui se balancent.
+- Ouverture de l'accueil incarnée : le chien recadré dans la tache, et la signature de Carole (psychologue depuis plus de 20 ans, Master de l'Université de Lausanne).
+- « On lui prête nos mots. Il a les siens. » : le métier d'interprète montré par des ratures au stylo.
+- Composeur de Communications qui oriente au lieu de lister des prix, avec la demande préremplie.
+- Doublons supprimés : un témoignage, des repères et des cartes de prix chacun à un seul endroit.
 
 ## Défauts
 
 ### Bloquants
 
-Aucun relevé par le script.
+Aucun relevé.
 
 ### Importants
 
-1. **Fluidité sur ordinateur lent** : accueil et Communications, profil CPU ×4 à la molette, 10 à 24 % d'images au-delà de 50 ms. Même ordre de grandeur sur la v1 mesurée dans les mêmes conditions : à revoir sur une vraie machine. Pistes : réduire la résolution du canvas de l'aura (dpr 0,7 sur ordinateur), retarder le montage de la bande de myrtilles. Effort : moyen.
-2. **Safari et iPhone réel non vérifiés** : le script tourne sous Chromium. À contrôler : tache WebGL, masque de la vague du voile, section épinglée de la Formation. Effort : petit.
+1. **Fluidité sur ordinateur lent** : accueil, profil CPU ×4 à la molette, 23 % d'images au-delà de 50 ms (même niveau qu'en v1 et v3). Pistes : couper l'onde de la photo « échange » sous un certain débit, monter la bande de myrtilles plus tard. Effort : moyen.
+2. **Preuves** : un seul témoignage client, peu de vraies photos ; à demander à la cliente (3 à 5 témoignages nommés, photos d'animaux de clientes). Effort : petit côté maquette.
+3. **Safari et iPhone réel non vérifiés.** Effort : petit.
 
 ### Finition
 
-1. **Effets qui ne bougent pas au défilement** (relevés « à regarder ») : traduction des titres, cartes de prix, aura de Communications : effets joués une fois à l'entrée ou au pointeur, comptés à part. Effort : petit.
-2. **Contenus à fournir** : durée et délai d'une communication, format du retour, téléphone, adresse et IDE, crédits photo, politique nLPD, kinésiologie à mentionner ou non. Effort : petit.
+1. Questions fréquentes : pas de bouton principal au premier écran (choix assumé : les questions d'abord).
+2. Effets joués une fois (traduction des titres, cartes de prix, aura de Communications) relevés « à regarder ».
 
 ## Mesures clés
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit (standard, 7 pages) | 0 échec, 8 à regarder |
-| Contrôles passés | mesures 77, balayage 6, bords 6, tient dans l'écran 8, mouvement 10, effets du plan 14, souris immobile 11 |
-| Fluidité ordinateur lent / téléphone | 10 à 24 % d'images longues / aucune |
-| Version des fichiers | ?v=3 |
+| Script d'audit (standard puis étapes corrigées) | 0 échec hors fluidité ordinateur lent |
+| Fluidité ordinateur lent / téléphone | 23 % d'images longues sur l'accueil (autres pages ≤ 1 %) / aucune |
+| Ouverture (premier octet → titre), accueil | ≈ 2,8 s |
+| Version des fichiers | ?v=4 |

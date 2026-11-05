@@ -2,44 +2,49 @@
  "id": "myrtille-et-compagnie-maquette/communications-tarifs",
  "maquette": "myrtille-et-compagnie-maquette",
  "page": "communications",
- "titre": "Trois formules, en francs suisses",
- "role": "tarifs",
- "description": "Trois cartes de prix qui se retournent, pruine qui s'essuie, montants qui comptent",
+ "titre": "Composer sa communication",
+ "role": "calculateur",
+ "description": "Composeur : la situation (quatre puces) conseille l'approche, trois cartes radio (base, avancée, forfait) ; fiche de carnet collante légèrement penchée qui se réécrit ligne par ligne (remise du forfait en vert), total qui compte et rebondit, bouton qui préremplit la demande",
  "animations": [
-  "apparition-au-défilement",
   "compteur",
-  "masque"
+  "révélation-texte"
  ],
  "interactions": [
-  "aucune"
+  "calculateur"
  ],
  "dependances": [
   "gsap",
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
- "module": null,
- "modules": [],
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "composeur-de-formule",
+ "modules": [
+  "composeur-de-formule"
+ ],
  "code": {
-  "html": "communications.html:175-206",
-  "css": "assets/css/site.css:48,158,218-242,326-330,343",
-  "js": "assets/js/site.js:3,113-121 ; assets/js/vivant.js:7-9,310-328,520 ; assets/js/socle/effets.js:31 ; assets/js/socle/compteurs.js:1,6-36 ; assets/js/demande.js:39-143"
+  "html": "communications.html:159-202",
+  "css": "assets/css/site.css:779-815",
+  "js": "assets/js/site.js:276 ; assets/js/v4.js:6,135-182 ; assets/js/socle/curseur.js:5-34 ; assets/js/vivant.js:534-571,574-598"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/communications-tarifs-p1440.jpg",
   "capture_m390": "medias/myrtille-et-compagnie-maquette/communications-tarifs-m390.jpg",
   "video": "medias/myrtille-et-compagnie-maquette/communications-tarifs-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "Tarifs lus dans les données de la page (JSON), jamais écrits dans le script.",
+  "Annonce du total en aria-live séparée, avec espace insécable avant les deux-points.",
+  "data-visuel et data-tient sur la fiche collante (contrôles de l'audit)."
+ ],
  "particularites": [
-  "retournement-carte"
+  "situation-qui-conseille"
  ],
  "mesures": {
-  "hauteur_p1440": 964,
-  "hauteur_m390": 1302,
+  "hauteur_p1440": 858,
+  "hauteur_m390": 1390,
   "epinglee": false,
-  "scrolltriggers": 5
+  "scrolltriggers": 1
  }
 }

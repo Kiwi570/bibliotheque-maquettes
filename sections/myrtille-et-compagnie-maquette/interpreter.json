@@ -1,0 +1,51 @@
+{
+ "id": "myrtille-et-compagnie-maquette/interpreter",
+ "maquette": "myrtille-et-compagnie-maquette",
+ "page": "index",
+ "titre": "On lui prête nos mots",
+ "role": "manifeste",
+ "description": "Colonne de titre collante ; à côté, quatre phrases que l'on dit de son animal barrées d'un trait de stylo irrégulier (SVG calculé sur les lignes réelles du texte), puis ce qu'elles peuvent cacher écrit à la main en italique violet, au rythme de la molette sur ordinateur, d'un coup sur téléphone ; espèces rencontrées en puces dessous",
+ "animations": [
+  "rature",
+  "révélation-texte",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "rature-au-stylo",
+ "modules": [
+  "rature-au-stylo"
+ ],
+ "code": {
+  "html": "index.html:147-161",
+  "css": "assets/css/socle.css:37-40 ; assets/css/site.css:704-707,711-731",
+  "js": "assets/js/site.js:275 ; assets/js/v4.js:3,81-132"
+ },
+ "medias": {
+  "capture": "medias/myrtille-et-compagnie-maquette/interpreter-p1440.jpg",
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/interpreter-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/interpreter-p720.mp4"
+ },
+ "pieges": [
+  "GSAP remplace les propriétés CSS rotate et scale : reprendre l'inclinaison dans la rotation GSAP.",
+  "Sans JavaScript, les traits SVG n'existent pas : barré CSS de secours et data-visuel sur la liste (contrôle « section sans visuel »).",
+  "Lecture « les deux » : phrase barrée, « autrement dit », phrase écrite, sans doublon pour les lecteurs d'écran."
+ ],
+ "particularites": [
+  "traduction-du-metier"
+ ],
+ "mesures": {
+  "hauteur_p1440": 917,
+  "hauteur_m390": 1131,
+  "epinglee": false,
+  "scrolltriggers": 4
+ }
+}

@@ -4,17 +4,18 @@
  "page": "communications",
  "titre": "Communications avec les animaux",
  "role": "ouverture",
- "description": "Tête de page : titre dont le mot se traduit, chat à la fenêtre révélé par une tache",
+ "description": "Ouverture sans grande image : titre dont le mot se traduit, trait d'encre tracé à la main qui se dessine au défilement, myrtille dessinée dans la marge qui roule au défilement ; bouton vers le composeur",
  "animations": [
-  "webgl-shader",
-  "masque",
-  "révélation-texte"
+  "trace-svg",
+  "révélation-texte",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -22,19 +23,23 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "communications.html:113-128",
-  "css": "assets/css/site.css:66,135-150,157,342,347-351,358-359,363-368,475-478,495-496,502,517",
-  "js": "assets/js/site.js:53-60,198-211,214-255,260,265,296,302,316 ; assets/js/tache.js:56-59,80-154"
+  "html": "communications.html:113-125",
+  "css": "assets/css/site.css:66,135-140,144-150,157,347-348,358,363-368,475-478,486,495-496,502,696,754-761,876-884",
+  "js": "assets/js/site.js:54-61,199-211,215-226,304"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/communications-debut-p1440.jpg",
-  "capture_m390": "medias/myrtille-et-compagnie-maquette/communications-debut-m390.jpg"
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/communications-debut-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/communications-debut-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "Une ouverture sans image reste une section : il lui faut un visuel de 60 px au moins et un effet qui bouge au défilement (contrôles de l'audit).",
+  "Sur tablette et téléphone, la myrtille entre dans le texte (float) : en absolu, elle recouvre le titre."
+ ],
  "mesures": {
-  "hauteur_p1440": 820,
-  "hauteur_m390": 788,
+  "hauteur_p1440": 499,
+  "hauteur_m390": 447,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  }
 }

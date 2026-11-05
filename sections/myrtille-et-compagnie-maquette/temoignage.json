@@ -4,7 +4,7 @@
  "page": "index",
  "titre": "Témoignage",
  "role": "témoignages",
- "description": "Carte sur une forêt en parallaxe, guillemets tracés, témoignage qui s'allume mot par mot au défilement",
+ "description": "Carte sur une forêt en parallaxe, vrai guillemet français en grand (dessiné en ::before), témoignage qui s'allume mot par mot et se referme",
  "animations": [
   "parallaxe",
   "révélation-texte",
@@ -23,9 +23,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:269-281",
-  "css": "assets/css/site.css:245-252,333",
-  "js": "assets/js/site.js:124-192"
+  "html": "index.html:288-300",
+  "css": "assets/css/site.css:245-252,333,841-843",
+  "js": "assets/js/site.js:125-193"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/temoignage-p1440.jpg",
@@ -33,12 +33,13 @@
   "video": "medias/myrtille-et-compagnie-maquette/temoignage-p720.mp4"
  },
  "pieges": [
-  "Pas de will-change sur les mots découpés : un calque par mot alourdit le défilement."
+  "Pas de will-change sur les mots découpés : un calque par mot alourdit le défilement.",
+  "Grand guillemet en texte : sa boîte de ligne déborde et chevauche le texte ; le dessiner en pseudo-élément dans une boîte de hauteur fixe."
  ],
  "mesures": {
-  "hauteur_p1440": 729,
-  "hauteur_m390": 652,
+  "hauteur_p1440": 720,
+  "hauteur_m390": 643,
   "epinglee": false,
-  "scrolltriggers": 3
+  "scrolltriggers": 2
  }
 }

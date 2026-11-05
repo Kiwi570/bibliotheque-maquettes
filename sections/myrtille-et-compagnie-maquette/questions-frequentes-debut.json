@@ -4,17 +4,18 @@
  "page": "questions-frequentes",
  "titre": "Ce que l’on me demande souvent",
  "role": "ouverture",
- "description": "Tête de page : cheval dans la brume révélé par une tache, mot traduit",
+ "description": "Ouverture courte sans grande image : titre traduit, trait d'encre et myrtille dans la marge ; les questions arrivent dès le premier écran",
  "animations": [
-  "webgl-shader",
-  "masque",
-  "révélation-texte"
+  "trace-svg",
+  "révélation-texte",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -22,19 +23,20 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "questions-frequentes.html:113-128",
-  "css": "assets/css/socle.css:187-190 ; assets/css/site.css:41-45,66,99-101,110,115-127,135-150,157,161,190-191,219,342,347-351,358-359,363-368,475-478,495-496,502,517,619,627,662",
-  "js": "assets/js/site.js:39-60,198-211,214-255,260,265,296,302,316 ; assets/js/tache.js:56-59,80-154"
+  "html": "questions-frequentes.html:113-121",
+  "css": "assets/css/site.css:41-45,66,115-127,135-137,144-150,157,161,190-191,347-348,358,363-368,475-478,486,495-496,502,619,627,662,696,754-761,876-884",
+  "js": "assets/js/site.js:40-61,199-211,215-226,304"
  },
  "medias": {
   "capture": "medias/myrtille-et-compagnie-maquette/questions-frequentes-debut-p1440.jpg",
-  "capture_m390": "medias/myrtille-et-compagnie-maquette/questions-frequentes-debut-m390.jpg"
+  "capture_m390": "medias/myrtille-et-compagnie-maquette/questions-frequentes-debut-m390.jpg",
+  "video": "medias/myrtille-et-compagnie-maquette/questions-frequentes-debut-p720.mp4"
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 820,
-  "hauteur_m390": 735,
+  "hauteur_p1440": 334,
+  "hauteur_m390": 317,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  }
 }
