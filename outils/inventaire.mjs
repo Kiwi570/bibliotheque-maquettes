@@ -23,7 +23,7 @@ const GENERIQUES = new Set('section sec wrap wrapper container cadre bloc block 
 
 // ---------- Analyse des sources ----------
 // Pages à la racine et dans les sous-dossiers (journal/, blog/…), hors dossiers techniques.
-const EXCLUS_DOS = /^(\.|node_modules$|vendor$|assets?$|images?$|img$|medias?$|fonts?$|css$|js$|correction$|audit$|captures?$|test)/;
+const EXCLUS_DOS = /^(\.|_|source$|outils$|donnees$|recu$|node_modules$|vendor$|assets?$|images?$|img$|medias?$|fonts?$|css$|js$|correction$|audit$|captures?$|test)/;
 function pagesHtml(rel = '', prof = 0) {
   const out = [];
   for (const e of fs.readdirSync(path.join(DOS, rel), { withFileTypes: true })) {

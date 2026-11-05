@@ -1,0 +1,46 @@
+{
+ "id": "proxiconseil-maquette/contact-debut",
+ "maquette": "proxiconseil-maquette",
+ "page": "contact",
+ "titre": "Prendre rendez-vous",
+ "role": "ouverture",
+ "description": "Carte vivante en courbes de niveau (WebGL, relief sous la souris, onde au clic) ; la loupe montre le bocage sous les courbes ; le repère tombe sur Le Mans",
+ "animations": [
+  "webgl-shader",
+  "masque",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "contact.html:98-124",
+  "css": "assets/css/site.css:38,109,135,215,257,407,531,612,658-684,688-698,760",
+  "js": "assets/js/site.js:4,291,315 ; assets/js/ondes.js:8-47 ; assets/js/socle/effets.js:19-20,31,136-141,267-311 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/pages.js:3,139-141,237,246,318,324,335-336,339-343,379-383,392,399-401 ; assets/js/carte.js:77-195"
+ },
+ "medias": {
+  "capture": "medias/proxiconseil-maquette/contact-debut-p1440.jpg",
+  "capture_m390": "medias/proxiconseil-maquette/contact-debut-m390.jpg",
+  "video": "medias/proxiconseil-maquette/contact-debut-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "loupe-sur-le-terrain"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

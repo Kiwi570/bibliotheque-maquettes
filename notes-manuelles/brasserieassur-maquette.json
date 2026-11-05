@@ -1,0 +1,1098 @@
+{
+ "maquette": {
+  "client": "courtier en assurance des professionnels de la bière (brasseries, producteurs, négociants, fabricants de matériel)",
+  "activite": [
+   "finance",
+   "services-b2b"
+  ],
+  "concept": [
+   "dossier",
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "artisanal",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "IBM Plex Mono",
+   "mono": "IBM Plex Sans"
+  },
+  "points_forts": [
+   "direction « Plan & cachet » : papier crème, encre bleu nuit, cachet rouge qui valide, plans de brasserie au trait",
+   "voile de mousse de bière avec bulles entre les pages et jauge de bière dans la marge qui se remplit au défilement",
+   "carte d'une brasserie en six zones de risques épinglée, chaque zone ouvre ses risques et garanties",
+   "une ouverture par page (cuve, étiquette, plan bleu, rideau, gazette) et devis TPE en trois minutes",
+   "registre ORIAS en fiche cochée, huit points à vérifier sur un mini-plan"
+  ],
+  "reserves": [
+   "fluidité au seuil sur ordinateur lent relevée par l'audit complet",
+   "visages du cabinet, raison sociale, assureur et médiateur à fournir",
+   "beaucoup d'images générées (cuves, entrepôts)"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "fil-conducteur",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "formulaire-par-étapes",
+   "calculateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "plan d'une brasserie en six zones de risques à explorer ; cachet qui valide",
+   "fil": "jauge de bière dans la marge qui se remplit au défilement"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile de mousse de bière : la mousse monte avec ses bulles, capsule au centre, puis retombe sur la page d'arrivée",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-de-mousse"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un plan de brasserie se dessine au trait puis s'efface sur la photo",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête crème : logo capsule, sept liens, Demander un devis",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Métiers",
+   "role": "menu",
+   "description": "Menu plein écran bleu nuit par groupes (métiers, cabinet)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "L’assurancedes métiersde la bière",
+   "role": "ouverture",
+   "description": "« L'assurance des métiers de la bière » sur une salle de brassage en cinémascope, poussière de lumière (canvas), cachet rouge qui se pose",
+   "animations": [
+    "canvas-2d",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau de mots en italique qui défile (distributeurs, événements)",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "metiers": {
+   "titre": "À chaque métier, ses risques",
+   "role": "services",
+   "description": "À chaque métier ses risques : quatre fiches photo numérotées (brasseries, producteurs, négociants, fabricants)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carte": {
+   "titre": "Une brasserie, six zones de risques",
+   "role": "outil-interactif",
+   "description": "Une brasserie, six zones de risques : plan isométrique épinglé, chaque zone (1 à 6) allume ses risques et ses garanties",
+   "animations": [
+    "section-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "plan-des-risques"
+   ]
+  },
+  "protections": {
+   "titre": "Ce que nous vous aidons à assurer",
+   "role": "galerie",
+   "description": "Ce que nous vous aidons à assurer : cinq protections en galerie épinglée horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "methode": {
+   "titre": "Un conseil écrit et motivé",
+   "role": "méthode",
+   "description": "Un conseil écrit et motivé : étapes à croix de repère, plan sur la table",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tpe": {
+   "titre": "Une TPE ? Votre devis en trois minutes",
+   "role": "calculateur",
+   "description": "Une TPE ? Votre devis en trois minutes : critères d'éligibilité à choisir, chiffres clés (3 min, 500 m², 3 M€)",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements": {
+   "titre": "Un courtier immatriculé, indépendant des assureurs",
+   "role": "preuves",
+   "description": "Un courtier immatriculé : fiche du registre ORIAS cochée ligne à ligne et cachet, quatre engagements",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "registre-coche"
+   ]
+  },
+  "questions": {
+   "titre": "Vos questions",
+   "role": "faq",
+   "description": "Vos questions : sept questions en accordéon et article du blog",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "final": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Parlons de votre activité : fûts dans une cave bleu nuit, voile",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Métiers",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit, grand logotype doré",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette cuve est vide",
+   "role": "page-404",
+   "description": "« Cette cuve est vide » sur une cave bleu nuit",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-debut": {
+   "titre": "Notre histoire",
+   "role": "ouverture",
+   "description": "Notre histoire en page de carnet magazine : grand titre, lettrine, photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-facon": {
+   "titre": "Un courtier, à vos côtés",
+   "role": "méthode",
+   "description": "Un courtier à vos côtés : quatre engagements numérotés à côté d'une photo collante",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-engagements": {
+   "titre": "Ce qui nous engage",
+   "role": "preuves",
+   "description": "Ce qui nous engage : registre ORIAS coché",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-equipe": {
+   "titre": "Les visages du cabinet",
+   "role": "équipe",
+   "description": "Les visages du cabinet : portraits vides à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Parlons de votre activité : appel court avec une cuve dessinée",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-debut": {
+   "titre": "Conseils et décryptages",
+   "role": "ouverture",
+   "description": "La Gazette BRASSERIEassur : en-tête de journal, article à la une",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-articles": {
+   "titre": "La responsabilité en cas d’intoxication alimentaire ou d’intoxication liée à la consommati",
+   "role": "articles",
+   "description": "Liste des articles du blog avec photo et chapô",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court du blog avec une cuve dessinée",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-responsabilite-intoxication-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "blog-responsabilite-intoxication-debut": {
+   "titre": "La responsabilité en cas d’intoxication alimentaire ou d’intoxication liée à la consommati",
+   "role": "articles",
+   "description": "Article : en-tête bleu nuit, titre et chapô",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-responsabilite-intoxication-texte-long": {
+   "titre": "Pour aller plus loin",
+   "role": "articles",
+   "description": "Corps de l'article à compléter et liens pour aller plus loin",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "blog-responsabilite-intoxication-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court en fin d'article avec une cuve dessinée",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "brasseries-debut": {
+   "titre": "Bien assurer sa brasserie",
+   "role": "ouverture",
+   "description": "Bien assurer sa brasserie : cuve détourée qui se remplit, jauge de volume, cachet",
+   "animations": [
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "brasseries-points": {
+   "titre": "Les huit points à vérifier",
+   "role": "méthode",
+   "description": "Les huit points à vérifier : liste cochée au défilement à côté d'un mini-plan qui allume la zone concernée",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "brasseries-resume": {
+   "titre": "En résumé",
+   "role": "offre",
+   "description": "En résumé et devis pour ma brasserie",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "brasseries-autres-metiers": {
+   "titre": "Vous exercez un autre métier de la bière ?",
+   "role": "services",
+   "description": "Vous exercez un autre métier de la bière ? : trois fiches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "brasseries-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "confidentialite-debut": {
+   "titre": "Politique de confidentialité",
+   "role": "texte-legal",
+   "description": "Politique de confidentialité : tête sobre avec cachet",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-texte-long": {
+   "titre": "Responsable du traitement",
+   "role": "texte-legal",
+   "description": "Texte de confidentialité avec sommaire collant, données à compléter surlignées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Contactez-nous",
+   "role": "ouverture",
+   "description": "Contactez-nous : plan de quartier dessiné avec le repère",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-message": {
+   "titre": "Votre message",
+   "role": "contact",
+   "description": "Votre message : formulaire simulé et coordonnées à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-debut": {
+   "titre": "Demandez votre devis",
+   "role": "ouverture",
+   "description": "Demandez votre devis : une cuve se remplit étape par étape",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-formulaire": {
+   "titre": "Quatre étapes",
+   "role": "contact",
+   "description": "Devis simulé en quatre étapes (métier, local, entreprise, contrat) avec récapitulatif et cuve qui se remplit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "devis-tpe": {
+   "titre": "Brasserie-restaurant, café ou bar de moins de 500 m² ?",
+   "role": "offre",
+   "description": "Brasserie-restaurant, café ou bar de moins de 500 m² : devis en ligne en trois minutes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-debut": {
+   "titre": "La responsabilité des fabricants",
+   "role": "ouverture",
+   "description": "La responsabilité des fabricants : photo d'atelier sous un plan bleu avec cotes et cartouche",
+   "animations": [
+    "masque",
+    "trace-svg",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-garanties-legales": {
+   "titre": "Vos garanties légales",
+   "role": "offre",
+   "description": "Vos garanties légales en fiches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-assurances": {
+   "titre": "Les assurances de l’entreprise",
+   "role": "méthode",
+   "description": "Les assurances de l'entreprise : points à vérifier sur mini-plan",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-montage": {
+   "titre": "Garanties de montage et d’essai",
+   "role": "offre",
+   "description": "Garanties de montage et d'essai : définition et photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-autres-metiers": {
+   "titre": "Vous exercez un autre métier de la bière ?",
+   "role": "services",
+   "description": "Vous exercez un autre métier de la bière ? : trois fiches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fabricants-materiel-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "negociants-en-gros-debut": {
+   "titre": "Se protéger des engagements",
+   "role": "ouverture",
+   "description": "Se protéger des engagements : rideau de quai qui se lève sur l'entrepôt",
+   "animations": [
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "negociants-en-gros-points": {
+   "titre": "Quatre assurances à combiner",
+   "role": "méthode",
+   "description": "Quatre assurances à combiner sur mini-plan",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "negociants-en-gros-resume": {
+   "titre": "En résumé",
+   "role": "offre",
+   "description": "En résumé : texte, photo et devis du métier",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "negociants-en-gros-autres-metiers": {
+   "titre": "Vous exercez un autre métier de la bière ?",
+   "role": "services",
+   "description": "Vous exercez un autre métier de la bière ? : trois fiches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "negociants-en-gros-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "producteurs-debut": {
+   "titre": "La responsabilité des producteurs",
+   "role": "ouverture",
+   "description": "La responsabilité des producteurs : étiquette de bouteille qui se colle et bandeau",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "producteurs-responsabilites": {
+   "titre": "Quatre responsabilités",
+   "role": "offre",
+   "description": "Quatre responsabilités en blocs photo et texte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "producteurs-garanties-liees": {
+   "titre": "Les garanties liées",
+   "role": "méthode",
+   "description": "Les garanties liées sur mini-plan",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "producteurs-autres-metiers": {
+   "titre": "Vous exercez un autre métier de la bière ?",
+   "role": "services",
+   "description": "Vous exercez un autre métier de la bière ? : trois fiches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "producteurs-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reglementaire-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "reglementaire-debut": {
+   "titre": "Cadre réglementaire",
+   "role": "texte-legal",
+   "description": "Cadre réglementaire : tête en document officiel",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reglementaire-texte-long": {
+   "titre": "Registre unique tenu par l’ORIAS",
+   "role": "texte-legal",
+   "description": "Registre ORIAS, rémunération, réclamations, médiation : texte long avec sommaire collant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-debut": {
+   "titre": "Audit, visite de risques, digitalisation",
+   "role": "ouverture",
+   "description": "Audit, visite de risques, digitalisation : mosaïque de photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-services": {
+   "titre": "Choisissez votre rendez-vous",
+   "role": "offre",
+   "description": "Choisissez votre rendez-vous : trois services en cartes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-rendez-vous": {
+   "titre": "Demande de rendez-vous",
+   "role": "contact",
+   "description": "Demande de rendez-vous simulée avec calendrier de créneaux",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-appel": {
+   "titre": "Parlons de votre activité",
+   "role": "appel",
+   "description": "Appel court avec une cuve dessinée et deux boutons",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

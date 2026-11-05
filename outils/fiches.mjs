@@ -25,7 +25,10 @@ for (const depot of process.argv.slice(2)) {
   const inv = lireJson(path.join(RACINE, 'inventaire', `${depot}.json`));
   const idt = lireJson(path.join(RACINE, 'inventaire', `${depot}-identite.json`), {});
   const notes = lireJson(path.join(RACINE, 'notes-manuelles', `${depot}.json`));
-  const audit = lireJson(path.join(AUDIT, depot, 'notes.json'));
+  // Notes d'audit : audit-maquettes/<dépôt>/notes.json ; à défaut (autre ordinateur), celles de la fiche déjà publiée.
+  const ancienne = lireJson(path.join(RACINE, 'maquettes', `${depot}.json`), null);
+  const audit = lireJson(path.join(AUDIT, depot, 'notes.json'), null) || (ancienne && { url: ancienne.url, note: ancienne.note, verdict: ancienne.verdict, ...(ancienne.commit_audit ? { correction: { commit: ancienne.commit_audit, note: ancienne.note } } : {}) });
+  if (!audit) throw new Error(`${depot} : ni ${path.join(AUDIT, depot, 'notes.json')} ni fiche maquette publiée`);
   const nm = notes.maquette;
   const grilleAuto = lireJson(path.join(RACINE, 'inventaire', `${depot}-grille.json`), null);
   const journal = lireJson(path.join(RACINE, 'journaux', `${depot}.json`), null);
@@ -107,9 +110,11 @@ for (const depot of process.argv.slice(2)) {
   ecrireJson(path.join(RACINE, 'maquettes', `${depot}.json`), fiche);
 
   // Rapport d'audit, suivi du compte rendu de correction s'il existe.
-  let md = fs.readFileSync(path.join(AUDIT, depot, 'rapport.md'), 'utf8');
+  // (sans le dossier d'audit, le rapport déjà publié dans audits/ est gardé tel quel)
+  const fRapport = path.join(AUDIT, depot, 'rapport.md');
+  let md = fs.existsSync(fRapport) ? fs.readFileSync(fRapport, 'utf8') : fs.readFileSync(path.join(RACINE, 'audits', `${depot}.md`), 'utf8');
   const corr = path.join(AUDIT, depot, 'correction', 'correction.md');
-  if (fs.existsSync(corr)) md += '\n\n---\n\n' + fs.readFileSync(corr, 'utf8').replace(/^# /m, '## ');
+  if (fs.existsSync(fRapport) && fs.existsSync(corr)) md += '\n\n---\n\n' + fs.readFileSync(corr, 'utf8').replace(/^# /m, '## ');
   fs.mkdirSync(path.join(RACINE, 'audits'), { recursive: true });
   fs.writeFileSync(path.join(RACINE, 'audits', `${depot}.md`), md);
   // Élagage : on supprime les médias de cette maquette qu'aucune fiche ne référence.

@@ -1,0 +1,711 @@
+{
+ "maquette": {
+  "client": "Gestalt-thérapeute et sophrologue à Chatou (adultes, couples, enfants, adolescents, familles, groupes)",
+  "activite": [
+   "santé",
+   "bien-être"
+  ],
+  "concept": [
+   "carnet"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Figtree",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Figure et fond » tirée de la Gestalt : vase de Rubin, deux profils d'encre qui s'ouvrent sur la photo",
+   "« Pour qui » épinglé : une forme WebGL qui se transforme pour chaque public, avec son tarif",
+   "mot « Gestalt » qui se rassemble sur une encre WebGL au pointeur, cercle de respiration de la sophrologie",
+   "fil d'encre sur toutes les pages, fiches d'accompagnement avec lien direct, demande de rendez-vous en quatre étapes"
+  ],
+  "reserves": [
+   "beaucoup d'illustrations générées (intérieurs vides), une seule vraie photo",
+   "tarifs enfants, adolescents et sophrologie, horaires et mentions à fournir",
+   "en-tête X-Frame-Options encore présent : la maquette ne s'affiche pas dans Wix"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "morphing",
+   "section-fixée",
+   "progression-fixée",
+   "empilement-de-fiches",
+   "fil-conducteur",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "transition-de-page",
+   "curseur-personnalisé"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "deux profils d'encre (vase de Rubin) qui s'écartent sur la photo, forme qui change pour chaque public",
+   "fil": "fil d'encre dans la marge sur toutes les pages"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile vert profond à bords d'encre ondulés qui couvre l'écran entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : deux profils face à face, la coupe entre eux se remplit puis s'ouvre",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête ivoire : monogramme proposé, nom et métier, quatre liens, Prendre rendez-vous",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran vert profond, liens en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "AlexandraGrandry",
+   "role": "ouverture",
+   "description": "Nom en grand, accroche « donner forme », deux profils d'encre (battants) dont la coupe laisse voir la photo ; épinglée, les profils s'écartent au défilement",
+   "animations": [
+    "section-fixée",
+    "masque",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "vase-de-rubin"
+   ]
+  },
+  "presentation": {
+   "titre": "Je vous accueille",
+   "role": "équipe",
+   "description": "Je vous accueille : portrait en arche, diplômes et engagements, trait d'encre",
+   "animations": [
+    "révélation-image",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "raisons": {
+   "titre": "Ce qui peut amener à consulter",
+   "role": "manifeste",
+   "description": "Ce qui peut amener à consulter : longue phrase sur fond d'encre diffuse, mot entouré à la main",
+   "animations": [
+    "révélation-texte",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pour-qui": {
+   "titre": "Une forme pour chaque histoire",
+   "role": "offre",
+   "description": "« Une forme pour chaque histoire » : section épinglée, une forme WebGL se transforme pour chaque public (adultes, couples, enfants…) à côté de la liste et du tarif",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "webgl-shader",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "forme-qui-se-transforme"
+   ]
+  },
+  "approches": {
+   "titre": "Gestalt-thérapie et sophrologie",
+   "role": "services",
+   "description": "Gestalt-thérapie et sophrologie : deux cartes photo qui mènent aux pages",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadre": {
+   "titre": "Regardée, questionnée, partagée",
+   "role": "preuves",
+   "description": "Regardée, questionnée, partagée : supervision, recherche, déontologie, sur fond vert, photo du cabinet",
+   "animations": [
+    "webgl-shader",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "deroule": {
+   "titre": "Le temps qu’il faut",
+   "role": "étapes",
+   "description": "Le temps qu'il faut : première séance, chemin, clôture, tarif adulte, à côté d'une porte entrouverte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Prendre rendez-vous sur un étang dans la brume : téléphone, e-mail, demande en ligne",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page vert : coordonnées, sommaire, confort de lecture",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page n’a pas encore pris forme",
+   "role": "page-404",
+   "description": "« Cette page n'a pas encore pris forme », lac au lever du jour",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-debut": {
+   "titre": "Accompagnements",
+   "role": "ouverture",
+   "description": "Très grand titre, sommaire en pastilles des six publics, bandeau de galets",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-adultes": {
+   "titre": "Adultes",
+   "role": "offre",
+   "description": "Fiche Adultes : numéro, accroche, tarif, déroulé et photo ; les fiches s'empilent au défilement, lien direct #adultes",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-couples": {
+   "titre": "Couples",
+   "role": "offre",
+   "description": "Fiche Couples : numéro, accroche, tarif, déroulé et photo ; les fiches s'empilent au défilement, lien direct #couples",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-enfants": {
+   "titre": "Enfants",
+   "role": "offre",
+   "description": "Fiche Enfants : numéro, accroche, tarif, déroulé et photo ; les fiches s'empilent au défilement, lien direct #enfants",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-adolescents": {
+   "titre": "Adolescents",
+   "role": "offre",
+   "description": "Fiche Adolescents : numéro, accroche, tarif, déroulé et photo ; les fiches s'empilent au défilement, lien direct #adolescents",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-familles": {
+   "titre": "Familles",
+   "role": "offre",
+   "description": "Fiche Familles : numéro, accroche, tarif, déroulé et photo ; les fiches s'empilent au défilement, lien direct #familles",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-groupe": {
+   "titre": "Groupe",
+   "role": "offre",
+   "description": "Fiche Groupe : tarif, dates à compléter, cercle de chaises qui se dessine",
+   "animations": [
+    "empilement-de-fiches",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-bon-a-savoir": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Bon à savoir : cinq questions en accordéon à côté d'une photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements-appel": {
+   "titre": "Un premier échange",
+   "role": "appel",
+   "description": "Un premier échange : appel court avec un cercle tracé",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Prendre rendez-vous",
+   "role": "ouverture",
+   "description": "Numéro de téléphone en très grand sur fond vert, chiffres en italique terre cuite, bandeau photo",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-demande": {
+   "titre": "En quatre étapes",
+   "role": "contact",
+   "description": "Demande de rendez-vous simulée en quatre étapes : pour qui (cartes avec tarif), créneau, coordonnées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "À deux minutes du RER",
+   "role": "carte",
+   "description": "À deux minutes du RER : plan schématique dont le chemin se trace de la gare au cabinet",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "chemin-qui-se-trace"
+   ]
+  },
+  "contact-tarifs": {
+   "titre": "Ce qu’il faut savoir",
+   "role": "tarifs",
+   "description": "Ce qu'il faut savoir : tableau des tarifs par public",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-debut": {
+   "titre": "La Gestalt-thérapieGestalt",
+   "role": "ouverture",
+   "description": "Fond d'encre verte en WebGL qui réagit au pointeur, le mot « Gestalt » se rassemble lettre à lettre",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-origine": {
+   "titre": "Une approche née après-guerre",
+   "role": "étapes",
+   "description": "Une approche née après-guerre : frise des années 50 à 70 tracée",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-ici-et-maintenant": {
+   "titre": "Ici et maintenant",
+   "role": "manifeste",
+   "description": "Ici et maintenant : grand titre italique et lumière sur un mur (onde WebGL)",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-corps": {
+   "titre": "Pas seulement avec les mots",
+   "role": "manifeste",
+   "description": "Pas seulement avec les mots : mots du corps en pastilles, photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-donner-forme": {
+   "titre": "Une forme qui prend sens",
+   "role": "outil-interactif",
+   "description": "Une forme qui prend sens : vase de Rubin, le bouton « Voir les deux visages » fait basculer figure et fond",
+   "animations": [
+    "morphing"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-qualites": {
+   "titre": "Existentielle, humaniste, relationnelle",
+   "role": "méthode",
+   "description": "Existentielle, humaniste, relationnelle : trois planches empilées au défilement",
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gestalt-therapie-appel": {
+   "titre": "En parler ensemble",
+   "role": "appel",
+   "description": "En parler ensemble : appel court",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-debut": {
+   "titre": "La sophrologie",
+   "role": "ouverture",
+   "description": "Image en arche et cercle de respiration (lumière et ronds sur l'eau), bouton « Respirer avec le cercle »",
+   "animations": [
+    "révélation-image",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cercle-de-respiration"
+   ]
+  },
+  "sophrologie-corps-esprit": {
+   "titre": "Réunir le corps et l’esprit",
+   "role": "méthode",
+   "description": "Réunir le corps et l'esprit : outils en trois photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-quotidien": {
+   "titre": "Des outils pour le quotidien",
+   "role": "services",
+   "description": "Des outils pour le quotidien : texte sur un banc sous un arbre",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-appel": {
+   "titre": "Essayer la sophrologie",
+   "role": "appel",
+   "description": "Essayer la sophrologie : appel court",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

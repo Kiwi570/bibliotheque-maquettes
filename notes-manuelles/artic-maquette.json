@@ -1,0 +1,944 @@
+{
+ "maquette": {
+  "client": "conseil en hôtellerie-restauration (stratégie, transformation, transmission) d'un ancien cuisinier et directeur F&B, à Orbe",
+  "activite": [
+   "conseil",
+   "restauration"
+  ],
+  "concept": [
+   "magazine",
+   "journal"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--ligne"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Source Code Pro",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le Cycle » : revue éditoriale crème, encre et vert vigne, le rouge réservé au « ! » de la marque et au fil qui avance",
+   "intro « bouchon » : la phrase se resserre en ARTIC!, le point tombe et rebondit, la page s'ouvre",
+   "le Cycle des cinq étapes en anneau qui tourne (WebGL) et le sommaire en anneau des huit expertises qui suit la lecture",
+   "carte du parcours tracée de Vaud au cap Finisterre, frise en douze étapes reliées par un fil rouge, presse en éventail",
+   "verre qui se remplit par le fond au fil des produits distriBOtion, journal de 19 articles filtrables"
+  ],
+  "reserves": [
+   "chiffres du tableau d'audit illustratifs, à remplacer",
+   "projets BOtaniq et VERS présentés comme concepts, statut à confirmer",
+   "IDE, TVA, horaires et confidentialité à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "galerie-horizontale",
+   "fil-conducteur",
+   "trace-svg",
+   "marquee",
+   "compteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "filtres",
+   "recherche",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "anneau du cycle qui tourne avec les cinq étapes ; verre qui se remplit",
+   "fil": "fil rouge du « ! » qui avance (anneau, route, frise, progression)"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile crème avec le logo ARTIC! entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro « bouchon » : la phrase « l'Art de l'Intelligence Commerciale » se resserre en ARTIC!, le point tombe, rebondit et ouvre la page en deux",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "phrase-qui-devient-logo"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo ARTIC! Agency, quatre liens, Premier échange",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran noir numéroté avec coordonnées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "L’Art de l’Intelligence Commerciale en Hospitalité !",
+   "role": "ouverture",
+   "description": "« L'Art de l'Intelligence Commerciale en Hospitalité ! » : salle dressée avec une onde WebGL, point d'exclamation rouge",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "manifeste": {
+   "titre": "Transformer l’expertise en opportunités durables",
+   "role": "manifeste",
+   "description": "Transformer l'expertise en opportunités durables : le texte passe à l'encre au défilement, trois piliers",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cycle": {
+   "titre": "De la conception à la transmission",
+   "role": "méthode",
+   "description": "De la conception à la transmission : le Cycle des cinq étapes en anneau qui tourne au défilement (WebGL), image et texte de chaque étape",
+   "animations": [
+    "webgl-shader",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "anneau-du-cycle"
+   ]
+  },
+  "projets": {
+   "titre": "Chaque projet raconte une histoire",
+   "role": "portfolio",
+   "description": "Chaque projet raconte une histoire : galerie épinglée des projets à l'horizontale avec étiquettes de statut",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "methode": {
+   "titre": "L’immersion d’abord",
+   "role": "méthode",
+   "description": "L'immersion d'abord : outils et tableau d'audit (anneaux et courbe) aux données illustratives",
+   "animations": [
+    "compteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ruban-section": {
+   "titre": "Pourquoi Artic!Agency ?",
+   "role": "decor",
+   "description": "Ruban « Pourquoi Artic!Agency ? » qui défile, bouton Pause",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "portrait": {
+   "titre": "De la brigade à la direction, sur plusieurs continents",
+   "role": "équipe",
+   "description": "De la brigade à la direction : portrait de Michel Grand et étapes du parcours",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confiance": {
+   "titre": "Ils me font confiance",
+   "role": "preuves",
+   "description": "Ils me font confiance : bandeau de logos et citations en accordéon",
+   "animations": [
+    "marquee",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Prêt à parler de vos projets de transformation, de transition ou de transmission ?",
+   "role": "appel",
+   "description": "Prêt à parler de vos projets : le « ! » se dresse au-dessus de l'appel final",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page noir, ARTIC! en très grand, coordonnées et sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette table n’a pas été dressée",
+   "role": "page-404",
+   "description": "« Cette table n'a pas été dressée » sur une salle vide",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-debut": {
+   "titre": "Michel Grand",
+   "role": "ouverture",
+   "description": "Michel Grand : portrait, credo et actions",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-carte": {
+   "titre": "Sur plusieurs continents",
+   "role": "carte",
+   "description": "Sur plusieurs continents : la route se trace de Vaud au cap Finisterre puis à Orbe, années qui défilent",
+   "animations": [
+    "trace-svg",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "route-du-parcours"
+   ]
+  },
+  "a-propos-parcours": {
+   "titre": "Le parcours",
+   "role": "étapes",
+   "description": "Le parcours en douze étapes reliées par un fil rouge qui se tire au défilement, photos d'époque",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-outils": {
+   "titre": "Mes outils",
+   "role": "services",
+   "description": "Mes outils : audit, amélioration continue, formation et coaching",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-milieux": {
+   "titre": "Mes milieux d’expertise",
+   "role": "services",
+   "description": "Mes milieux d'expertise : food, beverage, retail, catering en photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-valeurs": {
+   "titre": "Mes valeurs",
+   "role": "manifeste",
+   "description": "Mes valeurs en mots-clés sur fond noir",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-formateurs": {
+   "titre": "Les entreprises qui m’ont formé",
+   "role": "preuves",
+   "description": "Les entreprises qui m'ont formé : logos remis à l'encre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-presse": {
+   "titre": "On en a parlé",
+   "role": "preuves",
+   "description": "On en a parlé : coupures de presse en éventail qui s'ouvre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "presse-en-eventail"
+   ]
+  },
+  "a-propos-fin": {
+   "titre": "Un regard neuf sur votre établissement ?",
+   "role": "appel",
+   "description": "Un regard neuf sur votre établissement ? : appel avec portrait",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre projet",
+   "role": "ouverture",
+   "description": "Parlons de votre projet : carnet sur une table de café, actions",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-demande": {
+   "titre": "Votre demande, en quatre étapes",
+   "role": "contact",
+   "description": "Demande simulée en quatre étapes (expertise, établissement, calendrier, coordonnées) avec récapitulatif en direct, préremplie depuis les boutons « Parler de ce besoin »",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-coordonnees": {
+   "titre": "Coordonnées",
+   "role": "carte",
+   "description": "Coordonnées et plan d'Orbe dessiné d'après les coordonnées réelles",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "expertises-debut": {
+   "titre": "Huit expertises, un seul cycle",
+   "role": "ouverture",
+   "description": "Huit expertises, un seul cycle : nuancier et compteur d'étape",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "expertises-chapitres": {
+   "titre": "Conception",
+   "role": "services",
+   "description": "Les huit expertises en chapitres, sommaire en anneau qui suit la lecture (barre compacte au téléphone)",
+   "animations": [
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "sommaire-en-anneau"
+   ]
+  },
+  "expertises-fin": {
+   "titre": "Une étape à franchir ?",
+   "role": "appel",
+   "description": "Une étape à franchir ? : appel final sur fond noir",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-debut": {
+   "titre": "Le journal",
+   "role": "ouverture",
+   "description": "Le journal : réflexions, chroniques et souvenirs de terrain",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-une": {
+   "titre": "Entre ceux qui parlent fort et ceux qui agissent en silence",
+   "role": "articles",
+   "description": "Article à la une avec sa couverture-citation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-articles": {
+   "titre": "Faut-il repenser la clause du besoin en restauration ?",
+   "role": "articles",
+   "description": "Dix-neuf articles filtrables par saison et par recherche (accents et pluriels ignorés, gardés dans l'adresse)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-fin": {
+   "titre": "Envie d’en parler ?",
+   "role": "appel",
+   "description": "Envie d'en parler ? : appel final du journal",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-s02-e06-parler-fort-agir-en-sile-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "journal-s02-e06-parler-fort-agir-en-sile-debut": {
+   "titre": "Entre ceux qui parlent fort et ceux qui agissent en silence",
+   "role": "articles",
+   "description": "Modèle d'article : titre, chapô, couverture-citation et retour au journal",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-s02-e06-parler-fort-agir-en-sile-texte": {
+   "titre": "Ma conviction",
+   "role": "articles",
+   "description": "Corps de l'article, citation mot à mot, version anglaise de l'auteur repliée",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-s02-e06-parler-fort-agir-en-sile-saison": {
+   "titre": "Dans la même saison",
+   "role": "articles",
+   "description": "Dans la même saison : trois autres épisodes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-s02-e06-parler-fort-agir-en-sile-fin": {
+   "titre": "Envie d’en parler ?",
+   "role": "appel",
+   "description": "Envie d'en parler ? : appel en fin d'article",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête avec sommaire numéroté",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par le client",
+   "role": "texte-legal",
+   "description": "Informations à fournir par le client, éditeur, hébergeur, crédits",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-debut": {
+   "titre": "Des projets menés de bout en bout",
+   "role": "ouverture",
+   "description": "Des projets menés de bout en bout : objets en bois au soleil",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-principaux": {
+   "titre": "Quatre projets en détail",
+   "role": "portfolio",
+   "description": "Quatre projets en détail, en lignes alternées avec visuel et statut",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-autres": {
+   "titre": "Autres réalisations",
+   "role": "portfolio",
+   "description": "Autres réalisations en liste numérotée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-en-cours": {
+   "titre": "Projets en cours",
+   "role": "portfolio",
+   "description": "Projets en cours en liste numérotée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-fin": {
+   "titre": "Un concept à imaginer, un établissement à transformer ?",
+   "role": "appel",
+   "description": "Un concept à imaginer ? : appel final des projets",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-debut": {
+   "titre": "distriBOtion.CH",
+   "role": "ouverture",
+   "description": "Fiche projet distriBOtion.CH : tête de page avec visuel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-aventure": {
+   "titre": "L’aventure",
+   "role": "manifeste",
+   "description": "L'aventure et les marques distribuées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-produits": {
+   "titre": "Cinq étapes, un verre à remplir",
+   "role": "étapes",
+   "description": "Cinq étapes, un verre à remplir : frise des produits, le verre se remplit par le fond au défilement",
+   "animations": [
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "verre-qui-se-remplit"
+   ]
+  },
+  "projets-distribotion-showroom": {
+   "titre": "Le showroom",
+   "role": "galerie",
+   "description": "Le showroom en grande photo en parallaxe",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-references": {
+   "titre": "Ils l’ont adopté",
+   "role": "preuves",
+   "description": "Ils l'ont adopté : références avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-galerie": {
+   "titre": "En images",
+   "role": "galerie",
+   "description": "Galerie de dix photos avec visionneuse (lien par photo, clavier et glisser)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "projets-distribotion-fin": {
+   "titre": "Équiper, distribuer, lancer un produit ?",
+   "role": "appel",
+   "description": "Équiper, distribuer, lancer un produit ? : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

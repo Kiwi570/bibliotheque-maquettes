@@ -1,0 +1,651 @@
+{
+ "maquette": {
+  "client": "conseiller en investissements financiers et gestion de patrimoine au Mans",
+  "activite": [
+   "finance",
+   "conseil"
+  ],
+  "concept": [
+   "carte"
+  ],
+  "ambiance": [
+   "clair",
+   "sobre",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "lever de soleil WebGL sur le bocage : relief à la souris, courbes de niveau sous le curseur, onde au clic, le repère du logo tombe sur le soleil",
+   "le repère du logo comme fil : il tombe sur le soleil, sur Le Mans dans la carte du contact, à côté de la carte sur la 404",
+   "boussole des six objectifs (accueil et « Par où commencer ? ») qui mène au rendez-vous prérempli",
+   "portrait dans une fenêtre en forme de repère qui grandit jusqu'au plein écran, carte de contact en courbes de niveau avec loupe sur le paysage",
+   "immobilier : la façade naît d'un plan d'architecte, investissement couche par couche"
+  ],
+  "reserves": [
+   "mentions, médiateur, horaires et zone d'intervention à compléter",
+   "plusieurs illustrations générées (objectifs, pour qui)",
+   "beaucoup de sections de texte sur fond calcaire dans les pages intérieures"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "empilement-de-fiches",
+   "trace-svg",
+   "révélation-texte",
+   "révélation-image",
+   "apparition-au-défilement",
+   "masque",
+   "parallaxe",
+   "transition-de-page",
+   "compteur"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "formulaire-par-étapes",
+   "carte-interactive",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "repère du logo qui tombe sur le soleil et la carte ; boussole des six objectifs",
+   "fil": "le repère du logo, d'une page à l'autre (soleil, carte, portrait, 404)"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile pétrole entre deux pages, avec le repère",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : le repère tombe et ses ondes s'étendent avant d'ouvrir sur le paysage",
+   "animations": [
+    "ouverture-orchestrée",
+    "chargement-orchestré"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo au repère, quatre liens, Prendre rendez-vous",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran pétrole, liens en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Proximité et conseilau service de votrepatrimoine",
+   "role": "ouverture",
+   "description": "Lever de soleil plein cadre sur le bocage (WebGL) : relief à la souris, courbes de niveau sous le curseur, onde au clic, travelling au défilement ; le repère tombe sur le soleil",
+   "animations": [
+    "webgl-shader",
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "horizon-vivant"
+   ]
+  },
+  "objectifs": {
+   "titre": "Six objectifs, un seul repère",
+   "role": "outil-interactif",
+   "description": "Six objectifs, un seul repère : boussole en anneaux, le choix d'un objectif change l'image et le texte",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "boussole-des-objectifs"
+   ]
+  },
+  "raisons": {
+   "titre": "Pourquoi faire appel à un conseiller patrimonial ?",
+   "role": "manifeste",
+   "description": "Pourquoi faire appel à un conseiller : trois paragraphes qui s'allument, chemin de repères sur une courbe",
+   "animations": [
+    "révélation-texte",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui": {
+   "titre": "Nicolas Rabouan",
+   "role": "équipe",
+   "description": "Nicolas Rabouan : portrait noir et blanc, 18 années dans le milieu bancaire, lien vers le parcours",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "deroule": {
+   "titre": "Quatre étapes, à votre rythme",
+   "role": "étapes",
+   "description": "Quatre étapes à votre rythme : un fil laiton descend et allume chaque étape sur un paysage de nuit",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ils recommandent Nicolas",
+   "role": "témoignages",
+   "description": "Ils recommandent Nicolas : avis Google épinglés comme des notes sur une carte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier": {
+   "titre": "Investir dans la pierre",
+   "role": "galerie",
+   "description": "Investir dans la pierre : résidences en galerie épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Échangeons et concrétisons, ensemble, tous vos projets",
+   "role": "appel",
+   "description": "Citation et appel final sur un étang au crépuscule, ondes du repère",
+   "animations": [
+    "parallaxe",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page pétrole : logo, devise, coordonnées, statuts réglementaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Hors de la carte",
+   "role": "page-404",
+   "description": "« Hors de la carte » : le repère tombe à côté, chemin dans la brume",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-debut": {
+   "titre": "Votre patrimoine,objectif par objectif",
+   "role": "ouverture",
+   "description": "Six volets photo plein écran, un par objectif : le volet survolé (ou le suivant toutes les 4,5 s) s'élargit ; les volets montent un à un puis se décalent au défilement",
+   "animations": [
+    "masque",
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "volets-accordeon"
+   ]
+  },
+  "accompagnement-objectifs": {
+   "titre": "Les six objectifs",
+   "role": "offre",
+   "description": "Les six objectifs en planches empilées au défilement, une photo et un lien chacune",
+   "animations": [
+    "empilement-de-fiches",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-pour-qui": {
+   "titre": "Pour qui ?",
+   "role": "offre",
+   "description": "Pour qui : à titre privé, à titre professionnel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-boussole": {
+   "titre": "Par où commencer ?",
+   "role": "outil-interactif",
+   "description": "Par où commencer ? : on choisit sa situation, la boussole allume les objectifs concernés et propose d'en parler",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-deroule": {
+   "titre": "Le déroulé d’un accompagnement",
+   "role": "étapes",
+   "description": "Le déroulé en quatre feuillets numérotés",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-statuts": {
+   "titre": "Mes statuts, en clair",
+   "role": "preuves",
+   "description": "Mes statuts en clair : quatre statuts réglementaires et un tampon ORIAS qui se pose",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnement-appel": {
+   "titre": "Échangeons et concrétisons, ensemble, tous vos projets",
+   "role": "appel",
+   "description": "Appel court sur fond nuit avec le repère",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Prendre rendez-vous",
+   "role": "ouverture",
+   "description": "Carte vivante en courbes de niveau (WebGL, relief sous la souris, onde au clic) ; la loupe montre le bocage sous les courbes ; le repère tombe sur Le Mans",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "loupe-sur-le-terrain"
+   ]
+  },
+  "contact-rendez-vous": {
+   "titre": "Votre demande en quatre étapes",
+   "role": "contact",
+   "description": "Demande de rendez-vous simulée en quatre étapes, récapitulatif collant",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-carte": {
+   "titre": "Au Mans et autour",
+   "role": "carte",
+   "description": "Au Mans et autour : schéma de la Sarthe qui se trace, paysage",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-debut": {
+   "titre": "Investirdans la pierre",
+   "role": "ouverture",
+   "description": "Du plan à la pierre : la façade naît d'un plan d'architecte bleu nuit, un balayage révèle la photo, loupe sur le plan sous la souris",
+   "animations": [
+    "masque",
+    "révélation-image",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "plan-qui-devient-photo"
+   ]
+  },
+  "immobilier-couches": {
+   "titre": "Un investissement, couche par couche",
+   "role": "méthode",
+   "description": "Un investissement couche par couche : vue éclatée en plaques qui se séparent au défilement",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-residences": {
+   "titre": "Résidences commercialisées et livrées par Stellium Immobilier",
+   "role": "galerie",
+   "description": "Résidences Stellium en mosaïque de photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-appel": {
+   "titre": "Un projet immobilier ?",
+   "role": "appel",
+   "description": "Un projet immobilier ? : appel court sur courbes de niveau",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-debut": {
+   "titre": "NicolasRabouan",
+   "role": "ouverture",
+   "description": "Nuit pétrole, nom en très grand, portrait dans une fenêtre en forme de repère cerclée de laiton ; épinglée, la fenêtre grandit jusqu'au plein écran",
+   "animations": [
+    "section-fixée",
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-priorite": {
+   "titre": "Ma priorité",
+   "role": "manifeste",
+   "description": "Ma priorité : manifeste qui se souligne mot à mot",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-parcours": {
+   "titre": "Mon parcours",
+   "role": "étapes",
+   "description": "Mon parcours : frise tracée et compteur des 18 années",
+   "animations": [
+    "trace-svg",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-charte": {
+   "titre": "Une charte, des engagements",
+   "role": "preuves",
+   "description": "Une charte, des engagements : sceau qui tourne et citation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-informations-legales": {
+   "titre": "Mes informations légales",
+   "role": "texte-legal",
+   "description": "Mes informations légales : SARL, ORIAS, carte T, médiateur",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-suis-je-appel": {
+   "titre": "Échangeons et concrétisons, ensemble, tous vos projets",
+   "role": "appel",
+   "description": "Appel court en fin de page avec le repère et ses ondes",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

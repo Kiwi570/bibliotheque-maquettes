@@ -1,0 +1,675 @@
+{
+ "maquette": {
+  "client": "dépannage plomberie, chauffage, électricité et rénovation tous corps d'état dans l'Oise",
+  "activite": [
+   "bâtiment"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "sombre",
+   "industriel",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--ligne"
+  },
+  "polices": {
+   "titres": "Bricolage Grotesque",
+   "texte": "JetBrains Mono",
+   "mono": null
+  },
+  "points_forts": [
+   "lampe torche WebGL qui révèle le réseau de tuyaux et de câbles derrière le mur",
+   "prix affichés avant sur des tickets de caisse, ticket du devis calculé ligne par ligne sur les prix publiés",
+   "tableau électrique à disjoncteurs pour choisir le métier, caméra thermique qui repère la fuite, horloge des tarifs du soir et du week-end",
+   "réseau de tuyaux qui relie les sections et les urgences, cadran de l'intervention, carte de l'Oise",
+   "une ouverture propre à chaque page : numéro géant, bon d'intervention, trappe, mètre ruban, plan bleu"
+  ],
+  "reserves": [
+   "beaucoup d'images générées (salles de bain, portes), une seule photo du dirigeant à fournir",
+   "mentions, e-mail et horaires à compléter",
+   "retour arrière et rechargement au milieu de page signalés à regarder par le script"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "fil-conducteur",
+   "trace-svg",
+   "section-fixée",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "compteur",
+   "apparition-au-défilement",
+   "révélation-texte",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "calculateur",
+   "simulateur",
+   "formulaire-par-étapes",
+   "filtres",
+   "schema-interactif",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "lampe torche qui révèle le réseau derrière le mur ; tableau à disjoncteurs ; ticket du devis",
+   "fil": "réseau de tuyaux et de câbles qui relie les sections"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile sombre entre deux pages, logo au centre",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un faisceau de lampe balaie le noir et allume le logo",
+   "animations": [
+    "ouverture-orchestrée",
+    "chargement-orchestré"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête noir : logo, six liens, numéro d'urgence en jaune",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran sombre avec le numéro d'urgence",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Une fuite. Une panne. On arrive.",
+   "role": "ouverture",
+   "description": "« Une fuite. Une panne. On arrive. » : lampe torche WebGL qui suit la souris et révèle le réseau de tuyaux et de câbles derrière le mur, ticket du premier forfait",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "lampe-torche"
+   ]
+  },
+  "urgences": {
+   "titre": "Ce qui ne peut pas attendre.",
+   "role": "services",
+   "description": "Ce qui ne peut pas attendre : les urgences branchées sur une colonne du réseau qui s'allume au défilement",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "forfaits": {
+   "titre": "Les prix, affichés avant.",
+   "role": "tarifs",
+   "description": "Les prix affichés avant : huit forfaits en tickets de caisse dentelés",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tickets-de-caisse"
+   ]
+  },
+  "metiers": {
+   "titre": "Huit métiers sur le même tableau.",
+   "role": "outil-interactif",
+   "description": "Huit métiers sur le même tableau : un tableau électrique, chaque disjoncteur allume la fiche du métier",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tableau-a-disjoncteurs"
+   ]
+  },
+  "intervention": {
+   "titre": "Du premier appel à la garantie.",
+   "role": "étapes",
+   "description": "Du premier appel à la garantie : section épinglée, l'aiguille d'un cadran avance avec les étapes",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "Tout l'Oise, depuis Longueil-Sainte-Marie.",
+   "role": "carte",
+   "description": "Tout l'Oise : carte schématique du département et communes en pastilles",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "plomberie": {
+   "titre": "Équipement par équipement.",
+   "role": "galerie",
+   "description": "Équipement par équipement : galerie épinglée des équipements à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pedro": {
+   "titre": "Pedro Ricardo Oliveira",
+   "role": "équipe",
+   "description": "Pedro Ricardo Oliveira : cachet, citation et engagements (photo à fournir)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "estimer": {
+   "titre": "Chiffrez avant d'appeler.",
+   "role": "calculateur",
+   "description": "Chiffrez avant d'appeler : ticket d'exemple et lien vers le devis en ligne",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Un appel, et on arrive.",
+   "role": "appel",
+   "description": "Un appel, et on arrive : porte d'entrée de nuit, appeler ou devis",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Adresse",
+   "role": "pied-de-page",
+   "description": "Pied de page avec le réseau qui se poursuit, coordonnées, sommaire",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page a fui.",
+   "role": "page-404",
+   "description": "« Cette page a fui. » : robinet qui goutte",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Appelez, ou demandez un rendez-vous.",
+   "role": "ouverture",
+   "description": "Numéro d'urgence en très grand, chiffres jaunes qui s'allument, rue de nuit",
+   "animations": [
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-rendez-vous": {
+   "titre": "Demander un rendez-vous.",
+   "role": "contact",
+   "description": "Demande de rendez-vous simulée en trois étapes avec les champs du site actuel, coordonnées collantes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-zone": {
+   "titre": "Où intervient Budgetravaux.",
+   "role": "carte",
+   "description": "Où intervient Budgetravaux : carte de l'Oise",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-debut": {
+   "titre": "Plomberie, chauffage, électricité : on répare.",
+   "role": "ouverture",
+   "description": "Bon d'intervention qui se remplit à côté d'une photo de siphon",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-forfaits": {
+   "titre": "Huit forfaits, sans surprise.",
+   "role": "tarifs",
+   "description": "Huit forfaits sans surprise en tickets",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-thermique": {
+   "titre": "La caméra thermique repère la fuite derrière le mur.",
+   "role": "outil-interactif",
+   "description": "Démonstration de caméra thermique : on promène la caméra et la fuite apparaît derrière le mur (canvas)",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "camera-thermique"
+   ]
+  },
+  "depannage-soir-week-end": {
+   "titre": "Après 20 h, on vient aussi.",
+   "role": "calculateur",
+   "description": "Après 20 h, on vient aussi : on règle le jour et l'heure, l'horloge tourne et le ticket recalcule le forfait majoré",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-pannes": {
+   "titre": "Les dépannages les plus courants.",
+   "role": "services",
+   "description": "Les dépannages les plus courants : grille de cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-faq": {
+   "titre": "Questions fréquentes.",
+   "role": "faq",
+   "description": "Questions fréquentes en accordéon à côté d'un robinet",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "depannage-fin": {
+   "titre": "Une fuite en ce moment ?",
+   "role": "appel",
+   "description": "Une fuite en ce moment ? : appel court",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-en-ligne-debut": {
+   "titre": "Votre devis, ligne par ligne.",
+   "role": "ouverture",
+   "description": "Votre devis ligne par ligne : mètre ruban qui se déroule et porte les quatre étapes",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-en-ligne-estimateur": {
+   "titre": "Précisez",
+   "role": "calculateur",
+   "description": "Estimateur en quatre étapes (métier, pièce, postes, coordonnées) ; le ticket se calcule en direct sur les prix publiés (simulé)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur",
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "plomberie-debut": {
+   "titre": "Chaque équipement, chaque intervention.",
+   "role": "ouverture",
+   "description": "Une trappe s'ouvre sur les tuyaux, sommaire des équipements",
+   "animations": [
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "plomberie-equipements": {
+   "titre": "Douche",
+   "role": "services",
+   "description": "Équipements filtrés par des vannes (douche, baignoire, lavabo, WC…), une fiche chacun",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "plomberie-fin": {
+   "titre": "Votre équipement n'est pas dans la liste ?",
+   "role": "appel",
+   "description": "Votre équipement n'est pas dans la liste ? : appel court",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation-debut": {
+   "titre": "Rénovation tous corps d'état.",
+   "role": "ouverture",
+   "description": "Rénovation tous corps d'état : plan bleu qui se pose sur la photo du chantier et se trace",
+   "animations": [
+    "masque",
+    "trace-svg",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation-metiers": {
+   "titre": "Choisissez votre métier.",
+   "role": "outil-interactif",
+   "description": "Choisissez votre métier sur le tableau à disjoncteurs complet",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation-projets": {
+   "titre": "Trois façons de transformer un lieu.",
+   "role": "offre",
+   "description": "Trois façons de transformer un lieu : planches empilées",
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation-garanties": {
+   "titre": "Ce que Budgetravaux garantit.",
+   "role": "preuves",
+   "description": "Ce que Budgetravaux garantit : six engagements cochés",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "renovation-fin": {
+   "titre": "Un projet de rénovation ?",
+   "role": "appel",
+   "description": "Un projet de rénovation ? : appel court",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

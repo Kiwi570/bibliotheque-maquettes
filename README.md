@@ -5,7 +5,7 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Au début d'un projet (Claude)
 
-1. Parcourir `index.json` (120 Ko : une ligne par maquette, par section et par module, colonnes en tête) ; `taxonomie.json` donne les valeurs permises. Lire `lecons.md` : les leçons générales des projets passés, à appliquer dès ce projet.
+1. Parcourir `index.json` (150 Ko au plus : une ligne par maquette, par section notée 5 ou tirée en module, et par module, colonnes en tête ; toutes les sections notées 4 ou 5 sont dans `site/index-site.json`, les autres se trouvent avec `chercher.mjs`) ; `taxonomie.json` donne les valeurs permises. Lire `lecons.md` : les leçons générales des projets passés, à appliquer dès ce projet.
 2. Chercher : `node outils/chercher.mjs --activite restauration --ambiance chaleureux --role ouverture` (filtres répétables : `--concept --animation --interaction --dependance --telephone --sans ogl --note-min 4 --module`, mots libres acceptés, `--json` pour un résultat machine). Activité, concept et ambiance départagent sans exclure ; `--strict` les rend obligatoires.
 Avant de proposer les directions : `node outils/chercher.mjs --dernieres` donne la forme du voile, l'objet manipulé et le fil des 5 dernières maquettes (`--dernieres 10` pour plus), pour ne pas redonner les mêmes au client suivant.
 3. Lire les fiches retenues (`sections/<maquette>/<id>.json`, `modules/<nom>/module.json` et `NOTES.md`), regarder captures et vidéos (`medias/`).

@@ -1,0 +1,1372 @@
+{
+ "maquette": {
+  "client": "restaurant et lieu de réception avec piscine à Moineville, près de Metz (carte, à emporter, agenda, mariages, fêtes privées)",
+  "activite": [
+   "restauration",
+   "tourisme"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "nocturne",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "accueil à deux saisons : surface d'eau (été) ou de braise (hiver) en WebGL sur la photo, bascule hiver / été",
+   "« En ce moment » qui change selon la saison, agenda trié à la date du jour avec compte à rebours",
+   "braises en canvas autour du chef et de la cheminée, ardoise du chef",
+   "commande à emporter avec calendrier de retrait, carte cadeau composée en direct, réservation préremplie depuis toutes les pages",
+   "visite 360° de la terrasse, pool parties en vidéo, galeries avec visionneuse"
+  ],
+  "reserves": [
+   "horaires, capacités et tarifs « à confirmer » nombreux",
+   "plusieurs visuels générés (produits à emporter en monogrammes, ardoise)",
+   "17 pages, certaines sections se répètent d'une page à l'autre"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "compteur",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "réservation-simulee",
+   "panier-simule",
+   "formulaire-par-étapes",
+   "calculateur",
+   "galerie-cliquable",
+   "lecteur-vidéo",
+   "visite-guidee",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "surface d'eau ou de braise sur l'image d'accueil, bascule hiver / été",
+   "fil": "les deux saisons du lieu, d'une page à l'autre"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile brun foncé entre deux pages, sceau du lieu",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un sceau circulaire se trace autour du logo puis s'ouvre",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, liens, Réserver et bouton Menu",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran brun avec toutes les pages et les réseaux",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Les Jardins de l’Hacienda",
+   "role": "ouverture",
+   "description": "Salle au coin du feu (ou terrasse en été) sous une surface d'eau ou de braise en WebGL qui réagit au pointeur ; bascule « Voir l'été », prochain rendez-vous",
+   "animations": [
+    "webgl-shader",
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "surface-d-eau-ou-de-braise",
+    "bascule-de-saison"
+   ]
+  },
+  "en-ce-moment": {
+   "titre": "En ce moment",
+   "role": "agenda",
+   "description": "En ce moment : trois tuiles choisies selon la saison et la date (Saint-Sylvestre, fêtes, carte cadeau)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saisons": {
+   "titre": "L’hiver au coin du feu, l’été au bord de l’eau",
+   "role": "manifeste",
+   "description": "L'hiver au coin du feu, l'été au bord de l'eau : deux grandes images qui se partagent l'écran au défilement",
+   "animations": [
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chef": {
+   "titre": "Régis Clauss, l’âme de notre cuisine",
+   "role": "équipe",
+   "description": "Régis Clauss, l'âme de notre cuisine : portrait et braises qui montent (canvas) sur fond sombre",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "braises"
+   ]
+  },
+  "carte": {
+   "titre": "Produits frais et de saison",
+   "role": "produits",
+   "description": "Produits frais et de saison : extrait de la carte en volets avec prix, photo collante",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lieu": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Le lieu : galerie épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "agenda": {
+   "titre": "De nouveaux événements chaque mois",
+   "role": "agenda",
+   "description": "De nouveaux événements chaque mois : soirée à venir avec compte à rebours, événements passés",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "receptions": {
+   "titre": "Un instant magique avec vos proches",
+   "role": "offre",
+   "description": "Mariage, baptême, anniversaire, pot de départ en ruban, réceptions et capacités",
+   "animations": [
+    "marquee",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "offrir": {
+   "titre": "Les incontournables des fêtes",
+   "role": "offre",
+   "description": "Les incontournables des fêtes à emporter et la carte cadeau",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "venir": {
+   "titre": "En pleine nature, à 15 km de Metz",
+   "role": "carte",
+   "description": "En pleine nature à 15 km de Metz : plan des routes vers Moineville qui se tracent, note Google",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "À bientôt aux Jardins",
+   "role": "pied-de-page",
+   "description": "Pied de page brun « À bientôt aux Jardins », coordonnées, sommaire, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nouvel-onglet": {
+   "titre": "",
+   "ignorer": "annonce pour lecteur d'écran"
+  },
+  "404-debut": {
+   "titre": "Table introuvable",
+   "role": "page-404",
+   "description": "« Table introuvable » sur la terrasse aux cactus",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-debut": {
+   "titre": "Les incontournables des fêtes",
+   "role": "ouverture",
+   "description": "Les incontournables des fêtes : tête de page sombre, dates de retrait",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-produits": {
+   "titre": "Nos produits à emporter",
+   "role": "produits",
+   "description": "Nos produits à emporter : cartes en monogrammes, quantité et ajout à la commande",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-commande": {
+   "titre": "Votre retrait",
+   "role": "outil-interactif",
+   "description": "Votre retrait : calendrier de décembre, moment du retrait, coordonnées et récapitulatif avec total (simulé)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-visuellement-cache": {
+   "titre": "",
+   "ignorer": "annonce pour lecteur d'écran"
+  },
+  "agenda-debut": {
+   "titre": "Les rendez‑vous des Jardins",
+   "role": "ouverture",
+   "description": "Les rendez-vous des Jardins : paillettes dorées et prochain rendez-vous",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-a-venir": {
+   "titre": "À venir",
+   "role": "agenda",
+   "description": "À venir : grand compte à rebours et fiches des soirées, triées à la date du jour",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-passes": {
+   "titre": "Déjà passés",
+   "role": "agenda",
+   "description": "Déjà passés : soirées passées avec affiche et tarif",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-grand-buffet-debut": {
+   "titre": "Le Grand Buffet",
+   "role": "ouverture",
+   "description": "Fiche d'événement passé : tête sombre avec affiche",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-grand-buffet-passee": {
+   "titre": "Cet événement a eu lieu",
+   "role": "agenda",
+   "description": "Cet événement a eu lieu : date et lien vers l'agenda",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-grand-buffet-programme": {
+   "titre": "Le programme",
+   "role": "étapes",
+   "description": "Le programme en frise tracée avec photo",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-grand-buffet-photos": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Photos de l'événement en galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "agenda-grand-buffet-visionneuse": {
+   "titre": "Agrandir la photo",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos, clavier et flèches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "agenda-saint-sylvestre-debut": {
+   "titre": "Saint-Sylvestre",
+   "role": "ouverture",
+   "description": "Saint-Sylvestre : fiche d'événement à venir, tête sombre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-saint-sylvestre-minuit": {
+   "titre": "Avant minuit, le 31 décembre",
+   "role": "agenda",
+   "description": "Avant minuit, le 31 décembre : horloge et compte à rebours",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-saint-sylvestre-menu-soiree": {
+   "titre": "Le menu",
+   "role": "tarifs",
+   "description": "Le menu en cinq temps, tarifs avec et sans accord mets et vins, réservation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-soiree-libanaise-debut": {
+   "titre": "Soirée libanaise",
+   "role": "ouverture",
+   "description": "Soirée libanaise : tête avec affiche de la soirée passée",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-soiree-libanaise-passee": {
+   "titre": "Cette soirée a eu lieu",
+   "role": "agenda",
+   "description": "Cette soirée a eu lieu : date et lien vers l'agenda",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-soiree-libanaise-programme": {
+   "titre": "Le programme",
+   "role": "tarifs",
+   "description": "Le programme et le tarif de la soirée avec l'affiche",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carte-cadeau-debut": {
+   "titre": "Offrez un moment aux Jardins",
+   "role": "ouverture",
+   "description": "Offrez un moment aux Jardins : tête de page courte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carte-cadeau-composer": {
+   "titre": "Composer votre carte",
+   "role": "calculateur",
+   "description": "Composer votre carte cadeau : montant, quantité et message, la carte se compose en direct avec le total (simulé)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "calculateur",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "confidentialite-debut": {
+   "titre": "Confidentialité",
+   "role": "texte-legal",
+   "description": "Confidentialité : tête avec sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-texte-long": {
+   "titre": "Responsable",
+   "role": "texte-legal",
+   "description": "Données des formulaires, usages, conservation, droits (à compléter)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fetes-privees-debut": {
+   "titre": "Un instant magique avec vos proches",
+   "role": "ouverture",
+   "description": "Un instant magique avec vos proches : grande photo de table dressée",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fetes-privees-fetes": {
+   "titre": "Votre fête",
+   "role": "offre",
+   "description": "Votre fête : baptême, anniversaire, pot de départ en cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fetes-privees-saisons": {
+   "titre": "Deux saisons, deux ambiances",
+   "role": "offre",
+   "description": "Deux saisons, deux ambiances pour les fêtes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fetes-privees-photos": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Buffets en images en galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "fetes-privees-demande": {
+   "titre": "Préparer votre fête",
+   "role": "contact",
+   "description": "Préparer votre fête : demande simulée en quatre étapes avec récapitulatif",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fetes-privees-visionneuse": {
+   "titre": "Agrandir la photo",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos des fêtes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "infos-pratiques-debut": {
+   "titre": "Tout pour venir aux Jardins",
+   "role": "ouverture",
+   "description": "Tout pour venir aux Jardins : tête de page courte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-horaires": {
+   "titre": "Horaires",
+   "role": "faq",
+   "description": "Horaires du restaurant, des journées festives, du bar et de la piscine",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-lieu": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Le lieu en deux grandes photos (piscine et paillote)",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-acces": {
+   "titre": "En pleine nature, à 15 km de Metz",
+   "role": "carte",
+   "description": "En pleine nature à 15 km de Metz : adresse, plan des routes, itinéraire",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-faq": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Questions fréquentes en accordéon (réserver, chiens, piscine, accessibilité)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-debut": {
+   "titre": "La carte",
+   "role": "ouverture",
+   "description": "La carte : gros plan de plat, prix de 9 à 214 €",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-sous-nav": {
+   "titre": "Rubriques de la carte",
+   "role": "menu",
+   "description": "Sous-navigation collante des rubriques de la carte",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-la-carte": {
+   "titre": "La carte",
+   "role": "tarifs",
+   "description": "Toute la carte en volets par rubrique (entrées, plats, à partager, desserts) avec prix et photo collante",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-ardoise": {
+   "titre": "Les suggestions du chef",
+   "role": "produits",
+   "description": "Les suggestions du chef sur une ardoise qui s'écrit à la craie",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ardoise-a-la-craie"
+   ]
+  },
+  "la-carte-allergenes": {
+   "titre": "Allergènes",
+   "role": "faq",
+   "description": "Allergènes : liste à compléter, mention des allergènes sur demande",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-debut": {
+   "titre": "Le plus beau jour, dans un cadre idyllique",
+   "role": "ouverture",
+   "description": "Le plus beau jour, dans un cadre idyllique : photo de mariés plein cadre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-reperes": {
+   "titre": "Le lieu en quelques repères",
+   "role": "chiffres",
+   "description": "Le lieu en quelques repères : capacités en pastilles à confirmer",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-receptions": {
+   "titre": "Toutes vos réceptions",
+   "role": "offre",
+   "description": "Toutes vos réceptions : quatre types en photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-photos": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Galerie des mariages épinglée à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "mariages-avis": {
+   "titre": "Ce qu’en disent les mariés",
+   "role": "témoignages",
+   "description": "Ce qu'en disent les mariés : avis Mariages.net sur une salle dressée",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-demande": {
+   "titre": "Préparer votre réception",
+   "role": "contact",
+   "description": "Préparer votre réception : demande simulée en quatre étapes avec récapitulatif",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mariages-visionneuse": {
+   "titre": "Agrandir la photo",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos des mariages",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "reserver-debut": {
+   "titre": "Une table vous attend",
+   "role": "ouverture",
+   "description": "Une table vous attend : tête de page sur la salle",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reserver-formulaire": {
+   "titre": "Votre demande",
+   "role": "contact",
+   "description": "Réservation simulée : table, journée festive, soirée de l'agenda, réception ou question ; préremplie depuis les autres pages",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "restaurant-debut": {
+   "titre": "Au coin du feu, la cuisine du chef",
+   "role": "ouverture",
+   "description": "Au coin du feu, la cuisine du chef : salle chaleureuse plein cadre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "restaurant-cheminee": {
+   "titre": "Au creux de la cheminée",
+   "role": "manifeste",
+   "description": "Au creux de la cheminée : photo et braises qui montent (canvas)",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "restaurant-photos": {
+   "titre": "",
+   "role": "galerie",
+   "description": "La salle en images, galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "restaurant-chef": {
+   "titre": "La carte de Régis Clauss",
+   "role": "équipe",
+   "description": "La carte de Régis Clauss : portrait et liens",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "restaurant-savoir": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Bon à savoir : réservations, menu enfant, horaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "restaurant-visionneuse": {
+   "titre": "Agrandir la photo",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos du restaurant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "terrasse-piscine-debut": {
+   "titre": "Au bord de l’eau, sous les palmiers",
+   "role": "ouverture",
+   "description": "Au bord de l'eau, sous les palmiers : palmes qui se balancent au défilement",
+   "animations": [
+    "parallaxe",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-bandeau-saison": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau qui annonce la reprise de la saison d'été",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-terrasse": {
+   "titre": "La terrasse",
+   "role": "manifeste",
+   "description": "La terrasse : texte, repères à confirmer et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-journee": {
+   "titre": "Une journée festive",
+   "role": "offre",
+   "description": "Une journée festive : programme sur fond d'eau sombre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-regles": {
+   "titre": "Ce qu’il faut savoir",
+   "role": "faq",
+   "description": "Ce qu'il faut savoir : règles de la piscine",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-weekend": {
+   "titre": "Le week-end",
+   "role": "offre",
+   "description": "Le week-end à la piscine : formules en photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-pool-parties": {
+   "titre": "Les pool parties",
+   "role": "galerie",
+   "description": "Les pool parties : vidéo avec repli image",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-photos": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Galerie de la terrasse épinglée à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "terrasse-piscine-visite-360": {
+   "titre": "Visite 360°",
+   "role": "outil-interactif",
+   "description": "Visite 360° de la terrasse en WebGL, à faire tourner à la souris ou au doigt",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "visite-guidee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "terrasse-piscine-visionneuse": {
+   "titre": "Agrandir la photo",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos de la terrasse",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  }
+ }
+}

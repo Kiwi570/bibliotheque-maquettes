@@ -1,0 +1,794 @@
+{
+ "maquette": {
+  "client": "média local, indépendant et associatif du Pays de Châteaubriant (actualité, chantiers, vidéos, podcasts)",
+  "activite": [
+   "média",
+   "association"
+  ],
+  "concept": [
+   "journal"
+  ],
+  "ambiance": [
+   "clair",
+   "énergique",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "--ivoire",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--ivoire-2"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Inter Tight",
+   "mono": "Plex Mono"
+  },
+  "points_forts": [
+   "direction « La Une vivante » : manchette de quotidien, une qui s'imprime, bandes d'impression du voile entre les pages",
+   "ruban « Dernières infos » qui défile sous l'en-tête sur toutes les pages",
+   "radar du Pays de Châteaubriant : les communes en cercles, chaque commune filtre le fil",
+   "fil d'actualité filtrable par rubrique, commune et format, recherche plein écran",
+   "podcasts avec forme d'onde dessinée, état des chantiers en barres, tampon des dix ans"
+  ],
+  "reserves": [
+   "v1 : 13 rubriques et 24 brèves prévues en v2",
+   "beaucoup d'images générées pour les têtes de page",
+   "mentions, sources de financement et directeur de publication à confirmer"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "marquee",
+   "section-fixée",
+   "galerie-horizontale",
+   "trace-svg",
+   "compteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "filtres",
+   "recherche",
+   "lecteur-audio",
+   "lecteur-vidéo",
+   "carte-interactive",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "une",
+  "grille": {
+   "objet": "radar des communes qui filtre le fil d'actualité",
+   "fil": "ruban « Dernières infos » sous l'en-tête et manchette de journal"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en bandes d'impression qui passent comme sous une rotative, logo au centre",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-rotative"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : le logo se pose au centre et une ligne se tire comme un filet de journal",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, rubriques, recherche, bouton rouge Alertez-nous, date et pays sous la manchette",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recherche": {
+   "titre": "Rechercher",
+   "role": "outil-interactif",
+   "description": "Recherche plein écran dans les articles, ouverte depuis l'en-tête",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "menu": {
+   "titre": "Rubriques",
+   "role": "menu",
+   "description": "Menu plein écran des rubriques et des pages, alerte en rouge",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ruban-alerte": {
+   "titre": "Dernières infos",
+   "role": "decor",
+   "description": "Ruban noir « Dernières infos » qui défile sous l'en-tête, avec pause, sur toutes les pages",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ruban-dernieres-infos"
+   ]
+  },
+  "une": {
+   "titre": "Castel Actu",
+   "role": "ouverture",
+   "description": "La Une : manchette « Castel Actu » en très grand, article à la une avec photo (effet d'encre WebGL), date et pays",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "une-de-journal"
+   ]
+  },
+  "fil": {
+   "titre": "Toute l’actualité",
+   "role": "articles",
+   "description": "Toute l'actualité : fil filtrable par rubrique, commune et format, avec recherche, cartes photo",
+   "animations": [
+    "apparition-au-défilement",
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "pays": {
+   "titre": "Le Pays de Châteaubriant",
+   "role": "carte",
+   "description": "Le Pays de Châteaubriant : radar des onze communes, chaque commune allume ses infos et filtre le fil",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive",
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "radar-des-communes"
+   ]
+  },
+  "plus-lus": {
+   "titre": "Ce que vous avez le plus lu",
+   "role": "articles",
+   "description": "Ce que vous avez le plus lu : trois coupures classées avec le nombre de vues qui compte",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecoute": {
+   "titre": "En vidéo et en podcast",
+   "role": "outil-interactif",
+   "description": "En vidéo et en podcast : lecteurs audio avec forme d'onde dessinée (canvas) et liste des épisodes",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "forme-d-onde"
+   ]
+  },
+  "chantiers": {
+   "titre": "Ça bouge en ville",
+   "role": "galerie",
+   "description": "Ça bouge en ville : chantiers en galerie épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alertez": {
+   "titre": "Vous avez vu quelque chose ?",
+   "role": "appel",
+   "description": "Vous avez vu quelque chose ? : appel à envoyer une info en trois étapes, rue de nuit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "dix-ans": {
+   "titre": "Dix ans d’info locale",
+   "role": "chiffres",
+   "description": "Dix ans d'info locale : tampon qui tourne, compte à rebours, 1,7 million de vues par mois",
+   "animations": [
+    "compteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page noir : logo, promesse, contact, rubriques, confort de lecture",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "404-debut": {
+   "titre": "Erratum : cette page n’existe pas",
+   "role": "page-404",
+   "description": "« Erratum : cette page n'existe pas » avec une feuille de journal froissée",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alertez-nous-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "alertez-nous-debut": {
+   "titre": "Alertez-nous",
+   "role": "ouverture",
+   "description": "Alertez-nous : rue de nuit et adresses de la rédaction, image sous effet d'encre",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alertez-nous-formulaire": {
+   "titre": "Votre info, pas à pas",
+   "role": "contact",
+   "description": "Votre info, pas à pas : envoi simulé en quatre étapes (type d'info, détails, fichiers, contact) avec récapitulatif",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alertez-nous-contact": {
+   "titre": "Écrire ou appeler la rédaction",
+   "role": "contact",
+   "description": "Écrire ou appeler la rédaction : coordonnées et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "articles-central-8-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "articles-central-8-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "articles-central-8-debut": {
+   "titre": "Central 8, le nouveau complexe de loisirs de l’avenue Jean-Moulin",
+   "role": "articles",
+   "description": "Modèle d'article : titre en très grand, chapô, photo, partage et lien vers la vidéo Facebook",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "articles-central-8-essentiel": {
+   "titre": "L’essentiel",
+   "role": "articles",
+   "description": "L'essentiel : fiche de l'info (adresse, activités, ouverture) et nombre de vues",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "articles-central-8-lieu": {
+   "titre": "Sur le plan",
+   "role": "carte",
+   "description": "Sur le plan : le radar des communes avec le lieu de l'article",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "articles-central-8-aussi": {
+   "titre": "Dans la même veine",
+   "role": "articles",
+   "description": "Dans la même veine : trois brèves liées et appel à envoyer une info",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête avec sommaire en pastilles",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "Éditeur",
+   "role": "texte-legal",
+   "description": "Éditeur, directeur de la publication, hébergeur, droit de réponse, crédits",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "qui-sommes-nous-debut": {
+   "titre": "Qui sommes-nous ?",
+   "role": "ouverture",
+   "description": "Qui sommes-nous ? : bureau la nuit, effet d'encre, actions",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-histoire": {
+   "titre": "De la page Facebook à l’association",
+   "role": "étapes",
+   "description": "De la page Facebook à l'association : frise des jalons qui se trace",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-independant": {
+   "titre": "Informer avec sérieux… et avec cœur",
+   "role": "manifeste",
+   "description": "Informer avec sérieux et avec cœur : valeurs et photo d'encre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-fondateur": {
+   "titre": "Le fondateur",
+   "role": "équipe",
+   "description": "Le fondateur : monogramme et citation",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-transparence": {
+   "titre": "Qui publie Castel Actu",
+   "role": "preuves",
+   "description": "Qui publie Castel Actu : fiche de l'association et audience",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-soutenir": {
+   "titre": "Faire grandir l’info locale",
+   "role": "appel",
+   "description": "Faire grandir l'info locale : adhérer, donner, partager, avec tampon des dix ans",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rubriques-travaux-et-projets-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "rubriques-travaux-et-projets-debut": {
+   "titre": "Travaux et projets",
+   "role": "ouverture",
+   "description": "Modèle de rubrique : chantier au lever du jour, nombre de sujets",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rubriques-travaux-et-projets-liste": {
+   "titre": "Tous les chantiers et projets",
+   "role": "articles",
+   "description": "Tous les chantiers et projets : liste filtrable par état et par commune",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rubriques-travaux-et-projets-etat": {
+   "titre": "L’état des chantiers",
+   "role": "chiffres",
+   "description": "L'état des chantiers : barres par état qui se remplissent au défilement",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rubriques-travaux-et-projets-plan": {
+   "titre": "Où ça se passe",
+   "role": "carte",
+   "description": "Où ça se passe : radar des communes de la rubrique",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rubriques-travaux-et-projets-autres": {
+   "titre": "Toute l’actualité du Pays",
+   "role": "articles",
+   "description": "Toute l'actualité du Pays : les autres rubriques en vignettes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "videos-et-podcasts-ruban-alerte": {
+   "titre": "Dernières infos",
+   "ignorer": "même ruban que l'accueil"
+  },
+  "videos-et-podcasts-debut": {
+   "titre": "Vidéos et podcasts",
+   "role": "ouverture",
+   "description": "Vidéos et podcasts : tête de page avec effet d'encre",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "videos-et-podcasts-direct": {
+   "titre": "En direct du Pays",
+   "role": "articles",
+   "description": "En direct du Pays : vidéo à la une",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "videos-et-podcasts-podcasts": {
+   "titre": "En bref, en une minute",
+   "role": "outil-interactif",
+   "description": "En bref en une minute : grands lecteurs audio avec forme d'onde",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "videos-et-podcasts-videos": {
+   "titre": "Les vidéos en bref",
+   "role": "galerie",
+   "description": "Les vidéos en bref : grille de vignettes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "videos-et-podcasts-castel-fm": {
+   "titre": "Castel FM",
+   "role": "articles",
+   "description": "Castel FM : la radio associée avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

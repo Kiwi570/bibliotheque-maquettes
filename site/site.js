@@ -1,4 +1,4 @@
-// Bibliothèque des maquettes : lit /index.json et affiche sections (notées 4 et 5) et modules, filtrables.
+// Bibliothèque des maquettes : lit /site/index-site.json (repli : /index.json) et affiche sections (notées 4 et 5) et modules, filtrables.
 // Aucun serveur : tout est calculé dans la page. L'état des filtres vit dans l'adresse (partageable).
 const $ = s => document.querySelector(s);
 const sansAccent = t => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -168,10 +168,11 @@ new ResizeObserver(mesurer).observe($('.tete'));
 
 // ---------- Démarrage ----------
 try {
-  const r = await fetch('/index.json', { cache: 'no-cache' });
+  let r = await fetch('/site/index-site.json', { cache: 'no-cache' });
+  if (!r.ok) r = await fetch('/index.json', { cache: 'no-cache' });
   donnees = preparer(await r.json());
   const t = donnees.ix.totaux;
-  $('#totaux').textContent = `${t.maquettes} maquettes, ${t.sections_indexees} sections notées 4 ou 5 (sur ${t.sections_indexees + t.sections_notees_3_ou_moins}), ${t.modules} modules testés. Index du ${new Date(donnees.ix.version).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}.`;
+  $('#totaux').textContent = `${t.maquettes} maquettes, ${t.sections_notees_4_ou_5 ?? t.sections_indexees} sections notées 4 ou 5 (sur ${(t.sections_notees_4_ou_5 ?? t.sections_indexees) + t.sections_notees_3_ou_moins}), ${t.modules} modules testés. Index du ${new Date(donnees.ix.version).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}.`;
   lireEtat(); choisirVue(vue);
 } catch (err) {
   $('#totaux').textContent = 'Impossible de lire index.json.'; console.warn(err);

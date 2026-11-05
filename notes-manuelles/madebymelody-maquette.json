@@ -1,0 +1,798 @@
+{
+ "maquette": {
+  "client": "créatrice de mode à Nyon : pièces uniques numérotées faites main et atelier sur mesure",
+  "activite": [
+   "commerce",
+   "artisanat"
+  ],
+  "concept": [
+   "vitrine",
+   "scène"
+  ],
+  "ambiance": [
+   "sombre",
+   "doux",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--noir",
+   "texte": "--creme",
+   "accent": "--rose",
+   "secondaire": "--cerise"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "DM Mono",
+   "mono": null
+  },
+  "points_forts": [
+   "vinyle WebGL dont l'étiquette est une vraie photo, à faire tourner à la main avec élan, scratché au défilement, qui passe en face B",
+   "sillon gravé dans la marge lu par une pointe : chaque section est une plage numérotée, sur toutes les pages",
+   "bac de pochettes à feuilleter et boutique de 29 pièces filtrables avec fiche en pochette double et panier simulé partagé entre onglets",
+   "titres qui basculent du sage au sauvage, titre brodé au fil cerise, prénom brodé sur une étiquette tissée",
+   "une ouverture propre à chaque page (disque, pochette, voile de tulle, bac, étiquette de 45 tours)"
+  ],
+  "reserves": [
+   "mentions légales, TVA, numéros et mesures des pièces à fournir",
+   "pas de vrai portrait de Melody",
+   "en-tête X-Frame-Options encore présent : la maquette ne s'affiche pas dans Wix",
+   "beaucoup d'images générées dans l'univers et le sur-mesure"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "transition-de-page",
+   "fil-conducteur",
+   "section-fixée",
+   "progression-fixée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "marquee",
+   "reactif-vitesse",
+   "trace-svg",
+   "canvas-2d",
+   "flip"
+  ],
+  "interactions": [
+   "panier-simule",
+   "filtres",
+   "formulaire-par-étapes",
+   "saisie-personnalisee",
+   "configurateur",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "disque",
+  "grille": {
+   "objet": "vinyle à faire tourner à la main (élan, scratch au défilement, face A et face B)",
+   "fil": "sillon gravé dans la marge, lu par une pointe : chaque section est une plage"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en iris centré sur un petit disque : il se referme sur le clic, affiche la page d'arrivée et se rouvre sur son objet d'ouverture",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "transition-iris",
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro platine : le disque se pose, tourne puis glisse jusqu'au vinyle de l'accueil (ou à l'objet d'ouverture de la page)",
+   "animations": [
+    "ouverture-orchestrée",
+    "chargement-orchestré"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "intro-vers-l-objet",
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête noir fin : logo, quatre liens, bouton Rendez-vous rose, panier sur la boutique",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran numéroté comme une face de disque",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "sillon": {
+   "titre": "",
+   "role": "decor",
+   "description": "Sillon gravé dans la marge droite sur toute la hauteur de la page, lu par une pointe au défilement ; chaque section devient une plage numérotée",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "sillon-lu-au-defilement"
+   ],
+   "sans_capture": true
+  },
+  "disque": {
+   "titre": "Sage et sauvage",
+   "role": "ouverture",
+   "description": "« Sage et sauvage » : vinyle WebGL dont l'étiquette est une vraie photo, à faire tourner à la main (élan, flou de vitesse, lumière qui suit la souris), scratché au défilement, qui passe en face B",
+   "animations": [
+    "webgl-shader",
+    "reactif-vitesse",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "objet-a-faire-tourner",
+   "pieges": [],
+   "particularites": [
+    "disque-a-tourner"
+   ]
+  },
+  "manifeste": {
+   "titre": "Des pièces uniques parce que vous êtes uniques.",
+   "role": "manifeste",
+   "description": "Grand titre en trois lignes et collage de coupures (photos, croquis, écriture) qui glisse au défilement",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tracklist": {
+   "titre": "La tracklist",
+   "role": "produits",
+   "description": "La tracklist : 29 pièces comme des pistes numérotées (nom, type, taille, prix) ; la photo de la pièce survolée suit dans une colonne collante",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bac": {
+   "titre": "Dans le bac",
+   "role": "galerie",
+   "description": "Dans le bac : section épinglée où l'on feuillette les pochettes une à une (compteur 01 / 08), la pièce sort de sa pochette",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "flip"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "bac-a-feuilleter",
+   "pieges": []
+  },
+  "bascule": {
+   "titre": "",
+   "role": "manifeste",
+   "description": "Bascule épinglée face A / face B : le rose poudré, le tulle et la dentelle laissent place au noir et au rouge cerise, avec un curseur de face",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "unique": {
+   "titre": "",
+   "role": "preuves",
+   "description": "« 1/1 » : tampon de pièce unique et trois engagements (faite main, à Nyon, tissus en grande majorité naturels)",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "designer": {
+   "titre": "La designer",
+   "role": "équipe",
+   "description": "La designer : photo de platine, parcours (formation, stage John Galliano), lien vers le parcours",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure": {
+   "titre": "Pour un événement ou votre quotidien",
+   "role": "appel",
+   "description": "Accroche de l'atelier sur mesure sur fond rose, robe bustier rouge, lien vers la page",
+   "animations": [
+    "webgl-shader",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier": {
+   "titre": "Venez parler de votre pièce",
+   "role": "appel",
+   "description": "Ruban des noms de pièces qui défile au-dessus d'une photo d'atelier, rendez-vous et itinéraire",
+   "animations": [
+    "marquee",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "diamant": {
+   "titre": "",
+   "role": "decor",
+   "description": "Pointe de lecture fixe qui suit le sillon de la marge",
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "pied": {
+   "titre": "Ne manquez pas les nouvelles collections",
+   "role": "pied-de-page",
+   "description": "Pied de page avec petit disque, lettre d'information, sommaire et réduire les animations",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-sillon": {
+   "titre": "",
+   "ignorer": "même sillon de marge que l'accueil"
+  },
+  "404-debut": {
+   "titre": "Le diamant a sauté",
+   "role": "page-404",
+   "description": "« Le diamant a sauté » sur une platine dans la pénombre, retour à l'accueil ou à la boutique",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-sillon": {
+   "titre": "",
+   "ignorer": "même sillon de marge que l'accueil"
+  },
+  "boutique-debut": {
+   "titre": "Le bac à pièces uniques",
+   "role": "ouverture",
+   "description": "« Le bac » : ouverture compacte sur kraft, les pochettes sortent du bac, lecture aléatoire",
+   "animations": [
+    "ouverture-orchestrée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-catalogue": {
+   "titre": "MADLY",
+   "role": "produits",
+   "description": "29 pièces filtrables par type et par face (sage, sauvage), ajout au panier depuis la grille",
+   "animations": [
+    "flip",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-infos": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Bon à savoir : pièces uniques, livraison, retour et paiement à compléter",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-fiches": {
+   "titre": "MADLY",
+   "role": "produits",
+   "description": "Contenu des fiches des 29 pièces, lu par la fiche en pochette",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "boutique-fiche": {
+   "titre": "",
+   "role": "produits",
+   "description": "Fiche en pochette double qui s'ouvre sur la pièce, avec son propre lien (?piece=…), photos et ajout au panier",
+   "animations": [
+    "flip",
+    "masque"
+   ],
+   "interactions": [
+    "galerie-cliquable",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "boutique-panier": {
+   "titre": "Votre panier",
+   "role": "outil-interactif",
+   "description": "Tiroir du panier simulé, identique dans tous les onglets ; la pièce s'envole vers le panier à l'ajout",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "envol-vers-le-panier",
+   "pieges": [],
+   "sans_capture": true
+  },
+  "contact-sillon": {
+   "titre": "",
+   "ignorer": "même sillon de marge que l'accueil"
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre projet",
+   "role": "ouverture",
+   "description": "« L'étiquette » : fond cerise, numéro de téléphone en très grand sur une étiquette de 45 tours qui tourne",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-message": {
+   "titre": "Une question, une envie ?",
+   "role": "contact",
+   "description": "Formulaire simulé (prénom, nom, e-mail, sujet, message) à côté des canaux et d'une photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "Venir à l'atelier",
+   "role": "carte",
+   "description": "Venir à l'atelier : plan schématique de Nyon au bord du Léman, itinéraire, Instagram",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-sillon": {
+   "titre": "",
+   "ignorer": "même sillon de marge que l'accueil"
+  },
+  "sur-mesure-debut": {
+   "titre": "Un espace pour toutes vos idées",
+   "role": "ouverture",
+   "description": "« Le voile » : très grand titre brodé au fil cerise par une aiguille, tulle ondulant (WebGL) qui se lève sur la robe",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "titre-cousu",
+   "pieges": [],
+   "particularites": [
+    "titre-cousu"
+   ]
+  },
+  "sur-mesure-atelier": {
+   "titre": "Je vous conseille",
+   "role": "services",
+   "description": "Je vous conseille : photo d'une veste et texte d'accompagnement",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-mariees": {
+   "titre": "Robes de mariée",
+   "role": "services",
+   "description": "Robes de mariée : texte, matières et confection, collage de tissus",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-deroule": {
+   "titre": "Votre pièce, en quatre temps",
+   "role": "étapes",
+   "description": "Set-list en quatre temps (rencontre, forme et matière, confection, à votre rythme) avec une photo de pièce",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-enfants": {
+   "titre": "Les enfants",
+   "role": "services",
+   "description": "Les enfants : collage de croquis et de photos sur fond rose",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-costumiere": {
+   "titre": "Sur scène et à l'écran",
+   "role": "services",
+   "description": "Sur scène et à l'écran : trois cartes (costumière, théâtre et cinéma, recherche de style) sur une penderie",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-etiquette": {
+   "titre": "Brodez votre prénom",
+   "role": "outil-interactif",
+   "description": "Brodez votre prénom : le prénom tapé se brode en direct sur une étiquette tissée (canvas)",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "broderie-du-prenom"
+   ]
+  },
+  "sur-mesure-rendez-vous": {
+   "titre": "Racontez-moi votre pièce",
+   "role": "contact",
+   "description": "Demande de rendez-vous simulée en trois étapes (projet, date, coordonnées)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-sillon": {
+   "titre": "",
+   "ignorer": "même sillon de marge que l'accueil"
+  },
+  "univers-debut": {
+   "titre": "Du rose au noir",
+   "role": "ouverture",
+   "description": "« La pochette » : fond crème, collage et disque qui sort de la pochette, titre « Du rose au noir »",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-univers": {
+   "titre": "Un univers",
+   "role": "manifeste",
+   "description": "Un univers : inspirations (Gainsbourg, les Doors, Yves Simon) et triptyque de matières",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-melangeur": {
+   "titre": "Trois faders, un univers",
+   "role": "outil-interactif",
+   "description": "Mélangeur à trois faders (dentelle ou insectes, tulle ou paons, silencieux ou revendicateur) : chaque fader fond une photo dans l'autre",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "table-de-mixage"
+   ]
+  },
+  "univers-attitude": {
+   "titre": "Une attitude",
+   "role": "manifeste",
+   "description": "Une attitude : portrait et texte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-concept": {
+   "titre": "Un concept",
+   "role": "manifeste",
+   "description": "Un concept : tissus naturels, texte sur fond rose et tulle brodé",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-designer": {
+   "titre": "La designer",
+   "role": "équipe",
+   "description": "La designer : formation, stage, influences musicales, photo de platine",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers-fin": {
+   "titre": "Trouver sa pièce, ou créer la sienne",
+   "role": "appel",
+   "description": "Trouver sa pièce ou créer la sienne : fond cerise, boutique ou atelier",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
