@@ -8,13 +8,16 @@
 //                 "palette": {"fond": "--ink", "texte": "--foam", "accent": "--sun", "secondaire": "--blue"},   // noms de variables :root ou #hex
 //                 "polices": {"titres": "...", "texte": "...", "mono": "..."},
 //                 "points_forts": [...], "reserves": [...], "animations": [...], "interactions": [...],
-//                 "change_depuis_audit": "texte ou null", "accueil": "<id du bloc d'ouverture>" },
+//                 "change_depuis_audit": "texte ou null", "accueil": "<id du bloc d'ouverture>",
+//                 "grille": {"objet": "objet que le visiteur manipule, en quelques mots", "fil": "fil conducteur, en quelques mots"} },
+//   (la forme du voile, l'intro vers l'objet et les marques data-grille sont relevées par outils/grille.mjs ;
+//    le journal du projet, _audit/journal.json, est copié dans journaux/ par le même outil)
 //   "sections": { "<id inventaire>": { "titre", "role", "description", "animations", "interactions", "telephone",
 //                 "note_qualite", "reutilisable", "module", "modules"?: ["autres modules tirés de la section"], "pieges", "dependances"?, "particularites"?: ["mécanique rare, texte libre"], "code"?: {...}, "ignorer"?: "raison" } }
 // }
 import fs from 'node:fs';
 import path from 'node:path';
-import { RACINE, AUDIT, lireJson, ecrireJson } from './commun.mjs';
+import { RACINE, AUDIT, lireJson, ecrireJson, resumeJournal } from './commun.mjs';
 
 const DEP_GLOBALES = { gsap: 'gsap', scrolltrigger: 'scrolltrigger', splittext: 'splittext', flip: 'flip', lenis: 'lenis', ogl: 'ogl', three: 'three' };
 
@@ -24,6 +27,8 @@ for (const depot of process.argv.slice(2)) {
   const notes = lireJson(path.join(RACINE, 'notes-manuelles', `${depot}.json`));
   const audit = lireJson(path.join(AUDIT, depot, 'notes.json'));
   const nm = notes.maquette;
+  const grilleAuto = lireJson(path.join(RACINE, 'inventaire', `${depot}-grille.json`), null);
+  const journal = lireJson(path.join(RACINE, 'journaux', `${depot}.json`), null);
   const couleur = v => !v ? null : v.startsWith('--') ? (idt.variables_couleur?.[v] ?? null) : v;
 
   // Dépendances réellement chargées (toutes pages confondues).
@@ -85,6 +90,15 @@ for (const depot of process.argv.slice(2)) {
     points_forts: nm.points_forts, reserves: nm.reserves,
     animations: nm.animations, interactions: nm.interactions, dependances: nm.dependances || depsMaquette,
     ...(nm.particularites?.length ? { particularites: nm.particularites } : {}),
+    // Grille wouahou : ce que le visiteur manipule, forme du voile, fil (pour ne pas redonner les mêmes au client suivant).
+    ...(nm.grille?.objet || nm.grille?.fil || grilleAuto?.voile || grilleAuto?.intro_vers_objet || Object.values(grilleAuto?.marques || {}).some((l) => l.length) ? { grille: {
+      voile: grilleAuto?.voile ?? nm.grille?.voile ?? null,
+      objet: nm.grille?.objet || null,
+      fil: nm.grille?.fil || null,
+      intro_vers_objet: grilleAuto ? grilleAuto.intro_vers_objet : null,
+      marques: grilleAuto ? Object.entries(grilleAuto.marques).filter(([, l]) => l.length).map(([k]) => k) : [],
+    } } : {}),
+    ...(journal ? { journal: { fichier: `journaux/${depot}.json`, versions: resumeJournal(journal).map(({ etapes, ...v }) => v) } } : {}),
     sections: ids,
     captures: { 'accueil-ordinateur': accueil?.medias.capture, 'accueil-telephone': accueil?.medias.capture_m390 },
     audit: `https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/${depot}.md`,

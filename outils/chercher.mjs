@@ -3,6 +3,8 @@
 // Filtres : --activite --concept --ambiance (sur la maquette d'origine, ou convient_a/ambiances pour un module),
 //           --role --animation --interaction --dependance --telephone, --module (seulement les sections extraites en module),
 //           --sans <dependance> (exclut ce qui dépend de gsap, ogl…), --note-min N (1-5).
+// node outils/chercher.mjs --dernieres [N] : les N dernières maquettes (5 par défaut) avec la forme du voile, l'objet manipulé
+//           et le fil conducteur, pour ne pas redonner les mêmes au client suivant (grille wouahou).
 // Les filtres d'une même famille répétés valent « l'un ou l'autre » ; les mots libres cherchent dans titre, description, pièges et particularités,
 // sans tenir compte des accents ni des majuscules. Un filtre de maquette (activité, concept, ambiance) départage le classement
 // au lieu d'exclure : une section d'une autre activité reste proposée, plus bas.
@@ -12,7 +14,7 @@ import { RACINE, TAXO, lireJson } from './commun.mjs';
 
 const args = process.argv.slice(2);
 const f = { activite: [], concept: [], ambiance: [], role: [], animation: [], interaction: [], dependance: [], telephone: [], sans: [] };
-const mots = []; let max = 15, json = false, seulModules = false, noteMin = 1, strict = false;
+const mots = []; let max = 15, json = false, seulModules = false, noteMin = 1, strict = false, dernieres = 0;
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
   if (a === '--json') json = true;
@@ -20,6 +22,7 @@ for (let i = 0; i < args.length; i++) {
   else if (a === '--strict') strict = true;
   else if (a === '--max') max = +args[++i];
   else if (a === '--note-min') noteMin = +args[++i];
+  else if (a === '--dernieres' || a === '--derniere') dernieres = /^\d+$/.test(args[i + 1] || '') ? +args[++i] : 5;
   else if (a.startsWith('--')) {
     const k = a.slice(2).replace(/s$/, '').replace('interactions', 'interaction');
     if (!(k in f)) { console.error(`filtre inconnu : ${a}`); process.exit(1); }
@@ -35,6 +38,15 @@ const inter = (a, b) => !b.length || a.some(x => b.includes(x));
 const liste = d => fs.existsSync(d) ? fs.readdirSync(d) : [];
 
 const maquettes = Object.fromEntries(liste(path.join(RACINE, 'maquettes')).filter(x => x.endsWith('.json')).map(x => { const m = lireJson(path.join(RACINE, 'maquettes', x)); return [m.depot, m]; }));
+// Dernières maquettes : voile, objet et fil déjà donnés.
+if (dernieres) {
+  const l = Object.values(maquettes).sort((a, b) => (b.date_commit || '').localeCompare(a.date_commit || '')).slice(0, dernieres)
+    .map(m => ({ depot: m.depot, date: m.date_commit, client: m.client, activite: m.activite, voile: m.grille?.voile ?? null, objet: m.grille?.objet ?? null, fil: m.grille?.fil ?? null, url: m.url }));
+  if (json) { console.log(JSON.stringify(l, null, 1)); process.exit(0); }
+  console.log(`Les ${l.length} dernières maquettes (voile, objet, fil) :\n`);
+  for (const m of l) console.log(`${m.date}  ${m.depot}  · ${m.activite.join(', ')}\n        voile ${m.voile || 'non relevé'} · objet ${m.objet || 'non noté'} · fil ${m.fil || 'non noté'}\n`);
+  process.exit(0);
+}
 const res = [];
 function score(base, affinite, texte) {
   let s = base;

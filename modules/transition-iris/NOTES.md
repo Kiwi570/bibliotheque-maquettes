@@ -32,7 +32,7 @@ Origine : madebymelody-maquette (v2), voile en iris du socle de la skill (`asset
 - Repli automatique (pas de `clip-path` circle ou pas de `mask`) : fondu simple, jamais de page bloquée.
 - Le voile garde le défilement bloqué et la couleur de `html` tant qu'il couvre (bande de la barre de défilement sous Windows).
 - Retour arrière depuis le cache : `pageshow` annule tout, la page revient découverte.
-- Dans un projet du socle de la skill, qui a déjà son voile : ne pas ajouter ce module, mais reprendre sa logique dans `couvrir` et `découvrir` du voile, activée par `data-forme="iris"` sur `[data-voile]` (exemple complet : madebymelody-maquette, `assets/js/socle/iris.js`, branché dans `transitions.js` et `ouverture.js`).
+- **Projet bâti sur le socle de la skill (v10.2 et suivantes) : ne pas utiliser ce module.** Le voile du socle a déjà cette forme : `"formeVoile": "iris"` dans `donnees/site.json`, chaque page marque son objet d'ouverture `data-iris-centre`, et rien n'est à recopier à la main (`assets/js/socle/voile.js`). Ce module sert aux pages hors socle (démonstrations, autres projets).
 
 ## Variantes
 

@@ -30,6 +30,7 @@ Origine : `beat-haechler-maquette/veil` (vague SVG qui monte entre deux pages).
 
 ## Pièges
 
+- **Projet bâti sur le socle de la skill (v10.2 et suivantes) : ne pas utiliser ce module.** Le voile du socle a déjà cette forme : `"formeVoile": "vague"` dans `donnees/site.json` (bord ondulé à la montée et au retrait, `assets/js/socle/voile.js`). Ce module sert aux pages hors socle.
 - Sans le script critique, la page d'arrivée s'affiche découverte un instant puis le voile n'a rien à retirer : la transition paraît coupée.
 - Liens vers la page en cours : comparaison de chemins normalisés (sans `.html`, sans `index`, sans barre finale), sinon un lien `/contact` depuis `/contact.html` recharge la page. Les ancres de la même page défilent sous l'en-tête mesuré, sans voile.
 - Retour arrière depuis le cache (`pageshow` avec `persisted`) : la page revient découverte ; la clé de session est effacée dès l'arrivée, donc un rechargement ne rejoue jamais le voile.

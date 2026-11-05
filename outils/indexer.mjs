@@ -8,7 +8,7 @@ const liste = d => fs.existsSync(d) ? fs.readdirSync(d).sort() : [];
 const maquettes = [], sections = [], modules = []; let sousSeuil = 0;
 for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.json'))) {
   const m = lireJson(path.join(RACINE, 'maquettes', f));
-  maquettes.push([m.depot, m.activite, m.concept, m.ambiance, m.note, m.points_forts.slice(0, 3), m.url, m.client]);
+  maquettes.push([m.depot, m.activite, m.concept, m.ambiance, m.note, m.points_forts.slice(0, 3), m.url, m.client, m.date_commit || null, m.grille ? [m.grille.voile, m.grille.objet] : null]);
   for (const id of m.sections) {
     const s = lireJson(path.join(RACINE, 'sections', id + '.json'));
     if (s.note_qualite < 4) { sousSeuil++; continue; } // seules les sections notées 4 ou 5 figurent dans l'index
@@ -29,7 +29,7 @@ const index = {
   version: new Date().toISOString().slice(0, 10),
   aide: 'Colonnes : voir « colonnes ». Sections notées 4 ou 5 seulement (fiche : sections/<id>.json ; les autres sont trouvables par chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/. Chercher : node outils/chercher.mjs --role ouverture --ambiance sombre',
   totaux: { maquettes: maquettes.length, sections_indexees: sections.length, sections_notees_3_ou_moins: sousSeuil, modules: modules.length },
-  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances'] },
+  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances'] },
   maquettes, sections, modules,
 };
 // Une ligne par entrée : lisible d'un coup d'œil et compact.

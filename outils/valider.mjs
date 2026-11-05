@@ -25,6 +25,12 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
   for (const [k, v] of Object.entries(m.palette || {})) if (!/^#[0-9a-f]{6}$/i.test(v || '')) err.push(`${ou} : palette.${k} invalide (${v})`);
   for (const c of Object.values(m.captures || {})) if (c) poids(c, 300 * 1024, ou);
   if (!fs.existsSync(path.join(RACINE, 'audits', m.depot + '.md'))) err.push(`${ou} : audit manquant`);
+  if (m.grille) {
+    if (![null, 'glisse', 'iris', 'vague', 'rideau', 'propre'].includes(m.grille.voile)) err.push(`${ou} : grille.voile « ${m.grille.voile} » (glisse, iris, vague, rideau, propre ou null)`);
+    for (const k of ['objet', 'fil']) if (m.grille[k] != null && typeof m.grille[k] !== 'string') err.push(`${ou} : grille.${k} doit être un texte`);
+    if (m.grille.voile && !m.grille.objet) avert.push(`${ou} : grille.objet non noté (notes-manuelles, maquette.grille.objet)`);
+  }
+  if (m.journal && !fs.existsSync(path.join(RACINE, m.journal.fichier))) err.push(`${ou} : journal ${m.journal.fichier} manquant`);
   for (const id of m.sections) {
     const fs_ = path.join(RACINE, 'sections', id + '.json');
     if (!fs.existsSync(fs_)) { err.push(`${ou} : section manquante ${id}`); continue; }
@@ -65,6 +71,20 @@ for (const m of modules) {
   if (!/export\s+(async\s+)?function\s+init\s*\(/.test(js)) err.push(`${ou} : module.js n'exporte pas init()`);
   if (/new\s+Lenis|gsap\.registerPlugin|anticipatePin/.test(js)) err.push(`${ou} : module.js instancie Lenis, enregistre GSAP ou utilise anticipatePin`);
   if (!mj.tests || Object.values(mj.tests).some(v => typeof v === 'string' && /échec|erreur(?!s? *: *0)|ko/i.test(v) && !/^0 erreur/.test(v))) avert.push(`${ou} : tests à revoir (${JSON.stringify(mj.tests)})`);
+}
+// Journaux de projet (copiés par outils/grille.mjs) et fichier des leçons.
+for (const f of liste(path.join(RACINE, 'journaux')).filter(f => f.endsWith('.json'))) {
+  const ou = 'journaux/' + f; let j = null;
+  try { j = JSON.parse(fs.readFileSync(path.join(RACINE, 'journaux', f), 'utf8')); } catch { err.push(`${ou} : JSON illisible`); continue; }
+  if (!Array.isArray(j.versions) || !j.versions.length) { err.push(`${ou} : versions manquantes`); continue; }
+  j.versions.forEach((v, i) => { if (!Array.isArray(v.etapes)) err.push(`${ou} : versions[${i}].etapes doit être une liste`); });
+}
+if (fs.existsSync(path.join(RACINE, 'lecons.md'))) {
+  let dansLecons = false; /* seules les lignes sous « ## Leçons » sont des leçons ; l'en-tête explique le format */
+  fs.readFileSync(path.join(RACINE, 'lecons.md'), 'utf8').split('\n').forEach((l, i) => {
+    if (/^## /.test(l)) dansLecons = /^## Leçons\s*$/.test(l);
+    if (dansLecons && /^- /.test(l) && !/^- \d{4}-\d{2}-\d{2} · [^·]+ · problème : .+ · cause : .+ · règle : .+/.test(l)) avert.push(`lecons.md ligne ${i + 1} : format « - AAAA-MM-JJ · projet · problème : … · cause : … · règle : … »`);
+  });
 }
 let medias = 0, octets = 0; for (const d of liste(path.join(RACINE, 'medias'))) for (const f of liste(path.join(RACINE, 'medias', d))) { medias++; octets += fs.statSync(path.join(RACINE, 'medias', d, f)).size; }
 if (fs.existsSync(path.join(RACINE, 'index.json'))) { const s = fs.statSync(path.join(RACINE, 'index.json')).size; if (s > 150 * 1024) err.push(`index.json : ${Math.round(s / 1024)} Ko (max 150)`); }

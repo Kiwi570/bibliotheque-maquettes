@@ -16,7 +16,7 @@ Origine : madebymelody-maquette (v2) : le disque de la platine glisse jusqu'au v
 </body>
 ```
 
-Dans le socle de la skill, l'intro est déjà gérée (`demarrer({ jouer })`) : n'y reprendre que `versObjet(tl, { panneau, objet, cible, a })`, ajouté à la timeline de l'intro avant de la renvoyer. Chaque page marque son objet d'ouverture `data-iris-centre` (pochette, bandeau, bac, étiquette…).
+**Projet bâti sur le socle de la skill (v10.2 et suivantes) : ne pas copier ce module.** Le socle fournit `versObjet` : `import { versObjet } from './socle/index.js'`, puis `versObjet(tl, { a: 1.0 })` dans `jouer()`, avant de renvoyer la timeline. Par défaut, le logo du panneau (`[data-ouverture-objet]`) glisse jusqu'à l'objet d'ouverture de la page (`data-iris-centre`). Ce module sert aux pages hors socle.
 
 ## Réglages
 

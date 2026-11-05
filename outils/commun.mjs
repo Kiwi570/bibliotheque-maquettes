@@ -98,4 +98,14 @@ export function plages(intervalles, ecart = 3) {
 }
 export const plagesTexte = (fichier, p) => p.length ? fichier + ':' + p.map(([a, b]) => a === b ? a : `${a}-${b}`).join(',') : null;
 
+/** Minutes entre deux heures ISO (null si l'une manque ou si l'ordre est faux). */
+export const minutes = (a, b) => { const t = (Date.parse(b) - Date.parse(a)) / 60000; return Number.isFinite(t) && t >= 0 ? t : null; };
+/** Résumé d'un journal de projet (journaux/<dépôt>.json) : temps de travail, budget et attente de chaque version. */
+export function resumeJournal(j) {
+  return (j.versions || []).map((v) => {
+    const etapes = (v.etapes || []).map((e) => ({ etape: e.etape, budget: Number(e.budget) || 0, min: minutes(e.debut, e.fin) })).filter((e) => e.min != null);
+    const attente = (v.attentes || []).map((a) => minutes(a.debut, a.fin)).filter((x) => x != null).reduce((s, x) => s + x, 0);
+    return { version: v.version, travail: Math.round(etapes.reduce((s, e) => s + e.min, 0)), budget: etapes.reduce((s, e) => s + e.budget, 0), attente: Math.round(attente), allers_retours: v.allersRetours ?? null, etapes };
+  });
+}
 export const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
