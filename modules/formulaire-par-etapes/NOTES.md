@@ -55,6 +55,7 @@ Chaque `fieldset[data-etape]` est une étape (le nom affiché dans la progressio
 - Sans JavaScript (`@media (scripting: none)`), toutes les étapes sont visibles et le formulaire reste un formulaire HTML ordinaire : prévoir un `action` réel ou un `mailto:` sur le site en ligne. Avec JavaScript, les étapes 2+ sont masquées dès le premier affichage (pas de décalage de mise en page).
 - Toujours dire que l'envoi est simulé tant qu'aucun traitement réel n'est branché.
 - Champs à 16 px minimum (sinon zoom automatique sur iOS).
+- Sous 640 px, la carte de choix passe en grille de deux colonnes (`34px` puis le texte), l'icône `.fpe__icone` occupant la première sur deux lignes : **chaque carte doit avoir une icône** (SVG ou pastille), sinon le titre et le texte se partagent la même ligne et se chevauchent (constaté sur alexandra-grandry-maquette).
 
 ## Variantes
 

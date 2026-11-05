@@ -13,6 +13,11 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 6. Adapter : copier le dossier dans le projet, remplacer les contenus neutres, garder les classes et les `data-*` décrits dans chaque `NOTES.md`.
 7. Images : suivre `images/README.md`. Six commandes : récupérer, analyser, grok, vérifier-grok, produire, partage. Claude n'écrit que `plan-images.json`.
 
+## Si `npm ci` échoue (registre bloqué)
+
+Dans un environnement où le registre npm est refusé (403, nom introuvable), ne pas insister : relier les modules installés globalement, puis lancer les outils avec `NODE_PATH`.
+`mkdir -p node_modules && ln -sfn "$(npm root -g)/sharp" node_modules/sharp && ln -sfn "$(npm root -g)/playwright" node_modules/playwright`
+
 ## Conventions des modules
 
 - `module.js` exporte `init(root, options)` et obtient GSAP, ScrollTrigger, SplitText, Flip, Lenis ou OGL par `pret([...])` de `socle/socle.js` (chargés à la demande : `pret([])` ne charge rien) ; il ne les instancie jamais.

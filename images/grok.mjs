@@ -128,7 +128,12 @@ for (const page of [...new Set(images.map(i => i.page))]) {
   }
 }
 ecrireDocx(sortie, `${client} — images Grok`, blocs);
-ecrireJson(path.join(path.dirname(fPlan), 'grok-consignes.json'), { client, activite: G.activite, direction: direction.nom || null, date: new Date().toISOString(), images });
+// Fusion avec les consignes déjà écrites : une régénération partielle (quelques images renommées en -v2) ne fait pas
+// oublier les consignes des autres images du plan, sinon verifier-grok les déclare à tort « à régénérer » (ratio).
+const fConsignes = path.join(path.dirname(fPlan), 'grok-consignes.json');
+const duPlan = new Set(plan.flatMap(e => [e.source, e.source_mobile]).filter(Boolean).map(s => path.basename(s)));
+const anciennes = (lireJson(fConsignes, { images: [] }).images || []).filter(i => duPlan.has(i.fichier) && !images.some(n => n.fichier === i.fichier));
+ecrireJson(fConsignes, { client, activite: G.activite, direction: direction.nom || null, date: new Date().toISOString(), images: [...anciennes, ...images] });
 for (const i of images) console.log(`${i.priorite.padEnd(13)} ${i.fichier.padEnd(34)} ${i.format.padEnd(5)} ${i.grok}  ${i.gabarit}${i.pieges.length ? ` (pièges : ${i.pieges.join(', ')})` : ''}`);
 console.log(`\n${images.length} consignes (${compte('Indispensable')} indispensables). Document : ${sortie}`);
 console.log(`Consignes pour verifier-grok : ${path.join(path.dirname(fPlan), 'grok-consignes.json')}`);
