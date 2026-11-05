@@ -1,0 +1,1444 @@
+{
+ "maquette": {
+  "client": "groupe de six entreprises de paysagistes et d'élagueurs du Loiret (aménagement, entretien, élagage, génie végétal)",
+  "activite": [
+   "artisanat",
+   "bâtiment"
+  ],
+  "concept": [
+   "voyage",
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "végétal",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « De la graine à la cime » : la page se lit du sol vers la cime, une corde d'élagueur mesure l'altitude de lecture (0 à 25 m)",
+   "lumière sous canopée en WebGL sur chaque photo d'ouverture, saison vivante (feuilles, pétales, aigrettes, flocons selon la saison réelle)",
+   "quatre savoir-faire en strates épinglées du sol à la cime, avec l'altitude qui monte",
+   "cernes de l'arbre pour l'histoire du groupe, arbre des six sociétés, coupe de berge du génie végétal",
+   "lisières d'herbe entre les sections, l'herbe se couche quand on défile vite"
+  ],
+  "reserves": [
+   "audit complet de la skill fait sur la v1 (58 échecs), v2 et v3 non réauditées",
+   "26 pages dont des modèles répétés",
+   "nombreuses informations « à compléter »"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "fil-conducteur",
+   "reactif-vitesse",
+   "compteur",
+   "trace-svg",
+   "parallaxe",
+   "révélation-texte",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "filtres",
+   "calculateur",
+   "formulaire-par-étapes",
+   "carte-interactive",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": "audit de la skill sur la v1 (04/11, 58 échecs) ; v2 « un site plus vivant » et v3 « une ouverture propre à chaque page » faites ensuite, sans nouveau rapport.",
+  "accueil": "debut",
+  "grille": {
+   "objet": "corde d'élagueur qui mesure l'altitude de lecture ; strates du sol à la cime",
+   "fil": "la montée du sol vers la cime, de 0 à 25 m"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile vert forêt entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : le logo pousse depuis le sol comme une jeune pousse",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo du groupe, sept liens et Demander un devis en orange",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Nos trois sites",
+   "role": "menu",
+   "description": "Menu plein écran sombre avec les trois sites et leurs coordonnées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "corde": {
+   "titre": "Altitude de lecture",
+   "role": "decor",
+   "description": "Corde d'élagueur fixe dans la marge avec mousqueton : altitude de lecture de 0 à 25 m et repères cliquables",
+   "animations": [
+    "fil-conducteur",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "corde-d-altitude"
+   ],
+   "sans_capture": true
+  },
+  "barre-altitude": {
+   "titre": "",
+   "role": "decor",
+   "description": "Barre d'altitude compacte au téléphone",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Créons et entretenonsvos espaces verts",
+   "role": "ouverture",
+   "description": "« Créons et entretenons vos espaces verts » : allée sous les arbres, lumière de canopée en WebGL, feuilles de la saison en canvas, profil (particulier, entreprise, collectivité)",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "saison-vivante"
+   ]
+  },
+  "metiers": {
+   "titre": "Quatre savoir-faire, du sol à la cime",
+   "role": "services",
+   "description": "Quatre savoir-faire du sol à la cime : strates épinglées, l'altitude monte de 0 à 25 m et chaque métier prend l'écran",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "strates-du-sol-a-la-cime"
+   ]
+  },
+  "realisations": {
+   "titre": "Des parcs aux châteaux",
+   "role": "portfolio",
+   "description": "Des parcs aux châteaux : réalisations en galerie épinglée horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "methode": {
+   "titre": "De l’étude à l’entretien",
+   "role": "étapes",
+   "description": "De l'étude à l'entretien : trois étapes reliées par une tige qui pousse",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "preuves": {
+   "titre": "Des chiffres, des labels, des références",
+   "role": "chiffres",
+   "description": "Des chiffres, des labels, des références : compteurs et labels",
+   "animations": [
+    "compteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce qu’en disent nos clients",
+   "role": "témoignages",
+   "description": "Ce qu'en disent nos clients : avis en carrousel sur fond sombre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sites": {
+   "titre": "Trois sites, tout le Loiret",
+   "role": "carte",
+   "description": "Trois sites, tout le Loiret : carte du département et fiches des sites avec statut ouvert ou fermé",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "groupe": {
+   "titre": "Six entreprises, une même famille",
+   "role": "équipe",
+   "description": "Six entreprises, une même famille : photo d'équipe et sociétés",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement": {
+   "titre": "Rejoignez nos équipes",
+   "role": "appel",
+   "description": "Rejoignez nos équipes : postes en pastilles et photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "devis-final": {
+   "titre": "Et si l’on commençait par votre jardin ?",
+   "role": "appel",
+   "description": "Et si l'on commençait par votre jardin ? : ciel, herbe qui se couche au défilement, devis par métier",
+   "animations": [
+    "canvas-2d",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Nous trouver",
+   "role": "pied-de-page",
+   "description": "Pied de page vert sous une lisière d'herbe : sites, sommaire, réseaux",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette pagea été élaguée",
+   "role": "page-404",
+   "description": "« Cette page a été élaguée » : souche dans la brume",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-debut": {
+   "titre": "La viedu groupe",
+   "role": "ouverture",
+   "description": "Tête de page actualites : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-fil": {
+   "titre": "Le fil des nouvelles",
+   "role": "articles",
+   "description": "Le fil des nouvelles filtrable par thème et recherche",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-lettre": {
+   "titre": "Toutes nos nouvelles, sur les réseaux",
+   "role": "appel",
+   "description": "Toutes nos nouvelles sur les réseaux : appel « à la cime »",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-challenge-msa-2026-debut": {
+   "titre": "Un apprenti du groupe remporte en équipe le challenge Prévention des risques de la MSA",
+   "role": "ouverture",
+   "description": "Tête de page actualites challenge msa 2026 : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-challenge-msa-2026-article": {
+   "titre": "Une finale à Bourges",
+   "role": "articles",
+   "description": "Corps d'article des actualités avec intertitres",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-challenge-msa-2026-devis-final": {
+   "titre": "Un projet en tête ?",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-chenilles-processionnaires-ch-debut": {
+   "titre": "Suppression des nids de chenilles processionnaires du chêne",
+   "role": "ouverture",
+   "description": "Tête de page actualites chenilles processionnaires ch : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-chenilles-processionnaires-ch-article": {
+   "titre": "Un danger pour la santé",
+   "role": "articles",
+   "description": "Corps d'article des actualités avec intertitres",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "actualites-chenilles-processionnaires-ch-devis-final": {
+   "titre": "Un projet en tête ?",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-debut": {
+   "titre": "Concevoir et créervos extérieurs",
+   "role": "ouverture",
+   "description": "Tête de page amenagement paysager : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-deroule": {
+   "titre": "Sept étapes, un seul interlocuteur",
+   "role": "étapes",
+   "description": "Sept étapes, un seul interlocuteur : tige qui pousse",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-prestations": {
+   "titre": "Tout ce que nous aménageons",
+   "role": "services",
+   "description": "Tout ce que nous aménageons : prestations filtrables en strates",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-conception": {
+   "titre": "Votre jardin, avant le premier coup de pelle",
+   "role": "méthode",
+   "description": "Votre jardin avant le premier coup de pelle : plan et photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-realisations": {
+   "titre": "Nos jardins, sur le terrain",
+   "role": "portfolio",
+   "description": "Nos jardins sur le terrain : fil de réalisations",
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-qualifications": {
+   "titre": "Des savoir-faire certifiés",
+   "role": "preuves",
+   "description": "Des savoir-faire certifiés : plaques et accordéons",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "amenagement-paysager-devis-final": {
+   "titre": "Votre extérieur, dessiné pour vous",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-barre-article": {
+   "titre": "",
+   "ignorer": "barre de lecture"
+  },
+  "confidentialite-debut": {
+   "titre": "Politique de confidentialité",
+   "role": "ouverture",
+   "description": "Tête de page confidentialite : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-s-creme": {
+   "titre": "Responsable du traitement",
+   "role": "texte-legal",
+   "description": "Politique de confidentialité à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlonsde votre projet",
+   "role": "ouverture",
+   "description": "Tête de page contact : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-devis": {
+   "titre": "Votre demande en cinq étapes",
+   "role": "contact",
+   "description": "Votre demande en cinq étapes : devis simulé avec récapitulatif",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-sites": {
+   "titre": "Venez nous voir",
+   "role": "carte",
+   "description": "Venez nous voir : trois sites avec horaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-services-a-la-personne": {
+   "titre": "Jardinage à domicile : 50 % de crédit d’impôt",
+   "role": "offre",
+   "description": "Jardinage à domicile : 50 % de crédit d'impôt",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-debut": {
+   "titre": "Prendre soinde vos arbres, jusqu’à la cime",
+   "role": "ouverture",
+   "description": "Tête de page elagage soin arbres : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-taille-raisonnee": {
+   "titre": "Tailler juste, sans excès",
+   "role": "méthode",
+   "description": "Tailler juste, sans excès : arbre épinglé qui se taille branche par branche",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-prestations": {
+   "titre": "Du pied à la cime",
+   "role": "services",
+   "description": "Du pied à la cime : prestations d'élagage filtrables",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-maladies": {
+   "titre": "Ravageurs et maladies",
+   "role": "faq",
+   "description": "Ravageurs et maladies en grille",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-securite": {
+   "titre": "La sécurité avant tout",
+   "role": "preuves",
+   "description": "La sécurité avant tout : équipements et photos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-bois": {
+   "titre": "Bois de chauffage et copeaux",
+   "role": "offre",
+   "description": "Bois de chauffage et copeaux en accordéons",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "elagage-soin-arbres-devis-final": {
+   "titre": "Un arbre à soigner ?",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-debut": {
+   "titre": "Un jardin soignéà chaque saison",
+   "role": "ouverture",
+   "description": "Tête de page entretien jardinage : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-zero-phyto": {
+   "titre": "Entretenir avec le vivant",
+   "role": "manifeste",
+   "description": "Entretenir avec le vivant : zéro phyto en points",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-prestations": {
+   "titre": "Entretenir, saison après saison",
+   "role": "services",
+   "description": "Entretenir saison après saison : prestations filtrables",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-saisons": {
+   "titre": "Le bon geste, au bon moment",
+   "role": "outil-interactif",
+   "description": "Le bon geste au bon moment : cadran des saisons qui tourne avec les gestes du mois",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-jardinage-a-domicile": {
+   "titre": "Votre jardin entretenu, moitié prix",
+   "role": "offre",
+   "description": "Votre jardin entretenu moitié prix : services à la personne",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-credit-impot": {
+   "titre": "Combien vous coûte vraiment l’entretien ?",
+   "role": "calculateur",
+   "description": "Combien vous coûte vraiment l'entretien ? : on tape le montant, le coût après crédit d'impôt s'affiche",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entretien-jardinage-devis-final": {
+   "titre": "Un jardin soigné, toute l’année",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "genie-vegetal-debut": {
+   "titre": "Restaurer le vivant,du sol à l’eau",
+   "role": "ouverture",
+   "description": "Tête de page genie vegetal : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "genie-vegetal-coupe": {
+   "titre": "Le végétal comme matériau",
+   "role": "méthode",
+   "description": "Le végétal comme matériau : coupe de berge épinglée qui se construit couche par couche",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "coupe-de-berge"
+   ]
+  },
+  "genie-vegetal-chantiers": {
+   "titre": "Des chantiers au bord de l’eau",
+   "role": "portfolio",
+   "description": "Des chantiers au bord de l'eau en cartes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "genie-vegetal-savoir-faire": {
+   "titre": "Des équipes formées et équipées",
+   "role": "preuves",
+   "description": "Des équipes formées et équipées : texte et photos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "genie-vegetal-devis-final": {
+   "titre": "Un milieu à restaurer ?",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-debut": {
+   "titre": "Six entreprises,une même racine",
+   "role": "ouverture",
+   "description": "Tête de page le groupe : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-mission": {
+   "titre": "Notre mission",
+   "role": "manifeste",
+   "description": "Notre mission : texte et citation",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-histoire": {
+   "titre": "Les cernes d’un groupe",
+   "role": "étapes",
+   "description": "Les cernes d'un groupe : l'histoire se lit dans les cernes d'un tronc qui s'allument au défilement",
+   "animations": [
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cernes-du-tronc"
+   ]
+  },
+  "le-groupe-societes": {
+   "titre": "À chacune son métier",
+   "role": "équipe",
+   "description": "À chacune son métier : arbre des six sociétés",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-chiffres": {
+   "titre": "Le groupe aujourd’hui",
+   "role": "chiffres",
+   "description": "Le groupe aujourd'hui : chiffres sur photo",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-engagements": {
+   "titre": "Cinq engagements, au quotidien",
+   "role": "preuves",
+   "description": "Cinq engagements au quotidien en cartes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-partenaires": {
+   "titre": "Engagés sur le territoire",
+   "role": "preuves",
+   "description": "Engagés sur le territoire : logos des partenaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "le-groupe-devis-final": {
+   "titre": "Un projet, une équipe",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-debut": {
+   "titre": "Ils ont prisracine",
+   "role": "ouverture",
+   "description": "Tête de page realisations : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-liste": {
+   "titre": "Filtrez par projet",
+   "role": "portfolio",
+   "description": "Réalisations filtrables par type de projet et commune",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-devis-final": {
+   "titre": "Le prochain, c’est le vôtre",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-auguste-saint-hilaire-debut": {
+   "titre": "Le jardin Auguste de Saint-Hilaire",
+   "role": "ouverture",
+   "description": "Tête de page realisations auguste saint hilaire : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-auguste-saint-hilaire-projet": {
+   "titre": "En quelques mots",
+   "role": "portfolio",
+   "description": "Fiche réalisation : en quelques mots, données du chantier et photos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-auguste-saint-hilaire-suite": {
+   "titre": "L’extension du parc des Longues Allées",
+   "role": "portfolio",
+   "description": "Réalisation suivante en grand avec lien",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-auguste-saint-hilaire-visionneuse": {
+   "titre": "Photos de la réalisation",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos de la réalisation",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "realisations-auguste-saint-hilaire-devis-final": {
+   "titre": "Un projet similaire ?",
+   "role": "appel",
+   "description": "Appel final « à la cime » : ciel, herbe qui se couche et boutons de devis",
+   "animations": [
+    "parallaxe",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-debut": {
+   "titre": "Grandiravec nous",
+   "role": "ouverture",
+   "description": "Tête de page recrutement : photo sous la lumière de canopée (WebGL), saison vivante en canvas",
+   "animations": [
+    "webgl-shader",
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-postes": {
+   "titre": "Nous recrutons",
+   "role": "offre",
+   "description": "Nous recrutons : postes filtrables par métier et site",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-pourquoi": {
+   "titre": "Trois bonnes raisons",
+   "role": "manifeste",
+   "description": "Trois bonnes raisons de nous rejoindre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-apprentissage": {
+   "titre": "Apprendre sur le terrain",
+   "role": "offre",
+   "description": "Apprendre sur le terrain : l'apprentissage",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-deroule": {
+   "titre": "Quatre étapes, simplement",
+   "role": "étapes",
+   "description": "Quatre étapes simplement : chemin de feuilles",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recrutement-candidature": {
+   "titre": "Postuler en deux minutes",
+   "role": "contact",
+   "description": "Postuler en deux minutes : candidature simulée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

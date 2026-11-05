@@ -1,0 +1,693 @@
+{
+ "maquette": {
+  "client": "artiste plasticien et vidéaste nomade à Bruxelles (peintures, sculptures, films, résidences), site bilingue",
+  "activite": [
+   "culture"
+  ],
+  "concept": [
+   "galerie",
+   "dossier"
+  ],
+  "ambiance": [
+   "clair",
+   "brut",
+   "minéral"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Archivo",
+   "texte": "IBM Plex Mono",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le Mur » : le mur d'exposition et les Mauerstücke (pans de mur), plâtre, joints, étiquettes de musée, minutage de montage",
+   "œuvre d'ouverture à volets qui s'ouvrent, étiquette de musée et minuteur dans l'en-tête",
+   "mur épinglé des œuvres phares, mur complet en cinq pans avec filtres, liste, visionneuse avec loupe et « voir sur un mur »",
+   "table de montage des films (Kurzstücke), carte des résidences Laundry en arcs tracés",
+   "voile en blocs de mur qui se montent et se démontent, nom en blocs de pierre dans le pied de page"
+  ],
+  "reserves": [
+   "les œuvres ne sont jamais recadrées, ce qui laisse des marges variables",
+   "biographie et agenda très longs (agenda 7 000 px)",
+   "mentions à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "trace-svg",
+   "compteur",
+   "masque",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "canvas-2d"
+  ],
+  "interactions": [
+   "filtres",
+   "galerie-cliquable",
+   "lecteur-vidéo",
+   "simulateur",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "volets de l'œuvre d'ouverture ; œuvre à voir sur un mur",
+   "fil": "le mur d'exposition : pans, joints, étiquettes et minutage de montage"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en blocs de mur qui se montent rang par rang puis se démontent entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-en-blocs-de-mur"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : joints d'un mur qui se tracent, minutage de montage qui défile",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : monogramme, nom, minuteur de montage, trois liens, FR/EN, Écrire à JeanF",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran noir numéroté avec contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "JeanF, Nomade Polymedia",
+   "role": "ouverture",
+   "description": "« JeanF, Nomade Polymedia » : œuvre accrochée au mur de plâtre dont les volets s'ouvrent, étiquette de musée",
+   "animations": [
+    "masque",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "volets-d-oeuvre"
+   ]
+  },
+  "ruban-zone": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban rouge des titres de séries qui défile en biais, bouton Pause",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "manifeste": {
+   "titre": "Mauerstücke",
+   "role": "manifeste",
+   "description": "Mauerstücke : le manifeste en entier avec les quatre familles d'œuvres en colonne collante",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mur": {
+   "titre": "Le mur",
+   "role": "galerie",
+   "description": "Le mur : œuvres phares accrochées sur un mur épinglé qui défile à l'horizontale, triptyques qui s'ouvrent",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "masque"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "mur-d-exposition"
+   ]
+  },
+  "chiffres": {
+   "titre": "En chiffres",
+   "role": "chiffres",
+   "description": "En chiffres : quatre blocs de mur avec les nombres",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "laundry": {
+   "titre": "Laundry",
+   "role": "carte",
+   "description": "Laundry : carte des résidences avec arcs tracés entre les villes, fiches des résidences",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "films": {
+   "titre": "Kurzstücke",
+   "role": "galerie",
+   "description": "Kurzstücke : film à la une sur une pellicule et vignettes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "gare": {
+   "titre": "Gare aux Rumeurs",
+   "role": "manifeste",
+   "description": "Gare aux Rumeurs : projet collectif, photo et livret",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reperes": {
+   "titre": "Derniers repères",
+   "role": "agenda",
+   "description": "Derniers repères par année et lien vers l'agenda",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Écrire à JeanF",
+   "role": "appel",
+   "description": "Écrire à JeanF : atelier et carte de contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page noir : nom en blocs de pierre, coordonnées, sommaire",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Pan de mur manquant",
+   "role": "page-404",
+   "description": "« Pan de mur manquant » : trou dans un mur de parpaings",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-debut": {
+   "titre": "À propos",
+   "role": "ouverture",
+   "description": "À propos : l'artiste dans son atelier",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-bio": {
+   "titre": "Vieil artiste émergent",
+   "role": "équipe",
+   "description": "Vieil artiste émergent : biographie et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-parcours": {
+   "titre": "Formation et parcours",
+   "role": "étapes",
+   "description": "Formation et parcours en liste datée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-ruban-zone": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban des années et du nombre de dates",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-agenda": {
+   "titre": "Agenda",
+   "role": "agenda",
+   "description": "Agenda 2013-2024 filtrable par type (expositions, festivals, résidences…)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-bibliographie": {
+   "titre": "Bibliographie et catalogues",
+   "role": "preuves",
+   "description": "Bibliographie et catalogues en liste datée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-avec": {
+   "titre": "Avec",
+   "role": "preuves",
+   "description": "Avec : artistes et collaborateurs en briques",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-contact": {
+   "titre": "Contact",
+   "role": "contact",
+   "description": "Contact : formulaire simulé et coordonnées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-films-debut": {
+   "titre": "Films",
+   "role": "ouverture",
+   "description": "Films : tête de page avec photogrammes",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-films-ruban-zone": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban en pellicule des titres de films",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-films-table": {
+   "titre": "The editing table",
+   "role": "outil-interactif",
+   "description": "La table de montage : films en bandes de pellicule à déplier, minutage et lecteur",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "table-de-montage"
+   ]
+  },
+  "en-films-fin": {
+   "titre": "Programme a film",
+   "role": "appel",
+   "description": "Programmer un film : appel final",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "en-mentions-legales-debut": {
+   "titre": "Legal notice",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-mentions-legales-texte-long": {
+   "titre": "Details to be completed",
+   "role": "texte-legal",
+   "description": "Informations à compléter et mentions",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-debut": {
+   "titre": "The wall",
+   "role": "ouverture",
+   "description": "Le mur : tête de la page œuvres",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-ruban-zone": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban clair des titres d'œuvres",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-mur": {
+   "titre": "Five sections, one wall",
+   "role": "galerie",
+   "description": "Cinq pans, un mur : le mur complet épinglé, pans filtrables, œuvres jamais recadrées",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-liste": {
+   "titre": "All pieces",
+   "role": "produits",
+   "description": "Toutes les pièces en liste, avec plan du pan",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-fin": {
+   "titre": "Interested in a piece?",
+   "role": "appel",
+   "description": "Une pièce vous intéresse ? : appel final",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-oeuvres-visionneuse": {
+   "titre": "Cantico delle creature",
+   "role": "galerie",
+   "description": "Visionneuse avec loupe des œuvres, clavier et flèches",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "en-oeuvres-voir-mur": {
+   "titre": "View on a wall",
+   "role": "outil-interactif",
+   "description": "Voir sur un mur : l'œuvre posée à l'échelle dans une pièce",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  }
+ }
+}

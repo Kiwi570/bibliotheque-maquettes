@@ -1,0 +1,660 @@
+{
+ "maquette": {
+  "client": "énergéticienne : libérations au Point Zéro, soins, bains sonores et voyages initiatiques près de Lamalou-les-Bains (Hérault)",
+  "activite": [
+   "bien-être"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "sombre",
+   "doux",
+   "nocturne"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Figtree",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Point Zéro » : eau, lumière du soir, lotus ; un cadran de 10 à 0 accompagne la lecture",
+   "lotus sur l'eau en WebGL à l'ouverture, ondes et goutte dans l'intro et le voile",
+   "« De 10 à 0 » épinglée : le cadran descend avec le déroulé d'une séance",
+   "échelle du ressenti à régler de 10 à 0 (canvas), simulateur de durée de l'accompagnement",
+   "bain sonore à écouter avec une pastille de son, éventail des outils"
+  ],
+  "reserves": [
+   "fluidité au seuil sur ordinateur lent (audit complet)",
+   "beaucoup d'images générées",
+   "mentions et confidentialité à fournir"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "section-fixée",
+   "progression-fixée",
+   "compteur",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "simulateur",
+   "calculateur",
+   "formulaire-par-étapes",
+   "ambiance-sonore",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "échelle du ressenti de 10 à 0 à régler ; lotus sur l'eau",
+   "fil": "cadran de 10 à 0 qui accompagne la lecture"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile prune avec une goutte qui tombe et des ondes entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-goutte"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : une goutte tombe et des ondes s'étendent sur l'eau",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : nom, sept liens, cadran du Point Zéro et Prendre rendez-vous",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran crème avec la liste des soins et le contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Revenir à soi,au Point Zéro",
+   "role": "ouverture",
+   "description": "« Revenir à soi, au Point Zéro » : lotus sur un lac au coucher du soleil, eau en WebGL qui ondule sous le pointeur",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "lotus-sur-l-eau"
+   ]
+  },
+  "muriel": {
+   "titre": "Je suis Muriel, je chemine avec chacun vers son équilibre",
+   "role": "équipe",
+   "description": "Je suis Muriel : portrait en arche, 35 ans de parcours, formations en pastilles",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "soins": {
+   "titre": "Des séances uniques, à l’écoute de ce que vous vivez",
+   "role": "outil-interactif",
+   "description": "Des séances uniques : « Quel soin pour moi ? », on choisit ce qu'on ressent, le soin conseillé s'allume",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "quiz"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance": {
+   "titre": "De 10 à 0",
+   "role": "étapes",
+   "description": "De 10 à 0 : section épinglée, le cadran descend de 10 à 0 avec les étapes d'une séance",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cadran-de-10-a-0"
+   ]
+  },
+  "accompagner": {
+   "titre": "Accompagner et transmettre",
+   "role": "offre",
+   "description": "Accompagner et transmettre : trois accompagnements en cartes photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers": {
+   "titre": "Matinée Bain sonore · Méditation · Danse",
+   "role": "agenda",
+   "description": "Matinée bain sonore, méditation, danse : dates, tarif et bain sonore à écouter",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "lecteur-audio"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "voyage": {
+   "titre": "Les Voix de l’Unité",
+   "role": "offre",
+   "description": "Les Voix de l'Unité : voyage au Maroc en galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "temoignages": {
+   "titre": "Ce qu’en disent les personnes accompagnées",
+   "role": "témoignages",
+   "description": "Ce qu'en disent les personnes accompagnées : avis en colonnes avec photo collante",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous": {
+   "titre": "Faire un premier pas ensemble",
+   "role": "contact",
+   "description": "Faire un premier pas ensemble : demande simulée en quatre étapes, choix du soin, lotus",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page prune : identité, contact, soins, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "son-pastille": {
+   "titre": "",
+   "role": "decor",
+   "description": "Pastille de son fixe qui montre les ondes pendant l'écoute et l'arrête",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "ambiance-sonore"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-debut": {
+   "titre": "Cette page s’est libérée",
+   "role": "page-404",
+   "description": "« Cette page s'est libérée » sur un lac au crépuscule",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-debut": {
+   "titre": "Libérationsau Point Zéro",
+   "role": "ouverture",
+   "description": "Libérations au Point Zéro : goutte d'or qui tombe sur l'eau",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-principe": {
+   "titre": "Libérer ce qui est stocké dans le corps",
+   "role": "manifeste",
+   "description": "Libérer ce qui est stocké dans le corps : texte et citation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-echelle": {
+   "titre": "Une note, de 10 à 0",
+   "role": "outil-interactif",
+   "description": "Une note de 10 à 0 : on règle son ressenti au curseur, les ondes du cadran se calment en canvas",
+   "animations": [
+    "canvas-2d",
+    "compteur"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "echelle-du-ressenti"
+   ]
+  },
+  "liberations-point-zero-deroule": {
+   "titre": "Un vrai travail en duo",
+   "role": "étapes",
+   "description": "Un vrai travail en duo : énoncer, ressentir, accueillir, revenir à zéro",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-objectif": {
+   "titre": "Un objectif de vie personnel ?amical ?familial ?professionnel ?",
+   "role": "manifeste",
+   "description": "Un objectif de vie personnel, amical, familial, professionnel : mot qui change",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-tarifs": {
+   "titre": "Selon vos ressources, votre ressenti",
+   "role": "tarifs",
+   "description": "Selon vos ressources, votre ressenti : trois durées et prix, réservation",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-temoignages": {
+   "titre": "Ce qu’a changé une libération",
+   "role": "témoignages",
+   "description": "Ce qu'a changé une libération : témoignages",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-faq": {
+   "titre": "Avant de venir",
+   "role": "faq",
+   "description": "Avant de venir : questions en accordéon et dessin",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "liberations-point-zero-fin": {
+   "titre": "Envie de revenir à zéro ?",
+   "role": "appel",
+   "description": "Envie de revenir à zéro ? : lotus et appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par Muriel Chaplain",
+   "role": "texte-legal",
+   "description": "Informations à fournir par Muriel Chaplain et mentions",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-debut": {
+   "titre": "Reconnexionà Soi",
+   "role": "ouverture",
+   "description": "Reconnexion à Soi : tête de page sur l'eau",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-intentions": {
+   "titre": "Retrouver votre valeur, votre sécurité, votre joie",
+   "role": "manifeste",
+   "description": "Retrouver votre valeur, votre sécurité, votre joie : intentions qui s'allument une à une",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-outils": {
+   "titre": "Les outils de votre accompagnement",
+   "role": "services",
+   "description": "Les outils de votre accompagnement en éventail de cartes qui s'ouvre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-formats": {
+   "titre": "Là où vous êtes",
+   "role": "offre",
+   "description": "Là où vous êtes : au cabinet, à domicile, à distance",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-simulateur": {
+   "titre": "Choisissez votre durée",
+   "role": "calculateur",
+   "description": "Choisissez votre durée : le simulateur compose l'accompagnement et son prix",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "calculateur",
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-pourquoi": {
+   "titre": "Monter progressivement",
+   "role": "manifeste",
+   "description": "Monter progressivement : texte et visuel",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-temoignage": {
+   "titre": "Témoignage",
+   "role": "témoignages",
+   "description": "Témoignage en grand avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reconnexion-a-soi-fin": {
+   "titre": "Composer votre accompagnement avec Muriel",
+   "role": "appel",
+   "description": "Composer votre accompagnement avec Muriel : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

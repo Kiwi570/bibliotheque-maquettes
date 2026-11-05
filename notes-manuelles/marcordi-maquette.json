@@ -1,0 +1,618 @@
+{
+ "maquette": {
+  "client": "aidant numérique : dépannage informatique et aide aux démarches en ligne à domicile autour de Marigny-Marmande (Indre-et-Loire)",
+  "activite": [
+   "numérique",
+   "services-b2b"
+  ],
+  "concept": [
+   "carnet"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "doux"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Atkinson Hyperlegible",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le fil » : un câble de cuivre relie « marc » à « ordi » dans l'intro, court le long de chaque page et se branche sur chaque section",
+   "« Quel est votre souci ? » : on touche la phrase qui ressemble au problème, le câble se branche sur la bonne prestation",
+   "zone de 25 km en nuage de communes, on tape sa commune pour savoir si Marco se déplace",
+   "prix en trois niveaux sur des câbles, estimateur de prix, fiche prise qui se branche dans l'appel final",
+   "voile de transition avec câble, page 404 « débranchée »"
+  ],
+  "reserves": [
+   "beaucoup d'images générées (mains, tasses, intérieurs)",
+   "SIRET, moyens de paiement et mentions à compléter",
+   "sans WebGL : effets surtout au défilement"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "fil-conducteur",
+   "trace-svg",
+   "section-fixée",
+   "progression-fixée",
+   "apparition-au-défilement",
+   "révélation-texte",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "saisie-personnalisee",
+   "calculateur",
+   "filtres",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "câble à brancher sur son souci ; commune à taper",
+   "fil": "câble de cuivre qui court le long de chaque page et se branche sur les sections"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile sombre traversé par le câble de cuivre entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un câble de cuivre relie « marc » à « ordi » et devient le logo",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cable-qui-relie-le-nom"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo marcordi, quatre liens et numéro de téléphone en terre cuite",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Joindre Marco",
+   "role": "menu",
+   "description": "Menu plein écran « Joindre Marco » avec les liens et le contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Je vous aideavec vos écranset vos démarches.",
+   "role": "ouverture",
+   "description": "« Je vous aide avec vos écrans et vos démarches. » : mains sur un clavier près d'une tasse, câble qui descend dans la marge",
+   "animations": [
+    "fil-conducteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "souci": {
+   "titre": "Quel est votre souci ?",
+   "role": "outil-interactif",
+   "description": "Quel est votre souci ? : on touche la phrase qui ressemble au problème, le câble se branche sur la prestation et son prix",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cable-qui-se-branche"
+   ]
+  },
+  "familles": {
+   "titre": "Deux familles de services",
+   "role": "services",
+   "description": "Deux familles de services : informatique et multimédia, administratif",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "facons": {
+   "titre": "Trois façons d’intervenir",
+   "role": "services",
+   "description": "Trois façons d'intervenir : à domicile, à distance, en tiers-lieu",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "Chez vous, dans un rayon de 25 km",
+   "role": "outil-interactif",
+   "description": "Chez vous, dans un rayon de 25 km : nuage de 102 communes, on tape sa commune et la page répond",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "saisie-personnalisee",
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs": {
+   "titre": "Des prix simples, un devis gratuit",
+   "role": "tarifs",
+   "description": "Des prix simples : trois niveaux de prix sur des câbles et tampon « Devis gratuit »",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "marco": {
+   "titre": "marcordi, c’est Marco Hubin",
+   "role": "équipe",
+   "description": "marcordi, c'est Marco Hubin : portrait cerclé de cuivre sur un paysage",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "etapes": {
+   "titre": "Quatre étapes, sans surprise",
+   "role": "étapes",
+   "description": "Quatre étapes sans surprise : section épinglée, les étapes s'allument sur le câble",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "faq": {
+   "titre": "Vos questions",
+   "role": "faq",
+   "description": "Vos questions en accordéon à côté d'une photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Un souci ? Appelez Marco.",
+   "role": "appel",
+   "description": "Un souci ? Appelez Marco. : la prise se branche dans la fiche murale, numéro en grand",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "prise-qui-se-branche"
+   ]
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page crème : coordonnées, sommaire, réseaux, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page s’est débranchée.",
+   "role": "page-404",
+   "description": "« Cette page s'est débranchée. » avec une prise qui pend",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-debut": {
+   "titre": "Marco, votre aidant numérique",
+   "role": "ouverture",
+   "description": "Marco, votre aidant numérique : chemin de campagne et actions",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-demarche": {
+   "titre": "Prendre soin de la fracture numérique",
+   "role": "manifeste",
+   "description": "Prendre soin de la fracture numérique : citation de Marco et photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-fiche": {
+   "titre": "marcordi en quelques lignes",
+   "role": "preuves",
+   "description": "marcordi en quelques lignes : fiche d'identité et nuage de la zone",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-fin": {
+   "titre": "Un souci ? Appelez Marco.",
+   "role": "appel",
+   "description": "Un souci ? Appelez Marco. : appel final de la page à propos",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-debut": {
+   "titre": "Mentions légales et confidentialité",
+   "role": "texte-legal",
+   "description": "Mentions légales et confidentialité : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par marcordi",
+   "role": "texte-legal",
+   "description": "Informations à fournir et mentions, sommaire collant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-debut": {
+   "titre": "Ce que je fais pour vous",
+   "role": "ouverture",
+   "description": "Ce que je fais pour vous : tête de page des prestations",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-liste": {
+   "titre": "Les prestations",
+   "role": "services",
+   "description": "Les prestations filtrables par famille, avec compteur sur chaque pastille",
+   "animations": [
+    "apparition-au-défilement",
+    "flip"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-appareils": {
+   "titre": "Vos appareils, vos démarches",
+   "role": "services",
+   "description": "Vos appareils, vos démarches : pastilles des appareils et services en ligne",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "prestations-fin": {
+   "titre": "Votre besoin n’est pas dans la liste ?",
+   "role": "appel",
+   "description": "Votre besoin n'est pas dans la liste ? : appel final",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-debut": {
+   "titre": "Parlons de votre souci",
+   "role": "ouverture",
+   "description": "Parlons de votre souci : tête de page du rendez-vous",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-demande": {
+   "titre": "En cinq petites étapes",
+   "role": "contact",
+   "description": "Demande simulée en cinq petites étapes avec déroulé collant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-coordonnees": {
+   "titre": "Ou directement",
+   "role": "contact",
+   "description": "Ou directement : téléphone, e-mail, réseaux",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-debut": {
+   "titre": "Des tarifs clairs",
+   "role": "ouverture",
+   "description": "Des tarifs clairs : tête de page des tarifs",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-grille": {
+   "titre": "Trois niveaux selon la durée",
+   "role": "tarifs",
+   "description": "Trois niveaux selon la durée de l'intervention",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-estimateur": {
+   "titre": "Estimez le prix",
+   "role": "calculateur",
+   "description": "Estimez le prix : on règle la durée, le prix se calcule selon les niveaux",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-devis": {
+   "titre": "Le devis est gratuit",
+   "role": "appel",
+   "description": "Le devis est gratuit : explications et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

@@ -1,0 +1,899 @@
+{
+ "maquette": {
+  "client": "photographe portraitiste et d'événements à Tarbes (Hautes-Pyrénées) : séances, saisons, mariages, baptêmes",
+  "activite": [
+   "culture",
+   "commerce"
+  ],
+  "concept": [
+   "galerie",
+   "carnet"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "doux"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Temps de pose » : lin, encre, terracotta, diaphragme et mise au point",
+   "intro et voile en diaphragme (iris) qui s'ouvre sur une photo",
+   "pluie de tirages en ouverture « Faites une pause. », à attraper",
+   "planche contact de trois univers, séances de saison suspendues à une corde, galerie épinglée par univers avec visionneuse",
+   "guide « Quelle séance pour moi ? », fil de la journée d'un mariage, mot « Pause » qui se met au point"
+  ],
+  "reserves": [
+   "photos du site actuel de qualité inégale",
+   "tarifs et mentions à compléter",
+   "bandeaux de villes répétés sur toutes les pages"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "canvas-2d",
+   "section-fixée",
+   "galerie-horizontale",
+   "marquee",
+   "masque",
+   "filtre-anime",
+   "fil-conducteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "jeu",
+   "quiz",
+   "réservation-simulee",
+   "formulaire-par-étapes",
+   "galerie-cliquable",
+   "calculateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "ouverture",
+  "grille": {
+   "objet": "tirages qui tombent à attraper ; diaphragme qui s'ouvre",
+   "fil": "la mise au point : le flou devient net d'une section à l'autre"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en diaphragme (iris d'objectif) qui se ferme puis s'ouvre entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-diaphragme"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un diaphragme d'objectif s'ouvre sur une photo",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, quatre liens et Réserver en terracotta",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran lin numéroté avec liens et réseaux",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture": {
+   "titre": "Faites unepause.",
+   "role": "ouverture",
+   "description": "« Faites une pause. » : pluie de tirages photo qui tombent autour du titre, à attraper",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "pluie-de-tirages"
+   ]
+  },
+  "bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau de mots en italique (baptême, studio, extérieur) qui défile",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pause-pose": {
+   "titre": "Des portraits qui vous ressemblent.",
+   "role": "manifeste",
+   "description": "Des portraits qui vous ressemblent : le mot « Pose » se met au point (canvas) au-dessus des portraits",
+   "animations": [
+    "canvas-2d",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "mise-au-point"
+   ]
+  },
+  "trois-regards": {
+   "titre": "Une planche contact, trois univers",
+   "role": "galerie",
+   "description": "Une planche contact, trois univers : vignettes cerclées au crayon gras",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances": {
+   "titre": "Une heure pour vous, ou une demi-journée",
+   "role": "offre",
+   "description": "Une heure pour vous ou une demi-journée : cinq séances en photos avec prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements": {
+   "titre": "Mariage, baptême, anniversaire",
+   "role": "offre",
+   "description": "Mariage, baptême, anniversaire : forfaits sur fond sombre avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saisons": {
+   "titre": "Les séances de saison",
+   "role": "galerie",
+   "description": "Les séances de saison : tirages suspendus à une corde qui défile",
+   "animations": [
+    "galerie-horizontale",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tirages-sur-une-corde"
+   ]
+  },
+  "photographe": {
+   "titre": "Une passion née dans les albums de famille",
+   "role": "équipe",
+   "description": "Une passion née dans les albums de famille : portrait et citation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bandeau-2": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau des villes de la zone qui défile",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lumiere": {
+   "titre": "Suivre la lumière",
+   "role": "manifeste",
+   "description": "Suivre la lumière : studio ou extérieur, photo",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Parlons de votre séance.",
+   "role": "appel",
+   "description": "Parlons de votre séance. : réserver, demander une date ou écrire",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "PausePhoto65",
+   "role": "pied-de-page",
+   "description": "Pied de page sombre « Pause, pose. », sommaire et réseaux",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-ouverture": {
+   "titre": "Cette page est hors champ.",
+   "role": "page-404",
+   "description": "« Cette page est hors champ. » avec un flou de bokeh",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-ouverture": {
+   "titre": "Derrière l'objectif",
+   "role": "ouverture",
+   "description": "Derrière l'objectif : portrait de la photographe et citation",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau des villes de la zone (page à propos)",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-album": {
+   "titre": "Tout a commencé à la maison",
+   "role": "étapes",
+   "description": "Tout a commencé à la maison : album de famille ouvert",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-facon": {
+   "titre": "Révéler, sans travestir",
+   "role": "méthode",
+   "description": "Révéler, sans travestir : sa façon de faire en points",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-collaboratrices": {
+   "titre": "Ses collaboratrices",
+   "role": "preuves",
+   "description": "Ses collaboratrices : deux partenaires en cartes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-zone": {
+   "titre": "Tarbes et alentour",
+   "role": "carte",
+   "description": "Tarbes et alentour : villes reliées et distances, Pyrénées dessinées",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-contact": {
+   "titre": "Écrire à PausePhoto65",
+   "role": "contact",
+   "description": "Écrire à PausePhoto65 : formulaire simulé et coordonnées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-ouverture": {
+   "titre": "Votre journée, sans poses forcées.",
+   "role": "ouverture",
+   "description": "Votre journée, sans poses forcées : tête de page événements",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau des villes de la zone (page événements)",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-approche": {
+   "titre": "Préparer ensemble, puis s'effacer",
+   "role": "méthode",
+   "description": "Préparer ensemble, puis s'effacer : approche et photos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-journee": {
+   "titre": "Une demi-journée ou toute la journée ?",
+   "role": "outil-interactif",
+   "description": "Une demi-journée ou toute la journée ? : le fil de la journée change selon le choix",
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-forfaits": {
+   "titre": "Quatre forfaits",
+   "role": "tarifs",
+   "description": "Quatre forfaits en deux groupes avec prix",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-plus": {
+   "titre": "Organiser les photos avec vous",
+   "role": "offre",
+   "description": "Organiser les photos avec vous : services en plus",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "evenements-demande": {
+   "titre": "Demander une date",
+   "role": "contact",
+   "description": "Demander une date : demande simulée par étapes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-ouverture": {
+   "titre": "Galerie",
+   "role": "ouverture",
+   "description": "Galerie : tête de page et filtres des trois univers",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau des villes de la zone (galerie)",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-portraits": {
+   "titre": "Portraits — individuel & famille",
+   "role": "galerie",
+   "description": "Portraits individuel et famille : salle épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-regard": {
+   "titre": "Regard personnel",
+   "role": "galerie",
+   "description": "Regard personnel : salle épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-pro": {
+   "titre": "Portrait professionnel",
+   "role": "galerie",
+   "description": "Portrait professionnel : salle épinglée qui défile à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-fin": {
+   "titre": "Une de ces images vous ressemble ?",
+   "role": "appel",
+   "description": "Une de ces images vous ressemble ? : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-visionneuse": {
+   "titre": "Visionneuse",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos, clavier et glisser",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "mentions-legales-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "mentions-legales-ouverture": {
+   "titre": "Mentions légales",
+   "role": "texte-legal",
+   "description": "Mentions légales : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mentions-legales-texte-long": {
+   "titre": "À fournir par PausePhoto65",
+   "role": "texte-legal",
+   "description": "Informations à fournir par PausePhoto65 et mentions",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-ouverture": {
+   "titre": "Choisissez votre séance",
+   "role": "ouverture",
+   "description": "Choisissez votre séance : tête de page des séances",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-bandeau": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau des villes de la zone (séances)",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-guide": {
+   "titre": "Quelle séance pour moi ?",
+   "role": "outil-interactif",
+   "description": "Quelle séance pour moi ? : quelques choix et la séance conseillée s'affiche",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "quiz"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-seances-heure": {
+   "titre": "Une heure, une histoire",
+   "role": "offre",
+   "description": "Une heure, une histoire : fiches des séances d'une heure avec prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-renaissance": {
+   "titre": "Séance Renaissance",
+   "role": "offre",
+   "description": "Séance Renaissance : demi-journée, déroulé et photos",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-saisons": {
+   "titre": "Les séances de saison",
+   "role": "offre",
+   "description": "Les séances de saison en liste avec dates",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-studio": {
+   "titre": "Le studio, ou dehors",
+   "role": "offre",
+   "description": "Le studio, ou dehors : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-reservation": {
+   "titre": "Réserver un créneau",
+   "role": "contact",
+   "description": "Réserver un créneau : réservation simulée avec créneaux",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-faq": {
+   "titre": "Avant de réserver",
+   "role": "faq",
+   "description": "Avant de réserver : questions en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances-fin": {
+   "titre": "Une question avant de choisir ?",
+   "role": "appel",
+   "description": "Une question avant de choisir ? : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

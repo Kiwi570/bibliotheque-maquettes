@@ -1,0 +1,539 @@
+{
+ "maquette": {
+  "client": "fournisseur de téléphonie IP, internet d'affaires et câblage pour les entreprises au Québec, site bilingue",
+  "activite": [
+   "numérique",
+   "services-b2b"
+  ],
+  "concept": [
+   "dossier",
+   "laboratoire"
+  ],
+  "ambiance": [
+   "sombre",
+   "industriel",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--nuit"
+  },
+  "polices": {
+   "titres": "Instrument Sans",
+   "texte": "IBM Plex Mono",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le fil unique » : un seul fil de cuivre rouge relie tout, de l'intro aux sections",
+   "faisceau de fibres WebGL en ouverture « Un fournisseur. Une facture. Une équipe. »",
+   "« Plus personne ne se renvoie la balle » : le jeu du blâme entre quatre fournisseurs dessiné en schéma",
+   "comparateur de solutions selon la taille et le besoin, estimateur de facture unique avec total en direct",
+   "parcours épinglé et preuves depuis 1994"
+  ],
+  "reserves": [
+   "périmètre réduit : accueil et deux pages types, pages légales",
+   "beaucoup d'images générées",
+   "tarifs et données « à confirmer »"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "fil-conducteur",
+   "trace-svg",
+   "section-fixée",
+   "galerie-horizontale",
+   "compteur",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "révélation-texte"
+  ],
+  "interactions": [
+   "comparateur",
+   "calculateur",
+   "formulaire-par-étapes",
+   "schema-interactif",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "estimateur de la facture unique ; schéma du jeu du blâme",
+   "fil": "un seul fil de cuivre rouge qui relie les sections"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile bleu nuit traversé par le fil rouge entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : plusieurs fils s'emmêlent puis se réunissent en un seul fil rouge",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "fils-qui-se-reunissent"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, cinq liens, FR/EN et Évaluation gratuite en rouge",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran bleu nuit avec le contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Un fournisseur.Une facture.Une équipe.",
+   "role": "ouverture",
+   "description": "« Un fournisseur. Une facture. Une équipe. » : faisceau de fibres et de câbles en WebGL, mots en trois couleurs",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "un-seul-fournisseur": {
+   "titre": "Plus personne ne se renvoie la balle.",
+   "role": "manifeste",
+   "description": "Plus personne ne se renvoie la balle : schéma du jeu du blâme entre quatre fournisseurs, qui se résout en un seul interlocuteur",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "jeu-du-blame"
+   ]
+  },
+  "services": {
+   "titre": "Quatre services, un seul fil.",
+   "role": "services",
+   "description": "Quatre services, un seul fil : le fil rouge relie téléphonie, internet, câblage et lignes, avec prix d'appel",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comparateur": {
+   "titre": "Quelle solution pour vous ?",
+   "role": "outil-interactif",
+   "description": "Quelle solution pour vous ? : nombre d'utilisateurs et besoin, la solution conseillée s'allume avec son prix",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "estimateur": {
+   "titre": "Une seule facture. Combien ?",
+   "role": "calculateur",
+   "description": "Une seule facture, combien ? : on coche les services et le nombre d'utilisateurs, la facture se calcule en direct",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "facture-unique"
+   ]
+  },
+  "parcours": {
+   "titre": "Comment ça se passe",
+   "role": "étapes",
+   "description": "Comment ça se passe : quatre étapes en galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "preuves": {
+   "titre": "Depuis 1994.",
+   "role": "preuves",
+   "description": "Depuis 1994 : chiffres, partenaire 3CX et logos clients",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Vous déménagez ? Vous vous agrandissez ?",
+   "role": "appel",
+   "description": "Vous déménagez ? Vous vous agrandissez ? : appel final sur une ville de nuit",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Nous joindre",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit : devise, coordonnées, sommaire, informations légales",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Ce numéro n’est pas en service.",
+   "role": "page-404",
+   "description": "« Ce numéro n'est pas en service. » avec un câble débranché",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis-911-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "avis-911-debut": {
+   "titre": "Avis 9-1-1 en téléphonie IP",
+   "role": "texte-legal",
+   "description": "Modèle des pages légales (avis 9-1-1, conditions, plaintes…) : tête avec sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis-911-texte-long": {
+   "titre": "Pourquoi cet avis",
+   "role": "texte-legal",
+   "description": "Avis 9-1-1 en téléphonie IP : texte réglementaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-404-debut": {
+   "titre": "This number is not in service.",
+   "role": "page-404",
+   "description": "Page introuvable en anglais : « This number is not in service. »",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-evaluation-debut": {
+   "titre": "Free technical assessment.",
+   "role": "ouverture",
+   "description": "Évaluation technique gratuite : tête de page sombre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-evaluation-demande": {
+   "titre": "Your request in 5 steps",
+   "role": "contact",
+   "description": "Demande d'évaluation simulée en cinq étapes avec récapitulatif collant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-evaluation-coordonnees": {
+   "titre": "Contact details",
+   "role": "contact",
+   "description": "Coordonnées : téléphones, courriels, adresse et horaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-debut": {
+   "titre": "The right solution for your size.",
+   "role": "ouverture",
+   "description": "Téléphonie IP : la bonne solution pour votre taille",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-voip": {
+   "titre": "What is VoIP?",
+   "role": "manifeste",
+   "description": "Qu'est-ce que la VoIP ? : raisons et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-sous-nav": {
+   "titre": "On this page",
+   "role": "menu",
+   "description": "Sous-navigation collante des offres de la page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-voxfon": {
+   "titre": "Hosted Voxfon: big features, small price.",
+   "role": "offre",
+   "description": "Voxfon hébergé : fonctions, forfaits et prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-plateforme-3cx": {
+   "titre": "3CX: the platform that grows with you.",
+   "role": "offre",
+   "description": "3CX, la plateforme qui grandit avec vous : forfaits et fonctions",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-lignes-sip": {
+   "titre": "SIP trunking: keep your system, change your bill.",
+   "role": "offre",
+   "description": "Lignes SIP : garder son système, changer sa facture",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-appareils": {
+   "titre": "Phones and headsets",
+   "role": "produits",
+   "description": "Téléphones et casques en cartes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-telephonie-questions": {
+   "titre": "Frequently asked questions",
+   "role": "faq",
+   "description": "Questions fréquentes sur la téléphonie en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

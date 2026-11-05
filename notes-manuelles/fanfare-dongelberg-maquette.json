@@ -1,0 +1,814 @@
+{
+ "maquette": {
+  "client": "fanfare royale de village en Brabant wallon : concerts, cortèges, commémorations, école de musique",
+  "activite": [
+   "association",
+   "culture"
+  ],
+  "concept": [
+   "affiche",
+   "journal"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "ludique",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--nuit"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Archivo",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Képi & Galons » : bleu nuit, cuivre doré, rouge fourragère, guirlandes de fanions",
+   "défilé de musiciens qui marche le long d'une piste au défilement (accueil et pied de page), avec arrêt",
+   "son coupable : la fanfare joue quelques notes, mesures de partition dans la 404",
+   "cortège des animations épinglé, chapitres concerts, cortèges, commémorations, Oberbayern",
+   "frise de 1895 à aujourd'hui épinglée, albums en polaroïds, choix du pupitre de l'école"
+  ],
+  "reserves": [
+   "photos du site actuel de qualité inégale",
+   "flash d'une image pendant un épinglage relevé par l'audit",
+   "comité et lieu de l'école à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "marquee",
+   "compteur",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "lecteur-vidéo",
+   "filtres",
+   "galerie-cliquable",
+   "formulaire-par-étapes",
+   "ambiance-sonore",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "défilé de musiciens qui marche au défilement ; pupitre à choisir",
+   "fil": "guirlandes de fanions et galons d'une page à l'autre"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile bleu nuit à frange de fourragère entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "DongelbergDongelberg",
+   "role": "ouverture",
+   "description": "Intro : le nom Dongelberg s'écrit en or sous les fanions, comme un drapeau de société",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : écusson, nom, quatre liens, son et Réserver la fanfare",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran bleu nuit numéroté",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Dongelberg",
+   "role": "ouverture",
+   "description": "« Dongelberg » en or sur bleu nuit, guirlande de fanions, photo de la fanfare en cortège sous un effet WebGL, prochain rendez-vous",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "defile-zone": {
+   "titre": "",
+   "role": "decor",
+   "description": "Défilé de petits musiciens qui marchent le long d'une piste au défilement, bouton pour arrêter le défilé",
+   "animations": [
+    "reactif-vitesse",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "defile-de-musiciens"
+   ]
+  },
+  "rendez-vous": {
+   "titre": "Souper aux moules",
+   "role": "agenda",
+   "description": "Prochain rendez-vous : affiche du souper aux moules, menu, tarifs et réservations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations": {
+   "titre": "De la messe à la choucroute",
+   "role": "services",
+   "description": "De la messe à la choucroute : les animations en galerie épinglée",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reperes": {
+   "titre": "Une société musicale née parmi les carriers",
+   "role": "chiffres",
+   "description": "Une société musicale née parmi les carriers : frise de dates qui comptent",
+   "animations": [
+    "compteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "video": {
+   "titre": "Le concert annuel, à Jodoigne",
+   "role": "galerie",
+   "description": "Le concert annuel à Jodoigne : vidéo et lien vers toutes les vidéos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole": {
+   "titre": "Envie d'apprendre la musique ?",
+   "role": "offre",
+   "description": "Envie d'apprendre la musique ? : école de musique, âge, tarif, instrument prêté",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "albums": {
+   "titre": "Les souvenirs, album par album",
+   "role": "galerie",
+   "description": "Les souvenirs album par album : polaroïds qui s'éparpillent",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Une fête, une cérémonie, un cortège ?",
+   "role": "appel",
+   "description": "Une fête, une cérémonie, un cortège ? : appel et téléphone",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit avec galon, coordonnées, sommaire, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Fausse note : cette page s'est égarée",
+   "role": "page-404",
+   "description": "« Fausse note : cette page s'est égarée » : partition dont cinq notes se sont échappées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "defile-zone-2": {
+   "titre": "",
+   "role": "decor",
+   "description": "Défilé de musiciens repris au-dessus du pied de page des pages intérieures",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-debut": {
+   "titre": "Rendez-vous et souvenirs",
+   "role": "ouverture",
+   "description": "Rendez-vous et souvenirs : tête de page avec photo de concert",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-a-venir": {
+   "titre": "Prochain rendez-vous",
+   "role": "agenda",
+   "description": "Prochain rendez-vous avec affiche, menu et réservations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-dates-passees": {
+   "titre": "Nos dernières sorties",
+   "role": "agenda",
+   "description": "Nos dernières sorties de 2015 à 2024 filtrables par type, avec photos et vidéos",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-albums": {
+   "titre": "Les albums photo",
+   "role": "galerie",
+   "description": "Les albums photo en polaroïds sur fond nuit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "agenda-visionneuse": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des albums",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "animations-debut": {
+   "titre": "Une fanfare pour votre évènement",
+   "role": "ouverture",
+   "description": "Une fanfare pour votre évènement : fanions et pastilles des types d'animation",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-ruban-section": {
+   "titre": "",
+   "role": "decor",
+   "description": "Ruban des types d'animation qui défile, bouton Pause",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-concerts": {
+   "titre": "Concerts",
+   "role": "services",
+   "description": "Chapitre Concerts : numéro, texte, photos et occasions, les chapitres s'empilent au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-corteges": {
+   "titre": "Cortèges",
+   "role": "services",
+   "description": "Chapitre Cortèges : numéro, texte, photos et occasions, les chapitres s'empilent au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-commemorations": {
+   "titre": "Commémorations",
+   "role": "services",
+   "description": "Chapitre Commémorations : numéro, texte, photos et occasions, les chapitres s'empilent au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-ceremonies": {
+   "titre": "Cérémonies religieuses",
+   "role": "services",
+   "description": "Chapitre Cérémonies religieuses : numéro, texte, photos et occasions, les chapitres s'empilent au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-oberbayern": {
+   "titre": "Oberbayern",
+   "role": "services",
+   "description": "Chapitre Oberbayern : numéro, texte, photos et occasions, les chapitres s'empilent au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-repertoire": {
+   "titre": "Ce que joue la fanfare",
+   "role": "manifeste",
+   "description": "Ce que joue la fanfare : répertoire sur fond nuit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-videos": {
+   "titre": "La fanfare en concert",
+   "role": "galerie",
+   "description": "La fanfare en concert : vidéos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-demande": {
+   "titre": "Réserver la fanfare",
+   "role": "contact",
+   "description": "Réserver la fanfare : demande simulée par étapes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "confidentialite-debut": {
+   "titre": "Politique de confidentialité",
+   "role": "texte-legal",
+   "description": "Politique de confidentialité : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-texte-long": {
+   "titre": "En bref",
+   "role": "texte-legal",
+   "description": "En bref puis détail, fiche à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-debut": {
+   "titre": "Apprendre la musique, en fanfare",
+   "role": "ouverture",
+   "description": "Apprendre la musique en fanfare : tête de page",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-conditions": {
+   "titre": "Neuf bonnes raisons de commencer",
+   "role": "faq",
+   "description": "Neuf bonnes raisons de commencer, en grille",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-instruments": {
+   "titre": "Choisissez votre pupitre",
+   "role": "outil-interactif",
+   "description": "Choisissez votre pupitre : familles d'instruments à choisir sur fond nuit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-genres": {
+   "titre": "Des répertoires pour tous les goûts",
+   "role": "manifeste",
+   "description": "Des répertoires pour tous les goûts : genres qui défilent",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-lieu": {
+   "titre": "À la Maison de village",
+   "role": "carte",
+   "description": "À la Maison de village : adresse et horaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-de-musique-inscription": {
+   "titre": "Je souhaite m'inscrire",
+   "role": "contact",
+   "description": "Je souhaite m'inscrire : inscription simulée par étapes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-debut": {
+   "titre": "Depuis 1895, toujours en marche",
+   "role": "ouverture",
+   "description": "Depuis 1895, toujours en marche : grande photo de la fanfare",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-histoire": {
+   "titre": "De 1895 à aujourd'hui",
+   "role": "étapes",
+   "description": "De 1895 à aujourd'hui : frise épinglée qui défile à l'horizontale avec photos d'époque",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-chefs": {
+   "titre": "À la baguette",
+   "role": "équipe",
+   "description": "À la baguette : les chefs successifs en fiches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-comite": {
+   "titre": "Ceux qui font tourner la fanfare",
+   "role": "équipe",
+   "description": "Ceux qui font tourner la fanfare : comité sur fond nuit",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-rejoindre": {
+   "titre": "Vous jouez déjà d'un instrument ?",
+   "role": "appel",
+   "description": "Vous jouez déjà d'un instrument ? : rejoindre la fanfare",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-fanfare-contact": {
+   "titre": "Écrire à la fanfare",
+   "role": "contact",
+   "description": "Écrire à la fanfare : formulaire simulé et coordonnées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

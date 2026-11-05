@@ -1,0 +1,1203 @@
+{
+ "maquette": {
+  "client": "galerie en ligne d'œuvres d'art mural en éditions limitées (impressions FineArt, caisses américaines, certificats d'authenticité)",
+  "activite": [
+   "culture",
+   "commerce"
+  ],
+  "concept": [
+   "galerie",
+   "vitrine"
+  ],
+  "ambiance": [
+   "nocturne",
+   "luxueux",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Geist",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Nocturne » : galerie de nuit où chaque œuvre est éclairée par un projecteur qui suit la souris",
+   "salle épinglée « L'esprit du studio » : on avance de mur en mur dans la galerie",
+   "« Essayez avant d'accrocher » : l'œuvre posée à l'échelle sur un mur de salon, formats et prix",
+   "42 fiches œuvre avec configurateur de format et de finition, prix calculé, barre de commande collante",
+   "certificat NFC vérifiable au smartphone, vue éclatée de la caisse américaine"
+  ],
+  "reserves": [
+   "pages longues (artistes jusqu'à 10 000 px)",
+   "beaucoup de sections sur le même gabarit sombre",
+   "mentions et CGV à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "révélation-texte",
+   "masque",
+   "curseur-personnalisé",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "compteur"
+  ],
+  "interactions": [
+   "configurateur",
+   "calculateur",
+   "panier-simule",
+   "filtres",
+   "recherche",
+   "galerie-cliquable",
+   "simulateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "projecteur qui suit la souris sur l'œuvre ; œuvre essayée à l'échelle sur un mur",
+   "fil": "la galerie de nuit, mur après mur"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile noir avec un trait de lumière entre deux pages",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : le logo et le nom s'allument comme sous un projecteur, une ligne se tire",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, sept liens, recherche et panier",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran noir avec la liste des pages",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "recherche-fenetre": {
+   "titre": "Rechercher une œuvre",
+   "role": "outil-interactif",
+   "description": "Recherche d'une œuvre en fenêtre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "panier": {
+   "titre": "Votre panier",
+   "role": "outil-interactif",
+   "description": "Tiroir du panier simulé avec format et finition",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "visuellement-cache": {
+   "titre": "",
+   "ignorer": "annonce pour lecteur d'écran"
+  },
+  "debut": {
+   "titre": "Des œuvres originales prêtes à sublimer vos espaces.",
+   "role": "ouverture",
+   "description": "« Des œuvres originales prêtes à sublimer vos espaces » : une œuvre accrochée dans le noir, éclairée par un projecteur qui suit la souris",
+   "animations": [
+    "masque",
+    "curseur-personnalisé",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "projecteur-au-pointeur"
+   ]
+  },
+  "selection": {
+   "titre": "L’esprit du studio",
+   "role": "galerie",
+   "description": "L'esprit du studio : salle épinglée, on avance de mur en mur, chaque œuvre s'éclaire à son tour",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "salle-de-galerie"
+   ]
+  },
+  "univers": {
+   "titre": "Choisir par univers",
+   "role": "produits",
+   "description": "Choisir par univers : liste des univers, l'œuvre change au survol avec un effet WebGL",
+   "animations": [
+    "webgl-shader",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous": {
+   "titre": "Essayez avant d’accrocher",
+   "role": "outil-interactif",
+   "description": "Essayez avant d'accrocher : section épinglée, l'œuvre se pose à l'échelle sur un mur de salon selon le format choisi",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "oeuvre-a-l-echelle"
+   ]
+  },
+  "fabrication": {
+   "titre": "Une présence contemporaine, parfaitement maîtrisée",
+   "role": "méthode",
+   "description": "Une présence contemporaine : couches de la caisse américaine qui se séparent",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat": {
+   "titre": "Œuvres numérotées et certifiées authentiques",
+   "role": "preuves",
+   "description": "Œuvres numérotées et certifiées : compteur 1-30 en cadran et certificat NFC",
+   "animations": [
+    "compteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes": {
+   "titre": "Une sélection de signatures visuelles aux univers affirmés",
+   "role": "équipe",
+   "description": "Une sélection de signatures visuelles : trois artistes et leurs œuvres",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fondateurs": {
+   "titre": "Deux regards complémentaires",
+   "role": "équipe",
+   "description": "Deux regards complémentaires : les fondateurs et citation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "acheter": {
+   "titre": "Prête à accrocher, livrée avec soin",
+   "role": "preuves",
+   "description": "Prête à accrocher, livrée avec soin : paiement, livraison, retours, conseil",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Sommaire",
+   "role": "pied-de-page",
+   "description": "Pied de page noir : logo, sommaire, paiements, livraison, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Ce mur attend son œuvre",
+   "role": "page-404",
+   "description": "« Ce mur attend son œuvre » : mur vide sous un projecteur",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes-debut": {
+   "titre": "Une sélection de signatures visuelles aux univers affirmés",
+   "role": "ouverture",
+   "description": "Les artistes : œuvres éclairées sur un mur sombre",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes-darren-whitmore": {
+   "titre": "Darren Whitmore",
+   "role": "galerie",
+   "description": "Darren Whitmore : salle épinglée de ses œuvres qui défilent à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes-francesco-conte": {
+   "titre": "Francesco Conte",
+   "role": "galerie",
+   "description": "Francesco Conte : salle épinglée de ses œuvres qui défilent à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes-miyu-mori": {
+   "titre": "Miyu Mori",
+   "role": "galerie",
+   "description": "Miyu Mori : salle épinglée de ses œuvres qui défilent à l'horizontale",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "artistes-fin": {
+   "titre": "Trouver l’œuvre qui vous ressemble",
+   "role": "appel",
+   "description": "Trouver l'œuvre qui vous ressemble : appel vers la galerie",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-debut": {
+   "titre": "Encadrement & finitions d’exception",
+   "role": "ouverture",
+   "description": "Encadrement et finitions d'exception : baguettes sous la lumière",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-comparer": {
+   "titre": "Quatre finitions",
+   "role": "offre",
+   "description": "Quatre finitions comparées avec photos et caractéristiques dépliables",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-caisse-americaine": {
+   "titre": "La caisse américaine",
+   "role": "outil-interactif",
+   "description": "La caisse américaine : vue éclatée légendée qui se sépare au défilement",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-toile-insonorisee": {
+   "titre": "La toile insonorisée",
+   "role": "offre",
+   "description": "La toile insonorisée : texte et visuels",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-fineart": {
+   "titre": "FineArt Hahnemühle, encadré",
+   "role": "offre",
+   "description": "FineArt Hahnemühle encadré : caractéristiques et visuels",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-accroche": {
+   "titre": "Une suspension professionnelle, discrète et stable",
+   "role": "faq",
+   "description": "Une suspension professionnelle, discrète et stable",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadres-et-finitions-fin": {
+   "titre": "Chaque œuvre, quatre finitions",
+   "role": "appel",
+   "description": "Chaque œuvre, quatre finitions : appel vers la galerie",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-debut": {
+   "titre": "Certificat d’authenticité",
+   "role": "ouverture",
+   "description": "Certificat d'authenticité : tête de page sous la lumière",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-technologies": {
+   "titre": "Les nouvelles technologies pour assurer l’authenticité",
+   "role": "preuves",
+   "description": "Les nouvelles technologies pour assurer l'authenticité",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-double-securisation": {
+   "titre": "La double sécurisation Certificat & Œuvre",
+   "role": "preuves",
+   "description": "La double sécurisation certificat et œuvre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-verification": {
+   "titre": "Vérification par smartphone",
+   "role": "outil-interactif",
+   "description": "Vérification par smartphone : démonstration du scan NFC",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-transmission": {
+   "titre": "Revente, perte ou vol",
+   "role": "faq",
+   "description": "Revente, perte ou vol : ce que permet le certificat",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "certificat-fin": {
+   "titre": "Pour aller plus loin",
+   "role": "appel",
+   "description": "Pour aller plus loin : liens vers le journal et la galerie",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cgv-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "cgv-debut": {
+   "titre": "Conditions générales de vente",
+   "role": "texte-legal",
+   "description": "Conditions générales de vente : tête avec sommaire",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cgv-texte-long": {
+   "titre": "1. Identité du vendeur",
+   "role": "texte-legal",
+   "description": "Conditions générales de vente détaillées, notes à valider",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous-debut": {
+   "titre": "Visualiser une œuvre chez vous",
+   "role": "ouverture",
+   "description": "Visualiser une œuvre chez vous : salon dans la pénombre",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous-etapes": {
+   "titre": "Trois gestes, un rendu fidèle",
+   "role": "étapes",
+   "description": "Trois gestes pour un rendu fidèle",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous-outil": {
+   "titre": "Composez votre mur",
+   "role": "outil-interactif",
+   "description": "Composez votre mur : choisir une œuvre, un format et un mur, l'aperçu se met à l'échelle",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "configurateur",
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous-inspirations": {
+   "titre": "Inspirations",
+   "role": "galerie",
+   "description": "Inspirations : œuvres mises en situation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chez-vous-fin": {
+   "titre": "Le bon format en un regard",
+   "role": "appel",
+   "description": "Le bon format en un regard : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commande-debut": {
+   "titre": "Votre sélection",
+   "role": "ouverture",
+   "description": "Votre sélection : tête de la page commande",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commande-recapitulatif": {
+   "titre": "Récapitulatif",
+   "role": "outil-interactif",
+   "description": "Récapitulatif de commande simulé avec coordonnées et total",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule",
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-debut": {
+   "titre": "La Galerie",
+   "role": "ouverture",
+   "description": "La Galerie : mur d'œuvres sous la lumière",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-oeuvres": {
+   "titre": "Filtrer les œuvres",
+   "role": "produits",
+   "description": "42 œuvres filtrables par univers, artiste, format et prix, tri et recherche",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-univers": {
+   "titre": "Explorer par univers",
+   "role": "produits",
+   "description": "Explorer par univers : raccourcis en vignettes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "galerie-fin": {
+   "titre": "Hésitez-vous entre deux formats ?",
+   "role": "appel",
+   "description": "Hésitez-vous entre deux formats ? : appel vers l'essai chez soi",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-debut": {
+   "titre": "Technique & Culture",
+   "role": "ouverture",
+   "description": "Technique et culture : tête du journal",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-articles": {
+   "titre": "Les articles",
+   "role": "articles",
+   "description": "Les articles filtrables par thème",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-fin": {
+   "titre": "De la technique à vos murs",
+   "role": "appel",
+   "description": "De la technique à vos murs : appel final du journal",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-certificat-authenticite-photogra-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "journal-certificat-authenticite-photogra-debut": {
+   "titre": "Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique impr",
+   "role": "articles",
+   "description": "Modèle d'article : titre et image",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-certificat-authenticite-photogra-lecture": {
+   "titre": "Qu’est-ce qu’un certificat d’authenticité ?",
+   "role": "articles",
+   "description": "Corps de l'article long avec intertitres et images",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "journal-certificat-authenticite-photogra-a-lire": {
+   "titre": "À lire aussi",
+   "role": "articles",
+   "description": "À lire aussi : trois autres articles",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-debut": {
+   "titre": "Arbre de Cœur Florissant",
+   "role": "produits",
+   "description": "Gabarit des 42 fiches œuvre : visionneuse, configurateur de format et de finition, prix calculé, ajout au panier",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "configurateur",
+    "calculateur",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-oeuvre": {
+   "titre": "L’œuvre",
+   "role": "produits",
+   "description": "L'œuvre : description, accroche et caractéristiques",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-chez-vous": {
+   "titre": "Chez vous",
+   "role": "outil-interactif",
+   "description": "Chez vous : l'œuvre mise en situation",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-certificat": {
+   "titre": "Son certificat d’authenticité",
+   "role": "preuves",
+   "description": "Son certificat d'authenticité numéroté et sa puce NFC",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-fabrication": {
+   "titre": "La finition choisie",
+   "role": "offre",
+   "description": "La finition choisie détaillée avec photos",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-meme-univers": {
+   "titre": "Dans le même univers",
+   "role": "produits",
+   "description": "Dans le même univers : mur d'œuvres liées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-arbre-de-coeur-florissant-visionneuse": {
+   "titre": "Arbre de Cœur Florissant · Francesco Conte",
+   "role": "galerie",
+   "description": "Visionneuse plein écran de l'œuvre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "barre-oeuvre": {
+   "titre": "",
+   "role": "barre-fixe",
+   "description": "Barre de commande collante de la fiche : choix, total et ajout au panier",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "qui-sommes-nous-debut": {
+   "titre": "Notre histoire",
+   "role": "ouverture",
+   "description": "Notre histoire : tête de page du studio",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-ambition": {
+   "titre": "Une galerie d’art mural",
+   "role": "manifeste",
+   "description": "Une galerie d'art mural : lettrine et texte",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-selection": {
+   "titre": "Une sélection pensée pour vos espaces",
+   "role": "manifeste",
+   "description": "Une sélection pensée pour vos espaces",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-atelier": {
+   "titre": "Un atelier de fabrication premium",
+   "role": "preuves",
+   "description": "Un atelier de fabrication premium",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-createurs": {
+   "titre": "Les créateurs de Sequoia Studio",
+   "role": "équipe",
+   "description": "Les créateurs de Sequoia Studio",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "qui-sommes-nous-fin": {
+   "titre": "Une question, un conseil ?",
+   "role": "appel",
+   "description": "Une question, un conseil ? : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

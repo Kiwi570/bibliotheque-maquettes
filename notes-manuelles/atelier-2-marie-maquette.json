@@ -1,0 +1,804 @@
+{
+ "maquette": {
+  "client": "atelier familial de broderie et de flocage personnalisés en Bretagne (sacs, sweats, cierges, articles scouts et religieux)",
+  "activite": [
+   "artisanat",
+   "commerce"
+  ],
+  "concept": [
+   "atelier",
+   "catalogue"
+  ],
+  "ambiance": [
+   "clair",
+   "artisanal",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Fil d'or » : fil doré qui coud les sections, tambour à broder dans l'intro, voile cousu entre les pages",
+   "aperçu du prénom brodé sur le sac en direct, avec couleur du sac et du fil",
+   "univers (scout, religieux, Puy du Fou…) en piste épinglée à faire glisser",
+   "boutique complète de 51 fiches générées depuis le catalogue réel, filtres, recherche, panier",
+   "quatre gestes d'atelier épinglés, machines dessinées, commandes groupées avec devis"
+  ],
+  "reserves": [
+   "photos produits du site actuel de qualité inégale",
+   "délais et horaires à confirmer",
+   "fiches produits sur un même gabarit"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "fil-conducteur",
+   "trace-svg",
+   "apparition-au-défilement",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "saisie-personnalisee",
+   "configurateur",
+   "panier-simule",
+   "filtres",
+   "recherche",
+   "galerie-cliquable",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "prénom brodé en aperçu sur le sac ; tambour à broder",
+   "fil": "fil d'or qui coud les sections entre elles"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile bleu marine avec un cartouche et une couture qui se ferme entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : un tambour à broder où l'aiguille avance et brode le nom de l'atelier",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tambour-a-broder"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo et sceau, cinq liens, recherche, panier, La boutique",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran crème avec les liens en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Vos prénoms, brodés et flexés en Bretagne",
+   "role": "ouverture",
+   "description": "« Vos prénoms, brodés et flexés en Bretagne » : sac brodé au prénom sous un reflet WebGL, fil d'or qui descend",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "noel": {
+   "titre": "Idées pour Noël",
+   "role": "produits",
+   "description": "Idées pour Noël : articles suspendus comme des décorations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "univers": {
+   "titre": "Trouvez votre univers",
+   "role": "produits",
+   "description": "Trouvez votre univers : piste épinglée à faire glisser (scout, religieux, Puy du Fou…)",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "nouveautes": {
+   "titre": "Nouveautés de l’atelier",
+   "role": "produits",
+   "description": "Nouveautés de l'atelier : quatre cartes produits avec prix",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "personnaliser": {
+   "titre": "Votre prénom, en aperçu sur le sac",
+   "role": "outil-interactif",
+   "description": "Votre prénom en aperçu sur le sac : on tape le prénom, choisit la couleur du sac et du fil, l'aperçu se met à jour",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "saisie-personnalisee",
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "prenom-sur-le-produit"
+   ]
+  },
+  "savoir-faire": {
+   "titre": "Quatre gestes d’atelier",
+   "role": "méthode",
+   "description": "Quatre gestes d'atelier : section épinglée, broder, découper, appliquer, coudre",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "delai": {
+   "titre": "Environ trois semaines, de la commande à l’envoi",
+   "role": "étapes",
+   "description": "Environ trois semaines : trois étapes reliées par une couture",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "groupes": {
+   "titre": "Pour la patrouille, la paroisse ou l’équipe",
+   "role": "offre",
+   "description": "Pour la patrouille, la paroisse ou l'équipe : exemples de séries",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier": {
+   "titre": "Un atelier familial, en Bretagne",
+   "role": "équipe",
+   "description": "Un atelier familial en Bretagne : citation, carte du Morbihan, avis clients",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-rapide": {
+   "titre": "Un motif, un logo, une idée ?",
+   "role": "appel",
+   "description": "Un motif, un logo, une idée ? : appel sur fond de toile",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Atelier",
+   "role": "pied-de-page",
+   "description": "Pied de page marine : coordonnées, sommaire, informations, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "recherche": {
+   "titre": "Rechercher un article",
+   "role": "outil-interactif",
+   "description": "Recherche dans les articles en fenêtre",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "panier": {
+   "titre": "Votre panier",
+   "role": "outil-interactif",
+   "description": "Tiroir du panier simulé avec options de personnalisation",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "404-debut": {
+   "titre": "Fil cassé : cette page n’existe pas",
+   "role": "page-404",
+   "description": "« Fil cassé : cette page n'existe pas » avec une bobine",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-debut": {
+   "titre": "Une entreprise familiale bretonne",
+   "role": "ouverture",
+   "description": "Une entreprise familiale bretonne : machine à broder plein cadre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-histoire": {
+   "titre": "D’abord pour les enfants, puis pour les amis",
+   "role": "étapes",
+   "description": "D'abord pour les enfants, puis pour les amis : citation et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-machines": {
+   "titre": "Les machines de l’atelier",
+   "role": "preuves",
+   "description": "Les machines de l'atelier dessinées au trait (brodeuse, découpe, couture)",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-techniques": {
+   "titre": "Broderie, flex ou vinyle : que choisir ?",
+   "role": "faq",
+   "description": "Broderie, flex ou vinyle : que choisir ? en quatre cartes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-lieu": {
+   "titre": "À Kernascléden, dans le Morbihan",
+   "role": "carte",
+   "description": "À Kernascléden, dans le Morbihan : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-debut": {
+   "titre": "La boutique",
+   "role": "ouverture",
+   "description": "La boutique : 51 articles, recherche et étagère de fils",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-articles": {
+   "titre": "Filtrer les articles",
+   "role": "produits",
+   "description": "Articles filtrables par univers, technique et occasion, tri, ajout au panier",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-serie": {
+   "titre": "Une série pour un groupe ?",
+   "role": "appel",
+   "description": "Une série pour un groupe ? : bandeau vers les commandes groupées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-faq": {
+   "titre": "Avant de commander",
+   "role": "faq",
+   "description": "Avant de commander : questions en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-bonnet-en-polaire-fil-ariane": {
+   "titre": "Fil d’Ariane",
+   "role": "menu",
+   "description": "Fil d'Ariane des 51 fiches produits",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-bonnet-en-polaire-debut": {
+   "titre": "Bonnet en polaire « J’peux pas j’ai Puy du Fou »",
+   "role": "produits",
+   "description": "Gabarit des 51 fiches produits : photos, prix, options de personnalisation, prénom, ajout au panier",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "configurateur",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-bonnet-en-polaire-meme-univers": {
+   "titre": "Dans le même univers",
+   "role": "produits",
+   "description": "Dans le même univers : quatre articles liés",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "boutique-bonnet-en-polaire-visionneuse": {
+   "titre": "Photos de l’article",
+   "role": "galerie",
+   "description": "Visionneuse plein écran des photos de l'article",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "commandes-groupees-debut": {
+   "titre": "Commandes groupées",
+   "role": "ouverture",
+   "description": "Commandes groupées : tête de page avec exemples",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commandes-groupees-serie": {
+   "titre": "Ce que l’atelier fait en série",
+   "role": "produits",
+   "description": "Ce que l'atelier fait en série : cartes d'exemples",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commandes-groupees-etapes": {
+   "titre": "Comment ça se passe",
+   "role": "étapes",
+   "description": "Comment ça se passe : étapes reliées par une couture",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commandes-groupees-devis": {
+   "titre": "Votre demande de devis",
+   "role": "contact",
+   "description": "Votre demande de devis simulée avec récapitulatif collant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commandes-groupees-faq": {
+   "titre": "Questions des groupes",
+   "role": "faq",
+   "description": "Questions des groupes en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commandes-groupees-fin": {
+   "titre": "Plutôt en parler de vive voix ?",
+   "role": "appel",
+   "description": "Plutôt en parler de vive voix ? : appel court",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "confidentialite-debut": {
+   "titre": "Confidentialité et cookies",
+   "role": "texte-legal",
+   "description": "Confidentialité et cookies : tête de page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "confidentialite-texte-long": {
+   "titre": "Données personnelles",
+   "role": "texte-legal",
+   "description": "Données personnelles et cookies",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Contact",
+   "role": "ouverture",
+   "description": "Contact : tête de page avec photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-ecrire": {
+   "titre": "Écrire à l’atelier",
+   "role": "contact",
+   "description": "Écrire à l'atelier : formulaire simulé et coordonnées",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "infos-pratiques-debut": {
+   "titre": "Infos pratiques",
+   "role": "ouverture",
+   "description": "Infos pratiques : tête de page en bande",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-texte-long-grille": {
+   "titre": "Délais de fabrication",
+   "role": "faq",
+   "description": "Délais, livraison, retours, entretien : sommaire latéral et accordéons",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-fin": {
+   "titre": "Une question qui n’est pas ici ?",
+   "role": "appel",
+   "description": "Une question qui n'est pas ici ? : appel court",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

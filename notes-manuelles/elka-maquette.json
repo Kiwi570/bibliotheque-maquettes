@@ -1,0 +1,870 @@
+{
+ "maquette": {
+  "client": "hypnothérapeute à Bard-lès-Époisses (Côte-d'Or) : séances individuelles, enfants, ateliers d'autohypnose en visio",
+  "activite": [
+   "santé",
+   "bien-être"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--accent",
+   "secondaire": "--voile-fond"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le seuil » : l'Auxois au petit matin vu par une arche de pierre, on passe le seuil à l'intro et à chaque page",
+   "arche WebGL d'ouverture sur la campagne au lever du jour, voile en arche entre les pages",
+   "« Respirer un instant » : exercice de respiration guidée d'une minute",
+   "chemin du suivi qui se trace, sablier d'une séance d'atelier, sentier du parcours épinglé",
+   "calendrier des ateliers filtrable par thème, prise de rendez-vous par étapes, statut ouvert ou fermé du cabinet"
+  ],
+  "reserves": [
+   "beaucoup d'illustrations générées (paysages, intérieurs)",
+   "têtes de page toutes sur la même arche",
+   "CGV et mentions à compléter"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "trace-svg",
+   "fil-conducteur",
+   "masque",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "filtres",
+   "formulaire-par-étapes",
+   "réservation-simulee",
+   "jeu",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "arche de pierre qu'on traverse ; respiration guidée d'une minute",
+   "fil": "le chemin qui traverse le paysage, du seuil au cabinet"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile vert sauge en forme d'arche qui se referme puis se rouvre entre deux pages",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-arche"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro « Le seuil » : on passe une arche de pierre vers la campagne au petit matin",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "passer-le-seuil"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête : logo, quatre liens et Prendre rendez-vous",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Contact",
+   "role": "menu",
+   "description": "Menu plein écran vert avec les liens et le contact",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Libérez votre potentiel grâce à l’hypnose.",
+   "role": "ouverture",
+   "description": "« Libérez votre potentiel grâce à l'hypnose » : arche ouverte sur l'Auxois au lever du soleil (lumière WebGL), statut ouvert ou fermé du cabinet",
+   "animations": [
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "rencontre": {
+   "titre": "Avancer en douceur, à votre rythme",
+   "role": "équipe",
+   "description": "Avancer en douceur : portrait en cercle, chiffres et affiliations",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements": {
+   "titre": "Mes accompagnements",
+   "role": "services",
+   "description": "Mes accompagnements : cartes en arches qui se lèvent l'une après l'autre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chemin": {
+   "titre": "Le chemin d’un suivi",
+   "role": "étapes",
+   "description": "Le chemin d'un suivi : un chemin se trace et relie les trois étapes",
+   "animations": [
+    "trace-svg",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "respirer": {
+   "titre": "Respirer un instant",
+   "role": "outil-interactif",
+   "description": "Respirer un instant : exercice de respiration guidée d'une minute, l'arche se remplit et se vide",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "respiration-guidee"
+   ]
+  },
+  "parcours": {
+   "titre": "Mon parcours",
+   "role": "équipe",
+   "description": "Mon parcours : texte, affiliation et photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers": {
+   "titre": "Ateliers d’autohypnose",
+   "role": "offre",
+   "description": "Ateliers d'autohypnose : tarif, places, thèmes et prochain atelier sur fond vert",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce qu’en disent les personnes accompagnées",
+   "role": "témoignages",
+   "description": "Ce qu'en disent les personnes accompagnées : note et avis Résalib",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carnet": {
+   "titre": "Le carnet",
+   "role": "articles",
+   "description": "Le carnet : derniers articles avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "venir": {
+   "titre": "Venir au cabinet",
+   "role": "carte",
+   "description": "Venir au cabinet : plan des villages qui se trace, horaires, photo du cabinet",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Contact",
+   "role": "pied-de-page",
+   "description": "Pied de page vert : coordonnées, sommaire, informations, confort",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Vous avez fait un détour",
+   "role": "page-404",
+   "description": "« Vous avez fait un détour » : chemin dans la brume sous l'arche",
+   "animations": [
+    "webgl-shader",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-debut": {
+   "titre": "Apprendre l’autohypnose en petit groupe",
+   "role": "ouverture",
+   "description": "Apprendre l'autohypnose en petit groupe : arche sur des tasses, prix et places",
+   "animations": [
+    "webgl-shader",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-themes": {
+   "titre": "Trois thèmes, trois portes",
+   "role": "offre",
+   "description": "Trois thèmes, trois portes : cartes en arches",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-calendrier": {
+   "titre": "Le calendrier des séances",
+   "role": "agenda",
+   "description": "Le calendrier des séances de novembre et décembre filtrable par thème, détail de la séance choisie",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-seance": {
+   "titre": "Une séance de 1 h 30",
+   "role": "étapes",
+   "description": "Une séance de 1 h 30 : un sablier se vide au fil des étapes",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "sablier"
+   ]
+  },
+  "ateliers-visio": {
+   "titre": "En visio, depuis chez vous",
+   "role": "offre",
+   "description": "En visio depuis chez vous : conditions et places",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-sessions": {
+   "titre": "Les ateliers de l’automne",
+   "role": "agenda",
+   "description": "Les ateliers de l'automne en cartes avec places restantes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-conditions": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Bon à savoir : réserver, régler, s'engager, questions en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ateliers-inscription": {
+   "titre": "Envie d’essayer ?",
+   "role": "appel",
+   "description": "Envie d'essayer ? : appel final des ateliers",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "conditions-generales-de-vente-div": {
+   "titre": "",
+   "ignorer": "barre de lecture du socle"
+  },
+  "conditions-generales-de-vente-debut": {
+   "titre": "Conditions générales de vente",
+   "role": "texte-legal",
+   "description": "Tête des pages légales sous une arche courte",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "conditions-generales-de-vente-texte-long": {
+   "titre": "Prix",
+   "role": "texte-legal",
+   "description": "Conditions générales de vente à compléter",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-debut": {
+   "titre": "Comment se passe un suivi",
+   "role": "ouverture",
+   "description": "Comment se passe un suivi : arche sur la campagne",
+   "animations": [
+    "webgl-shader",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-etapes": {
+   "titre": "Trois étapes",
+   "role": "étapes",
+   "description": "Trois étapes avec photos qui changent dans une colonne collante",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-cabinet-ou-visio": {
+   "titre": "Au cabinet ou en visio",
+   "role": "offre",
+   "description": "Au cabinet ou en visio : deux cartes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-enfants": {
+   "titre": "Les enfants, dès 5 ans",
+   "role": "offre",
+   "description": "Les enfants dès 5 ans : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-cadre": {
+   "titre": "Le cadre et les limites",
+   "role": "faq",
+   "description": "Le cadre et les limites, numéros d'urgence",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-charte": {
+   "titre": "Charte d’engagement",
+   "role": "preuves",
+   "description": "Charte d'engagement en colonnes sur fond photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-questions": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "Questions fréquentes en accordéon",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hypnose-et-suivi-premier-pas": {
+   "titre": "Faire le premier pas",
+   "role": "appel",
+   "description": "Faire le premier pas : appel final",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-debut": {
+   "titre": "De l’école au cabinet",
+   "role": "ouverture",
+   "description": "De l'école au cabinet : arche sur la campagne",
+   "animations": [
+    "webgl-shader",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-rencontre": {
+   "titre": "Enseigner, puis accompagner",
+   "role": "équipe",
+   "description": "Enseigner, puis accompagner : portrait et texte",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-chemin": {
+   "titre": "Le chemin parcouru",
+   "role": "étapes",
+   "description": "Le chemin parcouru : sentier épinglé qui avance à travers le paysage étape par étape",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-formations": {
+   "titre": "Mes formations",
+   "role": "preuves",
+   "description": "Mes formations avec leurs années et organismes",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-approche": {
+   "titre": "Ma façon d’accompagner",
+   "role": "manifeste",
+   "description": "Ma façon d'accompagner : texte et photo",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-cabinet": {
+   "titre": "Le cabinet",
+   "role": "galerie",
+   "description": "Le cabinet : pile de photos qui se distribuent",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-avis": {
+   "titre": "Ce qu’en disent les personnes accompagnées",
+   "role": "témoignages",
+   "description": "Avis des personnes accompagnées, repris de Résalib",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-parcours-premier-pas": {
+   "titre": "Faisons connaissance",
+   "role": "appel",
+   "description": "Faisons connaissance : appel final du parcours",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-debut": {
+   "titre": "Tarifs et rendez-vous",
+   "role": "ouverture",
+   "description": "Tarifs et rendez-vous : arche et actions",
+   "animations": [
+    "webgl-shader",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-tarifs": {
+   "titre": "Les tarifs",
+   "role": "tarifs",
+   "description": "Les tarifs en liste avec une photo collante",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-rendez-vous": {
+   "titre": "Prendre rendez-vous",
+   "role": "contact",
+   "description": "Prendre rendez-vous : demande simulée par étapes (motif, créneau, coordonnées)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-conditions": {
+   "titre": "Conditions",
+   "role": "faq",
+   "description": "Conditions d'annulation et de règlement",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-horaires": {
+   "titre": "Horaires",
+   "role": "faq",
+   "description": "Horaires du cabinet avec statut du jour",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-et-rendez-vous-acces": {
+   "titre": "Accès",
+   "role": "carte",
+   "description": "Accès : plan qui se trace et photo",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
