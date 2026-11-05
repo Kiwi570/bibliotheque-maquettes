@@ -39,6 +39,7 @@ Origine : madebymelody-maquette (v2) : le bac à pochettes de l'accueil (remplac
 - La boucle de lissage ne tourne que pendant le mouvement (ajoutée puis retirée de `gsap.ticker`) : rien ne tourne au repos, ni en mode calme.
 - Un `data-effet` posé sur la pile seule ne bouge pas (ce sont les pochettes qui bougent) : dans un projet de la skill, le poser sur `.baf__caisse`.
 - Mode calme et sans JavaScript : rangée horizontale à faire défiler, étiquettes sous les pochettes, contenu complet.
+- Une pochette entièrement effacée (basculée, ou trop loin derrière) est remise à plat, invisible : son lien garde sa vraie taille (contrôle des cibles de 44 px, mesuré en fin de page) et reste atteignable au clavier. Les liens des pochettes font au moins 44 px de haut (`inline-flex`, `min-height`).
 
 ## Variantes
 

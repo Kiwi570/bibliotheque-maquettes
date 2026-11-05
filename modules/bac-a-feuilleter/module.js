@@ -43,6 +43,9 @@ export async function init(root, options = {}) {
         tr = `translate3d(0, ${(t * 6).toFixed(2)}%, ${(t * 90).toFixed(1)}px) rotateX(${(-t * o.bascule).toFixed(2)}deg)`;
         op = 1 - lisse(.4, .88, t);
       }
+      /* Pochette entièrement effacée : remise à plat (invisible), pour que son lien garde sa vraie taille
+         (contrôle des cibles de 44 px) et reste atteignable au clavier en revenant en arrière. */
+      if (op <= .001) tr = `translate3d(0, ${k < 0 ? 8 : (-k * 5.5).toFixed(2)}%, 0)`;
       c.style.transform = tr;
       c.style.opacity = op.toFixed(3);
       c.style.zIndex = String(k < -.12 ? 60 + i : n - i); /* celle qui bascule passe devant le bois */

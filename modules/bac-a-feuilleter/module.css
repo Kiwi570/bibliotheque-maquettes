@@ -19,7 +19,7 @@
   background: radial-gradient(circle, var(--couleur-accent) 0 22%, transparent 22.5%), repeating-radial-gradient(circle, color-mix(in oklab, var(--couleur-fond) 88%, var(--couleur-texte)) 0 1.4px, var(--couleur-fond) 1.4px 2.8px); }
 .baf__etiquette { margin-top: 12px; }
 .baf__etiquette h3 { font-size: clamp(1.1rem, .9rem + .8vw, 1.6rem); }
-.baf__etiquette h3 a { text-decoration: none; }
+.baf__etiquette h3 a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }  /* cible tactile de 44 px */
 .baf__etiquette h3 a::after { content: ''; position: absolute; inset: 0; z-index: 3; }
 .baf__etiquette p { font-family: var(--police-mono); font-size: max(12px, .85rem); }
 .baf__num { font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-accent); margin-right: .4em; }

@@ -28,6 +28,7 @@ Origine : madebymelody-maquette (v2) : vinyle WebGL du héros qu'on scratche à 
 - Le centre est mesuré au début du geste et après un défilement ou un redimensionnement, jamais à chaque image.
 - La lumière s'amortit et se stabilise dès que la souris s'arrête (contrôle « souris immobile » de l'audit) ; au doigt, elle ne bouge pas.
 - Boucle du socle : arrêtée hors écran et onglet caché ; en mode calme, aucune boucle et aucun geste : l'objet reste à son état de départ.
+- La rotation est posée sur l'enfant de `.oat__objet`, qui coupe en rond (`overflow: hidden`) : un carré tourné déborde de sa boîte (jusqu'à 41 % à 45°), et un objet presque aussi large que l'écran faisait défiler la page à l'horizontale.
 - Dans un projet de la skill : marquer l'élément `data-effet="…"` (il tourne tout seul) et `data-souris` (lumière).
 
 ## Variantes

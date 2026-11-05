@@ -2,8 +2,10 @@
 .oat { position: relative; aspect-ratio: 1; width: var(--oat-taille, min(54svh, 40vw, 560px)); -webkit-user-select: none; user-select: none; }
 .oat.est-actif { cursor: grab; touch-action: pan-y; }
 .oat.est-tenu { cursor: grabbing; }
-.oat__objet { position: absolute; inset: 0; border-radius: 50%; transform: rotate(var(--oat-angle, 0deg)); will-change: transform; }
-.oat__objet > * { width: 100%; height: 100%; }
+/* La rotation s'applique au contenu, dans une boîte ronde qui coupe : un carré tourné à 45° déborderait de 41 %
+   et ferait défiler la page à l'horizontale sur téléphone. */
+.oat__objet { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; }
+.oat__objet > * { width: 100%; height: 100%; transform: rotate(var(--oat-angle, 0deg)); will-change: transform; }
 /* Reflet fixe (il ne tourne pas avec l'objet) : deux éclats opposés qui suivent la lumière. */
 .oat__reflet { position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
   background: conic-gradient(from calc(var(--oat-lumiere, 0deg) - 12deg),

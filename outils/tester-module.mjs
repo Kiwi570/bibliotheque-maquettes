@@ -115,7 +115,7 @@ async function parcourir(pg) {
       if (!r.width || cs.visibility === 'hidden' || cs.display === 'none') continue;
       const texte = [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim());
       if (texte && parseFloat(cs.fontSize) < 11.95) pb.petits.add(el.tagName.toLowerCase() + '.' + (el.className || '').toString().split(' ')[0] + ' ' + cs.fontSize);
-      if (el.matches('a[href], button, [role="button"], input, select, summary, [tabindex="0"]') && (r.width < 43.5 || r.height < 43.5) && !el.closest('p, li > p')) pb.cibles.add(el.tagName.toLowerCase() + '.' + (el.className || '').toString().split(' ')[0] + ` ${Math.round(r.width)}×${Math.round(r.height)}`);
+      if (el.matches('a[href], button, [role="button"], input, select, summary, [tabindex="0"]') && cs.pointerEvents !== 'none' && (r.width < 43.5 || r.height < 43.5) && !el.closest('p, li > p')) pb.cibles.add(el.tagName.toLowerCase() + '.' + (el.className || '').toString().split(' ')[0] + ` ${Math.round(r.width)}×${Math.round(r.height)}`);
     }
     scrollTo(0, 0);
     return { coupes: [...pb.coupes].slice(0, 6), debord: pb.debord, petits: [...pb.petits].slice(0, 6), cibles: [...pb.cibles].slice(0, 6) };
