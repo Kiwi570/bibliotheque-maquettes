@@ -1,0 +1,16 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"offre-a-tiroirs\"] .ofr__tiroirs"},
+  {"attendre": 600},
+  {"cliquer": "#renovation .ofr__poignee"},
+  {"attendre": 800},
+  {"verifier": "#renovation.est-ouvert .ofr__parler"},
+  {"cliquer": "#atelier .ofr__poignee"},
+  {"attendre": 800},
+  {"verifier": "#atelier .ofr__poignee[aria-expanded=\"true\"]"},
+  {"cliquer": "#atelier .ofr__poignee"},
+  {"attendre": 700}
+ ],
+ "pause": 550,
+ "video": "scenario"
+}

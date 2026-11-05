@@ -1,0 +1,18 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"agenda-des-dates\"] .agd__outils"},
+  {"cliquer": ".agd__filtre[data-type=\"Stage\"]"},
+  {"attendre": 500},
+  {"verifier": ".agd__filtre[data-type=\"Stage\"][aria-pressed=\"true\"]"},
+  {"cliquer": ".agd__filtre[data-type=\"\"]"},
+  {"attendre": 400},
+  {"cliquer": ".agd__date:not([hidden]) .agd__ics >> nth=1"},
+  {"attendre": 700},
+  {"verifier": ".agd__date--ajoutee .agd__tampon"},
+  {"cliquer": ".agd__passees > summary"},
+  {"attendre": 400},
+  {"verifier": ".agd__liste--passees .agd__date"}
+ ],
+ "pause": 550,
+ "video": "les-deux"
+}

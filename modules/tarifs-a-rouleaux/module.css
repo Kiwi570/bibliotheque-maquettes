@@ -1,0 +1,54 @@
+/* Tarifs à rouleaux : formules côte à côte, formule conseillée, interrupteur de mode, prix en compteur mécanique.
+   Identité uniquement par variables ; --trf-min règle la largeur minimale d'une carte. */
+.trf { --trf-min: 16.5rem; position: relative; padding-block: clamp(56px, 9vw, 128px); }
+.trf__tete { display: grid; gap: .8rem; max-width: 46rem; margin-bottom: clamp(20px, 3vw, 36px); }
+.trf__h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.trf__intro { color: var(--couleur-texte-doux); max-width: 38rem; }
+
+/* Interrupteur de mode : caché sans JavaScript (les prix du premier mode sont écrits dans la page). */
+.trf__modes { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 4px; margin-bottom: clamp(20px, 3vw, 32px); border: 1px solid var(--couleur-ligne); border-radius: 999px; background: var(--couleur-surface); max-width: 100%; }
+.trf:not(.trf--pret) .trf__modes { display: none; }
+.trf__mode { min-height: 44px; padding: 0 1.15rem; border: 0; border-radius: 999px; background: transparent; font-size: max(14px, .92rem); cursor: pointer; transition: background-color .25s, color .25s; }
+.trf__mode[aria-checked="true"] { background: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.trf__mode:not([aria-checked="true"]):hover { background: color-mix(in oklab, var(--couleur-texte) 8%, transparent); }
+
+/* Cartes */
+.trf__grille { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--trf-min)), 1fr)); gap: clamp(14px, 2vw, 24px); align-items: stretch; }
+.trf__formule { position: relative; display: flex; flex-direction: column; gap: .8rem; padding: clamp(20px, 2.6vw, 32px); border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); background: var(--couleur-fond);
+  transition: transform .4s cubic-bezier(.2, .7, .2, 1), border-color .3s, opacity .3s; }
+.trf__formule[data-conseillee] { border: 2px solid var(--couleur-accent); background: var(--couleur-surface); }
+.trf__formule--absente { opacity: .5; }
+.trf__pastille { align-self: flex-start; padding: .25em .8em; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .08em; text-transform: uppercase; }
+.trf__nom { font-size: clamp(1.3rem, 2.2vw, 1.75rem); }
+.trf__accroche { color: var(--couleur-texte-doux); }
+.trf__prix { display: flex; flex-wrap: wrap; align-items: center; gap: .1em .45em; margin-top: .2rem; }
+/* Hauteur figée à 1em, texte ou rouleaux : rien ne bouge autour du prix pendant le roulement. */
+.trf__montant { display: inline-flex; align-items: flex-start; height: 1em; font-family: var(--police-titres); font-size: clamp(2.6rem, 5.2vw, 3.8rem); font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.trf__unite { color: var(--couleur-texte-doux); font-size: max(14px, .95rem); }
+.trf__economie.trf__economie--vide { color: transparent; border-bottom-color: transparent; }
+.trf__economie { align-self: flex-start; font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-accent); border-bottom: 1px dashed currentColor; }
+.trf__inclus { list-style: none; margin: .2rem 0 0; padding: 0; display: grid; gap: .45rem; flex: 1; }
+.trf__inclus li { position: relative; padding-left: 1.5em; }
+.trf__inclus li::before { content: ''; position: absolute; left: .2em; top: .55em; width: .55em; height: .3em; border-left: 2px solid var(--couleur-accent); border-bottom: 2px solid var(--couleur-accent); transform: rotate(-45deg); }
+.trf__choisir { align-self: stretch; margin-top: .4rem; }
+.trf__formule[data-conseillee] .trf__choisir { background: var(--couleur-accent); color: var(--couleur-sur-accent); border-color: var(--couleur-accent); }
+.trf__note { margin-top: clamp(16px, 2vw, 24px); color: var(--couleur-texte-doux); font-size: max(13px, .88rem); }
+
+/* Compteur mécanique : une colonne 0-9 par chiffre, hauteur figée en em (line-height 1). */
+.trf__rouleaux { display: inline-flex; }
+.trf__col { display: inline-block; height: 1em; overflow: hidden; }
+.trf__chiffres { display: block; transform: translateY(calc(var(--de, 0) * -1em)); }
+.trf__chiffres > span { display: block; height: 1em; line-height: 1; }
+.trf__montant--roule .trf__chiffres { transform: translateY(calc(var(--vers, 0) * -1em)); transition: transform var(--trf-duree, .9s) cubic-bezier(.2, .8, .15, 1) calc(var(--i, 0) * 80ms); }
+
+/* Retour physique du choix : tampon « Choisie » sur la carte. */
+.trf__tampon { position: absolute; top: clamp(14px, 2vw, 22px); right: clamp(14px, 2vw, 22px); padding: .2em .55em; border: 2px solid var(--couleur-accent); border-radius: 6px; color: var(--couleur-accent);
+  font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .1em; text-transform: uppercase; transform: rotate(8deg); opacity: 0; pointer-events: none; }
+.trf__formule--choisie .trf__tampon { opacity: 1; animation: trf-tampon .45s cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes trf-tampon { from { opacity: 0; transform: rotate(18deg) scale(1.9); } to { opacity: 1; transform: rotate(8deg) scale(1); } }
+
+/* Apparition et survol (souris seulement), jamais en mode calme */
+.trf--anime .trf__formule:not(.est-vu) { opacity: 0; transform: translateY(18px); }
+@media (hover: hover) and (pointer: fine) { .trf__formule:hover { transform: translateY(-4px); border-color: var(--couleur-texte-doux); } .trf__formule[data-conseillee]:hover { border-color: var(--couleur-accent); } }
+@media (min-width: 900px) { .trf__formule[data-conseillee] { margin-block: -10px; padding-block: calc(clamp(20px, 2.6vw, 32px) + 10px); } }
+.calme .trf__formule:hover { transform: none; }

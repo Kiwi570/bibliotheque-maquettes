@@ -1,0 +1,74 @@
+{
+ "nom": "agenda-des-dates",
+ "titre": "Agenda des dates classé selon le jour réel : mois, statuts automatiques, compte à rebours, filtres, ajout à l'agenda (.ics) et réservation préremplie",
+ "role": "agenda",
+ "animations": [
+  "apparition-au-défilement",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres",
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "les-plus-hautes-eaux-maquette/agenda-t-venir",
+  "petitenature-maquette/agenda-rendez-vous",
+  "goodlife-maquette/planning-planning"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "formation",
+  "association",
+  "sport",
+  "bien-être",
+  "santé",
+  "tourisme",
+  "restauration",
+  "artisanat",
+  "commerce",
+  "collectivité",
+  "animaux",
+  "média"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "sobre",
+  "chaleureux",
+  "artisanal",
+  "doux",
+  "énergique",
+  "végétal"
+ ],
+ "telephone": "adapté",
+ "grille": [
+  "retour"
+ ],
+ "options": {
+  "maintenant": "date du jour (Date ou texte ISO), l'heure réelle par défaut : pour une démonstration figée ou un test",
+  "dureeDefaut": "durée en minutes quand data-fin manque, 90 (fichier .ics et statut « en cours »)",
+  "dernieresPlaces": "seuil du statut « Plus que n places », 3",
+  "parMois": "regroupe les dates à venir par mois, true",
+  "reserver": "adresse de réservation par défaut (sinon data-reserver de chaque date) ; le module y ajoute ?sujet=…&date=…",
+  "fuseau": "fuseau du .ics (« Europe/Paris ») ; sans : heure locale flottante",
+  "langue": "langue des dates, lang de la page par défaut",
+  "textes": "libellés : tous, ajouter, ajoute, reserver, attente, complet, dernieres(n), encours, aujourdhui, cesoir, demain, aconfirmer, passees(n), compte(n), prochaine(titre, quand), aucune, tampon, dans(j, h, m)",
+  "css --agd-pastille": "taille de la pastille de date, clamp(64px, 7vw, 88px) (58 px sous 520 px)"
+ },
+ "images": [],
+ "poids_ko": 23.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

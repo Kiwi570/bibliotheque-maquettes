@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tarifs à rouleaux · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #13161b; --couleur-texte: #eef0ea; --couleur-accent: #d9b44a; --couleur-secondaire: #5f8f86; --couleur-sur-accent: #13161b; --rayon: 16px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, trois formules : changez de mode, les prix roulent comme un compteur ; « Choisir » prépare la demande.</p>
+  </section>
+
+  <section class="trf socle-cadre" data-module="tarifs-a-rouleaux" aria-labelledby="trf-titre">
+    <div class="trf__tete">
+      <p class="socle-surtitre">Tarifs</p>
+      <h2 class="trf__h2" id="trf-titre">Choisir sa formule</h2>
+      <p class="trf__intro">Trois rythmes pour venir quand vous voulez. Les prix sont écrits en toutes lettres, sans frais cachés.</p>
+    </div>
+    <div class="trf__modes" role="radiogroup" aria-label="Mode de paiement">
+      <button type="button" class="trf__mode" role="radio" data-mode="seance" aria-checked="true">À la séance</button>
+      <button type="button" class="trf__mode" role="radio" data-mode="carte" aria-checked="false">Carte de 10</button>
+      <button type="button" class="trf__mode" role="radio" data-mode="mois" aria-checked="false">Abonnement</button>
+    </div>
+    <ul class="trf__grille">
+      <li class="trf__formule" data-formule="Découverte">
+        <h3 class="trf__nom">Découverte</h3>
+        <p class="trf__accroche">Pour essayer, à votre rythme.</p>
+        <p class="trf__prix"><span class="trf__montant" data-prix='{"seance":"25","carte":"230","mois":"69"}'>25</span>
+          <span class="trf__unite" data-unite='{"seance":"€ la séance","carte":"€ les 10 séances","mois":"€ par mois"}'>€ la séance</span></p>
+        <p class="trf__economie" data-economie='{"carte":"8 % d’économie"}' hidden></p>
+        <ul class="trf__inclus"><li>Une séance d'une heure</li><li>Matériel prêté</li><li>Sans engagement</li></ul>
+        <a class="socle-bouton trf__choisir" href="#demande">Choisir</a>
+      </li>
+      <li class="trf__formule" data-formule="Régulière" data-conseillee>
+        <h3 class="trf__nom">Régulière</h3>
+        <p class="trf__accroche">La formule de la plupart des habitués.</p>
+        <p class="trf__prix"><span class="trf__montant" data-prix='{"seance":"22","carte":"190","mois":"79"}'>22</span>
+          <span class="trf__unite" data-unite='{"seance":"€ la séance","carte":"€ les 10 séances","mois":"€ par mois"}'>€ la séance</span></p>
+        <p class="trf__economie" data-economie='{"carte":"14 % d’économie","mois":"Séances illimitées"}' hidden></p>
+        <ul class="trf__inclus"><li>Une séance d'1 h 30</li><li>Suivi personnalisé</li><li>Accès aux ateliers du soir</li></ul>
+        <a class="socle-bouton trf__choisir" href="#demande">Choisir</a>
+      </li>
+      <li class="trf__formule" data-formule="Intensive">
+        <h3 class="trf__nom">Intensive</h3>
+        <p class="trf__accroche">Pour progresser vite, sur un objectif.</p>
+        <p class="trf__prix"><span class="trf__montant" data-prix='{"seance":"35","carte":"300","mois":"119"}'>35</span>
+          <span class="trf__unite" data-unite='{"seance":"€ la séance","carte":"€ les 10 séances","mois":"€ par mois"}'>€ la séance</span></p>
+        <p class="trf__economie" data-economie='{"carte":"14 % d’économie"}' hidden></p>
+        <ul class="trf__inclus"><li>Séance de 2 h en petit groupe</li><li>Programme écrit</li><li>Bilan à mi-parcours</li></ul>
+        <a class="socle-bouton trf__choisir" href="#demande">Choisir</a>
+      </li>
+    </ul>
+    <p class="trf__note">Prix toutes taxes comprises. Carte valable un an, abonnement résiliable chaque mois.</p>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="demande">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Demande</h2>
+    <p>« Choisir » arrive ici avec la formule et le mode dans l'adresse (?formule=…&amp;mode=…), pour préremplir le formulaire du site.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="tarifs-a-rouleaux"]')) init(el);
+</script>
+</body>
+</html>

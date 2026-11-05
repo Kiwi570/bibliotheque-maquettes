@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Offre à tiroirs · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #efece4; --couleur-texte: #22201c; --couleur-accent: #2f6a55; --couleur-secondaire: #b8743a; --couleur-sur-accent: #f4f1ea; --rayon: 10px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, quatre prestations rangées comme des tiroirs : on en ouvre un, l'image de la colonne suit, « En parler » prépare la demande.</p>
+  </section>
+
+  <section class="ofr socle-cadre" data-module="offre-a-tiroirs" aria-labelledby="ofr-titre">
+    <div class="ofr__tete">
+      <p class="socle-surtitre">Prestations</p>
+      <h2 class="ofr__h2" id="ofr-titre">Ce que nous faisons</h2>
+      <p class="ofr__intro">Quatre prestations, du conseil ponctuel au chantier complet. Ouvrez celle qui vous concerne.</p>
+    </div>
+    <div class="ofr__corps">
+      <ol class="ofr__tiroirs">
+        <li class="ofr__tiroir" id="conseil" data-sujet="Conseil sur place">
+          <h3 class="ofr__titre"><button type="button" class="ofr__poignee"><span class="ofr__num">01</span><span class="ofr__nom">Conseil sur place</span><span class="ofr__resume">Une visite, un avis franc, un plan d'action écrit</span><span class="ofr__prix">dès 90 €</span></button></h3>
+          <div class="ofr__contenu"><div class="ofr__interieur">
+            <figure class="ofr__image"><div class="socle-visuel"></div></figure>
+            <p>Nous venons voir, nous posons les bonnes questions, et vous repartez avec une liste de priorités et un ordre de grandeur de budget.</p>
+            <ul><li>Visite d'une heure trente</li><li>Compte rendu sous 48 h</li><li>Déduit du devis si vous signez</li></ul>
+            <a class="socle-bouton socle-bouton--plein ofr__parler" href="#demande">En parler</a>
+          </div></div>
+        </li>
+        <li class="ofr__tiroir" id="renovation" data-sujet="Rénovation complète">
+          <h3 class="ofr__titre"><button type="button" class="ofr__poignee"><span class="ofr__num">02</span><span class="ofr__nom">Rénovation complète</span><span class="ofr__resume">De la conception à la remise des clés</span><span class="ofr__prix">sur devis</span></button></h3>
+          <div class="ofr__contenu"><div class="ofr__interieur">
+            <figure class="ofr__image"><div class="socle-visuel socle-visuel--2"></div></figure>
+            <p>Un seul interlocuteur pour tout le chantier : plans, artisans, planning, réception. Un point d'avancement chaque semaine.</p>
+            <ul><li>Plans et choix des matériaux</li><li>Coordination des corps de métier</li><li>Garantie décennale</li></ul>
+            <a class="socle-bouton socle-bouton--plein ofr__parler" href="#demande">En parler</a>
+          </div></div>
+        </li>
+        <li class="ofr__tiroir" id="atelier" data-sujet="Mobilier sur mesure">
+          <h3 class="ofr__titre"><button type="button" class="ofr__poignee"><span class="ofr__num">03</span><span class="ofr__nom">Mobilier sur mesure</span><span class="ofr__resume">Dessiné pour la pièce, fabriqué à l'atelier</span><span class="ofr__prix">dès 1 200 €</span></button></h3>
+          <div class="ofr__contenu"><div class="ofr__interieur">
+            <figure class="ofr__image"><div class="socle-visuel socle-visuel--3"></div></figure>
+            <p>Bibliothèques, cuisines, rangements sous pente : chaque meuble est dessiné d'après vos mesures et vos usages.</p>
+            <ul><li>Esquisse et maquette 3D</li><li>Bois massif ou panneaux certifiés</li><li>Pose comprise</li></ul>
+            <a class="socle-bouton socle-bouton--plein ofr__parler" href="#demande">En parler</a>
+          </div></div>
+        </li>
+        <li class="ofr__tiroir" id="entretien" data-sujet="Entretien annuel">
+          <h3 class="ofr__titre"><button type="button" class="ofr__poignee"><span class="ofr__num">04</span><span class="ofr__nom">Entretien annuel</span><span class="ofr__resume">Une visite par an pour que tout dure</span><span class="ofr__prix">150 € par an</span></button></h3>
+          <div class="ofr__contenu"><div class="ofr__interieur">
+            <figure class="ofr__image"><div class="socle-visuel"></div></figure>
+            <p>Réglages, petites reprises et conseils d'usage, à la date qui vous arrange.</p>
+            <ul><li>Une visite par an</li><li>Petites pièces comprises</li><li>Priorité en cas d'urgence</li></ul>
+            <a class="socle-bouton socle-bouton--plein ofr__parler" href="#demande">En parler</a>
+          </div></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="demande">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Demande</h2>
+    <p>« En parler » arrive ici avec le sujet de la prestation dans l'adresse (?sujet=…), pour préremplir le formulaire du site.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="offre-a-tiroirs"]')) init(el);
+</script>
+</body>
+</html>

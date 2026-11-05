@@ -1,0 +1,17 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"tarifs-a-rouleaux\"] .trf__grille"},
+  {"attendre": 1600},
+  {"cliquer": ".trf__mode[data-mode=\"carte\"]"},
+  {"attendre": 1400},
+  {"verifier": ".trf__mode[data-mode=\"carte\"][aria-checked=\"true\"]"},
+  {"cliquer": ".trf__mode[data-mode=\"mois\"]"},
+  {"attendre": 1400},
+  {"cliquer": ".trf__formule[data-conseillee] .trf__choisir"},
+  {"attendre": 600},
+  {"verifier": ".trf__formule--choisie .trf__tampon"}
+ ],
+ "pause": 500,
+ "video": "scenario",
+ "capture": { "attendre": 400, "etapes": [{"defiler": "[data-module=\"tarifs-a-rouleaux\"] .trf__grille"}], "apres": 2200 }
+}

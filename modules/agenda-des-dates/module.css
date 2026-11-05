@@ -1,0 +1,76 @@
+/* Agenda des dates : liste par mois, pastille de date, statut, actions ; dates passées repliées.
+   Identité uniquement par variables ; --agd-pastille règle la taille de la pastille de date. */
+.agd { --agd-pastille: clamp(64px, 7vw, 88px); position: relative; padding-block: clamp(56px, 9vw, 128px); }
+.agd__tete { display: grid; gap: .8rem; max-width: 46rem; margin-bottom: clamp(20px, 3vw, 36px); }
+.agd__h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.agd__intro { color: var(--couleur-texte-doux); max-width: 38rem; }
+.agd__prochaine { font-family: var(--police-mono); font-size: max(13px, .88rem); letter-spacing: .04em; color: var(--couleur-accent); min-height: 1.5em; }
+
+/* Filtres par type et compteur */
+.agd__outils { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-bottom: clamp(12px, 2vw, 20px); }
+.agd__filtres { display: flex; gap: .4rem; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; padding: 3px; margin: -3px; }
+.agd__filtres::-webkit-scrollbar { display: none; }
+.agd__filtre { flex: none; min-height: 44px; padding: 0 1.05rem; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; font-size: max(13px, .9rem); white-space: nowrap; cursor: pointer; }
+.agd__filtre:hover { border-color: var(--couleur-texte-doux); }
+.agd__filtre[aria-pressed="true"] { background: var(--couleur-accent); color: var(--couleur-sur-accent); border-color: var(--couleur-accent); }
+.agd__compte { margin-left: auto; font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .06em; color: var(--couleur-texte-doux); white-space: nowrap; }
+
+/* Mois */
+.agd__groupe { margin-top: clamp(28px, 4vw, 48px); }
+.agd__groupe-titre { font-family: var(--police-mono); font-weight: 500; font-size: max(12px, .8rem); letter-spacing: .14em; text-transform: uppercase; color: var(--couleur-texte-doux);
+  padding-bottom: .7rem; border-bottom: 1px solid var(--couleur-ligne); }
+
+/* Une date */
+.agd__liste { list-style: none; margin: 0; padding: 0; display: grid; }
+.agd__date { display: grid; gap: .4rem 1.2rem; padding: clamp(16px, 2.2vw, 26px) 0; border-bottom: 1px solid var(--couleur-ligne); }
+.agd__date--pret { grid-template-columns: var(--agd-pastille) minmax(0, 1fr); align-items: start; }
+.agd__pastille { position: relative; display: grid; place-content: center; justify-items: center; aspect-ratio: 1; border-radius: calc(var(--rayon) * .8);
+  background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); line-height: 1; }
+.agd__num { font-family: var(--police-titres); font-size: calc(var(--agd-pastille) * .42); font-weight: 600; font-variant-numeric: tabular-nums; }
+.agd__mois { margin-top: .3em; font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.agd__corps { display: grid; gap: .35rem; min-width: 0; }
+.agd__titre { font-size: clamp(1.2rem, 2.1vw, 1.65rem); }
+.agd__quand { font-size: max(14px, .95rem); }
+.agd__quand::first-letter { text-transform: uppercase; }
+.agd__lieu, .agd__texte { color: var(--couleur-texte-doux); }
+.agd__statut { justify-self: start; padding: .25em .75em; border-radius: 999px; font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .08em; text-transform: uppercase;
+  background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); }
+.agd__date[data-statut="bientot"] .agd__statut, .agd__date[data-statut="dernieres"] .agd__statut { background: var(--couleur-accent); color: var(--couleur-sur-accent); border-color: var(--couleur-accent); }
+.agd__date[data-statut="encours"] .agd__statut { background: var(--couleur-secondaire); color: var(--couleur-fond); border-color: var(--couleur-secondaire); }
+.agd__date[data-statut="complet"] .agd__pastille { opacity: .6; }
+.agd__date[data-statut="aconfirmer"] .agd__pastille { border-style: dashed; }
+.agd__actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .45rem; }
+.agd__actions .socle-bouton { font-size: max(14px, .92rem); }
+.agd__vide { color: var(--couleur-texte-doux); padding-block: 1.2rem; }
+
+/* Dates passées : repliées */
+.agd__passees { margin-top: clamp(28px, 4vw, 44px); border-top: 1px solid var(--couleur-ligne); }
+.agd__passees > summary { display: flex; align-items: center; min-height: 52px; cursor: pointer; font-family: var(--police-mono); font-size: max(12px, .82rem); letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-texte-doux); list-style: none; }
+.agd__passees > summary::-webkit-details-marker { display: none; }
+.agd__passees > summary::before { content: '+'; display: inline-grid; place-items: center; width: 1.6em; margin-right: .4em; font-size: 1.2em; transition: transform .3s; }
+.agd__passees[open] > summary::before { transform: rotate(45deg); }
+.agd__liste--passees .agd__date { opacity: .72; }
+.agd__liste--passees .agd__pastille { filter: grayscale(1); }
+
+/* Retour physique de l'ajout à l'agenda : la pastille se tamponne « Ajouté ». */
+.agd__tampon { position: absolute; inset: auto -8% 8% auto; padding: .2em .45em; border: 2px solid var(--couleur-accent); border-radius: 6px; color: var(--couleur-accent);
+  background: color-mix(in oklab, var(--couleur-fond) 80%, transparent); font-family: var(--police-mono); font-size: max(12px, .7rem); letter-spacing: .08em; text-transform: uppercase;
+  transform: rotate(-12deg); opacity: 0; pointer-events: none; }
+.agd__date--ajoutee .agd__tampon { opacity: 1; animation: agd-tampon .45s cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes agd-tampon { from { opacity: 0; transform: rotate(-24deg) scale(1.9); } to { opacity: 1; transform: rotate(-12deg) scale(1); } }
+
+/* Apparition (jamais en mode calme : classe agd--anime posée par le module) */
+.agd--anime .agd__date:not(.est-vu) { opacity: 0; transform: translateY(14px); }
+.agd--anime .agd__date { transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
+.agd__date--entre { animation: agd-entre .35s ease both; }
+@keyframes agd-entre { from { opacity: 0; transform: translateY(8px); } }
+
+.agd__date--pret > .agd__actions { grid-column: 2; }
+@media (min-width: 900px) {
+  .agd__date--pret { grid-template-columns: var(--agd-pastille) minmax(0, 1fr) auto; }
+  .agd__date--pret > .agd__actions { grid-column: 3; grid-row: 1; align-self: center; justify-content: flex-end; margin-top: 0; max-width: 22rem; }
+}
+@media (max-width: 520px) {
+  .agd { --agd-pastille: 58px; }
+  .agd__actions .socle-bouton { flex: 1 1 auto; }
+}

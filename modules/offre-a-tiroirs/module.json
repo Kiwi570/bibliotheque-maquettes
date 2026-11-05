@@ -1,0 +1,81 @@
+{
+ "nom": "offre-a-tiroirs",
+ "titre": "Prestations rangées en tiroirs qui se déplient (la façade avance), image du tiroir ouvert dans une colonne collante, « En parler » qui préremplit la demande, ouverture par l'adresse",
+ "role": "offre",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-image"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "icc-maquette/formations",
+  "instinct-aventure-maquette/formules",
+  "h-renovation-maquette/services-cave-humide-avantages",
+  "willowcamp-maquette/facons"
+ ],
+ "convient_a": [
+  "artisanat",
+  "bâtiment",
+  "services-b2b",
+  "conseil",
+  "santé",
+  "bien-être",
+  "formation",
+  "juridique",
+  "finance",
+  "immobilier",
+  "numérique",
+  "industrie",
+  "tourisme",
+  "hébergement",
+  "commerce",
+  "animaux"
+ ],
+ "ambiances": [
+  "clair",
+  "sobre",
+  "chaleureux",
+  "artisanal",
+  "minéral",
+  "végétal",
+  "doux",
+  "luxueux",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "grille": [
+  "scene"
+ ],
+ "options": {
+  "ouvert": "index du tiroir ouvert au départ, 0 (null pour tout fermer) ; une ancre #identifiant dans l'adresse l'emporte",
+  "unSeul": "ouvrir un tiroir referme les autres, true",
+  "visuels": "colonne d'images collante sur ordinateur (960 px et plus) quand les tiroirs ont une .ofr__image, true",
+  "data-sujet": "sur chaque tiroir : sujet ajouté à l'adresse de « En parler » (?sujet=…), sinon le nom de la prestation"
+ },
+ "images": [
+  {
+   "role": "image de la prestation",
+   "selecteur": ".ofr__image",
+   "nombre": "1 par tiroir (facultatif)",
+   "ratio": "16:10 dans le tiroir (téléphone), 4:5 dans la colonne collante (ordinateur) : sujet au centre",
+   "largeur": 1200,
+   "zone_calme": "aucune (texte à côté de l'image, jamais dessus)"
+  }
+ ],
+ "poids_ko": 12.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

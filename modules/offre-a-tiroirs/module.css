@@ -1,0 +1,74 @@
+/* Offre à tiroirs : prestations en tiroirs qui se déplient, colonne d'images collante sur ordinateur.
+   Identité uniquement par variables. Sans JavaScript (pas de classe ofr--pret), tous les tiroirs sont dépliés. */
+.ofr { position: relative; padding-block: clamp(56px, 9vw, 128px); }
+.ofr__tete { display: grid; gap: .8rem; max-width: 46rem; margin-bottom: clamp(24px, 4vw, 48px); }
+.ofr__h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.ofr__intro { color: var(--couleur-texte-doux); max-width: 38rem; }
+
+/* Tiroirs */
+.ofr__tiroirs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--couleur-ligne); }
+.ofr__tiroir { position: relative; border-bottom: 1px solid var(--couleur-ligne); }
+.ofr__titre { margin: 0; font: inherit; }
+.ofr__poignee { position: relative; z-index: 1; display: grid; grid-template-columns: 3.2rem minmax(0, 1fr) auto 44px; align-items: center; gap: .3rem 1rem; width: 100%; min-height: 76px;
+  padding: clamp(14px, 2vw, 22px) 0; border: 0; background: var(--couleur-fond); text-align: left; cursor: pointer;
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), box-shadow .45s, background-color .3s; }
+.ofr__num { align-self: start; padding-top: .45em; font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .1em; color: var(--couleur-texte-doux); }
+.ofr__nom { grid-column: 2; font-family: var(--police-titres); font-size: clamp(1.25rem, 2.4vw, 1.9rem); line-height: 1.15; }
+.ofr__resume { grid-column: 2; color: var(--couleur-texte-doux); font-size: max(14px, .95rem); }
+.ofr__prix { grid-column: 3; grid-row: 1 / span 2; font-family: var(--police-mono); font-size: max(12px, .85rem); letter-spacing: .04em; white-space: nowrap; color: var(--couleur-texte-doux); }
+/* Bouton de tiroir : un plus qui devient un moins. */
+.ofr__poignee::after { content: ''; grid-column: 4; grid-row: 1 / span 2; justify-self: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--couleur-ligne);
+  background: linear-gradient(currentColor, currentColor) center / 14px 1.5px no-repeat, linear-gradient(currentColor, currentColor) center / 1.5px 14px no-repeat;
+  transition: transform .4s, background-size .3s, border-color .3s; }
+.ofr__poignee:hover::after { border-color: var(--couleur-texte-doux); }
+.ofr--pret .est-ouvert .ofr__poignee::after { transform: rotate(180deg); background-size: 14px 1.5px, 1.5px 0; border-color: var(--couleur-accent); }
+/* La façade avance quand le tiroir s'ouvre. */
+.ofr--pret .est-ouvert .ofr__poignee { transform: translateY(-3px); box-shadow: 0 14px 22px -18px color-mix(in oklab, var(--couleur-texte) 70%, transparent); }
+.ofr--pret .est-ouvert .ofr__num { color: var(--couleur-accent); }
+
+/* Contenu : se déplie (grid-template-rows 0fr → 1fr), sans mesure ni hauteur en dur. */
+.ofr__contenu { display: grid; grid-template-rows: 1fr; }
+.ofr--pret .ofr__contenu { grid-template-rows: 0fr; transition: grid-template-rows .55s cubic-bezier(.2, .7, .2, 1); }
+/* Avant le module (JavaScript actif) : déjà l'état de départ, premier tiroir ouvert, pour qu'aucun tiroir ne se referme sous les yeux (CLS 0). */
+@media (scripting: enabled) { .ofr:not(.ofr--pret) .ofr__tiroir:not(:first-child) .ofr__contenu { grid-template-rows: 0fr; } .ofr:not(.ofr--pret) .ofr__tiroir:not(:first-child) .ofr__interieur { opacity: 0; } }
+.ofr--pret .est-ouvert .ofr__contenu { grid-template-rows: 1fr; }
+.ofr__interieur { min-height: 0; overflow: hidden; padding-inline: 4.2rem 0; }
+.ofr__interieur > * { margin: 0 0 .9rem; }
+.ofr__interieur::after { content: ''; display: block; height: clamp(10px, 1.6vw, 20px); }
+.ofr--pret .ofr__interieur { opacity: 0; transform: translateY(-10px); transition: opacity .35s, transform .55s cubic-bezier(.2, .7, .2, 1); }
+.ofr--pret .est-ouvert .ofr__interieur { opacity: 1; transform: none; transition-delay: .08s; }
+.ofr__interieur p { color: var(--couleur-texte-doux); max-width: 40rem; }
+.ofr__interieur ul { padding-left: 1.2em; display: grid; gap: .35rem; }
+.ofr__parler { margin-top: .3rem; }
+.ofr__image { aspect-ratio: 16 / 10; overflow: hidden; border-radius: calc(var(--rayon) * .8); }
+.ofr__image > img, .ofr__image > div { width: 100%; height: 100%; object-fit: cover; }
+
+/* Colonne d'images collante (ordinateur) : l'image du tiroir ouvert. */
+.ofr__visuels { display: none; }
+@media (min-width: 960px) {
+  .ofr--visuels .ofr__corps { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(28px, 4vw, 72px); align-items: start; }
+  .ofr--visuels .ofr__visuels { grid-column: 1; grid-row: 1; }
+  .ofr--visuels .ofr__tiroirs { grid-column: 2; grid-row: 1; }
+  .ofr--visuels .ofr__visuels { display: block; position: sticky; top: calc(var(--entete-h) + 24px); aspect-ratio: 4 / 5; max-height: calc(var(--ecran-h) - var(--entete-h) - 48px);
+    overflow: hidden; border-radius: var(--rayon); background: var(--couleur-surface); }
+  .ofr__visuel { position: absolute; inset: 0; margin: 0; opacity: 0; transform: scale(1.06); transition: opacity .6s ease, transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+  .ofr__visuel.est-actif { opacity: 1; transform: none; }
+  .ofr__visuel > img, .ofr__visuel > div { width: 100%; height: 100%; object-fit: cover; }
+  .ofr--visuels .ofr__interieur .ofr__image { display: none; }
+}
+/* Avant le module (JavaScript actif, tiroirs avec images) : les deux colonnes sont déjà là, la liste ne se décale pas. */
+@media (scripting: enabled) and (min-width: 960px) {
+  .ofr:not(.ofr--pret):has(.ofr__image) .ofr__corps { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(28px, 4vw, 72px); align-items: start; }
+  .ofr:not(.ofr--pret):has(.ofr__image) .ofr__tiroirs { grid-column: 2; grid-row: 1; }
+  .ofr:not(.ofr--pret):has(.ofr__image) .ofr__interieur .ofr__image { display: none; }
+}
+@media (max-width: 640px) {
+  .ofr__poignee { grid-template-columns: 2.2rem minmax(0, 1fr) 44px; }
+  .ofr__prix { grid-column: 2; grid-row: auto; }
+  .ofr__poignee::after { grid-column: 3; grid-row: 1 / span 3; }
+  .ofr__interieur { padding-inline: 0; }
+}
+
+/* Apparition des façades, jamais en mode calme */
+.ofr--anime .ofr__tiroir:not(.est-vu) { opacity: 0; transform: translateY(14px); }
+.ofr--anime .ofr__tiroir { transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }

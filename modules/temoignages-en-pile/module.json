@@ -1,0 +1,70 @@
+{
+ "nom": "temoignages-en-pile",
+ "titre": "Pile de vrais témoignages : on attrape la fiche du dessus et on la lance (souris ou doigt, avec son élan), elle se glisse sous la pile ; flèches, clavier, compteur, étoiles",
+ "role": "témoignages",
+ "animations": [
+  "empilement-de-fiches",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "h-renovation-maquette/avis",
+  "myrtille-et-compagnie-maquette/formation-temoignages",
+  "loeilsingulier-maquette/liner",
+  "esaie-55-1-maquette/histoires"
+ ],
+ "convient_a": [
+  "artisanat",
+  "bâtiment",
+  "santé",
+  "bien-être",
+  "formation",
+  "conseil",
+  "services-b2b",
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "sport",
+  "commerce",
+  "animaux",
+  "association",
+  "immobilier"
+ ],
+ "ambiances": [
+  "clair",
+  "chaleureux",
+  "doux",
+  "artisanal",
+  "ludique",
+  "sobre",
+  "végétal",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "grille": [
+  "manipuler"
+ ],
+ "options": {
+  "visibles": "fiches visibles dans l'épaisseur de la pile, 3",
+  "seuil": "part de la largeur à dépasser pour lancer la fiche, 0.28 (ou une vitesse de 0,5 px/ms au lâcher)",
+  "textes": "{ precedent, suivant, compte(i, n) }",
+  "data-note": "sur .tep__note : note sur 5 (décimales permises), dessinée en étoiles, le texte du paragraphe reste lu"
+ },
+ "images": [],
+ "poids_ko": 12.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

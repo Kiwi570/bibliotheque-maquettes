@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Agenda des dates · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3efe6; --couleur-texte: #1f1d1a; --couleur-accent: #9b3d23; --couleur-secondaire: #2f5d50; --couleur-sur-accent: #f8f4ec; --rayon: 12px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, l'agenda : les dates sont classées selon le jour réel, les passées se replient, et chaque date à venir s'ajoute à l'agenda du visiteur.</p>
+  </section>
+
+  <section class="agd socle-cadre" data-module="agenda-des-dates" aria-labelledby="agd-titre">
+    <div class="agd__tete">
+      <p class="socle-surtitre">Agenda</p>
+      <h2 class="agd__h2" id="agd-titre">Les prochaines dates</h2>
+      <p class="agd__intro">Stages, ateliers et sorties : réservez votre place ou ajoutez la date à votre agenda.</p>
+      <p class="agd__prochaine" data-prochaine aria-live="polite"></p>
+    </div>
+    <div class="agd__outils">
+      <div class="agd__filtres" role="group" aria-label="Types de dates"></div>
+      <p class="agd__compte" data-compte aria-live="polite"></p>
+    </div>
+    <ol class="agd__liste">
+      <li class="agd__date" data-dans="0" data-heure="-0.5" data-duree="2" data-type="Atelier" data-lieu="Atelier du centre-ville" data-reserver="#reservation">
+        <h3 class="agd__titre">Atelier découverte</h3><p class="agd__texte">Deux heures pour essayer, sans matériel à apporter.</p></li>
+      <li class="agd__date" data-dans="1" data-heure="18.5" data-duree="2.5" data-type="Atelier" data-lieu="Atelier du centre-ville" data-places="2" data-reserver="#reservation">
+        <h3 class="agd__titre">Atelier du soir</h3><p class="agd__texte">Un thème par séance, en petit groupe.</p></li>
+      <li class="agd__date" data-dans="6" data-heure="9.5" data-duree="7" data-type="Stage" data-lieu="La grange, route des Prés" data-places="8" data-reserver="#reservation">
+        <h3 class="agd__titre">Stage d'une journée</h3><p class="agd__texte">Matinée de pratique, déjeuner partagé, après-midi en extérieur.</p></li>
+      <li class="agd__date" data-dans="13" data-heure="14" data-duree="3" data-type="Sortie" data-lieu="Parking du lac" data-complet data-reserver="#reservation">
+        <h3 class="agd__titre">Sortie au bord du lac</h3><p class="agd__texte">Trois heures de marche commentée.</p></li>
+      <li class="agd__date" data-dans="24" data-jour data-type="Stage" data-lieu="La grange, route des Prés" data-reserver="#reservation">
+        <h3 class="agd__titre">Week-end d'immersion</h3><p class="agd__texte">Deux jours complets, hébergement possible sur place.</p></li>
+      <li class="agd__date" data-dans="41" data-heure="10" data-duree="2" data-type="Sortie" data-lieu="Place du marché" data-reserver="#reservation">
+        <h3 class="agd__titre">Balade du marché</h3><p class="agd__texte">Rendez-vous devant la fontaine.</p></li>
+      <li class="agd__date" data-debut="" data-type="Stage" data-lieu="Lieu à confirmer">
+        <h3 class="agd__titre">Stage de printemps</h3><p class="agd__texte">Dates en cours de fixation : écrivez-nous pour être prévenu.</p></li>
+      <li class="agd__date" data-dans="-9" data-heure="18.5" data-duree="2.5" data-type="Atelier" data-lieu="Atelier du centre-ville">
+        <h3 class="agd__titre">Atelier du soir</h3><p class="agd__texte">Thème : les couleurs d'automne.</p></li>
+      <li class="agd__date" data-dans="-30" data-heure="9.5" data-duree="7" data-type="Stage" data-lieu="La grange, route des Prés">
+        <h3 class="agd__titre">Stage d'une journée</h3><p class="agd__texte">Complet, merci aux douze participants.</p></li>
+    </ol>
+    <p class="agd__vide" hidden>Aucune date de ce type pour le moment.</p>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="reservation">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Réservation</h2>
+    <p>Le bouton « Réserver » arrive ici avec le sujet et la date dans l'adresse (?sujet=…&amp;date=…), pour préremplir le formulaire du site.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  /* Démonstration seulement : dates calculées à partir d'aujourd'hui (data-dans en jours, data-heure en heures, data-duree en heures),
+     pour que tous les statuts se voient quel que soit le jour d'ouverture. Sur un site, data-debut et data-fin sont écrits dans la page. */
+  const pad = (n) => String(n).padStart(2, '0');
+  const iso = (d, jour) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}${jour ? '' : `T${pad(d.getHours())}:${pad(d.getMinutes())}`}`;
+  const maintenant = new Date();
+  for (const li of document.querySelectorAll('.agd__date[data-dans]')) {
+    const jour = new Date(maintenant.getFullYear(), maintenant.getMonth(), maintenant.getDate() + Number(li.dataset.dans));
+    if (li.hasAttribute('data-jour')) { li.dataset.debut = iso(jour, true); continue; }
+    const h = Number(li.dataset.heure), debut = li.dataset.dans === '0' ? new Date(maintenant.getTime() + h * 3600000) : new Date(jour.getTime() + h * 3600000);
+    debut.setMinutes(Math.round(debut.getMinutes() / 15) * 15, 0, 0);
+    li.dataset.debut = iso(debut);
+    li.dataset.fin = iso(new Date(debut.getTime() + Number(li.dataset.duree) * 3600000));
+  }
+  for (const el of document.querySelectorAll('[data-module="agenda-des-dates"]')) init(el);
+</script>
+</body>
+</html>

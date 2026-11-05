@@ -1,0 +1,72 @@
+{
+ "nom": "tarifs-a-rouleaux",
+ "titre": "Formules côte à côte avec formule conseillée et interrupteur de mode : les prix roulent comme un compteur mécanique, « Choisir » préremplit la demande et tamponne la carte",
+ "role": "tarifs",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "comparateur"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "beat-haechler-maquette/wave-top",
+  "pizzalyght-maquette/formules",
+  "iprof-maquette/tarifs-prices",
+  "esaie-55-1-maquette/parrainage-formules"
+ ],
+ "convient_a": [
+  "sport",
+  "bien-être",
+  "santé",
+  "formation",
+  "restauration",
+  "hébergement",
+  "services-b2b",
+  "conseil",
+  "numérique",
+  "culture",
+  "association",
+  "tourisme",
+  "commerce",
+  "artisanat"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "sobre",
+  "chaleureux",
+  "luxueux",
+  "énergique",
+  "ludique",
+  "doux"
+ ],
+ "telephone": "adapté",
+ "grille": [
+  "retour"
+ ],
+ "options": {
+  "mode": "mode affiché au départ (data-mode) ; par défaut celui marqué aria-checked, sinon le premier",
+  "rouler": "les chiffres roulent depuis 0 à la première apparition, true",
+  "duree": "durée d'un roulement en s, 0.9 (chaque chiffre part 80 ms après le précédent)",
+  "conseillee": "libellé de la pastille de la formule data-conseillee, 'Conseillée'",
+  "choisie": "texte du tampon posé après « Choisir », 'Choisie'",
+  "data-prix / data-unite / data-economie": "JSON { mode: valeur } sur le montant, l'unité et la ligne d'économie ; une valeur sans chiffre (« sur devis ») s'affiche telle quelle",
+  "css --trf-min": "largeur minimale d'une carte, 16.5rem (cartes empilées en dessous)"
+ },
+ "images": [],
+ "poids_ko": 14.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}
