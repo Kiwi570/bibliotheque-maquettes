@@ -1,0 +1,20 @@
+/* Objet à faire tourner : l'objet tourne selon --oat-angle ; reflet conique orienté par --oat-lumiere. */
+.oat { position: relative; aspect-ratio: 1; width: var(--oat-taille, min(54svh, 40vw, 560px)); -webkit-user-select: none; user-select: none; }
+.oat.est-actif { cursor: grab; touch-action: pan-y; }
+.oat.est-tenu { cursor: grabbing; }
+.oat__objet { position: absolute; inset: 0; border-radius: 50%; transform: rotate(var(--oat-angle, 0deg)); will-change: transform; }
+.oat__objet > * { width: 100%; height: 100%; }
+/* Reflet fixe (il ne tourne pas avec l'objet) : deux éclats opposés qui suivent la lumière. */
+.oat__reflet { position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+  background: conic-gradient(from calc(var(--oat-lumiere, 0deg) - 12deg),
+    color-mix(in oklab, var(--couleur-texte) calc(10% + var(--oat-eclat, 0) * 14%), transparent) 0deg, transparent 22deg 168deg,
+    color-mix(in oklab, var(--couleur-texte) 8%, transparent) 180deg, transparent 202deg 360deg);
+  -webkit-mask: radial-gradient(circle, transparent 0 36%, black 38% 98%, transparent 99%);
+          mask: radial-gradient(circle, transparent 0 36%, black 38% 98%, transparent 99%); }
+.oat__indice { position: absolute; right: -8%; bottom: 4%; display: none; align-items: center; gap: .5em; margin: 0; padding: .45em .85em; border-radius: 999px;
+  background: var(--couleur-texte); color: var(--couleur-fond); font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .12em; text-transform: uppercase;
+  transform: rotate(6deg); transition: opacity .5s, transform .5s; pointer-events: none; }
+.oat.est-actif .oat__indice { display: inline-flex; }
+.oat__indice.est-vu { opacity: 0; transform: rotate(6deg) translateY(8px); }
+.oat__indice svg { width: 1.3em; height: 1.3em; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 700px) { .oat { width: var(--oat-taille-telephone, min(72vw, 42svh)); } .oat__indice { right: -2%; bottom: -6%; } }

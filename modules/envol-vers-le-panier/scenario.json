@@ -1,0 +1,12 @@
+{
+  "etapes": [
+    { "cliquer": ".demo-carte:nth-child(2) [data-envol]" },
+    { "attendre": 1100 },
+    { "verifier": "[data-envol][aria-pressed=\"true\"]" },
+    { "cliquer": ".demo-carte:nth-child(1) [data-envol]" },
+    { "attendre": 1100 }
+  ],
+  "pause": 450,
+  "video": "scenario",
+  "capture": { "attendre": 600, "etapes": [ { "cliquer": ".demo-carte:nth-child(3) [data-envol]" } ], "apres": 380 }
+}

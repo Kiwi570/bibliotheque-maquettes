@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Objet à faire tourner · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #141113; --couleur-texte: #f3ebdd; --couleur-accent: #f4c6cf; --couleur-secondaire: #b30e29; }
+  .demo-heros { min-height: calc(var(--ecran-h) - 73px); align-content: center; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(16px, 3vw, 48px); padding: 32px var(--espace); }
+  .demo-heros h1 { justify-self: end; text-align: right; font-size: clamp(2.4rem, 6vw, 6rem); }
+  .demo-mot { font-family: var(--police-titres); font-size: clamp(2.4rem, 6vw, 6rem); line-height: 1.08; color: var(--couleur-accent); }
+  /* Un disque dessiné en CSS : sillons, étiquette, trou. L'étiquette porte un repère pour voir la rotation. */
+  .disque { position: relative; border-radius: 50%; background: repeating-radial-gradient(circle, color-mix(in oklab, var(--couleur-fond) 86%, var(--couleur-texte)) 0 1.4px, var(--couleur-fond) 1.4px 2.8px); box-shadow: 0 0 0 1px var(--couleur-ligne); }
+  .disque::after { content: ''; position: absolute; inset: 27%; border-radius: 50%;
+    background: radial-gradient(circle, var(--couleur-fond) 0 4%, transparent 4.5%), conic-gradient(var(--couleur-secondaire) 0 25%, var(--couleur-accent) 25% 100%); }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  @media (max-width: 700px) { .demo-heros { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; } .demo-heros h1 { justify-self: center; text-align: center; } }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-heros">
+    <h1>Titre</h1>
+    <div class="oat" data-module="objet-a-faire-tourner" role="img" aria-label="Disque de démonstration">
+      <div class="oat__objet"><div class="disque"></div></div>
+      <span class="oat__reflet" aria-hidden="true"></span>
+      <p class="oat__indice" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20 12a8 8 0 1 1-2.34-5.66" /><path d="M20 4v4h-4" /></svg>Faites tourner le disque</p>
+    </div>
+    <p class="demo-mot">de page</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <h2>Titre de la section suivante</h2>
+    <p>Attrapez le disque et faites-le tourner, dans un sens puis dans l'autre ; lâchez-le en plein élan. Faites défiler : il accélère avec le défilement. La lumière suit la souris.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="objet-a-faire-tourner"]'));
+</script>
+</body>
+</html>

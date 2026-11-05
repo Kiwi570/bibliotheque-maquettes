@@ -1,0 +1,60 @@
+{
+ "nom": "axes-au-defilement",
+ "titre": "Axes de police variable animés au défilement : les titres passent d'un caractère à l'autre (sage vers sauvage) sans changer de largeur",
+ "role": "decor",
+ "animations": [
+  "apparition-au-défilement",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "commerce",
+  "artisanat",
+  "média",
+  "formation",
+  "numérique",
+  "association",
+  "restauration"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "ludique",
+  "luxueux",
+  "doux",
+  "énergique",
+  "chaleureux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "selecteur": "éléments animés, '[data-axes]'",
+  "de": "réglage de départ, '\"SOFT\" 100, \"WONK\" 0' (data-axes-de sur un élément)",
+  "a": "réglage d'arrivée, '\"SOFT\" 0, \"WONK\" 1' (data-axes-a)",
+  "bascule": "axes à deux états, ['WONK']",
+  "debut": "'top 90%'",
+  "fin": "'top 38%'"
+ },
+ "images": [],
+ "poids_ko": 2.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.001,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

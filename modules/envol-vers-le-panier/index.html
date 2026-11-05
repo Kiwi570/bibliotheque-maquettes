@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Envol vers le panier · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3ebdd; --couleur-texte: #141113; --couleur-accent: #b30e29; --couleur-secondaire: #f4c6cf; --couleur-sur-accent: #f3ebdd; --rayon: 6px; }
+  .demo-panier { display: inline-flex; align-items: center; gap: .5em; min-height: 44px; padding: 0 1rem; border-radius: 999px; background: var(--couleur-texte); color: var(--couleur-fond); border: 0; }
+  .demo-panier b { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-size: max(12px, .8rem); }
+  .demo-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 20px; padding-block: 40px 80px; }
+  .demo-carte { display: grid; gap: 10px; }
+  .demo-carte .socle-visuel { aspect-ratio: 4 / 5; border-radius: var(--rayon); }
+  .demo-carte p { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .demo-bloc { padding-block: 48px 0; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><span style="display:flex;gap:8px"><button type="button" class="demo-panier" data-envol-cible>Panier <b data-compte>0</b></button><button type="button" data-calme>Mode calme</button></span></header>
+<main class="socle-cadre">
+  <section class="demo-bloc">
+    <h1>Titre de la boutique</h1>
+    <p>Ajoutez une pièce : sa photo s'arrondit et s'envole jusqu'au panier, qui rebondit.</p>
+  </section>
+  <section class="demo-grille" data-module="envol-vers-le-panier" aria-label="Pièces">
+    <article class="demo-carte" data-envol-carte><div class="socle-visuel"></div><h2>Première pièce</h2><p><span>110 CHF</span><button type="button" class="socle-bouton" data-envol aria-pressed="false">Ajouter</button></p></article>
+    <article class="demo-carte" data-envol-carte><div class="socle-visuel socle-visuel--2"></div><h2>Deuxième pièce</h2><p><span>150 CHF</span><button type="button" class="socle-bouton" data-envol aria-pressed="false">Ajouter</button></p></article>
+    <article class="demo-carte" data-envol-carte><div class="socle-visuel socle-visuel--3"></div><h2>Troisième pièce</h2><p><span>90 CHF</span><button type="button" class="socle-bouton" data-envol aria-pressed="false">Ajouter</button></p></article>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  /* Panier simulé de la démonstration : bascule aria-pressed et le compteur, puis le module fait partir l'envol. */
+  const compte = document.querySelector('[data-compte]');
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-envol]'); if (!b) return;
+    const dans = b.getAttribute('aria-pressed') !== 'true';
+    b.setAttribute('aria-pressed', String(dans)); b.textContent = dans ? 'Dans le panier' : 'Ajouter';
+    compte.textContent = document.querySelectorAll('[data-envol][aria-pressed="true"]').length;
+  });
+  init(document.querySelector('[data-module="envol-vers-le-panier"]'));
+</script>
+</body>
+</html>

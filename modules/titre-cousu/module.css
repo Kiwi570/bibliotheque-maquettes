@@ -1,0 +1,22 @@
+/* Titre cousu. Variables : --tcu-fil (couleur du fil), --tcu-fil-clair, --tcu-fil-fonce ; --c (avancement, 0 à 100 %). */
+.tcu { --tcu-fil: var(--couleur-accent);
+  --tcu-fil-clair: color-mix(in oklab, var(--tcu-fil) 62%, var(--couleur-texte));
+  --tcu-fil-fonce: color-mix(in oklab, var(--tcu-fil) 70%, var(--couleur-fond)); }
+.tcu__ligne { --c: 100%; position: relative; display: inline-block;
+  /* Point avant : tirets cousus sous la ligne, à mesure que le fil avance. */
+  background: repeating-linear-gradient(90deg, var(--tcu-fil) 0 7px, transparent 7px 12px) 0 100% / var(--c) 2px no-repeat; }
+.tcu__ligne::after { content: attr(data-texte); position: absolute; inset: 0; pointer-events: none; color: transparent;
+  background: repeating-linear-gradient(118deg, var(--tcu-fil-fonce) 0 1.2px, var(--tcu-fil) 1.2px 2.6px, var(--tcu-fil-clair) 2.6px 3.2px);
+  -webkit-background-clip: text; background-clip: text; clip-path: inset(-.3em calc(100% - var(--c)) -.35em -.3em); }
+.tcu[data-point="croix"] .tcu__ligne::after {
+  background: repeating-linear-gradient(45deg, var(--tcu-fil) 0 1.4px, transparent 1.4px 4px), repeating-linear-gradient(-45deg, var(--tcu-fil-fonce) 0 1.4px, transparent 1.4px 4px), color-mix(in oklab, var(--tcu-fil) 30%, transparent);
+  -webkit-background-clip: text; background-clip: text; }
+.tcu[data-point="fil"] .tcu__ligne::after { background: var(--tcu-fil); -webkit-background-clip: text; background-clip: text; }
+/* Aiguille : pseudo-élément (hors du texte), visible pendant la couture seulement. */
+.tcu__ligne::before { content: ''; position: absolute; left: var(--c); top: -.1em; width: .16em; height: 1.05em; pointer-events: none; z-index: 1;
+  opacity: var(--aig, 0); transform: translate(-50%, var(--saut, 0px)) rotate(14deg); transform-origin: 50% 80%;
+  background: linear-gradient(90deg, transparent 38%, var(--couleur-texte-doux) 38% 62%, transparent 62%) 50% 30% / 100% 70% no-repeat,
+    radial-gradient(ellipse 18% 9% at 50% 10%, transparent 45%, var(--couleur-texte-doux) 50%) no-repeat,
+    linear-gradient(180deg, transparent 72%, var(--couleur-texte-doux) 72% 100%) 50% 0 / 16% 100% no-repeat; }
+html.calme .tcu__ligne::before { display: none; }
+@media (prefers-reduced-motion: reduce) { .tcu__ligne::before { display: none; } }

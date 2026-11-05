@@ -1,0 +1,58 @@
+{
+ "nom": "transition-iris",
+ "titre": "Transition de page en iris : un disque grandit depuis le point du clic et couvre l'écran, puis la page d'arrivée s'ouvre en cercle depuis son objet d'ouverture",
+ "role": "transition-de-page",
+ "animations": [
+  "transition-de-page",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "commerce",
+  "artisanat",
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "bien-être",
+  "sport",
+  "média"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "ludique",
+  "énergique",
+  "luxueux",
+  "nocturne"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "couvrir": "durée du disque qui couvre l'écran en s, 0.55",
+  "ouvrir": "durée du trou qui s'ouvre à l'arrivée en s, 0.8",
+  "nom": "affiche le nom de la page d'arrivée (data-voile-nom ou texte du lien), true",
+  "centre": "objet d'ouverture de la page d'arrivée, '[data-iris-centre]'",
+  "exclure": "sélecteur des liens sans voile, '[data-sans-voile]'"
+ },
+ "images": [],
+ "poids_ko": 8.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

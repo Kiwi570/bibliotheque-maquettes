@@ -1,0 +1,56 @@
+{
+ "nom": "envol-vers-le-panier",
+ "titre": "Envol vers le panier : la photo de la pièce ajoutée s'arrondit en pastille et file en arc jusqu'au bouton du panier, qui rebondit",
+ "role": "produits",
+ "animations": [
+  "morphing"
+ ],
+ "interactions": [
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "commerce",
+  "artisanat",
+  "restauration",
+  "culture",
+  "bien-être",
+  "sport",
+  "formation",
+  "hébergement"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "ludique",
+  "chaleureux",
+  "énergique",
+  "doux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "bouton": "boutons qui déclenchent l'envol, '[data-envol]'",
+  "carte": "carte d'où part l'image, '[data-envol-carte]'",
+  "vers": "bouton(s) du panier, '[data-envol-cible]' (le premier affiché est pris)",
+  "forme": "'disque' ou 'carte'",
+  "quand": "quand(bouton) : vrai si l'envol doit partir (par défaut aria-pressed devient « true »)",
+  "envol(o)": "appel direct depuis le code du panier : depuis, vers, forme, duree, montrer"
+ },
+ "images": [],
+ "poids_ko": 5.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

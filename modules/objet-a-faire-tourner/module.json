@@ -1,0 +1,59 @@
+{
+ "nom": "objet-a-faire-tourner",
+ "titre": "Objet rond qu'on attrape et fait tourner à la main (disque, roue, cadran, bobine) : élan au lâcher, scratch au défilement, lumière qui suit la souris",
+ "role": "ouverture",
+ "animations": [
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "commerce",
+  "artisanat",
+  "restauration",
+  "sport",
+  "auto-moto",
+  "média",
+  "numérique",
+  "industrie"
+ ],
+ "ambiances": [
+  "sombre",
+  "ludique",
+  "énergique",
+  "nocturne",
+  "luxueux",
+  "brut",
+  "industriel"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "repos": "rotation au repos en rad/s, 1.15 (0 : immobile)",
+  "defilement": "rotation ajoutée par px/s de défilement, 0.006 (0 : pas de scratch au défilement)",
+  "amorti": "retour à la vitesse de repos après le lâcher, 1.4",
+  "elanMax": "élan maximal au lâcher en rad/s, 40",
+  "lumiere": "zone où la lumière suit la souris : 'section', 'objet' ou 'aucune'",
+  "dessiner": "dessiner({ angle, vitesse, lumiere, eclat, dt }) à chaque image, pour un shader WebGL"
+ },
+ "images": [],
+ "poids_ko": 8.3,
+ "tests": {
+  "formats": "échec : 360×780  débord 3px",
+  "reduire-animations": "ok",
+  "sans-webgl": "ok",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

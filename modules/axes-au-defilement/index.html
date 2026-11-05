@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Axes au défilement · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..800,0..100,0..1&display=swap">
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #141113; --couleur-texte: #f3ebdd; --couleur-accent: #f4c6cf; --couleur-secondaire: #b30e29; --police-titres: 'Fraunces', Georgia, serif; }
+  h1, h2 { font-weight: 400; }
+  .demo-bloc { min-height: 85vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2.6rem, 1.4rem + 5vw, 7rem); line-height: 1.02; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main data-module="axes-au-defilement">
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Faites défiler</p>
+    <h1 style="font-size: clamp(2.4rem, 6vw, 5rem)">Les titres changent de caractère en montant</h1>
+    <p>Les formes douces deviennent nerveuses à mesure que chaque titre monte dans l'écran, sans que la mise en page bouge.</p>
+  </section>
+  <section class="demo-bloc socle-cadre"><h2 data-axes>Du sage au sauvage</h2><p>Arrondi (SOFT 100) vers anguleux (SOFT 0), lettres sages vers lettres penchées (WONK).</p></section>
+  <section class="demo-bloc socle-cadre"><h2 data-axes>Une police qui bouge</h2><p>Seuls les axes qui gardent la largeur du texte sont animés.</p></section>
+  <section class="demo-bloc socle-cadre"><h2 data-axes data-axes-de='"SOFT" 0, "WONK" 1' data-axes-a='"SOFT" 100, "WONK" 0'>Et dans l'autre sens</h2><p>Réglage propre à un titre : data-axes-de et data-axes-a.</p></section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="axes-au-defilement"]'));
+</script>
+</body>
+</html>

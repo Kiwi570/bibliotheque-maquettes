@@ -1,0 +1,22 @@
+/* Transition en iris : voile fixe, couleur d'accent, disque qui grandit depuis le clic puis trou qui s'ouvre sur l'objet d'ouverture. */
+.tir {
+  position: fixed; inset: 0; z-index: 900; display: grid; place-items: center; pointer-events: none;
+  background: var(--tir-fond, var(--couleur-accent)); color: var(--tir-texte, var(--couleur-sur-accent));
+  visibility: hidden;
+}
+html.tir-couvert .tir, .tir.est-actif { visibility: visible; }
+html.tir-couvert, html.tir-couvert body { overflow: hidden; }
+html.tir-couvert { background-color: var(--tir-fond, var(--couleur-accent)); }
+.tir.est-ouvre {
+  -webkit-mask: radial-gradient(circle at var(--cx, 50%) var(--cy, 50%), transparent var(--trou, -2px), black calc(var(--trou, -2px) + 1px));
+          mask: radial-gradient(circle at var(--cx, 50%) var(--cy, 50%), transparent var(--trou, -2px), black calc(var(--trou, -2px) + 1px));
+}
+.tir__corps { display: grid; justify-items: center; gap: 14px; padding: var(--espace); text-align: center; }
+.tir__nom { font-family: var(--police-titres); font-size: clamp(2rem, 6vw, 4.2rem); line-height: 1.05; }
+.tir__disque { width: min(30vmin, 220px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, var(--tir-texte, var(--couleur-sur-accent)) 0 3%, var(--couleur-secondaire) 3.5% 30%, transparent 30.5%),
+    repeating-radial-gradient(circle, color-mix(in oklab, var(--couleur-fond) 92%, var(--couleur-texte)) 0 1.5px, var(--couleur-fond) 1.5px 3px);
+  animation: tir-tourne 1.8s linear infinite; }
+@keyframes tir-tourne { to { transform: rotate(360deg); } }
+html.calme .tir, html.calme.tir-couvert .tir { visibility: hidden !important; }
+@media (prefers-reduced-motion: reduce) { .tir { visibility: hidden !important; } }

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Titre cousu · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f4c6cf; --couleur-texte: #141113; --couleur-accent: #b30e29; --couleur-secondaire: #f3ebdd; }
+  .demo-tete { min-height: calc(var(--ecran-h) - 73px); display: grid; align-content: center; justify-items: center; gap: 1.2rem; text-align: center; padding-block: 8vh; }
+  .demo-tete .tcu { font-size: clamp(2.8rem, min(10vw, 14vh), 9rem); line-height: 1.08; font-weight: 300; }
+  .demo-tete .tcu__ligne + .tcu__ligne { margin-top: .12em; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc .tcu { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-tete socle-cadre">
+    <p class="socle-surtitre">Atelier sur mesure</p>
+    <h1 class="tcu" data-module="titre-cousu" data-point="satin"><span class="tcu__ligne">Un espace pour</span><br><span class="tcu__ligne">toutes vos idées</span></h1>
+    <p>Le titre se brode au fil, ligne par ligne ; une aiguille passe devant.</p>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <h2 class="tcu" data-module="titre-cousu" data-point="croix"><span class="tcu__ligne">Au point de croix</span></h2>
+    <p>Même mécanique, autre point : il se coud à l'entrée dans l'écran.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  document.querySelectorAll('[data-module="titre-cousu"]').forEach((t) => init(t));
+</script>
+</body>
+</html>

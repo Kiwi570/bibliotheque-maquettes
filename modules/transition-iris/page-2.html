@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Page 2 · transition en iris · module</title>
+<script>
+  /* Script critique du module transition-iris : à placer dans le head, avant les feuilles de style. */
+  (function (h) {
+    var calme = /[?&]calme\b/.test(location.search);
+    try { calme = calme || localStorage.getItem('socle-calme') === '1' || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    try { if (!calme && sessionStorage.getItem('tir-voile') === '1') h.classList.add('tir-couvert'); sessionStorage.removeItem('tir-voile'); } catch (e) {}
+    setTimeout(function () { h.classList.remove('tir-couvert'); }, 2200); /* délai de secours */
+  })(document.documentElement);
+</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  :root { --couleur-fond: #141113; --couleur-texte: #f3ebdd; --couleur-accent: #f4c6cf; --couleur-secondaire: #b30e29; --couleur-sur-accent: #141113; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1.2rem; padding-block: 10vh; }
+  .demo-bloc h1 { font-size: clamp(2.4rem, 7vw, 5.6rem); }
+  .demo-grille { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 60px); align-items: center; }
+  .demo-objet { aspect-ratio: 1; border-radius: 50%; width: min(100%, 420px); justify-self: center; }
+  .demo-liens { display: flex; flex-wrap: wrap; gap: 12px; }
+  .demo-nav { display: flex; gap: 4px; }
+  .demo-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; text-decoration: none; }
+  .demo-nav a[aria-current] { color: var(--couleur-accent); }
+  @media (max-width: 700px) { .demo-grille { grid-template-columns: minmax(0, 1fr); } .demo-objet { width: min(70vw, 300px); } }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete>
+  <nav class="demo-nav" aria-label="Pages de démonstration"><a href="index.html">Page 1</a><a href="page-2.html" aria-current="page">Page 2</a></nav>
+  <button type="button" data-calme>Mode calme</button>
+</header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <div class="demo-objet socle-visuel--2 socle-visuel" data-iris-centre aria-hidden="true" style="border-radius: var(--rayon); width: 100%; aspect-ratio: 16 / 7;"></div>
+    <p class="socle-surtitre">Page 2 sur 2</p>
+    <h1>Seconde page</h1>
+    <p>Ici l'objet d'ouverture est un bandeau : le trou s'ouvre depuis son centre visible.</p>
+    <p class="demo-liens"><a class="socle-bouton socle-bouton--plein" href="index.html" data-voile-nom="Page 1">Retour à la page 1</a></p>
+  </section>
+</main>
+<div class="tir" data-module="transition-iris" aria-hidden="true">
+  <div class="tir__corps"><span class="tir__disque"></span><span class="tir__nom"></span></div>
+</div>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="transition-iris"]'));
+</script>
+</body>
+</html>

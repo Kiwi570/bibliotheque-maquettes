@@ -1,0 +1,56 @@
+/* Bac à feuilleter. Base (mode calme, sans JavaScript) : rangée de pochettes qu'on fait défiler à l'horizontale.
+   .est-actif (posé par le script) : pile en perspective dans une caisse, épinglée. */
+.baf { --baf-teinte: var(--couleur-secondaire); position: relative; overflow: hidden;
+  background: color-mix(in oklab, var(--baf-teinte) 38%, var(--couleur-fond)); transition: background-color .8s ease; }
+.baf__grille { display: flex; flex-direction: column; gap: 12px; padding-block: 48px; }
+.baf__tete h2 { font-size: clamp(2rem, min(5vw, 8vh), 4.4rem); }
+.baf__tete p { margin-top: .3em; }
+.baf__compteur { display: none; }
+.baf__progres { display: none; height: 3px; margin-top: 14px; max-width: 22rem; background: var(--couleur-ligne); }
+.baf__progres span { display: block; height: 100%; background: var(--couleur-accent); transform-origin: 0 50%; transform: scaleX(0); }
+.baf__caisse { position: relative; }
+.baf__bois { display: none; }
+.baf__pile { display: flex; gap: 20px; padding: 8px 0 14px; overflow-x: auto; scroll-snap-type: x mandatory; }
+.baf__pochette { position: relative; flex: 0 0 min(340px, 72vw); display: flex; flex-direction: column; scroll-snap-align: start; }
+.baf__cadre { position: relative; aspect-ratio: 1; min-height: 0; }
+.baf__cadre > .baf__visuel { position: absolute; inset: 0; z-index: 2; border-radius: 2px; overflow: hidden; box-shadow: 10px 10px 30px color-mix(in oklab, var(--couleur-fond) 65%, transparent); }
+.baf__cadre > .baf__visuel img { width: 100%; height: 100%; object-fit: cover; }
+.baf__disque { position: absolute; z-index: 1; top: 3%; bottom: 3%; right: 0; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, var(--couleur-accent) 0 22%, transparent 22.5%), repeating-radial-gradient(circle, color-mix(in oklab, var(--couleur-fond) 88%, var(--couleur-texte)) 0 1.4px, var(--couleur-fond) 1.4px 2.8px); }
+.baf__etiquette { margin-top: 12px; }
+.baf__etiquette h3 { font-size: clamp(1.1rem, .9rem + .8vw, 1.6rem); }
+.baf__etiquette h3 a { text-decoration: none; }
+.baf__etiquette h3 a::after { content: ''; position: absolute; inset: 0; z-index: 3; }
+.baf__etiquette p { font-family: var(--police-mono); font-size: max(12px, .85rem); }
+.baf__num { font-family: var(--police-mono); font-size: max(12px, .8rem); color: var(--couleur-accent); margin-right: .4em; }
+
+.baf.est-actif { height: var(--ecran-h); }
+.baf.est-actif .baf__grille { height: 100%; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(24px, 4vw, 64px);
+  padding-block: calc(var(--entete-h) + 16px) calc(var(--barres-h) + 16px); }
+.baf.est-actif .baf__compteur { display: block; margin-top: clamp(16px, 4vh, 40px); font-family: var(--police-titres); font-size: clamp(3rem, 2rem + 4vw, 6.5rem); line-height: 1; }
+.baf.est-actif .baf__compteur span { font-family: var(--police-mono); font-size: max(12px, .3em); letter-spacing: .14em; opacity: .7; }
+.baf.est-actif .baf__progres { display: block; }
+.baf.est-actif .baf__caisse { --s: min(52svh, 36vw, 520px); height: calc(var(--s) * 1.3); display: grid; place-items: end center; perspective: 1100px; perspective-origin: 50% 35%; }
+.baf.est-actif .baf__pile { position: relative; width: var(--s); height: var(--s); margin-bottom: calc(var(--s) * .04); padding: 0; overflow: visible; display: block; scroll-snap-type: none; }
+.baf.est-actif .baf__pochette { position: absolute; inset: 0; display: grid; transform-origin: 50% 100%; will-change: transform, opacity; }
+.baf.est-actif .baf__cadre, .baf.est-actif .baf__etiquette { grid-area: 1 / 1; }
+.baf.est-actif .baf__cadre::after { content: ''; position: absolute; inset: 0; z-index: 2; background: var(--couleur-fond); opacity: var(--baf-ombre, 0); pointer-events: none; }
+/* Étiquette de prix collée sur la pochette (pas positionnée : le lien couvre toute la pochette). */
+.baf.est-actif .baf__etiquette { align-self: start; justify-self: start; z-index: 4; max-width: 78%; margin: 7% 0 0 -7%; padding: .55em .95em .6em; border-radius: 3px;
+  background: var(--couleur-texte); color: var(--couleur-fond); transform: rotate(-4deg); box-shadow: 0 10px 24px color-mix(in oklab, var(--couleur-fond) 55%, transparent); transition: opacity .25s linear; }
+.baf.est-actif .baf__pochette:not(.est-devant) .baf__etiquette { opacity: 0; }
+.baf.est-actif .baf__pochette:not(.est-devant) { pointer-events: none; }
+.baf.est-actif .baf__pochette:focus-within .baf__etiquette { opacity: 1; }
+.baf.est-actif .baf__bois { display: block; position: absolute; left: 50%; bottom: 0; z-index: 40; width: calc(var(--s) * 1.2); height: calc(var(--s) * .3); transform: translateX(-50%); pointer-events: none;
+  border-radius: 3px 3px 6px 6px; background: linear-gradient(180deg, color-mix(in oklab, var(--couleur-accent) 55%, var(--couleur-texte)), color-mix(in oklab, var(--couleur-accent) 45%, var(--couleur-fond)));
+  box-shadow: 0 18px 40px color-mix(in oklab, var(--couleur-fond) 60%, transparent); }
+.baf.est-actif .baf__bois::before { content: ''; position: absolute; inset: 0; border-radius: inherit;
+  background: repeating-linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) 8%, transparent) 0 2px, transparent 2px 38px); }
+@media (max-width: 860px) {
+  .baf.est-actif .baf__grille { grid-template-columns: minmax(0, 1fr); align-content: start; gap: 8px; }
+  .baf.est-actif .baf__compteur { margin-top: 6px; font-size: clamp(2.2rem, 10vw, 3.2rem); }
+  .baf.est-actif .baf__progres { display: none; }
+  .baf.est-actif .baf__grille { align-content: space-evenly; }
+  .baf.est-actif .baf__caisse { --s: min(76vw, 46svh, 420px); }
+  .baf.est-actif .baf__etiquette { margin-left: -4%; }
+}

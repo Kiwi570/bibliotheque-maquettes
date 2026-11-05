@@ -1,0 +1,65 @@
+{
+ "nom": "bac-a-feuilleter",
+ "titre": "Bac à feuilleter (crate digging) : pile de pochettes épinglée dans une caisse, la pochette de devant bascule vers soi à chaque cran, le fond prend la teinte de la pièce",
+ "role": "produits",
+ "animations": [
+  "section-fixée",
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "commerce",
+  "culture",
+  "artisanat",
+  "média",
+  "spectacle",
+  "restauration",
+  "formation"
+ ],
+ "ambiances": [
+  "sombre",
+  "chaleureux",
+  "artisanal",
+  "ludique",
+  "brut",
+  "nocturne"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "longueur": "hauteur d'écran défilée par pochette, 0.45",
+  "lissage": "suivi du défilement, 9",
+  "bascule": "angle de bascule vers soi en degrés, 64",
+  "profondeur": "pochettes visibles derrière celle de devant, 4",
+  "crans": "bascules par crans (false : continu), true"
+ },
+ "images": [
+  {
+   "role": "pochette (photo de la pièce, de l'œuvre, du livre ou du disque)",
+   "selecteur": ".baf__visuel img",
+   "nombre": "1 par pochette (4 à 10)",
+   "ratio": "1:1, object-fit: cover : sujet centré",
+   "largeur": 1200,
+   "zone_calme": "coin haut gauche : l'étiquette de prix s'y colle sur environ 40 % de la largeur"
+  }
+ ],
+ "poids_ko": 11.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "échec : a. 196×17, a. 138×26, a. 139×26"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "nom": "intro-vers-l-objet",
+ "titre": "Intro qui devient la page : l'objet de l'intro glisse jusqu'à l'objet d'ouverture de la page, puis l'écran s'ouvre en cercle depuis lui",
+ "role": "ouverture",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "origine": [
+  "madebymelody-maquette (v2)"
+ ],
+ "convient_a": [
+  "culture",
+  "spectacle",
+  "commerce",
+  "artisanat",
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "bien-être",
+  "sport",
+  "média",
+  "numérique"
+ ],
+ "ambiances": [
+  "sombre",
+  "clair",
+  "ludique",
+  "luxueux",
+  "énergique",
+  "nocturne",
+  "chaleureux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "tourner": "l'objet tourne en accélérant pendant l'intro (disque, roue, boussole), true",
+  "cible": "objet d'ouverture de la page, '[data-iris-centre]' (=\"disque\" : objet rond remplacé exactement)",
+  "fin": "fonction appelée quand la page est découverte",
+  "versObjet(tl, o)": "à réutiliser dans l'intro d'un projet : panneau, objet, cible, a (1.1 s), duree (0.5 s), ouverture (0.8 s), echelleMin, echelleMax"
+ },
+ "images": [],
+ "poids_ko": 6.6,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

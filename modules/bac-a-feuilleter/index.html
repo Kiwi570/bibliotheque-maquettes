@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bac à feuilleter · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #141113; --couleur-texte: #f3ebdd; --couleur-accent: #c98f55; --couleur-secondaire: #7a1022; --rayon: 4px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la caisse s'épingle, et chaque pochette bascule vers vous pour révéler la suivante.</p>
+  </section>
+
+  <section class="baf" data-module="bac-a-feuilleter" data-epingle aria-labelledby="baf-titre">
+    <div class="baf__grille socle-cadre">
+      <div class="baf__tete">
+        <h2 id="baf-titre">Dans le bac</h2>
+        <p>Feuilletez les pochettes une à une.</p>
+        <p class="baf__compteur" aria-hidden="true"><b data-baf-num>01</b><span> / 06</span></p>
+        <div class="baf__progres" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="baf__caisse" data-tient>
+        <div class="baf__pile" tabindex="0" role="region" aria-label="Pochettes à feuilleter">
+          <article class="baf__pochette" data-teinte="#7a1022"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel"></div></div><div class="baf__etiquette"><h3><a href="#p1"><span class="baf__num">01</span>Première pièce</a></h3><p>110 CHF · S</p></div></article>
+          <article class="baf__pochette" data-teinte="#24405c"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel socle-visuel--2"></div></div><div class="baf__etiquette"><h3><a href="#p2"><span class="baf__num">02</span>Deuxième pièce</a></h3><p>150 CHF · M</p></div></article>
+          <article class="baf__pochette" data-teinte="#3d5a2c"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel socle-visuel--3"></div></div><div class="baf__etiquette"><h3><a href="#p3"><span class="baf__num">03</span>Troisième pièce</a></h3><p>90 CHF · L</p></div></article>
+          <article class="baf__pochette" data-teinte="#5c3a24"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel"></div></div><div class="baf__etiquette"><h3><a href="#p4"><span class="baf__num">04</span>Quatrième pièce</a></h3><p>220 CHF · S</p></div></article>
+          <article class="baf__pochette" data-teinte="#2c2c5c"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel socle-visuel--2"></div></div><div class="baf__etiquette"><h3><a href="#p5"><span class="baf__num">05</span>Cinquième pièce</a></h3><p>60 CHF · M</p></div></article>
+          <article class="baf__pochette" data-teinte="#5c244a"><div class="baf__cadre"><span class="baf__disque" aria-hidden="true"></span><div class="baf__visuel socle-visuel socle-visuel--3"></div></div><div class="baf__etiquette"><h3><a href="#p6"><span class="baf__num">06</span>Sixième pièce</a></h3><p>180 CHF · L</p></div></article>
+        </div>
+        <div class="baf__bois" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <h2>Titre de la section suivante</h2>
+    <p>La caisse se libère après la dernière pochette.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-module="bac-a-feuilleter"]'));
+</script>
+</body>
+</html>
