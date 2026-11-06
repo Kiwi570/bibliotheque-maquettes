@@ -1,0 +1,245 @@
+{
+ "projet": "nolanis-maquette",
+ "client": "Nolanis (site actuel aussi sous le nom Optemis)",
+ "siteActuel": "https://www.nolanis.fr/",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v10.3",
+   "perimetre": [
+    "accueil",
+    "print-web",
+    "publicite",
+    "photo-video",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 15,
+     "debut": "2026-11-06T15:08:12+01:00",
+     "fin": "2026-11-06T15:13:01+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 15,
+     "debut": "2026-11-06T15:15:44+01:00",
+     "fin": "2026-11-06T15:20:50+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 30,
+     "debut": "2026-11-06T15:22:22+01:00",
+     "fin": "2026-11-06T15:47:24+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet",
+     "budget": 25,
+     "debut": "2026-11-06T15:50:22+01:00",
+     "fin": "2026-11-06T15:55:00+01:00"
+    },
+    {
+     "etape": "construction : contact et page de catégorie",
+     "budget": 10,
+     "debut": "2026-11-06T15:55:00+01:00",
+     "fin": "2026-11-06T15:58:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 20,
+     "debut": "2026-11-06T15:58:00+01:00",
+     "fin": "2026-11-06T17:02:30+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-06T17:02:30+01:00",
+     "fin": "2026-11-06T17:06:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-06T15:13:01+01:00",
+     "fin": "2026-11-06T15:15:44+01:00"
+    },
+    {
+     "pour": "validation des plans",
+     "debut": "2026-11-06T15:20:50+01:00",
+     "fin": "2026-11-06T15:22:22+01:00"
+    },
+    {
+     "pour": "images du site et images Grok",
+     "debut": "2026-11-06T15:22:22+01:00",
+     "fin": "2026-11-06T15:25:00+01:00"
+    },
+    {
+     "pour": "validation de l'aperçu de l'accueil",
+     "debut": "2026-11-06T15:47:24+01:00",
+     "fin": "2026-11-06T15:50:22+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [
+    "objet-a-faire-tourner",
+    "fil-conducteur",
+    "planches-empilees",
+    "axes-au-defilement"
+   ],
+   "audit": {
+    "niveau": "standard (deux passages complets) puis ciblé sur toutes les pages : fichiers, grille, mesures, parcours",
+    "echecsPremierPassage": 114,
+    "relances": 3,
+    "corrections": [
+     "e-mail contact@optemis.com en texte (lien vers le domaine du site actuel)",
+     "marque data-grille=fil oubliée sur main",
+     "masques des lignes de titre en clip-path (chevauchements et textes coupés)",
+     "zones tactiles de 44 px (téléphone, information clé, Modifier)",
+     "chemin de fer : marges par défaut de la liste (ne tenait pas dans l'écran)",
+     "enveloppe du publipostage : décor positionné hors de sa scène sur téléphone",
+     "premier écran en 320 x 568 et sans JavaScript (en-tête sur deux rangées)",
+     "flash de la couverture et du tampon à l'arrivée sous le voile",
+     "en-tête caché après un saut programmé : le bouton Menu restait hors écran",
+     "regard neuf : images en double dans une même page (dépliant, fin de Print & Web, fin de Photo)",
+     "regard neuf : fins de page différenciées (bon de réservation en encre, planche et loupe)",
+     "regard neuf : tampon encreur vierge à l'ouverture de Contact, BON À TIRER en toutes lettres seulement après l'envoi",
+     "regard neuf : recto du dépliant replié, chiffres réels sur chaque emplacement, un seul emplacement allumé à la fois sur téléphone",
+     "regard neuf : bande noire du canvas de calage (taille suivie par ResizeObserver), photo des objets recomposée sur papier",
+     "regard neuf : fil retiré sous 700 px, bouton Devis de l'en-tête retiré sur téléphone (barre du bas), numéros de vues continus"
+    ]
+   },
+   "effetsRetires": [
+    "fil conducteur masqué sous 700 px de large (il chevauchait les surtitres)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Scripts de la bibliothèque (outils/*.mjs, images/*.mjs) refusés à l'exécution dans cet environnement : bibliothèque consultée en lisant index.json, fiches et modules. Préparation (polices, socle) commencée pendant que l'utilisateur générait les images Grok (15:22-15:25). Boosts validés à l'aperçu : gouttes d'encre au lâcher, titres de section en quadri. Pages d'onglet et contact écrites pendant la construction de l'accueil (15:30-15:45), puis vérifiées et corrigées après l'aperçu. Regard neuf fait par un agent séparé sur les captures du premier audit."
+  },
+  {
+   "version": 2,
+   "skill": "v10.3",
+   "perimetre": [
+    "publipostage",
+    "objets-publicitaires",
+    "sauvegarde",
+    "formations"
+   ],
+   "etapes": [
+    {
+     "etape": "plans, images et document Grok",
+     "budget": 15,
+     "debut": "2026-11-06T17:07:00+01:00",
+     "fin": "2026-11-06T17:09:00+01:00"
+    },
+    {
+     "etape": "construction : pages ajoutées",
+     "budget": 40,
+     "debut": "2026-11-06T17:09:30+01:00",
+     "fin": "2026-11-06T17:24:00+01:00"
+    },
+    {
+     "etape": "audit et corrections",
+     "budget": 20,
+     "debut": "2026-11-06T17:24:00+01:00",
+     "fin": "2026-11-06T18:18:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-06T18:18:00+01:00",
+     "fin": "2026-11-06T18:22:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "choix de la suite (v2)",
+     "debut": "2026-11-06T17:05:00+01:00",
+     "fin": "2026-11-06T17:07:00+01:00"
+    },
+    {
+     "pour": "validation du plan v2",
+     "debut": "2026-11-06T17:09:00+01:00",
+     "fin": "2026-11-06T17:09:22+01:00"
+    },
+    {
+     "pour": "images Grok v2",
+     "debut": "2026-11-06T17:09:22+01:00",
+     "fin": "2026-11-06T17:11:00+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [
+    "bac-a-feuilleter (adapté à la main)",
+    "envol-vers-le-panier (adapté à la main)"
+   ],
+   "audit": {
+    "niveau": "standard",
+    "echecsPremierPassage": 28,
+    "relances": 3,
+    "corrections": [
+     "images de partage des 4 pages générées (absentes au premier passage)",
+     "navigation sans JavaScript sur téléphone : liens sur deux rangées au lieu d'une rangée qui débordait, zones tactiles de 44 px",
+     "section Programme (Formations) : molette déclarée comme visuel ; enveloppes de l'appel Publipostage agrandies",
+     "Sauvegarde 320×568 : ouverture resserrée, bouton du devis dans le premier écran",
+     "accueil : canevas du calage marqué éphémère (il passe la main à la photo une fois calé, voulu)"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Audit standard v2 : 28 échecs au premier passage (dont 20 de navigation sans JavaScript dus aux 9 liens), 0 après corrections (relances ciblées fichiers, mesures, films sur toutes les pages, puis mouvement et parcours sur les 4 nouvelles pages). Images Grok v2 reçues à 17:11, construction des pages commencée pendant l'attente."
+  },
+  {
+   "version": 3,
+   "skill": "v10.3",
+   "perimetre": [
+    "en-tête (toutes les pages)"
+   ],
+   "etapes": [
+    {
+     "etape": "construction : en-tête sur deux rangées",
+     "budget": 20,
+     "debut": "2026-11-06T18:26:00+01:00",
+     "fin": "2026-11-06T18:31:00+01:00"
+    },
+    {
+     "etape": "audit complet et corrections",
+     "budget": 50,
+     "debut": "2026-11-06T18:31:00+01:00",
+     "fin": "2026-11-06T19:56:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-06T19:56:00+01:00",
+     "fin": ""
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "choix de la suite (finaliser)",
+     "debut": "2026-11-06T18:23:00+01:00",
+     "fin": "2026-11-06T18:24:00+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [],
+   "audit": {
+    "niveau": "complet",
+    "echecsPremierPassage": 45,
+    "relances": 2,
+    "corrections": [
+     "lien Menu sans JavaScript (menu ouvert par #menu)",
+     "ouvertures resserrées sur téléphone à l'horizontale",
+     "scènes à hauteur de contenu en mode calme et sans JavaScript",
+     "dos du dépliant retiré une fois ouvert",
+     "mentions Illustration générée en haut à droite sur petit écran",
+     "aller() du socle : haut exact pour une scène qui cache l'en-tête",
+     "introduction du présentoir retirée sur écran bas"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Demande du client à 18:25 : un vrai en-tête sur ordinateur (à 1000 px, le bouton Menu remplaçait les liens). Premier audit complet de la v2 arrêté pour le refaire sur la v3."
+  }
+ ]
+}

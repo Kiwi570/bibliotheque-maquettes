@@ -1,0 +1,923 @@
+{
+ "maquette": {
+  "client": "Agence de communication visuelle à Strasbourg : print et web, espaces publicitaires, publipostage, photo et vidéo, objets publicitaires, sauvegarde en ligne, formation photo",
+  "activite": [
+   "services-b2b",
+   "média"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "artisanal",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "--papier",
+   "texte": "--encre",
+   "accent": "--violet",
+   "secondaire": "--ton-direct"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": "JetBrains Mono"
+  },
+  "points_forts": [
+   "direction « Bon à tirer » tirée de l'imprimerie : traits de coupe, repère de calage, barre de contrôle des encres, quatre passages quadri",
+   "accueil : repère de calage à faire tourner, la photo se décale en quatre couleurs (WebGL) puis se cale ; gouttes d'encre au lâcher",
+   "une ouverture et une scène du métier par page : dépliant trois volets, chemin de fer, parcours de l'enveloppe, présentoir à feuilleter, trajet du fichier, viseur",
+   "retours d'action : devis tamponné BON À TIRER, délai J+1/J+4/J+7 qui fait filer l'enveloppe, nom imprimé en direct qui s'envole vers le bouton Devis, test de panne, molette crantée du programme",
+   "en-tête sur deux rangées, navigation en chemin de fer numérotée (01 à 08)"
+  ],
+  "reserves": [
+   "nom à trancher entre Nolanis et Optemis, adresse, mentions légales, horaires et tarifs à fournir",
+   "objets publicitaires dessinés en code et frise de montage vidéo illustratifs",
+   "beaucoup d'illustrations générées pour les ouvertures, les vraies photos restent sur Photo & vidéo et les réalisations"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "canvas-2d",
+   "reactif-vitesse",
+   "fil-conducteur",
+   "section-fixée",
+   "progression-fixée",
+   "empilement-de-fiches",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "trace-svg",
+   "transition-de-page",
+   "curseur-personnalisé",
+   "bouton-magnétique"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "filtres",
+   "galerie-cliquable",
+   "saisie-personnalisee",
+   "simulateur",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "repère de calage à faire tourner : la photo se décale en quatre couleurs puis se cale",
+   "fil": "trait de coupe dans la marge, repère de calage au bout, une pastille par section"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en rideau de papier : deux pans portent chacun une moitié du repère de calage, qui se cale au centre",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro de moins de 3 s : traits de coupe, logo imprimé en trois passages, le repère glisse jusqu'à l'objet d'ouverture de la page qui s'ouvre en cercle depuis lui",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "intro-vers-l-objet",
+   "pieges": []
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête sur deux rangées : logo, barre de contrôle et signature, téléphone, devis ; navigation en chemin de fer, cases numérotées 01 à 08, filet d'encre au survol, page en cours encrée ; bouton Menu sous 900 px",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "à 1000 px, l'ancien en-tête d'une rangée passait au bouton Menu : le client l'a jugé « comme sur mobile »",
+    "sans JavaScript, un lien Menu ancré sur #menu ouvre le menu du socle par :target"
+   ]
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran papier, liens en grand, devis et appel, réduire les animations, barre de contrôle",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Votre agence de communication visuelle à Strasbourg",
+   "role": "ouverture",
+   "description": "Épreuve plein cadre de nuanciers et encres ; repère de calage à faire tourner (élan, doigt, clavier) : plus il tourne vite, plus la photo se décale en quatre couleurs, puis tout se cale ; gouttes d'encre quand on le lance fort",
+   "animations": [
+    "ouverture-orchestrée",
+    "webgl-shader",
+    "canvas-2d",
+    "reactif-vitesse",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "objet-a-faire-tourner",
+   "pieges": [
+    "canevas WebGL caché au repos (la photo prend le relais) : le marquer data-ephemere, sinon l'audit le voit apparaître puis disparaître",
+    "ResizeObserver sur le canevas, sinon bande noire après un redimensionnement"
+   ]
+  },
+  "manifeste": {
+   "titre": "Manifeste",
+   "role": "manifeste",
+   "description": "« 20 ans » en très grand, texte du métier, encre qui sèche au défilement (axe soft de Fraunces)",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": "axes-au-defilement",
+   "pieges": []
+  },
+  "services": {
+   "titre": "La liasse des épreuves",
+   "role": "services",
+   "description": "Liasse des sept épreuves de services empilées au défilement, chacune avec sa photo et son lien",
+   "animations": [
+    "empilement-de-fiches",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "planches-empilees",
+   "pieges": []
+  },
+  "realisations": {
+   "titre": "Mises en page, puis calées",
+   "role": "portfolio",
+   "description": "Réalisations dispersées comme des épreuves sur la table, qui se calent en grille au défilement",
+   "animations": [
+    "apparition-au-défilement",
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage": {
+   "titre": "Un envoi, en cinq étapes",
+   "role": "étapes",
+   "description": "Cinq étapes de l'envoi, une enveloppe qui avance au défilement",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "espaces": {
+   "titre": "Deux supports, quatre chiffres",
+   "role": "chiffres",
+   "description": "Deux supports publicitaires et quatre chiffres (exemplaires, abonnés)",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photos": {
+   "titre": "Des visuels fidèles à votre image",
+   "role": "galerie",
+   "description": "Bande de photos réelles qui défile sous un compte-fils, lien vers la planche contact",
+   "animations": [
+    "marquee",
+    "survol-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact": {
+   "titre": "Parlons-en, place de l'Homme de Fer",
+   "role": "contact",
+   "description": "Adresse, téléphone et plan d'accès dessiné en SVG",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Sommaire",
+   "role": "pied-de-page",
+   "description": "Pied de page papier : coordonnées, sommaire, confort de lecture, barre de contrôle",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page est partie au pilon",
+   "role": "page-404",
+   "description": "« Cette page est partie au pilon », titre tête-bêche qui se redresse, repère, illustration de papier froissé",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre projet",
+   "role": "ouverture",
+   "description": "Ouverture compacte violette : téléphone en très grand, adresse, tampon circulaire qui tourne au défilement",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-devis": {
+   "titre": "Votre demande, en trois étapes",
+   "role": "outil-interactif",
+   "description": "Devis en trois étapes prérempli depuis chaque page (service, support, délai), récapitulatif en épreuve qui se tamponne BON À TIRER à l'envoi et file dans la bannette",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "le tampon ne se montre qu'après l'envoi : avant, un tampon encreur vierge"
+   ]
+  },
+  "contact-acces": {
+   "titre": "Place de l'Homme de Fer",
+   "role": "carte",
+   "description": "Plan d'accès dessiné (place de l'Homme de Fer), arrêts de tram",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formations-debut": {
+   "titre": "Choisir l’image juste",
+   "role": "ouverture",
+   "description": "Ouverture dans le viseur : la photo se fait nette, les collimateurs se resserrent sur l'appareil",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formations-programme": {
+   "titre": "Tournez la molette",
+   "role": "outil-interactif",
+   "description": "Molette de mode crantée A, B, C, D à tourner (souris, doigt, flèches, Origine, Fin) : chaque cran ouvre un bloc du programme ; rôle slider, arrivée sur le bon cran depuis #bloc-c",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "les flèches s'enchaînent sur le cran visé, pas sur l'angle en cours d'animation",
+    "l'invite de rotation s'ajoute par-dessus le cran, sans le changer"
+   ]
+  },
+  "formations-materiel": {
+   "titre": "Les bons objectifs",
+   "role": "offre",
+   "description": "Les objectifs du bloc A, photo en parallaxe",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formations-fin": {
+   "titre": "Une session pour votre équipe ?",
+   "role": "appel",
+   "description": "Appel au devis, trois tirages vierges qui montent au défilement",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "objets-publicitaires-debut": {
+   "titre": "Personnalisez des objets publicitaires originaux",
+   "role": "ouverture",
+   "description": "Ouverture scindée sur le vert-jaune du logo, objets vierges qui se posent",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "objets-publicitaires-essai": {
+   "titre": "Votre nom, imprimé dessus",
+   "role": "outil-interactif",
+   "description": "« Votre nom, imprimé dessus » : on tape un texte, on choisit l'objet, l'impression se fait en direct en quatre passages ; « Ajouter à ma demande » fait voler l'objet jusqu'au bouton Devis, qui ouvre le devis avec l'objet et le texte",
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "saisie-personnalisee",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "envol-vers-le-panier",
+   "pieges": []
+  },
+  "objets-publicitaires-presentoir": {
+   "titre": "Six familles d’objets",
+   "role": "produits",
+   "description": "Présentoir épinglé des six familles d'objets qui se feuillettent un à un, le fond prend la teinte de chacun, compteur 01/06",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "bac-a-feuilleter",
+   "pieges": []
+  },
+  "objets-publicitaires-fin": {
+   "titre": "Un objet à votre image ?",
+   "role": "appel",
+   "description": "Appel au devis avec une vraie réalisation (coffret de stylos)",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-debut": {
+   "titre": "Votre photographe publicitaire dans le Bas-Rhin",
+   "role": "ouverture",
+   "description": "Grand titre puis table lumineuse : bande de photos réelles et compte-fils qu'on fait glisser",
+   "animations": [
+    "révélation-texte",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-planche": {
+   "titre": "Entourée au crayon gras",
+   "role": "galerie",
+   "description": "Planche contact filtrable (sujet gardé dans l'adresse), photos entourées au crayon gras au défilement, visionneuse",
+   "animations": [
+    "trace-svg",
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-video": {
+   "titre": "Prise de vue réelle et motion design",
+   "role": "offre",
+   "description": "Prise de vue réelle et motion design, frise de montage illustrative pilotée par le défilement avec timecode",
+   "animations": [
+    "progression-fixée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-formation": {
+   "titre": "Choisir l'image juste",
+   "role": "offre",
+   "description": "Teaser de la formation photo : sommaire A à D qui renvoie à la page Formations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-fin": {
+   "titre": "Une séance, une vidéo ?",
+   "role": "appel",
+   "description": "Appel au devis, loupe qui glisse sur une planche",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "photo-video-visionneuse": {
+   "titre": "Visionneuse de photos",
+   "role": "galerie",
+   "description": "Visionneuse de la planche contact (clavier, glisser)",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "print-web-debut": {
+   "titre": "Communication print et web",
+   "role": "ouverture",
+   "description": "Grand titre centré sur papier coton, dépliant fermé dont la couverture s'entrouvre",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-web-imprimes": {
+   "titre": "Le dépliant des imprimés",
+   "role": "produits",
+   "description": "Dépliant trois volets épinglé qui s'ouvre volet par volet en 3D, chaque volet liste ses imprimés",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "le dos d'un volet (rotateY 180°) compte pour l'audit en mode calme : le retirer quand le dépliant est ouvert"
+   ]
+  },
+  "print-web-web": {
+   "titre": "La mise en page passe à l'écran",
+   "role": "services",
+   "description": "Services web, mise en page réimposée en grille au défilement",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-web-sechoir": {
+   "titre": "Au séchoir",
+   "role": "portfolio",
+   "description": "Tirages suspendus au séchoir qui se balancent au défilement",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-web-fin": {
+   "titre": "Un imprimé, un site ?",
+   "role": "appel",
+   "description": "Appel au devis print ou web sur l'établi de l'atelier, photo en parallaxe et boutons devis et appel",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publicite-debut": {
+   "titre": "Achetez un espace publicitaire efficace",
+   "role": "ouverture",
+   "description": "Ouverture sombre scindée : chiffres des supports, couverture du Strassbuch qui arrive en tournant",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publicite-strassbuch": {
+   "titre": "Le city-guide de Strasbourg",
+   "role": "offre",
+   "description": "Le city-guide de Strasbourg, double page réelle",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publicite-amicale": {
+   "titre": "Le livret de septembre",
+   "role": "offre",
+   "description": "Le livret de l'Amicale du Conseil de l'Europe",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publicite-chemin-de-fer": {
+   "titre": "Six emplacements pour votre annonce",
+   "role": "tarifs",
+   "description": "Chemin de fer épinglé des six emplacements, chacun s'allume à son tour avec son lien de réservation préremplie",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "lien profond : avec un en-tête de plus de 108 px, aller() du socle doit viser le haut exact d'une scène data-entete-cache"
+   ]
+  },
+  "publicite-fin": {
+   "titre": "Votre annonce, au bon endroit",
+   "role": "appel",
+   "description": "Bon de réservation tamponné « Réservé » au défilement",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage-debut": {
+   "titre": "Publipostage et e-mailing",
+   "role": "ouverture",
+   "description": "Plein cadre sur les casiers de tri, cachet d'oblitération qui se tamponne puis tourne au défilement",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage-parcours": {
+   "titre": "L'enveloppe, étape par étape",
+   "role": "étapes",
+   "description": "Scène épinglée : la feuille se pose, s'imprime, entre sous pli, puis l'enveloppe part ; les cinq étapes s'allument",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage-delai": {
+   "titre": "Choisissez votre délai",
+   "role": "outil-interactif",
+   "description": "Choix du délai J+1, J+4 ou J+7 : l'enveloppe file jusqu'à la boîte plus ou moins vite, le lien du devis prend le délai",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage-e-mailing": {
+   "titre": "La même campagne, dans la boîte de réception",
+   "role": "services",
+   "description": "La même campagne en boîte de réception réimposée, photo de mise sous pli",
+   "animations": [
+    "empilement-de-fiches",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "publipostage-fin": {
+   "titre": "Un envoi à préparer ?",
+   "role": "appel",
+   "description": "Appel au devis, trois enveloppes qui montent au défilement",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sauvegarde-debut": {
+   "titre": "Vos fichiers, à l’abri",
+   "role": "ouverture",
+   "description": "Ouverture nocturne compacte : cadenas qui se ferme, prix en très grand, barre de sauvegarde incrémentale",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sauvegarde-trajet": {
+   "titre": "De votre ordinateur à deux centres de données",
+   "role": "méthode",
+   "description": "Trajet épinglé d'un fichier : ordinateur, chiffrement, deux centres de données, partout ; les stations s'encrent",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sauvegarde-panne": {
+   "titre": "Une panne, et après ?",
+   "role": "outil-interactif",
+   "description": "« Une panne, et après ? » : on choisit la panne, le fichier disparaît de l'ordinateur puis revient depuis la sauvegarde (message lu à voix haute)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sauvegarde-fin": {
+   "titre": "Mettre vos fichiers à l’abri",
+   "role": "appel",
+   "description": "Appel au devis, photo du disque de sauvegarde",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

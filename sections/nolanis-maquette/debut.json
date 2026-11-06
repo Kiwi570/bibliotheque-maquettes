@@ -1,0 +1,48 @@
+{
+ "id": "nolanis-maquette/debut",
+ "maquette": "nolanis-maquette",
+ "page": "index",
+ "titre": "Votre agence de communication visuelle à Strasbourg",
+ "role": "ouverture",
+ "description": "Épreuve plein cadre de nuanciers et encres ; repère de calage à faire tourner (élan, doigt, clavier) : plus il tourne vite, plus la photo se décale en quatre couleurs, puis tout se cale ; gouttes d'encre quand on le lance fort",
+ "animations": [
+  "ouverture-orchestrée",
+  "webgl-shader",
+  "canvas-2d",
+  "reactif-vitesse",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "objet-a-faire-tourner",
+ "modules": [
+  "objet-a-faire-tourner"
+ ],
+ "code": {
+  "html": "index.html:105-136",
+  "css": "assets/css/site.css:135-157,164-191,198,365-366,375,442,452,483,625-626,634,660,757,839-842,914-916,959,1026-1029,1035,1043",
+  "js": "assets/js/site.js:17-25,78 ; assets/js/effets-nolanis.js:76-158,186-267,310-329,388-422 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:20,267-311 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/calme.js:9-13"
+ },
+ "medias": {
+  "capture": "medias/nolanis-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/nolanis-maquette/debut-m390.jpg",
+  "video": "medias/nolanis-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "canevas WebGL caché au repos (la photo prend le relais) : le marquer data-ephemere, sinon l'audit le voit apparaître puis disparaître",
+  "ResizeObserver sur le canevas, sinon bande noire après un redimensionnement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 845,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

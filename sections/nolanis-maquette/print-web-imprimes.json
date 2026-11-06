@@ -1,0 +1,43 @@
+{
+ "id": "nolanis-maquette/print-web-imprimes",
+ "maquette": "nolanis-maquette",
+ "page": "print-web",
+ "titre": "Le dépliant des imprimés",
+ "role": "produits",
+ "description": "Dépliant trois volets épinglé qui s'ouvre volet par volet en 3D, chaque volet liste ses imprimés",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "print-web.html:122-159",
+  "css": "assets/css/site.css:378-401,463,477,643-646,704,720,855,873,1018-1020",
+  "js": "assets/js/site.js:7,50 ; assets/js/pages-v2.js:19-55,252-274 ; assets/js/socle/defilement.js:99-107 ; assets/js/socle/entete.js:63-141 ; assets/js/pages-nolanis.js:12-42,45-60"
+ },
+ "medias": {
+  "capture": "medias/nolanis-maquette/print-web-imprimes-p1440.jpg",
+  "capture_m390": "medias/nolanis-maquette/print-web-imprimes-m390.jpg",
+  "video": "medias/nolanis-maquette/print-web-imprimes-p720.mp4"
+ },
+ "pieges": [
+  "le dos d'un volet (rotateY 180°) compte pour l'audit en mode calme : le retirer quand le dépliant est ouvert"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2250,
+  "hauteur_m390": 1643,
+  "epinglee": true,
+  "scrolltriggers": 2
+ }
+}

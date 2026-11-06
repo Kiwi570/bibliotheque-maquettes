@@ -1,0 +1,42 @@
+{
+ "id": "nolanis-maquette/contact-devis",
+ "maquette": "nolanis-maquette",
+ "page": "contact",
+ "titre": "Votre demande, en trois étapes",
+ "role": "outil-interactif",
+ "description": "Devis en trois étapes prérempli depuis chaque page (service, support, délai), récapitulatif en épreuve qui se tamponne BON À TIRER à l'envoi et file dans la bannette",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "contact.html:117-161",
+  "css": "assets/css/socle.css:203-210 ; assets/css/site.css:43,383,476,561-564,568-601,665-666,827,1023",
+  "js": "assets/js/site.js:7,50,70-71,76,89 ; assets/js/pages-v2.js:57,104-151,386 ; assets/js/effets-nolanis.js:27-28,76-158,186-267 ; assets/js/socle/index.js:6 ; assets/js/socle/ouverture.js:2-3,8,19,36-45,54,93-147,156,161-248 ; assets/js/socle/voile.js:53 ; assets/js/socle/etat.js:7-9 ; assets/js/socle/gouttiere.js:5,27 ; assets/js/socle/effets.js:145 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/entete.js:6 ; assets/js/pages-nolanis.js:2,189-240"
+ },
+ "medias": {
+  "capture": "medias/nolanis-maquette/contact-devis-p1440.jpg",
+  "capture_m390": "medias/nolanis-maquette/contact-devis-m390.jpg",
+  "video": "medias/nolanis-maquette/contact-devis-p720.mp4"
+ },
+ "pieges": [
+  "le tampon ne se montre qu'après l'envoi : avant, un tampon encreur vierge"
+ ],
+ "mesures": {
+  "hauteur_p1440": 895,
+  "hauteur_m390": 1347,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}
