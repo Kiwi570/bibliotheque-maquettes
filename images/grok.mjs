@@ -13,7 +13,7 @@
 //   que verifier-grok.mjs relit pour corriger une consigne.
 import fs from 'node:fs';
 import path from 'node:path';
-import { ICI, args, lireJson, ecrireJson } from './commun.mjs';
+import { ICI, DONNEES, args, lireJson, ecrireJson } from './commun.mjs';
 import { ecrireDocx } from './docx.mjs';
 
 const { pos, opts } = args();
@@ -25,12 +25,12 @@ const fPlan = path.resolve(pos[0]);
 const plan = lireJson(fPlan);
 if (!Array.isArray(plan)) { console.error(`plan illisible : ${fPlan}`); process.exit(1); }
 const sansAccent = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-const fGabarit = path.join(ICI, 'gabarits-grok', `${sansAccent(opts.activite)}.json`);
+const fGabarit = path.join(DONNEES, 'gabarits-grok', `${sansAccent(opts.activite)}.json`);
 if (!fs.existsSync(fGabarit)) {
-  console.error(`activité inconnue : ${opts.activite}. Choix : ${fs.readdirSync(path.join(ICI, 'gabarits-grok')).filter(f => f.endsWith('.json') && f !== 'commun.json').map(f => f.replace('.json', '')).join(', ')}`);
+  console.error(`activité inconnue : ${opts.activite}. Choix : ${fs.readdirSync(path.join(DONNEES, 'gabarits-grok')).filter(f => f.endsWith('.json') && f !== 'commun.json').map(f => f.replace('.json', '')).join(', ')}`);
   process.exit(1);
 }
-const G = lireJson(fGabarit), C = lireJson(path.join(ICI, 'gabarits-grok', 'commun.json')), EMPL = lireJson(path.join(ICI, 'emplacements.json'), {});
+const G = lireJson(fGabarit), C = lireJson(path.join(DONNEES, 'gabarits-grok', 'commun.json')), EMPL = lireJson(path.join(DONNEES, 'emplacements.json'), {});
 const direction = typeof opts.direction === 'string' ? lireJson(path.resolve(opts.direction), null) : {};
 if (direction === null) { console.error(`direction illisible : ${opts.direction}`); process.exit(1); }
 const client = typeof opts.client === 'string' ? opts.client : direction.client || path.basename(path.dirname(fPlan));

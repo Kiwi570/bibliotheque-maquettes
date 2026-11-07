@@ -2,9 +2,24 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import http from 'node:http';
+import os from 'node:os';
 import { fileURLToPath } from 'node:url';
 
-export const RACINE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// Où sont les données de la bibliothèque. Ces outils tournent depuis le dépôt lui-même (outils/), ou depuis la copie livrée
+// avec la skill (bibliotheque/ de la skill, copiée en _biblio/ dans le projet) : une session peut refuser de lancer du code
+// téléchargé, mais lit sans problème les données d'un clone. Ordre : variable BIBLIO, dossier parent de l'outil, puis
+// bibliotheque-maquettes dans le dossier courant, son parent et ~/Downloads.
+export function trouverBibliotheque(ici) {
+  const cands = [process.env.BIBLIO, path.resolve(ici, '..'), path.resolve('bibliotheque-maquettes'), path.resolve('..', 'bibliotheque-maquettes'),
+    path.join(os.homedir(), 'Downloads', 'bibliotheque-maquettes'), path.join(os.homedir(), 'bibliotheque-maquettes')].filter(Boolean).map((d) => path.resolve(d));
+  const ok = cands.find((d) => fs.existsSync(path.join(d, 'taxonomie.json')) && fs.existsSync(path.join(d, 'index.json')));
+  if (!ok) {
+    console.error(`Bibliothèque introuvable (cherchée dans : ${[...new Set(cands)].join(', ')}).\nClone-la (git clone --depth 1 https://github.com/Kiwi570/bibliotheque-maquettes.git) puis relance avec BIBLIO=<dossier du clone>.`);
+    process.exit(2);
+  }
+  return ok;
+}
+export const RACINE = trouverBibliotheque(path.dirname(fileURLToPath(import.meta.url)));
 export const DOWNLOADS = path.resolve(RACINE, '..');
 export const AUDIT = path.join(DOWNLOADS, 'audit-maquettes');
 export const TAXO = JSON.parse(fs.readFileSync(path.join(RACINE, 'taxonomie.json'), 'utf8'));

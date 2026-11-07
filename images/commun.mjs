@@ -3,10 +3,21 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import os from 'node:os';
 import sharp from 'sharp';
 
 export const ICI = path.dirname(fileURLToPath(import.meta.url));
-export const RACINE = path.dirname(ICI);
+// Données de la bibliothèque (gabarits Grok, emplacements.json, fiches) : même recherche que outils/commun.mjs,
+// pour que ces commandes tournent aussi depuis la copie livrée avec la skill.
+function trouverBibliotheque() {
+  const cands = [process.env.BIBLIO, path.dirname(ICI), path.resolve('bibliotheque-maquettes'), path.resolve('..', 'bibliotheque-maquettes'),
+    path.join(os.homedir(), 'Downloads', 'bibliotheque-maquettes'), path.join(os.homedir(), 'bibliotheque-maquettes')].filter(Boolean).map((d) => path.resolve(d));
+  const ok = cands.find((d) => fs.existsSync(path.join(d, 'images', 'gabarits-grok')) && fs.existsSync(path.join(d, 'taxonomie.json')));
+  if (!ok) { console.error(`Bibliothèque introuvable (cherchée dans : ${[...new Set(cands)].join(', ')}). Relance avec BIBLIO=<dossier du clone>.`); process.exit(2); }
+  return ok;
+}
+export const RACINE = trouverBibliotheque();
+export const DONNEES = path.join(RACINE, 'images'); // gabarits-grok/, emplacements.json, tests/
 export const EXT_IMAGES = /\.(jpe?g|png|webp|gif|avif|svg|tiff?|heic)$/i;
 sharp.cache(false);
 

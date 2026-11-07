@@ -7,7 +7,7 @@
 // Grok ne produit que 1168×784 ou 784×1168 : le champ grok dit lequel demander et le recadrage reste fait par produire.mjs.
 import fs from 'node:fs';
 import path from 'node:path';
-import { RACINE, ICI, ecrireJson } from './commun.mjs';
+import { RACINE, ICI, DONNEES, ecrireJson } from './commun.mjs';
 import { dimensions } from './dimensions.mjs';
 
 const DL = path.dirname(RACINE);
@@ -96,5 +96,5 @@ for (const role of ['ouverture', 'section-fond', 'carte-service', 'galerie', 'po
   };
 }
 sortie.logo = { _source: 'jamais recadré ni réduit en dessous de sa taille ; largeurs utiles pour un logo en image', ratio: null, largeurs: [240, 480], recadrer: false };
-ecrireJson(path.join(ICI, 'emplacements.json'), sortie);
+ecrireJson(path.join(DONNEES, 'emplacements.json'), sortie);
 for (const [k, v] of Object.entries(sortie)) if (k !== '_source') console.log(`${k.padEnd(14)} ${String(v.ratio).padEnd(6)} ${v.largeurs.join(', ').padEnd(22)} ${v._source}`);

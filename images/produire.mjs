@@ -19,7 +19,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import sharp from 'sharp';
-import { ICI, args, lireJson, ecrireJson, ko, arrondi } from './commun.mjs';
+import { ICI, DONNEES, args, lireJson, ecrireJson, ko, arrondi } from './commun.mjs';
 
 const { pos, opts } = args();
 if (!pos[0]) { console.error('usage : node images/produire.mjs plan-images.json [--racine .] [--forcer]'); process.exit(1); }
@@ -27,7 +27,7 @@ const RACINE = path.resolve(typeof opts.racine === 'string' ? opts.racine : '.')
 const fPlan = path.resolve(pos[0]);
 const plan = lireJson(fPlan);
 if (!Array.isArray(plan)) { console.error(`plan illisible : ${fPlan}`); process.exit(1); }
-const EMPL = lireJson(path.join(ICI, 'emplacements.json'), {});
+const EMPL = lireJson(path.join(DONNEES, 'emplacements.json'), {});
 const fFiche = path.join(RACINE, 'donnees', 'images.json');
 const ancienne = lireJson(fFiche, {});
 const LARGEURS_MOBILE = [640, 1080];

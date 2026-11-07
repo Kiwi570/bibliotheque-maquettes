@@ -12,7 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { ICI, args, lireJson, ecrireJson, vision, planche, arrondi, EXT_IMAGES } from './commun.mjs';
+import { ICI, DONNEES, args, lireJson, ecrireJson, vision, planche, arrondi, EXT_IMAGES } from './commun.mjs';
 
 const { pos, opts } = args();
 if (pos.length < 2) { console.error('usage : node images/verifier-grok.mjs recu/grok/ plan-images.json [--consignes grok-consignes.json]'); process.exit(1); }
@@ -21,8 +21,8 @@ const fPlan = path.resolve(pos[1]);
 const plan = lireJson(fPlan, []);
 const fCons = path.resolve(typeof opts.consignes === 'string' ? opts.consignes : path.join(path.dirname(fPlan), 'grok-consignes.json'));
 const consignes = lireJson(fCons, { images: [] });
-const EMPL = lireJson(path.join(ICI, 'emplacements.json'), {});
-const COMMUN = lireJson(path.join(ICI, 'gabarits-grok', 'commun.json'), {});
+const EMPL = lireJson(path.join(DONNEES, 'emplacements.json'), {});
+const COMMUN = lireJson(path.join(DONNEES, 'gabarits-grok', 'commun.json'), {});
 const sansExt = f => path.basename(f).replace(/\.[^.]+$/, '');
 
 // Fichiers attendus : sources (et sources mobiles) du plan dans le dossier Grok (même dossier, quel que soit le chemin écrit).
