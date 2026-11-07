@@ -64,6 +64,7 @@ lancer('node', ['outils/relier-modules.mjs']);
 const touches = execFileSync('git', ['status', '--porcelain', 'notes-manuelles'], { cwd: RACINE, encoding: 'utf8' }).split('\n').map(l => l.slice(3).match(/notes-manuelles\/(.+)\.json$/)?.[1]).filter(d => d && d !== depot);
 for (const d of touches) lancer('node', ['outils/fiches.mjs', d]);
 lancer('node', ['outils/indexer.mjs']);
+lancer('node', ['outils/palmares.mjs']);
 try { lancer('node', ['outils/valider.mjs']); } catch { console.error('\nValidation en erreur : corriger les lignes ERREUR ci-dessus, puis relancer avec --sans-inventaire.'); process.exit(1); }
 console.log(`\n${depot} ajouté. Relire la fiche maquettes/${depot}.json, puis commiter (message sans apostrophe).`);
 console.log(`Leçons : relire journaux/${depot}.json (s'il existe) et le rapport d'audit du projet, proposer 0 à 3 leçons générales à l'utilisateur, et écrire celles qu'il valide dans lecons/${depot.replace(/-maquette$/, '')}.md (un fichier par projet ; format dans lecons.md), dans le même commit. Ne jamais proposer de mise à jour de la skill pendant un projet.`);

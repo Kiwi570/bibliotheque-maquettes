@@ -1,0 +1,1686 @@
+{
+ "explication": "Les meilleures sections de la bibliothèque pour chaque rôle : la barre à dépasser. Regarder la planche palmares/planches/<rôle>.jpg du rôle, lire les fiches citées ; chaque section de la nouvelle maquette fait au moins aussi bien.",
+ "genere": "2026-11-07",
+ "roles": {
+  "ouverture": [
+   {
+    "id": "icc-maquette/hero",
+    "maquette": "icc-maquette",
+    "client": "institut de conseil et de formation à la transformation des systèmes (conseil, expéditions apprenantes, programme jeunes à l'ONU)",
+    "note_section": 5,
+    "note_maquette": 91,
+    "titre": "Ouverture en constellation",
+    "description": "Ciel nocturne en WebGL (OGL) : des particules d'or dessinent l'arbre du logo puis s'ouvrent en constellation derrière le titre en serif fin ; carte « Vous êtes… » qui oriente vers trois publics. Repli 2D sans WebGL, image fixe en mode calme, bascule silencieuse si le contexte GPU est perdu.",
+    "animations": [
+     "ouverture-orchestrée",
+     "webgl-particules",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "constellation",
+    "fiche": "sections/icc-maquette/hero.json",
+    "capture": "medias/icc-maquette/hero-p1440.jpg",
+    "capture_m390": "medias/icc-maquette/hero-m390.jpg",
+    "video": "medias/icc-maquette/hero-p720.mp4",
+    "en_ligne": "https://icc-maquette.vercel.app"
+   },
+   {
+    "id": "winsbike-maquette/top",
+    "maquette": "winsbike-maquette",
+    "client": "distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne",
+    "note_section": 5,
+    "note_maquette": 91,
+    "titre": "Établi éclairé à la lampe",
+    "description": "Héros sur une photo d'établi plongée dans le noir : une lampe WebGL (OGL) suit le curseur, réchauffe la zone éclairée et fait briller la poussière qui tombe ; titre, recherche instantanée et bandeau défilant des engagements. Repli sur la photo sans WebGL.",
+    "animations": [
+     "webgl-shader",
+     "révélation-texte",
+     "marquee",
+     "parallaxe"
+    ],
+    "interactions": [
+     "recherche"
+    ],
+    "module": "lumiere-au-pointeur",
+    "fiche": "sections/winsbike-maquette/top.json",
+    "capture": "medias/winsbike-maquette/top-p1440.jpg",
+    "capture_m390": "medias/winsbike-maquette/top-m390.jpg",
+    "video": "medias/winsbike-maquette/top-p720.mp4",
+    "en_ligne": "https://winsbike-maquette.vercel.app"
+   },
+   {
+    "id": "d3co-maquette/heros",
+    "maquette": "d3co-maquette",
+    "client": "atelier d'objets déco imprimés en 3D (vases, cache-pots) avec boutique en ligne",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Héros imprimé couche par couche",
+    "description": "La vraie photo du vase s'imprime en WebGL (OGL) couche par couche sous une buse incandescente, les couches chaudes refroidissent ; cotes SVG du produit autour, puis vue éclatée en strates au défilement (épinglage, scrub). Repli Canvas 2D sans WebGL, image finale sous réduction des animations.",
+    "animations": [
+     "webgl-shader",
+     "révélation-texte",
+     "section-fixée",
+     "progression-fixée"
+    ],
+    "interactions": [
+     "schema-interactif"
+    ],
+    "module": "impression-couche-par-couche",
+    "fiche": "sections/d3co-maquette/heros.json",
+    "capture": "medias/d3co-maquette/heros-p1440.jpg",
+    "capture_m390": "medias/d3co-maquette/heros-m390.jpg",
+    "video": "medias/d3co-maquette/heros-p720.mp4",
+    "en_ligne": "https://d3co-maquette.vercel.app"
+   },
+   {
+    "id": "laure-polin-maquette/hero",
+    "maquette": "laure-polin-maquette",
+    "client": "sculptrice (ardoise taillée, bronze, pneu recyclé), atelier à Bagnolet, vente d'œuvres",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Œuvres recomposées en poussière d'ardoise",
+    "description": "Diaporama d'œuvres sur un mur d'ardoise en lumière rasante (WebGL, le relief suit le curseur) : chaque œuvre se rassemble depuis un nuage de particules (OGL) puis la vraie photo s'affiche intacte ; minuteur avec pause, points de navigation, cartel et parallaxe de sortie.",
+    "animations": [
+     "webgl-particules",
+     "webgl-shader",
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "galerie-cliquable"
+    ],
+    "module": "dissolution-en-particules",
+    "fiche": "sections/laure-polin-maquette/hero.json",
+    "capture": "medias/laure-polin-maquette/hero-p1440.jpg",
+    "capture_m390": "medias/laure-polin-maquette/hero-m390.jpg",
+    "video": "medias/laure-polin-maquette/hero-p720.mp4",
+    "en_ligne": "https://laure-polin-maquette.vercel.app"
+   },
+   {
+    "id": "les-plus-hautes-eaux-maquette/haut",
+    "maquette": "les-plus-hautes-eaux-maquette",
+    "client": "compagnie de théâtre gestuel et clown pour tous publics, tournée dans le Grand Ouest",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Héros sous la montée des eaux",
+    "description": "Photo de scène en bichromie : une nappe d'eau WebGL (OGL) avec caustiques monte en lui rendant ses couleurs, puis couvre toute l'image au défilement (scrub) ; un clic fait des ronds dans l'eau. Titre révélé mot à mot, prochaine représentation en carte. Repli CSS par variable --lvl sans WebGL.",
+    "animations": [
+     "webgl-shader",
+     "révélation-texte",
+     "révélation-image",
+     "ouverture-orchestrée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "revelation-a-l-encre",
+    "fiche": "sections/les-plus-hautes-eaux-maquette/haut.json",
+    "capture": "medias/les-plus-hautes-eaux-maquette/haut-p1440.jpg",
+    "capture_m390": "medias/les-plus-hautes-eaux-maquette/haut-m390.jpg",
+    "video": "medias/les-plus-hautes-eaux-maquette/haut-p720.mp4",
+    "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
+   },
+   {
+    "id": "surffm-maquette/hero",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Titre géant sur houle WebGL",
+    "description": "Premier écran plein cadre : une houle de lignes animée en shader (OGL, repli canvas 2D) sous une photo de nuit, un titre géant découpé en lettres qui montent en vague puis se soulèvent au passage de la souris, et un bouton lecture qui lance le direct.",
+    "animations": [
+     "webgl-shader",
+     "révélation-texte",
+     "parallaxe",
+     "ouverture-orchestrée"
+    ],
+    "interactions": [
+     "lecteur-audio"
+    ],
+    "module": null,
+    "fiche": "sections/surffm-maquette/hero.json",
+    "capture": "medias/surffm-maquette/hero-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/hero-m390.jpg",
+    "video": "medias/surffm-maquette/hero-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app"
+   }
+  ],
+  "outil-interactif": [
+   {
+    "id": "games42-maquette/trouver",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Cadenas des missions",
+    "description": "Trois molettes de cadenas (équipe, âge, nombre de joueurs) à faire tourner au doigt, à la molette ou au clavier ; le cadenas s'ouvre sur les missions adaptées avec leur prix calculé.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "calculateur",
+     "configurateur"
+    ],
+    "module": "cadenas-a-molettes",
+    "fiche": "sections/games42-maquette/trouver.json",
+    "capture": "medias/games42-maquette/trouver-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/trouver-m390.jpg",
+    "video": "medias/games42-maquette/trouver-p720.mp4",
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "loeilsingulier-maquette/ob-t",
+    "maquette": "loeilsingulier-maquette",
+    "client": "agence franco-britannique d'événementiel d'entreprise et de design graphique",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Plan de table",
+    "description": "Plan de table dessiné en SVG au scrub (tables tracées, chaises qui apparaissent) avec cartons de placement qui tombent ; choisir un carton ouvre le carton-réponse du contact prérempli avec l'intention choisie.",
+    "animations": [
+     "masque",
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "configurateur"
+    ],
+    "module": null,
+    "fiche": "sections/loeilsingulier-maquette/ob-t.json",
+    "capture": "medias/loeilsingulier-maquette/ob-t-p1440.jpg",
+    "capture_m390": "medias/loeilsingulier-maquette/ob-t-m390.jpg",
+    "video": "medias/loeilsingulier-maquette/ob-t-p720.mp4",
+    "en_ligne": "https://loeilsingulier-maquette.vercel.app"
+   },
+   {
+    "id": "libre-solidaire-maquette/reseau",
+    "maquette": "libre-solidaire-maquette",
+    "client": "maison d'édition indépendante (essais sur l'environnement, la société, la vigne)",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Réseau mycélien du catalogue",
+    "description": "Canvas 2D : chaque livre est un nœud (sa couverture) relié par un filament vivant au cœur de son territoire ; survol avec infobulle, clic vers la fiche, légende des territoires, animation suspendue hors écran.",
+    "animations": [
+     "canvas-2d"
+    ],
+    "interactions": [
+     "galerie-cliquable"
+    ],
+    "module": "constellation",
+    "fiche": "sections/libre-solidaire-maquette/reseau.json",
+    "capture": "medias/libre-solidaire-maquette/reseau-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/reseau-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/reseau-p720.mp4",
+    "en_ligne": "https://libre-solidaire-maquette.vercel.app"
+   }
+  ],
+  "galerie": [
+   {
+    "id": "games42-maquette/missions",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Couloir des portails",
+    "description": "Section épinglée : les cinq mondes défilent à l'horizontale, chacun change le monde affiché par le portail ; à l'arrêt, aimantation douce sur le monde le plus proche, et un bouton atteint au clavier fait venir son monde. Pile verticale sur téléphone.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "révélation-image"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/games42-maquette/missions.json",
+    "capture": "medias/games42-maquette/missions-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/missions-m390.jpg",
+    "video": "medias/games42-maquette/missions-p720.mp4",
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "surffm-maquette/emissions",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Galerie horizontale des émissions",
+    "description": "Section épinglée : le titre reste en haut et une piste de cartes photo défile à l'horizontale avec la molette, chaque image glissant légèrement dans son cadre ; la dernière carte renvoie à la grille. Sous 900 px, défilement horizontal natif.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "galerie-horizontale-epinglee",
+    "fiche": "sections/surffm-maquette/emissions.json",
+    "capture": "medias/surffm-maquette/emissions-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/emissions-m390.jpg",
+    "video": "medias/surffm-maquette/emissions-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app"
+   },
+   {
+    "id": "nelis-maquette/applications",
+    "maquette": "nelis-maquette",
+    "client": "froid industriel (vente, location et service de groupes frigorifiques)",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Galerie qui refroidit",
+    "description": "Galerie horizontale épinglée : la piste de cartes photo défile avec la molette et chaque carte passe d'un ton chaud à un ton froid quand elle traverse l'écran (variable --froid calculée à la position) ; une dernière carte liste les autres applications. Sur téléphone, défilement natif avec le même effet.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "filtre-anime"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "fond-qui-se-consume",
+    "fiche": "sections/nelis-maquette/applications.json",
+    "capture": "medias/nelis-maquette/applications-p1440.jpg",
+    "capture_m390": "medias/nelis-maquette/applications-m390.jpg",
+    "video": "medias/nelis-maquette/applications-p720.mp4",
+    "en_ligne": "https://nelis-maquette.vercel.app"
+   }
+  ],
+  "contact": [
+   {
+    "id": "instinct-aventure-maquette/contact",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Contact sous ciel étoilé et safari à la lampe",
+    "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
+    "animations": [
+     "canvas-2d",
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": "lumiere-au-pointeur",
+    "fiche": "sections/instinct-aventure-maquette/contact.json",
+    "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/contact-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
+   },
+   {
+    "id": "coupdefood-maquette/contact",
+    "maquette": "coupdefood-maquette",
+    "client": "agence de relations presse et de communication culinaire",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Bon de commande",
+    "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "formulaire-par-étapes"
+    ],
+    "module": "formulaire-par-etapes",
+    "fiche": "sections/coupdefood-maquette/contact.json",
+    "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
+    "video": "medias/coupdefood-maquette/contact-p720.mp4",
+    "en_ligne": "https://coupdefood-maquette.vercel.app"
+   },
+   {
+    "id": "myrtille-et-compagnie-maquette/demander-une-communication-formulaire",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Votre demande, en cinq étapes",
+    "description": "Demande simulée en cinq étapes : erreurs à côté des champs, formule préremplie par l'adresse, récapitulatif fixe avec l'aperçu de la photo qui se développe, total en direct, gerbe de myrtilles à l'envoi",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "formulaire-par-étapes"
+    ],
+    "module": null,
+    "fiche": "sections/myrtille-et-compagnie-maquette/demander-une-communication-formulaire.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-m390.jpg",
+    "video": null,
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app/demander-une-communication"
+   }
+  ],
+  "étapes": [
+   {
+    "id": "observatoire-des-cse-maquette/participer",
+    "maquette": "observatoire-des-cse-maquette",
+    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Téléphone épinglé du parcours",
+    "description": "Section sombre épinglée : à gauche les quatre étapes, à droite un téléphone dont l'écran rejoue le parcours au scrub (adresse tapée lettre à lettre, case cochée, questionnaire, cadeaux, notification) ; l'étape en cours s'allume.",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "telephone-epingle",
+    "fiche": "sections/observatoire-des-cse-maquette/participer.json",
+    "capture": "medias/observatoire-des-cse-maquette/participer-p1440.jpg",
+    "capture_m390": "medias/observatoire-des-cse-maquette/participer-m390.jpg",
+    "video": "medias/observatoire-des-cse-maquette/participer-p720.mp4",
+    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
+   },
+   {
+    "id": "instinct-aventure-maquette/grande-aventure-jours",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Itinéraire à carte collante",
+    "description": "Liste des jours à droite et carte collante à gauche : quand un jour passe au centre de l'écran, la trace s'allonge jusqu'à son étape, un compteur de jour et de nuitée se met à jour et l'animal de la région apparaît. Sur téléphone, carte dans le flux et barre « Jour n / total » compacte mesurée.",
+    "animations": [
+     "progression-fixée",
+     "apparition-au-défilement",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "carte-interactive"
+    ],
+    "module": "carte-itineraire-collante",
+    "fiche": "sections/instinct-aventure-maquette/grande-aventure-jours.json",
+    "capture": "medias/instinct-aventure-maquette/grande-aventure-jours-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/grande-aventure-jours-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/grande-aventure-jours-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app/grande-aventure"
+   },
+   {
+    "id": "aquafit-maquette/gilet",
+    "maquette": "aquafit-maquette",
+    "client": "cours de gymnastique aquatique en eau profonde",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Schéma épinglé en trois étapes",
+    "description": "La section reste épinglée pendant que le défilement fait avancer trois étapes : à droite un schéma SVG montre une silhouette qui court en suspension sous une surface ondulée, avec repères qui s'allument (surface, tête hors de l'eau, fond éloigné) ; à gauche l'étape correspondante s'allume. Sans épinglage sous 900 px.",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "morphing"
+    ],
+    "interactions": [
+     "schema-interactif"
+    ],
+    "module": "schema-epingle-etapes",
+    "fiche": "sections/aquafit-maquette/gilet.json",
+    "capture": "medias/aquafit-maquette/gilet-p1440.jpg",
+    "capture_m390": "medias/aquafit-maquette/gilet-m390.jpg",
+    "video": "medias/aquafit-maquette/gilet-p720.mp4",
+    "en_ligne": "https://aquafit-maquette.vercel.app"
+   }
+  ],
+  "produits": [
+   {
+    "id": "winsbike-maquette/eclatee",
+    "maquette": "winsbike-maquette",
+    "client": "distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne",
+    "note_section": 5,
+    "note_maquette": 91,
+    "titre": "Vue éclatée du moyeu",
+    "description": "Planche technique sur papier millimétré épinglée : le moyeu se démonte pièce par pièce au défilement, avec cotes, légende numérotée qui allume la pièce correspondante (survol et clavier).",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "masque"
+    ],
+    "interactions": [
+     "galerie-cliquable",
+     "schema-interactif"
+    ],
+    "module": "vue-eclatee",
+    "fiche": "sections/winsbike-maquette/eclatee.json",
+    "capture": "medias/winsbike-maquette/eclatee-p1440.jpg",
+    "capture_m390": "medias/winsbike-maquette/eclatee-m390.jpg",
+    "video": "medias/winsbike-maquette/eclatee-p720.mp4",
+    "en_ligne": "https://winsbike-maquette.vercel.app"
+   },
+   {
+    "id": "instinct-aventure-maquette/voyages-catalogue",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Catalogue filtré avec Flip",
+    "description": "Filtres (formule, durée, région), curseur de budget et tri : les cartes se réordonnent et disparaissent en Flip, un compteur annonce le nombre de résultats ; au survol d'une carte, sa trace s'allume sur une carte collante à droite.",
+    "animations": [
+     "flip",
+     "filtre-anime",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "filtres",
+     "carte-interactive",
+     "comparateur"
+    ],
+    "module": "catalogue-filtres-flip",
+    "fiche": "sections/instinct-aventure-maquette/voyages-catalogue.json",
+    "capture": "medias/instinct-aventure-maquette/voyages-catalogue-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/voyages-catalogue-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/voyages-catalogue-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app/voyages"
+   },
+   {
+    "id": "pierre-becq-lanterne-maquette/coups-de-coeur",
+    "maquette": "pierre-becq-lanterne-maquette",
+    "client": "antiquaire à Metz (mobilier et objets d'art du XVIe au XXe siècle, expertise, achat de successions)",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Salle des coups de cœur",
+    "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "progression-fixée",
+     "révélation-image",
+     "reactif-vitesse"
+    ],
+    "interactions": [
+     "panier-simule"
+    ],
+    "module": "galerie-horizontale-epinglee",
+    "fiche": "sections/pierre-becq-lanterne-maquette/coups-de-coeur.json",
+    "capture": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p1440.jpg",
+    "capture_m390": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-m390.jpg",
+    "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p720.mp4",
+    "en_ligne": "https://pierre-becq-lanterne-maquette.vercel.app"
+   }
+  ],
+  "manifeste": [
+   {
+    "id": "chateau-haut-piquat-maquette/terroir",
+    "maquette": "chateau-haut-piquat-maquette",
+    "client": "château viticole en Lussac Saint-Émilion : vins, boutique en ligne, visites et événements, site bilingue",
+    "note_section": 5,
+    "note_maquette": 86,
+    "titre": "Sous la vigne, le calcaireBeneath the vines, limestone",
+    "description": "Sous la vigne, le calcaire : longue coupe géologique épinglée en WebGL, du feuillage aux couches de calcaire, cotes de profondeur",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "webgl-shader"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/chateau-haut-piquat-maquette/terroir.json",
+    "capture": "medias/chateau-haut-piquat-maquette/terroir-p1440.jpg",
+    "capture_m390": "medias/chateau-haut-piquat-maquette/terroir-m390.jpg",
+    "video": "medias/chateau-haut-piquat-maquette/terroir-p720.mp4",
+    "en_ligne": "https://chateau-haut-piquat-maquette.vercel.app"
+   },
+   {
+    "id": "myrtille-et-compagnie-maquette/interpreter",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "On lui prête nos mots",
+    "description": "Colonne de titre collante ; à côté, quatre phrases que l'on dit de son animal barrées d'un trait de stylo irrégulier (SVG calculé sur les lignes réelles du texte), puis ce qu'elles peuvent cacher écrit à la main en italique violet, au rythme de la molette sur ordinateur, d'un coup sur téléphone ; espèces rencontrées en puces dessous",
+    "animations": [
+     "rature",
+     "révélation-texte",
+     "trace-svg"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "rature-au-stylo",
+    "fiche": "sections/myrtille-et-compagnie-maquette/interpreter.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/interpreter-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/interpreter-m390.jpg",
+    "video": "medias/myrtille-et-compagnie-maquette/interpreter-p720.mp4",
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app"
+   },
+   {
+    "id": "bvcomm-maquette/un-seul-fournisseur",
+    "maquette": "bvcomm-maquette",
+    "client": "fournisseur de téléphonie IP, internet d'affaires et câblage pour les entreprises au Québec, site bilingue",
+    "note_section": 5,
+    "note_maquette": 84,
+    "titre": "Plus personne ne se renvoie la balle.",
+    "description": "Plus personne ne se renvoie la balle : schéma du jeu du blâme entre quatre fournisseurs, qui se résout en un seul interlocuteur",
+    "animations": [
+     "trace-svg"
+    ],
+    "interactions": [
+     "schema-interactif"
+    ],
+    "module": null,
+    "fiche": "sections/bvcomm-maquette/un-seul-fournisseur.json",
+    "capture": "medias/bvcomm-maquette/un-seul-fournisseur-p1440.jpg",
+    "capture_m390": "medias/bvcomm-maquette/un-seul-fournisseur-m390.jpg",
+    "video": "medias/bvcomm-maquette/un-seul-fournisseur-p720.mp4",
+    "en_ligne": "https://bvcomm-maquette.vercel.app"
+   }
+  ],
+  "services": [
+   {
+    "id": "iprof-maquette/conseils-guide",
+    "maquette": "iprof-maquette",
+    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+    "note_section": 5,
+    "note_maquette": 92,
+    "titre": "Fiches de conseils filtrées et retournées",
+    "description": "Boutons de filtre à état (aria-pressed) qui réorganisent la grille de fiches par Flip (sorties en fondu réduit, entrées en grossissant) ; chaque fiche se retourne en 3D pour montrer son dos, la face cachée étant rendue inerte ; un lien profond (#fiche) ouvre la fiche retournée.",
+    "animations": [
+     "flip",
+     "filtre-anime",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "filtres",
+     "galerie-cliquable"
+    ],
+    "module": null,
+    "fiche": "sections/iprof-maquette/conseils-guide.json",
+    "capture": "medias/iprof-maquette/conseils-guide-p1440.jpg",
+    "capture_m390": "medias/iprof-maquette/conseils-guide-m390.jpg",
+    "video": "medias/iprof-maquette/conseils-guide-p720.mp4",
+    "en_ligne": "https://iprof-maquette.vercel.app/conseils"
+   },
+   {
+    "id": "gwenanou-print-maquette/matieres",
+    "maquette": "gwenanou-print-maquette",
+    "client": "atelier de gravure et de découpe laser (objets personnalisés en bois, métal, verre, ardoise, cuir, miroir) avec boutique",
+    "note_section": 5,
+    "note_maquette": 88,
+    "titre": "Six matières qui se consument",
+    "description": "Section épinglée : le fond passe d'une matière à la suivante par une brûlure WebGL dont le front suit le grain, pendant que texte, photo détourée au laser (cadre tracé en canvas) et sélecteur à curseur glissant suivent le même défilement. Rendu à la demande, repli par fondu d'images sans WebGL, état accessible sur la matière la plus proche.",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "webgl-shader",
+     "canvas-2d"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "fond-qui-se-consume",
+    "fiche": "sections/gwenanou-print-maquette/matieres.json",
+    "capture": "medias/gwenanou-print-maquette/matieres-p1440.jpg",
+    "capture_m390": "medias/gwenanou-print-maquette/matieres-m390.jpg",
+    "video": "medias/gwenanou-print-maquette/matieres-p720.mp4",
+    "en_ligne": "https://gwenanou-print-maquette.vercel.app"
+   },
+   {
+    "id": "depannage-60-maquette/reseaux",
+    "maquette": "depannage-60-maquette",
+    "client": "dépannage plomberie et électricité, rénovation, autour de Longueil-Sainte-Marie (Oise)",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Derrière le mur, deux réseaux.",
+    "description": "Derrière le mur, deux réseaux : section épinglée, le mur se fissure et laisse voir l'eau et l'électricité",
+    "animations": [
+     "section-fixée",
+     "masque",
+     "trace-svg"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/depannage-60-maquette/reseaux.json",
+    "capture": "medias/depannage-60-maquette/reseaux-p1440.jpg",
+    "capture_m390": "medias/depannage-60-maquette/reseaux-m390.jpg",
+    "video": "medias/depannage-60-maquette/reseaux-p720.mp4",
+    "en_ligne": "https://depannage-60-maquette.vercel.app"
+   }
+  ],
+  "carte": [
+   {
+    "id": "surffm-maquette/nous-capter-couverture",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Carte de couverture à calques",
+    "description": "Carte SVG générée depuis des coordonnées : le trait de côte se dessine, les villes apparaissent l'une après l'autre, les zones FM et DAB+ grandissent et des ondes partent des émetteurs en boucle ; deux boutons allument ou éteignent chaque calque.",
+    "animations": [
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "carte-interactive",
+     "filtres"
+    ],
+    "module": "carte-a-calques",
+    "fiche": "sections/surffm-maquette/nous-capter-couverture.json",
+    "capture": "medias/surffm-maquette/nous-capter-couverture-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/nous-capter-couverture-m390.jpg",
+    "video": "medias/surffm-maquette/nous-capter-couverture-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app/nous-capter"
+   },
+   {
+    "id": "stanislas-urbi-orbi-maquette/ligne",
+    "maquette": "stanislas-urbi-orbi-maquette",
+    "client": "projet artistique et photographique autour de la statue de Stanislas à Nancy (exposition, livre, portraits)",
+    "note_section": 5,
+    "note_maquette": 88,
+    "titre": "Le tour du monde sur le globe",
+    "description": "Section sombre collante : un globe WebGL (OGL) tourne en suivant la ligne géodésique de l'index autour de la Terre ; le défilement fait avancer un compteur de kilomètres, lentement sur les terres et vite sur les océans, avec cartes par pays. Carte SVG de repli sans WebGL et texte d'accessibilité.",
+    "animations": [
+     "webgl-shader",
+     "progression-fixée",
+     "compteur"
+    ],
+    "interactions": [
+     "carte-interactive"
+    ],
+    "module": "globe-itineraire",
+    "fiche": "sections/stanislas-urbi-orbi-maquette/ligne.json",
+    "capture": "medias/stanislas-urbi-orbi-maquette/ligne-p1440.jpg",
+    "capture_m390": "medias/stanislas-urbi-orbi-maquette/ligne-m390.jpg",
+    "video": "medias/stanislas-urbi-orbi-maquette/ligne-p720.mp4",
+    "en_ligne": "https://stanislas-urbi-orbi-maquette.vercel.app"
+   },
+   {
+    "id": "artic-maquette/a-propos-carte",
+    "maquette": "artic-maquette",
+    "client": "conseil en hôtellerie-restauration (stratégie, transformation, transmission) d'un ancien cuisinier et directeur F&B, à Orbe",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Sur plusieurs continents",
+    "description": "Sur plusieurs continents : la route se trace de Vaud au cap Finisterre puis à Orbe, années qui défilent",
+    "animations": [
+     "trace-svg",
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/artic-maquette/a-propos-carte.json",
+    "capture": "medias/artic-maquette/a-propos-carte-p1440.jpg",
+    "capture_m390": "medias/artic-maquette/a-propos-carte-m390.jpg",
+    "video": "medias/artic-maquette/a-propos-carte-p720.mp4",
+    "en_ligne": "https://artic-maquette.vercel.app/a-propos"
+   }
+  ],
+  "méthode": [
+   {
+    "id": "iprof-maquette/jargon",
+    "maquette": "iprof-maquette",
+    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+    "note_section": 5,
+    "note_maquette": 92,
+    "titre": "Jargon corrigé au stylo rouge",
+    "description": "La colonne de titre reste épinglée pendant que défile une liste de termes techniques : chacun est barré d'un trait rouge (background-size) puis sa traduction en mots simples s'écrit à la main dessous (clip-path), au rythme de la molette sur ordinateur, d'un coup sur téléphone.",
+    "animations": [
+     "section-fixée",
+     "révélation-texte",
+     "masque",
+     "rature"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "rature-au-stylo",
+    "fiche": "sections/iprof-maquette/jargon.json",
+    "capture": "medias/iprof-maquette/jargon-p1440.jpg",
+    "capture_m390": "medias/iprof-maquette/jargon-m390.jpg",
+    "video": "medias/iprof-maquette/jargon-p720.mp4",
+    "en_ligne": "https://iprof-maquette.vercel.app"
+   },
+   {
+    "id": "brice-bourdon-maquette/approche",
+    "maquette": "brice-bourdon-maquette",
+    "client": "ostéopathe en cabinet",
+    "note_section": 5,
+    "note_maquette": 92,
+    "titre": "Silhouette d'analyse en quatre couches",
+    "description": "Section épinglée : à gauche quatre approches en liste, seule l'active est dépliée ; à droite une silhouette au trait en canvas sur grille millimétrée se charge couche par couche (structure, axes et niveaux, appuis, réseau) selon la progression du défilement, avec un compteur « couche n / 4 ».",
+    "animations": [
+     "section-fixée",
+     "canvas-2d",
+     "progression-fixée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/brice-bourdon-maquette/approche.json",
+    "capture": "medias/brice-bourdon-maquette/approche-p1440.jpg",
+    "capture_m390": "medias/brice-bourdon-maquette/approche-m390.jpg",
+    "video": "medias/brice-bourdon-maquette/approche-p720.mp4",
+    "en_ligne": "https://brice-bourdon-maquette.vercel.app"
+   },
+   {
+    "id": "icc-maquette/architecture",
+    "maquette": "icc-maquette",
+    "client": "institut de conseil et de formation à la transformation des systèmes (conseil, expéditions apprenantes, programme jeunes à l'ONU)",
+    "note_section": 5,
+    "note_maquette": 91,
+    "titre": "Architecture en six niveaux",
+    "description": "Section épinglée sur quatre écrans : six niveaux de la méthode se succèdent avec compteur 01/06 et rail de boutons cliquables, pendant que le ciel WebGL forme six anneaux dont le niveau actif s'allume (uniforms pilotés par la progression). Les anneaux s'effacent à la sortie.",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "webgl-particules",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "fond-qui-se-consume",
+    "fiche": "sections/icc-maquette/architecture.json",
+    "capture": "medias/icc-maquette/architecture-p1440.jpg",
+    "capture_m390": "medias/icc-maquette/architecture-m390.jpg",
+    "video": "medias/icc-maquette/architecture-p720.mp4",
+    "en_ligne": "https://icc-maquette.vercel.app"
+   }
+  ],
+  "agenda": [
+   {
+    "id": "la-voie-du-sensible-maquette/ateliers-et-stages-agenda",
+    "maquette": "la-voie-du-sensible-maquette",
+    "client": "praticienne en soins énergétiques, rituels, Roue Médecine, ateliers de création et art-thérapie dans la Drôme",
+    "note_section": 5,
+    "note_maquette": 82,
+    "titre": "L’année en cercle",
+    "description": "L'année en cercle : chaque rendez-vous posé à sa date sur la roue de l'année, liste filtrable par type à côté",
+    "animations": [
+     "trace-svg"
+    ],
+    "interactions": [
+     "filtres",
+     "schema-interactif"
+    ],
+    "module": null,
+    "fiche": "sections/la-voie-du-sensible-maquette/ateliers-et-stages-agenda.json",
+    "capture": "medias/la-voie-du-sensible-maquette/ateliers-et-stages-agenda-p1440.jpg",
+    "capture_m390": "medias/la-voie-du-sensible-maquette/ateliers-et-stages-agenda-m390.jpg",
+    "video": "medias/la-voie-du-sensible-maquette/ateliers-et-stages-agenda-p720.mp4",
+    "en_ligne": "https://la-voie-du-sensible-maquette.vercel.app/ateliers-et-stages"
+   },
+   {
+    "id": "les-plus-hautes-eaux-maquette/agenda-t-venir",
+    "maquette": "les-plus-hautes-eaux-maquette",
+    "client": "compagnie de théâtre gestuel et clown pour tous publics, tournée dans le Grand Ouest",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Prochaines représentations",
+    "description": "Liste des prochaines dates générée depuis un fichier unique de données, triée selon la date du jour réelle, avec compte à rebours de la prochaine, ajout à l'agenda (.ics) et lien vers chaque fiche ; filtrable.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "filtres"
+    ],
+    "module": "agenda-des-dates",
+    "fiche": "sections/les-plus-hautes-eaux-maquette/agenda-t-venir.json",
+    "capture": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-p1440.jpg",
+    "capture_m390": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-m390.jpg",
+    "video": "medias/les-plus-hautes-eaux-maquette/agenda-t-venir-p720.mp4",
+    "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app/agenda"
+   },
+   {
+    "id": "observatoire-des-cse-maquette/calendrier",
+    "maquette": "observatoire-des-cse-maquette",
+    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Calendrier et compte à rebours",
+    "description": "Jalons de l'enquête calculés selon la date du jour (passé, en cours, à venir), à côté d'un stade dessiné en points avec compte à rebours jours, heures, minutes jusqu'à la restitution.",
+    "animations": [
+     "compteur",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/observatoire-des-cse-maquette/calendrier.json",
+    "capture": "medias/observatoire-des-cse-maquette/calendrier-p1440.jpg",
+    "capture_m390": "medias/observatoire-des-cse-maquette/calendrier-m390.jpg",
+    "video": "medias/observatoire-des-cse-maquette/calendrier-p720.mp4",
+    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
+   }
+  ],
+  "offre": [
+   {
+    "id": "nelis-maquette/puissances",
+    "maquette": "nelis-maquette",
+    "client": "froid industriel (vente, location et service de groupes frigorifiques)",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Jauge de puissance épinglée",
+    "description": "Section épinglée : une jauge verticale en échelle logarithmique monte palier par palier au défilement (chaque palier affiche sa plage, sa photo et son texte, la valeur entre en glissant), puis bascule en mode « gel » au dernier palier en température négative.",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "schema-epingle-etapes",
+    "fiche": "sections/nelis-maquette/puissances.json",
+    "capture": "medias/nelis-maquette/puissances-p1440.jpg",
+    "capture_m390": "medias/nelis-maquette/puissances-m390.jpg",
+    "video": "medias/nelis-maquette/puissances-p720.mp4",
+    "en_ligne": "https://nelis-maquette.vercel.app"
+   },
+   {
+    "id": "willowcamp-maquette/facons",
+    "maquette": "willowcamp-maquette",
+    "client": "petit camping nature avec emplacements, roulottes et cabanes, au bord d'étangs et de saules (Belgique), site en trois langues",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Planche des façons de camper",
+    "description": "Quatre façons de camper défilent à droite pendant qu'une planche quadrillée collante à gauche redessine à la plume le croquis de la façon lue (tente, véhicule, cabane, roulotte) et fait glisser le lavis d'une silhouette à l'autre ; nuancier accessible pour la couleur de la cabane.",
+    "animations": [
+     "morphing",
+     "masque",
+     "section-fixée",
+     "trace-svg"
+    ],
+    "interactions": [
+     "configurateur"
+    ],
+    "module": "offre-a-tiroirs",
+    "fiche": "sections/willowcamp-maquette/facons.json",
+    "capture": "medias/willowcamp-maquette/facons-p1440.jpg",
+    "capture_m390": "medias/willowcamp-maquette/facons-m390.jpg",
+    "video": "medias/willowcamp-maquette/facons-p720.mp4",
+    "en_ligne": "https://willowcamp-maquette.vercel.app"
+   },
+   {
+    "id": "sensoria-maquette/domaines",
+    "maquette": "sensoria-maquette",
+    "client": "école et espace de soins holistiques (massages, naturopathie, sonothérapie, techniques énergétiques) à Blois, Sète et Briord",
+    "note_section": 5,
+    "note_maquette": 83,
+    "titre": "Cinq domaines pour se former",
+    "description": "Cinq domaines pour se former, disposés en cercle autour d'un lotus dans une section épinglée ; le domaine survolé ouvre sa fiche",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "trace-svg"
+    ],
+    "interactions": [
+     "schema-interactif"
+    ],
+    "module": null,
+    "fiche": "sections/sensoria-maquette/domaines.json",
+    "capture": "medias/sensoria-maquette/domaines-p1440.jpg",
+    "capture_m390": "medias/sensoria-maquette/domaines-m390.jpg",
+    "video": "medias/sensoria-maquette/domaines-p720.mp4",
+    "en_ligne": "https://sensoria-maquette.vercel.app"
+   }
+  ],
+  "calculateur": [
+   {
+    "id": "iprof-maquette/tarifs-calculateur",
+    "maquette": "iprof-maquette",
+    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+    "note_section": 5,
+    "note_maquette": 92,
+    "titre": "Calculateur écrit à la main",
+    "description": "Choix du lieu (domicile ou distance) en boutons segmentés et compteurs ± pour les heures et les visites ; sur une fiche de cahier à droite, le détail du calcul se réécrit à la main ligne par ligne (clip-path), le total rebondit comme un tampon et l'économie du forfait s'affiche ; estimation marquée « illustratif ».",
+    "animations": [
+     "révélation-texte",
+     "masque"
+    ],
+    "interactions": [
+     "calculateur"
+    ],
+    "module": "composeur-de-formule",
+    "fiche": "sections/iprof-maquette/tarifs-calculateur.json",
+    "capture": "medias/iprof-maquette/tarifs-calculateur-p1440.jpg",
+    "capture_m390": "medias/iprof-maquette/tarifs-calculateur-m390.jpg",
+    "video": "medias/iprof-maquette/tarifs-calculateur-p720.mp4",
+    "en_ligne": "https://iprof-maquette.vercel.app/tarifs"
+   },
+   {
+    "id": "tiki-cassis-maquette/formules-composeur",
+    "maquette": "tiki-cassis-maquette",
+    "client": "balades et privatisations en bateau traditionnel dans les calanques, au départ du port de Cassis",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Composeur de sortie",
+    "description": "Composeur : moment, date, durée au curseur, passagers et option barbecue ; le prix se met à jour en direct selon la saison (fêtes de mai et Pâques calculées), la carte allume les calanques atteignables et le programme indicatif s'écrit.",
+    "animations": [
+     "compteur",
+     "masque"
+    ],
+    "interactions": [
+     "calculateur",
+     "simulateur"
+    ],
+    "module": "composeur-de-formule",
+    "fiche": "sections/tiki-cassis-maquette/formules-composeur.json",
+    "capture": "medias/tiki-cassis-maquette/formules-composeur-p1440.jpg",
+    "capture_m390": "medias/tiki-cassis-maquette/formules-composeur-m390.jpg",
+    "video": "medias/tiki-cassis-maquette/formules-composeur-p720.mp4",
+    "en_ligne": "https://tiki-cassis-maquette.vercel.app/formules"
+   },
+   {
+    "id": "budgetravaux-maquette/devis-en-ligne-estimateur",
+    "maquette": "budgetravaux-maquette",
+    "client": "dépannage plomberie, chauffage, électricité et rénovation tous corps d'état dans l'Oise",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Précisez",
+    "description": "Estimateur en quatre étapes (métier, pièce, postes, coordonnées) ; le ticket se calcule en direct sur les prix publiés (simulé)",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "calculateur",
+     "formulaire-par-étapes"
+    ],
+    "module": null,
+    "fiche": "sections/budgetravaux-maquette/devis-en-ligne-estimateur.json",
+    "capture": "medias/budgetravaux-maquette/devis-en-ligne-estimateur-p1440.jpg",
+    "capture_m390": "medias/budgetravaux-maquette/devis-en-ligne-estimateur-m390.jpg",
+    "video": null,
+    "en_ligne": "https://budgetravaux-maquette.vercel.app/devis-en-ligne"
+   }
+  ],
+  "portfolio": [
+   {
+    "id": "agence-ae-maquette/plein-cadre",
+    "maquette": "agence-ae-maquette",
+    "client": "Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Maison T-G",
+    "description": "La photo de la Maison T-G part d'une vignette et s'ouvre jusqu'au plein écran (clip-path) dans un cadre collant, le titre géant s'écarte, puis le lien vers le projet",
+    "animations": [
+     "révélation-image",
+     "masque",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/agence-ae-maquette/plein-cadre.json",
+    "capture": "medias/agence-ae-maquette/plein-cadre-p1440.jpg",
+    "capture_m390": "medias/agence-ae-maquette/plein-cadre-m390.jpg",
+    "video": "medias/agence-ae-maquette/plein-cadre-p720.mp4",
+    "en_ligne": "https://agence-ae-maquette.vercel.app"
+   },
+   {
+    "id": "icc-maquette/en-junior-impact-maker-travaux",
+    "maquette": "icc-maquette",
+    "client": "institut de conseil et de formation à la transformation des systèmes (conseil, expéditions apprenantes, programme jeunes à l'ONU)",
+    "note_section": 4,
+    "note_maquette": 91,
+    "titre": "Couvertures génératives",
+    "description": "Grille des travaux de recherche dont chaque couverture est une constellation générée en canvas 2D à partir du titre (même titre, même dessin), avec inclinaison au survol.",
+    "animations": [
+     "canvas-2d",
+     "survol-image"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/icc-maquette/en-junior-impact-maker-travaux.json",
+    "capture": "medias/icc-maquette/en-junior-impact-maker-travaux-p1440.jpg",
+    "capture_m390": "medias/icc-maquette/en-junior-impact-maker-travaux-m390.jpg",
+    "video": "medias/icc-maquette/en-junior-impact-maker-travaux-p720.mp4",
+    "en_ligne": "https://icc-maquette.vercel.app/en/junior-impact-maker"
+   },
+   {
+    "id": "les-plus-hautes-eaux-maquette/repertoire",
+    "maquette": "les-plus-hautes-eaux-maquette",
+    "client": "compagnie de théâtre gestuel et clown pour tous publics, tournée dans le Grand Ouest",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Répertoire en piste",
+    "description": "Sept spectacles en cartes sur une piste horizontale épinglée (au-dessus de 1100 px), barre de progression, filtres par public ; la photo reprend ses couleurs en entrant, l'objet du spectacle s'anime au survol et la couleur du projecteur change. Défilement natif en dessous.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "révélation-image",
+     "survol-image"
+    ],
+    "interactions": [
+     "filtres"
+    ],
+    "module": "galerie-horizontale-epinglee",
+    "fiche": "sections/les-plus-hautes-eaux-maquette/repertoire.json",
+    "capture": "medias/les-plus-hautes-eaux-maquette/repertoire-p1440.jpg",
+    "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
+    "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p720.mp4",
+    "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
+   }
+  ],
+  "tarifs": [
+   {
+    "id": "iprof-maquette/tarifs-prices",
+    "maquette": "iprof-maquette",
+    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+    "note_section": 4,
+    "note_maquette": 92,
+    "titre": "Trois fiches de prix",
+    "description": "Trois fiches de prix qui tombent sur la page et s'inclinent sous la souris ; les montants s'écrivent à la main l'un après l'autre (clip-path), la fiche mise en avant porte un tampon d'économie, et une note hachurée signale le rabais à confirmer.",
+    "animations": [
+     "apparition-au-défilement",
+     "révélation-texte",
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "tarifs-a-rouleaux",
+    "fiche": "sections/iprof-maquette/tarifs-prices.json",
+    "capture": "medias/iprof-maquette/tarifs-prices-p1440.jpg",
+    "capture_m390": "medias/iprof-maquette/tarifs-prices-m390.jpg",
+    "video": "medias/iprof-maquette/tarifs-prices-p720.mp4",
+    "en_ligne": "https://iprof-maquette.vercel.app/tarifs"
+   },
+   {
+    "id": "esaie-55-1-maquette/parrainage-formules",
+    "maquette": "esaie-55-1-maquette",
+    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
+    "note_section": 4,
+    "note_maquette": 88,
+    "titre": "Formules de parrainage",
+    "description": "Quatre formules en cartes photo ; le panneau de détail collant montre un récipient en canvas dont le niveau monte avec le montant, le coût annuel et ce que la formule couvre.",
+    "animations": [
+     "canvas-2d",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "simulateur"
+    ],
+    "module": "tarifs-a-rouleaux",
+    "fiche": "sections/esaie-55-1-maquette/parrainage-formules.json",
+    "capture": "medias/esaie-55-1-maquette/parrainage-formules-p1440.jpg",
+    "capture_m390": "medias/esaie-55-1-maquette/parrainage-formules-m390.jpg",
+    "video": "medias/esaie-55-1-maquette/parrainage-formules-p720.mp4",
+    "en_ligne": "https://esaie-55-1-maquette.vercel.app/parrainage"
+   },
+   {
+    "id": "talon-libre-maquette/annexe-tarifs",
+    "maquette": "talon-libre-maquette",
+    "client": "chalet et appartements de location saisonnière pour skieurs de télémark dans le Grand Massif",
+    "note_section": 4,
+    "note_maquette": 88,
+    "titre": "Tarifs à la semaine",
+    "description": "Calendrier des semaines par saison où chaque semaine est un bouton avec son prix ; le récapitulatif épinglé calcule total, acompte, échéancier en jours ouvrables (fériés compris) et frise d'annulation.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "calculateur",
+     "réservation-simulee"
+    ],
+    "module": null,
+    "fiche": "sections/talon-libre-maquette/annexe-tarifs.json",
+    "capture": "medias/talon-libre-maquette/annexe-tarifs-p1440.jpg",
+    "capture_m390": "medias/talon-libre-maquette/annexe-tarifs-m390.jpg",
+    "video": "medias/talon-libre-maquette/annexe-tarifs-p720.mp4",
+    "en_ligne": "https://talon-libre-maquette.vercel.app/annexe"
+   }
+  ],
+  "chiffres": [
+   {
+    "id": "observatoire-des-cse-maquette/pouls",
+    "maquette": "observatoire-des-cse-maquette",
+    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Les chiffres de la 1re étude",
+    "description": "Résultat d'une vraie étude en jauge demi-cercle et barres verticales SVG qui se tracent à l'entrée dans l'écran, avec légendes et sources.",
+    "animations": [
+     "compteur",
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/observatoire-des-cse-maquette/pouls.json",
+    "capture": "medias/observatoire-des-cse-maquette/pouls-p1440.jpg",
+    "capture_m390": "medias/observatoire-des-cse-maquette/pouls-m390.jpg",
+    "video": "medias/observatoire-des-cse-maquette/pouls-p720.mp4",
+    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
+   },
+   {
+    "id": "surffm-maquette/histoire",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Frise des saisons et compteurs",
+    "description": "Trois compteurs qui montent à l'arrivée, puis une frise verticale dont le trait se dessine au défilement pendant que les années glissent depuis la gauche.",
+    "animations": [
+     "compteur",
+     "progression-fixée",
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "frise-tracee",
+    "fiche": "sections/surffm-maquette/histoire.json",
+    "capture": "medias/surffm-maquette/histoire-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/histoire-m390.jpg",
+    "video": "medias/surffm-maquette/histoire-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app"
+   },
+   {
+    "id": "instinct-aventure-maquette/namibie",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Chiffres et soleil en direct",
+    "description": "Compteurs (superficie, densité, population) qui montent à l'arrivée, et un arc du soleil calculé en direct pour la destination (lever, coucher, position actuelle), à côté d'une carte illustrée.",
+    "animations": [
+     "compteur",
+     "apparition-au-défilement",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/instinct-aventure-maquette/namibie.json",
+    "capture": "medias/instinct-aventure-maquette/namibie-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/namibie-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/namibie-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
+   }
+  ],
+  "preuves": [
+   {
+    "id": "observatoire-des-cse-maquette/garanties",
+    "maquette": "observatoire-des-cse-maquette",
+    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Anonymiseur",
+    "description": "Section nuit épinglée : la fiche d'un profil fictif se défait en petits carrés (canvas 2D) qui s'envolent et deviennent des points parmi des milliers d'autres, pendant que les quatre garanties d'anonymat apparaissent. Sur téléphone, pas d'épinglage : la fiche se défait pendant le défilement.",
+    "animations": [
+     "canvas-2d",
+     "section-fixée",
+     "progression-fixée",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "dissolution-en-particules",
+    "fiche": "sections/observatoire-des-cse-maquette/garanties.json",
+    "capture": "medias/observatoire-des-cse-maquette/garanties-p1440.jpg",
+    "capture_m390": "medias/observatoire-des-cse-maquette/garanties-m390.jpg",
+    "video": "medias/observatoire-des-cse-maquette/garanties-p720.mp4",
+    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
+   },
+   {
+    "id": "games42-maquette/avis",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Note en molettes",
+    "description": "La note Google roule chiffre par chiffre comme les molettes du cadenas, puis les étoiles se remplissent ; recommandation Petit Futé et chèques vacances à côté.",
+    "animations": [
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/games42-maquette/avis.json",
+    "capture": "medias/games42-maquette/avis-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/avis-m390.jpg",
+    "video": "medias/games42-maquette/avis-p720.mp4",
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "nelis-maquette/location-techno",
+    "maquette": "nelis-maquette",
+    "client": "froid industriel (vente, location et service de groupes frigorifiques)",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Atouts en orbite",
+    "description": "Atouts placés en ellipse autour d'une photo produit ; l'ellipse tourne doucement avec le défilement. Sous 1024 px, simple liste.",
+    "animations": [
+     "progression-fixée",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/nelis-maquette/location-techno.json",
+    "capture": "medias/nelis-maquette/location-techno-p1440.jpg",
+    "capture_m390": "medias/nelis-maquette/location-techno-m390.jpg",
+    "video": "medias/nelis-maquette/location-techno-p720.mp4",
+    "en_ligne": "https://nelis-maquette.vercel.app/location"
+   }
+  ],
+  "page-404": [
+   {
+    "id": "surffm-maquette/404-page-hero",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "404 hors fréquence",
+    "description": "Page introuvable en « neige » de télévision (canvas 2D rafraîchi toutes les 160 ms) sous un titre géant, avec retour au direct et à la grille.",
+    "animations": [
+     "canvas-2d",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/surffm-maquette/404-page-hero.json",
+    "capture": "medias/surffm-maquette/404-page-hero-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/404-page-hero-m390.jpg",
+    "video": "medias/surffm-maquette/404-page-hero-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app/404"
+   },
+   {
+    "id": "sequoia-studio-maquette/404-debut",
+    "maquette": "sequoia-studio-maquette",
+    "client": "galerie en ligne d'œuvres d'art mural en éditions limitées (impressions FineArt, caisses américaines, certificats d'authenticité)",
+    "note_section": 4,
+    "note_maquette": 87,
+    "titre": "Ce mur attend son œuvre",
+    "description": "« Ce mur attend son œuvre » : mur vide sous un projecteur",
+    "animations": [
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/sequoia-studio-maquette/404-debut.json",
+    "capture": "medias/sequoia-studio-maquette/404-debut-p1440.jpg",
+    "capture_m390": "medias/sequoia-studio-maquette/404-debut-m390.jpg",
+    "video": null,
+    "en_ligne": "https://sequoia-studio-maquette.vercel.app/404"
+   },
+   {
+    "id": "chateau-haut-piquat-maquette/404-nf",
+    "maquette": "chateau-haut-piquat-maquette",
+    "client": "château viticole en Lussac Saint-Émilion : vins, boutique en ligne, visites et événements, site bilingue",
+    "note_section": 4,
+    "note_maquette": 86,
+    "titre": "404",
+    "description": "404 gravée dans le calcaire avec un fossile d'astérie",
+    "animations": [
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/chateau-haut-piquat-maquette/404-nf.json",
+    "capture": "medias/chateau-haut-piquat-maquette/404-nf-p1440.jpg",
+    "capture_m390": "medias/chateau-haut-piquat-maquette/404-nf-m390.jpg",
+    "video": "medias/chateau-haut-piquat-maquette/404-nf-p720.mp4",
+    "en_ligne": "https://chateau-haut-piquat-maquette.vercel.app/404"
+   }
+  ],
+  "appel": [
+   {
+    "id": "myrtille-et-compagnie-maquette/fin",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Envie de mieux comprendre votre compagnon ?",
+    "description": "Appel final : image révélée par une tache, mot traduit, puis une bande où des myrtilles tombent, rebondissent, s'entassent, et se lancent à la souris ou au doigt",
+    "animations": [
+     "canvas-2d",
+     "révélation-image",
+     "masque"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": null,
+    "fiche": "sections/myrtille-et-compagnie-maquette/fin.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/fin-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/fin-m390.jpg",
+    "video": "medias/myrtille-et-compagnie-maquette/fin-p720.mp4",
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app"
+   },
+   {
+    "id": "secia-maquette/urgence",
+    "maquette": "secia-maquette",
+    "client": "intégrateur en cybersécurité et réseaux d'entreprise en Belgique et au Luxembourg (membre de NPS Consult Group), site bilingue",
+    "note_section": 5,
+    "note_maquette": 84,
+    "titre": "Sous attaque ?",
+    "description": "Sous attaque ? : fond bleu nuit, zones A, B, C contenues une à une, numéros 24/7 Belgique et Luxembourg",
+    "animations": [
+     "trace-svg",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/secia-maquette/urgence.json",
+    "capture": "medias/secia-maquette/urgence-p1440.jpg",
+    "capture_m390": "medias/secia-maquette/urgence-m390.jpg",
+    "video": "medias/secia-maquette/urgence-p720.mp4",
+    "en_ligne": "https://secia-maquette.vercel.app"
+   },
+   {
+    "id": "h-renovation-maquette/appel",
+    "maquette": "h-renovation-maquette",
+    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Appel par la gouttière",
+    "description": "Appel final : une gouttière dessinée longe la section et une goutte y descend jusqu'au bouton Appeler, qui s'éclaire à son arrivée.",
+    "animations": [
+     "masque",
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/h-renovation-maquette/appel.json",
+    "capture": "medias/h-renovation-maquette/appel-p1440.jpg",
+    "capture_m390": "medias/h-renovation-maquette/appel-m390.jpg",
+    "video": "medias/h-renovation-maquette/appel-p720.mp4",
+    "en_ligne": "https://h-renovation-maquette.vercel.app"
+   }
+  ],
+  "decor": [
+   {
+    "id": "games42-maquette/portal",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Portail vivant",
+    "description": "Fond WebGL fixe (OGL) : l'image du monde traversé tourbillonne autour d'un anneau lumineux et passe d'un monde à l'autre par une dissolution ; il plonge dans le portail en quittant l'ouverture. Sans WebGL, fondu enchaîné d'images en CSS.",
+    "animations": [
+     "webgl-shader",
+     "progression-fixée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/games42-maquette/portal.json",
+    "capture": "medias/games42-maquette/portal-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/portal-m390.jpg",
+    "video": null,
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "surffm-maquette/cadran",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Cadran de fréquences latéral",
+    "description": "Règle verticale de 87,5 à 108 MHz fixée à droite : l'aiguille suit la progression de la page, chaque section porte une fréquence cliquable et son nom s'affiche en étiquette au changement, avec un grésillement bref ; sur téléphone il devient une règle horizontale au-dessus du lecteur.",
+    "animations": [
+     "progression-fixée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "rail-de-sections",
+    "fiche": "sections/surffm-maquette/cadran.json",
+    "capture": "medias/surffm-maquette/cadran-p1440.jpg",
+    "capture_m390": null,
+    "video": null,
+    "en_ligne": "https://surffm-maquette.vercel.app"
+   },
+   {
+    "id": "fanfare-dongelberg-maquette/defile-zone",
+    "maquette": "fanfare-dongelberg-maquette",
+    "client": "fanfare royale de village en Brabant wallon : concerts, cortèges, commémorations, école de musique",
+    "note_section": 5,
+    "note_maquette": 84,
+    "titre": "",
+    "description": "Défilé de petits musiciens qui marchent le long d'une piste au défilement, bouton pour arrêter le défilé",
+    "animations": [
+     "reactif-vitesse",
+     "marquee"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/fanfare-dongelberg-maquette/defile-zone.json",
+    "capture": "medias/fanfare-dongelberg-maquette/defile-zone-p1440.jpg",
+    "capture_m390": "medias/fanfare-dongelberg-maquette/defile-zone-m390.jpg",
+    "video": null,
+    "en_ligne": "https://fanfare-dongelberg-maquette.vercel.app"
+   }
+  ],
+  "équipe": [
+   {
+    "id": "surffm-maquette/emissions-equipe",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Trombinoscope à la loupe",
+    "description": "Photo de groupe dans un cadre : une loupe ronde grossit le visage sous la souris (×2,4), à côté de la liste des membres et de leurs émissions.",
+    "animations": [
+     "survol-image"
+    ],
+    "interactions": [
+     "galerie-cliquable"
+    ],
+    "module": null,
+    "fiche": "sections/surffm-maquette/emissions-equipe.json",
+    "capture": "medias/surffm-maquette/emissions-equipe-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/emissions-equipe-m390.jpg",
+    "video": "medias/surffm-maquette/emissions-equipe-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app/emissions"
+   },
+   {
+    "id": "libre-solidaire-maquette/auteurs",
+    "maquette": "libre-solidaire-maquette",
+    "client": "maison d'édition indépendante (essais sur l'environnement, la société, la vigne)",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Auteurs",
+    "description": "Liste des auteurs en grandes lignes ; au survol, la couverture de leur livre suit le curseur.",
+    "animations": [
+     "survol-image",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "mur-de-portraits",
+    "fiche": "sections/libre-solidaire-maquette/auteurs.json",
+    "capture": "medias/libre-solidaire-maquette/auteurs-p1440.jpg",
+    "capture_m390": "medias/libre-solidaire-maquette/auteurs-m390.jpg",
+    "video": "medias/libre-solidaire-maquette/auteurs-p720.mp4",
+    "en_ligne": "https://libre-solidaire-maquette.vercel.app"
+   },
+   {
+    "id": "gwenanou-print-maquette/atelier",
+    "maquette": "gwenanou-print-maquette",
+    "client": "atelier de gravure et de découpe laser (objets personnalisés en bois, métal, verre, ardoise, cuir, miroir) avec boutique",
+    "note_section": 4,
+    "note_maquette": 88,
+    "titre": "L'atelier",
+    "description": "Portrait du créateur révélé par des veines de bois SVG qui s'épaississent en décalé, bande photo en parallaxe et citation.",
+    "animations": [
+     "masque",
+     "révélation-image",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/gwenanou-print-maquette/atelier.json",
+    "capture": "medias/gwenanou-print-maquette/atelier-p1440.jpg",
+    "capture_m390": "medias/gwenanou-print-maquette/atelier-m390.jpg",
+    "video": "medias/gwenanou-print-maquette/atelier-p720.mp4",
+    "en_ligne": "https://gwenanou-print-maquette.vercel.app"
+   }
+  ],
+  "témoignages": [
+   {
+    "id": "loeilsingulier-maquette/liner",
+    "maquette": "loeilsingulier-maquette",
+    "client": "agence franco-britannique d'événementiel d'entreprise et de design graphique",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Références et témoignage recto verso",
+    "description": "Défilé des noms de clients, puis carte de témoignage qui se retourne (recto verso) au clic, au clavier avec focus déplacé sur la face visible.",
+    "animations": [
+     "marquee"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "temoignages-en-pile",
+    "fiche": "sections/loeilsingulier-maquette/liner.json",
+    "capture": "medias/loeilsingulier-maquette/liner-p1440.jpg",
+    "capture_m390": "medias/loeilsingulier-maquette/liner-m390.jpg",
+    "video": "medias/loeilsingulier-maquette/liner-p720.mp4",
+    "en_ligne": "https://loeilsingulier-maquette.vercel.app"
+   },
+   {
+    "id": "h-renovation-maquette/avis",
+    "maquette": "h-renovation-maquette",
+    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Pile d'ardoises",
+    "description": "Avis clients sur des ardoises empilées et légèrement tournées ; les flèches font passer l'ardoise du dessus au fond de la pile, compteur 1/3, cartes cachées rendues inertes.",
+    "animations": [
+     "empilement-de-fiches"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "temoignages-en-pile",
+    "fiche": "sections/h-renovation-maquette/avis.json",
+    "capture": "medias/h-renovation-maquette/avis-p1440.jpg",
+    "capture_m390": "medias/h-renovation-maquette/avis-m390.jpg",
+    "video": "medias/h-renovation-maquette/avis-p720.mp4",
+    "en_ligne": "https://h-renovation-maquette.vercel.app"
+   },
+   {
+    "id": "esaie-55-1-maquette/histoires",
+    "maquette": "esaie-55-1-maquette",
+    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
+    "note_section": 4,
+    "note_maquette": 88,
+    "titre": "Histoires",
+    "description": "Récits de personnes accompagnées en grandes cartes collantes qui s'empilent au défilement, chacune avec objectif et impact.",
+    "animations": [
+     "empilement-de-fiches"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "planches-empilees",
+    "fiche": "sections/esaie-55-1-maquette/histoires.json",
+    "capture": "medias/esaie-55-1-maquette/histoires-p1440.jpg",
+    "capture_m390": "medias/esaie-55-1-maquette/histoires-m390.jpg",
+    "video": "medias/esaie-55-1-maquette/histoires-p720.mp4",
+    "en_ligne": "https://esaie-55-1-maquette.vercel.app"
+   }
+  ],
+  "articles": [
+   {
+    "id": "artic-maquette/journal-articles",
+    "maquette": "artic-maquette",
+    "client": "conseil en hôtellerie-restauration (stratégie, transformation, transmission) d'un ancien cuisinier et directeur F&B, à Orbe",
+    "note_section": 4,
+    "note_maquette": 85,
+    "titre": "Faut-il repenser la clause du besoin en restauration ?",
+    "description": "Dix-neuf articles filtrables par saison et par recherche (accents et pluriels ignorés, gardés dans l'adresse)",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "filtres",
+     "recherche"
+    ],
+    "module": null,
+    "fiche": "sections/artic-maquette/journal-articles.json",
+    "capture": "medias/artic-maquette/journal-articles-p1440.jpg",
+    "capture_m390": "medias/artic-maquette/journal-articles-m390.jpg",
+    "video": null,
+    "en_ligne": "https://artic-maquette.vercel.app/journal"
+   },
+   {
+    "id": "castelactu-maquette/fil",
+    "maquette": "castelactu-maquette",
+    "client": "média local, indépendant et associatif du Pays de Châteaubriant (actualité, chantiers, vidéos, podcasts)",
+    "note_section": 4,
+    "note_maquette": 83,
+    "titre": "Toute l’actualité",
+    "description": "Toute l'actualité : fil filtrable par rubrique, commune et format, avec recherche, cartes photo",
+    "animations": [
+     "apparition-au-défilement",
+     "flip"
+    ],
+    "interactions": [
+     "filtres",
+     "recherche"
+    ],
+    "module": null,
+    "fiche": "sections/castelactu-maquette/fil.json",
+    "capture": "medias/castelactu-maquette/fil-p1440.jpg",
+    "capture_m390": "medias/castelactu-maquette/fil-m390.jpg",
+    "video": "medias/castelactu-maquette/fil-p720.mp4",
+    "en_ligne": "https://castelactu-maquette.vercel.app"
+   }
+  ],
+  "faq": [
+   {
+    "id": "myrtille-et-compagnie-maquette/questions-frequentes-questions",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 4,
+    "note_maquette": 85,
+    "titre": "Les six questions fréquentes",
+    "description": "Six questions réelles en accordéon, à côté de deux vraies photos posées en tirages dans une colonne collante",
+    "animations": [
+     "apparition-au-défilement",
+     "révélation-image",
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/myrtille-et-compagnie-maquette/questions-frequentes-questions.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/questions-frequentes-questions-m390.jpg",
+    "video": null,
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app/questions-frequentes"
+   }
+  ]
+ }
+}

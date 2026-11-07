@@ -78,7 +78,28 @@ h1 { margin: 0; font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); line-height: 1
 .cadre__tete h2 { margin: 0 auto 0 0; font-size: 1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .cadre iframe { flex: 1; width: 100%; border: 0; background: #fff; }
 
+/* Palmarès (palmares/index.html, écrit par outils/palmares.mjs). */
+.tete__nom a { color: inherit; text-decoration: none; }
+.onglets a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid transparent; border-radius: 999px; color: var(--texte); font-weight: 600; text-decoration: none; }
+.onglets a[aria-current="page"] { background: var(--texte); color: var(--fond); }
+.onglets a:hover:not([aria-current]) { border-color: var(--trait); }
+.palmares-roles { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.palmares-roles a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border: 1px solid var(--trait); border-radius: 999px; text-decoration: none; font-size: .875rem; }
+.palmares-role { padding: 28px 0 8px; border-top: 1px solid var(--trait); margin-top: 20px; }
+.palmares-role h2 { margin: 0 0 14px; font-size: 1.4rem; text-transform: capitalize; }
+.palmares-role h2 span { color: var(--doux); font-size: 1rem; font-weight: 500; }
+.palmares-role .grille { min-height: 0; }
+.carte__video summary { min-height: 44px; display: flex; align-items: center; padding: 0 16px; cursor: pointer; color: var(--accent); font-weight: 600; font-size: .875rem; }
+.carte__video video { display: block; width: 100%; }
+.carte__rang { margin: 0; color: var(--doux); font-size: .8125rem; }
+.carte h3 { margin: 0; font-size: 1.0625rem; line-height: 1.3; }
+.carte__corps p { margin: 0; }
+.carte__liens { margin-top: auto !important; padding-top: 8px; font-size: .875rem; }
+
 @media (max-width: 700px) {
+  .tete__in { flex-wrap: wrap; row-gap: 0; padding-block: 4px; }
+  .onglets { margin-left: 0; }
+  .onglets a { padding: 0 12px; }
   .tete__in { min-height: 56px; gap: 8px; }
   .tete__nom span { display: none; }
   .onglets button { padding: 0 12px; }
