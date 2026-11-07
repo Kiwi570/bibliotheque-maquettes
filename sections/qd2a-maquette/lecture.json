@@ -1,0 +1,53 @@
+{
+ "id": "qd2a-maquette/lecture",
+ "maquette": "qd2a-maquette",
+ "page": "index",
+ "titre": "Trois lecteurs, trois fiches, puis tout le comité",
+ "role": "méthode",
+ "description": "Table de lecture en 3D épinglée : le texte arrive, trois fiches de lecture se posent, deux tampons « Favorable », il rejoint la pile de la sélection finale, tampon « Lauréat » ; la table pivote à la main avec élan ; les cinq étapes s'allument à gauche",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:154-180",
+  "css": "assets/css/site.css:52-55,147,241-269,573-579,611,624-627",
+  "js": "assets/js/site.js:55-61,205-274,413-441,536 ; assets/js/socle/apparitions.js:22 ; assets/js/socle/effets.js:31 ; assets/js/socle/mesures.js:3 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/lecture.js:1"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/lecture-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/lecture-m390.jpg",
+  "video": "medias/qd2a-maquette/lecture-p720.mp4"
+ },
+ "pieges": [
+  "Textes de la table trop petits pour l'audit : décor en aria-hidden et data-audit-ignorer, l'information est dans la liste d'étapes",
+  "Sur téléphone, seule l'étape active est affichée pour que la scène tienne dans l'écran"
+ ],
+ "particularites": [
+  "scene-3d-css"
+ ],
+ "mesures": {
+  "hauteur_p1440": 4140,
+  "hauteur_m390": 3882,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "3d",
+  "objet-manipulable",
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}

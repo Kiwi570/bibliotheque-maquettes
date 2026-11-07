@@ -1,0 +1,48 @@
+{
+ "id": "qd2a-maquette/ouverture-panneau",
+ "maquette": "qd2a-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "appel-a-textes",
+  "contact",
+  "hydre",
+  "saison"
+ ],
+ "titre": "",
+ "role": "ouverture",
+ "description": "Intro de 2,6 s : le nom du Quartier se tape à la machine sur une feuille, « Quartier » souligné au crayon rouge, puis la feuille rétrécit et file jusqu'à l'objet d'ouverture de la page (le tapuscrit à l'accueil) et l'écran s'ouvre en cercle depuis lui",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:69-75",
+  "css": "assets/css/socle.css:229-232 ; assets/css/site.css:78-90",
+  "js": "assets/js/site.js:552-555 ; assets/js/socle/ouverture.js:23-31,161-248"
+ },
+ "medias": {},
+ "pieges": [
+  "Sur les pages sombres, le panneau de l'intro prend leur couleur (--ouverture-fond), sinon l'audit relève des images blanches à l'ouverture"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

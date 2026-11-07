@@ -1,0 +1,772 @@
+{
+ "maquette": {
+  "metier": "comité de lecture théâtral",
+  "client": "Comité de lecture international des écritures dramatiques contemporaines de langue française (association), accueilli au Théâtre des Quartiers d'Ivry",
+  "activite": [
+   "association",
+   "culture",
+   "spectacle"
+  ],
+  "concept": [
+   "dossier",
+   "scène"
+  ],
+  "ambiance": [
+   "clair",
+   "artisanal",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "#f4efe4",
+   "texte": "#16130f",
+   "accent": "#c8321e",
+   "secondaire": "#2b3a8c"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Recursive",
+   "mono": "Recursive"
+  },
+  "points_forts": [
+   "direction « Le Tapuscrit » : papier ivoire, encre, crayon rouge du lecteur et bleu stylo, une page à l'encre (l'appel) et une page bleu encre (l'Hydre)",
+   "tapuscrit lauréat qu'on feuillette à la main avec élan, annotations au crayon qui se tracent sur chaque page",
+   "table de lecture en 3D (trois fiches, deux tampons, la sélection, le lauréat) qui pivote à la main ; carrousel 3D de la saison",
+   "pile des 26 tapuscrits à feuilleter au défilement, filtrable par pays",
+   "voile « page » qui se tourne entre les pages, fil de crayon rouge dans la marge, dépôt en trois étapes tamponné « Reçu »"
+  ],
+  "reserves": [
+   "Safari et iPhone réel non vérifiés (intro, voile, scènes 3D)",
+   "mentions légales, montant du prix, lieux des lectures et texte intégral du manifeste à fournir",
+   "manifeste de l'accueil résumé, signalé comme tel",
+   "17 illustrations générées, toutes mentionnées comme telles"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "fil-conducteur",
+   "trace-svg",
+   "section-fixée",
+   "progression-fixée",
+   "empilement-de-fiches",
+   "révélation-texte",
+   "révélation-image",
+   "apparition-au-défilement",
+   "marquee",
+   "reactif-vitesse",
+   "masque",
+   "parallaxe",
+   "compteur",
+   "rature",
+   "filtre-anime",
+   "webgl-shader"
+  ],
+  "interactions": [
+   "galerie-cliquable",
+   "schema-interactif",
+   "filtres",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "tapuscrit lauréat à feuilleter à la main avec élan (annotations au crayon) ; table de lecture 3D à faire pivoter ; carrousel 3D",
+   "fil": "trait de crayon rouge du lecteur dans la marge gauche, une coche ou un soulignement par section"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile « page » : une feuille ivoire réglée, au bord incliné, balaie l'écran depuis le côté du clic avec son ombre de pli, puis se soulève du côté de l'objet d'ouverture de la page suivante (logo et nom de la page sur la feuille)",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Pli d'ombre visible au repos : il laissait une bande sombre au bord gauche quand le voile couvrait l'écran ; opacité 0 par défaut, animée seulement pendant le mouvement"
+   ],
+   "particularites": [
+    "voile-page-qui-se-tourne"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro de 2,6 s : le nom du Quartier se tape à la machine sur une feuille, « Quartier » souligné au crayon rouge, puis la feuille rétrécit et file jusqu'à l'objet d'ouverture de la page (le tapuscrit à l'accueil) et l'écran s'ouvre en cercle depuis lui",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Sur les pages sombres, le panneau de l'intro prend leur couleur (--ouverture-fond), sinon l'audit relève des images blanches à l'ouverture"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête opaque : logo réel du QD2A, quatre liens, bouton « Envoyer un texte » ; prend la couleur des pages à l'encre et bleu encre ; se cache à la descente",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran à l'encre : liens en très grand qui arrivent l'un après l'autre, bouton « Envoyer un texte », adresse e-mail, réglage des animations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "fil": {
+   "titre": "",
+   "role": "decor",
+   "description": "Trait de crayon rouge du lecteur, dans la marge gauche de toutes les pages : il se dessine au défilement avec la mine au bout, une coche ou un double soulignement s'allume à chaque section",
+   "animations": [
+    "fil-conducteur",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Tracé en polyligne calculée en JavaScript (longueur additionnée segment par segment), jamais getPointAtLength en boucle",
+    "Sur téléphone la marge ne fait que 16 px : repères réduits à la largeur du fil"
+   ]
+  },
+  "debut": {
+   "titre": "Le Quartier des Autrices et des Auteurs",
+   "role": "ouverture",
+   "description": "Tapuscrit agrafé du texte lauréat posé sur une table de lecture (photo générée) : on l'attrape et on tourne ses six pages avec élan, à la souris ou au doigt (glissement horizontal), flèches et clavier ; des annotations au crayon se tracent sur chaque page lue ; il s'incline vers la souris ; titre en trois lignes qui montent",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe",
+    "trace-svg"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Pages empilées : cacher celles qui ne sont pas en jeu, sinon l'audit voit leurs textes se chevaucher",
+    "Titre de couverture borné en cqi (container-type: inline-size) pour tenir sur le téléphone à l'horizontale"
+   ],
+   "particularites": [
+    "tapuscrit-a-feuilleter"
+   ]
+  },
+  "titres": {
+   "titre": "Les 26 textes de la sélection finale 25/26",
+   "role": "decor",
+   "description": "Les 26 titres de la sélection finale en deux bandeaux géants (Fraunces italique, Recursive manuscrite rouge) qui filent en sens opposés et s'inclinent selon la vitesse",
+   "animations": [
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lecture": {
+   "titre": "Trois lecteurs, trois fiches, puis tout le comité",
+   "role": "méthode",
+   "description": "Table de lecture en 3D épinglée : le texte arrive, trois fiches de lecture se posent, deux tampons « Favorable », il rejoint la pile de la sélection finale, tampon « Lauréat » ; la table pivote à la main avec élan ; les cinq étapes s'allument à gauche",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Textes de la table trop petits pour l'audit : décor en aria-hidden et data-audit-ignorer, l'information est dans la liste d'étapes",
+    "Sur téléphone, seule l'étape active est affichée pour que la scène tienne dans l'écran"
+   ],
+   "particularites": [
+    "scene-3d-css"
+   ]
+  },
+  "saison": {
+   "titre": "Une lauréate, quatre coups de cœur",
+   "role": "galerie",
+   "description": "Carrousel 3D sur fond d'encre : la lauréate et les quatre coups de cœur, portraits réels, qui tournent au défilement avec accrochage sur chaque carte, à la main avec élan et aux flèches",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Cartes qui tournent le dos : visibility hidden et inert, sinon elles restent cliquables"
+   ],
+   "particularites": [
+    "carrousel-3d"
+   ]
+  },
+  "lu": {
+   "titre": "Lu à voix haute",
+   "role": "galerie",
+   "description": "Plateau aux quatre pupitres (photo générée) qui s'ouvre de la vignette au plein écran et ondule selon la vitesse (WebGL), mots « Lu » et « à voix haute » qui s'écartent, légende des lectures de juin",
+   "animations": [
+    "masque",
+    "webgl-shader",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Les mots géants ne prennent pas toute la hauteur du cadre collant, sinon ils dépassent de quelques pixels en bas à 1366×768"
+   ]
+  },
+  "manifeste": {
+   "titre": "Le Quartier n’est pas seulement un comité de lecture. C’est une Hydre de Lerne.",
+   "role": "manifeste",
+   "description": "« un comité de lecture » barré de deux traits de crayon rouge puis remplacé à la main par « une Hydre de Lerne », texte qui s'allume mot à mot, les quatre comités en vignettes décalées",
+   "animations": [
+    "rature",
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "L’appel à textes est ouvert.",
+   "role": "appel",
+   "description": "Appel à textes : titre tapé à la machine en direct, quatre conditions cochées au crayon une à une, bouton et fiche PDF, photo d'enveloppe qui s'incline selon la vitesse",
+   "animations": [
+    "révélation-texte",
+    "trace-svg",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Titre tapé sur plusieurs lignes : interligne d'au moins 1,3, sinon l'audit voit les lettres de deux lignes se chevaucher"
+   ]
+  },
+  "partenaires": {
+   "titre": "Ils nous accueillent et nous accompagnent",
+   "role": "preuves",
+   "description": "Cinq partenaires en cartes blanches qui se posent comme des tampons (échelle et rotation), logos réels, lien Visiter",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Texte de lien visuellement caché : sa boîte déborde de la section ; aria-label à la place"
+   ]
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page à l'encre : logo, accueil au Théâtre des Quartiers d'Ivry, e-mail, Facebook, sommaire, mentions à compléter, réglage des animations",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-fil": {
+   "ignorer": "même fil conducteur que celui de l'accueil (bloc fil)"
+  },
+  "404-introuvable": {
+   "titre": "La servante est restée allumée",
+   "role": "page-404",
+   "description": "« La servante est restée allumée » : photo générée d'une servante sur un plateau vide, la lumière suit le pointeur, retour à l'accueil",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel-a-textes-fil": {
+   "ignorer": "même fil conducteur que celui de l'accueil (bloc fil)"
+  },
+  "appel-a-textes-debut": {
+   "titre": "L’appel à textes",
+   "role": "ouverture",
+   "description": "Page à l'encre : photo plein écran d'une enveloppe sous une lampe, la lumière suit le pointeur (et dérive au défilement) ; titre lettre à lettre, fiche PDF",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel-a-textes-conditions": {
+   "titre": "Quatre cachets avant l’envoi",
+   "role": "étapes",
+   "description": "Quatre cachets circulaires (texte sur un cercle) qui se tamponnent en cascade, une condition par cachet",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel-a-textes-parcours": {
+   "titre": "De votre boîte d’envoi à la scène",
+   "role": "étapes",
+   "description": "Parcours d'un texte épinglé : une enveloppe suit une route tracée, six stations s'allument avec leur étape, couvertures des éditions Passage(s) à la fin",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Stations placées en JavaScript : sans JavaScript elles s'empilaient, elles sont alors masquées"
+   ]
+  },
+  "appel-a-textes-fiche": {
+   "titre": "Une fiche, toujours",
+   "role": "preuves",
+   "description": "Photo générée de fiches de lecture en rideau, titre tapé, compteur des 200 pièces reçues",
+   "animations": [
+    "révélation-image",
+    "compteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel-a-textes-deposer": {
+   "titre": "Glissez votre texte dans l’enveloppe",
+   "role": "contact",
+   "description": "Dépôt simulé en trois étapes (vous, le texte avec ses PDF, récapitulatif) ; à l'envoi, la feuille glisse dans l'enveloppe, le rabat se ferme, l'enveloppe part et revient tamponnée « Reçu »",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "contact-fil": {
+   "ignorer": "même fil conducteur que celui de l'accueil (bloc fil)"
+  },
+  "contact-debut": {
+   "titre": "Écrire au Quartier",
+   "role": "ouverture",
+   "description": "Ouverture compacte : enveloppe kraft adressée au Quartier, timbre au logo, cachet de la poste qui se pose ; e-mail en clair à côté du bouton",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Votre message",
+   "role": "contact",
+   "description": "Formulaire simulé ; à l'envoi, la lettre se ferme et reçoit un cachet de la poste bleu « Reçu » (et non le tampon de l'appel)",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-lieu": {
+   "titre": "Le Quartier habite au théâtre",
+   "role": "carte",
+   "description": "Plan schématique d'accès en SVG (rues, chemin pointillé du métro au théâtre), accès en liste",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-bandeau": {
+   "titre": "Et pour envoyer un texte ?",
+   "role": "appel",
+   "description": "Bandeau photo sombre vers l'appel à textes",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hydre-fil": {
+   "ignorer": "même fil conducteur que celui de l'accueil (bloc fil)"
+  },
+  "hydre-debut": {
+   "titre": "L’Hydre de Lerne",
+   "role": "ouverture",
+   "description": "Page bleu encre : photo générée de quatre lampes de lecture, quatre cous dessinés depuis Ivry jusqu'aux quatre pays, têtes qui éclosent",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Noms des têtes posés par variables CSS en ligne : jamais de clearProps 'all' dessus"
+   ]
+  },
+  "hydre-manifeste": {
+   "titre": "Des ponts plutôt que des murs",
+   "role": "manifeste",
+   "description": "Marais dans la brume en fond, manifeste international qui s'allume mot à mot, citation courte",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hydre-comites": {
+   "titre": "Un comité par pays",
+   "role": "équipe",
+   "description": "Tambour 3D des quatre comités, qui tourne autour d'un axe horizontal au défilement",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "tambour-3d"
+   ]
+  },
+  "hydre-fonctionnement": {
+   "titre": "En commun, et chacun sa singularité",
+   "role": "méthode",
+   "description": "Quatre traits qui se rejoignent en un point (4 comités, 1 lauréat), deux colonnes",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hydre-vie": {
+   "titre": "Des lecteurs bénévoles, une réunion par mois",
+   "role": "équipe",
+   "description": "Photo réelle d'une soirée du Quartier, titre tapé, partenaires en bandeau de logos",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "hydre-fin": {
+   "titre": "Une cinquième voix ?",
+   "role": "appel",
+   "description": "Appel final avec une pile de feuilles dessinée qui s'incline selon la vitesse",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saison-fil": {
+   "ignorer": "même fil conducteur que celui de l'accueil (bloc fil)"
+  },
+  "saison-debut": {
+   "titre": "La saison 25/26",
+   "role": "ouverture",
+   "description": "Ouverture centrée : « 26 » géant rouge, 26 feuillets qui tombent dans la pile avec le compteur de 00 à 26, photo générée d'une pile de tapuscrits",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Chiffre géant : hauteur automatique et interligne 1,28, sinon sa boîte recouvre le surtitre et le titre"
+   ]
+  },
+  "saison-laureat": {
+   "titre": "Chronologies",
+   "role": "preuves",
+   "description": "Portrait réel révélé en rideau, titre tapé à la machine, nom qui passe de la machine à la main au défilement (axe CASL), personnages, distinctions",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saison-selection": {
+   "titre": "Les 26 textes",
+   "role": "produits",
+   "description": "Pile des 26 tapuscrits épinglée qu'on feuillette au défilement (celui de devant bascule vers soi et s'efface), accrochage sur chaque texte, filtre par pays gardé dans l'adresse",
+   "animations": [
+    "section-fixée",
+    "empilement-de-fiches",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Grille en 1fr élargie par la rangée de filtres en nowrap : minmax(0, 1fr)",
+    "role=region sur la liste lui retirait sa sémantique : le poser sur le conteneur"
+   ]
+  },
+  "saison-coups-de-coeur": {
+   "titre": "Quatre coups de cœur",
+   "role": "portfolio",
+   "description": "Quatre coups de cœur, portraits réels qui s'inclinent selon la vitesse, tampon du comité qui les a choisis",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saison-lectures": {
+   "titre": "Les lectures de juin",
+   "role": "agenda",
+   "description": "Trois lectures de juin, statut « Terminé » calculé à la date de Paris, photo de salle après lecture",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saison-pays": {
+   "titre": "Douze pays dans la sélection : France, Canada, RD Congo, Angleterre, Bénin, Burundi, Guiné",
+   "role": "decor",
+   "description": "Bandeaux géants des 12 pays de la sélection sur fond rouge",
+   "animations": [
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "saison-fin": {
+   "titre": "La saison 26/27 se lit déjà",
+   "role": "appel",
+   "description": "Appel final vers l'appel à textes, pile de feuilles dessinée",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

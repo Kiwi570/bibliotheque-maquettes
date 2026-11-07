@@ -1,0 +1,48 @@
+{
+ "id": "qd2a-maquette/appel-a-textes-parcours",
+ "maquette": "qd2a-maquette",
+ "page": "appel-a-textes",
+ "titre": "De votre boîte d’envoi à la scène",
+ "role": "étapes",
+ "description": "Parcours d'un texte épinglé : une enveloppe suit une route tracée, six stations s'allument avec leur étape, couvertures des éditions Passage(s) à la fin",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "appel-a-textes.html:164-197",
+  "css": "assets/css/site.css:52,438-459,573-579,612-613,624-628,669-671",
+  "js": "assets/js/site.js:239-274,412-441,539 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/appel-a-textes-parcours-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/appel-a-textes-parcours-m390.jpg",
+  "video": "medias/qd2a-maquette/appel-a-textes-parcours-p720.mp4"
+ },
+ "pieges": [
+  "Stations placées en JavaScript : sans JavaScript elles s'empilaient, elles sont alors masquées"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3780,
+  "hauteur_m390": 3545,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}

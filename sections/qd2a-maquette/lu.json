@@ -1,0 +1,50 @@
+{
+ "id": "qd2a-maquette/lu",
+ "maquette": "qd2a-maquette",
+ "page": "index",
+ "titre": "Lu à voix haute",
+ "role": "galerie",
+ "description": "Plateau aux quatre pupitres (photo générée) qui s'ouvre de la vignette au plein écran et ondule selon la vitesse (WebGL), mots « Lu » et « à voix haute » qui s'écartent, légende des lectures de juin",
+ "animations": [
+  "masque",
+  "webgl-shader",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:257-267",
+  "css": "assets/css/site.css:298-303",
+  "js": "assets/js/socle/gouttiere.js:95 ; assets/js/socle/effets.js:16-18,271-285 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/lu-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/lu-m390.jpg",
+  "video": "medias/qd2a-maquette/lu-p720.mp4"
+ },
+ "pieges": [
+  "Les mots géants ne prennent pas toute la hauteur du cadre collant, sinon ils dépassent de quelques pixels en bas à 1366×768"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2340,
+  "hauteur_m390": 2194,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "vitesse",
+  "webgl"
+ ],
+ "impact": "spectaculaire"
+}

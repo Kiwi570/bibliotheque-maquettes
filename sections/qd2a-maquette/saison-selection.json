@@ -1,0 +1,47 @@
+{
+ "id": "qd2a-maquette/saison-selection",
+ "maquette": "qd2a-maquette",
+ "page": "saison",
+ "titre": "Les 26 textes",
+ "role": "produits",
+ "description": "Pile des 26 tapuscrits épinglée qu'on feuillette au défilement (celui de devant bascule vers soi et s'efface), accrochage sur chaque texte, filtre par pays gardé dans l'adresse",
+ "animations": [
+  "section-fixée",
+  "empilement-de-fiches",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "saison.html:162-318",
+  "css": "assets/css/site.css:363-392,580-584,624-625,631-632",
+  "js": "assets/js/site.js:3,239-274,321,332-380 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/saison-selection-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/saison-selection-m390.jpg",
+  "video": "medias/qd2a-maquette/saison-selection-p720.mp4"
+ },
+ "pieges": [
+  "Grille en 1fr élargie par la rangée de filtres en nowrap : minmax(0, 1fr)",
+  "role=region sur la liste lui retirait sa sémantique : le poser sur le conteneur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 6048,
+  "hauteur_m390": 5672,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

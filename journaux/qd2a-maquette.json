@@ -1,0 +1,130 @@
+{
+ "projet": "qd2a-maquette",
+ "client": "Le Quartier des Autrices et des Auteurs (QD2A)",
+ "siteActuel": "https://comiteqdaa.wixsite.com/qd2a",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v10.4",
+   "perimetre": [
+    "accueil",
+    "saison",
+    "appel",
+    "hydre",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 15,
+     "debut": "2026-11-07T20:04:48+01:00",
+     "fin": "2026-11-07T20:14:00+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 15,
+     "debut": "2026-11-07T20:14:00+01:00",
+     "fin": "2026-11-07T20:21:30+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 30,
+     "debut": "2026-11-07T20:21:30+01:00",
+     "fin": "2026-11-07T20:47:30+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet",
+     "budget": 25,
+     "debut": "2026-11-07T20:49:00+01:00",
+     "fin": "2026-11-07T20:58:00+01:00"
+    },
+    {
+     "etape": "construction : contact et page de catégorie",
+     "budget": 10,
+     "debut": "2026-11-07T20:58:00+01:00",
+     "fin": "2026-11-07T21:00:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 35,
+     "debut": "2026-11-07T20:50:00+01:00",
+     "fin": "2026-11-07T22:01:30+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-07T22:01:30+01:00",
+     "fin": "2026-11-07T22:05:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-07T20:14:00+01:00",
+     "fin": "2026-11-07T20:16:30+01:00"
+    },
+    {
+     "pour": "validation des plans",
+     "debut": "2026-11-07T20:20:30+01:00",
+     "fin": "2026-11-07T20:21:30+01:00"
+    },
+    {
+     "pour": "images du site et images Grok (construction des données menée en parallèle)",
+     "debut": "2026-11-07T20:21:30+01:00",
+     "fin": "2026-11-07T20:27:00+01:00"
+    },
+    {
+     "pour": "validation de l'aperçu de l'accueil",
+     "debut": "2026-11-07T20:47:30+01:00",
+     "fin": "2026-11-07T20:49:00+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [
+    "mécaniques reprises sans copie de code : bac-a-feuilleter (pile des 26), rature-au-stylo, fil-conducteur, manifeste-mot-a-mot, lumiere-au-pointeur, formulaire-par-etapes, envol-vers-le-panier (enveloppe)"
+   ],
+   "audit": {
+    "niveau": "standard, passe des formats, puis complet (version finale)",
+    "echecsPremierPassage": 133,
+    "relances": 4,
+    "corrections": [
+     "lignes des titres et titres tapés qui se chevauchaient (interligne)",
+     "textes cachés des liens externes remplacés par aria-label",
+     "tailles sous 12 px (tampons, étiquettes)",
+     "contrastes (surtitres, filtres, bandeau, page à l'encre)",
+     "intro des pages sombres : panneau à leur couleur",
+     "grilles qui débordaient sur téléphone (pile, parcours)",
+     "bloc « 26 » qui recouvrait le titre",
+     "positions des noms de l'Hydre effacées en mode calme",
+     "pli du voile qui laissait une bande au bord"
+    ],
+    "complet": {
+     "date": "2026-11-07T22:29:03+01:00",
+     "echecs": 0,
+     "aRegarder": [
+      "rechargement au milieu de l'accueil (écran différent à 15 %)",
+      "fluidité de l'accueil (6 % d'images lentes)"
+     ],
+     "nonLance": [
+      "Safari"
+     ]
+    }
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Les scripts node de la bibliothèque (chercher.mjs, grok.mjs, produire.mjs, partage.mjs) ont été refusés par le contrôle de sécurité de la session (code venu de l'extérieur) : recherche faite en lisant index.json, document Grok écrit par un script Python reprenant la logique de grok.mjs, variantes WebP par outils/produire-images.py, images de partage par outils/images-partage.mjs du socle. Les modules de la bibliothèque n'ont donc pas pu être assemblés ni testés par tester-module.mjs : leurs mécaniques ont été réécrites dans site.js.",
+   "regardNeuf": [
+    "phrase fausse corrigée (« trois têtes » devenu « trois lecteurs du comité »)",
+    "dépôt : champs de fichier ajoutés (texte et fiche)",
+    "contact : cachet de la poste au lieu du tampon de l'appel",
+    "appel : lampe sur tout l'écran",
+    "tambour des comités agrandi",
+    "étapes inactives plus lisibles",
+    "repères du crayon plus petits sur téléphone",
+    "barre du téléphone : « E-mail »"
+   ],
+   "valideeLe": "2026-11-07T22:04:00+01:00"
+  }
+ ]
+}
