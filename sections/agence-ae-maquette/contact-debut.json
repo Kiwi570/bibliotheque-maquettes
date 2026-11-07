@@ -1,0 +1,44 @@
+{
+ "id": "agence-ae-maquette/contact-debut",
+ "maquette": "agence-ae-maquette",
+ "page": "contact",
+ "titre": "Parlons de votre projet",
+ "role": "ouverture",
+ "description": "Le numéro de téléphone en très grand, écrit chiffre après chiffre, soleil rond d'ouverture et bandeau de côte",
+ "animations": [
+  "révélation-texte",
+  "parallaxe",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "contact.html:101-120",
+  "css": "assets/css/site.css:32,109,135-136,311-312,539-551,644-649,653",
+  "js": "assets/js/site.js:240-245,475-491,699-709 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:10,172-196 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/contact-debut-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/contact-debut-m390.jpg",
+  "video": "medias/agence-ae-maquette/contact-debut-p720.mp4"
+ },
+ "pieges": [
+  "Espaces du numéro qui disparaissaient dans un conteneur flex : les poser dans un span de largeur fixe."
+ ],
+ "mesures": {
+  "hauteur_p1440": 818,
+  "hauteur_m390": 903,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

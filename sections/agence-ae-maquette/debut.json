@@ -1,0 +1,46 @@
+{
+ "id": "agence-ae-maquette/debut",
+ "maquette": "agence-ae-maquette",
+ "page": "index",
+ "titre": "Une architecture humaine, locale et engagée",
+ "role": "ouverture",
+ "description": "Photo plein cadre de la Maison T-G ; un soleil à saisir glisse sur son arc et rééclaire réellement la photo en WebGL (aube, jour, couchant, nuit), l'ombre du titre suit la lumière",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:101-125",
+  "css": "assets/css/site.css:26,32,83-132,618-619,631",
+  "js": "assets/js/site.js:44-109,113-197,377-407,434,439-441 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/debut-m390.jpg",
+  "video": "medias/agence-ae-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Pas de parallaxe ni de data-plein-ecran sur une ouverture rééclairée : la photo doit rester calée sous le shader."
+ ],
+ "particularites": [
+  "photo-reeclairee-par-un-soleil-a-saisir"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 0
+ }
+}

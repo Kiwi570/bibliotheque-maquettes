@@ -1,0 +1,47 @@
+{
+ "id": "agence-ae-maquette/maquette",
+ "maquette": "agence-ae-maquette",
+ "page": "index",
+ "titre": "Une maison bois se monte en quatre temps",
+ "role": "étapes",
+ "description": "Section épinglée : une maison en ossature bois en 3D CSS se construit au défilement (dalle, ossature, murs, baies, toit), tourne sur elle-même et se fait pivoter à la main avec élan ; ses faces s'éclairent selon le soleil",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:141-172",
+  "css": "assets/css/site.css:492-493,516,523,643,660-709,765,818",
+  "js": "assets/js/site.js:272-332,427,659-673,828-868,936-959"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/maquette-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/maquette-m390.jpg",
+  "video": "medias/agence-ae-maquette/maquette-p720.mp4"
+ },
+ "pieges": [
+  "Les faces 3D portaient la classe .mur, attrapée par l'effet « mur en coupe » d'une autre page : limiter chaque sélecteur d'effet à sa section (section.mur).",
+  "Créée après la coupe située plus bas, la scène décalait le départ de la scène suivante : appeler ScrollTrigger.sort() puis refresh() après avoir créé tous les effets."
+ ],
+ "particularites": [
+  "maquette-3d-css-qui-se-construit"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

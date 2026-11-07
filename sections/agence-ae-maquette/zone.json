@@ -1,0 +1,43 @@
+{
+ "id": "agence-ae-maquette/zone",
+ "maquette": "agence-ae-maquette",
+ "page": "index",
+ "titre": "Quimper et la côte du Sud Finistère",
+ "role": "carte",
+ "description": "Carte schématique du Sud Finistère : la côte se trace, les communes des réalisations s'allument, survol ou toucher pour voir leurs projets",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:370-445",
+  "css": "assets/css/site.css:35-36,251-270,621,650-651",
+  "js": "assets/js/site.js:6,351-374 ; assets/js/socle/voile.js:33 ; assets/js/socle/effets.js:198-218"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/zone-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/zone-m390.jpg",
+  "video": "medias/agence-ae-maquette/zone-p720.mp4"
+ },
+ "pieges": [
+  "Noms des communes qui se chevauchaient : n'afficher que l'agence et la commune active."
+ ],
+ "mesures": {
+  "hauteur_p1440": 1052,
+  "hauteur_m390": 1030,
+  "epinglee": false,
+  "scrolltriggers": 5
+ }
+}

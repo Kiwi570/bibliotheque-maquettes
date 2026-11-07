@@ -1,0 +1,48 @@
+{
+ "id": "agence-ae-maquette/lumiere",
+ "maquette": "agence-ae-maquette",
+ "page": "index",
+ "titre": "La conception bioclimatique, en quatre gestes",
+ "role": "méthode",
+ "description": "Coupe bioclimatique épinglée : le soleil passe aux vrais angles de Quimper (65° l'été, 42° aux équinoxes, 19° l'hiver), la lumière et l'ombre traversent la maison en SVG, ciel qui change ; le soleil se saisit à la main",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:221-261",
+  "css": "assets/css/site.css:168-217,615-616",
+  "js": "assets/js/site.js:272-332,798-812"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/lumiere-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/lumiere-m390.jpg",
+  "video": "medias/agence-ae-maquette/lumiere-p720.mp4"
+ },
+ "pieges": [
+  "Le mélange de couleurs du ciel en hsl passait par le vert : mélanger en RGB.",
+  "La typographie française insérait des espaces fines dans l'attribut d des chemins SVG : écrire les tracés en brut."
+ ],
+ "particularites": [
+  "coupe-bioclimatique-aux-angles-reels"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": true,
+  "scrolltriggers": 1
+ }
+}

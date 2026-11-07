@@ -1,9 +1,10 @@
 {
- "version": "2026-11-05",
+ "version": "2026-11-07",
  "aide": "Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/. Chercher : node outils/chercher.mjs --role ouverture --ambiance sombre",
- "totaux": {"maquettes":80,"sections_indexees":255,"sections_notees_4_ou_5":975,"sections_notees_3_ou_moins":2082,"modules":49},
+ "totaux": {"maquettes":81,"sections_indexees":265,"sections_notees_4_ou_5":999,"sections_notees_3_ou_moins":2099,"modules":49},
  "colonnes": {"maquettes":["depot","activite","concept","ambiance","note","points_forts","url","client","date","grille"],"sections":["id","role","animations","note","module","titre","interactions","capture","video","page"],"modules":["nom","role","animations","convient_a","titre","interactions","ambiances","dependances"]},
  "maquettes": [
+  ["agence-ae-maquette",["bâtiment"],["atelier"],["clair","chaleureux","sobre"],87,["direction « Course du soleil » : la conception bioclimatique rendue tangible, un soleil à saisir rééclaire la photo d'ouverture en WebGL","maison bois en 3D CSS qui se construit au défilement et se fait pivoter à la main avec élan","coupe bioclimatique épinglée aux vrais angles du soleil à Quimper, soleil manipulable ; mur en coupe qui se décompose"],"https://agence-ae-maquette.vercel.app","Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)","2026-11-07",["iris","soleil à saisir qui rééclaire la photo ; maison bois 3D à faire pivoter ; cadran solaire qui filtre les projets"]],
   ["alexandra-grandry-maquette",["santé","bien-être"],["carnet"],["clair","doux","végétal"],82,["direction « Figure et fond » tirée de la Gestalt : vase de Rubin, deux profils d'encre qui s'ouvrent sur la photo","« Pour qui » épinglé : une forme WebGL qui se transforme pour chaque public, avec son tarif","mot « Gestalt » qui se rassemble sur une encre WebGL au pointeur, cercle de respiration de la sophrologie"],"https://alexandra-grandry-maquette.vercel.app","Gestalt-thérapeute et sophrologue à Chatou (adultes, couples, enfants, adolescents, familles, groupes)","2026-11-05",[null,"deux profils d'encre (vase de Rubin) qui s'écartent sur la photo, forme qui change pour chaque public"]],
   ["apasdechien-maquette",["animaux"],["carnet"],["végétal","chaleureux","artisanal"],87,["laisse dorée qui serpente d'une section à l'autre avec empreintes","lumière de sous-bois en shader et balle à lancer","horloge de la balade fixée"],"https://apasdechien-maquette.vercel.app","éducatrice canine et promeneuse","2026-10-28",null],
   ["aquafit-maquette",["sport","bien-être"],["autre"],["océanique","nocturne","énergique"],89,["ouverture « surface puis plongée » avec une ligne d'eau tracée","schéma épinglé d'une personne qui court en suspension, en trois étapes","caustiques WebGL dont la profondeur suit la jauge latérale"],"https://aquafit-maquette.vercel.app","cours de gymnastique aquatique en eau profonde","2026-10-29",null],
@@ -86,6 +87,16 @@
   ["winsbike-maquette",["commerce","artisanat"],["atelier","catalogue"],["sombre","industriel","énergique"],91,["ouverture à la clé dynamométrique qui serre jusqu'au clic","établi éclairé par une lampe WebGL qui suit le curseur","vue éclatée du moyeu épinglée sur papier millimétré"],"https://winsbike-maquette.vercel.app","distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne","2026-10-28",null]
  ],
  "sections": [
+  ["agence-ae-maquette/convictions-debut","ouverture",["révélation-texte","masque","ouverture-orchestrée"],5,"","40 % des émissions de gaz à effet de serre viennent du bâtiment",[],1,1,"convictions"],
+  ["agence-ae-maquette/convictions-habitat-sain","outil-interactif",["section-fixée","progression-fixée"],5,"","Habitat sain",["schema-interactif"],1,1,"convictions"],
+  ["agence-ae-maquette/debut","ouverture",["webgl-shader","révélation-texte","ouverture-orchestrée"],5,"","Une architecture humaine, locale et engagée",["schema-interactif"],1,1,""],
+  ["agence-ae-maquette/fil-soleil","decor",["fil-conducteur"],5,"","",["schema-interactif"],0,0,""],
+  ["agence-ae-maquette/lumiere","méthode",["section-fixée","progression-fixée","trace-svg"],5,"","La conception bioclimatique, en quatre gestes",["schema-interactif"],1,1,""],
+  ["agence-ae-maquette/maquette","étapes",["section-fixée","progression-fixée"],5,"","Une maison bois se monte en quatre temps",["schema-interactif"],1,1,""],
+  ["agence-ae-maquette/ouverture-panneau","ouverture",["ouverture-orchestrée","masque"],5,"","",[],0,0,""],
+  ["agence-ae-maquette/plein-cadre","portfolio",["révélation-image","masque","révélation-texte"],5,"","Maison T-G",[],1,1,""],
+  ["agence-ae-maquette/realisations-debut","ouverture",["révélation-texte","ouverture-orchestrée"],5,"","Des lieux qui suivent le soleil",["filtres"],1,1,"realisations"],
+  ["agence-ae-maquette/realisations-tour","galerie",["apparition-au-défilement","reactif-vitesse"],5,"","Faites tourner les projets",["galerie-cliquable"],1,1,"realisations"],
   ["alexandra-grandry-maquette/debut","ouverture",["section-fixée","masque","révélation-texte","ouverture-orchestrée"],5,"","AlexandraGrandry",[],1,1,""],
   ["alexandra-grandry-maquette/gestalt-therapie-debut","ouverture",["webgl-shader","révélation-texte","ouverture-orchestrée"],5,"","La Gestalt-thérapieGestalt",[],1,1,"gestalt-therapie"],
   ["alexandra-grandry-maquette/pour-qui","offre",["section-fixée","progression-fixée","webgl-shader","morphing"],5,"","Une forme pour chaque histoire",[],1,1,""],

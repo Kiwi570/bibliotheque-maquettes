@@ -1,0 +1,45 @@
+{
+ "id": "agence-ae-maquette/plein-cadre",
+ "maquette": "agence-ae-maquette",
+ "page": "index",
+ "titre": "Maison T-G",
+ "role": "portfolio",
+ "description": "La photo de la Maison T-G part d'une vignette et s'ouvre jusqu'au plein écran (clip-path) dans un cadre collant, le titre géant s'écarte, puis le lien vers le projet",
+ "animations": [
+  "révélation-image",
+  "masque",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:266-279",
+  "css": "assets/css/site.css:723-734,768-772",
+  "js": "assets/js/site.js:40,870-881 ; assets/js/socle/gouttiere.js:95"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/plein-cadre-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/plein-cadre-m390.jpg",
+  "video": "medias/agence-ae-maquette/plein-cadre-p720.mp4"
+ },
+ "pieges": [
+  "Épinglée, la scène sautait d'un coup à la suivante : section haute avec un cadre en position sticky, sans pin.",
+  "Le cadre plein écran passait sous l'en-tête : le caler sous --entete-h."
+ ],
+ "mesures": {
+  "hauteur_p1440": 2340,
+  "hauteur_m390": 2194,
+  "epinglee": false,
+  "scrolltriggers": 1
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "agence-ae-maquette/realisations-tour",
+ "maquette": "agence-ae-maquette",
+ "page": "realisations",
+ "titre": "Faites tourner les projets",
+ "role": "galerie",
+ "description": "Carrousel 3D courbe de douze projets : il tourne au défilement, à la main avec élan et aux flèches ; un clic ouvre la visionneuse du projet",
+ "animations": [
+  "apparition-au-défilement",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "realisations.html:132-141",
+  "css": "assets/css/site.css:33-34,748-764",
+  "js": "assets/js/site.js:494-562,565-616,902-920,936-959,962-995 ; assets/js/socle/effets.js:13,220-251"
+ },
+ "medias": {
+  "capture": "medias/agence-ae-maquette/realisations-tour-p1440.jpg",
+  "capture_m390": "medias/agence-ae-maquette/realisations-tour-m390.jpg",
+  "video": "medias/agence-ae-maquette/realisations-tour-p720.mp4"
+ },
+ "pieges": [
+  "Les cartes vues de dos restaient cliquables et trop petites : les cacher quand elles tournent le dos."
+ ],
+ "particularites": [
+  "carrousel-3d-courbe"
+ ],
+ "mesures": {
+  "hauteur_p1440": 934,
+  "hauteur_m390": 603,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

@@ -1,0 +1,839 @@
+{
+ "maquette": {
+  "client": "Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)",
+  "activite": [
+   "bâtiment"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "#f2ede3",
+   "texte": "#1e2427",
+   "accent": "#c26a28",
+   "secondaire": "#e0913f"
+  },
+  "polices": {
+   "titres": "Newsreader",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Course du soleil » : la conception bioclimatique rendue tangible, un soleil à saisir rééclaire la photo d'ouverture en WebGL",
+   "maison bois en 3D CSS qui se construit au défilement et se fait pivoter à la main avec élan",
+   "coupe bioclimatique épinglée aux vrais angles du soleil à Quimper, soleil manipulable ; mur en coupe qui se décompose",
+   "cadran solaire qu'on tourne pour filtrer 23 projets, carrousel 3D, visionneuse avec lien propre par projet",
+   "fil du soleil de 6 h à 21 h sur toutes les pages, voile en iris ocre, rendez-vous en cinq étapes tamponné « Reçu »"
+  ],
+  "reserves": [
+   "Safari et iPhone réel non vérifiés (intro, voile, maquette 3D, carrousel)",
+   "mentions légales, numéro d'Ordre, assurance, témoignage complet et statut des perspectives 3D de projets à fournir",
+   "10 illustrations générées (ambiances, matières), toutes mentionnées comme telles"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "empilement-de-fiches",
+   "fil-conducteur",
+   "trace-svg",
+   "révélation-texte",
+   "révélation-image",
+   "apparition-au-défilement",
+   "marquee",
+   "reactif-vitesse",
+   "masque",
+   "parallaxe",
+   "filtre-anime",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "filtres",
+   "galerie-cliquable",
+   "carte-interactive",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "particularites": [
+   "soleil-a-saisir",
+   "maquette-3d-css",
+   "lumiere-au-pointeur"
+  ],
+  "grille": {
+   "objet": "soleil à saisir qui rééclaire la photo ; maison bois 3D à faire pivoter ; cadran solaire qui filtre les projets",
+   "fil": "course du soleil de 6 h à 21 h dans la marge droite, une heure par section, soleil à tirer pour voyager"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile ocre en iris, monogramme « ae » et nom de la page, qui s'ouvre en cercle sur l'objet rond d'ouverture de la page suivante (la barre fixe Appeler / Rendez-vous du téléphone partage cette signature)",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro de 2,4 s : le soleil se lève sur un arc au-dessus de « agence ae », l'ombre des lettres tourne avec lui, puis il rejoint l'objet rond de la page et l'écran s'ouvre en cercle depuis lui",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ombres-des-lettres-qui-tournent-avec-le-soleil"
+   ],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête crème : logo réel de l'agence posé en masque CSS (couleur pilotée par la page), cinq liens, bouton Rendez-vous ; se cache à la descente",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran : cinq liens en très grand qui arrivent l'un après l'autre, bouton d'appel, réglage des animations",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page : monogramme, adresse du Prieuré, téléphone, e-mail, réseaux, sommaire, badge de l'Ordre des architectes, mentions à compléter, mode calme",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fil-soleil": {
+   "titre": "",
+   "role": "decor",
+   "description": "Course du soleil dans la marge droite de toutes les pages, de 6 h à 21 h, une heure par section ; le soleil se tire à la main pour voyager dans la page",
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Le fil est fixe et passe au-dessus des sections : vérifier chaque section qui crée un contexte d'empilement (leçon alexandra-grandry)."
+   ],
+   "particularites": [
+    "fil-a-saisir-pour-voyager"
+   ],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Une architecture humaine, locale et engagée",
+   "role": "ouverture",
+   "description": "Photo plein cadre de la Maison T-G ; un soleil à saisir glisse sur son arc et rééclaire réellement la photo en WebGL (aube, jour, couchant, nuit), l'ombre du titre suit la lumière",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Pas de parallaxe ni de data-plein-ecran sur une ouverture rééclairée : la photo doit rester calée sous le shader."
+   ],
+   "particularites": [
+    "photo-reeclairee-par-un-soleil-a-saisir"
+   ]
+  },
+  "vision": {
+   "titre": "Plus que des mètres carrés",
+   "role": "manifeste",
+   "description": "Plus que des mètres carrés : manifeste qui s'éclaire mot à mot, titre dont l'ombre portée se couche et se redresse selon l'heure du soleil, photo qui avance au défilement",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ombre-portee-du-titre-selon-le-soleil"
+   ]
+  },
+  "maquette": {
+   "titre": "Une maison bois se monte en quatre temps",
+   "role": "étapes",
+   "description": "Section épinglée : une maison en ossature bois en 3D CSS se construit au défilement (dalle, ossature, murs, baies, toit), tourne sur elle-même et se fait pivoter à la main avec élan ; ses faces s'éclairent selon le soleil",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les faces 3D portaient la classe .mur, attrapée par l'effet « mur en coupe » d'une autre page : limiter chaque sélecteur d'effet à sa section (section.mur).",
+    "Créée après la coupe située plus bas, la scène décalait le départ de la scène suivante : appeler ScrollTrigger.sort() puis refresh() après avoir créé tous les effets."
+   ],
+   "particularites": [
+    "maquette-3d-css-qui-se-construit"
+   ]
+  },
+  "savoir-faire": {
+   "titre": "Trois manières de bâtir",
+   "role": "services",
+   "description": "Trois manières de bâtir : planches Neuf, Rénovation, Professionnel qui s'empilent au défilement, photo et lien vers les réalisations filtrées",
+   "animations": [
+    "empilement-de-fiches",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "lumiere": {
+   "titre": "La conception bioclimatique, en quatre gestes",
+   "role": "méthode",
+   "description": "Coupe bioclimatique épinglée : le soleil passe aux vrais angles de Quimper (65° l'été, 42° aux équinoxes, 19° l'hiver), la lumière et l'ombre traversent la maison en SVG, ciel qui change ; le soleil se saisit à la main",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Le mélange de couleurs du ciel en hsl passait par le vert : mélanger en RGB.",
+    "La typographie française insérait des espaces fines dans l'attribut d des chemins SVG : écrire les tracés en brut."
+   ],
+   "particularites": [
+    "coupe-bioclimatique-aux-angles-reels"
+   ]
+  },
+  "mots-geants": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeaux de mots géants (Lumière, Bois, Paille, Chaux…) qui filent au défilement en sens opposés, mots pleins et évidés, inclinés selon la vitesse",
+   "animations": [
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mots évidés à contraste nul : bandeau décoratif aria-hidden, à exclure du contrôle de contraste (data-audit-ignorer)."
+   ]
+  },
+  "plein-cadre": {
+   "titre": "Maison T-G",
+   "role": "portfolio",
+   "description": "La photo de la Maison T-G part d'une vignette et s'ouvre jusqu'au plein écran (clip-path) dans un cadre collant, le titre géant s'écarte, puis le lien vers le projet",
+   "animations": [
+    "révélation-image",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Épinglée, la scène sautait d'un coup à la suivante : section haute avec un cadre en position sticky, sans pin.",
+    "Le cadre plein écran passait sous l'en-tête : le caler sous --entete-h."
+   ]
+  },
+  "projets": {
+   "titre": "Cinq maisons, cinq lumières",
+   "role": "portfolio",
+   "description": "Cinq maisons, cinq lumières : photos de projets qui ondulent en WebGL, balayées par l'ombre d'un débord de toit et inclinées légèrement selon la vitesse de défilement",
+   "animations": [
+    "webgl-shader",
+    "reactif-vitesse",
+    "parallaxe",
+    "révélation-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "ombre-de-debord-de-toit-qui-passe"
+   ]
+  },
+  "chiffres": {
+   "titre": "Le bâtiment pèse lourd",
+   "role": "chiffres",
+   "description": "Le bâtiment pèse lourd : trois chiffres sourcés dont la graisse s'affermit au défilement (police variable, boîte de largeur fixe)",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "Quimper et la côte du Sud Finistère",
+   "role": "carte",
+   "description": "Carte schématique du Sud Finistère : la côte se trace, les communes des réalisations s'allument, survol ou toucher pour voir leurs projets",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Noms des communes qui se chevauchaient : n'afficher que l'agence et la commune active."
+   ]
+  },
+  "temoignage": {
+   "titre": "",
+   "role": "témoignages",
+   "description": "Paroles de client : citation de Marion (Penmarc'h) en grand, guillemet ocre en guise de visuel, texte complet à fournir",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Le premier rendez-vous est gratuit",
+   "role": "appel",
+   "description": "Le premier rendez-vous est gratuit : sans engagement, apporter plans, photos, budget et délais ; demande de rendez-vous et appel, titre à ombre portée",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Le cadran ne trouve pas cette page",
+   "role": "page-404",
+   "description": "Le cadran ne trouve pas cette page : cadran solaire en image, disque rond d'ouverture, le soleil continue sa course, retour à l'accueil",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-debut": {
+   "titre": "Une agence à taille humaine",
+   "role": "ouverture",
+   "description": "Texture chaux-chanvre, cartouche de plan qui se trace et s'écrit à l'ouverture, tampon rond de l'agence",
+   "animations": [
+    "trace-svg",
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cartouche-de-plan-qui-s-ecrit"
+   ]
+  },
+  "atelier-parcours": {
+   "titre": "Une architecture locale, consciente et durable",
+   "role": "étapes",
+   "description": "Parcours de 2008 à 2016 en frise tracée au défilement (HMONP, installation à Quimper, formation paille), réseaux de l'agence",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-equipe": {
+   "titre": "Quatre métiers autour d’un projet",
+   "role": "équipe",
+   "description": "Quatre métiers autour d'un projet : l'architecte fondatrice et ses partenaires, monogrammes à la place des portraits, titre à ombre portée",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-demarche": {
+   "titre": "Le meuble à plans de la mission",
+   "role": "méthode",
+   "description": "Le meuble à plans de la mission : les tiroirs sortent un à un du meuble au défilement et s'ouvrent au clic sur chaque étape de la mission, avec son image",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "meuble-a-plans-a-tiroirs"
+   ]
+  },
+  "atelier-faq": {
+   "titre": "Avant de nous appeler",
+   "role": "faq",
+   "description": "Avant de nous appeler : sept questions fréquentes en accordéon natif, photo en parallaxe",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-fin": {
+   "titre": "Rencontrons-nous",
+   "role": "appel",
+   "description": "Rencontrons-nous : appel court vers le premier rendez-vous et le téléphone",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre projet",
+   "role": "ouverture",
+   "description": "Le numéro de téléphone en très grand, écrit chiffre après chiffre, soleil rond d'ouverture et bandeau de côte",
+   "animations": [
+    "révélation-texte",
+    "parallaxe",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Espaces du numéro qui disparaissaient dans un conteneur flex : les poser dans un span de largeur fixe."
+   ]
+  },
+  "contact-rendez-vous": {
+   "titre": "Préparons-le ensemble",
+   "role": "contact",
+   "description": "Premier rendez-vous simulé en cinq étapes (votre projet, où, vos repères, vos coordonnées, récapitulatif), récapitulatif tamponné « Reçu », type de projet prérempli par ?projet=",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "Au Prieuré, à Quimper",
+   "role": "carte",
+   "description": "Au Prieuré, à Quimper : plan d'accès schématique qui se trace jusqu'à l'agence, adresse et repères",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-debut": {
+   "titre": "40 % des émissions de gaz à effet de serre viennent du bâtiment",
+   "role": "ouverture",
+   "description": "« 40 % » géant allumé par un rayon de soleil rasant, soleil rond d'ouverture, phrase sur les émissions du bâtiment",
+   "animations": [
+    "révélation-texte",
+    "masque",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "chiffre-allume-par-un-rayon-rasant"
+   ]
+  },
+  "convictions-pourquoi": {
+   "titre": "Les chiffres qui ont décidé de notre manière de faire",
+   "role": "chiffres",
+   "description": "Les chiffres qui ont décidé de notre manière de faire : quatre chiffres en barres qui se remplissent au défilement, sources citées",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-mots-geants": {
+   "titre": "",
+   "role": "decor",
+   "description": "Bandeau de mots géants sur fond sombre (Bioclimatique, Sain, Sobre…) qui filent en sens opposés selon la vitesse",
+   "animations": [
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-principes": {
+   "titre": "Habitat bioclimatique",
+   "role": "manifeste",
+   "description": "Habitat bioclimatique : principe 01, orientation et stratégies passives, illustration qui ondule en WebGL",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-habitat-sain": {
+   "titre": "Habitat sain",
+   "role": "outil-interactif",
+   "description": "Habitat sain : mur en coupe épinglé qui se décompose couche par couche (enduit chaux, paille, ossature bois…), étiquette de chaque matière",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Vérifier qu'il tient sur un écran bas (1366×768) : réduire l'épaisseur des couches plutôt que de laisser déborder."
+   ],
+   "particularites": [
+    "mur-en-coupe-qui-se-decompose"
+   ]
+  },
+  "convictions-chantier-propre": {
+   "titre": "Chantier propre",
+   "role": "manifeste",
+   "description": "Chantier propre : principe 03 (tri, nettoyage, réemploi de la terre, eaux traitées, voisins ménagés), image qui zoome au défilement",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-sobre": {
+   "titre": "Quatre pistes pour aller plus loin",
+   "role": "services",
+   "description": "Vers plus sobre : quatre pistes (rénover avant de construire, biosourcé et géosourcé, réemploi, Passivhaus) qui arrivent en cascade",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "convictions-fin": {
+   "titre": "Un projet sobre commence par une conversation",
+   "role": "appel",
+   "description": "Un projet sobre commence par une conversation : appel court vers le rendez-vous",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-debut": {
+   "titre": "Des lieux qui suivent le soleil",
+   "role": "ouverture",
+   "description": "Titre géant et cadran solaire qu'on tourne à la main, au clavier ou au doigt pour filtrer les projets (Tous, Neuf, Rénovation, Professionnel), bandeau de photos",
+   "animations": [
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cadran-solaire-qui-filtre"
+   ]
+  },
+  "realisations-tour": {
+   "titre": "Faites tourner les projets",
+   "role": "galerie",
+   "description": "Carrousel 3D courbe de douze projets : il tourne au défilement, à la main avec élan et aux flèches ; un clic ouvre la visionneuse du projet",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les cartes vues de dos restaient cliquables et trop petites : les cacher quand elles tournent le dos."
+   ],
+   "particularites": [
+    "carrousel-3d-courbe"
+   ]
+  },
+  "realisations-liste": {
+   "titre": "Tous les projets",
+   "role": "portfolio",
+   "description": "Les 23 projets en grille filtrable, filtre repris dans l'adresse (?famille=), cartes qui mènent à la visionneuse",
+   "animations": [
+    "filtre-anime",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-visionneuse": {
+   "titre": "",
+   "role": "galerie",
+   "description": "Visionneuse d'un projet en dialog natif : photos, commune, famille, lien propre #projet-…, Échap et retour du focus",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Une image sans src au départ fait échouer l'audit : partir d'une vraie image."
+   ],
+   "sans_capture": true
+  },
+  "realisations-fin": {
+   "titre": "Votre projet sera le prochain",
+   "role": "appel",
+   "description": "Votre projet sera le prochain : appel court vers le rendez-vous",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
