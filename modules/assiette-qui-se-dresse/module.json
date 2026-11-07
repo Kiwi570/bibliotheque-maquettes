@@ -1,0 +1,66 @@
+{
+ "nom": "assiette-qui-se-dresse",
+ "titre": "Plat vu de dessus qui se dresse au défilement : purée tracée à la cuillère, éléments posés un à un, herbes et fleur de sel en pluie, pendant que la recette s'allume à côté",
+ "role": "étapes",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "provenance": "à part",
+ "origine": [],
+ "inspirations": [
+  "objet-3d-qui-se-construit",
+  "jardins-hacienda-maquette/la-carte-la-carte"
+ ],
+ "convient_a": [
+  "restauration",
+  "commerce",
+  "artisanat",
+  "hébergement",
+  "formation"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "sombre",
+  "clair",
+  "artisanal",
+  "luxueux",
+  "doux"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 2.4",
+  "fin": "progression à laquelle le plat est dressé (la suite de l'épinglage le laisse voir), .96",
+  "largeurMin": "largeur à partir de laquelle la section s'épingle, 900",
+  "hauteurMin": "hauteur à partir de laquelle la section s'épingle, 600"
+ },
+ "images": [
+  {
+   "role": "élément du plat vu de dessus, détouré (WebP ou PNG transparent) : purée, pièce principale, garniture, sauce, herbes",
+   "selecteur": ".assiette__element > img",
+   "nombre": "1 par élément (4 à 8), plus éventuellement l'assiette vide en fond à la place de .assiette__plat",
+   "ratio": "1:1, même cadrage pour tous : chaque élément à sa place exacte sur l'assiette (88 % du cadre, centrée)",
+   "largeur": 1200,
+   "zone_calme": "aucune (la recette est à côté de l'assiette, jamais dessus)"
+  }
+ ],
+ "poids_ko": 11.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

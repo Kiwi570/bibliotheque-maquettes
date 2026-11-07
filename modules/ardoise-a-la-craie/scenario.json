@@ -1,0 +1,12 @@
+{
+ "etapes": [
+  {"defiler": ".ardoise"},
+  {"attendre": 1500},
+  {"cliquer": "[data-demo-soir]"},
+  {"attendre": 6000},
+  {"verifier": "[data-demo-soir][aria-pressed=\"true\"]"}
+ ],
+ "pause": 300,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": ".ardoise-section__texte h2"} ], "apres": 6200 }
+}

@@ -127,7 +127,7 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   const t = texteOk([m.titre, m.role, ...m.animations, notes].join(' '));
   if (t === null) continue;
   res.push({ type: 'module', id: m.nom, score: Math.round((10 + p * 0.9 + t) * 10) / 10, role: m.role, titre: m.titre, animations: m.animations, familles: dm.familles, impact: dm.impact, pourquoi,
-    dossier: `modules/${m.nom}/`, capture: `modules/${m.nom}/apercu.jpg`, origine: m.origine, tests: Object.values(m.tests || {}).every((v) => (typeof v === 'number' ? v < 0.1 : /^(ok|n\/a|0 erreur)$/.test(v))) ? 'ok' : 'à revoir' });
+    dossier: `modules/${m.nom}/`, capture: `modules/${m.nom}/apercu.jpg`, origine: m.origine, provenance: m.provenance || 'projet', inspirations: m.inspirations || [], tests: Object.values(m.tests || {}).every((v) => (typeof v === 'number' ? v < 0.1 : /^(ok|n\/a|0 erreur)$/.test(v))) ? 'ok' : 'à revoir' });
 }
 res.sort((a, b) => b.score - a.score || (a.type === 'module' ? -1 : 1));
 const out = res.slice(0, max);
@@ -138,6 +138,6 @@ console.log(`${res.length} résultat${res.length > 1 ? 's' : ''}${res.length > m
 for (const r of out) {
   const effets = [r.impact, ...(r.familles || [])].filter(Boolean).join(', ');
   const pq = r.pourquoi?.length ? `  ← ${r.pourquoi.join(', ')}` : '';
-  if (r.type === 'module') console.log(`MODULE  ${r.id}  · ${r.role} · ${effets}${pq}\n        ${r.titre}\n        ${r.dossier}  ·  origine ${r.origine} · tests ${r.tests}\n        capture ${r.capture}\n`);
+  if (r.type === 'module') console.log(`MODULE  ${r.id}  · ${r.role} · ${effets}${pq}\n        ${r.titre}\n        ${r.dossier}  ·  ${r.provenance === 'à part' ? `créé à part, pas encore servi (inspirations ${r.inspirations.join(', ') || '—'})` : `origine ${r.origine}`} · tests ${r.tests}\n        capture ${r.capture}\n`);
   else console.log(`${r.note}/5     ${r.id}  · ${r.role} · ${effets}${r.module ? ' · module ' + r.module : ''}${pq}\n        ${r.titre}  (${r.metier}, ${r.activite.join(', ')})\n        ${r.fiche}\n        capture ${r.capture || '—'}${r.video ? '  ·  vidéo ' + r.video : ''}\n        ${r.en_ligne}\n`);
 }

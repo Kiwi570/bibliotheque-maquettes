@@ -27,7 +27,7 @@ function preparer(ix) {
     const m = col('modules', l);
     return { type: 'module', id: m.nom, titre: m.titre, role: m.role, animations: m.animations, interactions: m.interactions || [], activite: m.convient_a || [],
       ambiance: m.ambiances || [], concept: [], modules: [m.nom], note: 0, dependances: m.dependances || [], besoin: [], luminosite: [], famille: m.familles || [], impact: m.impact ? [m.impact] : [], metier: '',
-      capture: `/modules/${m.nom}/apercu.jpg`, video: `/modules/${m.nom}/apercu.mp4`, chemin: `modules/${m.nom}/` };
+      capture: `/modules/${m.nom}/apercu.jpg`, video: `/modules/${m.nom}/apercu.mp4`, chemin: `modules/${m.nom}/`, aPart: m.provenance === 'à part' };
   });
   return { ix, maquettes, sections, modules };
 }
@@ -84,7 +84,7 @@ function carte(it) {
     <div class="carte__actions">${it.enLigne ? `<a class="bouton bouton--ligne" href="${it.enLigne}" target="_blank" rel="noopener">Voir en ligne<span class="sr"> : ${echap(it.titre)}</span></a>` : ''}
     <button type="button" class="bouton" data-copier="${it.chemin}">Copier le chemin<span class="sr"> de la fiche ${echap(it.titre)}</span></button></div></div></article>`;
   return `<article class="carte">${media}<div class="carte__corps">
-    <h2>${echap(it.id)}</h2><p class="carte__meta">${echap(it.titre)}</p><p class="carte__meta"><b>${echap(it.role)}</b> · ${echap(it.dependances.filter(d => d !== 'aucune').join(', ') || 'sans dépendance')}</p>
+    <h2>${echap(it.id)}</h2><p class="carte__meta">${echap(it.titre)}</p><p class="carte__meta"><b>${echap(it.role)}</b> · ${echap(it.dependances.filter(d => d !== 'aucune').join(', ') || 'sans dépendance')}${it.aPart ? ' · <em>créé à part, pas encore servi</em>' : ''}</p>
     <ul class="etiquettes" aria-label="Mécaniques">${it.animations.map(a => `<li>${echap(a)}</li>`).join('')}${it.interactions.map(a => `<li>${echap(a)}</li>`).join('')}</ul>
     <div class="carte__actions"><button type="button" class="bouton" data-demo="${it.id}">Démonstration<span class="sr"> de ${echap(it.id)}</span></button>
     <a class="bouton bouton--ligne" href="https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/modules/${it.id}/NOTES.md" target="_blank" rel="noopener">Notes<span class="sr"> de ${echap(it.id)}</span></a>

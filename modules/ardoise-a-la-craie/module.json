@@ -1,0 +1,63 @@
+{
+ "nom": "ardoise-a-la-craie",
+ "titre": "Ardoise des suggestions du jour qui s'écrit à la craie à l'écran : chiffon qui efface, lignes écrites une à une, texte du jour modifiable sans toucher la page",
+ "role": "produits",
+ "animations": [
+  "trace-svg",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "jardins-hacienda-maquette/la-carte-ardoise"
+ ],
+ "convient_a": [
+  "restauration",
+  "commerce",
+  "artisanat",
+  "hébergement",
+  "tourisme"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "artisanal",
+  "brut",
+  "sombre",
+  "nocturne",
+  "clair"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "source": "adresse d'un JSON du jour (date, titre, lignes, mot), sinon data-source de .ardoise",
+  "vitesse": "vitesse d'écriture, 1 (2 : deux fois plus vite)",
+  "debut": "moment où l'ardoise s'écrit (ScrollTrigger), top 78%",
+  "chiffon": "le chiffon passe avant d'écrire, true"
+ },
+ "images": [
+  {
+   "role": "photo d'une ardoise vide, facultative (sinon l'ardoise est dessinée en CSS)",
+   "selecteur": ".ardoise__fond img",
+   "nombre": "0 ou 1",
+   "ratio": "16:10 (4:4,4 sous 600 px), recadrée en cover",
+   "largeur": 1600,
+   "zone_calme": "toute la surface porte le texte : ardoise vierge et unie, cadre visible sur les bords, aucune écriture ni objet devant"
+  }
+ ],
+ "poids_ko": 16.4,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

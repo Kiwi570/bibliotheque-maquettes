@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plat fumant · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px; }
+  .demo-ouverture { background: var(--couleur-secondaire); color: var(--couleur-fond); padding-block: clamp(28px, 5vh, 64px); }
+  .demo-ouverture__grille { display: grid; gap: clamp(24px, 4vw, 64px); align-items: center; }
+  .demo-ouverture__texte { display: grid; gap: 1.1rem; align-content: center; }
+  .demo-ouverture .socle-surtitre { color: color-mix(in oklab, var(--couleur-accent) 55%, var(--couleur-fond)); }
+  .demo-ouverture h1 { font-size: clamp(2.3rem, 1.4rem + 3.6vw, 4.6rem); font-weight: 500; line-height: 1; max-width: 13ch; }
+  .demo-ouverture p:not(.socle-surtitre) { color: color-mix(in oklab, var(--couleur-fond) 80%, var(--couleur-secondaire)); max-width: 44ch; font-size: max(16px, 1.05rem); }
+  .demo-boutons { display: flex; flex-wrap: wrap; gap: .7rem; padding-top: .4rem; }
+  .demo-ouverture .socle-bouton:not(.socle-bouton--plein) { color: var(--couleur-fond); }
+  .demo-ouverture__photo { width: min(100%, 560px); justify-self: center; }
+  @media (min-width: 860px) {
+    .demo-ouverture__grille { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: calc(var(--ecran-h) - var(--entete-h) - 2 * clamp(28px, 5vh, 64px)); }
+    .demo-ouverture__photo { width: min(100%, calc((var(--ecran-h) - var(--entete-h) - 2 * clamp(28px, 5vh, 64px)) * .8)); justify-self: end; }
+  }
+  .demo-comptoir { display: grid; gap: clamp(20px, 4vw, 56px); align-items: center; padding-block: clamp(56px, 10vh, 120px); }
+  .demo-comptoir > div { display: grid; gap: .9rem; }
+  .demo-comptoir h2, .demo-bloc h2 { font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3rem); font-weight: 500; }
+  .demo-comptoir p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 46ch; }
+  @media (min-width: 860px) { .demo-comptoir { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); } }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-ouverture" aria-labelledby="demo-titre">
+    <div class="demo-ouverture__grille socle-cadre">
+      <div class="demo-ouverture__texte">
+        <p class="socle-surtitre">Cuisine de saison</p>
+        <h1 id="demo-titre">Servi fumant, cuisiné le jour même</h1>
+        <p>Velouté de courge, crème crue et graines torréfiées. Passez la souris ou le doigt sur l'assiette : la vapeur s'écarte, puis revient.</p>
+        <div class="demo-boutons"><a class="socle-bouton socle-bouton--plein" href="#comptoir">Réserver une table</a><a class="socle-bouton" href="#comptoir">Voir la carte</a></div>
+      </div>
+      <figure class="fumant demo-ouverture__photo" data-module="plat-fumant" data-vapeur=".54 .63 .5" style="--fumant-ratio: 4 / 5">
+        <img src="demo-veloute.jpg" alt="Velouté de courge fumant dans un bol en grès, spirale de crème et graines" width="1200" height="1500" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="demo-comptoir socle-cadre" id="comptoir" aria-labelledby="comptoir-titre">
+    <figure class="fumant" data-module="plat-fumant" data-vapeur=".5 .6 .3" style="--fumant-ratio: 4 / 3">
+      <img src="demo-cafe.jpg" alt="Café crème fumant sur sa soucoupe" width="1200" height="900" loading="lazy">
+      <figcaption class="fumant__legende">Au comptoir dès 8 h</figcaption>
+    </figure>
+    <div>
+      <p class="socle-surtitre">Au comptoir</p>
+      <h2 id="comptoir-titre">Le café crème de dix heures</h2>
+      <p>Même module, autre photo : une source plus étroite, posée au centre de la tasse. La vapeur ne tourne que lorsque la photo est à l'écran.</p>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son cours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="plat-fumant"]')) init(el);
+</script>
+</body>
+</html>

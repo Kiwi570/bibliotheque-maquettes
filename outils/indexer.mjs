@@ -27,16 +27,16 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   const m = lireJson(f);
   const notes = fs.existsSync(path.join(RACINE, 'modules', d, 'NOTES.md')) ? fs.readFileSync(path.join(RACINE, 'modules', d, 'NOTES.md'), 'utf8') : '';
   const dm = deduireModule(m, notes);
-  modules.push([m.nom, m.role, m.animations, m.convient_a, m.titre, (m.interactions || []).filter(a => a !== 'aucune'), m.ambiances, m.dependances, dm.impact, dm.familles]);
+  modules.push([m.nom, m.role, m.animations, m.convient_a, m.titre, (m.interactions || []).filter(a => a !== 'aucune'), m.ambiances, m.dependances, dm.impact, dm.familles, m.provenance || null]);
 }
 toutes.sort((a, b) => b[3] - a[3] || a[0].localeCompare(b[0]));
 // Index de Claude : notées 5, ou notées 4 avec un module (colonne 4 non vide).
 const sections = toutes.filter(l => l[3] === 5 || l[4]);
 const index = {
   version: new Date().toISOString().slice(0, 10),
-  aide: 'Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/. Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)',
+  aide: 'Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/, provenance projet (tiré d une maquette validée) ou à part (créé hors projet, pas encore servi). Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)',
   totaux: { maquettes: maquettes.length, sections_indexees: sections.length, sections_notees_4_ou_5: toutes.length, sections_notees_3_ou_moins: sousSeuil, modules: modules.length },
-  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille', 'metier', 'luminosite', 'ton', 'univers', 'besoins'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page', 'impact', 'familles'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances', 'impact', 'familles'] },
+  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille', 'metier', 'luminosite', 'ton', 'univers', 'besoins'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page', 'impact', 'familles'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances', 'impact', 'familles', 'provenance'] },
   maquettes, sections, modules,
 };
 // Une ligne par entrée : lisible d'un coup d'œil et compact.

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ardoise à la craie · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-caveat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  @font-face { font-family: 'Caveat'; src: url('demo-caveat.woff2') format('woff2'); font-weight: 600; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px;
+    --ardoise-police: 'Caveat', 'Bradley Hand', cursive; }
+  /* Section sombre : la page inverse ses couleurs localement (dérivées comprises). */
+  .demo-sombre { --couleur-fond: #1b1310; --couleur-texte: #f4ece1;
+    --couleur-texte-doux: color-mix(in oklab, var(--couleur-texte) 72%, var(--couleur-fond));
+    --couleur-ligne: color-mix(in oklab, var(--couleur-texte) 18%, var(--couleur-fond));
+    --couleur-surface: color-mix(in oklab, var(--couleur-texte) 8%, var(--couleur-fond));
+    --couleur-sur-accent: #f4ece1; background: var(--couleur-fond); color: var(--couleur-texte); }
+  .demo-sombre .socle-surtitre { color: color-mix(in oklab, var(--couleur-accent) 45%, var(--couleur-texte)); }
+  .ardoise-section__texte h2 { font-weight: 500; }
+  .demo-actions { display: flex; flex-wrap: wrap; gap: .7rem; padding-top: .3rem; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le chiffon efface l'ardoise, puis les suggestions du jour s'écrivent à la craie, ligne après ligne.</p>
+  </section>
+
+  <section class="ardoise-section demo-sombre" data-module="ardoise-a-la-craie" aria-labelledby="ardoise-titre">
+    <div class="ardoise-section__grille socle-cadre">
+      <div class="ardoise">
+        <div class="ardoise__surface">
+          <p class="ardoise__date" data-ardoise-date><span>Aujourd'hui</span></p>
+          <h3 class="ardoise__titre"><span>Suggestions du jour</span></h3>
+          <svg class="ardoise__trait" viewBox="0 0 400 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 90 6, 200 22, 396 10" pathLength="1" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          <ul class="ardoise__liste">
+            <li><span class="ardoise__plat">Velouté de potimarron, noisettes torréfiées</span><span class="ardoise__prix">9 €</span></li>
+            <li><span class="ardoise__plat">Joue de bœuf confite au vin rouge, purée maison</span><span class="ardoise__prix">24 €</span></li>
+            <li><span class="ardoise__plat">Truite de la vallée, beurre blanc aux herbes</span><span class="ardoise__prix">22 €</span></li>
+            <li><span class="ardoise__plat">Tarte fine aux pommes, caramel au beurre salé</span><span class="ardoise__prix">9 €</span></li>
+          </ul>
+          <p class="ardoise__mot"><span>Selon l'arrivage, jusqu'à épuisement</span></p>
+        </div>
+      </div>
+      <div class="ardoise-section__texte">
+        <p class="socle-surtitre">Selon le marché</p>
+        <h2 id="ardoise-titre">Ce que le chef a écrit ce matin</h2>
+        <p>Des suggestions qui changent avec l'arrivage et la saison, à demander en salle. Le texte de l'ardoise se change dans un petit fichier, sans toucher la page.</p>
+        <div class="demo-actions">
+          <a class="socle-bouton socle-bouton--plein" href="#suite">Réserver une table</a>
+          <button type="button" class="socle-bouton" data-demo-soir aria-pressed="false">Voir l'ardoise du soir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son cours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  /* Démonstration de ecrire() : deux ardoises (midi et soir). Sur un site, le texte du jour vient plutôt de data-source. */
+  const MIDI = { titre: 'Suggestions du jour', lignes: [ { plat: 'Velouté de potimarron, noisettes torréfiées', prix: '9 €' }, { plat: 'Joue de bœuf confite au vin rouge, purée maison', prix: '24 €' }, { plat: 'Truite de la vallée, beurre blanc aux herbes', prix: '22 €' }, { plat: 'Tarte fine aux pommes, caramel au beurre salé', prix: '9 €' } ], mot: "Selon l'arrivage, jusqu'à épuisement" };
+  const SOIR = { titre: 'Ce soir, au coin du feu', lignes: [ { plat: 'Œuf parfait, crème de cèpes', prix: '12 €' }, { plat: 'Côte de cochon grillée à la braise, jus au thym', prix: '26 €' }, { plat: 'Fromages affinés de la région', prix: '11 €' }, { plat: 'Moelleux au chocolat, glace vanille', prix: '10 €' } ], mot: 'Service jusqu’à 22 h' };
+  for (const el of document.querySelectorAll('[data-module="ardoise-a-la-craie"]')) {
+    const api = await init(el);
+    const b = el.querySelector('[data-demo-soir]');
+    b?.addEventListener('click', () => {
+      const soir = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', String(soir)); b.textContent = soir ? "Voir l'ardoise du midi" : "Voir l'ardoise du soir";
+      api.ecrire(soir ? SOIR : MIDI);
+    });
+  }
+</script>
+</body>
+</html>

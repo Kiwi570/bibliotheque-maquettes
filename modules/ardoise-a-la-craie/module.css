@@ -1,0 +1,63 @@
+/* Ardoise à la craie — identité uniquement par les variables du socle.
+   L'ardoise est dessinée en CSS (cadre en bois, ardoise, traces de craie effacée) ; une photo d'ardoise vide peut la remplacer
+   (.ardoise__fond). La craie : police manuscrite au choix (--ardoise-police), grain posé par un filtre SVG que module.js ajoute.
+   Écriture : chaque ligne (.ardoise__date > span, .ardoise__titre > span, .ardoise__liste > li, .ardoise__mot > span)
+   est révélée de gauche à droite par un masque piloté par --m, seulement quand module.js a pris la main (.est-actif). */
+.ardoise-section { padding-block: clamp(64px, 10vw, 140px); }
+.ardoise-section__grille { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.ardoise-section__texte { display: grid; gap: 1rem; align-content: center; }
+.ardoise-section__texte h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.6rem); line-height: 1.02; }
+.ardoise-section__texte p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 42ch; }
+@media (min-width: 860px) { .ardoise-section__grille { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); } }
+
+.ardoise { --ardoise-fond: color-mix(in oklab, var(--couleur-secondaire) 50%, darkslategray);
+  --ardoise-craie: color-mix(in oklab, white 86%, var(--ardoise-fond));
+  --ardoise-bois: color-mix(in oklab, var(--couleur-accent) 42%, var(--couleur-secondaire));
+  --ardoise-cadre: clamp(10px, 2.2cqi, 20px);
+  position: relative; container-type: inline-size; padding: var(--ardoise-cadre); border-radius: var(--rayon);
+  background:
+    repeating-linear-gradient(90deg, color-mix(in oklab, black 12%, transparent) 0 2px, transparent 2px 9px, color-mix(in oklab, white 6%, transparent) 9px 10px, transparent 10px 17px),
+    linear-gradient(160deg, color-mix(in oklab, var(--ardoise-bois) 80%, white), var(--ardoise-bois) 40%, color-mix(in oklab, var(--ardoise-bois) 70%, black));
+  box-shadow: 0 2px 0 color-mix(in oklab, white 14%, transparent) inset, 0 24px 50px -18px color-mix(in oklab, black 60%, transparent), 0 6px 14px -6px color-mix(in oklab, black 40%, transparent); }
+.ardoise__surface { position: relative; isolation: isolate; overflow: hidden; min-height: 100%; aspect-ratio: 16 / 10;
+  display: flex; flex-direction: column; justify-content: center; gap: .15em; padding: clamp(18px, 8cqi, 72px) clamp(20px, 10cqi, 92px);
+  border-radius: calc(var(--rayon) * .5); color: var(--ardoise-craie); font-family: var(--ardoise-police, var(--police-titres));
+  background:
+    var(--ardoise-grain, none),
+    radial-gradient(60% 40% at 24% 30%, color-mix(in oklab, var(--ardoise-craie) 9%, transparent), transparent 70%),
+    radial-gradient(50% 35% at 70% 64%, color-mix(in oklab, var(--ardoise-craie) 7%, transparent), transparent 70%),
+    radial-gradient(90% 18% at 50% 88%, color-mix(in oklab, var(--ardoise-craie) 8%, transparent), transparent 70%),
+    radial-gradient(120% 90% at 30% 20%, color-mix(in oklab, var(--ardoise-fond) 88%, white), var(--ardoise-fond) 55%, color-mix(in oklab, var(--ardoise-fond) 75%, black));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, black 35%, transparent), inset 0 8px 24px color-mix(in oklab, black 30%, transparent); }
+.ardoise__fond { position: absolute; inset: 0; z-index: -1; }
+.ardoise__fond img { width: 100%; height: 100%; object-fit: cover; }
+.ardoise__fond ~ * { text-shadow: 0 0 1px color-mix(in oklab, var(--ardoise-craie) 50%, transparent); }
+
+.ardoise__date { margin: 0; font-size: clamp(16px, 3.6cqi, 1.6rem); color: color-mix(in oklab, var(--ardoise-craie) 80%, var(--ardoise-fond)); }
+.ardoise__titre { margin: 0; font-family: inherit; font-weight: 600; font-size: clamp(1.6rem, 7.6cqi, 3.6rem); line-height: 1; letter-spacing: 0; }
+.ardoise__trait { display: block; width: 62%; height: clamp(10px, 2.4cqi, 18px); margin: .15em 0 .45em; color: var(--ardoise-craie); opacity: .85; overflow: visible; }
+.ardoise__trait path { stroke-dasharray: 1 1.2; stroke-dashoffset: var(--trait, 0); }
+.ardoise__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: .28em; font-size: clamp(18px, 4.1cqi, 2rem); line-height: 1.12; font-weight: 600; }
+.ardoise__liste li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .45em; align-items: baseline; }
+.ardoise__liste li::before { content: "~"; color: color-mix(in oklab, var(--ardoise-craie) 70%, var(--ardoise-fond)); }
+.ardoise__prix { white-space: nowrap; padding-left: .6em; }
+.ardoise__mot { margin: .5em 0 0; font-size: clamp(16px, 3.4cqi, 1.5rem); color: color-mix(in oklab, var(--ardoise-craie) 76%, var(--ardoise-fond)); }
+.ardoise :is(.ardoise__date, .ardoise__titre, .ardoise__mot) > span { display: inline-block; }
+/* Grain de craie (filtre SVG ajouté par module.js) et léger halo de poussière. */
+.ardoise.est-craie :is(.ardoise__date, .ardoise__titre, .ardoise__liste, .ardoise__mot) { filter: url(#ardoise-craie); }
+.ardoise :is(.ardoise__date, .ardoise__titre, .ardoise__liste, .ardoise__mot) { text-shadow: 0 0 1px color-mix(in oklab, var(--ardoise-craie) 55%, transparent), 0 0 7px color-mix(in oklab, var(--ardoise-craie) 14%, transparent); }
+
+/* Écriture : masque de gauche à droite, piloté par --m (de -10 % à 112 %). */
+.ardoise.est-actif :is(.ardoise__date > span, .ardoise__titre > span, .ardoise__liste > li, .ardoise__mot > span) {
+  -webkit-mask-image: linear-gradient(90deg, black calc(var(--m, 112%) - 8%), transparent var(--m, 112%));
+  mask-image: linear-gradient(90deg, black calc(var(--m, 112%) - 8%), transparent var(--m, 112%)); }
+.ardoise__chiffon { position: absolute; left: 0; top: 0; z-index: 2; width: 30%; aspect-ratio: 1.5; border-radius: 50%; pointer-events: none; opacity: 0;
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--ardoise-craie) 22%, transparent), color-mix(in oklab, var(--ardoise-craie) 8%, transparent) 60%, transparent); }
+.ardoise__baton { position: absolute; left: 0; top: 0; z-index: 3; width: clamp(22px, 5cqi, 38px); height: clamp(7px, 1.4cqi, 10px); border-radius: 3px; pointer-events: none; opacity: 0;
+  background: linear-gradient(180deg, color-mix(in oklab, white 96%, var(--ardoise-fond)), color-mix(in oklab, white 72%, var(--ardoise-fond)));
+  box-shadow: 2px 3px 4px color-mix(in oklab, black 45%, transparent); transition: opacity .3s; }
+.ardoise.est-ecrit .ardoise__baton { opacity: 1; }
+
+@media (max-width: 600px) { .ardoise__surface { aspect-ratio: 4 / 4.4; } }
+/* Mode calme, « réduire les animations » : tout est écrit, rien ne bouge (le module ne prend pas la main). */
+.calme .ardoise__chiffon, .calme .ardoise__baton { display: none; }

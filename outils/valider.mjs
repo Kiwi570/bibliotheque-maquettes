@@ -15,7 +15,8 @@ const poids = (f, max, ou) => { if (!fs.existsSync(path.join(RACINE, f))) { err.
 const fiche = f => { const s = fs.statSync(f).size; if (s > 10 * 1024) err.push(`${path.relative(RACINE, f)} : ${Math.round(s / 1024)} Ko (max 10)`); return lireJson(f); };
 
 const modules = new Set(liste(path.join(RACINE, 'modules')).filter(m => fs.existsSync(path.join(RACINE, 'modules', m, 'module.json'))));
-let nSec = 0;
+const depots = new Set(liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.json')).map(f => f.slice(0, -5)));
+let nSec = 0, nAPart = 0;
 for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.json'))) {
   const m = fiche(path.join(RACINE, 'maquettes', f)); const ou = 'maquettes/' + f;
   verifie(ou, 'activite', m.activite, 'activite', 1); verifie(ou, 'concept', m.concept, 'concept', 1); verifie(ou, 'ambiance', m.ambiance, 'ambiance', 1);
@@ -59,6 +60,25 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
 for (const m of modules) {
   const mj = fiche(path.join(RACINE, 'modules', m, 'module.json')); const ou = 'modules/' + m;
   if (mj.nom !== m) err.push(`${ou} : nom ≠ dossier`);
+  // Provenance : « projet » = tiré d'une ou plusieurs maquettes validées (citées dans origine, dépôt/section) ;
+  // « à part » = créé hors projet, jamais servi : origine vide (relier-modules.mjs n'y relie aucune section),
+  // sources d'inspiration facultatives dans inspirations (sections dépôt/id ou modules), NOTES.md qui commence par « **Créé à part** ».
+  const origines = [].concat(mj.origine ?? []);
+  if (!['projet', 'à part'].includes(mj.provenance)) err.push(`${ou} : provenance « ${mj.provenance ?? ''} » (projet : tiré d'une maquette validée, citée dans origine ; à part : créé hors projet)`);
+  if (mj.provenance === 'projet') {
+    if (!origines.length) err.push(`${ou} : provenance projet sans origine (dépôt/section d'où le module est tiré)`);
+    for (const o of origines) { const d = String(o).split(/[\s/]/)[0]; if (!depots.has(d)) err.push(`${ou} : origine « ${o} » : maquette ${d} absente de maquettes/`); }
+  }
+  if (mj.provenance === 'à part') {
+    nAPart++;
+    if (origines.length) err.push(`${ou} : créé à part, origine doit rester vide (les sources d'inspiration vont dans inspirations)`);
+    const notes = fs.existsSync(path.join(RACINE, 'modules', m, 'NOTES.md')) ? fs.readFileSync(path.join(RACINE, 'modules', m, 'NOTES.md'), 'utf8') : '';
+    if (!/^\*\*Créé à part\*\*/m.test(notes)) err.push(`${ou} : NOTES.md doit dire « **Créé à part** » en tête de paragraphe`);
+  }
+  if (mj.inspirations !== undefined) {
+    if (!Array.isArray(mj.inspirations)) err.push(`${ou} : inspirations doit être une liste`);
+    else for (const x of mj.inspirations) if (!modules.has(x) && !(String(x).includes('/') && fs.existsSync(path.join(RACINE, 'sections', x + '.json')))) err.push(`${ou} : inspiration « ${x} » introuvable (section dépôt/id ou module)`);
+  }
   if (!TAXO.role.includes(mj.role)) err.push(`${ou} : rôle « ${mj.role} »`);
   verifie(ou, 'animations', mj.animations, 'animation', 1); verifie(ou, 'dependances', mj.dependances, 'dependance', 1);
   verifie(ou, 'convient_a', mj.convient_a, 'activite', 1); verifie(ou, 'ambiances', mj.ambiances, 'ambiance', 1);
@@ -101,7 +121,7 @@ if (fs.existsSync(path.join(RACINE, 'lecons.md'))) {
 }
 let medias = 0, octets = 0; for (const d of liste(path.join(RACINE, 'medias'))) for (const f of liste(path.join(RACINE, 'medias', d))) { medias++; octets += fs.statSync(path.join(RACINE, 'medias', d, f)).size; }
 if (fs.existsSync(path.join(RACINE, 'index.json'))) { const s = fs.statSync(path.join(RACINE, 'index.json')).size; if (s > 150 * 1024) err.push(`index.json : ${Math.round(s / 1024)} Ko (max 150)`); }
-console.log(`${liste(path.join(RACINE, 'maquettes')).length} maquettes, ${nSec} sections, ${modules.size} modules, ${medias} médias (${Math.round(octets / 1048576)} Mo)`);
+console.log(`${liste(path.join(RACINE, 'maquettes')).length} maquettes, ${nSec} sections, ${modules.size} modules (${nAPart} créés à part), ${medias} médias (${Math.round(octets / 1048576)} Mo)`);
 avert.forEach(a => console.log('  avertissement : ' + a));
 err.forEach(e => console.log('  ERREUR : ' + e));
 process.exit(err.length ? 1 : 0);

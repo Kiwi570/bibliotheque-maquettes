@@ -1,0 +1,15 @@
+/* Plat fumant — identité uniquement par les variables du socle.
+   La vapeur est un canvas posé sur la photo par module.js (.fumant__vapeur), éclairci en « screen » :
+   elle se voit sur les fonds sombres et s'efface d'elle-même sur les zones claires, comme une vraie vapeur. */
+.fumant { --fumant-couleur: color-mix(in oklab, white 88%, var(--couleur-accent));
+  position: relative; display: block; margin: 0; overflow: hidden; isolation: isolate; border-radius: var(--rayon);
+  aspect-ratio: var(--fumant-ratio, auto); background: var(--couleur-surface); touch-action: pan-y; }
+.fumant > img, .fumant > picture, .fumant > picture > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.fumant__vapeur { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: screen; opacity: 0; transition: opacity 1.4s ease; }
+.fumant.est-actif .fumant__vapeur { opacity: 1; }
+.fumant__legende { position: absolute; left: 12px; bottom: 12px; z-index: 1; margin: 0; padding: .35em .8em; border-radius: 999px;
+  background: color-mix(in oklab, var(--couleur-texte) 72%, transparent); color: var(--couleur-fond); font-size: max(12px, .8rem); }
+
+/* Mode calme, « réduire les animations » : la photo seule. */
+@media (prefers-reduced-motion: reduce) { .fumant__vapeur { display: none; } }
+.calme .fumant__vapeur { display: none; }
