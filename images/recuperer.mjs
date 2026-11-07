@@ -1,14 +1,19 @@
 // Récupère les images du site actuel d'un client, en version originale, nommées d'après leur contexte.
-// node images/recuperer.mjs <url-du-site> [--sortie recu/] [--pages 60] [--client nom] [--sans-zip] [--sans-finder]
+// node images/recuperer.mjs <url-du-site> [--sortie recu/] [--pages 60] [--client nom] [--largeur-max 2000] [--sans-zip] [--sans-finder]
 //
 // - Parcourt le site avec Playwright (menu d'abord, puis fiches et galeries ; 60 pages au plus), fait défiler chaque page.
 // - Relève img, picture, srcset, fonds CSS, affiches de vidéo, og:image, Wix (data-image-info), et les images chargées par le réseau.
 // - Remonte à l'original : Wix (coupé avant /v1/), WordPress (sans -300x200 ni -scaled), Squarespace (sans ?format=),
-//   Shopify (sans _1024x), et tout paramètre de taille de l'adresse.
+//   Shopify (sans _1024x), Cloudflare (Hostinger/Zyro et autres : sans /cdn-cgi/image/<options>/), et tout paramètre
+//   de taille de l'adresse. Sans cette remontée, on ne recevait que les vignettes, écartées comme trop petites
+//   (lydiacourtois : seule la boutique revenait).
 // - Écarte icônes, pictogrammes, SVG décoratifs, images de moins de 400 px, images répétées sur presque toutes les pages
 //   (sauf le logo), pixels de suivi, drapeaux, avatars et icônes de réseaux sociaux. Garde toutes les variantes du logo,
 //   avec un champ marque : principale, sous-marque ou partenaire.
-// - Écrit <sortie>/<nom>.<ext> et <sortie>/recuperation.json, puis ~/Downloads/<client>-images.zip, montré dans le Finder.
+// - Réduit les photos à 2000 px sur leur plus grand côté (--largeur-max, 0 pour garder l'original) : assez pour
+//   toutes les tailles du socle, et le zip reste envoyable (agence-ae : zip refusé, « Trop volumineux »).
+// - Écrit <sortie>/<nom>.<ext> et <sortie>/recuperation.json, puis le ou les zips de 20 Mo au plus
+//   (~/Downloads/<client>-images.zip, ou -1.zip, -2.zip… : voir zipper.mjs), montrés dans le Finder.
 // Relançable : les fichiers de la récupération précédente (et eux seuls) sont effacés au départ ; grok/, analyse.json restent.
 import fs from 'node:fs';
 import os from 'node:os';
@@ -28,6 +33,7 @@ const hote = h => h.replace(/^www\./, '');
 const CLIENT = typeof opts.client === 'string' ? opts.client : hote(depart.hostname).split('.')[0];
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36';
 const LARGEUR_MIN = 400;
+const LARGEUR_MAX = opts['largeur-max'] === undefined ? 2000 : +opts['largeur-max'];
 
 // 1. Repartir de zéro : seulement ce que la récupération précédente a écrit.
 fs.mkdirSync(SORTIE, { recursive: true });
@@ -67,6 +73,14 @@ function originaux(u) {
     c.push(`${x.origin}${p.replace(/-scaled(?=\.\w+$)/, '')}`, `${x.origin}${p}`);
   }
   if (/squarespace(-cdn)?\.com$/.test(x.hostname)) c.push(`${x.origin}${x.pathname}`);
+  // Cloudflare Images (Hostinger/Zyro et tout site derrière Cloudflare) : /cdn-cgi/image/<options>/<chemin>.
+  // L'original est <chemin> ; à défaut, la même image demandée en grand.
+  const cf = x.pathname.match(/^\/cdn-cgi\/image\/[^/]+\/(.+)$/);
+  if (cf) {
+    const reste = cf[1].replace(/^(https?:)\/(?!\/)/, '$1//');
+    c.push(/^https?:\/\//.test(reste) ? reste : `${x.origin}/${reste}`);
+    if (!/^https?:/.test(reste)) c.push(`${x.origin}/cdn-cgi/image/w=2400/${reste}`);
+  }
   if (/googleusercontent\.com$/.test(x.hostname) && /=[\w-]*$/.test(x.pathname)) c.push(`${x.origin}${x.pathname.replace(/=[\w-]*$/, '=s0')}`);   // Google Sites : =s0 donne l'original
   if (/cdn\.shopify\.com$/.test(x.hostname) || /\/cdn\/shop\//.test(x.pathname)) {
     c.push(`${x.origin}${x.pathname.replace(/_(\d+x\d*|\d*x\d+|pico|icon|thumb|small|compact|medium|large|grande|master)(_crop_\w+)?(@\dx)?(?=\.\w+$)/i, '')}`);
@@ -79,7 +93,7 @@ function originaux(u) {
   return [...new Set(c)];
 }
 const SUIVI = /(recaptcha|frog\.wix\.com|\/ptrk\/|panorama\?|\/collect\?|facebook\.com\/tr|google-analytics|googletagmanager|doubleclick|bat\.bing|px\.ads|linkedin\.com\/px|hotjar|analytics|pixel\.|\/pixel|ct\.pinterest|matomo|piwik|stats\.wp|gravatar\.com|\/tr\?)/i;
-const ICONE = /(icon|picto|sprite|favicon|arrow|fleche|chevron|bullet|puce|emoji|spinner|loader|loading|placeholder|blank|spacer|transparent\.(png|gif)|1x1|social|reseaux|whatsapp|facebook|instagram|linkedin|twitter|youtube|tiktok|pinterest|payment|paiement|visa|mastercard|paypal|stars?[-_.]|etoile|rating)/i;
+const ICONE = /(icon|picto|sprite|favicon|arrow|fleche|chevron|bullet|puce|emoji|spinner|loader|loading|placeholder|blank|spacer|transparent\.(png|gif)|1x1|social|reseaux|whatsapp|facebook|instagram|linkedin|twitter|youtube|tiktok|pinterest|payment|paiement|visa|mastercard|paypal|stars?[-_.]|etoiles?[-_.]\d|rating)/i;   // « etoile » seul écartait aussi « Ma Bonne Étoile »
 const DRAPEAU = /(\/flags?\/|\/drapeaux?\/|flag[-_.]|drapeau|\/lang(ue)?s?\/[a-z]{2}\.(png|svg|gif)|\b(fr|en|de|it|es|nl|gb|us)\.(png|svg|gif)$)/i;
 const RESEAUX = /(facebook|instagram|linkedin|twitter|x\.com|youtube|tiktok|pinterest|whatsapp|tripadvisor|google\.com\/maps|g\.page)/i;
 const ORIGINE_UTILE = n => n && !/^(img|dsc|dscn|dcim|pxl|photo|image|capture|screenshot|screen shot|untitled|sans titre|file|fichier|picture|pic)[-_ ]?\d*/i.test(n) && !/^[a-f0-9_~-]{12,}/i.test(n) && !/[A-Za-z0-9]{20,}|=[a-z]\d+$/.test(n) && /[a-z]{3}/i.test(n);   // ni hash, ni identifiant Google
@@ -161,7 +175,7 @@ async function parcourir() {
       await page.waitForLoadState('networkidle', { timeout: 5000 }).catch(() => {});
       const r = await page.evaluate(collecter);
       const reelle = normPage(page.url()) || url;
-      pages.push({ url: reelle, titre: r.titre, h1: r.h1, images: r.images });
+      pages.push({ url: reelle, titre: r.titre, h1: r.h1, images: r.images, menu: r.liens.filter(l => l.menu).map(l => normPage(l.href)).filter(Boolean) });
       const menu = r.liens.filter(l => l.menu), autres = r.liens.filter(l => !l.menu);
       for (const l of [...menu, ...autres]) {
         const n = normPage(l.href);
@@ -364,9 +378,22 @@ async function main() {
       drapeau = deviner(`${alt} ${legende} ${titre} ${fichierOrigine} ${section} ${page}`, chemins);
     }
     const fichier = `${nom}.${t.ext}`;
+    // Photo réduite à LARGEUR_MAX sur son plus grand côté (sips -Z), sans changer de format ; les dimensions
+    // d'origine restent dans recuperation.json (largeur_origine, hauteur_origine).
+    let origine = null;
+    if (LARGEUR_MAX && !t.svg && t.format !== 'gif' && Math.max(t.largeur, t.hauteur) > LARGEUR_MAX) {
+      try {
+        const img = sharp(t.data, { failOn: 'none' }).rotate().resize(LARGEUR_MAX, LARGEUR_MAX, { fit: 'inside', withoutEnlargement: true });
+        const data = await (t.ext === 'png' ? img.png({ compressionLevel: 9, palette: false }) : t.ext === 'webp' ? img.webp({ quality: 90 }) : img.jpeg({ quality: 90, mozjpeg: true })).toBuffer();
+        const m = await sharp(data).metadata();
+        origine = { largeur: t.largeur, hauteur: t.hauteur };
+        t.data = data; t.largeur = m.width; t.hauteur = m.height;
+      } catch (e) { console.log(`(réduction impossible pour ${fichier} : ${e.message})`); }
+    }
     fs.writeFileSync(path.join(SORTIE, fichier), t.data);
     const e = { fichier, nom, origine: t.url, page: r.page, pages: t.pages.size, emplacement: `${r.type}${r.zone !== 'contenu' ? ` (${r.zone})` : ''}`,
-      contexte: { alt, legende, titre, section, page, fichier_origine: fichierOrigine }, largeur: t.largeur, hauteur: t.hauteur, poids: t.data.length, format: t.format, transparence: t.alpha, drapeau,
+      contexte: { alt, legende, titre, section, page, fichier_origine: fichierOrigine }, largeur: t.largeur, hauteur: t.hauteur,
+      ...(origine ? { largeur_origine: origine.largeur, hauteur_origine: origine.hauteur } : {}), poids: t.data.length, format: t.format, transparence: t.alpha, drapeau,
       ...(t.logo ? { marque: t.marque } : {}) };
     resultat.push(e);
     console.log(`OK ${fichier} ${t.largeur}x${t.hauteur} ${ko(t.data.length)} ${drapeau}${t.logo ? ` (${t.marque})` : ''}`);
@@ -375,12 +402,18 @@ async function main() {
   const resume = ecartees.reduce((o, e) => { const k = e.raison.replace(/ .*/, '').replace(/^\d+$/, 'petite'); o[k] = (o[k] || 0) + 1; return o; }, {});
   ecrireJson(path.join(SORTIE, 'recuperation.json'), { site: depart.href, date: new Date().toISOString(), pages: pages.map(p => p.url), images: resultat, ecartees });
   console.log(`\n${resultat.length} images gardées sur ${pages.length} pages ; écartées : ${Object.entries(resume).map(([k, v]) => `${v} ${k}`).join(', ') || 'aucune'}`);
+  // Pages du menu jamais lues (site qui charge ses pages en JavaScript, lien sans adresse) : signalées, pour
+  // ne pas croire le site entier récupéré.
+  const lues = new Set(pages.map(p => p.url));
+  const menuNonLu = [...new Set(pages[0]?.menu || [])].filter(u => !lues.has(u));
+  if (menuNonLu.length) console.log(`A REGARDER : ${menuNonLu.length} page(s) du menu non lue(s) : ${menuNonLu.join(', ')}`);
+  const parPage = pages.map(p => [p.url, resultat.filter(e => e.page === p.url).length]);
+  const vides = parPage.filter(([, n]) => !n).length;
+  if (pages.length >= 3 && vides >= pages.length - 1) console.log(`A REGARDER : images trouvées sur une seule page sur ${pages.length} ; vérifier sur le site que les autres pages n'ont vraiment pas de photo.`);
   if (!opts['sans-zip']) {
-    const zip = path.join(os.homedir(), 'Downloads', `${CLIENT}-images.zip`);
-    fs.rmSync(zip, { force: true });
-    execFileSync('zip', ['-q', '-j', zip, path.join(SORTIE, 'recuperation.json'), ...resultat.map(e => path.join(SORTIE, e.fichier))]);
-    console.log(`Zip : ${zip} (${ko(fs.statSync(zip).size)}). C'est ce fichier qu'il faut envoyer dans la conversation.`);
-    if (!opts['sans-finder'] && process.platform === 'darwin') execFileSync('open', ['-R', zip]);
+    const { zipper } = await import('./zipper.mjs');
+    const zips = zipper(SORTIE, { client: CLIENT, sortie: path.join(os.homedir(), 'Downloads'), fichiers: ['recuperation.json', ...resultat.map(e => e.fichier)] });
+    if (!opts['sans-finder'] && process.platform === 'darwin') execFileSync('open', ['-R', zips[0]]);
   }
 }
 main().catch(e => { console.error(`ECHEC : ${e.stack || e.message}`); process.exit(1); });

@@ -30,6 +30,11 @@ Dans un environnement où le registre npm est refusé (403, nom introuvable), ne
 
 ## Ajouter une maquette (fin de projet)
 
+Avant de commencer (sur Nolanis, ces trois points ont été découverts en route, pour 20 min) :
+- le projet est un **clone Git de son dépôt GitHub**, à côté de la bibliothèque : `git clone https://github.com/Kiwi570/<dépôt>.git ~/Downloads/<dépôt>` (l'inventaire lit son dernier commit ; un dossier dézippé ne suffit pas) ;
+- la **fiche d'audit** (note sur 100, verdict, points forts, défauts) s'écrit avant les fiches : `node outils/fiche-audit.mjs <fiche.json>` (format en tête du script), d'après les captures et le rapport du script d'audit du projet ;
+- si Claude ne peut pas pousser sur GitHub depuis sa conversation, il commite dans sa copie et livre un **bundle** (`git bundle create bibliotheque-<projet>.bundle origin/main..HEAD`) avec un seul bloc Terminal, sans # ni apostrophe : `git pull`, `git pull <bundle> HEAD` (ou `git apply -3` d'un patch), puis `node outils/valider.mjs && git push`, pour ne rien pousser si la validation échoue.
+
 1. `node outils/ajouter.mjs <dépôt>` : pull, inventaire (captures 1440 et 390, vidéos) et identité ; grille wouahou et journal (`outils/grille.mjs` : forme du voile, intro vers l'objet, marques `data-grille`, copie de `_audit/journal.json` dans `journaux/`) ; écrit le gabarit `notes-manuelles/<dépôt>.json` et une planche contact s'il manque.
 2. Compléter le gabarit (rôle, description, note, pièges ; valeurs dans `taxonomie.json`, format en tête de `outils/fiches.mjs`) en regardant la planche, sans oublier `maquette.grille` : l'objet que le visiteur manipule et le fil conducteur, en quelques mots.
 3. `node outils/ajouter.mjs <dépôt> --sans-inventaire` : fiches, liens vers les modules, `index.json`, validation (zéro erreur).
