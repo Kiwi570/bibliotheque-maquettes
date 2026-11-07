@@ -7,7 +7,7 @@
 // (sous l'en-tête mesuré ou sous les barres du bas), éléments en position: sticky collés mais coupés (détectés seuls, sans marquage),
 // texte < 12 px, cibles < 44 px, état final sous « réduire les animations ».
 // Scénario facultatif : modules/<nom>/scenario.json, joué en 1440×900, 820×1180 et 390×844 (test « scenario ») et filmé dans apercu.mp4.
-//   { "etapes": [ {"defiler": "sélecteur"}, {"cliquer": "sélecteur"}, {"survoler": "sélecteur"}, {"saisir": ["sélecteur", "texte"]},
+//   { "etapes": [ {"epingle": 0.9}, {"defiler": "sélecteur"}, {"cliquer": "sélecteur"}, {"survoler": "sélecteur"}, {"saisir": ["sélecteur", "texte"]},
 //                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"} ],
 //     chaque étape accepte "si": "sélecteur" (jouée seulement si ce sélecteur est visible à ce format),
 //     "pause": 450,            // entre deux étapes (ms), pour la vidéo
@@ -43,6 +43,8 @@ async function jouer(pg, sc, pause = 0) {
     if (e.si && !(await pg.locator(e.si).first().isVisible().catch(() => false))) continue;
     try {
       if (k === 'attendre') { await attendre(v); continue; }
+      // « epingle » : se place à cette fraction (0 à 1) de l'épinglage du module (ex. objet construit aux 9/10).
+      if (k === 'epingle') { await pg.evaluate((f) => { const st = window.ScrollTrigger?.getAll().find((x) => x.pin); if (st) scrollTo(0, st.start + (st.end - st.start) * f); }, v); await attendre(900); continue; }
       if (k === 'touche') await pg.keyboard.press(v);
       else {
         const sel = Array.isArray(v) ? v[0] : v; const loc = pg.locator(sel).first();

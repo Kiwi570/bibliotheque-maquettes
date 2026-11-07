@@ -1,0 +1,67 @@
+{
+ "nom": "depliant-3d",
+ "titre": "Dépliant trois volets qui s'ouvre au défilement, couverture d'abord, dans l'ordre d'un vrai dépliant",
+ "role": "offre",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "nolanis-maquette/print-web-imprimes"
+ ],
+ "convient_a": [
+  "services-b2b",
+  "commerce",
+  "artisanat",
+  "tourisme",
+  "culture",
+  "restauration",
+  "formation",
+  "santé",
+  "bien-être",
+  "association",
+  "immobilier"
+ ],
+ "ambiances": [
+  "clair",
+  "sobre",
+  "artisanal",
+  "chaleureux",
+  "ludique"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 1.5",
+  "angle": "angle des volets repliés, 172",
+  "largeurMin": "largeur à partir de laquelle la section s'épingle, 761",
+  "hauteurMin": "hauteur à partir de laquelle la section s'épingle, 560"
+ },
+ "images": [
+  {
+   "role": "volet",
+   "selecteur": ".d3d__media img",
+   "nombre": 3,
+   "ratio": "4:3",
+   "largeur": 800,
+   "zone_calme": "aucune"
+  }
+ ],
+ "poids_ko": 7.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

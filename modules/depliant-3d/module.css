@@ -1,0 +1,41 @@
+/* Dépliant 3D — identité uniquement par les variables du socle.
+   Sans .est-actif (sans JavaScript, mode calme, « réduire les animations ») : dépliant ouvert à plat, sans les dos. */
+.d3d { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.d3d__cadre { display: flex; flex-direction: column; gap: clamp(16px, 3vh, 32px); }
+.d3d__tete { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 8px 32px; }
+.d3d__titre { font-size: clamp(1.9rem, min(4.4vw, 7.5vh), 3.8rem); line-height: 1.02; }
+.d3d__intro { color: var(--couleur-texte-doux); max-width: 46ch; }
+.d3d__depliant { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); perspective: 2200px; }
+.d3d__volet { position: relative; display: flex; flex-direction: column; gap: 12px; min-height: 0; padding: clamp(16px, 2.2vw, 30px);
+  background: color-mix(in oklab, var(--couleur-texte) 4%, var(--couleur-fond)); box-shadow: 0 1px 0 var(--couleur-ligne), 0 18px 40px -24px color-mix(in oklab, var(--couleur-texte) 40%, transparent);
+  transform-style: preserve-3d; }
+.d3d__volet:nth-child(1) { transform-origin: 100% 50%; }
+.d3d__volet:nth-child(3) { transform-origin: 0 50%; }
+.d3d__volet > * { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+/* Ombre du pli, du côté de la charnière. */
+.d3d__volet::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, color-mix(in oklab, var(--couleur-fond) calc(var(--d3d-pli, 0) * 100%), transparent), transparent 40%); }
+.d3d__volet:nth-child(1)::after { background: linear-gradient(270deg, color-mix(in oklab, var(--couleur-fond) calc(var(--d3d-pli, 0) * 100%), transparent), transparent 40%); }
+/* Dos d'un volet replié (couverture, dos du volet gauche) : face arrière, vue seulement quand le volet est replié. */
+.d3d__verso { position: absolute; inset: 0; z-index: 3; display: grid; place-content: center; justify-items: center; gap: 10px; padding: 24px; text-align: center;
+  background: var(--couleur-surface); transform: rotateY(180deg); }
+.d3d:not(.est-actif) .d3d__verso { display: none; }
+.d3d__num { font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.d3d__volet h3 { font-size: clamp(1.3rem, 1rem + 1.2vw, 2.1rem); }
+.d3d__liste { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--couleur-ligne); }
+.d3d__liste li { padding: 7px 0; border-bottom: 1px solid var(--couleur-ligne); font-size: max(14px, .95rem); }
+.d3d__media { position: relative; flex: 1 1 auto; min-height: 90px; margin: 0; overflow: hidden; border-radius: calc(var(--rayon) / 2); background: var(--couleur-surface); }
+.d3d__media > img, .d3d__media > .socle-visuel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Épinglé : tout tient dans l'écran, sous l'en-tête. */
+.d3d--epingle { padding-block: 0; }
+.d3d--epingle .d3d__cadre { height: var(--ecran-h); justify-content: center; padding-top: calc(var(--entete-h) + 16px); padding-bottom: calc(var(--barres-h) + 16px); }
+.d3d--epingle .d3d__depliant { flex: 1 1 auto; min-height: 0; max-height: 620px; }
+@media (max-height: 760px) and (min-width: 761px) { .d3d__liste li { padding: 4px 0; font-size: max(13px, .88rem); } .d3d__volet { gap: 8px; } .d3d__intro { display: none; } }
+
+/* Téléphone : volets empilés, ils se déplient depuis leur bord haut. */
+@media (max-width: 760px) {
+  .d3d__depliant { grid-template-columns: 1fr; gap: 14px; perspective: 1200px; }
+  .d3d__volet { transform-origin: 50% 0 !important; }
+  .d3d__media { min-height: 170px; }
+  .d3d__verso { display: none; }
+}

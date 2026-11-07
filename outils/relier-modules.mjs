@@ -18,6 +18,9 @@ for (const m of fs.readdirSync(path.join(RACINE, 'modules')).sort()) {
     // Réécriture ciblée pour garder la mise en forme : section sur une ligne, ou sur plusieurs lignes (on ne touche qu'au champ module).
     let txt = fs.readFileSync(p, 'utf8');
     const cle = id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // On ne cherche la section qu'après la clé « sections » : une section peut porter le nom d'une clé du haut (ex. « maquette »).
+    const base = Math.max(0, txt.indexOf('"sections"'));
+    const avant = txt.slice(0, base); txt = txt.slice(base);
     const uneLigne = new RegExp(`^(\\s*)"${cle}"\\s*:\\s*\\{.*\\},?$`, 'm');
     const champs = `"module": ${JSON.stringify(s.module)}${s.modules ? `, "modules": ${JSON.stringify(s.modules)}` : ''}`;
     if (uneLigne.test(txt)) txt = txt.replace(uneLigne, (l, ind) => `${ind}"${id}": ${JSON.stringify(s)}${l.trimEnd().endsWith(',') ? ',' : ''}`);
@@ -29,6 +32,7 @@ for (const m of fs.readdirSync(path.join(RACINE, 'modules')).sort()) {
       if (i < 0 || !re.test(txt)) { console.log(`  champ module introuvable : ${o}`); continue; }
       txt = txt.slice(0, i) + champs + txt.slice(re.lastIndex);
     }
+    txt = avant + txt;
     fs.writeFileSync(p, txt); JSON.parse(txt); touches.add(depot);
     console.log(`relié ${o} → ${m}${s.module === m ? '' : ' (secondaire)'}`);
   }

@@ -1,0 +1,69 @@
+/* Grille sur photo — identité uniquement par les variables du socle.
+   La grille se règle par variables : --gsp-col, --gsp-lig (nombre de colonnes et de lignes),
+   --gsp-haut, --gsp-droite, --gsp-bas, --gsp-gauche (marges de la grille dans la photo, 6 % par défaut). */
+.gsp { position: relative; padding-block: clamp(56px, 8vw, 120px); }
+.gsp__cadre { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(18px, 3vw, 36px); }
+.gsp__tete { display: grid; gap: 10px; align-content: end; }
+.gsp__titre { font-size: clamp(1.9rem, min(4.2vw, 7vh), 3.6rem); line-height: 1.02; }
+.gsp__intro { color: var(--couleur-texte-doux); max-width: 46ch; }
+
+.gsp__photo { position: relative; margin: 0 auto; width: min(100%, calc(78svh * 4 / 3)); aspect-ratio: var(--gsp-ratio, 4 / 3); border-radius: var(--rayon); overflow: hidden; background: var(--couleur-surface); }
+.gsp__photo > img, .gsp__photo > .socle-visuel { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.gsp__grille { position: absolute; inset: var(--gsp-haut, 6%) var(--gsp-droite, 6%) var(--gsp-bas, 6%) var(--gsp-gauche, 6%); display: grid;
+  grid-template-columns: repeat(var(--gsp-col, 3), minmax(0, 1fr)); grid-template-rows: repeat(var(--gsp-lig, 3), minmax(0, 1fr));
+  box-shadow: inset 0 0 0 1.5px var(--gsp-trait); background: color-mix(in oklab, var(--couleur-fond) 10%, transparent);
+  --gsp-trait: color-mix(in oklab, var(--couleur-fond) 80%, var(--couleur-accent)); }
+.gsp__case { position: relative; container-type: size; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 4px;
+  min-width: 44px; min-height: 44px; padding: 8px; margin: 0; border: 0; border-radius: 0; background: transparent; color: var(--couleur-texte); font: inherit; text-align: left; cursor: pointer; overflow: hidden;
+  box-shadow: inset 0 0 0 .5px var(--gsp-trait); transition: background-color .45s, box-shadow .45s; }
+.gsp.est-pret .gsp__case { box-shadow: none; background: color-mix(in oklab, var(--couleur-fond) 42%, transparent); }
+/* Projecteur : les cases éteintes sont voilées, la case allumée est nette, cerclée et réchauffée ; lisible sur toute photo. */
+.gsp .gsp__case:hover { background: color-mix(in oklab, var(--couleur-fond) 12%, transparent); }
+.gsp__case:focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: -4px; }
+.gsp .gsp__case.est-vue { background: color-mix(in oklab, var(--couleur-fond) 22%, transparent); }
+.gsp .gsp__case.est-allumee { background: radial-gradient(circle at 50% 55%, color-mix(in oklab, var(--couleur-accent) 34%, transparent), transparent 72%); box-shadow: inset 0 0 0 2.5px var(--couleur-accent), 0 0 0 1px color-mix(in oklab, var(--couleur-fond) 60%, transparent); z-index: 1; }
+.gsp__coin, .gsp__etiquette { padding: 2px 7px; border-radius: 3px; background: color-mix(in oklab, var(--couleur-fond) 86%, transparent); line-height: 1.25; }
+.gsp__coin { font-family: var(--police-mono); font-size: max(12px, .7rem); letter-spacing: .06em; color: var(--couleur-texte-doux); }
+.gsp__etiquette { margin-top: auto; font-size: max(12px, .82rem); font-weight: 600; max-width: 100%; overflow-wrap: break-word; hyphens: auto; }
+.gsp__case.est-allumee .gsp__etiquette, .gsp__case.est-allumee .gsp__coin { background: var(--couleur-texte); color: var(--couleur-fond); }
+/* Case trop petite pour son nom (taille intérieure) : le nom passe dans le cartouche seulement (il reste le nom du bouton). */
+@container (max-width: 110px) or (max-height: 54px) {
+  .gsp__etiquette { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+/* Traits qui se dessinent (créés par le module ; sans JavaScript, chaque case a son trait fin). */
+.gsp__traits { position: absolute; inset: 0; pointer-events: none; }
+.gsp__trait { position: absolute; background: var(--gsp-trait); transition: transform .9s cubic-bezier(.6, 0, .2, 1) calc(var(--i, 0) * 90ms); }
+.gsp__trait--v { top: 0; bottom: 0; width: 1.5px; translate: -50% 0; transform-origin: 50% 0; }
+.gsp__trait--h { left: 0; right: 0; height: 1.5px; translate: 0 -50%; transform-origin: 0 50%; }
+.gsp.est-actif:not(.est-trace) .gsp__trait--v { transform: scaleY(0); }
+.gsp.est-actif:not(.est-trace) .gsp__trait--h { transform: scaleX(0); }
+.gsp.est-actif:not(.est-trace) .gsp__grille { box-shadow: none; }
+.gsp__grille { transition: box-shadow .6s; }
+
+/* Cartouche de taille fixe : le module mesure le plus long texte et fixe la hauteur. */
+.gsp__lecture { display: grid; gap: 10px; align-content: start; }
+.gsp__cartouche { display: grid; align-content: start; gap: 6px; padding: clamp(14px, 2vw, 22px); border-radius: var(--rayon); background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); border-left: 3px solid var(--couleur-accent); }
+.gsp__coin-lu { margin: 0; font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .08em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.gsp__coin-lu:empty { display: none; }
+.gsp__nom { margin: 0; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1.15; }
+.gsp__texte { margin: 0; color: var(--couleur-texte-doux); }
+.gsp__aide { margin: 0; color: var(--couleur-texte-doux); font-size: max(13px, .88rem); }
+.gsp:not(.est-pret) .gsp__aide { display: none; }
+.gsp.est-choisie .gsp__aide { visibility: hidden; }
+
+/* Téléphone à l'horizontale : le cartouche à côté de la photo, pour lire la case touchée sans défiler. */
+@media (min-width: 640px) and (max-width: 899px) and (max-height: 560px) {
+  .gsp__cadre { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); grid-template-areas: "tete tete" "photo lecture"; align-items: center; }
+  .gsp__tete { grid-area: tete; } .gsp__photo { grid-area: photo; } .gsp__lecture { grid-area: lecture; }
+}
+/* Ordinateur : photo à gauche, titre et cartouche à droite ; épinglé, tout tient dans l'écran. */
+@media (min-width: 900px) {
+  .gsp__cadre { grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); grid-template-rows: 1fr auto auto 1fr; grid-template-areas: "photo ." "photo tete" "photo lecture" "photo ."; column-gap: clamp(28px, 4vw, 64px); row-gap: 18px; align-items: center; }
+  .gsp__tete { grid-area: tete; } .gsp__lecture { grid-area: lecture; } .gsp__photo { grid-area: photo; margin: 0; }
+}
+.gsp--epingle { padding-block: 0; }
+.gsp--epingle .gsp__cadre { height: var(--ecran-h); padding-top: calc(var(--entete-h) + 16px); padding-bottom: calc(var(--barres-h) + 16px);
+  --gsp-hmax: calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 32px); }
+.gsp--epingle .gsp__photo { width: min(100%, calc(var(--gsp-hmax) * 4 / 3)); }
+@media (min-width: 900px) and (max-height: 800px) { .gsp--epingle .gsp__intro { display: none; } }

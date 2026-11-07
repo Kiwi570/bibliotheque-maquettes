@@ -1,0 +1,70 @@
+{
+ "nom": "carrousel-3d",
+ "titre": "Carrousel 3D : cartes sur un cylindre qui tourne au défilement, à la main avec élan et aux flèches",
+ "role": "galerie",
+ "animations": [
+  "reactif-vitesse",
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "agence-ae-maquette/realisations-tour"
+ ],
+ "convient_a": [
+  "bâtiment",
+  "artisanat",
+  "culture",
+  "commerce",
+  "immobilier",
+  "tourisme",
+  "hébergement",
+  "restauration",
+  "spectacle",
+  "numérique",
+  "formation"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "luxueux",
+  "chaleureux",
+  "sobre",
+  "ludique",
+  "minéral"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "tour": "rotation en degrés pendant que la section traverse l'écran, 180 (0 : pas de rotation au défilement)",
+  "inclinaison": "inclinaison du cylindre (rotateX), -6",
+  "face": "demi-angle dans lequel une carte est de face (visible, cliquable, au clavier), 62",
+  "ecart": "espace entre les cartes, 1.12 (1 : jointives)",
+  "lissage": "scrub de ScrollTrigger, 0.6"
+ },
+ "images": [
+  {
+   "role": "carte",
+   "selecteur": ".c3d__media img",
+   "nombre": "8 à 12",
+   "ratio": "3:4",
+   "largeur": 640,
+   "zone_calme": "aucune (le nom est sous l'image)"
+  }
+ ],
+ "poids_ko": 9.4,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

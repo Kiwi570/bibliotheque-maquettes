@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carrousel 3D · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #171513; --couleur-texte: #f2ede3; --couleur-accent: #e0913f; --couleur-secondaire: #6d8a7a; --rayon: 12px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : le carrousel tourne avec la page. Attrapez-le pour le lancer, ou utilisez les flèches.</p>
+  </section>
+
+  <section class="c3d" data-module="carrousel-3d" aria-labelledby="c3d-titre">
+    <div class="c3d__tete socle-cadre">
+      <p class="socle-surtitre">Réalisations</p>
+      <h2 class="c3d__titre" id="c3d-titre">Douze projets, un tour complet</h2>
+      <p class="c3d__intro">Chaque carte ouvre sa fiche. Les cartes de profil ou de dos ne sont ni visibles ni cliquables.</p>
+    </div>
+    <div class="c3d__scene" tabindex="0" role="region" aria-label="Carrousel des projets : flèches gauche et droite pour tourner">
+      <ul class="c3d__cylindre">
+        <li class="c3d__carte"><a class="c3d__lien" href="#p1"><figure class="c3d__media"><span class="socle-visuel"></span></figure><span class="c3d__nom">Maison sur la dune</span><span class="c3d__ligne">Neuf · 2025</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p2"><figure class="c3d__media"><span class="socle-visuel socle-visuel--2"></span></figure><span class="c3d__nom">Longère rénovée</span><span class="c3d__ligne">Rénovation · 2024</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p3"><figure class="c3d__media"><span class="socle-visuel socle-visuel--3"></span></figure><span class="c3d__nom">Atelier d'artiste</span><span class="c3d__ligne">Extension · 2024</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p4"><figure class="c3d__media"><span class="socle-visuel"></span></figure><span class="c3d__nom">Maison de bourg</span><span class="c3d__ligne">Rénovation · 2023</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p5"><figure class="c3d__media"><span class="socle-visuel socle-visuel--2"></span></figure><span class="c3d__nom">Cabinet médical</span><span class="c3d__ligne">Professionnel · 2023</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p6"><figure class="c3d__media"><span class="socle-visuel socle-visuel--3"></span></figure><span class="c3d__nom">Maison bois et paille</span><span class="c3d__ligne">Neuf · 2023</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p7"><figure class="c3d__media"><span class="socle-visuel"></span></figure><span class="c3d__nom">Surélévation</span><span class="c3d__ligne">Extension · 2022</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p8"><figure class="c3d__media"><span class="socle-visuel socle-visuel--2"></span></figure><span class="c3d__nom">Gîte en pierre</span><span class="c3d__ligne">Rénovation · 2022</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p9"><figure class="c3d__media"><span class="socle-visuel socle-visuel--3"></span></figure><span class="c3d__nom">Maison patio</span><span class="c3d__ligne">Neuf · 2021</span></a></li>
+        <li class="c3d__carte"><a class="c3d__lien" href="#p10"><figure class="c3d__media"><span class="socle-visuel"></span></figure><span class="c3d__nom">Boutique de centre-ville</span><span class="c3d__ligne">Professionnel · 2021</span></a></li>
+      </ul>
+    </div>
+    <div class="c3d__commandes">
+      <button type="button" class="c3d__prec" aria-label="Projet précédent"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <p class="c3d__indice" aria-hidden="true">Faites tourner</p>
+      <button type="button" class="c3d__suiv" aria-label="Projet suivant"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son défilement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="carrousel-3d"]')) init(el);
+</script>
+</body>
+</html>

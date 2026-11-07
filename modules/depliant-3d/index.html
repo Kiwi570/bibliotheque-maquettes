@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dépliant 3D · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f3efe7; --couleur-texte: #17161b; --couleur-accent: #c2185b; --couleur-secondaire: #0097a7; --rayon: 4px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la section s'épingle et le dépliant s'ouvre, couverture d'abord.</p>
+  </section>
+
+  <section class="d3d" data-module="depliant-3d" data-epingle aria-labelledby="d3d-titre">
+    <div class="d3d__cadre socle-cadre">
+      <div class="d3d__tete" data-tient>
+        <div><p class="socle-surtitre">Imprimés</p><h2 class="d3d__titre" id="d3d-titre">Le dépliant des imprimés</h2></div>
+        <p class="d3d__intro">De la conception à la livraison, en trois volets : faites défiler pour l'ouvrir.</p>
+      </div>
+      <div class="d3d__depliant" data-tient>
+        <article class="d3d__volet">
+          <span class="d3d__verso" aria-hidden="true"><span class="d3d__num">Au dos</span><strong>Studio · 03 88 00 00 00</strong></span>
+          <p class="d3d__num">Volet 1 / 3</p>
+          <h3>Conception</h3>
+          <ul class="d3d__liste"><li>Logo et charte</li><li>Mise en page</li><li>Corrections incluses</li></ul>
+          <figure class="d3d__media"><span class="socle-visuel"></span></figure>
+        </article>
+        <article class="d3d__volet">
+          
+          <p class="d3d__num">Volet 2 / 3</p>
+          <h3>Impression</h3>
+          <ul class="d3d__liste"><li>Papiers au choix</li><li>Petites et grandes séries</li><li>Bon à tirer validé</li></ul>
+          <figure class="d3d__media"><span class="socle-visuel socle-visuel--2"></span></figure>
+        </article>
+        <article class="d3d__volet">
+          <span class="d3d__verso" aria-hidden="true"><span class="d3d__num">Couverture</span><strong style="font-family:var(--police-titres);font-size:1.6rem">Le dépliant des imprimés</strong></span>
+          <p class="d3d__num">Volet 3 / 3</p>
+          <h3>Livraison</h3>
+          <ul class="d3d__liste"><li>Façonnage et pliage</li><li>Livré sous 5 jours</li><li>Mise sous pli</li></ul>
+          <figure class="d3d__media"><span class="socle-visuel socle-visuel--3"></span></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Le dépliant reste ouvert à plat.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="depliant-3d"]')) init(el);
+</script>
+</body>
+</html>

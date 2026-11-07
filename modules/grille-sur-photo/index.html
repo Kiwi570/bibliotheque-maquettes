@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Grille sur photo · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #f4efe6; --couleur-texte: #1c2640; --couleur-accent: #b8862f; --couleur-secondaire: #2f4b6e; --rayon: 6px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : les traits se posent sur la photo, puis les neuf zones s'allument en spirale depuis la porte.</p>
+  </section>
+
+  <section class="gsp" data-module="grille-sur-photo" data-epingle data-ordre="7,6,3,0,1,2,5,8,4" data-depart="4" aria-labelledby="gsp-titre">
+    <div class="gsp__cadre socle-cadre">
+      <div class="gsp__tete" data-tient>
+        <p class="socle-surtitre">Feng shui</p>
+        <h2 class="gsp__titre" id="gsp-titre">Les neuf zones de votre salon</h2>
+        <p class="gsp__intro">La grille se pose depuis la porte d'entrée. Chaque zone parle d'un domaine de votre vie.</p>
+      </div>
+      <figure class="gsp__photo" data-tient>
+        <span class="socle-visuel socle-visuel--2"></span>
+        <div class="gsp__grille" style="--gsp-col:3;--gsp-lig:3" role="group" aria-label="Les neuf zones, la porte en bas au centre">
+          <button type="button" class="gsp__case" data-coin="SE" data-nom="Prospérité" data-texte="L'abondance sous toutes ses formes : un coin dégagé, une plante vigoureuse, rien qui stagne."><span class="gsp__coin">SE</span><span class="gsp__etiquette">Prospérité</span></button>
+          <button type="button" class="gsp__case" data-coin="S" data-nom="Réputation" data-texte="Ce que les autres voient de vous. Une belle lumière et un objet qui vous ressemble."><span class="gsp__coin">S</span><span class="gsp__etiquette">Réputation</span></button>
+          <button type="button" class="gsp__case" data-coin="SO" data-nom="Relations" data-texte="Le couple et les associations : des objets par deux, des couleurs douces."><span class="gsp__coin">SO</span><span class="gsp__etiquette">Relations</span></button>
+          <button type="button" class="gsp__case" data-coin="E" data-nom="Famille" data-texte="Les racines et le soutien des proches : du bois, des photos de famille, une étagère rangée."><span class="gsp__coin">E</span><span class="gsp__etiquette">Famille</span></button>
+          <button type="button" class="gsp__case" data-coin="C" data-nom="Santé" data-texte="Le centre de la pièce, qui relie toutes les autres zones : on le garde libre pour que l'énergie circule."><span class="gsp__coin">C</span><span class="gsp__etiquette">Santé</span></button>
+          <button type="button" class="gsp__case" data-coin="O" data-nom="Créativité" data-texte="Les projets et les enfants : du métal, du blanc, un espace pour créer."><span class="gsp__coin">O</span><span class="gsp__etiquette">Créativité</span></button>
+          <button type="button" class="gsp__case" data-coin="NE" data-nom="Connaissance" data-texte="Le calme et l'étude : un coin lecture, une lampe, peu d'objets."><span class="gsp__coin">NE</span><span class="gsp__etiquette">Connaissance</span></button>
+          <button type="button" class="gsp__case" data-coin="N" data-nom="Carrière" data-texte="Le chemin de vie, juste en face de la porte : l'entrée doit être dégagée et accueillante, sans meuble qui barre le passage."><span class="gsp__coin">N</span><span class="gsp__etiquette">Carrière</span></button>
+          <button type="button" class="gsp__case" data-coin="NO" data-nom="Amis et voyages" data-texte="Les personnes qui vous aident et les voyages : des souvenirs, des cartes, un objet rapporté de loin."><span class="gsp__coin">NO</span><span class="gsp__etiquette">Amis et voyages</span></button>
+        </div>
+      </figure>
+      <div class="gsp__lecture" data-tient>
+        <div class="gsp__cartouche">
+          <p class="gsp__coin-lu">C</p>
+          <h3 class="gsp__nom">Santé</h3>
+          <p class="gsp__texte">Le centre de la pièce, qui relie toutes les autres zones : on le garde libre pour que l'énergie circule.</p>
+        </div>
+        <p class="gsp__aide">Touchez une zone pour la lire.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son défilement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="grille-sur-photo"]')) init(el);
+</script>
+</body>
+</html>

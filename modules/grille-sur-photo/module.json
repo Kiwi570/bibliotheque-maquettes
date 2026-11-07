@@ -1,0 +1,70 @@
+{
+ "nom": "grille-sur-photo",
+ "titre": "Grille de zones cliquables posée sur une photo : les traits se dessinent, les cases s'allument dans un ordre choisi, un cartouche fixe les explique",
+ "role": "outil-interactif",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif",
+  "visite-guidee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "origine": [
+  "lydiacourtois-maquette/feng-shui-debut",
+  "lydiacourtois-maquette/feng-shui-domaines"
+ ],
+ "convient_a": [
+  "bien-être",
+  "bâtiment",
+  "immobilier",
+  "artisanat",
+  "conseil",
+  "santé",
+  "sport",
+  "tourisme",
+  "formation"
+ ],
+ "ambiances": [
+  "clair",
+  "sobre",
+  "doux",
+  "chaleureux",
+  "minéral",
+  "végétal"
+ ],
+ "telephone": "simplifié",
+ "options": {
+  "ordre": "ordre d'allumage (indices), ou data-ordre=\"7,6,3,0,1,2,5,8,4\" ; spirale depuis le bas par défaut en 3 × 3",
+  "depart": "case allumée au départ et en mode calme, ou data-depart ; le centre par défaut",
+  "longueur": "durée de l'épinglage en hauteurs d'écran, 1.6",
+  "largeurMin": "largeur à partir de laquelle la section s'épingle, 900",
+  "hauteurMin": "hauteur à partir de laquelle la section s'épingle, 640"
+ },
+ "images": [
+  {
+   "role": "photo sous la grille",
+   "selecteur": ".gsp__photo img",
+   "nombre": 1,
+   "ratio": "4:3",
+   "largeur": 1600,
+   "zone_calme": "toute l'image porte la grille (6 % de marge par défaut) : photo lumineuse et peu chargée, vue de face ou de dessus, sans texte ; le module voile les cases éteintes"
+  }
+ ],
+ "poids_ko": 13.8,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "n/a",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

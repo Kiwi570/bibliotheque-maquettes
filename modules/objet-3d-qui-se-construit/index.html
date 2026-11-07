@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Objet 3D qui se construit · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #eee9df; --couleur-texte: #1d211f; --couleur-accent: #b5532f; --couleur-secondaire: #5f7f5a; --rayon: 10px; }
+  .demo-bloc { min-height: 80vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Faites défiler : la section s'épingle et la maison se monte, étape par étape, en tournant sur elle-même.</p>
+  </section>
+
+  <section class="o3d" data-module="objet-3d-qui-se-construit" data-epingle aria-labelledby="o3d-titre">
+    <div class="o3d__cadre socle-cadre">
+      <div class="o3d__texte" data-tient>
+        <p class="socle-surtitre">Le chantier</p>
+        <h2 class="o3d__titre" id="o3d-titre">Votre maison, montée sous vos yeux</h2>
+        <p class="o3d__intro">Chaque étape du chantier s'ajoute à la maquette. Attrapez-la pour en faire le tour.</p>
+      </div>
+      <div class="o3d__scene" data-tient tabindex="0" role="region" aria-label="Maquette 3D de la maison : flèches gauche et droite pour la faire tourner">
+        <div class="o3d__objet" aria-hidden="true">
+        <div class="o3d__sol"></div>
+        <div class="o3d__piece" data-de="-0.1" data-a="0.06" style="--o3d-chute:-120px"><div class="o3d__boite" style="--l:420px;--p:300px;--h:14px;--o3d-teinte: color-mix(in oklab, var(--couleur-texte) 20%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.12" data-a="0.3"><div class="o3d__boite o3d__boite--baies" style="--l:360px;--p:14px;--h:150px;--y:14px;--z:113px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.17" data-a="0.35"><div class="o3d__boite o3d__boite--baie" style="--l:14px;--p:212px;--h:150px;--y:14px;--x:173px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.22" data-a="0.4"><div class="o3d__boite o3d__boite--baies" style="--l:360px;--p:14px;--h:150px;--y:14px;--z:-113px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.27" data-a="0.45"><div class="o3d__boite o3d__boite--baie" style="--l:14px;--p:212px;--h:150px;--y:14px;--x:-173px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.45" data-a="0.56"><div class="o3d__boite o3d__boite--pignon" style="--l:360px;--p:14px;--h:110px;--y:164px;--z:113px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i></div></div>
+        <div class="o3d__piece" data-de="0.48" data-a="0.59"><div class="o3d__boite o3d__boite--pignon" style="--l:360px;--p:14px;--h:110px;--y:164px;--z:-113px;--o3d-teinte: var(--couleur-surface);"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i></div></div>
+        <div class="o3d__piece" data-de="0.56" data-a="0.7" style="--o3d-chute:-220px"><div class="o3d__boite" style="--l:236px;--p:310px;--h:8px;--x:-100px;--y:211px;--rz:-31.4deg;--o3d-teinte: color-mix(in oklab, var(--couleur-accent) 70%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.62" data-a="0.76" style="--o3d-chute:-220px"><div class="o3d__boite" style="--l:236px;--p:310px;--h:8px;--x:100px;--y:211px;--rz:31.4deg;--o3d-teinte: color-mix(in oklab, var(--couleur-accent) 70%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.76" data-a="0.86" style="--o3d-chute:-160px"><div class="o3d__boite" style="--l:34px;--p:34px;--h:72px;--x:-72px;--y:222px;--z:40px;--o3d-teinte: color-mix(in oklab, var(--couleur-texte) 35%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.82" data-a="0.92" style="--o3d-chute:-90px"><div class="o3d__boite" style="--l:170px;--p:110px;--h:6px;--x:110px;--z:205px;--o3d-teinte: color-mix(in oklab, var(--couleur-accent) 30%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        <div class="o3d__piece" data-de="0.88" data-a="0.98" style="--o3d-chute:-200px;--o3d-vrille:120deg"><div class="o3d__boite" style="--l:42px;--p:42px;--h:42px;--x:-160px;--z:200px;--o3d-teinte: color-mix(in oklab, var(--couleur-secondaire) 75%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div><div class="o3d__boite" style="--l:28px;--p:28px;--h:28px;--x:-112px;--z:222px;--ry:30deg;--o3d-teinte: color-mix(in oklab, var(--couleur-secondaire) 75%, var(--couleur-fond));"><i class="o3d__f o3d__f--av"></i><i class="o3d__f o3d__f--ar"></i><i class="o3d__f o3d__f--g"></i><i class="o3d__f o3d__f--d"></i><i class="o3d__f o3d__f--haut"></i></div></div>
+        </div>
+        <p class="o3d__indice" aria-hidden="true">Attrapez la maison pour la faire tourner</p>
+      </div>
+      <ol class="o3d__etapes" data-tient>
+        <li data-de="0"><div><strong>Fondations</strong><span>Étude du sol, dalle et réseaux</span></div></li>
+        <li data-de=".14"><div><strong>Murs</strong><span>Ossature et ouvertures plein sud</span></div></li>
+        <li data-de=".48"><div><strong>Charpente et toiture</strong><span>Hors d'eau, hors d'air</span></div></li>
+        <li data-de=".8"><div><strong>Finitions</strong><span>Terrasse, jardin, remise des clés</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son défilement.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="objet-3d-qui-se-construit"]')) init(el);
+</script>
+</body>
+</html>
