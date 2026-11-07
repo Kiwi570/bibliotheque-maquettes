@@ -1,0 +1,19 @@
+{
+ "etapes": [
+  {"defiler": ".pds__plan"},
+  {"attendre": 2400},
+  {"cliquer": ".pds__t[data-table='7'] .pds__plateau"},
+  {"attendre": 1300},
+  {"cliquer": "[data-pds-plus]"},
+  {"cliquer": "[data-pds-plus]"},
+  {"attendre": 700},
+  {"cliquer": ".pds__filtre[data-zone='terrasse']"},
+  {"attendre": 900},
+  {"cliquer": "[data-pds-table='10']"},
+  {"attendre": 1300},
+  {"verifier": "a.pds__reserver[href*='table=10'][href*='couverts=4']"}
+ ],
+ "pause": 350,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": ".pds__plan"}, {"attendre": 2500}, {"cliquer": ".pds__t[data-table='7'] .pds__plateau"} ], "apres": 900 }
+}

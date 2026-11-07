@@ -1,7 +1,7 @@
 // Réservation de table : date (les sept prochains jours en puces, ou le calendrier), service midi ou soir, créneaux
 // d'arrivée (passés et complets grisés), nombre de couverts, salle ou terrasse, demande particulière, coordonnées ;
 // récapitulatif tenu à jour à côté, vérification, puis récapitulatif à confirmer (chaque ligne modifiable) et envoi simulé.
-// Prérempli depuis l'adresse (?date=…&service=…&heure=…&couverts=…&espace=…) ; brouillon gardé si l'on recharge la page.
+// Prérempli depuis l'adresse (?date=…&service=…&heure=…&couverts=…&espace=…, et table=… venu du plan de salle) ; brouillon gardé si l'on recharge la page.
 // Tiré de jardins-hacienda-maquette/reserver-formulaire (champs, préremplissage, erreurs à côté du champ, envoi simulé)
 // et de pizzalyght-maquette/panier (créneaux calculés à l'heure du lieu avec un délai, état relu, focus rendu après rendu).
 // Sans JavaScript : un formulaire ordinaire (calendrier, liste d'heures, nombre). Mode calme : sans transition.
@@ -76,7 +76,7 @@ export async function init(root, options = {}) {
   const val = () => {
     const fd = new FormData(form);
     return { date: fd.get('date') || '', service: fd.get('service') || '', heure: fd.get('heure') || '', couverts: Math.max(1, Math.min(maxi, parseInt(fd.get('couverts'), 10) || 2)),
-      espace: fd.get('espace') || '', demandes: fd.getAll('demande'), message: (fd.get('message') || '').trim(),
+      espace: fd.get('espace') || '', table: (fd.get('table') || '').trim(), demandes: fd.getAll('demande'), message: (fd.get('message') || '').trim(),
       prenom: (fd.get('prenom') || '').trim(), nom: (fd.get('nom') || '').trim(), telephone: (fd.get('telephone') || '').trim(), email: (fd.get('email') || '').trim() };
   };
 
@@ -141,7 +141,7 @@ export async function init(root, options = {}) {
   function texteDe(v) {
     const sv = services.find((x) => x.id === v.service), es = (R.espaces || []).find((x) => x.id === v.espace);
     return { date: v.date ? maj(dateLongue(v.date)) : '', service: sv ? sv.libelle : '', heure: v.heure ? heure(enMin(v.heure)) : '', couverts: `${v.couverts} couvert${v.couverts > 1 ? 's' : ''}`,
-      espace: es ? es.libelle : '', demande: [...v.demandes, v.message].filter(Boolean).join(' · '), contact: [[v.prenom, v.nom].filter(Boolean).join(' '), v.telephone].filter(Boolean).join(' · ') };
+      espace: es ? es.libelle + (v.table ? ` · table ${v.table}` : '') : (v.table ? `Table ${v.table}` : ''), demande: [...v.demandes, v.message].filter(Boolean).join(' · '), contact: [[v.prenom, v.nom].filter(Boolean).join(' '), v.telephone].filter(Boolean).join(' · ') };
   }
   function rendreRecap() {
     const v = etape === 'envoye' && envoi ? envoi : val(), t = texteDe(v);
@@ -205,7 +205,7 @@ export async function init(root, options = {}) {
 
   // ---------- Brouillon et adresse ----------
   const CLE = 'resa-brouillon:' + location.pathname;
-  const GARDES = ['date', 'service', 'heure', 'couverts', 'espace', 'message', 'prenom', 'nom', 'telephone', 'email'];
+  const GARDES = ['date', 'service', 'heure', 'couverts', 'espace', 'table', 'message', 'prenom', 'nom', 'telephone', 'email'];
   function poser(n, v) {
     const els = form.querySelectorAll(`[name="${n}"]`);
     if (!els.length) return;
@@ -214,10 +214,12 @@ export async function init(root, options = {}) {
   }
   function sauver() { try { const v = val(); sessionStorage.setItem(CLE, JSON.stringify({ ...Object.fromEntries(GARDES.map((k) => [k, v[k]])), demandes: v.demandes })); } catch { /* stockage indisponible : on garde en mémoire */ } }
   const params = new URLSearchParams(location.search);
-  const depuisAdresse = ['date', 'service', 'heure', 'couverts', 'espace', 'demande'].some((k) => params.has(k));
+  const depuisAdresse = ['date', 'service', 'heure', 'couverts', 'espace', 'demande', 'table'].some((k) => params.has(k));
   let brouillon = null; try { brouillon = depuisAdresse ? null : JSON.parse(sessionStorage.getItem(CLE) || 'null'); } catch { brouillon = null; }
   const depart = brouillon || {};
-  if (depuisAdresse) { for (const k of ['date', 'service', 'heure', 'couverts', 'espace']) if (params.has(k)) depart[k] = params.get(k); if (params.has('demande')) depart.demandes = params.get('demande').split(','); }
+  if (depuisAdresse) { for (const k of ['date', 'service', 'heure', 'couverts', 'espace', 'table']) if (params.has(k)) depart[k] = params.get(k); if (params.has('demande')) depart.demandes = params.get('demande').split(','); }
+  // Table choisie sur un plan de salle (module plan-de-salle, ?table=…) : champ caché, montrée avec l'installation, envoyée avec la demande.
+  if (depart.table) { depart.table = String(depart.table).slice(0, 24); if (!form.querySelector('[name="table"]')) { const h = document.createElement('input'); h.type = 'hidden'; h.name = 'table'; form.append(h); } }
   // Le brouillon ou l'adresse peut être ancien : on le revalide (date passée, heure plus possible).
   if (depart.date && (depart.date < auj || depart.date > fin)) delete depart.date;
   for (const k of GARDES) if (depart[k] !== undefined && k !== 'heure') poser(k, String(depart[k]));
@@ -271,7 +273,7 @@ export async function init(root, options = {}) {
     }
     if (e.target.closest('[data-resa-nouvelle]')) {
       etape = 'saisie'; root.classList.remove('est-envoye'); for (const el of form.elements) el.disabled = false;
-      for (const n of ['heure', 'message', 'demande']) form.querySelectorAll(`[name="${n}"]`).forEach((x) => { if (x.type === 'checkbox' || x.type === 'radio') x.checked = false; else x.value = ''; });
+      for (const n of ['heure', 'message', 'demande', 'table']) form.querySelectorAll(`[name="${n}"]`).forEach((x) => { if (x.type === 'checkbox' || x.type === 'radio') x.checked = false; else x.value = ''; });
       majCouverts(+couvEl.value || 2); tout('date'); form.querySelector('[data-jour], input[name="date"]')?.focus();
     }
   });

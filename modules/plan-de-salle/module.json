@@ -1,0 +1,59 @@
+{
+ "nom": "plan-de-salle",
+ "titre": "Plan de salle vu de dessus qui s'incline en 3D à l'arrivée : tables à choisir par zone (cheminée, fenêtres, grande table, terrasse), tables prises grisées, repère dressé sur la table choisie, réservation avec ?table=…&couverts=…",
+ "role": "outil-interactif",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "carte-interactive",
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "provenance": "à part",
+ "origine": [],
+ "inspirations": [
+  "jardins-hacienda-maquette/terrasse-piscine-visite-360",
+  "carte-a-calques"
+ ],
+ "convient_a": [
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "spectacle",
+  "culture"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "clair",
+  "artisanal",
+  "sobre",
+  "luxueux",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "reservation": "adresse de la page de réservation, celle du module reservation-de-table (sinon data-reservation de la section, ou le href du bouton)",
+  "parametres": "noms des paramètres envoyés (lus par reservation-de-table), { table: 'table', couverts: 'couverts', espace: 'espace' } ; null : pas envoyé",
+  "couverts": "couverts au départ, 2 (sinon ?couverts= de l'adresse de la page, ou la valeur du champ)",
+  "couvertsMax": "12",
+  "prises": "identifiants des tables déjà prises (s'ajoutent aux data-prise) ; api.prises(ids) pour les remplacer",
+  "lireAdresse": "reprendre ?table= et ?couverts= de l'adresse de la page (retour depuis la réservation), true",
+  "textes": "textes à remplacer (toutes, invite, choix, detail, prise, petite, plusPetite, repere)"
+ },
+ "images": [],
+ "poids_ko": 35.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

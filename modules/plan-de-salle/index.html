@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Plan de salle · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px;
+    --couleur-sur-accent: #f4ece1; --pds-eau: #9fc4c0; --pds-vert: #7f8b58; --pds-vitre: #cfe2e4; }
+  .pds__tete h2 { font-weight: 500; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 56ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, la salle vue de dessus&nbsp;: elle s’incline en arrivant, on choisit sa table, au coin du feu, près des fenêtres ou sur la terrasse.</p>
+  </section>
+
+  <section class="pds" data-module="plan-de-salle" data-reservation="../reservation-de-table/index.html#resa-titre" aria-labelledby="pds-titre">
+    <div class="pds__grille socle-cadre">
+      <div class="pds__tete">
+        <p class="socle-surtitre">Réserver</p>
+        <h2 id="pds-titre">Choisissez votre table</h2>
+        <p>Au coin du feu, face aux fenêtres, à la grande table ou au bord de la piscine&nbsp;: touchez une table libre, puis réservez-la.</p>
+      </div>
+
+      <div class="pds__outils">
+        <div class="pds__filtres" role="group" aria-label="Zones de la salle" data-pds-filtres></div>
+        <div class="pds__couverts">
+          <label class="pds__libelle" for="pds-couverts">Couverts</label>
+          <div class="pds__qte">
+            <button type="button" data-pds-moins aria-label="Un couvert de moins" aria-controls="pds-couverts">−</button>
+            <input type="number" id="pds-couverts" value="2" min="1" max="12" step="1" inputmode="numeric">
+            <button type="button" data-pds-plus aria-label="Un couvert de plus" aria-controls="pds-couverts">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pds__scene">
+        <div class="pds__plan">
+          <div class="pds__sol">
+            <svg class="pds__svg" viewBox="0 0 1000 640" aria-hidden="true" focusable="false">
+              <defs>
+                <pattern id="pds-parquet" width="66" height="20" patternUnits="userSpaceOnUse"><rect class="pds__lame" width="66" height="20"/><path class="pds__joint" d="M0 19.5H66M24 0V20"/></pattern>
+                <pattern id="pds-dalles" width="44" height="44" patternUnits="userSpaceOnUse"><rect class="pds__dalle" width="44" height="44"/><path class="pds__joint" d="M0 43.5H44M43.5 0V44"/></pattern>
+                <radialGradient id="pds-braises" cx="0" cy=".5" r=".9"><stop offset="0" class="pds__lueur-a"/><stop offset="1" class="pds__lueur-b"/></radialGradient>
+                <linearGradient id="pds-jour" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="pds__jour-a"/><stop offset="1" class="pds__jour-b"/></linearGradient>
+              </defs>
+              <rect width="1000" height="640" fill="url(#pds-dalles)"/>
+              <rect class="pds__eau" x="926" y="40" width="54" height="560" rx="10"/>
+              <g class="pds__plantes"><circle cx="740" cy="42" r="17"/><circle cx="902" cy="40" r="11"/><circle cx="740" cy="600" r="17"/><circle cx="902" cy="604" r="11"/><circle cx="740" cy="404" r="9"/></g>
+              <rect x="20" y="20" width="680" height="600" fill="url(#pds-parquet)"/>
+              <g class="pds__zones">
+                <rect class="pds__zone" data-zone="cheminee" x="30" y="126" width="232" height="398" rx="18"/>
+                <rect class="pds__zone" data-zone="fenetre" x="252" y="30" width="438" height="150" rx="18"/>
+                <rect class="pds__zone" data-zone="grande-table" x="298" y="244" width="344" height="180" rx="18"/>
+                <rect class="pds__zone" data-zone="terrasse" x="714" y="22" width="204" height="596" rx="18"/>
+              </g>
+              <path class="pds__lumiere" d="M262 24H688L650 212H300Z" fill="url(#pds-jour)"/>
+              <ellipse cx="40" cy="330" rx="200" ry="160" fill="url(#pds-braises)"/>
+              <g class="pds__cheminee"><rect x="20" y="270" width="42" height="120" rx="4"/><path class="pds__feu" d="M38 354C30 338 46 330 40 312C54 326 56 342 48 354ZM46 354C44 346 52 342 52 332C58 340 58 350 54 354Z"/></g>
+              <g class="pds__bar"><rect x="36" y="568" width="224" height="36" rx="8"/><circle cx="66" cy="544" r="11"/><circle cx="116" cy="544" r="11"/><circle cx="166" cy="544" r="11"/><circle cx="216" cy="544" r="11"/></g>
+              <path class="pds__mur" d="M420 620H20V20H700V226M700 434V620H520"/>
+              <path class="pds__vitre" d="M262 20H684M700 232V428"/>
+              <g class="pds__etiquettes">
+                <text x="44" y="144">AU COIN DU FEU</text>
+                <text x="470" y="200" text-anchor="middle">LES FENÊTRES</text>
+                <text x="470" y="414" text-anchor="middle">LA GRANDE TABLE</text>
+                <text x="816" y="590" text-anchor="middle">TERRASSE</text>
+                <text x="148" y="526" text-anchor="middle">BAR</text>
+                <text x="470" y="606" text-anchor="middle">ENTRÉE</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="pds__panneau">
+        <ul class="pds__liste">
+          <li class="pds__item" data-table="1" data-zone="cheminee" data-places="2" data-forme="ronde" data-x="150" data-y="214" data-l="58"><a class="pds__lien" href="../reservation-de-table/index.html?table=1&amp;couverts=2&amp;espace=salle#resa-titre"><span class="pds__num">1</span><span class="pds__texte"><span class="pds__nom">Table 1</span><span class="pds__info"><span class="pds__zone-nom">Au coin du feu</span> · 2 places</span><span class="pds__note">Deux fauteuils face à l’âtre</span></span></a></li>
+          <li class="pds__item" data-table="2" data-zone="cheminee" data-places="4" data-forme="carree" data-x="160" data-y="336" data-l="66"><a class="pds__lien" href="../reservation-de-table/index.html?table=2&amp;couverts=4&amp;espace=salle#resa-titre"><span class="pds__num">2</span><span class="pds__texte"><span class="pds__nom">Table 2</span><span class="pds__info"><span class="pds__zone-nom">Au coin du feu</span> · 4 places</span><span class="pds__note">La plus proche du feu</span></span></a></li>
+          <li class="pds__item" data-table="3" data-zone="cheminee" data-places="2" data-forme="ronde" data-x="150" data-y="456" data-l="58" data-prise><span class="pds__lien"><span class="pds__num">3</span><span class="pds__texte"><span class="pds__nom">Table 3</span><span class="pds__info"><span class="pds__zone-nom">Au coin du feu</span> · 2 places</span><span class="pds__etat">Prise ce soir</span></span></span></li>
+          <li class="pds__item" data-table="4" data-zone="fenetre" data-places="2" data-forme="carree" data-x="330" data-y="100" data-l="54"><a class="pds__lien" href="../reservation-de-table/index.html?table=4&amp;couverts=2&amp;espace=salle#resa-titre"><span class="pds__num">4</span><span class="pds__texte"><span class="pds__nom">Table 4</span><span class="pds__info"><span class="pds__zone-nom">Les fenêtres</span> · 2 places</span><span class="pds__note">Vue sur le jardin</span></span></a></li>
+          <li class="pds__item" data-table="5" data-zone="fenetre" data-places="4" data-forme="longue" data-x="470" data-y="100" data-l="112" data-h="58"><a class="pds__lien" href="../reservation-de-table/index.html?table=5&amp;couverts=4&amp;espace=salle#resa-titre"><span class="pds__num">5</span><span class="pds__texte"><span class="pds__nom">Table 5</span><span class="pds__info"><span class="pds__zone-nom">Les fenêtres</span> · 4 places</span><span class="pds__note">Au soleil couchant</span></span></a></li>
+          <li class="pds__item" data-table="6" data-zone="fenetre" data-places="2" data-forme="ronde" data-x="612" data-y="100" data-l="56" data-prise><span class="pds__lien"><span class="pds__num">6</span><span class="pds__texte"><span class="pds__nom">Table 6</span><span class="pds__info"><span class="pds__zone-nom">Les fenêtres</span> · 2 places</span><span class="pds__etat">Prise ce soir</span></span></span></li>
+          <li class="pds__item" data-table="7" data-zone="grande-table" data-places="10" data-forme="longue" data-x="470" data-y="330" data-l="290" data-h="68"><a class="pds__lien" href="../reservation-de-table/index.html?table=7&amp;couverts=10&amp;espace=salle#resa-titre"><span class="pds__num">7</span><span class="pds__texte"><span class="pds__nom">Table 7</span><span class="pds__info"><span class="pds__zone-nom">La grande table</span> · 10 places</span><span class="pds__note">Pour les tablées et les anniversaires</span></span></a></li>
+          <li class="pds__item" data-table="8" data-zone="terrasse" data-places="4" data-forme="ronde" data-x="818" data-y="146" data-l="74"><a class="pds__lien" href="../reservation-de-table/index.html?table=8&amp;couverts=4&amp;espace=terrasse#resa-titre"><span class="pds__num">8</span><span class="pds__texte"><span class="pds__nom">Table 8</span><span class="pds__info"><span class="pds__zone-nom">Terrasse</span> · 4 places</span><span class="pds__note">Sous le grand olivier</span></span></a></li>
+          <li class="pds__item" data-table="9" data-zone="terrasse" data-places="4" data-forme="ronde" data-x="818" data-y="316" data-l="74" data-prise><span class="pds__lien"><span class="pds__num">9</span><span class="pds__texte"><span class="pds__nom">Table 9</span><span class="pds__info"><span class="pds__zone-nom">Terrasse</span> · 4 places</span><span class="pds__etat">Prise ce soir</span></span></span></li>
+          <li class="pds__item" data-table="10" data-zone="terrasse" data-places="6" data-forme="longue" data-x="818" data-y="484" data-l="122" data-h="60"><a class="pds__lien" href="../reservation-de-table/index.html?table=10&amp;couverts=6&amp;espace=terrasse#resa-titre"><span class="pds__num">10</span><span class="pds__texte"><span class="pds__nom">Table 10</span><span class="pds__info"><span class="pds__zone-nom">Terrasse</span> · 6 places</span><span class="pds__note">Au bord de la piscine</span></span></a></li>
+        </ul>
+        <div class="pds__action">
+          <p class="pds__choix" aria-live="polite" data-pds-choix>Choisissez une table libre sur le plan ou dans la liste.</p>
+          <a class="socle-bouton socle-bouton--plein pds__reserver" data-pds-reserver aria-disabled="true">Réserver cette table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="reservation">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>«&nbsp;Réserver cette table&nbsp;» ouvre la démonstration du module reservation-de-table avec ?table=…&amp;couverts=…&amp;espace=…&nbsp;: couverts et installation préremplis, table rappelée dans le récapitulatif.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="plan-de-salle"]')) await init(el);
+</script>
+</body>
+</html>

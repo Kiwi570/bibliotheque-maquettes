@@ -1,0 +1,26 @@
+{
+ "etapes": [
+  {"defiler": ".ccq__form"},
+  {"cliquer": ".ccq__puce:nth-child(3) input"},
+  {"cliquer": "#ccq-pour"}, {"touche": "Control+A"}, {"touche": "Backspace"},
+  {"saisir": ["#ccq-pour", "Camille"]},
+  {"cliquer": "#ccq-mot"}, {"touche": "Control+A"}, {"touche": "Backspace"},
+  {"saisir": ["#ccq-mot", "Pour un dîner au coin du feu"]},
+  {"cliquer": "[data-ccq-plus]"},
+  {"attendre": 700},
+  {"cliquer": ".ccq__offrir"},
+  {"attendre": 4600},
+  {"verifier": ".ccq.est-scelle [data-ccq-reprendre]"}
+ ],
+ "pause": 320,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [
+  {"defiler": ".ccq__scene"},
+  {"cliquer": ".ccq__puce:nth-child(4) input"},
+  {"saisir": ["#ccq-pour", "Camille"]},
+  {"saisir": ["#ccq-de", "Julien"]},
+  {"saisir": ["#ccq-mot", "Pour un dîner au coin du feu"]},
+  {"cliquer": "[data-ccq-plus]"},
+  {"cliquer": "[data-ccq-plus]"}
+ ], "apres": 1400 }
+}

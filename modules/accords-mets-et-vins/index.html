@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Accords mets et vins · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px; }
+  /* Section sombre : la page inverse ses couleurs localement (dérivées comprises). */
+  .demo-sombre { --couleur-fond: #1b1310; --couleur-texte: #f4ece1;
+    --couleur-texte-doux: color-mix(in oklab, var(--couleur-texte) 72%, var(--couleur-fond));
+    --couleur-ligne: color-mix(in oklab, var(--couleur-texte) 18%, var(--couleur-fond));
+    --couleur-surface: color-mix(in oklab, var(--couleur-texte) 8%, var(--couleur-fond));
+    --couleur-sur-accent: #f4ece1; background: var(--couleur-fond); color: var(--couleur-texte); }
+  .demo-sombre .socle-surtitre { color: color-mix(in oklab, var(--couleur-accent) 45%, var(--couleur-texte)); }
+  .ame__tete h2 { font-weight: 500; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, la carte et ses accords&nbsp;: touchez un plat, le verre se remplit de ce que le sommelier conseille.</p>
+  </section>
+
+  <section class="ame demo-sombre" data-module="accords-mets-et-vins" data-source="exemple-accords.json" aria-labelledby="ame-titre">
+    <div class="ame__grille socle-cadre">
+      <div class="ame__tete">
+        <p class="socle-surtitre">Accords mets et vins</p>
+        <h2 id="ame-titre">Un plat, un verre</h2>
+        <p>Choisissez un plat de la carte&nbsp;: le verre se remplit de ce que notre sommelier lui sert, vin, bière, cocktail ou thé.</p>
+      </div>
+      <ul class="ame__liste" data-choisi="joue">
+          <li class="ame__plat" data-plat="planche" data-type="cocktail" data-couleur="#f0907b" data-verre="coupe" data-bulles style="--c: #f0907b">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">À partager</p>
+            <h3 class="ame__nom">Planche du marché</h3>
+            <p class="ame__detail">Charcuterie fine, pickles maison, pain grillé</p>
+            <p class="ame__accord"><span class="ame__type">Cocktail</span> · <span class="ame__boisson">Paloma maison</span> · <span class="ame__region">Tequila, pamplemousse rose, eau pétillante</span></p>
+            <p class="ame__mot">L’amertume du pamplemousse nettoie le gras de la charcuterie, la pointe de sel la relance&nbsp;: on picore sans se lasser.</p>
+          </li>
+          <li class="ame__plat" data-plat="veloute" data-type="vin-blanc" data-couleur="#e2c25c" style="--c: #e2c25c">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Entrée</p>
+            <h3 class="ame__nom">Velouté de potimarron</h3>
+            <p class="ame__detail">Noisettes torréfiées, crème crue</p>
+            <p class="ame__accord"><span class="ame__type">Vin blanc</span> · <span class="ame__boisson">Viognier</span> · <span class="ame__region">IGP Collines rhodaniennes</span></p>
+            <p class="ame__mot">Ses arômes d’abricot répondent à la douceur de la courge, sa rondeur épouse le velouté sans l’alourdir.</p>
+          </li>
+          <li class="ame__plat" data-plat="truite" data-type="petillant" data-couleur="#efdb93" style="--c: #efdb93">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Plat</p>
+            <h3 class="ame__nom">Truite de la vallée</h3>
+            <p class="ame__detail">Beurre blanc aux herbes, poireaux fondants</p>
+            <p class="ame__accord"><span class="ame__type">Bulles</span> · <span class="ame__boisson">Crémant d’Alsace brut</span> · <span class="ame__region">Alsace · pinot blanc, auxerrois</span></p>
+            <p class="ame__mot">Des bulles fines et une belle acidité pour couper le beurre blanc&nbsp;; les herbes ressortent à chaque gorgée.</p>
+          </li>
+          <li class="ame__plat" data-plat="joue" data-type="vin-rouge" data-couleur="#6c1527" style="--c: #6c1527">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Plat</p>
+            <h3 class="ame__nom">Joue de bœuf confite</h3>
+            <p class="ame__detail">Sauce au vin rouge, purée maison</p>
+            <p class="ame__accord"><span class="ame__type">Vin rouge</span> · <span class="ame__boisson">Saint-Joseph</span> · <span class="ame__region">Vallée du Rhône nord · syrah</span></p>
+            <p class="ame__mot">Le poivre et la violette de la syrah font écho à la sauce&nbsp;; ses tanins soyeux tiennent tête à la viande confite.</p>
+          </li>
+          <li class="ame__plat" data-plat="cochon" data-type="biere" data-couleur="#b8661c" style="--c: #b8661c">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Plat</p>
+            <h3 class="ame__nom">Côte de cochon à la braise</h3>
+            <p class="ame__detail">Jus au thym, pommes grenaille</p>
+            <p class="ame__accord"><span class="ame__type">Bière</span> · <span class="ame__boisson">Bière ambrée artisanale</span> · <span class="ame__region">Brasserie du pays · malt caramel</span></p>
+            <p class="ame__mot">Le malt caramélisé rejoint le grillé de la braise, l’amertume légère allège le gras de la côte.</p>
+          </li>
+          <li class="ame__plat" data-plat="fromages" data-type="vin-blanc" data-couleur="#d49f37" style="--c: #d49f37">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Fromages</p>
+            <h3 class="ame__nom">Comté 24 mois et tomme fermière</h3>
+            <p class="ame__detail">Noix, confiture de figues</p>
+            <p class="ame__accord"><span class="ame__type">Vin blanc</span> · <span class="ame__boisson">Vin jaune</span> · <span class="ame__region">Arbois, Jura · savagnin</span></p>
+            <p class="ame__mot">Noix, épices, curry&nbsp;: le vin jaune et le comté vieux parlent la même langue. Un accord qui dure en bouche.</p>
+          </li>
+          <li class="ame__plat" data-plat="tarte" data-type="the" data-couleur="#a8622a" style="--c: #a8622a">
+            <span class="ame__pastille" aria-hidden="true"></span>
+            <p class="ame__moment">Dessert</p>
+            <h3 class="ame__nom">Tarte fine aux pommes</h3>
+            <p class="ame__detail">Caramel au beurre salé</p>
+            <p class="ame__accord"><span class="ame__type">Thé</span> · <span class="ame__boisson">Oolong torréfié</span> · <span class="ame__region">Taïwan · servi chaud, sans sucre</span></p>
+            <p class="ame__mot">Ses notes grillées et miellées prolongent le caramel au beurre salé, sans rien ajouter de sucré.</p>
+          </li>
+      </ul>
+      <div class="ame__scene">
+        <figure class="ame__verre" aria-hidden="true"></figure>
+        <div class="ame__fiche" aria-live="polite" aria-atomic="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son cours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="accords-mets-et-vins"]')) await init(el);
+</script>
+</body>
+</html>

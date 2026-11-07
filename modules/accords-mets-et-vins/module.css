@@ -1,0 +1,93 @@
+/* Accords mets et vins — identité uniquement par les variables du socle ; la couleur de la boisson vient du contenu (JSON ou data-couleur).
+   Liste des plats (vraie liste : sans JavaScript, chaque plat montre son accord et le mot du sommelier), puis la scène :
+   un verre en SVG ajouté par module.js (coupe qui se change d'un verre à l'autre, liquide qui monte par le fond, houle, bulles,
+   mousse) et la fiche de l'accord, annoncée aux lecteurs d'écran.
+   Réglages : --ame-verre (trait du verre), --ame-largeur-verre (largeur du verre dans la scène). */
+@property --ame-halo { syntax: '<color>'; inherits: true; initial-value: transparent; }
+.ame { padding-block: clamp(64px, 9vw, 130px); --ame-verre: color-mix(in oklab, var(--couleur-texte) 64%, transparent); }
+.ame__grille { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "liste" "scene"; gap: clamp(22px, 4vw, 44px); }
+@media (min-width: 900px) {
+  .ame__grille { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); grid-template-areas: "tete scene" "liste scene"; column-gap: clamp(40px, 6vw, 96px); row-gap: 28px; align-items: start; }
+  .ame__scene { align-self: center; }
+}
+/* Grand écran assez haut : le verre reste à côté de la liste pendant qu'on la parcourt. */
+@media (min-width: 900px) and (min-height: 600px) { .ame__scene { align-self: start; position: sticky; top: calc(var(--entete-h) + max(16px, (100vh - var(--entete-h) - 34rem) / 2)); } }
+.ame__tete { grid-area: tete; display: grid; gap: .8rem; }
+.ame__tete h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.4rem); line-height: 1.02; }
+.ame__tete p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 44ch; }
+
+/* ---------- Liste des plats ---------- */
+.ame__liste { grid-area: liste; list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; min-width: 0; }
+.ame__plat { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; row-gap: 2px; align-items: center;
+  padding: 11px 16px 12px 14px; border-radius: calc(var(--rayon) * .7); border: 1px solid transparent; transition: background-color .3s, border-color .3s; }
+.ame__pastille { grid-row: 1 / span 3; width: 12px; height: 12px; border-radius: 50%; background: var(--c, var(--couleur-accent));
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--c, var(--couleur-accent)) 22%, transparent); transition: box-shadow .3s, transform .3s; }
+.ame__plat > :not(.ame__pastille, .ame__radio) { grid-column: 2; margin: 0; }
+.ame__moment { font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.ame__nom { font-size: clamp(1.1rem, 1rem + .45vw, 1.4rem); font-weight: 500; line-height: 1.15; }
+.ame__detail { color: var(--couleur-texte-doux); font-size: max(12px, .92rem); }
+.ame__plat > .ame__accord { margin-top: .35rem; font-weight: 700; }
+.ame__type { color: color-mix(in oklab, var(--c, var(--couleur-accent)) 45%, var(--couleur-texte)); }
+.ame__mot { font-family: var(--police-titres); font-style: italic; color: var(--couleur-texte-doux); }
+.ame__radio { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.ame__plat:hover { background: color-mix(in oklab, var(--couleur-texte) 5%, transparent); }
+.ame__plat.est-choisi { background: color-mix(in oklab, var(--c, var(--couleur-accent)) 15%, transparent); border-color: color-mix(in oklab, var(--c, var(--couleur-accent)) 50%, transparent); }
+.ame__plat.est-choisi .ame__pastille { transform: scale(1.25); box-shadow: 0 0 0 4px color-mix(in oklab, var(--c, var(--couleur-accent)) 30%, transparent), 0 0 18px color-mix(in oklab, var(--c, var(--couleur-accent)) 70%, transparent); }
+.ame__plat:has(.ame__radio:focus-visible) { outline: 2px solid var(--couleur-accent); outline-offset: 2px; }
+
+/* Avec JavaScript, l'accord passe dans la fiche à côté du verre (masqué d'emblée : rien ne bouge au chargement). */
+@media (scripting: enabled) { .ame__plat :is(.ame__accord, .ame__mot) { display: none; } }
+/* Sans JavaScript : la liste est la carte des accords, la scène n'existe pas. */
+@media (scripting: none) { .ame__scene { display: none; } .ame__grille { grid-template-areas: "tete" "liste"; grid-template-columns: minmax(0, 1fr); } .ame__liste { gap: 12px; } .ame__plat > * { max-width: 68ch; } }
+
+/* Tablette et téléphone : les plats en rangée qu'on fait glisser, le verre juste dessous. */
+@media (max-width: 899px) and (scripting: enabled) {
+  .ame__liste { display: flex; gap: 10px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: var(--espace);
+    margin-inline: calc(var(--espace) * -1); padding: 4px var(--espace) 12px; scrollbar-width: thin; }
+  .ame__plat { flex: 0 0 min(68vw, 260px); scroll-snap-align: start; align-items: start; border-color: var(--couleur-ligne); }
+  .ame__pastille { grid-row: 1; align-self: center; }
+}
+
+/* ---------- Scène : verre et fiche ---------- */
+.ame__scene { grid-area: scene; display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: clamp(14px, 3vw, 44px); align-items: center; min-width: 0; }
+.ame__verre { --l: var(--ame-largeur-verre, 100%); position: relative; margin: 0; width: var(--l); max-width: 300px; aspect-ratio: 2 / 3; justify-self: center; transition: --ame-halo 1.2s ease; }
+.ame__verre::before { content: ""; position: absolute; inset: -8% -30% 4%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, color-mix(in oklab, var(--ame-halo) 34%, transparent), transparent); }
+.ame__svg { position: relative; width: 100%; height: 100%; overflow: visible; }
+.ame__sol { fill: color-mix(in oklab, black 40%, transparent); }
+.ame__coupe, .ame__pied { fill: color-mix(in oklab, var(--couleur-texte) 7%, transparent); }
+.ame__contour, .ame__pied { stroke: var(--ame-verre); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.ame__contour { fill: none; }
+.ame__brillance { fill: none; stroke: color-mix(in oklab, white 55%, transparent); stroke-width: 3.2; stroke-linecap: round; }
+.ame__corps, .ame__vague { fill: var(--ame-vin, transparent); }
+.ame__clair { stop-color: white; stop-opacity: .08; }
+.ame__sombre { stop-color: black; stop-opacity: .42; }
+.ame__ombre-bord { stop-color: black; stop-opacity: .32; }
+.ame__ombre-centre { stop-color: white; stop-opacity: .04; }
+.ame__mousse { fill: color-mix(in oklab, white 84%, var(--ame-vin, white)); display: none; }
+.est-mousse .ame__mousse { display: inline; }
+.ame__houle .ame__vague { animation: ame-houle 3.2s linear infinite; }
+@keyframes ame-houle { to { transform: translateX(-50px); } }
+.ame__bulles circle { fill: color-mix(in oklab, white 72%, transparent); opacity: 0; }
+.est-bulles .ame__bulles circle, .est-remplit .ame__bulles circle { animation: ame-bulle var(--d, 2.4s) linear var(--r, 0s) infinite; }
+@keyframes ame-bulle { 0% { transform: translateY(0); opacity: 0; } 14% { opacity: .9; } 86% { opacity: .85; } 100% { transform: translateY(calc(var(--prof, 90) * -1px)); opacity: 0; } }
+
+.ame__fiche { display: grid; gap: .45rem; align-content: center; min-height: 15.5rem; min-width: 0; }
+.ame__fiche > * { margin: 0; }
+.ame__fiche-plat { font-family: var(--police-mono); font-size: max(12px, .74rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.ame__fiche-type { display: inline-flex; align-items: center; gap: .55em; font-weight: 700; color: color-mix(in oklab, var(--ame-vin, var(--couleur-accent)) 38%, var(--couleur-texte)); }
+.ame__goutte { flex: none; width: .72em; height: .72em; border-radius: 50% 0 50% 50%; rotate: -45deg; background: var(--ame-vin, var(--couleur-accent)); box-shadow: 0 0 10px color-mix(in oklab, var(--ame-vin, var(--couleur-accent)) 70%, transparent); }
+.ame__fiche-nom { font-size: clamp(1.6rem, 1.15rem + 2vw, 2.8rem); font-weight: 500; line-height: 1.02; overflow-wrap: anywhere; }
+.ame__fiche-region { color: var(--couleur-texte-doux); }
+.ame__fiche > .ame__fiche-signature { margin-top: .7rem; font-family: var(--police-mono); font-size: max(12px, .72rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+.ame__fiche-mot { padding-left: 1rem; border-left: 2px solid color-mix(in oklab, var(--ame-vin, var(--couleur-accent)) 60%, var(--couleur-texte));
+  font-family: var(--police-titres); font-style: italic; font-size: clamp(1.02rem, .95rem + .35vw, 1.25rem); line-height: 1.42; }
+
+@media (max-width: 600px) {
+  .ame__scene { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); align-items: start; }
+  .ame__fiche { min-height: 0; align-content: start; }
+}
+/* Mode calme, « réduire les animations » : verre plein, pas de houle ni de bulles, la fiche change d'un coup. */
+.calme .ame__bulles { display: none; }
+.calme .ame__verre { transition: none; }
+@media (prefers-reduced-motion: reduce) { .ame__bulles { display: none; } .ame__verre { transition: none; } }

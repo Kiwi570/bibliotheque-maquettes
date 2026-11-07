@@ -1,0 +1,73 @@
+{
+ "nom": "carte-cadeau-qui-se-compose",
+ "titre": "Carte cadeau qui se compose en direct (montant, quantité, mot, total), puis glisse dans une enveloppe dont le rabat se ferme en 3D et qu'un cachet de cire scelle",
+ "role": "calculateur",
+ "animations": [
+  "compteur",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "calculateur",
+  "saisie-personnalisee",
+  "panier-simule"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "jardins-hacienda-maquette/carte-cadeau-composer",
+  "beat-haechler-maquette/bons-cadeaux-hero"
+ ],
+ "convient_a": [
+  "restauration",
+  "hébergement",
+  "bien-être",
+  "tourisme",
+  "commerce",
+  "artisanat",
+  "culture",
+  "spectacle",
+  "sport"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "artisanal",
+  "luxueux",
+  "doux",
+  "clair",
+  "sombre"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "min": "montant libre minimal, 10",
+  "max": "montant libre maximal, 1000",
+  "quantiteMax": "nombre de cartes au plus, 10",
+  "devise": "code de la devise du total, EUR",
+  "langue": "format des nombres, fr-FR",
+  "cachet": "initiales du cachet de cire (sinon data-cachet, sinon le monogramme de la carte)",
+  "envoyer": "fonction async ({ montant, quantite, total, pour, de, mot }) : vrai achat ; faux ou erreur, la carte ne part pas ; sans elle l'achat est simulé",
+  "textes": "textes à remplacer (pour, de, ticket, statut, simule, erreurMontant…)"
+ },
+ "images": [
+  {
+   "role": "logo de la maison sur la carte, facultatif (sinon un monogramme en texte)",
+   "selecteur": ".ccq__logo img",
+   "nombre": "0 ou 1",
+   "ratio": "1:1, logo seul sur fond transparent (SVG ou PNG)",
+   "largeur": 240,
+   "zone_calme": "logo seul, sans fond ni cadre, d'une couleur claire lisible sur la carte sombre"
+  }
+ ],
+ "poids_ko": 33.7,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.001,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

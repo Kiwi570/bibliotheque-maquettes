@@ -1,0 +1,136 @@
+/* Carte cadeau qui se compose — identité uniquement par les variables du socle.
+   Scène (décorative, aria-hidden) : la carte dessinée en CSS, sa pile (quantité) et, ajoutée par module.js, l'enveloppe
+   en trois calques (dos, rabat, poche) entre lesquels la carte glisse ; le rabat se ferme en 3D, un cachet le scelle.
+   Formulaire : un vrai formulaire (boutons radio, champ libre, quantité, prénoms, mot), lisible et envoyable sans JavaScript.
+   Réglages : --ccq-carte (fond de la carte), --ccq-encre (texte de la carte), --ccq-or (filets et monogramme),
+   --ccq-papier (enveloppe), --ccq-cire (cachet), --ccq-main (police manuscrite du prénom et du mot). */
+.ccq { padding-block: clamp(64px, 9vw, 130px);
+  --ccq-carte: var(--couleur-secondaire);
+  --ccq-encre: color-mix(in oklab, var(--couleur-fond) 90%, var(--couleur-accent));
+  --ccq-or: color-mix(in oklab, var(--couleur-accent) 52%, var(--couleur-fond));
+  --ccq-papier: color-mix(in oklab, color-mix(in oklab, var(--couleur-fond) 90%, var(--couleur-accent)) 94%, var(--couleur-secondaire));
+  --ccq-cire: color-mix(in oklab, var(--couleur-accent) 84%, black); }
+.ccq__grille { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "scene" "form"; gap: clamp(22px, 4vw, 48px); align-items: center; }
+@media (min-width: 900px) {
+  .ccq__grille { grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); grid-template-areas: "scene tete" "scene form"; column-gap: clamp(40px, 6vw, 96px); row-gap: 28px; align-items: start; }
+  .ccq__scene { align-self: start; padding-top: clamp(64px, 8.4vw, 124px); }
+}
+/* Grand écran assez haut : la carte reste à côté du formulaire pendant qu'on le remplit. */
+@media (min-width: 900px) and (min-height: 640px) { .ccq__scene { position: sticky; top: calc(var(--entete-h) + 12px); } }
+.ccq__tete { grid-area: tete; display: grid; gap: .8rem; }
+.ccq__tete h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.4rem); line-height: 1.02; }
+.ccq__tete p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 44ch; }
+
+/* ---------- Scène ---------- */
+.ccq__scene { grid-area: scene; position: relative; container-type: inline-size; display: grid; justify-items: center; gap: 14px; padding-block: clamp(40px, 13cqi, 64px) 0; }
+/* --ccq-env-l : largeur de l'enveloppe ; le plateau prend sa hauteur pour qu'elle ne déborde pas sur le ticket. */
+.ccq__plateau { --ccq-env-l: min(96cqi, 34.4rem); position: relative; display: grid; place-items: center; width: 100%; min-height: calc(var(--ccq-env-l) / 1.48); }
+.ccq__paquet { grid-area: 1 / 1; position: relative; z-index: 2; width: min(86cqi, 31rem); aspect-ratio: 1.6; container-type: inline-size; }
+.ccq__carte { position: absolute; inset: 0; z-index: 2; display: grid; grid-template-rows: auto 1fr; padding: 6.4cqi 7cqi 6cqi; overflow: hidden;
+  border-radius: calc(var(--rayon) * 1.1); color: var(--ccq-encre); isolation: isolate;
+  background:
+    radial-gradient(90% 70% at 12% 0%, color-mix(in oklab, var(--couleur-accent) 34%, transparent), transparent 70%),
+    repeating-radial-gradient(circle at 92% 118%, transparent 0 1.6cqi, color-mix(in oklab, var(--ccq-or) 13%, transparent) 1.6cqi calc(1.6cqi + 1px)),
+    linear-gradient(150deg, color-mix(in oklab, var(--ccq-carte) 86%, var(--couleur-accent)), var(--ccq-carte) 55%, color-mix(in oklab, var(--ccq-carte) 80%, black));
+  box-shadow: 0 1px 0 color-mix(in oklab, white 14%, transparent) inset, 0 30px 60px -28px color-mix(in oklab, black 70%, transparent), 0 10px 20px -12px color-mix(in oklab, black 45%, transparent); }
+.ccq__cadre { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; overflow: visible; }
+.ccq__cadre rect { fill: none; stroke: var(--ccq-or); stroke-width: .42; stroke-dasharray: 1 1; stroke-dashoffset: var(--ccq-trace, 0); opacity: .7; }
+.ccq__carte-haut { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 3cqi; align-items: center; }
+.ccq__monogramme, .ccq__logo { display: grid; place-items: center; width: 12cqi; aspect-ratio: 1; border-radius: 50%; border: 1px solid var(--ccq-or); color: var(--ccq-or);
+  font-family: var(--police-titres); font-style: italic; font-size: 4.6cqi; letter-spacing: .02em; }
+.ccq__logo img { width: 72%; height: 72%; object-fit: contain; }
+.ccq__noms { display: grid; gap: .6cqi; min-width: 0; }
+.ccq__type { font-family: var(--police-mono); font-size: max(12px, 2.6cqi); letter-spacing: .16em; text-transform: uppercase; color: var(--ccq-or); }
+.ccq__maison { font-family: var(--police-titres); font-size: 4.6cqi; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ccq__quantite { align-self: start; padding: .6cqi 2.2cqi; border-radius: 999px; background: var(--ccq-or); color: var(--ccq-carte); font-weight: 800; font-size: max(12px, 3cqi); font-variant-numeric: tabular-nums; }
+.ccq__carte-bas { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4cqi; align-items: end; }
+.ccq__montant { margin: 0; font-family: var(--police-titres); font-weight: 500; font-size: 17cqi; line-height: .82; letter-spacing: -.02em; font-variant-numeric: tabular-nums lining-nums; white-space: nowrap; }
+.ccq__montant span:first-child { display: inline-block; }
+.ccq__devise { font-size: .44em; margin-left: .14em; vertical-align: .9em; color: var(--ccq-or); }
+.ccq__dedicace { display: grid; gap: .4cqi; justify-items: end; text-align: right; min-width: 0; padding-bottom: .6cqi; }
+.ccq__pour, .ccq__mot, .ccq__de { margin: 0; max-width: 100%; font-family: var(--ccq-main, var(--police-titres)); font-weight: 600; overflow-wrap: anywhere; }
+.ccq__pour { font-size: 6.6cqi; line-height: 1; }
+.ccq__mot { font-size: 4.4cqi; line-height: 1.08; color: color-mix(in oklab, var(--ccq-encre) 86%, var(--ccq-carte)); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ccq__de { font-size: 4cqi; color: var(--ccq-or); }
+.ccq__pour:empty, .ccq__mot:empty, .ccq__de:empty { display: none; }
+.ccq__reflet { position: absolute; inset: 0; z-index: 3; pointer-events: none; mix-blend-mode: soft-light; opacity: .9;
+  background: radial-gradient(60% 70% at var(--mx, 24%) var(--my, 12%), color-mix(in oklab, white 55%, transparent), transparent 62%); }
+
+/* Pile : une carte de plus derrière par carte commandée (trois au plus), posées par module.js. */
+.ccq__pile { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.ccq__pile > span { position: absolute; inset: 0; border-radius: calc(var(--rayon) * 1.1); background: linear-gradient(150deg, color-mix(in oklab, var(--ccq-carte) 78%, var(--couleur-accent)), color-mix(in oklab, var(--ccq-carte) 92%, black));
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ccq-or) 30%, transparent) inset, 0 16px 30px -18px color-mix(in oklab, black 60%, transparent);
+  transform: translate(calc(var(--i) * 3.2cqi), calc(var(--i) * -2.8cqi)) rotate(calc(var(--i) * 3.4deg)); }
+.ccq__pile > span:nth-child(2) { background: linear-gradient(150deg, color-mix(in oklab, var(--ccq-carte) 68%, var(--couleur-accent)), color-mix(in oklab, var(--ccq-carte) 86%, black)); }
+
+.ccq__ticket { margin: 0; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--couleur-texte-doux); text-align: center; min-height: 1.6em; }
+
+/* ---------- Enveloppe (ajoutée par module.js) : dos, rabat et poche, mêmes dimensions, centrés sur la carte ---------- */
+.ccq__env { position: absolute; left: calc(50% - var(--ccq-env-l) / 2); top: calc(50% - var(--ccq-env-l) / 2.96); width: var(--ccq-env-l); aspect-ratio: 1.48; pointer-events: none; opacity: 0; }
+.ccq__env--dos { z-index: 1; border-radius: calc(var(--rayon) * .7);
+  background: linear-gradient(175deg, color-mix(in oklab, var(--ccq-papier) 72%, black), color-mix(in oklab, var(--ccq-papier) 86%, black) 40%, var(--ccq-papier));
+  box-shadow: 0 36px 60px -30px color-mix(in oklab, black 65%, transparent), 0 0 0 1px color-mix(in oklab, black 10%, transparent) inset; }
+.ccq__env--rabat { z-index: 1; }
+.ccq__env--poche { z-index: 3; filter: drop-shadow(0 -1px 1px color-mix(in oklab, black 16%, transparent)); }
+.ccq__poche { position: absolute; inset: 0; border-radius: calc(var(--rayon) * .7); }
+.ccq__poche--g { clip-path: polygon(0 0, 53% 57%, 0 100%); background: linear-gradient(100deg, color-mix(in oklab, var(--ccq-papier) 94%, black), var(--ccq-papier)); }
+.ccq__poche--d { clip-path: polygon(100% 0, 47% 57%, 100% 100%); background: linear-gradient(260deg, color-mix(in oklab, var(--ccq-papier) 90%, black), color-mix(in oklab, var(--ccq-papier) 97%, black)); }
+.ccq__poche--b { clip-path: polygon(0 100%, 50% 45%, 100% 100%); background: linear-gradient(0deg, color-mix(in oklab, var(--ccq-papier) 96%, black), color-mix(in oklab, var(--ccq-papier) 90%, white)); }
+.ccq__rabat { position: absolute; left: 0; right: 0; top: 0; height: 58%; transform-origin: 50% 0; transform-style: preserve-3d; transform: perspective(1100px) rotateX(125deg); }
+.ccq__rabat > span { position: absolute; inset: 0; clip-path: polygon(0 0, 100% 0, 50% 100%); backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: calc(var(--rayon) * .7) calc(var(--rayon) * .7) 0 0; }
+.ccq__rabat-dehors { background: linear-gradient(180deg, color-mix(in oklab, var(--ccq-papier) 96%, white), color-mix(in oklab, var(--ccq-papier) 88%, black));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, black 8%, transparent); }
+.ccq__rabat > .ccq__rabat-dedans { transform: rotateX(180deg); clip-path: polygon(0 100%, 100% 100%, 50% 0);
+  background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--couleur-accent) 78%, var(--ccq-papier)) 0 7px, color-mix(in oklab, var(--couleur-accent) 52%, var(--ccq-papier)) 7px 14px); }
+.ccq__cachet { --l: min(17cqi, 92px); position: absolute; left: calc(50% - var(--l) / 2); top: calc(58% - var(--l) / 2); width: var(--l); aspect-ratio: 1; opacity: 0; color: var(--ccq-cire);
+  filter: drop-shadow(0 3px 3px color-mix(in oklab, black 38%, transparent)); }
+.ccq__cachet svg { width: 100%; height: 100%; overflow: visible; }
+.ccq__cachet .ccq__cire { fill: currentColor; }
+.ccq__cachet .ccq__anneau { fill: none; stroke: color-mix(in oklab, var(--ccq-cire) 70%, black); stroke-width: 2.4; }
+.ccq__cachet .ccq__brillance { fill: color-mix(in oklab, white 22%, transparent); }
+.ccq__cachet text { fill: color-mix(in oklab, var(--ccq-cire) 55%, white); font-family: var(--police-titres); font-style: italic; font-size: 30px; font-weight: 600; }
+.ccq__env-nom { position: absolute; left: 0; right: 0; bottom: 8%; margin: 0; text-align: center; font-family: var(--ccq-main, var(--police-titres)); font-weight: 600; font-size: min(7cqi, 2.2rem); line-height: 1;
+  color: color-mix(in oklab, var(--ccq-carte) 80%, var(--ccq-papier)); }
+
+/* ---------- Formulaire ---------- */
+.ccq__form { grid-area: form; display: grid; gap: 1.15rem; min-width: 0; }
+.ccq__champ { display: grid; gap: .45rem; min-width: 0; margin: 0; padding: 0; border: 0; }
+.ccq__libelle { font-weight: 700; padding: 0; }
+.ccq__facultatif { font-weight: 500; color: var(--couleur-texte-doux); }
+.ccq__puces { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ccq__puce { position: relative; display: inline-flex; }
+.ccq__puce input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.ccq__puce span { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; padding: 0 1.05em; border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--couleur-texte) 30%, var(--couleur-fond)); font-weight: 700; font-variant-numeric: tabular-nums; transition: background-color .25s, color .25s, border-color .25s; }
+.ccq__puce input:checked + span { background: var(--couleur-texte); border-color: var(--couleur-texte); color: var(--couleur-fond); }
+.ccq__puce input:focus-visible + span { outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+.ccq__puce:hover span { border-color: var(--couleur-texte); }
+.ccq__libre { display: inline-flex; align-items: center; gap: .4rem; font-weight: 700; }
+.ccq__form :is(input[type="text"], input[type="number"], textarea) { width: 100%; min-height: 44px; padding: .55em .8em; border: 1px solid color-mix(in oklab, var(--couleur-texte) 26%, var(--couleur-fond));
+  border-radius: calc(var(--rayon) * .6); background: var(--couleur-surface); color: inherit; font: inherit; }
+.ccq__form textarea { resize: vertical; min-height: 4.4em; }
+.ccq__form :is(input, textarea):focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: 1px; }
+.ccq__form input[aria-invalid="true"] { border-color: var(--couleur-accent); }
+.ccq__libre input { width: 6.2em; }
+.ccq__form input[type="number"] { -moz-appearance: textfield; appearance: textfield; font-variant-numeric: tabular-nums; }
+.ccq__form input[type="number"]::-webkit-inner-spin-button, .ccq__form input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.ccq__qte { display: inline-grid; grid-template-columns: 46px 4.2em 46px; width: max-content; border: 1px solid color-mix(in oklab, var(--couleur-texte) 26%, var(--couleur-fond)); border-radius: 999px; overflow: hidden; background: var(--couleur-surface); }
+.ccq__qte button { min-width: 44px; min-height: 44px; border: 0; background: transparent; cursor: pointer; font-size: 1.3rem; font-weight: 700; }
+.ccq__qte button:hover { background: color-mix(in oklab, var(--couleur-texte) 8%, transparent); }
+.ccq__qte button:focus-visible { outline-offset: -3px; }
+.ccq .ccq__qte input { min-height: 44px; border: 0; border-inline: 1px solid var(--couleur-ligne); border-radius: 0; text-align: center; padding: 0; font-weight: 700; background: transparent; }
+.ccq__deux { display: grid; gap: 1.15rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.ccq__aide, .ccq__note { margin: 0; color: var(--couleur-texte-doux); font-size: max(12px, .86rem); }
+.ccq__erreur { margin: 0; color: color-mix(in oklab, var(--couleur-accent) 82%, var(--couleur-texte)); font-weight: 700; font-size: max(12px, .9rem); }
+.ccq__erreur:empty { display: none; }
+.ccq__total { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin: 0; padding-block: .7rem; border-block: 1px solid var(--couleur-ligne); font-weight: 700; }
+.ccq__total output { font-family: var(--police-titres); font-weight: 500; font-size: clamp(1.7rem, 1.3rem + 1.2vw, 2.3rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.ccq__actions { display: flex; flex-wrap: wrap; gap: .7rem; }
+.ccq__offrir[aria-busy="true"] { cursor: progress; opacity: .85; }
+.ccq__statut { margin: 0; padding: .9rem 1rem; border-radius: calc(var(--rayon) * .6); background: var(--couleur-surface); border-left: 3px solid var(--couleur-accent); font-weight: 600; }
+
+/* Écran étroit : la carte un peu plus grande dans sa colonne. */
+@media (max-width: 600px) { .ccq__paquet { width: 88cqi; } .ccq__plateau { --ccq-env-l: 97cqi; } }
+/* Mode calme, « réduire les animations » : la carte suit le formulaire sans mouvement ; l'enveloppe se ferme d'un coup. */
+.calme .ccq__reflet { display: none; }
+@media (prefers-reduced-motion: reduce) { .ccq__reflet { display: none; } }

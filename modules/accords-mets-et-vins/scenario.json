@@ -1,0 +1,16 @@
+{
+ "etapes": [
+  {"defiler": "[data-plat='cochon']"},
+  {"attendre": 2500},
+  {"cliquer": "[data-plat='cochon'] .ame__radio"},
+  {"attendre": 2500},
+  {"cliquer": "[data-plat='truite'] .ame__radio"},
+  {"attendre": 2500},
+  {"cliquer": "[data-plat='tarte'] .ame__radio"},
+  {"attendre": 2300},
+  {"verifier": ".ame__plat.est-choisi[data-plat='tarte']"}
+ ],
+ "pause": 300,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": "[data-plat='planche']"}, {"attendre": 2700} ], "apres": 300 }
+}

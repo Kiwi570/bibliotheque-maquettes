@@ -1,0 +1,56 @@
+{
+ "nom": "accords-mets-et-vins",
+ "titre": "Accords mets et vins : on touche un plat, le verre change de forme et se remplit par le fond de la boisson conseillée (vin, bière, cocktail, thé), avec le nom, la région et le mot du sommelier",
+ "role": "outil-interactif",
+ "animations": [
+  "masque",
+  "morphing",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "configurateur"
+ ],
+ "dependances": [
+  "gsap"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "artic-maquette/projets-distribotion-produits",
+  "chateau-haut-piquat-maquette/oenotourisme-ecrivins"
+ ],
+ "convient_a": [
+  "restauration",
+  "hébergement",
+  "commerce",
+  "tourisme",
+  "artisanat"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "chaleureux",
+  "luxueux",
+  "artisanal",
+  "clair"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "source": "adresse du JSON des accords (modèle : exemple-accords.json), sinon data-source de la section ; sans fichier, la liste de la page",
+  "contenu": "contenu déjà chargé, même forme que le JSON",
+  "choisi": "plat montré d'abord (sinon « choisi » du JSON, data-choisi de la liste, ou le premier)",
+  "duree": "durée du remplissage en secondes, 1.5",
+  "textes": "{ avec, signature, groupe }"
+ },
+ "images": [],
+ "poids_ko": 26.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

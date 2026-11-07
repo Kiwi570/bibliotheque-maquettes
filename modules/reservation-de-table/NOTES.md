@@ -44,7 +44,7 @@ Le HTML complet est dans `index.html` : le recopier, puis ajuster les réglages,
 - Couverts de 1 à `couverts_max` ; au maximum, le lien pour appeler. Les complets dépendent aussi du nombre de couverts.
 - « Vérifier ma réservation » : erreurs à côté des champs (date, heure, prénom, nom, téléphone, e-mail facultatif), focus sur la première ; sinon le récapitulatif passe en « Tout est juste ? » avec « Confirmer » et un « Modifier » par ligne. Modifier un champ revient à la saisie.
 - Confirmer : le créneau est revérifié, puis envoi (simulé par défaut), référence, champs bloqués, brouillon effacé, « Faire une autre réservation ».
-- Adresse : `?date=2026-11-14&service=soir&heure=20:30&couverts=4&espace=salle&demande=Chaise%20haute` (depuis un bouton « Réserver ce soir » d'une autre section). Brouillon : `sessionStorage`, relu au chargement s'il n'y a pas de paramètres, revalidé (date passée retirée, heure reprise seulement si elle reste libre).
+- Adresse : `?date=2026-11-14&service=soir&heure=20:30&couverts=4&espace=salle&demande=Chaise%20haute` (depuis un bouton « Réserver ce soir » d'une autre section). `table=10` (envoyé par le module `plan-de-salle` avec `couverts` et `espace`) : gardé dans un champ caché `table`, montré avec l'installation (« En terrasse · table 10 »), envoyé avec la demande, effacé par « Faire une autre réservation ». Brouillon : `sessionStorage`, relu au chargement s'il n'y a pas de paramètres, revalidé (date passée retirée, heure reprise seulement si elle reste libre).
 - Sans JavaScript : calendrier, liste d'heures, nombre de couverts, radios et champs ordinaires, envoyés à `action`. Mode calme : sans transition.
 
 ## Pièges

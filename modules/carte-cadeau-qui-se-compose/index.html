@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Carte cadeau qui se compose · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-caveat.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  @font-face { font-family: 'Caveat'; src: url('demo-caveat.woff2') format('woff2'); font-weight: 600; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px;
+    --couleur-sur-accent: #f4ece1; --ccq-main: 'Caveat', 'Bradley Hand', cursive; }
+  .ccq__tete h2 { font-weight: 500; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas : choisissez un montant, un nombre de cartes et un mot ; la carte se compose sous vos yeux, puis se glisse dans son enveloppe.</p>
+  </section>
+
+  <section class="ccq" data-module="carte-cadeau-qui-se-compose" data-cachet="JH" aria-labelledby="ccq-titre">
+    <div class="ccq__grille socle-cadre">
+      <div class="ccq__tete">
+        <p class="socle-surtitre">Carte cadeau</p>
+        <h2 id="ccq-titre">Offrez un moment aux Jardins</h2>
+        <p>Un dîner au coin du feu, un déjeuner sur la terrasse&nbsp;: composez la carte, elle se dessine pendant que vous écrivez.</p>
+      </div>
+
+      <div class="ccq__scene" aria-hidden="true">
+        <div class="ccq__plateau">
+          <div class="ccq__paquet">
+            <div class="ccq__carte">
+              <svg class="ccq__cadre" viewBox="0 0 160 100" preserveAspectRatio="none"><rect x="3.2" y="3.2" width="153.6" height="93.6" rx="5" ry="5" pathLength="1"/></svg>
+              <div class="ccq__carte-haut">
+                <span class="ccq__monogramme">JH</span>
+                <span class="ccq__noms"><span class="ccq__type">Carte cadeau</span><span class="ccq__maison">Les Jardins de l’Hacienda</span></span>
+                <span class="ccq__quantite" data-ccq-quantite hidden>× 1</span>
+              </div>
+              <div class="ccq__carte-bas">
+                <p class="ccq__montant"><span data-ccq-montant>50</span><span class="ccq__devise">€</span></p>
+                <div class="ccq__dedicace">
+                  <p class="ccq__pour" data-ccq-pour></p>
+                  <p class="ccq__mot" data-ccq-mot></p>
+                  <p class="ccq__de" data-ccq-de></p>
+                </div>
+              </div>
+              <span class="ccq__reflet"></span>
+            </div>
+          </div>
+        </div>
+        <p class="ccq__ticket" data-ccq-ticket>Une carte de 50 €</p>
+      </div>
+
+      <form class="ccq__form" action="#ccq-titre" method="get" novalidate>
+        <fieldset class="ccq__champ ccq__montants">
+          <legend class="ccq__libelle">Montant</legend>
+          <div class="ccq__puces">
+            <label class="ccq__puce"><input type="radio" name="montant" value="30"><span>30 €</span></label>
+            <label class="ccq__puce"><input type="radio" name="montant" value="50" checked><span>50 €</span></label>
+            <label class="ccq__puce"><input type="radio" name="montant" value="80"><span>80 €</span></label>
+            <label class="ccq__puce"><input type="radio" name="montant" value="120"><span>120 €</span></label>
+            <label class="ccq__puce"><input type="radio" name="montant" value="200"><span>200 €</span></label>
+            <label class="ccq__puce"><input type="radio" name="montant" value="libre"><span>Autre</span></label>
+            <span class="ccq__libre"><input type="number" name="montant_libre" id="ccq-libre" min="10" max="1000" step="1" inputmode="numeric" placeholder="75" aria-label="Montant libre, en euros (de 10 à 1 000)" aria-describedby="ccq-erreur-montant"><span aria-hidden="true">€</span></span>
+          </div>
+          <p class="ccq__erreur" id="ccq-erreur-montant" data-ccq-erreur="montant" aria-live="polite"></p>
+        </fieldset>
+
+        <div class="ccq__champ">
+          <label class="ccq__libelle" for="ccq-qte">Nombre de cartes</label>
+          <div class="ccq__qte">
+            <button type="button" data-ccq-moins aria-label="Une carte de moins" aria-controls="ccq-qte">−</button>
+            <input type="number" id="ccq-qte" name="quantite" value="1" min="1" max="10" step="1" inputmode="numeric">
+            <button type="button" data-ccq-plus aria-label="Une carte de plus" aria-controls="ccq-qte">+</button>
+          </div>
+        </div>
+
+        <div class="ccq__deux">
+          <div class="ccq__champ">
+            <label class="ccq__libelle" for="ccq-pour">Pour</label>
+            <input type="text" id="ccq-pour" name="pour" maxlength="30" autocomplete="off" placeholder="Prénom">
+          </div>
+          <div class="ccq__champ">
+            <label class="ccq__libelle" for="ccq-de">De la part de</label>
+            <input type="text" id="ccq-de" name="de" maxlength="30" autocomplete="given-name" placeholder="Votre prénom">
+          </div>
+        </div>
+
+        <div class="ccq__champ">
+          <label class="ccq__libelle" for="ccq-mot">Un petit mot <span class="ccq__facultatif">facultatif</span></label>
+          <textarea id="ccq-mot" name="mot" rows="2" maxlength="120" aria-describedby="ccq-reste"></textarea>
+          <p class="ccq__aide" id="ccq-reste"><span data-ccq-reste>120</span> caractères au plus</p>
+        </div>
+
+        <p class="ccq__total"><span>Total</span><output data-ccq-total for="ccq-qte ccq-libre">50 €</output></p>
+        <p class="socle-sr" aria-live="polite" data-ccq-annonce></p>
+
+        <div class="ccq__actions">
+          <button type="submit" class="socle-bouton socle-bouton--plein ccq__offrir">Offrir cette carte</button>
+          <button type="button" class="socle-bouton" data-ccq-reprendre hidden>Composer une autre carte</button>
+        </div>
+        <p class="ccq__statut" role="status" data-ccq-statut hidden></p>
+        <p class="ccq__note">Valable un an sur toute la carte, envoyée par e-mail ou remise au restaurant. Démonstration&nbsp;: l'achat est simulé.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="suite">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son cours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="carte-cadeau-qui-se-compose"]')) await init(el);
+</script>
+</body>
+</html>

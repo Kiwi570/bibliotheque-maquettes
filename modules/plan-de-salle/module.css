@@ -1,0 +1,143 @@
+/* Plan de salle — identité uniquement par les variables du socle.
+   Plan vu de dessus en SVG (décor de la salle écrit dans la page, tables et chaises dessinées par module.js d'après la liste)
+   posé sur un plan 3D (.pds__sol) qui s'incline à l'arrivée ; un repère se dresse au-dessus de la table choisie.
+   La liste des tables est le vrai contrôle : clavier, lecteur d'écran, téléphone (cibles de 44 px) et sans JavaScript (liens).
+   Réglages : --pds-incl, --pds-tour, --pds-ech (inclinaison finale, rotation, échelle), --pds-table, --pds-parquet, --pds-dalle,
+   --pds-eau, --pds-vert, --pds-vitre (décor). */
+.pds { padding-block: clamp(64px, 9vw, 130px);
+  --pds-table: color-mix(in oklab, var(--couleur-accent) 26%, var(--couleur-fond));
+  --pds-chaise: color-mix(in oklab, var(--couleur-texte) 64%, var(--couleur-fond)); }
+.pds__grille { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "outils" "scene" "panneau"; gap: clamp(18px, 3vw, 32px); }
+@media (min-width: 1000px) {
+  .pds__grille { grid-template-columns: minmax(0, 1.72fr) minmax(300px, 1fr); grid-template-areas: "tete tete" "scene outils" "scene panneau"; grid-template-rows: auto auto 1fr; column-gap: clamp(28px, 4vw, 64px); row-gap: 22px; }
+  .pds__scene { align-self: start; }
+}
+/* Grand écran : le plan reste à l'écran pendant qu'on parcourt la liste. */
+@media (min-width: 1000px) and (min-height: 540px) and (scripting: enabled) { .pds__scene { position: sticky; top: calc(var(--entete-h) + 20px); } }
+.pds__tete { grid-area: tete; display: grid; gap: .8rem; }
+.pds__tete h2 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3.4rem); line-height: 1.02; }
+.pds__tete p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 56ch; }
+
+/* ---------- Outils : zones et couverts ---------- */
+.pds__outils { grid-area: outils; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 14px 24px; min-width: 0; }
+.pds__filtres { display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; }
+.pds__filtre { display: inline-flex; align-items: center; gap: .45em; min-height: 44px; padding: 0 1em; border-radius: 999px; cursor: pointer;
+  border: 1px solid color-mix(in oklab, var(--couleur-texte) 28%, var(--couleur-fond)); background: transparent; font-weight: 700; transition: background-color .25s, color .25s, border-color .25s; }
+.pds__filtre:hover { border-color: var(--couleur-texte); }
+.pds__filtre[aria-pressed="true"] { background: var(--couleur-texte); border-color: var(--couleur-texte); color: var(--couleur-fond); }
+.pds__filtre-nb { font-weight: 500; font-variant-numeric: tabular-nums; opacity: .75; }
+.pds__couverts { display: grid; gap: .35rem; }
+.pds__libelle { font-weight: 700; }
+.pds__qte { display: inline-grid; grid-template-columns: 46px 3.6em 46px; width: max-content; border: 1px solid color-mix(in oklab, var(--couleur-texte) 26%, var(--couleur-fond)); border-radius: 999px; overflow: hidden; background: var(--couleur-surface); }
+.pds__qte button { min-width: 44px; min-height: 44px; border: 0; background: transparent; cursor: pointer; font-size: 1.3rem; font-weight: 700; }
+.pds__qte button:hover { background: color-mix(in oklab, var(--couleur-texte) 8%, transparent); }
+.pds__qte button:focus-visible { outline-offset: -3px; }
+.pds__qte input { min-height: 44px; width: 100%; border: 0; border-inline: 1px solid var(--couleur-ligne); background: transparent; color: inherit; font: inherit; font-weight: 700; text-align: center;
+  -moz-appearance: textfield; appearance: textfield; font-variant-numeric: tabular-nums; }
+.pds__qte input::-webkit-inner-spin-button, .pds__qte input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ---------- Scène : le plan sur un plan 3D ---------- */
+.pds__scene { grid-area: scene; min-width: 0; }
+.pds__plan { position: relative; aspect-ratio: 1000 / 600; perspective: 2400px; perspective-origin: 50% 28%; }
+.pds__sol { --pds-incl: 32deg; --pds-tour: -6deg; --pds-ech: .9;
+  position: absolute; left: 0; right: 0; top: 50%; aspect-ratio: 1000 / 640; translate: 0 -50%; transform-style: preserve-3d; transform-origin: 50% 54%;
+  transform: scale(var(--pds-ech)) rotateX(calc(var(--pds-incl) + var(--pds-jx, 0deg))) rotateZ(calc(var(--pds-tour) + var(--pds-jz, 0deg))); }
+.pds__svg { display: block; width: 100%; height: 100%; border-radius: var(--rayon); overflow: hidden;
+  box-shadow: 0 2px 0 color-mix(in oklab, white 40%, transparent) inset, 0 50px 70px -40px color-mix(in oklab, black 55%, transparent), 0 14px 26px -16px color-mix(in oklab, black 35%, transparent); }
+@media (max-width: 699px) { .pds__sol { --pds-incl: 24deg; --pds-tour: 0deg; --pds-ech: .97; } .pds__plan { aspect-ratio: 1000 / 620; } }
+
+/* Décor (dans la page) */
+.pds__lame { fill: var(--pds-parquet, color-mix(in oklab, var(--couleur-fond) 82%, var(--couleur-accent))); }
+.pds__dalle { fill: var(--pds-dalle, color-mix(in oklab, var(--couleur-fond) 88%, var(--couleur-secondaire))); }
+.pds__joint { fill: none; stroke: color-mix(in oklab, var(--couleur-texte) 9%, transparent); stroke-width: 1; }
+.pds__eau { fill: var(--pds-eau, color-mix(in oklab, var(--couleur-fond) 70%, var(--couleur-secondaire))); }
+.pds__plantes circle { fill: var(--pds-vert, color-mix(in oklab, var(--couleur-secondaire) 45%, var(--couleur-fond))); }
+.pds__mur { fill: none; stroke: var(--couleur-texte); stroke-width: 10; stroke-linecap: square; stroke-linejoin: miter; }
+.pds__vitre { fill: none; stroke: var(--pds-vitre, color-mix(in oklab, var(--couleur-fond) 60%, white)); stroke-width: 5; }
+.pds__cheminee rect { fill: var(--couleur-secondaire); }
+.pds__feu { fill: var(--couleur-accent); }
+.pds__lueur-a { stop-color: var(--couleur-accent); stop-opacity: .3; }
+.pds__lueur-b { stop-color: var(--couleur-accent); stop-opacity: 0; }
+.pds__jour-a { stop-color: white; stop-opacity: .5; }
+.pds__jour-b { stop-color: white; stop-opacity: 0; }
+.pds__bar rect { fill: color-mix(in oklab, var(--couleur-secondaire) 80%, var(--couleur-accent)); }
+.pds__bar circle { fill: color-mix(in oklab, var(--couleur-texte) 45%, var(--couleur-fond)); }
+.pds__etiquettes text { font-family: var(--police-mono); font-size: 14px; letter-spacing: .14em; fill: color-mix(in oklab, var(--couleur-texte) 55%, transparent); }
+.pds__zone { fill: var(--couleur-accent); fill-opacity: 0; stroke: var(--couleur-accent); stroke-opacity: 0; stroke-width: 2.4; stroke-dasharray: 7 7; transition: fill-opacity .4s, stroke-opacity .4s; }
+.pds__zone.est-active { fill-opacity: .1; stroke-opacity: .7; }
+
+/* Tables (dessinées par module.js) */
+.pds__t { cursor: pointer; transition: opacity .35s; }
+.pds__clic { fill: transparent; pointer-events: all; }
+.pds__ombre { fill: color-mix(in oklab, black 22%, transparent); transition: transform .4s; }
+.pds__plateau { fill: var(--pds-table); stroke: color-mix(in oklab, var(--couleur-accent) 50%, var(--couleur-texte)); stroke-width: 2; transition: fill .3s; }
+.pds__chaise { fill: var(--pds-chaise); transition: fill .3s; }
+.pds__num { font-family: var(--police-titres); font-weight: 600; fill: var(--couleur-texte); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.pds__t:hover .pds__plateau, .pds__t.est-survol .pds__plateau { fill: color-mix(in oklab, var(--pds-table) 60%, var(--couleur-accent)); }
+.pds__t.est-prise { cursor: not-allowed; }
+.pds__t.est-prise .pds__plateau { fill: var(--pds-hachures); stroke: color-mix(in oklab, var(--couleur-texte) 30%, var(--couleur-fond)); }
+.pds__t.est-prise .pds__chaise { fill: color-mix(in oklab, var(--couleur-texte) 24%, var(--couleur-fond)); }
+.pds__t.est-prise .pds__num { fill: color-mix(in oklab, var(--couleur-texte) 50%, var(--couleur-fond)); }
+.pds__hachures-fond { fill: color-mix(in oklab, var(--couleur-texte) 10%, var(--couleur-fond)); }
+.pds__hachures-trait { stroke: color-mix(in oklab, var(--couleur-texte) 26%, var(--couleur-fond)); stroke-width: 3; }
+.pds__t.est-terne { opacity: .26; }
+.pds__t.est-petite { opacity: .45; cursor: not-allowed; }
+.pds__t.est-choisie .pds__plateau { fill: var(--couleur-accent); stroke: color-mix(in oklab, var(--couleur-accent) 70%, black); }
+.pds__t.est-choisie .pds__chaise { fill: color-mix(in oklab, var(--couleur-accent) 55%, var(--couleur-texte)); }
+.pds__t.est-choisie .pds__num { fill: var(--couleur-sur-accent); }
+.pds__t.est-choisie .pds__ombre { transform: translate(7px, 11px); }
+.pds__anneau { fill: none; stroke: var(--couleur-accent); stroke-width: 3; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.pds__t.est-choisie .pds__anneau { animation: pds-onde 1.9s ease-out infinite; }
+@keyframes pds-onde { 0% { transform: scale(.9); opacity: .85; } 100% { transform: scale(1.32); opacity: 0; } }
+
+/* Repère debout au-dessus de la table choisie (contre-rotation : il reste face au visiteur) */
+.pds__repere { position: absolute; width: 0; height: 0; transform-style: preserve-3d; pointer-events: none;
+  transform: rotateZ(calc((var(--pds-tour) + var(--pds-jz, 0deg)) * -1)) rotateX(calc((var(--pds-incl) + var(--pds-jx, 0deg)) * -1)); }
+.pds__repere-corps { position: absolute; left: -110px; bottom: 0; width: 220px; display: flex; flex-direction: column; align-items: center; transform-origin: 50% 100%; }
+.pds__repere-etiquette { display: grid; justify-items: center; gap: 1px; padding: 8px 14px 9px; border-radius: 12px; background: var(--couleur-secondaire); color: var(--couleur-fond); white-space: nowrap;
+  box-shadow: 0 16px 30px -14px color-mix(in oklab, black 60%, transparent); }
+.pds__repere-etiquette b { font-family: var(--police-titres); font-weight: 600; font-size: 18px; line-height: 1.1; }
+.pds__repere-etiquette span { font-size: 13px; color: color-mix(in oklab, var(--couleur-fond) 78%, var(--couleur-secondaire)); }
+.pds__repere-tige { width: 2px; height: clamp(26px, 5vw, 54px); background: linear-gradient(var(--couleur-secondaire), var(--couleur-accent)); }
+.pds__repere-pied { width: 12px; height: 12px; margin-bottom: -6px; border-radius: 50%; background: var(--couleur-accent); box-shadow: 0 0 0 5px color-mix(in oklab, var(--couleur-accent) 30%, transparent); }
+
+/* ---------- Panneau : liste des tables et réservation ---------- */
+.pds__panneau { grid-area: panneau; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.pds__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); }
+.pds__lien { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center; width: 100%; min-height: 56px; padding: 8px 12px; text-align: left; text-decoration: none;
+  border: 1px solid var(--couleur-ligne); border-radius: calc(var(--rayon) * .7); background: transparent; color: inherit; font: inherit; cursor: pointer; transition: background-color .25s, border-color .25s; }
+a.pds__lien:hover, button.pds__lien:not([aria-disabled="true"]):hover, .pds__item.est-survol .pds__lien:not([aria-disabled="true"]) { border-color: var(--couleur-texte); background: color-mix(in oklab, var(--couleur-texte) 4%, transparent); }
+.pds__num { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--pds-table); font-family: var(--police-titres); font-weight: 600; font-size: 1.05rem; }
+.pds__texte { display: grid; gap: 1px; min-width: 0; }
+.pds__nom { font-weight: 700; }
+.pds__info, .pds__note, .pds__etat { font-size: max(12px, .86rem); color: var(--couleur-texte-doux); }
+.pds__etat { font-weight: 700; }
+.pds__item[data-prise] .pds__lien { cursor: not-allowed; color: color-mix(in oklab, var(--couleur-texte) 62%, var(--couleur-fond)); border-style: dashed; }
+.pds__item[data-prise] .pds__num { background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--couleur-texte) 12%, var(--couleur-fond)) 0 4px, color-mix(in oklab, var(--couleur-texte) 24%, var(--couleur-fond)) 4px 7px); }
+.pds__item.est-petite .pds__lien { cursor: not-allowed; color: color-mix(in oklab, var(--couleur-texte) 62%, var(--couleur-fond)); }
+.pds__item.est-choisie .pds__lien { border-color: var(--couleur-accent); background: color-mix(in oklab, var(--couleur-accent) 10%, transparent); box-shadow: 0 0 0 1px var(--couleur-accent) inset; }
+.pds__item.est-choisie .pds__num { background: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.pds__action { display: grid; gap: 12px; padding: 14px 16px; border-radius: var(--rayon); background: var(--couleur-surface); border: 1px solid var(--couleur-ligne); }
+.pds__choix { margin: 0; font-weight: 600; }
+.pds__choix span { display: block; font-weight: 500; color: var(--couleur-texte-doux); }
+.pds__reserver { justify-self: start; }
+.pds__reserver[aria-disabled="true"] { opacity: .5; cursor: not-allowed; }
+@media (min-width: 1000px) and (scripting: enabled) { .pds__action { order: -1; position: sticky; top: calc(var(--entete-h) + 16px); z-index: 3; box-shadow: 0 14px 24px -20px color-mix(in oklab, black 40%, transparent); } .pds__liste { grid-template-columns: 1fr; gap: 4px; } .pds__lien { min-height: 52px; padding-block: 5px; } .pds__note { display: none; } }
+/* Téléphone : les zones en une rangée qu'on fait glisser. */
+@media (max-width: 699px) { .pds__filtres { flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; margin-inline: calc(var(--espace) * -1); padding: 2px var(--espace) 6px; scrollbar-width: none; width: calc(100% + 2 * var(--espace)); }
+  .pds__filtre { flex: none; } .pds__outils { flex-direction: column; align-items: stretch; } .pds__couverts { grid-template-columns: auto auto; align-items: center; justify-content: start; gap: 14px; } }
+/* Téléphone et tablette : la réservation reste en bas de l'écran pendant qu'on parcourt la liste. */
+@media (max-width: 999px) and (scripting: enabled) {
+  .pds__action { position: sticky; bottom: calc(var(--barres-h) + 10px); z-index: 3; background: var(--couleur-fond); box-shadow: 0 -10px 30px -18px color-mix(in oklab, black 45%, transparent); grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .pds__reserver { justify-self: end; }
+}
+@media (max-width: 480px) and (scripting: enabled) { .pds__action { grid-template-columns: minmax(0, 1fr); } .pds__reserver { justify-self: stretch; } }
+/* Téléphone et tablette, rien de choisi : la barre ne garde que la consigne. */
+@media (max-width: 999px) and (scripting: enabled) { .pds__action:not(.est-pret) .pds__reserver { display: none; } .pds__action:not(.est-pret) { padding-block: 12px; } }
+
+/* Sans JavaScript : la liste de liens suffit ; ni plan, ni zones, ni bouton commun. */
+@media (scripting: none) { .pds__scene, .pds__outils, .pds__action { display: none; } .pds__grille { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "panneau"; } }
+
+/* Mode calme, « réduire les animations » : plan déjà incliné, anneau fixe, aucun mouvement. */
+.calme .pds__t.est-choisie .pds__anneau { animation: none; opacity: .7; transform: scale(1.12); }
+@media (prefers-reduced-motion: reduce) { .pds__t.est-choisie .pds__anneau { animation: none; opacity: .7; transform: scale(1.12); } }
