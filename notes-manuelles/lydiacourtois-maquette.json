@@ -1,0 +1,704 @@
+{
+ "maquette": {
+  "client": "géobiologue et praticienne du Feng Shui tibétain dans les Pyrénées-Orientales, avec une offre d'accompagnement à la vente immobilière (Immobilier Autrement)",
+  "activite": [
+   "bien-être",
+   "immobilier"
+  ],
+  "concept": [
+   "carte",
+   "cahier"
+  ],
+  "ambiance": [
+   "clair",
+   "doux",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "#f1eadf",
+   "texte": "#1c2640",
+   "accent": "#c69a3e",
+   "secondaire": "#9c4a28"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « Le plan et l'étoile » : papier sable d'architecte, encre bleu nuit, étoile d'or du logo, voile de transition en étoile à huit branches",
+   "étoile-boussole des neuf domaines à faire tourner : le plan de la maison pivote avec elle et éclaire un domaine",
+   "un monde par page depuis la v2 : chaux et olive, nuit et or, terre cuite, aube, chacun avec sa signature",
+   "lumière rasante à promener sur le mur (Géobiologie), grille des neuf domaines en lignes d'or sur la photo du salon (Feng Shui), visite pièce par pièce (Immobilier)",
+   "titres lettre à lettre, un titre par page tracé à la règle, fil doré dans la marge, demande en trois étapes tamponnée « Reçue »"
+  ],
+  "reserves": [
+   "audit complet de la v3 : sans JavaScript en 320×568 (liens de l'en-tête qui débordent), domaines qui se chevauchent sur téléphone à l'horizontale, chiffre « 20+ » en mode calme sur petit téléphone",
+   "tarifs contradictoires du site actuel et noms des neuf domaines à confirmer ; portrait et témoignages réels à fournir",
+   "illustrations générées pour les ouvertures et ambiances, toutes mentionnées ; Safari non vérifié"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "fil-conducteur",
+   "trace-svg",
+   "révélation-texte",
+   "révélation-image",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "masque",
+   "parallaxe",
+   "apparition-au-défilement"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "formulaire-par-étapes",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "grille": {
+   "objet": "l'étoile-boussole des neuf domaines, qui fait pivoter le plan de la maison",
+   "fil": "fil de circulation doré dans la marge, une étoile au bout"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en étoile à huit branches (celle du logo) : elle part du clic, tourne en grandissant, ses creux se comblent jusqu'à couvrir l'écran, puis s'ouvre en étoile sur l'objet d'ouverture de la page suivante",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "voile-en-etoile"
+   ],
+   "sans_capture": true
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : l'étoile du logo se trace au compas sur la nuit, le plan de la maison se dessine, puis l'étoile se pose sur la page",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête sable : logo Ma Bonne Étoile, quatre liens et « Me contacter » en pastille ; sa couleur d'action suit le monde de la page",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sans JavaScript, en 320×568, la rangée de liens débordait et poussait le bouton principal hors du premier écran : lien Menu vers #menu (socle v10.4)."
+   ]
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran bleu nuit, liens qui arrivent l'un après l'autre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "sans_capture": true
+  },
+  "debut": {
+   "titre": "Et si votre maisondevenait votre alliée ?",
+   "role": "ouverture",
+   "description": "« Et si votre maison devenait votre alliée ? » : papier millimétré, photo de salon sous le calque du plan, étoile-boussole des neuf domaines à faire tourner ; le plan pivote avec elle et le cartouche nomme la zone éclairée",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "masque"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "objet-a-faire-tourner",
+   "pieges": [
+    "Texte qui change sans action du visiteur (cartouche de la zone éclairée) : boîte de taille fixe dès le premier affichage, sinon décalage au chargement (CLS 0,22 sur téléphone en v2)."
+   ],
+   "particularites": [
+    "boussole-qui-fait-pivoter-le-plan"
+   ]
+  },
+  "enjeu": {
+   "titre": "Certaines maisons accueillent tout de suite. D'autres laissent un malaise difficile à expl",
+   "role": "manifeste",
+   "description": "« Certaines maisons accueillent tout de suite » : manifeste à côté d'une photo de chaise et vase, rai de lumière du matin qui traverse la section",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "accompagnements": {
+   "titre": "Trois façons de faire du lieu un allié.",
+   "role": "services",
+   "description": "Trois façons de faire du lieu un allié : géobiologie, Feng Shui et immobilier en calques de papier qui s'empilent, chacun avec sa photo et ses quatre points",
+   "animations": [
+    "empilement-de-fiches",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "planches-empilees",
+   "pieges": []
+  },
+  "demarche": {
+   "titre": "Avancer avec clarté, sans avoir besoin de tout savoir avant de commencer.",
+   "role": "étapes",
+   "description": "La démarche : plan schématique épinglé où l'on avance étape par étape (vos ressentis, usages, circulation, pistes)",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "schema-epingle-etapes",
+   "pieges": []
+  },
+  "tarifs": {
+   "titre": "Des tarifs clairs pour choisir sereinement.",
+   "role": "tarifs",
+   "description": "Des tarifs clairs : bande photo du salon puis trois cartes de prix posées dessus, prix qui roulent à l'arrivée, mentions « lancement »",
+   "animations": [
+    "révélation-image",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "tarifs-a-rouleaux",
+   "pieges": []
+  },
+  "capsules": {
+   "titre": "Des formats simples pour commencer en douceur.",
+   "role": "offre",
+   "description": "Les Capsules : quatre Bulles (sommeil, voyageur, déménagement, nouveau bureau) en cartes photo qui flottent, réservation par la demande avec la Bulle déjà choisie",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours": {
+   "titre": "De l'immobilier à l'harmonisation des lieux.",
+   "role": "équipe",
+   "description": "De l'immobilier à l'harmonisation des lieux : photo d'une porte en pierre, titre tracé à la règle, « 20+ » années et trois valeurs en pastilles",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "En mode calme sur 320×568, « 20+ » chevauche son libellé : prévoir la colonne du chiffre plus large ou le libellé dessous sur petit écran."
+   ]
+  },
+  "pour-qui": {
+   "titre": "Un accompagnement pour les espaces qui comptent.",
+   "role": "services",
+   "description": "Pour qui : quatre cartes photo (habitation, projet immobilier, espace professionnel, à distance)",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cadre": {
+   "titre": "Une lecture sensible et concrète du lieu.",
+   "role": "preuves",
+   "description": "Un cadre clair, sur fond nuit : photo en arche et avertissement « ne remplace pas un avis médical, psychologique ou vétérinaire »",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Parlons de votre lieu et de ce que vous souhaitez y vivre.",
+   "role": "appel",
+   "description": "« Parlons de votre lieu » : appel final, appeler ou faire le premier pas, photo de chaise et rideau",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied de page bleu nuit à l'étoile d'or : contact, pages, confort de lecture, mentions « à compléter »",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "mode-calme"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette pièce n'est pas sur le plan.",
+   "role": "page-404",
+   "description": "« Cette pièce n'est pas sur le plan. » : photo d'une pièce vide derrière une porte, retour à l'entrée",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre lieu.",
+   "role": "contact",
+   "description": "Contact compact sur papier d'aube : numéro en très grand, carte de France où une étoile file jusqu'aux Pyrénées-Orientales",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-demande": {
+   "titre": "Trois questions, puis Lydia vous rappelle.",
+   "role": "contact",
+   "description": "Trois questions, puis Lydia vous rappelle : demande en étapes (lieu, accompagnement, coordonnées, récapitulatif), préremplie par les boutons « Choisir », tampon « Reçue » à l'envoi simulé",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "formulaire-par-etapes",
+   "pieges": []
+  },
+  "contact-zone": {
+   "titre": "Pyrénées-Orientales et à distance",
+   "role": "carte",
+   "description": "Pyrénées-Orientales et à distance : panorama de collines où l'aube se lève au défilement",
+   "animations": [
+    "parallaxe",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feng-shui-debut": {
+   "titre": "Feng Shui de l'habitat",
+   "role": "ouverture",
+   "description": "Feng Shui sur fond nuit : salon en photo dans une grande arche, grille des neuf domaines en lignes d'or par-dessus, cases qui s'allument en spirale depuis la porte et cartouche de la zone éclairée",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "révélation-image"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "grille-des-domaines-sur-la-photo"
+   ]
+  },
+  "feng-shui-adapter": {
+   "titre": "Adapter votre lieu à votre vie.",
+   "role": "méthode",
+   "description": "Adapter votre lieu à votre vie : titre tracé à la règle, quatre points numérotés en liste de plan, photo d'enfilade",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feng-shui-elements": {
+   "titre": "Cinq éléments, une maison qui circule.",
+   "role": "méthode",
+   "description": "Cinq éléments, une maison qui circule : roue des cinq éléments posée sur la photo du salon, qui tourne au défilement ; l'élément en haut s'allume et se nomme en grand",
+   "animations": [
+    "progression-fixée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "roue-des-cinq-elements"
+   ]
+  },
+  "feng-shui-domaines": {
+   "titre": "Une carte de la maison, case par case.",
+   "role": "outil-interactif",
+   "description": "Une carte de la maison, case par case : grille des neuf domaines épinglée qui s'allume en spirale ; chaque case se touche et se décrit",
+   "animations": [
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sur téléphone à l'horizontale (844×390), les noms des neuf domaines se chevauchent dans les cases : réduire le texte ou passer en liste sous 500 px de haut."
+   ]
+  },
+  "feng-shui-tarifs": {
+   "titre": "Accompagnements et tarifs.",
+   "role": "tarifs",
+   "description": "Tarifs de nuit : bande photo puis trois cartes à l'anneau de boussole",
+   "animations": [
+    "révélation-image",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "feng-shui-serenite": {
+   "titre": "Inutile de tout refaire.",
+   "role": "appel",
+   "description": "« Inutile de tout refaire. » : photo d'une terrasse au rideau, appel à demander une étude",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "geobiologie-debut": {
+   "titre": "Géobiologie de l'habitat",
+   "role": "ouverture",
+   "description": "Géobiologie sur fond chaux : très grand titre centré, bandeau photo du salon recouvert de la coupe du lieu qui s'efface au défilement",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "geobiologie-vision": {
+   "titre": "Retrouver la sérénité chez soi.",
+   "role": "méthode",
+   "description": "Retrouver la sérénité chez soi : titre tracé à la règle, quatre points en liste de plan, photo d'une fenêtre ouverte",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "geobiologie-memoire": {
+   "titre": "Ce que le lieu garde de son histoire.",
+   "role": "outil-interactif",
+   "description": "Mémoire des murs et des sols : mur dans l'ombre, une lumière rasante suit la souris (au doigt, elle avance avec le défilement) et éclaire « Les murs », « Les sols », « Les traces d'usage »",
+   "animations": [
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "lumiere-au-pointeur",
+   "pieges": [],
+   "particularites": [
+    "lumiere-rasante-sur-le-mur"
+   ]
+  },
+  "geobiologie-deroulement": {
+   "titre": "Trois temps, du lieu au compte rendu.",
+   "role": "étapes",
+   "description": "Trois temps, du lieu au compte rendu : coupe de maison épinglée qui se dessine étape par étape",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "schema-epingle-etapes",
+   "pieges": []
+  },
+  "geobiologie-tarifs": {
+   "titre": "La formule qui convient à votre lieu.",
+   "role": "tarifs",
+   "description": "Tarifs en relevé, sur fond sauge : bande photo puis lignes de relevé avec prix et bouton « Choisir »",
+   "animations": [
+    "révélation-image",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "geobiologie-intention": {
+   "titre": "Remettre de l'harmonie, là où elle s'est perdue.",
+   "role": "appel",
+   "description": "« Remettre de l'harmonie, là où elle s'est perdue » : photo de chambre et appel",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-autrement-debut": {
+   "titre": "Immobilier Autrement",
+   "role": "ouverture",
+   "description": "Immobilier Autrement en terre cuite : les battants d'une porte s'ouvrent sur la façade, parcours de visite en pointillés, grande question",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "porte-qui-s-ouvre"
+   ]
+  },
+  "immobilier-autrement-observer": {
+   "titre": "Une visite, pièce par pièce, avec les yeux de l'acquéreur.",
+   "role": "galerie",
+   "description": "Une visite, pièce par pièce : galerie horizontale épinglée de photos de pièces, un point à observer par pièce",
+   "animations": [
+    "section-fixée",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "galerie-horizontale-epinglee",
+   "pieges": []
+  },
+  "immobilier-autrement-valoriser": {
+   "titre": "Révéler le potentiel d'accueil, sans tout transformer.",
+   "role": "services",
+   "description": "Révéler le potentiel d'accueil : bandeau photo de rebord de fenêtre et clés, trois axes",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-autrement-tarifs": {
+   "titre": "Trois formules pour préparer la vente.",
+   "role": "tarifs",
+   "description": "Trois formules pour préparer la vente : fiches de visite posées de biais sur la photo",
+   "animations": [
+    "révélation-image",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "immobilier-autrement-echange": {
+   "titre": "Préparer votre bien.",
+   "role": "appel",
+   "description": "Préparer votre bien : fond nuit, photo en arche, appel « Faire le point »",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "lydiacourtois-maquette/debut",
+ "maquette": "lydiacourtois-maquette",
+ "page": "index",
+ "titre": "Et si votre maisondevenait votre alliée ?",
+ "role": "ouverture",
+ "description": "« Et si votre maison devenait votre alliée ? » : papier millimétré, photo de salon sous le calque du plan, étoile-boussole des neuf domaines à faire tourner ; le plan pivote avec elle et le cartouche nomme la zone éclairée",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "masque"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "objet-a-faire-tourner",
+ "modules": [
+  "objet-a-faire-tourner"
+ ],
+ "code": {
+  "html": "index.html:98-135",
+  "css": "assets/css/modules.css:3-9,17-23 ; assets/css/site.css:91-142,398-402,415,420,429-430,439-440,446,533-534,561,568-571,664-668",
+  "js": "assets/js/site.js:1,6,28-75,89-102,113,129-178,195,211,220-226,258-303,395,408,415,420,426,437-441,450-465 ; assets/js/modules/temoignages-en-pile/module.js:2 ; assets/js/modules/pont.js:14 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,34,59-67,70-90,162-203 ; assets/js/socle/gouttiere.js:2 ; assets/js/socle/effets.js:14-16,20,267-311 ; assets/js/socle/onde.js:2-3,6,16,38,67-190 ; assets/js/socle/defilement.js:2,48-86 ; assets/js/socle/curseur.js:1,5-34 ; assets/js/socle/transitions.js:25-46 ; assets/js/modules/formulaire-par-etapes/module.js:4,78,180-181 ; assets/js/modules/schema-epingle-etapes/module.js:2,19-141 ; assets/js/modules/tarifs-a-rouleaux/module.js:4 ; assets/js/modules/fil-conducteur/module.js:8,66,76 ; assets/js/modules/objet-a-faire-tourner/module.js:1,9,15,18-108"
+ },
+ "medias": {
+  "capture": "medias/lydiacourtois-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/lydiacourtois-maquette/debut-m390.jpg",
+  "video": "medias/lydiacourtois-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Texte qui change sans action du visiteur (cartouche de la zone éclairée) : boîte de taille fixe dès le premier affichage, sinon décalage au chargement (CLS 0,22 sur téléphone en v2)."
+ ],
+ "particularites": [
+  "boussole-qui-fait-pivoter-le-plan"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1017,
+  "epinglee": false,
+  "scrolltriggers": 2
+ }
+}

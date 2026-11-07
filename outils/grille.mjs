@@ -37,7 +37,8 @@ const avec = (cle) => pages.filter((p) => new RegExp(`data-grille=["'][^"']*\\b$
 const marques = Object.fromEntries(MARQUES.map((k) => [k, avec(k)]));
 const balise = accueil ? (accueil.h.match(/<div\s+data-voile\b[^>]*>/i) || [])[0] : null;
 let voile = balise ? ((balise.match(/\sdata-forme=["']([^"']+)["']/) || [])[1] || null) : null;
-if (marques.voile.length) voile = 'propre';
+/* Une forme ajoutée par le projet à son socle (étoile de lydiacourtois…) est une transition propre. */
+if (marques.voile.length || (voile && !['glisse', 'iris', 'vague', 'rideau'].includes(voile))) voile = 'propre';
 let js = '';
 const lireJs = (d) => { if (!fs.existsSync(d)) return; for (const f of fs.readdirSync(d)) { const p = path.join(d, f); if (fs.statSync(p).isDirectory()) { if (!['vendor', 'socle'].includes(f)) lireJs(p); } else if (/\.m?js$/.test(f)) js += fs.readFileSync(p, 'utf8'); } };
 lireJs(path.join(DOS, 'assets', 'js'));
