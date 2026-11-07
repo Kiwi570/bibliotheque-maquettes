@@ -94,29 +94,55 @@ export async function init(root, options = {}) {
     }
 
     // Tracé : ondulation le long d'une section, courbe en S d'une marge à l'autre (dans les paddings), boucles.
-    let d = `M${f(pts[0].x)} ${f(pts[0].y)}`, cur = pts[0];
+    // Les segments sont gardés pour calculer la table des longueurs en JavaScript :
+    // getPointAtLength sur un long tracé coûtait plusieurs centaines de millisecondes à chaque reconstruction.
+    const segs = [];
+    let d = `M${f(pts[0].x)} ${f(pts[0].y)}`, cur = { x: pts[0].x, y: pts[0].y };
+    const ligne = (x, y) => { d += ` L${f(x)} ${f(y)}`; segs.push([cur.x, cur.y, cur.x, cur.y, x, y, x, y]); cur = { x, y }; };
+    const courbe = (x1, y1, x2, y2, x, y) => { d += ` C${f(x1)} ${f(y1)} ${f(x2)} ${f(y2)} ${f(x)} ${f(y)}`; segs.push([cur.x, cur.y, x1, y1, x2, y2, x, y]); cur = { x, y }; };
+    let prec = pts[0];
     for (let i = 1; i < pts.length; i++) {
       const b = pts[i], dy = b.y - cur.y;
       if (Math.abs(b.x - cur.x) < 1) {
-        if (onde && cur.debut && b.fin && cur.el === b.el && dy > 80) { const k = cur.x < W / 2 ? 1 : -1; d += ` C${f(cur.x + onde * k)} ${f(cur.y + dy / 3)} ${f(b.x - onde * k)} ${f(cur.y + dy * 2 / 3)} ${f(b.x)} ${f(b.y)}`; }
-        else d += ` L${f(b.x)} ${f(b.y)}`;
-      } else d += ` C${f(cur.x)} ${f(cur.y + dy * 0.55)} ${f(b.x)} ${f(b.y - dy * 0.55)} ${f(b.x)} ${f(b.y)}`;
-      cur = b;
+        if (onde && prec.debut && b.fin && prec.el === b.el && dy > 80) { const k = cur.x < W / 2 ? 1 : -1; courbe(cur.x + onde * k, cur.y + dy / 3, b.x - onde * k, cur.y + dy * 2 / 3, b.x, b.y); }
+        else ligne(b.x, b.y);
+      } else courbe(cur.x, cur.y + dy * 0.55, b.x, b.y - dy * 0.55, b.x, b.y);
+      prec = b;
       if (b.boucle) {
         const r = o.boucle;
-        d += ` C${f(b.x + r * 1.1)} ${f(b.y + r * 0.5)} ${f(b.x + r * 1.2)} ${f(b.y - r * 1.3)} ${f(b.x)} ${f(b.y - r * 1.2)}`;
-        d += ` C${f(b.x - r * 1.2)} ${f(b.y - r * 1.1)} ${f(b.x - r * 0.6)} ${f(b.y + r * 0.7)} ${f(b.x + r * 0.2)} ${f(b.y + r * 0.9)}`;
-        cur = { x: b.x + r * 0.2, y: b.y + r * 0.9 };
+        courbe(b.x + r * 1.1, b.y + r * 0.5, b.x + r * 1.2, b.y - r * 1.3, b.x, b.y - r * 1.2);
+        courbe(b.x - r * 1.2, b.y - r * 1.1, b.x - r * 0.6, b.y + r * 0.7, b.x + r * 0.2, b.y + r * 0.9);
       }
     }
     trace.setAttribute('d', d); rail?.setAttribute('d', d);
-    L = trace.getTotalLength();
-    trace.style.strokeDasharray = `${L} ${L}`;
 
     // Table longueur → point, avec la hauteur maximale atteinte (le fil peut remonter dans une boucle).
+    const brute = [[0, segs[0] ? segs[0][0] : pts[0].x, segs[0] ? segs[0][1] : pts[0].y]];
+    let acc = 0;
+    for (const [x0, y0, x1, y1, x2, y2, x3, y3] of segs) {
+      const n = x0 === x1 && y0 === y1 && x2 === x3 && y2 === y3 ? 1 : 24;
+      let px = x0, py = y0;
+      for (let k = 1; k <= n; k++) {
+        const t = k / n, u = 1 - t;
+        const x = u * u * u * x0 + 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t * x3;
+        const y = u * u * u * y0 + 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t * y3;
+        acc += Math.hypot(x - px, y - py); px = x; py = y;
+        brute.push([acc, x, y]);
+      }
+    }
+    L = trace.getTotalLength();
+    const echelle = acc > 0 ? L / acc : 1;
+    trace.style.strokeDasharray = `${L} ${L}`;
     pas = Math.max(4, L / 1600); table = [];
-    let maxY = -Infinity;
-    for (let l = 0; ; l += pas) { const ll = Math.min(l, L), p = trace.getPointAtLength(ll); maxY = Math.max(maxY, p.y); table.push([ll, p.x, p.y, maxY]); if (ll >= L) break; }
+    let maxY = -Infinity, j = 0;
+    for (let l = 0; ; l += pas) {
+      const ll = Math.min(l, L), cible = ll / echelle;
+      while (j < brute.length - 2 && brute[j + 1][0] < cible) j++;
+      const a = brute[j], b = brute[Math.min(j + 1, brute.length - 1)], span = b[0] - a[0] || 1, q = Math.min(1, Math.max(0, (cible - a[0]) / span));
+      const x = a[1] + (b[1] - a[1]) * q, y = a[2] + (b[2] - a[2]) * q;
+      maxY = Math.max(maxY, y); table.push([ll, x, y, maxY]);
+      if (ll >= L) break;
+    }
 
     // Perles et éléments accrochés
     gPerles.replaceChildren(); ancres = [];
