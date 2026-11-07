@@ -10,7 +10,7 @@
 // Le projet doit être un clone Git de son dépôt GitHub, à côté de la bibliothèque (~/Downloads/<dépôt>) :
 // l'inventaire lit son dernier commit. Un dossier dézippé ne suffit pas.
 // À chaque passage : grille wouahou (forme du voile, marques data-grille) et journal du projet (_audit/journal.json)
-// relevés par outils/grille.mjs ; à la fin, rappel des leçons à proposer (lecons.md).
+// relevés par outils/grille.mjs ; à la fin, rappel des leçons à proposer (lecons/<projet>.md).
 // Le site de consultation lit index.json directement : il est à jour dès que l'index l'est.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -66,4 +66,4 @@ for (const d of touches) lancer('node', ['outils/fiches.mjs', d]);
 lancer('node', ['outils/indexer.mjs']);
 try { lancer('node', ['outils/valider.mjs']); } catch { console.error('\nValidation en erreur : corriger les lignes ERREUR ci-dessus, puis relancer avec --sans-inventaire.'); process.exit(1); }
 console.log(`\n${depot} ajouté. Relire la fiche maquettes/${depot}.json, puis commiter (message sans apostrophe).`);
-console.log(`Leçons : relire journaux/${depot}.json (s'il existe) et le rapport d'audit du projet, proposer 0 à 3 leçons générales à l'utilisateur, et ajouter celles qu'il valide à lecons.md (format en tête du fichier), dans le même commit.`);
+console.log(`Leçons : relire journaux/${depot}.json (s'il existe) et le rapport d'audit du projet, proposer 0 à 3 leçons générales à l'utilisateur, et écrire celles qu'il valide dans lecons/${depot.replace(/-maquette$/, '')}.md (un fichier par projet ; format dans lecons.md), dans le même commit. Ne jamais proposer de mise à jour de la skill pendant un projet.`);

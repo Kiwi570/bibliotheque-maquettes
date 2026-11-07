@@ -79,6 +79,13 @@ for (const f of liste(path.join(RACINE, 'journaux')).filter(f => f.endsWith('.js
   if (!Array.isArray(j.versions) || !j.versions.length) { err.push(`${ou} : versions manquantes`); continue; }
   j.versions.forEach((v, i) => { if (!Array.isArray(v.etapes)) err.push(`${ou} : versions[${i}].etapes doit être une liste`); });
 }
+/* Leçons : un fichier par projet dans lecons/ ; chaque ligne qui commence par « - » suit le format. */
+const FORMAT_LECON = /^- \d{4}-\d{2}-\d{2} · [^·]+ · problème : .+ · cause : .+ · règle : .+/;
+for (const f of liste(path.join(RACINE, 'lecons')).filter(f => f.endsWith('.md'))) {
+  fs.readFileSync(path.join(RACINE, 'lecons', f), 'utf8').split('\n').forEach((l, i) => {
+    if (/^- /.test(l) && !FORMAT_LECON.test(l)) avert.push(`lecons/${f} ligne ${i + 1} : format « - AAAA-MM-JJ · projet · problème : … · cause : … · règle : … »`);
+  });
+}
 if (fs.existsSync(path.join(RACINE, 'lecons.md'))) {
   let dansLecons = false; /* seules les lignes sous « ## Leçons » sont des leçons ; l'en-tête explique le format */
   fs.readFileSync(path.join(RACINE, 'lecons.md'), 'utf8').split('\n').forEach((l, i) => {

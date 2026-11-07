@@ -5,7 +5,7 @@ Règle d'or : on réutilise la mécanique, jamais l'identité (aucun texte, logo
 
 ## Au début d'un projet (Claude)
 
-1. Parcourir `index.json` (150 Ko au plus : une ligne par maquette, par section notée 5 ou tirée en module, et par module, colonnes en tête ; toutes les sections notées 4 ou 5 sont dans `site/index-site.json`, les autres se trouvent avec `chercher.mjs`) ; `taxonomie.json` donne les valeurs permises. Lire `lecons.md` : les leçons générales des projets passés, à appliquer dès ce projet.
+1. Parcourir `index.json` (150 Ko au plus : une ligne par maquette, par section notée 5 ou tirée en module, et par module, colonnes en tête ; toutes les sections notées 4 ou 5 sont dans `site/index-site.json`, les autres se trouvent avec `chercher.mjs`) ; `taxonomie.json` donne les valeurs permises. Lire tous les fichiers de `lecons/` : les leçons générales des projets passés, à appliquer dès ce projet.
 2. Chercher : `node outils/chercher.mjs --activite restauration --ambiance chaleureux --role ouverture` (filtres répétables : `--concept --animation --interaction --dependance --telephone --sans ogl --note-min 4 --module`, mots libres acceptés, `--json` pour un résultat machine). Activité, concept et ambiance départagent sans exclure ; `--strict` les rend obligatoires.
 Avant de proposer les directions : `node outils/chercher.mjs --dernieres` donne la forme du voile, l'objet manipulé et le fil des 5 dernières maquettes (`--dernieres 10` pour plus), pour ne pas redonner les mêmes au client suivant.
 3. Lire les fiches retenues (`sections/<maquette>/<id>.json`, `modules/<nom>/module.json` et `NOTES.md`), regarder captures et vidéos (`medias/`).
@@ -38,7 +38,7 @@ Avant de commencer (sur Nolanis, ces trois points ont été découverts en route
 1. `node outils/ajouter.mjs <dépôt>` : pull, inventaire (captures 1440 et 390, vidéos) et identité ; grille wouahou et journal (`outils/grille.mjs` : forme du voile, intro vers l'objet, marques `data-grille`, copie de `_audit/journal.json` dans `journaux/`) ; écrit le gabarit `notes-manuelles/<dépôt>.json` et une planche contact s'il manque.
 2. Compléter le gabarit (rôle, description, note, pièges ; valeurs dans `taxonomie.json`, format en tête de `outils/fiches.mjs`) en regardant la planche, sans oublier `maquette.grille` : l'objet que le visiteur manipule et le fil conducteur, en quelques mots.
 3. `node outils/ajouter.mjs <dépôt> --sans-inventaire` : fiches, liens vers les modules, `index.json`, validation (zéro erreur).
-4. Leçons : d'après le journal et le rapport d'audit du projet, proposer à l'utilisateur 0 à 3 leçons générales ; ajouter celles qu'il valide à `lecons.md` (format en tête du fichier). Commiter le tout en un seul commit, puis un seul push.
+4. Leçons : d'après le journal et le rapport d'audit du projet, proposer à l'utilisateur 0 à 3 leçons générales ; écrire celles qu'il valide dans `lecons/<projet>.md`, un fichier par projet (mode d'emploi et format dans `lecons.md`). Pendant un projet, la skill ne se modifie jamais : les leçons y entrent à la prochaine mise à jour de la skill, faite à part. Commiter le tout en un seul commit, puis un seul push.
 
 ## Temps réel des projets
 
@@ -46,4 +46,4 @@ Avant de commencer (sur Nolanis, ces trois points ont été découverts en route
 
 ## Contenu
 
-`maquettes/` fiches maquettes · `sections/` fiches sections · `modules/` modules · `socle/` socle commun et `vendor/` · `audits/` rapports d'audit et de correction · `journaux/` journaux des projets (temps réel par étape) · `lecons.md` leçons générales des projets · `inventaire/` relevés automatiques · `notes-manuelles/` jugements humains · `medias/` captures et vidéos (jamais lues par Claude) · `outils/` scripts · `images/` pipeline d'images (commandes, `emplacements.json`, `gabarits-grok/`, tests).
+`maquettes/` fiches maquettes · `sections/` fiches sections · `modules/` modules · `socle/` socle commun et `vendor/` · `audits/` rapports d'audit et de correction · `journaux/` journaux des projets (temps réel par étape) · `lecons/` leçons générales, un fichier par projet (mode d'emploi : `lecons.md`) · `inventaire/` relevés automatiques · `notes-manuelles/` jugements humains · `medias/` captures et vidéos (jamais lues par Claude) · `outils/` scripts · `images/` pipeline d'images (commandes, `emplacements.json`, `gabarits-grok/`, tests).

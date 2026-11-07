@@ -1,0 +1,1 @@
+- 2026-11-06 · ajout de 28 maquettes à la bibliothèque · problème : 14 maquettes sur 28 sans rapport d'audit, notées sans lui · cause : le dossier _audit/rapport/ n'était pas poussé avec la maquette · règle : à chaque livraison, garder et pousser _audit/rapport/rapport.md avec la version livrée, sinon la bibliothèque ne peut pas reprendre l'audit.
