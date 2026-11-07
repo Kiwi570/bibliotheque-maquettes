@@ -27,7 +27,10 @@ const medias = process.argv.includes('--medias');
 const captures = process.argv.includes('--captures');
 const estModule = !arg.endsWith('.html');
 const fichier = estModule ? path.join(RACINE, 'modules', arg, 'index.html') : path.resolve(arg);
-const relatif = '/' + path.relative(RACINE, fichier).split(path.sep).join('/');
+// Une page hors de la bibliothèque (assemblage fait dans le projet : il contient sa copie du socle et des modules) est servie depuis son propre dossier.
+const dansBiblio = fichier.startsWith(RACINE + path.sep);
+const racineServie = dansBiblio ? RACINE : path.dirname(fichier);
+const relatif = '/' + path.relative(racineServie, fichier).split(path.sep).join('/');
 // Tablettes (768×1024, 820×1180, 1180×820, tactiles) et 1024×640 : formats où un élément collant manque le plus souvent de hauteur.
 const FORMATS = [[1000, 560], [1024, 640], [768, 1024, 1], [820, 1180, 1], [1180, 820, 1], [1280, 720], [1366, 768], [1440, 900], [1728, 1000], [1920, 1080], [2560, 1440], [390, 844, 1], [360, 780, 1], [320, 568, 1]];
 
@@ -66,14 +69,22 @@ async function essaiScenario([w, h, mobile]) {
   const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, isMobile: !!mobile, hasTouch: !!mobile });
   const pg = await ctx.newPage(); const erreurs = [];
   pg.on('pageerror', e => erreurs.push(e.message.slice(0, 160)));
-  pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text())) erreurs.push(m.text().slice(0, 160)); });
+  pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text()) && !externe(m)) erreurs.push(m.text().slice(0, 160)); });
   await pg.goto(srv.url + relatif, { waitUntil: 'load' }); await attendre(1500);
   const pbs = await jouer(pg, scenario);
   await ctx.close();
   return { format: `${w}×${h}`, pbs, erreurs };
 }
 
-const srv = await servir(RACINE);
+const srv = await servir(racineServie);
+/* Une ressource d'un autre site (polices Google…) que le réseau de la session refuse n'est pas une erreur du module : notée à part. */
+const externes = new Set();
+function externe(m) {
+  const u = (m.location && m.location().url) || '';
+  if (!/Failed to load resource/.test(m.text()) || !u || u.startsWith(srv.url)) return false;
+  try { externes.add(new URL(u).host); } catch {}
+  return true;
+}
 const nav = await chromium.launch({ args: ['--enable-unsafe-swiftshader'] });
 const attendre = ms => new Promise(r => setTimeout(r, ms));
 
@@ -128,7 +139,7 @@ async function essai([w, h, mobile], opts = {}) {
   const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, isMobile: !!mobile, hasTouch: !!mobile, reducedMotion: opts.reduit ? 'reduce' : 'no-preference' });
   const pg = await ctx.newPage(); const erreurs = [];
   pg.on('pageerror', e => erreurs.push(e.message.slice(0, 160)));
-  pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text())) erreurs.push(m.text().slice(0, 160)); });
+  pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text()) && !externe(m)) erreurs.push(m.text().slice(0, 160)); });
   await pg.addInitScript(() => { window.__cls = 0; new PerformanceObserver(l => { for (const e of l.getEntries()) if (!e.hadRecentInput) window.__cls += e.value; }).observe({ type: 'layout-shift', buffered: true }); });
   await pg.goto(srv.url + relatif + (opts.sansWebgl ? '?sanswebgl' : ''), { waitUntil: 'load' });
   await attendre(2500);
@@ -162,6 +173,7 @@ const tests = {
 };
 for (const r of tous) if (r.coupes.length || r.debord > 1 || r.erreurs.length || r.cls >= .1) console.log('  ' + r.format, JSON.stringify({ coupes: r.coupes, debord: r.debord, erreurs: r.erreurs, cls: r.cls }));
 console.log(JSON.stringify(tests, null, 1));
+if (externes.size) console.log(`ressources d'autres sites non chargées (réseau de la session, sans effet sur les tests) : ${[...externes].join(', ')}`);
 
 if (medias && estModule && !process.argv.includes('--garder-video')) {
   const dos = path.dirname(fichier);

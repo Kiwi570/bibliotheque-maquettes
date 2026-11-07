@@ -177,4 +177,4 @@ const rel = path.relative(process.cwd(), sortie);
 console.log(`${rel}/index.html : ${mods.length} modules (${mods.join(', ')})`);
 if (familles.length && !palette.polices_url) console.log(`polices chargées : ${familles.join(', ')} (400 et 700, display=optional ; sinon palette.polices_url)`);
 if (morts.length) console.log(`liens sans cible renvoyés vers #contenu : ${[...new Set(morts)].map(v => "#" + v).join(", ")} (à relier à vos sections)`);
-console.log(`Tester : node outils/tester-module.mjs ${path.relative(RACINE, path.join(sortie, 'index.html'))} --captures`);
+console.log(`Tester : node ${path.relative(process.cwd(), path.join(path.dirname(new URL(import.meta.url).pathname), 'tester-module.mjs'))} ${path.relative(process.cwd(), path.join(sortie, 'index.html'))} --captures`);
