@@ -192,12 +192,16 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   fs.writeFileSync(path.join(dos, 'apercu.jpg'), buf);
   // Démonstration : on part juste avant le module et on le parcourt (fin de l'épinglage comprise), 7 s au plus.
   const [y0, y1] = await pg.evaluate(() => { const m = document.querySelector('[data-module]'); const max = document.documentElement.scrollHeight - innerHeight;
-    if (!m) return [0, max]; const top = m.getBoundingClientRect().top + scrollY; const pins = (window.ScrollTrigger?.getAll() || []).filter(s => s.pin && m.contains(s.pin));
+    if (!m) return [0, max]; const pins = (window.ScrollTrigger?.getAll() || []).filter(s => s.pin && m.contains(s.pin));
+    /* Section épinglée : son haut se lit sur le début de l'épinglage (mesuré pendant l'épinglage, il vaudrait la position courante et le film ne montrerait que la fin). */
+    const top = pins.length ? Math.min(...pins.map(s => s.start)) : m.getBoundingClientRect().top + scrollY;
     const fin = pins.length ? Math.max(...pins.map(s => s.end)) : top + m.offsetHeight - innerHeight * .6; return [Math.max(0, Math.min(max, top - innerHeight * .5)), Math.max(0, Math.min(max, fin))]; });
   const modeVideo = scenario?.etapes?.length ? (scenario.video || 'scenario') : 'defilement';
   await pg.evaluate(y => scrollTo(0, y), y0); await attendre(600);
   let duree = 0; const tDemo = Date.now();
-  if (modeVideo !== 'scenario') { duree = Math.min(6400, Math.max(2500, (y1 - y0) * 1.6));
+  const epingle = await pg.evaluate(() => { const m = document.querySelector('[data-module]'); return !!(m && (window.ScrollTrigger?.getAll() || []).some(s => s.pin && m.contains(s.pin))); });
+  /* Une section épinglée se joue pendant le défilement : on lui laisse le temps (jusqu'à 9 s) pour qu'on voie tout son déroulé. */
+  if (modeVideo !== 'scenario') { duree = epingle ? Math.min(9000, Math.max(4500, (y1 - y0) * 3)) : Math.min(6400, Math.max(2500, (y1 - y0) * 1.6));
   await pg.evaluate(([y0, y1, duree]) => new Promise(ok => { const t0 = performance.now(); const pas = () => { const k = Math.min(1, (performance.now() - t0) / duree); scrollTo(0, y0 + (y1 - y0) * (k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2)); k < 1 ? requestAnimationFrame(pas) : ok(); }; requestAnimationFrame(pas); }), [y0, y1, duree]);
   }
   if (modeVideo !== 'defilement') { await jouer(pg, scenario, scenario.pause ?? 450); await attendre(800); }
@@ -206,7 +210,7 @@ if (medias && estModule && !process.argv.includes('--garder-video')) {
   await ctx.close();
   const video = await pg.video().path();
   const out = path.join(dos, 'apercu.mp4');
-  const dureeTotale = Math.min(modeVideo === 'defilement' ? 8 : 14, (Date.now() - t0) / 1000 - debutFilm);
+  const dureeTotale = Math.min(modeVideo === 'defilement' ? (epingle ? 11 : 8) : 14, (Date.now() - t0) / 1000 - debutFilm);
   execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(Math.max(0, debutFilm).toFixed(2)), '-i', video, '-t', String(Math.max(4, dureeTotale)), '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '28', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-vf', 'scale=960:600', out]);
   if (fs.statSync(out).size > 2 * 1024 * 1024) { execFileSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-an', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '33', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', out + '.mp4']); fs.renameSync(out + '.mp4', out); }
   fs.rmSync(video, { force: true });
