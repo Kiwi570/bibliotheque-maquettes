@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Horaires ouvert maintenant · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px; }
+  .horaires__texte > h2 { font-weight: 500; }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="horaires socle-cadre" data-module="horaires-ouvert-maintenant" aria-labelledby="horaires-titre">
+    <div class="horaires__grille">
+      <div class="horaires__cadran" aria-hidden="true"></div>
+      <div class="horaires__texte">
+        <p class="socle-surtitre">Horaires</p>
+        <h2 id="horaires-titre">Midi et soir, au fil de la semaine</h2>
+<!-- horaires:debut -->
+<div class="horaires__adresses" data-horaires-choix role="group" aria-label="Choisir une adresse"><a class="horaires__choix" href="#horaires-restaurant"><span class="horaires__pastille" aria-hidden="true"></span><span>Le restaurant</span></a><a class="horaires__choix" href="#horaires-traiteur"><span class="horaires__pastille" aria-hidden="true"></span><span>La boutique traiteur</span></a><a class="horaires__choix" href="#horaires-montreal"><span class="horaires__pastille" aria-hidden="true"></span><span>Le comptoir de Montréal</span></a></div>
+<p class="horaires__statut" data-horaires-statut><span class="horaires__pastille" aria-hidden="true"></span><span>Horaires de la semaine</span></p>
+<noscript><style>.horaires__cadran{display:none!important}.horaires__grille{grid-template-columns:minmax(0,1fr)!important}</style></noscript>
+<script type="application/json" data-horaires>{"fuseau":"Europe/Paris","seuil_ferme_bientot":30,"regle_feries":"ouvert","feries":[{"date":"2026-11-11","nom":"Armistice"},{"date":"2026-12-25","nom":"Noël"},{"date":"2027-01-01","nom":"Jour de l'an"}],"adresses":[{"id":"restaurant","nom":"Le restaurant","adresse":"12 place du Marché, 54000 Nancy","telephone":"03 83 00 00 00","semaine":{"lundi":[],"mardi":["12:00-14:00","19:00-22:30"],"mercredi":["12:00-14:00","19:00-22:30"],"jeudi":["12:00-14:00","19:00-22:30"],"vendredi":["12:00-14:00","19:00-23:30"],"samedi":["12:00-14:30","19:00-00:30"],"dimanche":["12:00-15:00"]},"exceptions":[{"date":"2026-12-24","creneaux":["19:00-01:00"],"motif":"Réveillon, sur réservation"},{"date":"2026-12-25","creneaux":[],"motif":"Noël"},{"du":"2027-01-04","au":"2027-01-18","creneaux":[],"motif":"Congés d'hiver"}]},{"id":"traiteur","nom":"La boutique traiteur","adresse":"3 rue des Halles, 54000 Nancy","telephone":"03 83 00 00 01","regle_feries":"ferme","semaine":{"lundi":[],"mardi":["09:00-19:30"],"mercredi":["09:00-19:30"],"jeudi":["09:00-19:30"],"vendredi":["09:00-19:30"],"samedi":["08:30-19:30"],"dimanche":["09:00-13:00"]},"exceptions":[{"date":"2026-12-24","creneaux":["08:00-17:00"],"motif":"Retrait des commandes de fêtes"}]},{"id":"montreal","nom":"Le comptoir de Montréal","adresse":"1200 rue Saint-Denis, Montréal","telephone":"+1 514 000 0000","fuseau":"America/Toronto","libelle_heure":"Heure de Montréal","feries":[{"date":"2026-12-25","nom":"Noël"},{"date":"2026-12-26","nom":"Lendemain de Noël"}],"regle_feries":"ferme","semaine":{"lundi":["07:30-15:00"],"mardi":["07:30-15:00"],"mercredi":["07:30-15:00"],"jeudi":["07:30-15:00"],"vendredi":["07:30-21:00"],"samedi":["09:00-18:30"],"dimanche":["09:00-14:00"]}}]}</script>
+<div class="horaires__texte-adresse" data-horaires-texte><div class="horaires__bloc" id="horaires-restaurant"><h3 class="horaires__nom">Le restaurant</h3><dl class="horaires__semaine" aria-label="Horaires de la semaine : Le restaurant"><div class="horaires__jour"><dt>Lundi</dt><dd><span class="horaires__ferme">Fermé</span></dd></div><div class="horaires__jour"><dt>Mardi</dt><dd>12 h – 14 h<span aria-hidden="true"> · </span><span class="horaires__sr">, puis </span>19 h – 22 h 30</dd></div><div class="horaires__jour"><dt>Mercredi</dt><dd>12 h – 14 h<span aria-hidden="true"> · </span><span class="horaires__sr">, puis </span>19 h – 22 h 30</dd></div><div class="horaires__jour"><dt>Jeudi</dt><dd>12 h – 14 h<span aria-hidden="true"> · </span><span class="horaires__sr">, puis </span>19 h – 22 h 30</dd></div><div class="horaires__jour"><dt>Vendredi</dt><dd>12 h – 14 h<span aria-hidden="true"> · </span><span class="horaires__sr">, puis </span>19 h – 23 h 30</dd></div><div class="horaires__jour"><dt>Samedi</dt><dd>12 h – 14 h 30<span aria-hidden="true"> · </span><span class="horaires__sr">, puis </span>19 h – 0 h 30</dd></div><div class="horaires__jour"><dt>Dimanche</dt><dd>12 h – 15 h</dd></div></dl><address class="horaires__adresse"><span>12 place du Marché, 54000 Nancy</span><a class="horaires__tel" href="tel:0383000000">03 83 00 00 00</a></address></div><div class="horaires__bloc" id="horaires-traiteur"><h3 class="horaires__nom">La boutique traiteur</h3><dl class="horaires__semaine" aria-label="Horaires de la semaine : La boutique traiteur"><div class="horaires__jour"><dt>Lundi</dt><dd><span class="horaires__ferme">Fermé</span></dd></div><div class="horaires__jour"><dt>Mardi</dt><dd>9 h – 19 h 30</dd></div><div class="horaires__jour"><dt>Mercredi</dt><dd>9 h – 19 h 30</dd></div><div class="horaires__jour"><dt>Jeudi</dt><dd>9 h – 19 h 30</dd></div><div class="horaires__jour"><dt>Vendredi</dt><dd>9 h – 19 h 30</dd></div><div class="horaires__jour"><dt>Samedi</dt><dd>8 h 30 – 19 h 30</dd></div><div class="horaires__jour"><dt>Dimanche</dt><dd>9 h – 13 h</dd></div></dl><div class="horaires__noter"><p class="horaires__noter-titre">À noter</p><ul><li>Mercredi 11 novembre : fermé (Armistice)</li></ul></div><address class="horaires__adresse"><span>3 rue des Halles, 54000 Nancy</span><a class="horaires__tel" href="tel:0383000001">03 83 00 00 01</a></address></div><div class="horaires__bloc" id="horaires-montreal"><h3 class="horaires__nom">Le comptoir de Montréal</h3><dl class="horaires__semaine" aria-label="Horaires de la semaine : Le comptoir de Montréal"><div class="horaires__jour"><dt>Lundi</dt><dd>7 h 30 – 15 h</dd></div><div class="horaires__jour"><dt>Mardi</dt><dd>7 h 30 – 15 h</dd></div><div class="horaires__jour"><dt>Mercredi</dt><dd>7 h 30 – 15 h</dd></div><div class="horaires__jour"><dt>Jeudi</dt><dd>7 h 30 – 15 h</dd></div><div class="horaires__jour"><dt>Vendredi</dt><dd>7 h 30 – 21 h</dd></div><div class="horaires__jour"><dt>Samedi</dt><dd>9 h – 18 h 30</dd></div><div class="horaires__jour"><dt>Dimanche</dt><dd>9 h – 14 h</dd></div></dl><address class="horaires__adresse"><span>1200 rue Saint-Denis, Montréal</span><a class="horaires__tel" href="tel:+15140000000">+1 514 000 0000</a></address></div></div>
+<!-- horaires:fin -->
+      </div>
+    </div>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>La page reprend son cours.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  /* Démonstration : ?heure=2026-11-07T21:48 fixe l'heure du lieu pour essayer un autre moment (sans ce paramètre : l'heure réelle). */
+  const heure = new URLSearchParams(location.search).get('heure') || undefined;
+  for (const el of document.querySelectorAll('[data-module="horaires-ouvert-maintenant"]')) init(el, { heure });
+</script>
+</body>
+</html>

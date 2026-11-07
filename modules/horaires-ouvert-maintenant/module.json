@@ -1,0 +1,54 @@
+{
+ "nom": "horaires-ouvert-maintenant",
+ "titre": "Cadran 24 h des horaires avec aiguille sur l'heure réelle du lieu, statut ouvert, ferme bientôt ou fermé et prochaine ouverture, plusieurs adresses, fermetures exceptionnelles et jours fériés",
+ "role": "agenda",
+ "animations": [
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "pizzalyght-maquette/cayenne-titre-horaires"
+ ],
+ "convient_a": [
+  "restauration",
+  "commerce",
+  "artisanat",
+  "hébergement",
+  "tourisme",
+  "santé",
+  "bien-être"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "clair",
+  "sombre",
+  "artisanal",
+  "doux",
+  "brut"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "source": "adresse du JSON des horaires (sinon data-source de la section, sinon le JSON écrit dans la page)",
+  "donnees": "le JSON lui-même",
+  "adresse": "identifiant de l'adresse affichée d'abord (sinon ?adresse=, data-adresse, la première)",
+  "heure": "heure d'essai à l'heure du lieu, 2026-11-07T21:48 (démonstration, tests)"
+ },
+ "images": [],
+ "poids_ko": 13,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.052,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

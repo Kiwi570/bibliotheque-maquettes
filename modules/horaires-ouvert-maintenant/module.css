@@ -1,0 +1,65 @@
+/* Horaires « ouvert maintenant » — identité uniquement par les variables du socle.
+   Cadran à gauche (ordinateur) ou en haut (téléphone), statut et semaine à côté. Sans JavaScript, en mode calme et sous
+   « réduire les animations » : pas de cadran, le texte seul. Couleurs d'état : vert ouvert, orangé ferme bientôt, gris fermé. */
+.horaires { padding-block: clamp(56px, 8vw, 120px);
+  --horaires-ouvert: color-mix(in oklab, seagreen 78%, var(--couleur-texte));
+  --horaires-bientot: color-mix(in oklab, darkorange 60%, var(--couleur-accent));
+  --horaires-ferme: color-mix(in oklab, var(--couleur-texte) 45%, var(--couleur-fond)); }
+.horaires__grille { display: grid; gap: clamp(28px, 5vw, 80px); align-items: center; }
+.horaires__texte { display: grid; gap: 18px; align-content: center; min-width: 0; }
+.horaires__texte > h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4rem); line-height: 1; }
+.horaires__sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; }
+
+/* Cadran */
+.horaires__cadran { position: relative; width: min(100%, 460px); aspect-ratio: 1; justify-self: center; }
+.horaires__svg { width: 100%; height: 100%; overflow: visible; }
+.horaires__piste { fill: none; stroke: var(--couleur-ligne); stroke-width: 22; }
+.horaires__graduation { stroke: color-mix(in oklab, var(--couleur-texte) 30%, var(--couleur-fond)); stroke-width: 1.2; }
+.horaires__graduation.est-forte { stroke: var(--couleur-texte-doux); stroke-width: 2.2; }
+.horaires__repere { fill: var(--couleur-texte-doux); font-family: var(--police-texte); font-size: 14px; font-weight: 600; text-anchor: middle; dominant-baseline: middle; }
+.horaires__arc { fill: none; stroke: var(--couleur-accent); stroke-width: 22; stroke-linecap: round; }
+.horaires__plage { fill: var(--couleur-accent); font-family: var(--police-texte); font-size: 13px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+.horaires__aiguille { transform-box: view-box; transform-origin: 200px 200px; transform: rotate(var(--angle, 0deg)); transition: transform 1.8s cubic-bezier(.65, 0, .25, 1); }
+.horaires__aiguille line { stroke: var(--couleur-texte); stroke-width: 2.6; stroke-linecap: round; }
+.horaires__pointe { fill: var(--couleur-accent); stroke: var(--couleur-fond); stroke-width: 3; }
+.horaires__cadran[data-etat="ouvert"] .horaires__pointe { fill: var(--horaires-ouvert); }
+.horaires__cadran[data-etat="bientot"] .horaires__pointe { fill: var(--horaires-bientot); }
+.horaires__centre { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; pointer-events: none; }
+.horaires__centre b { display: block; font-family: var(--police-titres); font-weight: 500; font-size: clamp(2.4rem, 9cqi, 4.2rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.horaires__cadran { container-type: inline-size; }
+.horaires__centre span { margin-top: 6px; font-size: max(12px, .78rem); letter-spacing: .12em; text-transform: uppercase; color: var(--couleur-texte-doux); }
+
+/* Choix de l'adresse, statut */
+.horaires__adresses { display: flex; flex-wrap: wrap; gap: 6px; }
+.horaires__choix { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; cursor: pointer; font-weight: 600; font-size: max(14px, .92rem); }
+.horaires__choix[aria-pressed="true"] { background: var(--couleur-texte); border-color: var(--couleur-texte); color: var(--couleur-fond); }
+.horaires__pastille { width: 10px; height: 10px; flex: none; border-radius: 50%; background: var(--horaires-ferme); }
+[data-etat="ouvert"] > .horaires__pastille, .horaires__statut.est-ouvert .horaires__pastille { background: var(--horaires-ouvert); box-shadow: 0 0 0 4px color-mix(in oklab, var(--horaires-ouvert) 22%, transparent); }
+[data-etat="bientot"] > .horaires__pastille, .horaires__statut.est-bientot .horaires__pastille { background: var(--horaires-bientot); box-shadow: 0 0 0 4px color-mix(in oklab, var(--horaires-bientot) 22%, transparent); }
+.horaires__statut { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-family: var(--police-titres); font-size: clamp(1.35rem, 1.05rem + 1vw, 1.9rem); font-weight: 500; line-height: 1.2; }
+.horaires__statut.est-ouvert > span:nth-child(2) { color: var(--horaires-ouvert); }
+.horaires__statut.est-bientot > span:nth-child(2) { color: var(--horaires-bientot); }
+.horaires__motif { flex-basis: 100%; font-family: var(--police-texte); font-size: max(14px, .92rem); font-weight: 600; color: var(--couleur-texte-doux); }
+
+/* Semaine, à noter, coordonnées */
+.horaires__nom { font-size: clamp(1.2rem, 1rem + .8vw, 1.5rem); font-weight: 500; margin-top: 10px; }
+.horaires__semaine { margin: 0; display: grid; }
+.horaires__jour { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--couleur-ligne); }
+.horaires__jour dt { color: var(--couleur-texte-doux); }
+.horaires__jour dd { margin: 0; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.horaires__jour.est-aujourdhui dt, .horaires__jour.est-aujourdhui dd { color: var(--couleur-texte); }
+.horaires__jour.est-aujourdhui { border-bottom-color: var(--couleur-accent); }
+.horaires__auj { font-size: max(12px, .8rem); font-weight: 700; color: var(--couleur-accent); }
+.horaires__ferme { color: var(--couleur-texte-doux); font-weight: 500; }
+.horaires__noter { padding: 14px 18px; border-radius: var(--rayon); background: var(--couleur-surface); }
+.horaires__noter-titre { font-size: max(12px, .78rem); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--couleur-accent); }
+.horaires__noter ul { margin: 6px 0 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: max(14px, .94rem); }
+.horaires__adresse { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; font-style: normal; color: var(--couleur-texte-doux); }
+.horaires__tel { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--couleur-texte); text-underline-offset: 4px; }
+
+@media (min-width: 900px) { .horaires__grille { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
+/* Mode calme et « réduire les animations » : pas de cadran, le texte sur toute la largeur. */
+@media (prefers-reduced-motion: reduce) { .horaires__cadran { display: none !important; } .horaires__grille { grid-template-columns: minmax(0, 1fr) !important; } }
+.calme .horaires__cadran { display: none !important; }
+.calme .horaires__grille { grid-template-columns: minmax(0, 1fr) !important; }
+.horaires__choix { text-decoration: none; }

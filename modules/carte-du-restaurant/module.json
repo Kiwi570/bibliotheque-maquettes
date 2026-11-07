@@ -1,0 +1,61 @@
+{
+ "nom": "carte-du-restaurant",
+ "titre": "Carte complète par rubriques, barre collante qui suit la lecture, filtres végétarien, sans gluten et à partager, recherche, prix et pictos d'allergènes avec légende, écrite depuis un fichier JSON",
+ "role": "tarifs",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "pizzalyght-maquette/carte-barre",
+  "jardins-hacienda-maquette/la-carte-la-carte"
+ ],
+ "convient_a": [
+  "restauration",
+  "commerce",
+  "artisanat",
+  "hébergement",
+  "tourisme"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "clair",
+  "sombre",
+  "artisanal",
+  "doux",
+  "luxueux"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "source": "adresse du JSON de la carte (sinon data-source de [data-carte]) : la carte est réécrite à son arrivée",
+  "donnees": "le JSON lui-même, déjà chargé"
+ },
+ "images": [
+  {
+   "role": "photo de rubrique, facultative (un plat de la rubrique)",
+   "selecteur": ".carte-resto__photo img",
+   "nombre": "0 à 1 par rubrique (champ photo du JSON)",
+   "ratio": "4:5 sur ordinateur, 16:9 sur téléphone (recadrée en cover)",
+   "largeur": 1200,
+   "zone_calme": "aucune (rien n'est écrit sur la photo)"
+  }
+ ],
+ "poids_ko": 18.1,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.016,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

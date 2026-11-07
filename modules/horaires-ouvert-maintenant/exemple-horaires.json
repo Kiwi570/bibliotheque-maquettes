@@ -1,0 +1,70 @@
+{
+ "fuseau": "Europe/Paris",
+ "seuil_ferme_bientot": 30,
+ "regle_feries": "ouvert",
+ "feries": [
+  { "date": "2026-11-11", "nom": "Armistice" },
+  { "date": "2026-12-25", "nom": "Noël" },
+  { "date": "2027-01-01", "nom": "Jour de l'an" }
+ ],
+ "adresses": [
+  {
+   "id": "restaurant",
+   "nom": "Le restaurant",
+   "adresse": "12 place du Marché, 54000 Nancy",
+   "telephone": "03 83 00 00 00",
+   "semaine": {
+    "lundi": [],
+    "mardi": ["12:00-14:00", "19:00-22:30"],
+    "mercredi": ["12:00-14:00", "19:00-22:30"],
+    "jeudi": ["12:00-14:00", "19:00-22:30"],
+    "vendredi": ["12:00-14:00", "19:00-23:30"],
+    "samedi": ["12:00-14:30", "19:00-00:30"],
+    "dimanche": ["12:00-15:00"]
+   },
+   "exceptions": [
+    { "date": "2026-12-24", "creneaux": ["19:00-01:00"], "motif": "Réveillon, sur réservation" },
+    { "date": "2026-12-25", "creneaux": [], "motif": "Noël" },
+    { "du": "2027-01-04", "au": "2027-01-18", "creneaux": [], "motif": "Congés d'hiver" }
+   ]
+  },
+  {
+   "id": "traiteur",
+   "nom": "La boutique traiteur",
+   "adresse": "3 rue des Halles, 54000 Nancy",
+   "telephone": "03 83 00 00 01",
+   "regle_feries": "ferme",
+   "semaine": {
+    "lundi": [],
+    "mardi": ["09:00-19:30"],
+    "mercredi": ["09:00-19:30"],
+    "jeudi": ["09:00-19:30"],
+    "vendredi": ["09:00-19:30"],
+    "samedi": ["08:30-19:30"],
+    "dimanche": ["09:00-13:00"]
+   },
+   "exceptions": [
+    { "date": "2026-12-24", "creneaux": ["08:00-17:00"], "motif": "Retrait des commandes de fêtes" }
+   ]
+  },
+  {
+   "id": "montreal",
+   "nom": "Le comptoir de Montréal",
+   "adresse": "1200 rue Saint-Denis, Montréal",
+   "telephone": "+1 514 000 0000",
+   "fuseau": "America/Toronto",
+   "libelle_heure": "Heure de Montréal",
+   "feries": [{ "date": "2026-12-25", "nom": "Noël" }, { "date": "2026-12-26", "nom": "Lendemain de Noël" }],
+   "regle_feries": "ferme",
+   "semaine": {
+    "lundi": ["07:30-15:00"],
+    "mardi": ["07:30-15:00"],
+    "mercredi": ["07:30-15:00"],
+    "jeudi": ["07:30-15:00"],
+    "vendredi": ["07:30-21:00"],
+    "samedi": ["09:00-18:30"],
+    "dimanche": ["09:00-14:00"]
+   }
+  }
+ ]
+}

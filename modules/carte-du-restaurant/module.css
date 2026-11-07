@@ -1,0 +1,95 @@
+/* Carte du restaurant — identité uniquement par les variables du socle.
+   Barre collante (rubriques, filtres, recherche) sous l'en-tête, rubriques en deux colonnes sur ordinateur (titre, plats),
+   plats en ligne « nom ……… prix », pictogrammes d'allergènes et légende. Sans JavaScript : tout sauf filtres et recherche. */
+.carte-resto { padding-block: clamp(56px, 8vw, 110px); --carte-barre-h: 120px; }
+.carte-resto__tete { display: grid; gap: .8rem; margin-bottom: clamp(20px, 3vw, 36px); }
+.carte-resto__tete h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4rem); line-height: 1; }
+.carte-resto__tete p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 52ch; }
+.carte-resto__sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; }
+.carte-resto__planche { position: absolute; width: 0; height: 0; overflow: hidden; }
+.carte-resto__picto { width: 18px; height: 18px; flex: none; }
+
+/* Barre collante : fond pleine largeur (ombre étendue puis rognée sur les côtés). */
+/* Barre collante, fond pleine largeur : border-image débordant sur les côtés (ce débord ne crée pas de défilement horizontal). */
+.carte-resto__barre { position: sticky; top: var(--entete-h); z-index: 4; display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding-block: 10px;
+  background: var(--couleur-fond); border-image: linear-gradient(to top, var(--couleur-ligne) 1px, var(--couleur-fond) 1px) fill 0 / 0 / 0 100vmax; }
+.carte-resto__rubriques { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain;
+  -webkit-mask-image: linear-gradient(90deg, black calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, black calc(100% - 28px), transparent); }
+.carte-resto__rubriques::-webkit-scrollbar { display: none; }
+.carte-resto__lien { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: max(14px, .92rem); color: var(--couleur-texte-doux); transition: background .25s, color .25s; }
+.carte-resto__lien:hover { color: var(--couleur-texte); }
+.carte-resto__lien small { font-weight: 500; font-size: max(12px, .78rem); font-variant-numeric: tabular-nums; color: inherit; }
+.carte-resto__lien.est-courant { background: var(--couleur-texte); color: var(--couleur-fond); }
+.carte-resto__outils { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+.carte-resto__filtres { display: flex; flex-wrap: wrap; gap: 6px; }
+.carte-resto__filtre { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; cursor: pointer; font-size: max(14px, .9rem); font-weight: 600; transition: background .2s, color .2s, border-color .2s; }
+.carte-resto__filtre:hover { border-color: var(--couleur-texte-doux); }
+.carte-resto__filtre[aria-pressed="true"] { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
+.carte-resto__recherche { position: relative; flex: 1 1 220px; min-width: 0; max-width: 340px; margin-left: auto; }
+.carte-resto__recherche .carte-resto__picto { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--couleur-texte-doux); pointer-events: none; }
+.carte-resto__recherche input { width: 100%; min-width: 0; min-height: 44px; padding: 0 16px 0 42px; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: var(--couleur-surface); color: inherit; font: inherit; font-size: max(16px, 1rem); }
+.carte-resto__recherche input:focus-visible { border-color: var(--couleur-accent); outline-offset: 1px; }
+
+/* Rubriques : titre à gauche, plats à droite sur ordinateur. */
+.carte-resto__rubrique { display: grid; gap: clamp(14px, 3vw, 28px); padding-block: clamp(28px, 4.5vw, 56px); border-top: 1px solid var(--couleur-ligne); scroll-margin-top: calc(var(--entete-h) + var(--carte-barre-h) + 8px); }
+.carte-resto__rubrique:first-child { border-top: 0; }
+.carte-resto__rubrique-tete { display: grid; gap: .5rem; align-content: start; }
+.carte-resto__rubrique-titre { font-style: italic; font-weight: 500; font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.6rem); color: var(--couleur-accent); }
+.carte-resto__rubrique-titre:focus { outline: none; }
+.carte-resto__photo { margin: 6px 0 0; border-radius: var(--rayon); overflow: hidden; aspect-ratio: 16 / 9; background: var(--couleur-surface); }
+.carte-resto__photo img { width: 100%; height: 100%; object-fit: cover; }
+.carte-resto__rubrique-note { color: var(--couleur-texte-doux); font-size: max(14px, .95rem); max-width: 30ch; }
+.carte-resto__plats { list-style: none; margin: 0; padding: 0; display: grid; gap: clamp(18px, 2.2vw, 26px); }
+.carte-resto__plat { display: grid; gap: 4px; }
+.carte-resto__plat-ligne { display: grid; grid-template-columns: auto auto minmax(16px, 1fr) auto; align-items: baseline; column-gap: 10px; }
+.carte-resto__plat-nom { font-family: var(--police-titres); font-weight: 600; font-size: max(17px, 1.14rem); line-height: 1.25; }
+.carte-resto__mention { font-size: max(12px, .74rem); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--couleur-accent); }
+.carte-resto__plat-ligne > .carte-resto__plat-nom + .carte-resto__points { grid-column: 2 / 4; }
+.carte-resto__points { align-self: end; margin-bottom: .32em; border-bottom: 2px dotted color-mix(in oklab, var(--couleur-texte) 30%, transparent); }
+.carte-resto__prix { font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.carte-resto__prix--formats { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 14px; }
+.carte-resto__prix--formats small { font-weight: 500; font-size: max(12px, .8rem); color: var(--couleur-texte-doux); }
+.carte-resto__desc { color: var(--couleur-texte-doux); font-size: max(15px, .97rem); max-width: 62ch; }
+.carte-resto__etiquettes { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.carte-resto__regime { display: inline-flex; align-items: center; gap: 5px; min-height: 26px; padding: 0 9px 0 7px; border-radius: 999px; background: color-mix(in oklab, var(--couleur-accent) 12%, var(--couleur-fond)); color: color-mix(in oklab, var(--couleur-accent) 75%, var(--couleur-texte)); font-size: max(12px, .76rem); font-weight: 600; }
+.carte-resto__regime .carte-resto__picto { width: 15px; height: 15px; }
+.carte-resto__regime .carte-resto__sr { position: static; width: auto; height: auto; margin: 0; clip: auto; overflow: visible; }
+.carte-resto__allergene { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--couleur-ligne); color: var(--couleur-texte-doux); }
+.carte-resto__allergene .carte-resto__picto { width: 17px; height: 17px; }
+.carte-resto__aucun { padding: 40px 0; display: grid; justify-items: start; gap: 14px; color: var(--couleur-texte-doux); font-size: max(16px, 1.05rem); }
+.carte-resto__tout { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--couleur-texte); background: transparent; font-weight: 600; cursor: pointer; }
+
+/* Légende des allergènes */
+.carte-resto__legende { margin-top: clamp(24px, 4vw, 48px); padding: clamp(20px, 3vw, 36px); border-radius: var(--rayon); background: var(--couleur-surface); display: grid; gap: 14px; }
+.carte-resto__legende-titre { font-size: clamp(1.3rem, 1rem + 1vw, 1.7rem); font-weight: 500; }
+.carte-resto__legende-liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px 18px; }
+.carte-resto__legende-liste li { display: flex; align-items: center; gap: 8px; font-size: max(14px, .9rem); }
+.carte-resto__legende-liste li.est-absent { color: color-mix(in oklab, var(--couleur-texte) 48%, var(--couleur-fond)); }
+.carte-resto__legende-note { color: var(--couleur-texte-doux); font-size: max(13px, .88rem); max-width: 80ch; }
+
+@media (min-width: 860px) { .carte-resto__rubrique { grid-template-columns: minmax(0, .75fr) minmax(0, 2fr); } .carte-resto__photo { aspect-ratio: 4 / 5; max-width: 340px; } }
+/* Grand écran : rubriques, filtres et recherche sur une seule rangée. */
+@media (min-width: 1100px) {
+  .carte-resto__barre { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 16px; }
+  .carte-resto__outils { flex-wrap: nowrap; }
+  .carte-resto__filtres { flex-wrap: nowrap; }
+  .carte-resto__recherche { flex: 0 0 clamp(200px, 18vw, 280px); }
+}
+@media (max-width: 600px) {
+  .carte-resto__plat-ligne { grid-template-columns: minmax(0, 1fr) auto; }
+  .carte-resto__plat-ligne > .carte-resto__points { display: none; }
+  .carte-resto__mention { grid-row: 2; grid-column: 1; justify-self: start; }
+  /* Téléphone : deux rangées. Filtres qui défilent à l'horizontale, recherche repliée en loupe qui s'ouvre au toucher. */
+  .carte-resto__outils { flex-wrap: nowrap; }
+  .carte-resto__filtres { flex: 1 1 auto; min-width: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(90deg, black calc(100% - 20px), transparent); mask-image: linear-gradient(90deg, black calc(100% - 20px), transparent); }
+  .carte-resto__filtres::-webkit-scrollbar { display: none; }
+  .carte-resto__filtre { flex: none; }
+  .carte-resto__recherche { flex: 0 0 44px; max-width: none; margin-left: 0; transition: flex-basis .25s ease; }
+  .carte-resto__recherche input { padding: 0 0 0 42px; }
+  .carte-resto__recherche input::placeholder { color: transparent; }
+  .carte-resto__recherche:focus-within, .carte-resto__recherche:has(input:not(:placeholder-shown)) { flex-basis: 64%; }
+  .carte-resto__recherche:focus-within input, .carte-resto__recherche:has(input:not(:placeholder-shown)) input { padding-right: 12px; }
+  .carte-resto__recherche:focus-within input::placeholder { color: var(--couleur-texte-doux); }
+}
+@media (prefers-reduced-motion: reduce) { .carte-resto__recherche { transition: none; } }

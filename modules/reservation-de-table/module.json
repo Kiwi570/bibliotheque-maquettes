@@ -1,0 +1,51 @@
+{
+ "nom": "reservation-de-table",
+ "titre": "Réservation de table : jour, service midi ou soir, créneaux avec complets grisés, couverts, salle ou terrasse, demande particulière, récapitulatif modifiable et envoi simulé, préremplie depuis l'adresse",
+ "role": "contact",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "jardins-hacienda-maquette/reserver-formulaire",
+  "pizzalyght-maquette/panier"
+ ],
+ "convient_a": [
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "bien-être"
+ ],
+ "ambiances": [
+  "chaleureux",
+  "clair",
+  "sombre",
+  "doux",
+  "luxueux",
+  "artisanal"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "reglages": "les réglages (sinon le JSON script[data-reservation] de la section)",
+  "envoyer": "async (demande) => ({ reference }) : l'envoi réel (par défaut, simulé)",
+  "complet": "(date, 'HH:MM', couverts) => booléen : disponibilité réelle (par défaut, complets du JSON et simulation)"
+ },
+ "images": [],
+ "poids_ko": 32.5,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.005,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

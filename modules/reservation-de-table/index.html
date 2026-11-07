@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Réservation de table · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="demo-manrope.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Les Jardins de l'Hacienda) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Fraunces'; src: url('demo-fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+  @font-face { font-family: 'Manrope'; src: url('demo-manrope.woff2') format('woff2'); font-weight: 200 800; font-display: block; }
+  :root { --couleur-fond: #f4ece1; --couleur-texte: #2b1e18; --couleur-accent: #a93f1a; --couleur-secondaire: #1b1310;
+    --police-titres: 'Fraunces', Georgia, serif; --police-texte: 'Manrope', system-ui, sans-serif; --rayon: 14px; }
+  .resa__tete h2 { font-weight: 500; }
+  .demo-bloc { min-height: 60vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
+  .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="resa socle-cadre" data-module="reservation-de-table" aria-labelledby="resa-titre">
+    <script type="application/json" data-reservation>{"fuseau":"Europe/Paris","delai_minutes":60,"jours_a_l_avance":60,"couverts_max":10,"telephone":"03 83 00 00 00",
+"services":{"midi":{"libelle":"Midi","debut":"12:00","fin":"13:45","pas":15},"soir":{"libelle":"Soir","debut":"19:00","fin":"21:45","pas":15}},
+"fermetures":{"jours":["lundi"],"services":{"dimanche":["soir"]},"dates":["2026-12-25","2027-01-01"]},
+"espaces":[{"id":"salle","libelle":"En salle"},{"id":"terrasse","libelle":"En terrasse","mois":[5,6,7,8,9],"note":"selon la météo","hors_saison":"de mai à septembre"}],
+"complets":{},"complets_simules":true}</script>
+    <noscript><style>.resa__jours{display:none}.resa__creneaux{min-height:0}.resa__compteur button{display:none}</style></noscript>
+    <div class="resa__grille">
+      <form class="resa__form" data-resa-form action="#" novalidate aria-labelledby="resa-titre">
+        <header class="resa__tete">
+          <p class="socle-surtitre">Réserver</p>
+          <h2 id="resa-titre">Une table vous attend</h2>
+          <p>Choisissez le jour, le service et l'heure d'arrivée : la demande part au restaurant, qui la confirme par message.</p>
+        </header>
+        <fieldset class="resa__champ" data-champ="date">
+          <legend>Quel jour ?</legend>
+          <div class="resa__jours" data-resa-jours aria-label="Les sept prochains jours"></div>
+          <label class="resa__date"><span>Ou une autre date</span><input type="date" id="resa-date" name="date" required></label>
+        </fieldset>
+        <fieldset class="resa__champ" data-champ="service">
+          <legend>Quel service ?</legend>
+          <div class="resa__puces">
+            <label class="resa__puce"><input type="radio" name="service" value="midi"><span>Midi</span><small data-note></small></label>
+            <label class="resa__puce"><input type="radio" name="service" value="soir" checked><span>Soir</span><small data-note></small></label>
+          </div>
+        </fieldset>
+        <fieldset class="resa__champ" data-champ="heure">
+          <legend>À quelle heure ?</legend>
+          <div class="resa__creneaux" data-resa-creneaux>
+            <label class="resa__date"><span>Heure d'arrivée</span><select name="heure" id="resa-heure"><option value="">Choisir</option><optgroup label="Midi"><option value="12:00">12 h</option><option value="12:15">12 h 15</option><option value="12:30">12 h 30</option><option value="12:45">12 h 45</option><option value="13:00">13 h</option><option value="13:15">13 h 15</option><option value="13:30">13 h 30</option><option value="13:45">13 h 45</option></optgroup><optgroup label="Soir"><option value="19:00">19 h</option><option value="19:15">19 h 15</option><option value="19:30">19 h 30</option><option value="19:45">19 h 45</option><option value="20:00">20 h</option><option value="20:15">20 h 15</option><option value="20:30">20 h 30</option><option value="20:45">20 h 45</option><option value="21:00">21 h</option><option value="21:15">21 h 15</option><option value="21:30">21 h 30</option><option value="21:45">21 h 45</option></optgroup></select></label>
+          </div>
+          <p class="resa__aide" data-resa-creneaux-aide aria-live="polite"></p>
+        </fieldset>
+        <div class="resa__champ" data-champ="couverts">
+          <label class="resa__libelle" for="resa-couverts">Combien de personnes ?</label>
+          <div class="resa__compteur">
+            <button type="button" data-moins aria-label="Une personne de moins">−</button>
+            <input type="number" id="resa-couverts" name="couverts" min="1" max="10" value="2" inputmode="numeric">
+            <button type="button" data-plus aria-label="Une personne de plus">+</button>
+          </div>
+          <p class="resa__aide" data-resa-groupe hidden>Au-delà de 10 personnes, appelez-nous au <a href="tel:+33383000000">03 83 00 00 00</a> : nous préparons la salle.</p>
+        </div>
+        <fieldset class="resa__champ" data-champ="espace">
+          <legend>Où souhaitez-vous vous installer ?</legend>
+          <div class="resa__puces">
+            <label class="resa__puce"><input type="radio" name="espace" value="salle" checked><span>En salle</span><small data-note></small></label>
+            <label class="resa__puce"><input type="radio" name="espace" value="terrasse"><span>En terrasse</span><small data-note></small></label>
+          </div>
+        </fieldset>
+        <fieldset class="resa__champ" data-champ="demande">
+          <legend>Une demande particulière ? <span class="resa__facultatif">(facultatif)</span></legend>
+          <div class="resa__puces resa__puces--demandes">
+            <label class="resa__puce"><input type="checkbox" name="demande" value="Anniversaire"><span>Anniversaire</span></label>
+            <label class="resa__puce"><input type="checkbox" name="demande" value="Chaise haute"><span>Chaise haute</span></label>
+            <label class="resa__puce"><input type="checkbox" name="demande" value="Accès en fauteuil"><span>Accès en fauteuil</span></label>
+            <label class="resa__puce"><input type="checkbox" name="demande" value="Allergie ou régime"><span>Allergie ou régime</span></label>
+          </div>
+          <label class="resa__date" style="max-width:none"><span>Précisez si besoin</span><textarea name="message" id="resa-message" rows="3"></textarea></label>
+        </fieldset>
+        <fieldset class="resa__champ" data-champ="contact">
+          <legend>Vos coordonnées</legend>
+          <div class="resa__contact">
+            <label><span>Prénom</span><input type="text" id="resa-prenom" name="prenom" autocomplete="given-name" required></label>
+            <label><span>Nom</span><input type="text" id="resa-nom" name="nom" autocomplete="family-name" required></label>
+            <label><span>Téléphone</span><input type="tel" id="resa-telephone" name="telephone" autocomplete="tel" required></label>
+            <label><span>E-mail <span class="resa__facultatif">(facultatif)</span></span><input type="email" id="resa-email" name="email" autocomplete="email"></label>
+          </div>
+        </fieldset>
+        <p class="resa__mention">Vos coordonnées servent seulement à confirmer la réservation et à vous prévenir en cas d'imprévu.</p>
+        <button type="submit" class="resa__bouton">Vérifier ma réservation</button>
+      </form>
+      <aside class="resa__recap" data-resa-recap aria-label="Récapitulatif de la réservation"></aside>
+    </div>
+  </section>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Titre de la section suivante</h2>
+    <p>Essayez aussi l'adresse préremplie : ?date=…&amp;service=soir&amp;heure=20:00&amp;couverts=4&amp;espace=salle.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="reservation-de-table"]')) init(el);
+</script>
+</body>
+</html>

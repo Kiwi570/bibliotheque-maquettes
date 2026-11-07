@@ -1,0 +1,25 @@
+{
+ "etapes": [
+  {"defiler": ".carte-resto__barre"},
+  {"cliquer": "[data-filtre=\"vegetarien\"]"},
+  {"attendre": 700},
+  {"cliquer": "[data-filtre=\"sans-gluten\"]"},
+  {"attendre": 900},
+  {"verifier": "[data-filtre=\"sans-gluten\"][aria-pressed=\"true\"]"},
+  {"cliquer": "[data-filtre=\"vegetarien\"]"},
+  {"cliquer": "[data-filtre=\"sans-gluten\"]"},
+  {"attendre": 500},
+  {"saisir": ["[data-recherche]", "chocolat"]},
+  {"attendre": 900},
+  {"verifier": "#carte-desserts:not([hidden])"},
+  {"touche": "Control+a"},
+  {"touche": "Backspace"},
+  {"attendre": 500},
+  {"cliquer": "[data-rubrique-lien=\"vins-et-boissons\"]"},
+  {"attendre": 1200},
+  {"verifier": "[data-rubrique-lien=\"vins-et-boissons\"].est-courant"}
+ ],
+ "pause": 300,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": "#carte-entrees .carte-resto__plat:nth-child(3)"} ], "apres": 500 }
+}

@@ -1,0 +1,17 @@
+{
+ "etapes": [
+  {"defiler": ".horaires__cadran"},
+  {"attendre": 2200},
+  {"verifier": ".horaires__statut:not([hidden])"},
+  {"cliquer": ".horaires__choix[data-i=\"1\"]"},
+  {"attendre": 1600},
+  {"verifier": ".horaires__choix[data-i=\"1\"][aria-pressed=\"true\"]"},
+  {"cliquer": ".horaires__choix[data-i=\"2\"]"},
+  {"attendre": 1800},
+  {"cliquer": ".horaires__choix[data-i=\"0\"]"},
+  {"attendre": 1200}
+ ],
+ "pause": 300,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": ".horaires"} ], "apres": 2400 }
+}

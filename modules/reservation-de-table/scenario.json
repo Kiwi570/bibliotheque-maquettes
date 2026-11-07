@@ -1,0 +1,29 @@
+{
+ "etapes": [
+  {"defiler": "[data-resa-jours]"},
+  {"cliquer": "[data-jour]:not(:disabled):not([aria-pressed=\"true\"])"},
+  {"attendre": 600},
+  {"cliquer": ".resa__creneau:not(.est-complet) input"},
+  {"attendre": 400},
+  {"cliquer": "[data-plus]"},
+  {"cliquer": "[data-plus]"},
+  {"cliquer": "input[name=\"demande\"][value=\"Anniversaire\"]"},
+  {"saisir": ["[name=\"prenom\"]", "Camille"]},
+  {"saisir": ["[name=\"nom\"]", "Martin"]},
+  {"saisir": ["[name=\"telephone\"]", "06 12 34 56 78"]},
+  {"cliquer": ".resa__bouton[type=\"submit\"]"},
+  {"attendre": 1000},
+  {"verifier": "[data-resa-confirmer]"},
+  {"cliquer": "[data-resa-modifier=\"couverts\"]"},
+  {"attendre": 700},
+  {"cliquer": "[data-moins]"},
+  {"cliquer": ".resa__bouton[type=\"submit\"]"},
+  {"attendre": 900},
+  {"cliquer": "[data-resa-confirmer]"},
+  {"attendre": 1000},
+  {"verifier": ".resa__recap-corps.est-envoye"}
+ ],
+ "pause": 250,
+ "video": "scenario",
+ "capture": { "attendre": 600, "etapes": [ {"defiler": ".resa__tete"} ], "apres": 400 }
+}
