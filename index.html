@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#16171a" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/site/icone.svg" type="image/svg+xml">
 <style>html,body{background:#f4f2ee}@media (prefers-color-scheme:dark){html,body{background:#16171a}}</style>
-<link rel="stylesheet" href="/site/site.css?v=6">
+<link rel="stylesheet" href="/site/site.css?v=7">
 </head>
 <body>
 <a class="sr socle-sr" href="#resultats">Aller aux résultats</a>
@@ -41,9 +41,13 @@
     <button type="button" class="bouton bouton--ligne bascule-filtres" aria-expanded="false" aria-controls="filtres">Filtres</button>
     <label class="champ champ--mots"><span>Mots</span><input type="search" name="q" placeholder="trame, épinglé, devis…" autocomplete="off"></label>
     <label class="champ"><span>Activité</span><select name="activite"></select></label>
+    <label class="champ" data-pour="sections"><span>Besoin du site</span><select name="besoin"></select></label>
+    <label class="champ" data-pour="sections"><span>Fond</span><select name="luminosite"></select></label>
     <label class="champ" data-pour="sections"><span>Concept</span><select name="concept"></select></label>
     <label class="champ"><span>Ambiance</span><select name="ambiance"></select></label>
     <label class="champ"><span>Rôle</span><select name="role"></select></label>
+    <label class="champ"><span>Famille d'effet</span><select name="famille"></select></label>
+    <label class="champ"><span>Impact</span><select name="impact"></select></label>
     <label class="champ"><span>Animation</span><select name="animation"></select></label>
     <label class="champ"><span>Interaction</span><select name="interaction"></select></label>
     <label class="champ" data-pour="sections"><span>Module</span><select name="module"></select></label>
@@ -70,6 +74,6 @@
   <iframe id="cadre-page" title="Démonstration du module" loading="lazy"></iframe>
 </dialog>
 <p class="sr socle-sr" id="annonce" aria-live="polite"></p>
-<script type="module" src="/site/site.js?v=5"></script>
+<script type="module" src="/site/site.js?v=6"></script>
 </body>
 </html>

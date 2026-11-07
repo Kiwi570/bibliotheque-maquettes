@@ -21,6 +21,10 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
   verifie(ou, 'activite', m.activite, 'activite', 1); verifie(ou, 'concept', m.concept, 'concept', 1); verifie(ou, 'ambiance', m.ambiance, 'ambiance', 1);
   if (m.concept.length > 2) err.push(`${ou} : concept, deux valeurs au plus`);
   if (m.ambiance.length > 3) err.push(`${ou} : ambiance, trois valeurs au plus`);
+  // Champs déduits (taxonomie v4, outils/deduire.mjs) : présents et dans la taxonomie.
+  if (!m.metier || typeof m.metier !== 'string') err.push(`${ou} : metier manquant (node outils/deduire.mjs, ou notes-manuelles maquette.metier)`);
+  if (!TAXO.luminosite.includes(m.luminosite)) err.push(`${ou} : luminosite « ${m.luminosite} » (node outils/deduire.mjs)`);
+  verifie(ou, 'ton', m.ton || [], 'ton'); verifie(ou, 'univers', m.univers || [], 'univers'); verifie(ou, 'besoins', m.besoins ?? null, 'besoin');
   verifie(ou, 'animations', m.animations, 'animation', 1); verifie(ou, 'interactions', m.interactions, 'interaction', 1); verifie(ou, 'dependances', m.dependances, 'dependance', 1);
   for (const [k, v] of Object.entries(m.palette || {})) if (!/^#[0-9a-f]{6}$/i.test(v || '')) err.push(`${ou} : palette.${k} invalide (${v})`);
   for (const c of Object.values(m.captures || {})) if (c) poids(c, 300 * 1024, ou);
@@ -38,6 +42,8 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
     if (!TAXO.role.includes(s.role)) err.push(`${os} : rôle « ${s.role} » hors taxonomie`);
     verifie(os, 'animations', s.animations, 'animation', 1); verifie(os, 'interactions', s.interactions, 'interaction', 1); verifie(os, 'dependances', s.dependances, 'dependance', 1);
     if (!TAXO.telephone.includes(s.telephone)) err.push(`${os} : telephone « ${s.telephone} »`);
+    if (!TAXO.impact.includes(s.impact)) err.push(`${os} : impact « ${s.impact} » (node outils/deduire.mjs)`);
+    verifie(os, 'familles', s.familles ?? null, 'famille');
     if (!(s.note_qualite >= 1 && s.note_qualite <= 5)) err.push(`${os} : note_qualite`);
     if (!s.description || s.description.length < 30) err.push(`${os} : description trop courte`);
     if (s.reutilisable && s.note_qualite < 4) err.push(`${os} : réutilisable avec une note < 4`);

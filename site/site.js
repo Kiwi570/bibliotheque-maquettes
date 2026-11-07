@@ -3,10 +3,11 @@
 const $ = s => document.querySelector(s);
 const sansAccent = t => String(t).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const PAS = 48;
-const FACETTES = ['activite', 'concept', 'ambiance', 'role', 'animation', 'interaction', 'module'];
-const LIBELLES = { activite: 'Toutes', concept: 'Tous', ambiance: 'Toutes', role: 'Tous', animation: 'Toutes', interaction: 'Toutes', module: 'Tous' };
+const FACETTES = ['activite', 'besoin', 'luminosite', 'concept', 'ambiance', 'role', 'famille', 'impact', 'animation', 'interaction', 'module'];
+const LIBELLES = { activite: 'Toutes', besoin: 'Tous', luminosite: 'Toutes', concept: 'Tous', ambiance: 'Toutes', role: 'Tous', famille: 'Toutes', impact: 'Tous', animation: 'Toutes', interaction: 'Toutes', module: 'Tous' };
 
 let donnees = null, vue = 'sections', affiches = PAS;
+const voulu = {}; // filtres lus dans l'adresse avant que les listes soient remplies
 const form = $('#filtres'), grille = $('#resultats'), compte = $('#compte'), plus = $('#plus'), annonce = $('#annonce');
 
 // ---------- Données ----------
@@ -18,13 +19,14 @@ function preparer(ix) {
     const media = (v, suffixe) => v === 1 ? `/medias/${depot}/${court}-${suffixe}` : v ? (v.startsWith('medias/') ? '/' + v : `/medias/${depot}/${v}`) : '';
     return { type: 'section', id: s.id, depot, titre: s.titre, role: s.role, animations: s.animations, interactions: s.interactions || [], note: s.note,
       modules: s.module ? s.module.split('+') : [], capture: media(s.capture, 'p1440.jpg'), video: media(s.video, 'p720.mp4'),
-      activite: m.activite || [], concept: m.concept || [], ambiance: m.ambiance || [], client: m.client || depot,
+      activite: m.activite || [], concept: m.concept || [], ambiance: m.ambiance || [], client: m.client || depot, metier: m.metier || '',
+      besoin: m.besoins || [], luminosite: m.luminosite ? [m.luminosite] : [], famille: s.familles || [], impact: s.impact ? [s.impact] : [],
       enLigne: m.url ? m.url + (s.page ? '/' + s.page : '') : '', chemin: `sections/${s.id}.json` };
   });
   const modules = ix.modules.map(l => {
     const m = col('modules', l);
     return { type: 'module', id: m.nom, titre: m.titre, role: m.role, animations: m.animations, interactions: m.interactions || [], activite: m.convient_a || [],
-      ambiance: m.ambiances || [], concept: [], modules: [m.nom], note: 0, dependances: m.dependances || [],
+      ambiance: m.ambiances || [], concept: [], modules: [m.nom], note: 0, dependances: m.dependances || [], besoin: [], luminosite: [], famille: m.familles || [], impact: m.impact ? [m.impact] : [], metier: '',
       capture: `/modules/${m.nom}/apercu.jpg`, video: `/modules/${m.nom}/apercu.mp4`, chemin: `modules/${m.nom}/` };
   });
   return { ix, maquettes, sections, modules };
@@ -35,7 +37,7 @@ const valeurs = (it, f) => f === 'animation' ? it.animations : f === 'interactio
 function lireEtat() {
   const p = new URLSearchParams(location.search);
   vue = p.get('vue') === 'modules' ? 'modules' : 'sections';
-  for (const el of form.elements) if (el.name) el.value = p.get(el.name) || '';
+  for (const el of form.elements) if (el.name) { el.value = p.get(el.name) || ''; if (el.tagName === 'SELECT' && p.get(el.name)) voulu[el.name] = p.get(el.name); }
 }
 function ecrireEtat() {
   const p = new URLSearchParams();
@@ -47,7 +49,7 @@ function remplirSelects() {
   const items = vue === 'modules' ? donnees.modules : donnees.sections;
   for (const f of FACETTES) {
     const sel = form.elements[f]; if (!sel) continue;
-    const garde = sel.value; const n = new Map();
+    const garde = voulu[f] || sel.value; delete voulu[f]; const n = new Map();
     for (const it of items) for (const v of new Set(valeurs(it, f))) if (v && v !== 'aucune') n.set(v, (n.get(v) || 0) + 1);
     const opts = [...n].sort((a, b) => a[0].localeCompare(b[0], 'fr'));
     sel.innerHTML = `<option value="">${f === 'module' ? 'Tous' : LIBELLES[f]}</option>` + (f === 'module' ? `<option value="*">Avec un module</option>` : '') +
@@ -61,12 +63,12 @@ function filtrer() {
   const mots = sansAccent(f.q || '').split(/\s+/).filter(Boolean);
   return items.filter(it => {
     for (const k of FACETTES) {
-      if (!f[k] || (vue === 'modules' && ['concept', 'module'].includes(k))) continue;
+      if (!f[k] || (vue === 'modules' && ['concept', 'module', 'besoin', 'luminosite'].includes(k))) continue;
       if (k === 'module' && f[k] === '*') { if (!it.modules.length) return false; continue; }
       if (!valeurs(it, k).includes(f[k])) return false;
     }
     if (vue === 'sections' && f.note === '5' && it.note < 5) return false;
-    if (mots.length) { const t = sansAccent([it.titre, it.id, it.role, it.client, ...it.animations, ...it.interactions, ...it.modules, ...it.ambiance].join(' ')); if (!mots.every(m => t.includes(m))) return false; }
+    if (mots.length) { const t = sansAccent([it.titre, it.id, it.role, it.client, it.metier, ...it.famille, ...it.animations, ...it.interactions, ...it.modules, ...it.ambiance].join(' ')); if (!mots.every(m => t.includes(m))) return false; }
     return true;
   }).sort((a, b) => b.note - a.note || b.modules.length - a.modules.length || a.titre.localeCompare(b.titre, 'fr'));
 }

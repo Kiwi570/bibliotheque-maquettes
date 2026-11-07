@@ -1,6 +1,6 @@
 {
- "version": 3,
- "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés. v3 : rôle articles, animations reactif-vitesse, fil-conducteur, trace-svg et rature, interactions ambiance-sonore, schema-interactif, saisie-personnalisee et visite-guidee, dépendance drawsvg-morphsvg. Les mécaniques rares (une seule maquette) vont dans le champ libre particularites des fiches, pas ici.",
+ "version": 4,
+ "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés. v3 : rôle articles, animations reactif-vitesse, fil-conducteur, trace-svg et rature, interactions ambiance-sonore, schema-interactif, saisie-personnalisee et visite-guidee, dépendance drawsvg-morphsvg. Les mécaniques rares (une seule maquette) vont dans le champ libre particularites des fiches, pas ici. v4 : axes luminosite, ton et univers (la liste ambiance reste, c'est leur réunion), besoin (ce que le site doit faire), impact (calme, vivant, spectaculaire) et famille (familles d'effets de la grille wouahou), tous déduits automatiquement par outils/deduire.mjs ; carte des métiers voisins (voisins) utilisée par la recherche.",
  "activite": [
   "restauration",
   "hébergement",
@@ -181,6 +181,206 @@
   "saisie-personnalisee": "interaction : le visiteur tape un texte (prénom, message) que la page met en scène",
   "visite-guidee": "interaction : parcours pas à pas qui montre les fonctions d une interface",
   "drawsvg-morphsvg": "dépendance : plugins GSAP DrawSVG ou MorphSVG",
-  "particularites": "champ libre des fiches (maquette et section) pour une mécanique rare : texte-brouille, scene-par-section, reprise-des-couleurs, retournement-carte, reactif-au-son, physique-pendule…"
+  "particularites": "champ libre des fiches (maquette et section) pour une mécanique rare : texte-brouille, scene-par-section, reprise-des-couleurs, retournement-carte, reactif-au-son, physique-pendule…",
+  "luminosite": "axe de maquette : fond clair ou sombre, calculé sur la couleur de fond de la palette",
+  "ton": "axe de maquette : le caractère (chaleureux, doux, sobre, énergique, luxueux, ludique, froid), tiré de l ambiance",
+  "univers": "axe de maquette : la matière ou le monde évoqué (minéral, végétal, industriel, océanique, montagne, brut, artisanal, nocturne), tiré de l ambiance",
+  "besoin": "ce que le site doit faire pour le client, déduit des sections de la maquette (panier, réservation, devis, rendez-vous, agenda...)",
+  "vendre": "besoin : panier ou achat en ligne",
+  "réserver": "besoin : réservation d une date, d une table, d une chambre, d une activité",
+  "devis": "besoin : demande de devis, estimation ou chiffrage",
+  "rendez-vous": "besoin : prise de rendez-vous ou de créneau",
+  "portfolio": "besoin : montrer des réalisations, des projets ou des œuvres",
+  "catalogue": "besoin : parcourir des produits ou des prestations avec filtres, sans achat",
+  "inscription": "besoin : s inscrire à un cours, un stage, une formation, une lettre",
+  "dons": "besoin : don, adhésion, parrainage, soutien",
+  "écouter-regarder": "besoin : lecteur audio ou vidéo (radio, musique, films)",
+  "zone-d-intervention": "besoin : montrer où le client intervient (carte, rayon, secteur)",
+  "impact": "axe de section : calme (aucune animation), vivant (animations légères), spectaculaire (scène, WebGL, 3D, objet manipulable, typographie géante...)",
+  "famille": "axe de section : famille d effet de la grille wouahou, déduite des animations et du texte de la fiche",
+  "3d": "famille : scène ou objet en 3D (CSS 3D, three.js), carrousel en cylindre",
+  "objet-manipulable": "famille : objet que le visiteur attrape, fait tourner ou déplace, avec élan",
+  "typo-geante": "famille : typographie géante ou cinétique (bandeaux de mots, titres énormes)",
+  "plein-ecran": "famille : image ou scène qui s ouvre jusqu au plein écran",
+  "carrousel": "famille : carrousel ou défilement de cartes à manipuler",
+  "vitesse": "famille : réagit à la vitesse du défilement",
+  "lumiere-pointeur": "famille : lumière, matière ou objet qui suit le pointeur ou le doigt",
+  "scene-epinglee": "famille : section fixée dont le contenu progresse au défilement",
+  "webgl": "famille : rendu WebGL (shader, particules)",
+  "voisins": "pour chaque activité, les activités les plus proches : la recherche les classe juste après l activité elle-même"
+ },
+ "luminosite": [
+  "clair",
+  "sombre"
+ ],
+ "ton": [
+  "chaleureux",
+  "doux",
+  "sobre",
+  "énergique",
+  "luxueux",
+  "ludique",
+  "froid"
+ ],
+ "univers": [
+  "minéral",
+  "végétal",
+  "industriel",
+  "océanique",
+  "montagne",
+  "brut",
+  "artisanal",
+  "nocturne"
+ ],
+ "besoin": [
+  "vendre",
+  "réserver",
+  "devis",
+  "rendez-vous",
+  "portfolio",
+  "catalogue",
+  "agenda",
+  "inscription",
+  "dons",
+  "écouter-regarder",
+  "zone-d-intervention"
+ ],
+ "impact": [
+  "calme",
+  "vivant",
+  "spectaculaire"
+ ],
+ "famille": [
+  "3d",
+  "objet-manipulable",
+  "typo-geante",
+  "plein-ecran",
+  "carrousel",
+  "vitesse",
+  "lumiere-pointeur",
+  "scene-epinglee",
+  "webgl",
+  "fil-conducteur"
+ ],
+ "voisins": {
+  "restauration": [
+   "hébergement",
+   "tourisme",
+   "commerce"
+  ],
+  "hébergement": [
+   "tourisme",
+   "restauration",
+   "bien-être"
+  ],
+  "commerce": [
+   "artisanat",
+   "auto-moto",
+   "animaux"
+  ],
+  "artisanat": [
+   "commerce",
+   "bâtiment",
+   "culture"
+  ],
+  "bâtiment": [
+   "artisanat",
+   "industrie",
+   "immobilier"
+  ],
+  "industrie": [
+   "services-b2b",
+   "bâtiment",
+   "numérique"
+  ],
+  "services-b2b": [
+   "conseil",
+   "numérique",
+   "industrie"
+  ],
+  "conseil": [
+   "services-b2b",
+   "formation",
+   "finance",
+   "juridique"
+  ],
+  "santé": [
+   "bien-être",
+   "sport"
+  ],
+  "bien-être": [
+   "santé",
+   "sport",
+   "hébergement"
+  ],
+  "sport": [
+   "bien-être",
+   "santé",
+   "tourisme"
+  ],
+  "culture": [
+   "spectacle",
+   "média",
+   "association"
+  ],
+  "spectacle": [
+   "culture",
+   "média"
+  ],
+  "média": [
+   "culture",
+   "numérique",
+   "spectacle"
+  ],
+  "formation": [
+   "conseil",
+   "culture",
+   "numérique"
+  ],
+  "association": [
+   "collectivité",
+   "culture"
+  ],
+  "collectivité": [
+   "association",
+   "tourisme",
+   "culture"
+  ],
+  "tourisme": [
+   "hébergement",
+   "restauration",
+   "sport"
+  ],
+  "numérique": [
+   "services-b2b",
+   "formation",
+   "média"
+  ],
+  "immobilier": [
+   "bâtiment",
+   "conseil",
+   "finance"
+  ],
+  "juridique": [
+   "conseil",
+   "finance",
+   "services-b2b"
+  ],
+  "finance": [
+   "conseil",
+   "juridique",
+   "services-b2b"
+  ],
+  "auto-moto": [
+   "commerce",
+   "artisanat",
+   "sport"
+  ],
+  "animaux": [
+   "santé",
+   "bien-être",
+   "commerce"
+  ],
+  "autre": []
  }
 }

@@ -4,7 +4,7 @@
 //
 // Format des notes manuelles (tout ce qu'un script ne peut pas juger) :
 // {
-//   "maquette": { "client": "radio de glisse", "activite": [...], "concept": [...], "ambiance": [...],
+//   "maquette": { "metier": "radio" (métier précis, court ; sinon tiré du client), "client": "radio de glisse", "activite": [...], "concept": [...], "ambiance": [...],
 //                 "palette": {"fond": "--ink", "texte": "--foam", "accent": "--sun", "secondaire": "--blue"},   // noms de variables :root ou #hex
 //                 "polices": {"titres": "...", "texte": "...", "mono": "..."},
 //                 "points_forts": [...], "reserves": [...], "animations": [...], "interactions": [...],
@@ -18,6 +18,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { RACINE, AUDIT, lireJson, ecrireJson, resumeJournal } from './commun.mjs';
+import { deduireSection, deduireMaquette } from './deduire.mjs';
 
 const DEP_GLOBALES = { gsap: 'gsap', scrolltrigger: 'scrolltrigger', splittext: 'splittext', flip: 'flip', lenis: 'lenis', ogl: 'ogl', three: 'three' };
 
@@ -41,7 +42,7 @@ for (const depot of process.argv.slice(2)) {
 
   const dossierSec = path.join(RACINE, 'sections', depot);
   fs.rmSync(dossierSec, { recursive: true, force: true });
-  const ids = [];
+  const ids = [], secs = [];
   const manquantes = [];
   for (const b of inv.blocs) {
     const n = notes.sections[b.id];
@@ -74,8 +75,9 @@ for (const depot of process.argv.slice(2)) {
       ...(n.particularites?.length ? { particularites: n.particularites } : {}),
       mesures: { hauteur_p1440: b.hauteur, hauteur_m390: b.hauteur_m390, epinglee: b.scrolltriggers.some(s => s.pin), scrolltriggers: b.scrolltriggers.length },
     };
+    Object.assign(fiche, deduireSection(fiche, n)); // familles d'effets et impact (taxonomie v4)
     ecrireJson(path.join(dossierSec, `${b.id}.json`), fiche);
-    ids.push(fiche.id);
+    ids.push(fiche.id); secs.push(fiche);
   }
   if (manquantes.length) console.warn(`${depot} : ${manquantes.length} blocs sans note manuelle : ${manquantes.join(', ')}`);
 
@@ -85,6 +87,7 @@ for (const depot of process.argv.slice(2)) {
     depot, url: audit.url, client: nm.client,
     activite: nm.activite, concept: nm.concept, ambiance: nm.ambiance,
     palette: Object.fromEntries(Object.entries(nm.palette).map(([k, v]) => [k, couleur(v)])),
+    metier: null, luminosite: null, ton: [], univers: [], besoins: [], // remplis juste après (deduire.mjs)
     polices: nm.polices,
     pages: Object.keys(inv.pages).sort((a, b) => (a === 'index' ? -1 : b === 'index' ? 1 : a === '404' ? 1 : b === '404' ? -1 : a.localeCompare(b))),
     commit: inv.commit, date_commit: inv.date_commit.slice(0, 10),
@@ -107,6 +110,7 @@ for (const depot of process.argv.slice(2)) {
     audit: `https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/${depot}.md`,
     commit_audit: correctionCommit || null,
   };
+  Object.assign(fiche, deduireMaquette(fiche, secs, nm));
   ecrireJson(path.join(RACINE, 'maquettes', `${depot}.json`), fiche);
 
   // Rapport d'audit, suivi du compte rendu de correction s'il existe.
