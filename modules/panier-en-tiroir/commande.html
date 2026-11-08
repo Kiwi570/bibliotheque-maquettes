@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Commander · Panier en tiroir · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Page de commande simple : celle où mènent les boutons « Ajouter » et « Panier » sans JavaScript.
+     Avec JavaScript, le tiroir est aussi là : le panier suit d'une page à l'autre. */
+  @font-face { font-family: 'Lora'; src: url('demo-lora.woff') format('woff'); font-weight: 400 700; font-display: swap; }
+  @font-face { font-family: 'Carlito'; src: url('demo-carlito.woff') format('woff'); font-weight: 400; font-display: swap; }
+  @font-face { font-family: 'Carlito'; src: url('demo-carlito-gras.woff') format('woff'); font-weight: 700; font-display: swap; }
+  :root { --couleur-fond: #f3ede3; --couleur-texte: #1b1d29; --couleur-accent: #b4432a; --couleur-secondaire: #23304f; --couleur-sur-accent: #fff8ef;
+    --police-titres: 'Lora', Georgia, serif; --police-texte: 'Carlito', system-ui, sans-serif; --rayon: 12px; }
+  body { font-size: max(17px, 1.06rem); }
+  .demo-entete { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px var(--espace); background: var(--couleur-fond); border-bottom: 1px solid var(--couleur-ligne); }
+  .demo-entete a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 999px; text-decoration: none; }
+  .demo-marque { font-family: var(--police-titres); font-style: italic; font-weight: 600; font-size: 1.3rem; padding: 0 !important; }
+  .demo-panier { background: var(--couleur-secondaire); color: var(--couleur-fond); font-weight: 700; }
+  .cmd { display: grid; gap: 28px; padding-block: 40px 90px; max-width: 760px; }
+  .cmd h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 500; }
+  .cmd fieldset { display: grid; gap: 12px; margin: 0; padding: 20px; border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); }
+  .cmd legend { padding: 0 6px; font-family: var(--police-titres); font-size: 1.3rem; }
+  .cmd .article { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 16px; align-items: center; padding: 10px 0; border-top: 1px solid var(--couleur-ligne); scroll-margin-top: 90px; }
+  .cmd .article:first-of-type { border-top: 0; }
+  .cmd .article:target { background: var(--couleur-surface); outline: 2px solid var(--couleur-accent); outline-offset: 6px; border-radius: 4px; }
+  .cmd label { display: grid; gap: 4px; font-weight: 700; font-size: .95rem; }
+  .cmd input, .cmd select { min-height: 46px; padding: 0 12px; border: 1px solid var(--couleur-ligne); border-radius: 8px; background: var(--couleur-fond); color: var(--couleur-texte); font: inherit; }
+  .cmd input[type="number"] { width: 6em; }
+  .cmd .choix { display: flex; align-items: center; gap: 12px; min-height: 52px; font-weight: 400; grid-template-columns: none; }
+  .cmd .choix input { width: 22px; min-height: 22px; accent-color: var(--couleur-accent); }
+  .cmd .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .cmd .opts { display: flex; flex-wrap: wrap; gap: 10px; grid-column: 1 / -1; }
+  .cmd .opts label { font-weight: 400; }
+  .cmd button { min-height: 52px; border: 0; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; }
+  .cmd .note { color: var(--couleur-texte-doux); font-size: .95rem; }
+  @media (max-width: 560px) { .cmd .duo { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="demo-entete" data-entete>
+  <a class="demo-marque" href="index.html">Brûlerie Vespérale</a>
+  <a class="demo-panier" href="commande.html" data-panier-ouvrir>Panier <span class="pet-compte" data-panier-compte>0</span></a>
+</header>
+<main class="socle-cadre cmd">
+  <noscript><style>[data-panier-compte]{display:none}</style></noscript>
+  <div><p class="socle-surtitre">Commande simple</p><h1>Votre commande</h1>
+    <p class="note">Indiquez les quantités souhaitées : nous confirmons la commande et le total par e-mail. Démonstration : le formulaire n'envoie rien.</p></div>
+  <form action="#envoye" method="get">
+    <fieldset><legend>Articles</legend>
+      <div class="article" id="nocturne"><label for="q-nocturne">Nocturne · 9,80 € les 250 g</label><input id="q-nocturne" name="nocturne" type="number" min="0" max="20" value="0" inputmode="numeric">
+        <div class="opts"><label>Mouture <select name="nocturne-mouture"><option>Grains</option><option>Filtre</option><option>Espresso</option></select></label><label>Poids <select name="nocturne-poids"><option>250 g</option><option>1 kg (34 €)</option></select></label></div></div>
+      <div class="article" id="aube-claire"><label for="q-aube">Aube claire · 12,50 € les 250 g</label><input id="q-aube" name="aube-claire" type="number" min="0" max="20" value="0" inputmode="numeric">
+        <div class="opts"><label>Mouture <select name="aube-mouture"><option>Grains</option><option selected>Filtre</option><option>Espresso</option></select></label><label>Poids <select name="aube-poids"><option>250 g</option><option>1 kg (44 €)</option></select></label></div></div>
+      <div class="article" id="doux-sommeil"><label for="q-doux">Doux sommeil · 11,20 € les 250 g</label><input id="q-doux" name="doux-sommeil" type="number" min="0" max="20" value="0" inputmode="numeric">
+        <div class="opts"><label>Mouture <select name="doux-mouture"><option>Grains</option><option>Filtre</option><option>Espresso</option></select></label><label>Poids <select name="doux-poids"><option>250 g</option><option>1 kg (39 €)</option></select></label></div></div>
+      <div class="article" id="tasse"><label for="q-tasse">Tasse en grès · 18,00 €</label><input id="q-tasse" name="tasse" type="number" min="0" max="20" value="0" inputmode="numeric">
+        <div class="opts"><label>Émail <select name="tasse-email"><option>Nuit</option><option>Sable</option></select></label></div></div>
+      <div class="article" id="coffret"><label for="q-coffret">Coffret trois origines · 29,00 €</label><input id="q-coffret" name="coffret" type="number" min="0" max="20" value="0" inputmode="numeric"></div>
+    </fieldset>
+    <fieldset><legend>Réception</legend>
+      <label class="choix"><input type="radio" name="reception" value="livraison" checked> Livraison : 5,90 €, offerte dès 45 €</label>
+      <label class="choix"><input type="radio" name="reception" value="retrait"> Retrait gratuit à l'atelier, du mercredi au samedi, 9 h à 18 h</label>
+    </fieldset>
+    <fieldset><legend>Coordonnées</legend>
+      <div class="duo"><label>Prénom <input name="prenom" autocomplete="given-name" required></label><label>Nom <input name="nom" autocomplete="family-name" required></label></div>
+      <label>E-mail <input name="email" type="email" autocomplete="email" required></label>
+      <label>Adresse (pour la livraison) <input name="adresse" autocomplete="street-address"></label>
+      <div class="duo"><label>Code postal <input name="cp" autocomplete="postal-code" inputmode="numeric"></label><label>Ville <input name="ville" autocomplete="address-level2"></label></div>
+    </fieldset>
+    <button type="submit">Envoyer la commande</button>
+  </form>
+</main>
+<div data-module="panier-en-tiroir" data-panier-tiroir>
+  <script type="application/json" data-panier-reglages>{"devise":"EUR","seuil_livraison":45,"frais_livraison":5.9,"tva":5.5,"cle":"demo-brulerie-panier","prefixe":"BV",
+"retrait":{"adresse":"Atelier, 12 passage des Torréfacteurs","horaires":"du mercredi au samedi, 9 h à 18 h"}}</script>
+</div>
+<script type="module">
+  import { init } from './module.js?v=1';
+  init(document.querySelector('[data-panier-tiroir]'));
+</script>
+</body>
+</html>

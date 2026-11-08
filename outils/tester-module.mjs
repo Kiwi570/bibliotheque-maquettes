@@ -8,7 +8,10 @@
 // texte < 12 px, cibles < 44 px, état final sous « réduire les animations ».
 // Scénario facultatif : modules/<nom>/scenario.json, joué en 1440×900, 820×1180 et 390×844 (test « scenario ») et filmé dans apercu.mp4.
 //   { "etapes": [ {"epingle": 0.9}, {"defiler": "sélecteur"}, {"cliquer": "sélecteur"}, {"survoler": "sélecteur"}, {"saisir": ["sélecteur", "texte"]},
-//                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"} ],
+//                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"},
+//                 {"glisser": ["sélecteur", [[0.8, 0.5], [0.2, 0.5]], 900]} ],
+//     « glisser » : souris enfoncée qui passe par ces points (fractions de la boîte de l'élément : 0,0 en haut à gauche),
+//                   en 900 ms (durée facultative ; 300 ms hors film) : essuyer, tourner une page, tirer une poignée…
 //     chaque étape accepte "si": "sélecteur" (jouée seulement si ce sélecteur est visible à ce format),
 //     "pause": 450,            // entre deux étapes (ms), pour la vidéo
 //     "video": "scenario",     // "scenario" (par défaut : la vidéo montre le scénario), "defilement" ou "les-deux"
@@ -57,6 +60,18 @@ async function jouer(pg, sc, pause = 0) {
         else if (k === 'survoler') await loc.hover({ timeout: 2500 });
         else if (k === 'saisir') { await loc.click({ timeout: 2500 }); await loc.pressSequentially(v[1], { delay: pause ? 70 : 0 }); }
         else if (k === 'choisir') await loc.selectOption(v[1], { timeout: 2500 });
+        else if (k === 'glisser') {
+          const b = await loc.boundingBox({ timeout: 2500 }); if (!b) throw new Error('élément sans boîte');
+          const pts = (v[1] || [[0.8, 0.5], [0.2, 0.5]]).map(([fx, fy]) => [b.x + b.width * fx, b.y + b.height * fy]);
+          const duree = v[2] ? (pause ? v[2] : Math.min(300, v[2])) : (pause ? 900 : 300), n = Math.max(6, Math.round(duree / 16));
+          await pg.mouse.move(...pts[0]); await pg.mouse.down();
+          for (let i = 1; i <= n; i++) {
+            const t = i / n * (pts.length - 1), s = Math.min(pts.length - 2, Math.floor(t)), f = t - s;
+            await pg.mouse.move(pts[s][0] + (pts[s + 1][0] - pts[s][0]) * f, pts[s][1] + (pts[s + 1][1] - pts[s][1]) * f);
+            await attendre(duree / n);
+          }
+          await pg.mouse.up();
+        }
         else if (k !== 'defiler') pbs.push(`étape inconnue ${k}`);
       }
     } catch (err) { pbs.push(`${k} ${JSON.stringify(v)} : ${err.message.split('\n')[0].slice(0, 80)}`); }

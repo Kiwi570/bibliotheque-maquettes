@@ -1,0 +1,74 @@
+{
+ "nom": "document-a-feuilleter",
+ "titre": "Document à feuilleter : plaquette, menu ou carnet écrit en HTML (une div par page) qu'on attrape et dont on tourne les pages à la main, avec élan, au clic sur le bord ou aux flèches ; feuillets 3D recto verso, ombre portée et pli, double page si la place le permet, annotations au crayon tracées à la lecture ; portrait ou paysage, couverture facultative",
+ "role": "ouverture",
+ "animations": [
+  "trace-svg"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "qd2a-maquette/debut"
+ ],
+ "convient_a": [
+  "conseil",
+  "services-b2b",
+  "immobilier",
+  "bâtiment",
+  "restauration",
+  "hébergement",
+  "tourisme",
+  "culture",
+  "média",
+  "formation",
+  "association",
+  "artisanat"
+ ],
+ "ambiances": [
+  "clair",
+  "chaleureux",
+  "artisanal",
+  "sobre",
+  "doux",
+  "luxueux",
+  "végétal"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "data-format": "attribut du document : 'portrait' (210 × 297), 'paysage' ou 'carre' ; --daf-r pour une autre proportion",
+  "data-couverture": "attribut du document : la première page est une couverture seule (et la dernière un dos si le nombre de pages est pair)",
+  "data-mode": "attribut du document : 'simple' pour toujours une page à la fois",
+  "depart": "page de départ, 0",
+  "invitation": "le coin de la page se soulève une fois à l'arrivée dans l'écran, true",
+  "inclinaison": "le document s'incline un peu vers la souris, true",
+  "elan": "part de la vitesse gardée au lâcher, en pages, 0.28",
+  "data-annot": "sur un mot ou une courte expression d'une page : 'souligne', 'entoure', 'barre', 'coche' ou 'marge' ; ou un svg.daf__annot libre (chemins pathLength=1)",
+  "init()": "renvoie { aller(i), suivante(), precedente(), detruire() }"
+ },
+ "images": [
+  {
+   "role": "image dans une page (photo de projet, plat, croquis), avec ou sans fond perdu",
+   "selecteur": ".daf__page img",
+   "nombre": "0 à 1 par page",
+   "ratio": "libre ; 5:4 ou 3:2 en tête de page, 4:3 en couverture",
+   "largeur": 1000,
+   "zone_calme": "aucune : le texte de la page est à côté ou dessous"
+  }
+ ],
+ "poids_ko": 27.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

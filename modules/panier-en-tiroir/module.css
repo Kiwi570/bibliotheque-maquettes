@@ -1,0 +1,142 @@
+/* Panier en tiroir. Identité uniquement par variables. Fermé, tout le tiroir est caché (visibility), donc hors du
+   parcours clavier et des lecteurs d'écran ; sur téléphone, il monte du bas sur presque tout l'écran. */
+html.pet-verrou { overflow: hidden; }
+.pet__voile { position: fixed; inset: 0; z-index: 880; background: color-mix(in oklab, var(--couleur-texte) 46%, transparent); opacity: 0; visibility: hidden; transition: opacity .35s, visibility 0s .35s; }
+.pet.est-ouvert .pet__voile { opacity: 1; visibility: visible; transition: opacity .35s; }
+
+.pet__tiroir { position: fixed; top: 0; right: 0; bottom: 0; z-index: 890; display: flex; flex-direction: column; width: min(460px, 100vw); background: var(--couleur-fond); color: var(--couleur-texte);
+  box-shadow: -24px 0 60px -30px color-mix(in oklab, var(--couleur-texte) 70%, transparent); transform: translateX(104%); visibility: hidden;
+  transition: transform .5s cubic-bezier(.2, .8, .2, 1), visibility 0s .5s; padding-bottom: env(safe-area-inset-bottom, 0px); }
+.pet.est-ouvert .pet__tiroir { transform: translateX(0); visibility: visible; transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
+.pet__poignee { display: none; }
+
+.pet__tete { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 22px 10px; }
+.pet__titre { font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem); outline: none; } /* reçoit le focus à l'ouverture, sans être un contrôle */
+.pet__fermer { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--couleur-ligne); border-radius: 50%; background: transparent; cursor: pointer; }
+.pet__fermer svg, .pet__quantite svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+.pet__fermer:hover { background: var(--couleur-texte); color: var(--couleur-fond); }
+
+.pet__etapes { display: flex; gap: 6px; margin: 0; padding: 0 22px 12px; list-style: none; counter-reset: pet; font-size: max(12px, .8rem); color: var(--couleur-texte-doux); border-bottom: 1px solid var(--couleur-ligne); }
+.pet__etapes li { counter-increment: pet; display: flex; align-items: center; gap: 6px; }
+.pet__etapes li + li::before { content: ''; order: -2; width: 14px; height: 1px; background: var(--couleur-ligne); margin-right: 2px; }
+.pet__etapes li::after { content: counter(pet); order: -1; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; border: 1px solid var(--couleur-ligne); font-size: max(12px, .7rem); }
+.pet__etapes li[aria-current] { color: var(--couleur-texte); font-weight: 700; }
+.pet__etapes li[aria-current]::after { background: var(--couleur-texte); color: var(--couleur-fond); border-color: var(--couleur-texte); }
+.pet__etapes li.est-faite::after { content: '✓'; background: var(--couleur-secondaire); color: var(--couleur-fond); border-color: var(--couleur-secondaire); }
+
+.pet__corps { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 14px 22px 18px; }
+.pet__pied { display: grid; gap: 12px; padding: 14px 22px 18px; border-top: 1px solid var(--couleur-ligne); background: var(--couleur-surface); }
+
+/* Jauge vers la livraison offerte */
+.pet__livraison { display: grid; gap: 8px; padding: 2px 0 14px; }
+.pet__jauge-texte { font-size: .95rem; }
+.pet__jauge-texte b { color: var(--couleur-accent); }
+.pet__jauge { height: 8px; border-radius: 999px; background: var(--couleur-ligne); overflow: hidden; }
+.pet__jauge span { display: block; height: 100%; width: calc(var(--part) * 100%); border-radius: inherit; background: var(--couleur-accent); transition: width .6s cubic-bezier(.2, .8, .2, 1); }
+.pet__jauge.est-pleine span { background: var(--couleur-secondaire); }
+
+/* Lignes */
+.pet__lignes { list-style: none; margin: 0; padding: 0; }
+.pet__ligne { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; grid-template-areas: "img texte montant" "img qte suppr"; gap: 4px 14px; align-items: center; padding: 14px 0; border-top: 1px solid var(--couleur-ligne); }
+.pet__vignette { grid-area: img; align-self: start; width: 72px; height: 72px; border-radius: calc(var(--rayon) * .6); object-fit: cover; background: var(--couleur-surface); }
+.pet__ligne-texte { grid-area: texte; display: grid; gap: 2px; min-width: 0; }
+.pet__nom { font-weight: 700; line-height: 1.25; }
+.pet__options, .pet__unitaire { font-size: max(12px, .82rem); color: var(--couleur-texte-doux); }
+.pet__montant { grid-area: montant; align-self: start; font-weight: 700; font-variant-numeric: tabular-nums; }
+.pet__quantite { grid-area: qte; justify-self: start; display: inline-flex; align-items: center; border: 1px solid var(--couleur-ligne); border-radius: 999px; }
+.pet__quantite button { display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.pet__quantite button:hover { background: var(--couleur-surface); }
+.pet__quantite output { min-width: 2ch; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.pet__supprimer { grid-area: suppr; justify-self: end; }
+.pet__lien { min-height: 44px; padding: 0 2px; border: 0; background: none; color: var(--couleur-texte-doux); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font-size: max(12px, .85rem); }
+.pet__lien:hover { color: var(--couleur-texte); }
+.pet__retire { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-bottom: 10px; padding: 4px 4px 4px 14px; border-radius: var(--rayon); background: var(--couleur-surface); font-size: .92rem; }
+.pet__retire .pet__lien { color: var(--couleur-accent); font-weight: 700; }
+.pet__vide { display: grid; justify-items: start; gap: 16px; padding: 24px 0; color: var(--couleur-texte-doux); }
+
+/* Choix (livraison ou retrait, paiement) */
+.pet__mode { display: grid; gap: 8px; margin: 14px 0 0; padding: 0; border: 0; }
+.pet__mode legend { margin-bottom: 8px; font-weight: 700; }
+.pet__choix { display: flex; align-items: center; gap: 12px; min-height: 54px; padding: 8px 14px; border: 1px solid var(--couleur-ligne); border-radius: var(--rayon); cursor: pointer; transition: border-color .2s, background-color .2s; }
+.pet__choix input { width: 22px; height: 22px; margin: 0; flex: none; accent-color: var(--couleur-accent); }
+.pet__choix span { font-size: .95rem; color: var(--couleur-texte-doux); }
+.pet__choix b { color: var(--couleur-texte); margin-right: 4px; }
+.pet__choix:has(input:checked) { border-color: var(--couleur-texte); background: var(--couleur-surface); }
+
+/* Totaux et boutons */
+.pet__totaux { display: grid; gap: 4px; margin: 0; }
+.pet__totaux div { display: flex; justify-content: space-between; gap: 12px; }
+.pet__totaux dt { color: var(--couleur-texte-doux); }
+.pet__totaux dd { margin: 0; font-variant-numeric: tabular-nums; }
+.pet__total { padding-top: 6px; margin-top: 2px; border-top: 1px solid var(--couleur-ligne); font-size: 1.15rem; }
+.pet__total dt, .pet__total dd { color: var(--couleur-texte); font-weight: 700; }
+.pet__tva { font-size: max(12px, .8rem); }
+.pet__bouton { display: inline-flex; align-items: center; justify-content: center; gap: .5em; width: 100%; min-height: 52px; padding: 0 22px; border: 1px solid var(--couleur-accent); border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-weight: 700; font-size: 1.02rem; cursor: pointer; transition: filter .2s, background-color .2s; }
+.pet__bouton:hover { filter: brightness(1.08); }
+.pet__bouton--clair { background: transparent; color: var(--couleur-texte); border-color: var(--couleur-ligne); width: auto; }
+.pet__bouton[aria-busy="true"] { cursor: progress; filter: saturate(.6); }
+.pet__actions { display: flex; gap: 10px; }
+.pet__actions .pet__bouton:last-child { flex: 1; }
+
+/* Coordonnées */
+.pet__form { display: grid; gap: 12px; }
+.pet__duo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pet__duo--cp { grid-template-columns: 2fr 3fr; }
+.pet__champ { display: grid; gap: 4px; }
+.pet__champ label { font-size: .9rem; font-weight: 700; }
+.pet__champ label span { font-weight: 400; color: var(--couleur-texte-doux); }
+.pet__champ input { min-height: 48px; width: 100%; padding: 0 14px; border: 1px solid var(--couleur-ligne); border-radius: calc(var(--rayon) * .7); background: var(--couleur-fond); color: var(--couleur-texte); font: inherit; }
+.pet__champ input:focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: 1px; border-color: transparent; }
+.pet__champ.est-invalide input { border-color: var(--couleur-accent); border-width: 2px; }
+.pet__erreur { font-size: max(12px, .82rem); color: var(--couleur-accent); font-weight: 700; }
+.pet__info { margin-top: 12px; padding: 12px 14px; border-radius: var(--rayon); background: var(--couleur-surface); font-size: .95rem; }
+.pet__note { font-size: max(12px, .85rem); color: var(--couleur-texte-doux); margin-top: 12px; }
+.pet__sous-titre { font-size: 1.1rem; margin: 18px 0 8px; }
+.pet__resume { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .95rem; }
+.pet__resume li { display: flex; justify-content: space-between; gap: 12px; }
+.pet__resume small { color: var(--couleur-texte-doux); font-size: max(12px, .8rem); }
+
+/* Confirmation */
+.pet__confirmation { display: grid; gap: 10px; padding-top: 6px; }
+.pet__coche { width: 64px; height: 64px; fill: none; stroke: var(--couleur-secondaire); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.pet__coche circle { stroke-dasharray: 151; stroke-dashoffset: 151; animation: pet-trace .7s .1s ease-out forwards; }
+.pet__coche path { stroke-dasharray: 40; stroke-dashoffset: 40; animation: pet-trace .45s .6s ease-out forwards; }
+@keyframes pet-trace { to { stroke-dashoffset: 0; } }
+.pet__merci { font-family: var(--police-titres); font-size: 1.8rem; line-height: 1.1; }
+.pet__reference { font-family: var(--police-mono); letter-spacing: .04em; }
+.pet__total-final { display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--couleur-ligne); font-weight: 700; }
+
+/* Annonce d'ajout (tiroir fermé) */
+.pet__annonce { position: fixed; right: 20px; bottom: calc(var(--barres-h, 0px) + 20px); z-index: 870; display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 40px); padding: 8px 8px 8px 8px; border-radius: 999px;
+  background: var(--couleur-texte); color: var(--couleur-fond); box-shadow: 0 18px 40px -18px color-mix(in oklab, var(--couleur-texte) 80%, transparent);
+  opacity: 0; transform: translateY(14px); visibility: hidden; transition: opacity .3s, transform .3s, visibility 0s .3s; }
+.pet__annonce.est-visible { opacity: 1; transform: none; visibility: visible; transition: opacity .3s, transform .3s; }
+.pet__annonce img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.pet__annonce p { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pet__voir { flex: none; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--couleur-fond); color: var(--couleur-texte); font-weight: 700; cursor: pointer; }
+
+/* Le bouton du panier rebondit à l'ajout (sans envol) ; son compteur est une pastille. */
+.pet-rebond { animation: pet-rebond .5s cubic-bezier(.3, 1.6, .5, 1); }
+@keyframes pet-rebond { 0% { transform: scale(1); } 35% { transform: scale(1.14); } 100% { transform: scale(1); } }
+.pet-compte { display: inline-grid; place-items: center; min-width: 1.7em; height: 1.7em; padding: 0 .35em; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-size: max(12px, .8rem); font-weight: 700; font-variant-numeric: tabular-nums; }
+.pet-compte.est-vide { background: var(--couleur-ligne); color: var(--couleur-texte); }
+
+/* Téléphone : le tiroir monte du bas, en grand ; on le referme en tirant la poignée vers le bas. */
+@media (max-width: 700px) {
+  .pet__tiroir { top: auto; left: 0; right: 0; width: auto; height: min(92svh, 92vh); border-radius: 20px 20px 0 0; transform: translateY(104%);
+    box-shadow: 0 -20px 60px -30px color-mix(in oklab, var(--couleur-texte) 70%, transparent); }
+  .pet.est-ouvert .pet__tiroir { transform: translateY(var(--tirage, 0px)); }
+  .pet__tiroir.est-tire { transition: none; }
+  .pet__poignee { display: grid; place-items: center; height: 22px; flex: none; touch-action: none; cursor: grab; }
+  .pet__poignee span { width: 44px; height: 5px; border-radius: 999px; background: var(--couleur-ligne); }
+  .pet__tete { padding: 2px 18px 10px; touch-action: none; }
+  .pet__etapes, .pet__corps, .pet__pied { padding-inline: 18px; }
+  .pet__annonce { left: 12px; right: 12px; bottom: calc(var(--barres-h, 0px) + 12px); }
+  .pet__annonce p { flex: 1; }
+  .pet__duo { grid-template-columns: 1fr; }
+  /* Coordonnées et paiement : seul le total reste en pied, pour garder la place aux champs. */
+  .pet__tiroir:is([data-etape="coordonnees"], [data-etape="paiement"]) .pet__totaux div:not(.pet__total) { display: none; }
+  .pet__tiroir:is([data-etape="coordonnees"], [data-etape="paiement"]) .pet__total { border-top: 0; margin-top: 0; padding-top: 0; }
+  .pet__duo--cp { grid-template-columns: 2fr 3fr; }
+}
+html.calme .pet-rebond, html.calme .pet__coche * { animation: none; stroke-dashoffset: 0; }

@@ -1,0 +1,19 @@
+{
+ "etapes": [
+  {"defiler": ".plaquette"},
+  {"cliquer": ".daf:has(.plaquette) [data-daf-precedent]:not(:disabled)", "si": ".daf:has(.plaquette) [data-daf-precedent]:not(:disabled)"},
+  {"attendre": 1900},
+  {"glisser": [".daf:has(.plaquette) .daf__scene", [[0.72, 0.55], [0.56, 0.56], [0.2, 0.6]], 650]},
+  {"attendre": 1100},
+  {"cliquer": ".daf:has(.plaquette) [data-daf-suivant]"},
+  {"attendre": 1000},
+  {"touche": "ArrowRight"},
+  {"attendre": 1300},
+  {"verifier": ".plaquette[data-p=\"3\"]"}
+ ],
+ "pause": 380,
+ "video": "scenario",
+ "capture": { "attendre": 900, "etapes": [
+  {"cliquer": ".daf:has(.plaquette) [data-daf-suivant]"}
+ ], "apres": 2200 }
+}

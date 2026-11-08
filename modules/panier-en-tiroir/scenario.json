@@ -1,0 +1,36 @@
+{
+ "etapes": [
+  {"touche": "Escape"},
+  {"attendre": 400},
+  {"choisir": ["[data-panier-produit]:nth-child(1) select[data-panier-option=\"Mouture\"]", "Filtre"]},
+  {"cliquer": "[data-panier-produit]:nth-child(1) [data-panier-ajouter]"},
+  {"attendre": 900},
+  {"cliquer": "[data-panier-produit]:nth-child(5) [data-panier-ajouter]"},
+  {"attendre": 900},
+  {"cliquer": "[data-entete] [data-panier-ouvrir]", "si": "[data-entete] [data-panier-ouvrir]"},
+  {"cliquer": ".pet__annonce.est-visible [data-panier-ouvrir]", "si": ".pet__annonce.est-visible [data-panier-ouvrir]"},
+  {"attendre": 700},
+  {"verifier": ".pet.est-ouvert .pet__ligne"},
+  {"cliquer": ".pet__ligne:first-child [data-panier-plus]"},
+  {"cliquer": "[data-mode-choix=\"retrait\"]"},
+  {"cliquer": "[data-panier-commander]"},
+  {"saisir": [".pet__form [name=\"prenom\"]", "Léa"]},
+  {"saisir": [".pet__form [name=\"nom\"]", "Roux"]},
+  {"saisir": [".pet__form [name=\"email\"]", "lea@exemple.fr"]},
+  {"cliquer": "[data-panier-suite]"},
+  {"cliquer": "[data-panier-payer]"},
+  {"attendre": 1500},
+  {"verifier": ".pet__confirmation .pet__reference"},
+  {"cliquer": ".pet__pied [data-panier-fermer]"},
+  {"attendre": 600}
+ ],
+ "pause": 320,
+ "video": "scenario",
+ "capture": { "attendre": 900, "etapes": [
+  {"cliquer": "[data-panier-produit]:nth-child(1) [data-panier-ajouter]"},
+  {"attendre": 900},
+  {"cliquer": "[data-panier-produit]:nth-child(4) [data-panier-ajouter]"},
+  {"attendre": 900},
+  {"cliquer": "[data-entete] [data-panier-ouvrir]"}
+ ], "apres": 800 }
+}

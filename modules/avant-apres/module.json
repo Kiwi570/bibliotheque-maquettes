@@ -1,0 +1,82 @@
+{
+ "nom": "avant-apres",
+ "titre": "Avant / après : deux photos du même lieu, au réglet gradué qu'on glisse (vrai curseur accessible) ou derrière une vitre embuée qu'on essuie au doigt ou à la souris (« Tout voir » au clavier) ; plusieurs chantiers en onglets, une légende par paire",
+ "role": "preuves",
+ "animations": [
+  "canvas-2d",
+  "révélation-image",
+  "masque"
+ ],
+ "interactions": [
+  "comparateur",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "swiss-cloisons-solutions-maquette/avant-apres",
+  "btp-confort-avenir-maquette/realisations"
+ ],
+ "convient_a": [
+  "bâtiment",
+  "artisanat",
+  "immobilier",
+  "auto-moto",
+  "animaux",
+  "bien-être",
+  "services-b2b"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "chaleureux",
+  "minéral",
+  "industriel",
+  "artisanal",
+  "sobre",
+  "brut"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "mode": "'reglet' ou 'vitre' ; sinon data-mode de la section (une paire peut porter le sien)",
+  "depart": "position du réglet au repos, en %, 50",
+  "balayage": "à l'entrée dans l'écran, la séparation part de la droite et glisse jusqu'au départ, true",
+  "pinceau": "rayon du chiffon, en fraction de la largeur de la photo, 0.08",
+  "survol": "à la souris, la vitre s'essuie au simple passage, true (false : bouton enfoncé)",
+  "seuil": "part essuyée au-delà de laquelle la vitre se dégage seule, 0.62 (0 : jamais)",
+  "buee": "épaisseur de la buée, 1 (0.5 légère à 1.5 épaisse)",
+  "voile": "couleur de la buée, 'rgba(236, 242, 245, .34)'",
+  "data-onglets": "attribut de la section : plusieurs paires en onglets (sans lui, les paires s'empilent)"
+ },
+ "images": [
+  {
+   "role": "photo avant (le jour du devis), prise du même point et à la même focale que l'après",
+   "selecteur": ".ava__vue--avant img",
+   "nombre": "1 par paire (1 à 6 paires)",
+   "ratio": "3:2 (ou --ratio du cadre), cadrage identique à l'après, object-fit: cover",
+   "largeur": 1600,
+   "zone_calme": "coin haut gauche (étiquette Avant) ; en vitre, le centre (consigne) et le coin bas droit (bouton Tout voir)"
+  },
+  {
+   "role": "photo après (le jour de la livraison), même point de vue",
+   "selecteur": ".ava__vue--apres img",
+   "nombre": "1 par paire",
+   "ratio": "3:2, identique à l'avant",
+   "largeur": 1600,
+   "zone_calme": "coin haut droit (étiquette Après)"
+  }
+ ],
+ "poids_ko": 25.9,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0.002,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

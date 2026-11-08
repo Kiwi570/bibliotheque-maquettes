@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Panier en tiroir · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-lora.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="demo-carlito.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="demo-lora-italique.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="demo-carlito-gras.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="../envol-vers-le-panier/module.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Brûlerie Vespérale, torréfacteur inventé) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Lora'; src: url('demo-lora.woff') format('woff'); font-weight: 400 700; font-display: block; }
+  @font-face { font-family: 'Lora'; src: url('demo-lora-italique.woff') format('woff'); font-weight: 400 700; font-style: italic; font-display: block; }
+  @font-face { font-family: 'Carlito'; src: url('demo-carlito.woff') format('woff'); font-weight: 400; font-display: block; }
+  @font-face { font-family: 'Carlito'; src: url('demo-carlito-gras.woff') format('woff'); font-weight: 700; font-display: block; }
+  :root { --couleur-fond: #f3ede3; --couleur-texte: #1b1d29; --couleur-accent: #b4432a; --couleur-secondaire: #23304f; --couleur-sur-accent: #fff8ef;
+    --police-titres: 'Lora', Georgia, serif; --police-texte: 'Carlito', system-ui, sans-serif; --rayon: 12px; }
+  body { font-size: max(17px, 1.06rem); }
+  .demo-entete { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px var(--espace); background: color-mix(in oklab, var(--couleur-fond) 94%, transparent); border-bottom: 1px solid var(--couleur-ligne); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+  .demo-marque { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--police-titres); font-style: italic; font-weight: 600; font-size: 1.35rem; text-decoration: none; white-space: nowrap; }
+  .demo-nav { display: flex; gap: 4px; margin-right: auto; margin-left: 18px; }
+  .demo-nav a, .demo-calme { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 999px; text-decoration: none; }
+  .demo-nav a:hover { background: var(--couleur-surface); }
+  .demo-calme { border: 1px solid var(--couleur-ligne); background: none; cursor: pointer; font-size: max(13px, .85rem); white-space: nowrap; }
+  .demo-panier { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 8px 0 16px; border-radius: 999px; background: var(--couleur-secondaire); color: var(--couleur-fond); text-decoration: none; font-weight: 700; }
+  .demo-panier svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; }
+  .demo-ouverture { display: grid; gap: 14px; padding-block: clamp(40px, 8vh, 96px) clamp(20px, 4vh, 40px); }
+  .demo-ouverture h1 { font-size: clamp(2.4rem, 6vw, 4.8rem); font-weight: 500; max-width: 15ch; }
+  .demo-ouverture h1 em { color: var(--couleur-accent); }
+  .demo-ouverture p:not(.socle-surtitre) { max-width: 50ch; color: var(--couleur-texte-doux); }
+  .demo-bandeau { display: flex; flex-wrap: wrap; gap: 6px 22px; padding: 14px 0; border-block: 1px solid var(--couleur-ligne); font-size: .95rem; }
+  .demo-bandeau b { color: var(--couleur-accent); }
+  .demo-produits { padding-block: 32px 90px; }
+  .demo-grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 28px 22px; }
+  .demo-produit { display: grid; gap: 10px; align-content: start; }
+  .demo-produit img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--rayon); background: var(--couleur-surface); }
+  .demo-produit h3 { font-size: 1.45rem; font-weight: 500; font-style: italic; }
+  .demo-produit p { color: var(--couleur-texte-doux); font-size: .95rem; }
+  .demo-options { display: flex; flex-wrap: wrap; gap: 8px; }
+  .demo-options select { min-height: 44px; padding: 0 30px 0 12px; border: 1px solid var(--couleur-ligne); border-radius: 999px; background: var(--couleur-fond); color: var(--couleur-texte); font: inherit; font-size: .95rem; }
+  .demo-pastilles { display: flex; gap: 6px; margin: 0; padding: 0; border: 0; }
+  .demo-pastilles legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .demo-pastilles label { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border: 1px solid var(--couleur-ligne); border-radius: 999px; cursor: pointer; font-size: .95rem; }
+  .demo-pastilles label:has(input:checked) { background: var(--couleur-texte); color: var(--couleur-fond); border-color: var(--couleur-texte); }
+  .demo-pastilles label:has(input:focus-visible) { outline: 2px solid var(--couleur-accent); outline-offset: 2px; }
+  .demo-achat { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
+  .demo-prix { font-weight: 700; font-size: 1.15rem; color: var(--couleur-texte); }
+  .demo-ajouter { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 20px; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-weight: 700; text-decoration: none; }
+  .demo-ajouter:hover { filter: brightness(1.08); }
+  @media (max-width: 700px) { .demo-nav { display: none; } .demo-marque { font-size: 1.15rem; } .demo-calme { padding: 0 10px; margin-left: auto; } .demo-panier span.demo-mot { display: none; } }
+</style>
+</head>
+<body>
+<header class="demo-entete" data-entete>
+  <a class="demo-marque" href="#cafes">Brûlerie Vespérale</a>
+  <nav class="demo-nav" aria-label="Rayons"><a href="#cafes">Cafés</a><a href="#accessoires">Accessoires</a></nav>
+  <button type="button" class="demo-calme" data-calme>Mode calme</button>
+  <a class="demo-panier" href="commande.html" data-panier-ouvrir data-envol-cible><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="demo-mot">Panier</span> <span class="pet-compte" data-panier-compte>0</span></a>
+</header>
+<main>
+  <div class="socle-cadre demo-ouverture">
+    <p class="socle-surtitre">Torréfié le mardi, chez vous le jeudi</p>
+    <h1>Des cafés pour <em>la fin du jour</em></h1>
+    <p>Ajoutez un café : le panier vous suit d'une page à l'autre, se règle sans quitter la page et garde votre choix si vous revenez demain.</p>
+    <p class="demo-bandeau"><span><b>Livraison offerte</b> dès 45 €</span><span><b>Retrait gratuit</b> à l'atelier</span><span><b>Paiement</b> simulé pour la démonstration</span></p>
+  </div>
+
+  <section class="socle-cadre demo-produits" data-module="panier-en-tiroir" aria-label="Cafés et accessoires">
+    <noscript><style>[data-panier-compte],.demo-options{display:none!important}</style></noscript>
+    <div class="demo-grille">
+      <article class="demo-produit" id="cafes" data-panier-produit>
+        <img src="demo-nocturne.jpg" width="640" height="800" alt="Sachet kraft de café Nocturne, étiquette bleu nuit">
+        <h3>Nocturne</h3><p>Assemblage corsé, cacao amer et noisette grillée.</p>
+        <div class="demo-options">
+          <select data-panier-option="Mouture" aria-label="Mouture de Nocturne"><option>Grains</option><option>Filtre</option><option>Espresso</option></select>
+          <select data-panier-option="Poids" aria-label="Poids de Nocturne"><option value="250 g" data-prix="9.80">250 g</option><option value="1 kg" data-prix="34">1 kg</option></select>
+        </div>
+        <p class="demo-achat"><span class="demo-prix">dès 9,80 €</span><a class="demo-ajouter" href="commande.html#nocturne" data-panier-ajouter="nocturne" data-nom="Nocturne" data-prix="9.80">Ajouter</a></p>
+      </article>
+      <article class="demo-produit" data-panier-produit>
+        <img src="demo-aube.jpg" width="640" height="800" alt="Sachet kraft de café Aube claire, étiquette jaune" loading="lazy">
+        <h3>Aube claire</h3><p>Origine unique, fruits jaunes et thé noir, en filtre.</p>
+        <div class="demo-options">
+          <select data-panier-option="Mouture" aria-label="Mouture d'Aube claire"><option>Grains</option><option selected>Filtre</option><option>Espresso</option></select>
+          <select data-panier-option="Poids" aria-label="Poids d'Aube claire"><option value="250 g" data-prix="12.50">250 g</option><option value="1 kg" data-prix="44">1 kg</option></select>
+        </div>
+        <p class="demo-achat"><span class="demo-prix">dès 12,50 €</span><a class="demo-ajouter" href="commande.html#aube-claire" data-panier-ajouter="aube-claire" data-nom="Aube claire" data-prix="12.50">Ajouter</a></p>
+      </article>
+      <article class="demo-produit" data-panier-produit>
+        <img src="demo-doux.jpg" width="640" height="800" alt="Sachet kraft de café décaféiné Doux sommeil, étiquette verte" loading="lazy">
+        <h3>Doux sommeil</h3><p>Décaféiné à l'eau, rond et biscuité, pour le soir.</p>
+        <div class="demo-options">
+          <select data-panier-option="Mouture" aria-label="Mouture de Doux sommeil"><option>Grains</option><option>Filtre</option><option>Espresso</option></select>
+          <select data-panier-option="Poids" aria-label="Poids de Doux sommeil"><option value="250 g" data-prix="11.20">250 g</option><option value="1 kg" data-prix="39">1 kg</option></select>
+        </div>
+        <p class="demo-achat"><span class="demo-prix">dès 11,20 €</span><a class="demo-ajouter" href="commande.html#doux-sommeil" data-panier-ajouter="doux-sommeil" data-nom="Doux sommeil" data-prix="11.20">Ajouter</a></p>
+      </article>
+      <article class="demo-produit" id="accessoires" data-panier-produit>
+        <img src="demo-tasse.jpg" width="640" height="800" alt="Tasse en grès émaillé bleu nuit, pied brut" loading="lazy">
+        <h3>Tasse en grès</h3><p>Tournée à la main, 25 cl, chaque pièce est unique.</p>
+        <div class="demo-options">
+          <fieldset class="demo-pastilles"><legend>Émail de la tasse</legend>
+            <label><input class="socle-sr" type="radio" name="tasse-email" value="Nuit" data-panier-option="Émail" checked>Nuit</label>
+            <label><input class="socle-sr" type="radio" name="tasse-email" value="Sable" data-panier-option="Émail">Sable</label>
+          </fieldset>
+        </div>
+        <p class="demo-achat"><span class="demo-prix">18,00 €</span><a class="demo-ajouter" href="commande.html#tasse" data-panier-ajouter="tasse" data-nom="Tasse en grès" data-prix="18">Ajouter</a></p>
+      </article>
+      <article class="demo-produit" data-panier-produit>
+        <img src="demo-coffret.jpg" width="640" height="800" alt="Coffret bleu nuit à ruban doré, trois cafés d'origine" loading="lazy">
+        <h3>Coffret trois origines</h3><p>Trois sachets de 100 g et une carte de dégustation.</p>
+        <p class="demo-achat"><span class="demo-prix">29,00 €</span><a class="demo-ajouter" href="commande.html#coffret" data-panier-ajouter="coffret" data-nom="Coffret trois origines" data-prix="29" data-options='{"Format":"3 × 100 g"}'>Ajouter</a></p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div data-module="panier-en-tiroir" data-panier-tiroir>
+  <script type="application/json" data-panier-reglages>{"devise":"EUR","seuil_livraison":45,"frais_livraison":5.9,"tva":5.5,"cle":"demo-brulerie-panier","prefixe":"BV",
+"retrait":{"adresse":"Atelier, 12 passage des Torréfacteurs","horaires":"du mercredi au samedi, 9 h à 18 h"}}</script>
+</div>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="panier-en-tiroir"]')) init(el);
+</script>
+</body>
+</html>

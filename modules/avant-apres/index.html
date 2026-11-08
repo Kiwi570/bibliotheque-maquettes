@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Avant / après · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-inter-display.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="demo-inter.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (Ormelle, atelier de rénovation intérieure inventé) : seul endroit où la palette et les polices sont fixées. */
+  @font-face { font-family: 'Inter Display'; src: url('demo-inter-display.woff') format('woff'); font-weight: 600; font-display: block; }
+  @font-face { font-family: 'Inter'; src: url('demo-inter.woff') format('woff'); font-weight: 400; font-display: block; }
+  @font-face { font-family: 'Inter'; src: url('demo-inter-gras.woff') format('woff'); font-weight: 600 700; font-display: block; }
+  :root { --couleur-fond: #efebe4; --couleur-texte: #1e2225; --couleur-accent: #b4532a; --couleur-secondaire: #5b7a70; --couleur-sur-accent: #fbf7f0;
+    --police-titres: 'Inter Display', 'Inter', system-ui, sans-serif; --police-texte: 'Inter', system-ui, sans-serif; --rayon: 10px; }
+  .demo-ouverture { padding-block: clamp(48px, 9vh, 110px) clamp(24px, 4vh, 48px); display: grid; gap: 14px; }
+  .demo-ouverture h1 { font-size: clamp(2.3rem, 6vw, 5rem); letter-spacing: -.02em; max-width: 14ch; }
+  .demo-ouverture p:not(.socle-surtitre) { max-width: 54ch; color: var(--couleur-texte-doux); }
+  .ava { padding-block: clamp(40px, 7vh, 90px); }
+  .ava-grille { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+  .ava-grille--inverse { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
+  .ava-grille--inverse .ava-texte { order: 2; }
+  .ava-texte { display: grid; gap: 14px; position: sticky; top: calc(var(--entete-h) + 24px); }
+  .ava-texte h2 { font-size: clamp(1.9rem, 3.4vw, 3rem); letter-spacing: -.015em; }
+  .ava-texte p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 42ch; }
+  .ava-chiffres { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 6px 0 0; padding: 14px 0 0; border-top: 1px solid var(--couleur-ligne); list-style: none; }
+  .ava-chiffres b { display: block; font-family: var(--police-titres); font-size: 1.6rem; color: var(--couleur-accent); }
+  .demo-pied { padding-block: 40px 80px; color: var(--couleur-texte-doux); }
+  @media (max-width: 900px) { .ava-grille, .ava-grille--inverse { grid-template-columns: minmax(0, 1fr); } .ava-grille--inverse .ava-texte { order: 0; } .ava-texte { position: static; } }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <div class="socle-cadre demo-ouverture">
+    <p class="socle-surtitre">Ormelle · rénovation intérieure</p>
+    <h1>Le même lieu, le premier et le dernier jour</h1>
+    <p>Deux façons de montrer un chantier : un réglet qu'on fait glisser entre l'avant et l'après, ou une vitre embuée qu'on essuie pour découvrir la pièce finie.</p>
+  </div>
+
+  <section class="ava" data-module="avant-apres" data-mode="reglet" data-onglets aria-labelledby="ava-titre">
+    <noscript><style>.ava__cadre{display:grid;grid-template-columns:1fr 1fr;gap:6px;aspect-ratio:auto;background:none;border-radius:0}.ava__vue{position:relative;overflow:hidden;border-radius:var(--rayon)}.ava__vue img{height:auto}.ava__vue--avant{clip-path:none}.ava__onglets{display:none}.ava .ava__paire{display:block!important}.ava__vue--apres .ava__etiquette{right:auto;left:12px}</style></noscript>
+    <div class="socle-cadre ava-grille">
+      <div class="ava-texte">
+        <p class="socle-surtitre">Chantiers livrés</p>
+        <h2 id="ava-titre">Faites glisser le réglet</h2>
+        <p>Trois pièces photographiées depuis le même point, le jour du devis et le jour des clés. Le réglet se prend à la souris, au doigt ou au clavier.</p>
+        <ul class="ava-chiffres"><li><b>3</b> chantiers</li><li><b>9 à 28</b> jours</li><li><b>1</b> interlocuteur</li></ul>
+      </div>
+      <div>
+        <div class="ava__onglets" data-ava-onglets></div>
+        <div class="ava__paires">
+          <figure class="ava__paire" data-titre="Salle d'eau">
+            <div class="ava__cadre" style="--ratio: 1280 / 853">
+              <div class="ava__vue ava__vue--avant"><img src="demo-salle-d-eau-avant.jpg" width="1280" height="853" alt="Avant : salle d'eau des années 70, faïence beige tachée, baignoire jaunie et carreaux tombés" decoding="async"><span class="ava__etiquette">Avant</span></div>
+              <div class="ava__vue ava__vue--apres"><img src="demo-salle-d-eau-apres.jpg" width="1280" height="853" alt="Après : douche à l'italienne derrière une paroi vitrée, zellige vert d'eau, meuble suspendu en chêne et miroir rond" decoding="async"><span class="ava__etiquette">Après</span></div>
+            </div>
+            <figcaption class="ava__legende"><b>Salle d'eau, 6 m²</b><span>Douche à l'italienne, zellige vert d'eau, meuble suspendu en chêne · 3 semaines</span></figcaption>
+          </figure>
+          <figure class="ava__paire" data-titre="Cuisine">
+            <div class="ava__cadre" style="--ratio: 1280 / 853">
+              <div class="ava__vue ava__vue--avant"><img src="demo-cuisine-avant.jpg" width="1280" height="853" alt="Avant : cuisine vidée, murs en plâtre nu, fils électriques apparents et sol en chape" loading="lazy" decoding="async"><span class="ava__etiquette">Avant</span></div>
+              <div class="ava__vue ava__vue--apres"><img src="demo-cuisine-apres.jpg" width="1280" height="853" alt="Après : cuisine vert profond avec îlot, crédence en zellige blanc, étagères en chêne et parquet" loading="lazy" decoding="async"><span class="ava__etiquette">Après</span></div>
+            </div>
+            <figcaption class="ava__legende"><b>Cuisine, 14 m²</b><span>Îlot, crédence en zellige, étagères ouvertes, parquet chêne · 4 semaines</span></figcaption>
+          </figure>
+          <figure class="ava__paire" data-titre="Séjour">
+            <div class="ava__cadre" style="--ratio: 1280 / 853">
+              <div class="ava__vue ava__vue--avant"><img src="demo-sejour-avant.jpg" width="1280" height="853" alt="Avant : séjour au papier peint décollé, moquette brune tachée, meubles sous bâche" loading="lazy" decoding="async"><span class="ava__etiquette">Avant</span></div>
+              <div class="ava__vue ava__vue--apres"><img src="demo-sejour-apres.jpg" width="1280" height="853" alt="Après : séjour lumineux, mur terre cuite, parquet clair, canapé, tapis bleu et bibliothèque" loading="lazy" decoding="async"><span class="ava__etiquette">Après</span></div>
+            </div>
+            <figcaption class="ava__legende"><b>Séjour, 32 m²</b><span>Papier peint déposé, enduits à la chaux, parquet poncé et vitrifié · 9 jours</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ava" data-module="avant-apres" data-mode="vitre" data-onglets aria-labelledby="ava-vitre-titre">
+    <noscript><style>.ava__cadre{display:grid;grid-template-columns:1fr 1fr;gap:6px;aspect-ratio:auto;background:none;border-radius:0}.ava__vue{position:relative;overflow:hidden;border-radius:var(--rayon)}.ava__vue img{height:auto}.ava__vue--avant{clip-path:none}.ava__onglets{display:none}.ava .ava__paire{display:block!important}.ava__vue--apres .ava__etiquette{right:auto;left:12px}</style></noscript>
+    <div class="socle-cadre ava-grille ava-grille--inverse">
+      <div class="ava-texte">
+        <p class="socle-surtitre">Le jour des clés</p>
+        <h2 id="ava-vitre-titre">Essuyez la vitre</h2>
+        <p>La buée d'un chantier qui s'achève : passez la main sur la vitre pour découvrir la pièce finie. Au clavier, « Tout voir » fait le geste à votre place.</p>
+      </div>
+      <div>
+        <div class="ava__onglets" data-ava-onglets></div>
+        <div class="ava__paires">
+          <figure class="ava__paire" data-titre="Séjour">
+            <div class="ava__cadre" style="--ratio: 1280 / 853">
+              <div class="ava__vue ava__vue--avant"><img src="demo-sejour-avant.jpg" width="1280" height="853" alt="Avant : séjour au papier peint décollé, moquette brune tachée, meubles sous bâche" loading="lazy" decoding="async"><span class="ava__etiquette">Avant</span></div>
+              <div class="ava__vue ava__vue--apres"><img src="demo-sejour-apres.jpg" width="1280" height="853" alt="Après : séjour lumineux, mur terre cuite, parquet clair, canapé, tapis bleu et bibliothèque" loading="lazy" decoding="async"><span class="ava__etiquette">Après</span></div>
+            </div>
+            <figcaption class="ava__legende"><b>Séjour, 32 m²</b><span>Livré un vendredi, neuf jours après la dépose du papier peint</span></figcaption>
+          </figure>
+          <figure class="ava__paire" data-titre="Salle d'eau">
+            <div class="ava__cadre" style="--ratio: 1280 / 853">
+              <div class="ava__vue ava__vue--avant"><img src="demo-salle-d-eau-avant.jpg" width="1280" height="853" alt="Avant : salle d'eau des années 70, faïence beige tachée, baignoire jaunie et carreaux tombés" loading="lazy" decoding="async"><span class="ava__etiquette">Avant</span></div>
+              <div class="ava__vue ava__vue--apres"><img src="demo-salle-d-eau-apres.jpg" width="1280" height="853" alt="Après : douche à l'italienne derrière une paroi vitrée, zellige vert d'eau, meuble suspendu en chêne et miroir rond" loading="lazy" decoding="async"><span class="ava__etiquette">Après</span></div>
+            </div>
+            <figcaption class="ava__legende"><b>Salle d'eau, 6 m²</b><span>La première douche y a été prise le soir même</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p class="socle-cadre demo-pied">Visuels de démonstration rendus pour la bibliothèque : remplacer par les photos du client, prises du même point.</p>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="avant-apres"]')) init(el);
+</script>
+</body>
+</html>

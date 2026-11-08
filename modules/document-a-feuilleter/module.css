@@ -1,0 +1,98 @@
+/* Document à feuilleter. Identité par variables (papier, encre et crayon dérivés de la palette, réglables par document).
+   Unité de page --pu : 1 % de la largeur d'une page (le document est un conteneur), pour que la mise en page des pages
+   soit la même avant et après le script (aucun décalage), en double page comme en page seule.
+   Mode calme, « réduire les animations » et sans JavaScript (noscript de la section) : les pages l'une sous l'autre. */
+.daf { --daf-papier: color-mix(in oklab, var(--couleur-fond) 30%, white); --daf-encre: var(--couleur-texte); --daf-crayon: var(--couleur-accent);
+  --daf-ombre: color-mix(in oklab, var(--couleur-texte) 70%, black); position: relative; }
+.daf__scene { container: daf-scene / inline-size; padding-block: 14px 6px; overflow-x: clip; }
+.daf__document { --daf-r: .7071; --daf-n: 1; --daf-hmax: clamp(300px, calc(var(--ecran-h) - 270px), 860px); /* sans --entete-h, mesurée après le premier affichage : pas de décalage */
+  --pu: calc(1cqi / var(--daf-n));
+  container: daf-doc / inline-size; position: relative; width: min(100%, calc(var(--daf-hmax) * var(--daf-r) * var(--daf-n))); aspect-ratio: calc(var(--daf-r) * var(--daf-n));
+  margin-inline: auto; perspective: 2600px; perspective-origin: 50% 40%;
+  transform: translateX(var(--decal, 0%)) rotateX(var(--incl-x, 0deg)) rotateY(var(--incl-y, 0deg));
+  filter: drop-shadow(0 12px 14px color-mix(in oklab, var(--daf-ombre) 20%, transparent)) drop-shadow(0 1px 2px color-mix(in oklab, var(--daf-ombre) 22%, transparent));
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: grab; outline-offset: 10px; }
+.daf__document[data-format="paysage"] { --daf-r: 1.4142; }
+.daf__document[data-format="carre"] { --daf-r: 1; }
+.daf__document.est-saisi { cursor: grabbing; }
+.daf__document.est-au-bord { cursor: pointer; }
+.daf__document img { -webkit-user-drag: none; }
+/* Double page dès que deux pages tiennent côte à côte (portrait : 720 px ; paysage : 1040 px) ; data-mode="simple" l'interdit. */
+@container daf-scene (min-width: 720px) { .daf__document:is(:not([data-format]), [data-format="portrait"], [data-format="carre"]):not([data-mode="simple"]) { --daf-n: 2; } }
+@container daf-scene (min-width: 1040px) { .daf__document[data-format="paysage"]:not([data-mode="simple"]) { --daf-n: 2; } }
+
+/* La page : papier, encre, unité --pu. */
+.daf__page { position: relative; box-sizing: border-box; overflow: hidden; background: var(--daf-papier); color: var(--daf-encre);
+  padding: calc(var(--pu) * 10) calc(var(--pu) * 9) calc(var(--pu) * 8); font-size: max(12px, calc(var(--pu) * 3.3)); line-height: 1.45; text-wrap: pretty; }
+.daf__page img { max-width: 100%; height: auto; }
+
+/* Avant le script : les pages empilées, seule la première (ou la double page d'ouverture) est visible, à sa place définitive. */
+.daf:not(.daf--pret) .daf__document > .daf__page { position: absolute; top: 0; height: 100%; width: calc(100% / var(--daf-n)); left: calc(100% - 100% / var(--daf-n)); visibility: hidden; }
+.daf:not(.daf--pret) .daf__document > .daf__page:first-child { visibility: visible; }
+@container daf-scene (min-width: 720px) {
+  .daf:not(.daf--pret) .daf__document:is(:not([data-format]), [data-format="portrait"], [data-format="carre"]):not([data-mode="simple"])[data-couverture] { --decal: -25%; }
+  .daf:not(.daf--pret) .daf__document:is(:not([data-format]), [data-format="portrait"], [data-format="carre"]):not([data-mode="simple"]):not([data-couverture]) > .daf__page:first-child { left: 0; }
+  .daf:not(.daf--pret) .daf__document:is(:not([data-format]), [data-format="portrait"], [data-format="carre"]):not([data-mode="simple"]):not([data-couverture]) > .daf__page:nth-child(2) { visibility: visible; }
+}
+@container daf-scene (min-width: 1040px) {
+  .daf:not(.daf--pret) .daf__document[data-format="paysage"]:not([data-mode="simple"])[data-couverture] { --decal: -25%; }
+  .daf:not(.daf--pret) .daf__document[data-format="paysage"]:not([data-mode="simple"]):not([data-couverture]) > .daf__page:first-child { left: 0; }
+  .daf:not(.daf--pret) .daf__document[data-format="paysage"]:not([data-mode="simple"]):not([data-couverture]) > .daf__page:nth-child(2) { visibility: visible; }
+}
+
+/* Feuillets en 3D : pivot au dos (bord gauche), recto et verso dos à dos. */
+.daf__feuillet { position: absolute; top: 0; bottom: 0; left: calc(100% - 100% / var(--daf-n)); width: calc(100% / var(--daf-n)); transform-origin: 0 50%; transform-style: preserve-3d; will-change: transform; }
+.daf__fixe { position: absolute; top: 0; bottom: 0; left: 0; width: 50%; z-index: 1; }
+.daf__face { position: absolute; inset: 0; overflow: hidden; background: var(--daf-papier); backface-visibility: hidden; -webkit-backface-visibility: hidden; box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--daf-ombre) 7%, transparent); }
+.daf__face--verso { transform: rotateY(180deg); }
+.daf__fixe .daf__face--verso { transform: none; }
+.daf--pret .daf__face > .daf__page { position: absolute; inset: 0; }
+.daf__face--blanche { background: linear-gradient(90deg, color-mix(in oklab, var(--daf-papier) 94%, var(--daf-ombre)), var(--daf-papier) 30%); }
+/* Ombrage du feuillet qui tourne (--pli : 0 à plat, 1 debout) et creux de la reliure en double page. */
+.daf__face::after { content: ''; position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: var(--pli, 0); }
+.daf__face--recto::after { background: linear-gradient(to right, color-mix(in oklab, var(--daf-ombre) 32%, transparent), transparent 22%, transparent 62%, color-mix(in oklab, var(--daf-ombre) 14%, transparent)); }
+.daf__face--verso::after { background: linear-gradient(to left, color-mix(in oklab, var(--daf-ombre) 36%, transparent), transparent 26%, transparent 70%, color-mix(in oklab, white 30%, transparent)); }
+.daf__document[data-affichage="double"] .daf__face::before { content: ''; position: absolute; top: 0; bottom: 0; z-index: 4; width: 9%; pointer-events: none; }
+.daf__document[data-affichage="double"] .daf__face--recto::before { left: 0; background: linear-gradient(to right, color-mix(in oklab, var(--daf-ombre) 16%, transparent), transparent); }
+.daf__document[data-affichage="double"] .daf__face--verso::before { right: 0; background: linear-gradient(to left, color-mix(in oklab, var(--daf-ombre) 16%, transparent), transparent); }
+/* Ombre portée sur la page dessous : bord du feuillet (--bord, -1 à 1), intensité --force. */
+.daf__portee { --dos: 50%; --demi: 50%; --e: calc(var(--dos) + var(--bord, 1) * var(--demi)); position: absolute; inset: 0; z-index: 250; pointer-events: none; opacity: var(--force, 0);
+  background: linear-gradient(to right, transparent calc(var(--e) - 16%), color-mix(in oklab, var(--daf-ombre) 34%, transparent) var(--e), transparent calc(var(--e) + 24%)); }
+.daf__document[data-affichage="simple"] .daf__portee { --dos: 0%; --demi: 100%; }
+.daf__reliure { position: absolute; top: 0; bottom: 0; left: 47%; width: 6%; z-index: 260; pointer-events: none; background: linear-gradient(to right, transparent, color-mix(in oklab, var(--daf-ombre) 14%, transparent) 50%, transparent); }
+.daf__document[data-affichage="simple"] .daf__reliure { display: none; }
+
+/* Annotations au crayon : tracées quand la page est lue (est-lue), d'emblée en mode calme. */
+.daf [data-annot] { position: relative; display: inline-block; }
+.daf__trait { position: absolute; pointer-events: none; overflow: visible; }
+.daf__trait path { fill: none; stroke: var(--daf-crayon); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: .9; transition: stroke-dashoffset .75s cubic-bezier(.45, 0, .2, 1) .15s; }
+.daf__trait--souligne { left: -2%; width: 104%; top: 84%; height: .45em; }
+.daf__trait--barre { left: -3%; width: 106%; top: 30%; height: 40%; }
+.daf__trait--entoure { left: -14%; width: 128%; top: -30%; height: 160%; }
+.daf__trait--coche { left: -1.45em; width: 1.1em; top: -.05em; height: 1.1em; } /* dans la marge, avant le mot */
+.daf__trait--marge { left: -.9em; width: .5em; top: -.1em; height: calc(100% + .2em); }
+.est-lue .daf__trait path, .daf--a-plat .daf__trait path, html.calme .daf__trait path, .est-lue svg.daf__annot path, .daf--a-plat svg.daf__annot path { stroke-dashoffset: 0; }
+svg.daf__annot { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+svg.daf__annot path { fill: none; stroke: var(--daf-crayon); stroke-width: 2.2; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; vector-effect: non-scaling-stroke; transition: stroke-dashoffset .8s cubic-bezier(.45, 0, .2, 1) .2s; }
+svg.daf__annot path + path { transition-delay: .7s; }
+
+/* Commandes : place réservée (aucune secousse quand elles arrivent) */
+.daf__commandes { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 14px; min-height: 96px; padding-top: 16px; }
+.daf__fleche { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--couleur-ligne); border-radius: 50%; background: var(--couleur-fond); color: var(--couleur-texte); cursor: pointer; transition: background-color .2s, color .2s, opacity .2s; }
+.daf__fleche svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.daf__fleche:not(:disabled):hover { background: var(--couleur-texte); color: var(--couleur-fond); }
+.daf__fleche:disabled { opacity: .35; cursor: default; }
+.daf__compteur { min-width: 15ch; margin: 0; text-align: center; font-family: var(--police-mono); font-size: max(12px, .85rem); font-variant-numeric: tabular-nums; }
+.daf__consigne { flex-basis: 100%; margin: 0; text-align: center; color: var(--couleur-texte-doux); font-size: max(12px, .85rem); }
+.daf__doigt { display: none; }
+@media (hover: none) { .daf__souris { display: none; } .daf__doigt { display: inline; } }
+
+/* À plat : les pages l'une sous l'autre (mode calme, réduire les animations ; sans JavaScript, le noscript reprend ces règles). */
+:is(html.calme .daf, .daf.daf--a-plat) .daf__document { --daf-n: 1 !important; width: min(100%, calc(680px * var(--daf-r))); max-width: 100%; aspect-ratio: auto; display: grid; gap: 22px; transform: none; filter: none; cursor: auto; user-select: auto; -webkit-user-select: auto; }
+:is(html.calme .daf, .daf.daf--a-plat) .daf__document > .daf__page { position: relative !important; left: auto !important; width: 100% !important; height: auto !important; visibility: visible !important; aspect-ratio: var(--daf-r); overflow: visible; box-shadow: 0 14px 30px -18px color-mix(in oklab, var(--daf-ombre) 45%, transparent); }
+:is(html.calme .daf, .daf.daf--a-plat) .daf__commandes { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .daf .daf__document { --daf-n: 1 !important; width: min(100%, calc(680px * var(--daf-r))); max-width: 100%; aspect-ratio: auto; display: grid; gap: 22px; transform: none; filter: none; cursor: auto; user-select: auto; -webkit-user-select: auto; }
+  .daf .daf__document > .daf__page { position: relative !important; left: auto !important; width: 100% !important; height: auto !important; visibility: visible !important; aspect-ratio: var(--daf-r); overflow: visible; }
+  .daf .daf__commandes { display: none; }
+}

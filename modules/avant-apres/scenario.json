@@ -1,0 +1,25 @@
+{
+ "etapes": [
+  {"cliquer": "[data-mode=\"vitre\"] .ava__onglet:nth-child(1)"},
+  {"defiler": "[data-mode=\"vitre\"] .ava__paire.est-active .ava__cadre"},
+  {"attendre": 500},
+  {"glisser": ["[data-mode=\"vitre\"] .ava__paire.est-active .ava__cadre", [[0.12, 0.3], [0.46, 0.22], [0.62, 0.42], [0.3, 0.55], [0.18, 0.78], [0.52, 0.7]], 2400]},
+  {"attendre": 700},
+  {"cliquer": "[data-mode=\"vitre\"] .ava__paire.est-active .ava__tout"},
+  {"attendre": 1100},
+  {"verifier": "[data-mode=\"vitre\"] .ava__paire.est-active .ava__cadre.est-ouvert"},
+  {"defiler": "[data-mode=\"reglet\"] .ava__onglets"},
+  {"attendre": 600},
+  {"glisser": ["[data-mode=\"reglet\"] .ava__paire.est-active .ava__cadre", [[0.5, 0.5], [0.16, 0.52], [0.84, 0.5], [0.5, 0.5]], 2200]},
+  {"cliquer": "[data-mode=\"reglet\"] .ava__onglet:nth-child(2)"},
+  {"attendre": 1700},
+  {"verifier": "[data-mode=\"reglet\"] .ava__paire.est-active[data-titre=\"Cuisine\"]"}
+ ],
+ "pause": 420,
+ "video": "scenario",
+ "capture": { "attendre": 900, "etapes": [
+  {"cliquer": "[data-mode=\"vitre\"] .ava__onglet:nth-child(2)"},
+  {"attendre": 700},
+  {"glisser": ["[data-mode=\"vitre\"] .ava__paire.est-active .ava__cadre", [[0.5, 0.22], [0.92, 0.3], [0.86, 0.58], [0.5, 0.52], [0.58, 0.82], [0.94, 0.86]], 300]}
+ ], "apres": 500 }
+}

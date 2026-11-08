@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Document à feuilleter · module</title>
+<script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
+<link rel="preload" href="demo-caladea.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="demo-caladea-gras.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration (table de lecture d'un studio d'édition inventé) : seul endroit où palette et polices sont fixées.
+     Chaque document règle son papier, son encre et son crayon (--daf-papier, --daf-encre, --daf-crayon). */
+  @font-face { font-family: 'Caladea'; src: url('demo-caladea.woff') format('woff'); font-weight: 400; font-display: block; }
+  @font-face { font-family: 'Caladea'; src: url('demo-caladea-italique.woff') format('woff'); font-weight: 400; font-style: italic; font-display: block; }
+  @font-face { font-family: 'Caladea'; src: url('demo-caladea-gras.woff') format('woff'); font-weight: 700; font-display: block; }
+  @font-face { font-family: 'Liberation Mono'; src: url('demo-liberation-mono.woff') format('woff'); font-weight: 400; font-display: block; }
+  :root { --couleur-fond: #e6e0d4; --couleur-texte: #26221d; --couleur-accent: #b23a26; --couleur-secondaire: #2e4c47; --couleur-sur-accent: #fbf6ec;
+    --police-titres: 'Caladea', Georgia, serif; --police-texte: 'Caladea', Georgia, serif; --police-mono: 'Liberation Mono', ui-monospace, monospace; --rayon: 4px; }
+  body { font-size: max(17px, 1.05rem); }
+  .demo-bloc { padding-block: clamp(28px, 5vh, 64px); }
+  .demo-bloc + .demo-bloc { border-top: 1px solid var(--couleur-ligne); }
+  .demo-duo { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 9fr); gap: clamp(20px, 3vw, 48px); align-items: start; }
+  .demo-duo--inverse { grid-template-columns: minmax(0, 9fr) minmax(0, 4fr); }
+  .demo-duo--inverse .demo-texte { order: 2; }
+  .demo-texte { display: grid; gap: 12px; align-content: center; padding-top: clamp(0px, 8vh, 90px); }
+  .demo-duo > .demo-texte { position: sticky; top: calc(var(--entete-h) + 20px); }
+  .demo-texte h1 { font-size: clamp(2.3rem, 4.4vw, 4rem); line-height: 1; }
+  .demo-texte h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+  .demo-texte p:not(.socle-surtitre) { color: var(--couleur-texte-doux); max-width: 40ch; }
+  .demo-texte--haut { max-width: 70ch; margin-bottom: 4px; }
+  @media (max-width: 1000px) { .demo-duo, .demo-duo--inverse { grid-template-columns: minmax(0, 1fr); } .demo-duo--inverse .demo-texte { order: 0; } .demo-duo > .demo-texte { position: static; padding-top: 0; } }
+
+  /* Plaquette d'agence (Atelier Saulaie, inventé) */
+  .plaquette { --daf-papier: #f7f4ee; --daf-encre: #1f2b28; --daf-crayon: #c0472b; }
+  .plaquette .daf__page h2 { font-size: 2.3em; line-height: 1; margin-bottom: .45em; font-weight: 700; }
+  .plaquette .daf__page h3 { font-size: 1.15em; margin: 1em 0 .3em; }
+  .plaquette .daf__page p + p { margin-top: .7em; }
+  .plaquette .petit { font-family: var(--police-mono); font-size: max(12px, .74em); letter-spacing: .12em; text-transform: uppercase; color: #5d6b66; }
+  .plaquette .couv, .plaquette .dos { background: #2e4c47; color: #f3eee3; display: flex; flex-direction: column; }
+  .plaquette .couv h1 { font-size: 3.6em; line-height: .95; margin: .35em 0 .3em; }
+  .plaquette .couv .petit, .plaquette .dos .petit { color: #c9d7cf; }
+  .plaquette .couv img { margin-top: auto; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
+  .plaquette .chiffres { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; margin-top: 1.4em; padding-top: 1em; border-top: 1px solid #c9cfc6; }
+  .plaquette .chiffres b { display: block; font-size: 2.1em; line-height: 1; color: #2e4c47; }
+  .plaquette .photo { margin: calc(var(--pu) * -10) calc(var(--pu) * -9) 1.2em; }
+  .plaquette .photo img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
+  .plaquette ol { margin: .4em 0 0; padding-left: 1.2em; display: grid; gap: .6em; }
+  .plaquette ol li::marker { font-weight: 700; color: #2e4c47; }
+  .plaquette blockquote { margin: 0 0 1.1em; font-style: italic; font-size: 1.15em; }
+  .plaquette blockquote footer { margin-top: .3em; font-style: normal; font-size: max(12px, .72em); font-family: var(--police-mono); color: #5d6b66; }
+  .plaquette .dos { align-items: center; justify-content: center; text-align: center; gap: .6em; }
+  .plaquette .marque { width: 3.4em; height: 3.4em; border: 2px solid #c9d7cf; border-radius: 50%; display: grid; place-items: center; font-size: 1.4em; font-weight: 700; }
+
+  /* Menu de restaurant (La Barque Lente, inventé), sans couverture : il s'ouvre sur sa première double page */
+  .menu { --daf-papier: #fbf3e2; --daf-encre: #2a1d16; --daf-crayon: #b8321f; }
+  .menu .daf__page { text-align: center; }
+  .menu .daf__page h2 { font-size: 1.9em; font-style: italic; font-weight: 400; margin-bottom: .2em; }
+  .menu .sous { font-family: var(--police-mono); font-size: max(12px, .72em); letter-spacing: .14em; text-transform: uppercase; color: #8a6a52; margin-bottom: 1.3em; }
+  .menu dl { margin: 0; display: grid; gap: .85em; }
+  .menu dt { font-weight: 700; }
+  .menu dd { margin: .1em 0 0; color: #6b5444; font-style: italic; }
+  .menu .prix { font-family: var(--police-mono); font-style: normal; color: #2a1d16; }
+  .menu img { width: 58%; margin: 1em auto 0; aspect-ratio: 1; object-fit: cover; border-radius: 50%; }
+  .menu .filet { width: 30%; height: 1px; margin: 1.2em auto; background: #c9ad8c; }
+
+  /* Carnet de voyage (paysage, couverture kraft) */
+  .carnet { --daf-papier: #f4eedf; --daf-encre: #2b2a26; --daf-crayon: #2f5f8a; }
+  .carnet .daf__page { font-family: var(--police-mono); font-size: max(12px, calc(var(--pu) * 2.25)); padding: calc(var(--pu) * 6) calc(var(--pu) * 6.5); background-image: repeating-linear-gradient(to bottom, transparent 0 calc(1.45em - 1px), #d9d1bd calc(1.45em - 1px) 1.45em); background-position: 0 calc(var(--pu) * 6 - .2em); }
+  .carnet .daf__page h2 { font-family: var(--police-titres); font-size: 1.9em; font-style: italic; font-weight: 400; margin-bottom: .3em; }
+  .carnet .deux { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2em; align-items: start; height: 100%; }
+  .carnet .deux img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; box-shadow: 0 2px 6px rgba(0,0,0,.18); transform: rotate(-1.5deg); border: .4em solid #fff; }
+  .carnet ul { list-style: none; margin: .4em 0 0; padding: 0; display: grid; gap: .3em; }
+  .carnet .couv, .carnet .dos { background: #b48a5c; color: #2b2116; display: grid; place-items: center; text-align: center; background-image: none; }
+  .carnet .etiquette { padding: 1.2em 2em; background: #f4eedf; border: 1px solid #8a6a46; box-shadow: 2px 3px 0 #8a6a46; }
+  .carnet .etiquette h1 { font-family: var(--police-titres); font-style: italic; font-weight: 400; font-size: 2.6em; line-height: 1; }
+  .carnet .elastique { position: absolute; top: 0; bottom: 0; right: 9%; width: 2.2%; background: #2b2116; }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<main>
+  <section class="daf demo-bloc" data-module="document-a-feuilleter" aria-labelledby="daf-titre">
+    <noscript><style>.daf .daf__document{--daf-n:1!important;width:min(100%,calc(680px*var(--daf-r)));aspect-ratio:auto;display:grid;gap:22px;transform:none;cursor:auto;user-select:auto}.daf .daf__document>.daf__page{position:relative!important;left:auto!important;width:100%!important;height:auto!important;visibility:visible!important;aspect-ratio:var(--daf-r);overflow:visible}.daf__commandes{display:none}.daf [data-annot=souligne]{text-decoration:underline wavy var(--daf-crayon)}.daf [data-annot=entoure]{outline:2px solid var(--daf-crayon);outline-offset:3px;border-radius:999px}.daf [data-annot=barre]{text-decoration:line-through var(--daf-crayon)}</style></noscript>
+    <div class="socle-cadre demo-duo">
+      <div class="demo-texte">
+        <p class="socle-surtitre">Plaquette d'agence · portrait, avec couverture</p>
+        <h1 id="daf-titre">Une plaquette qu'on feuillette vraiment</h1>
+        <p>Attrapez une page et tournez-la, cliquez sur son bord ou utilisez les flèches. Les annotations au crayon se tracent quand la page est lue.</p>
+      </div>
+      <div>
+        <div class="daf__scene">
+          <div class="daf__document plaquette" data-format="portrait" data-couverture data-titre="Plaquette de l'Atelier Saulaie">
+            <div class="daf__page couv"><p class="petit">Atelier Saulaie · architecture et paysage</p><h1>Habiter le paysage</h1><p>Plaquette 2027</p><img src="demo-facade.jpg" width="720" height="880" alt="Façade en bardage de bois et grandes baies vitrées, entre les arbres" decoding="async"></div>
+            <div class="daf__page"><p class="petit">L'atelier</p><h2>Des maisons qui regardent dehors</h2><p>Nous dessinons des maisons, des jardins et quelques équipements publics, toujours en partant du terrain : sa pente, ses arbres, la course du soleil.</p><p>Une même équipe suit le projet de la première visite à la remise des clés.</p><div class="chiffres"><p><b>12</b>personnes</p><p><b data-annot="entoure">140</b>projets livrés</p><p><b>3</b>prix régionaux</p></div></div>
+            <div class="daf__page"><div class="photo"><img src="demo-facade.jpg" width="720" height="880" alt="Maison des Saules, façade sud en bois" loading="lazy" decoding="async"></div><p class="petit">Maison des Saules · 2025 · 180 m²</p><h3>Une façade qui filtre</h3><p>Des lames de mélèze laissent passer <span data-annot="souligne">la lumière du matin</span> sans ouvrir la maison sur la rue.</p></div>
+            <div class="daf__page"><p class="petit">Notre méthode</p><h2>Quatre rendez-vous</h2><ol><li>Visite du terrain, croquis sur place.</li><li>Esquisse et estimation, sous <span data-annot="entoure">trois semaines</span>.</li><li>Permis, consultation des entreprises.</li><li>Chantier : une visite par semaine, un compte rendu le soir même.</li></ol><p style="margin-top:1.2em"><span data-annot="marge">Aucun honoraire n'est dû avant l'esquisse.</span></p></div>
+            <div class="daf__page"><div class="photo"><img src="demo-paysage.jpg" width="720" height="480" alt="Paysage de bord de mer à l'aquarelle, collines et plage" loading="lazy" decoding="async"></div><p class="petit">Le jardin des Lisières · 2026</p><h3>Un jardin sur la dune</h3><p>Des plantes qui tiennent au vent et au sel, des chemins de planches, un abri pour regarder la mer.</p></div>
+            <div class="daf__page"><p class="petit">Ils nous ont confié leur projet</p><h2>Ce qu'ils en disent</h2><blockquote>« On voulait de la lumière, on a eu bien plus : une maison qui change à chaque heure. »<footer>Claire et Hugo · maison familiale</footer></blockquote><blockquote>« Un chantier tenu, des comptes rendus clairs, aucune mauvaise surprise. »<footer>Une commune du littoral · halle de marché</footer></blockquote></div>
+            <div class="daf__page"><p class="petit">Prendre rendez-vous</p><h2>Venez avec vos photos du terrain</h2><p>Premier rendez-vous gratuit à l'atelier ou sur place.</p><p>atelier@saulaie.exemple<br>01 23 45 67 89</p><p>Visites de chantiers ouvertes le premier jeudi du mois.</p></div>
+            <div class="daf__page dos"><span class="marque">S</span><p>Atelier Saulaie</p><p class="petit">Imprimé sur papier recyclé</p></div>
+          </div>
+        </div>
+        <div class="daf__commandes" data-daf-commandes></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="daf demo-bloc" data-module="document-a-feuilleter" aria-labelledby="daf-menu-titre">
+    <noscript><style>.daf .daf__document{--daf-n:1!important;width:min(100%,calc(680px*var(--daf-r)));aspect-ratio:auto;display:grid;gap:22px;transform:none;cursor:auto;user-select:auto}.daf .daf__document>.daf__page{position:relative!important;left:auto!important;width:100%!important;height:auto!important;visibility:visible!important;aspect-ratio:var(--daf-r);overflow:visible}.daf__commandes{display:none}.daf [data-annot=souligne]{text-decoration:underline wavy var(--daf-crayon)}.daf [data-annot=entoure]{outline:2px solid var(--daf-crayon);outline-offset:3px;border-radius:999px}.daf [data-annot=barre]{text-decoration:line-through var(--daf-crayon)}</style></noscript>
+    <div class="socle-cadre demo-duo demo-duo--inverse">
+      <div class="demo-texte">
+        <p class="socle-surtitre">Menu de restaurant · sans couverture</p>
+        <h2 id="daf-menu-titre">La carte s'ouvre sur la table</h2>
+        <p>Sans couverture, le document s'ouvre directement sur sa première double page. Sur téléphone, une page à la fois.</p>
+      </div>
+      <div>
+        <div class="daf__scene">
+          <div class="daf__document menu" data-format="portrait" data-titre="Menu de La Barque Lente">
+            <div class="daf__page"><h2>Pour commencer</h2><p class="sous">La Barque Lente · cuisine du marché</p><dl><div><dt>Velouté de potimarron <span class="prix">9</span></dt><dd>noisettes torréfiées, crème crue</dd></div><div><dt>Œuf parfait <span class="prix">11</span></dt><dd>champignons des bois, pain grillé</dd></div><div><dt>Tartine <span data-annot="entoure">du jour</span> <span class="prix">10</span></dt><dd>selon l'humeur du chef</dd></div></dl><div class="filet"></div><p>Pain au levain de la boulangerie voisine</p></div>
+            <div class="daf__page"><h2>Les plats</h2><p class="sous">servis jusqu'à 21&nbsp;h&nbsp;30</p><dl><div><dt>Poisson de la criée <span class="prix">24</span></dt><dd>beurre blanc, poireaux fondants</dd></div><div><dt>Volaille rôtie <span class="prix">21</span></dt><dd>jus court, purée <span data-annot="souligne">faite maison</span></dd></div></dl><img src="demo-assiette.jpg" width="720" height="720" alt="Assiette vue du dessus : galette dorée, tomates et herbes" loading="lazy" decoding="async"></div>
+            <div class="daf__page"><h2>Fromages et desserts</h2><p class="sous">à commander en début de repas</p><dl><div><dt>Trois fromages affinés <span class="prix">9</span></dt><dd>confiture de cerises noires</dd></div><div><dt>Tarte fine aux pommes <span class="prix">8</span></dt><dd>caramel au beurre salé</dd></div><div><dt>Mousse au chocolat <span class="prix">8</span></dt><dd>à partager, ou pas</dd></div></dl></div>
+            <div class="daf__page"><h2>À boire</h2><p class="sous">vins au verre et sans alcool</p><dl><div><dt>Blanc sec de Loire <span class="prix">6</span></dt><dd>le verre de 12 cl</dd></div><div><dt>Rouge léger <span class="prix">6</span></dt><dd>servi frais</dd></div><div><dt>Limonade maison <span class="prix">4</span></dt><dd>citron, gingembre</dd></div></dl></div>
+            <div class="daf__page"><h2>Nos producteurs</h2><p class="sous">à moins de 50 km</p><p><span data-annot="coche">Légumes du maraîcher</span></p><p><span data-annot="coche">Volailles fermières</span></p><p><span data-annot="coche">Fromages de l'affineur</span></p><div class="filet"></div><p>La carte change avec les arrivages.</p></div>
+            <div class="daf__page"><h2>Infos</h2><p class="sous">du mardi au samedi</p><p>Midi&nbsp;: 12&nbsp;h – 14&nbsp;h<br>Soir&nbsp;: 19&nbsp;h – 22&nbsp;h</p><div class="filet"></div><p>Allergènes : demandez-nous la fiche de chaque plat.</p></div>
+          </div>
+        </div>
+        <div class="daf__commandes" data-daf-commandes></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="daf demo-bloc" data-module="document-a-feuilleter" aria-labelledby="daf-carnet-titre">
+    <noscript><style>.daf .daf__document{--daf-n:1!important;width:min(100%,calc(680px*var(--daf-r)));aspect-ratio:auto;display:grid;gap:22px;transform:none;cursor:auto;user-select:auto}.daf .daf__document>.daf__page{position:relative!important;left:auto!important;width:100%!important;height:auto!important;visibility:visible!important;aspect-ratio:var(--daf-r);overflow:visible}.daf__commandes{display:none}.daf [data-annot=souligne]{text-decoration:underline wavy var(--daf-crayon)}.daf [data-annot=entoure]{outline:2px solid var(--daf-crayon);outline-offset:3px;border-radius:999px}.daf [data-annot=barre]{text-decoration:line-through var(--daf-crayon)}</style></noscript>
+    <div class="socle-cadre">
+      <div class="demo-texte demo-texte--haut">
+        <p class="socle-surtitre">Carnet de voyage · paysage, avec couverture</p>
+        <h2 id="daf-carnet-titre">Un carnet à l'italienne</h2>
+        <p>Format paysage : en double page sur un grand écran, une page à la fois ailleurs.</p>
+      </div>
+      <div class="daf__scene">
+        <div class="daf__document carnet" data-format="paysage" data-couverture data-titre="Carnet de voyage, côte ouest">
+          <div class="daf__page couv"><span class="elastique" aria-hidden="true"></span><div class="etiquette"><p>Carnet</p><h1>Côte ouest</h1><p>août</p></div></div>
+          <div class="daf__page"><div class="deux"><img src="demo-paysage.jpg" width="720" height="480" alt="Aquarelle : collines mauves, mer et plage au coucher du soleil" loading="lazy" decoding="async"><div><h2>Jour 1</h2><p>Arrivés par le train de 14&nbsp;h. Le vent tombe vers 19&nbsp;h, la lumière devient <span data-annot="souligne">rose</span>.</p></div></div></div>
+          <div class="daf__page"><div class="deux"><div><h2>Jour 2</h2><p>Le village en haut de la colline : volets bleus, toits rouges, un <span data-annot="entoure">marché</span> le jeudi.</p></div><img src="demo-village.jpg" width="720" height="560" alt="Aquarelle : maisons aux toits rouges sur une colline verte" loading="lazy" decoding="async"></div></div>
+          <div class="daf__page"><h2>À ne pas oublier</h2><ul><li><span data-annot="coche">Crème solaire</span></li><li><span data-annot="coche">Horaires des marées</span></li><li>Carte des sentiers</li><li>Carnet de croquis</li></ul></div>
+          <div class="daf__page"><h2>Ce qu'on a mangé</h2><p>Midi : <span data-annot="barre">des frites</span> des moules au cidre.</p><p>Soir : galettes et cidre doux, au port.</p></div>
+          <div class="daf__page dos"><span class="elastique" aria-hidden="true"></span><p>à suivre</p></div>
+        </div>
+      </div>
+      <div class="daf__commandes" data-daf-commandes></div>
+    </div>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="document-a-feuilleter"]')) init(el);
+</script>
+</body>
+</html>

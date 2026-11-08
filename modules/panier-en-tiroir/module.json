@@ -1,0 +1,70 @@
+{
+ "nom": "panier-en-tiroir",
+ "titre": "Panier en tiroir : le même panier sur toutes les pages (gardé dans le navigateur, suivi entre onglets), boutons « Ajouter » déclarés en HTML, compteur annoncé, lignes avec vignette, options, quantités et suppression annulable, jauge de livraison offerte, livraison ou retrait, total TTC, puis coordonnées, paiement simulé et confirmation avec référence ; dialogue accessible, monte du bas sur téléphone",
+ "role": "outil-interactif",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "panier-simule",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "d3co-maquette/tiroir",
+  "winsbike-atelier/drawer",
+  "madebymelody-maquette/boutique-panier"
+ ],
+ "convient_a": [
+  "commerce",
+  "artisanat",
+  "restauration",
+  "culture",
+  "bien-être",
+  "sport",
+  "animaux",
+  "auto-moto",
+  "association"
+ ],
+ "ambiances": [
+  "clair",
+  "sombre",
+  "chaleureux",
+  "artisanal",
+  "luxueux",
+  "sobre",
+  "doux",
+  "ludique"
+ ],
+ "telephone": "adapté",
+ "options": {
+  "reglages": "JSON script[data-panier-reglages] du bloc [data-panier-tiroir] (ou options d'init) : devise, seuil_livraison, frais_livraison, tva, retrait {adresse, horaires} ou null, livraison (false : retrait seul), cle, prefixe",
+  "envol": "'auto' (envol-vers-le-panier s'il est dans la page : [data-envol-cible]), une fonction envol(o), ou false",
+  "commander": "async (commande) => ({ reference }) : l'envoi réel (par défaut, paiement simulé et référence calculée)",
+  "init()": "renvoie { ajouter(produit, source), ouvrir(etape), fermer(), vider(), lignes(), detruire() } ; ajouter et ouvrir sont aussi exportés"
+ },
+ "images": [
+  {
+   "role": "vignette du produit (photo de la fiche, reprise dans la ligne du panier et l'annonce d'ajout)",
+   "selecteur": "[data-panier-produit] img",
+   "nombre": "1 par produit",
+   "ratio": "4:5 dans la fiche, recadrée en carré 72 px dans le tiroir : sujet centré",
+   "largeur": 800,
+   "zone_calme": "aucune : rien n'est posé sur la photo"
+  }
+ ],
+ "poids_ko": 43.2,
+ "tests": {
+  "formats": "ok",
+  "reduire-animations": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}
