@@ -27,6 +27,8 @@
   .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
   .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
   .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
+  /* Lien direct vers le module (#demo-module, utilisé par le Bistrot des Modules) : il arrive sous l'en-tête. */
+  #demo-module { scroll-margin-top: max(var(--entete-h), 76px); }
 </style>
 </head>
 <body>
@@ -38,7 +40,7 @@
     <p>Plus bas, la carte et ses accords&nbsp;: touchez un plat, le verre se remplit de ce que le sommelier conseille.</p>
   </section>
 
-  <section class="ame demo-sombre" data-module="accords-mets-et-vins" data-source="exemple-accords.json" aria-labelledby="ame-titre">
+  <section id="demo-module" class="ame demo-sombre" data-module="accords-mets-et-vins" data-source="exemple-accords.json" aria-labelledby="ame-titre">
     <div class="ame__grille socle-cadre">
       <div class="ame__tete">
         <p class="socle-surtitre">Accords mets et vins</p>

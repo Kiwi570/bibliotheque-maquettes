@@ -26,6 +26,8 @@
   .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
   .demo-bloc p:not(.socle-surtitre) { max-width: 52ch; color: var(--couleur-texte-doux); }
   .assiette__titre { font-weight: 500; }
+  /* Lien direct vers le module (#demo-module, utilisé par le Bistrot des Modules) : il arrive sous l'en-tête. */
+  #demo-module { scroll-margin-top: max(var(--entete-h), 76px); }
 </style>
 </head>
 <body>
@@ -37,7 +39,7 @@
     <p>Faites défiler : la section s'épingle et le plat se dresse dans l'assiette, élément par élément, pendant que la recette se lit à côté.</p>
   </section>
 
-  <section class="assiette demo-sombre" data-module="assiette-qui-se-dresse" data-epingle aria-labelledby="assiette-titre">
+  <section id="demo-module" class="assiette demo-sombre" data-module="assiette-qui-se-dresse" data-epingle aria-labelledby="assiette-titre">
     <div class="assiette__cadre socle-cadre">
       <div class="assiette__texte" data-tient>
         <p class="socle-surtitre">Le plat du moment</p>

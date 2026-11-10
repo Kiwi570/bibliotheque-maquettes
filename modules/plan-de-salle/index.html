@@ -21,6 +21,8 @@
   .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 10vh; }
   .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); font-weight: 500; }
   .demo-bloc p:not(.socle-surtitre) { max-width: 56ch; color: var(--couleur-texte-doux); }
+  /* Lien direct vers le module (#demo-module, utilisé par le Bistrot des Modules) : il arrive sous l'en-tête. */
+  #demo-module { scroll-margin-top: max(var(--entete-h), 76px); }
 </style>
 </head>
 <body>
@@ -32,7 +34,7 @@
     <p>Plus bas, la salle vue de dessus&nbsp;: elle s’incline en arrivant, on choisit sa table, au coin du feu, près des fenêtres ou sur la terrasse.</p>
   </section>
 
-  <section class="pds" data-module="plan-de-salle" data-reservation="../reservation-de-table/index.html#resa-titre" aria-labelledby="pds-titre">
+  <section id="demo-module" class="pds" data-module="plan-de-salle" data-reservation="../reservation-de-table/index.html#resa-titre" aria-labelledby="pds-titre">
     <div class="pds__grille socle-cadre">
       <div class="pds__tete">
         <p class="socle-surtitre">Réserver</p>
