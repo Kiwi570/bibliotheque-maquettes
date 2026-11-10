@@ -26,6 +26,7 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
   if (!m.metier || typeof m.metier !== 'string') err.push(`${ou} : metier manquant (node outils/deduire.mjs, ou notes-manuelles maquette.metier)`);
   if (!TAXO.luminosite.includes(m.luminosite)) err.push(`${ou} : luminosite « ${m.luminosite} » (node outils/deduire.mjs)`);
   verifie(ou, 'ton', m.ton || [], 'ton'); verifie(ou, 'univers', m.univers || [], 'univers'); verifie(ou, 'besoins', m.besoins ?? null, 'besoin');
+  if (m.plan != null && !TAXO.plan.includes(m.plan)) err.push(`${ou} : plan « ${m.plan} » hors taxonomie (${TAXO.plan.join(', ')})`);
   verifie(ou, 'animations', m.animations, 'animation', 1); verifie(ou, 'interactions', m.interactions, 'interaction', 1); verifie(ou, 'dependances', m.dependances, 'dependance', 1);
   for (const [k, v] of Object.entries(m.palette || {})) if (!/^#[0-9a-f]{6}$/i.test(v || '')) err.push(`${ou} : palette.${k} invalide (${v})`);
   for (const c of Object.values(m.captures || {})) if (c) poids(c, 300 * 1024, ou);

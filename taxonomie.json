@@ -1,6 +1,6 @@
 {
- "version": 4,
- "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés. v3 : rôle articles, animations reactif-vitesse, fil-conducteur, trace-svg et rature, interactions ambiance-sonore, schema-interactif, saisie-personnalisee et visite-guidee, dépendance drawsvg-morphsvg. Les mécaniques rares (une seule maquette) vont dans le champ libre particularites des fiches, pas ici. v4 : axes luminosite, ton et univers (la liste ambiance reste, c'est leur réunion), besoin (ce que le site doit faire), impact (calme, vivant, spectaculaire) et famille (familles d'effets de la grille wouahou), tous déduits automatiquement par outils/deduire.mjs ; carte des métiers voisins (voisins) utilisée par la recherche.",
+ "version": 5,
+ "note": "Listes fermées. Toute valeur hors liste est refusée par outils/valider.mjs. v2 : rôles decor, barre-fixe et texte-legal ajoutés. v3 : rôle articles, animations reactif-vitesse, fil-conducteur, trace-svg et rature, interactions ambiance-sonore, schema-interactif, saisie-personnalisee et visite-guidee, dépendance drawsvg-morphsvg. Les mécaniques rares (une seule maquette) vont dans le champ libre particularites des fiches, pas ici. v4 : axes luminosite, ton et univers (la liste ambiance reste, c'est leur réunion), besoin (ce que le site doit faire), impact (calme, vivant, spectaculaire) et famille (familles d'effets de la grille wouahou), tous déduits automatiquement par outils/deduire.mjs ; carte des métiers voisins (voisins) utilisée par la recherche. v5 : plan (comment se lit la page d accueil, 11 plans, avec plan_convient : les activités pour lesquelles chaque plan est une piste) et 12 familles d effets de plus (22 en tout), pour que deux maquettes à la suite ne se ressemblent pas (outils/intention.mjs vérifie le déjà vu sur les trois dernières).",
  "activite": [
   "restauration",
   "hébergement",
@@ -207,7 +207,32 @@
   "lumiere-pointeur": "famille : lumière, matière ou objet qui suit le pointeur ou le doigt",
   "scene-epinglee": "famille : section fixée dont le contenu progresse au défilement",
   "webgl": "famille : rendu WebGL (shader, particules)",
-  "voisins": "pour chaque activité, les activités les plus proches : la recherche les classe juste après l activité elle-même"
+  "voisins": "pour chaque activité, les activités les plus proches : la recherche les classe juste après l activité elle-même",
+  "defilement-horizontal": "famille : la lecture avance de côté (frise, chemin, rangée) pendant le défilement vertical",
+  "masque": "animation et famille : image, vidéo ou couleur révélée par une forme, une découpe ou à travers les lettres",
+  "trait-qui-se-dessine": "famille : un trait se dessine sous les yeux (plan, signature, contour, chemin)",
+  "morphing": "animation et famille : une forme devient une autre (silhouette, pictogramme, contour de l'objet)",
+  "particules": "famille : poussière, pétales, vapeur, braises, flocons ou bulles animés (canvas ou WebGL)",
+  "profondeur": "famille : plans découpés qui se décalent en profondeur, collage en couches",
+  "plongee": "famille : on entre dans l'image, zoom à travers une ouverture jusqu'à la scène suivante",
+  "ambiance-qui-change": "famille : la lumière ou la couleur de la page change au fil de la lecture (matin vers soir, saisons)",
+  "video-pilotee": "famille : vidéo ou suite d'images menée par le défilement",
+  "empilement": "famille : cartes, planches ou fiches qui s'empilent au défilement",
+  "recomposition": "famille : la grille se réorganise sous les yeux (filtre, tri, regroupement animé)",
+  "curseur-vivant": "famille : curseur dessiné ou aimanté qui change selon ce qu'il survole",
+  "recit-lineaire": "plan : ouverture puis sections qui racontent dans l'ordre, de haut en bas",
+  "objet-unique": "plan : un seul objet du métier reste à l'écran et change d'état à chaque section",
+  "magazine": "plan : grille éditoriale asymétrique, grands titres, images de tailles variées, rubriques",
+  "outil-d-abord": "plan : l'outil principal (réserver, estimer, simuler, chercher) dès l'ouverture, le récit ensuite",
+  "parcours-horizontal": "plan : la lecture avance de côté, comme une frise, un chemin ou une chaîne de fabrication",
+  "territoire": "plan : une carte ou un plan du lieu sert de sommaire, chaque section est un point",
+  "carnet": "plan : on feuillette des pages, un menu, un catalogue, un herbier",
+  "ecran-partage": "plan : une moitié fixe (image, objet, carte) et l'autre qui défile",
+  "journee": "plan : la page suit une journée ou une saison, la lumière change d'une section à l'autre",
+  "galerie": "plan : les images d'abord, plein cadre, très peu de texte",
+  "index": "plan : liste typographique à grande échelle, l'image apparaît au survol ou au doigt",
+  "plan_convient": "activités pour lesquelles chaque plan de page est une piste (jamais une obligation)",
+  "famille_points_fixes": "familles qui réalisent les points 1, 4 et 6 de la grille wouahou (présentes sur toutes les maquettes) : elles ne comptent pas parmi les trois familles modernes du point 8 ni dans le déjà vu"
  },
  "luminosite": [
   "clair",
@@ -250,6 +275,19 @@
   "vivant",
   "spectaculaire"
  ],
+ "plan": [
+  "recit-lineaire",
+  "objet-unique",
+  "magazine",
+  "outil-d-abord",
+  "parcours-horizontal",
+  "territoire",
+  "carnet",
+  "ecran-partage",
+  "journee",
+  "galerie",
+  "index"
+ ],
  "famille": [
   "3d",
   "objet-manipulable",
@@ -260,7 +298,24 @@
   "lumiere-pointeur",
   "scene-epinglee",
   "webgl",
-  "fil-conducteur"
+  "fil-conducteur",
+  "defilement-horizontal",
+  "masque",
+  "trait-qui-se-dessine",
+  "morphing",
+  "particules",
+  "profondeur",
+  "plongee",
+  "ambiance-qui-change",
+  "video-pilotee",
+  "empilement",
+  "recomposition",
+  "curseur-vivant"
+ ],
+ "famille_points_fixes": [
+  "objet-manipulable",
+  "fil-conducteur",
+  "scene-epinglee"
  ],
  "voisins": {
   "restauration": [
@@ -382,5 +437,70 @@
    "commerce"
   ],
   "autre": []
+ },
+ "plan_convient": {
+  "recit-lineaire": [],
+  "objet-unique": [
+   "commerce",
+   "artisanat",
+   "industrie"
+  ],
+  "magazine": [
+   "association",
+   "culture",
+   "média",
+   "formation",
+   "collectivité"
+  ],
+  "outil-d-abord": [
+   "bâtiment",
+   "santé",
+   "bien-être",
+   "services-b2b",
+   "auto-moto",
+   "immobilier",
+   "juridique",
+   "finance"
+  ],
+  "parcours-horizontal": [
+   "industrie",
+   "artisanat",
+   "conseil",
+   "formation"
+  ],
+  "territoire": [
+   "hébergement",
+   "tourisme",
+   "collectivité"
+  ],
+  "carnet": [
+   "restauration",
+   "commerce",
+   "culture",
+   "formation"
+  ],
+  "ecran-partage": [
+   "commerce",
+   "immobilier",
+   "numérique"
+  ],
+  "journee": [
+   "restauration",
+   "hébergement",
+   "bien-être",
+   "sport",
+   "animaux"
+  ],
+  "galerie": [
+   "culture",
+   "spectacle",
+   "artisanat"
+  ],
+  "index": [
+   "numérique",
+   "conseil",
+   "services-b2b",
+   "média"
+  ]
  }
 }

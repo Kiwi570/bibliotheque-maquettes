@@ -42,7 +42,7 @@ if (!fs.existsSync(fNotes)) {
   const gabarit = {
     maquette: { client: '', activite: [], concept: [], ambiance: [], palette: { fond: '', texte: '', accent: '', secondaire: '' }, polices: { titres: '', texte: '', mono: '' },
       points_forts: [], reserves: [], animations: [], interactions: ['aucune'], change_depuis_audit: null, accueil: inv.blocs.find(b => b.dans_main)?.id || '',
-      grille: { objet: '', fil: '' } },
+      plan: '', grille: { objet: '', fil: '' } },
     sections: Object.fromEntries(inv.blocs.map(b => [b.id, { titre: b.titre || '', role: '', description: '', animations: [], interactions: ['aucune'], telephone: 'adapté', note_qualite: 3, reutilisable: false, module: null, pieges: [] }])),
   };
   ecrireJson(fNotes, gabarit);

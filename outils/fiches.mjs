@@ -9,6 +9,7 @@
 //                 "polices": {"titres": "...", "texte": "...", "mono": "..."},
 //                 "points_forts": [...], "reserves": [...], "animations": [...], "interactions": [...],
 //                 "change_depuis_audit": "texte ou null", "accueil": "<id du bloc d'ouverture>",
+//                 "plan": "recit-lineaire" (taxonomie : plan ; comment se lit la page d'accueil),
 //                 "grille": {"objet": "objet que le visiteur manipule, en quelques mots", "fil": "fil conducteur, en quelques mots"} },
 //   (la forme du voile, l'intro vers l'objet et les marques data-grille sont relevées par outils/grille.mjs ;
 //    le journal du projet, _audit/journal.json, est copié dans journaux/ par le même outil)

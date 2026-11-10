@@ -11,7 +11,7 @@ const liste = d => fs.existsSync(d) ? fs.readdirSync(d).sort() : [];
 const maquettes = [], toutes = [], modules = []; let sousSeuil = 0;
 for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.json'))) {
   const m = lireJson(path.join(RACINE, 'maquettes', f));
-  maquettes.push([m.depot, m.activite, m.concept, m.ambiance, m.note, m.points_forts.slice(0, 3), m.url, m.client, m.date_commit || null, m.grille ? [m.grille.voile, m.grille.objet] : null, m.metier || null, m.luminosite || null, m.ton || [], m.univers || [], m.besoins || []]);
+  maquettes.push([m.depot, m.activite, m.concept, m.ambiance, m.note, m.points_forts.slice(0, 3), m.url, m.client, m.date_commit || null, m.grille ? [m.grille.voile, m.grille.objet] : null, m.metier || null, m.luminosite || null, m.ton || [], m.univers || [], m.besoins || [], m.plan || null]);
   for (const id of m.sections) {
     const s = lireJson(path.join(RACINE, 'sections', id + '.json'));
     if (s.note_qualite < 4) { sousSeuil++; continue; } // seules les sections notées 4 ou 5 figurent dans l'index
@@ -36,7 +36,7 @@ const index = {
   version: new Date().toISOString().slice(0, 10),
   aide: 'Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/, provenance projet (tiré d une maquette validée) ou à part (créé hors projet, pas encore servi). Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)',
   totaux: { maquettes: maquettes.length, sections_indexees: sections.length, sections_notees_4_ou_5: toutes.length, sections_notees_3_ou_moins: sousSeuil, modules: modules.length },
-  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille', 'metier', 'luminosite', 'ton', 'univers', 'besoins'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page', 'impact', 'familles'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances', 'impact', 'familles', 'provenance'] },
+  colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille', 'metier', 'luminosite', 'ton', 'univers', 'besoins', 'plan'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page', 'impact', 'familles'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances', 'impact', 'familles', 'provenance'] },
   maquettes, sections, modules,
 };
 // Une ligne par entrée : lisible d'un coup d'œil et compact.

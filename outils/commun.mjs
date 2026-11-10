@@ -124,3 +124,29 @@ export function resumeJournal(j) {
   });
 }
 export const slug = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+
+/* Dernières maquettes (par date du dernier commit) : plan, familles de l'accueil (sections non calmes, points fixes à part),
+   modules repris ou tirés, voile, objet et fil. Utilisé par chercher.mjs --dernieres et intention.mjs (déjà vu). */
+export function dernieresMaquettes(n, sauf = []) {
+  const fixes = new Set(TAXO.famille_points_fixes || []);
+  const liste = (d) => (fs.existsSync(d) ? fs.readdirSync(d) : []);
+  const parOrigine = {};
+  for (const nom of liste(path.join(RACINE, 'modules'))) {
+    const mj = lireJson(path.join(RACINE, 'modules', nom, 'module.json'), null);
+    for (const o of String(mj?.origine || '').split(',').map((x) => x.trim().split('/')[0]).filter(Boolean)) (parOrigine[o] ||= []).push(nom);
+  }
+  const maquettes = liste(path.join(RACINE, 'maquettes')).filter((x) => x.endsWith('.json')).map((x) => lireJson(path.join(RACINE, 'maquettes', x)));
+  return maquettes.filter((m) => !sauf.includes(m.depot)).sort((a, b) => (b.date_commit || '').localeCompare(a.date_commit || '')).slice(0, n).map((m) => {
+    const fam = new Set(), mods = new Set(parOrigine[m.depot] || []);
+    for (const id of m.sections) {
+      const s = lireJson(path.join(RACINE, 'sections', id + '.json'), null);
+      if (!s) continue;
+      if (s.module) mods.add(s.module); (s.modules || []).forEach((x) => mods.add(x));
+      if (s.page === 'index' && s.impact !== 'calme') (s.familles || []).forEach((x) => fam.add(x));
+    }
+    const familles = TAXO.famille.filter((x) => fam.has(x));
+    return { depot: m.depot, date: m.date_commit, client: m.client, activite: m.activite, plan: m.plan || null,
+      familles_accueil: familles.filter((x) => !fixes.has(x)), points_fixes: familles.filter((x) => fixes.has(x)),
+      modules: [...mods].sort(), voile: m.grille?.voile ?? null, objet: m.grille?.objet ?? null, fil: m.grille?.fil ?? null, url: m.url };
+  });
+}

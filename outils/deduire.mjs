@@ -55,6 +55,8 @@ export function deduireMaquette(fiche, sections, manuel = {}) {
     ton: amb.filter((a) => TAXO.ton.includes(a)),
     univers: amb.filter((a) => TAXO.univers.includes(a)),
     besoins: manuel.besoins || besoins(sections, fiche),
+    /* Plan de la page d'accueil (taxonomie : plan) : jamais déduit, noté à la main (notes manuelles, maquette.plan). */
+    ...(manuel.plan ? { plan: manuel.plan } : {}),
   };
 }
 
@@ -67,7 +69,7 @@ const FORTES = ['jeu', 'configurateur', 'simulateur', 'schema-interactif', 'cart
 const STRUCTURE = ['menu', 'pied-de-page', 'texte-legal', 'barre-fixe'];
 export function familles({ animations = [], interactions = [], dependances = [], texte = '', role = '' }) {
   if (STRUCTURE.includes(role)) return [];
-  const t = norm(texte), a = new Set(animations), f = new Set();
+  const t = norm(texte).replace(/[’‘]/g, "'"), a = new Set(animations), f = new Set();
   if (/\b3d\b|three\.?js|preserve-3d|cylindre|\bcubes?\b|en volume/.test(t) || dependances.includes('three')) f.add('3d');
   if (/(faire|fait|se fait|font|a faire) tourner|tourne(r)? a la main|a la main avec|attrap|pivoter|manipul|avec (son |de l')?elan|a saisir|faire glisser|glisser du doigt|au glisser|on la lance|se lance|\b360\b/.test(t)) f.add('objet-manipulable');
   if (a.has('marquee') || /geant|typographie (geante|cinetique)|mots? qui (filent|defilent)|titre (enorme|monumental)/.test(t)) f.add('typo-geante');
@@ -78,6 +80,19 @@ export function familles({ animations = [], interactions = [], dependances = [],
   if (a.has('section-fixée') && a.has('progression-fixée')) f.add('scene-epinglee');
   if (a.has('webgl-shader') || a.has('webgl-particules')) f.add('webgl');
   if (a.has('fil-conducteur')) f.add('fil-conducteur');
+  /* v5 : familles ajoutées pour varier les maquettes (déduites seulement quand l'indice est franc). */
+  if (a.has('galerie-horizontale') || /defile(nt)? (de cote|a l'horizontale|horizontalement)|frise (horizontale|qui defile)|avance de cote/.test(t)) f.add('defilement-horizontal');
+  if (a.has('masque') || /a travers les lettres|texte (en|comme) masque|decoupee? (dans|par) (la|une) forme|se devoile (dans|par) (une|la) forme|clip-path/.test(t)) f.add('masque');
+  if (a.has('trace-svg') || /trait qui se dessine|se dessine (au|sous|a mesure)|dessine(e)? au defilement/.test(t)) f.add('trait-qui-se-dessine');
+  if (a.has('morphing') || dependances.includes('drawsvg-morphsvg') && /devient|se transforme en/.test(t)) f.add('morphing');
+  if (a.has('webgl-particules') || /particules|poussiere (d'or|qui)|petales|braises|flocons|bulles qui|vapeur qui|fumee qui/.test(t)) f.add('particules');
+  if (a.has('parallaxe') && /couches|calques|collage|plans? (decoupes|successifs)|en profondeur|decor en plans/.test(t)) f.add('profondeur');
+  if (/on (entre|plonge) dans|plongee dans|zoom (a travers|dans l'image)|traverse(r)? l'image|par l'ouverture jusqu/.test(t)) f.add('plongee');
+  if (/(le fond|la lumiere|la couleur de la page|l'ambiance) (change|passe|vire|tourne|baisse|tombe)|du jour a la nuit|de l'aube au|du matin au soir|au fil des saisons/.test(t)) f.add('ambiance-qui-change');
+  if (a.has('scrub-vidéo') || /video (menee|pilotee|lue) (par|au) (le )?defilement/.test(t)) f.add('video-pilotee');
+  if (a.has('empilement-de-fiches') || /s'empilent|empilees? au defilement|pile de (cartes|planches|fiches)/.test(t)) f.add('empilement');
+  if (a.has('flip') || /se reorganise|se recompose|se reclasse|tri anime/.test(t)) f.add('recomposition');
+  if (a.has('curseur-personnalisé') || /curseur (dessine|personnalise|aimante|qui change)/.test(t)) f.add('curseur-vivant');
   return TAXO.famille.filter((x) => f.has(x));
 }
 export function impact({ animations = [], interactions = [], fams = [] }) {

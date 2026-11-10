@@ -9,24 +9,28 @@
 //   --ambiance     (ancienne liste, réunion des trois) ; --concept
 // Ce que doit être la section ou le module (filtre obligatoire) :
 //   --role --animation --interaction --dependance --telephone
-//   --famille      famille d'effet de la grille wouahou : 3d, objet-manipulable, typo-geante, plein-ecran, carrousel, vitesse,
-//                  lumiere-pointeur, scene-epinglee, webgl, fil-conducteur
+//   --famille      famille d'effet de la grille wouahou (22, taxonomie : famille) : 3d, typo-geante, plein-ecran, carrousel, vitesse,
+//                  lumiere-pointeur, webgl, defilement-horizontal, masque, trait-qui-se-dessine, morphing, particules, profondeur,
+//                  plongee, ambiance-qui-change, video-pilotee, empilement, recomposition, curseur-vivant ;
+//                  et les points fixes objet-manipulable, fil-conducteur, scene-epinglee
 //   --impact       calme, vivant ou spectaculaire
+//   --plan         plan de la page d'accueil (taxonomie : plan) : sections d'accueil des maquettes qui l'ont (plan noté à la main)
 //   --module (seulement ce qui existe en module), --sans <dependance>, --note-min N (1-5)
 //   --strict       les critères du client deviennent obligatoires (activité exacte, besoin, luminosité…)
-// node outils/chercher.mjs --dernieres [N] : les N dernières maquettes (5 par défaut) avec la forme du voile, l'objet manipulé
-//           et le fil conducteur, pour ne pas redonner les mêmes au client suivant (grille wouahou).
+// node outils/chercher.mjs --dernieres [N] : les N dernières maquettes (5 par défaut) avec leur plan, les familles de leur accueil,
+//           les modules repris, la forme du voile, l'objet manipulé et le fil conducteur, pour ne rien redonner au client suivant
+//           (« Chaque maquette est unique », partie 2 de la skill). En bas : les familles et les plans encore libres.
 // Classement : la qualité (note) d'abord, puis la proximité avec le client : même métier +6, même activité +5, activité voisine +2,5,
 // chaque besoin commun +2,5, chaque trait d'ambiance commun +1. Un module part de 12 (autant qu'une section notée 5, réutilisable et reliée à un module : c'est du code testé) et gagne la même proximité (convient_a, ambiances) :
 // il ne passe devant une bonne section du métier que s'il convient lui aussi au client. Pour un module, l'activité compte selon sa spécificité : citée en
 // premier parmi six activités au plus, elle vaut +5 ; citée plus loin ou parmi beaucoup d'autres, moins (un module générique ne passe plus devant un module du métier).
 import fs from 'node:fs';
 import path from 'node:path';
-import { RACINE, TAXO, lireJson } from './commun.mjs';
+import { RACINE, TAXO, lireJson, dernieresMaquettes } from './commun.mjs';
 import { deduireModule, besoins as besoinsDe } from './deduire.mjs';
 
 const args = process.argv.slice(2);
-const f = { activite: [], concept: [], ambiance: [], luminosite: [], ton: [], univers: [], besoin: [], role: [], animation: [], interaction: [], dependance: [], telephone: [], famille: [], impact: [], sans: [] };
+const f = { activite: [], concept: [], ambiance: [], luminosite: [], ton: [], univers: [], besoin: [], role: [], animation: [], interaction: [], dependance: [], telephone: [], famille: [], impact: [], plan: [], sans: [] };
 const mots = [], metierMots = []; let max = 15, json = false, seulModules = false, noteMin = 1, strict = false, dernieres = 0;
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
@@ -55,13 +59,20 @@ const liste = (d) => (fs.existsSync(d) ? fs.readdirSync(d) : []);
 const voisins = new Set(f.activite.flatMap((a) => (TAXO.voisins?.[a] || [])).filter((a) => !f.activite.includes(a)));
 
 const maquettes = Object.fromEntries(liste(path.join(RACINE, 'maquettes')).filter((x) => x.endsWith('.json')).map((x) => { const m = lireJson(path.join(RACINE, 'maquettes', x)); return [m.depot, m]; }));
-// Dernières maquettes : voile, objet et fil déjà donnés.
 if (dernieres) {
-  const l = Object.values(maquettes).sort((a, b) => (b.date_commit || '').localeCompare(a.date_commit || '')).slice(0, dernieres)
-    .map((m) => ({ depot: m.depot, date: m.date_commit, client: m.client, activite: m.activite, voile: m.grille?.voile ?? null, objet: m.grille?.objet ?? null, fil: m.grille?.fil ?? null, url: m.url }));
-  if (json) { console.log(JSON.stringify(l, null, 1)); process.exit(0); }
-  console.log(`Les ${l.length} dernières maquettes (voile, objet, fil) :\n`);
-  for (const m of l) console.log(`${m.date}  ${m.depot}  · ${m.activite.join(', ')}\n        voile ${m.voile || 'non relevé'} · objet ${m.objet || 'non noté'} · fil ${m.fil || 'non noté'}\n`);
+  const l = dernieresMaquettes(dernieres);
+  const vues = new Set(l.flatMap((m) => m.familles_accueil)), plans = new Set(l.map((m) => m.plan).filter(Boolean));
+  const fixes = new Set(TAXO.famille_points_fixes || []);
+  const libres = TAXO.famille.filter((x) => !fixes.has(x) && !vues.has(x)), plansLibres = TAXO.plan.filter((x) => !plans.has(x));
+  if (json) { console.log(JSON.stringify({ maquettes: l, familles_libres: libres, plans_libres: plansLibres }, null, 1)); process.exit(0); }
+  console.log(`Les ${l.length} dernières maquettes : ne rien leur reprendre de visible (plan, familles de l'accueil, objet, voile, fil, apparence des modules).\n`);
+  for (const m of l) console.log(`${m.date}  ${m.depot}  · ${m.activite.join(', ')}
+        plan ${m.plan || 'non noté'} · voile ${m.voile || 'non relevé'}
+        familles de l'accueil : ${m.familles_accueil.join(', ') || 'aucune relevée'}${m.points_fixes.length ? ` (points fixes : ${m.points_fixes.join(', ')})` : ''}
+        modules : ${m.modules.join(', ') || 'aucun relié'}
+        objet ${m.objet || 'non noté'} · fil ${m.fil || 'non noté'}\n`);
+  console.log(`Familles libres (absentes de ces accueils) : ${libres.join(', ') || 'aucune'}`);
+  console.log(`Plans libres : ${plansLibres.join(', ')}`);
   process.exit(0);
 }
 
@@ -102,6 +113,7 @@ for (const m of Object.values(maquettes)) {
     if (s.note_qualite < noteMin) continue;
     if (!inter([s.role], f.role) || !inter(s.animations, f.animation) || !inter(s.interactions, f.interaction) || !inter(s.dependances, f.dependance) || !inter([s.telephone], f.telephone)) continue;
     if (!inter(s.familles || [], f.famille) || !inter([s.impact], f.impact)) continue;
+    if (f.plan.length && (s.page !== 'index' || !f.plan.includes(m.plan))) continue;
     if (f.sans.length && s.dependances.some((d) => f.sans.includes(d))) continue;
     const t = texteOk([s.titre, s.description, ...(s.pieges || []), ...(s.particularites || []), m.client, m.metier, ...m.activite].join(' '));
     if (t === null) continue;
@@ -114,6 +126,7 @@ for (const m of Object.values(maquettes)) {
 for (const d of liste(path.join(RACINE, 'modules'))) {
   const fj = path.join(RACINE, 'modules', d, 'module.json'); if (!fs.existsSync(fj)) continue;
   const m = lireJson(fj);
+  if (f.plan.length) break; // un plan est celui d'une maquette : les modules n'en ont pas
   if (!inter([m.role], f.role) || !inter(m.animations, f.animation) || !inter(m.dependances, f.dependance)) continue;
   if (f.interaction.length && !inter(m.interactions || [], f.interaction)) continue;
   if (f.sans.length && m.dependances.some((x) => f.sans.includes(x))) continue;
