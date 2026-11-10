@@ -22,7 +22,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
-import { RACINE, TAXO, lireJson, ecrireJson } from './commun.mjs';
+import { RACINE, TAXO, lireJson, ecrireJson, motsMetier, metierCommun } from './commun.mjs';
 
 const args = process.argv.slice(2);
 const activites = [], metierMots = [], sans = [];
@@ -49,9 +49,7 @@ for (let i = 0; i < args.length; i++) {
 }
 for (const a of activites) if (!TAXO.activite.includes(a)) { console.error(`« ${a} » n'est pas une activité de la taxonomie : ${TAXO.activite.join(', ')}`); process.exit(1); }
 
-const norm = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-const racine = (w) => norm(w).replace(/(aux|eaux|s|x)$/, '');
-const metierN = metierMots.map(racine).filter((x) => x.length > 2);
+const metierN = motsMetier(metierMots);
 const voisins = new Set(activites.flatMap((a) => TAXO.voisins?.[a] || []).filter((a) => !activites.includes(a)));
 const existe = (p) => p && fs.existsSync(path.join(RACINE, p));
 
@@ -106,9 +104,8 @@ for (let i = 0; i < candidates.length; i += 8) await Promise.all(candidates.slic
 // Utilité pour le projet, avec les mêmes critères que chercher.mjs : métier, activité, besoins du site, ambiance.
 function proximite({ m }) {
   let p = 0; const raisons = [];
-  // Mot pour mot (racine égale) : « hôtes » ne doit pas trouver « hôtellerie ».
-  const mots = new Set(norm([m.metier, m.client].join(' ')).split(/[^a-z0-9]+/).map(racine));
-  if (metierN.length && metierN.some((w) => mots.has(w))) { p += 6; raisons.push('même métier'); }
+  // Mot pour mot (racine égale), sans les mots vagues : « hôtes » ne trouve pas « hôtellerie », « avec » ne fait pas un métier.
+  if (metierCommun(metierN, [m.metier, m.client].join(' ')).length) { p += 6; raisons.push('même métier'); }
   else if (activites.length && (m.activite || []).some((a) => activites.includes(a))) { p += 5; raisons.push('même activité'); }
   else if (activites.length && (m.activite || []).some((a) => voisins.has(a))) { p += 2.5; raisons.push('activité proche'); }
   const besoins = (m.besoins || []).filter((b) => client.besoin.includes(b));

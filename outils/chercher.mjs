@@ -27,7 +27,7 @@
 // premier parmi six activités au plus, elle vaut +5 ; citée plus loin ou parmi beaucoup d'autres, moins (un module générique ne passe plus devant un module du métier).
 import fs from 'node:fs';
 import path from 'node:path';
-import { RACINE, TAXO, lireJson, dernieresMaquettes } from './commun.mjs';
+import { motsMetier, metierCommun, RACINE, TAXO, lireJson, dernieresMaquettes } from './commun.mjs';
 import { deduireModule, besoins as besoinsDe } from './deduire.mjs';
 
 const args = process.argv.slice(2);
@@ -56,7 +56,7 @@ async function finir(texte) { if (texte != null) await new Promise((r) => proces
 const norm = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const racine = (w) => norm(w).replace(/(aux|eaux|s|x)$/, '');
 const motsN = mots.map(racine).filter(Boolean);
-const metierN = metierMots.map(racine).filter(Boolean);
+const metierN = motsMetier(metierMots);
 const inter = (a, b) => !b.length || (a || []).some((x) => b.includes(x));
 const communs = (a, b) => (a || []).filter((x) => b.includes(x)).length;
 const liste = (d) => (fs.existsSync(d) ? fs.readdirSync(d) : []);
@@ -82,7 +82,7 @@ if (dernieres) {
 /* Proximité avec le client, et pourquoi (affiché à côté de chaque résultat). */
 function proximite({ activites = [], metierTexte = '', besoins = [], luminosite = null, ton = [], univers = [], ambiance = [], concept = [] }) {
   let p = 0; const pourquoi = [];
-  if (metierN.length) { const t = norm(metierTexte); const n = metierN.filter((m) => t.includes(m)).length; if (n) { p += 6; pourquoi.push('même métier'); } }
+  if (metierCommun(metierN, metierTexte).length) { p += 6; pourquoi.push('même métier'); }
   if (f.activite.length) {
     if (inter(activites, f.activite)) { p += 5; pourquoi.push('même activité'); }
     else if (activites.some((a) => voisins.has(a))) { p += 2.5; pourquoi.push('activité voisine'); }
@@ -94,7 +94,7 @@ function proximite({ activites = [], metierTexte = '', besoins = [], luminosite 
 }
 function exclueParStrict({ activites = [], metierTexte = '', besoins = [], luminosite = null, ton = [], univers = [], ambiance = [], concept = [] }) {
   if (!strict) return false;
-  return (f.activite.length && !inter(activites, f.activite)) || (metierN.length && !metierN.some((m) => norm(metierTexte).includes(m)))
+  return (f.activite.length && !inter(activites, f.activite)) || (metierN.length && !metierCommun(metierN, metierTexte).length)
     || (f.besoin.length && !f.besoin.every((b) => besoins.includes(b))) || (f.luminosite.length && luminosite && !f.luminosite.includes(luminosite))
     || (f.ton.length && !inter(ton, f.ton)) || (f.univers.length && !inter(univers, f.univers)) || (f.ambiance.length && !inter(ambiance, f.ambiance)) || (f.concept.length && !inter(concept, f.concept));
 }
@@ -167,7 +167,7 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   // Un module qui répond au besoin demandé (son interaction ou son texte : panier, réservation, devis…) est l'outil même de ce besoin : +1,5 de plus.
   if (f.besoin.length) p += 1.5 * communs(bes, f.besoin);
   // Le métier précis : un module n'en a pas, mais son titre ou le début de ses notes peut le citer (« carte du restaurant »).
-  if (metierN.length && metierN.some((w) => norm([m.titre, notes.split(/\n## /)[0]].join(' ')).includes(w))) { p += 3; pourquoi.unshift('métier cité'); }
+  if (metierCommun(metierN, [m.titre, notes.split(/\n## /)[0]].join(' ')).length) { p += 3; pourquoi.unshift('métier cité'); }
   const t = texteOk([m.titre, m.role, ...m.animations, notes].join(' '));
   if (t === null) continue;
   res.push({ type: 'module', id: m.nom, score: Math.round((12 + p + t) * 10) / 10, role: m.role, titre: m.titre, animations: m.animations, familles: dm.familles, impact: dm.impact, pourquoi,

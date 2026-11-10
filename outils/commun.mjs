@@ -154,3 +154,21 @@ export function dernieresMaquettes(n, sauf = []) {
       modules: [...mods].sort(), voile: m.grille?.voile ?? null, objet: m.grille?.objet ?? null, fil: m.grille?.fil ?? null, url: m.url };
   });
 }
+
+/* Mots du métier (chercher.mjs, vitrine.mjs). Le 11 novembre 2026, « restaurant traditionnel et lieu de réception avec piscine »
+   donnait « même métier » à un atelier vélo (« avec »), un lieu de retraites (« lieu ») et des balades en bateau (« traditionnel »),
+   et chercher.mjs comparait par morceaux de mots (« lieu » dans « milieu »). Désormais : mots entiers, racine égale, sans les petits
+   mots ni les mots vagues qui désignent n'importe quel métier. */
+const VAGUES = new Set(['avec', 'pour', 'dans', 'sans', 'chez', 'des', 'les', 'une', 'aux', 'sur', 'par', 'son', 'ses', 'leur', 'leurs', 'tout', 'tous', 'toute', 'toutes', 'autre', 'autres', 'plus', 'tres', 'bien', 'entre', 'depuis', 'pres', 'lieu', 'lieux', 'traditionnel', 'traditionnelle', 'artisanal', 'artisanale', 'artisan', 'maison', 'service', 'qualite', 'local', 'locale', 'familial', 'familiale', 'proximite', 'independant', 'independante', 'petit', 'petite', 'grand', 'grande', 'centre', 'espace', 'entreprise', 'societe', 'cabinet', 'studio', 'agence', 'boutique', 'magasin', 'ecole', 'professionnel', 'professionnelle', 'particulier', 'adresse', 'region', 'ville', 'france', 'haut', 'gamme', 'luxe', 'sur-mesure', 'mesure', 'creation', 'conseil', 'vente', 'ligne']);
+export const normMot = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+export const racineMot = (w) => normMot(w).replace(/(aux|eaux|s|x)$/, '');
+export function motsMetier(texte) {
+  const mots = normMot(Array.isArray(texte) ? texte.join(' ') : texte).split(/[^a-z0-9-]+/).filter((w) => w.length > 2 && !VAGUES.has(w));
+  return [...new Set(mots.map(racineMot).filter((w) => w.length > 2 && !VAGUES.has(w)))];
+}
+/* Mots du métier du client retrouvés, mot pour mot, dans le texte d'une maquette ou d'un module. */
+export function metierCommun(motsClient, texte) {
+  if (!motsClient.length) return [];
+  const t = new Set(normMot(texte).split(/[^a-z0-9-]+/).map(racineMot));
+  return motsClient.filter((w) => t.has(w));
+}
