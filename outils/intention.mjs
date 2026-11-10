@@ -21,7 +21,20 @@
 //       "modules": ["objet-a-faire-tourner"] (modules repris),
 //       "deja_vu_voulu": "raison" (facultatif : une reprise assumée devient une note au lieu d'un A REGARDER),
 //       "sections": [ { "role": "ouverture", "reprend": "icc-maquette/debut", "plus": "ce qu'on fait de plus pour ce client" } ],
-//       "invente": ["boussole des neuf domaines", "lumière rasante sur le mur"] } ] }
+//       "ancrage": [ { "element": "la cheminée de la salle", "source": "photo:restaurant-17.jpg" },
+//                    { "element": "la piscine et ses paillotes", "source": "site:/la-piscine" },
+//                    { "element": "le chef change sa carte chaque semaine", "source": "releve:carte" } ]
+//           (obligatoire, 3 au moins : ce qui existe vraiment chez le client et d'où on le sait ; source « photo: », « site: »,
+//            « releve: » ou « client: » (ce que l'utilisateur ou le client a dit)),
+//       "esquisse": "_suivi/esquisses/le-plan-et-l-etoile-ordinateur.jpg" (facultatif : par défaut, le nom de la direction en
+//           minuscules et tirets, comme l'écrit node _audit/esquisses.mjs ; la version téléphone est lue à côté),
+//       "invente": ["boussole des neuf domaines", "lumière rasante sur le mur"] } ],
+//   "sans_esquisses": "raison" (facultatif, exceptionnel : planche sans esquisses, la raison s'affiche) }
+// Vérité du lieu (11 novembre 2026) : sur les Jardins de l'Hacienda, une direction tirée du seul nom (volets bleus, murs à la
+// chaux, guirlandes mexicaines) racontait un lieu qui n'existe pas : un restaurant de cuisine française en Lorraine, avec cheminée
+// et piscine à paillotes. Chaque direction dit désormais sur quoi de vrai elle repose (« ancrage »), et ce qu'elle invente
+// (« invente ») s'affiche à part, à justifier. Et elle se montre en image (esquisse du premier écran) : choisie sur un texte,
+// la même direction a donné des persiennes en rectangles bleus plats que personne n'aurait validées en image.
 // « reprend » : identifiant d'une section de la bibliothèque (sections/<maquette>/<id>.json), de préférence du palmarès.
 // Déjà vu (« Chaque maquette est unique », partie 2 de la skill), comparé aux trois dernières maquettes (et aux « recentes ») :
 // A REGARDER si le plan est celui d'une des deux dernières ou d'une autre direction, si plus d'une famille de l'accueil
@@ -150,16 +163,45 @@ async function carteSection(s) {
     </article>`;
 }
 
+/* ---------- Vérité du lieu et esquisses ---------- */
+const SOURCES = /^(photo|site|releve|client):\s*\S/;
+const aVerifier = [];
+function verite(dir, n) {
+  const anc = Array.isArray(dir.ancrage) ? dir.ancrage : [];
+  const ok = anc.filter((a) => a && a.element && SOURCES.test(String(a.source || '')));
+  if (ok.length < 3) erreurs.push(`direction ${n + 1} : ancrage dans le vrai lieu insuffisant (${ok.length} élément(s) avec source photo:, site:, releve: ou client: ; 3 au moins)`);
+  for (const a of anc) if (a && !SOURCES.test(String(a.source || ''))) erreurs.push(`direction ${n + 1} : ancrage « ${a.element || '?'} » sans source valable (photo:, site:, releve: ou client:)`);
+  for (const a of ok.filter((x) => /^photo:/.test(x.source))) {
+    const f = String(a.source).replace(/^photo:\s*/, '');
+    if (![f, path.join('recu', f), path.join('recu', 'site', f)].some((x) => fs.existsSync(path.resolve(x)))) aVerifier.push(`direction ${n + 1} : photo d'ancrage introuvable (${f}) : vérifier le nom`);
+  }
+  return `<div class="verite"><h3>Ce qui existe vraiment chez ${e(d.client)}</h3><ul>${ok.map((a) => `<li>${e(a.element)} <em>${e(a.source)}</em></li>`).join('')}</ul>
+    ${(dir.invente || []).length ? `<h3>Inventé pour la maquette</h3><ul class="invente">${dir.invente.map((x) => `<li>${e(x)}</li>`).join('')}</ul><p class="verite__note">Chaque invention se rattache à ce qui existe ; aucune ne vient du seul nom du client.</p>` : ''}</div>`;
+}
+async function esquisse(dir, n) {
+  const o = dir.esquisse ? path.resolve(dir.esquisse) : path.resolve('_suivi', 'esquisses', `${slug(dir.nom)}-ordinateur.jpg`);
+  const t = o.replace(/-ordinateur\.jpg$/, '-telephone.jpg');
+  if (!fs.existsSync(o)) {
+    if (!d.sans_esquisses) erreurs.push(`direction ${n + 1} : esquisse absente (${path.relative(process.cwd(), o)}) : écrire _suivi/esquisses/${slug(dir.nom)}.html puis node _audit/esquisses.mjs`);
+    return '';
+  }
+  const b64 = async (f, l) => `data:image/jpeg;base64,${(await sharp(f).resize(l).jpeg({ quality: 74 }).toBuffer()).toString('base64')}`;
+  return `<div class="esquisse"><img class="esquisse__o" src="${await b64(o, 1200)}" alt="Esquisse du premier écran sur ordinateur : ${e(dir.nom)}">${fs.existsSync(t) ? `<img class="esquisse__t" src="${await b64(t, 300)}" alt="Esquisse du premier écran sur téléphone : ${e(dir.nom)}">` : ''}</div>`;
+}
+
 const blocs = [];
 for (const [n, dir] of (d.directions || []).entries()) {
   const refs = [];
   for (const s of dir.sections || []) refs.push(await carteSection(s));
   const g = dir.grille || {};
   const dv = dejaVu(dir, n, d.directions || []);
+  const vrai = verite(dir, n);
+  const esq = await esquisse(dir, n);
   blocs.push(`<section class="direction" id="direction-${n + 1}">
   <p class="direction__num">Direction ${n + 1}</p>
   <h2>${e(dir.nom)}</h2>
   <p class="direction__idee">${e(dir.idee)}</p>
+  ${esq}
   <div class="direction__id">
     <ul class="palette">${(dir.palette || []).map((c) => `<li style="background:${e(c)}"><span>${e(c)}</span></li>`).join('')}</ul>
     <p class="polices">${(dir.polices || []).map(e).join(' · ')}</p>
@@ -171,10 +213,10 @@ for (const [n, dir] of (d.directions || []).entries()) {
     <div><dt>La transition</dt><dd>${e(g.voile)}</dd></div>
     <div><dt>Effets modernes</dt><dd>${(g.modernes || []).map(e).join(' ; ')}</dd></div>
   </dl>
+  ${vrai}
   ${dv}
   <h3>Les sections clés : ce qu'on reprend de la bibliothèque, ce qu'on fait de plus</h3>
   <div class="refs">${refs.join('\n')}</div>
-  ${(dir.invente || []).length ? `<h3>Inventé pour ${e(d.client)}</h3><ul class="invente">${dir.invente.map((x) => `<li>${e(x)}</li>`).join('')}</ul>` : ''}
 </section>`);
 }
 
@@ -221,6 +263,17 @@ h3 { margin: 26px 0 12px; font-size: 1.1rem; }
 .ref__plus { padding: 8px 10px; border-radius: 8px; background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
 a { color: var(--accent); }
 .invente { margin: 0; padding-left: 20px; }
+.esquisse { display: flex; gap: 12px; align-items: flex-start; margin: 4px 0 20px; }
+.esquisse img { display: block; border-radius: 8px; border: 1px solid var(--trait); height: auto; }
+.esquisse__o { width: min(100%, 820px); min-width: 0; flex: 1 1 auto; }
+.esquisse__t { width: 180px; flex: 0 0 auto; }
+.verite { margin: 18px 0 4px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--trait); }
+.verite h3 { margin: 0 0 8px; font-size: 1rem; }
+.verite h3 + ul + h3 { margin-top: 14px; }
+.verite ul { margin: 0; padding-left: 20px; }
+.verite em { font-style: normal; color: var(--doux); font-size: .875rem; }
+.verite__note { margin: 8px 0 0; color: var(--doux); font-size: .875rem; }
+@media (max-width: 700px) { .esquisse { flex-direction: column; } .esquisse__t { width: 160px; } }
 .dejavu { margin: 18px 0 4px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--trait); }
 .dejavu h3 { margin: 0 0 8px; font-size: 1rem; }
 .dejavu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
@@ -246,6 +299,7 @@ footer { margin-top: 40px; color: var(--doux); font-size: .875rem; }
   <h1>${e(d.client)} : ${['une direction', 'deux directions', 'trois directions', 'quatre directions'][(d.directions || []).length - 1] || 'les directions'}</h1>
   <p class="chapo">Proposition avant construction, à partir du site actuel ${d.site_actuel ? `<a href="${e(d.site_actuel)}">${e(d.site_actuel.replace(/^https?:\/\//, ''))}</a>` : ''}${d.activite ? ` (${e(d.activite)})` : ''}. Chaque direction montre ce qu'on reprend des meilleures maquettes déjà faites et ce qu'on fait de plus pour ce client.</p>
   ${d.constat ? `<p class="constat">${e(d.constat)}</p>` : ''}
+  ${d.sans_esquisses ? `<p class="constat">Sans esquisses : ${e(d.sans_esquisses)}</p>` : ''}
   ${dernieres.length ? `<div class="tableau"><table class="recentes"><caption>Les dernières maquettes, à ne pas reprendre</caption>
     <thead><tr><th scope="col">Maquette</th><th scope="col">Plan</th><th scope="col">Familles de l'accueil</th><th scope="col">Voile</th></tr></thead>
     <tbody>${dernieres.map((m) => `<tr><td>${e(nomCourt(m))}${m.hors_bibliotheque ? ' (hors bibliothèque)' : ''}</td><td>${e(m.plan ? libelle(m.plan) : 'non noté')}</td><td>${e(m.familles_accueil.map(libelle).join(', ') || 'non relevées')}</td><td>${e(m.voile || 'non relevé')}</td></tr>`).join('')}</tbody></table></div>` : ''}
@@ -262,3 +316,4 @@ if (manque.length) { console.log(`A REGARDER : section(s) introuvable(s) dans la
 if (erreurs.length) { console.log(`ERREUR : planche invalide (à corriger ; « deja_vu_voulu » ne s'applique pas ici) :\n  ${erreurs.join('\n  ')}`); process.exitCode = 1; }
 if (aRegarder.length) { console.log(`A REGARDER : déjà vu (corriger les directions, ou « deja_vu_voulu » avec la raison d'une reprise voulue) :\n  ${aRegarder.join('\n  ')}`); process.exitCode = 1; }
 else if (!erreurs.length) console.log(`déjà vu : rien de visible ne reprend ${dernieres.map(nomCourt).join(', ') || 'les dernières maquettes'}`);
+if (aVerifier.length) console.log(`A REGARDER : vérité du lieu :\n  ${aVerifier.join('\n  ')}`);

@@ -5,6 +5,12 @@
 //                       "zone_texte": "gauche", "ratio": "16:9", "largeurs": [640, 1280], "cadrage": [50, 40],
 //                       "source_mobile": "recu/grok/salle-portrait.webp" (facultatif : image à part pour le téléphone) }]
 //   Champs lus par grok.mjs (ignorés ici) : page, emplacement, priorite, gabarit, scene.
+//   "beaute": 1 à 5, la note que Claude donne à chaque photo et image Grok en regardant les planches (11 novembre 2026 : sur les
+//   Jardins de l'Hacienda, un ours en peluche sur la cheminée, une table rouge floue et une chaise en peau de mouton occupaient
+//   les grands emplacements ; aucune n'était « faible » techniquement, toutes l'étaient à l'œil). 5 : photo de magazine ;
+//   4 : belle, tient en grand ; 3 : correcte, en moyen ou en petit ; 2 : faible (floue, sombre, encombrée, décor parasite,
+//   datée), en vignette seulement ; 1 : à écarter. Recopiée dans donnees/images.json ; l'audit refuse une image notée 2 ou
+//   moins (ou faible) affichée en grand, et signale une 3 en très grand. Les ouvertures et fonds de section : 4 ou 5.
 // - Formats par rôle : images/emplacements.json ; ratio et largeurs du plan l'emportent. role "logo" : jamais recadré.
 // - Sujet et cadrage : analyse.json du dossier de la source (analyser.mjs est lancé seul s'il manque ou date d'avant l'image).
 //   Recadrage qui garde le sujet entier (tête entière pour un portrait), jamais au centre par défaut ;
@@ -126,15 +132,15 @@ for (const e of plan) {
   const svg = /\.svg$/i.test(source);
   const st = fs.statSync(source);
   const stM = e.source_mobile && fs.existsSync(path.resolve(path.dirname(fPlan), e.source_mobile)) ? fs.statSync(path.resolve(path.dirname(fPlan), e.source_mobile)) : null;
-  const reglages = JSON.stringify({ e, em, v: 4 });
+  const reglages = JSON.stringify({ e: { ...e, beaute: undefined }, em, v: 4 }); // la note de beauté ne refait pas l'image
   const empreinte = crypto.createHash('sha1').update(`v5|${source}|${st.size}|${st.mtimeMs}|${stM?.size}|${stM?.mtimeMs}|${reglages}`).digest('hex').slice(0, 16);
   const avant = ancienne[e.nom];
   if (!opts.forcer && avant?.empreinte === empreinte && avant.fichiers.every(f => fs.existsSync(path.join(RACINE, 'assets', 'images', f)))) {
-    fiche[e.nom] = avant; inchangees++; console.log(`= ${e.nom} inchangée`); continue;
+    fiche[e.nom] = { ...avant, beaute: e.beaute ?? null }; inchangees++; console.log(`= ${e.nom} inchangée`); continue;
   }
   try {
     const grok = e.nom.startsWith('grok/') || e.nom.includes('/grok/');
-    const base = { nom: e.nom, source: e.source, role, alt: e.alt ?? '', grok, mention: grok ? 'Illustration générée' : null, empreinte };
+    const base = { nom: e.nom, source: e.source, role, alt: e.alt ?? '', grok, mention: grok ? 'Illustration générée' : null, beaute: e.beaute ?? null, empreinte };
     if (svg) {
       const sortie = path.join(RACINE, 'assets', 'images', `${e.nom}.svg`);
       fs.mkdirSync(path.dirname(sortie), { recursive: true });
@@ -206,5 +212,17 @@ for (const e of plan) {
 }
 // La fiche ne garde que les noms du plan.
 ecrireJson(fFiche, fiche);
+/* Beauté : chaque image du plan (hors logo et dessin) est notée ; les grands emplacements n'acceptent que 4 ou 5. */
+const GRANDS = new Set(['ouverture', 'section-fond', '404']);
+const nonNotees = [], tropFaibles = [];
+for (const e of plan) {
+  const f = fiche[e.nom]; if (!f || f.role === 'logo' || /\.svg$/i.test(e.source || '')) continue;
+  const b = Number(e.beaute);
+  if (!(b >= 1 && b <= 5)) nonNotees.push(e.nom);
+  else if (GRANDS.has(f.role) && (b <= 3 || f.faible)) tropFaibles.push(`${e.nom} (${f.role}, ${b}/5${f.faible ? ', faible' : ''})`);
+  else if (b <= 2 && !['vignette', 'produit', 'logo'].includes(f.role)) tropFaibles.push(`${e.nom} (${f.role}, ${b}/5 : en vignette seulement, ou à remplacer)`);
+}
+if (nonNotees.length) console.log(`A REGARDER : ${nonNotees.length} image(s) sans note de beauté (« beaute » de 1 à 5 dans le plan) : ${nonNotees.join(', ')}`);
+if (tropFaibles.length) console.log(`A REGARDER : image(s) trop faibles pour leur emplacement (une ouverture ou un fond veut 4 ou 5 : meilleure photo du client ou image Grok) :\n   ${tropFaibles.join('\n   ')}`);
 console.log(`\n${refaites} produites, ${inchangees} inchangées, ${erreurs} en échec. Fiche : ${path.relative(process.cwd(), fFiche)}`);
 if (erreurs) process.exit(1);
