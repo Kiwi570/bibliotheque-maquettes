@@ -42,7 +42,15 @@ const index = {
 // Une ligne par entrée : lisible d'un coup d'œil et compact.
 const ligne = x => JSON.stringify(x);
 const ecrire = (ix) => '{\n' + Object.entries(ix).map(([k, v]) => Array.isArray(v) ? ` "${k}": [\n${v.map(x => '  ' + ligne(x)).join(',\n')}\n ]` : ` "${k}": ${ligne(v)}`).join(',\n') + '\n}\n';
-const txt = ecrire(index);
+/* Plafond de 150 Ko (octets, accents compris) : au-delà, les points forts des maquettes se raccourcissent (3, puis 2, puis 1)
+   au lieu de faire échouer la validation après coup (l'index était à 36 octets du plafond ; audit externe). Le site garde tout. */
+const PLAFOND = 150 * 1024;
+let txt = ecrire(index), pointsForts = 3;
+while (Buffer.byteLength(txt) > PLAFOND && pointsForts > 1) {
+  pointsForts--;
+  txt = ecrire({ ...index, maquettes: maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pointsForts) : v))) });
+}
+if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même avec un seul point fort par maquette : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
 fs.writeFileSync(path.join(RACINE, 'index.json'), txt);
 fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5.', sections: toutes }));
-console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(txt.length / 102.4) / 10} Ko`);
+console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette pour rester sous 150 Ko)` : ''}`);
