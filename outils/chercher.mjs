@@ -17,8 +17,9 @@
 // node outils/chercher.mjs --dernieres [N] : les N dernières maquettes (5 par défaut) avec la forme du voile, l'objet manipulé
 //           et le fil conducteur, pour ne pas redonner les mêmes au client suivant (grille wouahou).
 // Classement : la qualité (note) d'abord, puis la proximité avec le client : même métier +6, même activité +5, activité voisine +2,5,
-// chaque besoin commun +2,5, chaque trait d'ambiance commun +1. Un module part de 10 (autant qu'une section notée 5) et gagne la même proximité (convient_a, ambiances) :
-// il ne passe devant une bonne section du métier que s'il convient lui aussi au client.
+// chaque besoin commun +2,5, chaque trait d'ambiance commun +1. Un module part de 12 (autant qu'une section notée 5, réutilisable et reliée à un module : c'est du code testé) et gagne la même proximité (convient_a, ambiances) :
+// il ne passe devant une bonne section du métier que s'il convient lui aussi au client. Pour un module, l'activité compte selon sa spécificité : citée en
+// premier parmi six activités au plus, elle vaut +5 ; citée plus loin ou parmi beaucoup d'autres, moins (un module générique ne passe plus devant un module du métier).
 import fs from 'node:fs';
 import path from 'node:path';
 import { RACINE, TAXO, lireJson } from './commun.mjs';
@@ -123,10 +124,24 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   // Un module s'adapte à toute palette : la luminosité ne le départage pas ; ses ambiances valent pour le ton et l'univers.
   const client = { activites: m.convient_a || [], metierTexte: [m.titre, notes].join(' '), besoins: bes, ton: m.ambiances || [], univers: m.ambiances || [], ambiance: m.ambiances || [] };
   if (strict && ((f.activite.length && !inter(m.convient_a || [], f.activite)) || (f.besoin.length && !f.besoin.every((b) => bes.includes(b))) || (f.ton.length && !inter(m.ambiances || [], f.ton)) || (f.univers.length && !inter(m.ambiances || [], f.univers)) || (f.ambiance.length && !inter(m.ambiances || [], f.ambiance)))) continue;
-  const { p, pourquoi } = proximite({ ...client, metierTexte: '' }); // le métier ne se juge que sur les maquettes : un module n'a pas de métier
+  /* Activité d'un module : un module fait pour un métier (il le cite en premier, sur peu d'activités) compte plus qu'un module
+     générique qui en cite dix. Sans cela, les 46 modules « adaptés à la restauration » arrivaient au même niveau que la carte du
+     restaurant ou la réservation de table. */
+  const ca = m.convient_a || [];
+  const largeur = Math.min(1, 6 / Math.max(1, ca.length));
+  const rang = f.activite.length ? Math.min(...f.activite.map((a) => { const i = ca.indexOf(a); return i < 0 ? 99 : i; })) : 99;
+  let { p, pourquoi } = proximite({ ...client, activites: [], metierTexte: '' });
+  if (f.activite.length) {
+    if (rang < 99) { const sp = largeur * (rang === 0 ? 1 : rang <= 2 ? 0.85 : 0.6); p += 5 * sp; pourquoi.unshift(sp >= 0.8 ? 'fait pour cette activité' : 'convient aussi à cette activité'); }
+    else if (ca.some((a) => voisins.has(a))) { p += 2.5 * largeur; pourquoi.unshift('activité voisine'); }
+  }
+  // Un module qui répond au besoin demandé (son interaction ou son texte : panier, réservation, devis…) est l'outil même de ce besoin : +1,5 de plus.
+  if (f.besoin.length) p += 1.5 * communs(bes, f.besoin);
+  // Le métier précis : un module n'en a pas, mais son titre ou le début de ses notes peut le citer (« carte du restaurant »).
+  if (metierN.length && metierN.some((w) => norm([m.titre, notes.split(/\n## /)[0]].join(' ')).includes(w))) { p += 3; pourquoi.unshift('métier cité'); }
   const t = texteOk([m.titre, m.role, ...m.animations, notes].join(' '));
   if (t === null) continue;
-  res.push({ type: 'module', id: m.nom, score: Math.round((10 + p * 0.9 + t) * 10) / 10, role: m.role, titre: m.titre, animations: m.animations, familles: dm.familles, impact: dm.impact, pourquoi,
+  res.push({ type: 'module', id: m.nom, score: Math.round((12 + p + t) * 10) / 10, role: m.role, titre: m.titre, animations: m.animations, familles: dm.familles, impact: dm.impact, pourquoi,
     dossier: `modules/${m.nom}/`, capture: `modules/${m.nom}/apercu.jpg`, origine: m.origine, provenance: m.provenance || 'projet', inspirations: m.inspirations || [], tests: Object.values(m.tests || {}).every((v) => (typeof v === 'number' ? v < 0.1 : /^(ok|n\/a|0 erreur)$/.test(v))) ? 'ok' : 'à revoir' });
 }
 res.sort((a, b) => b.score - a.score || (a.type === 'module' ? -1 : 1));
