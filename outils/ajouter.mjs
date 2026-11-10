@@ -15,7 +15,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 import { RACINE, DOWNLOADS, AUDIT, lireJson, ecrireJson } from './commun.mjs';
+
+/* Les sous-outils sont ceux du dossier de CET outil : dans un projet, les copies livrées avec la skill (_biblio/outils/),
+   jamais les scripts du clone (une session peut refuser du code téléchargé ; audit externe du 10 novembre 2026).
+   La bibliothèque visée leur est passée par BIBLIO : tous écrivent dans le même clone. */
+const OUTILS = path.dirname(fileURLToPath(import.meta.url));
+const outil = (nom) => path.join(OUTILS, nom);
 
 const depot = process.argv[2];
 if (!depot || depot.startsWith('--')) { console.error('usage : node outils/ajouter.mjs <dépôt> [--sans-inventaire] [--sans-pull]'); process.exit(1); }
@@ -24,17 +31,17 @@ if (!fs.existsSync(dosDepot) || !fs.existsSync(path.join(dosDepot, '.git'))) {
   console.error(`${fs.existsSync(dosDepot) ? 'pas un clone Git' : 'dépôt introuvable'} : ${dosDepot}\nLe cloner à côté de la bibliothèque (l'inventaire lit son dernier commit) :\n  git clone https://github.com/Kiwi570/${depot}.git ${dosDepot}`);
   process.exit(1);
 }
-const lancer = (cmd, args, opts = {}) => { console.log(`> ${cmd} ${args.join(' ')}`); execFileSync(cmd, args, { stdio: 'inherit', cwd: RACINE, ...opts }); };
+const lancer = (cmd, args, opts = {}) => { console.log(`> ${cmd} ${args.map((a) => a.startsWith(OUTILS) ? path.relative(process.cwd(), a) : a).join(' ')}`); execFileSync(cmd, args, { stdio: 'inherit', cwd: RACINE, env: { ...process.env, BIBLIO: RACINE }, ...opts }); };
 
 if (!process.argv.includes('--sans-pull') && fs.existsSync(path.join(dosDepot, '.git'))) {
   try { lancer('git', ['-C', dosDepot, 'pull', '--ff-only', '-q']); } catch { console.warn('  pull impossible : on continue avec la copie locale'); }
 }
 if (!process.argv.includes('--sans-inventaire')) {
-  lancer('node', ['outils/identite.mjs', depot]);
-  lancer('node', ['outils/inventaire.mjs', depot]);
+  lancer('node', [outil('identite.mjs'), depot]);
+  lancer('node', [outil('inventaire.mjs'), depot]);
 }
 
-lancer('node', ['outils/grille.mjs', depot]);
+lancer('node', [outil('grille.mjs'), depot]);
 
 const fNotes = path.join(RACINE, 'notes-manuelles', `${depot}.json`);
 if (!fs.existsSync(fNotes)) {
@@ -47,7 +54,7 @@ if (!fs.existsSync(fNotes)) {
   };
   ecrireJson(fNotes, gabarit);
   const planche = path.join(RACINE, 'inventaire', 'brut', `planche-${depot}.jpg`);
-  try { execFileSync('python3', [path.join(RACINE, 'outils', 'planche.py'), depot, planche], { cwd: RACINE, stdio: 'ignore' }); } catch {}
+  try { execFileSync('python3', [outil('planche.py'), depot, planche], { cwd: RACINE, stdio: 'ignore', env: { ...process.env, BIBLIO: RACINE } }); } catch {}
   console.log(`\nGabarit écrit : notes-manuelles/${depot}.json (${inv.blocs.length} blocs).`);
   console.log(`Planche contact : ${path.relative(RACINE, planche)}. Valeurs permises : taxonomie.json ; format : en tête de outils/fiches.mjs.`);
   console.log(`Complète rôle, description, animations, note et pièges de chaque bloc (ou "ignorer": "raison"), puis relance : node outils/ajouter.mjs ${depot} --sans-inventaire`);
@@ -59,12 +66,12 @@ if (!fs.existsSync(path.join(AUDIT, depot, 'notes.json')) && !fs.existsSync(path
   console.error(`\nFiche d'audit manquante (${path.join(AUDIT, depot, 'notes.json')}). L'écrire d'abord, en regardant les captures et le rapport\ndu script d'audit du projet : node outils/fiche-audit.mjs <fiche.json> (format en tête du script), puis relancer\nnode outils/ajouter.mjs ${depot} --sans-inventaire`);
   process.exit(1);
 }
-lancer('node', ['outils/fiches.mjs', depot]);
-lancer('node', ['outils/relier-modules.mjs']);
+lancer('node', [outil('fiches.mjs'), depot]);
+lancer('node', [outil('relier-modules.mjs')]);
 const touches = execFileSync('git', ['status', '--porcelain', 'notes-manuelles'], { cwd: RACINE, encoding: 'utf8' }).split('\n').map(l => l.slice(3).match(/notes-manuelles\/(.+)\.json$/)?.[1]).filter(d => d && d !== depot);
-for (const d of touches) lancer('node', ['outils/fiches.mjs', d]);
-lancer('node', ['outils/indexer.mjs']);
-lancer('node', ['outils/palmares.mjs']);
-try { lancer('node', ['outils/valider.mjs']); } catch { console.error('\nValidation en erreur : corriger les lignes ERREUR ci-dessus, puis relancer avec --sans-inventaire.'); process.exit(1); }
+for (const d of touches) lancer('node', [outil('fiches.mjs'), d]);
+lancer('node', [outil('indexer.mjs')]);
+lancer('node', [outil('palmares.mjs')]);
+try { lancer('node', [outil('valider.mjs')]); } catch { console.error('\nValidation en erreur : corriger les lignes ERREUR ci-dessus, puis relancer avec --sans-inventaire.'); process.exit(1); }
 console.log(`\n${depot} ajouté. Relire la fiche maquettes/${depot}.json, puis commiter (message sans apostrophe).`);
 console.log(`Leçons : relire journaux/${depot}.json (s'il existe) et le rapport d'audit du projet, proposer 0 à 3 leçons générales à l'utilisateur, et écrire celles qu'il valide dans lecons/${depot.replace(/-maquette$/, '')}.md (un fichier par projet ; format dans lecons.md), dans le même commit. Ne jamais proposer de mise à jour de la skill pendant un projet.`);

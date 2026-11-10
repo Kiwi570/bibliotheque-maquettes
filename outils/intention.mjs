@@ -47,11 +47,26 @@ const palmares = lireJson(path.join(RACINE, 'palmares.json'), { roles: {} }).rol
 const dansPalmares = new Set(Object.values(palmares).flat().map((x) => x.id));
 const manque = [];
 const aRegarder = [];
+/* Erreurs de format : jamais couvertes par « deja_vu_voulu » (la dispense ne vaut que pour une ressemblance assumée ;
+   audit externe : une planche vide ou hors taxonomie passait avec une dispense). */
+const erreurs = [];
+if (!Array.isArray(d.directions) || !d.directions.length) erreurs.push('aucune direction (deux ou trois attendues)');
+else if (d.directions.length > 4) erreurs.push(`${d.directions.length} directions : quatre au plus`);
 
 /* ---------- Déjà vu : les trois dernières maquettes, plus les récentes hors bibliothèque ---------- */
 const FIXES = new Set(TAXO.famille_points_fixes || []);
 const FORMES = ['glisse', 'iris', 'vague', 'rideau', 'propre'];
-const recentes = (d.recentes || []).map((r) => ({ depot: r.nom || 'récente', client: r.nom, plan: r.plan || null,
+for (const [k, r] of (d.recentes || []).entries()) {
+  if (r.plan && !TAXO.plan.includes(r.plan)) erreurs.push(`recentes[${k}] (${r.nom || '?'}) : plan « ${r.plan} » hors taxonomie`);
+  const hors = (r.familles || []).filter((x) => !TAXO.famille.includes(x));
+  if (hors.length) erreurs.push(`recentes[${k}] (${r.nom || '?'}) : famille(s) hors taxonomie : ${hors.join(', ')}`);
+  if (r.voile && !FORMES.includes(r.voile)) erreurs.push(`recentes[${k}] (${r.nom || '?'}) : voile « ${r.voile} » (${FORMES.join(', ')})`);
+}
+/* Une « récente » déjà entrée dans la bibliothèque n'est pas comptée deux fois : la fiche de la bibliothèque l'emporte. */
+const cle = (t) => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/-maquette$/, '').replace(/[^a-z0-9]/g, '');
+const dejaDansBib = new Set(fs.readdirSync(path.join(RACINE, 'maquettes')).filter((x) => x.endsWith('.json')).map((x) => cle(x.replace(/\.json$/, ''))));
+for (const r of d.recentes || []) if (dejaDansBib.has(cle(r.nom))) console.log(`(récente « ${r.nom} » déjà dans la bibliothèque : sa fiche est utilisée)`);
+const recentes = (d.recentes || []).filter((r) => !dejaDansBib.has(cle(r.nom))).map((r) => ({ depot: r.nom || 'récente', client: r.nom, plan: r.plan || null,
   familles_accueil: (r.familles || []).filter((x) => !FIXES.has(x)), modules: r.modules || [], voile: r.voile || null, hors_bibliotheque: true }));
 const dernieres = [...recentes, ...dernieresMaquettes(3, d.depot ? [d.depot] : [])].slice(0, 3);
 const nomCourt = (m) => (m.hors_bibliotheque ? String(m.client) : String(m.depot).replace(/-maquette$/, ''));
@@ -69,8 +84,11 @@ function dejaVu(dir, n, toutes) {
   const g = dir.grille || {}, lignes = [], alertes = [];
   const ou = (pred) => dernieres.filter(pred).map(nomCourt);
   /* Plan */
-  if (!dir.plan) alertes.push('plan de la page absent (taxonomie : plan)');
-  else if (!TAXO.plan.includes(dir.plan)) alertes.push(`plan « ${dir.plan} » inconnu (${TAXO.plan.join(', ')})`);
+  const erreur = (t) => erreurs.push(`direction ${n + 1} : ${t}`);
+  if (!dir.nom) erreur('nom absent');
+  if (!(dir.sections || []).length) erreur('aucune section reprise de la bibliothèque');
+  if (!dir.plan) erreur('plan de la page absent (taxonomie : plan)');
+  else if (!TAXO.plan.includes(dir.plan)) erreur(`plan « ${dir.plan} » hors taxonomie (${TAXO.plan.join(', ')})`);
   else {
     const vu = dernieres.slice(0, 2).filter((m) => m.plan === dir.plan).map(nomCourt);
     const autre = toutes.findIndex((x, k) => k !== n && x.plan === dir.plan);
@@ -81,15 +99,17 @@ function dejaVu(dir, n, toutes) {
   /* Familles */
   const fams = [...new Set([...(g.familles || []), ...(g.signature ? [g.signature] : [])])];
   const inconnues = fams.filter((x) => !TAXO.famille.includes(x));
-  if (inconnues.length) alertes.push(`famille(s) inconnue(s) : ${inconnues.join(', ')}`);
+  if (inconnues.length) erreur(`famille(s) hors taxonomie : ${inconnues.join(', ')}`);
+  if (g.signature && !(g.familles || []).includes(g.signature)) erreur(`signature « ${g.signature} » absente de grille.familles`);
+  if (g.forme_voile && !FORMES.includes(g.forme_voile)) erreur(`forme_voile « ${g.forme_voile} » (${FORMES.join(', ')})`);
   const modernes = fams.filter((x) => TAXO.famille.includes(x) && !FIXES.has(x));
-  if (modernes.length < 3) alertes.push(`${modernes.length} famille(s) moderne(s) sur l'accueil (3 au moins, hors ${[...FIXES].join(', ')})`);
+  if (modernes.length < 3) erreur(`${modernes.length} famille(s) moderne(s) sur l'accueil (3 au moins, hors ${[...FIXES].join(', ')})`);
   const vues = modernes.filter((x) => dernieres.some((m) => m.familles_accueil.includes(x)));
   if (vues.length > 1) alertes.push(`${vues.length} familles déjà vues sur les trois dernières (${vues.map(libelle).join(', ')}) : une au plus`);
   if (g.signature && vues.includes(g.signature)) alertes.push(`effet signature « ${libelle(g.signature)} » déjà vu`);
   for (const x of modernes) { const o = ou((m) => m.familles_accueil.includes(x)); lignes.push([x === g.signature ? 'Famille signature' : 'Famille', libelle(x), o.length ? `déjà vue : ${o.join(', ')}` : 'nouvelle', !o.length]); }
   /* Voile */
-  const forme = g.forme_voile || FORMES.find((f) => new RegExp(`\\b${f}\\b`, 'i').test(g.voile || '')) || null;
+  const forme = (FORMES.includes(g.forme_voile) && g.forme_voile) || FORMES.find((f) => new RegExp(`\\b${f}\\b`, 'i').test(g.voile || '')) || null;
   if (forme && forme !== 'propre' && dernieres[0] && dernieres[0].voile === forme) alertes.push(`voile « ${forme} », comme ${nomCourt(dernieres[0])}`);
   if (forme) lignes.push(['Forme du voile', forme, forme !== 'propre' && dernieres[0]?.voile === forme ? `comme ${nomCourt(dernieres[0])}` : 'différente de la dernière', !(forme !== 'propre' && dernieres[0]?.voile === forme)]);
   /* Modules signature */
@@ -239,5 +259,6 @@ footer { margin-top: 40px; color: var(--doux); font-size: .875rem; }
 fs.writeFileSync(sortie, html);
 console.log(`planche d'intention : ${sortie} (${Math.round(fs.statSync(sortie).size / 1024)} Ko, ${(d.directions || []).length} direction(s))`);
 if (manque.length) { console.log(`A REGARDER : section(s) introuvable(s) dans la bibliothèque : ${manque.join(', ')}`); process.exitCode = 1; }
-if (aRegarder.length) { console.log(`A REGARDER : déjà vu ou incomplet (corriger les directions, ou « deja_vu_voulu » avec la raison) :\n  ${aRegarder.join('\n  ')}`); process.exitCode = 1; }
-else console.log(`déjà vu : rien de visible ne reprend ${dernieres.map(nomCourt).join(', ') || 'les dernières maquettes'}`);
+if (erreurs.length) { console.log(`ERREUR : planche invalide (à corriger ; « deja_vu_voulu » ne s'applique pas ici) :\n  ${erreurs.join('\n  ')}`); process.exitCode = 1; }
+if (aRegarder.length) { console.log(`A REGARDER : déjà vu (corriger les directions, ou « deja_vu_voulu » avec la raison d'une reprise voulue) :\n  ${aRegarder.join('\n  ')}`); process.exitCode = 1; }
+else if (!erreurs.length) console.log(`déjà vu : rien de visible ne reprend ${dernieres.map(nomCourt).join(', ') || 'les dernières maquettes'}`);

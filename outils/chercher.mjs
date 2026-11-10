@@ -17,6 +17,7 @@
 //   --plan         plan de la page d'accueil (taxonomie : plan) : sections d'accueil des maquettes qui l'ont (plan noté à la main)
 //   --module (seulement ce qui existe en module), --sans <dependance>, --note-min N (1-5)
 //   --strict       les critères du client deviennent obligatoires (activité exacte, besoin, luminosité…)
+//   --par-maquette N  au plus N sections d'une même maquette dans les résultats (3 par défaut ; 0 : pas de limite)
 // node outils/chercher.mjs --dernieres [N] : les N dernières maquettes (5 par défaut) avec leur plan, les familles de leur accueil,
 //           les modules repris, la forme du voile, l'objet manipulé et le fil conducteur, pour ne rien redonner au client suivant
 //           (« Chaque maquette est unique », partie 2 de la skill). En bas : les familles et les plans encore libres.
@@ -31,13 +32,14 @@ import { deduireModule, besoins as besoinsDe } from './deduire.mjs';
 
 const args = process.argv.slice(2);
 const f = { activite: [], concept: [], ambiance: [], luminosite: [], ton: [], univers: [], besoin: [], role: [], animation: [], interaction: [], dependance: [], telephone: [], famille: [], impact: [], plan: [], sans: [] };
-const mots = [], metierMots = []; let max = 15, json = false, seulModules = false, noteMin = 1, strict = false, dernieres = 0;
+const mots = [], metierMots = []; let max = 15, json = false, seulModules = false, noteMin = 1, strict = false, dernieres = 0, parMaquette = 3;
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
   if (a === '--json') json = true;
   else if (a === '--module' || a === '--modules') seulModules = true;
   else if (a === '--strict') strict = true;
   else if (a === '--max') max = +args[++i];
+  else if (a === '--par-maquette') parMaquette = +args[++i];
   else if (a === '--note-min') noteMin = +args[++i];
   else if (a === '--metier' || a === '--metiers') metierMots.push(...String(args[++i] || '').split(/[\s,]+/).filter((x) => x.length > 2));
   else if (a === '--dernieres' || a === '--derniere') dernieres = /^\d+$/.test(args[i + 1] || '') ? +args[++i] : 5;
@@ -49,6 +51,8 @@ for (let i = 0; i < args.length; i++) {
     for (const x of String(v).split(',')) { if (!liste.includes(x)) { console.error(`« ${x} » n'est pas dans la taxonomie (${k}) : ${liste.join(', ')}`); process.exit(1); } f[k].push(x); }
   } else mots.push(a);
 }
+/* Sortie complète avant de quitter : process.exit() juste après console.log coupait un long JSON écrit dans un tube (64 Ko). */
+async function finir(texte) { if (texte != null) await new Promise((r) => process.stdout.write(texte + '\n', r)); process.exit(0); }
 const norm = (s) => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const racine = (w) => norm(w).replace(/(aux|eaux|s|x)$/, '');
 const motsN = mots.map(racine).filter(Boolean);
@@ -64,16 +68,15 @@ if (dernieres) {
   const vues = new Set(l.flatMap((m) => m.familles_accueil)), plans = new Set(l.map((m) => m.plan).filter(Boolean));
   const fixes = new Set(TAXO.famille_points_fixes || []);
   const libres = TAXO.famille.filter((x) => !fixes.has(x) && !vues.has(x)), plansLibres = TAXO.plan.filter((x) => !plans.has(x));
-  if (json) { console.log(JSON.stringify({ maquettes: l, familles_libres: libres, plans_libres: plansLibres }, null, 1)); process.exit(0); }
-  console.log(`Les ${l.length} dernières maquettes : ne rien leur reprendre de visible (plan, familles de l'accueil, objet, voile, fil, apparence des modules).\n`);
-  for (const m of l) console.log(`${m.date}  ${m.depot}  · ${m.activite.join(', ')}
+  if (json) await finir(JSON.stringify({ maquettes: l, familles_libres: libres, plans_libres: plansLibres }, null, 1));
+  const lignes = [`Les ${l.length} dernières maquettes : ne rien leur reprendre de visible (plan, familles de l'accueil, objet, voile, fil, apparence des modules).\n`];
+  for (const m of l) lignes.push(`${m.date}  ${m.depot}  · ${m.activite.join(', ')}
         plan ${m.plan || 'non noté'} · voile ${m.voile || 'non relevé'}
         familles de l'accueil : ${m.familles_accueil.join(', ') || 'aucune relevée'}${m.points_fixes.length ? ` (points fixes : ${m.points_fixes.join(', ')})` : ''}
         modules : ${m.modules.join(', ') || 'aucun relié'}
         objet ${m.objet || 'non noté'} · fil ${m.fil || 'non noté'}\n`);
-  console.log(`Familles libres (absentes de ces accueils) : ${libres.join(', ') || 'aucune'}`);
-  console.log(`Plans libres : ${plansLibres.join(', ')}`);
-  process.exit(0);
+  lignes.push(`Familles libres (absentes de ces accueils) : ${libres.join(', ') || 'aucune'}`, `Plans libres : ${plansLibres.join(', ')}`);
+  await finir(lignes.join('\n'));
 }
 
 /* Proximité avec le client, et pourquoi (affiché à côté de chaque résultat). */
@@ -106,7 +109,10 @@ const res = [];
 for (const m of Object.values(maquettes)) {
   const client = { activites: m.activite, metierTexte: [m.metier, m.client].join(' '), besoins: m.besoins || [], luminosite: m.luminosite, ton: m.ton || [], univers: m.univers || [], ambiance: m.ambiance, concept: m.concept };
   if (exclueParStrict(client)) continue;
-  const { p, pourquoi } = proximite(client);
+  /* Les besoins comptent section par section : un besoin de la maquette ne se propage plus à toutes ses sections (le voile
+     d'une brasserie remontait pour un avocat parce que la maquette avait « rendez-vous » ; audit externe). Un besoin de la
+     maquette que la section ne porte pas compte encore un peu (+0,8) : c'est le contexte. */
+  const { p, pourquoi } = proximite({ ...client, besoins: [] });
   for (const id of m.sections) {
     const s = lireJson(path.join(RACINE, 'sections', id + '.json'));
     if (seulModules && !s.modules?.length && !s.module) continue;
@@ -117,9 +123,18 @@ for (const m of Object.values(maquettes)) {
     if (f.sans.length && s.dependances.some((d) => f.sans.includes(d))) continue;
     const t = texteOk([s.titre, s.description, ...(s.pieges || []), ...(s.particularites || []), m.client, m.metier, ...m.activite].join(' '));
     if (t === null) continue;
-    const sc = s.note_qualite * 2 + (s.reutilisable ? 1 : 0) + (s.module ? 1 : 0) + p + t;
-    res.push({ type: 'section', id: s.id, score: Math.round(sc * 10) / 10, note: s.note_qualite, role: s.role, titre: s.titre, animations: s.animations, familles: s.familles || [], impact: s.impact, module: s.module, modules: s.modules,
-      metier: m.metier, activite: m.activite, pourquoi, fiche: `sections/${s.id}.json`, capture: s.medias.capture || null, video: s.medias.video || null, en_ligne: m.url + (s.page === 'index' ? '' : '/' + s.page) });
+    let pb = 0; const pq = [...pourquoi];
+    if (f.besoin.length) {
+      const bs = besoinsDe([s], { interactions: [] });
+      const ici = bs.filter((b) => f.besoin.includes(b)), contexte = (m.besoins || []).filter((b) => f.besoin.includes(b) && !bs.includes(b));
+      pb = 2.5 * ici.length + 0.8 * contexte.length;
+      if (ici.length) pq.push(`besoin ${ici.join(', ')}`); else if (contexte.length) pq.push(`besoin de la maquette (${contexte.join(', ')})`);
+    }
+    /* Sans capture, une section ne se montre pas sur la planche d'intention : elle passe derrière. */
+    const sansCapture = !s.medias?.capture;
+    const sc = s.note_qualite * 2 + (s.reutilisable ? 1 : 0) + (s.module ? 1 : 0) + p + pb + t - (sansCapture ? 1.5 : 0);
+    res.push({ type: 'section', id: s.id, maquette: m.depot, score: Math.round(sc * 10) / 10, note: s.note_qualite, role: s.role, titre: s.titre || `(${s.role}, sans titre)`, animations: s.animations, familles: s.familles || [], impact: s.impact, module: s.module, modules: s.modules,
+      metier: m.metier, activite: m.activite, pourquoi: sansCapture ? [...pq, 'sans capture'] : pq, fiche: `sections/${s.id}.json`, capture: s.medias.capture || null, video: s.medias.video || null, en_ligne: m.url + (s.page === 'index' ? '' : '/' + s.page) });
   }
 }
 // Modules
@@ -129,6 +144,7 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   if (f.plan.length) break; // un plan est celui d'une maquette : les modules n'en ont pas
   if (!inter([m.role], f.role) || !inter(m.animations, f.animation) || !inter(m.dependances, f.dependance)) continue;
   if (f.interaction.length && !inter(m.interactions || [], f.interaction)) continue;
+  if (!inter([m.telephone], f.telephone)) continue;
   if (f.sans.length && m.dependances.some((x) => f.sans.includes(x))) continue;
   const notes = fs.existsSync(path.join(RACINE, 'modules', d, 'NOTES.md')) ? fs.readFileSync(path.join(RACINE, 'modules', d, 'NOTES.md'), 'utf8') : '';
   const dm = deduireModule(m, notes);
@@ -157,12 +173,17 @@ for (const d of liste(path.join(RACINE, 'modules'))) {
   res.push({ type: 'module', id: m.nom, score: Math.round((12 + p + t) * 10) / 10, role: m.role, titre: m.titre, animations: m.animations, familles: dm.familles, impact: dm.impact, pourquoi,
     dossier: `modules/${m.nom}/`, capture: `modules/${m.nom}/apercu.jpg`, origine: m.origine, provenance: m.provenance || 'projet', inspirations: m.inspirations || [], tests: Object.values(m.tests || {}).every((v) => (typeof v === 'number' ? v < 0.1 : /^(ok|n\/a|0 erreur)$/.test(v))) ? 'ok' : 'à revoir' });
 }
-res.sort((a, b) => b.score - a.score || (a.type === 'module' ? -1 : 1));
-const out = res.slice(0, max);
-if (json) { console.log(JSON.stringify(out, null, 1)); process.exit(0); }
-if (!out.length) { console.log('Aucun résultat. Retirez un filtre ou un mot.'); process.exit(0); }
+/* Tri stable : score, puis module avant section, puis identifiant (l'ancien comparateur n'était pas un ordre cohérent). */
+res.sort((a, b) => b.score - a.score || (a.type === b.type ? 0 : a.type === 'module' ? -1 : 1) || String(a.id).localeCompare(String(b.id)));
+/* Variété : au plus --par-maquette sections d'une même maquette (3 par défaut ; 0 pour tout voir). Quatre sections du même
+   château occupaient le haut du classement d'une pâtisserie (audit externe). */
+const parDepot = new Map(); let masquees = 0;
+const varies = parMaquette > 0 ? res.filter((r) => { if (r.type !== 'section') return true; const n = (parDepot.get(r.maquette) || 0) + 1; parDepot.set(r.maquette, n); if (n > parMaquette) { masquees++; return false; } return true; }) : res;
+const out = varies.slice(0, max);
+if (json) await finir(JSON.stringify(out, null, 1));
+if (!out.length) await finir('Aucun résultat. Retirez un filtre ou un mot.');
 if (f.activite.length && voisins.size) console.log(`Activités voisines prises en compte : ${[...voisins].join(', ')}`);
-console.log(`${res.length} résultat${res.length > 1 ? 's' : ''}${res.length > max ? ` (les ${max} premiers)` : ''} :\n`);
+console.log(`${varies.length} résultat${varies.length > 1 ? 's' : ''}${varies.length > max ? ` (les ${max} premiers)` : ''}${masquees ? ` · ${masquees} section(s) masquée(s) au-delà de ${parMaquette} par maquette (--par-maquette 0 pour tout voir)` : ''} :\n`);
 for (const r of out) {
   const effets = [r.impact, ...(r.familles || [])].filter(Boolean).join(', ');
   const pq = r.pourquoi?.length ? `  ← ${r.pourquoi.join(', ')}` : '';

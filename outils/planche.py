@@ -4,7 +4,8 @@ python3 outils/planche.py <depot> <sortie.jpg> [p1440|m390] [colonnes]
 import json, os, sys
 from PIL import Image, ImageDraw
 
-racine = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# La bibliothèque : BIBLIO (passé par ajouter.mjs quand l'outil vient de la skill), sinon le dossier parent du script.
+racine = os.environ.get('BIBLIO') or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 depot, sortie = sys.argv[1], sys.argv[2]
 fmt = sys.argv[3] if len(sys.argv) > 3 else 'p1440'
 cols = int(sys.argv[4]) if len(sys.argv) > 4 else (4 if fmt == 'p1440' else 8)

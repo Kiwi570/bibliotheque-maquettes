@@ -44,7 +44,7 @@ export function besoins(sections, maquette = {}) {
     if (/\bdons?\b|faire un don|adhe(sion|rer|rez)|parrain|cagnotte/.test(t)) b.add('dons');
     if (r === 'carte' && /zone|rayon|intervention|secteur|deplac|perimetre/.test(t)) b.add('zone-d-intervention');
   }
-  if (b.has('vendre')) b.delete('catalogue');
+  /* « vendre » n'efface plus « catalogue » : une boutique a souvent aussi une carte ou un catalogue à parcourir (audit externe). */
   return TAXO.besoin.filter((x) => b.has(x));
 }
 export function deduireMaquette(fiche, sections, manuel = {}) {

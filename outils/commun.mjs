@@ -136,7 +136,11 @@ export function dernieresMaquettes(n, sauf = []) {
     for (const o of String(mj?.origine || '').split(',').map((x) => x.trim().split('/')[0]).filter(Boolean)) (parOrigine[o] ||= []).push(nom);
   }
   const maquettes = liste(path.join(RACINE, 'maquettes')).filter((x) => x.endsWith('.json')).map((x) => lireJson(path.join(RACINE, 'maquettes', x)));
-  return maquettes.filter((m) => !sauf.includes(m.depot)).sort((a, b) => (b.date_commit || '').localeCompare(a.date_commit || '')).slice(0, n).map((m) => {
+  /* Ordre réel : l'heure du dernier commit (inventaire), pas seulement le jour de la fiche (audit externe : deux maquettes du
+     même jour étaient départagées au hasard). */
+  const heure = (m) => lireJson(path.join(RACINE, 'inventaire', `${m.depot}.json`), {})?.date_commit || m.date_commit || '';
+  for (const m of maquettes) m._heure = heure(m);
+  return maquettes.filter((m) => !sauf.includes(m.depot)).sort((a, b) => b._heure.localeCompare(a._heure) || a.depot.localeCompare(b.depot)).slice(0, n).map((m) => {
     const fam = new Set(), mods = new Set(parOrigine[m.depot] || []);
     for (const id of m.sections) {
       const s = lireJson(path.join(RACINE, 'sections', id + '.json'), null);
