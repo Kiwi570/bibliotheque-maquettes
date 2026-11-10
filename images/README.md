@@ -18,7 +18,7 @@ Toutes les commandes se lancent depuis la racine du projet du client, avec le ch
    `[{ "source": "recu/salle.jpg", "nom": "ouverture", "role": "ouverture", "alt": "Salle au matin", "mobile": true, "zone_texte": "gauche" }]`.
    `role` vient d'`emplacements.json`. `mobile` vaut `true` ou un ratio (`"9:16"`). `zone_texte` vaut gauche, droite, haut ou bas. Facultatifs : `cadrage: [x, y]` en %, `ratio`, `largeurs`, `page` (image de partage de cette page), `source_mobile`.
    Pour une image à générer, la source va dans `recu/grok/` et l'entrée prend en plus `page`, `emplacement`, `priorite`, `scene` (anglais), `gabarit` ou `consigne_scene`.
-4. **Grok** : `node $I/grok.mjs plan-images.json --activite <activité> --direction direction.json --sortie ~/Downloads/<client>-images-grok.docx`.
+4. **Grok** : `node $I/grok.mjs plan-images.json --activite <activité> --direction _suivi/direction.json --sortie _suivi/<client>-images-grok.docx`.
    Une consigne anglaise complète par image, au format Grok (1168×784 ou 784×1168), avec les interdits communs et ceux de l'activité. Les gabarits sont dans `gabarits-grok/` (voir `LISEZMOI.md`). Écrit aussi `grok-consignes.json`.
 5. **Vérifier Grok** : `node $I/verifier-grok.mjs recu/grok/ plan-images.json`. Vérifie fichiers manquants, ratio (à 5 % près) et largeur, texte et filigrane, visage net, bordure, et compte les mains (indicatif, à regarder).
    Écrit `recu/grok/planche.jpg` et `verification.json`, avec une consigne corrigée pour chaque image à régénérer.
