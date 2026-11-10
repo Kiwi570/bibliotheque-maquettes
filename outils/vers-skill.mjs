@@ -50,7 +50,7 @@ Copie des dossiers \`outils/\` et \`images/\` (scripts seulement) du dépôt Kiw
 Pourquoi : une session de projet peut refuser de lancer du code téléchargé (le clone de la bibliothèque). Ces copies font partie de la skill et tournent ; le clone ne sert que de données.
 
 Dans un projet : \`cp -r <skill>/bibliotheque _biblio\`, puis \`node _biblio/preparer.mjs\` (relie sharp et Playwright déjà installés, sinon installe sharp ; Playwright n'est jamais réinstallé). Les commandes trouvent seules le clone (\`bibliotheque-maquettes\` dans le dossier courant, son parent ou ~/Downloads) ; sinon \`BIBLIO=<dossier du clone>\` devant la commande.
-- \`node _biblio/outils/chercher.mjs …\`, \`node _biblio/outils/intention.mjs intention.json\`, \`node _biblio/outils/assembler.mjs …\`, \`node _biblio/outils/tester-module.mjs …\`
+- \`node _biblio/outils/chercher.mjs …\`, \`node _biblio/outils/intention.mjs _suivi/intention.json --sortie _suivi/intention-<client>.html\` (fichiers de travail dans _suivi/), \`node _biblio/outils/assembler.mjs …\`, \`node _biblio/outils/tester-module.mjs …\`
 - \`I=_biblio/images\` puis \`node $I/grok.mjs …\`, \`node $I/verifier-grok.mjs …\`, \`node $I/produire.mjs …\`, \`node $I/partage.mjs\`
 - à la validation de la maquette : \`node _biblio/outils/ajouter.mjs <dépôt>\` (écrit dans le clone, qui se livre en bundle comme d'habitude).
 `);
