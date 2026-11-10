@@ -1,0 +1,45 @@
+{
+ "id": "locomponairo-maquette/reserver-demande",
+ "maquette": "locomponairo-maquette",
+ "page": "reserver",
+ "titre": "Votre demande",
+ "role": "outil-interactif",
+ "description": "Demande en trois étapes (chambre, dates, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif, nuits et taxe de séjour calculées, tampon « Demande prête », lien vers la vraie réservation eviivo ; préremplie depuis ?chambre=",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "réservation-simulee",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "envol-vers-le-panier",
+ "modules": [
+  "envol-vers-le-panier"
+ ],
+ "code": {
+  "html": "reserver.html:258-310",
+  "css": "assets/css/socle.css:285-291 ; assets/css/site.css:37,715-718,743-768,773,786",
+  "js": "assets/js/site.js:15-98,519-621 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:3,8,12-32 ; assets/js/socle/calme.js:1"
+ },
+ "medias": {
+  "capture": "medias/locomponairo-maquette/reserver-demande-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/reserver-demande-m390.jpg"
+ },
+ "pieges": [
+  "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1284,
+  "hauteur_m390": 1968,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "calme"
+}

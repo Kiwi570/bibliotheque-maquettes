@@ -1,0 +1,812 @@
+{
+  "maquette": {
+    "metier": "chambre d'hôtes",
+    "client": "chambre d'hôtes de quatre chambres, maison vigneronne de 1850 à Pouzols (Hérault), garage fermé",
+    "activite": [
+      "hébergement",
+      "tourisme"
+    ],
+    "concept": [
+      "carnet",
+      "autre"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "artisanal"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--vin",
+      "secondaire": "--volet"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Instrument Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "« Quatre clés, quatre histoires » : tomette, lie-de-vin, vert volet, laiton, Fraunces SOFT et WONK",
+      "intro des clés qui tombent sur l'anneau, voile en trou de serrure",
+      "trousseau à faire tourner : la clé du bas désigne la chambre",
+      "maison de 1850 en coupe 3D qui se monte au défilement, toit qui se lève sur les quatre chambres, à faire pivoter à la main",
+      "cadran de 24 h à l'heure de Pouzols (arrivée, clés, petit-déjeuner, garage, départ) et statut d'arrivée du jour",
+      "réservation au tableau de la réception : la clé décrochée file jusqu'au récapitulatif, tampon « Demande prête », lien vers la vraie réservation",
+      "sarment de vigne qui pousse dans la marge de toutes les pages, une feuille par section"
+    ],
+    "reserves": [
+      "couloir des chambres, tampons « inclus » et ronde des alentours en dessous du palmarès de leur rôle",
+      "Séjour, Alentours et Réserver ouvrent sur la même mise en page ; cadran et ronde repris à l'identique entre l'accueil et leur page",
+      "mentions légales, tarifs, surface de Denise et notes d'avis à fournir ; Safari non testé"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "transition-de-page",
+      "masque",
+      "fil-conducteur",
+      "section-fixée",
+      "progression-fixée",
+      "révélation-texte",
+      "apparition-au-défilement",
+      "parallaxe",
+      "reactif-vitesse",
+      "marquee",
+      "webgl-shader",
+      "trace-svg"
+    ],
+    "interactions": [
+      "réservation-simulee",
+      "formulaire-par-étapes",
+      "schema-interactif",
+      "galerie-cliquable",
+      "filtres",
+      "comparateur",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "trousseau de quatre clés à faire tourner, une par chambre",
+      "fil": "sarment de vigne qui pousse dans la marge, une feuille par section, une grappe au bout"
+    }
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile lie-de-vin en trou de serrure : la serrure grandit depuis le point du clic jusqu'à couvrir l'écran, nom de la page et petite clé au centre, puis la page suivante s'ouvre par un trou de serrure centré sur son objet d'ouverture",
+      "animations": [
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Queue de la serrure qui dépassait en haut de l'écran au clic dans la navigation (flash) : queue raccourcie, départ abaissé à 24 % de la hauteur et durée allongée",
+        "Forme non convexe : clip-path polygon en evenodd avec le rectangle de l'écran, pas de circle()"
+      ],
+      "particularites": [
+        "voile-trou-de-serrure"
+      ],
+      "sans_capture": true
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Intro : les quatre clés tombent une à une sur l'anneau, une serrure se dessine, le trousseau tourne d'un quart de tour puis file vers le trousseau de l'accueil (versObjet) ; la page s'ouvre par un trou de serrure synchronisé avec le panneau",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Trousseau entier visible une image avant l'animation : état de départ des clés caché dans le style critique"
+      ],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : petite clé et nom de la maison, liens des pages, bouton Réserver lie-de-vin ; se cache en descendant",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran sombre sur téléphone, liens en Fraunces et lien « Réduire les animations »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Quatre chambres,quatre histoires.",
+      "role": "ouverture",
+      "description": "Façade de la maison en fond, titre en trois lignes qui montent, trousseau de quatre clés étiquetées à faire tourner à la main avec élan (souris, doigt, flèches) : la clé du bas désigne la chambre (nom, étage, surface, vue, lien) ; quatre puces pour aller droit à une chambre ; halo de soleil qui suit la souris et se couche au défilement",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "objet-a-faire-tourner",
+      "pieges": [
+        "Clé désignée décalée : le trousseau part à 45 degrés, l'index de la clé du bas tient compte de ce décalage",
+        "Étiquettes des clés à l'envers quand le trousseau tourne : elles contre-tournent",
+        "Halo de soleil masqué sur écran tactile, indice « Faites tourner » masqué sur téléphone",
+        "Lignes du titre masquées par overflow : jambages coupés ; découpe par clip-path"
+      ]
+    },
+    "maison": {
+      "titre": "Une maison de vigneron, depuis 1850.",
+      "role": "manifeste",
+      "description": "Titre aux axes de Fraunces qui s'adoucissent au défilement, manifeste dont les mots s'allument un à un, photo de l'allée en parallaxe et escalier aux carreaux de ciment",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "axes-au-defilement",
+      "pieges": [
+        "Axes changés à chaque image : texte remis en forme sans cesse, défilement saccadé ; par pas de 4, écrits seulement s'ils changent"
+      ]
+    },
+    "vignes": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bandeau plein cadre des vignes et de la garrigue (image générée) qui ondule en WebGL selon la vitesse de défilement, légende à la plume",
+      "animations": [
+        "webgl-shader",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coupe": {
+      "titre": "La maison, étage par étage.",
+      "role": "étapes",
+      "description": "Maison de 1850 en coupe 3D épinglée : garage voûté, étages, terrasses et pignon tombent en place au défilement, le toit se lève et la façade s'efface sur les quatre chambres colorées ; on l'attrape pour la faire pivoter avec élan ; les cinq étapes s'allument à gauche",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "objet-3d-qui-se-construit",
+      "pieges": [
+        "Variables écrites sur la racine à chaque image (rotation, ombres, chute) : toute la maison recalculée, accueil sous le seuil de fluidité ; rotation et chute en transform direct, ombres tous les 15 degrés",
+        "Section vide au premier écran si la maison part de zéro : elle est déjà commencée à l'arrivée",
+        "Toit trop haut à 1024×640 : levée réduite"
+      ]
+    },
+    "chambres": {
+      "titre": "Aux prénoms de nos grands-mères.",
+      "role": "produits",
+      "description": "Prénoms des quatre grands-mères en très grand qui défilent en sens contraire au défilement, puis quatre cartes photo avec leur étiquette écrite à la plume",
+      "animations": [
+        "marquee",
+        "reactif-vitesse",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Prénoms géants décoratifs : data-audit-ignorer et aria-hidden, les noms sont dans les cartes"
+      ]
+    },
+    "suite": {
+      "titre": "Deux chambres voisines, une terrasse fleurie.",
+      "role": "offre",
+      "description": "Plein écran sombre : la photo de la terrasse grandit jusqu'aux bords, « Isabelle + Denise » en très grand par-dessus, puis le texte de la suite familiale",
+      "animations": [
+        "section-fixée",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Textes de la fin visibles avant l'effet quand chacun avait son propre fondu : un seul conteneur data-fx-apres"
+      ]
+    },
+    "inclus": {
+      "titre": "En direct, tout est compris.",
+      "role": "offre",
+      "description": "« En direct, tout est compris » : quatre cartes (petit-déjeuner, garage, annulation, climatisation) tamponnées « Inclus » l'une après l'autre, deux photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Tampons cachés en scale 1,6 en attendant leur effet : la page débordait sur téléphone ; cachés en visibility, l'agrandissement vit seulement dans l'animation"
+      ]
+    },
+    "ce-soir": {
+      "titre": "On vous attend de 17 h à 20 h 30.",
+      "role": "contact",
+      "description": "Fond vert volet : cadran de 24 h à l'heure de Pouzols (arcs de l'arrivée, de l'option, des clés et du garage, point du départ), aiguille qui balaie à l'arrivée puis se pose sur l'heure ; statut du jour (« L'accueil ouvre à 17 h aujourd'hui ») et bouton pour prévenir de son arrivée",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Aiguille dessinée hors du cadran quand GSAP (svgOrigin) et une transformation CSS tournaient le même élément : groupe placé par translate, rotation en attribut sur un groupe enfant",
+        "Statut qui change de longueur : boîte de hauteur minimale fixe"
+      ],
+      "particularites": [
+        "cadran-24-h-a-l-heure-du-lieu"
+      ]
+    },
+    "distinctions": {
+      "titre": "Ce qu’en disent les guides et les voyageurs",
+      "role": "preuves",
+      "description": "Plaques cintrées des distinctions relevées sur le site actuel (Petit Futé, Booking, Gîtes de France, Kayak, Team 68°), lien vers les avis TripAdvisor",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Lien TripAdvisor sous 44 px de haut : cible tactile agrandie",
+        "Note d'avis « à compléter » sortie des plaques, dans un paragraphe à part"
+      ]
+    },
+    "alentours": {
+      "titre": "Saint-Guilhem, le Salagou, Navacelles…",
+      "role": "galerie",
+      "description": "Ronde 3D des sites des alentours (gravures, type, distance quand le site la donne) qui tourne au défilement, à la main avec élan et aux flèches",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "carrousel-3d",
+      "pieges": [
+        "Cartes cachées de la ronde encore lues et focalisables : inert et data-audit-ignorer sur celles de dos"
+      ]
+    },
+    "fin": {
+      "titre": "Votre clé vous attend.",
+      "role": "appel",
+      "description": "Photo de la porte d'entrée en arche, « Votre clé vous attend », réserver en direct ou appeler",
+      "animations": [
+        "révélation-image",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page sombre : adresse, téléphone, e-mail, « Maison ouverte toute l'année », sommaire, réseaux, réduire les animations, mentions légales à compléter, SIRET",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette clé n’ouvre aucune porte.",
+      "role": "page-404",
+      "description": "« Cette clé n'ouvre aucune porte » : une clé seule sur un lit (image générée) qui s'avance au défilement, titre lettre à lettre, retour à l'accueil ou aux chambres",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Titre lettre à lettre sur deux lignes : interligne d'au moins 1,25, sinon lignes qui se chevauchent à l'audit"
+      ]
+    },
+    "alentours-debut": {
+      "titre": "Partir de Pouzols.",
+      "role": "carte",
+      "description": "Carte gravée de l'Hérault : Pouzols au centre, routes qui se tracent vers les douze sites cités par la maison, médaillon de la 2 CV, mention « carte illustrative »",
+      "animations": [
+        "trace-svg",
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Étiquettes qui se chevauchent à l'ouest de la carte : sites de gauche ancrés à droite de leur point (gauche: true)",
+        "Distances : seulement celles données par le site actuel, les autres « à compléter »"
+      ]
+    },
+    "alentours-sites": {
+      "titre": "La ronde des sites.",
+      "role": "galerie",
+      "description": "La ronde des sites en grand, avec la photo des gorges de l'Hérault (image générée)",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "carrousel-3d",
+      "pieges": [
+        "Même ronde que sur l'accueil : à varier d'une page à l'autre"
+      ]
+    },
+    "alentours-randonnee": {
+      "titre": "Prêt pour votre randonnée ?",
+      "role": "manifeste",
+      "description": "Plein écran sombre : le sentier de garrigue grandit jusqu'aux bords, « Garrigue et cirques » en très grand",
+      "animations": [
+        "section-fixée",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Même titre coupé en deux que la suite de l'accueil : à varier"
+      ]
+    },
+    "alentours-tout-pres": {
+      "titre": "Sans reprendre la route bien loin.",
+      "role": "galerie",
+      "description": "Trois cartes des sorties proches : centre équestre à 5 minutes, marchés, Estivales de Lattes ; lien vers le site du tourisme",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "alentours-fin": {
+      "titre": "Le soir, on rentre à la maison.",
+      "role": "appel",
+      "description": "Lauriers du jardin en arche, « Le soir, on rentre à la maison », réserver en direct",
+      "animations": [
+        "révélation-image",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-debut": {
+      "titre": "Quatre portes, quatre grands-mères.",
+      "role": "ouverture",
+      "description": "Quatre portes cintrées vert volet qui s'entrouvrent sur la photo de leur chambre, prénom et étage dessous ; chaque porte mène à sa chambre dans le couloir",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Portes plates : manquent de relief à côté du palmarès"
+      ]
+    },
+    "chambres-couloir": {
+      "titre": "Chaque porte s’ouvre sur sa chambre.",
+      "role": "produits",
+      "description": "Couloir : pour chaque chambre, une porte épinglée s'ouvre au défilement sur sa photo, à côté de l'étiquette écrite à la plume, de la fiche (étage, surface, couchage, vue), des équipements, de trois vignettes et du bouton « Réserver Isabelle »",
+      "animations": [
+        "section-fixée",
+        "trace-svg",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Section sage à côté du palmarès : peu de mouvement en dehors des portes"
+      ]
+    },
+    "chambres-comparer": {
+      "titre": "Les quatre chambres côte à côte.",
+      "role": "produits",
+      "description": "Comparatif des quatre chambres côte à côte (étage, surface, couchage, vue, terrasse) avec filtres terrasse, côté jardin et deux lits, gardés dans l'adresse",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-equipements": {
+      "titre": "Ce que vous trouvez en ouvrant la porte.",
+      "role": "services",
+      "description": "Ce qu'on trouve dans chaque chambre, liste cochée, note sur le lit d'appoint enfant, deux photos de détails",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Équipements : seulement ceux que le site actuel cite (eau et biscuits retirés, introuvables)"
+      ]
+    },
+    "chambres-fin": {
+      "titre": "Laquelle sera la vôtre ?",
+      "role": "appel",
+      "description": "Porte-fenêtre de Denise en arche, « Laquelle sera la vôtre ? », réserver en direct",
+      "animations": [
+        "révélation-image",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Un appel suffit.",
+      "role": "ouverture",
+      "description": "« Un appel suffit » : le numéro en très grand, tamponné chiffre par chiffre, axes de police qui bougent au défilement, adresse et e-mail, bandeau de l'allée fleurie",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Numéro trop large à 320 px : largeur fit-content et taille bornée"
+      ]
+    },
+    "contact-acces": {
+      "titre": "Par l’A750, sortie Gignac.",
+      "role": "carte",
+      "description": "Plan d'accès : la route se trace de Montpellier à la sortie Gignac de l'A750 puis à Pouzols, étapes et distances, lien vers l'itinéraire",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Une question avant de venir ?",
+      "role": "contact",
+      "description": "Formulaire simulé à côté d'une photo de mur de pierre (image générée), tamponné « Reçu » à l'envoi",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-reseaux": {
+      "titre": "La maison en photos et en avis.",
+      "role": "contact",
+      "description": "Trois cartes photo vers Instagram, Facebook et TripAdvisor",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-debut": {
+      "titre": "Choisissez votre clé.",
+      "role": "ouverture",
+      "description": "Tableau de la réception sur papier quadrillé : cinq crochets (quatre chambres et la suite), on décroche une clé pour commencer sa demande",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Clé décrochée sans rien voir : le clic fait défiler jusqu'au récapitulatif avant l'envol, puis met le curseur dans la date d'arrivée",
+        "Noms des crochets coupés : étiquettes sous les crochets, pas sur les clés"
+      ],
+      "particularites": [
+        "tableau-a-cles-de-reception"
+      ]
+    },
+    "reserver-demande": {
+      "titre": "Votre demande",
+      "role": "outil-interactif",
+      "description": "Demande en trois étapes (chambre, dates, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif, nuits et taxe de séjour calculées, tampon « Demande prête », lien vers la vraie réservation eviivo ; préremplie depuis ?chambre=",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "envol-vers-le-panier",
+      "pieges": [
+        "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée"
+      ]
+    },
+    "reserver-cadeau": {
+      "titre": "Une nuit à offrir ?",
+      "role": "offre",
+      "description": "Cartes cadeaux : photo de la table du petit-déjeuner en arche, lien vers la boutique de la maison",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "votre-sejour-debut": {
+      "titre": "La maison, heure par heure.",
+      "role": "ouverture",
+      "description": "Fond vert volet : le grand cadran de 24 h à l'heure de Pouzols, heure actuelle lue dessous, arrivée et départ",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Même cadran que sur l'accueil : à varier"
+      ]
+    },
+    "votre-sejour-journee": {
+      "titre": "De 8 h 30 à 23 h.",
+      "role": "étapes",
+      "description": "Journée épinglée heure par heure (8 h 30, 11 h, 14 h 30, 17 h, 22 h, 23 h) : le soleil avance sur son arc, chaque étape montre sa photo et son heure en grand",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "votre-sejour-garage": {
+      "titre": "Un garage fermé, et de quoi poser casque et bottes.",
+      "role": "services",
+      "description": "Motards et cavaliers : garage voûté en photo qui s'avance, garage fermé et inclus, prise Green'Up, vestiaire, chaussons prêtés, plaque du partenaire Team 68°",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "votre-sejour-conditions": {
+      "titre": "Les conditions, sans petites lignes.",
+      "role": "faq",
+      "description": "Les conditions en six points numérotés, sans petites lignes, à côté de la table du petit-déjeuner",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "votre-sejour-questions": {
+      "titre": "Vos questions, nos réponses.",
+      "role": "faq",
+      "description": "Dix questions et réponses dépliables reprises du site actuel, escalier rouge en photo",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "votre-sejour-fin": {
+      "titre": "Tout est clair ? Il ne reste qu’à choisir sa chambre.",
+      "role": "appel",
+      "description": "Cour plantée en arche, « Tout est clair ? Il ne reste qu'à choisir sa chambre », réserver",
+      "animations": [
+        "révélation-image",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

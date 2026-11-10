@@ -35,6 +35,7 @@ Origine : `agence-ae-maquette` (accueil, « La maquette » : la maison qui se mo
 
 - Jamais d'`opacity` sous 1 sur une pièce ou une boîte : elle aplatit la 3D (tout devient plat d'un coup). L'apparition est posée sur les faces (`.o3d__f`).
 - Pas de `overflow: hidden` ni de `filter` sur `.o3d__objet` et ses enfants, pour la même raison.
+- Fluidité : les variables écrites sur la racine à chaque image (`--o3d-ry`, ombres `--o3d-o-*`, `--m` des pièces) sont héritées par toutes les faces, donc toute la maison est recalculée à chaque image (plus de la moitié des images lentes de l'accueil sur locomponairo, processeur ralenti 4 fois). Parade testée : rotation écrite en `transform` directement sur `.o3d__objet`, chute des pièces en `transform` sur chaque pièce, `--m` arrêtée à 1/3 (les faces sont alors opaques), ombres seulement tous les 15 degrés, et chaque valeur écrite seulement si elle a changé.
 - La lumière est calculée pour quatre orientations (avant, droite, arrière, gauche) : une boîte tournée de `--ry` garde l'ombre de son orientation d'origine, réserver `--ry` aux petits éléments.
 - Avec `tour` à 360, l'objet finit de trois quarts comme il a commencé : c'est ce que voient le mode calme et la capture. Une autre valeur laisse l'objet de dos à la fin.
 - Téléphone ou écran bas (moins de 900 × 600) : pas d'épinglage ; la scène passe avant les étapes et l'objet se monte pendant qu'elle traverse l'écran (du haut de la scène à 85 % de l'écran jusqu'à son bas à 35 %), les étapes s'allument en dessous, visibles.

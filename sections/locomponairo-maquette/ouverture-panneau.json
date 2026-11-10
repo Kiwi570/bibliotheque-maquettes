@@ -1,0 +1,51 @@
+{
+ "id": "locomponairo-maquette/ouverture-panneau",
+ "maquette": "locomponairo-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "alentours",
+  "chambres",
+  "contact",
+  "reserver",
+  "votre-sejour"
+ ],
+ "titre": "",
+ "role": "ouverture",
+ "description": "Intro : les quatre clés tombent une à une sur l'anneau, une serrure se dessine, le trousseau tourne d'un quart de tour puis file vers le trousseau de l'accueil (versObjet) ; la page s'ouvre par un trou de serrure synchronisé avec le panneau",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:78-153",
+  "css": "assets/css/socle.css:229-232 ; assets/css/site.css:73-79,504-505,647-651",
+  "js": "assets/js/site.js:624-654 ; assets/js/socle/ouverture.js:23-31,161-248"
+ },
+ "medias": {},
+ "pieges": [
+  "Trousseau entier visible une image avant l'animation : état de départ des clés caché dans le style critique"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "masque"
+ ],
+ "impact": "vivant"
+}

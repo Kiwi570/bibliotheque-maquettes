@@ -1,0 +1,48 @@
+{
+ "id": "locomponairo-maquette/reserver-debut",
+ "maquette": "locomponairo-maquette",
+ "page": "reserver",
+ "titre": "Choisissez votre clé.",
+ "role": "ouverture",
+ "description": "Tableau de la réception sur papier quadrillé : cinq crochets (quatre chambres et la suite), on décroche une clé pour commencer sa demande",
+ "animations": [
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "reserver.html:201-257",
+  "css": "assets/css/socle.css:268-270 ; assets/css/site.css:727-742,775,779-785,789-794,811,816-818",
+  "js": "assets/js/site.js:3,101-110,519-621,657-667,695 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,47-81,84-92,95-115,188-220 ; assets/js/socle/effets.js:27,40,152-159 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/locomponairo-maquette/reserver-debut-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/reserver-debut-m390.jpg",
+  "video": "medias/locomponairo-maquette/reserver-debut-p720.mp4"
+ },
+ "pieges": [
+  "Clé décrochée sans rien voir : le clic fait défiler jusqu'au récapitulatif avant l'envol, puis met le curseur dans la date d'arrivée",
+  "Noms des crochets coupés : étiquettes sous les crochets, pas sur les clés"
+ ],
+ "particularites": [
+  "tableau-a-cles-de-reception"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [],
+ "impact": "vivant"
+}

@@ -1,0 +1,62 @@
+{
+ "id": "locomponairo-maquette/div",
+ "maquette": "locomponairo-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "index",
+  "404",
+  "404",
+  "alentours",
+  "alentours",
+  "chambres",
+  "chambres",
+  "contact",
+  "contact",
+  "reserver",
+  "reserver",
+  "votre-sejour",
+  "votre-sejour"
+ ],
+ "titre": "",
+ "role": "transition-de-page",
+ "description": "Voile lie-de-vin en trou de serrure : la serrure grandit depuis le point du clic jusqu'à couvrir l'écran, nom de la page et petite clé au centre, puis la page suivante s'ouvre par un trou de serrure centré sur son objet d'ouverture",
+ "animations": [
+  "transition-de-page",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:69-77",
+  "css": "assets/css/socle.css:220-221 ; assets/css/site.css:83-85",
+  "js": "assets/js/socle/voile.js:2,20-24 ; assets/js/socle/transitions.js:54-73"
+ },
+ "medias": {},
+ "pieges": [
+  "Queue de la serrure qui dépassait en haut de l'écran au clic dans la navigation (flash) : queue raccourcie, départ abaissé à 24 % de la hauteur et durée allongée",
+  "Forme non convexe : clip-path polygon en evenodd avec le rectangle de l'écran, pas de circle()"
+ ],
+ "particularites": [
+  "voile-trou-de-serrure"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 65,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "masque"
+ ],
+ "impact": "vivant"
+}

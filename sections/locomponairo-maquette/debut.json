@@ -1,0 +1,54 @@
+{
+ "id": "locomponairo-maquette/debut",
+ "maquette": "locomponairo-maquette",
+ "page": "index",
+ "titre": "Quatre chambres,quatre histoires.",
+ "role": "ouverture",
+ "description": "Façade de la maison en fond, titre en trois lignes qui montent, trousseau de quatre clés étiquetées à faire tourner à la main avec élan (souris, doigt, flèches) : la clé du bas désigne la chambre (nom, étage, surface, vue, lien) ; quatre puces pour aller droit à une chambre ; halo de soleil qui suit la souris et se couche au défilement",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "objet-a-faire-tourner",
+ "modules": [
+  "objet-a-faire-tourner"
+ ],
+ "code": {
+  "html": "index.html:201-303",
+  "css": "assets/css/site.css:44,89-130,339,360-371,386-404,668-669,805,834-839,845,850",
+  "js": "assets/js/site.js:3,14-98,476-493,624-654,657-667,676,695 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,47-81,84-92,95-115,188-220 ; assets/js/socle/effets.js:28,360-404 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/locomponairo-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/debut-m390.jpg",
+  "video": "medias/locomponairo-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Clé désignée décalée : le trousseau part à 45 degrés, l'index de la clé du bas tient compte de ce décalage",
+  "Étiquettes des clés à l'envers quand le trousseau tourne : elles contre-tournent",
+  "Halo de soleil masqué sur écran tactile, indice « Faites tourner » masqué sur téléphone",
+  "Lignes du titre masquées par overflow : jambages coupés ; découpe par clip-path"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "objet-manipulable",
+  "lumiere-pointeur"
+ ],
+ "impact": "spectaculaire"
+}

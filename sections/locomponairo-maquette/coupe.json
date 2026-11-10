@@ -1,0 +1,53 @@
+{
+ "id": "locomponairo-maquette/coupe",
+ "maquette": "locomponairo-maquette",
+ "page": "index",
+ "titre": "La maison, étage par étage.",
+ "role": "étapes",
+ "description": "Maison de 1850 en coupe 3D épinglée : garage voûté, étages, terrasses et pignon tombent en place au défilement, le toit se lève et la façade s'efface sur les quatre chambres colorées ; on l'attrape pour la faire pivoter avec élan ; les cinq étapes s'allument à gauche",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "objet-3d-qui-se-construit",
+ "modules": [
+  "objet-3d-qui-se-construit"
+ ],
+ "code": {
+  "html": "index.html:334-362",
+  "css": "assets/css/site.css:38,145-203,339,612,654-665,843,853-858",
+  "js": "assets/js/site.js:159-242"
+ },
+ "medias": {
+  "capture": "medias/locomponairo-maquette/coupe-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/coupe-m390.jpg",
+  "video": "medias/locomponairo-maquette/coupe-p720.mp4"
+ },
+ "pieges": [
+  "Variables écrites sur la racine à chaque image (rotation, ombres, chute) : toute la maison recalculée, accueil sous le seuil de fluidité ; rotation et chute en transform direct, ombres tous les 15 degrés",
+  "Section vide au premier écran si la maison part de zéro : elle est déjà commencée à l'arrivée",
+  "Toit trop haut à 1024×640 : levée réduite"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1090,
+  "epinglee": true,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "3d",
+  "objet-manipulable",
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}
