@@ -1,6 +1,6 @@
 # jardins-hacienda-2-maquette
 
-<https://jardins-hacienda-2-maquette.vercel.app> · audit du 11/11/2026 · dernier commit 29fe295 du 11/11/2026
+<https://jardins-hacienda-2-maquette.vercel.app> · audit du 11/11/2026 · dernier commit e477c7e du 11/11/2026
 
 > Audit d'entrée en bibliothèque : script d'audit de la skill (standard en deux passages, puis complet sur 13 tailles et contre-audit ciblé), test « vrai visiteur » (7 missions, téléphone et ordinateur), regard neuf d'un relecteur séparé, inventaire de la bibliothèque et lecture des captures. Pas d'audit externe : la note est à confirmer.
 
@@ -30,6 +30,7 @@ Version 7 de « De midi à minuit » : la même journée à l'heure de la maison
 - Des modules accrochés à une heure et à un geste,Dix-sept modules restaurant de la bibliothèque, un par endroit, chacun justifié par le métier (ardoise, passe, cheminée, vitre de décembre, ciel du lieu) : la journée reste une histoire, pas une suite de gadgets.
 - La vraie assiette qui se dresse,La photo d'une assiette du chef découpée en couches qui se posent nettes sur la même assiette floue, puis la photo entière : le module garde son geste sans illustration plate.
 - Les vraies photos du lieu,21 photos du site actuel retenues sur 366, recadrées et éclaircies ; l'enseigne détourée devant le ciel réel de Moineville.
+- Le feu d'une seule vraie photo,Les flammes de la photo de la cheminée ondulent (bandes décalées par une onde qui monte), la lueur vacille sur la salle, les braises partent du foyer mesuré dans le repère de la photo.
 
 ## Défauts
 
@@ -51,10 +52,11 @@ Aucun.
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit de la skill | standard : 0 échec(s), 0 à regarder, 0 non lancé(s) |
+| Script d'audit de la skill | standard : 0 échec(s), 1 à regarder, 0 non lancé(s) |
 | Audit complet (13 tailles) | 7 échecs au premier passage (boutons et infos sous le premier écran sur écran bas, éclair d'épinglage et fluidité des Fêtes) ; 0 après corrections et contre-audits ciblés |
 | Fluidité | Les fêtes : 1 % d'images lentes, tâche la plus longue 103 ms (ordinateur ralenti 4 fois) ; accueil 5 % |
 | Test visiteur | 13 missions réussies sur 14 avant corrections ; la soirée sur ordinateur (dates cachées derrière une photo) corrigée |
 | Regard neuf (points de la v6) | 8 réglés, 7 en partie, 3 non avant corrections ; la plupart corrigés |
 | Modules restaurant | 17 placés sur 46, 8 déjà présents sous une autre forme, le reste écarté avec sa raison (_audit/modules-restau-v7.md) |
 | Retour du client (v7.1) | l'hiver, plus de piscine en avant sur l'accueil ni sur Infos ; vapeur de 21 h rendue visible ; contre-audit vert |
+| Retours du client (v7.2) | accueil d'hiver réordonné (coin du feu à 19 h sur la vraie cheminée animée, terrasse d'été en fin de page), assiettes qui fument à 12 h 30, vert nuit à 21 h ; contre-audit vert |

@@ -32,7 +32,8 @@
    "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
    "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
    "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
-   "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules"
+   "le feu de la vraie cheminée animé à partir d'une seule photo : flammes qui ondulent, lueur qui vacille, braises au foyer",
+   "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume"
   ],
   "reserves": [
    "réservation en deux validations (Vérifier puis Confirmer)",
@@ -64,7 +65,7 @@
    "schema-interactif",
    "mode-calme"
   ],
-  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible.",
+  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée.",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
@@ -151,7 +152,7 @@
   "midi": {
    "titre": "12:00, midi au bord de l'eau",
    "role": "ouverture",
-   "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées et un halo de soleil qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
+   "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées étalonnée chaude, des rayons de soleil qui entrent par les baies et un halo qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
    "animations": [
     "webgl-shader",
     "révélation-texte"
@@ -172,18 +173,19 @@
   "dejeuner": {
    "titre": "12:30, le déjeuner",
    "role": "produits",
-   "description": "La salle au soleil de midi en vraie photo (tables rondes en verre, baies vitrées) et cinq vrais plats de la carte avec leurs prix.",
+   "description": "La carte de la semaine (cinq vrais plats et leurs prix) ; à côté, la vraie assiette devant la cheminée dont la vapeur monte et s'écarte sous la main ; les petites assiettes rondes sont des boutons : celle qu'on touche passe en grand et fume à son tour.",
    "animations": [
     "apparition-au-défilement",
+    "canvas-2d",
     "parallaxe"
    ],
    "interactions": [
-    "aucune"
+    "galerie-cliquable"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
+   "module": "plat-fumant",
    "pieges": []
   },
   "apres-midi": {
@@ -210,7 +212,7 @@
   "terrasse": {
    "titre": "19:00, la terrasse s'allume",
    "role": "manifeste",
-   "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt.",
+   "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt. L'hiver, elle passe tout en bas de l'accueil, en clin d'œil à l'été (« L'été, la terrasse s'allume »).",
    "animations": [
     "section-fixée",
     "progression-fixée",
@@ -231,9 +233,8 @@
   "diner": {
    "titre": "21:00, le dîner",
    "role": "calculateur",
-   "description": "La vraie assiette devant la cheminée : la vapeur, bien visible, monte du plat et s'écarte sous la main (canvas) ; prochains services ouverts, couverts, carton qui s'envole vers la réservation.",
+   "description": "Le dîner sur fond vert nuit : la salle au mur de pierre étalonnée en lumière du soir, prochains services ouverts, couverts, carton qui s'envole vers la réservation déjà remplie.",
    "animations": [
-    "canvas-2d",
     "morphing"
    ],
    "interactions": [
@@ -244,14 +245,12 @@
    "reutilisable": false,
    "module": "envol-vers-le-panier",
    "pieges": [],
-   "modules": [
-    "plat-fumant"
-   ]
+   "modules": []
   },
   "feu": {
    "titre": "23:00, au coin du feu",
    "role": "manifeste",
-   "description": "Fenêtre sur la salle qui s'ouvre jusqu'au plein écran, braises qui suivent la main, mots qui s'écartent.",
+   "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran : les flammes de la photo ondulent (bandes de l'image décalées par une onde qui monte, canvas posé sur le foyer), la lueur vacille sur la salle, les braises partent du foyer et s'écartent sous la main. L'hiver, elle ouvre la soirée à 19 h.",
    "animations": [
     "masque",
     "canvas-2d",
@@ -261,11 +260,13 @@
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
+   "note_qualite": 5,
+   "reutilisable": true,
    "module": null,
    "pieges": [
-    "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer"
+    "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer",
+    "mesurer le foyer dans le repère de la photo (object-fit: cover, recadrage réel), pas de l'écran",
+    "bords du canvas fondus (destination-in) pour ne pas voir la couture"
    ]
   },
   "fetes": {

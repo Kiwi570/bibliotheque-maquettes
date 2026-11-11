@@ -4,7 +4,7 @@
  "page": "index",
  "titre": "23:00, au coin du feu",
  "role": "manifeste",
- "description": "Fenêtre sur la salle qui s'ouvre jusqu'au plein écran, braises qui suivent la main, mots qui s'écartent.",
+ "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran : les flammes de la photo ondulent (bandes de l'image décalées par une onde qui monte, canvas posé sur le foyer), la lueur vacille sur la salle, les braises partent du foyer et s'écartent sous la main. L'hiver, elle ouvre la soirée à 19 h.",
  "animations": [
   "masque",
   "canvas-2d",
@@ -14,33 +14,29 @@
   "aucune"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger",
-  "canvas"
+  "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
+ "note_qualite": 5,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
   "html": "index.html:297-311",
-  "css": "assets/css/site.css:220-232,756-761,782,928-930",
-  "js": "assets/js/site.js:242-243,539-569 ; assets/js/socle/effets.js:18,273-285"
+  "css": "assets/css/site.css:220-232,756-761,782,928-930,1237,1241",
+  "js": "assets/js/site.js:242-243,539,543,546-599,629-658,702-706 ; assets/js/socle/effets.js:18,273-285"
  },
- "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/feu-p1440.jpg",
-  "capture_m390": "medias/jardins-hacienda-2-maquette/feu-m390.jpg",
-  "video": "medias/jardins-hacienda-2-maquette/feu-p720.mp4"
- },
+ "medias": {},
  "pieges": [
-  "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer"
+  "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer",
+  "mesurer le foyer dans le repère de la photo (object-fit: cover, recadrage réel), pas de l'écran",
+  "bords du canvas fondus (destination-in) pour ne pas voir la couture"
  ],
  "mesures": {
-  "hauteur_p1440": 1710,
-  "hauteur_m390": 1604,
+  "hauteur_p1440": null,
+  "hauteur_m390": null,
   "epinglee": false,
-  "scrolltriggers": 3
+  "scrolltriggers": 0
  },
  "familles": [
   "plein-ecran",

@@ -1,7 +1,7 @@
 {
  "version": "2026-11-11",
  "aide": "Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/, provenance projet (tiré d une maquette validée) ou à part (créé hors projet, pas encore servi). Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)",
- "totaux": {"maquettes":86,"sections_indexees":316,"sections_notees_4_ou_5":1096,"sections_notees_3_ou_moins":2202,"modules":65},
+ "totaux": {"maquettes":86,"sections_indexees":318,"sections_notees_4_ou_5":1097,"sections_notees_3_ou_moins":2201,"modules":65},
  "colonnes": {"maquettes":["depot","activite","concept","ambiance","note","points_forts","url","client","date","grille","metier","luminosite","ton","univers","besoins","plan"],"sections":["id","role","animations","note","module","titre","interactions","capture","video","page","impact","familles"],"modules":["nom","role","animations","convient_a","titre","interactions","ambiances","dependances","impact","familles","provenance"]},
  "maquettes": [
   ["agence-ae-maquette",["bâtiment"],["atelier"],["clair","chaleureux","sobre"],87,["direction « Course du soleil » : la conception bioclimatique rendue tangible, un soleil à saisir rééclaire la photo d'ouverture en WebGL","maison bois en 3D CSS qui se construit au défilement et se fait pivoter à la main avec élan"],"https://agence-ae-maquette.vercel.app","Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)","2026-11-07",["iris","soleil à saisir qui rééclaire la photo ; maison bois 3D à faire pivoter ; cadran solaire qui filtre les projets"],"architecte","clair",["chaleureux","sobre"],[],["rendez-vous","portfolio","zone-d-intervention"],"recit-lineaire"],
@@ -180,6 +180,7 @@
   ["iprof-maquette/conseils-guide","services",["flip","filtre-anime","apparition-au-défilement"],5,"","Fiches de conseils filtrées et retournées",["filtres","galerie-cliquable"],1,1,"conseils","vivant",["3d","recomposition"]],
   ["iprof-maquette/jargon","méthode",["section-fixée","révélation-texte","masque","rature"],5,"rature-au-stylo","Jargon corrigé au stylo rouge",[],1,1,"","vivant",["masque"]],
   ["iprof-maquette/tarifs-calculateur","calculateur",["révélation-texte","masque"],5,"composeur-de-formule","Calculateur écrit à la main",["calculateur"],1,1,"tarifs","vivant",["masque"]],
+  ["jardins-hacienda-2-maquette/feu","manifeste",["masque","canvas-2d","section-fixée"],5,"","23:00, au coin du feu",[],0,0,"","spectaculaire",["plein-ecran","masque","particules"]],
   ["jardins-hacienda-2-maquette/terrasse","manifeste",["section-fixée","progression-fixée","filtre-anime"],5,"","19:00, la terrasse s'allume",["schema-interactif"],1,1,"","spectaculaire",["scene-epinglee"]],
   ["jardins-hacienda-maquette/debut","ouverture",["webgl-shader","ouverture-orchestrée","révélation-texte"],5,"","Les Jardins de l’Hacienda",[],1,1,"","spectaculaire",["webgl"]],
   ["jeanf-maquette/debut","ouverture",["masque","révélation-texte","ouverture-orchestrée"],5,"","JeanF, Nomade Polymedia",[],1,1,"","vivant",["masque"]],
@@ -314,7 +315,8 @@
   ["iprof-maquette/cours-individuels-stackcards","méthode",["empilement-de-fiches"],4,"planches-empilees","Fiches empilées",[],1,1,"cours-individuels","calme",["empilement"]],
   ["iprof-maquette/tarifs-prices","tarifs",["apparition-au-défilement","révélation-texte","masque"],4,"tarifs-a-rouleaux","Trois fiches de prix",[],1,1,"tarifs","vivant",["lumiere-pointeur","masque"]],
   ["jardins-hacienda-2-maquette/404-debut","page-404",["webgl-shader","masque","révélation-texte"],4,"lumiere-au-pointeur","Cette page a fermé à minuit",[],1,1,"404","spectaculaire",["webgl","masque"]],
-  ["jardins-hacienda-2-maquette/diner","calculateur",["canvas-2d","morphing"],4,"envol-vers-le-panier+plat-fumant","21:00, le dîner",["réservation-simulee"],1,1,"","vivant",["morphing"]],
+  ["jardins-hacienda-2-maquette/dejeuner","produits",["apparition-au-défilement","canvas-2d","parallaxe"],4,"plat-fumant","12:30, le déjeuner",["galerie-cliquable"],1,1,"","vivant",[]],
+  ["jardins-hacienda-2-maquette/diner","calculateur",["morphing"],4,"envol-vers-le-panier","21:00, le dîner",["réservation-simulee"],0,0,"","vivant",["morphing"]],
   ["jardins-hacienda-2-maquette/infos-pratiques-debut","ouverture",["canvas-2d","révélation-texte"],4,"ciel-en-direct","Il est … à Moineville",["simulateur"],1,1,"infos-pratiques","vivant",[]],
   ["jardins-hacienda-2-maquette/infos-pratiques-horaires","outil-interactif",[],4,"horaires-ouvert-maintenant","Ouvert maintenant ?",["simulateur"],1,0,"infos-pratiques","vivant",["objet-manipulable"]],
   ["jardins-hacienda-2-maquette/la-carte-debut","ouverture",["trace-svg","révélation-texte"],4,"ardoise-a-la-craie","La carte à l'heure",["filtres"],1,1,"la-carte","vivant",["trait-qui-se-dessine"]],

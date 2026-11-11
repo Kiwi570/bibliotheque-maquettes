@@ -43,3 +43,5 @@ De la vapeur monte d'une photo de plat ou de boisson chaude, se défait en volut
 - Pain sorti du four, cocotte qu'on ouvre : `hauteur` 0,35, `densite` 0,7, source large et basse.
 - Boisson chaude en terrasse l'hiver : `vent` 0,3, `vitesse` 0,8.
 - À combiner avec `lumiere-au-pointeur` sur une même photo sombre : la lampe éclaire, la vapeur s'écarte (deux boucles, garder `qualite` à 0,5).
+- Plusieurs assiettes à toucher (jardins-hacienda-2 v7.2) : des vignettes rondes en boutons ; au clic, la grande image change de `src`/`srcset` (et la `<source>` du téléphone), puis `api.sources("x y l")` replace la vapeur sur la nouvelle assiette une fois l'image chargée. Sur une assiette claire vue de dessus (purée, crème), la vapeur blanche en `screen` se voit à peine : la garder pour les assiettes sombres ou monter `intensite`.
+- Réglages qui se voient vraiment sur une photo sombre : `densite: 1.3, hauteur: 0.85, intensite: 1.8` (les valeurs par défaut restaient presque invisibles, retour du client).
