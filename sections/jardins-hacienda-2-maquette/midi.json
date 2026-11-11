@@ -1,0 +1,48 @@
+{
+ "id": "jardins-hacienda-2-maquette/midi",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "index",
+ "titre": "12:00, midi au bord de l'eau",
+ "role": "ouverture",
+ "description": "Piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL), grande heure, nom et lieu, statut à l'heure réelle, deux boutons.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:119-141",
+  "css": "assets/css/site.css:74-75,82-127,585-586,653,698,716,723,732-737,756-781,834,845-852,860,893,906",
+  "js": "assets/js/site.js:1,31-43,121-136,139,142-186,203-266,310-380,457-475,478-498,615-632,839-840,850,853-856,862-864,867-869 ; assets/js/modules/reservation-de-table/module.js:1 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,360-404 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/midi-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/midi-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/midi-p720.mp4"
+ },
+ "pieges": [
+  "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
+  "dire l'heure réelle dans le statut quand la grande heure est celle du récit"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 881,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "lumiere-pointeur",
+  "webgl"
+ ],
+ "impact": "vivant"
+}

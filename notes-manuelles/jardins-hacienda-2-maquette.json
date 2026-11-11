@@ -1,0 +1,704 @@
+{
+ "maquette": {
+  "client": "restaurant, piscine et réceptions en Moselle (Moineville)",
+  "activite": [
+   "restauration",
+   "tourisme"
+  ],
+  "concept": [
+   "voyage",
+   "scène"
+  ],
+  "ambiance": [
+   "chaleureux",
+   "clair",
+   "nocturne"
+  ],
+  "palette": {
+   "fond": "#f6f1e7",
+   "texte": "#1c1712",
+   "accent": "#c2491f",
+   "secondaire": "#0c6f7b"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Bricolage Grotesque",
+   "mono": ""
+  },
+  "points_forts": [
+   "une journée à l'heure de la maison, de midi à minuit, qui règle voile, intro, horloge et lumière de chaque page",
+   "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules",
+   "eau de la piscine en WebGL à toucher",
+   "saison réelle affichée partout",
+   "boucles vidéo recadrées comme leurs images, vapeur masquée sur la fumée"
+  ],
+  "reserves": [
+   "en-tête d'accueil proche des maquettes précédentes",
+   "ouvertures intérieures de deux compositions seulement",
+   "La carte sans scène propre",
+   "réservation en deux temps (7 gestes)"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "webgl-shader",
+   "section-fixée",
+   "progression-fixée",
+   "galerie-horizontale",
+   "canvas-2d",
+   "révélation-texte",
+   "compteur",
+   "trace-svg",
+   "parallaxe"
+  ],
+  "interactions": [
+   "réservation-simulee",
+   "formulaire-par-étapes",
+   "filtres",
+   "recherche",
+   "saisie-personnalisee",
+   "schema-interactif",
+   "mode-calme",
+   "lecteur-vidéo"
+  ],
+  "change_depuis_audit": "Après l'audit : une seule heure par page (voile, intro, horloge), nom et lieu dès l'arrivée sur téléphone, demande de réception avec période, retour du mode calme à la bonne section (correction du socle).",
+  "accueil": "midi",
+  "plan": "journee",
+  "grille": {
+   "objet": "l'eau de la piscine à midi, les ampoules de la terrasse, les braises du feu",
+   "fil": "l'heure de la journée, de 12:00 à 00:00, portée par l'horloge de l'en-tête et le voile"
+  },
+  "metier": "restaurant et lieu de réception"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile à l'heure d'arrivée",
+   "role": "transition-de-page",
+   "description": "Voile en cloche aux couleurs et aux chiffres de l'heure de la page d'arrivée (calculée : déjeuner ou dîner selon l'heure réelle, service demandé).",
+   "animations": [
+    "transition-de-page",
+    "morphing"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "l'heure du voile doit être celle que la page affichera, sinon le fil se contredit ; poser le chiffre avant le premier affichage"
+   ]
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : l'horloge roule jusqu'à l'heure de la page",
+   "role": "transition-de-page",
+   "description": "Rouleaux de chiffres de 00:00 à l'heure de la page, puis l'horloge vole jusqu'à la grande heure de l'ouverture, à sa taille exacte.",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "faire arriver l'objet à la taille de la cible (hauteur pour hauteur), sinon il rétrécit puis regrossit"
+   ]
+  },
+  "header": {
+   "titre": "En-tête et horloge de la journée",
+   "role": "barre-fixe",
+   "description": "Logo, pastille d'heure qui suit le défilement (12:00 → 00:00), menu horodaté, bouton Réserver ; couleur et graisse suivent la lumière.",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "une seule rangée de 900 à 1150 px (réduire les écarts)"
+   ]
+  },
+  "menu": {
+   "titre": "Menu horodaté",
+   "role": "menu",
+   "description": "Chaque page avec son heure, dans l'ordre de la journée.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "ranger les entrées dans l'ordre des heures, sinon on lit des horaires en désordre"
+   ]
+  },
+  "midi": {
+   "titre": "12:00, midi au bord de l'eau",
+   "role": "ouverture",
+   "description": "Piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL), grande heure, nom et lieu, statut à l'heure réelle, deux boutons.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
+    "dire l'heure réelle dans le statut quand la grande heure est celle du récit"
+   ]
+  },
+  "dejeuner": {
+   "titre": "12:30, le déjeuner",
+   "role": "produits",
+   "description": "Cinq vrais plats de la carte avec leurs prix qui passent, assiette générée et trois vraies assiettes en éventail.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "apres-midi": {
+   "titre": "14:30, l'après-midi d'été",
+   "role": "galerie",
+   "description": "Piscine (boucle vidéo), bar, journées festives et pool parties en défilement de côté ; heures réelles de chaque moment.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "lecteur-vidéo"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "galerie horizontale générique : la renforcer ou la remplacer"
+   ]
+  },
+  "terrasse": {
+   "titre": "19:00, la terrasse s'allume",
+   "role": "manifeste",
+   "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
+    "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
+   ]
+  },
+  "diner": {
+   "titre": "21:00, le dîner",
+   "role": "calculateur",
+   "description": "Prochains services ouverts (le prochain soir coché), couverts, carton qui s'envole vers la réservation déjà remplie ; vapeur masquée sur l'assiette nette.",
+   "animations": [
+    "morphing"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "envol-vers-le-panier",
+   "pieges": []
+  },
+  "feu": {
+   "titre": "23:00, au coin du feu",
+   "role": "manifeste",
+   "description": "Fenêtre sur la salle qui s'ouvre jusqu'au plein écran, braises qui suivent la main, mots qui s'écartent.",
+   "animations": [
+    "masque",
+    "canvas-2d",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer"
+   ]
+  },
+  "fetes": {
+   "titre": "23:30, Noël et la Saint-Sylvestre",
+   "role": "agenda",
+   "description": "Deux menus avec prix et compte à rebours en jours de calendrier.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "compter les jours du calendrier à Moineville, pas des tranches de 24 h"
+   ]
+  },
+  "minuit": {
+   "titre": "00:00, offrir et venir",
+   "role": "appel",
+   "description": "Carte cadeau en aperçu, plan schématique Metz-Thionville-Luxembourg qui se dessine, statut.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page 00:00",
+   "role": "pied-de-page",
+   "description": "Pied sombre, horaires, contact, mode calme.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "mettre la place de la barre du bas dans le pied (sinon bande claire sous le pied sur téléphone)"
+   ]
+  },
+  "404-debut": {
+   "titre": "Cette page a fermé à minuit",
+   "role": "page-404",
+   "description": "La grande table vide sous la pergola, 00:00, retour à midi.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-debut": {
+   "titre": "Il est … à Moineville",
+   "role": "ouverture",
+   "description": "Heure réelle, photo du moment (piscine le jour, heure bleue le soir), statut.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-horaires": {
+   "titre": "Ouvert maintenant ?",
+   "role": "outil-interactif",
+   "description": "Horaires de la semaine et cadran 24 h à aiguille manipulable.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "horaires-ouvert-maintenant",
+   "pieges": [
+    "horaires de la semaine avant le cadran sur téléphone"
+   ]
+  },
+  "infos-pratiques-acces": {
+   "titre": "Venir à Moineville",
+   "role": "contact",
+   "description": "Plan schématique et règles d'accès.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "infos-pratiques-ecrire": {
+   "titre": "Une question",
+   "role": "contact",
+   "description": "Formulaire de contact simulé (nom, téléphone, message), avec la mention de confidentialité et le numéro à appeler en premier.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-debut": {
+   "titre": "La carte à l'heure",
+   "role": "ouverture",
+   "description": "Écran partagé : photo du service (déjeuner ou dîner selon l'heure réelle) et grande heure, bascule qui rallume la page à l'autre service.",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-toute-la-carte": {
+   "titre": "Toute la carte",
+   "role": "carte",
+   "description": "Grand index par rubriques, recherche et filtre végétarien, barre des rubriques collante.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": "carte-du-restaurant",
+   "pieges": [
+    "la barre collante monte à top:0 quand l'en-tête se cache"
+   ]
+  },
+  "la-carte-passe": {
+   "titre": "Les mains du chef",
+   "role": "manifeste",
+   "description": "Photo plein cadre en parallaxe et texte.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-carte-fin": {
+   "titre": "Une table vous attend",
+   "role": "appel",
+   "description": "Statut, réserver, vraies assiettes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "les-fetes-debut": {
+   "titre": "La saison décide",
+   "role": "ouverture",
+   "description": "Compte à rebours géant de la Saint-Sylvestre sur la salle au feu l'hiver, la journée d'été l'été ; bascule de saison.",
+   "animations": [
+    "compteur",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "nommer chaque prix dans le bandeau quand deux menus se suivent"
+   ]
+  },
+  "les-fetes-saint-sylvestre": {
+   "titre": "Le menu de la Saint-Sylvestre",
+   "role": "offre",
+   "description": "Menu en accords : le verre change de forme et de couleur selon le plat touché.",
+   "animations": [
+    "morphing",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "accords-mets-et-vins",
+   "pieges": []
+  },
+  "les-fetes-noel": {
+   "titre": "Le menu de Noël",
+   "role": "offre",
+   "description": "Plats sous leurs cloches qui se lèvent au défilement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "texte lisible avant que la cloche se lève"
+   ]
+  },
+  "les-fetes-passes": {
+   "titre": "Les soirées passées",
+   "role": "preuves",
+   "description": "Liste des soirées passées à côté d'une vraie photo.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "ne jamais barrer une soirée passée (on lit « annulé »)"
+   ]
+  },
+  "les-fetes-ete": {
+   "titre": "L'été, de 12 h à minuit",
+   "role": "agenda",
+   "description": "La journée d'été heure par heure avec vraies photos.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "offrir-debut": {
+   "titre": "Offrir une soirée",
+   "role": "ouverture",
+   "description": "Feu de la cheminée en gros plan, braises, carte cadeau en aperçu dont le montant tourne.",
+   "animations": [
+    "canvas-2d",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "offrir-composer": {
+   "titre": "Votre carte cadeau",
+   "role": "outil-interactif",
+   "description": "La carte s'écrit en direct puis part dans son enveloppe.",
+   "animations": [
+    "morphing",
+    "flip"
+   ],
+   "interactions": [
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "carte-cadeau-qui-se-compose",
+   "pieges": []
+  },
+  "receptions-debut": {
+   "titre": "Recevoir pour un …",
+   "role": "ouverture",
+   "description": "Terrasse la nuit, l'occasion qui change dans le titre (mariage, baptême, anniversaire, pot de départ).",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "receptions-espaces": {
+   "titre": "Trois lieux, deux saisons",
+   "role": "services",
+   "description": "Salle, terrasse, piscine en volets ; l'ordre suit la saison.",
+   "animations": [
+    "flip",
+    "révélation-image"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "receptions-occasions": {
+   "titre": "Ce que l'on fête ici",
+   "role": "galerie",
+   "description": "Vraies photos des fêtes par occasion.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "receptions-demande": {
+   "titre": "Demander une réception",
+   "role": "contact",
+   "description": "Demande en trois étapes (date ou période), carton d'invitation pré-écrit qui se remplit puis reçoit le tampon « Demande reçue ».",
+   "animations": [
+    "morphing"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "accepter une période quand la date n'est pas fixée",
+    "aucune occasion cochée d'avance ; récapitulatif au singulier avec l'année"
+   ]
+  },
+  "reserver-debut": {
+   "titre": "Réserver à la lumière du service",
+   "role": "ouverture",
+   "description": "Claire au déjeuner, de nuit au dîner, heure du service demandé ou du prochain service ouvert.",
+   "animations": [
+    "filtre-anime"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "reserver-formulaire": {
+   "titre": "Le jour, l'heure, les couverts",
+   "role": "calculateur",
+   "description": "Réservation simulée avec carte de placement et récapitulatif.",
+   "animations": [
+    "morphing"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "reservation-de-table",
+   "pieges": [
+    "erreur sous son champ (classe de champ sur chaque label)",
+    "choix confirmés jamais barrés"
+   ]
+  },
+  "reserver-plan": {
+   "titre": "Choisir ma table",
+   "role": "outil-interactif",
+   "description": "Plan de salle en 3D légère, tables à choisir.",
+   "animations": [
+    "flip"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "plan-de-salle",
+   "pieges": []
+  }
+ }
+}

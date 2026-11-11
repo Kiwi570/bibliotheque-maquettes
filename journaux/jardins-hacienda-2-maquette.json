@@ -1,0 +1,479 @@
+{
+ "projet": "jardins-hacienda-2-maquette",
+ "client": "Les Jardins de l'Hacienda (deuxième maquette, test réel des 9 modules restaurant)",
+ "siteActuel": "https://www.lesjardinsdelhacienda54.com/",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v10.8.2",
+   "perimetre": [
+    "accueil",
+    "la-carte",
+    "les-fetes",
+    "reserver",
+    "offrir",
+    "infos-pratiques",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-10T12:28:20+01:00",
+     "fin": "2026-11-10T12:47:00+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 15,
+     "debut": "2026-11-10T12:49:30+01:00",
+     "fin": "2026-11-10T12:54:00+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 30,
+     "debut": "2026-11-10T12:54:47+01:00",
+     "fin": "2026-11-10T13:25:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films (attente de la réponse notée à part)",
+     "budget": 5,
+     "debut": "2026-11-10T13:25:00+01:00",
+     "fin": "2026-11-10T13:28:00+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet",
+     "budget": 25,
+     "debut": "2026-11-10T13:29:30+01:00",
+     "fin": "2026-11-10T13:36:00+01:00"
+    },
+    {
+     "etape": "construction : contact et page de catégorie",
+     "budget": 10,
+     "debut": "2026-11-10T13:20:00+01:00",
+     "fin": "2026-11-10T13:36:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 35,
+     "debut": "2026-11-10T13:37:00+01:00",
+     "fin": "2026-11-10T15:11:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-10T15:11:00+01:00",
+     "fin": "2026-11-10T15:16:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-10T12:47:00+01:00",
+     "fin": "2026-11-10T12:49:30+01:00"
+    },
+    {
+     "pour": "validation des plans, images du site et images Grok",
+     "debut": "2026-11-10T12:54:00+01:00",
+     "fin": "2026-11-10T13:04:30+01:00"
+    },
+    {
+     "pour": "horaires (question)",
+     "debut": "2026-11-10T13:03:40+01:00",
+     "fin": "2026-11-10T13:04:20+01:00"
+    },
+    {
+     "pour": "validation de l'aperçu de l'accueil",
+     "debut": "2026-11-10T13:28:00+01:00",
+     "fin": "2026-11-10T13:29:20+01:00"
+    }
+   ],
+   "allersRetours": 3,
+   "modules": [
+    "plat-fumant",
+    "assiette-qui-se-dresse",
+    "ardoise-a-la-craie",
+    "carte-du-restaurant",
+    "accords-mets-et-vins",
+    "horaires-ouvert-maintenant",
+    "plan-de-salle",
+    "reservation-de-table",
+    "carte-cadeau-qui-se-compose",
+    "objet-a-faire-tourner",
+    "fil-conducteur",
+    "carrousel-3d",
+    "envol-vers-le-panier"
+   ],
+   "audit": {
+    "niveau": "standard",
+    "echecsPremierPassage": 232,
+    "relances": 6,
+    "corrections": [
+     "177 échecs hors fichiers de travail (planche, plans, document Grok, assemblage laissés à la racine : sortis du dossier)",
+     "contrastes : allergènes absents, puces fermées de la réservation, numéros des tables du plan de salle, texte doux des sections claires",
+     "chevauchements : interlignes des titres, de l'accord mets et vins, du prix de la Saint-Sylvestre et du carton ; cartes de profil du carrousel 3D masquées",
+     "zones tactiles : liens du menu, du sommaire et du carrousel à 44 px",
+     "premier écran : action principale et info clé visibles sur petits écrans (paragraphes d'intro masqués sous 380 px de large ou 700 px de haut)",
+     "fluidité : vapeur allégée (qualite 0.35), moins de braises, ombres sorties des objets qui tournent",
+     "horaires : minuit au lieu de 0 h ; rôle des éléments de la liste des accords",
+     "deuxième passage (61 échecs) : chevauchements dus à la boîte très haute de Bodoni Moda (titre de l'accueil rendu en texte simple une fois formé, écarts des titres), zones tactiles du pied de page, photos de repli en mode calme et sans JavaScript, bouton crème sur la photo d'Offrir, bâton de craie retiré après l'écriture, boutons radio des accords marqués data-superpose",
+     "fluidité de l'accueil (32 % d'images lentes) : ficelle sans rail ni retard et sur son calque, carrousel 3D à 90° au lieu de 180°, mots géants sur leur calque, épinglage de l'assiette à 1,4 écran : 8 %",
+     "défilement des modules annulé par le défilement adouci du projet et par ScrollTrigger.refresh() : adaptateur socle.lenis vers aller(), défilements refaits après le recalcul ; aller() borné par la hauteur réelle de la page",
+     "test « vrai visiteur » (15 missions sur 16) : plat végétarien sur téléphone corrigé et relancé (3 gestes), statut ouvert ou fermé sur l'accueil, accès direct au formulaire, jours sur deux lignes, confirmations à l'écran, textes et prix",
+     "regard neuf : couleurs de la confirmation de réservation, « Carte cadeau » lisible sur la carte dorée ; vérifié sur l'affiche que le menu de la Saint-Sylvestre est exact"
+    ]
+   },
+   "effetsRetires": [
+    "carrousel 3D : rotation au défilement réduite de 180° à 90° (fluidité)",
+    "ficelle : rail pâle retiré (fluidité)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Le site actuel ne donne les horaires et les menus de fête qu'en images (pages /horaires et /evenements) : à lire dans le zip des images du site. Outil grok.mjs : le compteur des indispensables attend la valeur « Indispensable » avec majuscule (avec « indispensable », il affiche 0) ; à reporter dans la bibliothèque. La carte (page) a été construite pendant le tournage de l'aperçu ; les pages d'onglet et la page de catégorie se chevauchent dans le temps (13 h 20 à 13 h 36). Visiteur : 15 missions réussies sur 16 au premier passage ; la mission ratée (plat végétarien, téléphone) réussit après correction. Regard neuf : 8 points à corriger, dont 4 corrigés (confirmation de réservation, couleurs, carte cadeau, titre de la cheminée ombré) ; restent le dessin de l'assiette, le panneau collant du plan, le double réglage des couverts et une famille d'effets plus moderne sur La carte. La machine de mesure n'a que 2 processeurs : les mesures de fluidité faites pendant les captures du regard neuf étaient faussées."
+  },
+  {
+   "version": 2,
+   "skill": "v10.8.2",
+   "perimetre": [
+    "accueil",
+    "la-carte",
+    "reserver"
+   ],
+   "etapes": [
+    {
+     "etape": "ajustements d'effets (assiette, plein écran sur La carte, ardoise, plan de salle)",
+     "budget": 25,
+     "debut": "2026-11-10T15:17:00+01:00",
+     "fin": "2026-11-10T15:24:00+01:00"
+    },
+    {
+     "etape": "audit ciblé et livraison",
+     "budget": 15,
+     "debut": "2026-11-10T15:24:00+01:00",
+     "fin": "2026-11-10T15:35:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "audit": {
+    "niveau": "ciblé (/, /la-carte, /reserver, standard complet)",
+    "echecsPremierPassage": 1,
+    "relances": 1,
+    "corrections": [
+     "fluidité de l'accueil à 10 % : vapeur qualite .3, carrousel 72°"
+    ]
+   },
+   "effetsRetires": [
+    "carrousel 3D : rotation au défilement de 90° à 72° (fluidité)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Demande : ajuster d'abord des effets (points restants du regard neuf). Plan de salle : le libellé « Prise ce soir » n'avait pas changé en v1 (le module remplace le texte de salle.json) ; réglé par textes.prise (M18)."
+  },
+  {
+   "version": 3,
+   "skill": "v10.8.2",
+   "perimetre": [
+    "accueil",
+    "reserver",
+    "infos-pratiques",
+    "la-carte",
+    "offrir"
+   ],
+   "etapes": [
+    {
+     "etape": "sections claires, carrousel, corrections du regard neuf",
+     "budget": 40,
+     "debut": "2026-11-10T15:50:00+01:00",
+     "fin": "2026-11-10T15:58:00+01:00"
+    },
+    {
+     "etape": "audit ciblé et livraison",
+     "budget": 15,
+     "debut": "2026-11-10T15:58:00+01:00",
+     "fin": "2026-11-10T16:13:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "audit": {
+    "niveau": "standard (toutes les pages)",
+    "echecsPremierPassage": 20,
+    "relances": 3,
+    "corrections": [
+     "formulaire clair de Réserver : section pleine largeur au lieu d'un fond peint hors colonne (fil recouvrant, contraste mesuré sur le fond sombre, débordement horizontal)",
+     "« Votre réservation » du récapitulatif foncé (4,22:1 → plus de 4,5:1)"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Demande : sections claires pour casser le sombre, carrousel « Recevoir » (animation, cartes trop petites), analyse des améliorations."
+  },
+  {
+   "version": 4,
+   "skill": "v10.9",
+   "perimetre": [
+    "accueil",
+    "la-carte",
+    "les-fetes",
+    "reserver",
+    "offrir",
+    "infos-pratiques",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque, directions et planche d'intention",
+     "budget": 20,
+     "debut": "2026-11-10T16:25:56+01:00",
+     "fin": "2026-11-10T16:29:00+01:00"
+    },
+    {
+     "etape": "plan v4, images du site et consignes Grok",
+     "budget": 15,
+     "debut": "2026-11-10T16:30:00+01:00",
+     "fin": "2026-11-10T16:36:00+01:00"
+    },
+    {
+     "etape": "construction : saisons, accueil en 6 sections, pages intérieures",
+     "budget": 60,
+     "debut": "2026-11-10T16:36:00+01:00",
+     "fin": "2026-11-10T16:49:00+01:00"
+    },
+    {
+     "etape": "vérifications ordinateur et téléphone, hiver et été ; accueil ramené à 7 écrans (plongée dans la scène)",
+     "budget": 20,
+     "debut": "2026-11-10T16:49:00+01:00",
+     "fin": "2026-11-10T17:08:00+01:00"
+    },
+    {
+     "etape": "audit complet, test visiteur, regard neuf et corrections",
+     "budget": 60,
+     "debut": "2026-11-10T17:08:00+01:00",
+     "fin": "2026-11-10T18:25:00+01:00"
+    },
+    {
+     "etape": "livraison : audit complet final, zip, aperçu, CHANGELOG, résumé",
+     "budget": 20,
+     "debut": "2026-11-10T18:25:00+01:00",
+     "fin": "2026-11-10T18:50:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "validation de la planche d'intention",
+     "debut": "2026-11-10T16:29:00+01:00",
+     "fin": "2026-11-10T16:30:00+01:00"
+    }
+   ],
+   "allersRetours": 0,
+   "modules": [
+    "plat-fumant",
+    "objet-a-faire-tourner",
+    "assiette-qui-se-dresse",
+    "carte-du-restaurant",
+    "ardoise-a-la-craie",
+    "accords-mets-et-vins",
+    "horaires-ouvert-maintenant",
+    "plan-de-salle",
+    "reservation-de-table",
+    "carte-cadeau-qui-se-compose",
+    "envol-vers-le-panier"
+   ],
+   "audit": {
+    "niveau": "complet (7 pages, 13 tailles, tous les modes)",
+    "echecsPremierPassage": 31,
+    "relances": 4,
+    "corrections": [
+     "accueil plus large que l'écran sur téléphone (assiettes qui tombent hors de la nappe) : nappe en overflow clip ; bouton Menu de nouveau atteignable",
+     "premier écran : téléphone à l'horizontale et sans JavaScript (cadran retiré sans JavaScript, titre réduit sur écran bas, hauteur sans l'en-tête)",
+     "zones tactiles du statut « ouvert maintenant » portées à 44 px",
+     "titre géant : marge au-dessus (boîte de la didone), contraste de la ligne de l'autre saison (couleur sourde et voile sous le titre)",
+     "cartes des fêtes en largeur : photo à la hauteur de la carte (mention « Illustration générée » qui chevauchait le bouton)",
+     "cloches de Noël masquées une fois levées (elles recouvraient le titre)",
+     "lien profond vers la demande de réception : section ramenée en haut après l'ajout du cadran manipulable",
+     "fluidité de l'accueil : vapeur du plateau retirée, ombres des assiettes fixes, photos de l'autre saison retirées du rendu après le fondu (17 % puis 12 % puis 6 à 7 % d'images lentes à 4 fois ralenti)",
+     "plateau : lumière qui suit la souris coupée (dérive sous la souris immobile)"
+    ]
+   },
+   "effetsRetires": [
+    "mots géants (bandeau)",
+    "ficelle dans la marge (fil-conducteur)",
+    "carrousel 3D (Recevoir)",
+    "cheminée en plein écran",
+    "plongée en section séparée (fondue dans la scène de la table pour tenir en 7 écrans)"
+   ],
+   "grilleDispenses": {},
+   "notes": "v4 « de A à Z » demandée après la v3 : plan journée (saisons), effets déjà vus retirés. Lecons/ vide (intégrées en v10.9). Test visiteur : 3 missions hors barème au premier passage (baptême, cadeau sur téléphone, premier écran téléphone), toutes dans le barème à la seconde passe. Regard neuf : Saint-Sylvestre non réservable (corrigé), mise en page des horaires (corrigée), photos et textes (corrigés). Non lancé : parcours:hauteur sur /reserver (le script perd les boutons des jours que le module redessine), vérifié à la main : 0 px de décalage ; Safari."
+  },
+  {
+   "version": 5,
+   "skill": "v10.9",
+   "perimetre": [
+    "accueil",
+    "la-carte",
+    "les-fetes",
+    "reserver",
+    "offrir",
+    "infos-pratiques",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "audit UX et design de la v4 (document)",
+     "budget": 20,
+     "debut": "2026-11-10T18:59:00+01:00",
+     "fin": "2026-11-10T19:04:00+01:00"
+    },
+    {
+     "etape": "améliorations : réceptions, réservation, saisons, été, ton, typographie, rythme, plan, finitions",
+     "budget": 60,
+     "debut": "2026-11-10T19:04:00+01:00",
+     "fin": "2026-11-10T19:22:00+01:00"
+    },
+    {
+     "etape": "audit complet, test visiteur et corrections",
+     "budget": 45,
+     "debut": "2026-11-10T19:22:00+01:00",
+     "fin": "2026-11-10T20:08:00+01:00"
+    },
+    {
+     "etape": "livraison v5 : zip, aperçu, CHANGELOG, résumé",
+     "budget": 15,
+     "debut": "2026-11-10T20:08:00+01:00",
+     "fin": "2026-11-10T20:15:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "audit": {
+    "niveau": "complet (7 pages, 13 tailles, tous les modes)",
+    "echecsPremierPassage": 4,
+    "relances": 2,
+    "corrections": [
+     "ouverture de l'accueil : arc du cadran retiré sous 620 px de haut (en-tête sur deux rangées vers 1000 px), cadran ramené à 260 px",
+     "jours de la réservation sur deux rangées jusqu'à 1180 px (ils chevauchaient le récapitulatif)",
+     "Offrir : voile plus dense derrière le surtitre (contraste 2,99:1)",
+     "formulaire de réservation : bandeau photo (bougies) rétabli, plus fin (section sans visuel)",
+     "titre « Les fêtes au coin du feu » : apparition ligne par ligne (lettres qui se chevauchaient pendant l'animation)",
+     "lien « Réceptions » depuis une autre page : section ramenée sous l'en-tête après les épinglages (test visiteur)"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Demande : réaliser toutes les améliorations relevées dans l'audit UX et design de la v4. Test visiteur 3e passe : réserver 13 gestes (téléphone) et 11 (ordinateur), baptême au formulaire en 3 et 2 gestes ; lien Réceptions corrigé ensuite."
+  },
+  {
+   "version": 6,
+   "skill": "v10.9.2",
+   "perimetre": [
+    "accueil",
+    "la-carte",
+    "les-fetes",
+    "receptions",
+    "reserver",
+    "offrir",
+    "infos-pratiques",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-10T20:25:54+01:00",
+     "fin": "2026-11-10T20:44:00+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 15,
+     "debut": "2026-11-10T20:45:30+01:00",
+     "fin": "2026-11-10T20:58:00+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 30,
+     "debut": "2026-11-10T20:58:30+01:00",
+     "fin": "2026-11-10T21:20:00+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet",
+     "budget": 25,
+     "debut": "2026-11-10T21:00:00+01:00",
+     "fin": "2026-11-10T21:22:00+01:00"
+    },
+    {
+     "etape": "construction : contact et page de catégorie",
+     "budget": 10,
+     "debut": "2026-11-10T21:08:00+01:00",
+     "fin": "2026-11-10T21:22:00+01:00"
+    },
+    {
+     "etape": "audit rapide et corrections (images provisoires)",
+     "budget": 35,
+     "debut": "2026-11-10T21:22:00+01:00",
+     "fin": "2026-11-10T22:37:30+01:00"
+    },
+    {
+     "etape": "images Grok : contrôle, alignement, boucles vidéo, intégration",
+     "budget": 20,
+     "debut": "2026-11-11T00:11:00+01:00",
+     "fin": "2026-11-11T00:27:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil (films et planche)",
+     "budget": 5,
+     "debut": "2026-11-11T00:21:00+01:00",
+     "fin": "2026-11-11T00:25:00+01:00"
+    },
+    {
+     "etape": "audit standard, test « vrai visiteur » (deux passages), regard neuf et corrections",
+     "budget": 35,
+     "debut": "2026-11-11T00:25:30+01:00",
+     "fin": "2026-11-11T02:12:00+01:00"
+    },
+    {
+     "etape": "audit complet (version finale) et corrections",
+     "budget": 45,
+     "debut": "2026-11-11T02:12:00+01:00",
+     "fin": "2026-11-11T02:52:00+01:00"
+    },
+    {
+     "etape": "livraison, dernières corrections (heure du voile, retour du mode calme) et audits ciblés",
+     "budget": 10,
+     "debut": "2026-11-11T02:52:00+01:00",
+     "fin": "2026-11-11T04:12:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-10T20:44:00+01:00",
+     "fin": "2026-11-10T20:45:30+01:00"
+    },
+    {
+     "pour": "validation des plans",
+     "debut": "2026-11-10T20:58:00+01:00",
+     "fin": "2026-11-10T20:58:30+01:00"
+    },
+    {
+     "pour": "images Grok (zip)",
+     "debut": "2026-11-10T20:58:30+01:00",
+     "fin": "2026-11-11T00:11:00+01:00"
+    }
+   ],
+   "allersRetours": 2,
+   "modules": [
+    "reservation-de-table",
+    "plan-de-salle",
+    "carte-cadeau-qui-se-compose",
+    "accords-mets-et-vins",
+    "horaires-ouvert-maintenant",
+    "carte-du-restaurant",
+    "envol-vers-le-panier"
+   ],
+   "notes": "Refonte complète demandée (v5 jugée « modèle de restaurant ») : socle v10.9.2 neuf, modules et logique gardés. Construction commencée sur des images provisoires de la v5, en attendant les images Grok. Images Grok reçues à 00:11 ; boucles vidéo : eau et vapeur gardées (vapeur masquée sur la fumée), flamme et crépuscule écartés (672 px, trop flous en grand).",
+   "audit": {
+    "premierAuditEchecs": 44,
+    "passes": 35,
+    "notes": "standard 44 puis 10 échecs ; ciblé 0 ; complet 13 échecs (contrastes sur image, petits écrans 375×667, mode calme) corrigés puis relancés ; test visiteur : 7 missions, 2 passages ; regard neuf : 29 points à corriger, 22 traités, les autres gardés et justifiés (_audit/regard-neuf/rapport.md)"
+   }
+  }
+ ]
+}

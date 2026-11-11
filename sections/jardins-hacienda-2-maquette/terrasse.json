@@ -1,0 +1,49 @@
+{
+ "id": "jardins-hacienda-2-maquette/terrasse",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "index",
+ "titre": "19:00, la terrasse s'allume",
+ "role": "manifeste",
+ "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:231-268",
+  "css": "assets/css/site.css:33,202-235,805,876-878",
+  "js": "assets/js/site.js:5,139-140,282,285-307,331-380,420-431,542-612,814,850-851 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:2,119 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:47-52 ; assets/js/socle/effets.js:190-214,290-315 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/terrasse-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/terrasse-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/terrasse-p720.mp4"
+ },
+ "pieges": [
+  "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
+  "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2340,
+  "hauteur_m390": 1857,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}
