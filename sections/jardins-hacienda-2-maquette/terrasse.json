@@ -4,7 +4,7 @@
  "page": "index",
  "titre": "19:00, la terrasse s'allume",
  "role": "manifeste",
- "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt. L'hiver, elle passe tout en bas de l'accueil, en clin d'œil à l'été (« L'été, la terrasse s'allume »).",
+ "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt. L'hiver, elle passe tout en bas de l'accueil en une seule image de nuit, guirlandes allumées, sans épinglage : un clin d'œil à l'été.",
  "animations": [
   "section-fixée",
   "progression-fixée",
@@ -14,8 +14,7 @@
   "schema-interactif"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger"
+  "aucune"
  ],
  "telephone": "adapté",
  "note_qualite": 5,
@@ -24,23 +23,22 @@
  "modules": [],
  "code": {
   "html": "index.html:221-258",
-  "css": "assets/css/site.css:33,160-193,692,763-765,989",
-  "js": "assets/js/site.js:5,115,178-205,209-220,242-243,307,406,409-431,488-537,666-687,702-706,803-873,1079,1123-1124 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/lumiere-au-pointeur/module.js:2,129-130,139-274 ; assets/js/modules/rideau-en-lanieres/module.js:24,30-146 ; assets/js/modules/formulaire-par-etapes/module.js:1,41,64,174,194 ; assets/js/modules/ciel-en-direct/module.js:136,188,242,247,291,301 ; assets/js/modules/givre-webgl/module.js:70-189 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:2,119 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:49-54 ; assets/js/socle/effets.js:190-214,290-315 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
+  "css": "assets/css/site.css:33,160-193,692,763-765,989,1240-1242,1255-1256",
+  "js": "assets/js/site.js:5,115,178-205,209-220,242-243,307,406,409-432,489-538,667-688,703-707,804-874,1080,1124-1125 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/lumiere-au-pointeur/module.js:2,129-130,139-274 ; assets/js/modules/rideau-en-lanieres/module.js:24,30-146 ; assets/js/modules/formulaire-par-etapes/module.js:1,41,64,174,194 ; assets/js/modules/ciel-en-direct/module.js:136,188,242,247,291,301 ; assets/js/modules/givre-webgl/module.js:70-189 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:2,119 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:49-54 ; assets/js/socle/effets.js:190-214,290-315 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/terrasse-p1440.jpg",
-  "capture_m390": "medias/jardins-hacienda-2-maquette/terrasse-m390.jpg",
-  "video": "medias/jardins-hacienda-2-maquette/terrasse-p720.mp4"
+  "capture_m390": "medias/jardins-hacienda-2-maquette/terrasse-m390.jpg"
  },
  "pieges": [
   "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
   "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
  ],
  "mesures": {
-  "hauteur_p1440": 2340,
-  "hauteur_m390": 1857,
+  "hauteur_p1440": 860,
+  "hauteur_m390": 844,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 0
  },
  "familles": [
   "scene-epinglee"

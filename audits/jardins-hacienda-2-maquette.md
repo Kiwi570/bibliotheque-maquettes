@@ -1,6 +1,6 @@
 # jardins-hacienda-2-maquette
 
-<https://jardins-hacienda-2-maquette.vercel.app> · audit du 11/11/2026 · dernier commit e477c7e du 11/11/2026
+<https://jardins-hacienda-2-maquette.vercel.app> · audit du 11/11/2026 · dernier commit e4c4fda du 11/11/2026
 
 > Audit d'entrée en bibliothèque : script d'audit de la skill (standard en deux passages, puis complet sur 13 tailles et contre-audit ciblé), test « vrai visiteur » (7 missions, téléphone et ordinateur), regard neuf d'un relecteur séparé, inventaire de la bibliothèque et lecture des captures. Pas d'audit externe : la note est à confirmer.
 
@@ -15,7 +15,7 @@ Version 7 de « De midi à minuit » : la même journée à l'heure de la maison
 | Critère | Note | Justification |
 |---|---|---|
 | 1. Effet « waouh » et niveau premium | 13/15 | Idée visible en 5 s (12:00 sur la piscine l'été, dans la salle aux baies vitrées l'hiver, une intro qui devient l'heure réelle, de nuit « la maison dort ») et des moments forts tirés du métier : l'ardoise qui s'efface au chiffon pour écrire le dîner, la vraie assiette qui se dresse, la vapeur qui s'écarte sous la main, la vitre givrée ; l'en-tête d'accueil reste de facture classique. |
-| 2. Direction artistique et harmonie | 13/15 | Vraies photos du lieu dans toutes les pages intérieures (salle, pergola, piscine, enseigne détourée, cèpes), retouchées claires ; craie Caveat seulement sur l'ardoise ; plus de cadres à bordure (réservation et formulaire en lignes, ticket dentelé). Trois images générées gardées à l'accueil (12:00, 19:00, 23:00) parce que l'eau et la terrasse en trois états en ont besoin. |
+| 2. Direction artistique et harmonie | 13/15 | Vraies photos du lieu dans toutes les pages intérieures (salle, pergola, piscine, enseigne détourée, cèpes), retouchées claires ; craie Caveat seulement sur l'ardoise ; plus de cadres à bordure (réservation et formulaire en lignes, ticket dentelé). Trois images générées gardées à l'accueil (12:00, 19:00, 23:00) parce que l'eau et la terrasse en trois états en ont besoin. Plus de violet : le soir est vert de nuit (Réceptions, dîner, terrasse). |
 | 3. Animations et effets | 14/15 | WebGL (eau, givre, bougie), vapeur en canvas qui s'écarte sous la main, ciel calculé (soleil, lune, étoiles), panorama épinglé dont la lumière suit l'heure, assiette en couches au défilement, dépliant 3D du menu de Noël, rideau de palmes à l'arrivée sur Réceptions, voile en dégradé entre deux heures. |
 | 4. Expérience ludique et interactions | 9/10 | Chaque page a quelque chose à toucher : eau, vapeur, givre, ardoise (bascule midi/soir), curseur du ciel, verre des accords, cadran des horaires, carte de placement qui s'envole, carte cadeau, bougie de la 404 ; réservation toujours en deux validations. |
 | 5. Tous les formats | 13/15 | Audit complet sur 13 tailles corrigé (texte sur le titre de la Saint-Sylvestre, scènes épinglées sur écran bas, givre différé) ; légende du panorama dédiée au téléphone ; petits téléphones encore serrés. |
@@ -52,8 +52,8 @@ Aucun.
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit de la skill | standard : 0 échec(s), 1 à regarder, 0 non lancé(s) |
-| Audit complet (13 tailles) | 7 échecs au premier passage (boutons et infos sous le premier écran sur écran bas, éclair d'épinglage et fluidité des Fêtes) ; 0 après corrections et contre-audits ciblés |
+| Script d'audit de la skill | complet : 0 échec(s), 1 à regarder, 0 non lancé(s) |
+| Audit complet (13 tailles) | v7.3 : 0 échec, 15 points à regarder traités ou acceptés (rechargement au milieu de La carte décalé d'un écran, contraste mesuré sous le 19:00 de Réceptions) ; v7 : 7 échecs au premier passage, corrigés |
 | Fluidité | Les fêtes : 1 % d'images lentes, tâche la plus longue 103 ms (ordinateur ralenti 4 fois) ; accueil 5 % |
 | Test visiteur | 13 missions réussies sur 14 avant corrections ; la soirée sur ordinateur (dates cachées derrière une photo) corrigée |
 | Regard neuf (points de la v6) | 8 réglés, 7 en partie, 3 non avant corrections ; la plupart corrigés |
