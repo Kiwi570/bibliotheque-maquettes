@@ -4,7 +4,7 @@
  "page": "index",
  "titre": "12:00, midi au bord de l'eau",
  "role": "ouverture",
- "description": "Piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL), grande heure, nom et lieu, statut à l'heure réelle, deux boutons.",
+ "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées et un halo de soleil qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
  "animations": [
   "webgl-shader",
   "révélation-texte"
@@ -13,7 +13,7 @@
   "aucune"
  ],
  "dependances": [
-  "canvas"
+  "ogl"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -21,9 +21,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:119-141",
-  "css": "assets/css/site.css:74-75,82-127,585-586,653,698,716,723,732-737,756-781,834,845-852,860,893,906",
-  "js": "assets/js/site.js:1,31-43,121-136,139,142-186,203-266,310-380,457-475,478-498,615-632,839-840,850,853-856,862-864,867-869 ; assets/js/modules/reservation-de-table/module.js:1 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,360-404 ; assets/js/socle/transitions.js:25-46"
+  "html": "index.html:121-152",
+  "css": "assets/css/socle.css:245-250,255,271 ; assets/css/site.css:76-127,480-481,548,593,610,614,622-627,645-670,721,732-739,747,776,788,858,1026,1067,1144,1183,1187-1193",
+  "js": "assets/js/site.js:1,31-43,55-74,121,141,224-239,242,245-289,306,327-390,467-537,624-645,648-669,786-803,876-881,1018-1019,1023,1031,1034-1037,1043-1045,1048-1050 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:47-60,123,128,142,145,283 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/reservation-de-table/module.js:1 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,360-404 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/midi-p1440.jpg",
@@ -32,7 +32,8 @@
  },
  "pieges": [
   "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
-  "dire l'heure réelle dans le statut quand la grande heure est celle du récit"
+  "dire l'heure réelle dans le statut quand la grande heure est celle du récit",
+  "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage"
  ],
  "mesures": {
   "hauteur_p1440": 900,

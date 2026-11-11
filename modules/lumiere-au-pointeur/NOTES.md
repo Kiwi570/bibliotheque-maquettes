@@ -45,6 +45,8 @@ Image : option `image`, sinon l'`<img>` de `.lum__fond` (réutilisée, pas de se
 - Garde-fou : après 1 s, médiane sur 40 images ; au-delà de 34 ms, densité ×0,7 (jusqu'à 0,75), puis bascule sur le masque CSS. En rendu logiciel (SwiftShader) à 1440×900, la médiane mesurée est d'environ 33 ms : sur une machine lente le repli CSS peut prendre le relais, c'est voulu.
 - Changer de source : `detruire()`, remplacer le canvas par un clone (le contexte WebGL perdu ne se réutilise pas), puis `init()` (voir la démonstration).
 - Une image d'une autre origine reçoit `crossOrigin = 'anonymous'` ; si le premier rendu échoue, repli CSS sans erreur console.
+- Dans une section en `display: grid`, le `justify-content: flex-end` du module pousse le texte à droite : forcer le texte sur toute la largeur de sa colonne (jardins-hacienda-2 v7, page 404).
+- Demande OGL : un projet qui ne le charge pas partout doit le charger à la demande avant `init` (adaptateur du socle).
 
 ## Variantes
 

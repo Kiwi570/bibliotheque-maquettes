@@ -4,36 +4,44 @@
  "page": "la-carte",
  "titre": "La carte à l'heure",
  "role": "ouverture",
- "description": "Écran partagé : photo du service (déjeuner ou dîner selon l'heure réelle) et grande heure, bascule qui rallume la page à l'autre service.",
+ "description": "L'ardoise de la semaine écrite à la craie (Caveat), celle du midi ou du soir selon l'heure réelle ; « Passer au dîner » l'efface au chiffon, écrit celle du soir et rallume la page.",
  "animations": [
-  "filtre-anime"
+  "trace-svg",
+  "révélation-texte"
  ],
  "interactions": [
-  "aucune"
+  "filtres"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
- "module": null,
- "modules": [],
+ "module": "ardoise-a-la-craie",
+ "modules": [
+  "ardoise-a-la-craie"
+ ],
  "code": {
-  "html": "la-carte.html:118-143",
-  "css": "assets/css/socle.css:270 ; assets/css/site.css:82-83,95,110,117-119,123,363-377,585-586,647-653,698,703,723-726,732,737,751-753,760,765,770,774,778,794,846,851-852,905-906",
-  "js": "assets/js/site.js:147-186,457-475,478-498,615-632,770-788,840,850 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/boucles.js:6,56-81 ; assets/js/socle/transitions.js:25-46"
+  "html": "la-carte.html:121-151",
+  "css": "assets/css/socle.css:270 ; assets/js/modules/ardoise-a-la-craie/module.css:13-31,36-53,59-61 ; assets/css/site.css:27,65-66,137,192-193,334,365,480,501,608,614,620,638,687,697,764-765,792,805-841,881-883,987-989,1026,1067,1093,1108-1109,1114,1128,1182-1183",
+  "js": "assets/js/site.js:4,141-152,250-289,613-616,624-645,1019,1031 ; assets/js/modules/ardoise-a-la-craie/module.js:1-4,9,27,40,43-47,50-149 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:152-159 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/la-carte-debut-p1440.jpg"
+  "capture": "medias/jardins-hacienda-2-maquette/la-carte-debut-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/la-carte-debut-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/la-carte-debut-p720.mp4"
  },
  "pieges": [],
  "mesures": {
   "hauteur_p1440": 900,
-  "hauteur_m390": 719,
+  "hauteur_m390": 1005,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  },
- "familles": [],
- "impact": "calme"
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
 }

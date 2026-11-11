@@ -41,6 +41,8 @@ Origine : fusion de `atelier-shazak-maquette/ouverture` (« Tresse puis rideau e
 - Échap ou « Passer » accélèrent la fin (×5) plutôt que de couper net. Le bouton est le premier élément atteint au clavier.
 - Forme `feuille` : les pointes restent hors de l'écran (130 % de haut) et les feuilles se chevauchent, sans quoi on verrait la page entre deux pointes avant l'ouverture.
 - Hauteur du héros de démonstration : ne pas la calculer avec `--entete-h` (mesurée après le premier affichage, elle provoquait un décalage de mise en page).
+- À coordonner avec le voile de transition du socle : ne le jouer qu'à l'arrivée depuis une autre page (jamais après l'intro ni au rechargement), sinon deux ouvertures se suivent (jardins-hacienda-2 v7).
+- `clearProps: 'all'` relevé par l'audit : nommer les propriétés.
 
 ## Variantes
 

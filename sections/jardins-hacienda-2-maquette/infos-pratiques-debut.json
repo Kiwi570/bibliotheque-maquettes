@@ -4,36 +4,45 @@
  "page": "infos-pratiques",
  "titre": "Il est … à Moineville",
  "role": "ouverture",
- "description": "Heure réelle, photo du moment (piscine le jour, heure bleue le soir), statut.",
+ "description": "Le ciel réel de Moineville à l'heure qu'il est (soleil, lune et étoiles calculés pour le lieu) derrière la vraie enseigne détourée ; un curseur montre une autre heure et la grande heure le suit ; adresse, distances et raccourcis Appeler, Une question, Venir dans le premier écran.",
  "animations": [
-  "compteur"
+  "canvas-2d",
+  "révélation-texte"
  ],
  "interactions": [
-  "aucune"
+  "simulateur"
  ],
  "dependances": [
-  "aucune"
+  "canvas"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
- "module": null,
- "modules": [],
+ "module": "ciel-en-direct",
+ "modules": [
+  "ciel-en-direct"
+ ],
  "code": {
-  "html": "infos-pratiques.html:118-137",
-  "css": "assets/css/socle.css:279-282 ; assets/css/site.css:76-83,93-95,110,117-119,123,210,271,319,369,389,396,405,463,482,578,585-586,592-606,653,698,704,714-715,732,737,760,765,770,774,778,804,846,851-852,903",
-  "js": "assets/js/site.js:84,121-136,147-186,457-475,478-498,615-632,705-710,713-721,840,850 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/transitions.js:25-46"
+  "html": "infos-pratiques.html:121-154",
+  "css": "assets/js/modules/ciel-en-direct/module.css:4-40,47-78,82-86 ; assets/css/site.css:76-83,95,110,117-119,123,480-481,487-501,548,593,608-609,622,627,649,654,659,663,667,733,738-739,786,858,1014-1031,1063-1070,1116-1117,1127,1144,1156-1162,1168-1169,1182-1183",
+  "js": "assets/js/site.js:121,224-239,250-289,624-645,648-669,786-803,876-881,884-896,1019,1031 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:65,101-103,108,276,319 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/infos-pratiques-debut-p1440.jpg"
+  "capture": "medias/jardins-hacienda-2-maquette/infos-pratiques-debut-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/infos-pratiques-debut-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/infos-pratiques-debut-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "mer: false pour un lieu sans mer",
+  "sous un premier plan détouré, halo de texte au lieu d'une boîte",
+  "observer seulement le bloc du curseur pour synchroniser la grande heure (sinon boucle sans fin)"
+ ],
  "mesures": {
-  "hauteur_p1440": 828,
-  "hauteur_m390": 776,
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
   "epinglee": false,
   "scrolltriggers": 0
  },
  "familles": [],
- "impact": "calme"
+ "impact": "vivant"
 }

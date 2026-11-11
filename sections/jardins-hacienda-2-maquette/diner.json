@@ -4,8 +4,9 @@
  "page": "index",
  "titre": "21:00, le dîner",
  "role": "calculateur",
- "description": "Prochains services ouverts (le prochain soir coché), couverts, carton qui s'envole vers la réservation déjà remplie ; vapeur masquée sur l'assiette nette.",
+ "description": "La vraie assiette devant la cheminée : la vapeur, bien visible, monte du plat et s'écarte sous la main (canvas) ; prochains services ouverts, couverts, carton qui s'envole vers la réservation.",
  "animations": [
+  "canvas-2d",
   "morphing"
  ],
  "interactions": [
@@ -13,19 +14,21 @@
  ],
  "dependances": [
   "gsap",
-  "scrolltrigger"
+  "scrolltrigger",
+  "canvas"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
  "reutilisable": false,
  "module": "envol-vers-le-panier",
  "modules": [
-  "envol-vers-le-panier"
+  "envol-vers-le-panier",
+  "plat-fumant"
  ],
  "code": {
-  "html": "index.html:269-306",
-  "css": "assets/css/site.css:131-132,238-259,753,804",
-  "js": "assets/js/site.js:139-140,331-380,661-704 ; assets/js/modules/reservation-de-table/module.js:134,250-251 ; assets/js/socle/compteurs.js:6-36"
+  "html": "index.html:258-296",
+  "css": "assets/js/modules/plat-fumant/module.css:4-9 ; assets/css/site.css:131-132,196-217,923-925",
+  "js": "assets/js/site.js:166,178-205,242-243,488-537,624-645,786-803,811-881,884-930 ; assets/js/modules/agenda-des-dates/module.js:4,91 ; assets/js/modules/plat-fumant/module.js:1,4,45-47,56-170 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:27,134,250-251 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11 ; assets/js/socle/compteurs.js:6-36"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/diner-p1440.jpg",
@@ -35,7 +38,7 @@
  "pieges": [],
  "mesures": {
   "hauteur_p1440": 1052,
-  "hauteur_m390": 1414,
+  "hauteur_m390": 1445,
   "epinglee": false,
   "scrolltriggers": 1
  },

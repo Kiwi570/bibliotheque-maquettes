@@ -2,11 +2,13 @@
  "id": "jardins-hacienda-2-maquette/la-carte-passe",
  "maquette": "jardins-hacienda-2-maquette",
  "page": "la-carte",
- "titre": "Les mains du chef",
- "role": "manifeste",
- "description": "Photo plein cadre en parallaxe et texte.",
+ "titre": "Sur la passe",
+ "role": "étapes",
+ "description": "Une vraie assiette du chef se dresse au défilement : la photo du site découpée en couches (purée, pièce rôtie, girolles, légumes, herbes), chacune posée nette sur la même assiette floue et dans l'ombre, puis la photo entière ; cinq étapes sans cadres.",
  "animations": [
-  "parallaxe"
+  "section-fixée",
+  "progression-fixée",
+  "révélation-image"
  ],
  "interactions": [
   "aucune"
@@ -16,25 +18,35 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 2,
- "reutilisable": false,
- "module": null,
- "modules": [],
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "assiette-qui-se-dresse",
+ "modules": [
+  "assiette-qui-se-dresse"
+ ],
  "code": {
-  "html": "la-carte.html:154-165",
-  "css": "assets/css/site.css:383-389",
-  "js": null
+  "html": "la-carte.html:162-177",
+  "css": "assets/js/modules/assiette-qui-se-dresse/module.css:9-49,55,60-70 ; assets/css/site.css:844-846,1088-1091,1149-1153,1170",
+  "js": "assets/js/site.js:2 ; assets/js/modules/assiette-qui-se-dresse/module.js:1,5-6,10,17-66"
  },
  "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/la-carte-passe-p1440.jpg"
+  "capture": "medias/jardins-hacienda-2-maquette/la-carte-passe-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/la-carte-passe-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/la-carte-passe-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "la classe .passe était déjà prise par la liste des plats de l'accueil : section renommée passe-chef",
+  "sans --ecran-h la scène épinglée fait 0 px",
+  "un comblement automatique du fond a laissé des taches : fond flou et sombre à la place"
+ ],
  "mesures": {
-  "hauteur_p1440": 774,
-  "hauteur_m390": 726,
-  "epinglee": false,
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1061,
+  "epinglee": true,
   "scrolltriggers": 1
  },
- "familles": [],
- "impact": "calme"
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
 }

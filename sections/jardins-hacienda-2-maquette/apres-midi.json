@@ -2,43 +2,43 @@
  "id": "jardins-hacienda-2-maquette/apres-midi",
  "maquette": "jardins-hacienda-2-maquette",
  "page": "index",
- "titre": "14:30, l'après-midi d'été",
+ "titre": "L'après-midi au bord de l'eau",
  "role": "galerie",
- "description": "Piscine (boucle vidéo), bar, journées festives et pool parties en défilement de côté ; heures réelles de chaque moment.",
+ "description": "L'été seulement : un panorama de la piscine et de la grande pergola (vraie photo) parcouru en défilant ; l'heure avance de 14:30 à 19:00, l'ombre gagne, chaque lieu s'allume à son heure avec sa légende (bandeau en bas de l'image sur téléphone). L'hiver, la section disparaît.",
  "animations": [
-  "galerie-horizontale"
+  "section-fixée",
+  "progression-fixée",
+  "parallaxe"
  ],
  "interactions": [
-  "lecteur-vidéo"
+  "aucune"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger"
+  "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:179-230",
-  "css": "assets/css/socle.css:249-250,255 ; assets/css/site.css:131-132,157-174,181-199,749",
-  "js": "assets/js/site.js:27-30,139,277-280,457-475,722-755 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/accords-mets-et-vins/module.js:63,91,109 ; assets/js/socle/effets.js:14,238-269 ; assets/js/socle/calme.js:15-44"
+  "html": "index.html:195-219",
+  "css": "assets/css/site.css:131-132,157,867-920,1124-1125,1130-1140,1176",
+  "js": "assets/js/site.js:55-74,242,433-464,577-598,648-669,990 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:2,20-33,63 ; assets/js/modules/ciel-en-direct/module.js:2,67-69,97 ; assets/js/modules/agenda-des-dates/module.js:11,62,85,135 ; assets/js/modules/reservation-de-table/module.js:6 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,17 ; assets/js/socle/voile.js:10 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:2"
  },
- "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/apres-midi-p1440.jpg"
- },
+ "medias": {},
  "pieges": [
-  "galerie horizontale générique : la renforcer ou la remplacer"
+  "overflow: hidden sur la section casse l'épinglage collant : overflow: clip",
+  "une légende ne s'allume que si son lieu est à l'écran"
  ],
  "mesures": {
-  "hauteur_p1440": 900,
-  "hauteur_m390": 859,
-  "epinglee": true,
-  "scrolltriggers": 2
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
  },
  "familles": [
-  "defilement-horizontal"
+  "scene-epinglee"
  ],
- "impact": "vivant"
+ "impact": "spectaculaire"
 }

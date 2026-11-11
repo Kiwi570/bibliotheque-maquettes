@@ -27,16 +27,17 @@
   },
   "points_forts": [
    "une journée à l'heure de la maison, de midi à minuit, qui règle voile, intro, horloge et lumière de chaque page",
-   "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules",
-   "eau de la piscine en WebGL à toucher",
-   "saison réelle affichée partout",
-   "boucles vidéo recadrées comme leurs images, vapeur masquée sur la fumée"
+   "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
+   "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
+   "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
+   "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
+   "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
+   "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules"
   ],
   "reserves": [
-   "en-tête d'accueil proche des maquettes précédentes",
-   "ouvertures intérieures de deux compositions seulement",
-   "La carte sans scène propre",
-   "réservation en deux temps (7 gestes)"
+   "réservation en deux validations (Vérifier puis Confirmer)",
+   "12:00, 19:00 et 23:00 de l'accueil encore en images générées",
+   "textes de l'ardoise et de la carte à confirmer avec l'établissement"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -44,12 +45,15 @@
    "webgl-shader",
    "section-fixée",
    "progression-fixée",
-   "galerie-horizontale",
    "canvas-2d",
    "révélation-texte",
+   "révélation-image",
+   "masque",
    "compteur",
    "trace-svg",
-   "parallaxe"
+   "parallaxe",
+   "reactif-vitesse",
+   "fil-conducteur"
   ],
   "interactions": [
    "réservation-simulee",
@@ -58,14 +62,13 @@
    "recherche",
    "saisie-personnalisee",
    "schema-interactif",
-   "mode-calme",
-   "lecteur-vidéo"
+   "mode-calme"
   ],
-  "change_depuis_audit": "Après l'audit : une seule heure par page (voile, intro, horloge), nom et lieu dès l'arrivée sur téléphone, demande de réception avec période, retour du mode calme à la bonne section (correction du socle).",
+  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible.",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
-   "objet": "l'eau de la piscine à midi, les ampoules de la terrasse, les braises du feu",
+   "objet": "l'eau de midi, l'ardoise effacée au chiffon, la vapeur sur l'assiette, la vitre givrée, le ciel de Moineville",
    "fil": "l'heure de la journée, de 12:00 à 00:00, portée par l'horloge de l'en-tête et le voile"
   },
   "metier": "restaurant et lieu de réception"
@@ -148,7 +151,7 @@
   "midi": {
    "titre": "12:00, midi au bord de l'eau",
    "role": "ouverture",
-   "description": "Piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL), grande heure, nom et lieu, statut à l'heure réelle, deux boutons.",
+   "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées et un halo de soleil qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
    "animations": [
     "webgl-shader",
     "révélation-texte"
@@ -162,13 +165,14 @@
    "module": null,
    "pieges": [
     "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
-    "dire l'heure réelle dans le statut quand la grande heure est celle du récit"
+    "dire l'heure réelle dans le statut quand la grande heure est celle du récit",
+    "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage"
    ]
   },
   "dejeuner": {
    "titre": "12:30, le déjeuner",
    "role": "produits",
-   "description": "Cinq vrais plats de la carte avec leurs prix qui passent, assiette générée et trois vraies assiettes en éventail.",
+   "description": "La salle au soleil de midi en vraie photo (tables rondes en verre, baies vitrées) et cinq vrais plats de la carte avec leurs prix.",
    "animations": [
     "apparition-au-défilement",
     "parallaxe"
@@ -183,21 +187,24 @@
    "pieges": []
   },
   "apres-midi": {
-   "titre": "14:30, l'après-midi d'été",
+   "titre": "L'après-midi au bord de l'eau",
    "role": "galerie",
-   "description": "Piscine (boucle vidéo), bar, journées festives et pool parties en défilement de côté ; heures réelles de chaque moment.",
+   "description": "L'été seulement : un panorama de la piscine et de la grande pergola (vraie photo) parcouru en défilant ; l'heure avance de 14:30 à 19:00, l'ombre gagne, chaque lieu s'allume à son heure avec sa légende (bandeau en bas de l'image sur téléphone). L'hiver, la section disparaît.",
    "animations": [
-    "galerie-horizontale"
+    "section-fixée",
+    "progression-fixée",
+    "parallaxe"
    ],
    "interactions": [
-    "lecteur-vidéo"
+    "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": [
-    "galerie horizontale générique : la renforcer ou la remplacer"
+    "overflow: hidden sur la section casse l'épinglage collant : overflow: clip",
+    "une légende ne s'allume que si son lieu est à l'écran"
    ]
   },
   "terrasse": {
@@ -224,8 +231,9 @@
   "diner": {
    "titre": "21:00, le dîner",
    "role": "calculateur",
-   "description": "Prochains services ouverts (le prochain soir coché), couverts, carton qui s'envole vers la réservation déjà remplie ; vapeur masquée sur l'assiette nette.",
+   "description": "La vraie assiette devant la cheminée : la vapeur, bien visible, monte du plat et s'écarte sous la main (canvas) ; prochains services ouverts, couverts, carton qui s'envole vers la réservation.",
    "animations": [
+    "canvas-2d",
     "morphing"
    ],
    "interactions": [
@@ -235,7 +243,10 @@
    "note_qualite": 4,
    "reutilisable": false,
    "module": "envol-vers-le-panier",
-   "pieges": []
+   "pieges": [],
+   "modules": [
+    "plat-fumant"
+   ]
   },
   "feu": {
    "titre": "23:00, au coin du feu",
@@ -260,7 +271,7 @@
   "fetes": {
    "titre": "23:30, Noël et la Saint-Sylvestre",
    "role": "agenda",
-   "description": "Deux menus avec prix et compte à rebours en jours de calendrier.",
+   "description": "Les menus de Noël et de la Saint-Sylvestre avec prix et compte à rebours en jours de calendrier, puis la prochaine soirée à venir, tirée de l'agenda.",
    "animations": [
     "compteur"
    ],
@@ -276,9 +287,9 @@
    ]
   },
   "minuit": {
-   "titre": "00:00, offrir et venir",
+   "titre": "Offrir un moment aux Jardins",
    "role": "appel",
-   "description": "Carte cadeau en aperçu, plan schématique Metz-Thionville-Luxembourg qui se dessine, statut.",
+   "description": "Offrir seul, en plein écran : la carte cadeau brille dans le noir ; « Venir » (distances et accès) passe au pied de page.",
    "animations": [
     "trace-svg"
    ],
@@ -312,34 +323,43 @@
   "404-debut": {
    "titre": "Cette page a fermé à minuit",
    "role": "page-404",
-   "description": "La grande table vide sous la pergola, 00:00, retour à midi.",
+   "description": "La salle dans le noir (vraie photo) : une bougie suit la main et l'éclaire (WebGL) ; 00:00 et retour à midi.",
    "animations": [
-    "aucune"
+    "webgl-shader",
+    "masque",
+    "révélation-texte"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
-   "pieges": []
+   "module": "lumiere-au-pointeur",
+   "pieges": [
+    "dans une section en grille, le justify-content du module pousse le texte à droite : colonne pleine"
+   ]
   },
   "infos-pratiques-debut": {
    "titre": "Il est … à Moineville",
    "role": "ouverture",
-   "description": "Heure réelle, photo du moment (piscine le jour, heure bleue le soir), statut.",
+   "description": "Le ciel réel de Moineville à l'heure qu'il est (soleil, lune et étoiles calculés pour le lieu) derrière la vraie enseigne détourée ; un curseur montre une autre heure et la grande heure le suit ; adresse, distances et raccourcis Appeler, Une question, Venir dans le premier écran.",
    "animations": [
-    "compteur"
+    "canvas-2d",
+    "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "simulateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
-   "pieges": []
+   "module": "ciel-en-direct",
+   "pieges": [
+    "mer: false pour un lieu sans mer",
+    "sous un premier plan détouré, halo de texte au lieu d'une boîte",
+    "observer seulement le bloc du curseur pour synchroniser la grande heure (sinon boucle sans fin)"
+   ]
   },
   "infos-pratiques-horaires": {
    "titre": "Ouvert maintenant ?",
@@ -362,7 +382,7 @@
   "infos-pratiques-acces": {
    "titre": "Venir à Moineville",
    "role": "contact",
-   "description": "Plan schématique et règles d'accès.",
+   "description": "Carte d'accès dessinée sur mesure (Moselle, A31, frontière, Thionville 19 km, Metz 24 km, Luxembourg 47 km) et règles d'accès.",
    "animations": [
     "trace-svg"
    ],
@@ -378,33 +398,34 @@
   "infos-pratiques-ecrire": {
    "titre": "Une question",
    "role": "contact",
-   "description": "Formulaire de contact simulé (nom, téléphone, message), avec la mention de confidentialité et le numéro à appeler en premier.",
+   "description": "Une question en quatre étapes : sujet en grandes cartes avec icône, message, coordonnées, vérification ; envoi simulé, message de fin ramené à l'écran.",
    "animations": [
-    "aucune"
+    "apparition-au-défilement"
    ],
    "interactions": [
     "formulaire-par-étapes"
    ],
    "telephone": "adapté",
-   "note_qualite": 2,
+   "note_qualite": 3,
    "reutilisable": false,
-   "module": null,
+   "module": "formulaire-par-etapes",
    "pieges": []
   },
   "la-carte-debut": {
    "titre": "La carte à l'heure",
    "role": "ouverture",
-   "description": "Écran partagé : photo du service (déjeuner ou dîner selon l'heure réelle) et grande heure, bascule qui rallume la page à l'autre service.",
+   "description": "L'ardoise de la semaine écrite à la craie (Caveat), celle du midi ou du soir selon l'heure réelle ; « Passer au dîner » l'efface au chiffon, écrit celle du soir et rallume la page.",
    "animations": [
-    "filtre-anime"
+    "trace-svg",
+    "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "filtres"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
+   "module": "ardoise-a-la-craie",
    "pieges": []
   },
   "la-carte-toute-la-carte": {
@@ -428,25 +449,31 @@
    ]
   },
   "la-carte-passe": {
-   "titre": "Les mains du chef",
-   "role": "manifeste",
-   "description": "Photo plein cadre en parallaxe et texte.",
+   "titre": "Sur la passe",
+   "role": "étapes",
+   "description": "Une vraie assiette du chef se dresse au défilement : la photo du site découpée en couches (purée, pièce rôtie, girolles, légumes, herbes), chacune posée nette sur la même assiette floue et dans l'ombre, puis la photo entière ; cinq étapes sans cadres.",
    "animations": [
-    "parallaxe"
+    "section-fixée",
+    "progression-fixée",
+    "révélation-image"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 2,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "assiette-qui-se-dresse",
+   "pieges": [
+    "la classe .passe était déjà prise par la liste des plats de l'accueil : section renommée passe-chef",
+    "sans --ecran-h la scène épinglée fait 0 px",
+    "un comblement automatique du fond a laissé des taches : fond flou et sombre à la place"
+   ]
   },
   "la-carte-fin": {
    "titre": "Une table vous attend",
    "role": "appel",
-   "description": "Statut, réserver, vraies assiettes.",
+   "description": "Les cèpes en grand (vraie photo en parallaxe), statut, « Réserver » le service affiché, téléphone.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -454,7 +481,7 @@
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 2,
+   "note_qualite": 3,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -462,10 +489,11 @@
   "les-fetes-debut": {
    "titre": "La saison décide",
    "role": "ouverture",
-   "description": "Compte à rebours géant de la Saint-Sylvestre sur la salle au feu l'hiver, la journée d'été l'été ; bascule de saison.",
+   "description": "L'hiver, le compte à rebours de la Saint-Sylvestre derrière une vitre givrée qui fond sous la main (WebGL) ; l'été, la piscine aux palmiers ; bascule de saison.",
    "animations": [
+    "webgl-shader",
     "compteur",
-    "canvas-2d"
+    "ouverture-orchestrée"
    ],
    "interactions": [
     "aucune"
@@ -473,9 +501,10 @@
    "telephone": "adapté",
    "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
+   "module": "givre-webgl",
    "pieges": [
-    "nommer chaque prix dans le bandeau quand deux menus se suivent"
+    "shader plein écran redessiné à chaque image : ne redessiner que si l'image change, rien pendant le défilement, démarrer à demi-résolution",
+    "installé seulement au repos en haut de page et l'hiver"
    ]
   },
   "les-fetes-saint-sylvestre": {
@@ -498,17 +527,18 @@
   "les-fetes-noel": {
    "titre": "Le menu de Noël",
    "role": "offre",
-   "description": "Plats sous leurs cloches qui se lèvent au défilement.",
+   "description": "Le menu de Noël en dépliant de trois volets qui s'ouvre au défilement, couverture d'abord.",
    "animations": [
-    "apparition-au-défilement"
+    "section-fixée",
+    "progression-fixée"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
-   "module": null,
+   "module": "depliant-3d",
    "pieges": [
     "texte lisible avant que la cloche se lève"
    ]
@@ -534,7 +564,7 @@
   "les-fetes-ete": {
    "titre": "L'été, de 12 h à minuit",
    "role": "agenda",
-   "description": "La journée d'été heure par heure avec vraies photos.",
+   "description": "La journée d'été heure par heure en vraies photos (piscine, paillotes, lanternes au-dessus de l'eau la nuit).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -584,7 +614,7 @@
   "receptions-debut": {
    "titre": "Recevoir pour un …",
    "role": "ouverture",
-   "description": "Terrasse la nuit, l'occasion qui change dans le titre (mariage, baptême, anniversaire, pot de départ).",
+   "description": "La pergola dressée pour un mariage (vraie photo, éclaircie sous le texte) ; l'occasion change dans le titre (mariage, baptême, anniversaire, pot de départ).",
    "animations": [
     "révélation-texte"
    ],
@@ -592,7 +622,7 @@
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -600,7 +630,7 @@
   "receptions-espaces": {
    "titre": "Trois lieux, deux saisons",
    "role": "services",
-   "description": "Salle, terrasse, piscine en volets ; l'ordre suit la saison.",
+   "description": "La salle et son mur de pierre, le brasero sous la pergola, la piscine aux palmiers, en vraies photos ; l'ordre suit la saison.",
    "animations": [
     "flip",
     "révélation-image"
@@ -617,7 +647,7 @@
   "receptions-occasions": {
    "titre": "Ce que l'on fête ici",
    "role": "galerie",
-   "description": "Vraies photos des fêtes par occasion.",
+   "description": "Vraies photos par occasion (table au bord de la piscine, gâteaux).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -652,7 +682,7 @@
   "reserver-debut": {
    "titre": "Réserver à la lumière du service",
    "role": "ouverture",
-   "description": "Claire au déjeuner, de nuit au dîner, heure du service demandé ou du prochain service ouvert.",
+   "description": "La vraie salle aux baies vitrées au déjeuner, l'assiette du soir au dîner (21:00) ; la soirée choisie dans l'agenda est rappelée.",
    "animations": [
     "filtre-anime"
    ],
@@ -668,7 +698,7 @@
   "reserver-formulaire": {
    "titre": "Le jour, l'heure, les couverts",
    "role": "calculateur",
-   "description": "Réservation simulée avec carte de placement et récapitulatif.",
+   "description": "Réservation simulée sans cadres : jours et créneaux en texte, sélection en pastille pleine, carte de placement, récapitulatif en ticket dentelé.",
    "animations": [
     "morphing"
    ],
@@ -687,7 +717,7 @@
   "reserver-plan": {
    "titre": "Choisir ma table",
    "role": "outil-interactif",
-   "description": "Plan de salle en 3D légère, tables à choisir.",
+   "description": "Plan de salle en 3D légère, liste des tables en lignes, table à choisir.",
    "animations": [
     "flip"
    ],
@@ -699,6 +729,45 @@
    "reutilisable": false,
    "module": "plan-de-salle",
    "pieges": []
+  },
+  "les-fetes-dates": {
+   "titre": "Les prochaines dates",
+   "role": "agenda",
+   "description": "Les soirées des affiches du site (côte de bœuf, raclette, brunch, soirée libanaise), Noël et la Saint-Sylvestre : la prochaine en premier avec son décompte, ajout à l'agenda, « Réserver » au bon jour avec la soirée rappelée au-dessus du formulaire, dates passées repliées ; photo de la piste de danse collante à gauche.",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "agenda-des-dates",
+   "pieges": [
+    "le module ajoute titres de mois et dates passées à côté de la liste : liste dans son propre conteneur, jamais dans la grille",
+    "date seule pour Noël et la Saint-Sylvestre (aucune heure inventée)"
+   ]
+  },
+  "receptions-rdl": {
+   "titre": "Rideau de palmes",
+   "role": "transition-de-page",
+   "description": "En arrivant d'une autre page, le voile violet de 19 h s'ouvre en palmes qui s'écartent sur la pergola (jamais après l'intro ni au rechargement).",
+   "animations": [
+    "ouverture-orchestrée",
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "rideau-en-lanieres",
+   "pieges": [
+    "à coordonner avec le voile du socle : ne jouer qu'à l'arrivée par le voile"
+   ]
   }
  }
 }

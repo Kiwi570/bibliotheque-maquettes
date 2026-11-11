@@ -4,9 +4,10 @@
  "page": "les-fetes",
  "titre": "Le menu de Noël",
  "role": "offre",
- "description": "Plats sous leurs cloches qui se lèvent au défilement.",
+ "description": "Le menu de Noël en dépliant de trois volets qui s'ouvre au défilement, couverture d'abord.",
  "animations": [
-  "apparition-au-défilement"
+  "section-fixée",
+  "progression-fixée"
  ],
  "interactions": [
   "aucune"
@@ -16,27 +17,33 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
- "module": null,
- "modules": [],
+ "module": "depliant-3d",
+ "modules": [
+  "depliant-3d"
+ ],
  "code": {
-  "html": "les-fetes.html:193-209",
-  "css": "assets/css/site.css:425-438,446,717",
-  "js": "assets/js/socle/effets.js:11,22,190-214,317-344 ; assets/js/socle/onde.js:3,67-190"
+  "html": "les-fetes.html:204-243",
+  "css": "assets/js/modules/depliant-3d/module.css:3-27,31-33,37-40 ; assets/css/site.css:965-979,1110,1129,1170",
+  "js": "assets/js/modules/depliant-3d/module.js:10,17-59"
  },
  "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/les-fetes-noel-p1440.jpg"
+  "capture": "medias/jardins-hacienda-2-maquette/les-fetes-noel-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/les-fetes-noel-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/les-fetes-noel-p720.mp4"
  },
  "pieges": [
   "texte lisible avant que la cloche se lève"
  ],
  "mesures": {
-  "hauteur_p1440": 1011,
-  "hauteur_m390": 1233,
-  "epinglee": false,
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1924,
+  "epinglee": true,
   "scrolltriggers": 1
  },
- "familles": [],
- "impact": "calme"
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "vivant"
 }

@@ -33,6 +33,9 @@ Le titre est visible dès la première image : seul le givre s'anime (pousse dep
 - Densité de pixels 1,25 sur ordinateur, 1 sous 760 px ; boucle à 60 i/s au plus via `socle.boucle` (arrêt hors écran et onglet caché) ; le shader sort tout de suite là où il n'y a pas de givre.
 - Sous 760 px, givre à 60 % d'opacité et bord plus fin (0,13) pour garder le texte lisible ; le paragraphe porte une ombre portée couleur fond.
 - Mode calme, réduire les animations, sans WebGL et sans JavaScript : givre figé en CSS (`.givre__statique`), plus sobre que le givre animé.
+- Demande OGL (chargé à la demande par l'adaptateur du projet).
+- Fluidité (jardins-hacienda-2 v7) : la boucle redessine le shader plein écran à chaque image, environ 200 ms par image sur processeur ralenti 4 fois, d'où un échec de l'audit (tâche de 320 ms en défilant). Corrigé dans la copie du projet (`assets/js/modules/givre-webgl/module.js`), à reprendre ici : ne redessiner que si l'image change (pousse en cours, texture de fonte modifiée, scintillement qui ne change qu'à `floor(uTime * 1.2)`), effacer la fonte seulement 14 s après la dernière, et ne rien dessiner pendant 180 ms après un `scroll` (l'image défile avec la section) ; démarrer à demi-résolution (`dpr: 0.5`, 65 ms par image au lieu de 200 sur rendu logiciel, à peine visible sur un givre flou) et ne passer en pleine résolution qu'après six images de suite à moins de 25 ms d'écart (`gl.finish()` ne mesure rien : le rendu de Chrome est asynchrone). Le projet l'installe en plus au repos (haut de page, après 700 ms sans défilement), pas sous 761 px de large, et seulement l'hiver.
+- Au-dessus d'un dégradé d'ouverture (`::after`), lui donner un `z-index` supérieur, sinon la vitre est invisible ; la mention « Illustration générée » passe au-dessus du givre.
 
 ## Variantes
 

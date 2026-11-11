@@ -1,0 +1,46 @@
+{
+ "id": "jardins-hacienda-2-maquette/les-fetes-dates",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "les-fetes",
+ "titre": "Les prochaines dates",
+ "role": "agenda",
+ "description": "Les soirées des affiches du site (côte de bœuf, raclette, brunch, soirée libanaise), Noël et la Saint-Sylvestre : la prochaine en premier avec son décompte, ajout à l'agenda, « Réserver » au bon jour avec la soirée rappelée au-dessus du formulaire, dates passées repliées ; photo de la piste de danse collante à gauche.",
+ "animations": [
+  "apparition-au-défilement",
+  "compteur"
+ ],
+ "interactions": [
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "agenda-des-dates",
+ "modules": [
+  "agenda-des-dates"
+ ],
+ "code": {
+  "html": "les-fetes.html:152-203",
+  "css": "assets/js/modules/agenda-des-dates/module.css:3-12,16,24-25,32-44,52,63-64,74 ; assets/css/site.css:953-962,1120-1122,1146-1147",
+  "js": "assets/js/site.js:126,434-464,467-487 ; assets/js/modules/agenda-des-dates/module.js:1,10-15,20-23,30,39,50,57-58,62,66,78,81,91-94,98,103-104,146,150,187,198,208,220,237,243,254 ; assets/js/modules/reservation-de-table/module.js:49,83"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/les-fetes-dates-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/les-fetes-dates-m390.jpg"
+ },
+ "pieges": [
+  "le module ajoute titres de mois et dates passées à côté de la liste : liste dans son propre conteneur, jamais dans la grille",
+  "date seule pour Noël et la Saint-Sylvestre (aucune heure inventée)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2376,
+  "hauteur_m390": 3093,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

@@ -56,6 +56,8 @@ Chaque `fieldset[data-etape]` est une étape (le nom affiché dans la progressio
 - Toujours dire que l'envoi est simulé tant qu'aucun traitement réel n'est branché.
 - Champs à 16 px minimum (sinon zoom automatique sur iOS).
 - Sous 640 px, la carte de choix passe en grille de deux colonnes (`34px` puis le texte), l'icône `.fpe__icone` occupant la première sur deux lignes : **chaque carte doit avoir une icône** (SVG ou pastille), sinon le titre et le texte se partagent la même ligne et se chevauchent (constaté sur alexandra-grandry-maquette).
+- Après l'envoi sur téléphone, le message de fin peut rester hors de l'écran : écouter `formulaire:envoye` et ramener le message à l'écran (jardins-hacienda-2 v7).
+- `clearProps: 'all'` relevé par l'audit : nommer les propriétés.
 
 ## Variantes
 

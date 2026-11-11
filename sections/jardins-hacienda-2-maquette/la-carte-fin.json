@@ -4,7 +4,7 @@
  "page": "la-carte",
  "titre": "Une table vous attend",
  "role": "appel",
- "description": "Statut, réserver, vraies assiettes.",
+ "description": "Les cèpes en grand (vraie photo en parallaxe), statut, « Réserver » le service affiché, téléphone.",
  "animations": [
   "apparition-au-défilement"
  ],
@@ -12,27 +12,28 @@
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 2,
+ "note_qualite": 3,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "la-carte.html:166-192",
-  "css": "assets/css/site.css:76-79,390-397",
-  "js": "assets/js/site.js:31-43,84,121-136,331-380,517-526,705-710 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90"
+  "html": "la-carte.html:178-192",
+  "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:76-79,850-858,947,1026,1067,1076",
+  "js": "assets/js/site.js:31-43,121,224-239,488-537,688-697,876-881 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/effets.js:9,273-285 ; assets/js/socle/onde.js:1"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/la-carte-fin-p1440.jpg"
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 484,
-  "hauteur_m390": 541,
+  "hauteur_p1440": 738,
+  "hauteur_m390": 692,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  },
  "familles": [],
  "impact": "calme"

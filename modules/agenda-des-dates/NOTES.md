@@ -44,6 +44,10 @@ Origine : `les-plus-hautes-eaux-maquette/agenda-t-venir` (tri selon la date du j
 - Le compte à rebours et les statuts se recalculent toutes les minutes (onglet visible seulement) ; en mode calme, une seule fois, et rien n'apparaît en glissant.
 - Retour physique de l'ajout à l'agenda (grille wouahou, point 7) : la pastille se tamponne « Ajouté ». Le projet pose `data-grille="retour"` sur la section s'il le compte dans sa grille.
 - Le module déplace les `<li>` (mois, dates passées) : ne pas poser de déclencheur de défilement sur une date avant l'appel à `init()`.
+- Le module ajoute ses titres de mois et ses dates passées **à côté** de la liste : dans une section en grille, ils deviennent des cellules et la liste glisse sous la photo (jardins-hacienda-2 v7 : les dates de novembre cachées sur ordinateur). Mettre la liste dans son propre conteneur (`<div class="…__liste"><ol>…</ol></div>`).
+- Le lien « Réserver » reçoit la date avec l'heure (`2026-12-25T12:00`) : un formulaire qui attend `AAAA-MM-JJ` doit couper (`slice(0, 10)`), et le projet peut passer l'identifiant de la soirée pour la rappeler au-dessus du formulaire.
+- Pas d'heure pour une date dont le lieu n'a pas donné l'heure (Noël, Saint-Sylvestre) : écrire la date seule.
+- Textes : espace insécable dans « Prochaine date : » ; compter « dans N jours » en jours de calendrier (comme le reste du site).
 
 ## Variantes
 

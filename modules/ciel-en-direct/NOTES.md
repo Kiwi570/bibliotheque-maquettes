@@ -53,6 +53,9 @@ La carte, le curseur et les raccourcis sont facultatifs : sans eux, le ciel suit
 - Jour ou nuit polaire : lever et coucher retombent sur `lever` / `coucher`.
 - `pret([])` ne charge rien : le module n'utilise ni GSAP ni ScrollTrigger.
 - Mode calme et « réduire les animations » : image fixe, transitions coupées, redessinée seulement quand l'heure change (curseur, minuterie).
+- Lieu sans mer : `mer: false` (sinon une mer et ses reflets occupent le bas du ciel).
+- Sous un premier plan détouré (enseigne, arbre), la boîte de texte se remplace par un halo (`text-shadow`) ; poser le détouré du côté opposé au texte avec un masque en fondu.
+- Si le projet affiche aussi une grande heure, la synchroniser avec l'heure choisie au curseur : observer seulement le bloc du curseur (observer tout le ciel, qui contient la grande heure, fait une boucle sans fin).
 
 ## Variantes
 

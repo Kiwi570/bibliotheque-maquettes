@@ -32,8 +32,7 @@
  "besoins": [
   "réserver",
   "catalogue",
-  "agenda",
-  "écouter-regarder"
+  "agenda"
  ],
  "polices": {
   "titres": "Instrument Serif",
@@ -50,23 +49,24 @@
   "reserver",
   "404"
  ],
- "commit": "0cc7532",
+ "commit": "29fe295",
  "date_commit": "2026-11-11",
- "change_depuis_audit": "Après l'audit : une seule heure par page (voile, intro, horloge), nom et lieu dès l'arrivée sur téléphone, demande de réception avec période, retour du mode calme à la bonne section (correction du socle).",
- "note": 83,
- "verdict": "À peaufiner",
+ "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible.",
+ "note": 86,
+ "verdict": "Prête à envoyer",
  "points_forts": [
   "une journée à l'heure de la maison, de midi à minuit, qui règle voile, intro, horloge et lumière de chaque page",
-  "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules",
-  "eau de la piscine en WebGL à toucher",
-  "saison réelle affichée partout",
-  "boucles vidéo recadrées comme leurs images, vapeur masquée sur la fumée"
+  "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
+  "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
+  "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
+  "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
+  "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
+  "terrasse épinglée qui passe du couchant à la nuit et s'allume sur ses vraies ampoules"
  ],
  "reserves": [
-  "en-tête d'accueil proche des maquettes précédentes",
-  "ouvertures intérieures de deux compositions seulement",
-  "La carte sans scène propre",
-  "réservation en deux temps (7 gestes)"
+  "réservation en deux validations (Vérifier puis Confirmer)",
+  "12:00, 19:00 et 23:00 de l'accueil encore en images générées",
+  "textes de l'ardoise et de la carte à confirmer avec l'établissement"
  ],
  "animations": [
   "ouverture-orchestrée",
@@ -74,12 +74,15 @@
   "webgl-shader",
   "section-fixée",
   "progression-fixée",
-  "galerie-horizontale",
   "canvas-2d",
   "révélation-texte",
+  "révélation-image",
+  "masque",
   "compteur",
   "trace-svg",
-  "parallaxe"
+  "parallaxe",
+  "reactif-vitesse",
+  "fil-conducteur"
  ],
  "interactions": [
   "réservation-simulee",
@@ -88,18 +91,18 @@
   "recherche",
   "saisie-personnalisee",
   "schema-interactif",
-  "mode-calme",
-  "lecteur-vidéo"
+  "mode-calme"
  ],
  "dependances": [
   "gsap",
   "scrolltrigger",
   "splittext",
+  "ogl",
   "canvas"
  ],
  "grille": {
   "voile": "propre",
-  "objet": "l'eau de la piscine à midi, les ampoules de la terrasse, les braises du feu",
+  "objet": "l'eau de midi, l'ardoise effacée au chiffon, la vapeur sur l'assiette, la vitre givrée, le ciel de Moineville",
   "fil": "l'heure de la journée, de 12:00 à 00:00, portée par l'horloge de l'en-tête et le voile",
   "intro_vers_objet": true,
   "marques": [
@@ -154,6 +157,13 @@
     "budget": 250,
     "attente": 195,
     "allers_retours": 2
+   },
+   {
+    "version": 7,
+    "travail": 357,
+    "budget": 290,
+    "attente": 0,
+    "allers_retours": null
    }
   ]
  },
@@ -181,12 +191,13 @@
   "jardins-hacienda-2-maquette/la-carte-passe",
   "jardins-hacienda-2-maquette/la-carte-fin",
   "jardins-hacienda-2-maquette/les-fetes-debut",
-  "jardins-hacienda-2-maquette/les-fetes-saint-sylvestre",
+  "jardins-hacienda-2-maquette/les-fetes-dates",
   "jardins-hacienda-2-maquette/les-fetes-noel",
-  "jardins-hacienda-2-maquette/les-fetes-passes",
+  "jardins-hacienda-2-maquette/les-fetes-saint-sylvestre",
   "jardins-hacienda-2-maquette/les-fetes-ete",
   "jardins-hacienda-2-maquette/offrir-debut",
   "jardins-hacienda-2-maquette/offrir-composer",
+  "jardins-hacienda-2-maquette/receptions-rdl",
   "jardins-hacienda-2-maquette/receptions-debut",
   "jardins-hacienda-2-maquette/receptions-espaces",
   "jardins-hacienda-2-maquette/receptions-occasions",
