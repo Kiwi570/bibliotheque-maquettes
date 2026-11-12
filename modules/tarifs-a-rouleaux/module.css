@@ -45,10 +45,9 @@
 .trf__tampon { position: absolute; top: clamp(14px, 2vw, 22px); right: clamp(14px, 2vw, 22px); padding: .2em .55em; border: 2px solid var(--couleur-accent); border-radius: 6px; color: var(--couleur-accent);
   font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .1em; text-transform: uppercase; transform: rotate(8deg); opacity: 0; pointer-events: none; }
 .trf__formule--choisie .trf__tampon { opacity: 1; animation: trf-tampon .45s cubic-bezier(.2, 1.4, .4, 1) both; }
+
 @keyframes trf-tampon { from { opacity: 0; transform: rotate(18deg) scale(1.9); } to { opacity: 1; transform: rotate(8deg) scale(1); } }
 
-/* Apparition et survol (souris seulement), jamais en mode calme */
 .trf--anime .trf__formule:not(.est-vu) { opacity: 0; transform: translateY(18px); }
 @media (hover: hover) and (pointer: fine) { .trf__formule:hover { transform: translateY(-4px); border-color: var(--couleur-texte-doux); } .trf__formule[data-conseillee]:hover { border-color: var(--couleur-accent); } }
 @media (min-width: 900px) { .trf__formule[data-conseillee] { margin-block: -10px; padding-block: calc(clamp(20px, 2.6vw, 32px) + 10px); } }
-.calme .trf__formule:hover { transform: none; }

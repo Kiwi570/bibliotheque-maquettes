@@ -8,9 +8,7 @@
 <script>
   /* Script critique du module intro-vers-l-objet : à placer dans le head, avant les feuilles de style. */
   (function (h) {
-    var calme = /[?&]calme\b/.test(location.search);
-    try { calme = calme || localStorage.getItem('socle-calme') === '1' || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-    if (calme) h.classList.add('calme'); else h.classList.add('ivo-intro');
+    h.classList.add('ivo-intro');
     setTimeout(function () { h.classList.remove('ivo-intro'); }, 4000); /* délai de secours */
   })(document.documentElement);
 </script>
@@ -33,7 +31,7 @@
 </style>
 </head>
 <body>
-<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<header class="socle-entete" data-entete><span>Démonstration</span></header>
 <main>
   <section class="demo-heros">
     <h1>Titre</h1>

@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Écran de chargement · module</title>
 <!-- Avant le premier affichage : mode calme mémorisé, et écran de chargement seulement s'il doit jouer (ni calme, ni « réduire les animations », ni déjà vu dans la session). -->
-<script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');else if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&sessionStorage.getItem('ecran-de-chargement-vu')!=='1')d.classList.add('edc-joue')}catch(e){}</script>
+<script>try{var d=document.documentElement;if(sessionStorage.getItem('ecran-de-chargement-vu')!=='1')d.classList.add('edc-joue')}catch(e){}</script>
 <link rel="stylesheet" href="../../socle/socle.css?v=1">
 <link rel="stylesheet" href="module.css?v=1">
 <style>
@@ -37,7 +37,7 @@
   </div>
   <button type="button" class="edc__passer socle-bouton">Passer</button>
 </div>
-<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<header class="socle-entete" data-entete><span>Démonstration</span></header>
 <main>
   <section class="demo-heros" aria-labelledby="demo-titre">
     <div class="demo-heros__fond socle-visuel" aria-hidden="true"></div>

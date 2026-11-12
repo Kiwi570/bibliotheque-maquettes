@@ -65,10 +65,3 @@
   .lrs__temps { justify-self: start; }
 }
 
-/* ---------- Réduire les animations et mode calme : visuel figé (dessiné une fois), lecteur intact ---------- */
-@media (prefers-reduced-motion: reduce) {
-  .lrs__halo { scale: .9; opacity: .55; }
-  .lrs__barres i { transform: scaleY(.4); }
-}
-.calme .lrs__halo { scale: .9; opacity: .55; }
-.calme .lrs__barres i { transform: scaleY(.4); }

@@ -19,14 +19,4 @@
 
 @media (max-width: 699px) { .fic { --fic-epaisseur: 1.6px; } }
 
-/* Réduire les animations et mode calme : fil entier, perles pleines, pas d'objet. */
-@media (prefers-reduced-motion: reduce) {
-  .fic__objet { display: none; }
-  .fic__trace { stroke-dashoffset: 0 !important; }
-  .fic__perle { fill: var(--couleur-accent); }
-}
-.calme .fic__objet { display: none; }
-.calme .fic__trace { stroke-dashoffset: 0 !important; }
-.calme .fic__perle { fill: var(--couleur-accent); }
-
 @media print { .fic__svg { display: none; } }

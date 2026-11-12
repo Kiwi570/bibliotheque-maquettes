@@ -107,6 +107,7 @@
 .fpe__coche { width: 64px; height: 64px; fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 .fpe__coche path { stroke-dasharray: 40; animation: fpe-trace .6s .25s cubic-bezier(.3, .7, .2, 1) both; }
 .fpe__coche circle { stroke-dasharray: 176; animation: fpe-trace .7s cubic-bezier(.3, .7, .2, 1) both; }
+
 @keyframes fpe-trace { from { stroke-dashoffset: var(--fpe-trace, 176); } to { stroke-dashoffset: 0; } }
 .fpe__coche path { --fpe-trace: 40; }
 
@@ -141,10 +142,3 @@
   .fpe__puce { padding: 0 14px; }
 }
 
-/* Réduire les animations, mode calme : état final immédiat. */
-@media (prefers-reduced-motion: reduce) {
-  .fpe__coche path, .fpe__coche circle { animation: none; stroke-dashoffset: 0; }
-  .fpe__bouton:hover { transform: none; }
-}
-.calme .fpe__coche path, .calme .fpe__coche circle { animation: none; stroke-dashoffset: 0; }
-.calme .fpe__bouton:hover { transform: none; }

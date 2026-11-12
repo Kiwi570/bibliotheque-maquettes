@@ -9,9 +9,7 @@ Origine : `beat-haechler-maquette/veil` (vague SVG qui monte entre deux pages).
 ```html
 <script>
   (function (h) {
-    var calme = /[?&]calme\b/.test(location.search);
-    try { calme = calme || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-    try { if (!calme && sessionStorage.getItem('tv-voile') === '1') h.classList.add('tv-couvert'); sessionStorage.removeItem('tv-voile'); } catch (e) {}
+    try { if (sessionStorage.getItem('tv-voile') === '1') h.classList.add('tv-couvert'); sessionStorage.removeItem('tv-voile'); } catch (e) {}
     setTimeout(function () { h.classList.remove('tv-couvert'); }, 2000);
   })(document.documentElement);
 </script>

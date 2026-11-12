@@ -52,6 +52,7 @@
 .ava__doigt { display: none; }
 @media (hover: none) { .ava__souris { display: none; } .ava__doigt { display: inline; } }
 .est-essuye .ava__indice { opacity: 0; translate: -50% -20%; animation: none; }
+
 @keyframes ava-geste { 0%, 100% { transform: translateX(0); } 30% { transform: translateX(-6px); } 60% { transform: translateX(6px); } }
 .ava__tout { position: absolute; right: 12px; bottom: 12px; z-index: 6; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; background: var(--couleur-fond); color: var(--couleur-texte); font-weight: 600; cursor: pointer;
   box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--couleur-texte) 70%, transparent); transition: background-color .25s, color .25s; }
@@ -67,4 +68,3 @@
   .ava__poignee { width: 46px; height: 46px; }
   .ava__tout { right: 10px; bottom: 10px; padding: 0 14px; }
 }
-html.calme .ava__indice { animation: none; }

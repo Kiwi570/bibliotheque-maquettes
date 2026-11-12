@@ -3,6 +3,7 @@
    un verre en SVG ajouté par module.js (coupe qui se change d'un verre à l'autre, liquide qui monte par le fond, houle, bulles,
    mousse) et la fiche de l'accord, annoncée aux lecteurs d'écran.
    Réglages : --ame-verre (trait du verre), --ame-largeur-verre (largeur du verre dans la scène). */
+
 @property --ame-halo { syntax: '<color>'; inherits: true; initial-value: transparent; }
 .ame { padding-block: clamp(64px, 9vw, 130px); --ame-verre: color-mix(in oklab, var(--couleur-texte) 64%, transparent); }
 .ame__grille { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "liste" "scene"; gap: clamp(22px, 4vw, 44px); }
@@ -67,9 +68,11 @@
 .ame__mousse { fill: color-mix(in oklab, white 84%, var(--ame-vin, white)); display: none; }
 .est-mousse .ame__mousse { display: inline; }
 .ame__houle .ame__vague { animation: ame-houle 3.2s linear infinite; }
+
 @keyframes ame-houle { to { transform: translateX(-50px); } }
 .ame__bulles circle { fill: color-mix(in oklab, white 72%, transparent); opacity: 0; }
 .est-bulles .ame__bulles circle, .est-remplit .ame__bulles circle { animation: ame-bulle var(--d, 2.4s) linear var(--r, 0s) infinite; }
+
 @keyframes ame-bulle { 0% { transform: translateY(0); opacity: 0; } 14% { opacity: .9; } 86% { opacity: .85; } 100% { transform: translateY(calc(var(--prof, 90) * -1px)); opacity: 0; } }
 
 .ame__fiche { display: grid; gap: .45rem; align-content: center; min-height: 15.5rem; min-width: 0; }
@@ -87,7 +90,4 @@
   .ame__scene { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); align-items: start; }
   .ame__fiche { min-height: 0; align-content: start; }
 }
-/* Mode calme, « réduire les animations » : verre plein, pas de houle ni de bulles, la fiche change d'un coup. */
-.calme .ame__bulles { display: none; }
-.calme .ame__verre { transition: none; }
-@media (prefers-reduced-motion: reduce) { .ame__bulles { display: none; } .ame__verre { transition: none; } }
+

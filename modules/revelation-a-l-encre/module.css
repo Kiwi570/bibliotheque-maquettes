@@ -17,10 +17,10 @@
 .rae--gl:not(.rae--etapes) .rae__fond, .rae--gl.rae--pile .rae__fond { opacity: 0; }
 /* En attendant le script (ouverture au chargement) : l'image n'apparaît pas puis disparaît. */
 .rae--attente .rae__image { opacity: 0; }
-@media (prefers-reduced-motion: no-preference) {
+
   /* data-rae-attente : posé dans le HTML pour une image au-dessus de la ligne de flottaison ; secours si le script ne vient pas. */
-  html:not(.calme) .rae[data-rae-attente]:not(.rae--pris) .rae__scene { opacity: 0; animation: rae-secours .6s 2.5s forwards; }
-}
+  html .rae[data-rae-attente]:not(.rae--pris) .rae__scene { opacity: 0; animation: rae-secours .6s 2.5s forwards; }
+
 @keyframes rae-secours { to { opacity: 1; } }
 
 /* ---------- Étale : la tache ---------- */
@@ -118,6 +118,4 @@
 .rae__puce[aria-current="step"] { background: var(--couleur-accent); border-color: var(--couleur-accent); color: var(--couleur-sur-accent); }
 
 @media (max-width: 420px) { .rae__actions .socle-bouton { flex: 1 1 100%; } }
-/* Réduire les animations et mode calme : état final, aucun canevas. */
-@media (prefers-reduced-motion: reduce) { .rae__canvas, .rae__voile, .rae__duo { display: none; } }
-.calme .rae__canvas, .calme .rae__voile, .calme .rae__duo { display: none; }
+

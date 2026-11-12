@@ -88,6 +88,7 @@
 .pds__t.est-choisie .pds__ombre { transform: translate(7px, 11px); }
 .pds__anneau { fill: none; stroke: var(--couleur-accent); stroke-width: 3; opacity: 0; transform-box: fill-box; transform-origin: center; }
 .pds__t.est-choisie .pds__anneau { animation: pds-onde 1.9s ease-out infinite; }
+
 @keyframes pds-onde { 0% { transform: scale(.9); opacity: .85; } 100% { transform: scale(1.32); opacity: 0; } }
 
 /* Repère debout au-dessus de la table choisie (contre-rotation : il reste face au visiteur) */
@@ -138,6 +139,3 @@ a.pds__lien:hover, button.pds__lien:not([aria-disabled="true"]):hover, .pds__ite
 /* Sans JavaScript : la liste de liens suffit ; ni plan, ni zones, ni bouton commun. */
 @media (scripting: none) { .pds__scene, .pds__outils, .pds__action { display: none; } .pds__grille { grid-template-columns: minmax(0, 1fr); grid-template-areas: "tete" "panneau"; } }
 
-/* Mode calme, « réduire les animations » : plan déjà incliné, anneau fixe, aucun mouvement. */
-.calme .pds__t.est-choisie .pds__anneau { animation: none; opacity: .7; transform: scale(1.12); }
-@media (prefers-reduced-motion: reduce) { .pds__t.est-choisie .pds__anneau { animation: none; opacity: .7; transform: scale(1.12); } }

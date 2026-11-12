@@ -8,9 +8,7 @@
 <script>
   /* Script critique du module transition-iris : à placer dans le head, avant les feuilles de style. */
   (function (h) {
-    var calme = /[?&]calme\b/.test(location.search);
-    try { calme = calme || localStorage.getItem('socle-calme') === '1' || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-    try { if (!calme && sessionStorage.getItem('tir-voile') === '1') h.classList.add('tir-couvert'); sessionStorage.removeItem('tir-voile'); } catch (e) {}
+    try { if (sessionStorage.getItem('tir-voile') === '1') h.classList.add('tir-couvert'); sessionStorage.removeItem('tir-voile'); } catch (e) {}
     setTimeout(function () { h.classList.remove('tir-couvert'); }, 2200); /* délai de secours */
   })(document.documentElement);
 </script>
@@ -32,7 +30,7 @@
 <body>
 <header class="socle-entete" data-entete>
   <nav class="demo-nav" aria-label="Pages de démonstration"><a href="index.html" aria-current="page">Page 1</a><a href="page-2.html">Page 2</a></nav>
-  <button type="button" data-calme>Mode calme</button>
+  
 </header>
 <main>
   <section class="demo-bloc socle-cadre demo-grille">

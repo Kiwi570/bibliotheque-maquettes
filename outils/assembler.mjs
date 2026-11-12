@@ -153,7 +153,7 @@ ${cssDemo.join('\n')}
 <body>
 <a class="socle-sr" href="#contenu">Aller au contenu</a>
 ${avant.join('\n')}
-<header class="socle-entete" data-entete><span>${titre}</span><button type="button" data-calme>Mode calme</button></header>
+<header class="socle-entete" data-entete><span>${titre}</span></header>
 <main id="contenu">
 ${corps.join('\n\n')}
 </main>

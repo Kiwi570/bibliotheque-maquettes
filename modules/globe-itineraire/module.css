@@ -14,7 +14,6 @@
 
 .gi__corps { display: grid; gap: clamp(24px, 4vw, 64px); align-items: start; }
 
-/* Scène : globe + boutons d'étape. Dans le flux par défaut (téléphone, écrans bas, mode calme). */
 .gi__scene { display: flex; flex-direction: column; gap: 12px; height: min(92vw, calc((var(--ecran-h) - var(--entete-h)) * .7)); min-height: 280px; }
 .gi__globe { position: relative; flex: 1; min-height: 0; border-radius: var(--rayon);
   /* sans script : un disque d'océan tient la place du globe */
@@ -66,13 +65,4 @@
 }
 @media (max-width: 420px) { .gi__bouton { min-width: 44px; } .gi__nav { gap: 2px; } }
 
-/* Réduire les animations et mode calme : globe immobile dans le flux, tracé complet. */
-@media (prefers-reduced-motion: reduce) {
-  .gi__scene { position: static !important; }
-  .gi__etape { min-height: 0 !important; }
-  .gi__etapes { padding-bottom: 0 !important; }
-}
-.calme .gi__scene { position: static !important; }
-.calme .gi__etape { min-height: 0 !important; }
-.calme .gi__etapes { padding-bottom: 0 !important; }
 .gi:not(.gi--vivant) .gi__compteur { display: none; }

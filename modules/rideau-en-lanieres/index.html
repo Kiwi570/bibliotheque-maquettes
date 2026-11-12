@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Rideau en lanières · module</title>
 <!-- Avant le premier affichage : mode calme mémorisé et rideau déjà vu dans la session (pas d'éclair du rideau). -->
-<script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');if(sessionStorage.getItem('rideau-en-lanieres-vu')==='1')d.classList.add('rdl-vu')}catch(e){}</script>
+<script>try{var d=document.documentElement;if(sessionStorage.getItem('rideau-en-lanieres-vu')==='1')d.classList.add('rdl-vu')}catch(e){}</script>
 <link rel="stylesheet" href="../../socle/socle.css?v=1">
 <link rel="stylesheet" href="module.css?v=1">
 <style>
@@ -35,7 +35,7 @@
   </div>
   <button type="button" class="rdl__passer socle-bouton">Passer l'ouverture</button>
 </div>
-<header class="socle-entete" data-entete><span>Démonstration</span><button type="button" data-calme>Mode calme</button></header>
+<header class="socle-entete" data-entete><span>Démonstration</span></header>
 <main>
   <section class="demo-heros" aria-labelledby="demo-titre">
     <div class="demo-heros__fond socle-visuel" aria-hidden="true"></div>

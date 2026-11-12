@@ -94,7 +94,7 @@ export async function init(root, options = {}) {
     duree: 1.8, delai: 0, debut: 'top 85%', fin: 'center 45%', depart: options.declencheur === 'survol' ? 1 : 2.4, loupe: 90, zone: null, ...options };
   const vide = { reveler() {}, tramer() {}, regler() {}, detruire() {} };
   const img = root.querySelector('.trame__img') || root.querySelector('img');
-  const reduit = matchMedia('(prefers-reduced-motion: reduce)').matches || document.documentElement.classList.contains('calme');
+  const reduit = false; // plus de mode calme (v10.11)
   if (!img || reduit) return vide;
   const boite = img.parentElement; // .trame__cadre : la boîte à la taille de la photo
   const zone = typeof o.zone === 'string' ? root.closest(o.zone) || root : o.zone || root;

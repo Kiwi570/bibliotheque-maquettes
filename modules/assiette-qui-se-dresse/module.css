@@ -53,6 +53,7 @@
   transform: translate(0, calc((1 - var(--mm)) * -34px)) scale(calc(1 + (1 - var(--mm)) * 1.1)); opacity: clamp(0, calc(var(--mm) * 4), 1); }
 /* Petit tassement à l'arrivée (posé par module.js pendant 450 ms). */
 .assiette__element.vient-de-se-poser > svg, .assiette__element.vient-de-se-poser > img { animation: assiette-pose .45s cubic-bezier(.3, 1.6, .5, 1); }
+
 @keyframes assiette-pose { 0% { transform: scale(.965); } 100% { transform: scale(1); } }
 
 /* Ordinateur : texte et recette à gauche, assiette à droite ; épinglé, tout tient dans l'écran. */

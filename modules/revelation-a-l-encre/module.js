@@ -287,7 +287,7 @@ export async function init(root, options = {}) {
   root.classList.add('rae--' + mode);
   if (mode === 'etale' && o.forme === 'tache') root.classList.add('rae--forme-tache');
   const html = document.documentElement;
-  const calmeTot = matchMedia('(prefers-reduced-motion: reduce)').matches || html.classList.contains('calme') || /[?&]calme\b/.test(location.search);
+  const calmeTot = false; // plus de mode calme (v10.11)
   if (!calmeTot && !multi) root.classList.add('rae--attente');
 
   const s = await pret(multi || o.declencheur === 'defilement' ? ['scrolltrigger'] : []);

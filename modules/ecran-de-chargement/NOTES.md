@@ -14,7 +14,7 @@ Différence avec `rideau-en-lanieres` : le rideau est un décor qui s'écarte ; 
 ```html
 <head>
   <!-- obligatoire : affiche l'écran avant le premier rendu seulement s'il doit jouer (pas d'éclair au retour, en calme ni sous « réduire les animations ») -->
-  <script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');else if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&sessionStorage.getItem('ecran-de-chargement-vu')!=='1')d.classList.add('edc-joue')}catch(e){}</script>
+  <script>try{var d=document.documentElement;if(sessionStorage.getItem('ecran-de-chargement-vu')!=='1')d.classList.add('edc-joue')}catch(e){}</script>
 </head>
 <body>
   <div class="edc" data-module="ecran-de-chargement">

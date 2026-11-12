@@ -1,5 +1,5 @@
 // Socle commun des modules : charge à la demande GSAP, ScrollTrigger, SplitText, Flip, Lenis et OGL depuis vendor/ (une seule fois),
-// mesure --entete-h et --barres-h, respecte « réduire les animations » et le mode calme,
+// mesure --entete-h et --barres-h (plus de mode calme depuis la v10.11 : toutes les animations se jouent),
 // et regroupe les ScrollTrigger.refresh() (polices, images, changements de hauteur).
 // Les modules n'instancient jamais GSAP ni Lenis eux-mêmes : ils appellent pret([...]) et reçoivent le socle.
 
@@ -17,12 +17,12 @@ function script(nom) {
   }));
 }
 
-const mqReduit = matchMedia('(prefers-reduced-motion: reduce)');
 const html = document.documentElement;
 export const socle = {
   gsap: null, ScrollTrigger: null, SplitText: null, Flip: null, OGL: null, lenis: null,
-  /** vrai si l'utilisateur a demandé moins d'animations (système ou bouton « mode calme ») */
-  get calme() { return mqReduit.matches || html.classList.contains('calme'); },
+  /** plus de mode calme (v10.11, 12 novembre 2026, à la demande de l'utilisateur) : toujours faux,
+      gardé pour les modules qui le lisent encore ; le réglage « réduire les animations » de l'appareil n'est pas suivi */
+  get calme() { return false; },
   /** vrai avec une souris (survols, curseur, effets lourds) */
   get souris() { return matchMedia('(hover: hover) and (pointer: fine)').matches; },
   get telephone() { return innerWidth < 700; },
@@ -86,40 +86,22 @@ export async function pret(besoins = []) {
 }
 
 async function demarrer() {
-  // Mode calme mémorisé (localStorage), ou forcé par ?calme. Pour l'appliquer avant le premier affichage, copier
-  // dans le <head> : <script>try{if(localStorage.getItem('socle-calme')==='1')document.documentElement.classList.add('calme')}catch(e){}</script>
-  try { if (localStorage.getItem('socle-calme') === '1') html.classList.add('calme'); } catch {}
-  if (/[?&]calme\b/.test(location.search)) html.classList.add('calme');
   mesurer();
   const ro = new ResizeObserver(() => rafraichir());
   for (const el of document.querySelectorAll('[data-entete], [data-barre]')) ro.observe(el);
   ro.observe(document.body);
   addEventListener('resize', rafraichir);
-  // Défilement adouci : seulement avec une molette de souris hors Mac, jamais en mode calme ni au toucher.
-  const voulu = html.dataset.lisse !== 'non' && !socle.calme && socle.souris && !/Mac|iPhone|iPad/.test(navigator.platform) && !/[?&]natif\b/.test(location.search);
-  if ((voulu || /[?&]lisse\b/.test(location.search)) && !socle.calme) {
+  // Défilement adouci : seulement avec une molette de souris hors Mac, jamais au toucher.
+  const voulu = html.dataset.lisse !== 'non' && socle.souris && !/Mac|iPhone|iPad/.test(navigator.platform) && !/[?&]natif\b/.test(location.search);
+  if (voulu || /[?&]lisse\b/.test(location.search)) {
     await script('lenis');
     socle.lenis = new window.Lenis({ autoRaf: false, anchors: { offset: () => -parseFloat(getComputedStyle(html).getPropertyValue('--entete-h')) || 0 } });
     if (socle.ScrollTrigger) socle.lenis.on('scroll', socle.ScrollTrigger.update);
     if (socle.gsap) { socle.gsap.ticker.add(t => socle.lenis.raf(t * 1000)); socle.gsap.ticker.lagSmoothing(0); }
     else { const tour = t => { socle.lenis.raf(t); requestAnimationFrame(tour); }; requestAnimationFrame(tour); }
   }
-  // Retour à la position après un changement de mode calme.
-  const retour = sessionStorage.getItem('socle-retour');
-  if (retour !== null) { sessionStorage.removeItem('socle-retour'); requestAnimationFrame(() => scrollTo(0, +retour)); }
   // Polices et images : un seul refresh quand elles arrivent.
   document.fonts?.ready.then(rafraichir);
   for (const img of document.images) if (!img.complete) img.addEventListener('load', rafraichir, { once: true });
   addEventListener('load', rafraichir, { once: true });
-  // Bouton mode calme éventuel : [data-calme]
-  for (const b of document.querySelectorAll('[data-calme]')) {
-    b.setAttribute('aria-pressed', String(html.classList.contains('calme')));
-    b.addEventListener('click', () => {
-      const calme = !html.classList.contains('calme');
-      try { localStorage.setItem('socle-calme', calme ? '1' : '0'); } catch {}
-      const u = new URL(location.href); u.searchParams.delete('calme');
-      sessionStorage.setItem('socle-retour', String(scrollY)); // le rechargement revient à la même position
-      location.replace(u.toString().replace(/\?$/, ''));
-    });
-  }
 }

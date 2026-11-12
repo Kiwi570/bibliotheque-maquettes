@@ -94,9 +94,3 @@
   .fqc__texte h3 { font-size: 1.65rem; }
 }
 
-/* Réduire les animations et mode calme : cartes figées, chaque écran sur son propre fond, rien ne bouge. */
-@media (prefers-reduced-motion: reduce) {
-  .fqc__fond::after { opacity: 0; }
-  .fqc__lien::after { transition: none; }
-}
-html.calme .fqc__fond::after { opacity: 0; }

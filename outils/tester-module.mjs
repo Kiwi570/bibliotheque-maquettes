@@ -1,11 +1,11 @@
-// Teste une page de démonstration (module ou assemblage) sur 14 formats (dont tablettes 768×1024, 820×1180 et 1180×820, et 1024×640), en mode réduit et sans WebGL.
+// Teste une page de démonstration (module ou assemblage) sur 14 formats (dont tablettes 768×1024, 820×1180 et 1180×820, et 1024×640), et sans WebGL.
 // node outils/tester-module.mjs <module | chemin/vers/page.html> [--ecrire] [--captures] [--medias]
 //   --ecrire : reporte le résultat dans modules/<nom>/module.json (tests, poids_ko)
 //   --captures : captures de la page (1440×900, 820×1180, 390×844 ; haut de page puis chaque [data-module]) dans <dossier>/captures/
 //   --medias : produit apercu.jpg (1440×900) et apercu.mp4 (si animé, ou le scénario s'il existe) dans le dossier du module
 // Contrôles : erreurs console, CLS, débordement horizontal, éléments marqués [data-tient] coupés par l'écran
 // (sous l'en-tête mesuré ou sous les barres du bas), éléments en position: sticky collés mais coupés (détectés seuls, sans marquage),
-// texte < 12 px, cibles < 44 px, état final sous « réduire les animations ».
+// texte < 12 px, cibles < 44 px (plus de test « réduire les animations » : mode calme retiré en v10.11).
 // Scénario facultatif : modules/<nom>/scenario.json, joué en 1440×900, 820×1180 et 390×844 (test « scenario ») et filmé dans apercu.mp4.
 //   { "etapes": [ {"epingle": 0.9}, {"defiler": "sélecteur"}, {"cliquer": "sélecteur"}, {"survoler": "sélecteur"}, {"saisir": ["sélecteur", "texte"]},
 //                 {"choisir": ["sélecteur", "valeur"]}, {"touche": "Enter"}, {"attendre": 600}, {"verifier": "sélecteur visible"},
@@ -151,7 +151,7 @@ async function parcourir(pg) {
 }
 
 async function essai([w, h, mobile], opts = {}) {
-  const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, isMobile: !!mobile, hasTouch: !!mobile, reducedMotion: opts.reduit ? 'reduce' : 'no-preference' });
+  const ctx = await nav.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1, isMobile: !!mobile, hasTouch: !!mobile, reducedMotion: 'no-preference' });
   const pg = await ctx.newPage(); const erreurs = [];
   pg.on('pageerror', e => erreurs.push(e.message.slice(0, 160)));
   pg.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text()) && !externe(m)) erreurs.push(m.text().slice(0, 160)); });
@@ -160,25 +160,21 @@ async function essai([w, h, mobile], opts = {}) {
   await attendre(2500);
   const clsChargement = await pg.evaluate(() => window.__cls);
   const r = await parcourir(pg);
-  let invisibles = [];
-  if (opts.reduit) invisibles = await pg.evaluate(() => [...document.querySelectorAll('main h1, main h2, main h3, main p, main img, main [data-tient]')].filter(e => { const cs = getComputedStyle(e); return e.getBoundingClientRect().width && (parseFloat(cs.opacity) < .99 || cs.visibility === 'hidden'); }).map(e => e.tagName.toLowerCase() + '.' + (e.className || '').toString().split(' ')[0]).slice(0, 6));
   await ctx.close();
-  return { format: `${w}×${h}`, erreurs, cls: +clsChargement.toFixed(3), ...r, invisibles };
+  return { format: `${w}×${h}`, erreurs, cls: +clsChargement.toFixed(3), ...r };
 }
 
 const resultats = [];
 for (const f of FORMATS) resultats.push(await essai(f));
-const reduit = [await essai([1440, 900], { reduit: true }), await essai([390, 844, 1], { reduit: true })];
 const sansWebgl = await essai([1440, 900], { sansWebgl: true });
 const scen = scenario?.etapes?.length ? [await essaiScenario([1440, 900]), await essaiScenario([820, 1180, 1]), await essaiScenario([390, 844, 1])] : [];
-const tous = [...resultats, ...reduit, sansWebgl, ...scen.map(r => ({ ...r, coupes: [], petits: [], cibles: [], cls: 0 }))];
+const tous = [...resultats, sansWebgl, ...scen.map(r => ({ ...r, coupes: [], petits: [], cibles: [], cls: 0 }))];
 const erreurs = [...new Set(tous.flatMap(r => r.erreurs))];
 const clsMax = Math.max(...tous.map(r => r.cls));
 const html = fs.readFileSync(fichier, 'utf8');
 const usesWebgl = /webgl|\bogl\b/i.test(html + (estModule ? fs.readFileSync(path.join(path.dirname(fichier), 'module.js'), 'utf8') : ''));
 const tests = {
   formats: resultats.every(r => !r.coupes.length && r.debord <= 1) ? 'ok' : 'échec : ' + resultats.filter(r => r.coupes.length || r.debord > 1).map(r => `${r.format} ${r.coupes.join(', ')}${r.debord > 1 ? ' débord ' + r.debord + 'px' : ''}`).join(' ; '),
-  'reduire-animations': reduit.every(r => !r.invisibles.length && !r.erreurs.length && !r.coupes.length) ? 'ok' : 'échec : ' + reduit.map(r => r.invisibles.join(',')).join(' ; '),
   'sans-webgl': usesWebgl ? (!sansWebgl.erreurs.length && !sansWebgl.coupes.length ? 'ok' : 'échec : ' + sansWebgl.erreurs.join(', ')) : 'n/a',
   console: erreurs.length ? `${erreurs.length} erreur${erreurs.length > 1 ? 's' : ''} : ${erreurs.slice(0, 2).join(' | ')}` : '0 erreur',
   cls: clsMax,

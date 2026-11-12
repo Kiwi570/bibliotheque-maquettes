@@ -14,6 +14,7 @@
   box-shadow: 0 0 0 2px var(--couleur-accent), 0 0 0 6px color-mix(in oklab, var(--couleur-accent) 28%, transparent);
   animation: vgd-halo 2.4s ease-in-out infinite; }
 .vgd--centre .vgd-halo { display: none; }
+
 @keyframes vgd-halo { 50% { box-shadow: 0 0 0 2px var(--couleur-accent), 0 0 0 10px color-mix(in oklab, var(--couleur-accent) 0%, transparent); } }
 
 .vgd-bulle {
@@ -25,6 +26,7 @@
   animation: vgd-entree .35s cubic-bezier(.2, .8, .2, 1);
 }
 .vgd-bulle:focus-visible { outline: 2px solid var(--couleur-accent); outline-offset: 3px; }
+
 @keyframes vgd-entree { from { opacity: 0; translate: 0 8px; scale: .98; } }
 .vgd--bas .vgd-bulle { left: 12px !important; right: 12px; top: auto !important; bottom: calc(12px + var(--barres-h) + env(safe-area-inset-bottom)); width: auto; max-height: 52vh; }
 
@@ -49,11 +51,6 @@
 @media (hover: none) { .vgd-bulle__aide { display: none; } }
 
 /* L'élément visé peut recevoir un style propre : [data-visite-actif]. */
-
-/* Réduire les animations et mode calme : pas de halo pulsé, pas d'entrée animée ; les déplacements sont instantanés (module.js). */
-@media (prefers-reduced-motion: reduce) { .vgd-halo, .vgd-bulle { animation: none; } .vgd-bulle__barre i { transition: none; } }
-html.calme .vgd-halo, html.calme .vgd-bulle { animation: none; }
-html.calme .vgd-bulle__barre i { transition: none; }
 
 /* ---------- Section et interface de démonstration ---------- */
 .vgd { padding-block: clamp(56px, 8vw, 112px); }

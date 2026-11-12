@@ -17,6 +17,7 @@
    Secours : si le module ne se charge jamais, le calque disparaît seul au bout de 5 s. */
 html.edc-joue .edc, .edc.est-pilote { display: grid; }
 html.edc-joue .edc:not(.est-pilote) { animation: edc-secours 0s linear 5s forwards; }
+
 @keyframes edc-secours { to { visibility: hidden; } }
 .edc.est-fini { display: none; }
 
@@ -53,7 +54,4 @@ html.edc-joue .edc:not(.est-pilote) { animation: edc-secours 0s linear 5s forwar
   .edc { --edc-taille: clamp(2.6rem, 18vh, 5rem); }
 }
 
-/* Réduire les animations, mode calme et impression : pas d'écran de chargement, la page est là. */
-@media (prefers-reduced-motion: reduce) { .edc { display: none !important; } }
-html.calme .edc { display: none !important; }
 @media print { .edc { display: none !important; } }

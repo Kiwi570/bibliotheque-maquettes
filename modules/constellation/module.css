@@ -35,14 +35,11 @@
 /* Lien : la bulle reste lue par les lecteurs d'écran (aria-describedby), masquée à l'œil tant qu'elle n'est pas ouverte. */
 .est-constellation .cst__noeud--lien:not(.est-ouvert) .cst__bulle { width: 1px; height: 1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .est-constellation .cst__noeud.est-ouvert .cst__bulle { animation: cst-bulle .35s cubic-bezier(.2, .8, .2, 1); }
+
 @keyframes cst-bulle { from { opacity: 0; transform: translateY(6px); } }
 
 /* Formation : les nœuds apparaissent un à un (seulement si JavaScript anime). */
 .est-anime.est-constellation .cst__noeud:not(.est-visible) { opacity: 0; }
-
-/* Réduire les animations et mode calme : état final, tout visible, rien ne bouge. */
-@media (prefers-reduced-motion: reduce) { .est-anime.est-constellation .cst__noeud:not(.est-visible) { opacity: 1; } }
-.calme .est-anime.est-constellation .cst__noeud:not(.est-visible) { opacity: 1; }
 
 @media (max-width: 420px) {
   .cst__pastille { padding-inline: .75em 1em; }

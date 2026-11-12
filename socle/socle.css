@@ -48,8 +48,3 @@ button { font: inherit; color: inherit; }
 .socle-entete { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 14px var(--espace); background: color-mix(in oklab, var(--couleur-fond) 94%, transparent); border-bottom: 1px solid var(--couleur-ligne); font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .08em; text-transform: uppercase; }
 .socle-entete button { white-space: nowrap; flex: none; min-height: 44px; min-width: 44px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--couleur-ligne); background: transparent; cursor: pointer; }
 
-/* Réduire les animations et mode calme : tout reste lisible, rien ne bouge tout seul. */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
-}
-.calme *, .calme *::before, .calme *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }

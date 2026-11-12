@@ -19,7 +19,6 @@
 .lum__canvas { position: absolute; inset: 0; z-index: -3; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity .6s; }
 .lum--gl .lum__canvas { opacity: 1; }
 
-/* Ombre en CSS : sans JavaScript, sans WebGL, en mode calme. Un trou de lumière dans un voile de nuit, halo teinté par-dessus. */
 .lum__ombre { position: absolute; inset: 0; z-index: -2; pointer-events: none;
   background: radial-gradient(circle calc(var(--lum-r) * 1.5) at var(--lum-x) var(--lum-y),
     transparent 0%,
@@ -58,7 +57,3 @@
 @media (max-height: 600px) and (min-width: 761px) { .lum__texte { display: none; } }
 @media (max-width: 380px) { .lum__actions .socle-bouton { flex: 1 1 100%; } }
 
-/* Réduire les animations et mode calme : canvas absent, lumière fixée au point d'intérêt. */
-@media (prefers-reduced-motion: reduce) { .lum__canvas { display: none; } .lum .lum__ombre { display: block; } }
-.calme .lum__canvas { display: none; }
-.calme .lum .lum__ombre { display: block; }

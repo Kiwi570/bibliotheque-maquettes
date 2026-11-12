@@ -101,6 +101,7 @@ html.pet-verrou { overflow: hidden; }
 .pet__coche { width: 64px; height: 64px; fill: none; stroke: var(--couleur-secondaire); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .pet__coche circle { stroke-dasharray: 151; stroke-dashoffset: 151; animation: pet-trace .7s .1s ease-out forwards; }
 .pet__coche path { stroke-dasharray: 40; stroke-dashoffset: 40; animation: pet-trace .45s .6s ease-out forwards; }
+
 @keyframes pet-trace { to { stroke-dashoffset: 0; } }
 .pet__merci { font-family: var(--police-titres); font-size: 1.8rem; line-height: 1.1; }
 .pet__reference { font-family: var(--police-mono); letter-spacing: .04em; }
@@ -117,6 +118,7 @@ html.pet-verrou { overflow: hidden; }
 
 /* Le bouton du panier rebondit à l'ajout (sans envol) ; son compteur est une pastille. */
 .pet-rebond { animation: pet-rebond .5s cubic-bezier(.3, 1.6, .5, 1); }
+
 @keyframes pet-rebond { 0% { transform: scale(1); } 35% { transform: scale(1.14); } 100% { transform: scale(1); } }
 .pet-compte { display: inline-grid; place-items: center; min-width: 1.7em; height: 1.7em; padding: 0 .35em; border-radius: 999px; background: var(--couleur-accent); color: var(--couleur-sur-accent); font-size: max(12px, .8rem); font-weight: 700; font-variant-numeric: tabular-nums; }
 .pet-compte.est-vide { background: var(--couleur-ligne); color: var(--couleur-texte); }
@@ -139,4 +141,3 @@ html.pet-verrou { overflow: hidden; }
   .pet__tiroir:is([data-etape="coordonnees"], [data-etape="paiement"]) .pet__total { border-top: 0; margin-top: 0; padding-top: 0; }
   .pet__duo--cp { grid-template-columns: 2fr 3fr; }
 }
-html.calme .pet-rebond, html.calme .pet__coche * { animation: none; stroke-dashoffset: 0; }

@@ -97,10 +97,3 @@
 }
 @media (max-width: 360px) { .mdp { --mdp-min: 52px; } }
 
-/* Réduire les animations et mode calme : tout est visible tout de suite, rien ne glisse. */
-@media (prefers-reduced-motion: reduce) {
-  .mdp__corps { opacity: 1 !important; transform: none !important; }
-  .mdp__fiche { translate: none; }
-}
-.calme .mdp__corps { opacity: 1 !important; transform: none !important; }
-.calme .mdp__fiche { translate: none; }

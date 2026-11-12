@@ -55,9 +55,8 @@
   .ple__visuel { aspect-ratio: auto; min-height: 300px; }
 }
 
-/* ---------- Empilement : écran assez large et assez haut, animations permises, pas de mode calme ni de repli ---------- */
-@media (min-width: 700px) and (min-height: 520px) and (prefers-reduced-motion: no-preference) {
-  html:not(.calme) .ple:not(.ple--plat) .ple__planche {
+@media (min-width: 700px) and (min-height: 520px) {
+  html .ple:not(.ple--plat) .ple__planche {
     position: sticky;
     top: calc(var(--entete-h) + var(--ple-marge) + var(--ple-i) * var(--ple-decalage));
     height: min(var(--ple-hmax), calc(var(--ecran-h) - var(--entete-h) - var(--barres-h) - 2 * var(--ple-marge) - (var(--ple-n) - 1) * var(--ple-decalage)));
@@ -65,21 +64,21 @@
     rotate: calc(min(var(--ple-p), 1) * var(--ple-rotation) * var(--ple-signe));
     box-shadow: 0 -18px 40px -28px color-mix(in oklab, var(--couleur-fond) 30%, black);
   }
-  html:not(.calme) .ple:not(.ple--plat) .ple__visuel { min-height: 0; }
+  html .ple:not(.ple--plat) .ple__visuel { min-height: 0; }
   /* Le lien garde ses 44 px quand sa planche recule (contre-échelle : aucune incidence sur la mise en page). */
-  html:not(.calme) .ple:not(.ple--plat) .ple__lien { scale: calc(1 / (1 - var(--ple-p) * var(--ple-reduction))); }
+  html .ple:not(.ple--plat) .ple__lien { scale: calc(1 / (1 - var(--ple-p) * var(--ple-reduction))); }
   /* Écrans bas : contenu plus serré pour tenir dès 1000 × 560. */
   @media (max-height: 760px) {
-    html:not(.calme) .ple:not(.ple--plat) .ple__contenu { padding: clamp(16px, 2.6vh, 28px) clamp(18px, 2.4vw, 32px); gap: 10px; }
-    html:not(.calme) .ple:not(.ple--plat) .ple__nom { font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem); }
-    html:not(.calme) .ple:not(.ple--plat) .ple__texte { font-size: .95rem; line-height: 1.45; }
-    html:not(.calme) .ple:not(.ple--plat) .ple__liste li { padding-block: 5px; font-size: .92rem; }
-    html:not(.calme) .ple:not(.ple--plat) .ple__liste li::before { top: calc(5px + .7em - 3px); }
-    html:not(.calme) .ple:not(.ple--plat) .ple__cartouche { padding-bottom: 6px; }
+    html .ple:not(.ple--plat) .ple__contenu { padding: clamp(16px, 2.6vh, 28px) clamp(18px, 2.4vw, 32px); gap: 10px; }
+    html .ple:not(.ple--plat) .ple__nom { font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem); }
+    html .ple:not(.ple--plat) .ple__texte { font-size: .95rem; line-height: 1.45; }
+    html .ple:not(.ple--plat) .ple__liste li { padding-block: 5px; font-size: .92rem; }
+    html .ple:not(.ple--plat) .ple__liste li::before { top: calc(5px + .7em - 3px); }
+    html .ple:not(.ple--plat) .ple__cartouche { padding-bottom: 6px; }
   }
   /* Tablette en portrait : une colonne, le visuel prend la hauteur qui reste sous le texte. */
   @media (orientation: portrait) {
     .ple { --ple-hmax: 900px; }
-    html:not(.calme) .ple:not(.ple--plat) .ple__planche { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+    html .ple:not(.ple--plat) .ple__planche { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
   }
 }

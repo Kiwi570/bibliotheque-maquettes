@@ -8,9 +8,7 @@
 <script>
   /* Script critique du module transition-vague : à placer dans le head, avant les feuilles de style. */
   (function (h) {
-    var calme = /[?&]calme\b/.test(location.search);
-    try { calme = calme || matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
-    try { if (!calme && sessionStorage.getItem('tv-voile') === '1') h.classList.add('tv-couvert'); sessionStorage.removeItem('tv-voile'); } catch (e) {}
+    try { if (sessionStorage.getItem('tv-voile') === '1') h.classList.add('tv-couvert'); sessionStorage.removeItem('tv-voile'); } catch (e) {}
     setTimeout(function () { h.classList.remove('tv-couvert'); }, 2000); /* délai de secours */
   })(document.documentElement);
 </script>
@@ -30,7 +28,7 @@
 <body>
 <header class="socle-entete" data-entete>
   <nav class="demo-nav" aria-label="Pages de démonstration"><a href="index.html" aria-current="page">Page 1</a><a href="page-2.html">Page 2</a></nav>
-  <button type="button" data-calme>Mode calme</button>
+  
 </header>
 <main>
   <section class="demo-bloc socle-cadre">

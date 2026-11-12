@@ -5,7 +5,7 @@ Origine : madebymelody-maquette (v2) : le disque de la platine glisse jusqu'au v
 ## Usage
 
 ```html
-<head><script>/* script critique : copier celui de index.html (classe html.ivo-intro, sauf mode calme) */</script></head>
+<head><script>/* script critique : copier celui de index.html (classe html.ivo-intro) */</script></head>
 <body>
   <section> … <div class="objet" data-iris-centre="disque"></div> … </section>
   <div class="ivo" data-module="intro-vers-l-objet" aria-hidden="true">

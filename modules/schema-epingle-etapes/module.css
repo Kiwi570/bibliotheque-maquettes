@@ -34,12 +34,12 @@
 .see__flux { fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 7 9; }
 .see__pointe { fill: none; stroke: var(--couleur-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
 
-/* Partie allumée : tout allumé sans JavaScript et en mode calme ; sinon, seulement les parties de l'étape en cours. */
 .see:not(.see--vivant) .see__boite:not(.see__boite--fixe), .see--vivant .est-allume .see__boite:not(.see__boite--fixe) { fill: color-mix(in oklab, var(--couleur-accent) 14%, var(--couleur-fond)); stroke: var(--couleur-accent); stroke-width: 2.5; }
 .see--vivant :is([data-see-partie], [data-see-des]) { transition: opacity .5s, background-color .4s, color .4s; }
 .see--vivant [data-see-partie]:not(.est-allume) { opacity: var(--see-eteint); }
 .see--vivant [data-see-des]:not(.est-allume) { opacity: 0; }
 .see--vivant.see--visible .est-allume .see__flux { animation: see-flux 1.1s linear infinite; }
+
 @keyframes see-flux { to { stroke-dashoffset: -32; } }
 
 /* Étiquettes : texte HTML posé en % du plan (même repère que le viewBox 400 × 300), jamais sous 12 px. */
@@ -61,7 +61,6 @@
 .see__puce[aria-current] > span[aria-hidden] { background: var(--couleur-accent); }
 .see__puce:focus-visible { outline-offset: -6px; }
 
-/* Sans JavaScript et mode calme : ordinateur, schéma collant à droite ; téléphone, schéma en haut. */
 @media (min-width: 900px) {
   .see__grille { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: start; }
   .see__schema { position: sticky; top: calc(var(--entete-h) + var(--see-marge)); }
@@ -116,9 +115,3 @@
   .see__niveau { inset: 3px; background: linear-gradient(90deg, var(--couleur-secondaire), var(--couleur-accent)); transform-origin: 0 50%; transform: scaleX(var(--see-niv, 1)); }
 }
 
-/* Réduire les animations et mode calme : état final complet, rien ne bouge. */
-@media (prefers-reduced-motion: reduce) {
-  .see__flux { animation: none !important; }
-  .see--pile .see__etape { transform: none; }
-}
-.calme .see__flux { animation: none !important; }

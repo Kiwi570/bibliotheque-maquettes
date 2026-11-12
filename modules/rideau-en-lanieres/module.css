@@ -12,6 +12,7 @@
   background: var(--rdl-couleur-1);
   animation: rdl-secours 0s linear 4s forwards;
 }
+
 @keyframes rdl-secours { to { visibility: hidden; } }
 .rdl.est-pilote { background: none; animation: none; }
 .rdl.est-fini, html.rdl-vu .rdl:not(.est-pilote) { display: none; }
@@ -51,7 +52,4 @@
 .rdl.est-pilote .rdl__passer { visibility: visible; }
 .rdl.est-couvre .rdl__passer { visibility: hidden; }
 
-/* Réduire les animations et mode calme : pas de rideau du tout, la page est là. */
-@media (prefers-reduced-motion: reduce) { .rdl { display: none; } }
-html.calme .rdl { display: none; }
 @media print { .rdl { display: none; } }

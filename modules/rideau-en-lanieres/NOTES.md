@@ -10,7 +10,7 @@ Origine : fusion de `atelier-shazak-maquette/ouverture` (« Tresse puis rideau e
 ```html
 <head>
   <!-- obligatoire : évite l'éclair du rideau au retour dans la session et en mode calme -->
-  <script>try{var d=document.documentElement;if(localStorage.getItem('socle-calme')==='1'||/[?&]calme\b/.test(location.search))d.classList.add('calme');if(sessionStorage.getItem('rideau-en-lanieres-vu')==='1')d.classList.add('rdl-vu')}catch(e){}</script>
+  <script>try{var d=document.documentElement;if(sessionStorage.getItem('rideau-en-lanieres-vu')==='1')d.classList.add('rdl-vu')}catch(e){}</script>
 </head>
 <body>
   <div class="rdl" data-module="rideau-en-lanieres">

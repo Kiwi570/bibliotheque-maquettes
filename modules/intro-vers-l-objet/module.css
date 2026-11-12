@@ -8,11 +8,10 @@
 }
 html.ivo-intro .ivo { display: grid; }
 html.ivo-intro, html.ivo-intro body { overflow: hidden; }
-html.calme .ivo { display: none !important; }
 .ivo__scene { position: relative; display: grid; justify-items: center; gap: 18px; }
 .ivo__objet { width: min(56vmin, 480px); aspect-ratio: 1; }
 .ivo__objet > * { width: 100%; height: 100%; }
 .ivo__legende { font-family: var(--police-mono); font-size: max(12px, .8rem); letter-spacing: .3em; text-transform: uppercase; color: var(--couleur-accent); opacity: 0; }
 .ivo__passer { position: absolute; left: 0; right: 0; bottom: max(24px, env(safe-area-inset-bottom)); text-align: center; font-family: var(--police-mono); font-size: max(12px, .75rem); letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
 @media (hover: hover) and (pointer: fine) { .ivo__passer { display: none; } }
-@media (prefers-reduced-motion: reduce) { .ivo { display: none !important; } }
+

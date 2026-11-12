@@ -45,8 +45,10 @@
 .cam.est-ouvert .cam__anse path { animation: cam-anse .8s both; }
 .cam.est-ouvert .cam__fenetre::after { border-color: var(--couleur-accent); box-shadow: 0 0 26px color-mix(in oklab, var(--couleur-accent) 55%, transparent); }
 .cam.est-ouvert .cam__corps { box-shadow: 0 0 0 6px color-mix(in oklab, var(--couleur-accent) 22%, transparent), 0 30px 70px -20px color-mix(in oklab, var(--couleur-fond) 40%, black); }
+
 @keyframes cam-anse { 0% { transform: none; } 35% { transform: translateY(-18px); } 100% { transform: translateY(-18px) rotate(-16deg); } }
 .cam.est-refuse .cam__corps { animation: cam-refus .45s; }
+
 @keyframes cam-refus { 20%, 60% { translate: -6px 0; } 40%, 80% { translate: 6px 0; } }
 
 /* Résultats */
@@ -65,6 +67,7 @@
 .cam__carte-titre { font-size: 1.25rem; }
 .cam__sauf { color: var(--couleur-accent) !important; }
 .cam__lien { justify-self: start; margin-top: .3rem; font-size: max(14px, .9rem); }
+
 @keyframes cam-carte { from { opacity: 0; transform: translateY(28px); } }
 
 /* Téléphone : quatre molettes en deux rangées */
@@ -74,10 +77,3 @@
 }
 @media (max-width: 380px) { .cam__cran { font-size: 13px; padding-inline: 3px; } }
 
-/* Réduire les animations et mode calme : état final, aucune entrée décalée */
-@media (prefers-reduced-motion: reduce) {
-  .cam__carte, .cam.est-refuse .cam__corps { animation: none; }
-  .cam.est-ouvert .cam__anse path { animation: none; transform: translateY(-18px) rotate(-16deg); }
-}
-.calme .cam__carte, .calme .cam.est-refuse .cam__corps { animation: none; }
-.calme .cam.est-ouvert .cam__anse path { animation: none; transform: translateY(-18px) rotate(-16deg); }

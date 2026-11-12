@@ -58,8 +58,5 @@
 .horaires__tel { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--couleur-texte); text-underline-offset: 4px; }
 
 @media (min-width: 900px) { .horaires__grille { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); } }
-/* Mode calme et « réduire les animations » : pas de cadran, le texte sur toute la largeur. */
-@media (prefers-reduced-motion: reduce) { .horaires__cadran { display: none !important; } .horaires__grille { grid-template-columns: minmax(0, 1fr) !important; } }
-.calme .horaires__cadran { display: none !important; }
-.calme .horaires__grille { grid-template-columns: minmax(0, 1fr) !important; }
+
 .horaires__choix { text-decoration: none; }

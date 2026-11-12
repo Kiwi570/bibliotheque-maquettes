@@ -9,6 +9,8 @@
 .trame__legende { font-family: var(--police-mono); font-size: max(12px, .78rem); letter-spacing: .04em; color: var(--couleur-texte-doux); }
 
 /* Repli sans WebGL (et attente du chargement) : la photo vue à travers un masque de points ou de lignes, qui s'ouvre. */
+
+/* Repli sans WebGL (et attente du chargement) : la photo vue à travers un masque de points ou de lignes, qui s'ouvre. */
 @property --trame-k { syntax: "<number>"; inherits: false; initial-value: 1.5; }
 .trame--attente .trame__img, .trame--css .trame__img { --trame-k: .55; transition: --trame-k var(--trame-duree) cubic-bezier(.65, 0, .35, 1) var(--trame-delai); }
 .trame--points.trame--attente .trame__img, .trame--points.trame--css .trame__img {
@@ -21,10 +23,3 @@
 .trame--css.trame--revelee .trame__img { --trame-k: 2.2; }
 .trame--css.trame--nette .trame__img { -webkit-mask-image: none; mask-image: none; }
 
-/* Réduire les animations et mode calme : photo nette, aucune trame. */
-@media (prefers-reduced-motion: reduce) {
-  .trame .trame__img { opacity: 1; -webkit-mask-image: none; mask-image: none; }
-  .trame .trame__canvas { display: none; }
-}
-.calme .trame .trame__img { opacity: 1; -webkit-mask-image: none; mask-image: none; }
-.calme .trame .trame__canvas { display: none; }

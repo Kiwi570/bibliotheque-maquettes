@@ -60,6 +60,7 @@
 .tep-libelle { font-size: .85em; font-weight: 600; margin-bottom: -.4em !important; }
 .tep-champ { display: flex; align-items: center; min-height: 2.9em; padding: 0 .85em; border: 1px solid var(--tep-trait); border-radius: .75em; background: var(--tep-carte); font-family: var(--police-mono); font-size: .9em; white-space: nowrap; overflow: hidden; }
 .tep-champ::after { content: ""; width: 1px; height: 1.1em; margin-left: 1px; background: var(--tep-encre); animation: tep-curseur 1s steps(1) infinite; }
+
 @keyframes tep-curseur { 50% { opacity: 0; } }
 .tep-case { display: grid; grid-template-columns: 1.4em 1fr; gap: .7em; align-items: start; font-size: .88em; }
 .tep-boite { display: grid; place-items: center; width: 1.4em; height: 1.4em; border-radius: .35em; border: 1.5px solid var(--tep-encre); }

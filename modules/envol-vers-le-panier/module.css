@@ -3,5 +3,5 @@
   box-shadow: 0 0 0 3px var(--couleur-accent), 0 14px 30px color-mix(in oklab, var(--couleur-fond) 55%, transparent); will-change: transform; }
 .evp--sans-image { background: radial-gradient(circle, var(--couleur-accent) 0 22%, transparent 23%), var(--couleur-secondaire); }
 .est-recu { animation: evp-rebond .5s cubic-bezier(.3, 1.6, .5, 1); }
+
 @keyframes evp-rebond { 0% { transform: scale(1); } 35% { transform: scale(1.14); } 100% { transform: scale(1); } }
-html.calme .est-recu { animation: none; }

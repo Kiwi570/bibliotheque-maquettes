@@ -4,7 +4,6 @@
 .ghe__titre { font-size: clamp(2.2rem, 5.6vw, 5rem); line-height: 1; padding-block: .06em; }
 .ghe__texte { color: var(--couleur-texte-doux); max-width: 46ch; }
 
-/* Piste : défilement horizontal natif (téléphone, mode calme, sans JavaScript) */
 .ghe__piste { display: flex; gap: clamp(12px, 1.6vw, 24px); overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
   padding-inline: max(var(--espace), calc((100vw - 1320px) / 2)); scroll-padding-inline: max(var(--espace), calc((100vw - 1320px) / 2));
   padding-bottom: 14px; scrollbar-width: thin; scrollbar-color: var(--couleur-accent) transparent; }

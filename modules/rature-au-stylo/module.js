@@ -24,7 +24,7 @@ const VARIANTES = 4; // 0 trait ondulé, 1 aller-retour, 2 diagonale, 3 gribouil
 export async function init(root, options = {}) {
   const o = { declencheur: 'apparition', depart: 'top 85%', debut: 'top 78%', fin: 'top 40%', delai: 0, duree: 1, souligner: true, variante: null, epaisseur: .075, ...options };
   const html = document.documentElement;
-  const calmeTot = matchMedia('(prefers-reduced-motion: reduce)').matches || html.classList.contains('calme');
+  const calmeTot = false; // plus de mode calme (v10.11)
   root.classList.add('rst-bloc');
   // Armé tout de suite (avant le chargement de GSAP) pour éviter de voir l'état final puis l'animation.
   if (!calmeTot) root.classList.add('est-arme');

@@ -75,8 +75,4 @@
 .oae-v--svg .oae-v__second { fill: var(--couleur-secondaire); }
 .oae-v--svg .oae-v__trait { fill: var(--couleur-texte); }
 
-/* Réduire les animations et mode calme : les éléments sont posés sans transition (module.js n'anime rien). */
-@media (prefers-reduced-motion: reduce) { .oae__mur { transition: none; } .oae__objet { opacity: 1 !important; visibility: visible !important; transform: none !important; } }
-.calme .oae__mur { transition: none; }
-.calme .oae__objet { opacity: 1 !important; visibility: visible !important; transform: none !important; }
 @media (max-width: 420px) { .oae__puces button { padding-inline: .85em; } .oae__cartel { padding: 12px 14px; } }

@@ -2,7 +2,6 @@
 .eau { position: relative; isolation: isolate; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;
   min-height: max(520px, calc(var(--ecran-h) - var(--entete-h))); padding-top: clamp(32px, 8vh, 96px); background: var(--couleur-fond);
   touch-action: pan-y; }
-/* Image d'ouverture (ou fond de bassin neutre en CSS) : seule visible sans JavaScript, sans WebGL et en mode calme. */
 .eau__fond { position: absolute; inset: 0; z-index: -3;
   background:
     linear-gradient(90deg, transparent calc(50% - 1px), color-mix(in oklab, var(--couleur-texte) 16%, transparent) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)) 0 0 / calc(var(--ecran-h) / 9) calc(var(--ecran-h) / 9),
@@ -32,6 +31,4 @@
 @media (max-width: 760px) { .eau__voile { background: linear-gradient(180deg, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 0%, transparent 25%, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 50%, color-mix(in oklab, var(--couleur-fond) 92%, transparent) 82%, var(--couleur-fond) 100%); } }
 @media (max-height: 600px) and (min-width: 761px) { .eau__texte { display: none; } }
 @media (max-width: 380px) { .eau__actions .socle-bouton { flex: 1 1 100%; } }
-/* Réduire les animations et mode calme : image figée (le script n'anime rien), canvas absent. */
-@media (prefers-reduced-motion: reduce) { .eau__canvas { display: none; } }
-.calme .eau__canvas { display: none; }
+

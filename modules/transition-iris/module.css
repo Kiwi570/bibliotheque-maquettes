@@ -17,6 +17,6 @@ html.tir-couvert { background-color: var(--tir-fond, var(--couleur-accent)); }
   background: radial-gradient(circle, var(--tir-texte, var(--couleur-sur-accent)) 0 3%, var(--couleur-secondaire) 3.5% 30%, transparent 30.5%),
     repeating-radial-gradient(circle, color-mix(in oklab, var(--couleur-fond) 92%, var(--couleur-texte)) 0 1.5px, var(--couleur-fond) 1.5px 3px);
   animation: tir-tourne 1.8s linear infinite; }
+
 @keyframes tir-tourne { to { transform: rotate(360deg); } }
-html.calme .tir, html.calme.tir-couvert .tir { visibility: hidden !important; }
-@media (prefers-reduced-motion: reduce) { .tir { visibility: hidden !important; } }
+

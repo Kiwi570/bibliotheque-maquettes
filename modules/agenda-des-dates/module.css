@@ -57,12 +57,13 @@
   background: color-mix(in oklab, var(--couleur-fond) 80%, transparent); font-family: var(--police-mono); font-size: max(12px, .7rem); letter-spacing: .08em; text-transform: uppercase;
   transform: rotate(-12deg); opacity: 0; pointer-events: none; }
 .agd__date--ajoutee .agd__tampon { opacity: 1; animation: agd-tampon .45s cubic-bezier(.2, 1.4, .4, 1) both; }
+
 @keyframes agd-tampon { from { opacity: 0; transform: rotate(-24deg) scale(1.9); } to { opacity: 1; transform: rotate(-12deg) scale(1); } }
 
-/* Apparition (jamais en mode calme : classe agd--anime posée par le module) */
 .agd--anime .agd__date:not(.est-vu) { opacity: 0; transform: translateY(14px); }
 .agd--anime .agd__date { transition: opacity .55s ease, transform .55s cubic-bezier(.2, .7, .2, 1); }
 .agd__date--entre { animation: agd-entre .35s ease both; }
+
 @keyframes agd-entre { from { opacity: 0; transform: translateY(8px); } }
 
 .agd__date--pret > .agd__actions { grid-column: 2; }

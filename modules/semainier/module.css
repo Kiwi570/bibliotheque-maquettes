@@ -93,6 +93,7 @@
 .smn.est-telephone .smn__table thead th { text-align: left; font-size: max(12px, .8rem); }
 .smn.est-telephone .smn__creneau { font-size: max(12px, .92rem); }
 .smn__panneau.est-nouveau tbody td { animation: smn-apparait .35s ease both; }
+
 @keyframes smn-apparait { from { opacity: 0; } to { opacity: 1; } }
 
 /* Jours abrégés sous 1100 px (le nom complet reste lu) */
@@ -108,12 +109,3 @@
   .smn.est-telephone .smn__table tbody th, .smn.est-telephone .smn__coin { width: 78px; }
 }
 
-/* Réduire les animations et mode calme : état final, rien ne glisse (le module saute aussi le Flip). */
-@media (prefers-reduced-motion: reduce) {
-  .smn__creneau { will-change: auto; }
-  .smn__barre i { transition: none; }
-  .smn__bloque, .smn__panneau.est-nouveau tbody td { animation: none; }
-}
-.calme .smn__creneau { will-change: auto; }
-.calme .smn__barre i { transition: none; }
-.calme .smn__bloque, .calme .smn__panneau.est-nouveau tbody td { animation: none; }

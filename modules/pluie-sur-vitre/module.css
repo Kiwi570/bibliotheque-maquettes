@@ -44,6 +44,4 @@
 @media (max-width: 760px) { .pluie__voile { background: linear-gradient(180deg, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 0%, transparent 24%, color-mix(in oklab, var(--couleur-fond) 55%, transparent) 48%, color-mix(in oklab, var(--couleur-fond) 92%, transparent) 80%, var(--couleur-fond) 100%); } }
 @media (max-height: 600px) and (min-width: 761px) { .pluie__texte { display: none; } }
 @media (max-width: 380px) { .pluie__actions .socle-bouton { flex: 1 1 100%; } }
-/* Réduire les animations et mode calme : image et gouttes figées (le script n'anime rien), canvas absent. */
-@media (prefers-reduced-motion: reduce) { .pluie__canvas { display: none; } }
-.calme .pluie__canvas { display: none; }
+
