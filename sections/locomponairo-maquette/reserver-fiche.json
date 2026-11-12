@@ -1,0 +1,50 @@
+{
+ "id": "locomponairo-maquette/reserver-fiche",
+ "maquette": "locomponairo-maquette",
+ "page": "reserver",
+ "titre": "Fiche de réception",
+ "role": "outil-interactif",
+ "description": "Fiche de réception montrée à l'envoi de la demande, sur le lie-de-vin de la maison : la clé de laiton tombe sur la photo de la chambre choisie avec sa pampille de laiton gravée au prénom (SVG, texte en creux avec reflet), le nombre de nuits monte jusqu'à son chiffre en très grand, dates en toutes lettres (« du samedi 21 au mardi 24 novembre 2026 »), horaires d'arrivée et de départ, voyageurs, inclus, options, taxe calculée, annulation, tampon « Demande prête », bouton laiton vers la vraie réservation ; elle suit chaque changement de la demande et se referme si les dates sont effacées",
+ "animations": [
+  "révélation-image",
+  "compteur"
+ ],
+ "interactions": [
+  "réservation-simulee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "reserver.html:307-379",
+  "css": "assets/css/site.css:752-753,807,860-900",
+  "js": "assets/js/site.js:614-773 ; assets/js/socle/mesures.js:42-78"
+ },
+ "medias": {
+  "capture": "medias/locomponairo-maquette/reserver-fiche-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/reserver-fiche-m390.jpg"
+ },
+ "pieges": [
+  "Défilement doux du navigateur arrêté à mi-chemin : la page grandit, l'observateur de hauteur relance ScrollTrigger.refresh pendant la descente. Descente faite par GSAP vers une cible relue à chaque image, lancée après l'événement de recalcul",
+  "Section cachée jusqu'à l'envoi : l'audit la jugeait « section sans visuel » (copie d'audit corrigée : sections [hidden] ignorées) et l'inventaire ne la capture pas (captures faites à la main)",
+  "Barre fixe du téléphone par-dessus la fiche : data-masque-barre sur la section",
+  "Prénom gravé à l'envers une fois la clé tournée : additionner les rotations (texte, pampille, clé) avant de choisir le sens du texte"
+ ],
+ "particularites": [
+  "fiche-de-reception",
+  "cle-gravee"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

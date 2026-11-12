@@ -32,13 +32,13 @@
       "ouverture sur la vraie porte d'entrée le soir : on choisit une chambre, la porte pivote et s'ouvre sur sa photo ; elle s'ouvre aussi au premier défilement ou se tire à la main",
       "la vraie façade photographiée reste en place pendant qu'une bande de lumière monte du garage au 2e étage, chaque étage avec ses chambres",
       "cadran de 24 h à l'heure de Pouzols (arrivée, clés, petit-déjeuner, garage, départ) et statut d'arrivée du jour",
-      "réservation au tableau de la réception : la clé décrochée file jusqu'au récapitulatif, tampon « Demande prête », lien vers la vraie réservation",
+      "réservation au tableau de la réception : la clé décrochée file jusqu'au récapitulatif, calendrier maison de deux mois (plage allumée, nuits, clavier), puis fiche de réception sur le lie-de-vin : la clé de laiton tombe sur la photo de la chambre avec sa pampille gravée au prénom, les nuits en très grand, les dates en toutes lettres, tampon « Demande prête » et bouton laiton vers la vraie réservation",
       "fil de laiton qui se trace dans la marge de toutes les pages, une petite clé au bout",
       "accueil ramené à 8,8 écrans, vraies photos du lieu et des alentours à la place des images générées"
     ],
     "reserves": [
       "couloir des chambres et journée de Séjour longs et répétitifs ; Séjour, Alentours et Réserver ouvrent encore sur la même mise en page",
-      "pas de prix ni de calendrier maison dans la réservation (aucun prix sur le site actuel)",
+      "aucun prix dans la réservation (aucun prix sur le site actuel) : la fiche renvoie au prix de la réservation sécurisée",
       "mentions légales, tarifs, surface de Denise et tarif du garage à fournir ; Safari non testé"
     ],
     "animations": [
@@ -62,13 +62,12 @@
       "filtres",
       "comparateur"
     ],
-    "change_depuis_audit": "v2 du 12 novembre 2026 : accueil refait sur la vraie porte et la vraie façade, vraies photos à la place des images générées, mode calme retiré à la demande du client",
+    "change_depuis_audit": null,
     "accueil": "debut",
     "grille": {
       "objet": "la vraie porte d'entrée, qui s'ouvre sur la chambre choisie",
       "fil": "fil de laiton qui se trace dans la marge de toutes les pages, une petite clé au bout"
-    },
-    "plan": "recit-lineaire"
+    }
   },
   "sections": {
     "defs-laiton": {
@@ -579,7 +578,7 @@
     "reserver-demande": {
       "titre": "Votre demande",
       "role": "outil-interactif",
-      "description": "Demande en trois étapes (chambre avec vignette photo, dates, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif, nuits et taxe de séjour calculées, tampon « Demande prête », lien vers la vraie réservation eviivo ; préremplie depuis ?chambre=",
+      "description": "Demande en trois étapes (chambre avec vignette photo, dates au calendrier maison, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif ; calendrier de deux mois côte à côte (un seul quand la place manque) : on touche l'arrivée puis le départ, la plage s'allume et une pastille donne les nuits, aperçu de la plage sous la souris, jours passés barrés, clavier (flèches, Origine et Fin, Page précédente et suivante) ; nuits et taxe de séjour calculées ; préremplie depuis ?chambre=",
       "animations": [
         "apparition-au-défilement"
       ],
@@ -592,8 +591,45 @@
       "reutilisable": false,
       "module": "envol-vers-le-panier",
       "pieges": [
-        "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée"
+        "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée",
+        "Pastille des nuits qui apparaissait au survol : la ligne des billets passait à la ligne et le calendrier descendait sous la souris (le clic tombait à côté). La pastille garde sa place, vide ou pleine",
+        "Jours de 44 px au doigt : deux mois seulement si la largeur le permet (mesurée par ResizeObserver), et sur un téléphone étroit le calendrier prend toute la largeur de l'écran (320 px : 7 × 45 px)",
+        "Jours passés : l'audit mesure aussi le contraste des boutons désactivés ; barrés en texte doux plutôt que pâlis",
+        "Les deux champs de date d'origine restent la source des valeurs et le secours sans script ; dates en heure locale, pas toISOString (décalage le soir)"
+      ],
+      "particularites": [
+        "calendrier-maison"
       ]
+    },
+    "reserver-fiche": {
+      "titre": "Fiche de réception",
+      "role": "outil-interactif",
+      "description": "Fiche de réception montrée à l'envoi de la demande, sur le lie-de-vin de la maison : la clé de laiton tombe sur la photo de la chambre choisie avec sa pampille de laiton gravée au prénom (SVG, texte en creux avec reflet), le nombre de nuits monte jusqu'à son chiffre en très grand, dates en toutes lettres (« du samedi 21 au mardi 24 novembre 2026 »), horaires d'arrivée et de départ, voyageurs, inclus, options, taxe calculée, annulation, tampon « Demande prête », bouton laiton vers la vraie réservation ; elle suit chaque changement de la demande et se referme si les dates sont effacées",
+      "animations": [
+        "révélation-image",
+        "compteur"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Défilement doux du navigateur arrêté à mi-chemin : la page grandit, l'observateur de hauteur relance ScrollTrigger.refresh pendant la descente. Descente faite par GSAP vers une cible relue à chaque image, lancée après l'événement de recalcul",
+        "Section cachée jusqu'à l'envoi : l'audit la jugeait « section sans visuel » (copie d'audit corrigée : sections [hidden] ignorées) et l'inventaire ne la capture pas (captures faites à la main)",
+        "Barre fixe du téléphone par-dessus la fiche : data-masque-barre sur la section",
+        "Prénom gravé à l'envers une fois la clé tournée : additionner les rotations (texte, pampille, clé) avant de choisir le sens du texte"
+      ],
+      "particularites": [
+        "fiche-de-reception",
+        "cle-gravee"
+      ],
+      "medias": {
+        "capture": "medias/locomponairo-maquette/reserver-fiche-p1440.jpg",
+        "capture_m390": "medias/locomponairo-maquette/reserver-fiche-m390.jpg"
+      }
     },
     "reserver-cadeau": {
       "titre": "Une nuit à offrir ?",

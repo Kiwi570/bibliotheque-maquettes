@@ -4,7 +4,7 @@
  "page": "reserver",
  "titre": "Votre demande",
  "role": "outil-interactif",
- "description": "Demande en trois étapes (chambre avec vignette photo, dates, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif, nuits et taxe de séjour calculées, tampon « Demande prête », lien vers la vraie réservation eviivo ; préremplie depuis ?chambre=",
+ "description": "Demande en trois étapes (chambre avec vignette photo, dates au calendrier maison, voyageurs et option d'arrivée) et récapitulatif collant : la clé file en arc jusqu'au récapitulatif ; calendrier de deux mois côte à côte (un seul quand la place manque) : on touche l'arrivée puis le départ, la plage s'allume et une pastille donne les nuits, aperçu de la plage sous la souris, jours passés barrés, clavier (flèches, Origine et Fin, Page précédente et suivante) ; nuits et taxe de séjour calculées ; préremplie depuis ?chambre=",
  "animations": [
   "apparition-au-défilement"
  ],
@@ -23,23 +23,32 @@
   "envol-vers-le-panier"
  ],
  "code": {
-  "html": "reserver.html:224-296",
-  "css": "assets/css/socle.css:285-291,312-313 ; assets/css/site.css:37,746-749,776-803,808,823",
-  "js": "assets/js/site.js:15-60,460-565 ; assets/js/socle/voile.js:4,183 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:3,8,12-32 ; assets/js/socle/transitions.js:75-116 ; assets/js/socle/entete.js:8,60-165 ; assets/js/socle/calme.js:1"
+  "html": "reserver.html:224-306",
+  "css": "assets/css/socle.css:39-42,285-291 ; assets/css/site.css:750-751,780-805,811-833,850-856,904,919",
+  "js": "assets/js/site.js:5,16-61,501-773 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:3,8,12-32 ; assets/js/socle/calme.js:1"
  },
  "medias": {
   "capture": "medias/locomponairo-maquette/reserver-demande-p1440.jpg",
   "capture_m390": "medias/locomponairo-maquette/reserver-demande-m390.jpg"
  },
  "pieges": [
-  "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée"
+  "Aucun prix sur le site actuel : le récapitulatif renvoie au prix de la réservation sécurisée",
+  "Pastille des nuits qui apparaissait au survol : la ligne des billets passait à la ligne et le calendrier descendait sous la souris (le clic tombait à côté). La pastille garde sa place, vide ou pleine",
+  "Jours de 44 px au doigt : deux mois seulement si la largeur le permet (mesurée par ResizeObserver), et sur un téléphone étroit le calendrier prend toute la largeur de l'écran (320 px : 7 × 45 px)",
+  "Jours passés : l'audit mesure aussi le contraste des boutons désactivés ; barrés en texte doux plutôt que pâlis",
+  "Les deux champs de date d'origine restent la source des valeurs et le secours sans script ; dates en heure locale, pas toISOString (décalage le soir)"
+ ],
+ "particularites": [
+  "calendrier-maison"
  ],
  "mesures": {
-  "hauteur_p1440": 1309,
-  "hauteur_m390": 1998,
+  "hauteur_p1440": 1733,
+  "hauteur_m390": 2371,
   "epinglee": false,
   "scrolltriggers": 0
  },
- "familles": [],
+ "familles": [
+  "lumiere-pointeur"
+ ],
  "impact": "calme"
 }
