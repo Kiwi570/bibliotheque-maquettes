@@ -2,14 +2,15 @@
  "id": "locomponairo-maquette/alentours",
  "maquette": "locomponairo-maquette",
  "page": "index",
- "titre": "Saint-Guilhem, le Salagou, Navacelles…",
+ "titre": "Entre gorges et cirques.",
  "role": "galerie",
- "description": "Ronde 3D des sites des alentours (gravures, type, distance quand le site la donne) qui tourne au défilement, à la main avec élan et aux flèches",
+ "description": "Une seule grande photo du Pont du Diable, légendée, puis les vrais trajets du site actuel en liste à filets qui se tracent (Gignac 7 km, Clamouse 11 km, Pézenas et Montpellier 25 min)",
  "animations": [
-  "parallaxe"
+  "parallaxe",
+  "apparition-au-défilement"
  ],
  "interactions": [
-  "galerie-cliquable"
+  "aucune"
  ],
  "dependances": [
   "gsap",
@@ -18,30 +19,23 @@
  "telephone": "adapté",
  "note_qualite": 3,
  "reutilisable": false,
- "module": "carrousel-3d",
- "modules": [
-  "carrousel-3d"
- ],
+ "module": null,
+ "modules": [],
  "code": {
-  "html": "index.html:509-610",
-  "css": "assets/css/site.css:46-47,289-311,382,597-598,626,633,828,846-847",
-  "js": "assets/js/site.js:245-279,681 ; assets/js/socle/voile.js:44 ; assets/js/socle/effets.js:14,238-269"
+  "html": "index.html:340-359",
+  "css": "assets/css/site.css:1091-1102",
+  "js": null
  },
  "medias": {
   "capture": "medias/locomponairo-maquette/alentours-p1440.jpg"
  },
- "pieges": [
-  "Cartes cachées de la ronde encore lues et focalisables : inert et data-audit-ignorer sur celles de dos"
- ],
+ "pieges": [],
  "mesures": {
-  "hauteur_p1440": 1188,
-  "hauteur_m390": 849,
+  "hauteur_p1440": 1120,
+  "hauteur_m390": 955,
   "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [
-  "3d",
-  "objet-manipulable"
- ],
- "impact": "spectaculaire"
+ "familles": [],
+ "impact": "vivant"
 }

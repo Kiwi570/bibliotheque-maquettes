@@ -3,43 +3,53 @@
  "maquette": "locomponairo-maquette",
  "page": "index",
  "titre": "Une maison de vigneron, depuis 1850.",
- "role": "manifeste",
- "description": "Titre aux axes de Fraunces qui s'adoucissent au défilement, manifeste dont les mots s'allument un à un, photo de l'allée en parallaxe et escalier aux carreaux de ciment",
+ "role": "étapes",
+ "description": "La vraie façade photographiée reste collée à gauche pendant qu'on lit : titre aux axes de Fraunces, manifeste dont les mots s'allument, puis rez-de-chaussée (garage), 1er (Isabelle et Denise) et 2e (Mathilde et Suzanne) ; l'étage lu reçoit une lueur chaude, le reste passe au soir, un repère nomme l'étage ; chaque étage montre sa vraie vue (allée, jardin et toits, jardin vu d'en haut) et ses chambres en photo avec leur lien",
  "animations": [
+  "section-fixée",
   "révélation-texte",
-  "parallaxe"
+  "progression-fixée"
  ],
  "interactions": [
-  "aucune"
+  "galerie-cliquable"
  ],
  "dependances": [
   "gsap",
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
- "reutilisable": false,
+ "note_qualite": 4,
+ "reutilisable": true,
  "module": "axes-au-defilement",
  "modules": [
   "axes-au-defilement"
  ],
  "code": {
-  "html": "index.html:304-325",
-  "css": "assets/css/site.css:133-142,372-374,733",
-  "js": "assets/js/site.js:3,101-110,113-122,160-242,679"
+  "html": "index.html:211-293",
+  "css": "assets/css/site.css:146-149,766,1012-1056",
+  "js": "assets/js/site.js:3,63-99,115-124,127-136,617-618"
  },
  "medias": {
-  "capture": "medias/locomponairo-maquette/maison-p1440.jpg"
+  "capture": "medias/locomponairo-maquette/maison-p1440.jpg",
+  "capture_m390": "medias/locomponairo-maquette/maison-m390.jpg",
+  "video": "medias/locomponairo-maquette/maison-p720.mp4"
  },
  "pieges": [
-  "Axes changés à chaque image : texte remis en forme sans cesse, défilement saccadé ; par pas de 4, écrits seulement s'ils changent"
+  "Photo en cover : la bande se place d'après la hauteur rendue de l'image (fractions relevées sur la photo)",
+  "Voiles de nuit déplacés en translate (pas de masque animé) : rien ne se repeint au défilement",
+  "Étape active par IntersectionObserver : avec ScrollTrigger, sa boucle tournait encore en mode calme"
+ ],
+ "particularites": [
+  "facade-eclairee-etage-par-etage"
  ],
  "mesures": {
-  "hauteur_p1440": 913,
-  "hauteur_m390": 842,
+  "hauteur_p1440": 2613,
+  "hauteur_m390": 2116,
   "epinglee": false,
-  "scrolltriggers": 4
+  "scrolltriggers": 2
  },
- "familles": [],
- "impact": "vivant"
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
 }

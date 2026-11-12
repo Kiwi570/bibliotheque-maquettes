@@ -135,7 +135,7 @@
      "etape": "livraison et ajout à la bibliothèque",
      "budget": 15,
      "debut": "2026-11-10T16:06:09+01:00",
-     "fin": ""
+     "fin": "2026-11-10T16:40:00+01:00"
     }
    ],
    "attentes": [],
@@ -161,6 +161,86 @@
    "effetsRetires": [],
    "grilleDispenses": {},
    "notes": "Version validée par l'utilisateur (« Valider la v1 »). Livraison de la v1 corrigée après l'audit complet, puis ajout à la bibliothèque."
+  },
+  {
+   "version": 3,
+   "skill": "v10.10",
+   "perimetre": [
+    "accueil",
+    "chambres",
+    "votre-sejour",
+    "alentours",
+    "contact",
+    "reserver",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "audit d'analyse : aperçu filmé, captures de toutes les pages, regard du directeur artistique, regard neuf",
+     "budget": 25,
+     "debut": "2026-11-12T15:22:00+01:00",
+     "fin": "2026-11-12T15:40:00+01:00"
+    },
+    {
+     "etape": "refonte réaliste de l'accueil (porte, façade étage par étage, suite, tout compris, alentours en photos, intro de la clé en laiton)",
+     "budget": 75,
+     "debut": "2026-11-12T15:40:00+01:00",
+     "fin": "2026-11-12T16:15:00+01:00"
+    },
+    {
+     "etape": "audit complet de la nouvelle version, test « vrai visiteur » refait",
+     "budget": 50,
+     "debut": "2026-11-12T16:15:00+01:00",
+     "fin": "2026-11-12T16:52:00+01:00"
+    },
+    {
+     "etape": "corrections (audit, visiteur, mode calme retiré), audits ciblés et standard, second regard du directeur artistique",
+     "budget": 35,
+     "debut": "2026-11-12T16:52:00+01:00",
+     "fin": ""
+    }
+   ],
+   "attentes": [
+    {
+     "objet": "choix de la profondeur de la refonte (question à choix multiples)",
+     "debut": "2026-11-12T15:36:00+01:00",
+     "fin": "2026-11-12T15:38:00+01:00"
+    },
+    {
+     "objet": "question sur le mode calme (lien visible ou tout retirer)",
+     "debut": "2026-11-12T16:25:00+01:00",
+     "fin": "2026-11-12T16:27:00+01:00"
+    }
+   ],
+   "allersRetours": 2,
+   "modules": [
+    "fil-conducteur",
+    "carrousel-3d",
+    "envol-vers-le-panier",
+    "axes-au-defilement"
+   ],
+   "audit": {
+    "niveau": "complet (toutes les pages, 13 formats), puis ciblé complet sur l'accueil et la 404, standard sur toutes les pages, ciblés sur l'accueil, Alentours et Séjour",
+    "echecsPremierPassage": 5,
+    "relances": 4,
+    "corrections": [
+     "légende de la porte en flex (chevauchement mesuré) et fond sombre déclaré sous la porte (contraste mesuré sur la crème)",
+     "404 sur téléphone : photo moins haute, bouton dans le premier écran",
+     "ouverture de l'accueil sous 3 s : seule la porte est prioritaire, intro resserrée",
+     "mode calme retiré à la demande du client : contrôles du mode calme dispensés dans la copie d'audit du projet (config.sansModeCalme)",
+     "typographie du statut d'arrivée (espace insécable), photo du garage moins grande",
+     "test vrai visiteur : lieu au premier écran du téléphone, façade non collée sur téléphone, phrase sur le prix, bouton d'envoi et « Demande prête » visibles"
+    ]
+   },
+   "effetsRetires": [
+    "trousseau (disque à faire tourner)",
+    "maison-coupe (maison 3D en boîtes)",
+    "tampons « Inclus »",
+    "cadran de l'accueil (reste sur Séjour)",
+    "ronde des sites de l'accueil (reste sur Alentours)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Demande de l'utilisateur : audit complet et analyse approfondie de tout le site, puis version optimale. Regard du directeur artistique (grille v10.10) : REFAIRE à 2,25/5 ; l'utilisateur a choisi la refonte réaliste de l'accueil. Mode calme retiré à la demande du client (16 h 27)."
   }
  ]
 }
