@@ -4,9 +4,9 @@
  "page": "infos-pratiques",
  "titre": "Ouvert maintenant ?",
  "role": "outil-interactif",
- "description": "Horaires de la semaine et cadran 24 h à aiguille manipulable.",
+ "description": "La semaine d'un coup d'œil : une piste par jour de 0 h à 24 h (nuits plus sombres), les créneaux à leur place (midi en or, soir en terre cuite), le moment présent qui bat sur la piste du jour ; un curseur d'heure (input range transparent sur les pistes) parcourt la semaine, allume les créneaux ouverts et le dit en toutes lettres.",
  "animations": [
-  "aucune"
+  "apparition-au-défilement"
  ],
  "interactions": [
   "simulateur"
@@ -15,32 +15,29 @@
   "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
- "module": "horaires-ouvert-maintenant",
- "modules": [
-  "horaires-ouvert-maintenant"
- ],
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
  "code": {
-  "html": "infos-pratiques.html:154-178",
-  "css": "assets/js/modules/horaires-ouvert-maintenant/module.css:4-14,25-29,33-41,46-53,57-64 ; assets/css/site.css:302-303,503-507,536-537,685,776,968",
-  "js": "assets/js/site.js:206,221,737-758,986-1019 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:4,103-111,130-132 ; assets/js/modules/horaires-ouvert-maintenant/module.js:5,12,19-90 ; assets/js/socle/effets.js:152-159"
+  "html": "infos-pratiques.html:148-199",
+  "css": "assets/css/site.css:1987-2027",
+  "js": "assets/js/site.js:126,988-1021,1103,1252-1281 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:4,36-61,64-83,102-111 ; assets/js/modules/assiette-qui-se-dresse/module.js:10,17-66 ; assets/js/modules/reservation-de-table/module.js:91,163,248-249,277 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,19-90 ; assets/js/socle/effets.js:152-159"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/infos-pratiques-horaires-p1440.jpg",
-  "capture_m390": "medias/jardins-hacienda-2-maquette/infos-pratiques-horaires-m390.jpg"
+  "capture_m390": "medias/jardins-hacienda-2-maquette/infos-pratiques-horaires-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/infos-pratiques-horaires-p720.mp4"
  },
  "pieges": [
-  "horaires de la semaine avant le cadran sur téléphone"
+  "l'audit lit le statut sur [data-horaires-statut] : le garder sur le nouvel élément"
  ],
  "mesures": {
-  "hauteur_p1440": 1214,
-  "hauteur_m390": 1506,
+  "hauteur_p1440": 876,
+  "hauteur_m390": 972,
   "epinglee": false,
   "scrolltriggers": 0
  },
- "familles": [
-  "objet-manipulable"
- ],
+ "familles": [],
  "impact": "vivant"
 }

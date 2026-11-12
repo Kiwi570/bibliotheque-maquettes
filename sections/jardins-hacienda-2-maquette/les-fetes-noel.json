@@ -3,11 +3,12 @@
  "maquette": "jardins-hacienda-2-maquette",
  "page": "les-fetes",
  "titre": "Le menu de Noël",
- "role": "offre",
- "description": "Le menu de Noël en dépliant de trois volets qui s'ouvre au défilement, couverture d'abord.",
+ "role": "menu",
+ "description": "Scène collante : une carte de vœux sur un vert de sapin où tombe une neige dorée. La couverture est la vraie affiche du restaurant (un reflet y passe) ; au défilement elle tourne sur sa charnière, la photo de la coupe devant la cheminée apparaît à gauche et les cinq plats s'inscrivent un à un entre deux filets d'or ; prix et réservation à gauche. Sur téléphone, la couverture se soulève vers le haut et s'efface.",
  "animations": [
   "section-fixée",
-  "progression-fixée"
+  "progression-fixée",
+  "flip"
  ],
  "interactions": [
   "aucune"
@@ -17,16 +18,14 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
- "module": "depliant-3d",
- "modules": [
-  "depliant-3d"
- ],
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
  "code": {
-  "html": "les-fetes.html:204-243",
-  "css": "assets/js/modules/depliant-3d/module.css:3-27,31-33,37-40 ; assets/css/site.css:966-980,1111,1130,1171",
-  "js": "assets/js/modules/depliant-3d/module.js:10,17-59"
+  "html": "les-fetes.html:213-251",
+  "css": "assets/css/site.css:72,1863-1915,1950",
+  "js": "assets/js/site.js:703-707,1182-1206,1235-1241 ; assets/js/socle/effets.js:17,152-159,271-288"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/les-fetes-noel-p1440.jpg",
@@ -34,16 +33,15 @@
   "video": "medias/jardins-hacienda-2-maquette/les-fetes-noel-p720.mp4"
  },
  "pieges": [
-  "texte lisible avant que la cloche se lève"
+  "--p posé par ScrollTrigger, tout le reste en calc() dans le CSS : un seul déclencheur, aucun saut",
+  "sur téléphone, rotation sur l'axe horizontal et fondu, sinon la couverture recouvre le titre"
  ],
  "mesures": {
-  "hauteur_p1440": 900,
-  "hauteur_m390": 1924,
-  "epinglee": true,
+  "hauteur_p1440": 2700,
+  "hauteur_m390": 2363,
+  "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [
-  "scene-epinglee"
- ],
+ "familles": [],
  "impact": "vivant"
 }

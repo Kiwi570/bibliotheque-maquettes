@@ -1,6 +1,6 @@
 # jardins-hacienda-2-maquette
 
-<https://jardins-hacienda-2-maquette.vercel.app> · audit du 12/11/2026 · dernier commit 994ece4 du 12/11/2026
+<https://jardins-hacienda-2-maquette.vercel.app> · audit du 12/11/2026 · dernier commit 33290a3 du 12/11/2026
 
 > Audit d'entrée en bibliothèque : script d'audit de la skill (standard en deux passages, puis complet sur 13 tailles et contre-audit ciblé), test « vrai visiteur » (7 missions, téléphone et ordinateur), regard neuf d'un relecteur séparé, inventaire de la bibliothèque et lecture des captures. Pas d'audit externe : la note est à confirmer.
 
@@ -8,7 +8,7 @@
 
 **86/100 · Prête à envoyer · 0 défaut bloquant**
 
-Version 7 (v7.4) : la journée de l'Hacienda sans heures affichées, nourrie de vraies photos du site actuel et de modules restaurant de la bibliothèque. L'accueil suit les références données par le client : ouverture au nom en grand avec quatre états (été ou hiver, midi ou soir), saison, prochain rendez-vous et bascule été/hiver ; le chef en polaroïd qui se retourne avec des étiquettes à déplacer ; la carte du déjeuner en cartes qui défilent près de l'assiette qui fume ; le lieu en cartes qui filent ; la réservation qui arrive au coin du feu, sur la vraie cheminée animée ; « En ce moment » avec les vraies affiches de Noël et de la Saint-Sylvestre. La terrasse qui s'allume au défilement est passée sur Réceptions ; la carte cadeau d'Offrir est devenue une carte de luxe.
+Version 7 (v7.5) : la journée de l'Hacienda sans heures affichées, nourrie de vraies photos du site actuel et de modules restaurant de la bibliothèque. L'accueil suit les références données par le client : ouverture au nom en grand avec quatre états (été ou hiver, midi ou soir), saison, prochain rendez-vous et bascule été/hiver ; le chef en polaroïd qui se retourne avec des étiquettes à déplacer ; la carte du déjeuner en cartes qui défilent près de l'assiette qui fume ; le lieu en cartes qui filent ; la réservation qui arrive au coin du feu, sur la vraie cheminée animée ; « En ce moment » avec les vraies affiches de Noël et de la Saint-Sylvestre. La terrasse qui s'allume au défilement est passée sur Réceptions ; la carte cadeau d'Offrir est devenue une carte de luxe ; polices Fraunces et Manrope de la référence ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions, des fêtes et d'Infos pratiques ; Noël en carte de vœux qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, horaires en semaine à parcourir ; transitions aux couleurs du site.
 
 ## Notes
 
@@ -52,7 +52,7 @@ Aucun.
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit de la skill | standard : 0 échec(s), 0 à regarder, 0 non lancé(s) |
+| Script d'audit de la skill | complet : 2 échec(s), 16 à regarder, 0 non lancé(s) |
 | Audit complet (13 tailles) | v7.3 : 0 échec, 15 points à regarder traités ou acceptés (rechargement au milieu de La carte décalé d'un écran, contraste mesuré sous le 19:00 de Réceptions) ; v7 : 7 échecs au premier passage, corrigés |
 | Fluidité | Les fêtes : 1 % d'images lentes, tâche la plus longue 103 ms (ordinateur ralenti 4 fois) ; accueil 5 % |
 | Test visiteur | 13 missions réussies sur 14 avant corrections ; la soirée sur ordinateur (dates cachées derrière une photo) corrigée |
@@ -61,3 +61,4 @@ Aucun.
 | Retour du client (v7.1) | l'hiver, plus de piscine en avant sur l'accueil ni sur Infos ; vapeur de 21 h rendue visible ; contre-audit vert |
 | Retours du client (v7.2) | accueil d'hiver réordonné (coin du feu à 19 h sur la vraie cheminée animée, terrasse d'été en fin de page), assiettes qui fument à 12 h 30, vert nuit à 21 h ; contre-audit vert |
 | Retours du client (v7.4) | plus aucune heure affichée ; accueil refait sur six références du client (ouverture, chef, carte, lieu, réservation au coin du feu, « En ce moment »), terrasse sur Réceptions, carte cadeau de luxe ; contre-audit vert |
+| Retours du client (v7.5) | polices de la référence, ouverture sur la photo panoramique, chef clair, déjeuner foncé, cartes de La carte, Offrir & emporter, Venir, ouvertures de Réceptions, des fêtes et d'Infos pratiques refaites, Noël en carte de vœux qui s'ouvre, Saint-Sylvestre dorée, semaine des horaires, transitions aux couleurs du site ; contre-audit sur ordinateur (7 tailles de 1000 à 2560 px) : 73 échecs au premier passage (ouverture coupée sur écran bas, textes à 9 px, voile crème vu comme écran blanc entre deux pages sombres, lien vers l'ancien site…), 0 après corrections ; le téléphone (2 échecs du bouton calme à 390 px) est repris à l'audit de fin à la demande du client |
