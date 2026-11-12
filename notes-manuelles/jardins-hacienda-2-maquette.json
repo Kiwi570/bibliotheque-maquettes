@@ -20,11 +20,11 @@
    "accent": "#c2491f",
    "secondaire": "#0c6f7b"
   },
-  "polices": {
-   "titres": "Instrument Serif",
-   "texte": "Bricolage Grotesque",
-   "mono": ""
-  },
+  "polices": [
+   "Fraunces",
+   "Manrope",
+   "Caveat"
+  ],
   "points_forts": [
    "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir)",
    "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
@@ -69,7 +69,7 @@
    "mode-calme",
    "jeu"
   ],
-  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe.",
+  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe. Suite (v7.5) : polices Fraunces et Manrope de la référence du client ; ouverture sur la photo panoramique de la salle ; chef clair, déjeuner foncé ; cartes de La carte ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions (arche, médaillon, sceau) et des fêtes (vraies affiches, plus de vitre givrée). Puis : carte de Noël qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, transitions crème au monogramme, ouverture claire et semaine des horaires d'Infos pratiques, ardoise au dos du polaroïd.",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
@@ -182,7 +182,7 @@
   "dejeuner": {
    "titre": "Le déjeuner, la carte de la semaine",
    "role": "produits",
-   "description": "La carte en trois cartes claires (Nos entrées, Nos plats, Nos desserts : trois plats chacune, nom, pointillés qui se tracent, prix, description) qui arrivent l'une après l'autre au défilement ; l'assiette du chef qui fume reste collée à côté, avec ses petites assiettes à toucher qui la remplacent et fument à leur tour.",
+   "description": "Sur fond brun foncé (v7.5) : la carte en trois cartes un ton plus clair (Nos entrées, Nos plats, Nos desserts : nom en Fraunces gras, pointillés qui se tracent, prix, description) qui arrivent au défilement ; l'assiette du chef qui fume reste collée à côté, avec ses petites assiettes à toucher.",
    "animations": [
     "apparition-au-défilement",
     "canvas-2d",
@@ -285,7 +285,7 @@
   "fetes": {
    "titre": "En ce moment",
    "role": "agenda",
-   "description": "Trois cartes claires à coins ronds : la Saint-Sylvestre et le menu de Noël avec leurs vraies affiches (décompte en jours posé sur l'image), la carte cadeau en petite carte vert de nuit et or sur la vraie photo du feu ; date en petites capitales rouges, titre, texte, prix, « Découvrir → » ; la prochaine soirée en dessous.",
+   "description": "Trois cartes claires à coins ronds : la Saint-Sylvestre et le menu de Noël avec leurs vraies affiches (décompte en jours posé sur l'image), les soirées à thème sur la vraie photo d'une table devant le feu ; date en petites capitales rouges, titre Fraunces, texte, prix, « Découvrir → » ; toute la carte est le lien ; la prochaine soirée en dessous.",
    "animations": [
     "apparition-au-défilement",
     "compteur",
@@ -358,20 +358,19 @@
    ]
   },
   "infos-pratiques-debut": {
-   "titre": "Il est … à Moineville",
+   "titre": "Horaires, accès et contact",
    "role": "ouverture",
-   "description": "Le ciel réel de Moineville à l'heure qu'il est (soleil, lune et étoiles calculés pour le lieu) derrière la vraie enseigne détourée ; un curseur montre une autre heure et la grande heure le suit ; adresse, distances et raccourcis Appeler, Une question, Venir dans le premier écran.",
+   "description": "Crème et lumière chaude : l'enseigne sous le ciel bleu en arche, une carte de visite de la maison (monogramme, adresse, téléphone, statut ouvert ou fermé en direct) qui s'incline vers la main, les distances en pastilles, Appeler / Une question / Venir. Le ciel calculé de la v7 est retiré à la demande du client.",
    "animations": [
-    "canvas-2d",
-    "révélation-texte"
+    "parallaxe"
    ],
    "interactions": [
-    "simulateur"
+    "aucune"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
    "reutilisable": false,
-   "module": "ciel-en-direct",
+   "module": null,
    "pieges": [
     "mer: false pour un lieu sans mer",
     "sous un premier plan détouré, halo de texte au lieu d'une boîte",
@@ -381,19 +380,19 @@
   "infos-pratiques-horaires": {
    "titre": "Ouvert maintenant ?",
    "role": "outil-interactif",
-   "description": "Horaires de la semaine et cadran 24 h à aiguille manipulable.",
+   "description": "La semaine d'un coup d'œil : une piste par jour de 0 h à 24 h (nuits plus sombres), les créneaux à leur place (midi en or, soir en terre cuite), le moment présent qui bat sur la piste du jour ; un curseur d'heure (input range transparent sur les pistes) parcourt la semaine, allume les créneaux ouverts et le dit en toutes lettres.",
    "animations": [
-    "aucune"
+    "apparition-au-défilement"
    ],
    "interactions": [
     "simulateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
-   "module": "horaires-ouvert-maintenant",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
    "pieges": [
-    "horaires de la semaine avant le cadran sur téléphone"
+    "l'audit lit le statut sur [data-horaires-statut] : le garder sur le nouvel élément"
    ]
   },
   "infos-pratiques-acces": {
@@ -448,7 +447,7 @@
   "la-carte-toute-la-carte": {
    "titre": "Toute la carte",
    "role": "carte",
-   "description": "Grand index par rubriques, recherche et filtre végétarien, barre des rubriques collante.",
+   "description": "Grand index par rubriques, recherche et filtre végétarien, barre des rubriques collante. En v7.5, chaque rubrique est une carte sable (titre italique terre cuite, noms en Fraunces gras, pointillés, prix) à côté de sa photo collée, d'après la référence du client.",
    "animations": [
     "apparition-au-défilement",
     "parallaxe"
@@ -506,11 +505,10 @@
   "les-fetes-debut": {
    "titre": "La saison décide",
    "role": "ouverture",
-   "description": "L'hiver, le compte à rebours de la Saint-Sylvestre derrière une vitre givrée qui fond sous la main (WebGL) ; l'été, la piscine aux palmiers ; bascule de saison.",
+   "description": "Nuit chaude et petites lueurs dorées qui scintillent ; les vraies affiches du restaurant (Noël derrière, Saint-Sylvestre devant) flottent doucement et mènent chacune à son menu ; le décompte de la Saint-Sylvestre en médaille dorée ; la bascule hiver/été. L'été : nuit turquoise, la piscine en arche et les lanternes en médaillon. La vitre givrée (module givre-webgl) est retirée à la demande du client.",
    "animations": [
-    "webgl-shader",
-    "compteur",
-    "ouverture-orchestrée"
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -518,7 +516,7 @@
    "telephone": "adapté",
    "note_qualite": 4,
    "reutilisable": false,
-   "module": "givre-webgl",
+   "module": null,
    "pieges": [
     "shader plein écran redessiné à chaque image : ne redessiner que si l'image change, rien pendant le défilement, démarrer à demi-résolution",
     "installé seulement au repos en haut de page et l'hiver"
@@ -527,7 +525,7 @@
   "les-fetes-saint-sylvestre": {
    "titre": "Le menu de la Saint-Sylvestre",
    "role": "offre",
-   "description": "Menu en accords : le verre change de forme et de couleur selon le plat touché.",
+   "description": "Nuit dorée : paillettes qui scintillent, la lueur de la salle prend la couleur du vin du plat choisi (propriété @property animée), le verre posé sur un reflet de table ; prix en médailles, vinyle du DJ qui tourne ; plats numérotés en chiffres romains dorés, le plat choisi éclairé de la couleur de son vin ; titre en dorure.",
    "animations": [
     "morphing",
     "révélation-texte"
@@ -536,28 +534,30 @@
     "schema-interactif"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": "accords-mets-et-vins",
    "pieges": []
   },
   "les-fetes-noel": {
    "titre": "Le menu de Noël",
-   "role": "offre",
-   "description": "Le menu de Noël en dépliant de trois volets qui s'ouvre au défilement, couverture d'abord.",
+   "role": "menu",
+   "description": "Scène collante : une carte de vœux sur un vert de sapin où tombe une neige dorée. La couverture est la vraie affiche du restaurant (un reflet y passe) ; au défilement elle tourne sur sa charnière, la photo de la coupe devant la cheminée apparaît à gauche et les cinq plats s'inscrivent un à un entre deux filets d'or ; prix et réservation à gauche. Sur téléphone, la couverture se soulève vers le haut et s'efface.",
    "animations": [
     "section-fixée",
-    "progression-fixée"
+    "progression-fixée",
+    "flip"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
-   "module": "depliant-3d",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
    "pieges": [
-    "texte lisible avant que la cloche se lève"
+    "--p posé par ScrollTrigger, tout le reste en calc() dans le CSS : un seul déclencheur, aucun saut",
+    "sur téléphone, rotation sur l'axe horizontal et fondu, sinon la couverture recouvre le titre"
    ]
   },
   "les-fetes-passes": {
@@ -633,16 +633,17 @@
   "receptions-debut": {
    "titre": "Recevoir pour un …",
    "role": "ouverture",
-   "description": "La pergola dressée pour un mariage (vraie photo, éclaircie sous le texte) ; l'occasion change dans le titre (mariage, baptême, anniversaire, pot de départ).",
+   "description": "Vert de nuit et lueur dorée : la pergola dressée en grande arche, en pleine lumière (plus de voile sombre sur la photo), la table au bord de la piscine en médaillon cerclé d'or, un sceau doré qui tourne (Mariages · Baptêmes · Anniversaires · Pots de départ autour du monogramme) ; l'occasion change dans le titre en italique doré.",
    "animations": [
-    "révélation-texte"
+    "révélation-texte",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
+   "note_qualite": 5,
+   "reutilisable": true,
    "module": null,
    "pieges": []
   },
@@ -791,7 +792,7 @@
   "chef": {
    "titre": "Régis Clauss, l'âme de notre cuisine",
    "role": "équipe",
-   "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur une table sombre : il suit un peu la main et se retourne d'un geste (au dos, la carte de la semaine écrite comme une fiche) ; autour, des étiquettes autocollantes (deux vraies photos rondes, cèpes et girolles, et des mots : fait maison, produits de saison, une nouvelle carte chaque semaine, suggestions de vive voix) qui se collent à l'arrivée et se déplacent du doigt. À droite, le texte et deux boutons (la carte, Instagram).",
+   "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur un papier crème à lumière chaude (fond clair, v7.5) : il suit un peu la main et se retourne d'un geste (au dos, la carte de la semaine écrite comme une fiche) ; autour, des étiquettes autocollantes (deux vraies photos rondes, cèpes et girolles, et des mots : fait maison, produits de saison, une nouvelle carte chaque semaine, suggestions de vive voix) qui se collent à l'arrivée et se déplacent du doigt. À droite, le texte et deux boutons (la carte, Instagram).",
    "animations": [
     "apparition-au-défilement",
     "flip"
@@ -848,6 +849,44 @@
    "pieges": [
     "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
     "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
+   ]
+  },
+  "offrir-emporter": {
+   "titre": "Offrir & emporter",
+   "role": "offre",
+   "description": "Deux grandes cartes sable : les incontournables des fêtes (vraie photo du foie gras maison, sceau rond « Fait maison », la liste du site en pastilles, lien vers la commande en ligne du restaurant) et la carte cadeau de luxe (vert de nuit, guilloché et filet d'or) qui s'incline vers la main avec un reflet qui suit, montant à choisir en pastilles dorées.",
+   "animations": [
+    "apparition-au-défilement",
+    "survol-image"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "texte décoratif de la carte (role img) marqué data-audit-ignorer, sinon « texte sous 12 px »"
+   ]
+  },
+  "venir": {
+   "titre": "En pleine nature, à 19 km de Metz",
+   "role": "contact",
+   "description": "Adresse, téléphone, statut « ouvert maintenant », Réserver et Itinéraire ; à droite, le plan des vraies positions projetées (frontière, Moselle) dans une carte sable : les traits courbes partent de Moineville vers Metz, Thionville, Luxembourg et Nancy avec leurs distances à vol d'oiseau, une lueur file de chaque ville vers la maison (offset-path), Moineville bat doucement.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "distances calculées (haversine) et dites « à vol d'oiseau »"
    ]
   }
  }
