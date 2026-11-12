@@ -1,0 +1,49 @@
+{
+ "id": "jardins-hacienda-2-maquette/lieu",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "index",
+ "titre": "Un endroit magique, en pleine nature",
+ "role": "galerie",
+ "description": "Cinq cartes en vraies photos (le restaurant, la terrasse, la piscine, les réceptions, le coin du feu), chacune avec son lien, qui filent vers la gauche pendant que le cadre reste collé ; une fine barre de progression suit le parcours. Sans animation, la piste se fait glisser.",
+ "animations": [
+  "galerie-horizontale",
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:307-359",
+  "css": "assets/css/site.css:1494-1521,1609-1613",
+  "js": "assets/js/site.js:1166-1176 ; assets/js/socle/effets.js:14,238-269"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/lieu-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/lieu-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/lieu-p720.mp4"
+ },
+ "pieges": [
+  "hauteur de la section recalculée avant chaque refresh (refreshInit) d'après la longueur de la piste"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1588,
+  "hauteur_m390": 2182,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "scene-epinglee",
+  "defilement-horizontal"
+ ],
+ "impact": "spectaculaire"
+}

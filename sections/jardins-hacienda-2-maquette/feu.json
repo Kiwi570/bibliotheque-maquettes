@@ -4,39 +4,49 @@
  "page": "index",
  "titre": "23:00, au coin du feu",
  "role": "manifeste",
- "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran : les flammes de la photo ondulent (bandes de l'image décalées par une onde qui monte, canvas posé sur le foyer), la lueur vacille sur la salle, les braises partent du foyer et s'écartent sous la main. L'hiver, elle ouvre la soirée à 19 h.",
+ "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran, les mots « Au coin » et « du feu » s'écartent ; ensuite le titre remonte et se resserre et le petit module de réservation (prochains services, couverts, carton qui s'envole vers la réservation déjà remplie) monte du bas. Les flammes de la photo ondulent, la lueur vacille, les braises partent du foyer et s'écartent sous la main.",
  "animations": [
   "masque",
   "canvas-2d",
   "section-fixée"
  ],
  "interactions": [
-  "aucune"
+  "réservation-simulee"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger",
+  "canvas"
  ],
  "telephone": "adapté",
  "note_qualite": 5,
  "reutilisable": true,
- "module": null,
- "modules": [],
+ "module": "envol-vers-le-panier",
+ "modules": [
+  "envol-vers-le-panier"
+ ],
  "code": {
-  "html": "index.html:297-311",
-  "css": "assets/css/site.css:220-232,756-761,782,928-930,1237,1243",
-  "js": "assets/js/site.js:242-243,540,544,547-600,630-659,703-707 ; assets/js/socle/effets.js:18,273-285"
+  "html": "index.html:384-425",
+  "css": "assets/css/site.css:201-216,221-233,757-761,783,929-931,1238,1244,1524-1552,1589-1596,1605-1607",
+  "js": "assets/js/site.js:240-241,487-538,542,545-598,628-657,701-705,921-964,1178-1204 ; assets/js/modules/agenda-des-dates/module.js:4,91 ; assets/js/modules/reservation-de-table/module.js:134,250-251 ; assets/js/socle/effets.js:18,273-288 ; assets/js/socle/compteurs.js:6-36"
  },
- "medias": {},
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/feu-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/feu-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/feu-p720.mp4"
+ },
  "pieges": [
   "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer",
   "mesurer le foyer dans le repère de la photo (object-fit: cover, recadrage réel), pas de l'écran",
-  "bords du canvas fondus (destination-in) pour ne pas voir la couture"
+  "bords du canvas fondus (destination-in) pour ne pas voir la couture",
+  "la scène plein écran du socle expose sa frise (fxTimeline) : la suite s'y ajoute après 1, pas dans une seconde frise",
+  "ne pas centrer avec translateX(-50%) ce que GSAP déplace : left/right 0 et margin auto"
  ],
  "mesures": {
-  "hauteur_p1440": null,
-  "hauteur_m390": null,
+  "hauteur_p1440": 2610,
+  "hauteur_m390": 2448,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  },
  "familles": [
   "plein-ecran",

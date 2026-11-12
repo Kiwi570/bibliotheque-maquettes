@@ -2,12 +2,13 @@
  "id": "jardins-hacienda-2-maquette/midi",
  "maquette": "jardins-hacienda-2-maquette",
  "page": "index",
- "titre": "12:00, midi au bord de l'eau",
+ "titre": "Les Jardins de l'Hacienda (ouverture)",
  "role": "ouverture",
- "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées étalonnée chaude, des rayons de soleil qui entrent par les baies et un halo qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
+ "description": "Ouverture sur le modèle donné par le client : le nom en très grand (romain puis italique doré), la pastille du lieu (19 km de Metz), la phrase du chef selon la saison et le moment, « Réserver une table » et « Voir la carte » crème, puis une barre sous un filet : la saison, le prochain rendez-vous de l'agenda calculé au jour réel et la bascule « Voir l'été » / « Voir l'hiver » ; un bouton pause arrête l'eau, la lumière et le lent zoom. Quatre photos selon la saison et le moment réels (piscine animée en WebGL, terrasse aux guirlandes, vraie salle aux baies vitrées, la même retouchée en soirée), voile coloré selon l'état.",
  "animations": [
   "webgl-shader",
-  "révélation-texte"
+  "révélation-texte",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
@@ -16,14 +17,14 @@
   "ogl"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
+ "note_qualite": 5,
  "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:121-153",
-  "css": "assets/css/socle.css:245-250,255,271 ; assets/css/site.css:76-127,480-481,548,593,610,614,622-627,645-670,721,732-739,747,776,788,858,1026,1067,1144,1183,1188-1212",
-  "js": "assets/js/site.js:1,31-43,55-74,121,141,224-239,242,245-289,306,327-390,468-538,715-736,739-760,877-894,967-972,1111-1112,1116,1124,1127-1130,1136-1138,1141-1143 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:47-60,123,128,142,145,283 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/reservation-de-table/module.js:1 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,360-404 ; assets/js/socle/transitions.js:25-46"
+  "html": "index.html:121-174",
+  "css": "assets/css/socle.css:245-250,255,271,279-282 ; assets/css/site.css:87-93,107,117,168,230,268,323,359,378,474,492,599,611,623,627,667,722,748,1086,1098,1168,1194-1210,1262-1269,1281-1283,1347-1403",
+  "js": "assets/js/site.js:325-388,1034-1052,1071,1074-1099,1217,1260-1262,1269-1270,1274 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,363-407 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/midi-p1440.jpg",
@@ -33,17 +34,20 @@
  "pieges": [
   "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
   "dire l'heure réelle dans le statut quand la grande heure est celle du récit",
-  "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage"
+  "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage",
+  "le soir, passer le voile et le texte au sombre et l'en-tête au thème nuit (data-lumiere de la section changé avant le premier affichage)",
+  "une photo de jour retouchée en soirée se signale (mention « Photo de la salle retouchée en soirée »)",
+  "le lent zoom de la photo ne doit pas toucher la photo d'été : l'eau WebGL redessine l'image et se décalerait",
+  "la bascule été/hiver garde le moment forcé (?moment=) et passe par la transition de page"
  ],
  "mesures": {
   "hauteur_p1440": 900,
-  "hauteur_m390": 881,
+  "hauteur_m390": 844,
   "epinglee": false,
   "scrolltriggers": 0
  },
  "familles": [
-  "lumiere-pointeur",
   "webgl"
  ],
- "impact": "vivant"
+ "impact": "spectaculaire"
 }

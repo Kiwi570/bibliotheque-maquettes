@@ -4,7 +4,7 @@
  "page": "offrir",
  "titre": "Votre carte cadeau",
  "role": "outil-interactif",
- "description": "La carte s'écrit en direct puis part dans son enveloppe.",
+ "description": "La carte cadeau qui se compose, en carte de luxe : vert de nuit profond, guilloché doré (SVG), monogramme en filigrane, montant en dorure animée, double filet d'or, reflet qui passe et inclinaison sous la souris ; le prénom, le mot et la signature s'écrivent en italique sur la carte ; elle part dans son enveloppe scellée. Formulaire à l'or (puces dorées, champs filetés d'or, total doré).",
  "animations": [
   "morphing",
   "flip"
@@ -16,30 +16,33 @@
   "gsap"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
+ "note_qualite": 5,
  "reutilisable": false,
  "module": "carte-cadeau-qui-se-compose",
  "modules": [
   "carte-cadeau-qui-se-compose"
  ],
  "code": {
-  "html": "offrir.html:145-203",
-  "css": "assets/js/modules/carte-cadeau-qui-se-compose/module.css:7-57,66,96-136 ; assets/css/site.css:300-304,482-484,967",
-  "js": "assets/js/site.js:166,178-205,715-736,877-894,902-972,975-1021 ; assets/js/modules/formulaire-par-etapes/module.js:68,181 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38,45,51-55,59,65-67,155,178,247 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
+  "html": "offrir.html:144-203",
+  "css": "assets/js/modules/carte-cadeau-qui-se-compose/module.css:7-57,66,96-136 ; assets/css/site.css:301-305,483-485,968,1288-1337",
+  "js": "assets/js/site.js:164,176-203,713-734,875-892,900-970,973-1019 ; assets/js/modules/formulaire-par-etapes/module.js:68,181 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38,45,51-55,59,65-67,155,178,247 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/offrir-composer-p1440.jpg",
   "capture_m390": "medias/jardins-hacienda-2-maquette/offrir-composer-m390.jpg",
   "video": "medias/jardins-hacienda-2-maquette/offrir-composer-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "un guilloché trop contrasté devient du bruit : traits à 0,3 d'opacité, rosace centrée hors de la carte"
+ ],
  "mesures": {
   "hauteur_p1440": 1163,
-  "hauteur_m390": 1530,
+  "hauteur_m390": 1534,
   "epinglee": false,
   "scrolltriggers": 0
  },
  "familles": [
+  "lumiere-pointeur",
   "morphing",
   "recomposition"
  ],

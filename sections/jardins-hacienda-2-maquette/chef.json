@@ -1,0 +1,47 @@
+{
+ "id": "jardins-hacienda-2-maquette/chef",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "index",
+ "titre": "Régis Clauss, l'âme de notre cuisine",
+ "role": "équipe",
+ "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur une table sombre : il suit un peu la main et se retourne d'un geste (au dos, la carte de la semaine écrite comme une fiche) ; autour, des étiquettes autocollantes (deux vraies photos rondes, cèpes et girolles, et des mots : fait maison, produits de saison, une nouvelle carte chaque semaine, suggestions de vive voix) qui se collent à l'arrivée et se déplacent du doigt. À droite, le texte et deux boutons (la carte, Instagram).",
+ "animations": [
+  "apparition-au-défilement",
+  "flip"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:175-223",
+  "css": "assets/css/socle.css:39-42 ; assets/css/site.css:33,1406-1464,1587-1588,1592,1597-1598,1602-1604",
+  "js": "assets/js/site.js:176-203,240-241,1101-1149,1218 ; assets/js/modules/plan-de-salle/module.js:183-186"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/chef-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/chef-m390.jpg"
+ },
+ "pieges": [
+  "un fieldset ou un enfant en nowrap élargit la colonne : bornes de déplacement calculées sur la table",
+  "étiquettes de droite ancrées à droite sur téléphone, sinon elles sortent de l'écran",
+  "pas de citation inventée du chef : le dos du polaroïd montre la carte de la semaine"
+ ],
+ "mesures": {
+  "hauteur_p1440": 828,
+  "hauteur_m390": 1283,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "recomposition"
+ ],
+ "impact": "vivant"
+}

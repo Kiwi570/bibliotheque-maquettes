@@ -31,6 +31,7 @@
  ],
  "besoins": [
   "réserver",
+  "rendez-vous",
   "catalogue",
   "agenda"
  ],
@@ -49,20 +50,21 @@
   "reserver",
   "404"
  ],
- "commit": "e4c4fda",
- "date_commit": "2026-11-11",
- "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo.",
+ "commit": "994ece4",
+ "date_commit": "2026-11-12",
+ "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe.",
  "note": 86,
  "verdict": "Prête à envoyer",
  "points_forts": [
-  "une journée à l'heure de la maison, de midi à minuit, qui règle voile, intro, horloge et lumière de chaque page",
+  "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir)",
   "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
   "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
   "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
   "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
   "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
   "le feu de la vraie cheminée animé à partir d'une seule photo : flammes qui ondulent, lueur qui vacille, braises au foyer",
-  "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume"
+  "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume",
+  "la carte cadeau en carte de luxe : vert de nuit, guilloché doré, montant en dorure"
  ],
  "reserves": [
   "réservation en deux validations (Vérifier puis Confirmer)",
@@ -83,7 +85,9 @@
   "trace-svg",
   "parallaxe",
   "reactif-vitesse",
-  "fil-conducteur"
+  "fil-conducteur",
+  "galerie-horizontale",
+  "flip"
  ],
  "interactions": [
   "réservation-simulee",
@@ -92,7 +96,8 @@
   "recherche",
   "saisie-personnalisee",
   "schema-interactif",
-  "mode-calme"
+  "mode-calme",
+  "jeu"
  ],
  "dependances": [
   "gsap",
@@ -103,8 +108,8 @@
  ],
  "grille": {
   "voile": "propre",
-  "objet": "l'eau de midi, l'ardoise effacée au chiffon, la vapeur sur l'assiette, la vitre givrée, le ciel de Moineville",
-  "fil": "l'heure de la journée, de 12:00 à 00:00, portée par l'horloge de l'en-tête et le voile",
+  "objet": "l'eau de midi, le soleil ou la lampe qui suit la main, l'assiette qui fume, le feu de la vraie cheminée, la carte cadeau",
+  "fil": "la lumière de la journée, du blanc de midi à la braise du soir (plus d'horloge affichée)",
   "intro_vers_objet": true,
   "marques": [
    "manipuler",
@@ -161,8 +166,8 @@
    },
    {
     "version": 7,
-    "travail": 437,
-    "budget": 395,
+    "travail": 532,
+    "budget": 515,
     "attente": 0,
     "allers_retours": null
    }
@@ -174,13 +179,12 @@
   "jardins-hacienda-2-maquette/header",
   "jardins-hacienda-2-maquette/menu",
   "jardins-hacienda-2-maquette/midi",
+  "jardins-hacienda-2-maquette/chef",
   "jardins-hacienda-2-maquette/dejeuner",
+  "jardins-hacienda-2-maquette/lieu",
   "jardins-hacienda-2-maquette/apres-midi",
-  "jardins-hacienda-2-maquette/terrasse",
-  "jardins-hacienda-2-maquette/diner",
   "jardins-hacienda-2-maquette/feu",
   "jardins-hacienda-2-maquette/fetes",
-  "jardins-hacienda-2-maquette/minuit",
   "jardins-hacienda-2-maquette/pied",
   "jardins-hacienda-2-maquette/404-debut",
   "jardins-hacienda-2-maquette/infos-pratiques-debut",
@@ -200,6 +204,7 @@
   "jardins-hacienda-2-maquette/offrir-composer",
   "jardins-hacienda-2-maquette/receptions-rdl",
   "jardins-hacienda-2-maquette/receptions-debut",
+  "jardins-hacienda-2-maquette/receptions-terrasse",
   "jardins-hacienda-2-maquette/receptions-espaces",
   "jardins-hacienda-2-maquette/receptions-occasions",
   "jardins-hacienda-2-maquette/receptions-demande",

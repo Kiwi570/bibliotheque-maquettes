@@ -1,0 +1,49 @@
+{
+ "id": "jardins-hacienda-2-maquette/receptions-terrasse",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "receptions",
+ "titre": "Recevoir, le soir venu",
+ "role": "manifeste",
+ "description": "Venue de l'accueil : scène épinglée, trois états de la même image alignés (couchant, heure bleue, nuit) au défilement, les guirlandes s'allument sur les ampoules relevées dans l'image (on les allume aussi du doigt), les trois étapes de la soirée s'éclairent ; sans heures.",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "receptions.html:138-174",
+  "css": "assets/css/socle.css:279-282 ; assets/css/site.css:73,93,160-194,230,268,323,359,378,474,492,599,693,764-766,990,1086,1098,1168,1241-1243,1256-1257,1389",
+  "js": "assets/js/site.js:5,113,176-203,207-218,240-241,305,404,407-430,487-536,665-686,701-705,1180-1204,1214 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/lumiere-au-pointeur/module.js:2,129-130,139-274 ; assets/js/modules/rideau-en-lanieres/module.js:24,30-146 ; assets/js/modules/ciel-en-direct/module.js:136,188,242,247,291,301 ; assets/js/modules/givre-webgl/module.js:70-189 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:2,119 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:49-54 ; assets/js/socle/effets.js:17,152-159,190-214,271-288,293-318 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/receptions-terrasse-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p720.mp4"
+ },
+ "pieges": [
+  "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
+  "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2340,
+  "hauteur_m390": 1857,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}

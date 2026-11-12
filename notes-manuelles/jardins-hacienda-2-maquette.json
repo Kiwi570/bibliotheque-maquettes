@@ -26,14 +26,15 @@
    "mono": ""
   },
   "points_forts": [
-   "une journée à l'heure de la maison, de midi à minuit, qui règle voile, intro, horloge et lumière de chaque page",
+   "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir)",
    "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
    "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
    "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
    "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
    "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
    "le feu de la vraie cheminée animé à partir d'une seule photo : flammes qui ondulent, lueur qui vacille, braises au foyer",
-   "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume"
+   "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume",
+   "la carte cadeau en carte de luxe : vert de nuit, guilloché doré, montant en dorure"
   ],
   "reserves": [
    "réservation en deux validations (Vérifier puis Confirmer)",
@@ -54,7 +55,9 @@
    "trace-svg",
    "parallaxe",
    "reactif-vitesse",
-   "fil-conducteur"
+   "fil-conducteur",
+   "galerie-horizontale",
+   "flip"
   ],
   "interactions": [
    "réservation-simulee",
@@ -63,14 +66,15 @@
    "recherche",
    "saisie-personnalisee",
    "schema-interactif",
-   "mode-calme"
+   "mode-calme",
+   "jeu"
   ],
-  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo.",
+  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe.",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
-   "objet": "l'eau de midi, l'ardoise effacée au chiffon, la vapeur sur l'assiette, la vitre givrée, le ciel de Moineville",
-   "fil": "l'heure de la journée, de 12:00 à 00:00, portée par l'horloge de l'en-tête et le voile"
+   "objet": "l'eau de midi, le soleil ou la lampe qui suit la main, l'assiette qui fume, le feu de la vraie cheminée, la carte cadeau",
+   "fil": "la lumière de la journée, du blanc de midi à la braise du soir (plus d'horloge affichée)"
   },
   "metier": "restaurant et lieu de réception"
  },
@@ -97,7 +101,7 @@
   "ouverture-panneau": {
    "titre": "Intro : l'horloge roule jusqu'à l'heure de la page",
    "role": "transition-de-page",
-   "description": "Rouleaux de chiffres de 00:00 à l'heure de la page, puis l'horloge vole jusqu'à la grande heure de l'ouverture, à sa taille exacte.",
+   "description": "Intro : le monogramme de la maison se pose (masque CSS du logo, couleur du texte du panneau), le nom et la ligne apparaissent, puis l'écran s'ouvre en cercle depuis le centre. La nuit, « La maison dort. Rendez-vous à midi. »",
    "animations": [
     "ouverture-orchestrée",
     "compteur"
@@ -150,40 +154,45 @@
    ]
   },
   "midi": {
-   "titre": "12:00, midi au bord de l'eau",
+   "titre": "Les Jardins de l'Hacienda (ouverture)",
    "role": "ouverture",
-   "description": "L'été, la piscine générée plein cadre dont l'eau ondule sous le doigt (WebGL) ; l'hiver, la vraie salle aux baies vitrées étalonnée chaude, des rayons de soleil qui entrent par les baies et un halo qui suit la main (« Midi près des baies vitrées, minuit au coin du feu. ») ; grande heure, nom et lieu, statut à l'heure réelle.",
+   "description": "Ouverture sur le modèle donné par le client : le nom en très grand (romain puis italique doré), la pastille du lieu (19 km de Metz), la phrase du chef selon la saison et le moment, « Réserver une table » et « Voir la carte » crème, puis une barre sous un filet : la saison, le prochain rendez-vous de l'agenda calculé au jour réel et la bascule « Voir l'été » / « Voir l'hiver » ; un bouton pause arrête l'eau, la lumière et le lent zoom. Quatre photos selon la saison et le moment réels (piscine animée en WebGL, terrasse aux guirlandes, vraie salle aux baies vitrées, la même retouchée en soirée), voile coloré selon l'état.",
    "animations": [
     "webgl-shader",
-    "révélation-texte"
+    "révélation-texte",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": true,
    "module": null,
    "pieges": [
     "le shader doit lire l'object-position réel de la photo (sinon bande décalée sur téléphone)",
     "dire l'heure réelle dans le statut quand la grande heure est celle du récit",
-    "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage"
+    "la saison décide de l'ouverture : ne jamais mettre la piscine en avant l'hiver (retour du client) ; deux visuels chargés en différé, un seul affiché selon data-saison posé avant le premier affichage",
+    "le soir, passer le voile et le texte au sombre et l'en-tête au thème nuit (data-lumiere de la section changé avant le premier affichage)",
+    "une photo de jour retouchée en soirée se signale (mention « Photo de la salle retouchée en soirée »)",
+    "le lent zoom de la photo ne doit pas toucher la photo d'été : l'eau WebGL redessine l'image et se décalerait",
+    "la bascule été/hiver garde le moment forcé (?moment=) et passe par la transition de page"
    ]
   },
   "dejeuner": {
-   "titre": "12:30, le déjeuner",
+   "titre": "Le déjeuner, la carte de la semaine",
    "role": "produits",
-   "description": "La carte de la semaine (cinq vrais plats et leurs prix) ; à côté, la vraie assiette devant la cheminée dont la vapeur monte et s'écarte sous la main ; les petites assiettes rondes sont des boutons : celle qu'on touche passe en grand et fume à son tour.",
+   "description": "La carte en trois cartes claires (Nos entrées, Nos plats, Nos desserts : trois plats chacune, nom, pointillés qui se tracent, prix, description) qui arrivent l'une après l'autre au défilement ; l'assiette du chef qui fume reste collée à côté, avec ses petites assiettes à toucher qui la remplacent et fument à leur tour.",
    "animations": [
     "apparition-au-défilement",
     "canvas-2d",
-    "parallaxe"
+    "section-fixée"
    ],
    "interactions": [
     "galerie-cliquable"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": "plat-fumant",
    "pieges": []
@@ -228,7 +237,8 @@
    "pieges": [
     "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
     "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
-   ]
+   ],
+   "ignorer": true
   },
   "diner": {
    "titre": "21:00, le dîner",
@@ -245,43 +255,48 @@
    "reutilisable": false,
    "module": "envol-vers-le-panier",
    "pieges": [],
-   "modules": []
+   "modules": [],
+   "ignorer": true
   },
   "feu": {
    "titre": "23:00, au coin du feu",
    "role": "manifeste",
-   "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran : les flammes de la photo ondulent (bandes de l'image décalées par une onde qui monte, canvas posé sur le foyer), la lueur vacille sur la salle, les braises partent du foyer et s'écartent sous la main. L'hiver, elle ouvre la soirée à 19 h.",
+   "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran, les mots « Au coin » et « du feu » s'écartent ; ensuite le titre remonte et se resserre et le petit module de réservation (prochains services, couverts, carton qui s'envole vers la réservation déjà remplie) monte du bas. Les flammes de la photo ondulent, la lueur vacille, les braises partent du foyer et s'écartent sous la main.",
    "animations": [
     "masque",
     "canvas-2d",
     "section-fixée"
    ],
    "interactions": [
-    "aucune"
+    "réservation-simulee"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
    "reutilisable": true,
-   "module": null,
+   "module": "envol-vers-le-panier",
    "pieges": [
     "voile sombre au centre pour lire le titre sur un mur clair ; légende hors du foyer",
     "mesurer le foyer dans le repère de la photo (object-fit: cover, recadrage réel), pas de l'écran",
-    "bords du canvas fondus (destination-in) pour ne pas voir la couture"
+    "bords du canvas fondus (destination-in) pour ne pas voir la couture",
+    "la scène plein écran du socle expose sa frise (fxTimeline) : la suite s'y ajoute après 1, pas dans une seconde frise",
+    "ne pas centrer avec translateX(-50%) ce que GSAP déplace : left/right 0 et margin auto"
    ]
   },
   "fetes": {
-   "titre": "23:30, Noël et la Saint-Sylvestre",
+   "titre": "En ce moment",
    "role": "agenda",
-   "description": "Les menus de Noël et de la Saint-Sylvestre avec prix et compte à rebours en jours de calendrier, puis la prochaine soirée à venir, tirée de l'agenda.",
+   "description": "Trois cartes claires à coins ronds : la Saint-Sylvestre et le menu de Noël avec leurs vraies affiches (décompte en jours posé sur l'image), la carte cadeau en petite carte vert de nuit et or sur la vraie photo du feu ; date en petites capitales rouges, titre, texte, prix, « Découvrir → » ; la prochaine soirée en dessous.",
    "animations": [
-    "compteur"
+    "apparition-au-défilement",
+    "compteur",
+    "survol-image"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
+   "note_qualite": 4,
+   "reutilisable": true,
    "module": null,
    "pieges": [
     "compter les jours du calendrier à Moineville, pas des tranches de 24 h"
@@ -301,7 +316,8 @@
    "note_qualite": 3,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [],
+   "ignorer": true
   },
   "pied": {
    "titre": "Pied de page 00:00",
@@ -598,7 +614,7 @@
   "offrir-composer": {
    "titre": "Votre carte cadeau",
    "role": "outil-interactif",
-   "description": "La carte s'écrit en direct puis part dans son enveloppe.",
+   "description": "La carte cadeau qui se compose, en carte de luxe : vert de nuit profond, guilloché doré (SVG), monogramme en filigrane, montant en dorure animée, double filet d'or, reflet qui passe et inclinaison sous la souris ; le prénom, le mot et la signature s'écrivent en italique sur la carte ; elle part dans son enveloppe scellée. Formulaire à l'or (puces dorées, champs filetés d'or, total doré).",
    "animations": [
     "morphing",
     "flip"
@@ -607,10 +623,12 @@
     "saisie-personnalisee"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": "carte-cadeau-qui-se-compose",
-   "pieges": []
+   "pieges": [
+    "un guilloché trop contrasté devient du bruit : traits à 0,3 d'opacité, rosace centrée hors de la carte"
+   ]
   },
   "receptions-debut": {
    "titre": "Recevoir pour un …",
@@ -768,6 +786,68 @@
    "module": "rideau-en-lanieres",
    "pieges": [
     "à coordonner avec le voile du socle : ne jouer qu'à l'arrivée par le voile"
+   ]
+  },
+  "chef": {
+   "titre": "Régis Clauss, l'âme de notre cuisine",
+   "role": "équipe",
+   "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur une table sombre : il suit un peu la main et se retourne d'un geste (au dos, la carte de la semaine écrite comme une fiche) ; autour, des étiquettes autocollantes (deux vraies photos rondes, cèpes et girolles, et des mots : fait maison, produits de saison, une nouvelle carte chaque semaine, suggestions de vive voix) qui se collent à l'arrivée et se déplacent du doigt. À droite, le texte et deux boutons (la carte, Instagram).",
+   "animations": [
+    "apparition-au-défilement",
+    "flip"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "un fieldset ou un enfant en nowrap élargit la colonne : bornes de déplacement calculées sur la table",
+    "étiquettes de droite ancrées à droite sur téléphone, sinon elles sortent de l'écran",
+    "pas de citation inventée du chef : le dos du polaroïd montre la carte de la semaine"
+   ]
+  },
+  "lieu": {
+   "titre": "Un endroit magique, en pleine nature",
+   "role": "galerie",
+   "description": "Cinq cartes en vraies photos (le restaurant, la terrasse, la piscine, les réceptions, le coin du feu), chacune avec son lien, qui filent vers la gauche pendant que le cadre reste collé ; une fine barre de progression suit le parcours. Sans animation, la piste se fait glisser.",
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "hauteur de la section recalculée avant chaque refresh (refreshInit) d'après la longueur de la piste"
+   ]
+  },
+  "receptions-terrasse": {
+   "titre": "Recevoir, le soir venu",
+   "role": "manifeste",
+   "description": "Venue de l'accueil : scène épinglée, trois états de la même image alignés (couchant, heure bleue, nuit) au défilement, les guirlandes s'allument sur les ampoules relevées dans l'image (on les allume aussi du doigt), les trois étapes de la soirée s'éclairent ; sans heures.",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
+    "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
    ]
   }
  }

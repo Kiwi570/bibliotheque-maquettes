@@ -2,38 +2,45 @@
  "id": "jardins-hacienda-2-maquette/fetes",
  "maquette": "jardins-hacienda-2-maquette",
  "page": "index",
- "titre": "23:30, Noël et la Saint-Sylvestre",
+ "titre": "En ce moment",
  "role": "agenda",
- "description": "Les menus de Noël et de la Saint-Sylvestre avec prix et compte à rebours en jours de calendrier, puis la prochaine soirée à venir, tirée de l'agenda.",
+ "description": "Trois cartes claires à coins ronds : la Saint-Sylvestre et le menu de Noël avec leurs vraies affiches (décompte en jours posé sur l'image), la carte cadeau en petite carte vert de nuit et or sur la vraie photo du feu ; date en petites capitales rouges, titre, texte, prix, « Découvrir → » ; la prochaine soirée en dessous.",
  "animations": [
-  "compteur"
+  "apparition-au-défilement",
+  "compteur",
+  "survol-image"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
- "reutilisable": false,
+ "note_qualite": 4,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:312-343",
-  "css": "assets/css/socle.css:39-42 ; assets/css/site.css:131-132,235-246,773-774,1094,1230",
-  "js": "assets/js/site.js:667-688"
+  "html": "index.html:426-487",
+  "css": "assets/css/site.css:1555-1585",
+  "js": "assets/js/site.js:27-30,144-150,240,306-388,665-686,713-734,986-1019,1073-1099 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:331 ; assets/js/modules/agenda-des-dates/module.js:2,31 ; assets/js/modules/ardoise-a-la-craie/module.js:47 ; assets/js/modules/accords-mets-et-vins/module.js:63,91,109 ; assets/js/socle/calme.js:15-44"
  },
- "medias": {},
+ "medias": {
+  "capture": "medias/jardins-hacienda-2-maquette/fetes-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/fetes-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/fetes-p720.mp4"
+ },
  "pieges": [
   "compter les jours du calendrier à Moineville, pas des tranches de 24 h"
  ],
  "mesures": {
-  "hauteur_p1440": null,
-  "hauteur_m390": null,
+  "hauteur_p1440": 924,
+  "hauteur_m390": 1851,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  },
  "familles": [],
- "impact": "calme"
+ "impact": "vivant"
 }
