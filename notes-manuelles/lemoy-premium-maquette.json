@@ -1,0 +1,1519 @@
+{
+  "maquette": {
+    "client": "pâtisserie, chocolaterie, boulangerie et traiteur rue François de Curel à Metz, commande en ligne et retrait en boutique",
+    "activite": [
+      "commerce",
+      "restauration",
+      "artisanat"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "luxueux"
+    ],
+    "palette": {
+      "fond": "--creme",
+      "texte": "--cacao",
+      "accent": "--or",
+      "secondaire": "--bordeaux"
+    },
+    "polices": {
+      "titres": "Inter",
+      "texte": "Inter",
+      "mono": null
+    },
+    "points_forts": [
+      "idée-maîtresse : la vitrine d'une maison de pâtisserie ; les entremets sont présentés sous cloche de verre, on soulève la cloche pour lire composition et allergènes",
+      "fiche produit pour chaque création (62), composition « de la base au dessus », 14 allergènes réglementaires, délai de préparation et prochain retrait calculés à l'heure de Paris",
+      "commande en ligne et retrait à l'heure dite : panier mémorisé, créneaux, ballotin à composer bonbon par bonbon, configurateur de pièce montée (choux par invité)",
+      "saisons et fêtes calculées : roue des saisons à tourner, compte à rebours de la prochaine fête (Saint-Nicolas), chasse aux fèves en janvier et aux œufs à Pâques",
+      "store bleu de la façade qui se déroule dans le pied de page quand la boutique est ouverte, 404 « restée dans la galette »",
+      "Inter et Lora italique, cacao, or du logo et ruban bordeaux de l'emballage, vraies photos de la maison"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : peu d'animations au défilement, voile non relevé",
+      "accueil de boutique en ligne bien rangé mais sans grand moment ; la séquence « en coupe » a été retirée faute de vraies photos de tranche",
+      "34 Mo d'images"
+    ],
+    "animations": [
+      "révélation-texte",
+      "révélation-image",
+      "parallaxe",
+      "transition-de-page",
+      "compteur",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "panier-simule",
+      "configurateur",
+      "filtres",
+      "galerie-cliquable",
+      "jeu",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "heros",
+    "plan": "outil-d-abord",
+    "grille": {
+      "objet": "cloche de verre à soulever sur chaque entremets",
+      "fil": "saisons et fêtes de la maison calculées à la date du jour"
+    },
+    "metier": "pâtissier chocolatier"
+  },
+  "sections": {
+    "entete": {
+      "titre": "La carte",
+      "role": "menu",
+      "description": "En-tête : logo, accès direct aux quatre familles, statut « ouvert / ferme bientôt » à l'heure de Paris, panier, Commander",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "heros": {
+      "titre": "Les grands classiques, revisités.",
+      "role": "ouverture",
+      "description": "Ouverture sur fond cacao : « Les grands classiques, revisités. », Lora italique en or, photo de tartelettes framboises dans une arche, prochain retrait des entremets",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "univers": {
+      "titre": "Quatre vitrines, une maison",
+      "role": "services",
+      "description": "« Quatre vitrines, une maison » : pâtisseries, chocolats, boulangerie, traiteur en quatre arches photo avec leur nombre de créations",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "incontournables": {
+      "titre": "À commander pour demain matin",
+      "role": "produits",
+      "description": "« À commander pour demain matin » : huit produits en cartes, prix, ajout direct au panier",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vitrine": {
+      "titre": "Sous les cloches, ce matin",
+      "role": "produits",
+      "description": "« Sous les cloches, ce matin » : rail des entremets sous cloche de verre sur fond cacao ; on soulève une cloche pour lire composition et allergènes",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "entremets sous cloche de verre qu'on soulève pour lire composition et allergènes"
+      ]
+    },
+    "manifeste": {
+      "titre": "Notre philosophie",
+      "role": "manifeste",
+      "description": "« Faire plaisir, et se faire plaisir » : la philosophie de la maison, les mots s'éclairent à la lecture",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bande-matiere": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bande de matière : gousses de vanille en gros plan, légère parallaxe",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "calendrier": {
+      "titre": "La maison vit au rythme des saisons",
+      "role": "agenda",
+      "description": "« La maison vit au rythme des saisons » : saison en cours (chocolat) et compte à rebours de la prochaine fête (Saint-Nicolas, 24 jours)",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coffret-teaser": {
+      "titre": "Composez votre ballotin",
+      "role": "offre",
+      "description": "« Composez votre ballotin » sur fond bordeaux : coffret noué, tailles 9, 16 ou 24 bonbons",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenements-teaser": {
+      "titre": "Pour les grands jours, choux après choux",
+      "role": "offre",
+      "description": "« Pour les grands jours, choux après choux » : pièces montées, 3 choux par invité, 20 personnes minimum, 10 jours pour réserver",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maison-teaser": {
+      "titre": "Une adresse messine, une transmission",
+      "role": "équipe",
+      "description": "« Une adresse messine, une transmission » : façade de la boutique dans une arche, histoire depuis les années 1980",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commande-teaser": {
+      "titre": "Commandez en ligne, retirez à l’heure dite",
+      "role": "appel",
+      "description": "« Commandez en ligne, retirez à l'heure dite » : click & collect, retrait en boutique, carte cadeau",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Horaires",
+      "role": "pied-de-page",
+      "description": "Pied de page cacao : logo, horaires du jour en gras, store bleu de la façade qui se déroule quand la boutique est ouverte, lettre de saison",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "store de la façade qui se déroule quand la boutique est ouverte"
+      ]
+    },
+    "barre-mobile": {
+      "titre": "Actions rapides",
+      "role": "barre-fixe",
+      "description": "Barre d'actions rapides du téléphone : commander, appeler, itinéraire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "panier": {
+      "titre": "Votre commande",
+      "role": "outil-interactif",
+      "description": "Panier en tiroir « Votre commande », mémorisé sur l'appareil, sous-total et créneau de retrait",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "annonce": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonces pour les lecteurs d'écran, sans affichage"
+    },
+    "404-page-404-scene": {
+      "titre": "Cette page est restée dans la galette",
+      "role": "page-404",
+      "description": "404 « Cette page est restée dans la galette » : on tire les rois, huit parts à choisir dont une cache la fève",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-tete": {
+      "titre": "Pains au levain, viennoiseries pur beurre",
+      "role": "ouverture",
+      "description": "Ouverture Boulangerie : pains au levain dans une arche, commander pour demain",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-sommaire": {
+      "titre": "Dans cette page",
+      "role": "menu",
+      "description": "Sommaire collant de la page (familles de produits)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-pains-s": {
+      "titre": "Cuits chaque matin",
+      "role": "produits",
+      "description": "« Cuits chaque matin » : pains en cartes, poids, prix, ajout au panier",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-tableau-scene": {
+      "titre": "La planche du boulanger",
+      "role": "galerie",
+      "description": "« La planche du boulanger » : pains de la maison posés sur une planche, mise en scène calculée sur fond cacao",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-petit-dej": {
+      "titre": "Le petit-déjeuner, pour 2 ou pour 4",
+      "role": "calculateur",
+      "description": "« Le petit-déjeuner, pour 2 ou pour 4 » : la sélection se recalcule, tout ajouter au panier",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boulangerie-viennoiseries-s": {
+      "titre": "Pour le petit-déjeuner et le goûter",
+      "role": "produits",
+      "description": "Viennoiseries et cakes : grande photo puis cartes produits",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carte-cadeau-tete": {
+      "titre": "Offrir le choix",
+      "role": "ouverture",
+      "description": "Ouverture Carte cadeau : boîte nouée du ruban bordeaux",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carte-cadeau-cc-titre": {
+      "titre": "Votre carte",
+      "role": "outil-interactif",
+      "description": "« Votre carte » : montant, destinataire et mot se composent en direct sur la carte cadeau cacao",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "cgv-tete": {
+      "titre": "Conditions générales de vente",
+      "role": "texte-legal",
+      "description": "Ouverture des conditions générales de vente",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cgv-legal": {
+      "titre": "1. Vendeur",
+      "role": "texte-legal",
+      "description": "Conditions générales de vente en articles numérotés",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chocolats-tete": {
+      "titre": "Bonbons, coffrets et confiseries",
+      "role": "ouverture",
+      "description": "Ouverture Chocolats : bonbons de chocolat dans une arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chocolats-coffret": {
+      "titre": "Votre ballotin, bonbon par bonbon",
+      "role": "outil-interactif",
+      "description": "« Votre ballotin, bonbon par bonbon » : on touche un bonbon pour le placer dans la prochaine case du coffret (9, 16 ou 24), ou on le glisse ; coffret fermé et noué du ruban",
+      "animations": [
+        "section-fixée",
+        "flip"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "ballotin à remplir bonbon par bonbon"
+      ]
+    },
+    "chocolats-gamme-s": {
+      "titre": "Chocolats et confiseries",
+      "role": "produits",
+      "description": "Chocolats et confiseries : boîtes, Impériales, orangettes en cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chocolats-bande-matiere": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bande de matière : fèves de cacao et chocolat cassé",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commander-tete": {
+      "titre": "Votre commande, prête à l’heure",
+      "role": "ouverture",
+      "description": "Ouverture Commander : « Votre commande, prête à l'heure », quatre étapes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commander-pas-commande": {
+      "titre": "Étapes de la commande",
+      "role": "menu",
+      "description": "Étapes de la commande (la carte, retrait, coordonnées, récapitulatif)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "commander-commande": {
+      "titre": "1La carte",
+      "role": "outil-interactif",
+      "description": "Commande en quatre étapes : la carte filtrable par famille, sur mesure (ballotin, pièce montée) en tiroir, créneau de retrait parmi les horaires et délais réels, coordonnées, récapitulatif collant",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "panier-simule",
+        "filtres",
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "commander-confirmation": {
+      "titre": "Merci, c’est noté.",
+      "role": "contact",
+      "description": "Confirmation « Merci, c'est noté » avec le créneau",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "commander-tiroir": {
+      "titre": "Sur mesure",
+      "role": "outil-interactif",
+      "description": "Tiroir « Sur mesure » qui ouvre le ballotin ou la pièce montée sans quitter la commande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "contact-tete": {
+      "titre": "Passez nous voir",
+      "role": "contact",
+      "description": "Ouverture Contact : « Passez nous voir », façade au store bleu, itinéraire et téléphone",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-horaires-s": {
+      "titre": "Six jours sur sept",
+      "role": "contact",
+      "description": "Horaires de la semaine avec le jour en gras, formulaire de commande spéciale par objet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-amandier-fil": {
+      "titre": "Fil d’Ariane",
+      "role": "menu",
+      "description": "Fil d'Ariane des fiches produits",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-amandier-fiche": {
+      "titre": "Amandier",
+      "role": "produits",
+      "description": "Fiche produit sans cloche (viennoiseries, pains) : photo, prix, allergènes soulignés, quantité, délai et prochain retrait",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-amandier-allergenes": {
+      "titre": "Les 14 allergènes réglementaires",
+      "role": "faq",
+      "description": "Les 14 allergènes réglementaires, ceux du produit en évidence, liste dépliable",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-amandier-voisins-titre": {
+      "titre": "Viennoiseries et cakes",
+      "role": "produits",
+      "description": "« Dans la même vitrine » : trois produits voisins",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-caprice-fiche": {
+      "titre": "Caprice",
+      "role": "produits",
+      "description": "Fiche d'entremets : le gâteau sous sa cloche de verre (la page s'ouvre en transition de vue depuis la carte), prix pour 4 parts, allergènes, délai de 24 h et prochain retrait calculés, existe aussi en individuel",
+      "animations": [
+        "transition-de-page",
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "creations-caprice-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "étapes",
+      "description": "« De la base au dessus » : les couches du gâteau numérotées de la base au dessus",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-foret-noire-fiche": {
+      "titre": "Forêt Noire",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Forêt Noire : même gabarit que creations-caprice-fiche"
+    },
+    "creations-foret-noire-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Forêt Noire : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-mille-feuille-vanille-fiche": {
+      "titre": "Mille-feuille vanille",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Mille-feuille vanille : même gabarit que creations-caprice-fiche"
+    },
+    "creations-mille-feuille-vanille-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Mille-feuille vanille : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-montebello-fiche": {
+      "titre": "MonteBello",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit MonteBello : même gabarit que creations-caprice-fiche"
+    },
+    "creations-montebello-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de MonteBello : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-opera-fiche": {
+      "titre": "Opéra",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Opéra : même gabarit que creations-caprice-fiche"
+    },
+    "creations-opera-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Opéra : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-paris-brest-fiche": {
+      "titre": "Paris-Brest",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Paris-Brest : même gabarit que creations-caprice-fiche"
+    },
+    "creations-paris-brest-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Paris-Brest : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-paris-metz-fiche": {
+      "titre": "Paris-Metz",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Paris-Metz : même gabarit que creations-caprice-fiche"
+    },
+    "creations-paris-metz-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Paris-Metz : même gabarit que creations-caprice-compo-titre"
+    },
+    "creations-succes-fiche": {
+      "titre": "Succès",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fiche produit Succès : même gabarit que creations-caprice-fiche"
+    },
+    "creations-succes-compo-titre": {
+      "titre": "De la base au dessus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "composition de Succès : même gabarit que creations-caprice-compo-titre"
+    },
+    "journal-tete": {
+      "titre": "Nouvelles de l’atelier",
+      "role": "ouverture",
+      "description": "Ouverture Journal : « Nouvelles de l'atelier »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "journal-articles-s": {
+      "titre": "Les articles",
+      "role": "articles",
+      "description": "Articles de saison en trois cartes datées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "journal-tvj-titre": {
+      "titre": "Cinq épisodes à l’atelier",
+      "role": "galerie",
+      "description": "« Cinq épisodes à l'atelier » : la web-série LemoyTV sur fond cacao",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maison-tete": {
+      "titre": "Une maison messine, en strates",
+      "role": "ouverture",
+      "description": "Ouverture La maison : « Une maison messine, en strates », façade dans une arche",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maison-strates-titre": {
+      "titre": "Lue de bas en haut",
+      "role": "preuves",
+      "description": "« Lue de bas en haut » : l'histoire de la maison en couches de gâteau, de l'école Millet (années 1980) à la transmission (2024)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "histoire de la maison lue en couches, de bas en haut"
+      ]
+    },
+    "maison-philo-titre": {
+      "titre": "Faire du bon, simplement",
+      "role": "manifeste",
+      "description": "« Faire du bon, simplement » : tartelettes framboises, philosophie",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maison-tv-titre": {
+      "titre": "L’atelier en images",
+      "role": "galerie",
+      "description": "« L'atelier en images » : épisodes de LemoyTV",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-tete": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Ouverture des mentions légales",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-legal": {
+      "titre": "Éditeur du site",
+      "role": "texte-legal",
+      "description": "Mentions légales : éditeur, hébergeur, propriété intellectuelle",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-tete": {
+      "titre": "Entremets et petits gâteaux",
+      "role": "ouverture",
+      "description": "Ouverture Pâtisseries : le Paris-Metz dans une arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-sommaire": {
+      "titre": "Dans cette page",
+      "role": "menu",
+      "description": "Sommaire collant de la page Pâtisseries (entremets, petits gâteaux, assortiments)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-entremets-s": {
+      "titre": "À partager, de quatre à huit",
+      "role": "produits",
+      "description": "« À partager, de quatre à huit » : les entremets sous cloche de verre, à soulever pour la composition",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-photo-geste-lemoy": {
+      "titre": "Le décor se joue dans les derniers millimètres.",
+      "role": "manifeste",
+      "description": "« Le décor se joue dans les derniers millimètres » : fraisier dans une arche sur fond cacao",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-petits-gateaux-s": {
+      "titre": "La vitrine du jour",
+      "role": "produits",
+      "description": "« La vitrine du jour » : petits gâteaux individuels en cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patisseries-assortiments-s": {
+      "titre": "Pour recevoir",
+      "role": "produits",
+      "description": "« Pour recevoir » : macarons et réductions sucrées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pieces-montees-tete": {
+      "titre": "Chaque pièce, montée à la main",
+      "role": "ouverture",
+      "description": "Ouverture Pièces montées : croquembouche fleuri dans une arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pieces-montees-deroule": {
+      "titre": "Comment ça se passe",
+      "role": "étapes",
+      "description": "« Comment ça se passe » : trois étapes en ligne",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pieces-montees-configurateur": {
+      "titre": "Combien de choux pour vos invités ?",
+      "role": "calculateur",
+      "description": "« Combien de choux pour vos invités ? » : occasion, pièce, nombre d'invités au curseur ; la pièce montée se dessine et grandit, le nombre de choux et le prix se calculent (3 choux par invité, 20 personnes minimum)",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "pièce montée qui grandit avec le nombre d'invités"
+      ]
+    },
+    "pieces-montees-galerie": {
+      "titre": "Quelques pièces de la maison",
+      "role": "galerie",
+      "description": "« Quelques pièces de la maison » : 52 réalisations filtrables par occasion, visionneuse",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pieces-montees-visionneuse": {
+      "titre": "Photo agrandie",
+      "role": "galerie",
+      "description": "Visionneuse des pièces montées, flèches et clavier",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "retrait-boutique-tete": {
+      "titre": "À l’heure dite, sans attendre",
+      "role": "ouverture",
+      "description": "Ouverture Retrait : « À l'heure dite, sans attendre », façade de la boutique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "retrait-boutique-direct-titre": {
+      "titre": "Les prochains créneaux",
+      "role": "agenda",
+      "description": "« Les prochains créneaux » en direct : boutique ouverte, prochain retrait, adresse",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "retrait-boutique-retrait-s": {
+      "titre": "Commandé en ligne, prêt en boutique",
+      "role": "étapes",
+      "description": "Click & collect en quatre étapes, horaires de la boutique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "retrait-boutique-delais-s": {
+      "titre": "Le temps de bien faire",
+      "role": "tarifs",
+      "description": "« Le temps de bien faire » : délai minimum par gamme, de 2 h à 10 jours",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "saisons-tete": {
+      "titre": "Le calendrier de la maison",
+      "role": "ouverture",
+      "description": "Ouverture Saisons : mirabelles de Lorraine dans une arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "saisons-maintenant": {
+      "titre": "En ce moment",
+      "role": "outil-interactif",
+      "description": "« En ce moment » : saison en cours, prochaine fête avec compte à rebours, roue des saisons à tourner au doigt, à la souris ou au clavier",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "roue des saisons à faire tourner, saison sous le repère doré"
+      ]
+    },
+    "saisons-saisons-liste": {
+      "titre": "Janvier – février",
+      "role": "agenda",
+      "description": "Le calendrier de janvier à décembre : chaque saison et ses fêtes, onglets de mois collants",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "traiteur-tete": {
+      "titre": "La Lorraine à table",
+      "role": "ouverture",
+      "description": "Ouverture Traiteur : « La Lorraine à table », tourte lorraine dans une arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "traiteur-traiteur-s": {
+      "titre": "Pour le déjeuner, pour recevoir",
+      "role": "produits",
+      "description": "« Pour le déjeuner, pour recevoir » : tourte, pâté lorrain, quiches en cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "traiteur-tableau-scene": {
+      "titre": "Une table lorraine",
+      "role": "galerie",
+      "description": "« Une table lorraine » : tourte et fours salés posés sur la table, mise en scène sur fond cacao",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "traiteur-receptions-s": {
+      "titre": "Pour une réception",
+      "role": "tarifs",
+      "description": "« Pour une réception » : liste des pièces salées avec prix, commande sur demande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

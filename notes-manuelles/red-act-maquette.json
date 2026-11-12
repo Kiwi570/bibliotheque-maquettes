@@ -1,0 +1,597 @@
+{
+  "maquette": {
+    "client": "conseil en communication, rédaction et community management à Hoenheim (Strasbourg), un seul interlocuteur depuis 2004",
+    "activite": [
+      "conseil",
+      "média"
+    ],
+    "concept": [
+      "carnet",
+      "autre"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--nuit",
+      "accent": "--rouge",
+      "secondaire": "--gris"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Inter Tight",
+      "mono": null
+    },
+    "points_forts": [
+      "« Red, le réseau » : red veut dire réseau en espagnol, le rouge du drapeau du logo devient un fil qui relie tout le site",
+      "intro : le fil rouge écrit « Red » puis « Act » et se noue ; « savoir faire » se retourne en « faire savoir » sous la boucle",
+      "filet des 90 vraies références à tirer à la main (accueil sur le bureau du rédacteur, page Références en filet de nuit avec filtres par secteur)",
+      "page Métiers « On barre le jargon, on écrit clair » : on raye soi-même le brouillon, la phrase claire s'écrit",
+      "Spécialités en écran scindé « La tribune et la table », séparation à faire glisser",
+      "bande sombre des vrais chiffres (2004, 90 références, 10 secteurs, 12 000 Passeports Alsaciens)",
+      "rendez-vous en trois étapes : la demande devient le nœud « Vous » du filet"
+    ],
+    "reserves": [
+      "regard du directeur artistique à REFAIRE en v3 (3,25/5) : filet de l'ouverture qui fait schéma de réseau posé sur la photo plutôt que vrai fil",
+      "images générées génériques (carnet, stylo, café, terrasse) qui ne montrent ni Strasbourg ni le vrai travail écrit ; un seul vrai portrait",
+      "fil de la marge qui passait sur le texte de la méthode ; voile en lanières plates",
+      "mise en page d'agence attendue en milieu d'accueil (deux colonnes, portrait, quatre colonnes)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "fil-conducteur",
+      "trace-svg",
+      "rature",
+      "section-fixée",
+      "révélation-texte",
+      "transition-de-page",
+      "marquee"
+    ],
+    "interactions": [
+      "schema-interactif",
+      "filtres",
+      "formulaire-par-étapes",
+      "jeu"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "filet des vraies références, à tirer à la main",
+      "fil": "fil rouge du drapeau dans la marge, un nœud par section"
+    },
+    "metier": "rédacteur et conseil en communication"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile entre les pages : sept lanières sombres qui se tissent, nom de la page au centre avec un petit nœud",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Lanières plates qui glissent : jugé « persienne jouet » par le regard du directeur artistique ; préférer un fil qui tire un voile d'un seul tenant ou un vrai tissage dessus-dessous en moins de 0,6 s"
+      ]
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Intro : le fil rouge écrit « Red » puis « Act » en deux secondes et se noue, puis file vers la bobine de l'accueil (intro vers l'objet)",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : drapeau rouge et nom, quatre liens, bouton Rendez-vous rouge ; se cache en descendant",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone : liens en Fraunces, numéro et rendez-vous",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "debut": {
+      "titre": "Savoir faire& faire savoir",
+      "role": "ouverture",
+      "description": "Ouverture : chiasme « Savoir faire & faire savoir » croisé par une boucle de fil rouge, portrait et numéro dès le premier écran ; à droite le bureau du rédacteur (carnet, bobine rouge) recouvert d'un filet des vraies références nommées, à tirer à la main",
+      "animations": [
+        "trace-svg",
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Filet en traits d'un pixel et pastilles blanches : il fait schéma de réseau, pas fil ; noms vers 11 px ; sur téléphone un bouton masquait un nom",
+        "Une ouverture faite de points reliés et nommés rappelle la constellation d'ICC : donner de la matière au fil (épaisseur, ombre, nœuds)"
+      ],
+      "particularites": [
+        "filet physique (canvas) des références clientes accroché à la bobine de la photo, à tirer à la souris ou au doigt"
+      ]
+    },
+    "metiers": {
+      "titre": "Un seul interlocuteur, six métiers",
+      "role": "services",
+      "description": "Six métiers accrochés à un fil comme des épreuves qui sèchent : cartes illustrées, flèches et compteur 01/06, glisser à la main ou au défilement",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "En v3 la roue 3D restait sur 01/06 pendant toute la scène épinglée : faire passer les métiers au défilement, pas seulement aux flèches"
+      ]
+    },
+    "specialites": {
+      "titre": "La tribune et la table",
+      "role": "services",
+      "description": "Deux spécialités, politique et gastronomie : citation rouge, pupitre dans une salle vide et village dans les vignes à l'aube",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reseau": {
+      "titre": "Ceux qui ont fait confiance à Red-Act",
+      "role": "chiffres",
+      "description": "Bande sombre « Ceux qui ont fait confiance » : 2004, 90 références, 10 secteurs, 12 000 Passeports Alsaciens en grands chiffres rouges, dix secteurs en Fraunces avec leur nombre en exposant",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "stephane": {
+      "titre": "Stéphane BourhisStéphane Bourhis",
+      "role": "équipe",
+      "description": "Stéphane Bourhis : titre écrit au fil, portrait devant les Ponts couverts, parcours, valeurs et phrase alsacienne",
+      "animations": [
+        "trace-svg",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Portrait selfie grand angle recadré serré sur le visage : garder la tour des Ponts couverts et le montrer plus petit"
+      ]
+    },
+    "methode": {
+      "titre": "Quatre nœuds, un seul fil",
+      "role": "méthode",
+      "description": "« Quatre nœuds, un seul fil » : le fil de la marge fait un nœud à chacune des quatre étapes (rencontre, audit, sur-mesure, durée)",
+      "animations": [
+        "fil-conducteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Le fil de la marge barrait le texte des étapes : il ne doit passer que dans les marges et les blancs"
+      ]
+    },
+    "fin": {
+      "titre": "Faisons savoir ce que vous savez faire",
+      "role": "appel",
+      "description": "« Faisons savoir ce que vous savez faire » : enveloppe nouée de fil rouge, rendez-vous, documentation et numéro en grand",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page crème : drapeau, adresse, sommaire, réseaux, mentions de maquette",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Le fil est coupé",
+      "role": "page-404",
+      "description": "404 « Le fil est coupé » : carnet ouvert et fil rouge coupé, bouton « Reprendre le fil »",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Faisons connaissance",
+      "role": "contact",
+      "description": "Ouverture Contact : carte de visite nouée par le fil rouge, posée sur une rue alsacienne dans la brume d'automne, numéro en très grand",
+      "animations": [
+        "révélation-image",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-rendez-vous": {
+      "titre": "Demander un rendez-vousDemander un rendez-vous",
+      "role": "contact",
+      "description": "Rendez-vous en trois étapes (besoin, détails, coordonnées), simulé ; à droite la demande se plie, se noue et devient le nœud « Vous » du filet",
+      "animations": [
+        "section-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "la demande envoyée devient un nœud du filet des clients"
+      ]
+    },
+    "contact-acces": {
+      "titre": "À Hoenheim, aux portes de Strasbourg",
+      "role": "carte",
+      "description": "Accès : carte schématique de l'Alsace (Hoenheim, Strasbourg, Colmar, Mulhouse) tracée au trait, adresse et moyens de contact",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers-debut": {
+      "titre": "Six métiers,une seule plume",
+      "role": "ouverture",
+      "description": "Ouverture Métiers : très grand titre « Six métiers, une seule plume », bandeau de brouillons de jargon qu'une feuille vient rayer",
+      "animations": [
+        "révélation-texte",
+        "rature"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers-scene": {
+      "titre": "On barre le jargon, on écrit clair",
+      "role": "services",
+      "description": "« On barre le jargon, on écrit clair » : pour chaque métier, une fiche commence par un brouillon de jargon ; on le raye soi-même (ou il se raye au défilement) et la phrase claire s'écrit à la main",
+      "animations": [
+        "section-fixée",
+        "rature",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "rature du jargon à faire soi-même, phrase claire écrite en rouge"
+      ]
+    },
+    "metiers-pour-qui": {
+      "titre": "Du particulier à l'institution",
+      "role": "preuves",
+      "description": "« Du particulier à l'institution » : ruelle alsacienne et pastilles des types de clients",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers-supports": {
+      "titre": "Tous vos supports, une même voix",
+      "role": "services",
+      "description": "Bandeau géant des supports (Web, Presse, Lettres, Réseaux, Print) en Fraunces rouge, puis la liste des supports et l'enveloppe nouée",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers-fin": {
+      "titre": "Un métier, ou les six ?",
+      "role": "appel",
+      "description": "« Un métier, ou les six ? » : table de café, bouton vers le rendez-vous avec le métier choisi",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-debut": {
+      "titre": "Un réseaude 90 noms",
+      "role": "ouverture",
+      "description": "Ouverture Références (page sombre) : grand filet de nuit sur la ville éclairée, les 90 noms en nœuds ; choisir un secteur tire les nœuds (sélection gardée dans l'adresse)",
+      "animations": [
+        "canvas-2d",
+        "trace-svg"
+      ],
+      "interactions": [
+        "filtres",
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-liste": {
+      "titre": "Toutes les références, par secteur",
+      "role": "preuves",
+      "description": "Liste complète et lisible des 90 références par secteur, sur fond nuit, petit filet en coin",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references-passeport": {
+      "titre": "Le Passeport AlsacienLe Passeport Alsacien",
+      "role": "preuves",
+      "description": "Le Passeport Alsacien : carnet rouge dessiné qui s'ouvre, 12 000 exemplaires en grand",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Carnet dessiné sans la vraie couverture : demander la vraie pièce écrite au client"
+      ]
+    },
+    "references-et-aussi": {
+      "titre": "Votre projet, le prochain nœud ?",
+      "role": "appel",
+      "description": "« Votre projet, le prochain nœud ? » : boucle de fil rouge et bouton de rendez-vous sur fond nuit",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 2,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Grand fond vide autour d'une boucle seule : bloc maigre en fin de page"
+      ]
+    },
+    "specialites-debut": {
+      "titre": "La tribuneet la table",
+      "role": "ouverture",
+      "description": "Ouverture Spécialités : écran scindé plein cadre, « La tribune » (salle politique sombre) et « et la table » (vin, raisin) en grand, séparation à faire glisser, carte-titre qui suit la couture",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "écran scindé à la couture déplaçable entre deux univers du client"
+      ]
+    },
+    "specialites-politique": {
+      "titre": "Il n'y a plus d'entrée en politique sans entrée en communication",
+      "role": "services",
+      "description": "Communication politique : grand titre sur fond sombre, banc d'assemblée, parcours candidat vers mandat tracé au fil",
+      "animations": [
+        "trace-svg",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "specialites-cave": {
+      "titre": "Du chai à la table",
+      "role": "services",
+      "description": "« Du chai à la table » : scène épinglée, la photo de cave grandit jusqu'au plein écran sous le titre en deux morceaux",
+      "animations": [
+        "section-fixée",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "specialites-tourisme": {
+      "titre": "Donner envie de venir, et de revenirDonner envie de venir, et de revenir",
+      "role": "services",
+      "description": "Tourisme et gastronomie : pastilles des secteurs, table d'auberge, liste des clients du secteur en deux colonnes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "specialites-fin": {
+      "titre": "La tribune, la table, ou les deux ?",
+      "role": "appel",
+      "description": "« La tribune, la table, ou les deux ? » : deux images-boutons qui ouvrent le rendez-vous avec la spécialité choisie",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

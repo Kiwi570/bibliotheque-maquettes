@@ -1,0 +1,530 @@
+{
+  "maquette": {
+    "client": "atelier graphique de Virginie à Béziers, spécialiste des étiquettes de vin et du packaging, identités visuelles, print et sites",
+    "activite": [
+      "artisanat",
+      "services-b2b"
+    ],
+    "concept": [
+      "atelier",
+      "catalogue"
+    ],
+    "ambiance": [
+      "clair",
+      "artisanal",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--encre",
+      "accent": "--rouge",
+      "secondaire": "--petrole"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Archivo",
+      "mono": null
+    },
+    "points_forts": [
+      "« L'Imprimerie » : papier, encres pétrole et rouge, repérage des plaques sur les titres, repères de coupe, tampons",
+      "ouverture : bouteille de Chardonnay avec son étiquette réelle sur papier à la cuve, titre « Atelier graphique à Béziers » en repérage décalé qui se cale",
+      "traînée d'encre tramée qui suit le pointeur (WebGL, chargée après l'ouverture)",
+      "nuancier des prestations en éventail épinglé, section des étiquettes de vin sur fond sombre",
+      "60 réalisations du site actuel filtrables (GSAP Flip), visionneuse avec loupe",
+      "estimateur de budget en ticket relié au bon de commande simulé, tampon du reçu"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : bouton du mode calme dans l'en-tête, voile non relevé",
+      "16 Mo d'images (60 réalisations en trois tailles)",
+      "aucun avis client réel ; mentions légales à compléter"
+    ],
+    "animations": [
+      "révélation-texte",
+      "webgl-shader",
+      "section-fixée",
+      "marquee",
+      "flip",
+      "curseur-personnalisé",
+      "transition-de-page",
+      "compteur"
+    ],
+    "interactions": [
+      "filtres",
+      "galerie-cliquable",
+      "calculateur",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "ouverture",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "bouteille et son étiquette, tirages posés sur le papier",
+      "fil": "repérage des plaques d’impression sur chaque titre"
+    },
+    "metier": "graphiste"
+  },
+  "sections": {
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo K, liens, bouton du mode calme, « Demander un devis » ; se cache en descendant",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ouverture": {
+      "titre": "Ateliergraphiqueà BéziersAteliergraphiqueà BéziersAteliergraphiqueà Béziers",
+      "role": "ouverture",
+      "description": "Ouverture : « Atelier graphique à Béziers » en Fraunces, trois passes d'encre décalées qui se calent (repérage), bouteille de Chardonnay et son étiquette réelle sur papier à la cuve, tirage photo posé, traînée d'encre tramée au pointeur",
+      "animations": [
+        "révélation-texte",
+        "webgl-shader",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "splittext",
+        "ogl"
+      ],
+      "particularites": [
+        "repérage CMJN décalé qui se cale sur le titre",
+        "traînée d'encre tramée qui suit le pointeur"
+      ]
+    },
+    "ruban": {
+      "titre": "",
+      "role": "decor",
+      "description": "Ruban défilant des savoir-faire (étiquettes de vin, print, packaging, sites) avec vignettes",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier": {
+      "titre": "Chaque projet mérite une attention particulière",
+      "role": "équipe",
+      "description": "« Chaque projet mérite une attention particulière » : illustration de Virginie dans son atelier, tampon de l'atelier, repères de coupe, chiffres (60 réalisations, 5 étapes, 45 € de l'heure) qui défilent",
+      "animations": [
+        "compteur",
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations": {
+      "titre": "Mes prestations",
+      "role": "services",
+      "description": "« Mes prestations » : nuancier épinglé, les cartes de prestations s'ouvrent en éventail comme un nuancier Pantone, chaque carte mène à ses tarifs",
+      "animations": [
+        "section-fixée",
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "prestations en nuancier qui s'ouvre en éventail"
+      ]
+    },
+    "vins": {
+      "titre": "Des étiquettes qui racontent un terroirDes étiquettes qui racontent un terroirDes étiquett",
+      "role": "portfolio",
+      "description": "« Des étiquettes qui racontent un terroir » : section sombre sur les vignes, étiquettes de vin réelles en grands tirages qui montent au défilement, prix à partir de",
+      "animations": [
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "methode": {
+      "titre": "Comment ça se déroule ?",
+      "role": "étapes",
+      "description": "« Comment ça se déroule ? » : cinq étapes épinglées (contact, devis, création, échange, livraison), grands numéros",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "selection": {
+      "titre": "Quelques réalisations",
+      "role": "portfolio",
+      "description": "« Quelques réalisations » : mosaïque de vignettes, nom et type au survol",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs": {
+      "titre": "Des tarifs affichés",
+      "role": "tarifs",
+      "description": "« Des tarifs affichés » : éventail de papiers et ticket de prix, rouleau encreur ligne par ligne",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis": {
+      "titre": "Parlons de votre projet",
+      "role": "contact",
+      "description": "« Parlons de votre projet » : bon de commande simulé par étapes (type de projet, détails, coordonnées), tampon « reçu » à l'envoi",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page encre : K blanc, contact, pages, réseaux",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre-mobile": {
+      "titre": "Contact rapide",
+      "role": "barre-fixe",
+      "description": "Barre de contact rapide du téléphone",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "curseur": {
+      "titre": "",
+      "role": "decor",
+      "description": "Curseur personnalisé à la souris, qui devient loupe sur les réalisations",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "loupe": {
+      "titre": "",
+      "role": "outil-interactif",
+      "description": "Loupe ronde qui grossit les réalisations sous le pointeur",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rideau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Rideau de papier entre les pages, présent dès l'arrivée (plus de page blanche)",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-planche": {
+      "titre": "404404404",
+      "role": "page-404",
+      "description": "404 « Cette page est partie au pilon » : 404 en trois passes d'encre mal repérées sur une feuille froissée",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-planche": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Mentions légales, champs à compléter signalés en rouge",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-ouverture": {
+      "titre": "RéalisationsRéalisationsRéalisations",
+      "role": "ouverture",
+      "description": "Ouverture Réalisations : tirages des projets posés en vrac sur un bureau sombre, qui se dispersent à l'arrivée",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-filtres": {
+      "titre": "Filtrer les réalisations",
+      "role": "outil-interactif",
+      "description": "Barre de filtres par catégorie (étiquettes, logos, cartes, affiches, web, carterie) avec leur nombre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-galerie": {
+      "titre": "Galerie des réalisations",
+      "role": "portfolio",
+      "description": "Les 60 réalisations du site actuel en grille, filtres animés (GSAP Flip) qui ne vident plus la page, lien direct par réalisation",
+      "animations": [
+        "flip",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "flip"
+      ]
+    },
+    "realisations-planche": {
+      "titre": "Votre projet sera le prochain sur le mur",
+      "role": "appel",
+      "description": "« Votre projet sera le prochain sur le mur » : olivier dans un atelier clair, demande de devis",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-visionneuse": {
+      "titre": "Réalisation en grand",
+      "role": "galerie",
+      "description": "Visionneuse qui s'ouvre et se referme depuis la vignette, flèches du clavier, loupe qui suit l'image affichée",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "tarifs-ouverture": {
+      "titre": "TarifsTarifsTarifs",
+      "role": "ouverture",
+      "description": "Ouverture Tarifs : grand éventail de papiers colorés, 45 € de l'heure et 250 € la journée, raccourcis par famille",
+      "animations": [
+        "révélation-image",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-planche": {
+      "titre": "Identité visuelle",
+      "role": "tarifs",
+      "description": "Tous les tarifs publiés par famille (identité, print, packaging, web), lignes qui s'impriment au rouleau encreur",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-estimateur": {
+      "titre": "Estimer mon budget",
+      "role": "calculateur",
+      "description": "« Estimer mon budget » : cases et quantités, le ticket se calcule à droite (collant) et envoie l'estimation au bon de commande",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-planche-2": {
+      "titre": "Pourquoi ces prix ?",
+      "role": "faq",
+      "description": "« Pourquoi ces prix ? » : questions dépliables à côté d'une pile de papiers",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-planche-3": {
+      "titre": "Mon petit +",
+      "role": "offre",
+      "description": "« Mon petit + » : suivi jusqu'à l'impression, kakémonos Miel Canac",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

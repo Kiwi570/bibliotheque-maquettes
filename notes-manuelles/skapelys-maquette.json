@@ -1,0 +1,1106 @@
+{
+  "maquette": {
+    "client": "agence web indépendante à Bourg-en-Bresse : création, refonte, référencement, maintenance et dépannage de sites WordPress pour artisans et commerçants",
+    "activite": [
+      "numérique",
+      "services-b2b"
+    ],
+    "concept": [
+      "atelier"
+    ],
+    "ambiance": [
+      "sombre",
+      "froid",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--plan",
+      "texte": "--blanc",
+      "accent": "--signal",
+      "secondaire": "--electrique"
+    },
+    "polices": {
+      "titres": "Unbounded",
+      "texte": "Geist",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "« Chantier numérique » : plan bleu de chantier, grille WebGL qui se déforme, jaune signal ; le site du client se construit sous un viseur de chantier",
+      "mascotte caméléon de l'agence reprise du site actuel, dans chaque page",
+      "délai « réponse sous 24 h ouvrées » calculé en direct (jours ouvrés, hors fériés), compte à rebours dans le contact",
+      "pages Refonte (comparateur avant / après), Référencement (page de résultats Google animée), Dépannage (diagnostic animé)",
+      "huit pages aux mêmes adresses que le site actuel : aucune redirection à prévoir pour le référencement"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : bouton du mode calme, voile non relevé",
+      "langage d'agence web assez attendu (fausse fenêtre de navigateur, cartes, grille de prix), peu propre à Bourg-en-Bresse",
+      "les pages de service reprennent les mêmes blocs (méthode, tarifs, avis, FAQ, devis)"
+    ],
+    "animations": [
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "curseur-personnalisé",
+      "compteur",
+      "transition-de-page",
+      "défilement-lissé",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "formulaire-par-étapes",
+      "comparateur",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "ouverture",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "site du client qui se construit sous le viseur",
+      "fil": "réticule de chantier qui suit le pointeur"
+    },
+    "metier": "agence web"
+  },
+  "sections": {
+    "curtain": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Rideau bleu de plan entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "haut": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo, menu Services déroulant avec pictogrammes, réalisations, tarifs, téléphone en mono, bouton jaune « Demander un devis »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu-mobile": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec les services et le devis",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "action-bar": {
+      "titre": "Contact rapide",
+      "role": "barre-fixe",
+      "description": "Barre de contact rapide du téléphone : appeler, WhatsApp, devis",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "reticle": {
+      "titre": "",
+      "role": "decor",
+      "description": "Curseur réticule de chantier qui encadre les éléments survolés et affiche leur nom",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "reticle-box": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "cadre du curseur réticule (voir reticle)"
+    },
+    "reticle-label": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "étiquette du curseur réticule (voir reticle)"
+    },
+    "ouverture": {
+      "titre": "Agence web à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture : « Agence web à Bourg-en-Bresse » en Unbounded, accroche jaune, avis Google ; sur une grille de plan en WebGL et des feuilles de croquis, une fenêtre de navigateur où le site du client se construit, mascotte caméléon",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Fausse fenêtre de navigateur et blocs gris : image attendue d'agence web"
+      ]
+    },
+    "methode": {
+      "titre": "Comment se passe votre projet ?",
+      "role": "étapes",
+      "description": "« Comment se passe votre projet ? » : quatre étapes épinglées, une conversation simulée s'écrit (« Bonjour, j'aimerais un site vitrine… ») et la frise avance",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pour-qui": {
+      "titre": "Artisans, commerçants, indépendants : un site à votre image.",
+      "role": "preuves",
+      "description": "« Artisans, commerçants, indépendants » : cartes des métiers (boulangerie, menuiserie, salon de coiffure, taxi) qui défilent, chacune avec la page qu'on lui ferait",
+      "animations": [
+        "galerie-horizontale",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services": {
+      "titre": "Un site qui vous ressemble.",
+      "role": "services",
+      "description": "« Un site qui vous ressemble » : création, refonte, référencement, maintenance, dépannage en cartes illustrées",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "portfolio",
+      "description": "« Des sites qui travaillent déjà » : Alp Park et KBM Taxi, captures sur un ordinateur portable",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "témoignages",
+      "description": "« Ce que disent nos clients » : 5,0 en très grand, avis Google en rubans qui défilent (bouton pause)",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pourquoi": {
+      "titre": "Pourquoi choisir Skapelys pour votre site ?",
+      "role": "manifeste",
+      "description": "« Pourquoi choisir Skapelys ? » : agence locale (petite carte des communes reliées), réponse sous 24 h avec compte à rebours en direct, ce qui est inclus",
+      "animations": [
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs": {
+      "titre": "Combien coûte votre site internet ?",
+      "role": "tarifs",
+      "description": "« Combien coûte votre site internet ? » : trois offres (One Page 690 €, Sur mesure 990 €, Maintenance 50 €/mois), prix qui défilent, détail dépliable",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cles": {
+      "titre": "Livré. Et il vous appartient à 100 %.",
+      "role": "offre",
+      "description": "« Livré. Et il vous appartient à 100 % » : trousseau de clés et téléphone qui montre les accès remis (hébergement, domaine, code)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zone": {
+      "titre": "Agence web à Bourg-en-Bresse : des sites rapides et visibles sur Google.",
+      "role": "carte",
+      "description": "Zone : Bourg-en-Bresse et les communes voisines en pastilles, photo de nuit, interventions à distance",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "faq": {
+      "titre": "Questions fréquentes sur la création de votre site.",
+      "role": "faq",
+      "description": "Questions fréquentes dépliables, mascotte collante",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "contact",
+      "description": "« Votre devis de site internet, gratuit » : formulaire par étapes (besoin, délai, coordonnées), réponse garantie avant une date calculée en jours ouvrés, compte à rebours",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "site-footer": {
+      "titre": "Services",
+      "role": "pied-de-page",
+      "description": "Pied de page : « Skapelys » en jaune géant, services, contact, informations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-notfound": {
+      "titre": "Cette page est encore en chantier.",
+      "role": "page-404",
+      "description": "404 « Cette page est encore en chantier » : maquette en fil de fer, mascotte",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-site-web-bourg-en-bresse-ouverture": {
+      "titre": "Création de site internet à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture Création : plan de site en perspective qui se construit, prix d'appel",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-site-web-bourg-en-bresse-activite": {
+      "titre": "Un site internet qui travaille pour votre activité.",
+      "role": "services",
+      "description": "« Un site internet qui travaille pour votre activité » : téléphone avec le site d'un client type",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-site-web-bourg-en-bresse-choisir": {
+      "titre": "Site vitrine ou site sur mesure : lequel choisir ?",
+      "role": "offre",
+      "description": "« Site vitrine ou site sur mesure : lequel choisir ? » : deux offres comparées en grandes cartes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-site-web-bourg-en-bresse-methode": {
+      "titre": "Comment se passe votre projet ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que methode de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-tarifs": {
+      "titre": "Combien coûte votre site internet ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que tarifs de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-cles": {
+      "titre": "Livré. Et il vous appartient à 100 %.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que cles de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que realisations de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que avis de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-faq": {
+      "titre": "Vos questions sur la création de votre site internet.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que faq de l'accueil, repris sur la page de service"
+    },
+    "creation-site-web-bourg-en-bresse-contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que contact de l'accueil, repris sur la page de service"
+    },
+    "depannage-site-wordpress-bourg-en-bresse-ouverture": {
+      "titre": "Dépannage de site internet à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture Dépannage : fenêtre de navigateur où un diagnostic s'écrit ligne par ligne (démonstration illustrative)",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannage-site-wordpress-bourg-en-bresse-pas-de-panique": {
+      "titre": "Votre site ne marche plus ? Pas de panique.",
+      "role": "manifeste",
+      "description": "« Votre site ne marche plus ? Pas de panique » : texte et photo d'ordinateur de nuit",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannage-site-wordpress-bourg-en-bresse-pannes": {
+      "titre": "Les pannes que nous réparons le plus souvent.",
+      "role": "services",
+      "description": "« Les pannes que nous réparons le plus souvent » : six pannes en cartes avec pictogramme et degré d'urgence",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannage-site-wordpress-bourg-en-bresse-realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que realisations de l'accueil, repris sur la page de service"
+    },
+    "depannage-site-wordpress-bourg-en-bresse-avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que avis de l'accueil, repris sur la page de service"
+    },
+    "depannage-site-wordpress-bourg-en-bresse-faq": {
+      "titre": "Vos questions sur le dépannage de votre site.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que faq de l'accueil, repris sur la page de service"
+    },
+    "depannage-site-wordpress-bourg-en-bresse-contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que contact de l'accueil, repris sur la page de service"
+    },
+    "maintenance-site-wordpress-bourg-en-bres-ouverture": {
+      "titre": "Maintenance de site internet à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture Maintenance : tableau de bord de suivi du site",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maintenance-site-wordpress-bourg-en-bres-entretien": {
+      "titre": "Un site, ça s’entretient aussi.",
+      "role": "manifeste",
+      "description": "« Un site, ça s'entretient aussi »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maintenance-site-wordpress-bourg-en-bres-inclus": {
+      "titre": "Ce qui est inclus pour 50 € par mois.",
+      "role": "offre",
+      "description": "« Ce qui est inclus pour 50 € par mois » : liste des services",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maintenance-site-wordpress-bourg-en-bres-panne": {
+      "titre": "Votre site est déjà en panne ?",
+      "role": "appel",
+      "description": "« Votre site est déjà en panne ? » : renvoi vers le dépannage",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "maintenance-site-wordpress-bourg-en-bres-realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que realisations de l'accueil, repris sur la page de service"
+    },
+    "maintenance-site-wordpress-bourg-en-bres-avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que avis de l'accueil, repris sur la page de service"
+    },
+    "maintenance-site-wordpress-bourg-en-bres-faq": {
+      "titre": "Vos questions sur la maintenance de votre site.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que faq de l'accueil, repris sur la page de service"
+    },
+    "maintenance-site-wordpress-bourg-en-bres-contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que contact de l'accueil, repris sur la page de service"
+    },
+    "mentions-legales-ouverture": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Ouverture des pages légales : titre sur la grille de plan",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-band": {
+      "titre": "Éditeur du site",
+      "role": "texte-legal",
+      "description": "Mentions légales avec sommaire collant qui suit la lecture",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "politique-de-confidentialite-ouverture": {
+      "titre": "Politique de confidentialité",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même ouverture que mentions-legales-ouverture"
+    },
+    "politique-de-confidentialite-band": {
+      "titre": "Responsable du traitement",
+      "role": "texte-legal",
+      "description": "Politique de confidentialité avec sommaire collant",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "referencement-seo-bourg-en-bresse-ouverture": {
+      "titre": "Agence SEO à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture Référencement : page de résultats Google animée où le site du client remonte (démonstration illustrative)",
+      "animations": [
+        "révélation-texte",
+        "flip"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "referencement-seo-bourg-en-bresse-pourquoi-seo": {
+      "titre": "Pourquoi le référencement naturel est important.",
+      "role": "manifeste",
+      "description": "« Pourquoi le référencement naturel est important »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "referencement-seo-bourg-en-bresse-methode-seo": {
+      "titre": "Comment nous travaillons votre référencement.",
+      "role": "étapes",
+      "description": "« Comment nous travaillons votre référencement » : six chantiers en cartes numérotées",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "referencement-seo-bourg-en-bresse-realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que realisations de l'accueil, repris sur la page de service"
+    },
+    "referencement-seo-bourg-en-bresse-avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que avis de l'accueil, repris sur la page de service"
+    },
+    "referencement-seo-bourg-en-bresse-faq": {
+      "titre": "Vos questions sur le référencement naturel.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que faq de l'accueil, repris sur la page de service"
+    },
+    "referencement-seo-bourg-en-bresse-contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que contact de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-ouverture": {
+      "titre": "Refonte de site internet à Bourg-en-Bresse",
+      "role": "ouverture",
+      "description": "Ouverture Refonte : ancien et nouveau site superposés",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "refonte-site-internet-bourg-en-bresse-remise-a-neuf": {
+      "titre": "Votre site a vieilli ? On le remet à neuf.",
+      "role": "manifeste",
+      "description": "« Votre site a vieilli ? On le remet à neuf »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "refonte-site-internet-bourg-en-bresse-avant-apres": {
+      "titre": "Site vieillissant : ce que la refonte change.",
+      "role": "outil-interactif",
+      "description": "« Ce que la refonte change » : comparateur avant / après à faire glisser entre un site vieillissant et sa refonte (démonstration illustrative)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "refonte-site-internet-bourg-en-bresse-methode": {
+      "titre": "Comment se passe votre projet ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que methode de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-tarifs": {
+      "titre": "Combien coûte votre site internet ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que tarifs de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-realisations": {
+      "titre": "Des sites qui travaillent déjà pour nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que realisations de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-avis": {
+      "titre": "Ce que disent nos clients.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que avis de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-faq": {
+      "titre": "Vos questions sur la refonte de votre site internet.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que faq de l'accueil, repris sur la page de service"
+    },
+    "refonte-site-internet-bourg-en-bresse-contact": {
+      "titre": "Votre devis de site internet, gratuit.",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même bloc que contact de l'accueil, repris sur la page de service"
+    }
+  }
+}

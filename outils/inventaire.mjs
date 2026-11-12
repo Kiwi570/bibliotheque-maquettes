@@ -51,6 +51,13 @@ function blocsSource(arbre) {
           out.push({ tag: e.tag, id: e.attrs.id || '', classe: e.attrs.class || '', sig: signature(e.tag, e.attrs.id, e.attrs.class), debut: e.debut, fin: e.fin ?? e.debut, dansMain: true, attrs: e.attrs, noeud: e });
           continue;
         }
+        // Enveloppe autour de toutes les sections (div qui porte un fil ou un décor, Red-Act) : on descend dedans,
+        // sinon la page entière ne fait qu'un bloc.
+        const enveloppe = (x) => x.tag === 'div' && (x.enfants || []).filter((y) => ['section', 'article'].includes(y.tag)).length >= 2;
+        if (!enfants.some((x) => ['section', 'article'].includes(x.tag)) && enfants.some(enveloppe)) {
+          for (const x of enfants) { if (enveloppe(x)) marcher(x, true); else marcher({ enfants: [x] }, true); }
+          continue;
+        }
         marcher(e, true); continue;
       }
       if (!dansMain && e.tag === 'div' && contientMain(e)) { marcher(e, false); continue; }
@@ -177,7 +184,11 @@ function mesurerDansPage(sigs) {
     if (e.tagName.toLowerCase() === 'svg' && !dansMain && (e.getAttribute('class') || e.id) && !e.querySelector('symbol')) { /* calque SVG gardé */ }
     else if (IGN.has(e.tagName.toUpperCase())) continue;
     if (e.classList.contains('pin-spacer')) { marcher(e, dansMain); continue; }
-    if (e.tagName === 'MAIN') { const en = [...e.children].filter(x => !IGN.has(x.tagName.toUpperCase()) && !x.classList.contains('pin-spacer')); if (en.length > 3 && !en.some(x => ['SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'ASIDE', 'NAV', 'FORM'].includes(x.tagName))) { vivants.push(e); continue; } marcher(e, true); continue; }
+    if (e.tagName === 'MAIN') { const en = [...e.children].filter(x => !IGN.has(x.tagName.toUpperCase()) && !x.classList.contains('pin-spacer')); if (en.length > 3 && !en.some(x => ['SECTION', 'ARTICLE', 'HEADER', 'FOOTER', 'ASIDE', 'NAV', 'FORM'].includes(x.tagName))) { vivants.push(e); continue; }
+      const sec = y => y.tagName === 'SECTION' || y.tagName === 'ARTICLE' || (y.classList.contains('pin-spacer') && !!y.querySelector(':scope > section, :scope > article'));
+      const env = x => x.tagName === 'DIV' && !x.classList.contains('pin-spacer') && [...x.children].filter(sec).length >= 2;
+      if (![...e.children].some(sec) && en.some(env)) { for (const x of [...e.children]) { if (env(x)) marcher(x, true); else marcher({ children: [x] }, true); } continue; }
+      marcher(e, true); continue; }
     if (!dansMain && e.tagName === 'DIV' && e.querySelector('main')) { marcher(e, false); continue; }
     vivants.push(e); } };
   marcher(document.body, false);

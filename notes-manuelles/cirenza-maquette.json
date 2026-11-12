@@ -1,0 +1,2063 @@
+{
+  "maquette": {
+    "client": "artiste peintre à La Clusaz (encaustique, huile, aquarelle), ancienne chercheuse sur les glaciers, et son lieu l'Espace Créa-Tea-Vité : galerie, salon de thé, cours, retraites et boutique",
+    "activite": [
+      "culture",
+      "formation"
+    ],
+    "concept": [
+      "galerie"
+    ],
+    "ambiance": [
+      "clair",
+      "montagne",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--calcaire",
+      "texte": "--granite",
+      "accent": "--ambre-texte",
+      "secondaire": "--glacier-texte"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Fraunces",
+      "mono": "IBM Plex Mono"
+    },
+    "points_forts": [
+      "« Strates » : la série « A Record of Time » lue comme une carotte de glace ; une colonne stratigraphique range les séries, un altimètre suit la lecture dans la marge",
+      "une maison, deux côtés : bascule « Atelier | Espace » dans l'en-tête, une couleur par entité (ambre de cire, bleu des murs de l'Espace), deux comptoirs et deux paniers qui ne se mélangent jamais",
+      "ouverture en carotte de cire qui fond (WebGL), cire à gratter pour découvrir la peinture, biographie en carottage",
+      "salles d'œuvres épinglées qui défilent à l'horizontale, fiche d'œuvre avec loupe et « Voir au mur » (silhouette à l'échelle)",
+      "carte des retraites en courbes de niveau, statut d'ouverture de l'Espace en direct, comptes à rebours",
+      "site bilingue (anglais à la racine, français sous /fr/), 51 pages, moteur d'animation maison sans bibliothèque"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : intro et voile non relevés par la grille",
+      "très riche en contenu mais peu de grands gestes visibles : la plupart des pages sont des suites de blocs éditoriaux sobres",
+      "60 Mo d'images ; œuvres récentes « titre à compléter » en attendant l'export Artwork Archive"
+    ],
+    "animations": [
+      "webgl-shader",
+      "section-fixée",
+      "galerie-horizontale",
+      "révélation-texte",
+      "parallaxe",
+      "défilement-lissé",
+      "fil-conducteur",
+      "curseur-personnalisé"
+    ],
+    "interactions": [
+      "panier-simule",
+      "filtres",
+      "galerie-cliquable",
+      "jeu",
+      "formulaire-par-étapes",
+      "lecteur-vidéo"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "ouverture",
+    "plan": "galerie",
+    "grille": {
+      "objet": "cire à gratter pour découvrir la peinture",
+      "fil": "colonne stratigraphique et altimètre dans la marge"
+    },
+    "metier": "artiste peintre"
+  },
+  "sections": {
+    "grain": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "grain de texture plein écran, sans contenu"
+    },
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête à deux côtés : bascule « Atelier | Espace » (ambre ou bleu), les liens changent selon le côté, statut d'ouverture de l'Espace en direct, langue et paniers",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bascule entre deux entités d'une même maison, chacune avec sa couleur et ses liens"
+      ]
+    },
+    "menu": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran : les pages des deux côtés, langue",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "panier": {
+      "titre": "Your baskets",
+      "role": "outil-interactif",
+      "description": "Paniers des deux comptoirs (atelier et Espace) : une commande ne mélange jamais les deux entités, l'œuvre ajoutée s'envole vers le panier de son comptoir, paiement simulé",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "deux paniers et deux encaissements pour deux entités juridiques"
+      ]
+    },
+    "panier-texte": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce du panier pour les lecteurs d'écran, sans affichage"
+    },
+    "altimetre": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Altimètre de la marge : colonne graduée de l'altitude de La Clusaz, le repère descend dans les strates au fil de la lecture",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "ouverture": {
+      "titre": "LisaLisa CirenzaCirenza",
+      "role": "ouverture",
+      "description": "Ouverture : « Lisa Cirenza » en Fraunces, l'ambre sur le prénom ; une carotte de cire fond en WebGL et découvre l'œuvre récente, puis texte et boutons arrivent ; passable au clavier",
+      "animations": [
+        "webgl-shader",
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Une fois l'intro passée, le premier écran est une mise en page classique titre, texte, tableau"
+      ]
+    },
+    "declaration-accueil": {
+      "titre": "01Artist statement",
+      "role": "manifeste",
+      "description": "« Most people look up and see the Alps. I see a record of time being erased. » : déclaration de l'artiste, les mots s'éclairent à la lecture, photo d'expédition sur le glacier",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "geologie": {
+      "titre": "The Geology of the InvisibleThe Geology of the Invisible",
+      "role": "outil-interactif",
+      "description": "« The Geology of the Invisible » : sur fond ardoise, une couche de cire ambrée recouvre la toile, on la gratte au pointeur pour découvrir la peinture",
+      "animations": [
+        "canvas-2d",
+        "webgl-shader"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cire à gratter au pointeur pour découvrir l'œuvre"
+      ]
+    },
+    "strates-accueil": {
+      "titre": "A Record of TimeA Record of Time",
+      "role": "galerie",
+      "description": "« A Record of Time » : colonne stratigraphique des séries, chaque série est une strate de couleur (A Record of Time, Hope and Optimism, Encaustic and Oils…) avec son nombre d'œuvres, qui s'ouvre sur sa salle",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "séries rangées en colonne stratigraphique"
+      ]
+    },
+    "atelier-maintenant": {
+      "titre": "Emergence",
+      "role": "portfolio",
+      "description": "« On my easel » : l'œuvre en cours, photos de l'atelier inclinées, citation de l'artiste",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "editions-accueil": {
+      "titre": "Small blocks, held in acrylicSmall blocks, held in acrylic",
+      "role": "produits",
+      "description": "Éditions de collection : petits blocs d'acrylique en trois vignettes, lien vers la boutique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "presse-accueil": {
+      "titre": "06Press",
+      "role": "preuves",
+      "description": "Presse : citation du Financial Times en grand, couvertures d'articles en rangée",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-accueil": {
+      "titre": "Espace Créa-Tea-VitéEspace Créa-Tea-Vité",
+      "role": "services",
+      "description": "L'Espace Créa-Tea-Vité : façade de nuit, statut « ouvert jusqu'à… » en direct, boutons vers l'Espace et les cours",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "retraites-accueil": {
+      "titre": "Three retreats in 2027Three retreats in 2027",
+      "role": "offre",
+      "description": "« Three retreats in 2027 » : trois retraites en cartes avec compte à rebours en jours et prix",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lettre": {
+      "titre": "Musings, Invites, and UpdatesMusings, Invites, and Updates",
+      "role": "contact",
+      "description": "Lettre d'information sur fond ardoise, deux listes (anglaise et française)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Lisa Cirenza · Fine Art",
+      "role": "pied-de-page",
+      "description": "Pied de page sombre en deux colonnes, une par entité (forme juridique, SIRET, contacts, réseaux), signature manuscrite et citation",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-erreur": {
+      "titre": "You fell into a crevasseYou fell into a crevasse",
+      "role": "page-404",
+      "description": "404 « You fell into a crevasse » : photo d'expédition sur le glacier, retour à la surface",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artist-bandeau": {
+      "titre": "Lisa CirenzaLisa Cirenza",
+      "role": "ouverture",
+      "description": "Ouverture L'artiste : le portrait émerge de la glace, œuvre « Emergence » à droite",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artist-declaration": {
+      "titre": "StatementStatement",
+      "role": "manifeste",
+      "description": "Déclaration complète de l'artiste, photo de détail",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artist-bio": {
+      "titre": "Layers of a lifeLayers of a life",
+      "role": "équipe",
+      "description": "« Layers of a life » : la biographie en carottage, une colonne de glace descend au fil des étapes de la vie, portrait de Lisa",
+      "animations": [
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "biographie lue comme une carotte de glace qui descend"
+      ]
+    },
+    "artist-matieres": {
+      "titre": "Water, pigments, heat and waxWater, pigments, heat and wax",
+      "role": "galerie",
+      "description": "« Water, pigments, heat and wax » : quatre matières en vignettes (chalumeau, pigments, eau, cire)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artist-carnet": {
+      "titre": "Behind the workBehind the work",
+      "role": "galerie",
+      "description": "« Behind the work » : photos d'atelier posées et inclinées comme un carnet",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artist-dossier": {
+      "titre": "04Short bio · for press and applications",
+      "role": "preuves",
+      "description": "Courte biographie pour la presse et les candidatures, liens CV, presse, contact",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-bandeau": {
+      "titre": "ClassesClasses",
+      "role": "ouverture",
+      "description": "Ouverture Classes : photo d'atelier, « I don't teach you how to paint a perfect flower »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-ateliers": {
+      "titre": "Focus on process and mediumFocus on process and medium",
+      "role": "offre",
+      "description": "« Focus on process and medium » : cinq ateliers en vignettes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-equipes": {
+      "titre": "The garden of creative thinkingThe garden of creative thinking",
+      "role": "offre",
+      "description": "« The garden of creative thinking » : ateliers pour les équipes et les institutions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-en-ligne": {
+      "titre": "Painting with Fire 6Painting with Fire 6",
+      "role": "offre",
+      "description": "Cours en ligne et cours en plein air en deux cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-carnet": {
+      "titre": "In the studioIn the studio",
+      "role": "galerie",
+      "description": "« In the studio » : photos de cours inclinées",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "classes-cocreation": {
+      "titre": "Co-Creating SessionsCo-Creating Sessions",
+      "role": "offre",
+      "description": "« Co-Creating Sessions » : séance ouverte à 30 €, réserver ou poser une question",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-contact": {
+      "titre": "Let's connect…Let's connect…",
+      "role": "contact",
+      "description": "« Let's connect… » : sujets en pastilles (œuvre, commande, cours, événement, retraite), formulaire simulé, adresse de l'atelier",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cv-bandeau": {
+      "titre": "CVCV",
+      "role": "ouverture",
+      "description": "Ouverture CV : photo d'exposition",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cv-cv-blocs": {
+      "titre": "Education and research",
+      "role": "preuves",
+      "description": "Formation, collections, presse, publications en colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cv-carnet": {
+      "titre": "Salons and openingsSalons and openings",
+      "role": "galerie",
+      "description": "« Salons and openings » : affiches et vernissages",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cv-frise": {
+      "titre": "Exhibitions, art fairs, honours and talks",
+      "role": "preuves",
+      "description": "Frise des expositions, salons et distinctions année par année, filtres par type",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-bandeau": {
+      "titre": "Espace Créa-Tea-VitéEspace Créa-Tea-Vité",
+      "role": "ouverture",
+      "description": "Ouverture de l'Espace Créa-Tea-Vité : logo rond en médaillon, statut d'ouverture en direct",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-panorama": {
+      "titre": "",
+      "role": "galerie",
+      "description": "Panorama de l'intérieur de l'Espace qui glisse au défilement",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-histoire-espace": {
+      "titre": "A refuge, by designA refuge, by design",
+      "role": "manifeste",
+      "description": "« A refuge, by design » : histoire du lieu, vidéo de la visite chargée au clic (Vimeo), citation",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-offres": {
+      "titre": "Welcome to Espace Créativité, a creative hub in one of the Alps' most stunning Savoyard vi",
+      "role": "services",
+      "description": "Créer, se retrouver, s'inspirer : trois photos du lieu",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-carte": {
+      "titre": "The menuThe menu",
+      "role": "tarifs",
+      "description": "« The menu » : carte des boissons du salon de thé, photo collante",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-boutique": {
+      "titre": "Curated materialsCurated materials",
+      "role": "produits",
+      "description": "« Curated materials » : matériel d'art et cadeaux de la boutique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-expo": {
+      "titre": "La Gravité de la GrâceLa Gravité de la Grâce",
+      "role": "agenda",
+      "description": "Exposition en cours « La Gravité de la Grâce » : texte, photos",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-agenda": {
+      "titre": "Classes & gatheringsClasses & gatherings",
+      "role": "agenda",
+      "description": "« Classes & gatherings » : prochaines séances et rencontres avec prix",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-infos": {
+      "titre": "07Opening hours",
+      "role": "contact",
+      "description": "Horaires et accès, statut d'ouverture en direct, annonces de fermeture exceptionnelle",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-carnet": {
+      "titre": "Around the galleryAround the gallery",
+      "role": "galerie",
+      "description": "« Around the gallery » : photos de la vie du lieu",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "espace-lettre": {
+      "titre": "Musings, Invites, and UpdatesMusings, Invites, and Updates",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même lettre d'information que le bloc lettre de l'accueil"
+    },
+    "fr-boutique-bandeau": {
+      "titre": "BoutiqueBoutique",
+      "role": "ouverture",
+      "description": "Ouverture Boutique : une maison, deux comptoirs, deux paniers",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-boutique-atelier": {
+      "titre": "Le comptoir de l'atelierLe comptoir de l'atelier",
+      "role": "produits",
+      "description": "« Le comptoir de l'atelier » : petites encaustiques, tirages et originaux filtrables par série, ajout au panier de l'atelier (l'œuvre s'envole vers son panier)",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "filtres",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "fr-boutique-editions": {
+      "titre": "Éditions de collectionÉditions de collection",
+      "role": "produits",
+      "description": "Éditions de collection : blocs d'acrylique numérotés",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-boutique-espace": {
+      "titre": "Le comptoir de l'EspaceLe comptoir de l'Espace",
+      "role": "produits",
+      "description": "« Le comptoir de l'Espace » sur fond bleu : séances et places de retraite, panier séparé",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-boutique-livraison": {
+      "titre": "De La Clusaz au monde entierDe La Clusaz au monde entier",
+      "role": "offre",
+      "description": "« De La Clusaz au monde entier » : expédition, retrait, et les deux comptes de paiement",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-contact-contact": {
+      "titre": "Écrivez-moi…Écrivez-moi…",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de contact-contact"
+    },
+    "fr-cours-prives-bandeau": {
+      "titre": "Cours privés sur mesureCours privés sur mesure",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même mise en page que classes-bandeau (cours privés)"
+    },
+    "fr-cours-prives-ateliers": {
+      "titre": "Le geste et le médiumLe geste et le médium",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même mise en page que classes-ateliers"
+    },
+    "fr-cours-prives-equipes": {
+      "titre": "Le jardin de la pensée créativeLe jardin de la pensée créative",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même mise en page que classes-equipes"
+    },
+    "fr-cours-prives-carnet": {
+      "titre": "À l'atelierÀ l'atelier",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même mise en page que classes-carnet"
+    },
+    "fr-cours-prives-cocreation": {
+      "titre": "Cours privé en plein airCours privé en plein air",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même mise en page que classes-cocreation"
+    },
+    "fr-evenements-prives-bandeau": {
+      "titre": "Événements privésÉvénements privés",
+      "role": "ouverture",
+      "description": "Ouverture Événements privés : grande table dressée dans la galerie",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-evenements-prives-jauges": {
+      "titre": "01Le lieu",
+      "role": "chiffres",
+      "description": "Le lieu en jauges : 18 personnes assises, 40 debout, points qui se remplissent",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-evenements-prives-experiences": {
+      "titre": "02Expériences créatives privées",
+      "role": "offre",
+      "description": "Expériences créatives privées : ateliers, pensée créative, sur mesure",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-evenements-prives-carnet": {
+      "titre": "Rencontres passéesRencontres passées",
+      "role": "galerie",
+      "description": "« Rencontres passées » : photos d'événements",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-evenements-prives-art-thinking": {
+      "titre": "Thèmes déjà proposésThèmes déjà proposés",
+      "role": "offre",
+      "description": "« Thèmes déjà proposés » : trois thèmes en cartes de couleur, photo de séance",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-notes-d-atelier-bandeau": {
+      "titre": "Notes d'atelierNotes d'atelier",
+      "role": "ouverture",
+      "description": "Ouverture Notes d'atelier : photo d'expédition, phrase de la première visite à Chamonix",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-notes-d-atelier-studio-texte": {
+      "titre": "",
+      "role": "articles",
+      "description": "Texte long des notes d'atelier, en colonne de lecture",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-notes-d-atelier-studio-chevalet": {
+      "titre": "01Sur mon chevalet",
+      "role": "portfolio",
+      "description": "« Sur mon chevalet » : œuvres en cours avec leur état",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-notes-d-atelier-studio-recherche": {
+      "titre": "02Recherches et procédé",
+      "role": "galerie",
+      "description": "« Recherches et procédé » : photos de procédé",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-oeuvres-bandeau": {
+      "titre": "ŒuvresŒuvres",
+      "role": "ouverture",
+      "description": "Ouverture Œuvres : grand titre, œuvre en noir et blanc",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-oeuvres-oeuvres-colonne": {
+      "titre": "Strates du temps",
+      "role": "galerie",
+      "description": "Colonne stratigraphique des séries (même principe que l'accueil)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-oeuvres-index-oeuvres": {
+      "titre": "Strates du tempsStrates du temps",
+      "role": "portfolio",
+      "description": "Index des œuvres de « Strates du temps » en vignettes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-oeuvres-archive": {
+      "titre": "ArchiveArchive",
+      "role": "portfolio",
+      "description": "Archive : 58 œuvres en grille, fiche avec loupe",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-oeuvres-beneath-the-surface-salle": {
+      "titre": "Beneath the SurfaceBeneath the Surface",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-beneath-the-surface-salle"
+    },
+    "fr-oeuvres-commandes-salle": {
+      "titre": "CommandesCommandes",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-commissions-salle"
+    },
+    "fr-oeuvres-connections-and-constructions-salle": {
+      "titre": "Connections and ConstructionsConnections and Constructions",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-connections-and-constructions-salle"
+    },
+    "fr-oeuvres-cuba-salle": {
+      "titre": "CubaCuba",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-cuba-salle"
+    },
+    "fr-oeuvres-encaustique-et-huiles-salle": {
+      "titre": "Encaustique et huilesEncaustique et huiles",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-encaustic-and-oils-salle"
+    },
+    "fr-oeuvres-hope-and-optimism-salle": {
+      "titre": "Hope and OptimismHope and Optimism",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-hope-and-optimism-salle"
+    },
+    "fr-oeuvres-layered-moments-salle": {
+      "titre": "Layered MomentsLayered Moments",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-layered-moments-salle"
+    },
+    "fr-oeuvres-strates-du-temps-salle": {
+      "titre": "Strates du tempsStrates du temps",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-a-record-of-time-salle"
+    },
+    "fr-oeuvres-the-london-tube-series-salle": {
+      "titre": "The London Tube SeriesThe London Tube Series",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "version française de works-the-london-tube-series-salle"
+    },
+    "fr-presse-bandeau": {
+      "titre": "PressePresse",
+      "role": "ouverture",
+      "description": "Ouverture Presse : grand titre et photo d'exposition, sommaire des articles",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-presse-wax-fusion": {
+      "titre": "Beyond the SurfaceBeyond the Surface",
+      "role": "preuves",
+      "description": "Wax Fusion n° XIV : couverture collante, extrait de l'article",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-presse-m2616": {
+      "titre": "L'art de créer du lien avec Lisa CirenzaL'art de créer du lien avec Lisa Cirenza",
+      "role": "preuves",
+      "description": "Article M2616 : photo, extrait",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-presse-ft": {
+      "titre": "London's best satellite fairs: ‘different conversations and collegiate feel’",
+      "role": "preuves",
+      "description": "Financial Times : citation et lien",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-presse-presse-mur": {
+      "titre": "Beyond the Surface",
+      "role": "preuves",
+      "description": "Mur de presse : couvertures et liens, liste dépliable",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-bandeau": {
+      "titre": "RetraitesRetraites",
+      "role": "ouverture",
+      "description": "Ouverture Retraites : grand titre et paysage de La Clusaz, trois retraites en 2027",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-retraites-accueil": {
+      "titre": "A Creative Pause",
+      "role": "offre",
+      "description": "Les trois retraites en cartes avec compte à rebours",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-carnet": {
+      "titre": "La Clusaz et le lac d'AnnecyLa Clusaz et le lac d'Annecy",
+      "role": "galerie",
+      "description": "« La Clusaz et le lac d'Annecy » : photos du pays",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-inclus": {
+      "titre": "Chambres et prixChambres et prix",
+      "role": "tarifs",
+      "description": "« Chambres et prix » : grille de prix par chambre, les mêmes pour les trois retraites",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-bandeau": {
+      "titre": "Alpine EncausticsAlpine Encaustics",
+      "role": "ouverture",
+      "description": "Ouverture d'une retraite : titre, dates, lieu, compte à rebours",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-retraite-intro": {
+      "titre": "",
+      "role": "offre",
+      "description": "Présentation de la retraite et encart collant (dates, lieu, groupe, prix)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-pourquoi": {
+      "titre": "Pourquoi ralentir ?Pourquoi ralentir ?",
+      "role": "manifeste",
+      "description": "« Pourquoi ralentir ? » : texte de l'artiste et photo de montagne",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-ingredients": {
+      "titre": "Le poulet, la sauce et les épicesLe poulet, la sauce et les épices",
+      "role": "offre",
+      "description": "« Le poulet, la sauce et les épices » : les ingrédients de la retraite",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-comment": {
+      "titre": "Notre carnet de recettes créatifNotre carnet de recettes créatif",
+      "role": "étapes",
+      "description": "« Notre carnet de recettes créatif »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-coachs": {
+      "titre": "Lisa Cirenza",
+      "role": "équipe",
+      "description": "Lisa Cirenza, coach de la retraite : portrait et parcours",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-carte-retraite-topo": {
+      "titre": "La Clusaz",
+      "role": "carte",
+      "description": "Carte épinglée en courbes de niveau : le parcours de la retraite se trace (La Clusaz, col des Aravis, lac d'Annecy, Talloires), chaque étape s'allume avec sa photo",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "carte en courbes de niveau dont le parcours se trace au défilement"
+      ]
+    },
+    "fr-retraites-alpine-encaustics-programme": {
+      "titre": "Jour après jourJour après jour",
+      "role": "étapes",
+      "description": "« Jour après jour » : programme jour par jour, numéro du jour collant, photos",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-pour-qui": {
+      "titre": "Cette retraite est-elle pour moi ?Cette retraite est-elle pour moi ?",
+      "role": "faq",
+      "description": "« Cette retraite est-elle pour moi ? » : deux colonnes de texte",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-temoignages": {
+      "titre": "Ce qu'ils en disent",
+      "role": "témoignages",
+      "description": "« Ce qu'ils en disent » : quatre citations sous une photo de chalet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-inclus": {
+      "titre": "Ce qui est inclusCe qui est inclus",
+      "role": "tarifs",
+      "description": "Inclus, non inclus et prix par chambre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-alpine-encaustics-reserver": {
+      "titre": "Voyons si nos élans créatifs s'accordentVoyons si nos élans créatifs s'accordent",
+      "role": "appel",
+      "description": "« Voyons si nos élans créatifs s'accordent » : échange découverte, WhatsApp, courriel",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-creative-pause-bandeau": {
+      "titre": "A Creative PauseA Creative Pause",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-bandeau"
+    },
+    "fr-retraites-creative-pause-retraite-intro": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-retraite-intro"
+    },
+    "fr-retraites-creative-pause-coachs": {
+      "titre": "Lisa Cirenza",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-coachs"
+    },
+    "fr-retraites-creative-pause-programme": {
+      "titre": "Jour après jourJour après jour",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "programme à venir, même gabarit que fr-retraites-alpine-encaustics-programme"
+    },
+    "fr-retraites-creative-pause-inclus": {
+      "titre": "Prix par personne · les mêmes pour les trois retraites",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-inclus"
+    },
+    "fr-retraites-creative-pause-reserver": {
+      "titre": "Voyons si nos élans créatifs s'accordentVoyons si nos élans créatifs s'accordent",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-reserver"
+    },
+    "fr-retraites-painting-in-paradise-bandeau": {
+      "titre": "Painting in ParadisePainting in Paradise",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-bandeau"
+    },
+    "fr-retraites-painting-in-paradise-retraite-intro": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-retraite-intro"
+    },
+    "fr-retraites-painting-in-paradise-coachs": {
+      "titre": "Lisa Cirenza",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-coachs"
+    },
+    "fr-retraites-painting-in-paradise-carte-retraite-topo": {
+      "titre": "La Clusaz",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-carte-retraite-topo"
+    },
+    "fr-retraites-painting-in-paradise-programme": {
+      "titre": "Jour après jourJour après jour",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-programme"
+    },
+    "fr-retraites-painting-in-paradise-pour-qui": {
+      "titre": "Cette retraite est-elle pour moi ?Cette retraite est-elle pour moi ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-pour-qui"
+    },
+    "fr-retraites-painting-in-paradise-temoignages": {
+      "titre": "Ce qu'ils en disent",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-temoignages"
+    },
+    "fr-retraites-painting-in-paradise-inclus": {
+      "titre": "Ce qui est inclusCe qui est inclus",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-inclus"
+    },
+    "fr-retraites-painting-in-paradise-faq": {
+      "titre": "QuestionsQuestions",
+      "role": "faq",
+      "description": "Questions pratiques dépliables (venir à La Clusaz, que apporter, se loger), photo du lac",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fr-retraites-painting-in-paradise-reserver": {
+      "titre": "Voyons si nos élans créatifs s'accordentVoyons si nos élans créatifs s'accordent",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que fr-retraites-alpine-encaustics-reserver"
+    },
+    "works-a-record-of-time-salle": {
+      "titre": "A Record of TimeA Record of Time",
+      "role": "galerie",
+      "description": "Salle d'une série : texte et photo collants, les œuvres défilent à l'horizontale au défilement (« the room moves sideways »), chaque œuvre ouvre sa fiche avec loupe et « Voir au mur » (silhouette à l'échelle), couleur de fond propre à la série",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "fiche d'œuvre avec « Voir au mur » : silhouette humaine à l'échelle de l'œuvre"
+      ]
+    },
+    "works-beneath-the-surface-salle": {
+      "titre": "Beneath the SurfaceBeneath the Surface",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-commissions-salle": {
+      "titre": "CommissionsCommissions",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-connections-and-constructions-salle": {
+      "titre": "Connections and ConstructionsConnections and Constructions",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-cuba-salle": {
+      "titre": "CubaCuba",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-encaustic-and-oils-salle": {
+      "titre": "Encaustic and OilsEncaustic and Oils",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-hope-and-optimism-salle": {
+      "titre": "Hope and OptimismHope and Optimism",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-layered-moments-salle": {
+      "titre": "Layered MomentsLayered Moments",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    },
+    "works-the-london-tube-series-salle": {
+      "titre": "The London Tube SeriesThe London Tube Series",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même gabarit que works-a-record-of-time-salle"
+    }
+  }
+}

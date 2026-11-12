@@ -1,0 +1,48 @@
+{
+ "id": "simple-travaux-maquette/prestations-collecteur",
+ "maquette": "simple-travaux-maquette",
+ "page": "prestations",
+ "titre": "Tout ce que Pedro répare, pose et transforme.",
+ "role": "outil-interactif",
+ "description": "Le collecteur : rampe de cuivre et six vannes quart de tour (dépannage, sanitaires, chauffe-eau, chauffage, électricité, PMR) ; tourner une vanne fait jaillir l'eau, remplit la rampe, fait bondir l'aiguille du manomètre et ouvre la fiche du métier avec ses prix",
+ "animations": [
+  "trace-svg",
+  "compteur"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "splittext"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "prestations.html:85-238",
+  "css": "assets/css/style.css:90-95,103,135,144-146,468-469,476,859,911-960,967-983,989-1009,1144",
+  "js": "assets/js/main.js:22-77 ; assets/js/modules/gl-ondes.js:44-123 ; assets/js/modules/prestations.js:1,93-202,375-383 ; assets/js/modules/compteur.js:1,10-12,62,78-80 ; assets/js/data/metiers.js:1 ; assets/js/modules/estimateur.js:1,9-144 ; assets/js/modules/demo.js:1,6-30 ; assets/js/modules/interactions.js:34-66"
+ },
+ "medias": {
+  "capture": "medias/simple-travaux-maquette/prestations-collecteur-p1440.jpg",
+  "capture_m390": "medias/simple-travaux-maquette/prestations-collecteur-m390.jpg",
+  "video": "medias/simple-travaux-maquette/prestations-collecteur-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "collecteur de vannes : chaque vanne ouvre un métier, le manomètre compte ses tarifs"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1270,
+  "hauteur_m390": 2014,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

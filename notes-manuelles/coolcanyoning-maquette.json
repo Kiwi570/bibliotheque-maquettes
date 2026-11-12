@@ -1,0 +1,1072 @@
+{
+  "maquette": {
+    "client": "guide de canyoning, via ferrata et escalade diplômé d'État (Yann) dans le Verdon, l'arrière-pays de Nice et le Haut-Var",
+    "activite": [
+      "sport",
+      "tourisme"
+    ],
+    "concept": [
+      "voyage",
+      "jeu"
+    ],
+    "ambiance": [
+      "clair",
+      "énergique",
+      "minéral"
+    ],
+    "palette": {
+      "fond": "--calcaire",
+      "texte": "--ombre",
+      "accent": "--corde",
+      "secondaire": "--turquoise"
+    },
+    "polices": {
+      "titres": "Big Shoulders",
+      "texte": "Outfit",
+      "mono": null
+    },
+    "points_forts": [
+      "idée-maîtresse « la descente » : faire défiler la page, c'est descendre le canyon ; l'altimètre de la marge compte les mètres, le pied de page annonce « Vous êtes au fond », la 404 est un rappel raté",
+      "ouverture en illustration plate (falaises, vasque turquoise, personnage sur la corde) et titre géant « Sauter. Glisser. Descendre. »",
+      "coupe du canyon épinglée en cinq obstacles, le personnage suit le chemin de l'eau",
+      "canyon-mètre : âge, envie, point de départ et durée donnent le bon canyon et son profil",
+      "mini-jeu du rappel (bouton, écran ou barre d'espace), aussi sur la 404",
+      "comparateur topo / photo par secteur, pont de singe qui réagit, voie d'escalade qui se trace en remontant, calculateur de groupe, cotation V/A/I",
+      "JavaScript natif sans bibliothèque, pages générées en Python"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : pas de voile de transition ni d'intro vers l'objet relevés par la grille",
+      "quatre canyons illustrés par des photos d'autres sorties et une via ferrata en image générée (signalés) ; pas de portrait individuel de Yann",
+      "pages de secteur (Verdon, Nice, Haut-Var) construites sur la même mise en page"
+    ],
+    "animations": [
+      "section-fixée",
+      "galerie-horizontale",
+      "trace-svg",
+      "canvas-2d",
+      "fil-conducteur",
+      "marquee",
+      "curseur-personnalisé",
+      "empilement-de-fiches"
+    ],
+    "interactions": [
+      "jeu",
+      "calculateur",
+      "comparateur",
+      "filtres",
+      "ambiance-sonore",
+      "formulaire-par-étapes",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "heros",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "personnage sur la corde, à faire descendre au rappel",
+      "fil": "altimètre de la marge qui compte les mètres de la descente"
+    },
+    "metier": "guide de canyoning"
+  },
+  "sections": {
+    "prechargement": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Préchargement : écran d'attente le temps que polices et illustrations arrivent",
+      "animations": [
+        "chargement-orchestré"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo, quatre liens, bouton du son de rivière (coupé par défaut), Réserver orange, Menu",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran avec photo et toutes les pages",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "altimetre": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Altimètre de la marge droite : corde orange graduée, le repère compte les mètres de descente au défilement (−150 m au fond de l'accueil, en montée sur la via ferrata)",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "altimètre de marge qui compte les mètres de descente au défilement"
+      ]
+    },
+    "corde-mobile": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Sur téléphone, la corde de l'altimètre devient une fine barre de progression",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "heros": {
+      "titre": "Sauter.Glisser.Descendre.",
+      "role": "ouverture",
+      "description": "Ouverture : titre géant « Sauter. Glisser. Descendre. » en Big Shoulders sur une gorge en illustration plate (falaises, vasque turquoise), un personnage descend en rappel le long d'une corde orange, cascade animée ; encart blanc avec Verdon, Nice, Haut-Var et deux boutons",
+      "animations": [
+        "canvas-2d",
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "bandeau": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bandeau défilant des canyons (Saint-Auban, Aiglun, Comps-sur-Artuby…) en lettres contour",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-principe": {
+      "titre": "La descente · −12 m",
+      "role": "manifeste",
+      "description": "« Un canyon, c'est une rivière qui a pris le chemin le plus court » : manifeste en capitales géantes, les mots passent de l'orange au noir au défilement, profondeur affichée en surtitre",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "coupe": {
+      "titre": "La descente en cinq obstacles",
+      "role": "étapes",
+      "description": "« La descente en cinq obstacles » : coupe du canyon épinglée (départ, saut de 6 m, toboggan, rappel de 45 m, vasque), le personnage suit le pointillé de l'eau, une étape par écran à droite",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "coupe du canyon en illustration où un personnage suit le chemin de l'eau au défilement"
+      ]
+    },
+    "horiz": {
+      "titre": "Dix canyons, trois secteurs.",
+      "role": "produits",
+      "description": "« Dix canyons, trois secteurs » : défilement horizontal épinglé des canyons sur fond d'eau sombre, photo, profil de dénivelé tracé, durée et niveau",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "canyon-metre": {
+      "titre": "Quel canyon pour vous ?",
+      "role": "calculateur",
+      "description": "« Quel canyon pour vous ? » : le canyon-mètre, âge, envie (sensations ou découverte), point de départ et durée donnent le bon canyon avec sa photo et son profil",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "canyon-mètre : quatre réglages qui désignent le bon canyon"
+      ]
+    },
+    "pile-titre": {
+      "titre": "Eau, roche et vide.",
+      "role": "offre",
+      "description": "« Eau, roche et vide » : trois activités (canyoning, via ferrata, escalade) en cartes empilées au défilement, photo et prix",
+      "animations": [
+        "empilement-de-fiches",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jeu-titre": {
+      "titre": "Descendez la cascade.",
+      "role": "outil-interactif",
+      "description": "« Descendez la cascade » : mini-jeu du rappel de 20 à 40 s (bouton, toucher ou barre d'espace), le personnage descend la cascade, consignes de sécurité à côté",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "mini-jeu du rappel jouable au clavier"
+      ]
+    },
+    "secteurs-titre": {
+      "titre": "Où voulez-vous vous mouiller ?",
+      "role": "services",
+      "description": "« Où voulez-vous vous mouiller ? » : trois secteurs (Verdon, arrière-pays niçois, Haut-Var) en photos verticales",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis-titre": {
+      "titre": "« Yann a rassuré tout le groupe. »",
+      "role": "témoignages",
+      "description": "Avis TripAdvisor en capitales, citation « Yann a rassuré tout le groupe » en grand",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fond": {
+      "titre": "On se retrouve au bord de l’eau ?",
+      "role": "appel",
+      "description": "« On se retrouve au bord de l'eau ? » sur fond d'eau sombre, profondeur −150 m en filigrane, réserver ou appeler",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Canyons",
+      "role": "pied-de-page",
+      "description": "Pied de page « Vous êtes au fond » : profondeur atteinte en grand, canyons, pages, contact",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre-mobile": {
+      "titre": "Actions rapides",
+      "role": "barre-fixe",
+      "description": "Barre d'action collante du téléphone : appeler, réserver",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "curseur": {
+      "titre": "",
+      "role": "decor",
+      "description": "Curseur personnalisé (souris seulement) ; un mot tapé au clavier fait plouf",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "grain": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "grain de texture plein écran, sans contenu"
+    },
+    "onde-svg": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "définitions SVG invisibles"
+    },
+    "404-page-404": {
+      "titre": "Raté le relais.",
+      "role": "page-404",
+      "description": "404 « Raté le relais » : le rappel raté, avec le mini-jeu de la cascade pour se rattraper",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-ph": {
+      "titre": "Choisir sa descente.",
+      "role": "ouverture",
+      "description": "Ouverture Canyoning : « Choisir sa descente », photo de groupe dans l'eau",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-canyon-metre": {
+      "titre": "Réglez, on choisit.",
+      "role": "calculateur",
+      "description": "Canyon-mètre de la page Canyoning (même outil que l'accueil)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-tous": {
+      "titre": "La liste complète.",
+      "role": "produits",
+      "description": "« La liste complète » : les dix canyons filtrables (secteur, niveau), photo et profil de dénivelé",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-canyon-respiration": {
+      "titre": "Lire le canyon avant d’y entrer.",
+      "role": "manifeste",
+      "description": "« Lire le canyon avant d'y entrer » : vasque turquoise, conseils",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-inclus": {
+      "titre": "Vous venez en maillot.",
+      "role": "offre",
+      "description": "« Vous venez en maillot » : fourni et à prévoir en deux colonnes sur fond sombre",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-faq-c": {
+      "titre": "Avant de sauter.",
+      "role": "faq",
+      "description": "« Avant de sauter » : questions dépliables",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-fond": {
+      "titre": "On se retrouve au bord de l’eau ?",
+      "role": "appel",
+      "description": "Appel de fin de page partagé (« On se retrouve au bord de l'eau ? »), profondeur de la page en filigrane",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "escalade-ph": {
+      "titre": "Pour une fois, on remonte.",
+      "role": "ouverture",
+      "description": "Ouverture Escalade : « Pour une fois, on remonte », grimpeur en grande voie",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "escalade-voie-t": {
+      "titre": "La voie, longueur par longueur",
+      "role": "étapes",
+      "description": "« La voie, longueur par longueur » : la voie se trace en remontant au défilement, une longueur par niveau (initiation, perfectionnement, autonomie)",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "escalade-fond": {
+      "titre": "Une cordée à monter ?",
+      "role": "appel",
+      "description": "« Une cordée à monter ? » : appel de fin, altitude en filigrane",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "groupes-ph": {
+      "titre": "À plusieurs, ça éclabousse.",
+      "role": "ouverture",
+      "description": "Ouverture Groupes : « À plusieurs, ça éclabousse »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "groupes-section": {
+      "titre": "EVG, EVJF & anniversaires",
+      "role": "offre",
+      "description": "EVG, EVJF et anniversaires en trois cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "groupes-calc": {
+      "titre": "Combien pour la bande ?",
+      "role": "calculateur",
+      "description": "« Combien pour la bande ? » : calculateur de groupe (sortie, nombre de personnes), petits personnages qui s'alignent, total en direct",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "guide-ph": {
+      "titre": "Yann, au bout de la corde.",
+      "role": "équipe",
+      "description": "Ouverture Guide : « Yann, au bout de la corde », encart sombre de présentation (pas de portrait individuel)",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Portrait individuel de Yann manquant"
+      ]
+    },
+    "guide-manifeste": {
+      "titre": "Manifeste",
+      "role": "manifeste",
+      "description": "Manifeste de Yann en capitales géantes qui s'éclairent mot à mot au défilement",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "guide-vai-t": {
+      "titre": "V, A, I : lire un canyon.",
+      "role": "outil-interactif",
+      "description": "« V, A, I : lire un canyon » : trois curseurs de cotation (vertical, aquatique, engagement) qui expliquent chaque niveau",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "guide-secu": {
+      "titre": "Ce qui ne se négocie pas.",
+      "role": "manifeste",
+      "description": "« Ce qui ne se négocie pas » : règles de sécurité",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "guide-gal": {
+      "titre": "Dans l’objectif.",
+      "role": "galerie",
+      "description": "« Dans l'objectif » : mosaïque de six photos de sorties, visionneuse",
+      "animations": [
+        "survol-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "guide-carnet-t": {
+      "titre": "Le blog de Yann.",
+      "role": "articles",
+      "description": "« Le blog de Yann » : liste d'articles sur fond sombre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "haut-var-ph": {
+      "titre": "Le Haut-Var, eau claire.",
+      "role": "ouverture",
+      "description": "Ouverture Haut-Var : « Le Haut-Var, eau claire »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "haut-var-liste": {
+      "titre": "Artuby de Comps",
+      "role": "produits",
+      "description": "Canyons du secteur : photo, durée, dénivelé, prix et profil",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "haut-var-cmp": {
+      "titre": "Du papier à l’eau.",
+      "role": "outil-interactif",
+      "description": "« Du papier à l'eau » : comparateur topo / photo à glisser",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-ph": {
+      "titre": "Mentions légales.",
+      "role": "texte-legal",
+      "description": "Ouverture des mentions légales",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-section": {
+      "titre": "Éditeur",
+      "role": "texte-legal",
+      "description": "Mentions légales et conditions de vente (extrait), informations à confirmer entourées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "nice-ph": {
+      "titre": "À une heure de la mer.",
+      "role": "ouverture",
+      "description": "Ouverture Nice : « À une heure de la mer »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "nice-liste": {
+      "titre": "Gours du Ray",
+      "role": "produits",
+      "description": "Canyons de l'arrière-pays niçois : photo, durée, dénivelé, prix et profil",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "nice-cmp": {
+      "titre": "Le parcours, en repères.",
+      "role": "outil-interactif",
+      "description": "« Le parcours, en repères » : profil tracé du canyon sur fond sombre",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-ph": {
+      "titre": "On s’encorde quand ?",
+      "role": "ouverture",
+      "description": "Ouverture Réserver : « On s'encorde quand ? »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-resa-t": {
+      "titre": "Démonstration du formulaire de réservation",
+      "role": "contact",
+      "description": "Formulaire de réservation simulé (sortie, date, groupe) et camp de base",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-ph": {
+      "titre": "Tout, sur une page.",
+      "role": "ouverture",
+      "description": "Ouverture Tarifs : « Tout, sur une page »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-grille-tarifaire": {
+      "titre": "Canyoning",
+      "role": "tarifs",
+      "description": "Grille de tous les tarifs par activité, photo à gauche",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs-cond": {
+      "titre": "Réserver, annuler.",
+      "role": "faq",
+      "description": "« Réserver, annuler » : conditions sur fond sombre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "verdon-ph": {
+      "titre": "Le Verdon, par l’intérieur.",
+      "role": "ouverture",
+      "description": "Ouverture Verdon : « Le Verdon, par l'intérieur »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "verdon-liste": {
+      "titre": "Rayaup",
+      "role": "produits",
+      "description": "Canyons du Verdon : photo, durée, dénivelé, prix et profil",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "verdon-cmp": {
+      "titre": "Le parcours, en repères.",
+      "role": "outil-interactif",
+      "description": "« Le parcours, en repères » : profil tracé du canyon sur fond sombre",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-ph": {
+      "titre": "Marcher sur le vide.",
+      "role": "ouverture",
+      "description": "Ouverture Via ferrata : « Marcher sur le vide »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-le-pont-de-singe": {
+      "titre": "Le pont de singe",
+      "role": "outil-interactif",
+      "description": "« Le pont de singe » : illustration d'un pont de singe entre deux falaises qui ondule et réagit au pointeur",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-vias": {
+      "titre": "Six lignes verticales.",
+      "role": "produits",
+      "description": "« Six lignes verticales » : six via ferrata en cartes, niveau et prix",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-seranon": {
+      "titre": "Séranon, heure par heure.",
+      "role": "étapes",
+      "description": "« Séranon, heure par heure » : déroulé d'une sortie sur fond sombre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

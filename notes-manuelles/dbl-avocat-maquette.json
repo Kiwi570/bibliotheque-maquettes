@@ -1,0 +1,600 @@
+{
+  "maquette": {
+    "client": "avocat au Barreau de Bruxelles, docteur en droit public, cabinet individuel avenue Paul-Henri Spaak (droit des étrangers, affaires, immobilier, travail, famille)",
+    "activite": [
+      "juridique"
+    ],
+    "concept": [
+      "dossier"
+    ],
+    "ambiance": [
+      "sombre",
+      "sobre",
+      "luxueux"
+    ],
+    "palette": {
+      "fond": "--nuit",
+      "texte": "--papier",
+      "accent": "--cachet",
+      "secondaire": "--kraft"
+    },
+    "polices": {
+      "titres": "Newsreader",
+      "texte": "Hanken Grotesk",
+      "mono": "IBM Plex Mono"
+    },
+    "points_forts": [
+      "« Chemise de dossier » : papier ivoire, encre bleu nuit, kraft et rouge cachet ; le portrait de Maître Dambel est agrafé dans une chemise sur le bureau",
+      "bureau en WebGL éclairé par une lampe, derrière toutes les pages",
+      "ouverture en chemise qui s'ouvre, changement de page par une feuille qui porte le nom de la page",
+      "principes du cabinet dans une note d'entretien caviardée dont les mots-clés se surlignent",
+      "matières en chemises à onglets (galerie épinglée), estimateur d'honoraires, rendez-vous simulé en quatre étapes",
+      "déontologie respectée : bureau recadré pour qu'aucune étiquette de dossier ne soit lisible, cinq matières au plus"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : intro et voile non relevés par la grille",
+      "accueil assez classique (titre, portrait, colonnes) : l'objet dossier reste un décor plus qu'une chose à manipuler",
+      "post-it « à compléter » visibles (horaires, code postal, assurance)"
+    ],
+    "animations": [
+      "webgl-shader",
+      "ouverture-orchestrée",
+      "transition-de-page",
+      "section-fixée",
+      "révélation-texte",
+      "masque",
+      "marquee",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "calculateur",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "une",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "chemise de dossier qui s’ouvre, portrait agrafé",
+      "fil": "folio du dossier dans la marge, une pièce par section"
+    },
+    "metier": "avocat"
+  },
+  "sections": {
+    "bureau-fond": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fond de toutes les pages : bureau bleu nuit en WebGL éclairé par une lampe dont la lumière glisse doucement (version sans WebGL avec ?webgl=0)",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "ogl"
+      ]
+    },
+    "intro-ecran": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Intro de la première visite : la chemise du dossier s'ouvre et découvre la page",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "tourne": {
+      "titre": "Accueil",
+      "role": "transition-de-page",
+      "description": "Changement de page : une feuille qui porte le nom de la page de destination passe sur l'écran",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "curseur": {
+      "titre": "",
+      "role": "decor",
+      "description": "Curseur personnalisé à la souris",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : monogramme OD et nom, liens, téléphone, bouton Rendez-vous rouge cachet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu-mobile": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu du téléphone qui se déroule comme une feuille",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "une": {
+      "titre": "Écouter.Conseiller.Défendre.",
+      "role": "ouverture",
+      "description": "Ouverture : « Écouter. Conseiller. Défendre. » en Newsreader très grand sur le bureau bleu nuit ; à droite le portrait de Maître Dambel agrafé dans une chemise kraft avec son monogramme, cachet rouge",
+      "animations": [
+        "révélation-texte",
+        "révélation-image",
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet": {
+      "titre": "Un cabinet à taille humaine, une pratique rigoureuse depuis 2005.",
+      "role": "équipe",
+      "description": "« Un cabinet à taille humaine » : texte avec mots surlignés au feutre, photo de la bibliothèque du cabinet, repères (Barreau depuis 2005, docteur en droit public)",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres": {
+      "titre": "Matières pratiquées",
+      "role": "services",
+      "description": "Matières pratiquées : galerie épinglée de chemises à onglets, chaque chemise s'ouvre sur sa matière (étrangers, affaires, immobilier…)",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "methode": {
+      "titre": "Le déroulé d’un dossier",
+      "role": "étapes",
+      "description": "« Le déroulé d'un dossier » : cinq étapes, fiches agrafées qui changent au défilement",
+      "animations": [
+        "section-fixée",
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "principes": {
+      "titre": "Ce qui s’impose au cabinet",
+      "role": "manifeste",
+      "description": "« Ce qui s'impose au cabinet » : note d'entretien caviardée, les mots-clés (indépendance, secret professionnel, loyauté…) apparaissent surlignés entre les bandes noires",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "note caviardée dont seuls les principes se découvrent surlignés"
+      ]
+    },
+    "honoraires": {
+      "titre": "Des honoraires annoncés avant d’agir",
+      "role": "tarifs",
+      "description": "« Des honoraires annoncés avant d'agir » : trois montants en grand (150 €, 180 €/h, forfaits), signature de convention, post-it à compléter",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces": {
+      "titre": "Le cabinet, avenue Paul-Henri Spaak",
+      "role": "carte",
+      "description": "Accès : plan schématique sur papier kraft de l'avenue Paul-Henri Spaak, coordonnées, lien d'itinéraire",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "final": {
+      "titre": "Exposez votre situation lors d’un premier rendez-vous.",
+      "role": "appel",
+      "description": "« Exposez votre situation lors d'un premier rendez-vous » : enveloppe kraft cachetée, deux boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Cabinet de Maître Ousmane Dambel",
+      "role": "pied-de-page",
+      "description": "Pied de page : logo complet, devise, pages, contacts, numéro BCE",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre-mobile": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Barre du téléphone : appeler, rendez-vous",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "folio": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Folio de dossier dans la marge gauche : numéro de pièce et titre de la section en vertical",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-p404": {
+      "titre": "Cette pièce manque au dossier.",
+      "role": "page-404",
+      "description": "404 « Cette pièce manque au dossier. » : chemise kraft vide sur le bureau",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "honoraires-une": {
+      "titre": "Honoraires",
+      "role": "ouverture",
+      "description": "Ouverture Honoraires : convention d'honoraires et stylo plume sur le bureau",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "honoraires-modalites": {
+      "titre": "Trois façons de fixer les honoraires",
+      "role": "tarifs",
+      "description": "« Trois façons de fixer les honoraires » : taux horaire, forfait, autre modalité, en trois fiches",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "honoraires-tarifs": {
+      "titre": "Tarifs indicatifs",
+      "role": "calculateur",
+      "description": "« Tarifs indicatifs » : tableau des tarifs et exemples de forfaits ; estimateur collant « Quel ordre de grandeur ? » qui donne le montant selon la démarche",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "honoraires-rendez-vous": {
+      "titre": "Demander un rendez-vous",
+      "role": "contact",
+      "description": "Rendez-vous simulé en quatre étapes (matière, situation, créneau, coordonnées) sur une fiche posée sur le bureau, photo du cabinet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-une": {
+      "titre": "Matières pratiquées",
+      "role": "ouverture",
+      "description": "Ouverture Matières : pile de chemises à onglets de couleur, une par matière",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-onglets": {
+      "titre": "Matières",
+      "role": "menu",
+      "description": "Onglets collants des cinq matières, l'onglet de la matière lue s'allume",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-etrangers": {
+      "titre": "Droit des étrangers",
+      "role": "services",
+      "description": "Droit des étrangers : chemise qui s'ouvre, mots surlignés, démarches et interlocuteurs",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-affaires": {
+      "titre": "Droit des affaires",
+      "role": "services",
+      "description": "Droit des affaires : chemise qui s'ouvre, démarches",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-immobilier": {
+      "titre": "Droit immobilier",
+      "role": "services",
+      "description": "Droit immobilier : chemise qui s'ouvre, démarches",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-travail": {
+      "titre": "Droit du travail",
+      "role": "services",
+      "description": "Droit du travail : chemise qui s'ouvre, démarches",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-famille": {
+      "titre": "Droit de la famille",
+      "role": "services",
+      "description": "Droit de la famille : chemise qui s'ouvre, démarches",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-juridictions": {
+      "titre": "Devant les juridictions et les administrations",
+      "role": "preuves",
+      "description": "« Devant les juridictions » : photo du Palais de justice place Poelaert en tirage, bandeau défilant des juridictions en étiquettes",
+      "animations": [
+        "marquee",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "matieres-rendez-vous-final": {
+      "titre": "Votre situation relève de l’une de ces matières ?",
+      "role": "appel",
+      "description": "Appel de fin : enveloppe cachetée, rendez-vous",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-legal-feuille": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Mentions légales sur une feuille de papier, champs à compléter en post-it",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

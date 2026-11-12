@@ -1,0 +1,1479 @@
+{
+  "maquette": {
+    "client": "agence d'immobilier de prestige et de relocation à l'île Maurice, une seule interlocutrice (Hélène Taylor), vente, location et accompagnement à l'installation",
+    "activite": [
+      "immobilier",
+      "conseil"
+    ],
+    "concept": [
+      "catalogue",
+      "voyage"
+    ],
+    "ambiance": [
+      "clair",
+      "luxueux",
+      "océanique"
+    ],
+    "palette": {
+      "fond": "--ecume",
+      "texte": "--nuit",
+      "accent": "--lagon",
+      "secondaire": "--sable-dore"
+    },
+    "polices": {
+      "titres": "Bodoni Moda",
+      "texte": "Jost",
+      "mono": null
+    },
+    "points_forts": [
+      "« L'île sur mesure » : charte officielle respectée (noir, beige, mousse tropicale, sable, écume), Bodoni Moda italique et Jost, sceau LN vectorisé dont l'anneau tourne",
+      "ouverture : le cercle sable se trace, l'anneau « L'île Maurice · Sur mesure » tourne, puis vue aérienne du lagon qui ondule en WebGL",
+      "carte schématique de l'île : régions éclairées en relief, configurateur « Composez votre art de vivre » où les envies éclairent les côtes",
+      "« Une journée à Maurice » : le soleil suit son arc de 6 h 15 au couchant, photo, teinte du ciel et texte en plans de vitesses différentes, son du lagon",
+      "vraie recherche immobilière (pays, régions, types, budget, critères), annonces aux photos qui défilent, favoris et partage, visite immersive plein écran",
+      "ventes confidentielles en enveloppe à cacheter, heure de Maurice en direct, calendrier des deux saisons"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : voile non relevé par la grille",
+      "très beau mais très attendu pour l'immobilier de luxe (grandes photos, cartes d'annonces) ; un seul vrai bien, les autres annonces sont des démonstrations",
+      "39 Mo d'images ; honoraires et plusieurs informations à compléter"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "webgl-shader",
+      "révélation-texte",
+      "parallaxe",
+      "galerie-horizontale",
+      "section-fixée",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "recherche",
+      "filtres",
+      "configurateur",
+      "carte-interactive",
+      "galerie-cliquable",
+      "ambiance-sonore",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "hero-accueil",
+    "plan": "magazine",
+    "grille": {
+      "objet": "carte de l’île qui s’éclaire selon vos envies",
+      "fil": "sceau LN dont l’anneau tourne, de l’intro au changement de page"
+    },
+    "metier": "agence immobilière de prestige"
+  },
+  "sections": {
+    "prechargement": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Intro de la première visite sur fond nuit : le cercle sable se trace, l'anneau « L'île Maurice · Sur mesure » tourne, le LN puis le logotype montent ; le rideau se lève dès que la photo est chargée",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "transition": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Changement de page : le sceau LN couvre l'écran puis s'efface",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "entete": {
+      "titre": "Propriétés Signature",
+      "role": "menu",
+      "description": "En-tête transparent sur la photo : logotype, sous-menus (Propriétés Signature avec le bien à la une), langue, « Votre projet »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hero-accueil": {
+      "titre": "L’île Maurice, sur mesure.",
+      "role": "ouverture",
+      "description": "Ouverture : « L'île Maurice, sur mesure. » en Bodoni Moda italique sur une vue aérienne du lagon qui ondule en WebGL (masque du lagon), sceau LN dont l'anneau tourne, onglets Acheter / Louer",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "splittext",
+        "lenis",
+        "ogl"
+      ],
+      "particularites": [
+        "eau du lagon qui ondule en WebGL sur la photo aérienne, limitée au masque du lagon"
+      ]
+    },
+    "recherche": {
+      "titre": "Rechercher une propriété",
+      "role": "outil-interactif",
+      "description": "Recherche immobilière : pays, régions, type, budget (devises), chambres et critères avancés dépliables, nombre de propriétés en direct",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "recherche",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "proprietes": {
+      "titre": "Le bien à la une",
+      "role": "produits",
+      "description": "« Le bien à la une » : la villa One&Only Le Saint Géran, photo, prix, caractéristiques, labels",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "collections-accueil": {
+      "titre": "Cinq collections, un seul fil : votre art de vivre",
+      "role": "galerie",
+      "description": "« Cinq collections, un seul fil » : cinq panneaux verticaux sur fond nuit (villas, penthouses, appartements, propriétés d'exception, terrains), le survolé s'élargit sur sa photo",
+      "animations": [
+        "révélation-texte",
+        "survol-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "luxury-nest": {
+      "titre": "Acteur reconnu de l’immobilier de prestige à Maurice",
+      "role": "chiffres",
+      "description": "« Acteur reconnu de l'immobilier de prestige » : +20 ans, 1 interlocutrice, photos d'intérieurs superposées",
+      "animations": [
+        "compteur",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "helene-accueil": {
+      "titre": "Le visage derrière Luxury Nest",
+      "role": "équipe",
+      "description": "« Le visage derrière Luxury Nest » : portrait d'Hélène dans une arche, sa citation en Bodoni italique, sceau",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations": {
+      "titre": "Nos prestations pour vos projets immobiliers",
+      "role": "services",
+      "description": "Trois prestations (acheter, vendre, conseil) en cartes photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carte-accueil": {
+      "titre": "Cinq côtes, cinq façons de vivre l’île",
+      "role": "carte",
+      "description": "« Cinq côtes, cinq façons de vivre l'île » : carte schématique de Maurice sur fond nuit, les envies cochées (lagon, golf, montagne…) éclairent les régions qui conviennent",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "carte de l'île où les envies éclairent les côtes qui leur conviennent"
+      ]
+    },
+    "temoignages": {
+      "titre": "Témoignages",
+      "role": "témoignages",
+      "description": "Témoignages en carrousel sur fond nuit, photo en noir et blanc",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carnet-accueil": {
+      "titre": "Tout savoir sur la vie à l’île Maurice",
+      "role": "articles",
+      "description": "« Tout savoir sur la vie à l'île Maurice » : trois articles du carnet d'Hélène",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "honoraires": {
+      "titre": "Honoraires d’agence",
+      "role": "tarifs",
+      "description": "Honoraires d'agence (barème à fournir)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Votre art de vivre commence par une conversation",
+      "role": "appel",
+      "description": "« Votre art de vivre commence par une conversation » : rendez-vous, WhatsApp, téléphone, réponse sous 24 h",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page nuit : contact, heure de Maurice en direct, son du lagon, plan du site",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu-mobile": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec photos des collections",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "barre-mobile": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Barre du téléphone : votre projet, WhatsApp, appeler",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "visionneuse": {
+      "titre": "Galerie de photos",
+      "role": "galerie",
+      "description": "Visionneuse des photos des biens, clavier et glisser",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "404-page-404": {
+      "titre": "Cette page a disparu, comme le dodo.",
+      "role": "page-404",
+      "description": "404 « Cette page a disparu, comme le dodo. » : plage au crépuscule, traces de pas dans le sable, petit dodo",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-hero-agence": {
+      "titre": "Le visage derrière Luxury Nest",
+      "role": "équipe",
+      "description": "Ouverture L'agence : « Le visage derrière Luxury Nest », portrait en pied d'Hélène dans une arche, sceau qui tourne",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-histoire": {
+      "titre": "De l’hôtellerie de luxe à l’immobilier de prestige, l’excellence comme fil conducteur",
+      "role": "preuves",
+      "description": "« De l'hôtellerie de luxe à l'immobilier de prestige » : frise datée avec photos",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-valeurs-mini": {
+      "titre": "Ce qui me guide",
+      "role": "manifeste",
+      "description": "« Ce qui me guide » : luxe, excellence, respect",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-engagements": {
+      "titre": "Écoute, disponibilité et confidentialité",
+      "role": "manifeste",
+      "description": "« Écoute, disponibilité et confidentialité » en trois colonnes",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-reseau": {
+      "titre": "Un réseau d’experts, une seule interlocutrice",
+      "role": "services",
+      "description": "« Un réseau d'experts, une seule interlocutrice » : notaires, banques, écoles, conseillers",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-bande-temoignage": {
+      "titre": "Témoignage",
+      "role": "témoignages",
+      "description": "Témoignage en grand sur une villa assombrie",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-rencontre": {
+      "titre": "Rencontrons-nous, autour d’un café dans le confort de votre salon ou par visioconférence !",
+      "role": "appel",
+      "description": "« Rencontrons-nous, autour d'un café » : rendez-vous ou visioconférence",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-demo-appartement-moka-hero-bien": {
+      "titre": "Appartement au calme à Moka",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce de démonstration : même gabarit que biens-villa-one-only-le-saint-geran-hero-bien"
+    },
+    "biens-demo-appartement-moka-bien-corps": {
+      "titre": "Description",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce de démonstration : même gabarit que biens-villa-one-only-le-saint-geran-bien-corps"
+    },
+    "biens-demo-appartement-moka-galerie-section": {
+      "titre": "3 photos de lappartement",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce de démonstration : même gabarit que biens-villa-one-only-le-saint-geran-galerie-section"
+    },
+    "biens-demo-appartement-moka-situation": {
+      "titre": "Moka, le centre",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce de démonstration : même gabarit que biens-villa-one-only-le-saint-geran-situation"
+    },
+    "biens-demo-appartement-moka-demande": {
+      "titre": "Demander une visite ou la documentation",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "annonce de démonstration : même gabarit que biens-villa-one-only-le-saint-geran-demande"
+    },
+    "biens-villa-one-only-le-saint-geran-hero-bien": {
+      "titre": "Villa One&Only Le Saint Géran",
+      "role": "produits",
+      "description": "Fiche d'un bien : mosaïque de photos, labels, favoris et partage, titre, prix et caractéristiques, accès à la visite immersive",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-bien-corps": {
+      "titre": "Description",
+      "role": "produits",
+      "description": "Description et détails du bien, encart prix collant avec demande de visite, WhatsApp et téléphone",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-resort": {
+      "titre": "L’une des dernières Private Homes disponibles",
+      "role": "manifeste",
+      "description": "« L'une des dernières Private Homes disponibles » : le resort",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-services-bien": {
+      "titre": "Vivre la villa, sans souci",
+      "role": "services",
+      "description": "« Vivre la villa, sans souci » : services du resort",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-galerie-section": {
+      "titre": "27 photos de villa",
+      "role": "galerie",
+      "description": "Les 27 photos de la villa en galerie, chaque photo monte au défilement, visionneuse",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-situation": {
+      "titre": "Pointe de Flacq, l’est",
+      "role": "carte",
+      "description": "Situation : la région du bien éclairée sur la carte de l'île, trajet depuis l'aéroport qui se dessine",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-demande": {
+      "titre": "Demander une visite ou la documentation",
+      "role": "contact",
+      "description": "« Demander une visite ou la documentation » : formulaire prérempli avec le bien",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "biens-villa-one-only-le-saint-geran-visite": {
+      "titre": "Visite immersiveVilla One&Only Le Saint Géran",
+      "role": "galerie",
+      "description": "Visite immersive plein écran : fondus et Ken Burns de pièce en pièce",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "visite-guidee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "carnet-hero-carnet": {
+      "titre": "Tout savoir sur la vie à l’île Maurice",
+      "role": "ouverture",
+      "description": "Ouverture du Carnet d'Hélène : grand titre en Bodoni italique et photo de plage",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carnet-carnet-liste": {
+      "titre": "Connaître les réglementations et les lois immobilières à l’île Maurice",
+      "role": "articles",
+      "description": "Articles du carnet filtrables par catégorie",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carnet-hiver-austral-a-maurice-article": {
+      "titre": "La douceur de l’hiver austral à l’île Maurice : une période idéale pour faire rimer vacanc",
+      "role": "articles",
+      "description": "Article du carnet : grand titre, photo, texte long avec intertitres et temps de lecture",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carnet-hiver-austral-a-maurice-carnet-accueil": {
+      "titre": "À lire aussi",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "carnet-reglementations-immobilieres-maur-article": {
+      "titre": "Connaître les réglementations et les lois immobilières à l’île Maurice",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "article du carnet : même gabarit que carnet-hiver-austral-a-maurice-article"
+    },
+    "carnet-reglementations-immobilieres-maur-carnet-accueil": {
+      "titre": "À lire aussi",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "carnet-retraite-a-maurice-article": {
+      "titre": "Et si vous posiez vos valises à l’île Maurice pour votre retraite ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "article du carnet : même gabarit que carnet-hiver-austral-a-maurice-article"
+    },
+    "carnet-retraite-a-maurice-carnet-accueil": {
+      "titre": "À lire aussi",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "carnet-vie-sous-les-varangues-article": {
+      "titre": "Art de vivre à la mauricienne : la vie sous les varangues, une tradition depuis plus de 20",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "article du carnet : même gabarit que carnet-hiver-austral-a-maurice-article"
+    },
+    "carnet-vie-sous-les-varangues-carnet-accueil": {
+      "titre": "À lire aussi",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "carnet-villa-penthouse-ou-appartement-article": {
+      "titre": "Villa, penthouse, appartement : quel type de bien choisir ?",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "article du carnet : même gabarit que carnet-hiver-austral-a-maurice-article"
+    },
+    "carnet-villa-penthouse-ou-appartement-carnet-accueil": {
+      "titre": "À lire aussi",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "confidentialite-hero-legal": {
+      "titre": "Politique de confidentialité",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "même ouverture que mentions-legales-hero-legal"
+    },
+    "confidentialite-legal": {
+      "titre": "Responsable du traitement",
+      "role": "texte-legal",
+      "description": "Politique de confidentialité : responsable du traitement, données, droits",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-hero-contact": {
+      "titre": "Confiez-nous votre projet",
+      "role": "contact",
+      "description": "Ouverture Contact : « Confiez-nous votre projet », coordonnées et heure de Maurice",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre fiche projet",
+      "role": "contact",
+      "description": "« Votre fiche projet » : formulaire par étapes (projet, région, budget, calendrier, coordonnées), récapitulatif collant qui se remplit",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-hero-legal": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Ouverture des pages légales : titre et petite photo de lagon",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-legal": {
+      "titre": "Éditeur du site",
+      "role": "texte-legal",
+      "description": "Mentions légales : éditeur, hébergeur, propriété intellectuelle",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-hero-signature": {
+      "titre": "La Collection",
+      "role": "ouverture",
+      "description": "Ouverture Propriétés Signature : « La Collection » avec la recherche",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "recherche",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-resultats": {
+      "titre": "Propriétés",
+      "role": "produits",
+      "description": "Annonces : cartes dont les photos défilent, labels vérifiés, favoris et partage, tri et filtres",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "signature-ventes-confidentielles": {
+      "titre": "Certaines propriétés ne se montrent pas",
+      "role": "offre",
+      "description": "« Certaines propriétés ne se montrent pas » : enveloppe crème au cachet LN, « brisez le cachet » pour découvrir une vente confidentielle (sans prix ni photo)",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "vente confidentielle dans une enveloppe dont on brise le cachet"
+      ]
+    },
+    "signature-location": {
+      "titre": "Si votre installation commençait par une location sur mesure ?",
+      "role": "offre",
+      "description": "« Si votre installation commençait par une location sur mesure ? »",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-hero-collection": {
+      "titre": "Appartements de prestige",
+      "role": "ouverture",
+      "description": "Ouverture d'une collection : titre en Bodoni, photo, repères",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-collection-texte": {
+      "titre": "La collection Appartements de prestige",
+      "role": "manifeste",
+      "description": "Texte de la collection avec lettrine, article du carnet lié",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-resultats": {
+      "titre": "Les biens de la collection",
+      "role": "produits",
+      "description": "Les biens de la collection en cartes d'annonces",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-galerie-section": {
+      "titre": "Quelques exemples",
+      "role": "galerie",
+      "description": "« Quelques exemples » : galerie horizontale à glisser",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-collection-nav": {
+      "titre": "Autres collections",
+      "role": "menu",
+      "description": "Liens vers les autres collections",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "signature-appartements-de-prestige-appel": {
+      "titre": "Votre appartement, sur mesure",
+      "role": "appel",
+      "description": "« Votre appartement, sur mesure » : appel de fin de collection",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-hero-prestations": {
+      "titre": "Du premier café à la célébration",
+      "role": "ouverture",
+      "description": "Ouverture Sur mesure : « Du premier café à la célébration », sommaire des six prestations en encart",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-prestige": {
+      "titre": "Propriétés de prestige",
+      "role": "services",
+      "description": "01 Propriétés de prestige : photo et texte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-expatriation": {
+      "titre": "Expatriation et location",
+      "role": "services",
+      "description": "02 Expatriation et location : démarches cochées",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-conseil": {
+      "titre": "Conseil en projet immobilier",
+      "role": "services",
+      "description": "03 Conseil en projet immobilier : maquette d'architecte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-confidentiel": {
+      "titre": "Ventes confidentielles",
+      "role": "offre",
+      "description": "04 Ventes confidentielles : l'enveloppe au cachet",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-composer": {
+      "titre": "Composez votre art de vivre",
+      "role": "outil-interactif",
+      "description": "« Composez votre art de vivre » : trois questions (envies, projet, type de bien), la carte de l'île s'éclaire sur les régions qui conviennent et la proposition se compose",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "configurateur",
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "configurateur dont les envies éclairent la carte de l'île"
+      ]
+    },
+    "sur-mesure-proposition": {
+      "titre": "Votre projet sur mesure",
+      "role": "outil-interactif",
+      "description": "« Votre projet sur mesure » : la fiche de proposition qui se remplit, à envoyer",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-etapes": {
+      "titre": "Six étapes, une seule interlocutrice",
+      "role": "étapes",
+      "description": "« Six étapes, une seule interlocutrice » : étapes épinglées, la photo change à chaque étape",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-temoignage-seul": {
+      "titre": "",
+      "role": "témoignages",
+      "description": "Témoignage des propriétaires, sceau",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-appel": {
+      "titre": "Discutons ensemble de vos projets immobiliers",
+      "role": "appel",
+      "description": "« Discutons ensemble de vos projets immobiliers »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-hero-vivre": {
+      "titre": "Vivre à Maurice",
+      "role": "ouverture",
+      "description": "Ouverture Vivre à Maurice : le Morne en plein écran, titre en Bodoni italique, heure locale en direct et décalage avec chez vous",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-regions": {
+      "titre": "Choisir sa côte",
+      "role": "carte",
+      "description": "« Choisir sa côte » : carte de l'île en relief, onglets des cinq régions, la région survolée s'éclaire avec ses atouts",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-art-de-vivre": {
+      "titre": "Une journée à Maurice",
+      "role": "outil-interactif",
+      "description": "« Une journée à Maurice » : scène épinglée, le soleil suit son arc de 6 h 15 au couchant, photo, teinte du ciel et texte en plans de vitesses différentes, son du lagon à écouter",
+      "animations": [
+        "section-fixée",
+        "parallaxe",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "journée type au défilement : soleil sur son arc et ciel qui change d'heure"
+      ]
+    },
+    "vivre-a-maurice-saisons": {
+      "titre": "Deux saisons, le soleil toute l’année",
+      "role": "agenda",
+      "description": "« Deux saisons, le soleil toute l'année » : cadran des douze mois, le mois du jour en évidence, été et hiver austral",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-passions": {
+      "titre": "Golf, voile, pêche, randonnée ou kitesurf",
+      "role": "galerie",
+      "description": "Golf, voile, pêche, randonnée, kitesurf en cinq photos verticales",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-reperes": {
+      "titre": "Six repères avant de vous lancer",
+      "role": "faq",
+      "description": "« Six repères avant de vous lancer » sur fond nuit, sources citées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vivre-a-maurice-carnet-accueil": {
+      "titre": "Pour aller plus loin",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "« À lire aussi » : même bloc que carnet-accueil"
+    },
+    "vivre-a-maurice-appel": {
+      "titre": "Votre nouvelle vie, côté lagon",
+      "role": "appel",
+      "description": "« Votre nouvelle vie, côté lagon »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

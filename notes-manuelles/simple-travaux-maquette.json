@@ -1,0 +1,640 @@
+{
+  "maquette": {
+    "client": "artisan plombier, chauffagiste et électricien indépendant à Longueil-Sainte-Marie (Oise), 100 tarifs TTC affichés, salle de bain PMR",
+    "activite": [
+      "bâtiment",
+      "artisanat"
+    ],
+    "concept": [
+      "autre"
+    ],
+    "ambiance": [
+      "clair",
+      "industriel",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--encre",
+      "accent": "--cuivre",
+      "secondaire": "--eau-froide"
+    },
+    "polices": {
+      "titres": "Archivo",
+      "texte": "Instrument Sans",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "« Le Réseau » : un plan de plomberie vivant sur papier calque ; une canalisation de cuivre longe toute la page, se branche dans chaque section par un raccord et une vanne, l'eau y circule au rythme du défilement",
+      "ouverture : maison en coupe avec ses réseaux d'eau froide, d'eau chaude et d'électricité, et les vrais prix au survol de chaque poste",
+      "compteur d'eau à rouleaux pour les prix, vannes quart de tour des étapes, compas qui balaie les 30 km",
+      "page Prestations : collecteur à six vannes (tourner une vanne remplit la rampe et fait bondir le manomètre), diagnostic par symptôme, catalogue des 101 prestations",
+      "estimateur sur 10 pièces et 100 tarifs réels, total en direct partagé avec le catalogue",
+      "transition de page « vidange », ondulation d'eau en WebGL sur les images"
+    ],
+    "reserves": [
+      "maquette d'avant la v10.2 : bouton du mode calme dans l'en-tête, voile non relevé par la grille",
+      "photo de Pedro à fournir (encart « photo à fournir ») ; images d'intérieurs génériques",
+      "beaucoup de petits textes mono gris sur le papier"
+    ],
+    "animations": [
+      "fil-conducteur",
+      "trace-svg",
+      "compteur",
+      "section-fixée",
+      "webgl-shader",
+      "transition-de-page",
+      "révélation-texte",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "calculateur",
+      "schema-interactif",
+      "filtres",
+      "recherche",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "haut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "maison en coupe avec ses réseaux et ses prix",
+      "fil": "canalisation de cuivre qui longe la page, l’eau y circule au défilement"
+    },
+    "metier": "plombier chauffagiste"
+  },
+  "sections": {
+    "ouverture": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Écran de chargement aux couleurs du plan, le temps que polices et images arrivent",
+      "animations": [
+        "chargement-orchestré"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo, liens, pastille « ouvert », numéro, bouton du mode calme",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec le numéro",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "haut": {
+      "titre": "Votre plombier dans l’Oise. Le prix, avant le déplacement.",
+      "role": "ouverture",
+      "description": "Ouverture : « Votre plombier dans l'Oise. Le prix, avant le déplacement. » ; à droite la maison en coupe sur papier calque, réseaux d'eau froide, d'eau chaude et d'électricité qui se tracent, étiquettes de prix sur chaque poste, trois tarifs réels au survol",
+      "animations": [
+        "trace-svg",
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "splittext",
+        "drawsvg-morphsvg"
+      ],
+      "particularites": [
+        "maison en coupe dont chaque poste affiche ses vrais prix"
+      ]
+    },
+    "urgence": {
+      "titre": "Une fuite, un WC bouché, plus d’eau chaude ?",
+      "role": "appel",
+      "description": "« Une fuite, un WC bouché, plus d'eau chaude ? » sur fond bleu de plan : robinet de cuivre dont une goutte tombe, numéro en grand",
+      "animations": [
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pieces": {
+      "titre": "Choisissez la pièce, le prix suit.",
+      "role": "services",
+      "description": "« Choisissez la pièce, le prix suit » : galerie horizontale des pièces (WC, lavabo, douche…), nombre de tarifs et un exemple de prix par carte, cotes de plan autour des images",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "comment": {
+      "titre": "Quatre vannes, zéro surprise.",
+      "role": "étapes",
+      "description": "« Quatre vannes, zéro surprise » : quatre étapes, chaque vanne quart de tour s'ouvre au défilement",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "vannes quart de tour qui s'ouvrent étape par étape"
+      ]
+    },
+    "prix": {
+      "titre": "Le tarif s’affiche. Il ne bouge plus.",
+      "role": "tarifs",
+      "description": "« Le tarif s'affiche. Il ne bouge plus. » : compteur d'eau à rouleaux qui affiche le prix de l'exemple choisi (WC bouché, groupe de sécurité, ballon)",
+      "animations": [
+        "compteur",
+        "section-fixée"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "prix affichés sur un compteur d'eau à rouleaux"
+      ]
+    },
+    "pedro": {
+      "titre": "Pedro, artisan indépendant. Pas de plateforme, pas de sous-traitance.",
+      "role": "équipe",
+      "description": "« Pedro, artisan indépendant » : fiche de plan avec encart « photo à fournir », trois engagements, établi d'outils",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Encart « photo à fournir » à la place du portrait"
+      ]
+    },
+    "zone": {
+      "titre": "30 km autour de Longueil-Sainte-Marie.",
+      "role": "carte",
+      "description": "« 30 km autour de Longueil-Sainte-Marie » : compas qui balaie le rayon sur fond bleu de plan, communes par secteur avec leur distance, survoler une commune la montre",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "pmr": {
+      "titre": "Une salle de bain adaptée, pour rester autonome.",
+      "role": "offre",
+      "description": "« Une salle de bain adaptée » : photo de salle de bain PMR, prix des équipements en liste cotée",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Parlez directement à votre artisan.",
+      "role": "appel",
+      "description": "« Parlez directement à votre artisan » : numéro en très grand sur fond bleu, appeler, SMS, estimer, rendez-vous",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu de plan : contact, horaires, pages",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "barre": {
+      "titre": "Actions rapides",
+      "role": "barre-fixe",
+      "description": "Barre d'actions rapides du téléphone : appeler, estimer",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "vidange": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Transition « vidange » entre les pages : l'écran se remplit puis se vide comme un bac",
+      "animations": [
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "curseur": {
+      "titre": "",
+      "role": "decor",
+      "description": "Curseur personnalisé à la souris",
+      "animations": [
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "gl-ondes": {
+      "titre": "",
+      "role": "decor",
+      "description": "Ondulation d'eau en WebGL sur les images au survol",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "ogl"
+      ]
+    },
+    "reseau": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil de la page : canalisation de cuivre qui longe toute la page, se branche dans chaque section par un raccord et une vanne, l'eau y circule au rythme du défilement, gouttes au raccord",
+      "animations": [
+        "fil-conducteur",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "canalisation de cuivre où l'eau circule au défilement, un raccord par section"
+      ]
+    },
+    "404-e404": {
+      "titre": "Cette page n’existe pas.",
+      "role": "page-404",
+      "description": "404 « Cette page n'existe pas » : tuyau coupé, retour à l'accueil",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-contact-hero": {
+      "titre": "Appelez Pedro.",
+      "role": "contact",
+      "description": "Ouverture Contact : « Appelez Pedro », numéro en grand, camionnette et intervention",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-rendez-vous": {
+      "titre": "Choisissez un créneau.",
+      "role": "contact",
+      "description": "« Choisissez un créneau » : calendrier du mois, créneaux, type d'intervention et coordonnées, rendez-vous simulé",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "contact-zone": {
+      "titre": "Votre commune est-elle couverte ?",
+      "role": "carte",
+      "description": "« Votre commune est-elle couverte ? » : même compas des 30 km que l'accueil",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-message": {
+      "titre": "Une question, un projet ?",
+      "role": "contact",
+      "description": "« Une question, un projet ? » : formulaire de message simulé, cuisine en photo",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estimation-estim-hero": {
+      "titre": "Votre prix en trois gestes.",
+      "role": "ouverture",
+      "description": "Ouverture Estimation : « Votre prix en trois gestes », compteur à zéro",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estimation-estimateur": {
+      "titre": "Quelle pièce est concernée ?",
+      "role": "calculateur",
+      "description": "Estimateur : on choisit la pièce parmi dix, on coche les interventions (100 tarifs TTC du site actuel), le compteur à rouleaux additionne en direct",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "estimation-demande": {
+      "titre": "Pedro vous rappelle pour confirmer.",
+      "role": "contact",
+      "description": "« Pedro vous rappelle pour confirmer » : urgence ou rendez-vous, créneaux, coordonnées, demande simulée",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estimation-inclus": {
+      "titre": "Un prix clair, et ce qu’il couvre.",
+      "role": "offre",
+      "description": "« Un prix clair, et ce qu'il couvre » : compris et non compris en deux colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estimation-appel": {
+      "titre": "Pedro vous répond avant de valider.",
+      "role": "appel",
+      "description": "« Pedro vous répond avant de valider » : numéro en grand sur fond bleu",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-legal": {
+      "titre": "Mentions légales et confidentialité",
+      "role": "texte-legal",
+      "description": "Mentions légales et confidentialité, sommaire collant, informations à compléter comptées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-collecteur": {
+      "titre": "Tout ce que Pedro répare, pose et transforme.",
+      "role": "outil-interactif",
+      "description": "Le collecteur : rampe de cuivre et six vannes quart de tour (dépannage, sanitaires, chauffe-eau, chauffage, électricité, PMR) ; tourner une vanne fait jaillir l'eau, remplit la rampe, fait bondir l'aiguille du manomètre et ouvre la fiche du métier avec ses prix",
+      "animations": [
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "collecteur de vannes : chaque vanne ouvre un métier, le manomètre compte ses tarifs"
+      ]
+    },
+    "prestations-diagnostic": {
+      "titre": "Qu’est-ce qui ne va pas ?",
+      "role": "outil-interactif",
+      "description": "« Qu'est-ce qui ne va pas ? » : sept symptômes à pictogrammes animés, chacun affiche les vraies prestations concernées avec leur prix, robinet qui goutte",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-catalogue": {
+      "titre": "100 tarifs, rangés par métier.",
+      "role": "tarifs",
+      "description": "« 100 tarifs, rangés par métier » : les 101 prestations avec vannes de filtre, recherche sans accents, bouton « + » qui ajoute la ligne à l'estimation, total en direct",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-appel": {
+      "titre": "Une intervention qui n’est pas listée ? Demandez à Pedro.",
+      "role": "appel",
+      "description": "« Une intervention qui n'est pas listée ? » : numéro en grand sur fond bleu",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

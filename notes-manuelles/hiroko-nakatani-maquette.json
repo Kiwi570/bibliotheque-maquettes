@@ -1,0 +1,715 @@
+{
+  "maquette": {
+    "client": "instructrice de méditation de pleine conscience (MBSR) à Paris Est et en ligne, marches en silence dans le bois de Vincennes, association IMA KOKO-LO",
+    "activite": [
+      "bien-être",
+      "formation"
+    ],
+    "concept": [
+      "autre"
+    ],
+    "ambiance": [
+      "clair",
+      "doux",
+      "végétal"
+    ],
+    "palette": {
+      "fond": "--washi",
+      "texte": "--encre",
+      "accent": "--accent",
+      "secondaire": "--bronze"
+    },
+    "polices": {
+      "titres": "Shippori Mincho",
+      "texte": "Albert Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "« La cloche qui chante » : un bol chantant en bronze martelé reste à l'écran sur l'accueil, on le fait chanter en tournant sur le bord, on l'effleure sur l'eau (son synthétisé, après un geste)",
+      "l'eau du bol reflète l'image de la section qu'on lit ; la cloche change de taille et de place d'une section à l'autre",
+      "intro : l'ensō du logo se trace, le 念 s'écrit, le logo tombe comme une goutte dans le bol et la page s'ouvre en onde",
+      "mot-clé de chaque titre posé au pinceau (encre qui bave puis sèche), 今 + 心 = 念 tracé au défilement",
+      "plongée finale dans le bois entre trois plans, plongée des huit semaines MBSR sous l'eau",
+      "feuilles de la vraie saison, anneau des thèmes à faire tourner, ensō à tracer soi-même, carte au pinceau de l'est parisien"
+    ],
+    "reserves": [
+      "pas de portrait d'Hiroko (aquarelle de cerisier à la place) ; beaucoup d'illustrations générées",
+      "prix des formules annuelles et dates du cycle MBSR absents du site actuel (« sur demande »)",
+      "sur téléphone la cloche devient une petite pastille : l'effet signature y est bien moins présent"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "trace-svg",
+      "section-fixée",
+      "canvas-2d",
+      "webgl-shader",
+      "parallaxe",
+      "transition-de-page",
+      "révélation-texte"
+    ],
+    "interactions": [
+      "ambiance-sonore",
+      "jeu",
+      "filtres",
+      "formulaire-par-étapes",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "objet-unique",
+    "grille": {
+      "objet": "bol chantant en bronze à faire chanter au bord ou à effleurer sur l’eau",
+      "fil": "petite cloche de marge qui sonne à chaque section"
+    },
+    "metier": "instructrice de méditation MBSR"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile « onde » : un disque d'eau part du clic avec des anneaux en avance et des reflets de lumière (caustiques), la page suivante s'ouvre en onde depuis son objet d'ouverture",
+      "animations": [
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "ouverture",
+      "description": "Intro : l'ensō du logo IMA KOKO-LO se trace, le 念 s'écrit, puis le logo tombe comme une goutte dans l'eau de la cloche et la page s'ouvre en onde",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo et nom, liens des pages, bouton Réserver vert",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone : liens des pages en Shippori Mincho, contact et billetterie",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "debut": {
+      "titre": "Revenir à l’instant, en marchant, ensemble.",
+      "role": "ouverture",
+      "description": "Ouverture : « Revenir à l'instant, en marchant, ensemble » en Shippori Mincho, mot-clé au pinceau ; à droite le bol chantant en bronze martelé, son eau montre le bois d'automne ; tourner sur le bord le fait chanter, effleurer l'eau le frappe ; prochaine séance et compte à rebours",
+      "animations": [
+        "webgl-shader",
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "ambiance-sonore",
+        "jeu"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bol chantant à faire chanter en tournant sur le bord (son synthétisé dans le navigateur, après un geste)",
+        "eau du bol qui reflète l'image de la section en cours"
+      ]
+    },
+    "nen": {
+      "titre": "Maintenant, et le cœur",
+      "role": "manifeste",
+      "description": "« Maintenant, et le cœur » : 今 + 心 = 念 tracés au pinceau au défilement, avec leur lecture, et la cloche réduite à côté",
+      "animations": [
+        "trace-svg",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "pratiques": {
+      "titre": "Dehors, en salle, chez vous, ou sur huit semaines",
+      "role": "offre",
+      "description": "Quatre pratiques sur une ligne (marche, atelier, en ligne, MBSR) : photo, prix, description ; la cloche passe en médaillon en bas à droite",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marche": {
+      "titre": "Deux heures dans le bois, en silence",
+      "role": "étapes",
+      "description": "« Deux heures dans le bois, en silence » : scène épinglée de 9 h 55 à midi, l'heure avance au défilement et la cloche sonne à chaque arrêt",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "dates": {
+      "titre": "Choisissez votre moment",
+      "role": "agenda",
+      "description": "« Choisissez votre moment » : rangée de feuilles d'automne, prochaines dates en deux colonnes avec bouton de réservation (récapitulatif avant Billetweb)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hiroko": {
+      "titre": "Hiroko Nakatani",
+      "role": "équipe",
+      "description": "« Hiroko Nakatani » : parcours, ensō tracé au pinceau autour de l'aquarelle de cerisier (pas de portrait), témoignage",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Pas de portrait : l'aquarelle ne remplace pas un visage pour un métier de la relation"
+      ]
+    },
+    "plongee": {
+      "titre": "Venez marcher dans le bois",
+      "role": "appel",
+      "description": "Plongée finale : on entre dans le bois d'automne entre trois plans (feuillage net, flou, photo), poussière d'or qui monte, le titre « Venez marcher dans le bois » naît au centre d'une onde avec le son de la cloche",
+      "animations": [
+        "section-fixée",
+        "parallaxe",
+        "webgl-particules"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit : logo, sommaire, contact, billetterie",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "recap": {
+      "titre": "",
+      "role": "outil-interactif",
+      "description": "Panneau de réservation : récapitule quoi, quand, où, quoi apporter et le prix, puis « Continuer sur Billetweb » ; une goutte tombe dans la cloche et la date passe en « Billetterie ouverte »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "mini-cloche": {
+      "titre": "Faire sonner la cloche · section 1 sur 7",
+      "role": "barre-fixe",
+      "description": "Fil : petite cloche dans la marge gauche (barre du bas sur téléphone) qui sonne à chaque section et montre l'avancée dans la page",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "pastille-son": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Pastille du son de la cloche, coupé par défaut",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "defs-svg": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "définitions SVG invisibles (filtres de pinceau)"
+    },
+    "404-debut": {
+      "titre": "Le sentier se perd ici",
+      "role": "page-404",
+      "description": "404 « Le sentier se perd ici » : brume dans le bois, ensō à tracer soi-même pour revenir",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-debut": {
+      "titre": "Toutes les dates",
+      "role": "ouverture",
+      "description": "Ouverture Agenda : « Toutes les dates », prochaine séance en encart, rangée de feuilles aux couleurs de l'année",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-dates": {
+      "titre": "novembre 2026",
+      "role": "agenda",
+      "description": "Dix feuilles de septembre à juin (la feuille du mois s'allume, un clic mène au mois), filtres par pratique, dates passées grisées à l'heure de Paris, compte à rebours qui suit le filtre",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-tarifs": {
+      "titre": "À l’unité, ou à l’année",
+      "role": "tarifs",
+      "description": "« À l'unité, ou à l'année » : cartes de prix et formules, lien vers Billetweb",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ateliers-debut": {
+      "titre": "Un thème par mois, toute l’année",
+      "role": "ouverture",
+      "description": "Ouverture Ateliers : « Un thème par mois, toute l'année », anneau des thèmes à faire tourner (souris, doigt, flèches) avec élan et aimantation ; le centre montre le mois et le thème",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "ateliers-cycle": {
+      "titre": "Le cycle 2026-2027",
+      "role": "agenda",
+      "description": "Tableau du cycle 2026-2027 : mois, thème, samedi en salle, mardis en ligne",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ateliers-atelier": {
+      "titre": "Un samedi par mois, de 14 h à 16 h",
+      "role": "offre",
+      "description": "Atelier mensuel du samedi : photo de la salle, déroulé, accès et prix",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ateliers-en-ligne": {
+      "titre": "Le mardi, de 20 h à 20 h 45",
+      "role": "offre",
+      "description": "Méditation du mardi soir : la nuit tombe au défilement (étoiles), la lampe s'allume en vacillant",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ateliers-saison": {
+      "titre": "Trois fois par an, au changement de saison",
+      "role": "offre",
+      "description": "Ateliers de saison au Jardin d'agronomie tropicale : cerisier en fleurs, trois dates",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Écrire à Hiroko",
+      "role": "contact",
+      "description": "Ouverture Contact : « Écrire à Hiroko », e-mail en grand, photo de bord de lac au matin",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre message, en trois temps",
+      "role": "contact",
+      "description": "« Votre message, en trois temps » : formulaire par étapes, le message envoyé se plie en lettre et part en goutte vers la cloche, tampon « reçu »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-lieux": {
+      "titre": "Où se retrouver",
+      "role": "carte",
+      "description": "« Où se retrouver » : carte de l'est parisien dessinée au pinceau (bois de Vincennes, lacs, Marne, RER A), les cinq lieux tombent un à un, lien Itinéraire par lieu",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "contact-enso": {
+      "titre": "Tracez votre ensō",
+      "role": "outil-interactif",
+      "description": "« Tracez votre ensō » : cercle à tracer d'un seul geste, la trace sèche comme de l'encre",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "marches-debut": {
+      "titre": "Marcher en silence dans le bois",
+      "role": "ouverture",
+      "description": "Ouverture Marches : « Marcher en silence dans le bois », plan rond des quatre parcours qui se tracent tour à tour puis un marcheur les parcourt",
+      "animations": [
+        "trace-svg",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "marches-deroule": {
+      "titre": "De 10 h à midi",
+      "role": "étapes",
+      "description": "« De 10 h à midi » : déroulé en cinq temps, les photos des étapes se découvrent comme une eau qui monte",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marches-parcours": {
+      "titre": "Le bois, saison après saison",
+      "role": "offre",
+      "description": "Quatre parcours (Parc floral, Jardin d'agronomie, cours d'eau, château) avec leur prochaine date et compte à rebours",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marches-tarifs": {
+      "titre": "20 € la marche, 38 € à deux",
+      "role": "tarifs",
+      "description": "« 20 € la marche, 38 € à deux » : feuilles de la vraie saison qui tombent devant la photo",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marches-temoignage": {
+      "titre": "Une marche pour votre groupe ?",
+      "role": "témoignages",
+      "description": "Témoignage d'une participante et marche pour un groupe",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mbsr-debut": {
+      "titre": "Huit semaines pour installer une pratique",
+      "role": "ouverture",
+      "description": "Ouverture MBSR : « Huit semaines pour installer une pratique », lac à l'aube dans une arche, le lac ondule au défilement et sous la souris",
+      "animations": [
+        "webgl-shader"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mbsr-origine": {
+      "titre": "Créé en 1979, par Jon Kabat-Zinn",
+      "role": "manifeste",
+      "description": "« Créé en 1979, par Jon Kabat-Zinn » : 1979 s'écrit au trait puis se remplit d'encre",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mbsr-semaines": {
+      "titre": "Huit séances en groupe, de 2 h 30 à 3 h",
+      "role": "étapes",
+      "description": "Huit séances en plongée : on descend palier par palier sous l'eau, rayons de lumière qui s'éteignent avec la profondeur, bulles qui remontent",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "mbsr-engagement": {
+      "titre": "Être là, et pratiquer entre les séances",
+      "role": "manifeste",
+      "description": "« Être là, et pratiquer entre les séances » : coussin dans une chambre claire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mbsr-tarif": {
+      "titre": "450 € le programme",
+      "role": "tarifs",
+      "description": "« 450 € le programme » centré, inscription",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
