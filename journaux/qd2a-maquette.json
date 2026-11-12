@@ -245,6 +245,140 @@
    ],
    "notes": "L'audit complet de la v1 avec l'audit v10.10 a été arrêté en cours (mesures faites, films en cours) : les fichiers du site changeaient pendant la refonte. La v1 avait eu son audit complet le 7 novembre (0 échec).",
    "valideeLe": null
+  },
+  {
+   "version": 3,
+   "skill": "v10.10",
+   "perimetre": [
+    "accueil"
+   ],
+   "demande": "rendre la section « D'un e-mail à la scène » de l'accueil plus fluide et corriger ses petits défauts",
+   "etapes": [
+    {
+     "etape": "correction de la scène du trajet et fluidité de l'accueil",
+     "budget": 30,
+     "debut": "2026-11-12T17:15:00+01:00",
+     "fin": "2026-11-12T17:28:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "audit": {
+    "niveau": "ciblé sur l'accueil (fichiers, mesures, mouvement, fluidité, films)",
+    "echecs": 0,
+    "fluidite": "0 % d'images lentes (ordinateur ralenti et téléphone), contre 2 % avant"
+   },
+   "corrections": [
+    "timeline du trajet liée au défilement par GSAP (scrub) au lieu d'être recalée à chaque événement",
+    "document reçu dessiné à sa taille puis réduit jusqu'à sa place (plus de petit feuillet agrandi trois fois)",
+    "tampons « Favorable » posés sur les visages, plus sur le texte des fiches",
+    "description de l'étape active dans un panneau à hauteur fixe : la colonne ne saute plus",
+    "états de départ posés une fois, plus de réenregistrement au rafraîchissement",
+    "Q de l'ouverture déplacé d'un seul bloc au défilement, fond du comité glissé en calque"
+   ],
+   "effetsRetires": [
+    "écartement des formes du Q au défilement (remplacé par un mouvement d'ensemble)"
+   ]
+  },
+  {
+   "version": 4,
+   "skill": "v10.10",
+   "perimetre": [
+    "accueil",
+    "saison",
+    "appel",
+    "hydre",
+    "contact",
+    "404"
+   ],
+   "demande": "corriger la pile des 26 textes, puis audit complet et analyse approfondie de tout le site, corrections pour une version optimale",
+   "etapes": [
+    {
+     "etape": "pile des 26 : défilement adouci, feuilles du dessous propres, texte net",
+     "budget": 15,
+     "debut": "2026-11-12T17:34:00+01:00",
+     "fin": "2026-11-12T17:37:00+01:00"
+    },
+    {
+     "etape": "analyse de tout le site (captures page par page, regard neuf)",
+     "budget": 20,
+     "debut": "2026-11-12T17:37:00+01:00",
+     "fin": "2026-11-12T17:52:00+01:00"
+    },
+    {
+     "etape": "corrections de tout le site (faits, geste d’envoi, appel, saison, Hydre, contact, 404, accueil) et audit rapide",
+     "budget": 60,
+     "debut": "2026-11-12T17:52:00+01:00",
+     "fin": "2026-11-12T18:13:43+01:00"
+    },
+    {
+     "etape": "audit complet et corrections",
+     "budget": 45,
+     "debut": "2026-11-12T18:13:43+01:00",
+     "fin": "2026-11-12T19:06:24+01:00"
+    },
+    {
+     "etape": "livraison (CHANGELOG, README, journal, zip)",
+     "budget": 5,
+     "debut": "2026-11-12T19:06:24+01:00",
+     "fin": "2026-11-12T19:06:48+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "audit": {
+    "niveau": "complet (14 formats, sans JavaScript, calme, films, fluidité, mouvement, captures)",
+    "premierPassage": {
+     "echecs": 29,
+     "aRegarder": 4
+    },
+    "echecsPremierPassage": [
+     "sections sans visuel après le retrait des images générées (fiche, envoi, objets, bandeau, manifeste, fins de page, ouverture de l’Hydre sur petits écrans)",
+     "chiffre « 200 » et ses légendes qui se chevauchaient",
+     "contraste du chiffre 3 des étapes (texte foncé sur vert)",
+     "textes sous 12 px (noms des têtes sur téléphone, tampons des coups de cœur)",
+     "bouton principal hors du premier écran (appel à l’horizontale, Hydre sans JavaScript)",
+     "noms des têtes qui se touchaient sur les petits dessins"
+    ],
+    "relances": 4,
+    "echecsFinal": 0,
+    "aRegarderFinal": [
+     "trois effets au clic (tirage des lecteurs, sommaire, têtes de l’Hydre réservées à l’ordinateur) : voulu",
+     "changement brusque au retour avant sur la saison : changement de page normal"
+    ],
+    "fluidite": "0 % d’images lentes sur toutes les pages (ordinateur ralenti et téléphone)",
+    "nonLance": "Safari (WebKit) : à vérifier sur le Mac"
+   },
+   "effetsRetires": [
+    "lampe qui suit le pointeur (appel)",
+    "route et enveloppe épinglées (appel)",
+    "pile des 26 épinglée (saison)",
+    "dépôt simulé et lettre qui se plie (appel, contact)",
+    "éclairage mot à mot du manifeste (Hydre)"
+   ],
+   "modulesReutilises": [
+    "trois-lecteurs (accueil, repris en ouverture de l’appel)"
+   ],
+   "auditRapide": {
+    "echecs": 0,
+    "aRegarder": 2,
+    "note": "deux « changements brusques » au retour avant sur la saison : changement de page normal (image 0 = page précédente)"
+   },
+   "corrections": [
+    "un seul geste d’envoi (e-mail avec objet et fiche), formulaires simulés supprimés",
+    "un seul bouton : prune sur crème, orange sur fonds sombres ; barre du téléphone à un bouton",
+    "six phrases remises d’aplomb (lectures, prix, 191/200, « peu de comités », « chaque pays », signature, 28 mentions)",
+    "appel refait sur trois visages tirés au sort, étapes fixes, livres en grand, envoi par e-mail avec aperçu",
+    "saison : sommaire des 26 trié par pays, lectures avec visages, tampons sous les photos",
+    "Hydre : têtes en visages, manifeste lisible avec « La pêche miraculeuse », 6 visages canadiens tirés de l’affiche",
+    "contact : quatre objets e-mail, adresse et vraie façade, plus de plan inventé",
+    "404 : titre à droite de la servante, deux liens de plus",
+    "six illustrations générées retirées"
+   ],
+   "effetsAjoutes": [
+    "tirage de trois autres lecteurs (cartes qui tournent)",
+    "sommaire filtrable dont les titres glissent à leur place (retour physique du filtre)"
+   ]
   }
  ]
 }

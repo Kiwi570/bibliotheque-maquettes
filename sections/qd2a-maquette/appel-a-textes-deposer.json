@@ -2,15 +2,14 @@
  "id": "qd2a-maquette/appel-a-textes-deposer",
  "maquette": "qd2a-maquette",
  "page": "appel-a-textes",
- "titre": "Glissez votre texte dans l’enveloppe",
+ "titre": "Votre texte part par e-mail",
  "role": "contact",
- "description": "Dépôt simulé en trois étapes (vous, le texte avec ses PDF, récapitulatif) ; à l'envoi, la feuille glisse dans l'enveloppe, le rabat se ferme, l'enveloppe part et revient tamponnée « Reçu »",
+ "description": "Bande prune : trois étapes (remplir la fiche, joindre le texte, écrire au comité), l'adresse en grand, un grand bouton qui ouvre la messagerie avec l'objet rempli, et l'aperçu de l'e-mail à envoyer (À, Objet, pièces jointes) en carte penchée",
  "animations": [
-  "apparition-au-défilement",
-  "reactif-vitesse"
+  "apparition-au-défilement"
  ],
  "interactions": [
-  "formulaire-par-étapes"
+  "aucune"
  ],
  "dependances": [
   "aucune"
@@ -21,23 +20,23 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "appel-a-textes.html:219-262",
-  "css": "assets/css/socle.css:285-292 ; assets/css/site.css:279-281,506-508,526-560,639,647,686,712-716,737,769,776",
-  "js": "assets/js/site.js:3,333-365,469-508,526-558,596 ; assets/js/socle/index.js:38-61 ; assets/js/socle/gouttiere.js:59-91 ; assets/js/socle/effets.js:216-236 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/calme.js:1"
+  "html": "appel-a-textes.html:208-233",
+  "css": "assets/css/site.css:480,550,669,706-718,797,834-839,847",
+  "js": null
  },
  "medias": {
   "capture": "medias/qd2a-maquette/appel-a-textes-deposer-p1440.jpg",
   "capture_m390": "medias/qd2a-maquette/appel-a-textes-deposer-m390.jpg"
  },
- "pieges": [],
+ "pieges": [
+  "Le client reçoit tout par e-mail : un formulaire simulé faisait finir l'action principale sur « rien n'est envoyé »"
+ ],
  "mesures": {
-  "hauteur_p1440": 817,
-  "hauteur_m390": 1332,
+  "hauteur_p1440": 751,
+  "hauteur_m390": 1292,
   "epinglee": false,
   "scrolltriggers": 0
  },
- "familles": [
-  "vitesse"
- ],
- "impact": "vivant"
+ "familles": [],
+ "impact": "calme"
 }

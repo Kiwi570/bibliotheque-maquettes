@@ -3,11 +3,9 @@
  "maquette": "qd2a-maquette",
  "page": "appel-a-textes",
  "titre": "Une fiche, toujours",
- "role": "preuves",
- "description": "Photo générée de fiches de lecture en rideau, titre dont la police s'assouplit au défilement, compteur des 200 pièces reçues",
+ "role": "chiffres",
+ "description": "« Environ 200 textes reçus par saison » en chiffre géant prune, à côté de la promesse d'une fiche de lecture pour chaque texte",
  "animations": [
-  "révélation-image",
-  "compteur",
   "révélation-texte"
  ],
  "interactions": [
@@ -23,20 +21,24 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "appel-a-textes.html:204-218",
-  "css": "assets/css/site.css:522-524,647",
-  "js": "assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
+  "html": "appel-a-textes.html:197-207",
+  "css": "assets/css/site.css:476-478,550,701-705,797,802",
+  "js": null
  },
  "medias": {
   "capture": "medias/qd2a-maquette/appel-a-textes-fiche-p1440.jpg"
  },
- "pieges": [],
+ "pieges": [
+  "Chiffre géant en Fraunces : interligne 1,2 et écart entre les lignes, sinon les boîtes du texte se chevauchent pour l'audit"
+ ],
  "mesures": {
-  "hauteur_p1440": 821,
-  "hauteur_m390": 1053,
+  "hauteur_p1440": 492,
+  "hauteur_m390": 672,
   "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [],
+ "familles": [
+  "typo-geante"
+ ],
  "impact": "vivant"
 }

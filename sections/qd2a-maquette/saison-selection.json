@@ -4,11 +4,10 @@
  "page": "saison",
  "titre": "Les 26 textes",
  "role": "produits",
- "description": "Pile des 26 tapuscrits épinglée qu'on feuillette au défilement (celui de devant bascule vers soi et s'efface), accrochage sur chaque texte, filtre par pays gardé dans l'adresse",
+ "description": "Sommaire typographique des 26 textes sur trois colonnes (titre en Fraunces, autrice ou auteur, pays), lauréate et coups de cœur marqués à leur couleur ; les filtres par pays rangent la liste et les titres glissent à leur nouvelle place (FLIP), filtre gardé dans l'adresse",
  "animations": [
-  "section-fixée",
-  "empilement-de-fiches",
-  "filtre-anime"
+  "filtre-anime",
+  "flip"
  ],
  "interactions": [
   "filtres"
@@ -18,14 +17,14 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 5,
+ "note_qualite": 4,
  "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "saison.html:163-319",
-  "css": "assets/css/site.css:418-447,640-644,684-685,691-692",
-  "js": "assets/js/site.js:3,129-155,378,389-437 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+  "html": "saison.html:163-290",
+  "css": "assets/css/site.css:423-426,721-734,788-790,797,803-804",
+  "js": "assets/js/site.js:128-155,422,433-460,528 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/lecture.js:1,5-30"
  },
  "medias": {
   "capture": "medias/qd2a-maquette/saison-selection-p1440.jpg",
@@ -33,17 +32,17 @@
   "video": "medias/qd2a-maquette/saison-selection-p720.mp4"
  },
  "pieges": [
-  "Grille en 1fr élargie par la rangée de filtres en nowrap : minmax(0, 1fr)",
-  "role=region sur la liste lui retirait sa sémantique : le poser sur le conteneur"
+  "Remplace une pile épinglée de 5 à 6 écrans où il fallait feuilleter 18 fois pour lire le 18e titre",
+  "FLIP : mesurer avant de masquer, puis partir de l'ancienne position ; les titres nouveaux entrent en fondu"
  ],
  "mesures": {
-  "hauteur_p1440": 3708,
-  "hauteur_m390": 3477,
+  "hauteur_p1440": 1532,
+  "hauteur_m390": 3345,
   "epinglee": false,
   "scrolltriggers": 1
  },
  "familles": [
-  "empilement"
+  "recomposition"
  ],
  "impact": "vivant"
 }

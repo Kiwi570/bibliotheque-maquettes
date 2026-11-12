@@ -2,48 +2,43 @@
  "id": "qd2a-maquette/appel-a-textes-parcours",
  "maquette": "qd2a-maquette",
  "page": "appel-a-textes",
- "titre": "De votre boîte d’envoi à la scène",
+ "titre": "Six étapes, de l’e-mail à la scène",
  "role": "étapes",
- "description": "Parcours d'un texte épinglé : une enveloppe suit une route tracée, six stations s'allument avec leur étape, couvertures des éditions Passage(s) à la fin",
+ "description": "Six étapes fixes aux couleurs du logo, numéros en formes arrondies, puis trois couvertures Passage(s) en grand (200 px) : remplace un chemin épinglé qui refaisait le trajet de l'accueil",
  "animations": [
-  "section-fixée",
-  "progression-fixée",
-  "trace-svg"
+  "apparition-au-défilement",
+  "reactif-vitesse"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger"
+  "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
+ "note_qualite": 3,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "appel-a-textes.html:170-203",
-  "css": "assets/css/site.css:56,499-520,633-639,672-673,684-688,729-731",
-  "js": "assets/js/site.js:333-365,469-498,596 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+  "html": "appel-a-textes.html:170-196",
+  "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:688-700,787,793-801",
+  "js": "assets/js/socle/effets.js:9,273-285 ; assets/js/socle/onde.js:1"
  },
  "medias": {
-  "capture": "medias/qd2a-maquette/appel-a-textes-parcours-p1440.jpg",
-  "capture_m390": "medias/qd2a-maquette/appel-a-textes-parcours-m390.jpg",
-  "video": "medias/qd2a-maquette/appel-a-textes-parcours-p720.mp4"
+  "capture": "medias/qd2a-maquette/appel-a-textes-parcours-p1440.jpg"
  },
  "pieges": [
-  "Stations placées en JavaScript : sans JavaScript elles s'empilaient, elles sont alors masquées"
+  "Numéro sur le vert du Cameroun : texte clair (3,65:1 en foncé)"
  ],
  "mesures": {
-  "hauteur_p1440": 2700,
-  "hauteur_m390": 2532,
+  "hauteur_p1440": 1135,
+  "hauteur_m390": 1750,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 0
  },
  "familles": [
-  "scene-epinglee",
-  "trait-qui-se-dessine"
+  "vitesse"
  ],
- "impact": "spectaculaire"
+ "impact": "vivant"
 }

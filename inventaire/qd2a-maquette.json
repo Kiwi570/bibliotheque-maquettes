@@ -1,8 +1,8 @@
 {
  "depot": "qd2a-maquette",
- "commit": "a0a989f",
- "date_commit": "2026-11-12T17:02:54+01:00",
- "genere": "2026-11-12T16:07:58.633Z",
+ "commit": "c56007c",
+ "date_commit": "2026-11-12T19:12:44+01:00",
+ "genere": "2026-11-12T18:19:25.658Z",
  "pages": {
   "404": {
    "fichier": "404.html",
@@ -45,11 +45,6 @@
     "three": false
    },
    "ajoutes_par_js": [
-    {
-     "sig": "div.barre-masquee",
-     "fixe": true,
-     "h": 0
-    },
     {
      "sig": "canvas.trace-vivante",
      "fixe": true,
@@ -99,11 +94,6 @@
     "three": false
    },
    "ajoutes_par_js": [
-    {
-     "sig": "div.barre-masquee",
-     "fixe": true,
-     "h": 0
-    },
     {
      "sig": "canvas.trace-vivante",
      "fixe": true,
@@ -202,11 +192,6 @@
     "three": false
    },
    "ajoutes_par_js": [
-    {
-     "sig": "div.barre-masquee",
-     "fixe": true,
-     "h": 0
-    },
     {
      "sig": "canvas.trace-vivante",
      "fixe": true,
@@ -371,16 +356,10 @@
    "page": "index",
    "pages": [
     "index",
-    "index",
-    "404",
     "404",
     "appel-a-textes",
-    "appel-a-textes",
-    "contact",
     "contact",
     "hydre",
-    "hydre",
-    "saison",
     "saison"
    ],
    "sig": "div",
@@ -392,7 +371,7 @@
    },
    "titre": "",
    "hauteur": 900,
-   "hauteur_m390": 78,
+   "hauteur_m390": null,
    "masque_m390": false,
    "position": "fixed",
    "cache": true,
@@ -426,9 +405,7 @@
     "data-forme",
     "data-voile-libelle"
    ],
-   "medias": {
-    "capture_m390": "medias/qd2a-maquette/div-m390.jpg"
-   }
+   "medias": {}
   },
   {
    "id": "ouverture-panneau",
@@ -446,7 +423,7 @@
    "code": {
     "html": "index.html:73-82",
     "css": "assets/css/socle.css:229-232 ; assets/css/site.css:81-90",
-    "js": "assets/js/site.js:610-613 ; assets/js/socle/ouverture.js:23-31,161-248"
+    "js": "assets/js/site.js:542-545 ; assets/js/socle/ouverture.js:23-31,161-248"
    },
    "titre": "",
    "hauteur": 0,
@@ -632,12 +609,12 @@
    "dans_main": true,
    "code": {
     "html": "index.html:122-146",
-    "css": "assets/css/socle.css:245-250,255,270-271 ; assets/css/site.css:34,40,98-111,137,167-168,173,178,192-193,201,229-247,647-652,669,677-679,704,725,748,773,780",
-    "js": "assets/js/site.js:26-126,573-580,622 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:245-250,255,270-271 ; assets/css/site.css:34,40,98-111,137,167-168,173,178,186-187,195,223-242,550-555,568,573-575,594,610,630,654,685,851,856",
+    "js": "assets/js/site.js:26-125,159-191,505-512,554 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Le Quartier des Autrices et des Auteurs",
    "hauteur": 900,
-   "hauteur_m390": 1252,
+   "hauteur_m390": 1239,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -647,12 +624,15 @@
      "scrub": 0.4,
      "debut": 0,
      "fin": 900,
-     "anime": false,
+     "anime": true,
      "toggle": false
     }
    ],
-   "tweens": 0,
-   "proprietes": [],
+   "tweens": 1,
+   "proprietes": [
+    "yPercent",
+    "scale"
+   ],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
@@ -727,9 +707,9 @@
    "sig": "section#comite.lecteurs",
    "dans_main": true,
    "code": {
-    "html": "index.html:147-176",
-    "css": "assets/css/site.css:43,250-267,742,749-751,782",
-    "js": "assets/js/site.js:129-157,333-365,595 ; assets/js/socle/formulaires.js:3"
+    "html": "index.html:147-177",
+    "css": "assets/css/site.css:43,245-264,624,631-633,662",
+    "js": "assets/js/site.js:128-191,355-409,527 ; assets/js/socle/formulaires.js:3"
    },
    "titre": "Près de 50 lecteurs, quatre têtes",
    "hauteur": 882,
@@ -765,7 +745,7 @@
    ],
    "tweens": 3,
    "proprietes": [
-    "--bgx",
+    "xPercent",
     "x",
     "y",
     "scale",
@@ -786,11 +766,12 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 46,
+    "images": 52,
     "liens": 1
    },
    "classes_exclusives": [
     "lecteurs",
+    "lecteurs-fond",
     "lecteurs-grille",
     "lecteurs-texte",
     "mur-filtres",
@@ -808,6 +789,7 @@
     "mur-groupe--canada"
    ],
    "data": [
+    "data-lecteurs-fond",
     "data-grille",
     "data-effet",
     "data-axes",
@@ -833,9 +815,9 @@
    "sig": "section#trajet.trajet",
    "dans_main": true,
    "code": {
-    "html": "index.html:177-229",
-    "css": "assets/css/site.css:56,270-326,634,736-741,752-759,768-769,774-777",
-    "js": "assets/js/site.js:3,332-365,470-498,595 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+    "html": "index.html:178-236",
+    "css": "assets/css/site.css:56,267-339,545,617-623,634-642,650,655-658",
+    "js": "assets/js/site.js:3,350,355-409,527 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
    },
    "titre": "D’un e-mail à la scène",
    "hauteur": 3060,
@@ -846,28 +828,29 @@
    "scrolltriggers": [
     {
      "pin": false,
-     "scrub": 0.5,
+     "scrub": 0.8,
      "debut": 1782,
      "fin": 3942,
-     "anime": false,
+     "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 1146,
-     "fin": 1722,
+     "debut": 1219,
+     "fin": 1795,
      "anime": false,
      "toggle": false
     }
    ],
-   "tweens": 11,
+   "tweens": 13,
    "proprietes": [
     "opacity",
     "y",
-    "x",
+    "--e",
     "scale",
-    "rotate"
+    "rotate",
+    "--p"
    ],
    "boucles_css": 0,
    "animations_css": 0,
@@ -896,6 +879,7 @@
     "trajet-etape",
     "trajet-num",
     "trajet-desc",
+    "trajet-detail",
     "scene-trajet",
     "tr-grille",
     "tr-texte",
@@ -903,6 +887,7 @@
     "tr-libelle",
     "tr-libelle--selection",
     "tr-mail",
+    "tr-doc",
     "tr-lecteur",
     "tr-lecteur--0",
     "tr-fiche",
@@ -925,11 +910,14 @@
     "data-axes",
     "data-etapes",
     "data-etape",
+    "data-trajet-detail",
+    "data-detail",
     "data-visuel",
     "data-trajet",
     "data-tr-texte",
     "data-tr-selection",
-    "data-tr-recu",
+    "data-tr-mail",
+    "data-tr-doc",
     "data-tr-lecteur",
     "data-tr-tampon",
     "data-tr-portrait",
@@ -950,13 +938,13 @@
    "sig": "section#saison.une",
    "dans_main": true,
    "code": {
-    "html": "index.html:230-305",
-    "css": "assets/css/site.css:48-52,112-132,137-157,329-347,650-651,670,680-681,703,743-744,760-762",
-    "js": "assets/js/site.js:3,14,23,26-126,208-298,367,446,596 ; assets/js/socle/index.js:38-61 ; assets/js/socle/ouverture.js:5,55,83 ; assets/js/socle/voile.js:6-7,43,125-163,166,171-207 ; assets/js/socle/gouttiere.js:2-4,7,10,20 ; assets/js/socle/apparitions.js:2,22 ; assets/js/socle/effets.js:4,16,56-74,111-141,178,238-269,273-288,302-315,348-349,408 ; assets/js/socle/onde.js:1-3,6,59,67-190 ; assets/js/socle/boucles.js:1,4,40,43-54 ; assets/js/socle/defilement.js:99 ; assets/js/socle/curseur.js:1 ; assets/js/socle/transitions.js:5,49 ; assets/js/socle/entete.js:3-4,42-56,84-165"
+    "html": "index.html:237-270",
+    "css": "assets/css/site.css:48-52,112-132,137-157,342-349,553-554,569,576-577,593,625-626,643-644",
+    "js": "assets/js/site.js:3,14,23,26-125,226-316,355-411,469,528 ; assets/js/socle/index.js:38-61 ; assets/js/socle/ouverture.js:5,55,83 ; assets/js/socle/voile.js:6-7,43,125-163,166,171-207 ; assets/js/socle/gouttiere.js:2-4,7,10,20 ; assets/js/socle/apparitions.js:2,22 ; assets/js/socle/effets.js:4,16,56-74,111-141,178,238-269,273-288,302-315,348-349,408 ; assets/js/socle/onde.js:1-3,6,59,67-190 ; assets/js/socle/boucles.js:1,4,40,43-54 ; assets/js/socle/defilement.js:99 ; assets/js/socle/curseur.js:1 ; assets/js/socle/transitions.js:5,49 ; assets/js/socle/entete.js:3-4,42-56,84-165"
    },
    "titre": "Chronologies",
-   "hauteur": 1411,
-   "hauteur_m390": 2393,
+   "hauteur": 826,
+   "hauteur_m390": 1561,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1001,8 +989,8 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 10,
-    "liens": 5
+    "images": 2,
+    "liens": 1
    },
    "classes_exclusives": [
     "une",
@@ -1067,9 +1055,9 @@
    "sig": "section#manifeste.manifeste",
    "dans_main": true,
    "code": {
-    "html": "index.html:306-324",
-    "css": "assets/css/site.css:350-363,568-571,647,763",
-    "js": "assets/js/site.js:185-198"
+    "html": "index.html:271-289",
+    "css": "assets/css/socle.css:58 ; assets/css/site.css:43-44,355-368,497-500,550,645,758,843",
+    "js": "assets/js/site.js:203-216"
    },
    "titre": "Le Quartier n’est pas seulement un comité de lecture. C’est une Hydre de Lerne.",
    "hauteur": 831,
@@ -1081,24 +1069,24 @@
     {
      "pin": false,
      "scrub": true,
-     "debut": 5527,
-     "fin": 6865,
+     "debut": 4942,
+     "fin": 6280,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 5670,
-     "fin": 6246,
+     "debut": 5085,
+     "fin": 5661,
      "anime": false,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": true,
-     "debut": 5860,
-     "fin": 6263,
+     "debut": 5274,
+     "fin": 5678,
      "anime": false,
      "toggle": false
     }
@@ -1135,6 +1123,7 @@
     "manifeste-hydre",
     "manifeste-texte",
     "citation",
+    "bouton--contour",
     "manifeste-peinture",
     "peinture"
    ],
@@ -1164,13 +1153,13 @@
    "sig": "section#appel.appel-accueil",
    "dans_main": true,
    "code": {
-    "html": "index.html:325-349",
-    "css": "assets/css/site.css:366-379,647,765",
-    "js": "assets/js/site.js:3,158-173"
+    "html": "index.html:290-313",
+    "css": "assets/css/site.css:371-384,550,647,673-680,799,851-854",
+    "js": "assets/js/site.js:3,159-191"
    },
    "titre": "L’appel à textes est ouvert.",
-   "hauteur": 710,
-   "hauteur_m390": 1057,
+   "hauteur": 654,
+   "hauteur_m390": 997,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1178,16 +1167,16 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 6398,
-     "fin": 6974,
+     "debut": 5813,
+     "fin": 6389,
      "anime": false,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": null,
-     "debut": 6534,
-     "fin": 7624,
+     "debut": 5921,
+     "fin": 7011,
      "anime": true,
      "toggle": false
     }
@@ -1214,7 +1203,7 @@
     "onglets": 0,
     "deplies": 0,
     "images": 3,
-    "liens": 3
+    "liens": 2
    },
    "classes_exclusives": [
     "appel-accueil",
@@ -1233,7 +1222,6 @@
     "data-axes",
     "data-anime",
     "data-survol",
-    "data-libelle",
     "data-trois-lecteurs",
     "data-visuel",
     "data-lecteur-img",
@@ -1254,8 +1242,8 @@
    "sig": "section#partenaires.partenaires",
    "dans_main": true,
    "code": {
-    "html": "index.html:350-377",
-    "css": "assets/css/site.css:382-388,742,764",
+    "html": "index.html:314-341",
+    "css": "assets/css/site.css:387-393,624,646",
     "js": null
    },
    "titre": "Ils nous accueillent et nous accompagnent",
@@ -1314,7 +1302,7 @@
    "sig": "footer#pied.pied",
    "dans_main": false,
    "code": {
-    "html": "index.html:379-404",
+    "html": "index.html:343-368",
     "css": "assets/css/socle.css:309-314 ; assets/css/site.css:91-94",
     "js": "assets/js/socle/mesures.js:42-78 ; assets/js/socle/transitions.js:16-23"
    },
@@ -1368,6 +1356,62 @@
    }
   },
   {
+   "id": "barre-une",
+   "page": "index",
+   "pages": [
+    "index",
+    "404",
+    "appel-a-textes",
+    "contact",
+    "hydre",
+    "saison"
+   ],
+   "sig": "div.barre-une",
+   "dans_main": false,
+   "code": {
+    "html": "index.html:369-371",
+    "css": null,
+    "js": "assets/js/socle/mesures.js:25-34,42-78"
+   },
+   "titre": "",
+   "hauteur": 0,
+   "hauteur_m390": 65,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "barre-une"
+   ],
+   "data": [
+    "data-barre-fixe",
+    "data-libelle"
+   ],
+   "medias": {
+    "capture_m390": "medias/qd2a-maquette/barre-une-m390.jpg"
+   }
+  },
+  {
    "id": "404-introuvable",
    "page": "404",
    "pages": [
@@ -1376,9 +1420,9 @@
    "sig": "section#introuvable.introuvable",
    "dans_main": true,
    "code": {
-    "html": "404.html:122-134",
-    "css": "assets/css/socle.css:120,245-250,255,271,275-282 ; assets/css/site.css:34-39,181,221-225,391-401,629,653,685,698,704-705,775",
-    "js": "assets/js/site.js:3,15-21,176-182,299-330,447-467 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/effets.js:9,27-28,40,152-159,273-285,360-404 ; assets/js/socle/onde.js:1,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "404.html:122-135",
+    "css": "assets/css/socle.css:120,245-250,255,271,275-282 ; assets/css/site.css:34-39,45-47,215-219,396-406,541,588-595,656,669,781-784,808-811",
+    "js": "assets/js/site.js:3,15-21,194-200,317-348,470-490 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/effets.js:9,27-28,40,152-159,273-285,360-404 ; assets/js/socle/onde.js:1,67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "La servante est restée allumée",
    "hauteur": 900,
@@ -1398,8 +1442,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": -423,
-     "fin": 153,
+     "debut": -553,
+     "fin": 23,
      "anime": false,
      "toggle": false
     }
@@ -1422,7 +1466,7 @@
     "onglets": 0,
     "deplies": 0,
     "images": 2,
-    "liens": 1
+    "liens": 3
    },
    "classes_exclusives": [
     "introuvable",
@@ -1436,7 +1480,11 @@
     "q-fil-p",
     "q-fil-nouvelle",
     "q-fil-l",
-    "titre-axes"
+    "introuvable-titre",
+    "titre-axes",
+    "introuvable-actions",
+    "introuvable-liens",
+    "lien-fleche"
    ],
    "data": [
     "data-servante",
@@ -1467,25 +1515,16 @@
    "dans_main": true,
    "code": {
     "html": "appel-a-textes.html:122-144",
-    "css": "assets/css/socle.css:245-250,255,268-271 ; assets/css/site.css:34,40,45-47,53-55,98-99,103-105,167-168,173-185,192-193,201,644-647,652-653,669,677-679,701-704,725,780",
-    "js": "assets/js/site.js:299-330,447-467,573-580,622 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/effets.js:24-25,28,40,360-404 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:58,245-250,255,270-271 ; assets/css/site.css:34,40-44,98-105,167-168,173-180,186-187,195,378-384,550,555,568,573-575,594,610,647,673-685,797-799,850-856",
+    "js": "assets/js/site.js:3,159-191,505-512,554 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "L’appel à textes",
    "hauteur": 900,
-   "hauteur_m390": 844,
+   "hauteur_m390": 943,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": null,
-     "debut": 0,
-     "fin": 900,
-     "anime": false,
-     "toggle": false
-    }
-   ],
+   "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
    "boucles_css": 0,
@@ -1499,11 +1538,11 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 1,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 3,
     "liens": 2
    },
    "classes_exclusives": [
@@ -1514,19 +1553,20 @@
     "ouv-texte",
     "masque-ecran-tres-bas",
     "ouv-titre",
-    "appel-titre",
+    "ligne-masque",
+    "ouv-ligne",
     "ouv-intro",
-    "masque-ecran-bas",
     "ouv-actions",
     "ouv-info",
     "pastille",
     "ouv-lien",
-    "lien-fleche",
-    "lampe",
-    "lampe-photo",
-    "lampe-ombre",
-    "lampe-consigne",
-    "souris-seulement"
+    "trois-lecteurs",
+    "trois-lecteurs--grand",
+    "trois-titre",
+    "trois-lecteur",
+    "trois-actions",
+    "bouton--contour",
+    "trois-note"
    ],
    "data": [
     "data-anime",
@@ -1535,15 +1575,16 @@
     "data-action-principale",
     "data-survol",
     "data-info-cle",
-    "data-lampe",
+    "data-trois-lecteurs",
+    "data-visuel",
     "data-iris-centre",
-    "data-souris",
-    "data-grok"
+    "data-lecteur-img",
+    "data-tirer",
+    "data-lecteurs-liste"
    ],
    "medias": {
     "capture": "medias/qd2a-maquette/appel-a-textes-debut-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/appel-a-textes-debut-m390.jpg",
-    "video": "medias/qd2a-maquette/appel-a-textes-debut-p720.mp4"
+    "capture_m390": "medias/qd2a-maquette/appel-a-textes-debut-m390.jpg"
    }
   },
   {
@@ -1556,8 +1597,8 @@
    "dans_main": true,
    "code": {
     "html": "appel-a-textes.html:145-169",
-    "css": "assets/css/site.css:488-497",
-    "js": "assets/js/site.js:299-330,573-580 ; assets/js/socle/curseur.js:5-34"
+    "css": "assets/css/site.css:464-473,686-687",
+    "js": "assets/js/site.js:317-348,505-512 ; assets/js/socle/curseur.js:5-34"
    },
    "titre": "Quatre cachets avant l’envoi",
    "hauteur": 609,
@@ -1621,36 +1662,27 @@
    "pages": [
     "appel-a-textes"
    ],
-   "sig": "section#parcours.route",
+   "sig": "section#parcours.etapes-texte",
    "dans_main": true,
    "code": {
-    "html": "appel-a-textes.html:170-203",
-    "css": "assets/css/site.css:56,499-520,633-639,672-673,684-688,729-731",
-    "js": "assets/js/site.js:333-365,469-498,596 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+    "html": "appel-a-textes.html:170-196",
+    "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:688-700,787,793-801",
+    "js": "assets/js/socle/effets.js:9,273-285 ; assets/js/socle/onde.js:1"
    },
-   "titre": "De votre boîte d’envoi à la scène",
-   "hauteur": 2700,
-   "hauteur_m390": 2532,
+   "titre": "Six étapes, de l’e-mail à la scène",
+   "hauteur": 1135,
+   "hauteur_m390": 1750,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.4,
-     "debut": 1509,
-     "fin": 3309,
-     "anime": false,
-     "toggle": false
-    }
-   ],
+   "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 1,
+   "sticky": 0,
    "elements": {
     "videos": 0,
     "audio": 0,
@@ -1665,39 +1697,23 @@
     "liens": 0
    },
    "classes_exclusives": [
-    "route",
-    "route-cadre",
-    "route-texte",
-    "conteneur-gauche",
-    "route-etapes",
-    "route-etape",
-    "route-num",
-    "route-carte",
-    "route-svg",
-    "route-fond",
-    "route-trait",
-    "route-station",
-    "route-env",
-    "route-livres",
-    "route-livre"
+    "etapes-texte",
+    "six-etapes",
+    "livres",
+    "livres-titre",
+    "livres-liste",
+    "media",
+    "livre"
    ],
    "data": [
-    "data-scene",
     "data-grille",
-    "data-entete-cache",
-    "data-collant",
     "data-effet",
-    "data-etape",
-    "data-visuel",
-    "data-route",
-    "data-station",
-    "data-route-env",
-    "data-route-livres"
+    "data-anime",
+    "data-fx"
    ],
    "medias": {
     "capture": "medias/qd2a-maquette/appel-a-textes-parcours-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/appel-a-textes-parcours-m390.jpg",
-    "video": "medias/qd2a-maquette/appel-a-textes-parcours-p720.mp4"
+    "capture_m390": "medias/qd2a-maquette/appel-a-textes-parcours-m390.jpg"
    }
   },
   {
@@ -1709,13 +1725,13 @@
    "sig": "section#fiche.fiche",
    "dans_main": true,
    "code": {
-    "html": "appel-a-textes.html:204-218",
-    "css": "assets/css/site.css:522-524,647",
-    "js": "assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
+    "html": "appel-a-textes.html:197-207",
+    "css": "assets/css/site.css:476-478,550,701-705,797,802",
+    "js": null
    },
    "titre": "Une fiche, toujours",
-   "hauteur": 821,
-   "hauteur_m390": 1053,
+   "hauteur": 492,
+   "hauteur_m390": 672,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1723,8 +1739,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 3668,
-     "fin": 4244,
+     "debut": 1976,
+     "fin": 2552,
      "anime": false,
      "toggle": false
     }
@@ -1746,22 +1762,21 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 0,
     "liens": 0
    },
    "classes_exclusives": [
     "fiche",
     "fiche-grille",
-    "fiche-photo",
-    "fiche-chiffre"
+    "fiche-chiffre",
+    "fiche-plus"
    ],
    "data": [
-    "data-grok",
     "data-anime",
+    "data-visuel",
     "data-grille",
     "data-effet",
-    "data-axes",
-    "data-compteur"
+    "data-axes"
    ],
    "medias": {
     "capture": "medias/qd2a-maquette/appel-a-textes-fiche-p1440.jpg",
@@ -1778,13 +1793,13 @@
    "sig": "section#deposer.depot",
    "dans_main": true,
    "code": {
-    "html": "appel-a-textes.html:219-262",
-    "css": "assets/css/socle.css:285-292 ; assets/css/site.css:279-281,506-508,526-560,639,647,686,712-716,737,769,776",
-    "js": "assets/js/site.js:3,333-365,469-508,526-558,596 ; assets/js/socle/index.js:38-61 ; assets/js/socle/gouttiere.js:59-91 ; assets/js/socle/effets.js:216-236 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/calme.js:1"
+    "html": "appel-a-textes.html:208-233",
+    "css": "assets/css/site.css:480,550,669,706-718,797,834-839,847",
+    "js": null
    },
-   "titre": "Glissez votre texte dans l’enveloppe",
-   "hauteur": 817,
-   "hauteur_m390": 1332,
+   "titre": "Votre texte part par e-mail",
+   "hauteur": 751,
+   "hauteur_m390": 1292,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1800,59 +1815,33 @@
     "videos": 0,
     "audio": 0,
     "iframes": 0,
-    "formulaires": 1,
-    "champs": 9,
-    "boutons": 5,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
     "images": 0,
-    "liens": 0
+    "liens": 3
    },
    "classes_exclusives": [
     "depot",
     "depot-grille",
     "depot-texte",
-    "depot-visuel",
-    "enveloppe",
-    "env-dos",
-    "env-feuille",
-    "env-face",
-    "env-rabat",
-    "env-tampon",
-    "env-legende",
-    "etapes",
-    "etapes-annonce",
-    "etapes-fil",
-    "actif",
-    "etape",
-    "champ",
-    "champ-fichier",
-    "champ-aide",
-    "champ-case",
-    "etapes-boutons",
-    "recap",
-    "mention-donnees"
+    "mail-apercu",
+    "depot-envoi",
+    "depot-etapes",
+    "depot-adresse",
+    "depot-action",
+    "bouton--grand",
+    "depot-note"
    ],
    "data": [
     "data-grille",
     "data-effet",
     "data-anime",
-    "data-fx",
     "data-visuel",
-    "data-enveloppe",
-    "data-env-feuille",
-    "data-env-rabat",
-    "data-env-tampon",
-    "data-env-legende",
-    "data-formulaire",
-    "data-etapes-form",
-    "data-etape-form",
-    "data-etape-suivante",
-    "data-etape-precedente",
-    "data-recap",
-    "data-message-envoi",
-    "data-texte"
+    "data-survol"
    ],
    "medias": {
     "capture": "medias/qd2a-maquette/appel-a-textes-deposer-p1440.jpg",
@@ -1869,12 +1858,12 @@
    "dans_main": true,
    "code": {
     "html": "contact.html:122-138",
-    "css": "assets/css/socle.css:270 ; assets/css/site.css:35-39,98-105,167-168,173,178,192-193,201-218,391-398,647,652,660,669,677-679,685,693,701-705,717-720,725-727,775,780",
-    "js": "assets/js/site.js:3,15-21,526-558,573-580,622 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/effets.js:7 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:270 ; assets/css/site.css:35-39,98-105,167-168,173,178,186-187,195-212,396-403,550,555,561,568,573-575,583,591-595,602-605,610-612,656,685,851,856",
+    "js": "assets/js/site.js:3,15-21,159-191,194-200,470-490,505-512,554 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/effets.js:7,27,40,152-159 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Écrire au Quartier",
-   "hauteur": 613,
-   "hauteur_m390": 721,
+   "hauteur": 638,
+   "hauteur_m390": 747,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1940,21 +1929,21 @@
    }
   },
   {
-   "id": "contact-formulaire",
+   "id": "contact-objets",
    "page": "contact",
    "pages": [
     "contact"
    ],
-   "sig": "section#formulaire.ecrire",
+   "sig": "section#objets.objets",
    "dans_main": true,
    "code": {
-    "html": "contact.html:139-162",
-    "css": "assets/css/socle.css:285-292 ; assets/css/site.css:401,537-538,549-560,604-607,647,715-716",
-    "js": "assets/js/site.js:3,176-182,469,500-508,526-558 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58"
+    "html": "contact.html:139-147",
+    "css": "assets/css/site.css:406,766-773,792,813",
+    "js": "assets/js/site.js:194-200,225,536 ; assets/js/socle/ouverture.js:33,83 ; assets/js/socle/voile.js:5,70,169-207 ; assets/js/socle/gouttiere.js:27"
    },
-   "titre": "Votre message",
-   "hauteur": 989,
-   "hauteur_m390": 1214,
+   "titre": "Choisissez l’objet",
+   "hauteur": 524,
+   "hauteur_m390": 1000,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1962,8 +1951,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": -116,
-     "fin": 460,
+     "debut": -91,
+     "fin": 485,
      "anime": false,
      "toggle": false
     }
@@ -1979,50 +1968,32 @@
     "videos": 0,
     "audio": 0,
     "iframes": 0,
-    "formulaires": 1,
-    "champs": 4,
-    "boutons": 1,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
     "images": 0,
-    "liens": 0
+    "liens": 4
    },
    "classes_exclusives": [
-    "ecrire",
-    "ecrire-grille",
-    "ecrire-form",
+    "objets",
     "titre-axes",
-    "champ",
-    "mention-donnees",
-    "ecrire-visuel",
-    "enveloppe",
-    "enveloppe--poste",
-    "env-dos",
-    "env-feuille",
-    "env-face",
-    "env-rabat",
-    "env-tampon"
+    "objets-liste",
+    "objet"
    ],
    "data": [
-    "data-formulaire",
-    "data-form-lettre",
     "data-axes",
     "data-grille",
-    "data-message-envoi",
-    "data-texte",
-    "data-effet",
-    "data-fx",
+    "data-anime",
     "data-visuel",
-    "data-enveloppe",
-    "data-env-feuille",
-    "data-env-rabat",
-    "data-env-tampon"
+    "data-libelle"
    ],
    "medias": {
-    "capture": "medias/qd2a-maquette/contact-formulaire-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/contact-formulaire-m390.jpg",
-    "video": "medias/qd2a-maquette/contact-formulaire-p720.mp4"
+    "capture": "medias/qd2a-maquette/contact-objets-p1440.jpg",
+    "capture_m390": "medias/qd2a-maquette/contact-objets-m390.jpg",
+    "video": "medias/qd2a-maquette/contact-objets-p720.mp4"
    }
   },
   {
@@ -2034,29 +2005,143 @@
    "sig": "section#lieu.lieu",
    "dans_main": true,
    "code": {
-    "html": "contact.html:163-185",
-    "css": "assets/css/site.css:45-47,412-414,608-621,647,701",
-    "js": "assets/js/site.js:3,12 ; assets/js/socle/voile.js:9 ; assets/js/socle/effets.js:38 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/defilement.js:48-86 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:2"
+    "html": "contact.html:148-165",
+    "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:41,45-47,533-534,550,591,774-776,784,797",
+    "js": "assets/js/socle/voile.js:9 ; assets/js/socle/effets.js:9,273-285 ; assets/js/socle/onde.js:1,67-190 ; assets/js/socle/transitions.js:2"
    },
-   "titre": "Le Quartier habite au théâtre",
-   "hauteur": 730,
-   "hauteur_m390": 948,
+   "titre": "Une adresse, pas un guichet",
+   "hauteur": 698,
+   "hauteur_m390": 797,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 2,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "lieu",
+    "lieu-grille",
+    "lieu-adresse",
+    "lien-fleche",
+    "facade",
+    "media",
+    "facade-photo",
+    "credit"
+   ],
+   "data": [
+    "data-anime"
+   ],
+   "medias": {
+    "capture": "medias/qd2a-maquette/contact-lieu-p1440.jpg",
+    "capture_m390": "medias/qd2a-maquette/contact-lieu-m390.jpg"
+   }
+  },
+  {
+   "id": "contact-bandeau",
+   "page": "contact",
+   "pages": [
+    "contact"
+   ],
+   "sig": "section#bandeau.bandeau",
+   "dans_main": true,
+   "code": {
+    "html": "contact.html:166-173",
+    "css": "assets/css/site.css:535-538,595,669,777-778,829-833",
+    "js": "assets/js/socle/mesures.js:42-78"
+   },
+   "titre": "Et pour envoyer un texte ?",
+   "hauteur": 516,
+   "hauteur_m390": 492,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 4,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "bandeau",
+    "bandeau-texte",
+    "quatre-visages"
+   ],
+   "data": [
+    "data-visuel",
+    "data-anime",
+    "data-libelle",
+    "data-survol"
+   ],
+   "medias": {
+    "capture": "medias/qd2a-maquette/contact-bandeau-p1440.jpg",
+    "capture_m390": "medias/qd2a-maquette/contact-bandeau-m390.jpg"
+   }
+  },
+  {
+   "id": "hydre-debut",
+   "page": "hydre",
+   "pages": [
+    "hydre"
+   ],
+   "sig": "section#debut.ouv",
+   "dans_main": true,
+   "code": {
+    "html": "hydre.html:122-142",
+    "css": "assets/css/socle.css:245-250,255,268-271 ; assets/css/site.css:34,98-105,167-168,173,183-195,555,564,568-575,579,589,594-595,610-611,744-752,805-806,814-816,851,856-859",
+    "js": "assets/js/site.js:159-191,493-502,505-512,520-522,532,554-557 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
+   },
+   "titre": "L’Hydre de Lerne",
+   "hauteur": 900,
+   "hauteur_m390": 844,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
    "scrolltriggers": [
     {
      "pin": false,
-     "scrub": 0.5,
-     "debut": 961,
-     "fin": 1803,
+     "scrub": true,
+     "debut": 0,
+     "fin": 900,
      "anime": true,
      "toggle": false
     }
    ],
    "tweens": 1,
    "proprietes": [
-    "strokeDashoffset"
+    "yPercent"
    ],
    "boucles_css": 0,
    "animations_css": 0,
@@ -2077,175 +2162,14 @@
     "liens": 1
    },
    "classes_exclusives": [
-    "lieu",
-    "lieu-grille",
-    "lieu-adresse",
-    "liste-coches",
-    "lien-fleche",
-    "plan",
-    "plan-rue",
-    "fine",
-    "plan-chemin",
-    "plan-point",
-    "plan-point--metro",
-    "plan-etiquette",
-    "plan-etiquette--metro",
-    "plan-point--tqi",
-    "plan-etiquette--tqi"
-   ],
-   "data": [
-    "data-anime",
-    "data-visuel",
-    "data-fx",
-    "data-repere"
-   ],
-   "medias": {
-    "capture": "medias/qd2a-maquette/contact-lieu-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/contact-lieu-m390.jpg",
-    "video": "medias/qd2a-maquette/contact-lieu-p720.mp4"
-   }
-  },
-  {
-   "id": "contact-bandeau",
-   "page": "contact",
-   "pages": [
-    "contact"
-   ],
-   "sig": "section#bandeau.bandeau",
-   "dans_main": true,
-   "code": {
-    "html": "contact.html:186-197",
-    "css": "assets/css/socle.css:120,275-282 ; assets/css/site.css:181,622-629,653,698,705",
-    "js": "assets/js/socle/effets.js:9,273-285 ; assets/js/socle/onde.js:1 ; assets/js/socle/mesures.js:42-78"
-   },
-   "titre": "Et pour envoyer un texte ?",
-   "hauteur": 402,
-   "hauteur_m390": 404,
-   "masque_m390": false,
-   "position": "relative",
-   "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 1432,
-     "fin": 2734,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 0,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 2,
-    "liens": 1
-   },
-   "classes_exclusives": [
-    "bandeau",
-    "media",
-    "bandeau-photo",
-    "mention-ia",
-    "bandeau-texte"
-   ],
-   "data": [
-    "data-grok",
-    "data-fx",
-    "data-anime",
-    "data-libelle",
-    "data-survol"
-   ],
-   "medias": {
-    "capture": "medias/qd2a-maquette/contact-bandeau-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/contact-bandeau-m390.jpg",
-    "video": "medias/qd2a-maquette/contact-bandeau-p720.mp4"
-   }
-  },
-  {
-   "id": "hydre-debut",
-   "page": "hydre",
-   "pages": [
-    "hydre"
-   ],
-   "sig": "section#debut.ouv",
-   "dans_main": true,
-   "code": {
-    "html": "hydre.html:122-146",
-    "css": "assets/css/socle.css:245-250,255,268-271 ; assets/css/site.css:34,98-105,167-168,173,188-201,644,652,663-665,669,674-679,683,698-699,704-705,725-726",
-    "js": "assets/js/site.js:561-570,573-580,588-590,600,622-625 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
-   },
-   "titre": "L’Hydre de Lerne",
-   "hauteur": 900,
-   "hauteur_m390": 844,
-   "masque_m390": false,
-   "position": "relative",
-   "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": -900,
-     "fin": 900,
-     "anime": true,
-     "toggle": false
-    },
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 0,
-     "fin": 900,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 2,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 0,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 2,
-    "liens": 1
-   },
-   "classes_exclusives": [
     "ouv",
     "ouv-hydre",
     "ecran",
-    "hydre-fond",
     "hydre-ouv",
     "hydre-dessin",
     "cou",
     "tete",
+    "tete-anneau",
     "corps",
     "tete-nom",
     "tete-nom--ivry",
@@ -2258,9 +2182,6 @@
     "ouv-info"
    ],
    "data": [
-    "data-grok",
-    "data-fx",
-    "data-fx-force",
     "data-iris-centre",
     "data-effet",
     "data-visuel",
@@ -2288,25 +2209,17 @@
    "sig": "section#manifeste.marais",
    "dans_main": true,
    "code": {
-    "html": "hydre.html:147-159",
-    "css": "assets/css/site.css:355-361,564-571,698,705",
-    "js": "assets/js/site.js:185-198"
+    "html": "hydre.html:143-160",
+    "css": "assets/css/site.css:41,360-368,494-500,595,753-758,840-846",
+    "js": null
    },
    "titre": "Des ponts plutôt que des murs",
-   "hauteur": 630,
-   "hauteur_m390": 657,
+   "hauteur": 680,
+   "hauteur_m390": 1071,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
    "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 0,
-     "fin": 1530,
-     "anime": true,
-     "toggle": false
-    },
     {
      "pin": false,
      "scrub": 0.4,
@@ -2314,21 +2227,10 @@
      "fin": 790,
      "anime": false,
      "toggle": false
-    },
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 395,
-     "fin": 799,
-     "anime": false,
-     "toggle": false
     }
    ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
+   "tweens": 0,
+   "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
@@ -2349,19 +2251,19 @@
    },
    "classes_exclusives": [
     "marais",
-    "marais-fond",
+    "marais-grille",
     "marais-texte",
+    "citation",
+    "citation--grande",
     "manifeste-texte",
-    "citation"
+    "marais-peinture",
+    "peinture",
+    "credit"
    ],
    "data": [
-    "data-grok",
-    "data-fx",
-    "data-fx-force",
     "data-grille",
     "data-effet",
     "data-axes",
-    "data-mot-a-mot",
     "data-anime"
    ],
    "medias": {
@@ -2379,13 +2281,13 @@
    "sig": "section#comites.tetes",
    "dans_main": true,
    "code": {
-    "html": "hydre.html:160-185",
-    "css": "assets/css/site.css:573-582",
-    "js": "assets/js/site.js:368-372,561-570,597"
+    "html": "hydre.html:161-187",
+    "css": "assets/css/site.css:502-511,759",
+    "js": "assets/js/site.js:412-416,493-502,529"
    },
    "titre": "Un comité par pays",
-   "hauteur": 1110,
-   "hauteur_m390": 1989,
+   "hauteur": 1155,
+   "hauteur_m390": 2147,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2393,8 +2295,8 @@
     {
      "pin": false,
      "scrub": 0.5,
-     "debut": 971,
-     "fin": 1583,
+     "debut": 1020,
+     "fin": 1632,
      "anime": true,
      "toggle": false
     }
@@ -2418,7 +2320,7 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 46,
+    "images": 52,
     "liens": 0
    },
    "classes_exclusives": [
@@ -2428,7 +2330,8 @@
     "tete-col",
     "tete-pastille",
     "tete-depuis",
-    "tete-visages"
+    "tete-visages",
+    "tetes-note"
    ],
    "data": [
     "data-grille",
@@ -2453,13 +2356,13 @@
    "sig": "section#fonctionnement.choix",
    "dans_main": true,
    "code": {
-    "html": "hydre.html:186-204",
-    "css": "assets/css/site.css:584-592,647,655",
+    "html": "hydre.html:188-206",
+    "css": "assets/css/site.css:513-521,550,557,807",
     "js": "assets/js/socle/entete.js:10"
    },
    "titre": "En commun, et chacun sa singularité",
    "hauteur": 594,
-   "hauteur_m390": 883,
+   "hauteur_m390": 795,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2467,8 +2370,8 @@
     {
      "pin": false,
      "scrub": 0.5,
-     "debut": 1998,
-     "fin": 2708,
+     "debut": 2091,
+     "fin": 2802,
      "anime": true,
      "toggle": false
     }
@@ -2525,13 +2428,13 @@
    "sig": "section#vie.vie",
    "dans_main": true,
    "code": {
-    "html": "hydre.html:205-242",
-    "css": "assets/css/site.css:594-601,647,701",
+    "html": "hydre.html:207-244",
+    "css": "assets/css/site.css:523-530,550,591,760-763",
     "js": null
    },
    "titre": "Des lecteurs bénévoles, une réunion par mois",
-   "hauteur": 872,
-   "hauteur_m390": 1262,
+   "hauteur": 784,
+   "hauteur_m390": 1023,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2539,17 +2442,17 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2434,
-     "fin": 3078,
-     "anime": true,
+     "debut": 2642,
+     "fin": 3218,
+     "anime": false,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2564,
-     "fin": 3140,
-     "anime": false,
+     "debut": 2534,
+     "fin": 3157,
+     "anime": true,
      "toggle": false
     }
    ],
@@ -2604,13 +2507,13 @@
    "sig": "section#fin.fin",
    "dans_main": true,
    "code": {
-    "html": "hydre.html:243-250",
-    "css": "assets/css/site.css:481-485",
+    "html": "hydre.html:245-252",
+    "css": "assets/css/site.css:459-461,829-833",
     "js": "assets/js/socle/ouverture.js:19,56-81,93-147 ; assets/js/socle/voile.js:171-207 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,187,216-236 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "Une cinquième voix ?",
-   "hauteur": 539,
-   "hauteur_m390": 477,
+   "hauteur": 545,
+   "hauteur_m390": 457,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2632,13 +2535,13 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 0,
+    "images": 4,
     "liens": 1
    },
    "classes_exclusives": [
     "fin",
     "fin-grille",
-    "fin-pile"
+    "quatre-visages"
    ],
    "data": [
     "data-visuel",
@@ -2662,8 +2565,8 @@
    "dans_main": true,
    "code": {
     "html": "saison.html:122-133",
-    "css": "assets/css/socle.css:245-250,255,271 ; assets/css/site.css:34,40,98-104,160-173,192-193,201,652,669,677-682,704,724-725",
-    "js": "assets/js/site.js:379-388,573-580,591,600,622,625 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:245-250,255,268-271 ; assets/css/site.css:34,40,98-104,160-173,186-187,195,555,568,573-578,594,609-610,669,851,856",
+    "js": "assets/js/site.js:159-191,423-432,505-512,523,532,554,558 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "La saison 25/26",
    "hauteur": 900,
@@ -2716,6 +2619,7 @@
     "ligne-masque",
     "ouv-ligne",
     "ouv-intro",
+    "masque-ecran-bas",
     "ouv-actions"
    ],
    "data": [
@@ -2745,7 +2649,7 @@
    "dans_main": true,
    "code": {
     "html": "saison.html:134-162",
-    "css": "assets/css/site.css:405-415,647,654-655",
+    "css": "assets/css/site.css:410-420,550,556-557",
     "js": null
    },
    "titre": "Chronologies",
@@ -2815,25 +2719,25 @@
    "pages": [
     "saison"
    ],
-   "sig": "section#selection.pile-scene",
+   "sig": "section#selection.sommaire",
    "dans_main": true,
    "code": {
-    "html": "saison.html:163-319",
-    "css": "assets/css/site.css:418-447,640-644,684-685,691-692",
-    "js": "assets/js/site.js:3,129-155,378,389-437 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+    "html": "saison.html:163-290",
+    "css": "assets/css/site.css:423-426,721-734,788-790,797,803-804",
+    "js": "assets/js/site.js:128-155,422,433-460,528 ; assets/js/socle/mesures.js:42-78 ; assets/js/socle/lecture.js:1,5-30"
    },
    "titre": "Les 26 textes",
-   "hauteur": 3708,
-   "hauteur_m390": 3477,
+   "hauteur": 1532,
+   "hauteur_m390": 3345,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
    "scrolltriggers": [
     {
      "pin": false,
-     "scrub": null,
-     "debut": 2003,
-     "fin": 4811,
+     "scrub": 0.4,
+     "debut": 1317,
+     "fin": 1893,
      "anime": false,
      "toggle": false
     }
@@ -2844,7 +2748,7 @@
    "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 1,
+   "sticky": 0,
    "elements": {
     "videos": 0,
     "audio": 0,
@@ -2859,37 +2763,28 @@
     "liens": 0
    },
    "classes_exclusives": [
-    "pile-scene",
-    "pile-cadre",
-    "pile-tete",
-    "pile-filtres",
+    "sommaire",
+    "sommaire-tete",
+    "sommaire-filtres",
     "filtre",
-    "pile-compteur",
-    "pile-zone",
-    "pile",
-    "tapu",
-    "tapu-num",
-    "tapu-titre",
-    "tapu-auteur",
-    "tapu-pays",
-    "tapu--distingue",
-    "tapu-tampon",
+    "sommaire-liste",
+    "som",
+    "som-num",
+    "som-titre",
+    "som-auteur",
+    "som--distingue",
+    "som-marque",
+    "som-point",
     "pile-vide"
    ],
    "data": [
-    "data-scene",
     "data-grille",
-    "data-entete-cache",
-    "data-collant",
     "data-effet",
-    "data-anime",
+    "data-axes",
     "data-filtres",
     "data-filtre",
-    "data-pile-num",
-    "data-pile-total",
+    "data-sommaire",
     "data-visuel",
-    "data-pile-zone",
-    "data-pile",
     "data-pays",
     "data-pile-vide"
    ],
@@ -2908,13 +2803,13 @@
    "sig": "section#coups-de-coeur.coups",
    "dans_main": true,
    "code": {
-    "html": "saison.html:320-367",
-    "css": "assets/css/site.css:450-455",
+    "html": "saison.html:291-338",
+    "css": "assets/css/site.css:429-434,819-824",
     "js": "assets/js/socle/effets.js:5,409-430"
    },
    "titre": "Quatre coups de cœur",
-   "hauteur": 883,
-   "hauteur_m390": 2561,
+   "hauteur": 947,
+   "hauteur_m390": 1159,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2967,31 +2862,19 @@
    "sig": "section#lectures.lectures",
    "dans_main": true,
    "code": {
-    "html": "saison.html:368-397",
-    "css": "assets/css/socle.css:279-282 ; assets/css/site.css:458-467,629,647",
-    "js": "assets/js/site.js:438-444 ; assets/js/socle/onde.js:8"
+    "html": "saison.html:339-361",
+    "css": "assets/css/site.css:438-444,735-740,791",
+    "js": "assets/js/site.js:461-467 ; assets/js/socle/onde.js:8"
    },
    "titre": "Les lectures de juin",
-   "hauteur": 911,
-   "hauteur_m390": 1475,
+   "hauteur": 717,
+   "hauteur_m390": 1219,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 5822,
-     "fin": 7379,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
@@ -3007,19 +2890,18 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 6,
     "liens": 0
    },
    "classes_exclusives": [
     "lectures",
-    "lectures-grille",
+    "lectures-intro",
     "agenda",
     "agenda-date",
     "agenda-jour",
     "statut",
     "agenda-lieu",
-    "lectures-photo",
-    "mention-ia"
+    "agenda-textes"
    ],
    "data": [
     "data-grille",
@@ -3028,14 +2910,11 @@
     "data-date",
     "data-statut",
     "data-termine",
-    "data-avenir",
-    "data-grok",
-    "data-fx"
+    "data-avenir"
    ],
    "medias": {
     "capture": "medias/qd2a-maquette/saison-lectures-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/saison-lectures-m390.jpg",
-    "video": "medias/qd2a-maquette/saison-lectures-p720.mp4"
+    "capture_m390": "medias/qd2a-maquette/saison-lectures-m390.jpg"
    }
   },
   {
@@ -3047,13 +2926,13 @@
    "sig": "section#pays.pays-liste",
    "dans_main": true,
    "code": {
-    "html": "saison.html:398-406",
-    "css": "assets/css/site.css:470-476",
+    "html": "saison.html:362-371",
+    "css": "assets/css/site.css:448-454,741",
     "js": null
    },
    "titre": "Douze pays dans la sélection",
-   "hauteur": 531,
-   "hauteur_m390": 825,
+   "hauteur": 603,
+   "hauteur_m390": 943,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3061,8 +2940,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 6819,
-     "fin": 7395,
+     "debut": 4512,
+     "fin": 5088,
      "anime": false,
      "toggle": false
     }
@@ -3089,7 +2968,8 @@
    },
    "classes_exclusives": [
     "pays-liste",
-    "pays-grille"
+    "pays-grille",
+    "pays-note"
    ],
    "data": [
     "data-grille",
@@ -3113,13 +2993,13 @@
    "sig": "section#fin.fin",
    "dans_main": true,
    "code": {
-    "html": "saison.html:407-414",
-    "css": "assets/css/site.css:481-485",
+    "html": "saison.html:372-379",
+    "css": "assets/css/site.css:459-461,829-833",
     "js": "assets/js/socle/ouverture.js:19,56-81,93-147 ; assets/js/socle/voile.js:171-207 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,187,216-236 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "La saison 26/27 se lit déjà",
-   "hauteur": 539,
-   "hauteur_m390": 512,
+   "hauteur": 545,
+   "hauteur_m390": 492,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3141,13 +3021,13 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 0,
+    "images": 4,
     "liens": 1
    },
    "classes_exclusives": [
     "fin",
     "fin-grille",
-    "fin-pile"
+    "quatre-visages"
    ],
    "data": [
     "data-visuel",
