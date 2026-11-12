@@ -4,10 +4,10 @@
  "page": "hydre",
  "titre": "Un comité par pays",
  "role": "équipe",
- "description": "Tambour 3D des quatre comités, qui tourne autour d'un axe horizontal au défilement",
+ "description": "Les quatre têtes de l'Hydre en visages : une colonne par comité, à sa couleur du logo, avec ses membres publiés ; les colonnes se dressent l'une après l'autre au défilement (ordinateur)",
  "animations": [
-  "section-fixée",
-  "progression-fixée"
+  "apparition-au-défilement",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
@@ -17,31 +17,29 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "hydre.html:154-195",
-  "css": "assets/css/site.css:512-523,601-602,624-625,630,661",
-  "js": "assets/js/site.js:276,504-513,541 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+  "html": "hydre.html:160-185",
+  "css": "assets/css/site.css:573-582",
+  "js": "assets/js/site.js:368-372,561-570,597"
  },
  "medias": {
-  "capture": "medias/qd2a-maquette/hydre-comites-p1440.jpg"
+  "capture": "medias/qd2a-maquette/hydre-comites-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/hydre-comites-m390.jpg",
+  "video": "medias/qd2a-maquette/hydre-comites-p720.mp4"
  },
- "pieges": [],
- "particularites": [
-  "tambour-3d"
+ "pieges": [
+  "Pas de montée des colonnes sur téléphone : empilées, la dernière dépassait de la section"
  ],
  "mesures": {
-  "hauteur_p1440": 2700,
-  "hauteur_m390": 2532,
+  "hauteur_p1440": 1110,
+  "hauteur_m390": 1989,
   "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [
-  "3d",
-  "scene-epinglee"
- ],
- "impact": "spectaculaire"
+ "familles": [],
+ "impact": "vivant"
 }

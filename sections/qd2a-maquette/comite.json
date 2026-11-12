@@ -1,0 +1,49 @@
+{
+ "id": "qd2a-maquette/comite",
+ "maquette": "qd2a-maquette",
+ "page": "index",
+ "titre": "Près de 50 lecteurs, quatre têtes",
+ "role": "équipe",
+ "description": "« Près de 50 lecteurs, quatre têtes » : les 46 visages publiés des membres des comités, recadrés sur le visage, partent mélangés et se regroupent par comité au défilement ; filtre par comité ; la lumière de la section passe du violet à l'orange des affiches du Quartier",
+ "animations": [
+  "filtre-anime",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:147-176",
+  "css": "assets/css/site.css:43,250-267,742,749-751,782",
+  "js": "assets/js/site.js:129-157,333-365,595 ; assets/js/socle/formulaires.js:3"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/comite-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/comite-m390.jpg",
+  "video": "medias/qd2a-maquette/comite-p720.mp4"
+ },
+ "pieges": [
+  "Positions de départ prises avec offsetLeft et offsetTop (relatives à la section, indépendantes des transformations en cours) ; additionner l'offset du parent les comptait deux fois et faisait voler les visages jusque dans l'ouverture",
+  "Aucun nombre de lecteurs par comité : les portraits publiés ne sont pas tous les lecteurs (Canada : 2 sur le site, 8 sur l'affiche)"
+ ],
+ "particularites": [
+  "visages-qui-se-regroupent"
+ ],
+ "mesures": {
+  "hauteur_p1440": 882,
+  "hauteur_m390": 1136,
+  "epinglee": false,
+  "scrolltriggers": 3
+ },
+ "familles": [],
+ "impact": "vivant"
+}

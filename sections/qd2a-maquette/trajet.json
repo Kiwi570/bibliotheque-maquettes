@@ -1,0 +1,50 @@
+{
+ "id": "qd2a-maquette/trajet",
+ "maquette": "qd2a-maquette",
+ "page": "index",
+ "titre": "D’un e-mail à la scène",
+ "role": "étapes",
+ "description": "Le trajet d'un texte, scène épinglée : l'e-mail avec ses pièces jointes, le texte reçu, trois lecteurs et leurs fiches, deux tampons « Favorable », 26 textes en sélection finale, la lauréate et quatre coups de cœur, puis les trois lectures de juin ; six étapes allumées à gauche (titres seuls sur téléphone, description de l'étape active)",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "empilement-de-fiches"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:177-229",
+  "css": "assets/css/site.css:56,270-326,634,736-741,752-759,768-769,774-777",
+  "js": "assets/js/site.js:3,332-365,470-498,595 ; assets/js/socle/effets.js:17,152-159,271-285 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/qd2a-maquette/trajet-p1440.jpg",
+  "capture_m390": "medias/qd2a-maquette/trajet-m390.jpg",
+  "video": "medias/qd2a-maquette/trajet-p720.mp4"
+ },
+ "pieges": [
+  "Masquer les descriptions des étapes inactives par display: none, jamais font-size: 0 (l'audit compte un texte de 0 px)",
+  "Mode calme et sans JavaScript : la scène repasse dans le flux, sinon ses éléments absolus se chevauchent"
+ ],
+ "mesures": {
+  "hauteur_p1440": 3060,
+  "hauteur_m390": 2870,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "scene-epinglee",
+  "empilement"
+ ],
+ "impact": "spectaculaire"
+}

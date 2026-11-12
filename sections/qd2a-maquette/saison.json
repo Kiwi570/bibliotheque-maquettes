@@ -2,12 +2,13 @@
  "id": "qd2a-maquette/saison",
  "maquette": "qd2a-maquette",
  "page": "index",
- "titre": "Une lauréate, quatre coups de cœur",
- "role": "galerie",
- "description": "Carrousel 3D sur fond d'encre : la lauréate et les quatre coups de cœur, portraits réels, qui tournent au défilement avec accrochage sur chaque carte, à la main avec élan et aux flèches",
+ "titre": "Chronologies",
+ "role": "preuves",
+ "description": "La Une de la saison : portrait de la lauréate, Chronologies et ses distinctions, le tapuscrit à feuilleter à la main (pages qui tournent avec élan, annotations au crayon), puis les quatre coups de cœur, chacun marqué de la couleur du comité qui l'a choisi",
  "animations": [
-  "section-fixée",
-  "progression-fixée"
+  "parallaxe",
+  "apparition-au-défilement",
+  "trace-svg"
  ],
  "interactions": [
   "galerie-cliquable"
@@ -18,36 +19,32 @@
  ],
  "telephone": "adapté",
  "note_qualite": 4,
- "reutilisable": false,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:181-256",
-  "css": "assets/css/site.css:147,272-295,598-599,624-625,629,672",
-  "js": "assets/js/site.js:277-315,540"
+  "html": "index.html:230-305",
+  "css": "assets/css/site.css:48-52,112-132,137-157,329-347,650-651,670,680-681,703,743-744,760-762",
+  "js": "assets/js/site.js:3,14,23,26-126,208-298,367,446,596 ; assets/js/socle/index.js:38-61 ; assets/js/socle/ouverture.js:5,55,83 ; assets/js/socle/voile.js:6-7,43,125-163,166,171-207 ; assets/js/socle/gouttiere.js:2-4,7,10,20 ; assets/js/socle/apparitions.js:2,22 ; assets/js/socle/effets.js:4,16,56-74,111-141,178,238-269,273-288,302-315,348-349,408 ; assets/js/socle/onde.js:1-3,6,59,67-190 ; assets/js/socle/boucles.js:1,4,40,43-54 ; assets/js/socle/defilement.js:99 ; assets/js/socle/curseur.js:1 ; assets/js/socle/transitions.js:5,49 ; assets/js/socle/entete.js:3-4,42-56,84-165"
  },
  "medias": {
   "capture": "medias/qd2a-maquette/saison-p1440.jpg",
   "capture_m390": "medias/qd2a-maquette/saison-m390.jpg",
   "video": "medias/qd2a-maquette/saison-p720.mp4"
  },
- "pieges": [
-  "Cartes qui tournent le dos : visibility hidden et inert, sinon elles restent cliquables"
- ],
+ "pieges": [],
  "particularites": [
-  "carrousel-3d"
+  "tapuscrit-a-feuilleter"
  ],
  "mesures": {
-  "hauteur_p1440": 2970,
-  "hauteur_m390": 2785,
+  "hauteur_p1440": 1411,
+  "hauteur_m390": 2393,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 2
  },
  "familles": [
-  "3d",
   "objet-manipulable",
-  "carrousel",
-  "scene-epinglee"
+  "trait-qui-se-dessine"
  ],
- "impact": "spectaculaire"
+ "impact": "vivant"
 }

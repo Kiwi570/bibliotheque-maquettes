@@ -8,34 +8,32 @@
   "spectacle"
  ],
  "concept": [
-  "dossier",
+  "affiche",
   "scène"
  ],
  "ambiance": [
   "clair",
-  "artisanal",
-  "chaleureux"
+  "chaleureux",
+  "énergique"
  ],
  "palette": {
-  "fond": "#f4efe4",
-  "texte": "#16130f",
-  "accent": "#c8321e",
-  "secondaire": "#2b3a8c"
+  "fond": "#f5f0e8",
+  "texte": "#1a1614",
+  "accent": "#4f2045",
+  "secondaire": "#d9783c"
  },
  "metier": "comité de lecture théâtral",
  "luminosite": "clair",
  "ton": [
-  "chaleureux"
+  "chaleureux",
+  "énergique"
  ],
- "univers": [
-  "artisanal"
- ],
+ "univers": [],
  "besoins": [
   "portfolio",
   "catalogue",
   "agenda"
  ],
- "plan": "recit-lineaire",
  "polices": {
   "titres": "Fraunces",
   "texte": "Recursive",
@@ -49,46 +47,44 @@
   "saison",
   "404"
  ],
- "commit": "c44d26d",
- "date_commit": "2026-11-07",
- "note": 86,
+ "commit": "a0a989f",
+ "date_commit": "2026-11-12",
+ "change_depuis_audit": "v2 après un regard de directeur artistique (REFAIRE, 2,9 sur 5) : identité tirée du logo et des visages du client à la place du tapuscrit, kit déjà vu retiré (carrousel 3D, mots géants, crayon dans la marge), accueil ramené de 15 à 9,5 écrans ; second regard AJUSTER 3,9 sur 5.",
+ "note": 85,
  "verdict": "Prête à envoyer",
  "points_forts": [
-  "direction « Le Tapuscrit » : papier ivoire, encre, crayon rouge du lecteur et bleu stylo, une page à l'encre (l'appel) et une page bleu encre (l'Hydre)",
-  "tapuscrit lauréat qu'on feuillette à la main avec élan, annotations au crayon qui se tracent sur chaque page",
-  "table de lecture en 3D (trois fiches, deux tampons, la sélection, le lauréat) qui pivote à la main ; carrousel 3D de la saison",
-  "pile des 26 tapuscrits à feuilleter au défilement, filtrable par pays",
-  "voile « page » qui se tourne entre les pages, fil de crayon rouge dans la marge, dépôt en trois étapes tamponné « Reçu »"
+  "le logo du Quartier vectorisé, ses six formes remplies des 46 vrais visages du comité, de la lauréate et des coups de cœur : on les attrape",
+  "une couleur du logo par comité, tenue de l'accueil à l'Hydre",
+  "les visages qui se regroupent par comité au défilement",
+  "le trajet d'un texte de l'e-mail à la scène, avec le vrai e-mail et les vraies étapes",
+  "accueil de 9,5 écrans, tapuscrit de la lauréate à feuilleter, pile des 26 à feuilleter et filtrer"
  ],
  "reserves": [
-  "Safari et iPhone réel non vérifiés (intro, voile, scènes 3D)",
-  "mentions légales, montant du prix, lieux des lectures et texte intégral du manifeste à fournir",
-  "manifeste de l'accueil résumé, signalé comme tel",
-  "17 illustrations générées, toutes mentionnées comme telles"
+  "Safari et iPhone réel non vérifiés ; audit complet non lancé (audit standard, choix de l'utilisateur)",
+  "accord des membres pour leurs portraits et crédits à demander ; portraits du comité canadien incomplets",
+  "illustrations générées bleutées sur l'appel et l'Hydre, moins accordées à la palette",
+  "mentions légales et texte intégral du manifeste à fournir"
  ],
  "animations": [
   "ouverture-orchestrée",
   "transition-de-page",
   "fil-conducteur",
-  "trace-svg",
+  "morphing",
+  "masque",
+  "parallaxe",
   "section-fixée",
   "progression-fixée",
   "empilement-de-fiches",
+  "filtre-anime",
   "révélation-texte",
   "révélation-image",
   "apparition-au-défilement",
-  "marquee",
-  "reactif-vitesse",
-  "masque",
-  "parallaxe",
   "compteur",
-  "rature",
-  "filtre-anime",
-  "webgl-shader"
+  "trace-svg",
+  "curseur-personnalisé"
  ],
  "interactions": [
   "galerie-cliquable",
-  "schema-interactif",
   "filtres",
   "formulaire-par-étapes",
   "mode-calme"
@@ -100,8 +96,8 @@
  ],
  "grille": {
   "voile": "propre",
-  "objet": "tapuscrit lauréat à feuilleter à la main avec élan (annotations au crayon) ; table de lecture 3D à faire pivoter ; carrousel 3D",
-  "fil": "trait de crayon rouge du lecteur dans la marge gauche, une coche ou un soulignement par section",
+  "objet": "le Q du logo dont les six formes sont remplies des visages du comité, à attraper et écarter avec élan ; tapuscrit de la lauréate à feuilleter",
+  "fil": "petit Q devant chaque surtitre, qui se reconstitue forme par forme au fil des sections",
   "intro_vers_objet": true,
   "marques": [
    "manipuler",
@@ -120,6 +116,13 @@
     "budget": 135,
     "attente": 11,
     "allers_retours": 1
+   },
+   {
+    "version": 2,
+    "travail": 94,
+    "budget": 205,
+    "attente": 2,
+    "allers_retours": 1
    }
   ]
  },
@@ -128,12 +131,10 @@
   "qd2a-maquette/ouverture-panneau",
   "qd2a-maquette/header",
   "qd2a-maquette/menu",
-  "qd2a-maquette/fil",
   "qd2a-maquette/debut",
-  "qd2a-maquette/titres",
-  "qd2a-maquette/lecture",
+  "qd2a-maquette/comite",
+  "qd2a-maquette/trajet",
   "qd2a-maquette/saison",
-  "qd2a-maquette/lu",
   "qd2a-maquette/manifeste",
   "qd2a-maquette/appel",
   "qd2a-maquette/partenaires",
@@ -167,5 +168,6 @@
   "accueil-telephone": "medias/qd2a-maquette/debut-m390.jpg"
  },
  "audit": "https://github.com/Kiwi570/bibliotheque-maquettes/blob/main/audits/qd2a-maquette.md",
- "commit_audit": null
+ "commit_audit": null,
+ "plan": "recit-lineaire"
 }

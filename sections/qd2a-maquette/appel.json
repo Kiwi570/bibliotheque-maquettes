@@ -4,17 +4,16 @@
  "page": "index",
  "titre": "L’appel à textes est ouvert.",
  "role": "appel",
- "description": "Appel à textes : titre tapé à la machine en direct, quatre conditions cochées au crayon une à une, bouton et fiche PDF, photo d'enveloppe qui s'incline selon la vitesse",
+ "description": "Appel à textes : quatre conditions aux couleurs des comités, les vrais gestes (envoyer par e-mail, la fiche PDF, le dépôt en ligne de démonstration) et « Votre texte sera lu par trois d'entre eux » : trois visages du comité tirés au hasard à chaque visite",
  "animations": [
-  "révélation-texte",
-  "trace-svg",
-  "reactif-vitesse"
+  "apparition-au-défilement"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -22,26 +21,25 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:298-318",
-  "css": "assets/css/site.css:56-59,326-335,536,587",
-  "js": "assets/js/site.js:3,64-93,536-538"
+  "html": "index.html:325-349",
+  "css": "assets/css/site.css:366-379,647,765",
+  "js": "assets/js/site.js:3,158-173"
  },
  "medias": {
   "capture": "medias/qd2a-maquette/appel-p1440.jpg",
-  "capture_m390": "medias/qd2a-maquette/appel-m390.jpg"
+  "capture_m390": "medias/qd2a-maquette/appel-m390.jpg",
+  "video": "medias/qd2a-maquette/appel-p720.mp4"
  },
- "pieges": [
-  "Titre tapé sur plusieurs lignes : interligne d'au moins 1,3, sinon l'audit voit les lettres de deux lignes se chevaucher"
+ "pieges": [],
+ "particularites": [
+  "trois-lecteurs-au-hasard"
  ],
  "mesures": {
-  "hauteur_p1440": 807,
-  "hauteur_m390": 1000,
+  "hauteur_p1440": 710,
+  "hauteur_m390": 1057,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  },
- "familles": [
-  "vitesse",
-  "trait-qui-se-dessine"
- ],
- "impact": "vivant"
+ "familles": [],
+ "impact": "calme"
 }

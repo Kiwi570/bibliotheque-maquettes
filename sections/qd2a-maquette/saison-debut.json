@@ -4,11 +4,10 @@
  "page": "saison",
  "titre": "La saison 25/26",
  "role": "ouverture",
- "description": "Ouverture centrée : « 26 » géant rouge, 26 feuillets qui tombent dans la pile avec le compteur de 00 à 26, photo générée d'une pile de tapuscrits",
+ "description": "Ouverture aux couleurs des affiches du Quartier (violet vers orange) : « 26 » géant ocre, 26 feuillets qui tombent dans la pile avec le compteur de 00 à 26",
  "animations": [
   "ouverture-orchestrée",
-  "compteur",
-  "parallaxe"
+  "compteur"
  ],
  "interactions": [
   "aucune"
@@ -23,9 +22,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "saison.html:116-132",
-  "css": "assets/css/socle.css:245-250,255,271 ; assets/css/site.css:31,37,108-114,170-180,199-200,208,592,609,617-622,638,644,664-665",
-  "js": "assets/js/site.js:322-331,516-523,534,544,564,567 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
+  "html": "saison.html:122-133",
+  "css": "assets/css/socle.css:245-250,255,271 ; assets/css/site.css:34,40,98-104,160-173,192-193,201,652,669,677-682,704,724-725",
+  "js": "assets/js/site.js:379-388,573-580,591,600,622,625 ; assets/js/socle/ouverture.js:33 ; assets/js/socle/voile.js:5,71-79,82-102,171-207 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
   "capture": "medias/qd2a-maquette/saison-debut-p1440.jpg",
@@ -33,13 +32,13 @@
   "video": "medias/qd2a-maquette/saison-debut-p720.mp4"
  },
  "pieges": [
-  "Chiffre géant : hauteur automatique et interligne 1,28, sinon sa boîte recouvre le surtitre et le titre"
+  "Chiffre posé sur des traits de la pile : traits d'une teinte proche du fond, sinon l'audit mesure un contraste sur image de 1,9"
  ],
  "mesures": {
   "hauteur_p1440": 900,
   "hauteur_m390": 844,
   "epinglee": false,
-  "scrolltriggers": 2
+  "scrolltriggers": 1
  },
  "familles": [
   "typo-geante"
