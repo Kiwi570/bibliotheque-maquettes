@@ -1,0 +1,996 @@
+{
+  "maquette": {
+    "client": "coach de triathlon diplômé (Michael Lecuivre, « Coach Mika ») : plans d'entraînement à distance, coaching 1-to-1, stages dans les Pyrénées, club FIT-TRI-TEAM, outils gratuits et blog",
+    "activite": [
+      "sport",
+      "formation"
+    ],
+    "concept": [
+      "laboratoire"
+    ],
+    "ambiance": [
+      "clair",
+      "énergique",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--creme",
+      "texte": "--encre",
+      "accent": "--lime",
+      "secondaire": "--terre"
+    },
+    "polices": {
+      "titres": "Barlow Condensed",
+      "texte": "Barlow",
+      "mono": null
+    },
+    "points_forts": [
+      "un seul système tenu sur les douze pages : gris très clair, bandes bleu nuit, vert citron pour les boutons et les prix, un mot bleu en italique dans chaque titre en capitales Barlow Condensed",
+      "ouverture photo pleine largeur (cycliste au crépuscule), titre géant « Des plans fondés sur la science », trois chiffres qui comptent à droite, lignes qui défilent et léger zoom",
+      "curseur « Quel volume hebdomadaire visez-vous ? » qui désigne la bonne formule (Team, Squad, 1-to-1) et ses prix",
+      "calculateur des zones de fréquence cardiaque (méthode Karvonen) en direct, sur l'accueil et la page Ressources",
+      "pages intérieures exactement au niveau de l'accueil : même ouverture claire avec photo, mêmes bandes sombres, même carte d'appel final",
+      "JavaScript natif sans bibliothèque : apparitions, mots qui s'allument à la lecture, cartes qui s'inclinent, boutons magnétiques, fondu entre les pages"
+    ],
+    "reserves": [
+      "maquette de fin septembre, d'avant le script d'audit : visuels provisoires en attendant les photos du coach",
+      "peu d'effets marquants : aucun moment « wouahou », la qualité vient de l'harmonie et de la clarté",
+      "quelques sections de texte un peu longues (mentions, programme), petits libellés en capitales"
+    ],
+    "animations": [
+      "révélation-texte",
+      "apparition-au-défilement",
+      "compteur",
+      "marquee",
+      "révélation-image",
+      "bouton-magnétique",
+      "survol-image",
+      "transition-de-page"
+    ],
+    "interactions": [
+      "calculateur",
+      "comparateur",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "hero",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "curseur du volume d'entraînement qui désigne la formule",
+      "fil": null
+    },
+    "metier": "coach de triathlon",
+    "dependances": [
+      "aucune"
+    ]
+  },
+  "sections": {
+    "progression": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Fine barre de progression de lecture en haut de l'écran, en vert citron, sur toutes les pages",
+      "animations": [
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo FIT-TRI, neuf liens en petites capitales, bouton sombre « Entretien gratuit » ; il se resserre et change de fond selon la section traversée",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "menu": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, liens en grandes capitales, fermeture à la touche Échap",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "hero": {
+      "titre": "Des plans fondés sur la science, un coach qui vous connaît",
+      "role": "ouverture",
+      "description": "Ouverture : photo d'un cycliste au crépuscule en pleine largeur, titre géant en capitales « Des plans fondés sur la science, un coach qui vous connaît » avec « science » en vert citron italique, deux boutons, et à droite trois chiffres qui comptent (300+ athlètes, 20 ans, depuis 2001) ; lignes fines qui défilent et léger zoom de la photo",
+      "animations": [
+        "révélation-texte",
+        "compteur",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ],
+      "particularites": [
+        "chiffres clés en colonne à droite du titre, séparés par des filets"
+      ]
+    },
+    "marquee": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bande vert citron qui défile avec les courses de référence (XTRI, Kona, Roth, Nice, Embrun, Ironman 70.3)",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "section": {
+      "titre": "Planification personnalisée",
+      "role": "manifeste",
+      "description": "« Planification personnalisée » : paragraphe d'accueil en gros texte dont les mots s'allument au fil de la lecture, puis trois piliers numérotés (planification, progression, soutien)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "band-nuit": {
+      "titre": "Les formulesTrois niveaux d’accompagnement, un même sérieux",
+      "role": "tarifs",
+      "description": "« Trois niveaux d'accompagnement, un même sérieux » sur bande bleu nuit : curseur du volume hebdomadaire (heures par semaine) qui allume la formule conseillée parmi trois cartes de prix (Team 80 €, Squad 120 €, 1-to-1 dès 250 €)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ],
+      "particularites": [
+        "curseur d'heures d'entraînement qui désigne la formule de coaching"
+      ]
+    },
+    "section-2": {
+      "titre": "ServicesLe dialogue avant tout",
+      "role": "services",
+      "description": "« Le dialogue avant tout » : quatre cartes photo des services (consulting, tests de performance, analyse vidéo, positionnement vélo) avec prix et lien, photos qui se dévoilent",
+      "animations": [
+        "révélation-image",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "band-blanc": {
+      "titre": "Stages FIT-TRI-PERFVivez bien plus qu’un entraînement",
+      "role": "offre",
+      "description": "Stages : grande photo de route de montagne à gauche, « Vivez bien plus qu'un entraînement » et liste des points forts du stage à droite",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "section-3": {
+      "titre": "Outil gratuitVos zones de fréquence cardiaque, méthode Karvonen",
+      "role": "calculateur",
+      "description": "Outil gratuit « Vos zones de fréquence cardiaque, méthode Karvonen » : deux champs (repos, maximum) et carte sombre des cinq zones dont les fourchettes en battements se recalculent en direct",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ],
+      "particularites": [
+        "zones cardiaques Karvonen calculées en direct"
+      ]
+    },
+    "band-nuit-2": {
+      "titre": "Le club FIT-TRI-TEAMUne des licences les moins chères de France",
+      "role": "offre",
+      "description": "Club FIT-TRI-TEAM sur bande bleu nuit : « Une des licences les moins chères de France », carte vert citron « 105 € » avec ce qui est compris",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "section-4": {
+      "titre": "Ils racontentDes rêves sportifs devenus réalité",
+      "role": "témoignages",
+      "description": "« Des rêves sportifs devenus réalité » : trois témoignages d'athlètes en cartes blanches avec nom et course",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "band-blanc-2": {
+      "titre": "Le blogEntraînement, science et séances",
+      "role": "articles",
+      "description": "« Entraînement, science et séances » : trois derniers articles du blog en cartes photo avec catégorie et date",
+      "animations": [
+        "révélation-image",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "cta-band": {
+      "titre": "Prêt·e à franchir le cap ?",
+      "role": "appel",
+      "description": "Carte bleu nuit arrondie « Prêt·e à franchir le cap ? » avec deux boutons (entretien, écrire), reprise en fin de chaque page",
+      "animations": [
+        "apparition-au-défilement",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "footer": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit en quatre colonnes : présentation, formules, le club, contact, réseaux et mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "sticky-bar": {
+      "titre": "",
+      "role": "barre-fixe",
+      "description": "Barre d'action fixe du téléphone : entretien gratuit et formules",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "article-repartition-des-intensites-page-intro": {
+      "titre": "La répartition des intensités : de la méthode polarisée à la méthode pyramidale",
+      "role": "ouverture",
+      "description": "Ouverture d'article : fil d'Ariane, catégorie et temps de lecture, titre en capitales « La répartition des intensités : de la méthode polarisée à la méthode pyramidale » avec le dernier mot en bleu",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "article-repartition-des-intensites-section": {
+      "titre": "Le modèle à trois zones",
+      "role": "articles",
+      "description": "Corps d'article : photo de montagne, intertitres en capitales, barres colorées qui comparent la répartition des intensités des trois méthodes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "article-repartition-des-intensites-band-blanc": {
+      "titre": "À lire aussiDeux autres articles",
+      "role": "articles",
+      "description": "« Deux autres articles » : deux cartes photo d'articles voisins en fin de lecture",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "blog-page-intro": {
+      "titre": "Entraînement, science, séances, podcast",
+      "role": "ouverture",
+      "description": "Ouverture du blog : « Entraînement, science, séances, podcast » en capitales, dernier mot en bleu, chapeau court",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "blog-section": {
+      "titre": "La répartition des intensités : de la méthode polarisée à la méthode pyramidale",
+      "role": "articles",
+      "description": "Liste des articles : article à la une en grande photo puis cartes avec catégorie, date et chapeau",
+      "animations": [
+        "révélation-image",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "club-page-intro": {
+      "titre": "Faites partie d’une équipe",
+      "role": "ouverture",
+      "description": "Ouverture des pages intérieures (club, coach, stages) : titre en capitales avec un mot bleu en italique à gauche, photo verticale à droite, sur le même fond clair que l'accueil",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "club-section": {
+      "titre": "Ce que ça changeDes athlètes comme vous",
+      "role": "offre",
+      "description": "« Des athlètes comme vous » : ce que change le club, carte vert citron de la licence à 105 € et deux boutons",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "club-cta-band": {
+      "titre": "Envie de rejoindre le team ?",
+      "role": "appel",
+      "description": "Carte d'appel bleu nuit « Envie de rejoindre le team ? » avant le pied de page",
+      "animations": [
+        "apparition-au-défilement",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coach-page-intro": {
+      "titre": "Michael Lecuivre, alias Coach Mika",
+      "role": "ouverture",
+      "description": "« Michael Lecuivre, alias Coach Mika » : titre en capitales, présentation, portrait du coach à droite",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coach-band-nuit": {
+      "titre": "",
+      "role": "chiffres",
+      "description": "Bande bleu nuit de quatre chiffres qui comptent (300+, 20, 250+, 1994)",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coach-section": {
+      "titre": "FormationDiplômé, et toujours en formation",
+      "role": "preuves",
+      "description": "« Diplômé, et toujours en formation » : diplômes en liste à gauche, photo de cycliste à droite",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coach-band-blanc": {
+      "titre": "ExpériencesTrente ans de triathlon",
+      "role": "preuves",
+      "description": "« Trente ans de triathlon » : deux colonnes d'expériences professionnelles et sportives datées, citation du coach en bleu",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coach-cta-band": {
+      "titre": "On en parle en visio ?",
+      "role": "appel",
+      "description": "Carte d'appel bleu nuit « On en parle en visio ? »",
+      "animations": [
+        "apparition-au-défilement",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coaching-section": {
+      "titre": "Power Coaching illimité",
+      "role": "offre",
+      "description": "Ouverture de la page Coaching : carte bleu nuit « Power Coaching illimité », places disponibles et deux prix (1 190 €, 1 990 €)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coaching-section-2": {
+      "titre": "Les trois formulesChoisissez votre rythme",
+      "role": "tarifs",
+      "description": "« Choisissez votre rythme » : le curseur du volume hebdomadaire et les trois formules en grandes cartes, la conseillée en bleu nuit, détail de ce qui est compris",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "coaching-band-blanc": {
+      "titre": "Plan vélo / triathlonVous êtes autonome en natation et en course ?",
+      "role": "tarifs",
+      "description": "Plan vélo ou triathlon : tableau des prix selon la durée (1, 3, 6, 12 mois) pour les athlètes autonomes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Tableau large : défile à l'horizontale sur téléphone"
+      ],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "contact-page-intro": {
+      "titre": "N’hésitez pas à me contacter",
+      "role": "ouverture",
+      "description": "« N'hésitez pas à me contacter » : titre en capitales, mot bleu, chapeau",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "contact-section": {
+      "titre": "Un entretien préalable en visio",
+      "role": "contact",
+      "description": "Formulaire (nom, e-mail, objet, objectif, message) et carte bleu nuit « Un entretien préalable en visio » avec lien de réservation, coordonnées du coach",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "mentions-legales-page-intro": {
+      "titre": "Mentions légales, CGV et confidentialité",
+      "role": "ouverture",
+      "description": "Ouverture des mentions : « Mentions légales, CGV et confidentialité » en capitales, mot bleu",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "mentions-legales-legal": {
+      "titre": "Éditeur du site",
+      "role": "texte-legal",
+      "description": "Mentions légales, conditions de vente et confidentialité en intertitres, points à confirmer surlignés en vert",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "ressources-page-intro": {
+      "titre": "Des outils gratuits, écrits par votre entraîneur",
+      "role": "ouverture",
+      "description": "« Des outils gratuits, écrits par votre entraîneur » : titre en capitales, mot bleu en italique",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "ressources-section": {
+      "titre": "Calcul zones FC et méthode polarisée",
+      "role": "articles",
+      "description": "Cartes des documents à télécharger (calcul des zones, tests VMA et 2 000 m, répartition, choix du vélo) avec étiquette PDF ou XLS",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "ressources-band-blanc": {
+      "titre": "En ligneVos zones de FC, méthode Karvonen",
+      "role": "calculateur",
+      "description": "Le calculateur des zones de fréquence cardiaque en version page Ressources, carte sombre des cinq zones à droite",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "services-section": {
+      "titre": "Coaching 1-to-1",
+      "role": "services",
+      "description": "Services en rangées alternées photo et texte : coaching 1-to-1, consulting, tests, analyse vidéo, chacun avec son prix et son bouton",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "services-positionnement": {
+      "titre": "Positionnement véloLe vélo de vos rêves existe. Mais votre position est-elle optimale ?",
+      "role": "offre",
+      "description": "Bande bleu nuit « Le vélo de vos rêves existe. Mais votre position est-elle optimale ? » : liste des bénéfices et grande photo de cycliste au soleil couchant",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-page-intro": {
+      "titre": "Vivez bien plus qu’un entraînement",
+      "role": "ouverture",
+      "description": "« Vivez bien plus qu'un entraînement » : ouverture de la page Stages, photo d'un peloton sur la route côtière",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-section": {
+      "titre": "Une approche haut niveau, accessible et concrèteSur place, vous ne venez pas consommer de ",
+      "role": "méthode",
+      "description": "« Sur place, vous ne venez pas consommer de l'entraînement. Vous venez comprendre. » : cinq piliers numérotés du stage",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-band-blanc": {
+      "titre": "Un terrain brut, exigeant, spectaculaire",
+      "role": "offre",
+      "description": "« Un terrain brut, exigeant, spectaculaire » : photos des Pyrénées et de la côte, infos pratiques et lien vers le programme",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-programme": {
+      "titre": "Programme · Stage week-end XTRI & Tri des PyrénéesQuatre jours en conditions réelles",
+      "role": "agenda",
+      "description": "« Quatre jours en conditions réelles » sur bande bleu nuit : quatre cartes de journée avec distances et dénivelés en grand chiffres, prix et bouton d'inscription",
+      "animations": [
+        "apparition-au-défilement",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-section-2": {
+      "titre": "Pendant le stage, en optionTesting et analyse vidéo",
+      "role": "services",
+      "description": "« Testing et analyse vidéo » en option pendant le stage : deux grandes cartes photo avec prix",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    },
+    "stages-cta-band": {
+      "titre": "Rejoignez l’expérience FIT-TRI",
+      "role": "appel",
+      "description": "Carte d'appel bleu nuit « Rejoignez l'expérience FIT-TRI » : réserver sa place, voir les formules",
+      "animations": [
+        "apparition-au-défilement",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "aucune"
+      ]
+    }
+  }
+}

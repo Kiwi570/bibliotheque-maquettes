@@ -14,10 +14,11 @@ const form = $('#filtres'), grille = $('#resultats'), compte = $('#compte'), plu
 function preparer(ix) {
   const col = (nom, ligne) => Object.fromEntries(ix.colonnes[nom].map((c, i) => [c, ligne[i]]));
   const maquettes = new Map(ix.maquettes.map(l => { const m = col('maquettes', l); return [m.depot, m]; }));
+  const favoris = new Set(ix.favoris || []); // maquettes favorites de l'utilisateur (favoris.json)
   const sections = ix.sections.map(l => {
     const s = col('sections', l); const [depot, court] = s.id.split('/'); const m = maquettes.get(depot) || {};
     const media = (v, suffixe) => v === 1 ? `/medias/${depot}/${court}-${suffixe}` : v ? (v.startsWith('medias/') ? '/' + v : `/medias/${depot}/${v}`) : '';
-    return { type: 'section', id: s.id, depot, titre: s.titre, role: s.role, animations: s.animations, interactions: s.interactions || [], note: s.note,
+    return { type: 'section', id: s.id, depot, favori: favoris.has(depot), titre: s.titre, role: s.role, animations: s.animations, interactions: s.interactions || [], note: s.note,
       modules: s.module ? s.module.split('+') : [], capture: media(s.capture, 'p1440.jpg'), video: media(s.video, 'p720.mp4'),
       activite: m.activite || [], concept: m.concept || [], ambiance: m.ambiance || [], client: m.client || depot, metier: m.metier || '',
       besoin: m.besoins || [], luminosite: m.luminosite ? [m.luminosite] : [], famille: s.familles || [], impact: s.impact ? [s.impact] : [],
@@ -68,6 +69,7 @@ function filtrer() {
       if (!valeurs(it, k).includes(f[k])) return false;
     }
     if (vue === 'sections' && f.note === '5' && it.note < 5) return false;
+    if (vue === 'sections' && f.favori === '1' && !it.favori) return false;
     if (mots.length) { const t = sansAccent([it.titre, it.id, it.role, it.client, it.metier, ...it.famille, ...it.animations, ...it.interactions, ...it.modules, ...it.ambiance].join(' ')); if (!mots.every(m => t.includes(m))) return false; }
     return true;
   }).sort((a, b) => b.note - a.note || b.modules.length - a.modules.length || a.titre.localeCompare(b.titre, 'fr'));
@@ -78,7 +80,7 @@ const echap = t => String(t ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<':
 function carte(it) {
   const etiquettes = [...it.modules.map(m => `<li class="est-module">${echap(m)}</li>`), ...it.animations.slice(0, 4).map(a => `<li>${echap(a)}</li>`), ...it.interactions.slice(0, 2).map(a => `<li>${echap(a)}</li>`)].join('');
   const media = `<div class="carte__media"${it.video ? ` data-video="${it.video}"` : ''}>${it.capture ? `<img src="${it.capture}" alt="" loading="lazy" decoding="async" width="1440" height="900">` : '<span class="sans">Pas de capture</span>'}
-    ${it.type === 'section' ? `<span class="pastille${it.note === 5 ? ' pastille--5' : ''}">${it.note}/5</span>` : ''}${it.video ? '<span class="pastille pastille--video" aria-hidden="true">▶ survol</span>' : ''}</div>`;
+    ${it.type === 'section' ? `<span class="pastille${it.note === 5 ? ' pastille--5' : ''}">${it.note}/5</span>` : ''}${it.video ? '<span class="pastille pastille--video" aria-hidden="true">▶ survol</span>' : ''}${it.favori ? '<span class="pastille pastille--favori">★ favorite</span>' : ''}</div>`;
   if (it.type === 'section') return `<article class="carte">${media}<div class="carte__corps">
     <h2>${echap(it.titre)}</h2><p class="carte__meta"><b>${echap(it.client)}</b> · ${echap(it.role)}</p><ul class="etiquettes" aria-label="Mécaniques">${etiquettes}</ul>
     <div class="carte__actions">${it.enLigne ? `<a class="bouton bouton--ligne" href="${it.enLigne}" target="_blank" rel="noopener">Voir en ligne<span class="sr"> : ${echap(it.titre)}</span></a>` : ''}

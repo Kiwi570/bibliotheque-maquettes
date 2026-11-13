@@ -24,6 +24,15 @@ export const DOWNLOADS = path.resolve(RACINE, '..');
 export const AUDIT = path.join(DOWNLOADS, 'audit-maquettes');
 export const TAXO = JSON.parse(fs.readFileSync(path.join(RACINE, 'taxonomie.json'), 'utf8'));
 
+// Maquettes favorites de l'utilisateur (favoris.json à la racine) : le niveau et le style visés, lus par la skill au début
+// de chaque projet (vitrine.mjs --favoris). nomDepot accepte « lemoy-premium », « lemoy-premium-maquette » ou l'adresse en ligne.
+export const nomDepot = (x) => { let t = String(x || '').trim().toLowerCase(); const u = t.match(/^https?:\/\/([^./]+)\./); if (u) t = u[1]; t = t.replace(/\/+$/, ''); if (!t || t.endsWith('-maquette') || fs.existsSync(path.join(RACINE, 'maquettes', t + '.json'))) return t; return t + '-maquette'; };
+export function lireFavoris() {
+  const f = path.join(RACINE, 'favoris.json');
+  if (!fs.existsSync(f)) return [];
+  const o = JSON.parse(fs.readFileSync(f, 'utf8'));
+  return Array.isArray(o.favoris) ? o.favoris : [];
+}
 export const lireJson = (f, defaut) => { try { return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { if (defaut !== undefined) return defaut; throw new Error('JSON illisible : ' + f); } };
 export const ecrireJson = (f, o, compact = false) => { fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, JSON.stringify(o, null, compact ? 0 : 1) + '\n'); };
 

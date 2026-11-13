@@ -1,0 +1,846 @@
+{
+  "maquette": {
+    "client": "association de team building survie douce, stages de survie, anniversaires et EVG en forêt, à Marly-le-Roi et partout en France",
+    "activite": [
+      "tourisme",
+      "formation",
+      "sport"
+    ],
+    "concept": [
+      "voyage"
+    ],
+    "ambiance": [
+      "sombre",
+      "végétal",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--charbon",
+      "texte": "--cendre",
+      "accent": "--braise",
+      "secondaire": "--mousse"
+    },
+    "polices": {
+      "titres": "Big Shoulders",
+      "texte": "Fraunces",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "une seule ambiance tenue de bout en bout : forêt de nuit, charbon et mousse, une seule couleur vive (la braise orange) pour les boutons, les prix et les mots qui s'embrasent",
+      "ouverture : feu de camp en WebGL dans la photo de forêt, titre géant « ICE Attitude » en Big Shoulders, on maintient le clic pour attiser le feu, le titre se consume en quittant l'écran",
+      "« Une journée en forêt » épinglée : le soleil tourne sur un arc, l'horloge avance de 10 h à 16 h, la lumière du fond change atelier après atelier",
+      "« Autour du feu » : l'équipe en cercle autour d'un foyer, le cercle tourne au défilement et la fiche du membre au premier plan s'affiche",
+      "« L'épreuve du feu » : un archet à feu à manœuvrer pour faire naître la braise, calculateur de tarif, devis dans un tiroir avec récapitulatif",
+      "petites animations partout : braises qui suivent le curseur, lettres qui montent couleur braise, photos qui arrivent troubles puis s'éclaircissent, cartes inclinables, boutons magnétiques"
+    ],
+    "reserves": [
+      "maquette v2 du 19 octobre, d'avant le script d'audit : images Grok pour les fonds, points à valider avec le client (adresse, statut, dates)",
+      "fond très sombre partout : textes en Fraunces sur charbon à surveiller en petite taille",
+      "trois pages seulement (accueil, stage survie, team building)"
+    ],
+    "animations": [
+      "webgl-shader",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "compteur",
+      "parallaxe",
+      "canvas-2d",
+      "curseur-personnalisé",
+      "bouton-magnétique",
+      "transition-de-page",
+      "défilement-lissé"
+    ],
+    "interactions": [
+      "jeu",
+      "calculateur",
+      "formulaire-par-étapes",
+      "ambiance-sonore",
+      "carte-interactive"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "ouverture",
+    "plan": "journee",
+    "grille": {
+      "objet": "feu de camp à attiser en ouverture, archet à feu sur la page Stage",
+      "fil": "braises orange qui suivent le curseur et embrasent les mots"
+    },
+    "metier": "stages de survie en forêt"
+  },
+  "sections": {
+    "entete": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sombre : logo ICE Attitude, liens, téléphone en mono, bouton braise « Demander un devis » qui ouvre le tiroir",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "menu-mobile": {
+      "titre": "",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, liens en Big Shoulders et numéro",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "ouverture": {
+      "titre": "ICE Attitude, ICE Attitude",
+      "role": "ouverture",
+      "description": "Ouverture : photo de forêt de nuit où brûle un feu de camp en WebGL, devise « Revenir à l'essentiel » en italique braise, titre géant « ICE Attitude » dont les lettres montent, chiffres clés en bas ; maintenir le clic attise le feu, le titre se consume quand on descend",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte",
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "splittext",
+        "ogl"
+      ],
+      "particularites": [
+        "feu de camp WebGL dans la photo, qu'on attise en maintenant le clic",
+        "titre qui se consume en quittant l'écran"
+      ]
+    },
+    "pourquoi": {
+      "titre": "Pourquoi la forêt ?",
+      "role": "manifeste",
+      "description": "« Pourquoi la forêt ? » : texte avec mots clés en braise, liste des bienfaits numérotés, photos de groupe qui arrivent troubles puis s'éclaircissent en parallaxe",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "formules": {
+      "titre": "Six façons de revenir à l'essentiel",
+      "role": "offre",
+      "description": "« Six façons de revenir à l'essentiel » : galerie horizontale épinglée de six formules (team building, stage 1 jour, anniversaire, EVG, stage 2 jours, immersion) en cartes photo inclinables, prix qui s'allument en braise",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, les cartes s'empilent en colonne"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "journee": {
+      "titre": "Une journée en forêt",
+      "role": "étapes",
+      "description": "« Une journée en forêt » épinglée : le soleil parcourt un arc, l'horloge passe de 10:00 à 16:00 et le fond change de lumière à chaque atelier (orientation, abri, eau, cueillette, secourisme, feu), photo et pictogramme qui se dessine pour chacun",
+      "animations": [
+        "section-fixée",
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, les ateliers défilent sans épinglage"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "lenis"
+      ],
+      "particularites": [
+        "horloge et soleil sur un arc qui suivent la journée au défilement"
+      ]
+    },
+    "preuves": {
+      "titre": "Quelques repères",
+      "role": "chiffres",
+      "description": "« Quelques repères » sur fond de braises : quatre chiffres qui comptent (10 à 100 participants, 6 h, 43, 5/5) et braises qui montent en canvas",
+      "animations": [
+        "compteur",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "confiance": {
+      "titre": "Ils nous ont fait confiance",
+      "role": "preuves",
+      "description": "« Ils nous ont fait confiance » sur fond d'écorce : grille de logos clients en clair qui défilent",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Ce qu'ils en disent",
+      "role": "témoignages",
+      "description": "« Ce qu'ils en disent » : grand avis en Fraunces italique sur photo de groupe assombrie, étoiles, défilement des avis par flèches",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "equipe": {
+      "titre": "Autour du feu",
+      "role": "équipe",
+      "description": "« Autour du feu » : portraits de l'équipe en cercle autour d'un foyer en canvas ; le cercle tourne au défilement, le membre au premier plan grandit et sa fiche s'affiche (Didier, formateur survie), clic sur un portrait pour y aller",
+      "animations": [
+        "section-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, portraits en grille sans cercle"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "équipe en cercle qui tourne autour d'un foyer"
+      ]
+    },
+    "zones": {
+      "titre": "Où nous trouver",
+      "role": "carte",
+      "description": "« Où nous trouver » : carte schématique qui relie Marly-le-Roi aux forêts d'intervention avec leurs distances, liste des lieux à gauche, survol d'un lieu qui l'allume",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sessions": {
+      "titre": "Prochaines sessions",
+      "role": "agenda",
+      "description": "« Prochaines sessions » sur fond de nuit étoilée : onglets à venir et passées, cartes de session avec date, formule et bouton",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "faq": {
+      "titre": "Questions pratiques",
+      "role": "faq",
+      "description": "« Questions pratiques » : photo de marche en forêt fixée à gauche, questions dépliables à droite (sportif, participants, pluie, insectes, tenue)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact": {
+      "titre": "On allume le feu ?",
+      "role": "appel",
+      "description": "« On allume le feu ? » sur fond de braises : titre géant, phrase d'appel et gros bouton rond braise « Demander un devis » qui ouvre le tiroir",
+      "animations": [
+        "révélation-texte",
+        "canvas-2d",
+        "bouton-magnétique"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Nous joindre",
+      "role": "pied-de-page",
+      "description": "Pied de page : logo, « Revenir à l'essentiel. » en grand, coordonnées, activités, liens, citation sur la nature",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dock": {
+      "titre": "Préférences",
+      "role": "barre-fixe",
+      "description": "Petit dock fixe en bas à gauche : son d'ambiance (vent, feu) et mode calme",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "ambiance-sonore",
+        "mode-calme"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "tiroir": {
+      "titre": "Demander un devis",
+      "role": "contact",
+      "description": "Tiroir de devis qui glisse depuis la droite sur toutes les pages : formule, nombre de participants, date, lieu, coordonnées, récapitulatif qui se met à jour",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "sans_capture": true
+    },
+    "transition": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Transition entre les pages : un voile de fumée et de braises en canvas couvre l'écran puis se lève",
+      "animations": [
+        "transition-de-page",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "curseur": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "curseur personnalisé sans rendu propre : décrit avec braises-curseur"
+    },
+    "braises-curseur": {
+      "titre": "",
+      "role": "decor",
+      "description": "Braises en canvas qui suivent le curseur sur toutes les pages, en traînée orange discrète",
+      "animations": [
+        "curseur-personnalisé",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "mentions-legales-legal-bandeau": {
+      "titre": "",
+      "role": "texte-legal",
+      "description": "Bandeau d'avertissement des mentions : informations à confirmer avec le client, sur fond braise sombre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mentions-legales-ouverture": {
+      "titre": "Mentions légales",
+      "role": "texte-legal",
+      "description": "Mentions légales en colonne, points à confirmer en italique braise",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-ouverture": {
+      "titre": "Les bases de la survie",
+      "role": "ouverture",
+      "description": "Ouverture de la page Stage : forêt brumeuse avec le même feu WebGL, titre géant « Les bases de la survie », faits du stage en pastilles, boutons tarif et programme",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "splittext",
+        "ogl"
+      ]
+    },
+    "stage-survie-objectif": {
+      "titre": "L'objectif",
+      "role": "manifeste",
+      "description": "« L'objectif » : deux colonnes de texte et photo de sous-bois, mots clés en braise",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-programme": {
+      "titre": "Le programme, de 10h à 16h",
+      "role": "étapes",
+      "description": "« Le programme, de 10h à 16h » épinglé : l'horloge avance, chaque atelier arrive avec sa photo d'objet (boussole, couteau, gourde) et son pictogramme qui se dessine",
+      "animations": [
+        "section-fixée",
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "stage-survie-feu": {
+      "titre": "À vous : l'épreuve du feu",
+      "role": "outil-interactif",
+      "description": "« À vous : l'épreuve du feu » : archet à feu dessiné en canvas ; on fait aller et venir l'archet pour chauffer la planchette jusqu'à la braise, puis la flamme prend dans le nid d'herbe",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "archet à feu à manœuvrer pour faire naître une braise"
+      ]
+    },
+    "stage-survie-tarif": {
+      "titre": "Votre tarif",
+      "role": "calculateur",
+      "description": "« Votre tarif » : nombre de participants au curseur et en gros chiffres, jauge de places, total en direct (900 € pour 12), date et bouton de réservation",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-galerie": {
+      "titre": "Ils y étaient",
+      "role": "galerie",
+      "description": "« Ils y étaient » : rangée de photos de stagiaires qui défile, photos qui s'éclaircissent",
+      "animations": [
+        "galerie-horizontale",
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-autres": {
+      "titre": "Les autres formules",
+      "role": "offre",
+      "description": "« Les autres formules » : quatre cartes photo inclinables des autres formules avec durée et prix",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-sessions": {
+      "titre": "Sessions",
+      "role": "agenda",
+      "description": "Sessions du stage en version compacte : onglets et cartes de date",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-citation-section": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "Citation de Carl Gustav Jung en Fraunces italique sur fond de braises, mots qui s'allument au défilement",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stage-survie-faq": {
+      "titre": "Questions pratiques",
+      "role": "faq",
+      "description": "Questions pratiques du stage : photo de sentier fixée et questions dépliables",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-ouverture": {
+      "titre": "Survie douce en forêt",
+      "role": "ouverture",
+      "description": "Ouverture Team building : silhouettes d'un groupe dans la forêt au feu, titre géant « Survie douce en forêt », chiffres du format et boutons",
+      "animations": [
+        "webgl-shader",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger",
+        "splittext",
+        "ogl"
+      ]
+    },
+    "team-building-objectifs": {
+      "titre": "Ce que vos équipes y gagnent",
+      "role": "manifeste",
+      "description": "« Ce que vos équipes y gagnent » épinglé : des particules se rassemblent en cercle autour du groupe pendant que les objectifs s'allument un à un, photo de groupe à droite",
+      "animations": [
+        "section-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "team-building-formats": {
+      "titre": "Trois formats",
+      "role": "offre",
+      "description": "« Trois formats » : demi-journée, journée complète, expérience immersive en trois grandes cartes photo avec durée, barre de durée qui se remplit",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-competences": {
+      "titre": "Six savoir-faire, un seul groupe",
+      "role": "services",
+      "description": "« Six savoir-faire, un seul groupe » : rail horizontal de six photos d'ateliers (boussole, eau, abri, feu…) qui défile au défilement",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-lieu": {
+      "titre": "Chez nous ou chez vous",
+      "role": "carte",
+      "description": "« Chez nous ou chez vous » : texte et deux photos (forêt de Marly, château de séminaire)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-devis": {
+      "titre": "Composez votre demande",
+      "role": "contact",
+      "description": "« Composez votre demande » : devis en cinq étapes (projet, participants, format, date, contact) avec récapitulatif à droite qui se remplit",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "team-building-avis": {
+      "titre": "Ils l'ont vécu",
+      "role": "témoignages",
+      "description": "« Ils l'ont vécu » : avis en grand Fraunces italique sur photo assombrie",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-confiance": {
+      "titre": "Ils nous ont fait confiance",
+      "role": "preuves",
+      "description": "« Ils nous ont fait confiance » : grille de logos clients sur fond d'écorce",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-equipe": {
+      "titre": "Didier et son équipe",
+      "role": "équipe",
+      "description": "« Didier et son équipe » : rangée de portraits ronds avec prénom, lien vers l'équipe complète",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "team-building-citation-section": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "Citation d'Henry Ford en Fraunces italique à côté d'une photo de mains et de cordes",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+ "id": "ice-attitude-maquette/ouverture",
+ "maquette": "ice-attitude-maquette",
+ "page": "index",
+ "titre": "ICE Attitude, ICE Attitude",
+ "role": "ouverture",
+ "description": "Ouverture : photo de forêt de nuit où brûle un feu de camp en WebGL, devise « Revenir à l'essentiel » en italique braise, titre géant « ICE Attitude » dont les lettres montent, chiffres clés en bas ; maintenir le clic attise le feu, le titre se consume quand on descend",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "splittext",
+  "ogl"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:60-84",
+  "css": "assets/css/main.css:111,182-221,226-229,863-867,874-877,883",
+  "js": "assets/js/core.js:203-250,365-366,371,377,381-382,390,402 ; assets/js/feu.js:1,93,98,109-110,173-176"
+ },
+ "medias": {
+  "capture": "medias/ice-attitude-maquette/ouverture-p1440.jpg",
+  "capture_m390": "medias/ice-attitude-maquette/ouverture-m390.jpg",
+  "video": "medias/ice-attitude-maquette/ouverture-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "feu de camp WebGL dans la photo, qu'on attise en maintenant le clic",
+  "titre qui se consume en quittant l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "typo-geante",
+  "webgl"
+ ],
+ "impact": "spectaculaire"
+}

@@ -58,6 +58,22 @@ for (const f of liste(path.join(RACINE, 'maquettes')).filter(f => f.endsWith('.j
     if (s.note_qualite >= 4 && s.animations.some(a => a !== 'aucune') && !s.medias.video && s.medias.capture) avert.push(`${os} : animée sans vidéo`);
   }
 }
+// Maquettes favorites (favoris.json) : liste lue par la skill au début de chaque projet (vitrine.mjs --favoris).
+if (fs.existsSync(path.join(RACINE, 'favoris.json'))) {
+  const fv = lireJson(path.join(RACINE, 'favoris.json'), null);
+  if (!fv || !Array.isArray(fv.favoris)) err.push('favoris.json : illisible ou sans liste « favoris »');
+  else {
+    const vus = new Set();
+    for (const [i, f] of fv.favoris.entries()) {
+      const ou = `favoris.json[${i}]`;
+      if (!f || typeof f.depot !== 'string' || !/^[a-z0-9-]+$/.test(f.depot)) { err.push(`${ou} : depot manquant ou mal écrit`); continue; }
+      if (vus.has(f.depot)) err.push(`${ou} : ${f.depot} en double`); vus.add(f.depot);
+      if (typeof f.pourquoi !== 'string' || f.pourquoi.trim().length < 10 || f.pourquoi.length > 200) err.push(`${ou} : pourquoi, une phrase de 10 à 200 caractères`);
+      if (f.ajoute && !/^\d{4}-\d{2}-\d{2}$/.test(f.ajoute)) err.push(`${ou} : ajoute au format AAAA-MM-JJ`);
+      if (!depots.has(f.depot)) avert.push(`${ou} : ${f.depot} pas encore dans la bibliothèque (la skill ne voit pas ses captures)`);
+    }
+  }
+}
 for (const m of modules) {
   const mj = fiche(path.join(RACINE, 'modules', m, 'module.json')); const ou = 'modules/' + m;
   if (mj.nom !== m) err.push(`${ou} : nom ≠ dossier`);

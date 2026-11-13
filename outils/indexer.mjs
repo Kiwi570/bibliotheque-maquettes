@@ -4,7 +4,7 @@
 // node outils/indexer.mjs
 import fs from 'node:fs';
 import path from 'node:path';
-import { RACINE, lireJson } from './commun.mjs';
+import { RACINE, lireJson, lireFavoris } from './commun.mjs';
 import { deduireModule } from './deduire.mjs';
 
 const liste = d => fs.existsSync(d) ? fs.readdirSync(d).sort() : [];
@@ -52,5 +52,5 @@ while (Buffer.byteLength(txt) > PLAFOND && pointsForts > 1) {
 }
 if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même avec un seul point fort par maquette : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
 fs.writeFileSync(path.join(RACINE, 'index.json'), txt);
-fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5.', sections: toutes }));
+fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5 et la liste des maquettes favorites (favoris.json).', favoris: lireFavoris().map((f) => f.depot), sections: toutes }));
 console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette pour rester sous 150 Ko)` : ''}`);
