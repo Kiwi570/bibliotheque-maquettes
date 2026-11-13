@@ -34,7 +34,7 @@ toutes.sort((a, b) => b[3] - a[3] || a[0].localeCompare(b[0]));
 const sections = toutes.filter(l => l[3] === 5 || l[4]);
 const index = {
   version: new Date().toISOString().slice(0, 10),
-  aide: 'Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; modules : dossier modules/<nom>/, provenance projet (tiré d une maquette validée) ou à part (créé hors projet, pas encore servi). Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)',
+  aide: 'Colonnes : voir « colonnes ». Sections notées 5, et notées 4 quand un module en est tiré (fiche : sections/<id>.json ; toutes les sections notées 4 ou 5 : site/index-site.json ; les autres : chercher.mjs) ; module = modules tirés de la section, principal en tête, séparés par + ; capture et video : 1 = medias/<dépôt>/<id court>-p1440.jpg ou -p720.mp4, 0 = aucune, sinon chemin relatif à medias/<dépôt>/ ; page vide = accueil ; url de maquette 1 = adresse habituelle https://<dépôt>.vercel.app ; client raccourci (…) quand l index approche 150 Ko, fiche complète dans maquettes/<dépôt>.json ; modules : dossier modules/<nom>/, provenance projet (tiré d une maquette validée) ou à part (créé hors projet, pas encore servi). Chercher : node outils/chercher.mjs --activite restauration --metier pizzeria --besoin vendre --role ouverture (voir l en-tête de outils/chercher.mjs : métier, activités voisines, besoins, luminosité, ton, univers, famille d effet, impact)',
   totaux: { maquettes: maquettes.length, sections_indexees: sections.length, sections_notees_4_ou_5: toutes.length, sections_notees_3_ou_moins: sousSeuil, modules: modules.length },
   colonnes: { maquettes: ['depot', 'activite', 'concept', 'ambiance', 'note', 'points_forts', 'url', 'client', 'date', 'grille', 'metier', 'luminosite', 'ton', 'univers', 'besoins', 'plan'], sections: ['id', 'role', 'animations', 'note', 'module', 'titre', 'interactions', 'capture', 'video', 'page', 'impact', 'familles'], modules: ['nom', 'role', 'animations', 'convient_a', 'titre', 'interactions', 'ambiances', 'dependances', 'impact', 'familles', 'provenance'] },
   maquettes, sections, modules,
@@ -45,12 +45,19 @@ const ecrire = (ix) => '{\n' + Object.entries(ix).map(([k, v]) => Array.isArray(
 /* Plafond de 150 Ko (octets, accents compris) : au-delà, les points forts des maquettes se raccourcissent (3, puis 2, puis 1)
    au lieu de faire échouer la validation après coup (l'index était à 36 octets du plafond ; audit externe). Le site garde tout. */
 const PLAFOND = 150 * 1024;
-let txt = ecrire(index), pointsForts = 3;
-while (Buffer.byteLength(txt) > PLAFOND && pointsForts > 1) {
-  pointsForts--;
-  txt = ecrire({ ...index, maquettes: maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pointsForts) : v))) });
+/* 13 novembre 2026 (99 maquettes, 149 Ko) : l'adresse habituelle s'écrit 1 dans index.json, et la description du client se
+   raccourcit après les points forts (90 puis 60 caractères). Le site (site/index-site.json) et les fiches gardent tout. */
+const compacter = (pf, client) => maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pf)
+  : i === 6 ? (v === `https://${l[0]}.vercel.app` ? 1 : v)
+  : i === 7 && client && typeof v === 'string' && v.length > client ? v.slice(0, client - 1).trimEnd() + '…' : v)));
+const ETAPES = [[3, 0], [2, 0], [1, 0], [1, 90], [1, 60]];
+let txt = '', etape = 0, pointsForts = 3;
+for (; etape < ETAPES.length; etape++) {
+  txt = ecrire({ ...index, maquettes: compacter(...ETAPES[etape]) });
+  if (Buffer.byteLength(txt) <= PLAFOND) break;
 }
-if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même avec un seul point fort par maquette : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
+etape = Math.min(etape, ETAPES.length - 1); pointsForts = ETAPES[etape][0];
+if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même avec un seul point fort et le client raccourci : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
 fs.writeFileSync(path.join(RACINE, 'index.json'), txt);
 fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5 et la liste des maquettes favorites (favoris.json).', favoris: lireFavoris().map((f) => f.depot), sections: toutes }));
-console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette pour rester sous 150 Ko)` : ''}`);
+console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette${ETAPES[etape][1] ? `, client en ${ETAPES[etape][1]} caractères` : ''} pour rester sous 150 Ko)` : ''}`);

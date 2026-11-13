@@ -1,0 +1,50 @@
+{
+ "id": "exco-maquette/services-expertise-comptable-band-3",
+ "maquette": "exco-maquette",
+ "page": "services/expertise-comptable",
+ "titre": "L’année comptable, mois par mois",
+ "role": "agenda",
+ "description": "« L'année comptable, mois par mois » sur bande bleu nuit : diagramme de Gantt des missions de l'année (saisie, TVA, bilan, liasse…) qui se remplit au défilement, mois en cours repéré",
+ "animations": [
+  "section-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "services/expertise-comptable.html:136-158",
+  "css": "assets/css/site.css:80,87-96,100,104-105,123-124,539,587,591,672-673,771-776,789-790,798,806-810,884,924-925,935-938,946-948,952-953,957,968-972,1210-1213,1286-1291,1355,1475,1509-1511,1569,1606,1650,1658",
+  "js": "assets/js/site.js:81"
+ },
+ "medias": {
+  "capture": "medias/exco-maquette/services-expertise-comptable-band-3-p1440.jpg",
+  "capture_m390": "medias/exco-maquette/services-expertise-comptable-band-3-m390.jpg",
+  "video": "medias/exco-maquette/services-expertise-comptable-band-3-p720.mp4"
+ },
+ "pieges": [
+  "Sur téléphone, le diagramme défile à l'horizontale"
+ ],
+ "particularites": [
+  "année comptable en diagramme de Gantt qui se remplit au défilement"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2500,
+  "hauteur_m390": 1049,
+  "epinglee": true,
+  "scrolltriggers": 4
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

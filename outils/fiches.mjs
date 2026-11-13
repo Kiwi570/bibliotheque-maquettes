@@ -21,6 +21,21 @@ import path from 'node:path';
 import { RACINE, AUDIT, lireJson, ecrireJson, resumeJournal } from './commun.mjs';
 import { deduireSection, deduireMaquette } from './deduire.mjs';
 
+/* Sites générés (Exco : 215 pages, 139 fiches cabinets) : un dossier de plus de 12 pages se résume à ses 3 premières et
+   « dossier/… (N pages) », pour que la fiche maquette reste sous 10 Ko. Les sections gardent leurs pages exactes. */
+function resumerPages(pages) {
+  const dossiers = {};
+  for (const p of pages) { const d = p.includes('/') ? p.split('/')[0] : null; if (d) (dossiers[d] ||= []).push(p); }
+  const sortie = [], vus = new Set();
+  for (const p of pages) {
+    const d = p.includes('/') ? p.split('/')[0] : null;
+    if (!d || dossiers[d].length <= 12) { sortie.push(p); continue; }
+    if (vus.has(d)) continue; vus.add(d);
+    sortie.push(...dossiers[d].slice(0, 3), `${d}/… (${dossiers[d].length} pages)`);
+  }
+  return sortie;
+}
+
 const DEP_GLOBALES = { gsap: 'gsap', scrolltrigger: 'scrolltrigger', splittext: 'splittext', flip: 'flip', lenis: 'lenis', ogl: 'ogl', three: 'three' };
 
 for (const depot of process.argv.slice(2)) {
@@ -90,7 +105,7 @@ for (const depot of process.argv.slice(2)) {
     palette: Object.fromEntries(Object.entries(nm.palette).map(([k, v]) => [k, couleur(v)])),
     metier: null, luminosite: null, ton: [], univers: [], besoins: [], // remplis juste après (deduire.mjs)
     polices: nm.polices,
-    pages: Object.keys(inv.pages).sort((a, b) => (a === 'index' ? -1 : b === 'index' ? 1 : a === '404' ? 1 : b === '404' ? -1 : a.localeCompare(b))),
+    pages: resumerPages(Object.keys(inv.pages).sort((a, b) => (a === 'index' ? -1 : b === 'index' ? 1 : a === '404' ? 1 : b === '404' ? -1 : a.localeCompare(b)))),
     commit: inv.commit, date_commit: inv.date_commit.slice(0, 10),
     ...(nm.change_depuis_audit ? { change_depuis_audit: nm.change_depuis_audit } : {}),
     note: audit.correction?.note ?? audit.note, verdict: audit.verdict,
