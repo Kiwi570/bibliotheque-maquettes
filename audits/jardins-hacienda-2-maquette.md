@@ -1,6 +1,6 @@
 # jardins-hacienda-2-maquette
 
-<https://jardins-hacienda-2-maquette.vercel.app> · audit du 12/11/2026 · dernier commit 33290a3 du 12/11/2026
+<https://jardins-hacienda-2-maquette.vercel.app> · audit du 13/11/2026 · dernier commit bb5e198 du 13/11/2026
 
 > Audit d'entrée en bibliothèque : script d'audit de la skill (standard en deux passages, puis complet sur 13 tailles et contre-audit ciblé), test « vrai visiteur » (7 missions, téléphone et ordinateur), regard neuf d'un relecteur séparé, inventaire de la bibliothèque et lecture des captures. Pas d'audit externe : la note est à confirmer.
 
@@ -8,7 +8,7 @@
 
 **86/100 · Prête à envoyer · 0 défaut bloquant**
 
-Version 7 (v7.5) : la journée de l'Hacienda sans heures affichées, nourrie de vraies photos du site actuel et de modules restaurant de la bibliothèque. L'accueil suit les références données par le client : ouverture au nom en grand avec quatre états (été ou hiver, midi ou soir), saison, prochain rendez-vous et bascule été/hiver ; le chef en polaroïd qui se retourne avec des étiquettes à déplacer ; la carte du déjeuner en cartes qui défilent près de l'assiette qui fume ; le lieu en cartes qui filent ; la réservation qui arrive au coin du feu, sur la vraie cheminée animée ; « En ce moment » avec les vraies affiches de Noël et de la Saint-Sylvestre. La terrasse qui s'allume au défilement est passée sur Réceptions ; la carte cadeau d'Offrir est devenue une carte de luxe ; polices Fraunces et Manrope de la référence ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions, des fêtes et d'Infos pratiques ; Noël en carte de vœux qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, horaires en semaine à parcourir ; transitions aux couleurs du site.
+Version 7 (v7.5.8) : la journée de l'Hacienda sans heures affichées, nourrie de vraies photos du site actuel et de modules restaurant de la bibliothèque. L'accueil suit les références données par le client : ouverture au nom en grand avec quatre états (été ou hiver, midi ou soir), saison, prochain rendez-vous et bascule été/hiver ; le chef en polaroïd qui se retourne avec des étiquettes à déplacer ; la carte du déjeuner en cartes qui défilent près de l'assiette qui fume ; le lieu en cartes qui filent ; la réservation qui arrive au coin du feu, sur la vraie cheminée animée ; « En ce moment » avec les vraies affiches de Noël et de la Saint-Sylvestre. La terrasse qui s'allume au défilement est passée sur Réceptions ; la carte cadeau d'Offrir est devenue une carte de luxe ; polices Fraunces et Manrope de la référence ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions, des fêtes et d'Infos pratiques ; Noël en carte de vœux qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, horaires en semaine à parcourir ; transitions aux couleurs du site. Puis, au fil des retours du client : Réceptions avec ses occasions qui défilent dans l'ouverture et dans « Ce que l'on fête ici » par paliers, « Cinq espaces, un seul domaine », la demande sur fond clair (carton d'invitation et polaroïds qui suivent les choix), « Ils ont dit oui aux Jardins » en polaroïds sur un fil ; une page À emporter en vitrine sous cloches de verre (plats dessinés, vapeur à l'ouverture) ; le plan du domaine sur Infos pratiques ; « Ici on aime rire » et la carte de la semaine qui dresse une table cosy sur l'accueil.
 
 ## Notes
 
@@ -31,6 +31,8 @@ Version 7 (v7.5) : la journée de l'Hacienda sans heures affichées, nourrie de 
 - La vraie assiette qui se dresse,La photo d'une assiette du chef découpée en couches qui se posent nettes sur la même assiette floue, puis la photo entière : le module garde son geste sans illustration plate.
 - Les vraies photos du lieu,21 photos du site actuel retenues sur 366, recadrées et éclaircies ; l'enseigne détourée devant le ciel réel de Moineville.
 - Le feu d'une seule vraie photo,Les flammes de la photo de la cheminée ondulent (bandes décalées par une onde qui monte), la lueur vacille sur la salle, les braises partent du foyer mesuré dans le repère de la photo.
+- La vitrine sous cloches,Les huit incontournables des fêtes sous des cloches de verre reprises de la maquette Lemoy, chaque plat dessiné en SVG faute de photo détourée : la cloche se soulève au survol, s'ouvre au toucher, la vapeur monte des plats chauds ; le panier et le retrait restent ceux de la référence du client.
+- Le carton qui se remplit,La demande de réception écrit l'occasion, la date, les invités et l'espace sur un carton d'invitation pendant qu'on remplit le formulaire, et deux polaroïds montrent la vraie photo de l'occasion et de l'espace choisis ; à l'envoi, le tampon.
 
 ## Défauts
 
@@ -47,12 +49,13 @@ Aucun.
 
 1. **Trois images générées à l'accueil** : 12:00, 19:00 et 23:00 restent des illustrations (mention « Illustration générée ») : une vraie photo de la piscine de face et trois prises de la terrasse au même cadrage les remplaceraient. Effort : photos du client.
 2. **Encart du plan de salle** : L'encart collant du plan de salle et quelques zones calmes entre les sections relevés par le regard neuf. Effort : 1 h.
+3. **Photos détourées des produits à emporter** : Les plats de la vitrine sont des illustrations : des photos détourées des vrais produits (comme la vitrine Lemoy) les remplaceraient. Effort : photos du client.
 
 ## Mesures clés
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit de la skill | complet : 2 échec(s), 16 à regarder, 0 non lancé(s) |
+| Script d'audit de la skill | complet : 0 échec(s), 1 à regarder, 0 non lancé(s) |
 | Audit complet (13 tailles) | v7.3 : 0 échec, 15 points à regarder traités ou acceptés (rechargement au milieu de La carte décalé d'un écran, contraste mesuré sous le 19:00 de Réceptions) ; v7 : 7 échecs au premier passage, corrigés |
 | Fluidité | Les fêtes : 1 % d'images lentes, tâche la plus longue 103 ms (ordinateur ralenti 4 fois) ; accueil 5 % |
 | Test visiteur | 13 missions réussies sur 14 avant corrections ; la soirée sur ordinateur (dates cachées derrière une photo) corrigée |
@@ -62,3 +65,4 @@ Aucun.
 | Retours du client (v7.2) | accueil d'hiver réordonné (coin du feu à 19 h sur la vraie cheminée animée, terrasse d'été en fin de page), assiettes qui fument à 12 h 30, vert nuit à 21 h ; contre-audit vert |
 | Retours du client (v7.4) | plus aucune heure affichée ; accueil refait sur six références du client (ouverture, chef, carte, lieu, réservation au coin du feu, « En ce moment »), terrasse sur Réceptions, carte cadeau de luxe ; contre-audit vert |
 | Retours du client (v7.5) | polices de la référence, ouverture sur la photo panoramique, chef clair, déjeuner foncé, cartes de La carte, Offrir & emporter, Venir, ouvertures de Réceptions, des fêtes et d'Infos pratiques refaites, Noël en carte de vœux qui s'ouvre, Saint-Sylvestre dorée, semaine des horaires, transitions aux couleurs du site ; contre-audit sur ordinateur (7 tailles de 1000 à 2560 px) : 73 échecs au premier passage (ouverture coupée sur écran bas, textes à 9 px, voile crème vu comme écran blanc entre deux pages sombres, lien vers l'ancien site…), 0 après corrections ; le téléphone (2 échecs du bouton calme à 390 px) est repris à l'audit de fin à la demande du client |
+| Retours du client (v7.5.1 à v7.5.8) | La carte du soir lisible ; Réceptions : occasions qui défilent dans l'ouverture et par paliers dans « Ce que l'on fête ici », « Cinq espaces, un seul domaine », demande sur fond clair avec carton et polaroïds, « Ils ont dit oui » sur un fil ; page À emporter en vitrine sous cloches (plats dessinés) ; plan du domaine sur Infos pratiques ; accueil : « Ici on aime rire », carte de la semaine qui dresse une table cosy. Chaque envoi audité sur ordinateur (7 tailles) : 0 échec après corrections (dernier envoi : 3 textes à 10-11 px sur le carton d'invitation) |
