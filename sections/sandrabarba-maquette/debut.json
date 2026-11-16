@@ -1,0 +1,53 @@
+{
+ "id": "sandrabarba-maquette/debut",
+ "maquette": "sandrabarba-maquette",
+ "page": "index",
+ "titre": "La vie est un combat.Ne le vivez plus seul·e.",
+ "role": "ouverture",
+ "description": "Nuit unie, flaque de lumière chaude, la boîte allumée sur le bureau de pin ; on y glisse sa tuile-mot, elle répond, puis on plonge dedans : une fenêtre s'ouvre depuis le panneau et les lettres se rangent en trois temps (« Mettons-y des mots », « En parler », « Sortir du silence »)",
+ "animations": [
+  "ouverture-orchestrée",
+  "section-fixée",
+  "progression-fixée",
+  "masque",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "saisie-personnalisee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:108-169",
+  "css": "assets/css/socle.css:39-42 ; assets/css/site.css:48,57-58,99-147,295-299,303-304,325-328,402,446,504,512-519,529-558,568,576-582,611-616,629,644,652,662-696,717-732,738-753,764-767,771-774,778-783,816,820-828,834-835,847-852,869-873,887,891-893,909-911,915-944,950-976,1036-1037,1046,1139,1248-1256,1260,1274-1277,1302,1328,1335-1336,1411,1452-1453,1490,1511,1530,1573",
+  "js": "assets/js/site.js:67-81,84-334,347-370,569,582-584,594-604 ; assets/js/socle/index.js:9,14,37-58 ; assets/js/socle/ouverture.js:32,82,160-237 ; assets/js/socle/voile.js:5,9,42-51,54-74,136-168 ; assets/js/socle/gouttiere.js:27 ; assets/js/socle/effets.js:17,29,151-158,171,176,269-283,406 ; assets/js/socle/onde.js:67-204 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:9"
+ },
+ "medias": {
+  "capture": "medias/sandrabarba-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/sandrabarba-maquette/debut-m390.jpg",
+  "video": "medias/sandrabarba-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "une boîte agrandie avec ses ombres floues saccade : ouvrir une fenêtre (clip-path rectangulaire) et ne déplacer que les rangées de texte",
+  "zone morte de 3 % au début de la scène épinglée, sinon un reste de défilement fait bouger l'ouverture pendant l'audit",
+  "remesurer la fenêtre de départ quand la boîte change de place (fin de l'intro, réponse affichée)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2970,
+  "hauteur_m390": 2701,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "scene-epinglee",
+  "masque"
+ ],
+ "impact": "spectaculaire"
+}

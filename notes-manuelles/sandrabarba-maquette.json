@@ -1,0 +1,725 @@
+{
+ "maquette": {
+  "client": "Cabinet de psychothérapie et de sophrologie à Aubignan (Vaucluse), adultes, couples, familles, femmes victimes de violences",
+  "activite": [
+   "santé",
+   "bien-être"
+  ],
+  "concept": [
+   "vitrine"
+  ],
+  "ambiance": [
+   "sombre",
+   "chaleureux",
+   "doux"
+  ],
+  "palette": {
+   "fond": "--nuit",
+   "texte": "--pierre",
+   "accent": "--framboise",
+   "secondaire": "--corail"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Hanken Grotesk",
+   "mono": null
+  },
+  "points_forts": [
+   "direction « La boîte à mots » tirée du vrai cabinet : la boîte lumineuse « AIMER LA VIE » de l'entrée, posée sur le bureau de pin",
+   "on glisse sa tuile (le deuil, la peur, les violences…) dans la boîte, qui s'allume et répond ; le mot suit le visiteur jusqu'au rendez-vous",
+   "plongée fluide dans la boîte : une fenêtre s'ouvre depuis le panneau, chaque rangée part de sa rangée, les lettres se rangent en trois temps",
+   "pages intérieures sur deux fonds (pierre, nuit), la boîte une fois en grand dans chaque ouverture avec le mot de la page",
+   "page Violences sobre : « Quitter vite », numéros d'aide en très grands chiffres, lampe qui révèle les violences invisibles"
+  ],
+  "reserves": [
+   "beaucoup d'illustrations générées (pièces du cabinet), portraits réels limités en définition (sandra-laine 960 px)",
+   "mentions légales, SIRET et politique de confidentialité à fournir",
+   "sur Sophrologie, la boîte apparaît deux fois (ouverture et exercice de respiration), à la demande du brief"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "section-fixée",
+   "progression-fixée",
+   "fil-conducteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "marquee",
+   "transition-de-page",
+   "masque"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "galerie-cliquable",
+   "saisie-personnalisee"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "outil-d-abord",
+  "grille": {
+   "objet": "la vraie boîte lumineuse de l'entrée, posée sur le bureau de pin, où l'on glisse sa tuile-mot ; on plonge dedans au défilement",
+   "fil": "« VOTRE MOT » : le mot choisi suit le visiteur dans la marge et dans la barre du bas, jusqu'à la demande de rendez-vous"
+  },
+  "metier": "psychothérapie, sophrologie"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile nuit qui s'ouvre en iris sur la boîte de la page d'arrivée, nom de la page au centre",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Intro : « LA VIE EST UN COMBAT » en tuiles, le logo glisse jusqu'à la boîte (accueil seulement)",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête nuit : logo plume, quatre liens, bouton framboise",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone, avec l'adresse et les horaires",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "La vie est un combat.Ne le vivez plus seul·e.",
+   "role": "ouverture",
+   "description": "Nuit unie, flaque de lumière chaude, la boîte allumée sur le bureau de pin ; on y glisse sa tuile-mot, elle répond, puis on plonge dedans : une fenêtre s'ouvre depuis le panneau et les lettres se rangent en trois temps (« Mettons-y des mots », « En parler », « Sortir du silence »)",
+   "animations": [
+    "ouverture-orchestrée",
+    "section-fixée",
+    "progression-fixée",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "une boîte agrandie avec ses ombres floues saccade : ouvrir une fenêtre (clip-path rectangulaire) et ne déplacer que les rangées de texte",
+    "zone morte de 3 % au début de la scène épinglée, sinon un reste de défilement fait bouger l'ouverture pendant l'audit",
+    "remesurer la fenêtre de départ quand la boîte change de place (fin de l'intro, réponse affichée)"
+   ]
+  },
+  "sandra": {
+   "titre": "Je suis comme vous. Une femme.",
+   "role": "équipe",
+   "description": "Sandra en grand portrait à la rampe, citation « Je suis comme vous. Une femme. », formations",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences": {
+   "titre": "Ne restez pas seule.",
+   "role": "manifeste",
+   "description": "Bande nuit : « Ne restez pas seule », numéros 3919, 17, 112, 114, coupure de presse",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seances": {
+   "titre": "Au cabinet, en visio, ou à deux.",
+   "role": "tarifs",
+   "description": "Trois façons de venir (cabinet, visio, à deux), durée et prix dans le titre",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cabinet": {
+   "titre": "Une pièce calme, dans une maison de village.",
+   "role": "preuves",
+   "description": "La pièce du cabinet en grand, lampe à promener à la souris, vraie boîte de l'entrée en photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "« Jamais seule. »",
+   "role": "témoignages",
+   "description": "Trois avis réels, grand guillemet framboise",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Et vous, quel mot vous amène ?",
+   "role": "appel",
+   "description": "« Et vous, quel mot vous amène ? » sur une petite boîte allumée",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied nuit : sommaire, aide en cas de violences, mentions",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fil": {
+   "titre": "",
+   "role": "barre-fixe",
+   "description": "Fil « VOTRE MOT » dans la marge : le mot choisi suit le visiteur sur toutes les pages",
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "PAGEINTROUVABLECe mot-là n’est pas dans la boîte.",
+   "role": "page-404",
+   "description": "« PAGE INTROUVABLE » en tuiles, « Ce mot-là n'est pas dans la boîte », photo de la vraie boîte",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "psychotherapie-debut": {
+   "titre": "Parler,pour comprendre ce qui se répète.",
+   "role": "ouverture",
+   "description": "Nuit et flaque de lumière, la boîte « PARLER » posée sur le bureau de pin, halo qui respire, lettres qui se soulèvent au survol",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "la boîte doit mordre sur le plateau (marge négative) avec une ombre de contact, sinon elle flotte"
+   ]
+  },
+  "psychotherapie-temps": {
+   "titre": "On avance, à votre rythme.",
+   "role": "étapes",
+   "description": "Les trois temps en une scène épinglée sur la pierre : la rangée du milieu de la boîte s'écrit AFFRONTER, SE RECONSTRUIRE, VIVRE au défilement, le texte suit",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "chiffres et grands mots : le cadre de la police dépasse l'interligne, prévoir de la marge entre les lignes"
+   ]
+  },
+  "psychotherapie-themes": {
+   "titre": "Les mots qui amènent au cabinet.",
+   "role": "manifeste",
+   "description": "Les mots qui amènent au cabinet en très grande typographie, deux lignes qui défilent en sens contraire au défilement, puis une grande citation",
+   "animations": [
+    "marquee",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "marquer le ruban data-ruban pour que l'audit ne compte pas les mots coupés au bord"
+   ]
+  },
+  "psychotherapie-couple": {
+   "titre": "Vous n’arrivez plus à vous parler ?",
+   "role": "services",
+   "description": "Couple et famille : la grande image des deux fauteuils et deux colonnes avec durée et prix en texte",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "image générée de 1024 px : la garder sous un quart d'écran"
+   ]
+  },
+  "psychotherapie-formations": {
+   "titre": "Diplômes, certificats, et ce qu’en dit la presse.",
+   "role": "preuves",
+   "description": "Formations et presse : bande de vignettes qui s'ouvrent en grand dans une visionneuse",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la visionneuse vide doit avoir une image valide (gif 1 px), sinon l'audit compte une image non chargée"
+   ]
+  },
+  "psychotherapie-fin": {
+   "titre": "Et si vous commenciez par en parler ?",
+   "role": "appel",
+   "description": "« Et si vous commenciez par en parler ? » sur la nuit, tarifs en texte, vraie photo du fauteuil en petit",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "psychotherapie-visionneuse": {
+   "titre": "Document en grand",
+   "role": "outil-interactif",
+   "description": "Visionneuse (dialog) des diplômes et de la presse",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-debut": {
+   "titre": "Un appel, un SMS,ou trois questions.",
+   "role": "ouverture",
+   "description": "La boîte « APPELEZ / 07 60 36 / 58 32 » posée sur le bureau, lien d'appel ; médaillon de Sandra « elle vous répond elle-même »",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-demande": {
+   "titre": "Trois questions, puis Sandra vous répond.",
+   "role": "contact",
+   "description": "Demande en trois étapes sur la pierre, séances une par ligne ; à l'envoi, le récapitulatif tombe dans la confirmation",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-acces": {
+   "titre": "89 rue du Portail‑Neuf, Aubignan.",
+   "role": "carte",
+   "description": "Plan d'accès schématique redessiné : Aubignan, Carpentras, Orange, Avignon, Vaison-la-Romaine, temps de trajet, adresse et parking",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "donner une zone pleine aux repères du plan, sinon l'audit les voit recouverts par le fond"
+   ]
+  },
+  "sophrologie-debut": {
+   "titre": "Il n’y a pas de magie :retrouvez-vous.",
+   "role": "ouverture",
+   "description": "Plein cadre sur le voilage aux pissenlits, texte sur le mur clair, la boîte « INSPIREZ » posée sur le bureau ; l'image respire lentement",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-souffle": {
+   "titre": "Respirez avec la boîte.",
+   "role": "outil-interactif",
+   "description": "« Respirez avec la boîte » en pleine hauteur sur la nuit : boîte très grande qui respire seule (4 s, 6 s), lumière qui monte et descend ; on maintient le bouton pour inspirer, trois cycles",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-methode": {
+   "titre": "La relaxation dynamique de Caycedo.",
+   "role": "méthode",
+   "description": "La relaxation dynamique de Caycedo : trois principes en très grands chiffres Instrument Serif, puis une phrase sur le déroulé",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-pour-qui": {
+   "titre": "Tous les âges, toutes les conditions physiques.",
+   "role": "services",
+   "description": "Pour qui : portrait de Sandra en grand, la liste en colonnes, certificat en vignette",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-fin": {
+   "titre": "Prête, prêt à respirer autrement ?",
+   "role": "appel",
+   "description": "« Prête, prêt à respirer autrement ? » sur la nuit, avec la pièce du cabinet",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sophrologie-visionneuse": {
+   "titre": "Document en grand",
+   "role": "outil-interactif",
+   "description": "Visionneuse (dialog) qui ouvre en grand le certificat de sophrologie, fermeture au clic hors de l'image ou par la croix",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-quitter": {
+   "titre": "Quitter ce site tout de suite (ouvre une page météo)",
+   "role": "barre-fixe",
+   "description": "Bouton « Quitter vite » : remplace la page par un site météo, au-dessus du voile d'intro, dans l'en-tête sur téléphone",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "garder l'en-tête affiché sur cette page pour que le bouton n'y recouvre rien au téléphone"
+   ]
+  },
+  "violences-debut": {
+   "titre": "Mettre des mots, en parler,sortir du silence.",
+   "role": "ouverture",
+   "description": "Nuit et halo, la boîte « SORTIR / DU / SILENCE » sur le bureau, appel direct dès le premier écran",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-aide": {
+   "titre": "Si vous êtes en danger, appelez.",
+   "role": "chiffres",
+   "description": "Numéros d'aide (17, 114, 3919, 119) en très grands chiffres sur la nuit, liens d'appel",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-invisibles": {
+   "titre": "Ce qui ne laisse pas de traces visibles est aussi de la violence.",
+   "role": "outil-interactif",
+   "description": "Une lampe qu'on promène révèle sur un mur sombre les violences invisibles (insultes, chantage, isolement…)",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la couche éclairée doit être recalée au centre du cercle quand on change sa taille (left/top 50 %)"
+   ]
+  },
+  "violences-formes": {
+   "titre": "La violence ne laisse pas toujours de traces.",
+   "role": "services",
+   "description": "Les quatre formes de violence en colonnes, chiffres Instrument Serif",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-approche": {
+   "titre": "La culpabilité n’est pas la vôtre.",
+   "role": "méthode",
+   "description": "« La culpabilité n'est pas la vôtre » avec le portrait de Sandra en grand et ses engagements",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-presse": {
+   "titre": "Éveiller les consciences sur les violences invisibles.",
+   "role": "preuves",
+   "description": "La presse et le certificat en vignettes qui s'ouvrent en grand",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-fin": {
+   "titre": "Ne restez pas seule.",
+   "role": "appel",
+   "description": "« Ne restez pas seule. » sur la nuit, appel et rendez-vous, médaillon de Sandra",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "violences-visionneuse": {
+   "titre": "Document en grand",
+   "role": "outil-interactif",
+   "description": "Visionneuse (dialog) qui ouvre en grand l'article de presse et le certificat, fermeture au clic hors de l'image ou par la croix",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
