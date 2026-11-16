@@ -1,0 +1,46 @@
+{
+ "id": "newpears-regie-maquette/location-debut",
+ "maquette": "newpears-regie-maquette",
+ "page": "location",
+ "titre": "Le matériel,livré et installé",
+ "role": "ouverture",
+ "description": "Les cinq vrais packs détourés alignés sur un plateau, du plus petit au plus complet ; une poursuite passe de l'un à l'autre, suit la souris, se pose au clic ; le pack éclairé donne son nom, pour qui, et « Voir ce pack » qui ouvre son onglet.",
+ "animations": [
+  "révélation-texte"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "location.html:108-128",
+  "css": "assets/css/socle.css:265 ; assets/css/site.css:101,134-135,348,362-372,377-378,462,639-645,661,930,956,1027-1032,1037-1069,1090,1112,1117,1157-1166,1276-1283,1298,1303,1308-1314,1325-1329",
+  "js": "assets/js/site.js:283,315-319,336-375,402-417 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,47-55,58-78,153-195 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/newpears-regie-maquette/location-debut-p1440.jpg",
+  "capture_m390": "medias/newpears-regie-maquette/location-debut-m390.jpg"
+ },
+ "pieges": [
+  "les photos se chevauchent : chaque bouton garde sa zone (image en absolu, pointer-events none) et la liste est marquée data-superpose",
+  "légende à hauteur réservée, sinon le défilement automatique fait sauter la page (CLS)",
+  "classe .rack déjà prise par une ancienne section : préfixe etal-"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 798,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "lumiere-pointeur"
+ ],
+ "impact": "calme"
+}

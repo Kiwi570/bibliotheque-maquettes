@@ -1,0 +1,670 @@
+{
+  "maquette": {
+    "client": "Location de son, de lumière et d'effets à la journée, et prestation DJ (Mattéo et Sacha) à Saint-Quentin (Aisne), mariages et soirées, jusqu'à 50 km",
+    "activite": [
+      "spectacle",
+      "commerce"
+    ],
+    "concept": [
+      "scène",
+      "catalogue"
+    ],
+    "ambiance": [
+      "sombre",
+      "nocturne",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--vert-clair",
+      "secondaire": "--violet"
+    },
+    "polices": {
+      "titres": "Big Shoulders Display",
+      "texte": "Manrope",
+      "mono": "Doto"
+    },
+    "points_forts": [
+      "héros sobre après deux « refaire » : un seul faisceau accroché en haut suit la main, éclaire le titre et se pose sur le vrai pack conseillé",
+      "conseil sur une ligne : curseur d'invités et interrupteur Mariage donnent le pack, ajouté d'un clic à « Ma demande » (flight case dans l'en-tête)",
+      "flight case de l'accueil fait de la matière de la vraie photo (panneau, cornière, loquets redressés et détourés), couvercle à tirer",
+      "une ouverture propre à chaque page d'onglet : rack des cinq vrais packs sous une poursuite, contrôleur aux plateaux qui tournent, salle qui prend la couleur de l'événement, plan de salle qui suit les invités",
+      "sections claires (métiers, zone, catalogue, demande, questions) qui cassent le tout sombre, demandées par le client"
+    ],
+    "reserves": [
+      "illustrations générées encore présentes (salle sur Événements et 404, vignettes d'événements, temps forts DJ)",
+      "photo des DJ sombre ; mentions légales et prix par pack à fournir",
+      "sur téléphone, le premier écran bouge peu (choix de sobriété)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "transition-de-page",
+      "révélation-texte",
+      "apparition-au-défilement",
+      "fil-conducteur",
+      "compteur",
+      "trace-svg"
+    ],
+    "interactions": [
+      "panier-simule",
+      "formulaire-par-étapes",
+      "filtres",
+      "recherche",
+      "configurateur",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "regie",
+    "plan": "outil-d-abord",
+    "grille": {
+      "objet": "curseur d'invités et interrupteur Mariage qui donnent le vrai pack sous un faisceau qui suit la main ; couvercle du flight case à tirer",
+      "fil": "ligne de lumière sous l'en-tête qui suit la lecture, voile en faisceau entre les pages"
+    },
+    "metier": "location de son et lumière, DJ"
+  },
+  "sections": {
+    "div": {
+      "titre": "Intro : la poire au laser",
+      "role": "transition-de-page",
+      "description": "Au premier chargement, la poire du logo se trace comme un faisceau laser, puis se pose sur le titre de l'accueil (versObjet).",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ouverture-panneau": {
+      "titre": "Voile en faisceau",
+      "role": "transition-de-page",
+      "description": "Entre les pages, un cône de lumière couvre puis découvre l'écran (forme de voile « faisceau » ajoutée au socle).",
+      "animations": [
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "forme propre au projet : FORMES_VOILE et DUREES dans voile.js, generer.mjs et commun.mjs"
+      ]
+    },
+    "header": {
+      "titre": "En-tête et « Ma demande »",
+      "role": "menu",
+      "description": "Logo poire, liens, et « Ma demande » en flight case avec compteur ; l'article ajouté s'envole jusqu'à lui.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "localStorage newpears-demande partagé entre onglets, valeur abîmée tolérée"
+      ]
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran avec appel, WhatsApp et e-mail.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fil-progression": {
+      "titre": "Ligne de lecture",
+      "role": "decor",
+      "description": "Fine ligne en dégradé violet-vert sous l'en-tête, qui suit la lecture de chaque page : le fil sobre qui remplace deux lyres jugées inutiles.",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "regie": {
+      "titre": "La soirée, on la règle avec vous.",
+      "role": "ouverture",
+      "description": "Fond presque noir uni, grand titre, un seul faisceau accroché en haut qui suit la main, éclaire le titre et revient sur la vraie photo du pack conseillé ; conseil sur une ligne (curseur d'invités, Mariage, pack, ajout à la demande).",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "la version chargée (salle générée, multiples faisceaux, brume, CO2, console de trois faders) a été refaite deux fois puis retirée : rester sobre",
+        "tirets insécables dans les surtitres Doto pour ne pas couper Saint-Quentin"
+      ]
+    },
+    "flight-case": {
+      "titre": "Ouvrez le flight case",
+      "role": "produits",
+      "description": "Le couvercle d'un vrai flight case (panneau, cornière et loquets découpés dans la photo) se tire vers le haut ; il s'ouvre seul 1 s après être entier à l'écran ; cinq produits posés sur la mousse, chacun à ajouter ; frise des quatre étapes dessous.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "jeu",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "la perspective du couvercle déborde pendant la rotation : overflow-x clip sur la section",
+        "au doigt, un toucher ouvre (pan-y garde le défilement)"
+      ]
+    },
+    "metiers": {
+      "titre": "Vous louez. On s'occupe de tout.",
+      "role": "services",
+      "description": "Fond clair : les deux métiers, la location sur la vraie photo du pack sur fond blanc, la prestation DJ sur une photo de cabine.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dj": {
+      "titre": "L'electro house dans l'ADN, tous les styles sur la piste",
+      "role": "équipe",
+      "description": "Mur LED des styles en Doto qui s'allume en entrant, photo réelle de Mattéo et Sacha recadrée sur la partie éclairée avec sa légende, styles en pastilles.",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "photo source de 675 px : montrée sous le quart de l'écran pour ne pas être jugée faible"
+      ]
+    },
+    "evenements": {
+      "titre": "Chaque événement a son ambiance",
+      "role": "services",
+      "description": "Liste des événements avec vignettes, la lumière de la section prend la couleur de l'événement survolé ; mention commune « illustrations générées » sous la liste.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zone": {
+      "titre": "Saint-Quentin et 50 km autour",
+      "role": "carte",
+      "description": "Fond clair : zone de 50 km autour de Saint-Quentin en carte SVG qui se trace, chiffres en matrice LED violette, lien vers les avis Google.",
+      "animations": [
+        "trace-svg",
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Une date, un lieu ?",
+      "role": "appel",
+      "description": "Appel final « Une date, un lieu ? » sous deux faisceaux fixes, devis, téléphone, WhatsApp.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page : contact, pages, réseaux, mentions à compléter.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "La piste est vide ici",
+      "role": "page-404",
+      "description": "« La piste est vide ici » sur la salle éteinte, retour à l'accueil.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une date, un lieu ?",
+      "role": "contact",
+      "description": "Numéro en matrice LED, demande, WhatsApp et e-mail ; à droite un plan de salle en SVG qui se dessine (piste, cabine, enceintes, lyres qui balaient) et pose une table ronde pour dix invités, réglable par − et +, synchronisé avec le formulaire et le conseil de l'accueil.",
+      "animations": [
+        "trace-svg",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "le champ invités du formulaire et le plan se répondent : n'émettre que des événements non « isTrusted » pour éviter la boucle"
+      ]
+    },
+    "contact-demande": {
+      "titre": "Quatre étapes, une minute",
+      "role": "contact",
+      "description": "Fond clair : demande en quatre étapes (événement, date et lieu, souhait, coordonnées) qui reprend la sélection de « Ma demande » et le nombre d'invités ; récapitulatif à droite ; à l'envoi simulé, jet de CO2 et tampon « Demande reçue ».",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "tampon caché (visibility) avant l'envoi, sinon il recouvre le titre"
+      ]
+    },
+    "contact-joindre": {
+      "titre": "Ou directement",
+      "role": "contact",
+      "description": "Moyens directs : téléphone, WhatsApp, e-mail, réseaux.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-zone": {
+      "titre": "Où nous intervenons",
+      "role": "carte",
+      "description": "Carte de la zone d'intervention, comme sur l'accueil.",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-questions": {
+      "titre": "Les questions qu'on nous pose",
+      "role": "faq",
+      "description": "Fond clair : questions fréquentes en accordéon à côté d'une vraie photo de pack sur fond blanc.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenements-debut": {
+      "titre": "Chaque événementa son ambiance",
+      "role": "ouverture",
+      "description": "La même salle, désaturée, prend la couleur de chaque événement (couleur posée en image de fond, transition par @property) ; onze noms en grand à droite qui défilent seuls et réagissent au survol ; sur téléphone, le nom en cours sur la photo.",
+      "animations": [
+        "filtre-anime",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "couleur en background-color : axe lit un fond clair derrière les noms ; la poser en image de fond",
+        "noms à 44 px de haut au moins (min-height 1,42em)"
+      ]
+    },
+    "evenements-index": {
+      "titre": "On vient avec ce qu'il faut",
+      "role": "services",
+      "description": "Index des onze événements : image ou vrai matériel du client sur la couleur de l'événement, formule, devis prérempli ; le mariage propose d'ajouter le Pack Professionnel.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenements-formules": {
+      "titre": "Avec ou sans DJ",
+      "role": "offre",
+      "description": "Avec ou sans DJ : deux formules côte à côte.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "evenements-fin": {
+      "titre": "Votre événement n'est pas dans la liste ?",
+      "role": "appel",
+      "description": "Appel final « Votre événement n'est pas dans la liste ? ».",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "location-debut": {
+      "titre": "Le matériel,livré et installé",
+      "role": "ouverture",
+      "description": "Les cinq vrais packs détourés alignés sur un plateau, du plus petit au plus complet ; une poursuite passe de l'un à l'autre, suit la souris, se pose au clic ; le pack éclairé donne son nom, pour qui, et « Voir ce pack » qui ouvre son onglet.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "les photos se chevauchent : chaque bouton garde sa zone (image en absolu, pointer-events none) et la liste est marquée data-superpose",
+        "légende à hauteur réservée, sinon le défilement automatique fait sauter la page (CLS)",
+        "classe .rack déjà prise par une ancienne section : préfixe etal-"
+      ]
+    },
+    "location-packs": {
+      "titre": "Choisissez l'ambiance, on s'occupe du reste",
+      "role": "offre",
+      "description": "Les cinq packs en onglets LED, fiche avec la photo réelle, le contenu lu sur la photo, et ajout à la demande.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "location-flight-case": {
+      "titre": "Plus de 200 références, rangées par famille",
+      "role": "produits",
+      "description": "Scène épinglée : le flight case s'ouvre famille par famille (sonorisation, éclairage, effets, structure, vidéo), un objet détouré par famille.",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "location-catalogue": {
+      "titre": "Composez votre demande",
+      "role": "produits",
+      "description": "Fond clair : catalogue de 25 articles filtrable par famille (filtre gardé dans l'adresse) avec recherche sans accents ni pluriels, ajout à la demande.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "location-etapes": {
+      "titre": "De votre sélection à la récupération",
+      "role": "étapes",
+      "description": "De la sélection à la récupération en quatre étapes, avec une photo de livraison.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "location-bon-a-savoir": {
+      "titre": "Bon à savoir",
+      "role": "faq",
+      "description": "Fond clair : conditions de location en cartes (prix TTC, livraison, caution, acompte, effets).",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestation-dj-debut": {
+      "titre": "Deux DJ,toute la soirée",
+      "role": "ouverture",
+      "description": "Grand titre centré au-dessus du vrai contrôleur DJ détouré en grand ; ses deux plateaux (découpés dans la même photo) tournent seuls, suivent le défilement et se scratchent à la main.",
+      "animations": [
+        "révélation-texte",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "centre des plateaux trouvé par ajustement de cercle sur l'anneau rouge ; position du fond en pourcentages"
+      ]
+    },
+    "prestation-dj-inclus": {
+      "titre": "Ce que nous apportons",
+      "role": "services",
+      "description": "Ce que les DJ apportent, en voyants qui s'allument.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestation-dj-playlist": {
+      "titre": "Vos incontournables, et les titres à éviter",
+      "role": "outil-interactif",
+      "description": "Incontournables et titres à éviter : on touche un style une fois pour l'ajouter, deux fois pour l'éviter ; la playlist se joint à la demande.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "saisie-personnalisee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestation-dj-temps-forts": {
+      "titre": "Chaque moment a sa musique",
+      "role": "méthode",
+      "description": "Les temps forts de la soirée (entrée, discours, gâteau, ouverture du bal) avec photos.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestation-dj-duo": {
+      "titre": "Mattéo et Sacha",
+      "role": "équipe",
+      "description": "Mattéo et Sacha, photo réelle et chiffres.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestation-dj-fin": {
+      "titre": "Les week-ends partent vite",
+      "role": "appel",
+      "description": "« Les week-ends partent vite » : devis DJ et téléphone.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
