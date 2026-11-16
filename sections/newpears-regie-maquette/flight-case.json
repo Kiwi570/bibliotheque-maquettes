@@ -4,13 +4,13 @@
  "page": "index",
  "titre": "Ouvrez le flight case",
  "role": "produits",
- "description": "Fond clair : le couvercle d'un vrai flight case (panneau, cornière et loquets découpés dans la photo) se tire vers le haut ; il s'ouvre seul 1 s après être entier à l'écran ; cinq produits posés sur la mousse, chacun à ajouter ; frise des quatre étapes dessous.",
+ "description": "Fond clair : le couvercle d'un vrai flight case (panneau, cornière et loquets découpés dans la photo) s'ouvre tout seul au défilement, sans consigne ni bouton : les loquets basculent d'abord, puis il se soulève au rythme du scroll avec un léger rebond (ressort) et se referme si on remonte ; cinq produits sortent un par un, chacun à ajouter ; frise des quatre étapes dessous.",
  "animations": [
+  "progression-fixée",
   "apparition-au-défilement",
   "révélation-image"
  ],
  "interactions": [
-  "jeu",
   "panier-simule"
  ],
  "dependances": [
@@ -23,9 +23,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:138-195",
-  "css": "assets/css/site.css:134-135,403-406,419,664-686,690-694,701-711,715,784-791,871-899,908-909,965-992,1001-1002,1016-1017,1377,1381-1383,1391,1408-1410,1414,1424-1426",
-  "js": "assets/js/site.js:154-204,477-490"
+  "html": "index.html:138-193",
+  "css": "assets/css/site.css:403-406,419,664-686,690-692,701-711,715,784-791,871-899,908-909,965-992,1001-1002,1016-1017,1377,1381-1383,1408-1410,1414,1424,1438-1440",
+  "js": "assets/js/site.js:154-192,465-478"
  },
  "medias": {
   "capture": "medias/newpears-regie-maquette/flight-case-p1440.jpg",
@@ -34,7 +34,9 @@
  },
  "pieges": [
   "la perspective du couvercle déborde pendant la rotation : overflow-x clip sur la section",
-  "au doigt, un toucher ouvre (pan-y garde le défilement)"
+  "v7 : le geste « tirer le couvercle » et sa consigne ont été retirés à la demande du client ; l'ouverture suit le défilement (début quand la scène entre en bas, ouvert quand son haut arrive au tiers de l'écran)",
+  "ressort (raideur 90, amortissement 13) qui suit la position du défilement ; position posée d'emblée au chargement pour ne rien rejouer au rechargement",
+  "au clavier, arriver sur un produit ouvre tout ; animations réduites : ouvert d'emblée"
  ],
  "mesures": {
   "hauteur_p1440": 1158,

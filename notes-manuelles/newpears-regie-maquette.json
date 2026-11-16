@@ -28,7 +28,7 @@
     "points_forts": [
       "héros sobre après deux « refaire » : un seul faisceau accroché en haut suit la main, éclaire le titre et se pose sur le vrai pack conseillé",
       "conseil sur une ligne : curseur d'invités et interrupteur Mariage donnent le pack, ajouté d'un clic à « Ma demande » (flight case dans l'en-tête)",
-      "flight case de l'accueil fait de la matière de la vraie photo (panneau, cornière, loquets redressés et détourés), couvercle à tirer",
+      "flight case de l'accueil fait de la matière de la vraie photo (panneau, cornière, loquets redressés et détourés), couvercle qui s'ouvre au défilement",
       "une ouverture propre à chaque page d'onglet : rack des cinq vrais packs sous une poursuite, contrôleur aux plateaux qui tournent, salle qui prend la couleur de l'événement, plan de salle qui suit les invités",
       "fond clair majoritaire (v5, demandé par le client) : seules les ouvertures, l'appel final et le pied restent sombres ; néons et lueurs retirés, boutons unis, police LED réservée aux chiffres"
     ],
@@ -58,7 +58,7 @@
     "accueil": "regie",
     "plan": "outil-d-abord",
     "grille": {
-      "objet": "curseur d'invités et interrupteur Mariage qui donnent le vrai pack sous un faisceau qui suit la main ; couvercle du flight case à tirer",
+      "objet": "curseur d'invités et interrupteur Mariage qui donnent le vrai pack sous un faisceau qui suit la main ; couvercle du flight case qui s'ouvre au défilement",
       "fil": "ligne de lumière sous l'en-tête qui suit la lecture, voile en faisceau entre les pages"
     },
     "metier": "location de son et lumière, DJ"
@@ -177,13 +177,13 @@
     "flight-case": {
       "titre": "Ouvrez le flight case",
       "role": "produits",
-      "description": "Fond clair : le couvercle d'un vrai flight case (panneau, cornière et loquets découpés dans la photo) se tire vers le haut ; il s'ouvre seul 1 s après être entier à l'écran ; cinq produits posés sur la mousse, chacun à ajouter ; frise des quatre étapes dessous.",
+      "description": "Fond clair : le couvercle d'un vrai flight case (panneau, cornière et loquets découpés dans la photo) s'ouvre tout seul au défilement, sans consigne ni bouton : les loquets basculent d'abord, puis il se soulève au rythme du scroll avec un léger rebond (ressort) et se referme si on remonte ; cinq produits sortent un par un, chacun à ajouter ; frise des quatre étapes dessous.",
       "animations": [
+        "progression-fixée",
         "apparition-au-défilement",
         "révélation-image"
       ],
       "interactions": [
-        "jeu",
         "panier-simule"
       ],
       "telephone": "adapté",
@@ -192,7 +192,9 @@
       "module": null,
       "pieges": [
         "la perspective du couvercle déborde pendant la rotation : overflow-x clip sur la section",
-        "au doigt, un toucher ouvre (pan-y garde le défilement)"
+        "v7 : le geste « tirer le couvercle » et sa consigne ont été retirés à la demande du client ; l'ouverture suit le défilement (début quand la scène entre en bas, ouvert quand son haut arrive au tiers de l'écran)",
+        "ressort (raideur 90, amortissement 13) qui suit la position du défilement ; position posée d'emblée au chargement pour ne rien rejouer au rechargement",
+        "au clavier, arriver sur un produit ouvre tout ; animations réduites : ouvert d'emblée"
       ]
     },
     "metiers": {
