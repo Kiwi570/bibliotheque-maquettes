@@ -1,0 +1,56 @@
+{
+ "id": "djludoremix-maquette/debut",
+ "maquette": "djludoremix-maquette",
+ "page": "index",
+ "titre": "Votre soirée en plein feux",
+ "role": "ouverture",
+ "description": "Une seule grande scène épinglée : une photo de Ludo à la fois dans le noir, une poursuite qu'on promène (seule après 6 s), un second faisceau, des lasers et des points disco sur canvas, des coupes au flash entre les photos, et un pupitre de cinq faders qui calcule la formule la moins chère et son vrai prix.",
+ "animations": [
+  "section-fixée",
+  "canvas-2d",
+  "masque",
+  "trace-svg"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:109-185",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:31,114-129,141-147,151-154,174,183-185,275,289,356-376,405,439,518,528-529,536-540,552-553,558,581-585,597-603,623,633-637,644-679,683-707,731-757,762-763,767-786,792-822,834,845-852,868-875,884-902,907-912,920-921,926-930,935-941,986-1003,1028,1038,1083,1089-1090,1128,1132-1133,1149-1152,1164,1170",
+  "js": "assets/js/site.js:28-33,40-132,193-210,279-344,384-414,418-437,565,596 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:1,5,43-51,54-74,95-130,138-168 ; assets/js/socle/effets.js:17,151-158,214-234,269-283 ; assets/js/socle/transitions.js:25-46,52-115"
+ },
+ "medias": {
+  "capture": "medias/djludoremix-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/djludoremix-maquette/debut-m390.jpg",
+  "video": "medias/djludoremix-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Six regards du directeur artistique avant AJUSTER 4,00 : une seule idée en grand vaut mieux que trois effets.",
+  "Arrêter la démo des faders au premier geste, sinon l'audit voit l'effet dériver sous la souris immobile.",
+  "Le flash plein écran doit rester doux (opacité 0,4 au plus)."
+ ],
+ "particularites": [
+  "Masque radial CSS piloté par --fx/--fy pour la poursuite, sur la photo réelle du client."
+ ],
+ "mesures": {
+  "hauteur_p1440": 2160,
+  "hauteur_m390": 1688,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "masque",
+  "trait-qui-se-dessine"
+ ],
+ "impact": "spectaculaire"
+}

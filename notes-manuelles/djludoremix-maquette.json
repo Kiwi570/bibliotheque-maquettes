@@ -1,0 +1,588 @@
+{
+ "maquette": {
+  "client": "DJ Ludo Remix, DJ, son, lumière et laser dans le Gard",
+  "activite": [
+   "spectacle"
+  ],
+  "concept": [
+   "scène"
+  ],
+  "ambiance": [
+   "sombre",
+   "nocturne",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "#07070b",
+   "texte": "#f3eee6",
+   "accent": "#ff2d55",
+   "secondaire": "#a979ff"
+  },
+  "polices": {
+   "titres": "Big Shoulders",
+   "texte": "Figtree",
+   "mono": ""
+  },
+  "points_forts": [
+   "Accueil en une seule scène : une poursuite qu'on promène sur la photo et un pupitre de faders qui allume la salle et donne le vrai prix.",
+   "Une ouverture propre à chaque page : VU-mètre des prix, lettres géantes, numéro tracé au laser, boule à facettes en 3D.",
+   "L'affiche de la soirée qui se compose pendant la demande de devis, puis se fait tamponner."
+  ],
+  "reserves": [
+   "Le titre en deux lignes, gras puis néon, se répète sur toutes les pages.",
+   "Formules montre encore les prix à trois endroits (VU-mètre, pupitre, cartes).",
+   "Safari non vérifié."
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "trace-svg",
+   "section-fixée",
+   "canvas-2d",
+   "masque",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "fil-conducteur",
+   "apparition-au-défilement"
+  ],
+  "interactions": [
+   "simulateur",
+   "formulaire-par-étapes",
+   "galerie-cliquable",
+   "mode-calme"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "objet-unique",
+  "grille": {
+   "objet": "un pupitre lumière de cinq faders (lyres, lasers, UV, disco, heure de fin) posé sur la photo, et une poursuite à promener",
+   "fil": "une lyre accrochée au bord droit, dont la lentille prend la couleur de la page"
+  },
+  "metier": "DJ animateur de soirées"
+ },
+ "sections": {
+  "div": {
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "",
+   "role": "",
+   "description": "",
+   "ignorer": "conteneur technique sans contenu propre"
+  },
+  "ouverture-panneau": {
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le texte tracé doit rester sous 3 s, accéléré au premier geste."
+   ],
+   "titre": "Intro au laser",
+   "role": "transition-de-page",
+   "description": "Un trait de laser écrit « LUDO REMIX » dans le brouillard, la lentille s'allume puis glisse jusqu'à l'objet d'ouverture de la page."
+  },
+  "fil": {
+   "animations": [
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Trop fine elle est invisible (regard neuf v1), trop large elle passe sur les cartes à 390 px."
+   ],
+   "titre": "Lyre du fil",
+   "role": "decor",
+   "description": "Une petite lyre suspendue au bord droit descend avec la lecture ; sa lentille prend la couleur de la page."
+  },
+  "header": {
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "Logotype avec lentille, navigation et bouton « Devis sous 48 h »."
+  },
+  "menu": {
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran du téléphone."
+  },
+  "debut": {
+   "animations": [
+    "section-fixée",
+    "canvas-2d",
+    "masque",
+    "trace-svg"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Six regards du directeur artistique avant AJUSTER 4,00 : une seule idée en grand vaut mieux que trois effets.",
+    "Arrêter la démo des faders au premier geste, sinon l'audit voit l'effet dériver sous la souris immobile.",
+    "Le flash plein écran doit rester doux (opacité 0,4 au plus)."
+   ],
+   "titre": "Votre soirée en plein feux",
+   "role": "ouverture",
+   "description": "Une seule grande scène épinglée : une photo de Ludo à la fois dans le noir, une poursuite qu'on promène (seule après 6 s), un second faisceau, des lasers et des points disco sur canvas, des coupes au flash entre les photos, et un pupitre de cinq faders qui calcule la formule la moins chère et son vrai prix.",
+   "particularites": [
+    "Masque radial CSS piloté par --fx/--fy pour la poursuite, sur la photo réelle du client."
+   ]
+  },
+  "soirees": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Une piste, trois publics",
+   "role": "services",
+   "description": "Bande des cinq prix cliquables avec l'heure de fin, puis trois soirées types en cartes (défilement horizontal sur téléphone)."
+  },
+  "livre": {
+   "animations": [
+    "trace-svg",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Reprendre les citations mot pour mot : un avis reformulé a été retiré au regard neuf."
+   ],
+   "titre": "286 messages, un show laser",
+   "role": "témoignages",
+   "description": "Mur du livre d'or : on choisit une citation et des faisceaux laser l'écrivent en grand ; distinctions Wedding Awards et Zankyou."
+  },
+  "rayon": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "50 km autour de Pont-Saint-Esprit, déplacement compris",
+   "role": "carte",
+   "description": "Carte radar SVG du rayon de 50 km, cercle qui se trace et balayage."
+  },
+  "date": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Réservez la date",
+   "role": "appel",
+   "description": "Petit formulaire « Réservez la date » : à l'envoi, la date s'écrit au laser."
+  },
+  "pied": {
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Logotype, zone, numéro, liens, boutique et crédits."
+  },
+  "404-debut": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Piste vide",
+   "role": "page-404",
+   "description": "Piste vide, une poursuite et « Retour sur la piste »."
+  },
+  "contact-debut": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Réservez votre date",
+   "role": "ouverture",
+   "description": "Le numéro en chiffres géants tracés au laser sous des faisceaux qui balaient, puis l'action et la réponse sous 48 h."
+  },
+  "contact-devis": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Boutons de navigation collants en bas, sinon « Continuer » sort de l'écran sur téléphone."
+   ],
+   "titre": "Demande de devis",
+   "role": "contact",
+   "description": "Demande de devis en cinq étapes à côté d'une affiche de la soirée qui se compose à chaque champ (occasion, date, lieu, invités, formule) et se fait tamponner « Reçu » à l'envoi."
+  },
+  "contact-reseaux": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Suivre Ludo",
+   "role": "appel",
+   "description": "Réseaux sociaux et boutique en liste, avec une photo."
+  },
+  "formules-debut": {
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "La classe .vu est prise par le socle (élément vu) : nommer autrement."
+   ],
+   "titre": "Composez votre lumière",
+   "role": "ouverture",
+   "description": "VU-mètre géant : cinq colonnes de LED montent jusqu'au prix de chaque formule puis vivent ; une colonne touchée règle le pupitre.",
+   "particularites": [
+    "Segments en HTML allumés par classes, jitter de VU-mètre dans une boucle à 11 images/s."
+   ]
+  },
+  "formules-pupitre": {
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "canvas-2d"
+   ],
+   "interactions": [
+    "simulateur",
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "À égalité de prix, préférer la formule Association quand la case est cochée."
+   ],
+   "titre": "Le pupitre",
+   "role": "calculateur",
+   "description": "La salle des fêtes en plein écran, épinglée ; le défilement passe les cinq formules au pupitre (lyres, lasers, UV, disco, heure de fin) tant que la main n'y touche pas."
+  },
+  "formules-tableau": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Double les prix du VU-mètre et du pupitre."
+   ],
+   "titre": "Les cinq formules côte à côte",
+   "role": "tarifs",
+   "description": "Cinq cartes de formule avec pictogramme, matériel, horaires et heure en plus."
+  },
+  "formules-faq": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Questions en accordéon et photo."
+  },
+  "ludo-debut": {
+   "animations": [
+    "masque",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Sur écran vertical, couper en LU / DO et calculer la place libre au-dessus du texte."
+   ],
+   "titre": "Derrière les platines",
+   "role": "ouverture",
+   "description": "« LUDO » en lettres géantes sur tout l'écran, la photo vue à travers (fond noir en mix-blend multiply) ; au défilement les lettres grandissent jusqu'à la photo pleine."
+  },
+  "ludo-parcours": {
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Marquer la piste data-galerie, sinon l'audit voit des textes coupés par la fenêtre."
+   ],
+   "titre": "Le parcours, au laser",
+   "role": "étapes",
+   "description": "Parcours en défilement horizontal épinglé sous une lyre dont le cône allume chaque date au passage."
+  },
+  "ludo-photos": {
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "En lumière",
+   "role": "galerie",
+   "description": "Mur de photos de la séance pro, images réactives à la vitesse."
+  },
+  "ludo-livre": {
+   "animations": [
+    "empilement-de-fiches"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Le livre d'or",
+   "role": "témoignages",
+   "description": "Citations du livre d'or en cartes collantes qui s'empilent."
+  },
+  "ludo-fin": {
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "À vous de jouer",
+   "role": "appel",
+   "description": "Photo en plein air et demande de devis."
+  },
+  "soirees-debut": {
+   "animations": [
+    "canvas-2d"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "titre": "Toutes les fêtes, un seul DJ",
+   "role": "ouverture",
+   "description": "Place de village un soir de fête votive (image générée) et une boule à facettes en 3D dessinée facette par facette sur canvas, qui tourne et jette ses reflets.",
+   "particularites": [
+    "Boule à facettes en canvas 2D : bandes de latitude, éclairage diffus et spéculaire, scintillement."
+   ]
+  },
+  "soirees-occasions": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "On fête quoi ?",
+   "role": "services",
+   "description": "Index typographique des occasions qui s'allume au défilement."
+  },
+  "soirees-bodega": {
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Total Bodega",
+   "role": "offre",
+   "description": "Concept Total Bodega en grand, image générée en parallaxe."
+  },
+  "soirees-kitsch": {
+   "animations": [
+    "canvas-2d",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Kitsch Party",
+   "role": "offre",
+   "description": "Kitsch Party, titre néon et éclats sur canvas."
+  },
+  "soirees-publics": {
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Trois publics, une même exigence",
+   "role": "services",
+   "description": "Quatre publics en lignes alternées photo et texte, avec devis prérempli."
+  },
+  "soirees-fin": {
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Votre fête est dans la liste ?",
+   "role": "appel",
+   "description": "Photo de fête de village et appel."
+  }
+ }
+}
