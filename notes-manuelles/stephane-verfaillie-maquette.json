@@ -26,14 +26,14 @@
    "mono": ""
   },
   "points_forts": [
-   "Le voyant vert d'un ordinateur qui redémarre comme seule idée : intro, statut « joignable maintenant », voile en iris bleu nuit",
-   "Carte réelle des 274 communes à moins de 30 km de Molsheim, tirée des contours officiels, avec la distance de chaque commune",
+   "Le voyant vert comme seule idée : intro du bouton marche/arrêt, statut « joignable » à l'heure de Paris, voile en iris, et un grand bouton qui s'allume dans l'appel final",
+   "Carte réelle des 274 communes à moins de 30 km de Molsheim, distance de chaque commune et lien direct vers un rendez-vous prérempli",
    "Cinq ouvertures différentes pour cinq pages dans un seul système (clair, bleu nuit du logo, vert)",
    "Contenus tous réels : tarifs complets, inclus dans le forfait, horaires, avis Google, références"
   ],
   "reserves": [
    "Images Grok livrées petites ou floues, agrandies et affinées",
-   "Sobre plus que spectaculaire : pas de scène épinglée forte sur l'accueil"
+   "Pas de scène épinglée forte sur l'accueil"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -53,7 +53,7 @@
    "filtres",
    "formulaire-par-étapes"
   ],
-  "change_depuis_audit": null,
+  "change_depuis_audit": "v2 : appel final au bouton qui s'allume, statut en positif, accueil plus court, zone reliée au rendez-vous, mobile compacté",
   "accueil": "debut",
   "plan": "recit-lineaire",
   "grille": {
@@ -132,7 +132,7 @@
   "debut": {
    "titre": "Votre ordinateur repart.",
    "role": "ouverture",
-   "description": "Ouverture scindée : titre très grand en Funnel Display avec « repart. » en vert, bouton vert et téléphone, statut « joignable maintenant » calculé à l'heure de Paris ; grande photo verticale d'un portable sur un établi qui respire lentement, pastille bleu nuit au texte circulaire « dès 30 € · prestations comprises » qui tourne au défilement.",
+   "description": "Ouverture scindée : titre très grand en Funnel Display avec « repart. » en vert, bouton vert et téléphone, trois faits rassurants (CNAM, domicile, atelier ou à distance, particuliers et pros), statut « joignable » calculé à l'heure de Paris ; grande photo verticale d'un portable sur un établi qui respire lentement, pastille bleu nuit au texte circulaire « dès 30 € · prestations comprises » qui tourne au défilement.",
    "animations": [
     "ouverture-orchestrée",
     "révélation-texte",
@@ -227,7 +227,7 @@
   "zone": {
    "titre": "274 communes à moins de 30 km",
    "role": "carte",
-   "description": "Carte réelle des communes du Bas-Rhin (contours officiels simplifiés, communes de la zone teintées), cercle de 30 km qui se trace au défilement, villes repères et atelier ; champ commune avec liste et distance à vol d'oiseau calculée, trait vers la commune choisie.",
+   "description": "Carte réelle des communes du Bas-Rhin (contours officiels simplifiés, communes de la zone teintées), cercle de 30 km qui se trace au défilement, villes repères et atelier ; champ commune avec distance à vol d'oiseau, trait vers la commune choisie et lien « Prendre rendez-vous à … » qui préremplit le formulaire.",
    "animations": [
     "trace-svg",
     "apparition-au-défilement"
@@ -264,10 +264,10 @@
   "apprendre": {
    "titre": "Apprendre et être en ligne",
    "role": "offre",
-   "description": "Deux cartes (formations 75 € l'heure, sites et applis sur devis) et une photo qui s'incline selon la vitesse de défilement.",
+   "description": "Bande compacte : titre et texte à gauche, deux cartes à icône (formations 75 € l'heure, sites et applis sur devis) à droite, sans photo.",
    "animations": [
-    "reactif-vitesse",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
@@ -281,7 +281,7 @@
   "avis": {
    "titre": "Ce qu'en disent les clients",
    "role": "témoignages",
-   "description": "Trois vrais avis Google, le premier en grande carte bleu nuit, points forts cités en étiquettes, guillemets verts qui se tracent.",
+   "description": "Trois vrais avis Google : grande carte bleu nuit à gauche, deux cartes empilées à droite avec les points forts cités en étiquettes, guillemets verts qui se tracent ; rangée qui défile au doigt sur téléphone.",
    "animations": [
     "trace-svg",
     "apparition-au-défilement"
@@ -298,10 +298,10 @@
   "appel": {
    "titre": "Un souci ? Appelez, ça repart.",
    "role": "appel",
-   "description": "Bande bleu nuit, photo du soir à droite sous un dégradé, pictogramme marche/arrêt vert, boutons rendez-vous et téléphone, statut joignable dont le voyant respire.",
+   "description": "Bande bleu nuit : titre, texte, boutons rendez-vous et téléphone à gauche ; à droite un grand bouton marche/arrêt dessiné qui se trace au défilement puis s'allume en vert avec un halo, voyant qui pulse.",
    "animations": [
-    "révélation-texte",
-    "parallaxe"
+    "trace-svg",
+    "révélation-texte"
    ],
    "interactions": [
     "aucune"
@@ -310,7 +310,9 @@
    "note_qualite": 4,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "L'arc et le trait partent de stroke-dashoffset 1 posé en CSS sous html.js, l'allumage passe par une classe (est-allume) posée par un ScrollTrigger, défaite en remontant"
+   ]
   },
   "pied": {
    "titre": "Pied de page bleu nuit",
@@ -368,7 +370,7 @@
   "a-propos-atelier": {
    "titre": "L'atelier, à Niederhaslach",
    "role": "galerie",
-   "description": "Photo d'atelier qui s'ouvre d'une vignette au plein écran au défilement, mots qui s'écartent, adresse de l'atelier sur rendez-vous à la fin.",
+   "description": "Photo d'atelier qui s'ouvre d'une vignette au plein écran au défilement, « L'atelier, / à Niederhaslach. » sur deux lignes qui s'écartent sans sortir de l'écran, adresse sur rendez-vous à la fin.",
    "animations": [
     "masque",
     "section-fixée"
@@ -385,7 +387,7 @@
   "a-propos-parcours": {
    "titre": "Entrepreneur, et d'ici",
    "role": "manifeste",
-   "description": "Grande citation du site actuel, quatre faits (ingénieur CNAM, particuliers et pros, trois façons d'intervenir, formations et web), photo d'établi en parallaxe.",
+   "description": "Grande citation du site actuel, quatre faits (ingénieur CNAM, particuliers et pros, trois façons d'intervenir, formations et web), photo de trousse d'outils en parallaxe.",
    "animations": [
     "révélation-texte",
     "apparition-au-défilement",
@@ -435,8 +437,9 @@
   "a-propos-appel": {
    "titre": "Appel final",
    "role": "appel",
-   "description": "L'appel final bleu nuit de l'accueil : photo du soir, bouton de rendez-vous, téléphone et statut joignable.",
+   "description": "Même appel final que l'accueil : bande bleu nuit, boutons rendez-vous et téléphone, grand bouton marche/arrêt qui se trace puis s'allume en vert.",
    "animations": [
+    "trace-svg",
     "révélation-texte"
    ],
    "interactions": [
@@ -451,7 +454,7 @@
   "professionnels-debut": {
    "titre": "Un informaticien pour votre entreprise",
    "role": "ouverture",
-   "description": "Plein cadre : photo de bureau sous un dégradé bleu nuit, une ligne de balayage verte traverse la photo à l'arrivée puis file au défilement pendant que la photo se rapproche ; badge vert « Sur devis » (objet d'ouverture).",
+   "description": "Plein cadre : photo de bureau sous un dégradé bleu nuit, une ligne verte balaie la photo puis s'efface toutes les quelques secondes pendant que la photo se rapproche au défilement ; badge vert « Sur devis » (objet d'ouverture).",
    "animations": [
     "ouverture-orchestrée",
     "parallaxe"
@@ -673,8 +676,9 @@
   "services-appel": {
    "titre": "Appel final",
    "role": "appel",
-   "description": "L'appel final bleu nuit de l'accueil : photo du soir, bouton de rendez-vous, téléphone et statut joignable.",
+   "description": "Même appel final que l'accueil : bande bleu nuit, boutons rendez-vous et téléphone, grand bouton marche/arrêt qui se trace puis s'allume en vert.",
    "animations": [
+    "trace-svg",
     "révélation-texte"
    ],
    "interactions": [

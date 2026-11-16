@@ -4,16 +4,17 @@
  "page": "index",
  "titre": "Apprendre et être en ligne",
  "role": "offre",
- "description": "Deux cartes (formations 75 € l'heure, sites et applis sur devis) et une photo qui s'incline selon la vitesse de défilement.",
+ "description": "Bande compacte : titre et texte à gauche, deux cartes à icône (formations 75 € l'heure, sites et applis sur devis) à droite, sans photo.",
  "animations": [
-  "reactif-vitesse",
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "trace-svg"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 3,
@@ -21,8 +22,8 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:327-344",
-  "css": "assets/css/site.css:378-386",
+  "html": "index.html:329-342",
+  "css": "assets/css/site.css:378-387,732-738,754-755",
   "js": null
  },
  "medias": {
@@ -30,13 +31,13 @@
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 865,
-  "hauteur_m390": 1037,
+  "hauteur_p1440": 631,
+  "hauteur_m390": 839,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 2
  },
  "familles": [
-  "vitesse"
+  "trait-qui-se-dessine"
  ],
  "impact": "vivant"
 }

@@ -4,10 +4,10 @@
  "page": "index",
  "titre": "Un souci ? Appelez, ça repart.",
  "role": "appel",
- "description": "Bande bleu nuit, photo du soir à droite sous un dégradé, pictogramme marche/arrêt vert, boutons rendez-vous et téléphone, statut joignable dont le voyant respire.",
+ "description": "Bande bleu nuit : titre, texte, boutons rendez-vous et téléphone à gauche ; à droite un grand bouton marche/arrêt dessiné qui se trace au défilement puis s'allume en vert avec un halo, voyant qui pulse.",
  "animations": [
-  "révélation-texte",
-  "parallaxe"
+  "trace-svg",
+  "révélation-texte"
  ],
  "interactions": [
   "aucune"
@@ -22,22 +22,26 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:367-383",
-  "css": "assets/css/site.css:188,198-199,407-415",
-  "js": null
+  "html": "index.html:365-379",
+  "css": "assets/css/site.css:198-199,408-431",
+  "js": "assets/js/site.js:65-73,271"
  },
  "medias": {
   "capture": "medias/stephane-verfaillie-maquette/appel-p1440.jpg",
   "capture_m390": "medias/stephane-verfaillie-maquette/appel-m390.jpg",
   "video": "medias/stephane-verfaillie-maquette/appel-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "L'arc et le trait partent de stroke-dashoffset 1 posé en CSS sous html.js, l'allumage passe par une classe (est-allume) posée par un ScrollTrigger, défaite en remontant"
+ ],
  "mesures": {
-  "hauteur_p1440": 780,
-  "hauteur_m390": 779,
+  "hauteur_p1440": 648,
+  "hauteur_m390": 694,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 2
  },
- "familles": [],
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
  "impact": "vivant"
 }
