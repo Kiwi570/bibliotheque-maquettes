@@ -1,6 +1,6 @@
 # newpears-regie-maquette
 
-<https://newpears-regie-maquette.vercel.app> · audit du 16/11/2026 · dernier commit 036770f du 16/11/2026
+<https://newpears-regie-maquette.vercel.app> · audit du 16/11/2026 · dernier commit b39ceca du 16/11/2026
 
 > Audit d'entrée en bibliothèque : script d'audit de la skill (complet, v3 : 0 échec), regard du directeur artistique (VALIDER 4,3/5 sur l'accueil v1), regard neuf, test « vrai visiteur », inventaire de la bibliothèque et lecture des captures Pas d'audit externe : la note est à confirmer.
 
@@ -55,7 +55,8 @@ Aucun.
 
 | Mesure | Valeur |
 |---|---|
-| Script d'audit de la skill | complet : 0 échec(s), 0 à regarder, 0 non lancé(s) |
+| Script d'audit de la skill | standard : 0 échec(s), 0 à regarder, 0 non lancé(s) |
 | Regard du directeur artistique (accueil v1) | REFAIRE 2,8 puis 3,2, puis AJUSTER, puis VALIDER 4,3/5 |
 | Regard neuf (v1) | accueil 3,8, location 3,6, contact 3,6, DJ 2,9, 404 2,9, événements 2,8 : ouvertures d'onglet refaites en v2 |
 | Audit complet (v3) | 4 puis 3 échecs, puis 0 ; Safari non lancé |
+| Audit ciblé v4 (page DJ) | 0 échec : platines dessinées à la place de la photo floue |

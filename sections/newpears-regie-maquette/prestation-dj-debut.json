@@ -4,7 +4,7 @@
  "page": "prestation-dj",
  "titre": "Deux DJ,toute la soirée",
  "role": "ouverture",
- "description": "Grand titre centré au-dessus du vrai contrôleur DJ détouré en grand ; ses deux plateaux (découpés dans la même photo) tournent seuls, suivent le défilement et se scratchent à la main.",
+ "description": "Grand titre centré au-dessus de platines dessinées en SVG (deux plateaux, table de mixage, traits fins violets et verts, poire du logo sur l'étiquette), nettes à toutes les tailles ; les plateaux tournent seuls, suivent le défilement et se scratchent à la main.",
  "animations": [
   "révélation-texte",
   "reactif-vitesse"
@@ -21,8 +21,8 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "prestation-dj.html:108-125",
-  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:101,134-135,348,362-367,461-465,469-472,639-643,661,930,956,1028,1038,1072-1086,1090,1112,1117,1285-1286,1298,1310,1325",
+  "html": "prestation-dj.html:108-161",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:101,134-135,348,362-367,461-465,469-472,639-643,661,930,956,1028,1038,1072-1075,1083-1086,1090,1112,1117,1285-1286,1298,1310,1325,1338-1364",
   "js": "assets/js/site.js:283,315-319,378-399,402-417 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,47-55,58-78,153-195 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
@@ -30,7 +30,8 @@
   "capture_m390": "medias/newpears-regie-maquette/prestation-dj-debut-m390.jpg"
  },
  "pieges": [
-  "centre des plateaux trouvé par ajustement de cercle sur l'anneau rouge ; position du fond en pourcentages"
+  "la photo du contrôleur du site (1 100 px) était floue en grand sur écran Retina : dessin SVG à la place (v4)",
+  "plateaux en <g> SVG : transform-box fill-box et transform-origin center pour tourner sur leur centre"
  ],
  "mesures": {
   "hauteur_p1440": 1051,

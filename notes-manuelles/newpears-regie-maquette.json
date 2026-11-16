@@ -570,7 +570,7 @@
     "prestation-dj-debut": {
       "titre": "Deux DJ,toute la soirée",
       "role": "ouverture",
-      "description": "Grand titre centré au-dessus du vrai contrôleur DJ détouré en grand ; ses deux plateaux (découpés dans la même photo) tournent seuls, suivent le défilement et se scratchent à la main.",
+      "description": "Grand titre centré au-dessus de platines dessinées en SVG (deux plateaux, table de mixage, traits fins violets et verts, poire du logo sur l'étiquette), nettes à toutes les tailles ; les plateaux tournent seuls, suivent le défilement et se scratchent à la main.",
       "animations": [
         "révélation-texte",
         "reactif-vitesse"
@@ -583,7 +583,8 @@
       "reutilisable": true,
       "module": null,
       "pieges": [
-        "centre des plateaux trouvé par ajustement de cercle sur l'anneau rouge ; position du fond en pourcentages"
+        "la photo du contrôleur du site (1 100 px) était floue en grand sur écran Retina : dessin SVG à la place (v4)",
+        "plateaux en <g> SVG : transform-box fill-box et transform-origin center pour tourner sur leur centre"
       ]
     },
     "prestation-dj-inclus": {
