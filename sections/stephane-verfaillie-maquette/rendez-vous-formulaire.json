@@ -1,0 +1,45 @@
+{
+ "id": "stephane-verfaillie-maquette/rendez-vous-formulaire",
+ "maquette": "stephane-verfaillie-maquette",
+ "page": "rendez-vous",
+ "titre": "Formulaire de rendez-vous",
+ "role": "contact",
+ "description": "Formulaire en cinq étapes (lieu, appareil, souci, jour et moment, coordonnées) : grandes cartes à icônes, jours des deux semaines à venir avec dimanches et fériés grisés, commune avec distance réelle ; récapitulatif bleu nuit en direct avec estimation tirée des tarifs.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "formulaire-par-etapes",
+ "modules": [
+  "formulaire-par-etapes"
+ ],
+ "code": {
+  "html": "rendez-vous.html:126-198",
+  "css": "assets/css/socle.css:287 ; assets/css/site.css:11,15,22,38-64,75-82,87-89,105-106,113-117,128-132,144-150,154,175,191,585-596,602-605,628-632,684",
+  "js": "assets/js/site.js:19,63-92,114-131,153-212 ; assets/js/modules/formulaire-par-etapes.js:1,27,43,46-49,66,74,78,86,105,108,114,155,158,176,196,222-223,241,268 ; assets/js/modules/horaires-calcul.js:64-100"
+ },
+ "medias": {
+  "capture": "medias/stephane-verfaillie-maquette/rendez-vous-formulaire-p1440.jpg",
+  "capture_m390": "medias/stephane-verfaillie-maquette/rendez-vous-formulaire-m390.jpg"
+ },
+ "pieges": [
+  "Le module importe pret() de son propre socle : le brancher sur le GSAP du projet avec rafraichir du socle, sinon erreur « s.rafraichir is not a function »",
+  "Une section qui ne contient que le module a besoin d'un effet de la bibliothèque (cascade sur le récapitulatif)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 937,
+  "hauteur_m390": 998,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "calme"
+}

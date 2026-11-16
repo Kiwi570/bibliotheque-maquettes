@@ -1,0 +1,690 @@
+{
+ "maquette": {
+  "client": "Stéphane Verfaillie, dépannage informatique à domicile, en atelier ou à distance (Molsheim, Bas-Rhin)",
+  "activite": [
+   "numérique",
+   "artisanat",
+   "services-b2b"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "sobre",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "#f6f7f4",
+   "texte": "#15181c",
+   "accent": "#16c172",
+   "secondaire": "#0f2d4a"
+  },
+  "polices": {
+   "titres": "Funnel Display",
+   "texte": "Funnel Sans",
+   "mono": ""
+  },
+  "points_forts": [
+   "Le voyant vert d'un ordinateur qui redémarre comme seule idée : intro, statut « joignable maintenant », voile en iris bleu nuit",
+   "Carte réelle des 274 communes à moins de 30 km de Molsheim, tirée des contours officiels, avec la distance de chaque commune",
+   "Cinq ouvertures différentes pour cinq pages dans un seul système (clair, bleu nuit du logo, vert)",
+   "Contenus tous réels : tarifs complets, inclus dans le forfait, horaires, avis Google, références"
+  ],
+  "reserves": [
+   "Images Grok livrées petites ou floues, agrandies et affinées",
+   "Sobre plus que spectaculaire : pas de scène épinglée forte sur l'accueil"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "trace-svg",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "compteur",
+   "marquee",
+   "transition-de-page",
+   "révélation-image",
+   "reactif-vitesse"
+  ],
+  "interactions": [
+   "carte-interactive",
+   "calculateur",
+   "filtres",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "pastille « dès 30 € » au bouton marche/arrêt, sur laquelle finit l'intro",
+   "fil": "le voyant vert : intro, statut joignable, surtitres, voile"
+  },
+  "metier": "dépannage informatique"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile iris bleu nuit",
+   "role": "transition-de-page",
+   "description": "Voile bleu nuit du logo qui s'ouvre en cercle sur l'objet de la page d'arrivée, pictogramme marche/arrêt vert et nom de la page.",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : le voyant s'allume",
+   "role": "ouverture",
+   "description": "Panneau bleu nuit : l'anneau et le trait du bouton marche/arrêt se tracent, le voyant s'allume en vert, une barre se remplit, puis le bouton glisse jusqu'à la pastille de la page (versObjet) et le panneau s'ouvre en cercle depuis elle.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "En-tête clair",
+   "role": "menu",
+   "description": "En-tête clair opaque : marque du logo redessinée en SVG, nom et métier, liens, téléphone avec voyant d'état (vert ou gris selon l'heure), bouton vert « Prendre rendez-vous ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran clair, grands liens Funnel Display, bouton d'appel.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Votre ordinateur repart.",
+   "role": "ouverture",
+   "description": "Ouverture scindée : titre très grand en Funnel Display avec « repart. » en vert, bouton vert et téléphone, statut « joignable maintenant » calculé à l'heure de Paris ; grande photo verticale d'un portable sur un établi qui respire lentement, pastille bleu nuit au texte circulaire « dès 30 € · prestations comprises » qui tourne au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le titre arrive par un masque en clip-path (pas overflow hidden) : sinon accents et jambages coupés à l'audit",
+    "La pastille est dans le bloc de texte pour le téléphone et posée sur le coin de la photo sur ordinateur (position absolue par rapport au texte, z-index au-dessus de la figure)"
+   ]
+  },
+  "facons": {
+   "titre": "Trois façons de dépanner",
+   "role": "services",
+   "description": "Trois cartes photo (chez vous, à l'atelier, à distance) avec pastille d'icône bleu nuit, prix réels et lien de rendez-vous prérempli ; sur téléphone, rangée qui défile au doigt.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "compris": {
+   "titre": "Prestations comprises",
+   "role": "offre",
+   "description": "Bande bleu nuit : liste des neuf prestations incluses dans le forfait, chaque coche se trace au défilement ; photo de carte électronique au voyant vert et compteur « 9 prestations incluses ».",
+   "animations": [
+    "trace-svg",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "L'état de départ des coches (stroke-dashoffset 1) est posé en CSS sous html.js, l'arrivée en GSAP, l'état final inline"
+   ]
+  },
+  "pannes": {
+   "titre": "Ce qui coince",
+   "role": "services",
+   "description": "Bandeau de mots géants (appareils) qui filent en sens opposés, puis six pannes courantes dites par le visiteur, ce qui est fait et le prix réel ou « inclus ».",
+   "animations": [
+    "marquee",
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mots géants en contour ou trop pâles : axe les compte en contraste 1:1 ; couleurs pleines à 3:1 au moins (gris et vert foncé, graisse 300)"
+   ]
+  },
+  "stephane": {
+   "titre": "Stéphane, ingénieur informatique",
+   "role": "équipe",
+   "description": "Vrai portrait rond dans un anneau pointillé vert qui se trace, parcours CNAM et citation du site actuel.",
+   "animations": [
+    "trace-svg",
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "274 communes à moins de 30 km",
+   "role": "carte",
+   "description": "Carte réelle des communes du Bas-Rhin (contours officiels simplifiés, communes de la zone teintées), cercle de 30 km qui se trace au défilement, villes repères et atelier ; champ commune avec liste et distance à vol d'oiseau calculée, trait vers la commune choisie.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Ne jamais animer y (transform) d'un groupe SVG placé par l'attribut transform : GSAP l'écrase et toutes les étiquettes se retrouvent sur une ligne",
+    "Calcul fait une fois (outils/zone.py) : fond de carte en SVG externe léger, interaction en calque SVG"
+   ]
+  },
+  "pros": {
+   "titre": "Pour les entreprises",
+   "role": "services",
+   "description": "Photo d'un switch réseau en rideau, quatre offres sur devis avec icônes, puis ruban des six vraies références avec bouton pause.",
+   "animations": [
+    "révélation-image",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "apprendre": {
+   "titre": "Apprendre et être en ligne",
+   "role": "offre",
+   "description": "Deux cartes (formations 75 € l'heure, sites et applis sur devis) et une photo qui s'incline selon la vitesse de défilement.",
+   "animations": [
+    "reactif-vitesse",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce qu'en disent les clients",
+   "role": "témoignages",
+   "description": "Trois vrais avis Google, le premier en grande carte bleu nuit, points forts cités en étiquettes, guillemets verts qui se tracent.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Un souci ? Appelez, ça repart.",
+   "role": "appel",
+   "description": "Bande bleu nuit, photo du soir à droite sous un dégradé, pictogramme marche/arrêt vert, boutons rendez-vous et téléphone, statut joignable dont le voyant respire.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page bleu nuit",
+   "role": "pied-de-page",
+   "description": "Vrai logo du client, coordonnées, horaires et statut, sommaire, mentions légales non cliquables « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page ne répond plus",
+   "role": "page-404",
+   "description": "Photo plein cadre d'un câble débranché sous un dégradé bleu nuit, pictogramme marche/arrêt éteint, retour à l'accueil.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le dégradé va dans la figure (::after, sous la mention « Illustration générée »), et la section garde un fond bleu nuit : sinon axe calcule le texte blanc sur le fond clair de la page"
+   ]
+  },
+  "a-propos-debut": {
+   "titre": "Stéphane Verfaillie",
+   "role": "ouverture",
+   "description": "Ouverture centrée : vrai portrait rond (objet d'ouverture) cerclé de vert, nom très grand qui arrive lettre à lettre, parcours et bouton ; un écran entier.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Ouverture d'un écran entier : sinon, sur grand écran, la photo plein écran suivante est déjà dans l'écran au chargement et cache l'en-tête dès l'arrivée"
+   ]
+  },
+  "a-propos-atelier": {
+   "titre": "L'atelier, à Niederhaslach",
+   "role": "galerie",
+   "description": "Photo d'atelier qui s'ouvre d'une vignette au plein écran au défilement, mots qui s'écartent, adresse de l'atelier sur rendez-vous à la fin.",
+   "animations": [
+    "masque",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-parcours": {
+   "titre": "Entrepreneur, et d'ici",
+   "role": "manifeste",
+   "description": "Grande citation du site actuel, quatre faits (ingénieur CNAM, particuliers et pros, trois façons d'intervenir, formations et web), photo d'établi en parallaxe.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-zone": {
+   "titre": "Zone d'intervention",
+   "role": "carte",
+   "description": "La carte réelle des 274 communes de l'accueil, avec le cercle des 30 km qui se trace et le champ commune qui donne la distance.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-avis": {
+   "titre": "Avis",
+   "role": "témoignages",
+   "description": "Les trois vrais avis Google repris de l'accueil : grande carte bleu nuit pour le premier, étiquettes des points forts, guillemets verts qui se tracent.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-appel": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "L'appel final bleu nuit de l'accueil : photo du soir, bouton de rendez-vous, téléphone et statut joignable.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-debut": {
+   "titre": "Un informaticien pour votre entreprise",
+   "role": "ouverture",
+   "description": "Plein cadre : photo de bureau sous un dégradé bleu nuit, une ligne de balayage verte traverse la photo à l'arrivée puis file au défilement pendant que la photo se rapproche ; badge vert « Sur devis » (objet d'ouverture).",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-offres": {
+   "titre": "Ce que je prends en charge",
+   "role": "services",
+   "description": "Quatre cartes sur devis avec pictogrammes qui se tracent.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-references": {
+   "titre": "Ils ont fait appel à moi",
+   "role": "preuves",
+   "description": "Liste numérotée des six vraies références en grand Funnel Display, photo réseau en rideau.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-deroule": {
+   "titre": "Comment ça se passe",
+   "role": "étapes",
+   "description": "Trois étapes reliées par un trait pointillé qui se trace, encart formations des équipes.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-appel": {
+   "titre": "Un projet, une panne au bureau ?",
+   "role": "appel",
+   "description": "Appel final « devis » sur la photo du circuit au voyant vert.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-debut": {
+   "titre": "Cinq questions, une minute",
+   "role": "ouverture",
+   "description": "Titre, boutons commencer et appeler, statut joignable ; frise verticale des cinq étapes dont le trait se trace et les ronds s'allument, puis qui suit l'étape du formulaire.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rendez-vous-formulaire": {
+   "titre": "Formulaire de rendez-vous",
+   "role": "contact",
+   "description": "Formulaire en cinq étapes (lieu, appareil, souci, jour et moment, coordonnées) : grandes cartes à icônes, jours des deux semaines à venir avec dimanches et fériés grisés, commune avec distance réelle ; récapitulatif bleu nuit en direct avec estimation tirée des tarifs.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Le module importe pret() de son propre socle : le brancher sur le GSAP du projet avec rafraichir du socle, sinon erreur « s.rafraichir is not a function »",
+    "Une section qui ne contient que le module a besoin d'un effet de la bibliothèque (cascade sur le récapitulatif)"
+   ]
+  },
+  "rendez-vous-coordonnees": {
+   "titre": "Joindre Stéphane",
+   "role": "contact",
+   "description": "Téléphone, e-mail, adresse de l'atelier sur rendez-vous et horaires en liste à icônes, statut joignable, photo de trousse d'outils.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-debut": {
+   "titre": "Des tarifs clairs",
+   "role": "ouverture",
+   "description": "Grand titre et « 30 € » géant bleu nuit dont le 3 roule à l'arrivée, puis bandeau photo d'outils en pleine largeur.",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le rouleau de chiffres met le chiffre final en premier dans le HTML : sans JavaScript, il s'affiche juste"
+   ]
+  },
+  "services-tarifs": {
+   "titre": "Tous les tarifs",
+   "role": "tarifs",
+   "description": "Six familles de tarifs réels en tableaux, filtres en pastilles gardés dans l'adresse (?famille=), nombre de prestations affichées.",
+   "animations": [
+    "filtre-anime",
+    "trace-svg"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-estimer": {
+   "titre": "Combien ça va coûter ?",
+   "role": "calculateur",
+   "description": "Formule et options à cocher, ticket bleu nuit qui additionne les vrais tarifs (fourchette avec déplacement) et lien de rendez-vous prérempli.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-inclus": {
+   "titre": "Tout ça, sans supplément",
+   "role": "offre",
+   "description": "Bande bleu nuit, les neuf prestations incluses en trois colonnes avec coches qui se tracent.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-questions": {
+   "titre": "Questions pratiques",
+   "role": "faq",
+   "description": "Six questions aux réponses tirées du site actuel, photo d'établi collante.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "services-appel": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "L'appel final bleu nuit de l'accueil : photo du soir, bouton de rendez-vous, téléphone et statut joignable.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
