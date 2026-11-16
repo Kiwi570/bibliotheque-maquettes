@@ -12,7 +12,7 @@
  ],
  "titre": "En-tête et « Ma demande »",
  "role": "menu",
- "description": "Logo poire, liens, et « Ma demande » en flight case avec compteur ; l'article ajouté s'envole jusqu'à lui.",
+ "description": "Logo poire en version claire (même dégradé, éclairci, pour le fond sombre), liens, et « Ma demande » en flight case avec compteur ; l'article ajouté s'envole jusqu'à lui.",
  "animations": [
   "apparition-au-défilement"
  ],
@@ -29,7 +29,7 @@
  "modules": [],
  "code": {
   "html": "index.html:70-84",
-  "css": "assets/css/socle.css:143-148,155-156,161-168,173,177-180,184-188 ; assets/css/site.css:40-49,407-408,421,652-653,1371,1411",
+  "css": "assets/css/socle.css:143-148,155-156,161-168,173,177-180,184-188 ; assets/css/site.css:40-49,407-408,421,652-653,1371,1411,1435-1436",
   "js": "assets/js/site.js:20-30,34-51 ; assets/js/socle/boucles.js:54-77 ; assets/js/socle/mesures.js:36-78 ; assets/js/socle/entete.js:8,26-56,60-165"
  },
  "medias": {
@@ -37,11 +37,12 @@
   "capture_m390": "medias/newpears-regie-maquette/header-m390.jpg"
  },
  "pieges": [
-  "localStorage newpears-demande partagé entre onglets, valeur abîmée tolérée"
+  "localStorage newpears-demande partagé entre onglets, valeur abîmée tolérée",
+  "le logo du client (dégradé violet-vert, traits fins) ne se lisait pas sur le fond sombre (2,4:1) : version éclaircie logo-entete-clair, aussi au pied, à l'intro et sur les images de partage"
  ],
  "mesures": {
-  "hauteur_p1440": 65,
-  "hauteur_m390": 65,
+  "hauteur_p1440": 67,
+  "hauteur_m390": 67,
   "epinglee": false,
   "scrolltriggers": 0
  },
