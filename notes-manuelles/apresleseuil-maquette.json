@@ -1,0 +1,722 @@
+{
+ "maquette": {
+  "client": "Après le Seuil, accompagnement des transitions de vie et de lieux (Largentière, Ardèche)",
+  "activite": [
+   "bien-être",
+   "conseil",
+   "artisanat"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--ivoire",
+   "texte": "--encre",
+   "accent": "--or-texte",
+   "secondaire": "--bleu"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Jost",
+   "mono": ""
+  },
+  "points_forts": [
+   "L'arche du logo redessinée en SVG sert de motif à tout : intro qui se trace et glisse vers la photo, contours dorés, voile, appel final",
+   "Vraies réalisations de la cliente en avant / après (module avant-apres) plutôt qu'en galerie plate",
+   "Pages intérieures au niveau de l'accueil, chacune avec son ouverture propre",
+   "Audit complet sans échec, 0 % d'images lentes"
+  ],
+  "reserves": [
+   "Images Grok livrées agrandies depuis des planches : floues, tenues en taille moyenne",
+   "Accueil de 12 écrans sur ordinateur"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "trace-svg",
+   "masque",
+   "révélation-image",
+   "apparition-au-défilement",
+   "parallaxe",
+   "transition-de-page",
+   "révélation-texte"
+  ],
+  "interactions": [
+   "comparateur",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "curseur avant / après sur trois vraies réalisations",
+   "fil": "l'arche dorée du logo, de l'intro à l'appel final"
+  },
+  "metier": "coach de transition et décoratrice"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile en deux battants",
+   "role": "transition-de-page",
+   "description": "Voile bleu de porte en rideau : deux battants se ferment depuis les côtés puis s'ouvrent depuis le centre, avec l'arche dorée et le nom de la page.",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : l'arche se trace",
+   "role": "ouverture",
+   "description": "Panneau bleu de porte : les trois arches et l'onde du logo se tracent en or (pathLength 1), le nom apparaît en capitales espacées, puis l'arche glisse jusqu'à la photo en arche de la page (versObjet) et le panneau s'ouvre en cercle depuis elle.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Tracer un SVG à l'intro : poser pathLength=\"1\" dans le HTML, sinon stroke-dasharray: 1 du style critique dessine des pointillés avant le JavaScript",
+    "Garder l'intro sous 3 s : versObjet à 1,05 s et entrée du premier écran à 1,55 s (2,7 s mesurées)"
+   ]
+  },
+  "header": {
+   "titre": "En-tête ivoire",
+   "role": "menu",
+   "description": "En-tête ivoire opaque : arche du logo et nom en capitales espacées, liens, bouton bleu « Premier échange offert » (« Rendez-vous » sur téléphone), page en cours marquée d'une petite arche dorée.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Logo seul sans texte visible sur petit téléphone : aria-label sur le lien, sinon erreur axe link-name"
+   ]
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran ivoire, grands liens Fraunces, rendez-vous et téléphone, grande arche dorée en filigrane.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Des vies et des lieux en transition",
+   "role": "ouverture",
+   "description": "Bleu de porte, grand titre Fraunces avec « en transition » en italique doré, porte bleue ouverte sur la terrasse dans une photo en arche entourée de deux arches dorées et de l'onde du logo ; la lumière respire dans l'image, la porte s'éloigne au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Lignes de titre animées par GSAP : ne pas poser data-anime sur chaque ligne (l'audit les prend pour des blocs séparés et signale un chevauchement) ; état de départ en CSS par classe et fromTo avec y: 0 explicite"
+   ]
+  },
+  "situations": {
+   "titre": "Peut-être êtes-vous ici parce que…",
+   "role": "manifeste",
+   "description": "Titre collant à gauche, cinq situations en grand Fraunces à droite qui s'allument une à une, chacune avec une petite porte dorée dont le battant s'ouvre ; conclusion en italique doré.",
+   "animations": [
+    "révélation-texte",
+    "trace-svg",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Une phrase allumée doit le rester (déclenchement once) : un texte pâle lié au défilement échoue au contraste quand l'audit mesure en haut de page"
+   ]
+  },
+  "seuil": {
+   "titre": "Franchir le seuil",
+   "role": "decor",
+   "description": "Image qui s'ouvre jusqu'au plein écran depuis une arche (clip-path inset avec rayon calculé à partir des largeurs mesurées au rafraîchissement), mots « Franchir / le seuil » qui s'écartent, phrase qui arrive à la fin.",
+   "animations": [
+    "masque",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Mots posés sur l'image au départ alors que l'arche est étroite : contraste 1:1 sur l'ivoire autour ; les placer au-dessus de l'arche, en bleu"
+   ]
+  },
+  "accompagnements": {
+   "titre": "À chaque passage, son accompagnement",
+   "role": "services",
+   "description": "Deux entrées (transformer un lieu, traverser un passage) et cinq cartes en arche qui se révèlent de bas en haut, rangée qui défile au doigt sur téléphone.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations": {
+   "titre": "Avant / après",
+   "role": "preuves",
+   "description": "Module avant-apres en réglet sur trois vraies réalisations de la cliente (dressing, buffet, bahut) en onglets, séparation qui glisse seule à l'entrée.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "avant-apres",
+   "pieges": [
+    "Photos avant notées 2 (floues, capture d'annonce) : tenir le cadre sous le quart de l'écran ; la paire montrée d'abord est la plus belle"
+   ]
+  },
+  "christel": {
+   "titre": "J'ai toujours accompagné les transformations.",
+   "role": "équipe",
+   "description": "Portrait de la praticienne en arche entouré du contour doré qui se trace, texte à la première personne, signature italique, parcours court.",
+   "animations": [
+    "révélation-image",
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "etapes": {
+   "titre": "Comment ça se passe",
+   "role": "étapes",
+   "description": "Trois étapes en arches avec pictogrammes au trait, reliées par un chemin doré qui se dessine.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels": {
+   "titre": "Professionnels",
+   "role": "offre",
+   "description": "Bande sable : grande photo de terrasse, texte et pastilles des quatre axes, lien vers le coaching d'entreprise.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "villa": {
+   "titre": "Séjourner pour se réparer",
+   "role": "offre",
+   "description": "Vraie photo de la terrasse de la Villa dans une arche large, pastille « En rénovation ».",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Photo du client de moins de 1 280 px : marquée faible, jamais au-delà du quart de l'écran ni avec parallaxe (l'agrandissement compte dans la mesure)"
+   ]
+  },
+  "fin": {
+   "titre": "Faisons connaissance.",
+   "role": "appel",
+   "description": "Bleu de porte, petite arche du logo qui se trace, grand titre, bouton or ; un soleil levant (rayons SVG et halo) monte et tourne derrière au défilement.",
+   "animations": [
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Arche et signature, coordonnées, sommaire ; mentions légales en texte « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette porte ne mène nulle part.",
+   "role": "page-404",
+   "description": "Bleu de porte, vieille porte bleue entrouverte dans une arche avec contour doré.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-debut": {
+   "titre": "Accompagner les passages, autrement.",
+   "role": "ouverture",
+   "description": "Portrait de la praticienne sur fond bleu nuit, très grand, dans une arche à contour doré qui se trace ; titre à droite.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-volets": {
+   "titre": "Transmission, lieux, passage",
+   "role": "méthode",
+   "description": "Trois volets en arches ivoire avec pictogrammes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Un SVG data-fx=\"trace\" dans un parent data-anime (cascade, fondu) ne s'est pas dessiné : pictogramme laissé statique"
+   ]
+  },
+  "a-propos-parcours": {
+   "titre": "Parcours et certifications",
+   "role": "preuves",
+   "description": "Frise verticale dorée qui se trace, quatre étapes du parcours, pastilles « en cours ».",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-realisations": {
+   "titre": "Quelques réalisations",
+   "role": "galerie",
+   "description": "Mosaïque en colonnes des vraies réalisations, légendes par catégorie, images qui s'inclinent selon la vitesse.",
+   "animations": [
+    "reactif-vitesse",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-propos-fin": {
+   "titre": "Faisons connaissance.",
+   "role": "appel",
+   "description": "Appel final commun à toutes les pages : bleu de porte, petite arche du logo qui se trace, grand titre, bouton or et téléphone, soleil levant qui monte derrière.",
+   "animations": [
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Un premier échange, simplement.",
+   "role": "ouverture",
+   "description": "Titre, trois promesses avec pictogrammes, photo en arche qui se resserre au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-rendez-vous": {
+   "titre": "Rendez-vous en quatre étapes",
+   "role": "contact",
+   "description": "Module formulaire-par-etapes : profil, passage (prérempli par ?sujet= de la page d'origine), coordonnées, récapitulatif, envoi simulé.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Repères d'étapes coupés vers 1 024 px : ne garder que le nom de l'étape active sous 1 200 px"
+   ]
+  },
+  "contact-coordonnees": {
+   "titre": "Nous contacter",
+   "role": "contact",
+   "description": "Boussole dorée qui tourne au défilement, coordonnées en liste, bandeau bleu des quatre valeurs.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-debut": {
+   "titre": "Accompagner vos passages",
+   "role": "ouverture",
+   "description": "Bandeau photo qui s'ouvre en deux battants, carton ivoire qui le chevauche avec le titre, sommaire de cinq portes bleues à pictogrammes dorés.",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-depart": {
+   "titre": "Préparer un nouveau départ",
+   "role": "services",
+   "description": "Photo en arche à contour doré, liste à puces en arche, étapes en cartes.",
+   "animations": [
+    "révélation-image",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-chez-soi": {
+   "titre": "Se sentir mieux chez soi",
+   "role": "services",
+   "description": "Texte et photo en arche inversés, trois étapes en cartes arrondies à pictogrammes.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-faire-de-la-place": {
+   "titre": "Faire de la place",
+   "role": "services",
+   "description": "Liste, photo en rideau, engagement réemploi sur bande bleue, frise de quatre étapes.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-retrouver-un-cap": {
+   "titre": "Retrouver un cap",
+   "role": "services",
+   "description": "Bande bleue : photo en arche avec boussole dorée qui tourne au défilement, modalités du coaching.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-ateliers": {
+   "titre": "Créer et partager",
+   "role": "services",
+   "description": "Trois thèmes d'ateliers en cartes, note sur le programme donné sur demande (agenda vide sur le site actuel).",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-villa": {
+   "titre": "Séjourner",
+   "role": "offre",
+   "description": "Villa en rénovation, vraie photo en arche, lien pour être tenu au courant.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "particuliers-fin": {
+   "titre": "Faisons connaissance.",
+   "role": "appel",
+   "description": "Appel final commun à toutes les pages : bleu de porte, petite arche du logo qui se trace, grand titre, bouton or et téléphone, soleil levant qui monte derrière.",
+   "animations": [
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-debut": {
+   "titre": "Coaching d'entreprise",
+   "role": "ouverture",
+   "description": "Très grand titre, colonne de texte, bandeau photo qui s'élargit jusqu'aux bords au défilement (clip-path).",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-collectif": {
+   "titre": "Faire évoluer les personnes",
+   "role": "manifeste",
+   "description": "Grand texte qui arrive mot à mot, arbre au trait qui se dessine.",
+   "animations": [
+    "révélation-texte",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-axes": {
+   "titre": "Accompagner autrement",
+   "role": "services",
+   "description": "Quatre axes en cartes à pictogrammes et listes, photo en rideau.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-formats": {
+   "titre": "Un accompagnement sur mesure",
+   "role": "offre",
+   "description": "Quatre formats en liste numérotée en arches.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-sortir-du-cadre": {
+   "titre": "Sortir du cadre",
+   "role": "offre",
+   "description": "Texte et vraie photo de la Villa en arche.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "professionnels-fin": {
+   "titre": "Faisons connaissance.",
+   "role": "appel",
+   "description": "Appel final commun à toutes les pages : bleu de porte, petite arche du logo qui se trace, grand titre, bouton or et téléphone, soleil levant qui monte derrière.",
+   "animations": [
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

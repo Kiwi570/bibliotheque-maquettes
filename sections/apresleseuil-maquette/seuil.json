@@ -1,0 +1,48 @@
+{
+ "id": "apresleseuil-maquette/seuil",
+ "maquette": "apresleseuil-maquette",
+ "page": "index",
+ "titre": "Franchir le seuil",
+ "role": "decor",
+ "description": "Image qui s'ouvre jusqu'au plein écran depuis une arche (clip-path inset avec rayon calculé à partir des largeurs mesurées au rafraîchissement), mots « Franchir / le seuil » qui s'écartent, phrase qui arrive à la fin.",
+ "animations": [
+  "masque",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:145-156",
+  "css": "assets/css/socle.css:39-42 ; assets/css/site.css:154-165",
+  "js": "assets/js/site.js:3,46-74,182 ; assets/js/modules/avant-apres.js:5,40,46,205 ; assets/js/socle/apparitions.js:35-56 ; assets/js/socle/effets.js:17,151-158,269-283 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:2,84-165"
+ },
+ "medias": {
+  "capture": "medias/apresleseuil-maquette/seuil-p1440.jpg",
+  "capture_m390": "medias/apresleseuil-maquette/seuil-m390.jpg",
+  "video": "medias/apresleseuil-maquette/seuil-p720.mp4"
+ },
+ "pieges": [
+  "Mots posés sur l'image au départ alors que l'arche est étroite : contraste 1:1 sur l'ivoire autour ; les placer au-dessus de l'arche, en bleu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1800,
+  "hauteur_m390": 1688,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "plein-ecran",
+  "masque"
+ ],
+ "impact": "vivant"
+}

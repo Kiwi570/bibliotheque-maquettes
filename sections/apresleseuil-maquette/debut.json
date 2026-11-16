@@ -1,0 +1,50 @@
+{
+ "id": "apresleseuil-maquette/debut",
+ "maquette": "apresleseuil-maquette",
+ "page": "index",
+ "titre": "Des vies et des lieux en transition",
+ "role": "ouverture",
+ "description": "Bleu de porte, grand titre Fraunces avec « en transition » en italique doré, porte bleue ouverte sur la terrasse dans une photo en arche entourée de deux arches dorées et de l'onde du logo ; la lumière respire dans l'image, la porte s'éloigne au défilement.",
+ "animations": [
+  "ouverture-orchestrée",
+  "trace-svg",
+  "masque",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:110-129",
+  "css": "assets/css/socle.css:240-245,250,265-266 ; assets/css/site.css:42-43,47,62,84,116-133,468,476-478,485-487",
+  "js": "assets/js/site.js:15-22,25-32,155,163-177,204-205 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/apresleseuil-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/apresleseuil-maquette/debut-m390.jpg",
+  "video": "medias/apresleseuil-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Lignes de titre animées par GSAP : ne pas poser data-anime sur chaque ligne (l'audit les prend pour des blocs séparés et signale un chevauchement) ; état de départ en CSS par classe et fromTo avec y: 0 explicite"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1057,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "masque",
+  "trait-qui-se-dessine"
+ ],
+ "impact": "spectaculaire"
+}

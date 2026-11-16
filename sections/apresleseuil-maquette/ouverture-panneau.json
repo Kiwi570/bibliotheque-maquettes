@@ -1,0 +1,51 @@
+{
+ "id": "apresleseuil-maquette/ouverture-panneau",
+ "maquette": "apresleseuil-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "a-propos",
+  "contact",
+  "particuliers",
+  "professionnels"
+ ],
+ "titre": "Intro : l'arche se trace",
+ "role": "ouverture",
+ "description": "Panneau bleu de porte : les trois arches et l'onde du logo se tracent en or (pathLength 1), le nom apparaît en capitales espacées, puis l'arche glisse jusqu'à la photo en arche de la page (versObjet) et le panneau s'ouvre en cercle depuis elle.",
+ "animations": [
+  "ouverture-orchestrée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:65-69",
+  "css": "assets/css/socle.css:224-227 ; assets/css/site.css:107-111,469-470",
+  "js": "assets/js/site.js:189-190,194-196,205 ; assets/js/socle/ouverture.js:22-30,160-237"
+ },
+ "medias": {},
+ "pieges": [
+  "Tracer un SVG à l'intro : poser pathLength=\"1\" dans le HTML, sinon stroke-dasharray: 1 du style critique dessine des pointillés avant le JavaScript",
+  "Garder l'intro sous 3 s : versObjet à 1,05 s et entrée du premier écran à 1,55 s (2,7 s mesurées)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

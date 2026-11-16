@@ -1,0 +1,46 @@
+{
+ "id": "apresleseuil-maquette/contact-rendez-vous",
+ "maquette": "apresleseuil-maquette",
+ "page": "contact",
+ "titre": "Rendez-vous en quatre étapes",
+ "role": "contact",
+ "description": "Module formulaire-par-etapes : profil, passage (prérempli par ?sujet= de la page d'origine), coordonnées, récapitulatif, envoi simulé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "formulaire-par-etapes",
+ "modules": [
+  "formulaire-par-etapes"
+ ],
+ "code": {
+  "html": "contact.html:130-202",
+  "css": "assets/css/socle.css:287 ; assets/css/site.css:41,301,424-430,446,473,488 ; assets/css/modules.css:73-84,91-140,145-151,156-182,186-190,195-196,201-212",
+  "js": "assets/js/site.js:133-152 ; assets/js/modules/formulaire-par-etapes.js:1,25,41,44-47,51,57-67,72,76,84,103,106,121,153,156,166,172-174,180,194,197,220-221,239,266 ; assets/js/modules/avant-apres.js:23"
+ },
+ "medias": {
+  "capture": "medias/apresleseuil-maquette/contact-rendez-vous-p1440.jpg",
+  "capture_m390": "medias/apresleseuil-maquette/contact-rendez-vous-m390.jpg",
+  "video": "medias/apresleseuil-maquette/contact-rendez-vous-p720.mp4"
+ },
+ "pieges": [
+  "Repères d'étapes coupés vers 1 024 px : ne garder que le nom de l'étape active sous 1 200 px"
+ ],
+ "mesures": {
+  "hauteur_p1440": 809,
+  "hauteur_m390": 1151,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "calme"
+}
