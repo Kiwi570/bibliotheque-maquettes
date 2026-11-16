@@ -1,0 +1,47 @@
+{
+ "id": "creative-keys-2-maquette/gondole",
+ "maquette": "creative-keys-2-maquette",
+ "page": "index",
+ "titre": "Vos emballages m'emballent",
+ "role": "portfolio",
+ "description": "Tête de gondole : six packagings en grandes cartes blanches avec étiquette de rayon, la rangée glisse à l'horizontale pendant qu'on descend, sans épinglage ; visionneuse au clic.",
+ "animations": [
+  "galerie-horizontale",
+  "parallaxe"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:169-229",
+  "css": "assets/css/socle.css:245 ; assets/css/site.css:169-201,239,315-316,376,453-455,504-507,540-542",
+  "js": "assets/js/site.js:26-49,135-174,193-260,263-291 ; assets/js/socle/effets.js:14,236-267"
+ },
+ "medias": {
+  "capture": "medias/creative-keys-2-maquette/gondole-p1440.jpg",
+  "capture_m390": "medias/creative-keys-2-maquette/gondole-m390.jpg",
+  "video": "medias/creative-keys-2-maquette/gondole-p720.mp4"
+ },
+ "pieges": [
+  "la version épinglée (data-fx=\"galerie\" du socle, anticipatePin) faisait sauter la page à la sortie : rangée qui glisse au défilement à la place"
+ ],
+ "mesures": {
+  "hauteur_p1440": 871,
+  "hauteur_m390": 653,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "defilement-horizontal"
+ ],
+ "impact": "vivant"
+}

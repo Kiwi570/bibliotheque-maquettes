@@ -1,0 +1,657 @@
+{
+ "maquette": {
+  "client": "graphiste indépendant à Paris (Thierry Poincet) : packaging, print et PLV, logos, sites web",
+  "activite": [
+   "services-b2b"
+  ],
+  "concept": [
+   "vitrine",
+   "catalogue"
+  ],
+  "ambiance": [
+   "clair",
+   "ludique",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "#EDECE8",
+   "texte": "#121212",
+   "accent": "#2B3CF0",
+   "secondaire": "#FFE14A"
+  },
+  "polices": {
+   "titres": "Bricolage Grotesque",
+   "texte": "Instrument Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "l'accroche du client prise au sens propre : un rayon gris dont un vrai packaging sort en couleur",
+   "70 vraies réalisations du client, rangées par univers avec étiquettes de rayon (marque · produit)",
+   "une ouverture propre à chaque page (mur qui se met en rayon, kakémono qui se déroule, compte à rebours, croquis)",
+   "palette tenue sur tout le site : gris studio, cartes blanches, encre, bleu électrique, étiquette jaune"
+  ],
+  "reserves": [
+   "pas d'objet à manipuler sur l'accueil (la tablette suit le défilement)",
+   "mot-symbole CK provisoire, le client n'a pas de logo",
+   "accueil de 12 à 13 écrans sur ordinateur"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "ouverture-orchestrée",
+   "reactif-vitesse",
+   "marquee",
+   "révélation-texte",
+   "révélation-image",
+   "compteur",
+   "galerie-horizontale",
+   "section-fixée",
+   "parallaxe",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "filtres",
+   "galerie-cliquable",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "la tablette de chocolat qui sort du rang gris à l'intro et suit le défilement",
+   "fil": "le rayon de magasin : étagères, facings et étiquettes de rayon jaunes"
+  },
+  "metier": "graphiste packaging"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Voile en deux portes coulissantes encre (forme rideau du socle) avec le nom de la page d'arrivée.",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Intro « en rayon » : trois étagères se tracent, les packagings du client arrivent en gris, la tablette 60 % reprend ses couleurs, sort du rang et glisse jusqu'à l'objet d'ouverture de la page (versObjet), le panneau s'ouvre en cercle.",
+   "animations": [
+    "chargement-orchestré",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "les vignettes du panneau sont chargées sur chaque page : rester en 480 px",
+    "l'objet de l'intro est mesuré à l'appel de jouer() : ne pas animer l'objet d'ouverture avant"
+   ]
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête opaque, mot-symbole CK carré bleu et liseré jaune, liens et bouton devis.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran, liens en Bricolage très gras.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Habillez votre marque. Démarquez-vous.",
+   "role": "ouverture",
+   "description": "Deux rayons de vrais packagings en gris qui défilent selon la vitesse du défilement (bouton pause), titre « Habillez votre marque. Démarquez-vous. » avec le mot en Instrument Serif italique bleu, la tablette détourée qui flotte et une étiquette de rayon jaune qui se colle.",
+   "animations": [
+    "ouverture-orchestrée",
+    "reactif-vitesse",
+    "marquee",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "titre en lignes : data-anime=\"gsap\" sur le h1, pas sur chaque ligne (l'audit tolère alors le recouvrement des boîtes de police)",
+    "découpe des lignes par clip-path qui déborde, pas overflow hidden (accents coupés)",
+    "mouvement continu de plus de 5 s : bouton pause"
+   ]
+  },
+  "studio": {
+   "titre": "30 ans à habiller des marques",
+   "role": "manifeste",
+   "description": "« 30 ans à habiller des marques » : texte, trois chiffres réels qui comptent (30 ans, 147 réalisations, 4 métiers) et une table de graphiste générée révélée en rideau.",
+   "animations": [
+    "révélation-texte",
+    "compteur",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-magasin": {
+   "titre": "",
+   "role": "preuves",
+   "description": "Le kakémono du client photographié en supermarché part d'une vignette et s'ouvre en plein écran pendant que « Jusqu'au » et « rayon » s'écartent ; étiquette jaune en légende.",
+   "animations": [
+    "révélation-image",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "sur téléphone, partir d'un cadre plus grand (data-fx-depart posé avant demarrer) et mettre les mots au-dessus et au-dessous, sinon écran presque vide"
+   ]
+  },
+  "gondole": {
+   "titre": "Vos emballages m'emballent",
+   "role": "portfolio",
+   "description": "Tête de gondole : six packagings en grandes cartes blanches avec étiquette de rayon, la rangée glisse à l'horizontale pendant qu'on descend, sans épinglage ; visionneuse au clic.",
+   "animations": [
+    "galerie-horizontale",
+    "parallaxe"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la version épinglée (data-fx=\"galerie\" du socle, anticipatePin) faisait sauter la page à la sortie : rangée qui glisse au défilement à la place"
+   ]
+  },
+  "metiers": {
+   "titre": "Une seule main, du logo au site",
+   "role": "services",
+   "description": "Quatre métiers en cartes blanches, chacun titré par un jeu de mots du client, image qui se resserre au défilement, flèche qui avance au survol.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "etapes": {
+   "titre": "Du logo au linéaire",
+   "role": "méthode",
+   "description": "« Du logo au linéaire » : six étapes tirées des réalisations publiées, un fil bleu qui se remplit au défilement et une image collante qui change à chaque étape.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "images de l'étape cachées sur téléphone avec sizes 0px : jamais chargées, l'audit échoue ; garder le visuel sur téléphone"
+   ]
+  },
+  "logos": {
+   "titre": "À vos marques… prêts ? Partez !",
+   "role": "portfolio",
+   "description": "Mur de huit logos clients sur bande encre, tuiles blanches en cascade.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce qu'en disent ses clients",
+   "role": "témoignages",
+   "description": "Quatre avis réels de Graphiste.com en courtes citations italiques, avec la source.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Votre produit mérite son facing.",
+   "role": "appel",
+   "description": "Bande bleue d'appel final : mots géants jaunes et blancs qui filent en sens opposés, titre avec mot en italique jaune, devis prérempli et téléphone.",
+   "animations": [
+    "marquee",
+    "reactif-vitesse",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visionneuse": {
+   "titre": "Visionneuse des réalisations",
+   "role": "galerie",
+   "description": "Visionneuse plein écran : flèches, glissement, Échap, focus gardé, un lien #r-… par réalisation (aussi au changement d'ancre).",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "créer l'image à l'ouverture : une img sans src dans une fenêtre cachée échoue à l'audit (image non chargée)",
+    "écouter hashchange : un lien #r-… vers la page en cours ne recharge pas"
+   ]
+  },
+  "pied": {
+   "titre": "",
+   "role": "pied-de-page",
+   "description": "Pied encre : mot-symbole, coordonnées, pages, réseaux en nouvel onglet, mentions légales à compléter en texte simple.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Rupture de stock",
+   "role": "page-404",
+   "description": "« Rupture de stock » sur un rayon vide généré, titre posé sur des pavés gris studio.",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre marque",
+   "role": "ouverture",
+   "description": "« Parlons de votre marque » : écran partagé, carnet de croquis généré en parallaxe, devis et téléphone.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-devis": {
+   "titre": "Qu'avez-vous à habiller ?",
+   "role": "contact",
+   "description": "Devis simulé en trois étapes (projet en cartes à choisir, détails, coordonnées) avec progression, hauteur animée et récapitulatif collant en ticket ; prérempli par ?projet=.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "logos-sites-debut": {
+   "titre": "À vos marques… prêts ? Partez !",
+   "role": "ouverture",
+   "description": "Bande encre « À vos marques… prêts ? Partez ! » : un feu de départ compte 3, 2, 1 puis passe au bleu, et cinq logos jaillissent en éventail autour de lui ; le feu tourne au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "la transformation de l'éventail va sur le li, l'animation GSAP sur la figure à l'intérieur (sinon GSAP écrase la rotation CSS)"
+   ]
+  },
+  "logos-sites-logos": {
+   "titre": "Sur la ligne de départ",
+   "role": "portfolio",
+   "description": "Quatorze logos en cartes blanches avec étiquettes de rayon, inclinaison au survol, visionneuse.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "logos-sites-vitrine": {
+   "titre": "Profitez-en pour faire du lèche-vitrine",
+   "role": "portfolio",
+   "description": "« Profitez-en pour faire du lèche-vitrine » : huit sites en maquettes ordinateur et téléphone dans une galerie horizontale épinglée.",
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "galerie du projet sans anticipatePin (sauts avec le défilement adouci)"
+   ]
+  },
+  "logos-sites-fin": {
+   "titre": "Votre marque est dans les starting-blocks ?",
+   "role": "appel",
+   "description": "Bande bleue d'appel final : mots géants jaunes et blancs qui filent en sens opposés, titre avec mot en italique jaune, devis prérempli et téléphone.",
+   "animations": [
+    "marquee",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "logos-sites-visionneuse": {
+   "ignorer": "même visionneuse que l'accueil"
+  },
+  "packaging-debut": {
+   "titre": "Vos emballages m'emballent",
+   "role": "ouverture",
+   "description": "« Vos emballages m'emballent » : grand titre puis un mur de douze packagings sur trois étagères noires ; à l'arrivée, chaque facing tombe sur son étagère, puis les rangs glissent en sens opposés au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "état de départ des facings caché par une classe posée avant le premier affichage (sinon flash à l'arrivée par le voile)"
+   ]
+  },
+  "packaging-rayon": {
+   "titre": "En rayon",
+   "role": "portfolio",
+   "description": "Galerie de 24 packagings filtrable par univers (compte par filtre, filtre gardé dans l'adresse), cartes blanches et étiquettes, deux colonnes sur téléphone.",
+   "animations": [
+    "filtre-anime",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "packaging-inclus": {
+   "titre": "Plus qu'un joli carton",
+   "role": "offre",
+   "description": "Bande encre : ce que comprend un packaging, cinq points numérotés en jaune à côté d'une ambiance du client en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "packaging-fin": {
+   "titre": "Un produit à lancer en rayon ?",
+   "role": "appel",
+   "description": "Bande bleue d'appel final : mots géants jaunes et blancs qui filent en sens opposés, titre avec mot en italique jaune, devis prérempli et téléphone.",
+   "animations": [
+    "marquee",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "packaging-visionneuse": {
+   "ignorer": "même visionneuse que l'accueil"
+  },
+  "print-debut": {
+   "titre": "Vos marques m'impressionnent",
+   "role": "ouverture",
+   "description": "« Vos marques m'impressionnent » : écran partagé, l'affiche du client se déroule sous sa barre comme un kakémono, une autre affiche tourne derrière au défilement.",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-affiches": {
+   "titre": "01 Affiches et presse",
+   "role": "portfolio",
+   "description": "Affiches et presse : huit imprimés du client en cartes, image qui se resserre au défilement.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-plaquettes": {
+   "titre": "02 Plaquettes et dépliants",
+   "role": "portfolio",
+   "description": "Plaquettes et dépliants sur bande blanche, cinq colonnes sur ordinateur.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-plv": {
+   "titre": "03 PLV et stands",
+   "role": "portfolio",
+   "description": "PLV et stands sur bande encre : kakémonos et coffrets.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-editions": {
+   "titre": "04 Menus et calendriers",
+   "role": "portfolio",
+   "description": "Menus de restaurant et calendriers de l'Avent du client en cartes blanches avec étiquettes de rayon, trois colonnes, image qui se resserre au défilement, visionneuse au clic.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-bat": {
+   "titre": "Du fichier à la pile",
+   "role": "méthode",
+   "description": "« Du fichier à la pile » : presse offset générée révélée en rideau, dépliant détouré qui s'incline avec la vitesse.",
+   "animations": [
+    "révélation-image",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-fin": {
+   "titre": "Une affiche, un menu, un stand ?",
+   "role": "appel",
+   "description": "Bande bleue d'appel final : mots géants jaunes et blancs qui filent en sens opposés, titre avec mot en italique jaune, devis prérempli et téléphone.",
+   "animations": [
+    "marquee",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "print-visionneuse": {
+   "ignorer": "même visionneuse que l'accueil"
+  }
+ }
+}

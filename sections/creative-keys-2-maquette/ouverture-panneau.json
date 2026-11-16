@@ -1,0 +1,49 @@
+{
+ "id": "creative-keys-2-maquette/ouverture-panneau",
+ "maquette": "creative-keys-2-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "logos-sites",
+  "packaging",
+  "print"
+ ],
+ "titre": "",
+ "role": "transition-de-page",
+ "description": "Intro « en rayon » : trois étagères se tracent, les packagings du client arrivent en gris, la tablette 60 % reprend ses couleurs, sort du rang et glisse jusqu'à l'objet d'ouverture de la page (versObjet), le panneau s'ouvre en cercle.",
+ "animations": [
+  "chargement-orchestré",
+  "ouverture-orchestrée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:63-68",
+  "css": "assets/css/socle.css:224-227 ; assets/css/site.css:90-104",
+  "js": "assets/js/site.js:409-414 ; assets/js/socle/ouverture.js:22-30,160-237"
+ },
+ "medias": {},
+ "pieges": [
+  "les vignettes du panneau sont chargées sur chaque page : rester en 480 px",
+  "l'objet de l'intro est mesuré à l'appel de jouer() : ne pas animer l'objet d'ouverture avant"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

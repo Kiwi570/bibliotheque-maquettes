@@ -1,0 +1,40 @@
+{
+ "id": "creative-keys-2-maquette/visionneuse",
+ "maquette": "creative-keys-2-maquette",
+ "page": "index",
+ "titre": "Visionneuse des réalisations",
+ "role": "galerie",
+ "description": "Visionneuse plein écran : flèches, glissement, Échap, focus gardé, un lien #r-… par réalisation (aussi au changement d'ancre).",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:397-402",
+  "css": "assets/css/site.css:425-437",
+  "js": "assets/js/site.js:5,193-260,400"
+ },
+ "medias": {},
+ "pieges": [
+  "créer l'image à l'ouverture : une img sans src dans une fenêtre cachée échoue à l'audit (image non chargée)",
+  "écouter hashchange : un lien #r-… vers la page en cours ne recharge pas"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "calme"
+}
