@@ -1,0 +1,154 @@
+{
+ "projet": "epnfc-maquette",
+ "client": "ParaClub Montbéliard (EPNFC)",
+ "siteActuel": "https://www.epnfc.fr",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "tandem",
+    "initiation",
+    "progression",
+    "reserver",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-16T18:24:00+01:00",
+     "fin": "2026-11-16T18:30:09+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 10,
+     "debut": "2026-11-16T18:31:39+01:00",
+     "fin": "2026-11-16T18:37:16+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 40,
+     "debut": "2026-11-16T18:37:16+01:00",
+     "fin": "2026-11-16T19:21:58+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films (attente de la réponse notée à part)",
+     "budget": 5,
+     "debut": "2026-11-16T19:21:58+01:00",
+     "fin": "2026-11-16T19:34:16+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet, contact et page de catégorie",
+     "budget": 40,
+     "debut": "2026-11-16T18:58:00+01:00",
+     "fin": "2026-11-16T19:21:58+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 25,
+     "debut": "2026-11-16T19:34:00+01:00",
+     "fin": "2026-11-16T20:36:35+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-16T20:36:35+01:00",
+     "fin": "2026-11-16T20:37:02+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-16T18:30:09+01:00",
+     "fin": "2026-11-16T18:31:39+01:00"
+    },
+    {
+     "pour": "images Grok",
+     "debut": "2026-11-16T18:37:16+01:00",
+     "fin": "2026-11-16T19:04:01+01:00"
+    },
+    {
+     "pour": "réponse à l’aperçu",
+     "debut": "2026-11-16T19:31:00+01:00",
+     "fin": "2026-11-16T19:34:16+01:00"
+    }
+   ],
+   "allersRetours": 3,
+   "modules": [],
+   "audit": {
+    "niveau": "standard + passe des formats (complet, mesures et écran)",
+    "echecsPremierPassage": 25,
+    "relances": 6,
+    "corrections": [
+     "billet : rotation retirée (chevauchements)",
+     "compteurs en grille : justify-self start (débordement au balayage)",
+     "premiers écrans 320×568, 375×667, 844×390, 1000×560 et sans JavaScript",
+     "404 : fond de nuages et photo de la manche à air en carte",
+     "calendrier : aria-current au lieu de aria-pressed",
+     "images Grok de moins de 1280 px agrandies à 1600 px"
+    ]
+   },
+   "effetsRetires": [
+    "citation du posé retirée de l’accueil (gardée sur Tandem) pour raccourcir la page"
+   ],
+   "grilleDispenses": {},
+   "notes": "favoris.json absent du dépôt public : copie locale provisoire reconstruite d'après la skill (8 favorites). Accueil et pages intérieures construits en parallèle de l’attente des images Grok (pages écrites pendant l’audit rapide de l’accueil)."
+  },
+  {
+   "version": 2,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "tandem",
+    "initiation",
+    "progression",
+    "reserver",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse approfondie de la v1",
+     "budget": 20,
+     "debut": "2026-11-16T23:09:59+01:00",
+     "fin": "2026-11-16T23:12:22+01:00"
+    },
+    {
+     "etape": "corrections et améliorations",
+     "budget": 40,
+     "debut": "2026-11-16T23:12:22+01:00",
+     "fin": "2026-11-16T23:15:31+01:00"
+    },
+    {
+     "etape": "audit complet et corrections",
+     "budget": 50,
+     "debut": "2026-11-16T23:15:31+01:00",
+     "fin": "2026-11-16T23:44:31+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-16T23:44:31+01:00",
+     "fin": "2026-11-16T23:44:38+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [],
+   "audit": {
+    "niveau": "complet (13 tailles, tous les modes, toutes les pages)",
+    "echecsPremierPassage": 1,
+    "relances": 1,
+    "corrections": [
+     "cadre photo du déroulé Tandem ramené à 540 px (photo faible au-delà de 25 % de l’écran)"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Demande : audit complet, analyse approfondie (expérience, visuels, design, animations) et améliorations pour une version optimale."
+  }
+ ]
+}

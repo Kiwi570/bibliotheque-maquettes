@@ -1,0 +1,846 @@
+{
+  "maquette": {
+    "client": "école de parachutisme associative (ParaClub Montbéliard, EPNFC, aérodrome de Courcelles-lès-Montbéliard) : sauts en tandem, initiation, progression jusqu'à l'autonomie, bons cadeaux",
+    "activite": [
+      "sport",
+      "tourisme",
+      "association"
+    ],
+    "concept": [
+      "voyage"
+    ],
+    "ambiance": [
+      "énergique",
+      "clair",
+      "froid"
+    ],
+    "palette": {
+      "fond": "--ciel",
+      "texte": "--nuit",
+      "accent": "--accent",
+      "secondaire": "--ciel-2"
+    },
+    "polices": {
+      "titres": "Archivo Expanded",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Porte ouverte » : ciel clair, bleu nuit et orange voile, Archivo Expanded large avec un mot orange par titre ; photos de vrais sauts et du terrain",
+      "ouverture : vue aérienne qui respire doucement, petite voile orange qui dérive dans le vent ; « Sautez à 4 000 m » en très grand",
+      "« De la porte au posé » : trajectoire d'un tandem qui se trace de l'avion à la cible au défilement, avec les altitudes et les temps",
+      "manche à air qui se gonfle avec la vitesse de défilement, talon du bon cadeau qui se détache, carte d'embarquement qui remonte et s'incline",
+      "réservation en quatre étapes avec calendrier des vrais jours de saut (week-ends et jours fériés calculés), formule préremplie par l'adresse"
+    ],
+    "reserves": [
+      "tarifs non publiés par le club : demande des tarifs par e-mail (simulée)",
+      "quelques illustrations générées (vues aériennes) ; logo officiel absent, logo typographique provisoire"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "trace-svg",
+      "section-fixée",
+      "galerie-horizontale",
+      "reactif-vitesse",
+      "parallaxe",
+      "masque",
+      "compteur",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "réservation-simulee",
+      "formulaire-par-étapes",
+      "carte-interactive"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la trajectoire du tandem, de l'avion à la cible",
+      "fil": "la petite voile orange qui dérive"
+    },
+    "metier": "école de parachutisme"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile bleu nuit entre les pages : la petite voile descend jusqu'à l'objet de la page",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête clair : logo ParaClub Montbéliard, tandem, initiation, progression, réserver, contact, bouton orange « Réserver »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur bleu nuit, liens en Archivo Expanded",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Sautez à4 000 m",
+      "role": "ouverture",
+      "description": "Ouverture : vue aérienne de la campagne qui respire doucement, petite voile orange qui dérive dans le vent, « Sautez à 4 000 m » en très grand avec l'altitude en orange, boutons réserver et offrir, jours d'ouverture",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "petite voile qui dérive dans le vent sur la vue aérienne"
+      ]
+    },
+    "premier-saut": {
+      "titre": "Deux façons de passer la porte",
+      "role": "offre",
+      "description": "« Deux façons de passer la porte » : deux grandes photos (tandem, initiation) avec ce qu'il faut savoir et un bouton chacune",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "deroule": {
+      "titre": "De la porte au posé",
+      "role": "étapes",
+      "description": "« De la porte au posé » sur bleu nuit, épinglé : trajectoire d'un tandem qui se trace de l'avion à la cible au défilement, altitudes et temps qui s'affichent, cinq étapes en cartes (théorie, équipement, montée, chute libre, voile)",
+      "animations": [
+        "trace-svg",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, la trajectoire est plus courte et les étapes se lisent dessous"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "trajectoire d'un saut tracée de l'avion à la cible"
+      ]
+    },
+    "terrain": {
+      "titre": "Un vrai terrain de parachutisme",
+      "role": "chiffres",
+      "description": "« Un vrai terrain de parachutisme » : texte, photos de l'avion et du terrain, chiffres en orange (1 700 × 800 m, 6 places, 15 min, 500 sauts, 25 couchages)",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "club": {
+      "titre": "Le week‑end, on saute ensemble",
+      "role": "galerie",
+      "description": "« Le week-end, on saute ensemble » : rangée de photos de la vie du club (barbecue, véhicule de piste, Cessna) qui glisse au défilement",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "progresser": {
+      "titre": "Du premier saut à l'autonomie",
+      "role": "étapes",
+      "description": "« Du premier saut à l'autonomie » : photo d'une formation en chute libre et pastilles des brevets qui mènent à l'autonomie",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offrir": {
+      "titre": "Offrez 4 000 mètres",
+      "role": "offre",
+      "description": "« Offrez 4 000 mètres » : bon cadeau dessiné dont le talon se détache au défilement, bouton offrir",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "talon du bon cadeau qui se détache au défilement"
+      ]
+    },
+    "pratique": {
+      "titre": "Avant de venir",
+      "role": "faq",
+      "description": "« Avant de venir » : quatre cartes (qui peut sauter, la météo décide, le jour J, vos proches) dont une carte bleu nuit avec une manche à air qui se gonfle avec la vitesse de défilement",
+      "animations": [
+        "reactif-vitesse",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "manche à air qui se tend avec la vitesse de défilement"
+      ]
+    },
+    "appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit : logo, présentation, jours de saut, adresse, sommaire, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Posé hors zone",
+      "role": "page-404",
+      "description": "404 « Posé hors zone » : titre géant, petite voile, photo inclinée d'un atterrissage, bouton retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une question ? Appelez le club",
+      "role": "ouverture",
+      "description": "« Une question ? Appelez le club » : numéro en très grand orange, photo du véhicule de l'école, jours d'ouverture, e-mail",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-acces": {
+      "titre": "L'aérodrome de Courcelles-lès-Montbéliard",
+      "role": "carte",
+      "description": "« L'aérodrome de Courcelles-lès-Montbéliard » sur bleu nuit : carte d'accès où les routes se tracent depuis Mulhouse, Colmar, Belfort, Besançon et la Suisse, aérodrome qui pulse",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire avec sujet (saut en tandem, initiation…), sur fiche blanche",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-amis": {
+      "titre": "Le club et ses partenaires",
+      "role": "preuves",
+      "description": "« Le club et ses partenaires » : liens vers les réseaux et les partenaires en étiquettes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-debut": {
+      "titre": "Votre premier saut, seul sous votre voile",
+      "role": "ouverture",
+      "description": "« Votre premier saut, seul sous votre voile » : photo depuis la porte de l'avion, titre avec la fin en orange, bouton réserver",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-journee": {
+      "titre": "La journée",
+      "role": "étapes",
+      "description": "« La journée » : frise horaire (8 h accueil, formation, midi, l'après-midi, après) qui se trace puis glisse au défilement",
+      "animations": [
+        "trace-svg",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-formation": {
+      "titre": "Six heures pour être prêt",
+      "role": "méthode",
+      "description": "« Six heures pour être prêt » : la formation au sol, photos en mosaïque",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-saut": {
+      "titre": "1 200 mètres, et la voile s'ouvre",
+      "role": "étapes",
+      "description": "« 1 200 mètres, et la voile s'ouvre » sur bleu nuit : voile en photo, chiffres clés (1 200 m, 3 s, radio)",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-preparer": {
+      "titre": "Ce qu'il faut savoir",
+      "role": "faq",
+      "description": "« Ce qu'il faut savoir » : conditions et choses à apporter en deux cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-apres": {
+      "titre": "Vers le brevet A",
+      "role": "offre",
+      "description": "« Vers le brevet A » : la suite après le premier saut, photo des voiles au sol",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "initiation-appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "progression-debut": {
+      "titre": "Du premier saut à l'autonomie",
+      "role": "ouverture",
+      "description": "« Du premier saut à l'autonomie » : bandeau photo de formation en chute libre qui s'ouvre au défilement",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "progression-brevets": {
+      "titre": "Une progression par étapes",
+      "role": "étapes",
+      "description": "« Une progression par étapes » : les brevets en échelle, du premier saut au brevet de moniteur, chacun avec ce qu'il permet",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "progression-disciplines": {
+      "titre": "Voler à plusieurs",
+      "role": "services",
+      "description": "« Voler à plusieurs » : disciplines (vol relatif, freefly, précision d'atterrissage) en grandes photos avec titres découpés",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "progression-materiel": {
+      "titre": "Tout pour progresser",
+      "role": "services",
+      "description": "« Tout pour progresser » : le matériel et la location au club",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "progression-appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-debut": {
+      "titre": "Réservez votre saut",
+      "role": "ouverture",
+      "description": "« Réservez votre saut » : carte d'embarquement dessinée qui remonte puis s'incline au défilement",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "carte d'embarquement qui remonte et s'incline"
+      ]
+    },
+    "reserver-reservation": {
+      "titre": "Votre réservation",
+      "role": "contact",
+      "description": "« Votre réservation » en quatre étapes : formule (préremplie par l'adresse), calendrier des vrais jours de saut (week-ends et jours fériés calculés, à l'heure du terrain), participants, coordonnées ; récapitulatif épinglé avec l'acompte de 50 €",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Réservation simulée"
+      ],
+      "particularites": [
+        "calendrier des jours de saut avec jours fériés calculés"
+      ]
+    },
+    "reserver-tarifs": {
+      "titre": "Recevoir les tarifs par e-mail",
+      "role": "tarifs",
+      "description": "« Recevoir les tarifs par e-mail » : champ e-mail et bouton, le club ne publiant pas ses prix",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "reserver-acompte": {
+      "titre": "Les règles du jeu",
+      "role": "texte-legal",
+      "description": "« Les règles du jeu » : acompte, report météo, annulation",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-faq": {
+      "titre": "Tout ce qu'on nous demande",
+      "role": "faq",
+      "description": "« Tout ce qu'on nous demande » : douze questions dépliables avec titre épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tandem-debut": {
+      "titre": "Le saut en tandem",
+      "role": "ouverture",
+      "description": "« Le saut en tandem » : grande photo de tandem en chute libre, texte et bouton",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tandem-deroule": {
+      "titre": "Cinq temps, une demi-journée",
+      "role": "étapes",
+      "description": "« Cinq temps, une demi-journée » : étapes du tandem ; la photo épinglée change avec l'étape lue et glisse doucement",
+      "animations": [
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "tandem-pose": {
+      "titre": "",
+      "role": "decor",
+      "description": "Bande de transition après le posé : citation courte sur la sensation du saut",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tandem-video": {
+      "titre": "Gardez votre saut",
+      "role": "offre",
+      "description": "« Gardez votre saut » : option vidéo dans un cadre « REC » qui se dessine, point rouge qui clignote",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tandem-conditions": {
+      "titre": "Conditions et sécurité",
+      "role": "faq",
+      "description": "« Conditions et sécurité » : âge, poids, santé, météo en colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tandem-appel": {
+      "titre": "Prêt à passer la porte ?",
+      "role": "appel",
+      "description": "« Prêt à passer la porte ? » : vue du ciel au-dessus des nuages, petite voile orange qui flotte, titre avec la fin en orange, boutons réserver et offrir, téléphone",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
