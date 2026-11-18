@@ -1,0 +1,525 @@
+{
+  "maquette": {
+    "client": "comédienne (Sarah Chaperon) : théâtre, tournages et voix, portraits de cinq photographes, bande-démo et extraits de voix",
+    "activite": [
+      "spectacle",
+      "culture"
+    ],
+    "concept": [
+      "galerie",
+      "atelier"
+    ],
+    "ambiance": [
+      "sobre",
+      "brut",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--encre",
+      "accent": "--crayon",
+      "secondaire": "--nuit"
+    },
+    "polices": {
+      "titres": "Instrument Serif",
+      "texte": "Fragment Mono",
+      "mono": "Fragment Mono"
+    },
+    "points_forts": [
+      "direction « La planche-contact » : papier, encre, nuit de chambre noire et crayon gras rouge, Instrument Serif et Fragment Mono ; ses vrais portraits partout",
+      "ouverture : planche-contact posée sur une table lumineuse et loupe en verre qu'on promène pour grossir les tirages ; un clic entoure un portrait au crayon rouge, un second clic plonge dedans",
+      "titres qui se révèlent comme un tirage dans le bac, traits de crayon gras qui se dessinent à l'arrivée, poursuite de théâtre qui suit la souris",
+      "tirages posés sur la table qui glissent chacun à sa vitesse, frise des tournages épinglée qui avance de côté, bande de film qui avance au défilement",
+      "dates de théâtre rangées à venir ou passées au jour réel, portraits filtrables par photographe et lumière, voix avec onde tracée au crayon"
+    ],
+    "reserves": [
+      "v2 très longue (près de 15 h) avec la skill v10.12.1",
+      "extraits de voix sans fichiers réels (ondes simulées)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "trace-svg",
+      "masque",
+      "parallaxe",
+      "section-fixée",
+      "galerie-horizontale",
+      "curseur-personnalisé",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "galerie-cliquable",
+      "filtres",
+      "lecteur-audio",
+      "lecteur-vidéo",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "objet-unique",
+    "grille": {
+      "objet": "la loupe en verre sur la planche-contact",
+      "fil": "le crayon gras rouge qui entoure ce qu'il faut voir"
+    },
+    "metier": "comédienne"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile de chambre noire entre les pages, intro où la planche s'éclaire sur la table lumineuse",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête papier : nom de Sarah, parcours, portraits, démo et voix, contact, bouton noir « La contacter »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur papier, liens en Instrument Serif",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "SarahChaperon",
+      "role": "ouverture",
+      "description": "Ouverture épinglée : planche-contact de ses portraits sur une table lumineuse, loupe en verre qu'on promène pour grossir les tirages (elle se promène seule juste après l'intro) ; un clic entoure le portrait au crayon gras rouge avec la note du tirage, un second clic fait plonger dans le portrait qui grandit jusqu'au plein écran",
+      "animations": [
+        "ouverture-orchestrée",
+        "section-fixée",
+        "trace-svg",
+        "masque"
+      ],
+      "interactions": [
+        "jeu",
+        "galerie-cliquable"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, la loupe se déplace au doigt"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "loupe en verre sur une planche-contact",
+        "portrait entouré au crayon gras puis plongée jusqu'au plein écran"
+      ]
+    },
+    "jeu": {
+      "titre": "Sur scène, en vidéo",
+      "role": "portfolio",
+      "description": "« Sur scène, en vidéo » : affiches de spectacles avec bouton de lecture, chiffres entourés au crayon (70, 35) et « Plus de 160 soirs »",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visages": {
+      "titre": "Entourez votre tirage",
+      "role": "galerie",
+      "description": "« Entourez votre tirage » sur chambre noire : planche de portraits qu'on entoure au crayon, le tirage s'élève et se retourne",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "jeu",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "voix": {
+      "titre": "Écouter Sarah",
+      "role": "outil-interactif",
+      "description": "« Écouter Sarah » sur nuit : portrait en clair-obscur et liste d'extraits de voix avec ondes rouges qui respirent",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "lecteur-audio"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Extraits sans fichiers réels"
+      ]
+    },
+    "actualite": {
+      "titre": "Sur scène en 2026",
+      "role": "agenda",
+      "description": "« Sur scène en 2026 » : prochaines dates rangées au jour réel, mois entouré au crayon",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Écrivez-lui, appelez-la",
+      "role": "appel",
+      "description": "« Écrivez-lui, appelez-la » sur photo sombre : numéro entouré au crayon gras rouge, e-mail et bouton",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page de nuit : nom, métiers, sommaire, photographes crédités",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette prise n'existe pas",
+      "role": "page-404",
+      "description": "404 « Cette prise n'existe pas » : fauteuil rouge et projecteur sur une scène vide, bouton retour à la planche",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Écrire à Sarah",
+      "role": "ouverture",
+      "description": "« Écrire à Sarah » : numéro entouré au crayon, portrait glissé dans une pochette kraft",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-message": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire ; à l'envoi, le message file vers « La contacter » et la page remonte sur la pochette",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "demo-et-voix-debut": {
+      "titre": "La voir, l'entendre",
+      "role": "ouverture",
+      "description": "« La voir, l'entendre » : bande de film perforée avec les affiches qui avance de côté au défilement, titre en Instrument Serif",
+      "animations": [
+        "galerie-horizontale",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "demo-et-voix-demo": {
+      "titre": "La bande-démo",
+      "role": "portfolio",
+      "description": "« La bande-démo » : portrait, texte et bouton entouré au crayon pour la recevoir",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "demo-et-voix-voix": {
+      "titre": "Sa voix",
+      "role": "outil-interactif",
+      "description": "« Sa voix » sur nuit : portrait sur lequel court une onde tracée au crayon, extraits numérotés avec durées",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "lecteur-audio"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "parcours-debut": {
+      "titre": "Sur les planches",
+      "role": "ouverture",
+      "description": "« Sur les planches » : tirages et affiches posés sur la table qui glissent chacun à sa vitesse, poursuite de théâtre qui suit la souris",
+      "animations": [
+        "parallaxe",
+        "curseur-personnalisé"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "poursuite de théâtre qui suit la souris"
+      ]
+    },
+    "parcours-actualite": {
+      "titre": "Où la voir",
+      "role": "agenda",
+      "description": "« Où la voir » : dates à venir puis passées (barrées), rangées au jour réel du visiteur",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "parcours-theatre": {
+      "titre": "Du drame au jeune public",
+      "role": "portfolio",
+      "description": "« Du drame au jeune public » : registres filtrables (tout, grand répertoire, jeune public, contemporain) et liste de spectacles",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "parcours-tournages": {
+      "titre": "Devant la caméra",
+      "role": "portfolio",
+      "description": "« Devant la caméra » sur nuit : frise des tournages épinglée qui avance de côté au défilement, portrait sur film",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "parcours-cv": {
+      "titre": "Son CV complet",
+      "role": "appel",
+      "description": "« Son CV complet » : portrait et bouton pour le demander",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "portraits-debut": {
+      "titre": "Douze visages",
+      "role": "ouverture",
+      "description": "« Douze visages » sur chambre noire : portrait dans un cadre, mot en italique rouge, photographes cités",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "portraits-planche": {
+      "titre": "Tous les tirages",
+      "role": "galerie",
+      "description": "« Tous les tirages » : planche filtrable par photographe et par lumière ; chaque tirage se révèle comme dans le bac et s'ouvre en grand (lien #portrait-n)",
+      "animations": [
+        "masque",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "portraits-visionneuse": {
+      "titre": "Portrait en grand",
+      "role": "galerie",
+      "description": "Visionneuse des portraits : agrandissement, flèches, lien direct qui l'ouvre tout seul",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "portraits-demande": {
+      "titre": "Besoin d'une photo en haute définition ?",
+      "role": "appel",
+      "description": "« Besoin d'une photo en haute définition ? » : portrait en gros plan et bouton pour demander les fichiers",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

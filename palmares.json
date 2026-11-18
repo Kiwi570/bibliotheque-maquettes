@@ -120,28 +120,29 @@
     "en_ligne": "https://mtcloud-maquette.vercel.app"
    },
    {
-    "id": "d3co-maquette/heros",
-    "maquette": "d3co-maquette",
-    "client": "atelier d'objets déco imprimés en 3D (vases, cache-pots) avec boutique en ligne",
+    "id": "sarah-chaperon-maquette/debut",
+    "maquette": "sarah-chaperon-maquette",
+    "client": "comédienne (Sarah Chaperon) : théâtre, tournages et voix, portraits de cinq photographes, bande-démo et extraits de voix",
     "note_section": 5,
     "note_maquette": 90,
-    "titre": "Héros imprimé couche par couche",
-    "description": "La vraie photo du vase s'imprime en WebGL (OGL) couche par couche sous une buse incandescente, les couches chaudes refroidissent ; cotes SVG du produit autour, puis vue éclatée en strates au défilement (épinglage, scrub). Repli Canvas 2D sans WebGL, image finale sous réduction des animations.",
+    "titre": "SarahChaperon",
+    "description": "Ouverture épinglée : planche-contact de ses portraits sur une table lumineuse, loupe en verre qu'on promène pour grossir les tirages (elle se promène seule juste après l'intro) ; un clic entoure le portrait au crayon gras rouge avec la note du tirage, un second clic fait plonger dans le portrait qui grandit jusqu'au plein écran",
     "animations": [
-     "webgl-shader",
-     "révélation-texte",
+     "ouverture-orchestrée",
      "section-fixée",
-     "progression-fixée"
+     "trace-svg",
+     "masque"
     ],
     "interactions": [
-     "schema-interactif"
+     "jeu",
+     "galerie-cliquable"
     ],
-    "module": "impression-couche-par-couche",
-    "fiche": "sections/d3co-maquette/heros.json",
-    "capture": "medias/d3co-maquette/heros-p1440.jpg",
-    "capture_m390": "medias/d3co-maquette/heros-m390.jpg",
-    "video": "medias/d3co-maquette/heros-p720.mp4",
-    "en_ligne": "https://d3co-maquette.vercel.app"
+    "module": null,
+    "fiche": "sections/sarah-chaperon-maquette/debut.json",
+    "capture": "medias/sarah-chaperon-maquette/debut-p1440.jpg",
+    "capture_m390": "medias/sarah-chaperon-maquette/debut-m390.jpg",
+    "video": "medias/sarah-chaperon-maquette/debut-p720.mp4",
+    "en_ligne": "https://sarah-chaperon-maquette.vercel.app"
    }
   ],
   "outil-interactif": [
@@ -277,74 +278,6 @@
     "en_ligne": "https://nava-maquette.vercel.app"
    }
   ],
-  "contact": [
-   {
-    "id": "instinct-aventure-maquette/contact",
-    "maquette": "instinct-aventure-maquette",
-    "client": "agence de voyages en 4x4 en Afrique australe",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "Contact sous ciel étoilé et safari à la lampe",
-    "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
-    "animations": [
-     "canvas-2d",
-     "révélation-texte",
-     "parallaxe"
-    ],
-    "interactions": [
-     "jeu"
-    ],
-    "module": "lumiere-au-pointeur",
-    "fiche": "sections/instinct-aventure-maquette/contact.json",
-    "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
-    "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
-    "video": "medias/instinct-aventure-maquette/contact-p720.mp4",
-    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
-   },
-   {
-    "id": "epnfc-maquette/reserver-reservation",
-    "maquette": "epnfc-maquette",
-    "client": "école de parachutisme associative (ParaClub Montbéliard, EPNFC, aérodrome de Courcelles-lès-Montbéliard) : sauts en tandem, initiation, progression jusqu'à l'autonomie, bons cadeaux",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "Votre réservation",
-    "description": "« Votre réservation » en quatre étapes : formule (préremplie par l'adresse), calendrier des vrais jours de saut (week-ends et jours fériés calculés, à l'heure du terrain), participants, coordonnées ; récapitulatif épinglé avec l'acompte de 50 €",
-    "animations": [
-     "section-fixée"
-    ],
-    "interactions": [
-     "réservation-simulee",
-     "formulaire-par-étapes"
-    ],
-    "module": null,
-    "fiche": "sections/epnfc-maquette/reserver-reservation.json",
-    "capture": "medias/epnfc-maquette/reserver-reservation-p1440.jpg",
-    "capture_m390": "medias/epnfc-maquette/reserver-reservation-m390.jpg",
-    "video": null,
-    "en_ligne": "https://epnfc-maquette.vercel.app/reserver"
-   },
-   {
-    "id": "coupdefood-maquette/contact",
-    "maquette": "coupdefood-maquette",
-    "client": "agence de relations presse et de communication culinaire",
-    "note_section": 5,
-    "note_maquette": 87,
-    "titre": "Bon de commande",
-    "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
-    "animations": [
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "formulaire-par-étapes"
-    ],
-    "module": "formulaire-par-etapes",
-    "fiche": "sections/coupdefood-maquette/contact.json",
-    "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
-    "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
-    "video": "medias/coupdefood-maquette/contact-p720.mp4",
-    "en_ligne": "https://coupdefood-maquette.vercel.app"
-   }
-  ],
   "galerie": [
    {
     "id": "enluminure-marienuel-maquette/oeuvres-choisies",
@@ -413,6 +346,74 @@
     "capture_m390": "medias/surffm-maquette/emissions-m390.jpg",
     "video": "medias/surffm-maquette/emissions-p720.mp4",
     "en_ligne": "https://surffm-maquette.vercel.app"
+   }
+  ],
+  "contact": [
+   {
+    "id": "instinct-aventure-maquette/contact",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Contact sous ciel étoilé et safari à la lampe",
+    "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
+    "animations": [
+     "canvas-2d",
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": "lumiere-au-pointeur",
+    "fiche": "sections/instinct-aventure-maquette/contact.json",
+    "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/contact-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
+   },
+   {
+    "id": "epnfc-maquette/reserver-reservation",
+    "maquette": "epnfc-maquette",
+    "client": "école de parachutisme associative (ParaClub Montbéliard, EPNFC, aérodrome de Courcelles-lès-Montbéliard) : sauts en tandem, initiation, progression jusqu'à l'autonomie, bons cadeaux",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Votre réservation",
+    "description": "« Votre réservation » en quatre étapes : formule (préremplie par l'adresse), calendrier des vrais jours de saut (week-ends et jours fériés calculés, à l'heure du terrain), participants, coordonnées ; récapitulatif épinglé avec l'acompte de 50 €",
+    "animations": [
+     "section-fixée"
+    ],
+    "interactions": [
+     "réservation-simulee",
+     "formulaire-par-étapes"
+    ],
+    "module": null,
+    "fiche": "sections/epnfc-maquette/reserver-reservation.json",
+    "capture": "medias/epnfc-maquette/reserver-reservation-p1440.jpg",
+    "capture_m390": "medias/epnfc-maquette/reserver-reservation-m390.jpg",
+    "video": null,
+    "en_ligne": "https://epnfc-maquette.vercel.app/reserver"
+   },
+   {
+    "id": "coupdefood-maquette/contact",
+    "maquette": "coupdefood-maquette",
+    "client": "agence de relations presse et de communication culinaire",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Bon de commande",
+    "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "formulaire-par-étapes"
+    ],
+    "module": "formulaire-par-etapes",
+    "fiche": "sections/coupdefood-maquette/contact.json",
+    "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
+    "video": "medias/coupdefood-maquette/contact-p720.mp4",
+    "en_ligne": "https://coupdefood-maquette.vercel.app"
    }
   ],
   "produits": [
@@ -1187,6 +1188,77 @@
     "en_ligne": "https://santevouszen-maquette.vercel.app/formules"
    }
   ],
+  "portfolio": [
+   {
+    "id": "agence-ae-maquette/plein-cadre",
+    "maquette": "agence-ae-maquette",
+    "client": "Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Maison T-G",
+    "description": "La photo de la Maison T-G part d'une vignette et s'ouvre jusqu'au plein écran (clip-path) dans un cadre collant, le titre géant s'écarte, puis le lien vers le projet",
+    "animations": [
+     "révélation-image",
+     "masque",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/agence-ae-maquette/plein-cadre.json",
+    "capture": "medias/agence-ae-maquette/plein-cadre-p1440.jpg",
+    "capture_m390": "medias/agence-ae-maquette/plein-cadre-m390.jpg",
+    "video": "medias/agence-ae-maquette/plein-cadre-p720.mp4",
+    "en_ligne": "https://agence-ae-maquette.vercel.app"
+   },
+   {
+    "id": "icc-maquette/en-junior-impact-maker-travaux",
+    "maquette": "icc-maquette",
+    "client": "institut de conseil et de formation à la transformation des systèmes (conseil, expéditions apprenantes, programme jeunes à l'ONU)",
+    "note_section": 4,
+    "note_maquette": 91,
+    "titre": "Couvertures génératives",
+    "description": "Grille des travaux de recherche dont chaque couverture est une constellation générée en canvas 2D à partir du titre (même titre, même dessin), avec inclinaison au survol.",
+    "animations": [
+     "canvas-2d",
+     "survol-image"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/icc-maquette/en-junior-impact-maker-travaux.json",
+    "capture": "medias/icc-maquette/en-junior-impact-maker-travaux-p1440.jpg",
+    "capture_m390": "medias/icc-maquette/en-junior-impact-maker-travaux-m390.jpg",
+    "video": "medias/icc-maquette/en-junior-impact-maker-travaux-p720.mp4",
+    "en_ligne": "https://icc-maquette.vercel.app/en/junior-impact-maker"
+   },
+   {
+    "id": "les-plus-hautes-eaux-maquette/repertoire",
+    "maquette": "les-plus-hautes-eaux-maquette",
+    "client": "compagnie de théâtre gestuel et clown pour tous publics, tournée dans le Grand Ouest",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Répertoire en piste",
+    "description": "Sept spectacles en cartes sur une piste horizontale épinglée (au-dessus de 1100 px), barre de progression, filtres par public ; la photo reprend ses couleurs en entrant, l'objet du spectacle s'anime au survol et la couleur du projecteur change. Défilement natif en dessous.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "révélation-image",
+     "survol-image"
+    ],
+    "interactions": [
+     "filtres"
+    ],
+    "module": "galerie-horizontale-epinglee",
+    "fiche": "sections/les-plus-hautes-eaux-maquette/repertoire.json",
+    "capture": "medias/les-plus-hautes-eaux-maquette/repertoire-p1440.jpg",
+    "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
+    "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p720.mp4",
+    "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
+   }
+  ],
   "preuves": [
    {
     "id": "observatoire-des-cse-maquette/garanties",
@@ -1321,77 +1393,6 @@
     "capture_m390": "medias/enluminure-marienuel-maquette/marie-m390.jpg",
     "video": "medias/enluminure-marienuel-maquette/marie-p720.mp4",
     "en_ligne": "https://enluminure-marienuel-maquette.vercel.app"
-   }
-  ],
-  "portfolio": [
-   {
-    "id": "agence-ae-maquette/plein-cadre",
-    "maquette": "agence-ae-maquette",
-    "client": "Architecte à Quimper, agence d'architecture environnementale (maisons neuves bois et paille, rénovation, locaux professionnels)",
-    "note_section": 5,
-    "note_maquette": 87,
-    "titre": "Maison T-G",
-    "description": "La photo de la Maison T-G part d'une vignette et s'ouvre jusqu'au plein écran (clip-path) dans un cadre collant, le titre géant s'écarte, puis le lien vers le projet",
-    "animations": [
-     "révélation-image",
-     "masque",
-     "révélation-texte"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/agence-ae-maquette/plein-cadre.json",
-    "capture": "medias/agence-ae-maquette/plein-cadre-p1440.jpg",
-    "capture_m390": "medias/agence-ae-maquette/plein-cadre-m390.jpg",
-    "video": "medias/agence-ae-maquette/plein-cadre-p720.mp4",
-    "en_ligne": "https://agence-ae-maquette.vercel.app"
-   },
-   {
-    "id": "icc-maquette/en-junior-impact-maker-travaux",
-    "maquette": "icc-maquette",
-    "client": "institut de conseil et de formation à la transformation des systèmes (conseil, expéditions apprenantes, programme jeunes à l'ONU)",
-    "note_section": 4,
-    "note_maquette": 91,
-    "titre": "Couvertures génératives",
-    "description": "Grille des travaux de recherche dont chaque couverture est une constellation générée en canvas 2D à partir du titre (même titre, même dessin), avec inclinaison au survol.",
-    "animations": [
-     "canvas-2d",
-     "survol-image"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/icc-maquette/en-junior-impact-maker-travaux.json",
-    "capture": "medias/icc-maquette/en-junior-impact-maker-travaux-p1440.jpg",
-    "capture_m390": "medias/icc-maquette/en-junior-impact-maker-travaux-m390.jpg",
-    "video": "medias/icc-maquette/en-junior-impact-maker-travaux-p720.mp4",
-    "en_ligne": "https://icc-maquette.vercel.app/en/junior-impact-maker"
-   },
-   {
-    "id": "les-plus-hautes-eaux-maquette/repertoire",
-    "maquette": "les-plus-hautes-eaux-maquette",
-    "client": "compagnie de théâtre gestuel et clown pour tous publics, tournée dans le Grand Ouest",
-    "note_section": 4,
-    "note_maquette": 90,
-    "titre": "Répertoire en piste",
-    "description": "Sept spectacles en cartes sur une piste horizontale épinglée (au-dessus de 1100 px), barre de progression, filtres par public ; la photo reprend ses couleurs en entrant, l'objet du spectacle s'anime au survol et la couleur du projecteur change. Défilement natif en dessous.",
-    "animations": [
-     "section-fixée",
-     "galerie-horizontale",
-     "révélation-image",
-     "survol-image"
-    ],
-    "interactions": [
-     "filtres"
-    ],
-    "module": "galerie-horizontale-epinglee",
-    "fiche": "sections/les-plus-hautes-eaux-maquette/repertoire.json",
-    "capture": "medias/les-plus-hautes-eaux-maquette/repertoire-p1440.jpg",
-    "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
-    "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p720.mp4",
-    "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
    }
   ],
   "chiffres": [
