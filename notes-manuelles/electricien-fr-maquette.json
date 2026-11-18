@@ -1,0 +1,627 @@
+{
+  "maquette": {
+    "client": "annuaire national d'électriciens (electricien.fr) : recherche gratuite par code postal ou département pour les particuliers, offres d'inscription et de mise en avant pour les électriciens",
+    "activite": [
+      "bâtiment",
+      "numérique",
+      "services-b2b"
+    ],
+    "concept": [
+      "carte",
+      "catalogue"
+    ],
+    "ambiance": [
+      "nocturne",
+      "énergique",
+      "industriel"
+    ],
+    "palette": {
+      "fond": "--nuit",
+      "texte": "--papier",
+      "accent": "--cuivre",
+      "secondaire": "--nuit-2"
+    },
+    "polices": {
+      "titres": "Archivo",
+      "texte": "Instrument Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « La France allumée » : nuit, cuivre et papier, Archivo gras avec la seconde ligne en cuivre ; un annuaire rendu vivant",
+      "ouverture : carte des 96 départements où ceux des derniers inscrits sont allumés en cuivre et où, de temps en temps, un département s'allume comme une ligne mise sous tension ; recherche dont l'exemple s'écrit tout seul",
+      "« 51 620 électriciens référencés » épinglé sur une photo de tableau électrique qui s'agrandit ; grand bandeau des régions en titres qui défilent",
+      "page Trouver : régions en accordéon et résultats par département gardés dans l'adresse (?d=38) ; recherche qui comprend code postal, numéro, nom de département ou ville",
+      "page Électriciens : la fiche mise en avant part de la 4e place et passe en tête, présence à vérifier, inscription en trois étapes"
+    ],
+    "reserves": [
+      "beaucoup d'illustrations générées (maisons, tableaux, outils)",
+      "coordonnées de l'équipe absentes (affichées en image sur le site actuel)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "section-fixée",
+      "masque",
+      "marquee",
+      "parallaxe",
+      "compteur",
+      "trace-svg",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "carte-interactive",
+      "recherche",
+      "filtres",
+      "formulaire-par-étapes",
+      "comparateur"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "outil-d-abord",
+    "grille": {
+      "objet": "la carte des départements qui s'allument",
+      "fil": "le cuivre : câbles, étincelles, lignes sous tension"
+    },
+    "metier": "annuaire d'électriciens"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de 2,3 s : le mot-symbole se pose, le logo glisse jusqu'à l'objet d'ouverture (la carte sur l'accueil) ; voile nuit entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête de nuit : logo electricien.fr, trouver un électricien, électriciens, conseils, contact, bouton cuivre « Inscrire mon entreprise »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur nuit, liens en Archivo",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Un électricien,près de chez vous.",
+      "role": "ouverture",
+      "description": "Ouverture : « Un électricien, près de chez vous. » avec la fin en cuivre, champ de recherche dont l'exemple s'écrit lettre par lettre, compteur 51 620 ; à droite la carte des 96 départements où ceux des derniers inscrits sont allumés en cuivre et où des étincelles allument un département de temps en temps",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe",
+        "compteur"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "départements qui s'allument comme une ligne mise sous tension",
+        "exemple de recherche qui s'écrit tout seul"
+      ]
+    },
+    "comment": {
+      "titre": "Trois gestes, et le courant passe.",
+      "role": "étapes",
+      "description": "« Trois gestes, et le courant passe. » sur papier : trois étapes numérotées en photo (la maison, le tableau, la lampe)",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "france-entiere": {
+      "titre": "51 620 électriciens référencés",
+      "role": "chiffres",
+      "description": "« 51 620 électriciens référencés » épinglé : photo d'un tableau électrique qui s'agrandit jusqu'au plein écran sous le chiffre en cuivre",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "regions": {
+      "titre": "Treize régions, et l’outre-mer.",
+      "role": "carte",
+      "description": "« Treize régions, et l'outre-mer. » : noms des régions en très grand qui défilent en bandeau, puis liste des régions en deux colonnes vers la page Trouver",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "inscrits": {
+      "titre": "Ils viennent de rejoindre l’annuaire.",
+      "role": "preuves",
+      "description": "« Ils viennent de rejoindre l'annuaire. » sur papier : rail des dix derniers inscrits qui défile, avec pause",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils": {
+      "titre": "Avant de faire venir un électricien.",
+      "role": "articles",
+      "description": "« Avant de faire venir un électricien. » : trois conseils en cartes photo (diagnostic, norme NF C 15-100, choisir son électricien)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "electriciens": {
+      "titre": "Faites-vous trouver par vos prochains clients.",
+      "role": "offre",
+      "description": "« Faites-vous trouver par vos prochains clients. » sur papier : deux prix (320 €, 750 €) et témoignage d'un électricien sur une carte de nuit",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Le bon électricien, à deux pas.",
+      "role": "appel",
+      "description": "« Le bon électricien, à deux pas. » : câbles de cuivre en très gros plan, boutons chercher sur la carte et inscrire mon entreprise",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page de nuit : logo, présentation, sommaire, liens pour les électriciens, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Plus de courant sur cette page.",
+      "role": "page-404",
+      "description": "404 « Plus de courant sur cette page. » : prise débranchée dans la pénombre, boutons retour et trouver",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-debut": {
+      "titre": "Avant d’appelerun électricien.",
+      "role": "ouverture",
+      "description": "« Avant d'appeler un électricien. » : ouverture scindée, titre et photo d'un tableau, sommaire des quatre conseils",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-guides": {
+      "titre": "Le diagnostic électrique",
+      "role": "articles",
+      "description": "Quatre guides numérotés (diagnostic électrique, norme NF C 15-100, choisir son électricien, panneaux solaires), photo et points clés, lien vers la source officielle",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-sources": {
+      "titre": "Pour aller plus loin.",
+      "role": "preuves",
+      "description": "« Pour aller plus loin. » : quatre sources officielles (Qualifelec, médiateur de l'énergie, CRE, ONISEP) en cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-fin": {
+      "titre": "Prêt pour les travaux ?",
+      "role": "appel",
+      "description": "Appel final sur nuit ou papier : titre en Archivo avec la fin en cuivre, câble de cuivre qui se dessine, boutons vers la carte ou l'inscription",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une question ?Écrivez-nous.",
+      "role": "ouverture",
+      "description": "« Une question ? Écrivez-nous. » : ampoule allumée dans la nuit, titre avec la fin en cuivre",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire selon le profil (particulier ou électricien) et réponses rapides épinglées",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "electriciens-debut": {
+      "titre": "Faites-voustrouver.",
+      "role": "ouverture",
+      "description": "« Faites-vous trouver. » : électricien au travail en plein cadre, titre en cuivre, prix de départ",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "electriciens-offres": {
+      "titre": "Deux façons d’être vu.",
+      "role": "tarifs",
+      "description": "« Deux façons d'être vu. » : fiche coordonnées (320 €) et mise en avant (750 €) en deux cartes, la seconde sur nuit",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "electriciens-mise-en-avant": {
+      "titre": "Ce que voit un particulier qui cherche dans votre département.",
+      "role": "outil-interactif",
+      "description": "« Ce que voit un particulier qui cherche dans votre département. » : liste de résultats dessinée où votre fiche part de la 4e place et passe en tête au défilement",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "fiche qui monte de la 4e à la 1re place"
+      ]
+    },
+    "electriciens-temoignages": {
+      "titre": "Les premiers appels, dès l’inscription.",
+      "role": "témoignages",
+      "description": "« Les premiers appels, dès l'inscription. » : témoignages d'électriciens, photo de câbles épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "electriciens-presence": {
+      "titre": "Êtes-vous déjà dans l’annuaire ?",
+      "role": "outil-interactif",
+      "description": "« Êtes-vous déjà dans l'annuaire ? » : champ nom ou code postal et vérification simulée",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "electriciens-inscription": {
+      "titre": "Inscrire mon entreprise.",
+      "role": "contact",
+      "description": "« Inscrire mon entreprise. » : inscription en trois étapes (entreprise, offre, envoi) avec total épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Inscription simulée"
+      ]
+    },
+    "electriciens-fin": {
+      "titre": "Une question avant de vous inscrire ?",
+      "role": "appel",
+      "description": "Appel final sur nuit ou papier : titre en Archivo avec la fin en cuivre, câble de cuivre qui se dessine, boutons vers la carte ou l'inscription",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "trouver-debut": {
+      "titre": "Trouvez votre électricien.",
+      "role": "ouverture",
+      "description": "« Trouvez votre électricien. » : grand titre, recherche, bandeau photo",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "trouver-carte": {
+      "titre": "Choisissez votre région, puis votre département.",
+      "role": "carte",
+      "description": "« Choisissez votre région, puis votre département. » : carte épinglée des départements et régions en accordéon ; le département choisi s'allume et ses résultats s'affichent, gardés dans l'adresse (?d=38)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "filtres"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "région puis département, résultat gardé dans l'adresse"
+      ]
+    },
+    "trouver-resultats": {
+      "titre": "Les dix derniers inscrits",
+      "role": "outil-interactif",
+      "description": "Résultats : les dix derniers inscrits du département en fiches, titre épinglé",
+      "animations": [
+        "section-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "trouver-choisir": {
+      "titre": "Trois réflexes avant de signer.",
+      "role": "faq",
+      "description": "« Trois réflexes avant de signer. » : trois conseils et photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "trouver-fin": {
+      "titre": "Votre entreprise n’apparaît pas ?",
+      "role": "appel",
+      "description": "Appel final sur nuit ou papier : titre en Archivo avec la fin en cuivre, câble de cuivre qui se dessine, boutons vers la carte ou l'inscription",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

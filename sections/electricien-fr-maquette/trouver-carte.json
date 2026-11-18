@@ -1,0 +1,46 @@
+{
+ "id": "electricien-fr-maquette/trouver-carte",
+ "maquette": "electricien-fr-maquette",
+ "page": "trouver",
+ "titre": "Choisissez votre région, puis votre département.",
+ "role": "carte",
+ "description": "« Choisissez votre région, puis votre département. » : carte épinglée des départements et régions en accordéon ; le département choisi s'allume et ses résultats s'affichent, gardés dans l'adresse (?d=38)",
+ "animations": [
+  "section-fixée"
+ ],
+ "interactions": [
+  "carte-interactive",
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "trouver.html:135-202",
+  "css": "assets/css/site.css:53-56,118-136,149,268-283,468,486,495-499,712-713",
+  "js": "assets/js/site.js:15-58,61-81,84-118,121-159,222-226,238-239 ; assets/js/socle/voile.js:1,95-130 ; assets/js/socle/effets.js:21,25,151-158,214-267 ; assets/js/socle/transitions.js:52-115 ; assets/js/annuaire.js:1,11,27-44"
+ },
+ "medias": {
+  "capture": "medias/electricien-fr-maquette/trouver-carte-p1440.jpg",
+  "capture_m390": "medias/electricien-fr-maquette/trouver-carte-m390.jpg",
+  "video": "medias/electricien-fr-maquette/trouver-carte-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "région puis département, résultat gardé dans l'adresse"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1529,
+  "hauteur_m390": 1771,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}
