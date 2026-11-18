@@ -1,0 +1,602 @@
+{
+  "maquette": {
+    "client": "graphiste packaging et PLV en Île-de-France (Creative Keys, Thierry Poincet) : emballages pour la grande distribution, print, logos et sites, trente ans de rayons ; première version, refaite ensuite en Creative Keys 2",
+    "activite": [
+      "services-b2b",
+      "artisanat",
+      "commerce"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "énergique",
+      "industriel",
+      "sombre"
+    ],
+    "palette": {
+      "fond": "--mur",
+      "texte": "--graphite",
+      "accent": "--rouge",
+      "secondaire": "--graphite"
+    },
+    "polices": {
+      "titres": "Big Shoulders",
+      "texte": "JetBrains Mono",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "direction « Le linéaire » : un rayon de supermarché éclairé comme une galerie, garni de ses vrais produits ; graphite, blanc mur et rouge étiquette, Big Shoulders en capitales",
+      "ouverture : on tire un produit de l'étagère, il vole jusqu'à la main et pivote, la lumière du rayon suit la souris ; au téléphone, appui long puis geste vers le haut",
+      "allée de rayon qu'on longe de côté au défilement, produits attrapables, panneaux suspendus qui se balancent selon la vitesse de défilement",
+      "étude de cas Maison Erté du logo au rayon, gamme de six saveurs épinglée, catalogue des packagings rayon par rayon, pile d'imprimés sur la table de l'imprimeur"
+    ],
+    "reserves": [
+      "première version abandonnée au profit de Creative Keys 2 : 8 échecs au dernier audit (flash pendant l'épinglage de l'ouverture)",
+      "dépôt lourd (129 Mo) et ambiance très sombre pour un graphiste de la grande distribution"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "galerie-horizontale",
+      "section-fixée",
+      "reactif-vitesse",
+      "parallaxe",
+      "empilement-de-fiches",
+      "révélation-texte",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "galerie-cliquable",
+      "filtres",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "parcours-horizontal",
+    "grille": {
+      "objet": "le produit qu'on tire de l'étagère et qu'on fait pivoter",
+      "fil": "le rayon éclairé et ses étiquettes"
+    },
+    "metier": "graphiste packaging"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile rouge étiquette entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête graphite : logo Creative Keys, packagings et PLV, print, marques et sites, devis et contact, bouton « Demander un devis »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur graphite, liens en capitales",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Démarquez-vous en rayon.",
+      "role": "ouverture",
+      "description": "Ouverture : « Démarquez-vous en rayon. » en capitales avec la fin en rouge ; rayon de supermarché garni de ses vrais produits sous une lumière qui suit la souris ; on tire un produit de l'étagère, il vole jusqu'à la main et pivote, le précédent reprend sa place ; étiquette de prix « Demander un devis »",
+      "animations": [
+        "ouverture-orchestrée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Au doigt : appui long puis geste vers le haut"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "produit tiré de l'étagère qui vole jusqu'à la main et pivote"
+      ]
+    },
+    "erte": {
+      "titre": "Une marque, du logo au rayon",
+      "role": "portfolio",
+      "description": "« Une marque, du logo au rayon » : étude de cas Maison Erté épinglée, étapes du logo au rayon qui changent l'image à droite",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "metiers": {
+      "titre": "Quatre métiers, un seul graphiste",
+      "role": "services",
+      "description": "« Quatre métiers, un seul graphiste » : quatre cartes photo (packagings et PLV, print, marques, sites web)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references": {
+      "titre": "Trente ans de rayons",
+      "role": "chiffres",
+      "description": "« Trente ans de rayons » sur graphite : 30 et 147 en grand rouge, pile de plaquettes, bandeau des marques clientes qui défile, avis",
+      "animations": [
+        "compteur",
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Votre produit mérite sa place.",
+      "role": "appel",
+      "description": "Appel final « Votre produit mérite sa place. » sur graphite : étagère de produits éclairée, boutons demander un devis et téléphone, étiquette de prix rouge",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page graphite : étagère éclairée, logo, contact, sommaire, informations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cet article n'est plus en rayon",
+      "role": "page-404",
+      "description": "404 « Cet article n'est plus en rayon » : étagère vide éclairée, étiquette rouge, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-debut": {
+      "titre": "Parlons de votre produit.",
+      "role": "ouverture",
+      "description": "« Parlons de votre produit. » : numéro en grand rouge, e-mail, produits alignés",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-demande": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » : demande en étapes avec choix en cartes (packaging, PLV, print, logo, site) et ticket de caisse récapitulatif épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "devis-contact": {
+      "titre": "Ou tout simplement",
+      "role": "contact",
+      "description": "« Ou tout simplement » : téléphone, e-mail et produits",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marques-et-web-debut": {
+      "titre": "À vos marques… prêts ? Partez !",
+      "role": "ouverture",
+      "description": "« À vos marques… prêts ? Partez ! » : ruban de logos qui défile en biais, pastille rouge",
+      "animations": [
+        "marquee",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marques-et-web-logos": {
+      "titre": "Des marques qui partent du bon pied",
+      "role": "portfolio",
+      "description": "« Des marques qui partent du bon pied » : grille de logos réalisés, chacun s'ouvre en grand",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marques-et-web-sites": {
+      "titre": "Faites du lèche-vitrine",
+      "role": "portfolio",
+      "description": "« Faites du lèche-vitrine » : sites présentés dans une vitrine éclairée, écrans qui défilent",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marques-et-web-appel": {
+      "titre": "Votre marque, sur la ligne de départ.",
+      "role": "appel",
+      "description": "Appel final « Votre marque, sur la ligne de départ. » sur graphite : étagère de produits éclairée, boutons demander un devis et téléphone, étiquette de prix rouge",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marques-et-web-visionneuse": {
+      "titre": "Voir en grand",
+      "role": "galerie",
+      "description": "Visionneuse des réalisations : agrandissement, flèches et Échap",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "packagings-debut": {
+      "titre": "Vos emballages m'emballent.",
+      "role": "ouverture",
+      "description": "« Vos emballages m'emballent. » : carte blanche posée sur un mur de produits",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "packagings-gamme": {
+      "titre": "Une gamme, six saveurs",
+      "role": "portfolio",
+      "description": "« Une gamme, six saveurs » épinglé : le sachet change de saveur et de couleur de fond au défilement",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "packagings-catalogue": {
+      "titre": "Tous les packagings, rayon par rayon",
+      "role": "portfolio",
+      "description": "« Tous les packagings, rayon par rayon » : catalogue filtrable par rayon, produits qui s'ouvrent en grand",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "packagings-plv": {
+      "titre": "La PLV, le dernier mètre",
+      "role": "portfolio",
+      "description": "« La PLV, le dernier mètre » : présentoirs et calendriers en mosaïque",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "packagings-appel": {
+      "titre": "Votre gamme mérite le même soin.",
+      "role": "appel",
+      "description": "Appel final « Votre gamme mérite le même soin. » sur graphite : étagère de produits éclairée, boutons demander un devis et téléphone, étiquette de prix rouge",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "packagings-visionneuse": {
+      "titre": "Voir en grand",
+      "role": "galerie",
+      "description": "Visionneuse des réalisations : agrandissement, flèches et Échap",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "print-debut": {
+      "titre": "Vos marques m'impressionnent.",
+      "role": "ouverture",
+      "description": "« Vos marques m'impressionnent. » : plaquettes et menus imprimés en éventail",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "print-pile": {
+      "titre": "Sur la table de l'imprimeur",
+      "role": "portfolio",
+      "description": "« Sur la table de l'imprimeur » épinglé : imprimés qui se posent en pile l'un après l'autre au défilement",
+      "animations": [
+        "section-fixée",
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "print-imprimes": {
+      "titre": "Plaquettes, affiches, menus",
+      "role": "portfolio",
+      "description": "« Plaquettes, affiches, menus » : grille filtrable des imprimés",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "print-fabrication": {
+      "titre": "Du fichier à l'imprimeur",
+      "role": "étapes",
+      "description": "« Du fichier à l'imprimeur » : étapes de fabrication sur une photo de presse",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "print-appel": {
+      "titre": "Un imprimé à préparer ?",
+      "role": "appel",
+      "description": "Appel final « Un imprimé à préparer ? » sur graphite : étagère de produits éclairée, boutons demander un devis et téléphone, étiquette de prix rouge",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "print-visionneuse": {
+      "titre": "Voir en grand",
+      "role": "galerie",
+      "description": "Visionneuse des réalisations : agrandissement, flèches et Échap",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    }
+  }
+}
