@@ -1,0 +1,775 @@
+{
+  "maquette": {
+    "client": "cabinet de psychothérapie et de sophrologie à Aubignan, Vaucluse (Sandra Barba) : adultes, couples, familles, victimes de violences, au cabinet, en visio ou à domicile",
+    "activite": [
+      "santé",
+      "bien-être"
+    ],
+    "concept": [
+      "autre"
+    ],
+    "ambiance": [
+      "doux",
+      "chaleureux",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--olive"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Respirer » : lin, argile, olive nuit et laurier-rose (le rose du logo), Fraunces avec une ligne en italique rose ; seconde maquette pour la cliente, refaite avec la skill v11.1 après une première jugée « pas harmonieuse »",
+      "intro : un cercle de lumière inspire, souffle, puis devient le portrait de Sandra en ouverture ; le souffle ne revient qu'une fois, dans l'exercice de la page Sophrologie",
+      "pages intérieures au niveau de l'accueil : même lin, mêmes cartes, même appel olive « Et si vous commenciez par en parler ? », photos du cabinet en arche",
+      "page Violences : bande olive où une lumière douce grandit pendant qu'on lit, numéros d'aide, bouton « Quitter vite » qui remplace la page",
+      "rendez-vous par étapes prérempli par l'adresse (?seance=couple), mots qui s'éclairent au défilement, visionneuse des diplômes avec liens directs"
+    ],
+    "reserves": [
+      "plusieurs photos du cabinet générées",
+      "peu d'effets marquants : la qualité vient de la douceur et de l'harmonie"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "section-fixée",
+      "parallaxe",
+      "masque",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le cercle de lumière qui respire et devient le portrait",
+      "fil": "la respiration, 4 s puis 6 s"
+    },
+    "metier": "psychothérapeute et sophrologue"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de moins de 3 s : le cercle de lumière inspire, souffle, puis glisse jusqu'au portrait de l'ouverture ; voile olive entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : nom et métiers, psychothérapie, sophrologie, violences, rendez-vous, bouton rose « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur lin, liens en Fraunces",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "La vie est un combat.Ne le vivezplus seul·e.",
+      "role": "ouverture",
+      "description": "Ouverture : « La vie est un combat. Ne le vivez plus seul·e. » avec la dernière ligne en italique rose, boutons rendez-vous et téléphone, prix d'une séance ; portrait de Sandra dans le cercle de lumière de l'intro, entouré d'un fin anneau",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "cercle de lumière de l'intro qui devient le portrait"
+      ]
+    },
+    "ce-qui-vous-amene": {
+      "titre": "Ce qui vous amène",
+      "role": "manifeste",
+      "description": "« Ce qui vous amène » : situations en grand Fraunces (un deuil, un burn-out, des nuits trop courtes…) dont chaque mot s'éclaire au défilement et reste éclairé ; photo de voilage en arche",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnements": {
+      "titre": "Besoin d'aide, de souffler, ou de vous parler ?",
+      "role": "services",
+      "description": "« Besoin d'aide, de souffler, ou de vous parler ? » : trois cartes photo du cabinet (psychothérapie, sophrologie, violences) avec lien",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sandra": {
+      "titre": "Je suis comme vous. Une femme.",
+      "role": "équipe",
+      "description": "« Je suis comme vous. Une femme. » : portrait lumineux, parcours, citation en italique rose, encart « Plus jamais seule », formations et diplômes qui s'ouvrent dans la visionneuse",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences": {
+      "titre": "Victimes de violences, dans l'enfance ou dans le couple.",
+      "role": "offre",
+      "description": "« Victimes de violences, dans l'enfance ou dans le couple. » sur olive : formes de violence en italique, chiffres d'aide (17, 3919), une lumière douce grandit pendant qu'on lit",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "lumière douce qui grandit pendant la lecture"
+      ]
+    },
+    "deroule": {
+      "titre": "Un premier pas, à votre rythme.",
+      "role": "étapes",
+      "description": "« Un premier pas, à votre rythme. » : quatre étapes numérotées reliées par un fil, photo du bureau",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Elles en parlent",
+      "role": "témoignages",
+      "description": "« Elles en parlent » : trois avis en cartes argile, grands guillemets roses",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet": {
+      "titre": "Un cabinet au calme, à Aubignan.",
+      "role": "decor",
+      "description": "« Un cabinet au calme, à Aubignan. » épinglé : le mot « Aubignan » en grand, photo du cabinet qui s'agrandit, « ou en visio » qui arrive en italique rose",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "fin": {
+      "titre": "Et si vous commenciez par en parler ?",
+      "role": "appel",
+      "description": "Appel final sur olive nuit « Et si vous commenciez par en parler ? » : portrait rond de Sandra, titre avec la seconde ligne en italique rose, boutons rendez-vous, téléphone et SMS",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Le site",
+      "role": "pied-de-page",
+      "description": "Pied de page olive nuit : nom et adresse du cabinet, le site, réseaux, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Respirez :cette page n'existe pas.",
+      "role": "page-404",
+      "description": "404 « Respirez : cette page n'existe pas. » : galets en équilibre et bol, boutons retour et rendez-vous",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-debut": {
+      "titre": "Affronter un moment difficile.Se reconstruire.Retrouver le sourire.",
+      "role": "ouverture",
+      "description": "« Affronter un moment difficile. Se reconstruire. Retrouver le sourire. » : trois lignes dont la dernière en italique rose, grand bandeau du cabinet",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-pourquoi": {
+      "titre": "Pour soi, ou pour un proche.",
+      "role": "services",
+      "description": "« Pour soi, ou pour un proche. » : quatre colonnes numérotées de situations",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-approche": {
+      "titre": "Parler, pour ne plus être seul·e.",
+      "role": "méthode",
+      "description": "« Parler, pour ne plus être seul·e. » : approche en points numérotés, citation, photo du cabinet en arche",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-couple": {
+      "titre": "Vivre en couple n'est pas toujours un long fleuve tranquille.",
+      "role": "offre",
+      "description": "« Vivre en couple n'est pas toujours un long fleuve tranquille. » : texte, durées et prix du coaching couple et famille, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-modes": {
+      "titre": "Au cabinet, en visio, ou chez vous.",
+      "role": "tarifs",
+      "description": "« Au cabinet, en visio, ou chez vous. » : trois modes en cartes avec durée, prix et bouton, photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "psychotherapie-fin": {
+      "titre": "Et si vous commenciez par en parler ?",
+      "role": "appel",
+      "description": "Appel final sur olive nuit « Et si vous commenciez par en parler ? » : portrait rond de Sandra, titre avec la seconde ligne en italique rose, boutons rendez-vous, téléphone et SMS",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-debut": {
+      "titre": "Une heurepour vous.",
+      "role": "ouverture",
+      "description": "« Une heure pour vous. » : « 65 € » en très grand italique rose, portrait de Sandra, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-seances": {
+      "titre": "Quatre façons de venir.",
+      "role": "tarifs",
+      "description": "« Quatre façons de venir. » : séances en lignes avec pictogramme, durée, prix et bouton « Choisir »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-demande": {
+      "titre": "Trois questions, puis Sandra vous recontacte.",
+      "role": "contact",
+      "description": "« Trois questions, puis Sandra vous recontacte. » : demande par étapes avec choix en cartes, séance préremplie par l'adresse (?seance=couple), photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "rendez-vous-contact": {
+      "titre": "Un appel, un SMS, un e-mail.",
+      "role": "contact",
+      "description": "« Un appel, un SMS, un e-mail. » : trois cartes de contact",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-acces": {
+      "titre": "89 rue du Portail Neuf, Aubignan.",
+      "role": "carte",
+      "description": "« 89 rue du Portail Neuf, Aubignan. » : photo du cabinet, accès et lien itinéraire",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-questions": {
+      "titre": "Avant de vous lancer",
+      "role": "faq",
+      "description": "« Avant de vous lancer » : questions dépliables sans à-coup",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-fin": {
+      "titre": "Et si vous commenciez par en parler ?",
+      "role": "appel",
+      "description": "Appel final sur olive nuit « Et si vous commenciez par en parler ? » : portrait rond de Sandra, titre avec la seconde ligne en italique rose, boutons rendez-vous, téléphone et SMS",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-debut": {
+      "titre": "Il n'y a pas de magie :retrouvez-vous.",
+      "role": "ouverture",
+      "description": "« Il n'y a pas de magie : retrouvez-vous. » : titre avec la fin en italique rose, photo en arche",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-methode": {
+      "titre": "Trois principes, une seule attention : vous.",
+      "role": "méthode",
+      "description": "« Trois principes, une seule attention : vous. » : principes et photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-respirer": {
+      "titre": "Respirez avec le cercle.",
+      "role": "outil-interactif",
+      "description": "« Respirez avec le cercle. » : le cercle de l'intro revient une seule fois ; il grandit 4 s (inspirez) puis se resserre 6 s (soufflez), pause par le bouton",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "exercice de respiration avec le cercle de l'intro"
+      ]
+    },
+    "sophrologie-pour-qui": {
+      "titre": "À tout âge, et pour la vie de tous les jours.",
+      "role": "services",
+      "description": "« À tout âge, et pour la vie de tous les jours. » : situations en colonnes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-histoire": {
+      "titre": "L'étude de la conscience en équilibre.",
+      "role": "manifeste",
+      "description": "« L'étude de la conscience en équilibre. » : histoire de la sophrologie",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-seance": {
+      "titre": "C'est vous qui décidez du rythme.",
+      "role": "étapes",
+      "description": "« C'est vous qui décidez du rythme. » : déroulé d'une séance et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-fin": {
+      "titre": "Et si vous commenciez par en parler ?",
+      "role": "appel",
+      "description": "Appel final sur olive nuit « Et si vous commenciez par en parler ? » : portrait rond de Sandra, titre avec la seconde ligne en italique rose, boutons rendez-vous, téléphone et SMS",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-debut": {
+      "titre": "Mettre des mots.Sortir du silence.",
+      "role": "ouverture",
+      "description": "« Mettre des mots. Sortir du silence. » : titre en deux lignes, bouton « Quitter vite » toujours visible qui remplace la page par Google",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouton « Quitter vite » pour les victimes"
+      ]
+    },
+    "violences-aide": {
+      "titre": "Vous n'êtes pas seule. Ces numéros répondent.",
+      "role": "contact",
+      "description": "« Vous n'êtes pas seule. Ces numéros répondent. » : numéros d'aide en grandes cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-secret": {
+      "titre": "Le secret est bien caché au fond du placard.",
+      "role": "manifeste",
+      "description": "« Le secret est bien caché au fond du placard. » : texte sur olive, lumière qui grandit",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-culpabilite": {
+      "titre": "Coupable ? Mais de quoi ?",
+      "role": "manifeste",
+      "description": "« Coupable ? Mais de quoi ? » : texte court en Fraunces",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-formes": {
+      "titre": "Qu'est-ce que la violence ?",
+      "role": "services",
+      "description": "« Qu'est-ce que la violence ? » : formes de violence et liens utiles",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-engagement": {
+      "titre": "Aussi en dehors du cabinet.",
+      "role": "preuves",
+      "description": "« Aussi en dehors du cabinet. » : engagement associatif et article de presse dans la visionneuse",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "violences-fin": {
+      "titre": "Vous pouvez commencer par un simple SMS.",
+      "role": "appel",
+      "description": "« Vous pouvez commencer par un simple SMS. » : appel final olive adapté aux victimes, portrait et boutons",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
