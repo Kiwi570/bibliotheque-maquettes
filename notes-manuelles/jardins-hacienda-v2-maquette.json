@@ -1,0 +1,721 @@
+{
+  "maquette": {
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
+    "activite": [
+      "restauration",
+      "tourisme"
+    ],
+    "concept": [
+      "carnet",
+      "vitrine"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "clair",
+      "végétal"
+    ],
+    "palette": {
+      "fond": "--chaux",
+      "texte": "--encre",
+      "accent": "--cobalt",
+      "secondaire": "--ocre"
+    },
+    "polices": {
+      "titres": "Gloock",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Les persiennes » : chaux, volets cobalt, soleil ocre, palme et braise le soir ; rais de lumière à travers des persiennes qui glissent et tournent au fil du défilement",
+      "ouverture : des persiennes cobalt qu'on ouvre du doigt ou à la souris, avec élan, sur la vraie piscine ; le H du logo glisse jusqu'à elles à la fin de l'intro",
+      "accueil construit comme une journée (12 h la cuisine, 14 h 30 le jardin, le dimanche, 19 h la cheminée) : le soir tombe sur toute la page et l'en-tête suit l'heure de la section",
+      "plongée dans la piscine par une arche, braises de la cheminée, guirlande de fanions de papier découpé, billets datés avec compte à rebours",
+      "carte en volets qui se déplient, assiettes à toucher (module), réservation de table où le carton se plie à votre nom (module), confettis quand la demande de fête part"
+    ],
+    "reserves": [
+      "« à compléter » encore visible sur trois pages (mentions et réservation)",
+      "plusieurs photos générées par Grok ; horaires et tarifs des réceptions absents du site actuel"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "parallaxe",
+      "masque",
+      "section-fixée",
+      "canvas-2d",
+      "révélation-texte",
+      "fil-conducteur",
+      "flip",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "réservation-simulee",
+      "formulaire-par-étapes",
+      "filtres",
+      "carte-interactive",
+      "mode-calme"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "journee",
+    "grille": {
+      "objet": "les persiennes cobalt qu'on ouvre sur la piscine",
+      "fil": "les rais de lumière des persiennes, du midi au soir"
+    },
+    "metier": "restaurant et lieu de réception"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de moins de 3 s : le H du logo glisse jusqu'aux persiennes de l'ouverture, qui s'ouvrent lame par lame ; voile chaux entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête chaux : logo H rouge, la carte, le lieu, réceptions, contact, bouton cobalt « Réserver » ; il passe au sable puis à la nuit selon l'heure de la section",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, liens en Gloock",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Les Jardins de l'Hacienda",
+      "role": "ouverture",
+      "description": "Ouverture : « Les Jardins de l'Hacienda » en grand Gloock cobalt sur un mur chaulé strié de lumière ; à droite, des persiennes cobalt qu'on ouvre du doigt ou à la souris, avec élan et petite vague des lames, sur la vraie piscine ; boutons réserver et carte, prochain rendez-vous daté",
+      "animations": [
+        "ouverture-orchestrée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Au doigt, seul le glissement horizontal ouvre les lames"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "persiennes qu'on ouvre à la main sur la piscine"
+      ]
+    },
+    "cuisine": {
+      "titre": "Régis Clauss, l'âme de notre cuisine",
+      "role": "offre",
+      "description": "« 12 h. Régis Clauss, l'âme de notre cuisine » : l'heure en grand, portrait du chef, rubriques de la carte avec fourchettes de prix et nombre de propositions, rais de lumière qui tournent au défilement",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement",
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jardin": {
+      "titre": "Des palmiers, des cocktails, des sourires",
+      "role": "offre",
+      "description": "« 14 h 30. Des palmiers, des cocktails, des sourires » sur sable : jardin en plans (piscine, arche, palmes) qui prend de la profondeur au défilement et à la souris, journées festives et horaires de baignade",
+      "animations": [
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "jardin en plans qui prend de la profondeur"
+      ]
+    },
+    "plongee": {
+      "titre": "Plongée dans la piscine",
+      "role": "decor",
+      "description": "« Plongez. » épinglé : une arche s'agrandit sur la piscine jusqu'au plein écran, la photo plonge sous l'eau",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "plongée dans la piscine par une arche"
+      ]
+    },
+    "grand-buffet": {
+      "titre": "Le brasero s’allume",
+      "role": "offre",
+      "description": "« Dimanche. Le brasero s'allume » sur blond : Grand Buffet avec DJ set, viande à la broche, horaires, 50 € par personne, photos qui se chevauchent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cheminee": {
+      "titre": "Au creux de la cheminée",
+      "role": "offre",
+      "description": "« 19 h. Au creux de la cheminée » sur nuit : braises en canvas qui montent, photos de plats au coin du feu, bouton réserver pour le soir ; le soir tombe sur la page",
+      "animations": [
+        "canvas-2d",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "braises de la cheminée en canvas"
+      ]
+    },
+    "en-ce-moment": {
+      "titre": "Les fêtes à l'Hacienda",
+      "role": "agenda",
+      "description": "« Les fêtes à l'Hacienda » sur nuit : billets datés (Noël, Saint-Sylvestre, à emporter) avec compte à rebours à la date du lieu, menus dépliables, prix et bouton réserver",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "billets datés avec compte à rebours"
+      ]
+    },
+    "grands-jours": {
+      "titre": "Un instant magique avec vos proches",
+      "role": "offre",
+      "description": "« Un instant magique avec vos proches » épinglé sur nuit : guirlande de fanions en papier découpé qui se balance, les mots (mariage, baptême, anniversaire, pot de départ) s'écartent et s'effacent pendant que la photo en arche s'ouvre",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "guirlande de fanions qui se balance"
+      ]
+    },
+    "venir": {
+      "titre": "En pleine nature, à 15 km de Metz",
+      "role": "carte",
+      "description": "« En pleine nature, à 15 km de Metz » : carte dessinée où la route se trace de Metz à Moineville, adresse, téléphone et boutons",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page cobalt : logo, adresse, téléphone, sommaire, accès et contact, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "La table est vide",
+      "role": "page-404",
+      "description": "404 « La table est vide » : chaise et table vide devant un volet cobalt, rais de lumière, bouton retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "06 18 21 28 10",
+      "role": "ouverture",
+      "description": "Contact : le numéro « 06 18 21 28 10 » en très grand Gloock, adresse, boutons ; la vraie enseigne du lieu sous un ciel bleu",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-acces": {
+      "titre": "Le chemin",
+      "role": "carte",
+      "description": "« Le chemin » : accès depuis Metz, Nancy et le Luxembourg, carte dessinée où la route se trace, fresque du H",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-infos": {
+      "titre": "Bon à savoir",
+      "role": "faq",
+      "description": "« Bon à savoir » : cinq cartes d'informations pratiques (journées festives, bar seul, piscine, Grand Buffet, réservation) et photo du kiosque",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Écrivez-nous",
+      "role": "contact",
+      "description": "« Écrivez-nous » : formulaire (objet, date souhaitée, nombre de personnes, message) et photo en arche",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "la-carte-debut": {
+      "titre": "La carte",
+      "role": "ouverture",
+      "description": "« La carte » en cobalt encadré au pochoir : trois photos d'assiettes (entrée, plat, dessert) avec prix, menu du jour",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-carte-carte-detail": {
+      "titre": "Entrées",
+      "role": "produits",
+      "description": "La carte épinglée : rubriques en volets qui se déplient (entrées, plats, à partager, desserts), onglets qui recomposent la carte sur fond de persiennes",
+      "animations": [
+        "section-fixée",
+        "flip"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "la-carte-assiettes": {
+      "titre": "Dans l'assiette",
+      "role": "galerie",
+      "description": "« Dans l'assiette » : assiettes en arches qu'on touche, elles pivotent et se soulèvent (module « assiette qui se dresse »)",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "assiette-qui-se-dresse",
+      "pieges": []
+    },
+    "la-carte-chef": {
+      "titre": "Tradition et créativité",
+      "role": "équipe",
+      "description": "« Tradition et créativité » : portrait du chef en médaillon et texte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-carte-reserver-fin": {
+      "titre": "Une table vous attend",
+      "role": "appel",
+      "description": "« Une table vous attend » : photo en arche, boutons réserver et le lieu",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-lieu-debut": {
+      "titre": "Le lieu",
+      "role": "ouverture",
+      "description": "« Le lieu » sur palme : la lumière glisse à travers les lettres du titre, palmes en ombre, distance de Metz et bouton",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "lumière qui glisse à travers les lettres du titre"
+      ]
+    },
+    "le-lieu-entrer": {
+      "titre": "La salle",
+      "role": "decor",
+      "description": "« La salle » épinglée : on entre dans la salle par une arche qui s'agrandit, légendes qui se relaient",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "le-lieu-cheminee": {
+      "titre": "La cheminée",
+      "role": "galerie",
+      "description": "« La cheminée » sur nuit : photos du coin du feu et texte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-lieu-terrasse": {
+      "titre": "La terrasse",
+      "role": "galerie",
+      "description": "« La terrasse » : grande photo de la terrasse dressée et vignette du kiosque",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-lieu-piscine": {
+      "titre": "La piscine",
+      "role": "galerie",
+      "description": "« La piscine » : bandeau d'horaires et trois photos de la piscine sous les palmiers",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-lieu-fresque": {
+      "titre": "Bienvenue à la maison",
+      "role": "appel",
+      "description": "« Bienvenue à la maison » : la fresque du H, boutons réserver et contact",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "receptions-debut": {
+      "titre": "Les grands jours",
+      "role": "ouverture",
+      "description": "« Les grands jours » sur nuit : guirlande de fanions, titre ocre, photo de mariés en arche, bouton demander une date",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "receptions-fetes": {
+      "titre": "Ce que l'on fête ici",
+      "role": "services",
+      "description": "« Ce que l'on fête ici » : cinq cartes photo (mariage, baptême, anniversaire, pot de départ, pool party) ; le lien choisit le sujet dans la demande",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "receptions-souvenirs": {
+      "titre": "Souvenirs de fêtes",
+      "role": "galerie",
+      "description": "« Souvenirs de fêtes » : mosaïque de photos de réceptions qui glissent à des vitesses différentes",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "receptions-demande": {
+      "titre": "Parlons de votre fête",
+      "role": "contact",
+      "description": "« Parlons de votre fête » : demande (type de fête, date, invités, message) ; confettis quand la demande part",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "confettis à l'envoi de la demande"
+      ]
+    },
+    "reserver-debut": {
+      "titre": "Réserver",
+      "role": "ouverture",
+      "description": "« Réserver » : téléphone, Grand Buffet et prochain rendez-vous, carton de table « Votre nom » posé de biais",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-formulaire": {
+      "titre": "Votre table",
+      "role": "outil-interactif",
+      "description": "« Votre table » : jour en tuiles, service midi ou soir, créneaux, couverts, salle ou terrasse ; récapitulatif épinglé, et le carton de table se plie à votre nom et se pose (module « réservation de table »)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "reservation-de-table",
+      "pieges": [
+        "Réservation simulée, créneaux d'exemple"
+      ]
+    }
+  }
+}

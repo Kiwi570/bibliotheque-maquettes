@@ -1,0 +1,47 @@
+{
+ "id": "jardins-hacienda-v2-maquette/reserver-formulaire",
+ "maquette": "jardins-hacienda-v2-maquette",
+ "page": "reserver",
+ "titre": "Votre table",
+ "role": "outil-interactif",
+ "description": "« Votre table » : jour en tuiles, service midi ou soir, créneaux, couverts, salle ou terrasse ; récapitulatif épinglé, et le carton de table se plie à votre nom et se pose (module « réservation de table »)",
+ "animations": [
+  "section-fixée"
+ ],
+ "interactions": [
+  "réservation-simulee",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "reservation-de-table",
+ "modules": [
+  "reservation-de-table"
+ ],
+ "code": {
+  "html": "reserver.html:144-218",
+  "css": "assets/css/modules.css:77-107,115-125,131-141,160-168 ; assets/css/site.css:462-464,575-579,590,598",
+  "js": "assets/js/site.js:298-322 ; assets/js/modules/reservation-de-table/module.js:27,35-37,84,101,108,124,131,134,152,159,164,169-170,183,202,250-251"
+ },
+ "medias": {
+  "capture": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-m390.jpg",
+  "video": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-p720.mp4"
+ },
+ "pieges": [
+  "Réservation simulée, créneaux d'exemple"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1842,
+  "hauteur_m390": 2620,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [],
+ "impact": "calme"
+}

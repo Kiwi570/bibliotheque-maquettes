@@ -189,26 +189,26 @@
     "en_ligne": "https://tableauxenfant-maquette.vercel.app"
    },
    {
-    "id": "games42-maquette/trouver",
-    "maquette": "games42-maquette",
-    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "id": "jardins-hacienda-v2-maquette/reserver-formulaire",
+    "maquette": "jardins-hacienda-v2-maquette",
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
     "note_section": 5,
     "note_maquette": 90,
-    "titre": "Cadenas des missions",
-    "description": "Trois molettes de cadenas (équipe, âge, nombre de joueurs) à faire tourner au doigt, à la molette ou au clavier ; le cadenas s'ouvre sur les missions adaptées avec leur prix calculé.",
+    "titre": "Votre table",
+    "description": "« Votre table » : jour en tuiles, service midi ou soir, créneaux, couverts, salle ou terrasse ; récapitulatif épinglé, et le carton de table se plie à votre nom et se pose (module « réservation de table »)",
     "animations": [
-     "apparition-au-défilement"
+     "section-fixée"
     ],
     "interactions": [
-     "calculateur",
-     "configurateur"
+     "réservation-simulee",
+     "formulaire-par-étapes"
     ],
-    "module": "cadenas-a-molettes",
-    "fiche": "sections/games42-maquette/trouver.json",
-    "capture": "medias/games42-maquette/trouver-p1440.jpg",
-    "capture_m390": "medias/games42-maquette/trouver-m390.jpg",
-    "video": "medias/games42-maquette/trouver-p720.mp4",
-    "en_ligne": "https://games42-maquette.vercel.app"
+    "module": "reservation-de-table",
+    "fiche": "sections/jardins-hacienda-v2-maquette/reserver-formulaire.json",
+    "capture": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-m390.jpg",
+    "video": "medias/jardins-hacienda-v2-maquette/reserver-formulaire-p720.mp4",
+    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app/reserver"
    }
   ],
   "étapes": [
@@ -370,6 +370,28 @@
     "en_ligne": "https://enluminure-marienuel-maquette.vercel.app"
    },
    {
+    "id": "jardins-hacienda-v2-maquette/la-carte-assiettes",
+    "maquette": "jardins-hacienda-v2-maquette",
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Dans l'assiette",
+    "description": "« Dans l'assiette » : assiettes en arches qu'on touche, elles pivotent et se soulèvent (module « assiette qui se dresse »)",
+    "animations": [
+     "parallaxe",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": "assiette-qui-se-dresse",
+    "fiche": "sections/jardins-hacienda-v2-maquette/la-carte-assiettes.json",
+    "capture": "medias/jardins-hacienda-v2-maquette/la-carte-assiettes-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-v2-maquette/la-carte-assiettes-m390.jpg",
+    "video": "medias/jardins-hacienda-v2-maquette/la-carte-assiettes-p720.mp4",
+    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app/la-carte"
+   },
+   {
     "id": "games42-maquette/missions",
     "maquette": "games42-maquette",
     "client": "escape game familial (enfants, familles, adultes, groupes)",
@@ -391,29 +413,6 @@
     "capture_m390": "medias/games42-maquette/missions-m390.jpg",
     "video": "medias/games42-maquette/missions-p720.mp4",
     "en_ligne": "https://games42-maquette.vercel.app"
-   },
-   {
-    "id": "surffm-maquette/emissions",
-    "maquette": "surffm-maquette",
-    "client": "radio associative de glisse",
-    "note_section": 5,
-    "note_maquette": 90,
-    "titre": "Galerie horizontale des émissions",
-    "description": "Section épinglée : le titre reste en haut et une piste de cartes photo défile à l'horizontale avec la molette, chaque image glissant légèrement dans son cadre ; la dernière carte renvoie à la grille. Sous 900 px, défilement horizontal natif.",
-    "animations": [
-     "section-fixée",
-     "galerie-horizontale",
-     "parallaxe"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "galerie-horizontale-epinglee",
-    "fiche": "sections/surffm-maquette/emissions.json",
-    "capture": "medias/surffm-maquette/emissions-p1440.jpg",
-    "capture_m390": "medias/surffm-maquette/emissions-m390.jpg",
-    "video": "medias/surffm-maquette/emissions-p720.mp4",
-    "en_ligne": "https://surffm-maquette.vercel.app"
    }
   ],
   "produits": [
@@ -799,6 +798,29 @@
     "en_ligne": "https://nava-maquette.vercel.app"
    },
    {
+    "id": "jardins-hacienda-v2-maquette/grands-jours",
+    "maquette": "jardins-hacienda-v2-maquette",
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Un instant magique avec vos proches",
+    "description": "« Un instant magique avec vos proches » épinglé sur nuit : guirlande de fanions en papier découpé qui se balance, les mots (mariage, baptême, anniversaire, pot de départ) s'écartent et s'effacent pendant que la photo en arche s'ouvre",
+    "animations": [
+     "section-fixée",
+     "masque",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/jardins-hacienda-v2-maquette/grands-jours.json",
+    "capture": "medias/jardins-hacienda-v2-maquette/grands-jours-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-v2-maquette/grands-jours-m390.jpg",
+    "video": "medias/jardins-hacienda-v2-maquette/grands-jours-p720.mp4",
+    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app"
+   },
+   {
     "id": "nelis-maquette/puissances",
     "maquette": "nelis-maquette",
     "client": "froid industriel (vente, location et service de groupes frigorifiques)",
@@ -820,28 +842,6 @@
     "capture_m390": "medias/nelis-maquette/puissances-m390.jpg",
     "video": "medias/nelis-maquette/puissances-p720.mp4",
     "en_ligne": "https://nelis-maquette.vercel.app"
-   },
-   {
-    "id": "jardins-hacienda-2-maquette/les-fetes-saint-sylvestre",
-    "maquette": "jardins-hacienda-2-maquette",
-    "client": "restaurant, piscine et réceptions en Moselle (Moineville)",
-    "note_section": 5,
-    "note_maquette": 86,
-    "titre": "Le menu de la Saint-Sylvestre",
-    "description": "Nuit dorée : paillettes qui scintillent, la lueur de la salle prend la couleur du vin du plat choisi (propriété @property animée), le verre posé sur un reflet de table ; prix en médailles, vinyle du DJ qui tourne ; plats numérotés en chiffres romains dorés, le plat choisi éclairé de la couleur de son vin ; titre en dorure.",
-    "animations": [
-     "morphing",
-     "révélation-texte"
-    ],
-    "interactions": [
-     "schema-interactif"
-    ],
-    "module": "accords-mets-et-vins",
-    "fiche": "sections/jardins-hacienda-2-maquette/les-fetes-saint-sylvestre.json",
-    "capture": "medias/jardins-hacienda-2-maquette/les-fetes-saint-sylvestre-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/les-fetes-saint-sylvestre-m390.jpg",
-    "video": "medias/jardins-hacienda-2-maquette/les-fetes-saint-sylvestre-p720.mp4",
-    "en_ligne": "https://jardins-hacienda-2-maquette.vercel.app/les-fetes"
    }
   ],
   "calculateur": [
@@ -1469,6 +1469,28 @@
   ],
   "decor": [
    {
+    "id": "jardins-hacienda-v2-maquette/plongee",
+    "maquette": "jardins-hacienda-v2-maquette",
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Plongée dans la piscine",
+    "description": "« Plongez. » épinglé : une arche s'agrandit sur la piscine jusqu'au plein écran, la photo plonge sous l'eau",
+    "animations": [
+     "section-fixée",
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/jardins-hacienda-v2-maquette/plongee.json",
+    "capture": "medias/jardins-hacienda-v2-maquette/plongee-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-v2-maquette/plongee-m390.jpg",
+    "video": "medias/jardins-hacienda-v2-maquette/plongee-p720.mp4",
+    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app"
+   },
+   {
     "id": "games42-maquette/portal",
     "maquette": "games42-maquette",
     "client": "escape game familial (enfants, familles, adultes, groupes)",
@@ -1510,29 +1532,6 @@
     "capture_m390": null,
     "video": null,
     "en_ligne": "https://surffm-maquette.vercel.app"
-   },
-   {
-    "id": "annemaelle-mereveillance-maquette/espace",
-    "maquette": "annemaelle-mereveillance-maquette",
-    "client": "accompagnement émotionnel sur un mois, communication animale et ateliers relationnels dans les écoles (Anne-Maëlle Le Roux, Andouillé, Mayenne)",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "C'est dans cet espace paisible en toi que je t'emmène",
-    "description": "« Cet espace paisible en toi » épinglé : photo d'étang dans la brume qui s'agrandit pendant que les deux mots s'écartent et s'effacent avant d'atteindre les bords",
-    "animations": [
-     "section-fixée",
-     "masque",
-     "révélation-texte"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/annemaelle-mereveillance-maquette/espace.json",
-    "capture": "medias/annemaelle-mereveillance-maquette/espace-p1440.jpg",
-    "capture_m390": "medias/annemaelle-mereveillance-maquette/espace-m390.jpg",
-    "video": "medias/annemaelle-mereveillance-maquette/espace-p720.mp4",
-    "en_ligne": "https://annemaelle-mereveillance-maquette.vercel.app"
    }
   ],
   "témoignages": [
