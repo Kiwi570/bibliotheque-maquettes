@@ -1,0 +1,701 @@
+{
+  "maquette": {
+    "client": "artiste peintre (Sevb, Romorantin-Lanthenay) : toiles originales et toiles sur mesure au prénom de l'enfant, affiches, coussins et petits cadeaux en boutique",
+    "activite": [
+      "artisanat",
+      "commerce",
+      "culture"
+    ],
+    "concept": [
+      "atelier",
+      "galerie"
+    ],
+    "ambiance": [
+      "doux",
+      "chaleureux",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--creme",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--sombre"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « L'atelier tendre » : crème, rose poudré, encre verte du logo et framboise, Fraunces avec un mot en italique framboise par titre ; les vraies toiles de Sevb partout",
+      "ouverture : une vraie toile accrochée par deux fils sur un mur à pois, révélée par trois coups de pinceau, qui se balance doucement ensuite",
+      "« Voyez-la au mur » : la toile descend se poser à l'échelle sur la photo d'une chambre, on change la toile et la couleur du mur",
+      "composeur de toile sur mesure : fond, couleur, univers et prénom, aperçu qui se met à jour ; sur l'accueil, la toile collée aux quatre étapes change de fond à chaque étape",
+      "boutique de 59 créations avec filtres, recherche, fiche en tiroir et panier simulé ; cadres suspendus qui descendent et se balancent au toucher en fin de page"
+    ],
+    "reserves": [
+      "quelques fonds d'ambiance générés (chambres, atelier) à remplacer par des photos réelles",
+      "frais de livraison et dimensions des grands formats à trancher avec la cliente"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "masque",
+      "section-fixée",
+      "parallaxe",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement",
+      "galerie-horizontale"
+    ],
+    "interactions": [
+      "configurateur",
+      "filtres",
+      "recherche",
+      "panier-simule",
+      "formulaire-par-étapes",
+      "saisie-personnalisee"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la toile accrochée qui se balance, qu'on voit au mur d'une chambre",
+      "fil": "les cadres suspendus à deux fils"
+    },
+    "metier": "artiste peintre de tableaux pour enfants"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de 2,3 s : le cadre accroché du logo et quatre échantillons de fond s'ouvrent en éventail, puis le cadre glisse vers la toile de la page ; même voile entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête crème : logo Tableaux Enfant, boutique, sur mesure, l'artiste, contact, panier avec pastille, bouton framboise « Créer son tableau »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, liens en Fraunces et bouton framboise",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Petits héros,grandes histoires",
+      "role": "ouverture",
+      "description": "Ouverture : « Petits héros, grandes histoires » avec le dernier mot en italique framboise, texte et boutons ; à droite une vraie toile de Sevb accrochée par deux fils sur un mur rose à pois, révélée par trois coups de pinceau puis qui se balance doucement",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toile révélée par trois coups de pinceau, accrochée par deux fils"
+      ]
+    },
+    "offrir": {
+      "titre": "Trois façons d'offrir une histoire",
+      "role": "offre",
+      "description": "« Trois façons d'offrir une histoire » : trois cartes photo (toile originale 145 €, toile sur mesure 185 €, affiche à son prénom 20 €), la carte du milieu en vert foncé",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "toiles": {
+      "titre": "Les toiles originales",
+      "role": "produits",
+      "description": "« Les toiles originales » : rangée de grandes toiles qui défile, bouton favori et prix sur chacune, flèches",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "mur": {
+      "titre": "Voyez-la au mur",
+      "role": "outil-interactif",
+      "description": "« Voyez-la au mur » : photo d'une chambre ; la toile de 50 cm descend se poser au mur à la bonne échelle et se balance ; choix de la toile en vignettes et de la couleur du mur (rose poudré, bleu ciel, vert sauge)",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toile posée à l'échelle sur la photo d'une chambre, mur qui change de couleur"
+      ]
+    },
+    "sur-mesure": {
+      "titre": "Une toile qui raconte son histoire",
+      "role": "étapes",
+      "description": "« Une toile qui raconte son histoire » : quatre étapes numérotées du sur-mesure ; la toile reste collée à côté et son fond change à chaque étape lue",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, la toile passe sous les étapes et change de fond toute seule"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "sevb": {
+      "titre": "L'univers tendre et poétique de Sevb",
+      "role": "équipe",
+      "description": "« L'univers tendre et poétique de Sevb » sur vert profond : photo de l'artiste dans son atelier, citation en italique, « 20 ans de peinture » en grand chiffre",
+      "animations": [
+        "révélation-image",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "plus": {
+      "titre": "Affiches, coussins et petits cadeaux",
+      "role": "produits",
+      "description": "« Affiches, coussins et petits cadeaux » : bandeau de mots en italique qui défile (échelles porte-photo, cartes postales…), photo de chambre et rangée de produits",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Ils se sont reconnus",
+      "role": "témoignages",
+      "description": "Avis de parents sur des notes punaisées de travers, l'une sur fond vert foncé, guillemets en framboise",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Racontez-moi son histoire",
+      "role": "appel",
+      "description": "Appel final vert profond « Racontez-moi son histoire » : boutons créer sa toile et écrire à Sevb, rangée de cadres suspendus qui descendent se poser et se balancent, seuls et au toucher",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "cadres suspendus à deux fils qui se balancent au toucher"
+      ]
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page vert profond : logo, sommaire, adresse de l'atelier, informations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette toile s'est décrochée",
+      "role": "page-404",
+      "description": "404 « Cette toile s'est décrochée » : chevalet et toile vierge dans la pénombre, boutons vers l'accueil et la boutique",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-debut": {
+      "titre": "Sevb,peintre des petits héros",
+      "role": "ouverture",
+      "description": "« Sevb, peintre des petits héros » : portrait de Sevb dans un cadre en arche, signature dessinée qui se trace, texte et bouton",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-histoire": {
+      "titre": "Une émotion souvenir",
+      "role": "manifeste",
+      "description": "« Une émotion souvenir » : son histoire en deux colonnes, deux cadres suspendus, citation « Rien n'est standardisé. » en framboise",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-atelier": {
+      "titre": "Dans l'atelier",
+      "role": "galerie",
+      "description": "« Dans l'atelier » : photo de pinceaux et petites toiles en rangée",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-inspirations": {
+      "titre": "Ce qui l'inspire",
+      "role": "galerie",
+      "description": "« Ce qui l'inspire » sur vert profond : trois toiles (l'enfance, la nature, le quotidien de maman) avec légendes",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-avis": {
+      "titre": "Ce qu'en disent les parents",
+      "role": "témoignages",
+      "description": "Avis de parents sur des notes punaisées de travers, l'une sur fond vert foncé, guillemets en framboise",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-fin": {
+      "titre": "Une toile pour votre petit héros ?",
+      "role": "appel",
+      "description": "Appel final vert profond « Racontez-moi son histoire » : boutons créer sa toile et écrire à Sevb, rangée de cadres suspendus qui descendent se poser et se balancent, seuls et au toucher",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "cadres suspendus à deux fils qui se balancent au toucher"
+      ]
+    },
+    "boutique-debut": {
+      "titre": "La boutique des petits héros",
+      "role": "ouverture",
+      "description": "« La boutique des petits héros » : titre avec mot en italique, bandeau des vraies créations qui défile en continu sous le titre",
+      "animations": [
+        "marquee",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-catalogue": {
+      "titre": "Toutes les créations",
+      "role": "produits",
+      "description": "« Toutes les créations » : 59 créations filtrables (catégorie, pour qui, budget), recherche et tri, cartes avec prix ; fiche en tiroir (?produit=…) avec choix du prénom, panier en tiroir et envol vers le panier",
+      "animations": [
+        "filtre-anime",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "panier-simule",
+        "saisie-personnalisee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Commande simulée"
+      ],
+      "particularites": [
+        "fiche produit en tiroir avec prénom gardé dans le panier"
+      ]
+    },
+    "boutique-fiche": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "tiroir de fiche produit sans rendu propre, décrit avec le catalogue"
+    },
+    "boutique-bon-a-savoir": {
+      "titre": "Bon à savoir",
+      "role": "preuves",
+      "description": "« Bon à savoir » : quatre cartes (emballage soigné, frais de port, délais, couleurs) avec pictogrammes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-fin": {
+      "titre": "Une idée plus personnelle ?",
+      "role": "appel",
+      "description": "« Une idée plus personnelle ? » sur vert profond : renvoi vers le sur-mesure, photo de chambre avec une toile",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Écrivez à Sevb",
+      "role": "ouverture",
+      "description": "« Écrivez à Sevb » : e-mail en grand framboise, bouton, photo du papier et des pinceaux près de la fenêtre",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-message": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire (sujet repris de l'adresse), horaires de l'atelier, petite carte du Loir-et-Cher, livraison et retours",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes",
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "sur-mesure-debut": {
+      "titre": "Sa toile,son histoire",
+      "role": "ouverture",
+      "description": "« Sa toile, son histoire » : photo pleine page de la toile vierge sur le chevalet, « 185 € » en très grand",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-inclus": {
+      "titre": "Ce qui est compris",
+      "role": "preuves",
+      "description": "« Ce qui est compris » : liste de ce que comprend la toile sur mesure (format, prénom, échanges, emballage)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-composer": {
+      "titre": "Composez sa toile",
+      "role": "outil-interactif",
+      "description": "« Composez sa toile » : fond, couleur, univers et prénom saisi ; aperçu de la toile épinglé qui se met à jour, demande simulée envoyée à Sevb",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur",
+        "saisie-personnalisee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "aperçu de la toile avec le prénom de l'enfant"
+      ]
+    },
+    "sur-mesure-etapes": {
+      "titre": "Quatre étapes, de l'idée à la chambre",
+      "role": "étapes",
+      "description": "« Quatre étapes, de l'idée à la chambre » : étapes numérotées avec photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-realisations": {
+      "titre": "Ils ont déjà leur toile",
+      "role": "galerie",
+      "description": "« Ils ont déjà leur toile » : prénoms déjà peints en vignettes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-faq": {
+      "titre": "Vos questions",
+      "role": "faq",
+      "description": "« Vos questions » : six questions dépliables sur le sur-mesure",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sur-mesure-fin": {
+      "titre": "On commence par un e-mail ?",
+      "role": "appel",
+      "description": "« On commence par un e-mail ? » : appel final vers le contact, photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

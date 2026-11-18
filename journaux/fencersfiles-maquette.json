@@ -1,0 +1,172 @@
+{
+ "projet": "fencersfiles-maquette",
+ "client": "Fencer’s Files",
+ "siteActuel": "https://fencersfiles.blogspot.com",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "dossiers",
+    "fiche dossier (76)",
+    "auteur et contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, favorites, bibliotheque, directions",
+     "debut": "2026-11-17T14:05:01+01:00",
+     "fin": "2026-11-17T14:25:37+01:00"
+    },
+    {
+     "etape": "plans et document Grok",
+     "debut": "2026-11-17T14:25:37+01:00",
+     "fin": "2026-11-17T14:27:49+01:00"
+    },
+    {
+     "etape": "reception du zip du site : 2 images seulement, script de rattrapage des vignettes",
+     "debut": "2026-11-17T18:25:14+01:00",
+     "fin": "2026-11-17T18:26:59+01:00"
+    },
+    {
+     "etape": "reception du second zip : planches, articles, decision couvertures PDF",
+     "debut": "2026-11-17T18:37:39+01:00",
+     "fin": "2026-11-17T18:43:00+01:00"
+    },
+    {
+     "etape": "controle des images Grok : 6 gardees, 5 a regenerer",
+     "debut": "2026-11-17T18:46:05+01:00",
+     "fin": "2026-11-17T18:48:15+01:00"
+    },
+    {
+     "etape": "zip des couvertures (1 sur 76) : second script ; donnees des 76 dossiers, socle, gabarits, pages, style et effets (premier jet de l accueil)",
+     "debut": "2026-11-17T19:00:57+01:00",
+     "fin": "2026-11-17T19:15:57+01:00"
+    },
+    {
+     "etape": "reception des 5 images Grok v2 et des 76 couvertures, production des images",
+     "debut": "2026-11-17T20:05:22+01:00",
+     "fin": "2026-11-17T20:14:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films, validé par l'utilisateur",
+     "debut": "2026-11-17T20:14:00+01:00",
+     "fin": "2026-11-17T20:21:00+01:00"
+    },
+    {
+     "etape": "audit rapide, corrections, audit standard ciblé, passe des formats, contrôle des 76 fiches, regard neuf",
+     "debut": "2026-11-17T20:21:00+01:00",
+     "fin": "2026-11-17T21:36:44+01:00"
+    },
+    {
+     "etape": "livraison",
+     "debut": "2026-11-17T21:36:44+01:00",
+     "fin": "2026-11-17T21:45:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "zip des images du site",
+     "debut": "2026-11-17T14:05:40+01:00",
+     "fin": "2026-11-17T18:25:14+01:00"
+    },
+    {
+     "pour": "reponses aux questions (direction, perimetre, images, langues)",
+     "debut": "2026-11-17T14:10:15+01:00",
+     "fin": "2026-11-17T14:25:37+01:00"
+    },
+    {
+     "pour": "images Grok et fichier des articles",
+     "debut": "2026-11-17T14:27:49+01:00",
+     "fin": "2026-11-17T20:05:22+01:00"
+    },
+    {
+     "pour": "second zip du site (76 vignettes et articles.json)",
+     "debut": "2026-11-17T18:26:59+01:00",
+     "fin": "2026-11-17T18:37:39+01:00"
+    },
+    {
+     "pour": "zip des couvertures PDF et images Grok",
+     "debut": "2026-11-17T18:43:00+01:00",
+     "fin": "2026-11-17T19:00:57+01:00"
+    },
+    {
+     "pour": "couvertures PDF (second script) et 5 images Grok -v2",
+     "debut": "2026-11-17T19:15:57+01:00",
+     "fin": "2026-11-17T20:05:22+01:00"
+    }
+   ],
+   "allersRetours": 6,
+   "modules": [],
+   "audit": {
+    "niveau": "standard ciblé sur 6 pages (/, /dossiers, 2 fiches, /auteur, /404), passe des formats sur les mêmes pages, contrôle léger des 76 fiches à 4 tailles (_audit/fiches.json)",
+    "echecsPremierPassage": 131,
+    "relances": 6,
+    "corrections": [
+     "masques des titres en clip-path (textes coupés)",
+     "pile et caviardage à sens unique (chevauchements mesurés en haut de page)",
+     "grille de l'index : apparition carte par carte au lieu d'une cascade sur 76 enfants (grille vide au milieu de la page)",
+     "premier écran sur petits téléphones et écrans bas sans JavaScript",
+     "zone tactile du pied de page, contraste de la date de l'onglet, débordement de la 404, tailles des étiquettes à 13 px",
+     "grands chiffres serrés marqués data-superpose"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Blogger : recuperer.mjs a écarté les 76 vignettes (128 px affichés) ; vignettes de 128 px d'origine ; couvertures tirées des PDF (Drive a refusé après une image, puis PDF Dropbox et Quick Look)."
+  },
+  {
+   "version": 2,
+   "skill": "v11.1",
+   "perimetre": [
+    "couvertures en grande taille (écrans Retina)"
+   ],
+   "etapes": [
+    {
+     "etape": "lecture du journal de mise en ligne, version 2, audit ciblé, livraison",
+     "debut": "2026-11-18T10:58:59+01:00",
+     "fin": "2026-11-18T11:00:43+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [],
+   "audit": {
+    "niveau": "ciblé (fichiers et mesures) sur /, /dossiers et /dossiers/la-terre-creuse",
+    "echecsPremierPassage": 0,
+    "relances": 0,
+    "corrections": []
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Le zip dézippé pour la v1 était le premier envoyé (même nom que le second) : la mise en ligne n'avait pas les couvertures en grande taille. Leçon possible : ne jamais envoyer deux zips du même nom."
+  },
+  {
+   "version": 3,
+   "skill": "v11.1",
+   "perimetre": [
+    "retrait d'une couverture périmée (dossier 001)"
+   ],
+   "etapes": [
+    {
+     "etape": "lecture du journal de la v2, correction, audit ciblé, livraison",
+     "debut": "2026-11-18T11:12:00+01:00",
+     "fin": "2026-11-18T11:15:25+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [],
+   "audit": {
+    "niveau": "ciblé (fichiers et mesures) sur /, /dossiers et /dossiers/la-genealogie-des-annunaki",
+    "echecsPremierPassage": 0,
+    "relances": 0,
+    "corrections": []
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Fichier d001-800.webp resté du premier passage de visuels.mjs (couverture non rognée) : le générateur liste tous les fichiers présents. Leçon possible : un outil qui écrit des variantes d'image retire d'abord celles qu'il ne produit plus."
+  }
+ ]
+}

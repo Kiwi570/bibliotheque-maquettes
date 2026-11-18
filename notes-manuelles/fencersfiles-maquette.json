@@ -1,0 +1,538 @@
+{
+  "maquette": {
+    "client": "blog de dossiers PDF sur les ovnis, les anciennes civilisations et les mystères (Fencer's Files, 76 dossiers en douze rubriques)",
+    "activite": [
+      "média",
+      "culture"
+    ],
+    "concept": [
+      "dossier",
+      "journal"
+    ],
+    "ambiance": [
+      "nocturne",
+      "brut",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--nuit",
+      "accent": "--rouge",
+      "secondaire": "--fiche"
+    },
+    "polices": {
+      "titres": "Big Shoulders",
+      "texte": "Source Serif",
+      "mono": "Plex Mono"
+    },
+    "points_forts": [
+      "direction « Les dossiers » : nuit et papier jaune, capitales Big Shoulders, rouge de tampon, mono pour les cotes ; les vraies couvertures des 76 dossiers comme seules images fortes",
+      "ouverture : l'onglet « Dossier n° 076 » se pose, le titre monte ligne à ligne, la couverture du dernier dossier glisse au défilement, le cachet tombe",
+      "manifeste caviardé : les barres noires se retirent une à une quand le texte entre dans l'écran",
+      "les six derniers dossiers partent en pile au centre puis se déploient ; série Alien Transcripts en rangée qui glisse à l'horizontale",
+      "index des 76 dossiers avec filtres par rubrique et recherche gardés dans l'adresse, 76 fiches générées depuis un seul modèle"
+    ],
+    "reserves": [
+      "couvertures d'origine très chargées et saturées : elles dominent la palette sobre du site",
+      "illustrations d'ambiance générées par Grok (bureau, magnétophone, dolmen, ciel étoilé)",
+      "droits des dossiers traduits ou extraits de livres à vérifier avant la mise en ligne"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "rature",
+      "empilement-de-fiches",
+      "galerie-horizontale",
+      "masque",
+      "parallaxe",
+      "compteur",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "filtres",
+      "recherche",
+      "galerie-cliquable",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "index",
+    "grille": {
+      "objet": "le dossier : onglet, cote, cachet et couverture",
+      "fil": "le tampon rouge « À vous de mener l'enquête »"
+    },
+    "metier": "blog d'ufologie et de mystères"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de 2,5 s : le nom s'écrit lettre à lettre, le cachet tombe, le médaillon glisse jusqu'à la couverture d'ouverture ; sert aussi de voile entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête de nuit : logo Fencer's Files, liens en mono capitales, loupe de recherche, bouton rouge « Écrire à l'auteur »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone, rubriques en capitales Big Shoulders",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "La Terrecreuse",
+      "role": "ouverture",
+      "description": "Ouverture : bureau de nuit, onglet rouge « Dossier n° 076 · 17 novembre », titre géant « La Terre creuse » en capitales qui monte ligne à ligne, couverture du dossier inclinée qui continue de bouger au défilement, bouton « Ouvrir le dossier » et compteurs (76 dossiers, 12 rubriques)",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "onglet de dossier daté qui se pose avant le titre"
+      ]
+    },
+    "manifeste": {
+      "titre": "Le mystère commence là où les certitudes s’arrêtent…",
+      "role": "manifeste",
+      "description": "« Le mystère commence là où les certitudes s'arrêtent… » sur papier : texte caviardé dont les barres noires se retirent une à une, médaillon du blog, quatre thèmes numérotés en bas",
+      "animations": [
+        "rature",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "caviardage : barres noires qui se retirent à la lecture"
+      ]
+    },
+    "derniers": {
+      "titre": "Les derniers dossiers",
+      "role": "articles",
+      "description": "« Les derniers dossiers » : les six couvertures partent empilées au centre puis se déploient en rangée, cote rouge, rubrique et date sous chacune",
+      "animations": [
+        "empilement-de-fiches",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "rubriques": {
+      "titre": "Douze rubriques",
+      "role": "outil-interactif",
+      "description": "« Douze rubriques » : liste des rubriques en capitales avec le nombre de dossiers ; la couverture du dernier dossier de la rubrique survolée s'affiche, épinglée à droite",
+      "animations": [
+        "section-fixée",
+        "survol-image"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, pas de couverture au survol"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "serie": {
+      "titre": "Alien Transcripts",
+      "role": "galerie",
+      "description": "« Alien Transcripts » sur fond de nuit : les cinq dossiers de la série en rangée de couvertures qui glisse à l'horizontale pendant le défilement",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "civilisations": {
+      "titre": "Anciennes civilisations",
+      "role": "decor",
+      "description": "« Anciennes civilisations » : titre géant sur une photo de dolmen qui part en petit rectangle et s'agrandit jusqu'au plein écran pendant que la section est épinglée",
+      "animations": [
+        "masque",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "auteur": {
+      "titre": "d’ufologie",
+      "role": "équipe",
+      "description": "L'auteur : « 40 ans d'ufologie » en très grand chiffre rouge, présentation courte, ciel étoilé, lien vers la page",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecrire-appel": {
+      "titre": "Une observation, une question, un dossier à suggérer ?",
+      "role": "appel",
+      "description": "Appel final sur fond de nuit : « Une observation, une question, un dossier à suggérer ? », cachet rouge « À vous de mener l'enquête » qui tombe d'un coup puis glisse, bouton et e-mail",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page de nuit : médaillon, sommaire, rubriques, mentions, e-mail",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Dossier introuvable",
+      "role": "page-404",
+      "description": "404 « Dossier introuvable » : tiroir de dossiers vide, cachet, bouton vers tous les dossiers",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "auteur-debut": {
+      "titre": "Plus de 40 ansd’ufologie",
+      "role": "ouverture",
+      "description": "« Plus de 40 ans d'ufologie » sur ciel étoilé, présentation, bouton « Lui écrire » et e-mail",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "auteur-bio": {
+      "titre": "Un passionné, des dossiers",
+      "role": "chiffres",
+      "description": "« Un passionné, des dossiers » : médaillon, texte, trois chiffres réels du blog en grand rouge (40, 76, 12)",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "auteur-ecrire": {
+      "titre": "Écrire à l’auteur",
+      "role": "contact",
+      "description": "« Écrire à l'auteur » : formulaire sur une fiche blanche (nom, e-mail, objet, message), trait rouge dessiné à la main",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "dossiers-debut": {
+      "titre": "76dossiers à ouvrir",
+      "role": "ouverture",
+      "description": "« 76 dossiers à ouvrir » : nombre géant en rouge, photo de liasses scellées à la cire, bouton de recherche",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dossiers-index": {
+      "titre": "La Terre creuse",
+      "role": "outil-interactif",
+      "description": "Index des 76 dossiers : filtres par rubrique en étiquettes mono, recherche qui ignore accents et pluriels (gardés dans l'adresse), grille de couvertures avec cote, rubrique, date et titre court, passage en fondu",
+      "animations": [
+        "filtre-anime",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "filtres et recherche gardés dans l'adresse (?rubrique=, ?q=)"
+      ]
+    },
+    "dossiers-ecrire-appel": {
+      "titre": "Vous ne trouvez pas un sujet ?",
+      "role": "appel",
+      "description": "Appel final sur fond de nuit : « Une observation, une question, un dossier à suggérer ? », cachet rouge « À vous de mener l'enquête » qui tombe d'un coup puis glisse, bouton et e-mail",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "dossiers-alien-transcripts-1-contact-et--div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "fine barre de lecture sans contenu propre"
+    },
+    "dossiers-alien-transcripts-1-contact-et--debut": {
+      "titre": "Alien Transcripts 1 : contact et communication",
+      "role": "ouverture",
+      "description": "Fiche dossier (76 pages d'un modèle) : « N° 050 » en très grand rouge, titre en capitales, rubrique, bouton « Ouvrir le dossier complet (PDF) », couverture inclinée à droite",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dossiers-alien-transcripts-1-contact-et--presentation": {
+      "titre": "Présentation",
+      "role": "articles",
+      "description": "Présentation du dossier : texte du blog en colonne, encart épinglé « Le dossier complet » avec bouton PDF",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dossiers-alien-transcripts-1-contact-et--suite": {
+      "titre": "Dans la même rubrique",
+      "role": "articles",
+      "description": "« Dans la même rubrique » : quatre couvertures voisines, dossiers précédent et suivant",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dossiers-alien-transcripts-1-contact-et--ecrire-appel": {
+      "titre": "Une observation, une question, un dossier à suggérer ?",
+      "role": "appel",
+      "description": "Appel final sur fond de nuit : « Une observation, une question, un dossier à suggérer ? », cachet rouge « À vous de mener l'enquête » qui tombe d'un coup puis glisse, bouton et e-mail",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    }
+  }
+}

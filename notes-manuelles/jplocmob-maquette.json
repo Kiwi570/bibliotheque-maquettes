@@ -1,0 +1,675 @@
+{
+  "maquette": {
+    "client": "location de mobylettes restaurées et balades en Isère au départ de Chèzeneuve : trois balades, formules à la demi-journée ou à la journée",
+    "activite": [
+      "tourisme",
+      "auto-moto"
+    ],
+    "concept": [
+      "carte",
+      "voyage"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "végétal",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--sapin",
+      "accent": "--accent",
+      "secondaire": "--jaune"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Instrument Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Carte routière » : papier crème, vert sapin, rouge borne et ligne jaune de la route, Bricolage Grotesque avec un mot rouge souligné par titre, tenue sur les six pages",
+      "ouverture : une petite mobylette remonte la route en bas de l'écran, puis suit la souris le long de la route ; le tampon du logo se pose et file vers la photo",
+      "plans des parcours : le tracé jaune se dessine au défilement, la mobylette le suit, les villages s'allument et les kilomètres comptent ; bouton pour rejouer",
+      "composeur de sortie : balade, durée et nombre de mobylettes, prix en direct sur un bon de sortie, rangée de petites mobylettes allumées",
+      "réservation en quatre étapes avec bon de sortie qui suit les choix et tampon qui se pose à l'envoi"
+    ],
+    "reserves": [
+      "plusieurs photos des lieux reprises du site actuel, droits à vérifier ; quelques illustrations générées",
+      "beaucoup de bandes vert sapin en fin de page (appel puis pied de page) : deux blocs sombres qui se suivent"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "trace-svg",
+      "galerie-horizontale",
+      "compteur",
+      "révélation-image",
+      "section-fixée",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "carte-interactive",
+      "calculateur",
+      "formulaire-par-étapes",
+      "jeu"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "territoire",
+    "grille": {
+      "objet": "la petite mobylette qu'on conduit le long de la route",
+      "fil": "la ligne jaune de la route qui se dessine"
+    },
+    "metier": "location de mobylettes et balades"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de moins de 3 s : le tampon du logo se pose, la route se trace, le tampon file vers la photo de la page ; même voile vert sapin entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête crème : logo JP Loc Mob, liens, bouton rouge « Réserver »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur vert sapin",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "La routeest à vous.",
+      "role": "ouverture",
+      "description": "Ouverture : « La route est à vous. » avec « vous » en rouge souligné, texte, deux boutons ; photo d'une mobylette devant une palissade qui se pose en rideau ; en bas, une route où une petite mobylette remonte toute seule puis suit la souris ou file là où l'on touche",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "révélation-image",
+        "trace-svg"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "petite mobylette à conduire le long d'une route au pied de l'ouverture"
+      ]
+    },
+    "esprit": {
+      "titre": "L'esprit",
+      "role": "manifeste",
+      "description": "« L'esprit » sur vert sapin : grand texte sur les mobylettes témoins d'une époque, mot clé souligné, large photo de campagne iséroise au soleil",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades": {
+      "titre": "Trois balades, trois routes",
+      "role": "offre",
+      "description": "« Trois balades, trois routes » : trois cartes photo avec borne kilométrique rouge (37, 63, 70 km), texte, prix et lien",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "carte": {
+      "titre": "Deux boucles au départ de Chèzeneuve",
+      "role": "carte",
+      "description": "« Deux boucles au départ de Chèzeneuve » sur vert sapin : plan épinglé où le tracé jaune se dessine, la mobylette le suit, les villages s'allument au passage, les kilomètres comptent ; choix de la balade et bouton « Rejouer le tracé »",
+      "animations": [
+        "trace-svg",
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, le plan passe au-dessus du texte"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "tracé de balade suivi par la mobylette, villages qui s'allument au passage"
+      ]
+    },
+    "mobylettes": {
+      "titre": "Cinq mobylettes restaurées",
+      "role": "galerie",
+      "description": "« Cinq mobylettes restaurées » : rangée de photos de mobylettes de couleurs différentes qui glisse à l'horizontale au défilement, légende sous chacune",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "deroule": {
+      "titre": "Comment ça se passe",
+      "role": "étapes",
+      "description": "« Comment ça se passe » : quatre étapes en photo (un café en terrasse, casque et gants, la route, le retour) reliées par un trait de progression qui se trace",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs": {
+      "titre": "Votre sortie, votre prix",
+      "role": "calculateur",
+      "description": "« Votre sortie, votre prix » sur vert sapin : choix de la balade, de la durée et du nombre de mobylettes ; bon de sortie blanc à droite avec le prix en direct, la caution et une rangée de petites mobylettes allumées selon le nombre",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bon de sortie qui se met à jour, petites mobylettes allumées selon le nombre choisi"
+      ]
+    },
+    "questions": {
+      "titre": "Avant de partir",
+      "role": "faq",
+      "description": "« Avant de partir » : photo d'un chat sur une mobylette épinglée à gauche, sept questions dépliables animées à droite",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Alors, on roule ?",
+      "role": "appel",
+      "description": "Appel final « Alors, on roule ? » : photo de route au coucher du soleil, tampon du logo, boutons réserver et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page vert sapin : tampon, sommaire, contact, réseaux, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Sortie de route",
+      "role": "page-404",
+      "description": "404 « Sortie de route » : chemin de campagne, route en bas où la mobylette sort du tracé, boutons retour",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades-et-tarifs-debut": {
+      "titre": "Trois balades, trois routes",
+      "role": "ouverture",
+      "description": "« Trois balades, trois routes » en très grand, photo panoramique de collines avec trois bornes (37, 63, 70 km) qui mènent aux balades",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades-et-tarifs-fallavier": {
+      "titre": "Balade Fallavier",
+      "role": "carte",
+      "description": "Balade détaillée : borne kilométrique rouge (37 km, Balade Fallavier), titre, texte, villages traversés, formules et prix ; à côté, plan vert sapin épinglé où le tracé jaune se dessine au défilement, la mobylette le suit et les villages s'allument, bouton « Rejouer le tracé »",
+      "animations": [
+        "trace-svg",
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "balades-et-tarifs-cremieu": {
+      "titre": "Village des brocanteurs et Crémieu",
+      "role": "carte",
+      "description": "« Village des brocanteurs et Crémieu » (63 km) : même mise en page en miroir, plan épinglé à gauche où le tracé se dessine et la mobylette le suit, étapes et prix à droite",
+      "animations": [
+        "trace-svg",
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "balades-et-tarifs-libre": {
+      "titre": "Itinéraire libre",
+      "role": "offre",
+      "description": "« Itinéraire libre » (70 km maximum) : texte, formules et prix, grande photo de route entre les champs",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades-et-tarifs-composer": {
+      "titre": "Calculez votre sortie",
+      "role": "calculateur",
+      "description": "« Calculez votre sortie » : le composeur de la page d'accueil en version page, bon de sortie à droite",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades-et-tarifs-pauses": {
+      "titre": "Deux pauses en terrasse",
+      "role": "services",
+      "description": "« Deux pauses en terrasse » : deux cartes d'adresses avec photo, ville et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "balades-et-tarifs-appel": {
+      "titre": "Alors, on roule ?",
+      "role": "appel",
+      "description": "Appel final des pages intérieures « Alors, on roule ? » sur bande vert sapin, tampon du logo, boutons réserver et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Un appel, et on en parle",
+      "role": "ouverture",
+      "description": "« Un appel, et on en parle » : numéro de téléphone en très grand rouge, e-mail, photo du chat sur la mobylette, route en bas",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Une question ? Écrivez-nous",
+      "role": "contact",
+      "description": "« Une question ? Écrivez-nous » : téléphone et e-mail à gauche, formulaire court sur fiche blanche",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-zone": {
+      "titre": "Chèzeneuve et ses alentours",
+      "role": "carte",
+      "description": "« Chèzeneuve et ses alentours » sur vert sapin : plan des deux boucles, liens vers les réseaux",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-appel": {
+      "titre": "Alors, on roule ?",
+      "role": "appel",
+      "description": "Appel final des pages intérieures « Alors, on roule ? » sur bande vert sapin, tampon du logo, boutons réserver et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "les-mobylettes-debut": {
+      "titre": "Cinq mobylettes restaurées",
+      "role": "ouverture",
+      "description": "« Cinq mobylettes restaurées » : grand « 5 » en filigrane, mobylettes détourées qui se posent, texte et bouton",
+      "animations": [
+        "révélation-texte",
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-mobylettes-galerie": {
+      "titre": "Les voici, prêtes à partir",
+      "role": "galerie",
+      "description": "« Les voici, prêtes à partir » : grandes photos des mobylettes en mosaïque, chacune avec sa couleur et une légende, qui arrivent en décalé au défilement",
+      "animations": [
+        "révélation-image",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-mobylettes-accueil-cafe": {
+      "titre": "Le café avant la route",
+      "role": "manifeste",
+      "description": "« Le café avant la route » : photos de l'accueil au café et texte sur le départ",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-mobylettes-conditions": {
+      "titre": "À savoir avant de louer",
+      "role": "faq",
+      "description": "« À savoir avant de louer » : conditions en liste (âge, permis, caution, casque fourni) avec photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-mobylettes-appel": {
+      "titre": "Alors, on roule ?",
+      "role": "appel",
+      "description": "Appel final des pages intérieures « Alors, on roule ? » sur bande vert sapin, tampon du logo, boutons réserver et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "reserver-debut": {
+      "titre": "Votre balade, en quatre étapes",
+      "role": "contact",
+      "description": "« Votre balade, en quatre étapes » : demande de réservation pas à pas (balade, date, mobylettes, coordonnées), bon de sortie épinglé à droite qui suit les choix, tampon qui se pose à l'envoi",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "bon de sortie tamponné à l'envoi de la demande"
+      ]
+    },
+    "reserver-compris": {
+      "titre": "Ce qui vous attend",
+      "role": "preuves",
+      "description": "« Ce qui vous attend » : ce qui est compris (casque, gants, café, plan) avec photo et liens",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
