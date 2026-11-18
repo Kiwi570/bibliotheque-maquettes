@@ -1,0 +1,41 @@
+/* Tableau des départs : tableau d'affichage à palettes. Identité uniquement par variables ;
+   --tdd-case règle la taille des palettes, --tdd-fond-case leur couleur, --tdd-colonnes la grille d'une ligne. */
+.tdd { --tdd-case: clamp(15px, 1.9vw, 30px); --tdd-fond-case: color-mix(in oklab, var(--couleur-texte) 9%, var(--couleur-fond));
+  --tdd-colonnes: minmax(0, 1fr) auto auto auto; position: relative; padding-block: clamp(56px, 9vw, 128px); }
+.tdd__tete { display: grid; gap: .8rem; max-width: 46rem; margin-bottom: clamp(20px, 3vw, 36px); }
+.tdd__h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+.tdd__intro { color: var(--couleur-texte-doux); max-width: 38rem; }
+
+.tdd__tableau { display: grid; padding: clamp(14px, 2.4vw, 30px); border: 1px solid var(--couleur-ligne); border-radius: calc(var(--rayon) + 4px);
+  background: color-mix(in oklab, var(--couleur-fond) 70%, black); box-shadow: 0 40px 80px -40px color-mix(in oklab, black 80%, transparent); }
+.tdd__entete, .tdd__ligne { display: grid; grid-template-columns: var(--tdd-colonnes); align-items: center; column-gap: clamp(14px, 3vw, 44px); }
+.tdd__entete { padding: 0 0 12px; border-bottom: 1px solid var(--couleur-ligne); font: 500 max(13px, .76rem)/1.2 var(--police-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--couleur-accent); }
+.tdd__ligne { padding: clamp(10px, 1.4vw, 16px) 0; border-bottom: 1px solid color-mix(in oklab, var(--couleur-texte) 8%, transparent); transition: background-color .3s; }
+.tdd__ligne:last-child { border-bottom: 0; padding-bottom: 0; }
+@media (hover: hover) { .tdd__ligne:hover { background: linear-gradient(90deg, color-mix(in oklab, var(--couleur-accent) 9%, transparent), transparent 70%); } }
+.tdd__cellule { display: inline-flex; align-items: center; gap: 6px; min-width: 0; }
+.tdd__cellule--prix { justify-content: flex-end; }
+.tdd__unite { font: 500 max(13px, .76rem)/1 var(--police-mono); color: var(--couleur-texte-doux); text-transform: uppercase; letter-spacing: .1em; }
+
+/* Sans JavaScript : le texte tel quel, en capitales mono. Avec : les palettes. */
+.tdd__texte { font: 700 var(--tdd-case)/1.2 var(--police-mono); letter-spacing: .08em; text-transform: uppercase; min-width: 0; }
+.tdd__texte--accent { color: var(--couleur-accent); }
+.tdd__cases { display: inline-flex; gap: 3px; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: 0; }
+.tdd__texte--petit { --tdd-case: clamp(13px, 1.2vw, 19px); }
+/* Une palette : hauteur et largeur en em, ligne noire au milieu, chiffres tabulaires : la largeur ne saute jamais. */
+.tdd__case { position: relative; display: inline-grid; place-items: center; width: 1.18em; height: 1.62em; border-radius: 4px; background: var(--tdd-fond-case); color: var(--couleur-texte); box-shadow: inset 0 -1px 0 color-mix(in oklab, black 60%, transparent); }
+.tdd__texte--accent .tdd__case { color: var(--couleur-accent); }
+.tdd__case::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: color-mix(in oklab, black 70%, transparent); }
+.tdd__case--tourne { animation: tdd-tour .12s linear; }
+@keyframes tdd-tour { 0% { transform: scaleY(1); } 50% { transform: scaleY(.35); } 100% { transform: scaleY(1); } }
+
+/* Téléphone : chaque ligne sur deux rangs (principal et prix, puis le reste et l'action), sans en-tête. */
+@media (max-width: 760px) {
+  .tdd__entete { display: none; }
+  .tdd__ligne { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "principal prix" "secondaire action"; row-gap: 8px; column-gap: 8px; }
+  .tdd__cellule { grid-area: secondaire; }
+  .tdd__cellule--principale { grid-area: principal; } .tdd__cellule--prix { grid-area: prix; justify-self: end; } .tdd__cellule--action { grid-area: action; justify-self: end; }
+  .tdd { --tdd-case: 16px; } .tdd__cases { gap: 2px; }
+  .tdd__texte--petit { --tdd-case: 13px; }
+}
+@media (max-width: 380px) { .tdd { --tdd-case: 13px; } .tdd__cases { gap: 1px; } .tdd__case { width: 1.14em; } .tdd__tableau { padding: 12px 10px; } }

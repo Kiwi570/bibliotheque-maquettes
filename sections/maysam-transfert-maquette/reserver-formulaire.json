@@ -1,0 +1,46 @@
+{
+ "id": "maysam-transfert-maquette/reserver-formulaire",
+ "maquette": "maysam-transfert-maquette",
+ "page": "reserver",
+ "titre": "Formulaire en cinq étapes",
+ "role": "outil-interactif",
+ "description": "Carton noir à gauche avec la pancarte au nom tapé et le récapitulatif qui se remplit ; formulaire en cinq étapes nommées (trajet, date, passagers, contact, vérifier), simulé ; à l'envoi un tampon « Demande prête » se pose sur la pancarte.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "réservation-simulee",
+  "saisie-personnalisee"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "formulaire-par-etapes",
+ "modules": [
+  "formulaire-par-etapes"
+ ],
+ "code": {
+  "html": "reserver.html:125-216",
+  "css": "assets/css/socle.css:287 ; assets/css/formulaire-par-etapes.css:3-14,21-48,61-69,75-77,81,86-112,116-120,125-126,131-141 ; assets/css/site.css:39-40,47,254-260,371-377,514-536,576,594",
+  "js": "assets/js/site.js:2,148-209,345-378 ; assets/js/socle/effets.js:151-158 ; assets/js/modules/formulaire-par-etapes/module.js:1,25,41,44-47,51,57-67,72,76,84,153,156,174,180,194,220-221,239,266"
+ },
+ "medias": {
+  "capture": "medias/maysam-transfert-maquette/reserver-formulaire-p1440.jpg",
+  "capture_m390": "medias/maysam-transfert-maquette/reserver-formulaire-m390.jpg",
+  "video": "medias/maysam-transfert-maquette/reserver-formulaire-p720.mp4"
+ },
+ "pieges": [],
+ "mesures": {
+  "hauteur_p1440": 1159,
+  "hauteur_m390": 1844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

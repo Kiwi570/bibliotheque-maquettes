@@ -194,25 +194,25 @@
     "en_ligne": "https://loeilsingulier-maquette.vercel.app"
    },
    {
-    "id": "libre-solidaire-maquette/reseau",
-    "maquette": "libre-solidaire-maquette",
-    "client": "maison d'édition indépendante (essais sur l'environnement, la société, la vigne)",
+    "id": "maysam-transfert-maquette/pancarte",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
     "note_section": 5,
     "note_maquette": 89,
-    "titre": "Réseau mycélien du catalogue",
-    "description": "Canvas 2D : chaque livre est un nœud (sa couverture) relié par un filament vivant au cœur de son territoire ; survol avec infobulle, clic vers la fiche, légende des territoires, animation suspendue hors écran.",
+    "titre": "Votre nom vous attend.",
+    "description": "Hall d'arrivée flou de nuit : le visiteur tape son nom et il s'écrit en Bodoni sur la pancarte du chauffeur, qui se balance à chaque lettre ; trois garanties de l'accueil à l'aéroport.",
     "animations": [
-     "canvas-2d"
+     "apparition-au-défilement"
     ],
     "interactions": [
-     "galerie-cliquable"
+     "saisie-personnalisee"
     ],
-    "module": "constellation",
-    "fiche": "sections/libre-solidaire-maquette/reseau.json",
-    "capture": "medias/libre-solidaire-maquette/reseau-p1440.jpg",
-    "capture_m390": "medias/libre-solidaire-maquette/reseau-m390.jpg",
-    "video": "medias/libre-solidaire-maquette/reseau-p720.mp4",
-    "en_ligne": "https://libre-solidaire-maquette.vercel.app"
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/pancarte.json",
+    "capture": "medias/maysam-transfert-maquette/pancarte-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/pancarte-m390.jpg",
+    "video": "medias/maysam-transfert-maquette/pancarte-p720.mp4",
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
    }
   ],
   "contact": [
@@ -280,6 +280,82 @@
     "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-m390.jpg",
     "video": null,
     "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app/demander-une-communication"
+   }
+  ],
+  "produits": [
+   {
+    "id": "winsbike-maquette/eclatee",
+    "maquette": "winsbike-maquette",
+    "client": "distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne",
+    "note_section": 5,
+    "note_maquette": 91,
+    "titre": "Vue éclatée du moyeu",
+    "description": "Planche technique sur papier millimétré épinglée : le moyeu se démonte pièce par pièce au défilement, avec cotes, légende numérotée qui allume la pièce correspondante (survol et clavier).",
+    "animations": [
+     "section-fixée",
+     "progression-fixée",
+     "masque"
+    ],
+    "interactions": [
+     "galerie-cliquable",
+     "schema-interactif"
+    ],
+    "module": "vue-eclatee",
+    "fiche": "sections/winsbike-maquette/eclatee.json",
+    "capture": "medias/winsbike-maquette/eclatee-p1440.jpg",
+    "capture_m390": "medias/winsbike-maquette/eclatee-m390.jpg",
+    "video": "medias/winsbike-maquette/eclatee-p720.mp4",
+    "en_ligne": "https://winsbike-maquette.vercel.app"
+   },
+   {
+    "id": "instinct-aventure-maquette/voyages-catalogue",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Catalogue filtré avec Flip",
+    "description": "Filtres (formule, durée, région), curseur de budget et tri : les cartes se réordonnent et disparaissent en Flip, un compteur annonce le nombre de résultats ; au survol d'une carte, sa trace s'allume sur une carte collante à droite.",
+    "animations": [
+     "flip",
+     "filtre-anime",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "filtres",
+     "carte-interactive",
+     "comparateur"
+    ],
+    "module": "catalogue-filtres-flip",
+    "fiche": "sections/instinct-aventure-maquette/voyages-catalogue.json",
+    "capture": "medias/instinct-aventure-maquette/voyages-catalogue-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/voyages-catalogue-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/voyages-catalogue-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app/voyages"
+   },
+   {
+    "id": "pierre-becq-lanterne-maquette/coups-de-coeur",
+    "maquette": "pierre-becq-lanterne-maquette",
+    "client": "antiquaire à Metz (mobilier et objets d'art du XVIe au XXe siècle, expertise, achat de successions)",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Salle des coups de cœur",
+    "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.",
+    "animations": [
+     "section-fixée",
+     "galerie-horizontale",
+     "progression-fixée",
+     "révélation-image",
+     "reactif-vitesse"
+    ],
+    "interactions": [
+     "panier-simule"
+    ],
+    "module": "galerie-horizontale-epinglee",
+    "fiche": "sections/pierre-becq-lanterne-maquette/coups-de-coeur.json",
+    "capture": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p1440.jpg",
+    "capture_m390": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-m390.jpg",
+    "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p720.mp4",
+    "en_ligne": "https://pierre-becq-lanterne-maquette.vercel.app"
    }
   ],
   "étapes": [
@@ -422,82 +498,6 @@
     "capture_m390": "medias/nelis-maquette/applications-m390.jpg",
     "video": "medias/nelis-maquette/applications-p720.mp4",
     "en_ligne": "https://nelis-maquette.vercel.app"
-   }
-  ],
-  "produits": [
-   {
-    "id": "winsbike-maquette/eclatee",
-    "maquette": "winsbike-maquette",
-    "client": "distributeur et atelier de pièces et accessoires vélo (VTT, route, ville, BMX) en Centre Bretagne",
-    "note_section": 5,
-    "note_maquette": 91,
-    "titre": "Vue éclatée du moyeu",
-    "description": "Planche technique sur papier millimétré épinglée : le moyeu se démonte pièce par pièce au défilement, avec cotes, légende numérotée qui allume la pièce correspondante (survol et clavier).",
-    "animations": [
-     "section-fixée",
-     "progression-fixée",
-     "masque"
-    ],
-    "interactions": [
-     "galerie-cliquable",
-     "schema-interactif"
-    ],
-    "module": "vue-eclatee",
-    "fiche": "sections/winsbike-maquette/eclatee.json",
-    "capture": "medias/winsbike-maquette/eclatee-p1440.jpg",
-    "capture_m390": "medias/winsbike-maquette/eclatee-m390.jpg",
-    "video": "medias/winsbike-maquette/eclatee-p720.mp4",
-    "en_ligne": "https://winsbike-maquette.vercel.app"
-   },
-   {
-    "id": "instinct-aventure-maquette/voyages-catalogue",
-    "maquette": "instinct-aventure-maquette",
-    "client": "agence de voyages en 4x4 en Afrique australe",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "Catalogue filtré avec Flip",
-    "description": "Filtres (formule, durée, région), curseur de budget et tri : les cartes se réordonnent et disparaissent en Flip, un compteur annonce le nombre de résultats ; au survol d'une carte, sa trace s'allume sur une carte collante à droite.",
-    "animations": [
-     "flip",
-     "filtre-anime",
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "filtres",
-     "carte-interactive",
-     "comparateur"
-    ],
-    "module": "catalogue-filtres-flip",
-    "fiche": "sections/instinct-aventure-maquette/voyages-catalogue.json",
-    "capture": "medias/instinct-aventure-maquette/voyages-catalogue-p1440.jpg",
-    "capture_m390": "medias/instinct-aventure-maquette/voyages-catalogue-m390.jpg",
-    "video": "medias/instinct-aventure-maquette/voyages-catalogue-p720.mp4",
-    "en_ligne": "https://instinct-aventure-maquette.vercel.app/voyages"
-   },
-   {
-    "id": "pierre-becq-lanterne-maquette/coups-de-coeur",
-    "maquette": "pierre-becq-lanterne-maquette",
-    "client": "antiquaire à Metz (mobilier et objets d'art du XVIe au XXe siècle, expertise, achat de successions)",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "Salle des coups de cœur",
-    "description": "Section épinglée : les pièces détourées défilent à l'horizontale sous un rai de vitrail ; le fond prend la teinte de la pièce centrale, les étiquettes se balancent selon la vitesse du défilement puis reviennent en oscillant ; compteur, titre et barre d'avancement. Défilement natif à glisser sur téléphone, focus clavier ramené au centre.",
-    "animations": [
-     "section-fixée",
-     "galerie-horizontale",
-     "progression-fixée",
-     "révélation-image",
-     "reactif-vitesse"
-    ],
-    "interactions": [
-     "panier-simule"
-    ],
-    "module": "galerie-horizontale-epinglee",
-    "fiche": "sections/pierre-becq-lanterne-maquette/coups-de-coeur.json",
-    "capture": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p1440.jpg",
-    "capture_m390": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-m390.jpg",
-    "video": "medias/pierre-becq-lanterne-maquette/coups-de-coeur-p720.mp4",
-    "en_ligne": "https://pierre-becq-lanterne-maquette.vercel.app"
    }
   ],
   "manifeste": [
@@ -994,6 +994,73 @@
     "en_ligne": "https://willowcamp-maquette.vercel.app"
    }
   ],
+  "page-404": [
+   {
+    "id": "surffm-maquette/404-page-hero",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "404 hors fréquence",
+    "description": "Page introuvable en « neige » de télévision (canvas 2D rafraîchi toutes les 160 ms) sous un titre géant, avec retour au direct et à la grille.",
+    "animations": [
+     "canvas-2d",
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/surffm-maquette/404-page-hero.json",
+    "capture": "medias/surffm-maquette/404-page-hero-p1440.jpg",
+    "capture_m390": "medias/surffm-maquette/404-page-hero-m390.jpg",
+    "video": "medias/surffm-maquette/404-page-hero-p720.mp4",
+    "en_ligne": "https://surffm-maquette.vercel.app/404"
+   },
+   {
+    "id": "qd2a-maquette/404-introuvable",
+    "maquette": "qd2a-maquette",
+    "client": "Comité de lecture international des écritures dramatiques contemporaines de langue française (association), accueilli au Théâtre des Quartiers d'Ivry",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "La servante est restée allumée",
+    "description": "« La servante est restée allumée » : photo générée d'une servante sur un plateau vide, la lumière suit le pointeur ; titre en grand à droite de la lampe (sous l'ampoule sur téléphone), retour à l'accueil, à la saison et à l'appel",
+    "animations": [
+     "révélation-texte"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/qd2a-maquette/404-introuvable.json",
+    "capture": "medias/qd2a-maquette/404-introuvable-p1440.jpg",
+    "capture_m390": "medias/qd2a-maquette/404-introuvable-m390.jpg",
+    "video": "medias/qd2a-maquette/404-introuvable-p720.mp4",
+    "en_ligne": "https://qd2a-maquette.vercel.app/404"
+   },
+   {
+    "id": "maysam-transfert-maquette/404-debut",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Ce trajet n'existe pas.",
+    "description": "Valise seule sous un réverbère de nuit, titre Bodoni, retour à l'accueil et réservation.",
+    "animations": [
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/404-debut.json",
+    "capture": "medias/maysam-transfert-maquette/404-debut-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/404-debut-m390.jpg",
+    "video": null,
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app/404"
+   }
+  ],
   "portfolio": [
    {
     "id": "agence-ae-maquette/plein-cadre",
@@ -1063,72 +1130,6 @@
     "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
     "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p720.mp4",
     "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
-   }
-  ],
-  "page-404": [
-   {
-    "id": "surffm-maquette/404-page-hero",
-    "maquette": "surffm-maquette",
-    "client": "radio associative de glisse",
-    "note_section": 4,
-    "note_maquette": 90,
-    "titre": "404 hors fréquence",
-    "description": "Page introuvable en « neige » de télévision (canvas 2D rafraîchi toutes les 160 ms) sous un titre géant, avec retour au direct et à la grille.",
-    "animations": [
-     "canvas-2d",
-     "révélation-texte"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/surffm-maquette/404-page-hero.json",
-    "capture": "medias/surffm-maquette/404-page-hero-p1440.jpg",
-    "capture_m390": "medias/surffm-maquette/404-page-hero-m390.jpg",
-    "video": "medias/surffm-maquette/404-page-hero-p720.mp4",
-    "en_ligne": "https://surffm-maquette.vercel.app/404"
-   },
-   {
-    "id": "qd2a-maquette/404-introuvable",
-    "maquette": "qd2a-maquette",
-    "client": "Comité de lecture international des écritures dramatiques contemporaines de langue française (association), accueilli au Théâtre des Quartiers d'Ivry",
-    "note_section": 4,
-    "note_maquette": 89,
-    "titre": "La servante est restée allumée",
-    "description": "« La servante est restée allumée » : photo générée d'une servante sur un plateau vide, la lumière suit le pointeur ; titre en grand à droite de la lampe (sous l'ampoule sur téléphone), retour à l'accueil, à la saison et à l'appel",
-    "animations": [
-     "révélation-texte"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/qd2a-maquette/404-introuvable.json",
-    "capture": "medias/qd2a-maquette/404-introuvable-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/404-introuvable-m390.jpg",
-    "video": "medias/qd2a-maquette/404-introuvable-p720.mp4",
-    "en_ligne": "https://qd2a-maquette.vercel.app/404"
-   },
-   {
-    "id": "apresleseuil-maquette/404-debut",
-    "maquette": "apresleseuil-maquette",
-    "client": "Après le Seuil, accompagnement des transitions de vie et de lieux (Largentière, Ardèche)",
-    "note_section": 4,
-    "note_maquette": 87,
-    "titre": "Cette porte ne mène nulle part.",
-    "description": "Bleu de porte, vieille porte bleue entrouverte dans une arche avec contour doré.",
-    "animations": [
-     "trace-svg"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/apresleseuil-maquette/404-debut.json",
-    "capture": "medias/apresleseuil-maquette/404-debut-p1440.jpg",
-    "capture_m390": "medias/apresleseuil-maquette/404-debut-m390.jpg",
-    "video": "medias/apresleseuil-maquette/404-debut-p720.mp4",
-    "en_ligne": "https://apresleseuil-maquette.vercel.app/404"
    }
   ],
   "appel": [
@@ -1203,6 +1204,28 @@
   ],
   "tarifs": [
    {
+    "id": "maysam-transfert-maquette/tarifs",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Des prix clairs, sans surprise.",
+    "description": "Tableau des départs d'aéroport à palettes : destination, durée et prix des cinq trajets réels se retournent lettre par lettre à l'arrivée, une ligne se retourne de nouveau au survol ; bouton « Réserver » par ligne. Sur téléphone, chaque trajet tient sur deux lignes.",
+    "animations": [
+     "apparition-au-défilement",
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "tableau-des-departs",
+    "fiche": "sections/maysam-transfert-maquette/tarifs.json",
+    "capture": "medias/maysam-transfert-maquette/tarifs-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/tarifs-m390.jpg",
+    "video": null,
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
+   },
+   {
     "id": "iprof-maquette/tarifs-prices",
     "maquette": "iprof-maquette",
     "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
@@ -1246,28 +1269,6 @@
     "capture_m390": "medias/esaie-55-1-maquette/parrainage-formules-m390.jpg",
     "video": "medias/esaie-55-1-maquette/parrainage-formules-p720.mp4",
     "en_ligne": "https://esaie-55-1-maquette.vercel.app/parrainage"
-   },
-   {
-    "id": "talon-libre-maquette/annexe-tarifs",
-    "maquette": "talon-libre-maquette",
-    "client": "chalet et appartements de location saisonnière pour skieurs de télémark dans le Grand Massif",
-    "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Tarifs à la semaine",
-    "description": "Calendrier des semaines par saison où chaque semaine est un bouton avec son prix ; le récapitulatif épinglé calcule total, acompte, échéancier en jours ouvrables (fériés compris) et frise d'annulation.",
-    "animations": [
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "calculateur",
-     "réservation-simulee"
-    ],
-    "module": null,
-    "fiche": "sections/talon-libre-maquette/annexe-tarifs.json",
-    "capture": "medias/talon-libre-maquette/annexe-tarifs-p1440.jpg",
-    "capture_m390": "medias/talon-libre-maquette/annexe-tarifs-m390.jpg",
-    "video": "medias/talon-libre-maquette/annexe-tarifs-p720.mp4",
-    "en_ligne": "https://talon-libre-maquette.vercel.app/annexe"
    }
   ],
   "preuves": [
@@ -1569,6 +1570,28 @@
     "en_ligne": "https://loeilsingulier-maquette.vercel.app"
    },
    {
+    "id": "maysam-transfert-maquette/temoignages",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Ils nous confient leurs trajets.",
+    "description": "Six avis réels en billets ivoire : talon avec trajet et passager, perforation, citation en Bodoni italique ; distribués au défilement avec un léger décalage ; rangée qui se glisse au doigt sur téléphone.",
+    "animations": [
+     "apparition-au-défilement",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/temoignages.json",
+    "capture": "medias/maysam-transfert-maquette/temoignages-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/temoignages-m390.jpg",
+    "video": "medias/maysam-transfert-maquette/temoignages-p720.mp4",
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
+   },
+   {
     "id": "h-renovation-maquette/avis",
     "maquette": "h-renovation-maquette",
     "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
@@ -1588,27 +1611,6 @@
     "capture_m390": "medias/h-renovation-maquette/avis-m390.jpg",
     "video": "medias/h-renovation-maquette/avis-p720.mp4",
     "en_ligne": "https://h-renovation-maquette.vercel.app"
-   },
-   {
-    "id": "esaie-55-1-maquette/histoires",
-    "maquette": "esaie-55-1-maquette",
-    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
-    "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Histoires",
-    "description": "Récits de personnes accompagnées en grandes cartes collantes qui s'empilent au défilement, chacune avec objectif et impact.",
-    "animations": [
-     "empilement-de-fiches"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "planches-empilees",
-    "fiche": "sections/esaie-55-1-maquette/histoires.json",
-    "capture": "medias/esaie-55-1-maquette/histoires-p1440.jpg",
-    "capture_m390": "medias/esaie-55-1-maquette/histoires-m390.jpg",
-    "video": "medias/esaie-55-1-maquette/histoires-p720.mp4",
-    "en_ligne": "https://esaie-55-1-maquette.vercel.app"
    }
   ],
   "articles": [

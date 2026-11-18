@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tableau des départs · module</title>
+<link rel="stylesheet" href="../../socle/socle.css?v=1">
+<link rel="stylesheet" href="module.css?v=1">
+<style>
+  /* Identité de démonstration : seul endroit où la palette et les polices sont fixées. */
+  :root { --couleur-fond: #111317; --couleur-texte: #eeebe4; --couleur-accent: #e0a63c; --couleur-secondaire: #6c8fb3; --couleur-sur-accent: #111317; --rayon: 14px; }
+  .demo-bloc { min-height: 70vh; display: grid; align-content: center; gap: 1rem; padding-block: 12vh; }
+  .demo-bloc h2 { font-size: clamp(2rem, 5vw, 3.6rem); }
+</style>
+</head>
+<body>
+<header class="socle-entete" data-entete><span>Démonstration</span></header>
+<main>
+  <section class="demo-bloc socle-cadre">
+    <p class="socle-surtitre">Section précédente</p>
+    <h2>Titre de la section précédente</h2>
+    <p>Plus bas, le tableau des départs : à son arrivée, les palettes tournent puis se posent sur chaque destination, durée et prix.</p>
+  </section>
+
+  <section class="tdd socle-cadre" data-module="tableau-des-departs" aria-labelledby="tdd-titre">
+    <div class="tdd__tete">
+      <p class="socle-surtitre">Départs</p>
+      <h2 class="tdd__h2" id="tdd-titre">Les prochains départs</h2>
+      <p class="tdd__intro">Cinq navettes au prix fixe, affichées comme en gare. Survolez une ligne : ses palettes tournent de nouveau.</p>
+    </div>
+    <div class="tdd__tableau" role="table" aria-labelledby="tdd-titre">
+      <div class="tdd__entete" role="row"><span role="columnheader">Destination</span><span role="columnheader">Durée</span><span role="columnheader">Prix</span><span role="columnheader"><span class="socle-sr">Réserver</span></span></div>
+      <div class="tdd__ligne" role="row">
+        <span class="tdd__cellule tdd__cellule--principale" role="cell"><span class="tdd__texte" data-cases="10">Gare nord</span></span>
+        <span class="tdd__cellule" role="cell"><span class="tdd__texte tdd__texte--petit" data-cases="6">15-20</span><span class="tdd__unite" aria-hidden="true">min</span><span class="socle-sr">minutes</span></span>
+        <span class="tdd__cellule tdd__cellule--prix" role="cell"><span class="tdd__texte tdd__texte--accent" data-cases="4" data-aligne="droite">25€</span></span>
+        <span class="tdd__cellule tdd__cellule--action" role="cell"><a class="socle-bouton socle-bouton--plein" href="#demande">Réserver<span class="socle-sr"> Gare nord</span></a></span>
+      </div>
+      <div class="tdd__ligne" role="row">
+        <span class="tdd__cellule tdd__cellule--principale" role="cell"><span class="tdd__texte" data-cases="10">Aéroport</span></span>
+        <span class="tdd__cellule" role="cell"><span class="tdd__texte tdd__texte--petit" data-cases="6">35-50</span><span class="tdd__unite" aria-hidden="true">min</span><span class="socle-sr">minutes</span></span>
+        <span class="tdd__cellule tdd__cellule--prix" role="cell"><span class="tdd__texte tdd__texte--accent" data-cases="4" data-aligne="droite">60€</span></span>
+        <span class="tdd__cellule tdd__cellule--action" role="cell"><a class="socle-bouton socle-bouton--plein" href="#demande">Réserver<span class="socle-sr"> Aéroport</span></a></span>
+      </div>
+      <div class="tdd__ligne" role="row">
+        <span class="tdd__cellule tdd__cellule--principale" role="cell"><span class="tdd__texte" data-cases="10">Vieux port</span></span>
+        <span class="tdd__cellule" role="cell"><span class="tdd__texte tdd__texte--petit" data-cases="6">10-15</span><span class="tdd__unite" aria-hidden="true">min</span><span class="socle-sr">minutes</span></span>
+        <span class="tdd__cellule tdd__cellule--prix" role="cell"><span class="tdd__texte tdd__texte--accent" data-cases="4" data-aligne="droite">18€</span></span>
+        <span class="tdd__cellule tdd__cellule--action" role="cell"><a class="socle-bouton socle-bouton--plein" href="#demande">Réserver<span class="socle-sr"> Vieux port</span></a></span>
+      </div>
+      <div class="tdd__ligne" role="row">
+        <span class="tdd__cellule tdd__cellule--principale" role="cell"><span class="tdd__texte" data-cases="10">Centre</span></span>
+        <span class="tdd__cellule" role="cell"><span class="tdd__texte tdd__texte--petit" data-cases="6">25-35</span><span class="tdd__unite" aria-hidden="true">min</span><span class="socle-sr">minutes</span></span>
+        <span class="tdd__cellule tdd__cellule--prix" role="cell"><span class="tdd__texte tdd__texte--accent" data-cases="4" data-aligne="droite">40€</span></span>
+        <span class="tdd__cellule tdd__cellule--action" role="cell"><a class="socle-bouton socle-bouton--plein" href="#demande">Réserver<span class="socle-sr"> Centre</span></a></span>
+      </div>
+      <div class="tdd__ligne" role="row">
+        <span class="tdd__cellule tdd__cellule--principale" role="cell"><span class="tdd__texte" data-cases="10">Stations</span></span>
+        <span class="tdd__cellule" role="cell"><span class="tdd__texte tdd__texte--petit" data-cases="6">90-120</span><span class="tdd__unite" aria-hidden="true">min</span><span class="socle-sr">minutes</span></span>
+        <span class="tdd__cellule tdd__cellule--prix" role="cell"><span class="tdd__texte tdd__texte--accent" data-cases="4" data-aligne="droite">150€</span></span>
+        <span class="tdd__cellule tdd__cellule--action" role="cell"><a class="socle-bouton socle-bouton--plein" href="#demande">Réserver<span class="socle-sr"> Stations</span></a></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-bloc socle-cadre" id="demande">
+    <p class="socle-surtitre">Section suivante</p>
+    <h2>Demande</h2>
+    <p>Chaque bouton « Réserver » mène au formulaire du site, avec la destination dans l'adresse pour le préremplir.</p>
+  </section>
+</main>
+<script type="module">
+  import { init } from './module.js?v=1';
+  for (const el of document.querySelectorAll('[data-module="tableau-des-departs"]')) init(el);
+</script>
+</body>
+</html>

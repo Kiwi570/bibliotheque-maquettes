@@ -1,0 +1,46 @@
+{
+ "id": "maysam-transfert-maquette/trajets-carte",
+ "maquette": "maysam-transfert-maquette",
+ "page": "trajets",
+ "titre": "Paris au centre, cinq départs.",
+ "role": "carte",
+ "description": "Carte d'Île-de-France en SVG : routes qui se tracent une fois depuis Paris, pastilles qui roulent dessus (animateMotion), fiche par destination avec prix et durée.",
+ "animations": [
+  "trace-svg"
+ ],
+ "interactions": [
+  "carte-interactive"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "trajets.html:131-197",
+  "css": "assets/css/site.css:35,344-378,461,576",
+  "js": "assets/js/site.js:212-240 ; assets/js/socle/effets.js:21,25,236-267"
+ },
+ "medias": {
+  "capture": "medias/maysam-transfert-maquette/trajets-carte-p1440.jpg",
+  "capture_m390": "medias/maysam-transfert-maquette/trajets-carte-m390.jpg",
+  "video": "medias/maysam-transfert-maquette/trajets-carte-p720.mp4"
+ },
+ "pieges": [
+  "Départs des pastilles décalés avec un begin négatif : avec un begin positif, la pastille attend en haut à gauche du dessin"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1208,
+  "hauteur_m390": 1227,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

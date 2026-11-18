@@ -1,0 +1,12 @@
+{
+ "etapes": [
+  {"defiler": "[data-module=\"tableau-des-departs\"] .tdd__tableau"},
+  {"attendre": 2200},
+  {"verifier": ".tdd--pret .tdd__case"},
+  {"survoler": ".tdd__ligne:nth-of-type(3)"},
+  {"attendre": 900}
+ ],
+ "pause": 500,
+ "video": "scenario",
+ "capture": { "attendre": 400, "etapes": [{"defiler": "[data-module=\"tableau-des-departs\"] .tdd__tableau"}], "apres": 2400 }
+}

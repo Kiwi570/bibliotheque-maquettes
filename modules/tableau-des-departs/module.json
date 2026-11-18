@@ -1,0 +1,62 @@
+{
+ "nom": "tableau-des-departs",
+ "titre": "Tableau d'affichage à palettes comme en gare ou à l'aéroport : à l'arrivée, chaque palette tourne puis se pose sur sa lettre (destination, durée, prix) ; au survol, la ligne tourne de nouveau",
+ "role": "tarifs",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "provenance": "projet",
+ "origine": [
+  "maysam-transfert-maquette/tarifs"
+ ],
+ "convient_a": [
+  "tourisme",
+  "hébergement",
+  "auto-moto",
+  "sport",
+  "culture",
+  "spectacle",
+  "restauration",
+  "formation",
+  "collectivité"
+ ],
+ "ambiances": [
+  "sombre",
+  "nocturne",
+  "industriel",
+  "luxueux",
+  "sobre",
+  "ludique",
+  "énergique"
+ ],
+ "telephone": "adapté",
+ "grille": [],
+ "options": {
+  "signes": "signes tirés au hasard pendant que les palettes tournent, 'A à Z, 0 à 9 et -'",
+  "tours": "tours minimum d'une palette, 4 (jusqu'à 12 selon sa place dans le tableau)",
+  "pas": "durée d'un tour en ms, 55",
+  "survol": "les palettes d'une ligne tournent de nouveau au survol à la souris, true",
+  "jouer": "jouer à la première apparition, true (false : appeler jouer() soi-même, par exemple à la fin d'une intro)",
+  "seuil": "part du tableau visible pour lancer, 0.35",
+  "data-cases / data-aligne": "sur chaque .tdd__texte : nombre de palettes ; data-aligne=\"droite\" complète à gauche (prix)",
+  "css --tdd-case / --tdd-fond-case / --tdd-colonnes": "taille des palettes (clamp 15 à 30 px), couleur d'une palette, grille d'une ligne (minmax(0, 1fr) auto auto auto)"
+ },
+ "images": [],
+ "poids_ko": 9.2,
+ "tests": {
+  "formats": "ok",
+  "sans-webgl": "n/a",
+  "console": "0 erreur",
+  "cls": 0,
+  "scenario": "ok",
+  "texte-12px": "ok",
+  "cibles-44px": "ok"
+ }
+}

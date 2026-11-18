@@ -1,0 +1,47 @@
+{
+ "id": "maysam-transfert-maquette/vehicules",
+ "maquette": "maysam-transfert-maquette",
+ "page": "index",
+ "titre": "Des véhicules premium pour chaque trajet.",
+ "role": "produits",
+ "description": "Fond ivoire : trois cartes (Tesla Model Y, Mercedes Classe E, Classe V) avec silhouette dessinée qui arrive en roulant, roues qui tournent puis phares qui s'allument, places et valises.",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:335-396",
+  "css": "assets/css/site.css:229-238,461,468,576",
+  "js": "assets/js/site.js:277-295,304-314,345-372"
+ },
+ "medias": {
+  "capture": "medias/maysam-transfert-maquette/vehicules-p1440.jpg",
+  "capture_m390": "medias/maysam-transfert-maquette/vehicules-m390.jpg",
+  "video": "medias/maysam-transfert-maquette/vehicules-p720.mp4"
+ },
+ "pieges": [
+  "Les traits restent cachés tant que la voiture n'a pas roulé : un IntersectionObserver lance l'arrivée en entier, jamais un tracé lié au défilement (dessins à moitié tracés en v1)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1000,
+  "hauteur_m390": 1360,
+  "epinglee": false,
+  "scrolltriggers": 3
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

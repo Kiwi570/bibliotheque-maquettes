@@ -1,0 +1,637 @@
+{
+ "maquette": {
+  "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+  "activite": [
+   "tourisme",
+   "auto-moto"
+  ],
+  "concept": [
+   "voyage",
+   "station"
+  ],
+  "ambiance": [
+   "sombre",
+   "nocturne",
+   "luxueux"
+  ],
+  "palette": {
+   "fond": "#0C0E13",
+   "texte": "#F2EDE3",
+   "accent": "#C9A45C",
+   "secondaire": "#7A5A1E"
+  },
+  "polices": {
+   "titres": "Bodoni Moda",
+   "texte": "Manrope",
+   "mono": "JetBrains Mono"
+  },
+  "points_forts": [
+   "La lumière des phares comme fil : intro, traînées de l'avenue projetées en perspective, silhouettes qui allument leurs phares, filet doré du voile",
+   "Tableau des départs à palettes sur les cinq trajets réels, qui se retourne à l'arrivée et au survol",
+   "Pancarte au nom tapé, de l'accueil au formulaire de réservation, jusqu'au tampon « Demande prête »",
+   "Six pages au même niveau, une ouverture par page, prix affichés une seule fois par page"
+  ],
+  "reserves": [
+   "Accueil un peu long (10,5 écrans)",
+   "Photo de la Classe E absente, silhouette à la place",
+   "Safari non vérifié"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "trace-svg",
+   "parallaxe",
+   "galerie-horizontale",
+   "empilement-de-fiches",
+   "compteur",
+   "transition-de-page",
+   "reactif-vitesse",
+   "canvas-2d",
+   "fil-conducteur"
+  ],
+  "interactions": [
+   "calculateur",
+   "saisie-personnalisee",
+   "formulaire-par-étapes",
+   "réservation-simulee",
+   "carte-interactive",
+   "comparateur"
+  ],
+  "change_depuis_audit": "v2 : traînées en perspective, silhouettes qui roulent et allument leurs phares, voiture sur la mini-route de l'estimateur, billets de témoignages, tampon de fin de réservation, prix plus affichés trois fois sur Trajets",
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "la pancarte qui écrit le nom tapé par le visiteur",
+   "fil": "la lumière des phares : intro, traînées, silhouettes, voile"
+  },
+  "metier": "chauffeur privé"
+ },
+ "sections": {
+  "div": {
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Voile vitre teintée",
+   "role": "transition-de-page",
+   "description": "Voile noir comme une vitre teintée qui remonte entre deux pages, filet doré sur son bord, nom de la page en Bodoni."
+  },
+  "ouverture-panneau": {
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Intro : deux phares s'allument",
+   "role": "ouverture",
+   "description": "Panneau noir : deux phares s'allument en halo, le nom Maysam Transfert apparaît dessous, puis la lumière ouvre la page sur l'avenue de nuit."
+  },
+  "header": {
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "En-tête noir",
+   "role": "menu",
+   "description": "En-tête noir : logo or (tour Eiffel), liens des pages, bouton or « Réserver »."
+  },
+  "menu": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran noir, grands liens en Bodoni, bouton de réservation et téléphone."
+  },
+  "debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "canvas-2d",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les traînées se projettent selon object-fit cover, object-position et currentSrc (photo téléphone ou ordinateur) : sinon le point de fuite se décale d'un format à l'autre"
+   ],
+   "titre": "À l'heure, à chaque trajet.",
+   "role": "ouverture",
+   "description": "Avenue parisienne de nuit sous la pluie, traînées de feux rouges et de phares blancs dessinées en canvas qui suivent la perspective jusqu'au point de fuite et accélèrent au défilement, zoom lent de la photo ; titre Bodoni avec « chaque trajet. » en italique or, deux boutons et trois faits rassurants."
+  },
+  "tarifs": {
+   "animations": [
+    "apparition-au-défilement",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": "tableau-des-departs",
+   "pieges": [
+    "Palettes en clamp(15px, 1.9vw, 30px) et 13 px sous 380 px de large : au-delà, la destination la plus longue déborde"
+   ],
+   "titre": "Des prix clairs, sans surprise.",
+   "role": "tarifs",
+   "description": "Tableau des départs d'aéroport à palettes : destination, durée et prix des cinq trajets réels se retournent lettre par lettre à l'arrivée, une ligne se retourne de nouveau au survol ; bouton « Réserver » par ligne. Sur téléphone, chaque trajet tient sur deux lignes."
+  },
+  "estimation": {
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "titre": "Estimez votre tarif en quelques secondes.",
+   "role": "calculateur",
+   "description": "Fond ivoire : choix du trajet, passagers et valises ; carte noire du résultat avec le véhicule conseillé, sa silhouette, le prix fixe, et une mini-route où une petite voiture roule de Paris à la destination ; la silhouette passe de la berline au van en roulant."
+  },
+  "services": {
+   "animations": [
+    "galerie-horizontale",
+    "section-fixée",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Bien plus qu'un simple trajet.",
+   "role": "services",
+   "description": "Six services en galerie horizontale épinglée : grandes illustrations de nuit (aéroport, gares, valises, cuir, ruban de mariage, route au couchant), numéro, titre Bodoni, lien qui préremplit la réservation ; cartes qui s'inclinent au survol."
+  },
+  "vehicules": {
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les traits restent cachés tant que la voiture n'a pas roulé : un IntersectionObserver lance l'arrivée en entier, jamais un tracé lié au défilement (dessins à moitié tracés en v1)"
+   ],
+   "titre": "Des véhicules premium pour chaque trajet.",
+   "role": "produits",
+   "description": "Fond ivoire : trois cartes (Tesla Model Y, Mercedes Classe E, Classe V) avec silhouette dessinée qui arrive en roulant, roues qui tournent puis phares qui s'allument, places et valises."
+  },
+  "pancarte": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "titre": "Votre nom vous attend.",
+   "role": "outil-interactif",
+   "description": "Hall d'arrivée flou de nuit : le visiteur tape son nom et il s'écrit en Bodoni sur la pancarte du chauffeur, qui se balance à chaque lettre ; trois garanties de l'accueil à l'aéroport."
+  },
+  "temoignages": {
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Rotation de 2 degrés au plus pendant la distribution scrubée et 0 à l'arrivée : une rotation agrandit la boîte de chaque ligne et l'audit voit le trajet toucher le nom",
+    "Ne pas rogner la section (overflow clip) : seulement la piste du téléphone"
+   ],
+   "titre": "Ils nous confient leurs trajets.",
+   "role": "témoignages",
+   "description": "Six avis réels en billets ivoire : talon avec trajet et passager, perforation, citation en Bodoni italique ; distribués au défilement avec un léger décalage ; rangée qui se glisse au doigt sur téléphone."
+  },
+  "faq": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Vos questions, nos réponses.",
+   "role": "faq",
+   "description": "Fond ivoire : cinq questions réelles en accordéon qui s'ouvre en douceur, petite tour Eiffel or à côté du titre."
+  },
+  "appel": {
+   "animations": [
+    "révélation-image",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Prêt à réserver votre chauffeur ?",
+   "role": "appel",
+   "description": "Portière de voiture de nuit en grand, titre Bodoni, boutons Réserver en ligne, téléphone et WhatsApp."
+  },
+  "pied": {
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Pied noir : logo, phrase du service, liens des pages, contacts, « Mentions légales : à compléter » non cliquable."
+  },
+  "404-debut": {
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Ce trajet n'existe pas.",
+   "role": "page-404",
+   "description": "Valise seule sous un réverbère de nuit, titre Bodoni, retour à l'accueil et réservation."
+  },
+  "contact-debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Une question ? Joignables à tout moment.",
+   "role": "ouverture",
+   "description": "Ouverture scindée : titre et numéro de téléphone en très grand chiffres Bodoni qui s'écrivent, photo de rue mouillée la nuit."
+  },
+  "contact-joindre": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Nous joindre",
+   "role": "contact",
+   "description": "Quatre cartes noires : téléphone, WhatsApp, e-mail, disponibilité, chacune avec son lien."
+  },
+  "contact-zone": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Paris et toute l'Île-de-France.",
+   "role": "carte",
+   "description": "Fond ivoire : vue de Paris la nuit et la carte des trajets d'Île-de-France en version réduite."
+  },
+  "contact-faq": {
+   "ignorer": "même FAQ que l'accueil, en entier"
+  },
+  "contact-appel": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "flotte-debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Trois véhicules, un même soin.",
+   "role": "ouverture",
+   "description": "Grand titre Bodoni puis bandeau de nuit où les trois silhouettes dorées arrivent en roulant l'une après l'autre et allument leurs phares."
+  },
+  "flotte-vehicules": {
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Le bon véhicule pour chaque trajet.",
+   "role": "produits",
+   "description": "Fond ivoire : un rang par véhicule, silhouette, places, valises, badge d'usage, photo du modèle quand elle est juste, lien qui préremplit la réservation."
+  },
+  "flotte-choix": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Combien êtes-vous ?",
+   "role": "outil-interactif",
+   "description": "Passagers et valises au compteur : le véhicule qui convient s'allume dans la liste, les autres s'éteignent."
+  },
+  "flotte-confort": {
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Le confort, jusqu'aux détails.",
+   "role": "offre",
+   "description": "Fond ivoire : cuir matelassé en gros plan, sièges enfant, bagages, 100 % électrique."
+  },
+  "flotte-appel": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "reserver-debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Réservez votre trajet en quelques minutes.",
+   "role": "ouverture",
+   "description": "Pare-brise sous la pluie la nuit en plein écran, titre Bodoni centré, téléphone et trois garanties."
+  },
+  "reserver-formulaire": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "réservation-simulee",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [],
+   "titre": "Formulaire en cinq étapes",
+   "role": "outil-interactif",
+   "description": "Carton noir à gauche avec la pancarte au nom tapé et le récapitulatif qui se remplit ; formulaire en cinq étapes nommées (trajet, date, passagers, contact, vérifier), simulé ; à l'envoi un tampon « Demande prête » se pose sur la pancarte."
+  },
+  "reserver-bon-a-savoir": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Avant de partir.",
+   "role": "faq",
+   "description": "FAQ courte avant la réservation, avec le téléphone."
+  },
+  "services-debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Bien plus qu'un simple trajet.",
+   "role": "ouverture",
+   "description": "Ouverture en cadre : hall d'hôtel de nuit et voiture qui attend, titre Bodoni, rideau qui s'ouvre à l'arrivée."
+  },
+  "services-liste": {
+   "animations": [
+    "empilement-de-fiches",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "planches-empilees",
+   "pieges": [],
+   "titre": "Choisissez votre trajet.",
+   "role": "services",
+   "description": "Six services en planches qui s'empilent au défilement, avec cartouche (numéro, catégorie), liste de détails, illustration et boutons qui préremplissent la réservation."
+  },
+  "services-accueil-aeroport": {
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Trois gestes qui rassurent.",
+   "role": "étapes",
+   "description": "Fond ivoire : trois étapes numérotées de l'accueil à l'aéroport (vol suivi, pancarte, attente sans frais) reliées par un trait qui se trace."
+  },
+  "services-appel": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "trajets-debut": {
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Des prix fixes, trajet par trajet.",
+   "role": "ouverture",
+   "description": "Ouverture scindée : traînées de phares sur une route de nuit et carte noire au prix en très grand qui passe d'un trajet à l'autre."
+  },
+  "trajets-carte": {
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "carte-interactive"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Départs des pastilles décalés avec un begin négatif : avec un begin positif, la pastille attend en haut à gauche du dessin"
+   ],
+   "titre": "Paris au centre, cinq départs.",
+   "role": "carte",
+   "description": "Carte d'Île-de-France en SVG : routes qui se tracent une fois depuis Paris, pastilles qui roulent dessus (animateMotion), fiche par destination avec prix et durée."
+  },
+  "trajets-estimation": {
+   "ignorer": "même estimateur que l'accueil"
+  },
+  "trajets-inclus": {
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Tout est compris.",
+   "role": "offre",
+   "description": "Six inclus (pancarte, suivi du vol, bagages, sièges enfant, paiement, annulation) avec icônes or dans un anneau ; deux colonnes sur téléphone."
+  },
+  "trajets-sur-demande": {
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "titre": "Mise à disposition et longs trajets.",
+   "role": "offre",
+   "description": "Fond ivoire : deux cartes illustrées sur devis, mise à disposition et longs trajets."
+  },
+  "trajets-appel": {
+   "ignorer": "même appel final que l'accueil"
+  }
+ }
+}
