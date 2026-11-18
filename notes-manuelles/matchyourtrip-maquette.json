@@ -1,0 +1,676 @@
+{
+ "maquette": {
+  "client": "MatchYourTrip, mise en relation de voyageurs avec des travel planners spécialistes d'une destination ou d'une envie (application en construction)",
+  "activite": [
+   "tourisme",
+   "numérique"
+  ],
+  "concept": [
+   "carnet",
+   "voyage"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "#F7F0E6",
+   "texte": "#2B1F24",
+   "accent": "#C42A7E",
+   "secondaire": "#2B1A27"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Figtree",
+   "mono": ""
+  },
+  "points_forts": [
+   "Un seul collage de papier déchiré (crème, prune, rose, abricot) tenu de l'intro au pied de page, avec scotch, tampons et étiquettes",
+   "Outil de match envie × destination au cœur de l'accueil, qui préremplit le formulaire",
+   "Scène des 14 onglets qui se ferment jusqu'au carnet de voyage (charge mentale racontée sans texte)",
+   "Formulaire en trois étapes avec billet qui se remplit et tampon « Prêt au départ »"
+  ],
+  "reserves": [
+   "Pas de scène épinglée forte ni d'effet spectaculaire",
+   "Sections de texte typographiques (pourquoi, formules, étapes)"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "parallaxe",
+   "trace-svg",
+   "fil-conducteur",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "progression-fixée",
+   "révélation-image",
+   "masque",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "configurateur",
+   "filtres",
+   "recherche",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": "v2 : titre match géant souligné, avion du rêve, scène des 14 onglets, ciel de papier du don, tampon du billet, mots clés des titres collés sur papier, aperçus flous des images d'ouverture",
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "pastille « Match ! » où finit l'intro, puis les fiches envie × destination à toucher",
+   "fil": "le papier déchiré et l'avion en papier : couches de l'ouverture, pointillés du rêve, étapes, appel final"
+  },
+  "metier": "travel planner"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile prune en vague",
+   "role": "transition-de-page",
+   "description": "Voile prune qui monte en vague, pin du logo et nom de la page d'arrivée, puis s'ouvre sur sa pastille.",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : bandes de papier déchiré",
+   "role": "ouverture",
+   "description": "Panneau crème : deux bandes de papier déchiré rose et abricot se croisent, le pin du logo, un cœur, le nom et le slogan en Caveat ; le pin glisse ensuite jusqu'à la pastille de la page (versObjet).",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "En-tête crème",
+   "role": "menu",
+   "description": "En-tête crème : logo Match en Fraunces avec Your en italique rose, liens, bouton rose « Mon projet de voyage ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran crème, grands liens Fraunces, bouton « Je trouve mon travel planner », slogan en Caveat.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Ouverture : couches de papier et rêve",
+   "role": "ouverture",
+   "description": "Collage d'une voyageuse qui regarde l'horizon ; quatre couches de papier déchiré montent puis s'écartent au défilement ; feuille inclinée avec un titre dont le mot « match » est géant et souligné à la main ; un avion en papier suit en pointillés le regard de la silhouette jusqu'à la feuille.",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe",
+    "révélation-texte",
+    "trace-svg",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Une ligne de titre plus grande repousse l'info clé hors de l'écran à 1000×560 : règle de hauteur max 640",
+    "Entrées en GSAP fromTo avec y: 0 explicite, sinon les lignes restent décalées"
+   ]
+  },
+  "match": {
+   "titre": "Le match envie × destination",
+   "role": "outil-interactif",
+   "description": "Fond prune : deux fiches de papier (envies, destinations) à puces, un tampon « Match ! » au milieu et une phrase-résultat ; le bouton emporte le choix dans le formulaire prérempli.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Aide différente à la souris et au doigt (Cliquez ou Touchez)"
+   ]
+  },
+  "pourquoi": {
+   "titre": "Pourquoi un travel planner",
+   "role": "services",
+   "description": "Quatre fiches de papier scotchées, pictogrammes roses, phrase manuscrite en Caveat sous la grille.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Fiches sans rotation résiduelle après l'entrée (chevauchements mesurés par l'audit)"
+   ]
+  },
+  "themes": {
+   "titre": "Thèmes vedettes",
+   "role": "galerie",
+   "description": "Six fiches photo en collage décalé (animaux, chien, aventure, rencontres, bien-être, road trip) avec famille, sous-thèmes et lien.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "destinations": {
+   "titre": "Destinations en bande illustrée",
+   "role": "carte",
+   "description": "Grande bande illustrée en papier (plages, collines, montgolfière) puis huit régions en étiquettes de papier, chaque pays mène au formulaire.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "etapes": {
+   "titre": "Comment ça marche",
+   "role": "étapes",
+   "description": "Trois étapes numérotées reliées par un pointillé que suit un avion en papier.",
+   "animations": [
+    "trace-svg",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "formules": {
+   "titre": "Plusieurs façons de préparer",
+   "role": "offre",
+   "description": "Quatre formules : le travel planner disponible, trois autres sous un tampon « Prochainement ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "rencontres": {
+   "titre": "Histoire de rencontres",
+   "role": "manifeste",
+   "description": "Photo plein cadre au soleil couchant (amies dans l'eau) et feuille de texte posée dessus.",
+   "animations": [
+    "parallaxe",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Nuit prune au bord déchiré : lune, étoiles, avion en papier qui file, titre « premier pas » en Fraunces et deux boutons (projet, don).",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mention « Illustration générée » placée en haut : le bord déchiré du pied de page la cachait en bas"
+   ]
+  },
+  "pied": {
+   "titre": "Pied de page prune",
+   "role": "pied-de-page",
+   "description": "Prune au bord déchiré : logo, slogan Caveat, sommaire, liens utiles et mentions de démonstration.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "404 : volcan de papier",
+   "role": "page-404",
+   "description": "Volcan et vallées en papier plein cadre, feuille « vraiment hors des sentiers battus » et deux boutons.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment-ca-marche-debut": {
+   "titre": "Ouverture aux jumelles",
+   "role": "ouverture",
+   "description": "Ouverture scindée : titre au mot clé collé sur papier, collage d'une voyageuse aux jumelles qui se dévoile en deux cercles comme dans des jumelles.",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Aperçu flou de l'image en fond, sinon case grise au retour avant"
+   ]
+  },
+  "comment-ca-marche-benefices": {
+   "titre": "Les 14 onglets",
+   "role": "services",
+   "description": "Fenêtre de navigateur avec 14 onglets ouverts (Vols, Hôtel, Visa…) qui se ferment un à un pendant la lecture des bénéfices ; le compteur descend et un carnet de voyage prune apparaît à la fin. Scène collée à gauche sur ordinateur, jouée d'un coup sur tablette et téléphone.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Carnet dans la même cellule de grille que les lignes (en absolu il débordait sur téléphone)",
+    "Onglets fermés par échelle et visibility, sans fondu d'opacité : axe mesure le contraste pendant la transition",
+    "Sur une colonne la scène est au-dessus de la liste : la jouer au temps, pas au défilement de la liste"
+   ]
+  },
+  "comment-ca-marche-rencontres": {
+   "titre": "Rencontres",
+   "role": "manifeste",
+   "description": "Fond prune, collage photo des rencontres et texte avec phrase manuscrite.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment-ca-marche-etapes": {
+   "titre": "Trois étapes",
+   "role": "étapes",
+   "description": "Même frise que l'accueil : pointillé et avion en papier.",
+   "animations": [
+    "trace-svg",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment-ca-marche-formules": {
+   "titre": "Formules",
+   "role": "offre",
+   "description": "Les quatre formules et leurs tampons « Prochainement ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment-ca-marche-questions": {
+   "titre": "Vos questions",
+   "role": "faq",
+   "description": "Questions en accordéon, pictogrammes à gauche.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "comment-ca-marche-fin": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Nuit prune au bord déchiré : lune, étoiles, avion en papier qui file, titre « premier pas » en Fraunces et deux boutons (projet, don).",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mention « Illustration générée » placée en haut : le bord déchiré du pied de page la cachait en bas"
+   ]
+  },
+  "faire-un-don-debut": {
+   "titre": "Ouverture : envol",
+   "role": "ouverture",
+   "description": "Illustration de papier plein cadre (collines, dunes, montgolfière qui s'élève), feuille au mot « envol » collé sur papier.",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "faire-un-don-mission": {
+   "titre": "Mission en mots collés",
+   "role": "manifeste",
+   "description": "Trois mots (humaine, accessible, responsable) sur des étiquettes de papier qui se posent une à une.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "faire-un-don-utilite": {
+   "titre": "À quoi sert votre don",
+   "role": "services",
+   "description": "Trois fiches de papier avec pictogramme.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "faire-un-don-don": {
+   "titre": "Le don et sa montgolfière",
+   "role": "outil-interactif",
+   "description": "Formulaire de don simulé : montant avec + et −, montgolfière dans un ciel de papier (soleil, nuages, collines déchirées) qui monte et grossit avec le montant.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Boutons + et − en flex 1 1 0 pour ne pas déborder sur téléphone"
+   ]
+  },
+  "faire-un-don-fin": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Nuit prune au bord déchiré : lune, étoiles, avion en papier qui file, titre « premier pas » en Fraunces et deux boutons (projet, don).",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mention « Illustration générée » placée en haut : le bord déchiré du pied de page la cachait en bas"
+   ]
+  },
+  "mon-projet-de-voyage-debut": {
+   "titre": "Ouverture au billet",
+   "role": "ouverture",
+   "description": "Titre au mot « ici » collé sur papier ; collage carnet, crayon et boussole qui tombe en place en tournant.",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "mon-projet-de-voyage-formulaire": {
+   "titre": "Formulaire en trois étapes et billet",
+   "role": "contact",
+   "description": "Formulaire en trois étapes (envie, voyage, vous), familles en radios visibles, préremplissage depuis l'adresse ; à côté un billet prune qui se remplit au fil des réponses et reçoit un tampon « Prêt au départ » à l'envoi simulé.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Préremplissage : garder la destination reçue et cocher la famille via data-items",
+    "Radios stylés mais visibles (le focus ne doit pas aller sur un champ caché)"
+   ]
+  },
+  "mon-projet-de-voyage-ensuite": {
+   "titre": "Et ensuite ?",
+   "role": "étapes",
+   "description": "Trois fiches : on lit votre projet, on cherche votre match, votre voyage se dessine.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "themes-et-destinations-debut": {
+   "titre": "Ouverture en mosaïque",
+   "role": "ouverture",
+   "description": "Titre au mot « rêve » collé sur papier, puis une grande bande illustrée et deux bandes décalées qui se recalent.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Une seule vraie image ; les bandes décalées en fond CSS (mentions et aria-hidden)"
+   ]
+  },
+  "themes-et-destinations-catalogue": {
+   "titre": "Catalogue des envies",
+   "role": "produits",
+   "description": "Neuf familles illustrées, 44 thèmes, filtres par famille, recherche tolérante (accents, pluriels) avec surlignage, filtres gardés dans l'adresse, état vide qui emporte la recherche dans le formulaire.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "themes-et-destinations-destinations": {
+   "titre": "Les destinations",
+   "role": "carte",
+   "description": "Tableau de papier d'un volcan en rideau puis huit régions et leurs pays, chacun mène au formulaire.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "white-space: nowrap sur les pays (chevauchements à l'audit)"
+   ]
+  },
+  "themes-et-destinations-autre": {
+   "titre": "Votre envie n'est pas dans la liste",
+   "role": "appel",
+   "description": "Feuille centrée avec cœur, phrase d'exemple et bouton vers le formulaire.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "themes-et-destinations-fin": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Nuit prune au bord déchiré : lune, étoiles, avion en papier qui file, titre « premier pas » en Fraunces et deux boutons (projet, don).",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mention « Illustration générée » placée en haut : le bord déchiré du pied de page la cachait en bas"
+   ]
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "matchyourtrip-maquette/debut",
+ "maquette": "matchyourtrip-maquette",
+ "page": "index",
+ "titre": "Ouverture : couches de papier et rêve",
+ "role": "ouverture",
+ "description": "Collage d'une voyageuse qui regarde l'horizon ; quatre couches de papier déchiré montent puis s'écartent au défilement ; feuille inclinée avec un titre dont le mot « match » est géant et souligné à la main ; un avion en papier suit en pointillés le regard de la silhouette jusqu'à la feuille.",
+ "animations": [
+  "ouverture-orchestrée",
+  "parallaxe",
+  "révélation-texte",
+  "trace-svg",
+  "fil-conducteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:113-141",
+  "css": "assets/css/site.css:45,88-91,104-135,480-491,514,534-536,542-545,550-553,560-568,578-588,595,605-608,615-616",
+  "js": "assets/js/site.js:17-47,50-61,64-91,365 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/matchyourtrip-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/matchyourtrip-maquette/debut-m390.jpg",
+  "video": "medias/matchyourtrip-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Une ligne de titre plus grande repousse l'info clé hors de l'écran à 1000×560 : règle de hauteur max 640",
+  "Entrées en GSAP fromTo avec y: 0 explicite, sinon les lignes restent décalées"
+ ],
+ "mesures": {
+  "hauteur_p1440": 923,
+  "hauteur_m390": 788,
+  "epinglee": false,
+  "scrolltriggers": 4
+ },
+ "familles": [
+  "typo-geante",
+  "fil-conducteur",
+  "trait-qui-se-dessine",
+  "profondeur"
+ ],
+ "impact": "spectaculaire"
+}

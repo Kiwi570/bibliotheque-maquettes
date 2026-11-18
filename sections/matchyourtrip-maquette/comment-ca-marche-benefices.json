@@ -1,0 +1,47 @@
+{
+ "id": "matchyourtrip-maquette/comment-ca-marche-benefices",
+ "maquette": "matchyourtrip-maquette",
+ "page": "comment-ca-marche",
+ "titre": "Les 14 onglets",
+ "role": "services",
+ "description": "Fenêtre de navigateur avec 14 onglets ouverts (Vols, Hôtel, Visa…) qui se ferment un à un pendant la lecture des bénéfices ; le compteur descend et un carnet de voyage prune apparaît à la fin. Scène collée à gauche sur ordinateur, jouée d'un coup sur tablette et téléphone.",
+ "animations": [
+  "progression-fixée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "comment-ca-marche.html:134-169",
+  "css": "assets/css/site.css:305-333,469-470",
+  "js": "assets/js/site.js:199-237,362 ; assets/js/socle/ouverture.js:160-237 ; assets/js/socle/gouttiere.js:3,7 ; assets/js/socle/onde.js:67-190"
+ },
+ "medias": {
+  "capture": "medias/matchyourtrip-maquette/comment-ca-marche-benefices-p1440.jpg",
+  "capture_m390": "medias/matchyourtrip-maquette/comment-ca-marche-benefices-m390.jpg",
+  "video": "medias/matchyourtrip-maquette/comment-ca-marche-benefices-p720.mp4"
+ },
+ "pieges": [
+  "Carnet dans la même cellule de grille que les lignes (en absolu il débordait sur téléphone)",
+  "Onglets fermés par échelle et visibility, sans fondu d'opacité : axe mesure le contraste pendant la transition",
+  "Sur une colonne la scène est au-dessus de la liste : la jouer au temps, pas au défilement de la liste"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1181,
+  "hauteur_m390": 1606,
+  "epinglee": false,
+  "scrolltriggers": 5
+ },
+ "familles": [],
+ "impact": "vivant"
+}

@@ -1,0 +1,45 @@
+{
+ "id": "matchyourtrip-maquette/mon-projet-de-voyage-formulaire",
+ "maquette": "matchyourtrip-maquette",
+ "page": "mon-projet-de-voyage",
+ "titre": "Formulaire en trois étapes et billet",
+ "role": "contact",
+ "description": "Formulaire en trois étapes (envie, voyage, vous), familles en radios visibles, préremplissage depuis l'adresse ; à côté un billet prune qui se remplit au fil des réponses et reçoit un tampon « Prêt au départ » à l'envoi simulé.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "mon-projet-de-voyage.html:133-202",
+  "css": "assets/css/socle.css:39-42,280-287 ; assets/css/site.css:24,94,149-154,410-451,471-472,530",
+  "js": "assets/js/site.js:3,17-39,63-120,199-213,241-337,340-347,350-357,362 ; assets/js/socle/index.js:5-7,14,37-58 ; assets/js/socle/ouverture.js:35-44,82,156 ; assets/js/socle/voile.js:9,33,54-74,138-168 ; assets/js/socle/gouttiere.js:59-91,95 ; assets/js/socle/apparitions.js:1,35-56 ; assets/js/socle/effets.js:2,111-140,214-234,300-313,404 ; assets/js/socle/onde.js:45,67-190 ; assets/js/socle/mesures.js:25-34 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/compteurs.js:6-36 ; assets/js/socle/formulaires.js:1-3,8-9,12-58 ; assets/js/socle/transitions.js:54-72 ; assets/js/socle/entete.js:6,42-56,60-165"
+ },
+ "medias": {
+  "capture": "medias/matchyourtrip-maquette/mon-projet-de-voyage-formulaire-p1440.jpg",
+  "capture_m390": "medias/matchyourtrip-maquette/mon-projet-de-voyage-formulaire-m390.jpg",
+  "video": "medias/matchyourtrip-maquette/mon-projet-de-voyage-formulaire-p720.mp4"
+ },
+ "pieges": [
+  "Préremplissage : garder la destination reçue et cocher la famille via data-items",
+  "Radios stylés mais visibles (le focus ne doit pas aller sur un champ caché)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1021,
+  "hauteur_m390": 1704,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "calme"
+}
