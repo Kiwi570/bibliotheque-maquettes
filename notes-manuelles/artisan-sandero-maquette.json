@@ -1,0 +1,605 @@
+{
+  "maquette": {
+    "client": "entreprise familiale de couverture, zinguerie, charpente, peinture et façades à Taverny (Artisan Sandero), de père en fils depuis 2006",
+    "activite": [
+      "bâtiment",
+      "artisanat"
+    ],
+    "concept": [
+      "atelier"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "artisanal",
+      "minéral"
+    ],
+    "palette": {
+      "fond": "--chaux",
+      "texte": "--encre",
+      "accent": "--tuile",
+      "secondaire": "--ecran"
+    },
+    "polices": {
+      "titres": "Newsreader",
+      "texte": "Schibsted Grotesk",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Sous les tuiles » : chaux, terre cuite et écran noir, Newsreader avec un mot en italique tuile ; un artisan du bâtiment traité avec l'élégance d'une revue",
+      "ouverture : plongée sous les tuiles sur sept écrans ; partie du faîtage, la caméra glisse sous la tuile, à travers liteaux, écran et isolant, légendes en relais, images décodées d'avance pour rester fluide",
+      "titres posés tuile par tuile (les mots tombent rang par rang), trame des liteaux qui se cloue au défilement, soleil placé selon la vraie position sur Taverny",
+      "« Ce que vous voyez d'en bas » : diagnostic sur la coupe de la maison, « Le toit, pièce par pièce » où chaque pièce du croquis se nomme au survol, finitions d'enduit qui recomposent la grille",
+      "quatre matériaux épinglés avec leur durée de vie, courrier des clients avec note 5,0, devis en étapes avec méthode rang par rang"
+    ],
+    "reserves": [
+      "quinze versions et près de 23 heures avec la skill v10.10 ; mode calme retiré à la demande du client",
+      "dépôt très lourd (125 Mo) ; 3 échecs au dernier audit (mode calme)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "section-fixée",
+      "révélation-texte",
+      "trace-svg",
+      "parallaxe",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "schema-interactif",
+      "formulaire-par-étapes",
+      "filtres",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "objet-unique",
+    "grille": {
+      "objet": "la plongée sous les tuiles, couche par couche",
+      "fil": "les liteaux qui se clouent et les titres posés tuile par tuile"
+    },
+    "metier": "couvreur-zingueur"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile en rangs de tuiles terre cuite entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête chaux : logo Artisan Sandero, couverture, zinguerie et charpente, peinture et façades, devis et contact, bouton tuile « Devis gratuit »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur écran noir, liens en Newsreader",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Ce qui se passe sous les tuiles, une famille le sait.",
+      "role": "ouverture",
+      "description": "Ouverture épinglée sur sept écrans : « Ce qui se passe sous les tuiles, une famille le sait. » ; la photo du toit vu du faîtage, puis la caméra plonge sous la tuile, à travers liteaux, écran, isolant et charpente, en canvas, avec des légendes en relais ; boutons devis et téléphone",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "section-fixée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, la photo passe sous la bande de texte, toile plus petite"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "plongée sous les tuiles couche par couche au défilement"
+      ]
+    },
+    "metiers": {
+      "titre": "Cinq métiers, une même famille.",
+      "role": "services",
+      "description": "« Cinq métiers, une même famille. » : rubriques numérotées en photos (couverture, zinguerie et charpente, peinture et façades) avec un mot en italique tuile",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "diagnostic": {
+      "titre": "Ce que vous voyez d'en bas.",
+      "role": "outil-interactif",
+      "description": "« Ce que vous voyez d'en bas. » sur écran noir : coupe de la maison dessinée, liste des signes (une tache au plafond, une tuile cassée…) ; chaque signe allume la zone du toit concernée et dit ce qu'elle cache",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "signes vus d'en bas reliés à la zone du toit"
+      ]
+    },
+    "chantiers": {
+      "titre": "Sur les chantiers",
+      "role": "galerie",
+      "description": "« Sur les chantiers » : rangée de photos de chantier prises par l'équipe (drone et toit)",
+      "animations": [
+        "galerie-horizontale",
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "famille": {
+      "titre": "De père en fils",
+      "role": "équipe",
+      "description": "« Chez Artisan Sandero, la toiture, c'est une histoire de famille. » sur écran noir : repères (2006, 3 camions, toutes hauteurs, décennale), photo d'un couvreur au travail",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Le courrier des clients",
+      "role": "témoignages",
+      "description": "« Le courrier des clients » : note 5,0 en grand, avis en carte postale avec tampon qui défilent, compteur d'avis",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zone": {
+      "titre": "De Taverny aux communes voisines",
+      "role": "carte",
+      "description": "« De Taverny aux communes voisines » : vue aérienne des toits au coucher du soleil, communes en étiquettes, boutons",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page écran noir : logo, adresse, horaires, sommaire, pratique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page a glissé du toit.",
+      "role": "page-404",
+      "description": "404 « Cette page a glissé du toit. » : tuile tombée dans l'herbe au pied d'une maison, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "couverture-debut": {
+      "titre": "Couverture",
+      "role": "ouverture",
+      "description": "« Couverture » : photo d'un toit avec fenêtre de toit, pastille « Passez la souris sur le toit pour le démousser » ; la mousse s'efface sous la souris",
+      "animations": [
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "toit qu'on démousse à la souris"
+      ]
+    },
+    "couverture-interventions": {
+      "titre": "Ce que l'on fait sur un toit",
+      "role": "services",
+      "description": "« Ce que l'on fait sur un toit » : cinq interventions numérotées (pose, rénovation, nettoyage, isolation…) avec lien devis, photo de liteaux épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "couverture-anatomie": {
+      "titre": "Le toit, pièce par pièce.",
+      "role": "outil-interactif",
+      "description": "« Le toit, pièce par pièce. » : croquis de maison dont chaque pièce (faîtage, chatière, égout, rive…) se nomme et s'explique au survol, épinglé",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "couverture-materiaux": {
+      "titre": "Quatre matériaux, quatre durées de vie",
+      "role": "produits",
+      "description": "« Quatre matériaux, quatre durées de vie » sur écran noir : chaque matériau (terre cuite, ardoise, zinc, bac acier) épinglé tour à tour avec sa photo et sa durée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "couverture-chantiers": {
+      "titre": "Couvertures refaites par l'équipe",
+      "role": "galerie",
+      "description": "« Couvertures refaites par l'équipe » : rangée de photos de chantier avec légendes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "couverture-fin": {
+      "titre": "Un toit à regarder de près ?",
+      "role": "appel",
+      "description": "Appel final « Un toit à regarder de près ? » sur écran noir : boutons devis gratuit et téléphone, horaires, rangée de tuiles",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-debut": {
+      "titre": "Votre chantier, en quelques étapes.",
+      "role": "ouverture",
+      "description": "« Votre chantier, en quelques étapes. » : téléphone en grand sur carte noire, bouton",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-demande": {
+      "titre": "Demande de devis",
+      "role": "contact",
+      "description": "« Demande de devis » : demande en étapes (métier, prestation, adresse, photos, coordonnées) avec choix en cartes et coordonnées de l'entreprise épinglées",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "devis-methode": {
+      "titre": "La méthode, rang par rang.",
+      "role": "étapes",
+      "description": "« La méthode, rang par rang. » : six étapes numérotées et photo du couvreur",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "facades-debut": {
+      "titre": "Peinture et façades",
+      "role": "ouverture",
+      "description": "« Peinture et façades » : grand titre avec « et » en italique, maison fraîchement ravalée",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "facades-peinture": {
+      "titre": "La peinture, préparée avant d'être posée",
+      "role": "méthode",
+      "description": "« La peinture, préparée avant d'être posée » : étapes de préparation et marques de peinture",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "facades-ravalement": {
+      "titre": "Le ravalement en quatre temps",
+      "role": "étapes",
+      "description": "« Le ravalement en quatre temps » sur écran noir : quatre temps numérotés en grand italique, photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "facades-finitions": {
+      "titre": "Quatre finitions d'enduit",
+      "role": "produits",
+      "description": "« Quatre finitions d'enduit » : on touche une finition (grattée, talochée, écrasée, lissée), la grille se recompose autour d'elle",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "facades-fin": {
+      "titre": "Une façade à reprendre ?",
+      "role": "appel",
+      "description": "Appel final « Une façade à reprendre ? » sur écran noir : boutons devis gratuit et téléphone, horaires, rangée de tuiles",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zinguerie-charpente-debut": {
+      "titre": "Zinguerie et charpente",
+      "role": "ouverture",
+      "description": "« Zinguerie et charpente » : titre et photo de gouttière en zinc",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zinguerie-charpente-signes": {
+      "titre": "Votre gouttière vous fait signe ?",
+      "role": "outil-interactif",
+      "description": "« Votre gouttière vous fait signe ? » : signes à cocher qui orientent vers la bonne réparation, photo",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "quiz"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zinguerie-charpente-zinguerie": {
+      "titre": "Le zinc, soudé sur mesure",
+      "role": "services",
+      "description": "« Le zinc, soudé sur mesure » : photos et texte de zinguerie",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zinguerie-charpente-charpente": {
+      "titre": "La charpente, sous le toit",
+      "role": "services",
+      "description": "« La charpente, sous le toit » : signes à cocher et photo de charpente",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "quiz"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zinguerie-charpente-fin": {
+      "titre": "Une fuite, une poutre qui travaille ?",
+      "role": "appel",
+      "description": "Appel final « Une fuite, une poutre qui travaille ? » sur écran noir : boutons devis gratuit et téléphone, horaires, rangée de tuiles",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
