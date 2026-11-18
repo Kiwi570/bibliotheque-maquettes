@@ -1,0 +1,828 @@
+{
+  "maquette": {
+    "client": "sophrologue certifiée et praticienne en hypnose à Toulouse (Marianne Meyzen Récalde) : stress, sommeil, acouphènes, deuil animalier (Les Amis de Buck), au cabinet et en ligne",
+    "activite": [
+      "bien-être",
+      "santé",
+      "animaux"
+    ],
+    "concept": [
+      "autre"
+    ],
+    "ambiance": [
+      "doux",
+      "clair",
+      "nocturne"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--fond2"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Souffle » : blanc cassé, bleu brume, violet et nuit étoilée, Fraunces douce avec un mot en italique violet ; le mot « souffle » respire avec la graisse de la police",
+      "intro : le disque inspire, expire, puis glisse et grandit jusqu'au cercle de l'ouverture (paysage de brume) entouré d'anneaux qui respirent au rythme 4 s / 6 s",
+      "« Respirez une minute avec moi » : sphère qui guide une vraie minute de respiration, phrases qui accompagnent",
+      "onde agitée qui se calme à mesure qu'on descend (acouphènes), étoiles qui s'allument au défilement (deuil animalier), lettres du titre de l'hypnose qui se rangent",
+      "calculateur de l'accompagnement (sophrologie, hypnose, protocole) reporté dans la demande, domaines filtrables gardés dans l'adresse, deux portes du rendez-vous qui s'écartent"
+    ],
+    "reserves": [
+      "illustrations générées pour les paysages et le cabinet ; portrait actuel tiré d'une vidéo",
+      "17 sections de texte sans visuel au dernier audit"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "canvas-2d",
+      "trace-svg",
+      "section-fixée",
+      "masque",
+      "transition-de-page",
+      "apparition-au-défilement",
+      "reactif-vitesse"
+    ],
+    "interactions": [
+      "jeu",
+      "calculateur",
+      "filtres",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le cercle qui respire (4 s d'inspiration, 6 s d'expiration)",
+      "fil": "le souffle : anneaux, sphère, onde qui se calme"
+    },
+    "metier": "sophrologue et hypnothérapeute"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro d'environ 2,4 s : le disque inspire, expire, puis glisse et grandit jusqu'au cercle d'ouverture ; voile en iris entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête clair : nom et métier, Les Amis de Buck, sophrologie, hypnose, tarifs, bouton violet « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur nuit violette, liens en Fraunces",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Retrouver son souffle, à son rythme.",
+      "role": "ouverture",
+      "description": "Ouverture : « Retrouver son souffle, à son rythme. » où le mot « souffle » respire (graisse variable) ; grand cercle de paysage dans la brume entouré d'anneaux qui respirent (4 s / 6 s), portrait rond de Marianne en médaillon",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "cercle et anneaux qui respirent au rythme d'une respiration réelle",
+        "mot du titre qui respire par la graisse de la police"
+      ]
+    },
+    "accompagnements": {
+      "titre": "Quatre chemins vers un mieux-être",
+      "role": "services",
+      "description": "« Quatre chemins vers un mieux-être » : quatre cartes photo (Les Amis de Buck, émotions et sommeil, acouphènes, hypnose)",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "respirer": {
+      "titre": "Respirez une minute avec moi",
+      "role": "outil-interactif",
+      "description": "« Respirez une minute avec moi » : sphère qui grandit et rétrécit pour guider une minute de respiration, consignes qui changent, bouton « Commencer »",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "minute de respiration guidée par une sphère"
+      ]
+    },
+    "amis-de-buck": {
+      "titre": "Les Amis de Buck, quand nos animaux s’en vont…",
+      "role": "offre",
+      "description": "« Les Amis de Buck, quand nos animaux s'en vont… » sur nuit étoilée : texte, médaillon du chien, points de l'accompagnement, étoiles qui s'allument au défilement",
+      "animations": [
+        "canvas-2d",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acouphenes": {
+      "titre": "Que le bruit redevienne un son parmi d’autres",
+      "role": "offre",
+      "description": "« Que le bruit redevienne un son parmi d'autres » : chiffre « 8 millions », photo d'un étang, onde agitée en bas qui se calme à mesure qu'on descend",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "onde agitée qui se calme au défilement"
+      ]
+    },
+    "seance": {
+      "titre": "Une heure pour soi, par le corps et la parole",
+      "role": "étapes",
+      "description": "« Une heure pour soi, par le corps et la parole » : déroulé de la séance en étapes reliées par un fil, durées en grand, photo épinglée",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "qui": {
+      "titre": "Marianne Meyzen Récalde, sophrologue certifiée",
+      "role": "équipe",
+      "description": "« Marianne Meyzen Récalde, sophrologue certifiée » : portrait, formations et spécialisations en colonnes",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "temoignages": {
+      "titre": "Des mots qui font du bien",
+      "role": "témoignages",
+      "description": "« Des mots qui font du bien » : quatre avis en cartes blanches, liens vers tous les avis",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pratique": {
+      "titre": "Simple et clair",
+      "role": "tarifs",
+      "description": "« Simple et clair » : trois tarifs en grand (sophrologie 50 €, Amis de Buck 40 €, hypnose 60 €), cabinet à Purpan et séances en ligne",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Le changement est une porte qui ne s’ouvre que de l’intérieur.",
+      "role": "appel",
+      "description": "Appel final « Le changement est une porte qui ne s'ouvre que de l'intérieur. » : paysage de collines dans la brume, cercle qui respire, citation en Fraunces avec un mot en italique violet, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Le cabinet",
+      "role": "pied-de-page",
+      "description": "Pied de page nuit violette : fleur du logo, le cabinet, horaires, sommaire, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette porte-ci ne mène nulle part",
+      "role": "page-404",
+      "description": "404 « Cette porte-ci ne mène nulle part » : porte de pierre fleurie dans un cercle, bouton retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hypnose-debut": {
+      "titre": "Dialogue avec l’inconscient",
+      "role": "ouverture",
+      "description": "« Dialogue avec l'inconscient » : lettres du titre qui se rangent puis se dispersent un peu au défilement, voilage en arche",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "lettres du titre qui se rangent puis se dispersent"
+      ]
+    },
+    "hypnose-idees": {
+      "titre": "Non, l’hypnose n’endort pas",
+      "role": "faq",
+      "description": "« Non, l'hypnose n'endort pas » : idées reçues et réalités en cartes qui se retournent, photo d'un fauteuil",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hypnose-indications": {
+      "titre": "Ce que l’on peut dénouer ensemble",
+      "role": "services",
+      "description": "« Ce que l'on peut dénouer ensemble » : six indications numérotées en cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hypnose-pratique": {
+      "titre": "Une séance, parfois plusieurs",
+      "role": "tarifs",
+      "description": "« Une séance, parfois plusieurs » sur nuit : durée et tarifs en grand, cercles concentriques",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hypnose-appel": {
+      "titre": "Le changement est une porte qui ne s’ouvre que de l’intérieur.",
+      "role": "appel",
+      "description": "Appel final « Le changement est une porte qui ne s'ouvre que de l'intérieur. » : paysage de collines dans la brume, cercle qui respire, citation en Fraunces avec un mot en italique violet, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-debut": {
+      "titre": "Les Amis de Buck, quand nos animaux s’en vont…",
+      "role": "ouverture",
+      "description": "« Les Amis de Buck, quand nos animaux s'en vont… » : nuit étoilée où les étoiles s'allument une à une, médaillon de Buck",
+      "animations": [
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-histoire": {
+      "titre": "Un labrador abandonné trois fois, resté joyeux",
+      "role": "manifeste",
+      "description": "« Un labrador abandonné trois fois, resté joyeux » : histoire de Buck, photo du labrador posée de travers",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-vivre": {
+      "titre": "Ce que vous pourrez vivre",
+      "role": "preuves",
+      "description": "« Ce que vous pourrez vivre » : six bienfaits numérotés en cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-protocole": {
+      "titre": "Six séances pour dire ce qui reste à dire",
+      "role": "étapes",
+      "description": "« Six séances pour dire ce qui reste à dire » : chiffres du protocole et photo d'une boîte à souvenirs",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-citations": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "Citation de Lamartine en Fraunces italique sur nuit étoilée",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-temoignages": {
+      "titre": "Ils ont traversé ce deuil avec moi",
+      "role": "témoignages",
+      "description": "« Ils ont traversé ce deuil avec moi » : témoignages en cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-engagements": {
+      "titre": "Une cause qui me tient à cœur",
+      "role": "manifeste",
+      "description": "« Une cause qui me tient à cœur » : engagement auprès d'associations, liens",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-tarifs": {
+      "titre": "Le protocole, séance par séance",
+      "role": "tarifs",
+      "description": "« Le protocole, séance par séance » : tarif et premier échange offert",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "les-amis-de-buck-appel": {
+      "titre": "Le changement est une porte qui ne s’ouvre que de l’intérieur.",
+      "role": "appel",
+      "description": "Appel final « Le changement est une porte qui ne s'ouvre que de l'intérieur. » : paysage de collines dans la brume, cercle qui respire, citation en Fraunces avec un mot en italique violet, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-debut": {
+      "titre": "Au cabinet ou en ligne",
+      "role": "ouverture",
+      "description": "« Au cabinet ou en ligne » : deux portes illustrées qui s'écartent doucement au défilement",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-tarifs": {
+      "titre": "Calculez votre accompagnement",
+      "role": "calculateur",
+      "description": "« Calculez votre accompagnement » : choix de la pratique, du nombre de séances et du lieu, total en direct ; le lien reporte l'accompagnement choisi dans la demande",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-reglement": {
+      "titre": "Règlement, mutuelle, absence",
+      "role": "faq",
+      "description": "« Règlement, mutuelle, absence » : questions dépliables animées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-cabinet": {
+      "titre": "À Purpan, parking gratuit",
+      "role": "carte",
+      "description": "« À Purpan, parking gratuit » : accès au cabinet, photo et lien itinéraire",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-demande": {
+      "titre": "Écrivez-moi, je vous rappelle",
+      "role": "contact",
+      "description": "« Écrivez-moi, je vous rappelle » : formulaire prérempli par le calculateur",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "rendez-vous-appel": {
+      "titre": "Le changement est une porte qui ne s’ouvre que de l’intérieur.",
+      "role": "appel",
+      "description": "Appel final « Le changement est une porte qui ne s'ouvre que de l'intérieur. » : paysage de collines dans la brume, cercle qui respire, citation en Fraunces avec un mot en italique violet, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-debut": {
+      "titre": "Savoir gérer l’émotion pour nourrir son corps et son mental",
+      "role": "ouverture",
+      "description": "« Savoir gérer l'émotion pour nourrir son corps et son mental » : panorama de brume qui s'ouvre au défilement",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-definition": {
+      "titre": "Le mental en harmonie avec le corps",
+      "role": "manifeste",
+      "description": "« Le mental en harmonie avec le corps » : définition en colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-techniques": {
+      "titre": "Respirer, bouger, imaginer",
+      "role": "méthode",
+      "description": "« Respirer, bouger, imaginer » : trois techniques et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-domaines": {
+      "titre": "Ce que la sophrologie peut accompagner",
+      "role": "services",
+      "description": "« Ce que la sophrologie peut accompagner » : domaines filtrables (gardés dans l'adresse) en cartes",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-acouphenes": {
+      "titre": "Intégrer l’acouphène aux sons de votre quotidien",
+      "role": "offre",
+      "description": "« Intégrer l'acouphène aux sons de votre quotidien » : protocole acouphènes, onde qui se calme au défilement, photo",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-seance": {
+      "titre": "Une heure pour soi, par le corps et la parole",
+      "role": "étapes",
+      "description": "« Une heure pour soi, par le corps et la parole » : déroulé de la séance en version page",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-entreprise": {
+      "titre": "Des séances sur mesure",
+      "role": "services",
+      "description": "« Des séances sur mesure » : sophrologie en entreprise, photo et lien",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-tarifs": {
+      "titre": "Une séance, ou dix",
+      "role": "tarifs",
+      "description": "« Une séance, ou dix » : tarifs et forfaits de sophrologie",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sophrologie-appel": {
+      "titre": "Le changement est une porte qui ne s’ouvre que de l’intérieur.",
+      "role": "appel",
+      "description": "Appel final « Le changement est une porte qui ne s'ouvre que de l'intérieur. » : paysage de collines dans la brume, cercle qui respire, citation en Fraunces avec un mot en italique violet, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
