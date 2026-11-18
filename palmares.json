@@ -1,6 +1,6 @@
 {
  "explication": "Les meilleures sections de la bibliothèque pour chaque rôle : la barre à dépasser. Regarder la planche palmares/planches/<rôle>.jpg du rôle, lire les fiches citées ; chaque section de la nouvelle maquette fait au moins aussi bien.",
- "genere": "2026-11-13",
+ "genere": "2026-11-18",
  "roles": {
   "ouverture": [
    {
@@ -194,25 +194,92 @@
     "en_ligne": "https://loeilsingulier-maquette.vercel.app"
    },
    {
-    "id": "libre-solidaire-maquette/reseau",
-    "maquette": "libre-solidaire-maquette",
-    "client": "maison d'édition indépendante (essais sur l'environnement, la société, la vigne)",
+    "id": "maysam-transfert-maquette/pancarte",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
     "note_section": 5,
     "note_maquette": 89,
-    "titre": "Réseau mycélien du catalogue",
-    "description": "Canvas 2D : chaque livre est un nœud (sa couverture) relié par un filament vivant au cœur de son territoire ; survol avec infobulle, clic vers la fiche, légende des territoires, animation suspendue hors écran.",
+    "titre": "Votre nom vous attend.",
+    "description": "Hall d'arrivée flou de nuit : le visiteur tape son nom et il s'écrit en Bodoni sur la pancarte du chauffeur, qui se balance à chaque lettre ; trois garanties de l'accueil à l'aéroport.",
     "animations": [
-     "canvas-2d"
+     "apparition-au-défilement"
     ],
     "interactions": [
-     "galerie-cliquable"
+     "saisie-personnalisee"
     ],
-    "module": "constellation",
-    "fiche": "sections/libre-solidaire-maquette/reseau.json",
-    "capture": "medias/libre-solidaire-maquette/reseau-p1440.jpg",
-    "capture_m390": "medias/libre-solidaire-maquette/reseau-m390.jpg",
-    "video": "medias/libre-solidaire-maquette/reseau-p720.mp4",
-    "en_ligne": "https://libre-solidaire-maquette.vercel.app"
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/pancarte.json",
+    "capture": "medias/maysam-transfert-maquette/pancarte-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/pancarte-m390.jpg",
+    "video": "medias/maysam-transfert-maquette/pancarte-p720.mp4",
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
+   }
+  ],
+  "contact": [
+   {
+    "id": "instinct-aventure-maquette/contact",
+    "maquette": "instinct-aventure-maquette",
+    "client": "agence de voyages en 4x4 en Afrique australe",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Contact sous ciel étoilé et safari à la lampe",
+    "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
+    "animations": [
+     "canvas-2d",
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": "lumiere-au-pointeur",
+    "fiche": "sections/instinct-aventure-maquette/contact.json",
+    "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
+    "video": "medias/instinct-aventure-maquette/contact-p720.mp4",
+    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
+   },
+   {
+    "id": "coupdefood-maquette/contact",
+    "maquette": "coupdefood-maquette",
+    "client": "agence de relations presse et de communication culinaire",
+    "note_section": 5,
+    "note_maquette": 87,
+    "titre": "Bon de commande",
+    "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "formulaire-par-étapes"
+    ],
+    "module": "formulaire-par-etapes",
+    "fiche": "sections/coupdefood-maquette/contact.json",
+    "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
+    "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
+    "video": "medias/coupdefood-maquette/contact-p720.mp4",
+    "en_ligne": "https://coupdefood-maquette.vercel.app"
+   },
+   {
+    "id": "myrtille-et-compagnie-maquette/demander-une-communication-formulaire",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Votre demande, en cinq étapes",
+    "description": "Demande simulée en cinq étapes : erreurs à côté des champs, formule préremplie par l'adresse, récapitulatif fixe avec l'aperçu de la photo qui se développe, total en direct, gerbe de myrtilles à l'envoi",
+    "animations": [
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "formulaire-par-étapes"
+    ],
+    "module": null,
+    "fiche": "sections/myrtille-et-compagnie-maquette/demander-une-communication-formulaire.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-m390.jpg",
+    "video": null,
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app/demander-une-communication"
    }
   ],
   "étapes": [
@@ -284,73 +351,6 @@
     "capture_m390": "medias/aquafit-maquette/gilet-m390.jpg",
     "video": "medias/aquafit-maquette/gilet-p720.mp4",
     "en_ligne": "https://aquafit-maquette.vercel.app"
-   }
-  ],
-  "contact": [
-   {
-    "id": "instinct-aventure-maquette/contact",
-    "maquette": "instinct-aventure-maquette",
-    "client": "agence de voyages en 4x4 en Afrique australe",
-    "note_section": 5,
-    "note_maquette": 89,
-    "titre": "Contact sous ciel étoilé et safari à la lampe",
-    "description": "Fin de page de nuit : un dégradé de crépuscule puis un ciel étoilé en canvas 2D, les coordonnées avec boutons Copier, puis un jeu où la souris ou le doigt promène une lampe torche sur une scène noire pour trouver six paires d'yeux (la lampe erre seule au repos), et le pied de page.",
-    "animations": [
-     "canvas-2d",
-     "révélation-texte",
-     "parallaxe"
-    ],
-    "interactions": [
-     "jeu"
-    ],
-    "module": "lumiere-au-pointeur",
-    "fiche": "sections/instinct-aventure-maquette/contact.json",
-    "capture": "medias/instinct-aventure-maquette/contact-p1440.jpg",
-    "capture_m390": "medias/instinct-aventure-maquette/contact-m390.jpg",
-    "video": "medias/instinct-aventure-maquette/contact-p720.mp4",
-    "en_ligne": "https://instinct-aventure-maquette.vercel.app"
-   },
-   {
-    "id": "coupdefood-maquette/contact",
-    "maquette": "coupdefood-maquette",
-    "client": "agence de relations presse et de communication culinaire",
-    "note_section": 5,
-    "note_maquette": 87,
-    "titre": "Bon de commande",
-    "description": "Formulaire en bon de commande sur trois étapes (motif en puces, informations, message et pièce jointe) avec validation aria-invalid, glissement entre étapes ; à l'envoi le papier se plie en 3D puis un écran de réussite tamponné récapitule la demande ; coordonnées copiables à côté.",
-    "animations": [
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "formulaire-par-étapes"
-    ],
-    "module": "formulaire-par-etapes",
-    "fiche": "sections/coupdefood-maquette/contact.json",
-    "capture": "medias/coupdefood-maquette/contact-p1440.jpg",
-    "capture_m390": "medias/coupdefood-maquette/contact-m390.jpg",
-    "video": "medias/coupdefood-maquette/contact-p720.mp4",
-    "en_ligne": "https://coupdefood-maquette.vercel.app"
-   },
-   {
-    "id": "myrtille-et-compagnie-maquette/demander-une-communication-formulaire",
-    "maquette": "myrtille-et-compagnie-maquette",
-    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
-    "note_section": 5,
-    "note_maquette": 85,
-    "titre": "Votre demande, en cinq étapes",
-    "description": "Demande simulée en cinq étapes : erreurs à côté des champs, formule préremplie par l'adresse, récapitulatif fixe avec l'aperçu de la photo qui se développe, total en direct, gerbe de myrtilles à l'envoi",
-    "animations": [
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "formulaire-par-étapes"
-    ],
-    "module": null,
-    "fiche": "sections/myrtille-et-compagnie-maquette/demander-une-communication-formulaire.json",
-    "capture": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-p1440.jpg",
-    "capture_m390": "medias/myrtille-et-compagnie-maquette/demander-une-communication-formulaire-m390.jpg",
-    "video": null,
-    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app/demander-une-communication"
    }
   ],
   "galerie": [
@@ -996,75 +996,6 @@
     "en_ligne": "https://willowcamp-maquette.vercel.app"
    }
   ],
-  "tarifs": [
-   {
-    "id": "iprof-maquette/tarifs-prices",
-    "maquette": "iprof-maquette",
-    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
-    "note_section": 4,
-    "note_maquette": 92,
-    "titre": "Trois fiches de prix",
-    "description": "Trois fiches de prix qui tombent sur la page et s'inclinent sous la souris ; les montants s'écrivent à la main l'un après l'autre (clip-path), la fiche mise en avant porte un tampon d'économie, et une note hachurée signale le rabais à confirmer.",
-    "animations": [
-     "apparition-au-défilement",
-     "révélation-texte",
-     "masque"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "tarifs-a-rouleaux",
-    "fiche": "sections/iprof-maquette/tarifs-prices.json",
-    "capture": "medias/iprof-maquette/tarifs-prices-p1440.jpg",
-    "capture_m390": "medias/iprof-maquette/tarifs-prices-m390.jpg",
-    "video": "medias/iprof-maquette/tarifs-prices-p720.mp4",
-    "en_ligne": "https://iprof-maquette.vercel.app/tarifs"
-   },
-   {
-    "id": "esaie-55-1-maquette/parrainage-formules",
-    "maquette": "esaie-55-1-maquette",
-    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
-    "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Formules de parrainage",
-    "description": "Quatre formules en cartes photo ; le panneau de détail collant montre un récipient en canvas dont le niveau monte avec le montant, le coût annuel et ce que la formule couvre.",
-    "animations": [
-     "canvas-2d",
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "simulateur"
-    ],
-    "module": "tarifs-a-rouleaux",
-    "fiche": "sections/esaie-55-1-maquette/parrainage-formules.json",
-    "capture": "medias/esaie-55-1-maquette/parrainage-formules-p1440.jpg",
-    "capture_m390": "medias/esaie-55-1-maquette/parrainage-formules-m390.jpg",
-    "video": "medias/esaie-55-1-maquette/parrainage-formules-p720.mp4",
-    "en_ligne": "https://esaie-55-1-maquette.vercel.app/parrainage"
-   },
-   {
-    "id": "talon-libre-maquette/annexe-tarifs",
-    "maquette": "talon-libre-maquette",
-    "client": "chalet et appartements de location saisonnière pour skieurs de télémark dans le Grand Massif",
-    "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Tarifs à la semaine",
-    "description": "Calendrier des semaines par saison où chaque semaine est un bouton avec son prix ; le récapitulatif épinglé calcule total, acompte, échéancier en jours ouvrables (fériés compris) et frise d'annulation.",
-    "animations": [
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "calculateur",
-     "réservation-simulee"
-    ],
-    "module": null,
-    "fiche": "sections/talon-libre-maquette/annexe-tarifs.json",
-    "capture": "medias/talon-libre-maquette/annexe-tarifs-p1440.jpg",
-    "capture_m390": "medias/talon-libre-maquette/annexe-tarifs-m390.jpg",
-    "video": "medias/talon-libre-maquette/annexe-tarifs-p720.mp4",
-    "en_ligne": "https://talon-libre-maquette.vercel.app/annexe"
-   }
-  ],
   "page-404": [
    {
     "id": "surffm-maquette/404-page-hero",
@@ -1110,25 +1041,96 @@
     "en_ligne": "https://qd2a-maquette.vercel.app/404"
    },
    {
-    "id": "exco-maquette/404-ihero",
-    "maquette": "exco-maquette",
-    "client": "réseau de cabinets indépendants d'expertise comptable, d'audit et de conseil (139 cabinets, 23 groupes, France et 14 autres pays), site bilingue de 215 pages",
+    "id": "maysam-transfert-maquette/404-debut",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
     "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Cette page n’existe pas ou a changé d’adresse.",
-    "description": "404 : « 404 » en grand Fraunces fine, phrase claire, recherche d'un cabinet et carte de France où un repère cherche sa place",
+    "note_maquette": 89,
+    "titre": "Ce trajet n'existe pas.",
+    "description": "Valise seule sous un réverbère de nuit, titre Bodoni, retour à l'accueil et réservation.",
     "animations": [
+     "révélation-texte",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/404-debut.json",
+    "capture": "medias/maysam-transfert-maquette/404-debut-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/404-debut-m390.jpg",
+    "video": null,
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app/404"
+   }
+  ],
+  "appel": [
+   {
+    "id": "myrtille-et-compagnie-maquette/fin",
+    "maquette": "myrtille-et-compagnie-maquette",
+    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
+    "note_section": 5,
+    "note_maquette": 85,
+    "titre": "Envie de mieux comprendre votre compagnon ?",
+    "description": "Appel final : image révélée par une tache, mot traduit, puis une bande où des myrtilles tombent, rebondissent, s'entassent, et se lancent à la souris ou au doigt",
+    "animations": [
+     "canvas-2d",
+     "révélation-image",
+     "masque"
+    ],
+    "interactions": [
+     "jeu"
+    ],
+    "module": null,
+    "fiche": "sections/myrtille-et-compagnie-maquette/fin.json",
+    "capture": "medias/myrtille-et-compagnie-maquette/fin-p1440.jpg",
+    "capture_m390": "medias/myrtille-et-compagnie-maquette/fin-m390.jpg",
+    "video": "medias/myrtille-et-compagnie-maquette/fin-p720.mp4",
+    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app"
+   },
+   {
+    "id": "secia-maquette/urgence",
+    "maquette": "secia-maquette",
+    "client": "intégrateur en cybersécurité et réseaux d'entreprise en Belgique et au Luxembourg (membre de NPS Consult Group), site bilingue",
+    "note_section": 5,
+    "note_maquette": 84,
+    "titre": "Sous attaque ?",
+    "description": "Sous attaque ? : fond bleu nuit, zones A, B, C contenues une à une, numéros 24/7 Belgique et Luxembourg",
+    "animations": [
+     "trace-svg",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/secia-maquette/urgence.json",
+    "capture": "medias/secia-maquette/urgence-p1440.jpg",
+    "capture_m390": "medias/secia-maquette/urgence-m390.jpg",
+    "video": "medias/secia-maquette/urgence-p720.mp4",
+    "en_ligne": "https://secia-maquette.vercel.app"
+   },
+   {
+    "id": "h-renovation-maquette/appel",
+    "maquette": "h-renovation-maquette",
+    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Appel par la gouttière",
+    "description": "Appel final : une gouttière dessinée longe la section et une goutte y descend jusqu'au bouton Appeler, qui s'éclaire à son arrivée.",
+    "animations": [
+     "masque",
+     "apparition-au-défilement",
      "trace-svg"
     ],
     "interactions": [
-     "recherche"
+     "aucune"
     ],
     "module": null,
-    "fiche": "sections/exco-maquette/404-ihero.json",
-    "capture": "medias/exco-maquette/404-ihero-p1440.jpg",
-    "capture_m390": "medias/exco-maquette/404-ihero-m390.jpg",
-    "video": "medias/exco-maquette/404-ihero-p720.mp4",
-    "en_ligne": "https://exco-maquette.vercel.app/404"
+    "fiche": "sections/h-renovation-maquette/appel.json",
+    "capture": "medias/h-renovation-maquette/appel-p1440.jpg",
+    "capture_m390": "medias/h-renovation-maquette/appel-m390.jpg",
+    "video": "medias/h-renovation-maquette/appel-p720.mp4",
+    "en_ligne": "https://h-renovation-maquette.vercel.app"
    }
   ],
   "portfolio": [
@@ -1200,6 +1202,145 @@
     "capture_m390": "medias/les-plus-hautes-eaux-maquette/repertoire-m390.jpg",
     "video": "medias/les-plus-hautes-eaux-maquette/repertoire-p720.mp4",
     "en_ligne": "https://les-plus-hautes-eaux-maquette.vercel.app"
+   }
+  ],
+  "tarifs": [
+   {
+    "id": "maysam-transfert-maquette/tarifs",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+    "note_section": 5,
+    "note_maquette": 89,
+    "titre": "Des prix clairs, sans surprise.",
+    "description": "Tableau des départs d'aéroport à palettes : destination, durée et prix des cinq trajets réels se retournent lettre par lettre à l'arrivée, une ligne se retourne de nouveau au survol ; bouton « Réserver » par ligne. Sur téléphone, chaque trajet tient sur deux lignes.",
+    "animations": [
+     "apparition-au-défilement",
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "tableau-des-departs",
+    "fiche": "sections/maysam-transfert-maquette/tarifs.json",
+    "capture": "medias/maysam-transfert-maquette/tarifs-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/tarifs-m390.jpg",
+    "video": null,
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
+   },
+   {
+    "id": "iprof-maquette/tarifs-prices",
+    "maquette": "iprof-maquette",
+    "client": "professeur d'informatique particulier (Mac, iPad, iPhone)",
+    "note_section": 4,
+    "note_maquette": 92,
+    "titre": "Trois fiches de prix",
+    "description": "Trois fiches de prix qui tombent sur la page et s'inclinent sous la souris ; les montants s'écrivent à la main l'un après l'autre (clip-path), la fiche mise en avant porte un tampon d'économie, et une note hachurée signale le rabais à confirmer.",
+    "animations": [
+     "apparition-au-défilement",
+     "révélation-texte",
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "tarifs-a-rouleaux",
+    "fiche": "sections/iprof-maquette/tarifs-prices.json",
+    "capture": "medias/iprof-maquette/tarifs-prices-p1440.jpg",
+    "capture_m390": "medias/iprof-maquette/tarifs-prices-m390.jpg",
+    "video": "medias/iprof-maquette/tarifs-prices-p720.mp4",
+    "en_ligne": "https://iprof-maquette.vercel.app/tarifs"
+   },
+   {
+    "id": "esaie-55-1-maquette/parrainage-formules",
+    "maquette": "esaie-55-1-maquette",
+    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
+    "note_section": 4,
+    "note_maquette": 88,
+    "titre": "Formules de parrainage",
+    "description": "Quatre formules en cartes photo ; le panneau de détail collant montre un récipient en canvas dont le niveau monte avec le montant, le coût annuel et ce que la formule couvre.",
+    "animations": [
+     "canvas-2d",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "simulateur"
+    ],
+    "module": "tarifs-a-rouleaux",
+    "fiche": "sections/esaie-55-1-maquette/parrainage-formules.json",
+    "capture": "medias/esaie-55-1-maquette/parrainage-formules-p1440.jpg",
+    "capture_m390": "medias/esaie-55-1-maquette/parrainage-formules-m390.jpg",
+    "video": "medias/esaie-55-1-maquette/parrainage-formules-p720.mp4",
+    "en_ligne": "https://esaie-55-1-maquette.vercel.app/parrainage"
+   }
+  ],
+  "preuves": [
+   {
+    "id": "observatoire-des-cse-maquette/garanties",
+    "maquette": "observatoire-des-cse-maquette",
+    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Anonymiseur",
+    "description": "Section nuit épinglée : la fiche d'un profil fictif se défait en petits carrés (canvas 2D) qui s'envolent et deviennent des points parmi des milliers d'autres, pendant que les quatre garanties d'anonymat apparaissent. Sur téléphone, pas d'épinglage : la fiche se défait pendant le défilement.",
+    "animations": [
+     "canvas-2d",
+     "section-fixée",
+     "progression-fixée",
+     "apparition-au-défilement"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "dissolution-en-particules",
+    "fiche": "sections/observatoire-des-cse-maquette/garanties.json",
+    "capture": "medias/observatoire-des-cse-maquette/garanties-p1440.jpg",
+    "capture_m390": "medias/observatoire-des-cse-maquette/garanties-m390.jpg",
+    "video": "medias/observatoire-des-cse-maquette/garanties-p720.mp4",
+    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
+   },
+   {
+    "id": "games42-maquette/avis",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Note en molettes",
+    "description": "La note Google roule chiffre par chiffre comme les molettes du cadenas, puis les étoiles se remplissent ; recommandation Petit Futé et chèques vacances à côté.",
+    "animations": [
+     "compteur"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/games42-maquette/avis.json",
+    "capture": "medias/games42-maquette/avis-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/avis-m390.jpg",
+    "video": "medias/games42-maquette/avis-p720.mp4",
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "qd2a-maquette/saison",
+    "maquette": "qd2a-maquette",
+    "client": "Comité de lecture international des écritures dramatiques contemporaines de langue française (association), accueilli au Théâtre des Quartiers d'Ivry",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Chronologies",
+    "description": "La Une de la saison : portrait de la lauréate, Chronologies et ses distinctions, le tapuscrit à feuilleter à la main (pages qui tournent avec élan, annotations au crayon) ; les coups de cœur ne sont plus répétés ici (déjà dans le trajet)",
+    "animations": [
+     "parallaxe",
+     "apparition-au-défilement",
+     "trace-svg"
+    ],
+    "interactions": [
+     "galerie-cliquable"
+    ],
+    "module": null,
+    "fiche": "sections/qd2a-maquette/saison.json",
+    "capture": "medias/qd2a-maquette/saison-p1440.jpg",
+    "capture_m390": "medias/qd2a-maquette/saison-m390.jpg",
+    "video": "medias/qd2a-maquette/saison-p720.mp4",
+    "en_ligne": "https://qd2a-maquette.vercel.app"
    }
   ],
   "chiffres": [
@@ -1274,76 +1415,6 @@
     "en_ligne": "https://instinct-aventure-maquette.vercel.app"
    }
   ],
-  "preuves": [
-   {
-    "id": "observatoire-des-cse-maquette/garanties",
-    "maquette": "observatoire-des-cse-maquette",
-    "client": "observatoire indépendant des relations sociales qui mène des enquêtes auprès des élus de CSE",
-    "note_section": 5,
-    "note_maquette": 90,
-    "titre": "Anonymiseur",
-    "description": "Section nuit épinglée : la fiche d'un profil fictif se défait en petits carrés (canvas 2D) qui s'envolent et deviennent des points parmi des milliers d'autres, pendant que les quatre garanties d'anonymat apparaissent. Sur téléphone, pas d'épinglage : la fiche se défait pendant le défilement.",
-    "animations": [
-     "canvas-2d",
-     "section-fixée",
-     "progression-fixée",
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "dissolution-en-particules",
-    "fiche": "sections/observatoire-des-cse-maquette/garanties.json",
-    "capture": "medias/observatoire-des-cse-maquette/garanties-p1440.jpg",
-    "capture_m390": "medias/observatoire-des-cse-maquette/garanties-m390.jpg",
-    "video": "medias/observatoire-des-cse-maquette/garanties-p720.mp4",
-    "en_ligne": "https://observatoire-des-cse-maquette.vercel.app"
-   },
-   {
-    "id": "games42-maquette/avis",
-    "maquette": "games42-maquette",
-    "client": "escape game familial (enfants, familles, adultes, groupes)",
-    "note_section": 4,
-    "note_maquette": 90,
-    "titre": "Note en molettes",
-    "description": "La note Google roule chiffre par chiffre comme les molettes du cadenas, puis les étoiles se remplissent ; recommandation Petit Futé et chèques vacances à côté.",
-    "animations": [
-     "compteur"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/games42-maquette/avis.json",
-    "capture": "medias/games42-maquette/avis-p1440.jpg",
-    "capture_m390": "medias/games42-maquette/avis-m390.jpg",
-    "video": "medias/games42-maquette/avis-p720.mp4",
-    "en_ligne": "https://games42-maquette.vercel.app"
-   },
-   {
-    "id": "qd2a-maquette/saison",
-    "maquette": "qd2a-maquette",
-    "client": "Comité de lecture international des écritures dramatiques contemporaines de langue française (association), accueilli au Théâtre des Quartiers d'Ivry",
-    "note_section": 4,
-    "note_maquette": 89,
-    "titre": "Chronologies",
-    "description": "La Une de la saison : portrait de la lauréate, Chronologies et ses distinctions, le tapuscrit à feuilleter à la main (pages qui tournent avec élan, annotations au crayon) ; les coups de cœur ne sont plus répétés ici (déjà dans le trajet)",
-    "animations": [
-     "parallaxe",
-     "apparition-au-défilement",
-     "trace-svg"
-    ],
-    "interactions": [
-     "galerie-cliquable"
-    ],
-    "module": null,
-    "fiche": "sections/qd2a-maquette/saison.json",
-    "capture": "medias/qd2a-maquette/saison-p1440.jpg",
-    "capture_m390": "medias/qd2a-maquette/saison-m390.jpg",
-    "video": "medias/qd2a-maquette/saison-p720.mp4",
-    "en_ligne": "https://qd2a-maquette.vercel.app"
-   }
-  ],
   "équipe": [
    {
     "id": "exco-maquette/gov",
@@ -1409,76 +1480,6 @@
     "capture_m390": "medias/surffm-maquette/emissions-equipe-m390.jpg",
     "video": "medias/surffm-maquette/emissions-equipe-p720.mp4",
     "en_ligne": "https://surffm-maquette.vercel.app/emissions"
-   }
-  ],
-  "appel": [
-   {
-    "id": "myrtille-et-compagnie-maquette/fin",
-    "maquette": "myrtille-et-compagnie-maquette",
-    "client": "interprète animalière, communication avec les animaux à distance (Vaud et Romandie)",
-    "note_section": 5,
-    "note_maquette": 85,
-    "titre": "Envie de mieux comprendre votre compagnon ?",
-    "description": "Appel final : image révélée par une tache, mot traduit, puis une bande où des myrtilles tombent, rebondissent, s'entassent, et se lancent à la souris ou au doigt",
-    "animations": [
-     "canvas-2d",
-     "révélation-image",
-     "masque"
-    ],
-    "interactions": [
-     "jeu"
-    ],
-    "module": null,
-    "fiche": "sections/myrtille-et-compagnie-maquette/fin.json",
-    "capture": "medias/myrtille-et-compagnie-maquette/fin-p1440.jpg",
-    "capture_m390": "medias/myrtille-et-compagnie-maquette/fin-m390.jpg",
-    "video": "medias/myrtille-et-compagnie-maquette/fin-p720.mp4",
-    "en_ligne": "https://myrtille-et-compagnie-maquette.vercel.app"
-   },
-   {
-    "id": "secia-maquette/urgence",
-    "maquette": "secia-maquette",
-    "client": "intégrateur en cybersécurité et réseaux d'entreprise en Belgique et au Luxembourg (membre de NPS Consult Group), site bilingue",
-    "note_section": 5,
-    "note_maquette": 84,
-    "titre": "Sous attaque ?",
-    "description": "Sous attaque ? : fond bleu nuit, zones A, B, C contenues une à une, numéros 24/7 Belgique et Luxembourg",
-    "animations": [
-     "trace-svg",
-     "apparition-au-défilement"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/secia-maquette/urgence.json",
-    "capture": "medias/secia-maquette/urgence-p1440.jpg",
-    "capture_m390": "medias/secia-maquette/urgence-m390.jpg",
-    "video": "medias/secia-maquette/urgence-p720.mp4",
-    "en_ligne": "https://secia-maquette.vercel.app"
-   },
-   {
-    "id": "h-renovation-maquette/appel",
-    "maquette": "h-renovation-maquette",
-    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
-    "note_section": 4,
-    "note_maquette": 89,
-    "titre": "Appel par la gouttière",
-    "description": "Appel final : une gouttière dessinée longe la section et une goutte y descend jusqu'au bouton Appeler, qui s'éclaire à son arrivée.",
-    "animations": [
-     "masque",
-     "apparition-au-défilement",
-     "trace-svg"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/h-renovation-maquette/appel.json",
-    "capture": "medias/h-renovation-maquette/appel-p1440.jpg",
-    "capture_m390": "medias/h-renovation-maquette/appel-m390.jpg",
-    "video": "medias/h-renovation-maquette/appel-p720.mp4",
-    "en_ligne": "https://h-renovation-maquette.vercel.app"
    }
   ],
   "decor": [
@@ -1548,6 +1549,72 @@
     "en_ligne": "https://fanfare-dongelberg-maquette.vercel.app"
    }
   ],
+  "témoignages": [
+   {
+    "id": "loeilsingulier-maquette/liner",
+    "maquette": "loeilsingulier-maquette",
+    "client": "agence franco-britannique d'événementiel d'entreprise et de design graphique",
+    "note_section": 4,
+    "note_maquette": 90,
+    "titre": "Références et témoignage recto verso",
+    "description": "Défilé des noms de clients, puis carte de témoignage qui se retourne (recto verso) au clic, au clavier avec focus déplacé sur la face visible.",
+    "animations": [
+     "marquee"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "temoignages-en-pile",
+    "fiche": "sections/loeilsingulier-maquette/liner.json",
+    "capture": "medias/loeilsingulier-maquette/liner-p1440.jpg",
+    "capture_m390": "medias/loeilsingulier-maquette/liner-m390.jpg",
+    "video": "medias/loeilsingulier-maquette/liner-p720.mp4",
+    "en_ligne": "https://loeilsingulier-maquette.vercel.app"
+   },
+   {
+    "id": "maysam-transfert-maquette/temoignages",
+    "maquette": "maysam-transfert-maquette",
+    "client": "Maysam Transfert, chauffeur privé à Paris et en Île-de-France : aéroports, gares, Disneyland Paris, mise à disposition",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Ils nous confient leurs trajets.",
+    "description": "Six avis réels en billets ivoire : talon avec trajet et passager, perforation, citation en Bodoni italique ; distribués au défilement avec un léger décalage ; rangée qui se glisse au doigt sur téléphone.",
+    "animations": [
+     "apparition-au-défilement",
+     "parallaxe"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/maysam-transfert-maquette/temoignages.json",
+    "capture": "medias/maysam-transfert-maquette/temoignages-p1440.jpg",
+    "capture_m390": "medias/maysam-transfert-maquette/temoignages-m390.jpg",
+    "video": "medias/maysam-transfert-maquette/temoignages-p720.mp4",
+    "en_ligne": "https://maysam-transfert-maquette.vercel.app"
+   },
+   {
+    "id": "h-renovation-maquette/avis",
+    "maquette": "h-renovation-maquette",
+    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
+    "note_section": 4,
+    "note_maquette": 89,
+    "titre": "Pile d'ardoises",
+    "description": "Avis clients sur des ardoises empilées et légèrement tournées ; les flèches font passer l'ardoise du dessus au fond de la pile, compteur 1/3, cartes cachées rendues inertes.",
+    "animations": [
+     "empilement-de-fiches"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "temoignages-en-pile",
+    "fiche": "sections/h-renovation-maquette/avis.json",
+    "capture": "medias/h-renovation-maquette/avis-p1440.jpg",
+    "capture_m390": "medias/h-renovation-maquette/avis-m390.jpg",
+    "video": "medias/h-renovation-maquette/avis-p720.mp4",
+    "en_ligne": "https://h-renovation-maquette.vercel.app"
+   }
+  ],
   "articles": [
    {
     "id": "exco-maquette/actualites-band",
@@ -1614,71 +1681,6 @@
     "capture_m390": "medias/castelactu-maquette/fil-m390.jpg",
     "video": "medias/castelactu-maquette/fil-p720.mp4",
     "en_ligne": "https://castelactu-maquette.vercel.app"
-   }
-  ],
-  "témoignages": [
-   {
-    "id": "loeilsingulier-maquette/liner",
-    "maquette": "loeilsingulier-maquette",
-    "client": "agence franco-britannique d'événementiel d'entreprise et de design graphique",
-    "note_section": 4,
-    "note_maquette": 90,
-    "titre": "Références et témoignage recto verso",
-    "description": "Défilé des noms de clients, puis carte de témoignage qui se retourne (recto verso) au clic, au clavier avec focus déplacé sur la face visible.",
-    "animations": [
-     "marquee"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "temoignages-en-pile",
-    "fiche": "sections/loeilsingulier-maquette/liner.json",
-    "capture": "medias/loeilsingulier-maquette/liner-p1440.jpg",
-    "capture_m390": "medias/loeilsingulier-maquette/liner-m390.jpg",
-    "video": "medias/loeilsingulier-maquette/liner-p720.mp4",
-    "en_ligne": "https://loeilsingulier-maquette.vercel.app"
-   },
-   {
-    "id": "h-renovation-maquette/avis",
-    "maquette": "h-renovation-maquette",
-    "client": "couvreur et entreprise de rénovation (toiture, façade, isolation) dans le Val-d'Oise",
-    "note_section": 4,
-    "note_maquette": 89,
-    "titre": "Pile d'ardoises",
-    "description": "Avis clients sur des ardoises empilées et légèrement tournées ; les flèches font passer l'ardoise du dessus au fond de la pile, compteur 1/3, cartes cachées rendues inertes.",
-    "animations": [
-     "empilement-de-fiches"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "temoignages-en-pile",
-    "fiche": "sections/h-renovation-maquette/avis.json",
-    "capture": "medias/h-renovation-maquette/avis-p1440.jpg",
-    "capture_m390": "medias/h-renovation-maquette/avis-m390.jpg",
-    "video": "medias/h-renovation-maquette/avis-p720.mp4",
-    "en_ligne": "https://h-renovation-maquette.vercel.app"
-   },
-   {
-    "id": "esaie-55-1-maquette/histoires",
-    "maquette": "esaie-55-1-maquette",
-    "client": "association chrétienne internationale d'aide aux personnes vulnérables (Ottawa et Gabon), parrainage et dons",
-    "note_section": 4,
-    "note_maquette": 88,
-    "titre": "Histoires",
-    "description": "Récits de personnes accompagnées en grandes cartes collantes qui s'empilent au défilement, chacune avec objectif et impact.",
-    "animations": [
-     "empilement-de-fiches"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "planches-empilees",
-    "fiche": "sections/esaie-55-1-maquette/histoires.json",
-    "capture": "medias/esaie-55-1-maquette/histoires-p1440.jpg",
-    "capture_m390": "medias/esaie-55-1-maquette/histoires-m390.jpg",
-    "video": "medias/esaie-55-1-maquette/histoires-p720.mp4",
-    "en_ligne": "https://esaie-55-1-maquette.vercel.app"
    }
   ],
   "faq": [

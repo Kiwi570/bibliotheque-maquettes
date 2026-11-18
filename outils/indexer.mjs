@@ -1,4 +1,4 @@
-// Régénère index.json : une ligne par maquette, par section et par module. C'est le seul fichier que Claude lit en entier (150 Ko au plus).
+// Régénère index.json : une ligne par maquette, par section et par module. Claude peut le lire en entier (150 Ko au plus, allégé tout seul : voir plus bas).
 // Il garde les sections notées 5 et les sections notées 4 dont un module est tiré ; site/index-site.json (lu par le site de consultation)
 // garde toutes les sections notées 4 ou 5. Les autres sont trouvables par chercher.mjs.
 // node outils/indexer.mjs
@@ -46,18 +46,38 @@ const ecrire = (ix) => '{\n' + Object.entries(ix).map(([k, v]) => Array.isArray(
    au lieu de faire échouer la validation après coup (l'index était à 36 octets du plafond ; audit externe). Le site garde tout. */
 const PLAFOND = 150 * 1024;
 /* 13 novembre 2026 (99 maquettes, 149 Ko) : l'adresse habituelle s'écrit 1 dans index.json, et la description du client se
-   raccourcit après les points forts (90 puis 60 caractères). Le site (site/index-site.json) et les fiches gardent tout. */
+   raccourcit après les points forts (90, 60 caractères, puis plus de client : le métier reste).
+   18 novembre 2026 (107 maquettes, 148,6 Ko, vingt de plus à venir) : dernier recours, les sections notées 5 sans module se
+   limitent à 4, 3, 2 puis 1 par maquette (celles qui ont un module restent toutes ; ouverture et effet le plus fort d'abord).
+   L'index ne bloque donc plus l'ajout d'une maquette. Le site (site/index-site.json), les fiches et chercher.mjs gardent tout. */
 const compacter = (pf, client) => maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pf)
   : i === 6 ? (v === `https://${l[0]}.vercel.app` ? 1 : v)
+  : i === 7 && client < 0 ? null
   : i === 7 && client && typeof v === 'string' && v.length > client ? v.slice(0, client - 1).trimEnd() + '…' : v)));
-const ETAPES = [[3, 0], [2, 0], [1, 0], [1, 90], [1, 60]];
-let txt = '', etape = 0, pointsForts = 3;
+const POIDS_IMPACT = { spectaculaire: 0, vivant: 1, calme: 2 };
+const limiter = (k) => {
+  if (!Number.isFinite(k)) return sections;
+  const parMaquette = {};
+  for (const l of sections) (parMaquette[l[0].split('/')[0]] ||= []).push(l);
+  const garde = new Set();
+  for (const liste of Object.values(parMaquette)) {
+    const avecModule = liste.filter((l) => l[4]), sans = liste.filter((l) => !l[4]);
+    sans.sort((a, b) => (b[1] === 'ouverture') - (a[1] === 'ouverture') || (POIDS_IMPACT[a[10]] ?? 3) - (POIDS_IMPACT[b[10]] ?? 3) || a[0].localeCompare(b[0]));
+    for (const l of [...avecModule, ...sans.slice(0, k)]) garde.add(l);
+  }
+  return sections.filter((l) => garde.has(l));
+};
+const ETAPES = [[3, 0, Infinity], [2, 0, Infinity], [1, 0, Infinity], [1, 90, Infinity], [1, 60, Infinity], [1, -1, Infinity], [1, -1, 4], [1, -1, 3], [1, -1, 2], [1, -1, 1]];
+let txt = '', etape = 0, pointsForts = 3, nbSections = sections.length;
 for (; etape < ETAPES.length; etape++) {
-  txt = ecrire({ ...index, maquettes: compacter(...ETAPES[etape]) });
+  const [pf, cl, k] = ETAPES[etape];
+  const secs = limiter(k);
+  nbSections = secs.length;
+  txt = ecrire({ ...index, ...(Number.isFinite(k) ? { aide: index.aide + ` Index allégé : au plus ${k} section(s) notée(s) 5 sans module par maquette (les autres : site/index-site.json ou chercher.mjs).` } : {}), maquettes: compacter(pf, cl), sections: secs });
   if (Buffer.byteLength(txt) <= PLAFOND) break;
 }
 etape = Math.min(etape, ETAPES.length - 1); pointsForts = ETAPES[etape][0];
-if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même avec un seul point fort et le client raccourci : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
+if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même au plus léger : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
 fs.writeFileSync(path.join(RACINE, 'index.json'), txt);
 fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5 et la liste des maquettes favorites (favoris.json).', favoris: lireFavoris().map((f) => f.depot), sections: toutes }));
-console.log(`index.json : ${maquettes.length} maquettes, ${sections.length} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette${ETAPES[etape][1] ? `, client en ${ETAPES[etape][1]} caractères` : ''} pour rester sous 150 Ko)` : ''}`);
+console.log(`index.json : ${maquettes.length} maquettes, ${nbSections} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette${ETAPES[etape][1] > 0 ? `, client en ${ETAPES[etape][1]} caractères` : ETAPES[etape][1] < 0 ? ', sans client' : ''}${Number.isFinite(ETAPES[etape][2]) ? `, ${ETAPES[etape][2]} section(s) notée(s) 5 sans module par maquette` : ''} pour rester sous 150 Ko)` : ''}`);
