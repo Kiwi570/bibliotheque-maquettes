@@ -1,0 +1,774 @@
+{
+  "maquette": {
+    "client": "praticienne de yoga et gym du visage près de Toulouse (Marianne, méthode Roxane Rajeunissement) : séances en cabine, en ligne et en atelier, Protocole 45+, cartes cadeaux",
+    "activite": [
+      "bien-être",
+      "santé",
+      "formation"
+    ],
+    "concept": [
+      "atelier"
+    ],
+    "ambiance": [
+      "doux",
+      "clair",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--prune",
+      "accent": "--accent",
+      "secondaire": "--poudre"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "DM Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Le geste qui remonte » : crème, poudre rosée, prune et framboise, Fraunces avec un mot en italique ; photos en arche et lumière du matin, tenues sur les six pages",
+      "ouverture : photo en arche qui se dévoile de bas en haut et respire doucement, traits qui remontent comme un passage de pierre, médaillon du logo, étiquettes qui flottent",
+      "carte du visage : dessin au trait dont chaque zone s'allume quand son texte passe, ou au toucher",
+      "Protocole 45+ : quatre quarts de disque qui arrivent de leur coin et se rassemblent ; addition dont le total compte",
+      "« Calculez votre parcours » sur les vrais prix (packs et unités), carte cadeau où le soin choisi s'écrit, douze semaines qui se remplissent"
+    ],
+    "reserves": [
+      "onze illustrations générées (cabines, salons) : à remplacer par des photos du lieu",
+      "nombreux points « à regarder » au dernier audit (43, surtout des contrastes de petits textes rosés)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "masque",
+      "parallaxe",
+      "section-fixée",
+      "compteur",
+      "trace-svg",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "schema-interactif",
+      "calculateur",
+      "saisie-personnalisee",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la carte du visage dont les zones s'allument",
+      "fil": "le geste qui remonte : traits et arches qui montent"
+    },
+    "metier": "praticienne en yoga et gym du visage"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de 2,3 s : le cercle du logo se trace, le logo monte puis glisse vers la photo de la page ; voile en iris entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête crème : logo, la méthode, Protocole 45+, séances et tarifs, contact, bouton framboise « Diagnostic offert »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur fond prune, liens en Fraunces",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Rajeunirnaturellement",
+      "role": "ouverture",
+      "description": "Ouverture : « Rajeunir naturellement » avec le second mot en italique framboise ; photo en arche (pierre de quartz rose sur du lin) qui se dévoile de bas en haut et respire doucement, traits qui remontent sur l'arche, médaillon du logo et étiquettes qui flottent",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "photo en arche qui se dévoile de bas en haut et respire"
+      ]
+    },
+    "methode-en-bref": {
+      "titre": "Une méthode pure, sans chimie",
+      "role": "manifeste",
+      "description": "« Le visage a ses muscles » sur poudre rosée : grand texte dont les mots s'allument un à un, profil dessiné au trait, quatre repères (25 min, 1 h 30, 3 mois, 3 zones)",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zones": {
+      "titre": "Trois zones, des gestes précis",
+      "role": "outil-interactif",
+      "description": "« Trois zones, des gestes précis » : visage dessiné au trait épinglé ; chaque zone (regard et front, bas du visage, cou et décolleté) s'allume quand son texte passe au milieu, ou au toucher du dessin ou de son nom",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, on touche les zones au lieu du défilement"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "carte du visage dont les zones s'allument au défilement et au toucher"
+      ]
+    },
+    "formules": {
+      "titre": "En cabine, en ligne ou en groupe",
+      "role": "offre",
+      "description": "« En cabine, en ligne ou en groupe » : cinq cartes photo des formules (séance en cabine, en ligne, massage liftant, atelier collectif…) avec durée et prix",
+      "animations": [
+        "révélation-image",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "resultats": {
+      "titre": "Ce que montrent les photos",
+      "role": "preuves",
+      "description": "« Ce que montrent les photos » : photos avant et après d'une séance (front, bas du visage) en vignettes qui s'ouvrent en grand, texte prudent sur les résultats",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole": {
+      "titre": "Le Protocole 45+, quatre approches réunies",
+      "role": "offre",
+      "description": "« Le Protocole 45+, quatre approches réunies » sur prune : disque en quatre quarts (visage, sophrologie, naturopathie, nutrition) qui arrivent de leur coin et se rassemblent autour de « 45+ »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "disque en quatre volets qui se rassemble"
+      ]
+    },
+    "marianne": {
+      "titre": "Je m'appelle Marianne",
+      "role": "équipe",
+      "description": "« Je m'appelle Marianne » : portrait en arche pendant une séance, texte, certificat cliquable qui s'ouvre en grand",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "Ce qu'en disent mes clients",
+      "role": "témoignages",
+      "description": "« Ce qu'en disent mes clients » : avis sur une carte claire qui défile, flèches, photo de salon en fond",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lieux": {
+      "titre": "Près de Toulouse, ou chez vous",
+      "role": "carte",
+      "description": "« Près de Toulouse, ou chez vous » : jours de présence (mercredi, samedi, en ligne) sur une carte posée sur la photo du Wellbee Space",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "diagnostic-offert": {
+      "titre": "Commençons par un diagnostic",
+      "role": "appel",
+      "description": "« Commençons par un diagnostic » : carte crème posée sur un fond de papier et de branches roses, mot en italique framboise, bouton et téléphone ; reprise en fin de chaque page",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visionneuse-diplome": {
+      "titre": "Certificat professionnel de la méthode Roxane Rajeunissement",
+      "role": "decor",
+      "description": "Visionneuse du certificat professionnel de la méthode Roxane Rajeunissement, en boîte de dialogue native",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page prune : médaillon, contact (téléphone, WhatsApp, e-mail), le site, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Ce reflet-là n'existe pas",
+      "role": "page-404",
+      "description": "404 « Ce reflet-là n'existe pas » : miroir qui ne reflète que la lumière, carte crème avec le médaillon et deux boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Prenonsrendez-vous",
+      "role": "ouverture",
+      "description": "« Prenons rendez-vous » : photo plein cadre du salon, carte crème avec titre en italique et bouton, pastille « 25 min offertes »",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-diagnostic": {
+      "titre": "25 minutes pour faire connaissance",
+      "role": "contact",
+      "description": "« 25 minutes pour faire connaissance » : texte, portrait rond, boutons de créneau ; téléphone, WhatsApp, e-mail et réseaux",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Écrivez-moi",
+      "role": "contact",
+      "description": "« Écrivez-moi » : demande en trois étapes avec choix en cartes à pictogrammes (diagnostic, cabine, en ligne, atelier, Protocole 45+, question), choix prérempli par l'adresse ; photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-lieux": {
+      "titre": "Deux adresses à Plaisance‑du‑Touch",
+      "role": "carte",
+      "description": "« Deux adresses à Plaisance-du-Touch » : le Wellbee Space et le cabinet avec jours et itinéraires, photo du salon",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-debut": {
+      "titre": "Des gestes doux,appris pour durer",
+      "role": "ouverture",
+      "description": "« Des gestes doux, appris pour durer » : titre en italique, texte, bouton ; large photo d'une pierre et d'une serviette, pastille « 1 h 30 »",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-cabine": {
+      "titre": "Une séance, une feuille de route",
+      "role": "offre",
+      "description": "« Une séance, une feuille de route » : photo en arche de la cabine, déroulé de la séance et prix (90 €)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-en-ligne": {
+      "titre": "Depuis chez vous",
+      "role": "offre",
+      "description": "« Depuis chez vous » : séances en ligne, prix (70 €), photo en arche d'un miroir",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-ateliers": {
+      "titre": "En petit groupe, une zone à la fois",
+      "role": "offre",
+      "description": "« En petit groupe, une zone à la fois » : ateliers collectifs (45 € l'atelier de 1 h 30), photo en arche et trois cartes des zones",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-trois-mois": {
+      "titre": "Trois mois pour que ça dure",
+      "role": "étapes",
+      "description": "« Trois mois pour que ça dure » : douze semaines en pastilles qui se remplissent au défilement, quatre étapes numérotées",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "douze semaines qui se remplissent au défilement"
+      ]
+    },
+    "methode-resultats": {
+      "titre": "Ce que montrent les photos",
+      "role": "preuves",
+      "description": "« Ce que montrent les photos » : photos avant et après d'une séance (front, bas du visage) en vignettes qui s'ouvrent en grand, texte prudent sur les résultats",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-precautions": {
+      "titre": "Précautions",
+      "role": "faq",
+      "description": "« Précautions » : profil dessiné épinglé, questions dépliables (médecine esthétique, avis médical, injections…)",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-diagnostic-offert": {
+      "titre": "Commençons par un diagnostic",
+      "role": "appel",
+      "description": "« Commençons par un diagnostic » : carte crème posée sur un fond de papier et de branches roses, mot en italique framboise, bouton et téléphone ; reprise en fin de chaque page",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole-45-debut": {
+      "titre": "Le Protocole45+",
+      "role": "ouverture",
+      "description": "Ouverture du Protocole 45+ : « 45+ » en très grand, disque des quatre volets qui se rassemble pendant l'intro",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole-45-pour-qui": {
+      "titre": "Quand le temps se voit, et se sent",
+      "role": "manifeste",
+      "description": "« Quand le temps se voit, et se sent » : pour qui est le protocole, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole-45-volets": {
+      "titre": "Ce que comprend le protocole",
+      "role": "services",
+      "description": "« Ce que comprend le protocole » : quatre volets en cartes photo avec ce que chacun apporte",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole-45-tarif": {
+      "titre": "L'addition, en clair",
+      "role": "tarifs",
+      "description": "« L'addition, en clair » : prix de chaque volet en ligne et total de 455 € qui compte en entrant à l'écran",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "protocole-45-diagnostic-offert": {
+      "titre": "Commençons par un diagnostic",
+      "role": "appel",
+      "description": "« Commençons par un diagnostic » : carte crème posée sur un fond de papier et de branches roses, mot en italique framboise, bouton et téléphone ; reprise en fin de chaque page",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-tarifs-debut": {
+      "titre": "Choisirsa séance",
+      "role": "ouverture",
+      "description": "« Choisir sa séance » : photo du Wellbee Space et médaillon « dès 70 € »",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-tarifs-seances": {
+      "titre": "Les séances",
+      "role": "tarifs",
+      "description": "« Les séances » : liste des séances avec durée et prix ; la photo de la colonne collante suit la séance lue",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "seances-tarifs-packs": {
+      "titre": "Le chemin vers la jeunesse naturelle",
+      "role": "calculateur",
+      "description": "« Le chemin vers la jeunesse naturelle » : packs et « Calculez votre parcours » qui trouve la combinaison la moins chère (packs et unités) sur les vrais prix",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "combinaison de séances la moins chère calculée sur les vrais prix"
+      ]
+    },
+    "seances-tarifs-cartes-cadeaux": {
+      "titre": "Offrir une séance",
+      "role": "outil-interactif",
+      "description": "« Offrir une séance » : carte cadeau dessinée où le soin choisi, le montant et le message s'écrivent pendant qu'on remplit le formulaire",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "saisie-personnalisee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Commande simulée"
+      ],
+      "particularites": [
+        "carte cadeau qui s'écrit pendant la saisie"
+      ]
+    },
+    "seances-tarifs-conditions": {
+      "titre": "Conditions",
+      "role": "texte-legal",
+      "description": "« Conditions » : annulation, report, validité des packs et des cartes cadeaux, en colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-tarifs-diagnostic-offert": {
+      "titre": "Commençons par un diagnostic",
+      "role": "appel",
+      "description": "« Commençons par un diagnostic » : carte crème posée sur un fond de papier et de branches roses, mot en italique framboise, bouton et téléphone ; reprise en fin de chaque page",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

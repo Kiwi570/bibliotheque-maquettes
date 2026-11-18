@@ -1,0 +1,50 @@
+{
+ "id": "yoga-gym-visage-maquette/zones",
+ "maquette": "yoga-gym-visage-maquette",
+ "page": "index",
+ "titre": "Trois zones, des gestes précis",
+ "role": "outil-interactif",
+ "description": "« Trois zones, des gestes précis » : visage dessiné au trait épinglé ; chaque zone (regard et front, bas du visage, cou et décolleté) s'allume quand son texte passe au milieu, ou au toucher du dessin ou de son nom",
+ "animations": [
+  "section-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:157-207",
+  "css": "assets/css/site.css:138-170,340,596-600",
+  "js": "assets/js/site.js:35-73,264-271 ; assets/js/modules/formulaire-par-etapes/module.js:180-181 ; assets/js/socle/voile.js:33"
+ },
+ "medias": {
+  "capture": "medias/yoga-gym-visage-maquette/zones-p1440.jpg",
+  "capture_m390": "medias/yoga-gym-visage-maquette/zones-m390.jpg",
+  "video": "medias/yoga-gym-visage-maquette/zones-p720.mp4"
+ },
+ "pieges": [
+  "Sur téléphone, on touche les zones au lieu du défilement"
+ ],
+ "particularites": [
+  "carte du visage dont les zones s'allument au défilement et au toucher"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1082,
+  "hauteur_m390": 1599,
+  "epinglee": false,
+  "scrolltriggers": 3
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

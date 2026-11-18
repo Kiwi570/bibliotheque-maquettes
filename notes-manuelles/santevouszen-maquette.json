@@ -1,0 +1,652 @@
+{
+  "maquette": {
+    "client": "cours de Qi Gong, méditation et fitness seniors en ligne (Patrick Campo, La Réunion) : 107 séances à la demande, live chaque jeudi, six formules",
+    "activite": [
+      "sport",
+      "bien-être",
+      "formation"
+    ],
+    "concept": [
+      "scène"
+    ],
+    "ambiance": [
+      "sombre",
+      "océanique",
+      "doux"
+    ],
+    "palette": {
+      "fond": "--basalte",
+      "texte": "--blanc",
+      "accent": "--braise",
+      "secondaire": "--ocean"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Atkinson Hyperlegible",
+      "mono": "Mono"
+    },
+    "points_forts": [
+      "direction « Le geste lent » : basalte, braise, océan et ciel de La Réunion, titres condensés serrés ; les vraies photos et vidéos de Patrick en pleine nature partout",
+      "ouverture : Patrick soutient le ciel des deux mains sur un ponton ; la hauteur de la souris sur la silhouette règle la hauteur de ses bras, consignes « plus lentement » et phrase de fin",
+      "« poses longues » : ses gestes filmés caméra fixe, l'instant en cours net et les instants passés en fantômes de plus en plus pâles ; la souris fait jouer le geste",
+      "registre filtrable des 107 séances (lieu qui apparaît sous le pointeur), série à compter avec lui, deux horloges La Réunion et Paris avec l'arc du prochain live",
+      "formules : prix qui roulent selon la durée et la façon de pratiquer, billet qui file jusqu'au récapitulatif de l'inscription ; « lent. » du pied de page qui s'élargit quand la souris ralentit"
+    ],
+    "reserves": [
+      "sept versions et plus de dix heures au total (v1 en 6 h 24 avec la v10.12.1)",
+      "dépôt très lourd (477 Mo, vidéos des poses longues) ; logo réel non trouvé, marque typographique en attendant",
+      "page sombre de bout en bout, sauf la page Fitness seniors en crème"
+    ],
+    "animations": [
+      "canvas-2d",
+      "scrub-vidéo",
+      "section-fixée",
+      "galerie-horizontale",
+      "révélation-texte",
+      "compteur",
+      "transition-de-page",
+      "apparition-au-défilement",
+      "reactif-vitesse"
+    ],
+    "interactions": [
+      "jeu",
+      "filtres",
+      "calculateur",
+      "formulaire-par-étapes",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "Patrick dont on règle les bras à la souris",
+      "fil": "les poses longues : le geste et ses fantômes"
+    },
+    "metier": "professeur de Qi Gong en ligne"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile de basalte entre les pages et intro courte du titre",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sur la photo : marque Santé Vous Zen, séances, fitness seniors, Patrick Campo, formules, contact, bouton braise « Choisir ma formule »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur basalte, liens en titres condensés",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Le geste lent.",
+      "role": "ouverture",
+      "description": "Ouverture : Patrick sur un ponton de Nosy Be, mer et ciel, titre condensé « Le geste lent. » dont la largeur respire ; la hauteur de la souris sur sa silhouette règle la hauteur de ses bras (poignée au doigt et au clavier), consignes qui s'affichent, phrase de fin quand le geste est lent ; prochain live en bas",
+      "animations": [
+        "canvas-2d",
+        "scrub-vidéo",
+        "reactif-vitesse",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, une poignée remplace la souris"
+      ],
+      "particularites": [
+        "bras de Patrick réglés par la hauteur de la souris",
+        "titre dont la largeur respire et se resserre quand on va vite"
+      ]
+    },
+    "pratiquer": {
+      "titre": "Le Qi Gong avec Patrick, chez vous.",
+      "role": "offre",
+      "description": "« Le Qi Gong avec Patrick, chez vous » : trois cartes photo (107 séances à la demande, le live du jeudi, 3 modules de fitness seniors) avec chiffres en braise",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "comment": {
+      "titre": "Trois étapes, sans vous déplacer.",
+      "role": "étapes",
+      "description": "« Trois étapes, sans vous déplacer » : étapes numérotées, Patrick en vidéo dans un cadre, bouton et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "enchainement": {
+      "titre": "Méthode du Dr Yayamales 5 katas",
+      "role": "galerie",
+      "description": "« Méthode du Dr Yayama, les 5 katas » : défilement horizontal épinglé d'un paysage à l'autre (lave, littoral, forêt) ; les panneaux filmés sont des poses longues où le défilement déroule le geste, l'instant net et les instants passés en fantômes pâles, et la souris le fait jouer",
+      "animations": [
+        "galerie-horizontale",
+        "section-fixée",
+        "canvas-2d",
+        "scrub-vidéo"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Sur téléphone, recadrage 9:16 et panneaux au doigt"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "pose longue : geste filmé détouré avec ses instants passés en fantômes"
+      ]
+    },
+    "live": {
+      "titre": "Jeudi 19 novembre18 h à Paris · 21 h chez Patrick",
+      "role": "agenda",
+      "description": "Prochain live « Jeudi 19 novembre, 18 h à Paris, 21 h chez Patrick » en grand, programme d'automne, photo de Patrick face à la mer",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick": {
+      "titre": "Plus de vingt ans à remettre les corps en mouvement.",
+      "role": "équipe",
+      "description": "« Plus de vingt ans à remettre les corps en mouvement » : Patrick en pleine nature, parcours et trois chiffres (20 ans, 15 ans, 2003) qui comptent",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formules": {
+      "titre": "Combien de temps voulez-vous pratiquer ?",
+      "role": "calculateur",
+      "description": "« Combien de temps voulez-vous pratiquer ? » sur océan : choix du live ou de la demande et curseur de durée, prix qui roulent jusqu'à la bonne formule (234 €), ce qui est compris, photo de Patrick",
+      "animations": [
+        "compteur",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "prix qui roulent selon la durée et la façon de pratiquer"
+      ]
+    },
+    "essayer": {
+      "titre": "Essayez avant de vous abonner.",
+      "role": "appel",
+      "description": "« Essayez avant de vous abonner » : groupe en blanc qui fait le geste sur les rochers face à la mer, boutons séance gratuite sur YouTube et téléphone",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page de basalte : sommaire et pratique, puis la signature « Le geste lent. » en très grand dont « lent. » s'élargit quand la souris ralentit",
+      "animations": [
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "signature qui s'élargit quand la souris ralentit"
+      ]
+    },
+    "404-debut": {
+      "titre": "Ce geste n'existe pas encore.",
+      "role": "page-404",
+      "description": "404 « Ce geste n'existe pas encore » sur un champ de lave assombri, bouton retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une question ? Appelez Patrick.",
+      "role": "ouverture",
+      "description": "« Une question ? Appelez Patrick. » : numéro en très grand, Patrick face à la mer ; deux horloges (La Réunion et Paris) avec l'arc du prochain live",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "deux horloges et l'arc du prochain live"
+      ]
+    },
+    "contact-message": {
+      "titre": "Ou laissez un message",
+      "role": "contact",
+      "description": "« Ou laissez un message » : formulaire sur basalte, photo de Patrick en forêt",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "fitness-seniors-debut": {
+      "titre": "Un muscle à la fois.",
+      "role": "ouverture",
+      "description": "Fitness seniors sur crème : « Un muscle à la fois. » en braise, texte, bouton, photo d'une séance en plein air",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fitness-seniors-serie": {
+      "titre": "Comptez la série avec lui",
+      "role": "outil-interactif",
+      "description": "« Comptez la série avec lui » : compteur circulaire 0 / 20 qu'on fait avancer à chaque répétition, vidéo de la séance",
+      "animations": [
+        "compteur",
+        "trace-svg"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "compter la série avec le professeur"
+      ]
+    },
+    "fitness-seniors-modules": {
+      "titre": "Ce qu'il y a dans chaque séance.",
+      "role": "services",
+      "description": "« Ce qu'il y a dans chaque séance » : trois modules en cartes photo avec durée, matériel et minutage des exercices",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fitness-seniors-commencer": {
+      "titre": "Pour suivre le fitness seniors, choisissez votre formule.",
+      "role": "appel",
+      "description": "Appel vers les formules sur crème ou basalte : photo de séance, titre condensé, bouton braise « Choisir ma formule »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formules-debut": {
+      "titre": "Six formules, de 84 € à 334 €.",
+      "role": "ouverture",
+      "description": "« Six formules, de 84 € à 334 € » sur le geste de Nosy Be : curseur de durée en ouverture, formule conseillée qui change",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formules-avec-live": {
+      "titre": "Le live chaque jeudi",
+      "role": "tarifs",
+      "description": "« Le live chaque jeudi » puis « Plutôt à la demande » : formules en cartes blanches (134 €, 234 €, 334 €…) ; « Choisir » fait filer le billet jusqu'au récapitulatif de l'inscription",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "billet qui file jusqu'à l'inscription"
+      ]
+    },
+    "formules-inscription": {
+      "titre": "Votre inscription",
+      "role": "contact",
+      "description": "« Votre inscription » : billet de la formule choisie et formulaire simulé",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Inscription simulée"
+      ]
+    },
+    "formules-faq": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "« Questions fréquentes » : questions dépliables, photo d'un groupe face au lac",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick-campo-debut": {
+      "titre": "Patrick Campo",
+      "role": "ouverture",
+      "description": "« Patrick Campo » en très grand, texte, photo de Patrick en blanc devant des fougères",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick-campo-parcours": {
+      "titre": "La rééducation, puis le souffle.",
+      "role": "étapes",
+      "description": "« La rééducation, puis le souffle » : parcours daté (centre de rééducation Sainte-Clotilde, médecine physique, Qi Gong énergétique), photo épinglée qui change",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick-campo-diplomes": {
+      "titre": "Ce qu'il a étudié.",
+      "role": "preuves",
+      "description": "« Ce qu'il a étudié » : liste des diplômes, citation sur une carte posée sur la photo en forêt",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick-campo-terrain": {
+      "titre": "Seul face à la caméra, ou devant une foule.",
+      "role": "galerie",
+      "description": "« Seul face à la caméra, ou devant une foule » : photos de séances en mosaïque",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "patrick-campo-pratiquer": {
+      "titre": "Pratiquer avec lui.",
+      "role": "appel",
+      "description": "Appel vers les formules sur crème ou basalte : photo de séance, titre condensé, bouton braise « Choisir ma formule »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-debut": {
+      "titre": "107 séances, à votre heure.",
+      "role": "ouverture",
+      "description": "« 107 séances, à votre heure. » : chiffre en grand, photo de pratique en pleine nature",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-registre": {
+      "titre": "Choisissez une forme, une saison.",
+      "role": "outil-interactif",
+      "description": "« Choisissez une forme, une saison » : registre des 107 séances filtrable par forme et saison (filtres gardés dans l'adresse) ; au survol d'une séance, la photo de son lieu apparaît sous le pointeur",
+      "animations": [
+        "filtre-anime",
+        "survol-image"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "lieu de la séance qui apparaît sous le pointeur"
+      ]
+    },
+    "seances-meditation": {
+      "titre": "Debout, assis, ou les yeux fermés.",
+      "role": "services",
+      "description": "« Debout, assis, ou les yeux fermés » : méditations en trois cartes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-commencer": {
+      "titre": "Prêt à commencer ?",
+      "role": "appel",
+      "description": "Appel vers les formules sur crème ou basalte : photo de séance, titre condensé, bouton braise « Choisir ma formule »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

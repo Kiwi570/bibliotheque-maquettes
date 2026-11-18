@@ -1,0 +1,792 @@
+{
+  "maquette": {
+    "client": "art-thérapeute, coach de transition et praticienne énergétique (Corinne Fonteneau, Armonia, Nuaillé près de Cholet), qui peint aussi ses propres toiles",
+    "activite": [
+      "bien-être",
+      "santé",
+      "culture"
+    ],
+    "concept": [
+      "atelier",
+      "galerie"
+    ],
+    "ambiance": [
+      "doux",
+      "clair",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "#FAF5EC",
+      "texte": "#16335B",
+      "accent": "#BF3F1A",
+      "secondaire": "#DCEBE8"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Papier et pigments » : papier crème, lavis d'eau, encre marine du logo et vermillon, Fraunces avec un mot en italique vermillon ; les vraies toiles de Corinne mises en valeur",
+      "ouverture : une goutte de pigment tombe sur le logo, s'étale et glisse jusqu'à la toile (mandala bleu) qui flotte doucement ; rosace tracée qui tourne très lentement derrière",
+      "images qui se révèlent comme un pigment qui s'étale (tache), deux chemins tracés au défilement, toiles qui se posent sur une cimaise et rangée qui glisse",
+      "outil « Faites un point sur votre projet » (coaching), rendez-vous en étapes, épingle qui se pose sur la carte, ondes concentriques (énergie)"
+    ],
+    "reserves": [
+      "v1 longue (près de 6 h) ; illustrations générées pour le cabinet et les ateliers",
+      "tarifs du coaching et du Reiki absents du site actuel : phrases d'attente"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "masque",
+      "trace-svg",
+      "galerie-horizontale",
+      "marquee",
+      "parallaxe",
+      "canvas-2d",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "formulaire-par-étapes",
+      "quiz",
+      "carte-interactive",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la goutte de pigment qui s'étale et révèle les images",
+      "fil": "la rosace tracée et les deux chemins"
+    },
+    "metier": "art-thérapeute et coach de transition"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de moins de 3 s : une goutte de pigment tombe au-dessus du logo, s'étale puis glisse vers l'image de la page ; même voile entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête papier : logo Armonia, art-thérapie, coaching, énergie, échangeons, bouton vermillon « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur encre marine, liens en Fraunces",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Mieux vous comprendre, retrouver votre équilibre",
+      "role": "ouverture",
+      "description": "Ouverture scindée : « Mieux vous comprendre, retrouver votre équilibre » avec le dernier mot en italique vermillon ; à droite la vraie toile de Corinne (mandala bleu) qui flotte et s'incline sous la souris, rosace tracée qui tourne très lentement derrière, taches de lavis qui respirent",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "goutte de pigment de l'intro qui finit sur la toile"
+      ]
+    },
+    "chemins": {
+      "titre": "Deux chemins, une même intention",
+      "role": "offre",
+      "description": "« Deux chemins, une même intention » : deux parcours (retrouver mon équilibre, tremplin vers l'emploi) en cartes photo, deux traits qui se tracent au défilement",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "ce-qui-vous-amene": {
+      "titre": "Ce qui vous amène",
+      "role": "manifeste",
+      "description": "« Ce qui vous amène » : liste de situations en Fraunces, italique pour les nuances, pastille de lavis avec une citation",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches": {
+      "titre": "Une approche intégrative, adaptée à vos besoins",
+      "role": "services",
+      "description": "« Une approche intégrative, adaptée à vos besoins » : trois photos (art-thérapie, coaching, énergie) révélées comme un pigment qui s'étale",
+      "animations": [
+        "masque",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "image révélée comme un pigment qui s'étale"
+      ]
+    },
+    "leviers": {
+      "titre": "Les leviers de l'accompagnement",
+      "role": "decor",
+      "description": "Bandeau de mots en Fraunces qui défile (confiance en soi, créativité, prise de parole…), italique vermillon en alternance",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "oeuvres": {
+      "titre": "Elle accompagne, et elle peint",
+      "role": "galerie",
+      "description": "« Elle accompagne, et elle peint » : les toiles de Corinne se posent une à une sur une cimaise, puis la rangée glisse au défilement ; titre, technique, format et prix sous chacune",
+      "animations": [
+        "galerie-horizontale",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toiles qui se posent sur une cimaise, rangée qui glisse"
+      ]
+    },
+    "corinne": {
+      "titre": "Derrière chaque difficulté, une personne",
+      "role": "équipe",
+      "description": "« Derrière chaque difficulté, une personne » : portrait rond sur lavis, parcours de Corinne, citation et trois engagements",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "temoignages": {
+      "titre": "Ce sont elles et eux qui en parlent le mieux",
+      "role": "témoignages",
+      "description": "« Ce sont elles et eux qui en parlent le mieux » : six témoignages en cartes papier, guillemets vermillon",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs": {
+      "titre": "Avant de venir",
+      "role": "tarifs",
+      "description": "« Avant de venir » : tarifs en cartes (art-thérapie 80 € puis 70 €, libération 70 €, coaching sur demande) et questions fréquentes dépliables",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rencontre": {
+      "titre": "Et si nous faisions connaissance ?",
+      "role": "appel",
+      "description": "Appel final sur encre marine : titre en Fraunces avec un mot en italique, rosace en filigrane, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page encre marine : logo, présentation, adresse, sommaire, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Ce chemin ne mène nulle part",
+      "role": "page-404",
+      "description": "404 « Ce chemin ne mène nulle part » : toile « Spirale, Chemin de vie » de Corinne, titre en italique, bouton retour",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-debut": {
+      "titre": "Exprimer, créer et symboliser autrement",
+      "role": "ouverture",
+      "description": "« Exprimer, créer et symboliser autrement » : plein cadre sur un atelier lumineux, texte sur une feuille posée, prix de la première séance",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-mediation": {
+      "titre": "La création comme médiation",
+      "role": "manifeste",
+      "description": "« La création comme médiation » : texte en colonne et grande aquarelle révélée comme un pigment",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-mediations": {
+      "titre": "Quatre façons de dire",
+      "role": "services",
+      "description": "« Quatre façons de dire » : quatre médiations numérotées (peinture, écriture, modelage, mouvement) et photo d'un atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-pour-qui": {
+      "titre": "Cela peut vous parler si vous vivez…",
+      "role": "preuves",
+      "description": "« Cela peut vous parler si vous vivez… » : situations cochées en deux colonnes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-formats": {
+      "titre": "Seul ou à plusieurs",
+      "role": "tarifs",
+      "description": "« Seul ou à plusieurs » : deux formats en cartes avec prix et une séance en trois temps numérotés",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-toiles": {
+      "titre": "Quatre arbres de vie",
+      "role": "galerie",
+      "description": "« Quatre arbres de vie » : quatre toiles de Corinne accrochées sur une cimaise, légendes et prix",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "art-therapie-rencontre": {
+      "titre": "Envie d'essayer ?",
+      "role": "appel",
+      "description": "Appel final sur encre marine : titre en Fraunces avec un mot en italique, rosace en filigrane, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "coaching-de-transition-debut": {
+      "titre": "Clarifier les possibles, se mettre en mouvement",
+      "role": "ouverture",
+      "description": "« Clarifier les possibles, se mettre en mouvement » : grand titre avec mot en italique vermillon, chemin sous une arche de feuillage",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-de-transition-situations": {
+      "titre": "Vous reconnaissez-vous dans ces situations ?",
+      "role": "preuves",
+      "description": "« Vous reconnaissez-vous dans ces situations ? » : six situations numérotées en cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-de-transition-cadre": {
+      "titre": "Un espace d'écoute, un cadre de confiance",
+      "role": "méthode",
+      "description": "« Un espace d'écoute, un cadre de confiance » : titre épinglé à gauche, quatre engagements en grand Fraunces dont un en italique vermillon",
+      "animations": [
+        "section-fixée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-de-transition-methode": {
+      "titre": "Comment nous avançons ensemble",
+      "role": "méthode",
+      "description": "« Comment nous avançons ensemble » : photo d'un carnet et texte de méthode",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-de-transition-parcours": {
+      "titre": "Mieux-être ou emploi : deux parcours",
+      "role": "offre",
+      "description": "« Mieux-être ou emploi : deux parcours » : deux cartes de parcours tracées comme deux chemins",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-de-transition-point": {
+      "titre": "Par où commencer ?",
+      "role": "outil-interactif",
+      "description": "« Par où commencer ? » : outil « Faites un point sur votre projet », quelques questions à cocher qui orientent vers un parcours ; rien n'est enregistré",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "quiz"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Outil simulé, sur place"
+      ]
+    },
+    "coaching-de-transition-rencontre": {
+      "titre": "Et si on faisait le point ?",
+      "role": "appel",
+      "description": "Appel final sur encre marine : titre en Fraunces avec un mot en italique, rosace en filigrane, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "echangeons-debut": {
+      "titre": "Faisons connaissance",
+      "role": "ouverture",
+      "description": "« Faisons connaissance » : numéro de téléphone en très grand, portrait de Corinne, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "echangeons-rendez-vous": {
+      "titre": "Préparez votre rendez-vous",
+      "role": "contact",
+      "description": "« Préparez votre rendez-vous » : rendez-vous en étapes (approche, format, créneau, coordonnées), choix déjà fait selon l'adresse, résumé épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "echangeons-cabinet": {
+      "titre": "À Nuaillé, près de Cholet",
+      "role": "carte",
+      "description": "« À Nuaillé, près de Cholet » : carte dessinée où une épingle vermillon se pose, adresse et accès",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "echangeons-tarifs": {
+      "titre": "Les tarifs, clairement",
+      "role": "tarifs",
+      "description": "« Les tarifs, clairement » : tarifs en lignes et mention « sur rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "echangeons-rencontre": {
+      "titre": "Un créneau en quelques clics",
+      "role": "appel",
+      "description": "Appel final sur encre marine : titre en Fraunces avec un mot en italique, rosace en filigrane, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "energie-et-liberations-debut": {
+      "titre": "Énergie et libérations",
+      "role": "ouverture",
+      "description": "« Énergie et libérations » : grand titre centré sur des ondes concentriques en canvas qui s'élargissent, puis bandeau photo",
+      "animations": [
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "energie-et-liberations-demarche": {
+      "titre": "Une démarche de bien-être",
+      "role": "manifeste",
+      "description": "« Une démarche de bien-être » : mention bien visible que ces pratiques ne remplacent pas un suivi médical",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "energie-et-liberations-liberation-quantique": {
+      "titre": "La libération quantique et émotionnelle",
+      "role": "services",
+      "description": "« La libération quantique et émotionnelle » : texte, photo, déroulé et tarif",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "energie-et-liberations-reiki": {
+      "titre": "La pratique énergétique, Reiki",
+      "role": "services",
+      "description": "« La pratique énergétique, Reiki » : texte, photo et tarif sur demande",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "energie-et-liberations-choisir": {
+      "titre": "Comment choisir ?",
+      "role": "faq",
+      "description": "« Comment choisir ? » : les deux pratiques comparées en deux cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "energie-et-liberations-rencontre": {
+      "titre": "Une question avant de réserver ?",
+      "role": "appel",
+      "description": "Appel final sur encre marine : titre en Fraunces avec un mot en italique, rosace en filigrane, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    }
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "maquette": {
+    "client": "dépannage et réparation de fenêtres, portes-fenêtres et baies coulissantes en PVC et aluminium dans les Hauts-de-France (roulettes, crémones, poignées)",
+    "activite": [
+      "bâtiment",
+      "artisanat"
+    ],
+    "concept": [
+      "atelier"
+    ],
+    "ambiance": [
+      "clair",
+      "énergique",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--marine",
+      "accent": "--accent",
+      "secondaire": "--verre"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « La coulisse » : crème, bleu marine, rouge et bleu verre, Bricolage Grotesque gras avec la seconde ligne en rouge ; la mascotte du logo bien intégrée, tenue sur les cinq pages",
+      "ouverture : le reflet balaie la baie vitrée dessinée, le vantail droit coulisse sur le gauche avec un rebond de roulette, puis continue de coulisser au défilement",
+      "« Qu'est-ce qui coince ? » : on choisit la pièce sur le schéma de la fenêtre ou de la baie, elle bouge et la bonne réparation s'affiche avec un bouton prérempli",
+      "« On garde la fenêtre » : façade de brique épinglée dont l'image s'ouvre pendant que les mots s'écartent ; carte de la région dont les départements s'allument",
+      "numéro de téléphone en très grand partout, mascotte qui monte du bas comme un vantail qu'on soulève, demande de dépannage en étapes préremplie par l'adresse"
+    ],
+    "reserves": [
+      "photos des pannes et des fenêtres générées (roulettes, crémone, poignée) : à remplacer par des photos de chantier",
+      "accueil assez court (sept sections) et zone d'intervention sans photo"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "parallaxe",
+      "section-fixée",
+      "masque",
+      "trace-svg",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "schema-interactif",
+      "carte-interactive",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "outil-d-abord",
+    "grille": {
+      "objet": "la baie coulissante dessinée qui coulisse sur ses roulettes",
+      "fil": "les pièces qui glissent sur leur rail au défilement"
+    },
+    "metier": "réparation de fenêtres et menuiseries"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro d'environ 2,2 s : le reflet balaie la baie, le vantail coulisse avec un rebond de roulette ; voile en forme de coulisse entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête crème : logo Magik Fenêtre, dépannages, réparer ou remplacer, contact, bouton rouge avec le numéro",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Un appel suffit",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur marine, « Un appel suffit » et numéro en grand",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Ça coince ? On répare.",
+      "role": "ouverture",
+      "description": "Ouverture : « Ça coince ? On répare. » avec la seconde ligne en rouge, texte, bouton rouge avec le numéro ; à droite une baie vitrée dessinée sur un jardin, le reflet la balaie et le vantail coulisse avec un rebond de roulette, puis continue de coulisser au défilement",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "baie vitrée dont le vantail coulisse avec un rebond de roulette"
+      ]
+    },
+    "pannes": {
+      "titre": "Trois pannes courantes, une seule réparation à faire.",
+      "role": "services",
+      "description": "« Trois pannes courantes, une seule réparation à faire » : cartes photo (roulettes de baie, crémone, poignée) qui glissent sur leur rail au défilement, carte marine « Et toutes les autres »",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "reparer": {
+      "titre": "On change la pièce, pas la fenêtre.",
+      "role": "manifeste",
+      "description": "« On change la pièce, pas la fenêtre » sur marine : fenêtre dessinée en perspective et liste des pièces qui se changent (poignée, crémone, roulettes, vitrage…)",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "diagnostic": {
+      "titre": "Qu'est-ce qui coince ?",
+      "role": "outil-interactif",
+      "description": "« Qu'est-ce qui coince ? » : schémas d'une fenêtre et d'une baie coulissante avec points rouges ; on choisit la pièce (crémone, poignée, roulettes), elle bouge et la carte de réponse s'affiche avec le bouton « Demander pour ma baie » ; la baie coulisse une fois à l'arrivée",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "diagnostic de panne sur le schéma de la menuiserie"
+      ]
+    },
+    "facade": {
+      "titre": "On garde la fenêtre.",
+      "role": "decor",
+      "description": "« On garde la fenêtre » : façade de brique épinglée dont l'image s'ouvre au défilement pendant que les deux moitiés du titre s'écartent pour ne jamais rester sur la photo",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "zone": {
+      "titre": "Partout dans les Hauts-de-France.",
+      "role": "carte",
+      "description": "« Partout dans les Hauts-de-France » : carte de la région tracée dont les départements s'allument, liste des départements qui s'allument au survol",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Une fenêtre qui coince ? Appelez.",
+      "role": "appel",
+      "description": "« Une fenêtre qui coince ? Appelez. » sur bande marine : mascotte du logo qui monte du bas comme un vantail qu'on soulève, numéro en très grand, boutons appeler et décrire ma panne",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page crème : logo, présentation courte, numéro, sommaire, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page est coincée.",
+      "role": "page-404",
+      "description": "404 « Cette page est coincée » : mascotte qui lève le pouce, titre en rouge, bouton retour",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une panne ? Appelez.",
+      "role": "ouverture",
+      "description": "« Une panne ? Appelez. » : numéro en très grand qui dérive doucement au défilement, boutons appeler et décrire",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Décrire ma panne",
+      "role": "contact",
+      "description": "« Décrire ma panne » sur marine : demande en quatre étapes (menuiserie, panne, photo, coordonnées) avec choix en cartes à pictogrammes, préremplie par l'adresse (?panne=)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-zone": {
+      "titre": "Toute la région Hauts-de-France.",
+      "role": "carte",
+      "description": "« Partout dans les Hauts-de-France » : carte de la région tracée dont les départements s'allument, liste des départements qui s'allument au survol",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannages-debut": {
+      "titre": "Dépannages",
+      "role": "ouverture",
+      "description": "« Dépannages » en titre géant marine, texte, numéro, photo de tournevis sur une roulette",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannages-detail": {
+      "titre": "Roulettes de baie vitrée",
+      "role": "services",
+      "description": "Les pannes en détail (roulettes de baie, crémone, poignée…) : signes, ce qu'on fait, bouton prérempli ; le panneau photo collant suit la panne lue, compteur 01/03",
+      "animations": [
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "depannages-autres": {
+      "titre": "Et toutes les autres menuiseries",
+      "role": "services",
+      "description": "« Et toutes les autres menuiseries » sur marine : étiquettes (fenêtres, portes-fenêtres, baies, PVC, aluminium) et bouton",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannages-faq": {
+      "titre": "Avant d'appeler",
+      "role": "faq",
+      "description": "« Avant d'appeler » : carte marine avec le numéro épinglée à gauche, questions dépliables à droite",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "depannages-appel": {
+      "titre": "Une fenêtre qui coince ? Appelez.",
+      "role": "appel",
+      "description": "« Une fenêtre qui coince ? Appelez. » sur bande marine : mascotte du logo qui monte du bas comme un vantail qu'on soulève, numéro en très grand, boutons appeler et décrire ma panne",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "reparer-plutot-que-remplacer-debut": {
+      "titre": "Remplacer Réparer votre fenêtre.",
+      "role": "ouverture",
+      "description": "« Remplacer Réparer votre fenêtre » : le mot « Remplacer » se barre en rouge et « Réparer » s'écrit dessous, photo de fenêtre en arche",
+      "animations": [
+        "rature",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "mot barré puis remplacé dans le titre"
+      ]
+    },
+    "reparer-plutot-que-remplacer-raisons": {
+      "titre": "Moins cher, et moins de déchets.",
+      "role": "preuves",
+      "description": "« Moins cher, et moins de déchets » : deux cartes illustrées (pièces qui glissent, mur de brique) qui glissent sur leur rail",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reparer-plutot-que-remplacer-bilan": {
+      "titre": "Ce qu'on garde, ce qu'on change.",
+      "role": "preuves",
+      "description": "« Ce qu'on garde, ce qu'on change » : deux colonnes, crème et marine, avec puces",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reparer-plutot-que-remplacer-jardin": {
+      "titre": "La fenêtre reste en place.",
+      "role": "manifeste",
+      "description": "« La fenêtre reste en place » : grande photo de fenêtre sur jardin, texte sur une carte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reparer-plutot-que-remplacer-appel": {
+      "titre": "Une fenêtre qui coince ? Appelez.",
+      "role": "appel",
+      "description": "« Une fenêtre qui coince ? Appelez. » sur bande marine : mascotte du logo qui monte du bas comme un vantail qu'on soulève, numéro en très grand, boutons appeler et décrire ma panne",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    }
+  }
+}

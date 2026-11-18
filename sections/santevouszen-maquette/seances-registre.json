@@ -1,0 +1,48 @@
+{
+ "id": "santevouszen-maquette/seances-registre",
+ "maquette": "santevouszen-maquette",
+ "page": "seances",
+ "titre": "Choisissez une forme, une saison.",
+ "role": "outil-interactif",
+ "description": "« Choisissez une forme, une saison » : registre des 107 séances filtrable par forme et saison (filtres gardés dans l'adresse) ; au survol d'une séance, la photo de son lieu apparaît sous le pointeur",
+ "animations": [
+  "filtre-anime",
+  "survol-image"
+ ],
+ "interactions": [
+  "filtres"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "seances.html:124-367",
+  "css": "assets/css/site.css:263-278,416-417,439-440,529,539,866-875,987,1016-1017,1032-1035,1058-1059,1075",
+  "js": "assets/js/site.js:1,582-648,744 ; assets/js/socle/effets.js:27,40,151-158 ; assets/js/socle/mesures.js:42-78"
+ },
+ "medias": {
+  "capture": "medias/santevouszen-maquette/seances-registre-p1440.jpg",
+  "capture_m390": "medias/santevouszen-maquette/seances-registre-m390.jpg",
+  "video": "medias/santevouszen-maquette/seances-registre-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "lieu de la séance qui apparaît sous le pointeur"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1750,
+  "hauteur_m390": 1992,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "lumiere-pointeur"
+ ],
+ "impact": "vivant"
+}
