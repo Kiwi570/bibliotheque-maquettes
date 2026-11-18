@@ -1,0 +1,959 @@
+{
+  "maquette": {
+    "client": "atelier d'enluminure et de calligraphie à Valence (Marie Nuel) : œuvres, commandes personnalisées (naissances, mariages, armoiries), stages et ateliers, boutique",
+    "activite": [
+      "artisanat",
+      "culture",
+      "formation",
+      "commerce"
+    ],
+    "concept": [
+      "atelier",
+      "galerie"
+    ],
+    "ambiance": [
+      "artisanal",
+      "luxueux",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--lapis",
+      "secondaire": "--or"
+    },
+    "polices": {
+      "titres": "Cormorant Garamond",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Lapis et feuille d'or » : vélin, lapis du logo et or des enluminures, Cormorant Garamond avec un mot en italique lapis ; les vraies œuvres de Marie au centre de chaque page, jamais recadrées ni recolorées",
+      "ouverture : le monogramme MN s'écrit et se dore, puis s'ouvre sur l'œuvre « Amitié » dont la feuille d'or accroche la lumière au mouvement de la souris",
+      "le métier en scènes : pigments qui passent de la poudre à l'aplat, reliure du manuscrit qui s'ouvre, lettrine posée geste par geste (assiette, feuille d'or, lettre peinte)",
+      "mur des œuvres qui glisse à trois vitesses, visionneuse avec loupe sur l'or, œuvre à sa taille réelle au mur, monogramme écrit à la plume dans l'appel final",
+      "composeur de commande (prix de départ et date limite), agenda des stages calculé à la date du jour, marque-pages avec prénom en gothique, boutique filtrable"
+    ],
+    "reserves": [
+      "quelques illustrations générées (écritoire, pigments, goutte d'encre)",
+      "pages du site actuel non reprises (biographie, actualités, presse)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "trace-svg",
+      "révélation-texte",
+      "galerie-horizontale",
+      "section-fixée",
+      "parallaxe",
+      "masque",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "galerie-cliquable",
+      "filtres",
+      "configurateur",
+      "saisie-personnalisee",
+      "formulaire-par-étapes",
+      "panier-simule"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "galerie",
+    "grille": {
+      "objet": "la feuille d'or qui accroche la lumière",
+      "fil": "le monogramme écrit à la plume et doré"
+    },
+    "metier": "enlumineuse et calligraphe"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : le monogramme MN s'écrit et se dore, puis s'ouvre sur l'œuvre de la page ; voile lapis entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête vélin : signature Marie Nuel, œuvres, commandes, stages et ateliers, boutique, contact, bouton lapis « Commander »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur vélin, liens en Cormorant Garamond",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "L’artd’illuminerla page",
+      "role": "ouverture",
+      "description": "Ouverture : « L'art d'illuminer la page » avec le verbe en italique lapis, texte et boutons, prochain stage ; à droite l'œuvre « Amitié » (lettrine A sur fond lapis) dont la feuille d'or accroche un reflet qui suit la souris, et repasse seul toutes les 4 s",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "reflet sur la feuille d'or qui suit la souris"
+      ]
+    },
+    "illuminare": {
+      "titre": "Illuminare",
+      "role": "manifeste",
+      "description": "« Illuminare » : origine du mot en grand Cormorant, quatre repères (2012, 100 h, 23, 10), œuvre de la colombe dont l'or brille au défilement",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "oeuvres-choisies": {
+      "titre": "Des œuvres à regarder de près",
+      "role": "galerie",
+      "description": "« Des œuvres à regarder de près » : mur des œuvres en trois colonnes qui glissent à trois vitesses différentes au défilement",
+      "animations": [
+        "parallaxe",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "mur d'œuvres en trois colonnes à trois vitesses"
+      ]
+    },
+    "commander": {
+      "titre": "Une enluminure rien que pour vous",
+      "role": "offre",
+      "description": "« Une enluminure rien que pour vous » : occasions en cartes (naissance, mariage, prénoms, armoiries…) avec exemple et prix de départ",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metier": {
+      "titre": "De la pierre à la couleur",
+      "role": "decor",
+      "description": "« De la pierre à la couleur » épinglé : photo d'une table de travail qui s'agrandit pendant que les deux mots « Broyer » et « dorer » s'écartent et s'effacent",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "pigments": {
+      "titre": "Huit couleurs, quatre origines",
+      "role": "outil-interactif",
+      "description": "« Huit couleurs, quatre origines » : photo de pigments broyés et huit pastilles (lapis-lazuli, cinabre, orpiment, ocre…) qui passent de la poudre à l'aplat une à une",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "pigments qui passent de la poudre à l'aplat"
+      ]
+    },
+    "manuscrit": {
+      "titre": "Un manuscrit, de la peau à la reliure",
+      "role": "étapes",
+      "description": "« Un manuscrit, de la peau à la reliure » épinglé : la reliure de cuir s'ouvre au défilement pendant que les étapes (écriture, peinture, support, reliure) s'affichent",
+      "animations": [
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "reliure qui s'ouvre au défilement"
+      ]
+    },
+    "apprendre": {
+      "titre": "Prendre la plume, même débutant",
+      "role": "agenda",
+      "description": "« Prendre la plume, même débutant » : prochaines dates calculées à la date du jour, photo d'un atelier, lien vers les stages",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "marie": {
+      "titre": "Marie Nuel",
+      "role": "équipe",
+      "description": "« Marie Nuel » : photo au travail sur un manuscrit, parcours, citation en italique lapis ; un petit lapin sort de derrière la photo, les oreilles frémissent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "lapin des marges qui sort de derrière la photo"
+      ]
+    },
+    "offrir": {
+      "titre": "Prêtes à offrir",
+      "role": "produits",
+      "description": "« Prêtes à offrir » : œuvres encadrées en stock posées sur une étagère, prix et lien vers la boutique",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Votre lettre, à l’or fin",
+      "role": "appel",
+      "description": "Appel final sur lapis : le monogramme MN s'écrit à la plume au défilement puis se dore, titre en Cormorant avec un mot en italique, boutons commander et écrire",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "monogramme écrit à la plume au défilement"
+      ]
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page vélin : monogramme, adresse de l'atelier, le site, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Une goutte d’encre est tombée ici",
+      "role": "page-404",
+      "description": "404 « Une goutte d'encre est tombée ici » : plume et tache d'encre sur le papier, lettrine dorée, boutons retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-debut": {
+      "titre": "Des œuvres prêtes à offrir",
+      "role": "ouverture",
+      "description": "« Des œuvres prêtes à offrir » : prix « de 25 à 450 € » en très grand, cadres dorés posés, lettrine",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-catalogue": {
+      "titre": "Œuvres en stock",
+      "role": "produits",
+      "description": "« Œuvres en stock » : 19 œuvres encadrées filtrables (gardé dans l'adresse), fiche avec dimensions et prix, bouton « Ajouter à ma demande » qui alimente le tiroir de demande d'achat",
+      "animations": [
+        "filtre-anime",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Demande simulée"
+      ]
+    },
+    "boutique-tirages": {
+      "titre": "Vingt-cinq euros, en A4",
+      "role": "produits",
+      "description": "« Vingt-cinq euros, en A4 » : tirages d'art, photo d'un tirage encadré",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-marque-pages": {
+      "titre": "Votre prénom, en gothique",
+      "role": "outil-interactif",
+      "description": "« Votre prénom, en gothique » : on saisit le prénom, choisit l'encre et l'ornement, l'aperçu du marque-page s'écrit en gothique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "saisie-personnalisee",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "prénom écrit en gothique sur le marque-page"
+      ]
+    },
+    "boutique-envoi": {
+      "titre": "Paiement et envoi",
+      "role": "texte-legal",
+      "description": "« Paiement et envoi » : modes de paiement et d'envoi, monogramme",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-demande-bouton": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "bouton fixe « Ma demande » sans rendu propre, décrit avec le catalogue"
+    },
+    "boutique-demande": {
+      "titre": "Ma demande d’achat",
+      "role": "contact",
+      "description": "Tiroir « Ma demande d'achat » : œuvres choisies, total et coordonnées, envoi simulé",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "boutique-visuellement-cache": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "bloc d'accessibilité masqué"
+    },
+    "commandes-debut": {
+      "titre": "Une enluminure faite pour vous",
+      "role": "ouverture",
+      "description": "« Une enluminure faite pour vous » : « dès 120 € » en très grand, lettrine, photo d'une œuvre sur du papier",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-occasions": {
+      "titre": "Six façons de marquer un jour",
+      "role": "services",
+      "description": "« Six façons de marquer un jour » : occasions en onglets (naissance, mariage, prénoms, armoiries, fêtes religieuses, associations), exemple et prix pour chacune",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-composer": {
+      "titre": "Votre commande en quatre choix",
+      "role": "calculateur",
+      "description": "« Votre commande en quatre choix » : occasion, format, support, or ; prix de départ et date limite pour commander, récapitulatif épinglé dont la feuille bouge au défilement",
+      "animations": [
+        "section-fixée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "configurateur",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-gestes": {
+      "titre": "Une page en quatre gestes",
+      "role": "étapes",
+      "description": "« Une page en quatre gestes » : quatre étapes en photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-religions": {
+      "titre": "Pour toutes les traditions",
+      "role": "services",
+      "description": "« Pour toutes les traditions » : fêtes religieuses et exemple",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-exemples": {
+      "titre": "Quelques commandes",
+      "role": "galerie",
+      "description": "« Quelques commandes » : mosaïque de commandes réalisées",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-questions": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "« Questions fréquentes » : quatre questions dépliables sur les commandes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commandes-fin": {
+      "titre": "Une idée, une date ?",
+      "role": "appel",
+      "description": "Appel final sur lapis : le monogramme MN s'écrit à la plume au défilement puis se dore, titre en Cormorant avec un mot en italique, boutons commander et écrire",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "monogramme écrit à la plume au défilement"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Écrire à l’atelier",
+      "role": "ouverture",
+      "description": "« Écrire à l'atelier » : l'écritoire en plein cadre, titre en Cormorant",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire prérempli par l'adresse, coordonnées et plan simplifié épinglés",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-dons": {
+      "titre": "Vos trésors oubliés",
+      "role": "manifeste",
+      "description": "« Vos trésors oubliés » : appel aux dons de matériaux (feuilles d'or, pinceaux, parchemins), photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "oeuvres-debut": {
+      "titre": "Œuvres de l’atelier",
+      "role": "ouverture",
+      "description": "« Œuvres de l'atelier » : une vraie œuvre posée sur un mur de chaux, titre et filtres",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "oeuvres-galerie": {
+      "titre": "Amitié",
+      "role": "galerie",
+      "description": "Les 45 œuvres filtrables (enluminures, calligraphies, religieuses, série des oiseaux…) en grille ; visionneuse avec lien direct (#o-…), clavier, glissement et loupe sur l'or",
+      "animations": [
+        "filtre-anime",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "visionneuse avec loupe sur la feuille d'or"
+      ]
+    },
+    "oeuvres-visionneuse": {
+      "titre": "Agrandir",
+      "role": "galerie",
+      "description": "Visionneuse des œuvres : agrandissement, flèches, loupe qui suit le pointeur sur l'or",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "oeuvres-oiseaux": {
+      "titre": "Une série",
+      "role": "galerie",
+      "description": "« Une série » : les oiseaux de Nouvelle-Zélande, œuvres en vol qui bougent au défilement",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "oeuvres-echelle": {
+      "titre": "À sa vraie taille",
+      "role": "outil-interactif",
+      "description": "« À sa vraie taille » : l'œuvre choisie s'affiche à sa taille réelle sur un mur à côté d'un meuble",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "œuvre montrée à sa taille réelle au mur"
+      ]
+    },
+    "oeuvres-fin": {
+      "titre": "Une œuvre vous parle ?",
+      "role": "appel",
+      "description": "Appel final sur lapis : le monogramme MN s'écrit à la plume au défilement puis se dore, titre en Cormorant avec un mot en italique, boutons commander et écrire",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "monogramme écrit à la plume au défilement"
+      ]
+    },
+    "stages-debut": {
+      "titre": "Apprendre l’enluminure",
+      "role": "ouverture",
+      "description": "« Apprendre l'enluminure » : date du prochain stage en très grand, photo d'un atelier",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stages-agenda": {
+      "titre": "Les dates",
+      "role": "agenda",
+      "description": "« Les dates » : agenda à venir puis passé, calculé à la date du jour à l'heure de Valence",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "agenda calculé à la date du jour"
+      ]
+    },
+    "stages-stages": {
+      "titre": "Deux jours, une lettre",
+      "role": "offre",
+      "description": "« Deux jours, une lettre » : le stage type, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stages-interventions": {
+      "titre": "L’atelier se déplace",
+      "role": "services",
+      "description": "« L'atelier se déplace » : interventions en musées et associations",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stages-scolaires": {
+      "titre": "Une classe, vingt-huit plumes",
+      "role": "services",
+      "description": "« Une classe, vingt-huit plumes » : ateliers scolaires et Pass Culture",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stages-passe": {
+      "titre": "Là où l’atelier est passé",
+      "role": "preuves",
+      "description": "« Là où l'atelier est passé » : lieux et partenaires passés",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "stages-inscription": {
+      "titre": "Demander une place",
+      "role": "contact",
+      "description": "« Demander une place » : formulaire d'inscription simulé avec le monogramme",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Inscription simulée"
+      ]
+    }
+  }
+}
