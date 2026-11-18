@@ -119,8 +119,10 @@ for (const page of ORDRE) { const s = sources[page];
     if (!b.dansMain) {
       if (communs[b.sig]) { communs[b.sig].pages.push(page); b.ref = communs[b.sig]; continue; }
     } else if (s.gabarit) {
-      // Gabarit approché : même signature ne suffit pas, le contenu (classes internes) doit aussi se ressembler.
-      const semblable = x => { if (!s.gabaritLache) return true; const a = classesDe(x._b.noeud), c = classesDe(b.noeud); const u = new Set([...a, ...c]); return !u.size || [...a].filter(k => c.has(k)).length / u.size >= 0.7; };
+      // Même signature ne suffit pas, le contenu (classes internes) doit aussi se ressembler, même quand la suite de blocs
+      // est identique (seuil bas, 20 % de classes communes : une illustration en plus ne compte pas) : chez Cool Canyoning
+      // (18 novembre 2026), la voie d'escalade avait la même enveloppe que la liste des articles du carnet et disparaissait.
+      const semblable = x => { const a = classesDe(x._b.noeud), c = classesDe(b.noeud); const u = new Set([...a, ...c]); return !u.size || [...a].filter(k => c.has(k)).length / u.size >= (s.gabaritLache ? 0.7 : 0.2); };
       const ref = blocs.find(x => x.page === s.gabarit && x.sig === b.sig && !x._pris?.has(page) && semblable(x));
       if (ref) { ref.pages.push(page); (ref._pris ??= new Set()).add(page); b.ref = ref; continue; }
     }
