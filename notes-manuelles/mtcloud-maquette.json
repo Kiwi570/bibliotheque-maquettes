@@ -1,0 +1,764 @@
+{
+  "maquette": {
+    "client": "artisan informaticien à Mandelieu-la-Napoule (MTCloud, Michael Tourneur) : installe à domicile un boîtier qui remplace Google Photos et Google Drive, achat unique sans abonnement, site en français et en anglais",
+    "activite": [
+      "numérique",
+      "artisanat"
+    ],
+    "concept": [
+      "vitrine"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "clair",
+      "luxueux"
+    ],
+    "palette": {
+      "fond": "--sable",
+      "texte": "--nuit",
+      "accent": "--ambre-fonce",
+      "secondaire": "--ambre"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Rentrer à la maison » : sable et lin de la Riviera, bleu nuit et ambre du logo, Fraunces avec une ligne en italique ambre ; un sujet technique rendu chaleureux",
+      "ouverture : salon ouvert sur la mer, les souvenirs tombent du ciel de la photo et rentrent dans le petit boîtier blanc dont la LED s'allume",
+      "boîtier, téléphone et ordinateur dessinés en code (aucune fausse photo de produit) : grille de photos qui se range par personnes, lieux ou dates, fichiers qui passent de l'ordinateur au téléphone",
+      "configurateur : mémoire, stockage, accès ; jauge, total qui compte depuis le prix de base (275 €), rentabilité face à un abonnement, devis prérempli",
+      "même photo sur le téléphone, l'ordinateur puis la télé ; côte qui se dessine de Bandol à Menton ; site bilingue complet"
+    ],
+    "reserves": [
+      "v1 longue (près de 4 h) puis v2 de 2 h",
+      "scènes de vie générées (salons, escaliers de village), marquées comme telles"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "flip",
+      "trace-svg",
+      "compteur",
+      "parallaxe",
+      "section-fixée",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "configurateur",
+      "calculateur",
+      "comparateur",
+      "formulaire-par-étapes",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le petit boîtier où rentrent les souvenirs",
+      "fil": "les souvenirs qui passent d'un écran à l'autre"
+    },
+    "metier": "installateur de cloud personnel"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : des souvenirs rentrent dans le bouclier du logo, qui glisse jusqu'à l'objet de la page ; voile bleu nuit entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sable : logo MTCloud, services, le boîtier, à propos, contact, EN, bouton bleu nuit « Configurer mon cloud »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur bleu nuit, liens en Fraunces",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Vos photos et vos fichiers, enfin chez vous.",
+      "role": "ouverture",
+      "description": "Ouverture : « Vos photos et vos fichiers, enfin chez vous. » avec la dernière ligne en italique ambre ; grande photo d'un salon ouvert sur la mer, des vignettes de souvenirs tombent du ciel de la photo dans le petit boîtier blanc dont la LED ambre s'allume ; prix d'achat unique",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "souvenirs qui tombent du ciel de la photo dans le boîtier"
+      ]
+    },
+    "constat": {
+      "titre": "Et si vos souvenirs n'étaient plus dans le cloud de quelqu'un d'autre ?",
+      "role": "manifeste",
+      "description": "« Et si vos souvenirs n'étaient plus dans le cloud de quelqu'un d'autre ? » : texte, étiquettes des usages, photo d'albums ouverts",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "photos": {
+      "titre": "Vos photos, comme Google Photos. Mais chez vous.",
+      "role": "outil-interactif",
+      "description": "« Vos photos, comme Google Photos. Mais chez vous. » : téléphone dessiné en code dont la grille de photos se range par personnes, lieux ou dates en glissant (démonstration seule une fois, puis boutons)",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "grille de photos qui se range par personnes, lieux ou dates"
+      ]
+    },
+    "fichiers": {
+      "titre": "Vos fichiers, comme Google Drive. Sans le remplir.",
+      "role": "outil-interactif",
+      "description": "« Vos fichiers, comme Google Drive. Sans le remplir. » : ordinateur et téléphone dessinés, chaque fichier passe de l'un à l'autre au défilement avec sa barre de synchronisation",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "promesses": {
+      "titre": "Trois promesses, tenues.",
+      "role": "preuves",
+      "description": "« Trois promesses, tenues. » sur bleu nuit : bandeau de mots en Fraunces italique qui défile, trois promesses en grand ambre (chez vous, 0 € par mois, 1 humain)",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier": {
+      "titre": "Un petit boîtier discret, un vrai coffre-fort pour vos souvenirs.",
+      "role": "produits",
+      "description": "« Un petit boîtier discret, un vrai coffre-fort pour vos souvenirs. » : boîtier dessiné qui tourne au défilement, quatre caractéristiques en grands chiffres",
+      "animations": [
+        "parallaxe",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "tarif": {
+      "titre": "Combien ça coûte ? Une fois, c'est tout.",
+      "role": "calculateur",
+      "description": "« Combien ça coûte ? Une fois, c'est tout. » : choix du stockage et de l'accès en cartes ; carte bleu nuit épinglée avec jauge, total (275 €) et rentabilité selon l'abonnement payé aujourd'hui",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur",
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "rentabilité face à l'abonnement actuel"
+      ]
+    },
+    "artisan": {
+      "titre": "Un humain, du début à la fin.",
+      "role": "équipe",
+      "description": "« Un humain, du début à la fin. » : escalier de village fleuri, texte, deux cartes (à domicile, partout en France)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "etapes": {
+      "titre": "Quatre étapes, et vous n'avez rien à faire.",
+      "role": "étapes",
+      "description": "« Quatre étapes, et vous n'avez rien à faire. » : frise de quatre étapes reliées par un trait ambre",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Parlons de votre futur cloud.",
+      "role": "appel",
+      "description": "« Parlons de votre futur cloud. » sur bleu nuit : photo d'un village perché au crépuscule, boutons recevoir mon devis et téléphone",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit : logo, sommaire, contact, horaires de réponse, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page s'est égarée. Pas vos photos.",
+      "role": "page-404",
+      "description": "404 « Cette page s'est égarée. Pas vos photos. » : 404 en italique ambre, cadres photo posés sur un mur, bouton retour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-debut": {
+      "titre": "Qui est MTCloud ?",
+      "role": "ouverture",
+      "description": "« Qui est MTCloud ? » : ouverture scindée, chiffres (15 ans et plus, 100 % dédié), la côte à fond perdu à droite",
+      "animations": [
+        "révélation-texte",
+        "révélation-image",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-pourquoi": {
+      "titre": "Pourquoi j'ai créé MTCloud.",
+      "role": "manifeste",
+      "description": "« Pourquoi j'ai créé MTCloud. » : raisons en liste barrée, photo d'outils sur l'établi",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-conviction": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "« La technologie doit servir les gens, pas l'inverse. » en grand Fraunces sur bleu nuit, écusson du logo",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-partout": {
+      "titre": "Garder ses données chez soi, ce n'est pas se couper du monde.",
+      "role": "services",
+      "description": "« Garder ses données chez soi, ce n'est pas se couper du monde. » : trois cartes (téléphone, télé, navigateur)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-engagements": {
+      "titre": "Ce que vous pouvez attendre de moi, avant, pendant et après.",
+      "role": "méthode",
+      "description": "« Ce que vous pouvez attendre de moi, avant, pendant et après. » : engagements numérotés et photo d'escalier fleuri",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-zone": {
+      "titre": "De Bandol à Menton, et partout en France.",
+      "role": "carte",
+      "description": "« De Bandol à Menton, et partout en France. » : la côte se dessine de Bandol à Menton et les villes s'allument au passage",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "côte qui se dessine, villes qui s'allument"
+      ]
+    },
+    "a-propos-appel": {
+      "titre": "Parlons de votre futur cloud.",
+      "role": "appel",
+      "description": "« Parlons de votre futur cloud. » sur bleu nuit : photo d'un village perché au crépuscule, boutons recevoir mon devis et téléphone",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-debut": {
+      "titre": "Une fois. Pas par mois.",
+      "role": "ouverture",
+      "description": "« 275 € » en très grand italique ambre, « Une fois. Pas par mois. », boîtier dessiné qui respire et tourne doucement sur son socle",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-detail": {
+      "titre": "Petit, silencieux, en aluminium.",
+      "role": "produits",
+      "description": "« Petit, silencieux, en aluminium. » : boîtier en grand et tableau des caractéristiques",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-pose": {
+      "titre": "À côté de votre box, il se fait oublier.",
+      "role": "decor",
+      "description": "« À côté de votre box, il se fait oublier. » : photo d'intérieur face à la mer avec le boîtier posé, texte sur une carte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-configurateur": {
+      "titre": "Configurez votre cloud, le total suit.",
+      "role": "calculateur",
+      "description": "« Configurez votre cloud, le total suit. » : configurateur complet (mémoire, stockage, accès), carte récapitulative épinglée où les segments de la jauge montent et le total se compte, lien vers le devis prérempli",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-compris": {
+      "titre": "Le prix comprend tout le nécessaire.",
+      "role": "preuves",
+      "description": "« Le prix comprend tout le nécessaire. » : liste de ce qui est compris",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boitier-appel": {
+      "titre": "Parlons de votre futur cloud.",
+      "role": "appel",
+      "description": "« Parlons de votre futur cloud. » sur bleu nuit : photo d'un village perché au crépuscule, boutons recevoir mon devis et téléphone",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre futur cloud.",
+      "role": "ouverture",
+      "description": "« Parlons de votre futur cloud. » : ouverture courte sur bleu nuit avec photo du village",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » : formulaire prérempli par la configuration reçue dans l'adresse, téléphone et e-mail",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "en-contact-debut": {
+      "titre": "Let's talk about your future cloud.",
+      "role": "ouverture",
+      "description": "Version anglaise de l'ouverture du contact : « Let's talk about your future cloud. »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-contact-demande": {
+      "titre": "Your request",
+      "role": "contact",
+      "description": "Version anglaise du formulaire de demande prérempli par la configuration",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "en-services-debut": {
+      "titre": "Everything you do with Google, at home.",
+      "role": "ouverture",
+      "description": "Services (ici en anglais) : grand titre puis bandeau dessiné où la télé, l'ordinateur et le téléphone montrent les mêmes souvenirs",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-tele": {
+      "titre": "Your albums on the big screen, no cables, no USB stick.",
+      "role": "outil-interactif",
+      "description": "Albums sur la télé : visionneuse dessinée qui fait défiler les souvenirs, bouton pause",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-fichiers": {
+      "titre": "One link, and the folder is shared.",
+      "role": "outil-interactif",
+      "description": "Partage d'un dossier : démonstration du lien de partage qui se crée et se copie",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-ecrans": {
+      "titre": "At home, yet everywhere.",
+      "role": "decor",
+      "description": "« At home, yet everywhere » : la même photo s'affiche sur le téléphone, l'ordinateur puis la télé, profondeur au défilement",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-comparer": {
+      "titre": "Online subscription or a box at home?",
+      "role": "tarifs",
+      "description": "Abonnement en ligne ou boîtier chez soi : comparaison en deux colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-faq": {
+      "titre": "Your questions, my answers.",
+      "role": "faq",
+      "description": "Questions et réponses dépliables, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-services-appel": {
+      "titre": "Let's talk about your future cloud.",
+      "role": "appel",
+      "description": "« Parlons de votre futur cloud. » sur bleu nuit : photo d'un village perché au crépuscule, boutons recevoir mon devis et téléphone",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

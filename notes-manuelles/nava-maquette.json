@@ -1,0 +1,704 @@
+{
+  "maquette": {
+    "client": "cuisiniste et agenceur sur mesure à Ternay (NAVA By Faure Agencement) : cuisines, salles de bain, dressings, rénovation et meubles TV, showroom",
+    "activite": [
+      "artisanat",
+      "bâtiment",
+      "commerce"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "luxueux",
+      "sobre",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--noir",
+      "accent": "--chene",
+      "secondaire": "--sable"
+    },
+    "polices": {
+      "titres": "Instrument Serif",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Façades » : lin, sable, noir mat et chêne, Instrument Serif fine avec un mot en italique ; vraies photos de réalisations, élégant et tenu sur les six pages",
+      "l'idée du meuble : façades qui s'ouvrent à l'arrivée, prestations rangées en tiroirs dont les façades glissent en place, porte de placard qui s'entrouvre sur la garantie",
+      "îlot 3D qui se monte au fil des quatre étapes de l'accompagnement (module objet-3d-qui-se-construit)",
+      "cadran 24 h des horaires à l'heure de Ternay, sceau de garantie qui tourne, mosaïque de réalisations dont les tuiles dispersées se rangent",
+      "réalisations filtrables par pièce avec visionneuse et un lien par photo, rendez-vous en trois étapes"
+    ],
+    "reserves": [
+      "quelques illustrations générées (atelier, matières, ancien magasin)",
+      "ancienneté à confirmer (20 ou 25 ans) ; pages Partenaires, Recrutement et Blog non reprises"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "masque",
+      "section-fixée",
+      "parallaxe",
+      "trace-svg",
+      "flip",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "filtres",
+      "galerie-cliquable",
+      "formulaire-par-étapes",
+      "schema-interactif"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "l'îlot 3D qui se monte, la porte qui s'entrouvre",
+      "fil": "les façades et les tiroirs"
+    },
+    "metier": "cuisiniste sur mesure"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Deux portes noires qui se ferment puis s'ouvrent entre les pages, et intro où les façades s'ouvrent sur la cuisine",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : logo NAVA, réalisations, savoir-faire, l'accompagnement, showroom et contact, bouton noir « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur lin, liens en Instrument Serif",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Cuisinistesur-mesure",
+      "role": "ouverture",
+      "description": "Ouverture : « Cuisiniste sur-mesure » avec le second mot en italique, texte et boutons, pastille « Showroom ouvert » ; grande photo de cuisine noir et bois qui respire lentement, sceau « 10 ans de garantie » qui tourne",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "reperes": {
+      "titre": "Chaque projet raconte une histoire",
+      "role": "chiffres",
+      "description": "« Chaque projet raconte une histoire » : logos de presse, trois repères (2000 projets, 10 ans de garantie, 20 ans) en grand Instrument Serif",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations": {
+      "titre": "Tout sur mesure, pièce par pièce",
+      "role": "offre",
+      "description": "« Tout sur mesure, pièce par pièce » : prestations rangées en tiroirs (cuisine, salle de bain, dressing, rénovation, meuble TV) dont les façades glissent en place une à une ; on ouvre un tiroir pour lire, photo épinglée qui change",
+      "animations": [
+        "section-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "offre-a-tiroirs",
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "prestations en tiroirs dont les façades glissent en place"
+      ]
+    },
+    "citation": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "Citation du fondateur en grand Instrument Serif sur noir mat, photo d'un robinet noir et mot en italique",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode": {
+      "titre": "De l'idée à la pose",
+      "role": "étapes",
+      "description": "« De l'idée à la pose » : quatre étapes en liste ; à côté, un îlot de cuisine en 3D CSS se monte pièce par pièce au fil des étapes (plan, caissons, plan de travail, finitions)",
+      "animations": [
+        "section-fixée",
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "objet-3d-qui-se-construit",
+      "pieges": [
+        "Sur téléphone, l'îlot se monte au-dessus des étapes"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "îlot 3D qui se monte au fil des étapes"
+      ]
+    },
+    "realisations": {
+      "titre": "Notre savoir-faire en images",
+      "role": "galerie",
+      "description": "« Notre savoir-faire en images » : mosaïque de réalisations dont les tuiles dispersées se rangent dans la grille au défilement, filtres par pièce",
+      "animations": [
+        "flip",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "tuiles dispersées qui se rangent dans la grille"
+      ]
+    },
+    "garantie": {
+      "titre": "10 ans de garantie",
+      "role": "preuves",
+      "description": "« 10 ans de garantie » sur noir mat : chiffre géant en italique, porte de placard en chêne qui s'entrouvre sur sa charnière au défilement ; un toucher la ferme ou l'ouvre en grand avec un rebond",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "porte de placard qui s'entrouvre au défilement et au toucher"
+      ]
+    },
+    "showroom": {
+      "titre": "Prenons un café",
+      "role": "contact",
+      "description": "« Prenons un café » : cadran 24 h des horaires dont l'aiguille rejoint l'heure de Ternay à l'arrivée, trois cartes (par téléphone, au showroom, par écrit)",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadran 24 h des horaires à l'heure du showroom"
+      ]
+    },
+    "pied": {
+      "titre": "Plan du site",
+      "role": "pied-de-page",
+      "description": "Pied de page noir mat : logo NAVA, adresse, plan du site, horaires du showroom, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Ce tiroirest vide",
+      "role": "page-404",
+      "description": "404 « Ce tiroir est vide » : photo d'un tiroir ouvert vide, boutons retour et réalisations",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnement-debut": {
+      "titre": "De l'idéeà la pose",
+      "role": "ouverture",
+      "description": "« De l'idée à la pose » en très grand, texte, bouton, large photo de chants de bois et de pierre",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnement-etapes": {
+      "titre": "Quatre étapes, zéro surprise",
+      "role": "étapes",
+      "description": "« Quatre étapes, zéro surprise » : étapes numérotées en italique avec photo, qui arrivent l'une après l'autre au défilement",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnement-engagements": {
+      "titre": "Nos engagements",
+      "role": "méthode",
+      "description": "« Nos engagements » : trois engagements en lignes et photo d'un séjour",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnement-garantie": {
+      "titre": "10 ans de garantie",
+      "role": "preuves",
+      "description": "« 10 ans de garantie » sur noir mat : chiffre géant en italique, porte de placard en chêne qui s'entrouvre sur sa charnière au défilement ; un toucher la ferme ou l'ouvre en grand avec un rebond",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "porte de placard qui s'entrouvre au défilement et au toucher"
+      ]
+    },
+    "accompagnement-histoire": {
+      "titre": "De Perene à NAVA",
+      "role": "équipe",
+      "description": "« De Perene à NAVA » : histoire de l'entreprise, citation, dessin de l'ancien magasin, logos de presse",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accompagnement-fin": {
+      "titre": "On commence par un café ?",
+      "role": "appel",
+      "description": "Appel final « On commence par un café ? » : photo de réalisation et bouton prendre rendez-vous, sur lin",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-debut": {
+      "titre": "Nosréalisations",
+      "role": "ouverture",
+      "description": "« Nos réalisations » en très grand sur une photo de cuisine noire, bouton « Voir les 20 photos »",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-galerie": {
+      "titre": "Nos réalisations",
+      "role": "galerie",
+      "description": "Galerie des réalisations : filtres par pièce gardés dans l'adresse et collés en haut, mosaïque de grandes photos ; chaque photo a son lien (#r-…)",
+      "animations": [
+        "section-fixée",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "realisations-visionneuse": {
+      "titre": "Photo agrandie",
+      "role": "galerie",
+      "description": "Visionneuse des réalisations : s'ouvre depuis la vignette ou un lien direct, flèches, glissement, Échap",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "realisations-fin": {
+      "titre": "Un projet vous ressemble ?",
+      "role": "appel",
+      "description": "Appel final « On commence par un café ? » : photo de réalisation et bouton prendre rendez-vous, sur lin",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-debut": {
+      "titre": "Cinq savoir-faire,un même soin",
+      "role": "ouverture",
+      "description": "« Cinq savoir-faire, un même soin » : titre en italique et rangée des cinq pièces en photos verticales qui mènent à chaque savoir-faire",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-cuisine": {
+      "titre": "Cuisine sur mesure",
+      "role": "services",
+      "description": "Savoir-faire cuisine sur mesure : numéro en italique, texte, deux boutons, photos de réalisations en mosaïque qui se posent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-salle-de-bain": {
+      "titre": "Salle de bain",
+      "role": "services",
+      "description": "Savoir-faire salle de bain : numéro en italique, texte, deux boutons, photos de réalisations en mosaïque qui se posent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-dressing": {
+      "titre": "Dressing intégré",
+      "role": "services",
+      "description": "Savoir-faire dressing intégré : numéro en italique, texte, deux boutons, photos de réalisations en mosaïque qui se posent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-renovation": {
+      "titre": "Rénovation",
+      "role": "services",
+      "description": "Savoir-faire rénovation : numéro en italique, texte, deux boutons, photos de réalisations en mosaïque qui se posent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-meuble-tv": {
+      "titre": "Meuble TV",
+      "role": "services",
+      "description": "Savoir-faire meuble TV : numéro en italique, texte, deux boutons, photos de réalisations en mosaïque qui se posent",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-matieres": {
+      "titre": "Matières et couleurs, choisies ensemble",
+      "role": "services",
+      "description": "« Matières et couleurs, choisies ensemble » : nuancier de matières et photo, lien vers le showroom",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "savoir-faire-fin": {
+      "titre": "Une pièce à repenser ?",
+      "role": "appel",
+      "description": "Appel final « On commence par un café ? » : photo de réalisation et bouton prendre rendez-vous, sur lin",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "showroom-debut": {
+      "titre": "Prenonsun café",
+      "role": "ouverture",
+      "description": "« Prenons un café » : titre en italique, cadran 24 h des horaires à l'heure de Ternay, statut ouvert ou fermé en direct",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "showroom-rendez-vous": {
+      "titre": "Parlons de votre projet",
+      "role": "contact",
+      "description": "« Parlons de votre projet » : rendez-vous en trois étapes (pièce, moment, coordonnées) ; une fois envoyé, le formulaire se range et la confirmation apparaît",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "showroom-acces": {
+      "titre": "27 route de Givors, Ternay",
+      "role": "carte",
+      "description": "« 27 route de Givors, Ternay » : accès, stationnement et photo du showroom",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
