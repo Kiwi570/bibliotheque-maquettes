@@ -30,6 +30,7 @@
   "nocturne"
  ],
  "besoins": [
+  "vendre",
   "réserver",
   "rendez-vous",
   "catalogue",
@@ -43,6 +44,7 @@
  "pages": [
   "index",
   "a-emporter",
+  "espace",
   "infos-pratiques",
   "la-carte",
   "les-fetes",
@@ -51,26 +53,24 @@
   "reserver",
   "404"
  ],
- "commit": "bb5e198",
- "date_commit": "2026-11-13",
- "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe. Suite (v7.5) : polices Fraunces et Manrope de la référence du client ; ouverture sur la photo panoramique de la salle ; chef clair, déjeuner foncé ; cartes de La carte ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions (arche, médaillon, sceau) et des fêtes (vraies affiches, plus de vitre givrée). Puis : carte de Noël qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, transitions crème au monogramme, ouverture claire et semaine des horaires d'Infos pratiques, ardoise au dos du polaroïd.",
+ "commit": "9a8c0ac",
+ "date_commit": "2026-11-18",
+ "change_depuis_audit": "v7.5.17 à v7.7.1 (16 au 18 novembre 2026) : Réceptions refaite (parcours, palette crème, vrais mariages en mosaïque, espaces qui glissent au défilement), Les fêtes refaite (éphéméride, billets, carte de Noël à l'encre dorée, carte cadeau en enveloppe), Saint-Sylvestre avec chaque plat et son verre, Offrir avec une seule carte et des idées, La carte ouverte en doubles pages, accueil (Le Restaurant, Pour les fêtes, vrais avis qui défilent), Réserver en quatre étapes avec carton de table, et nouvel espace restaurateur de démonstration (/espace).",
  "note": 86,
  "verdict": "Prête à envoyer",
  "points_forts": [
-  "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir)",
-  "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
-  "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
-  "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
-  "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
-  "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
-  "le feu de la vraie cheminée animé à partir d'une seule photo : flammes qui ondulent, lueur qui vacille, braises au foyer",
-  "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume",
-  "la carte cadeau en carte de luxe : vert de nuit, guilloché doré, montant en dorure"
+  "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir), sur de vraies photos du lieu",
+  "dix-sept modules restaurant de la bibliothèque, un par endroit : ardoise à la craie, vraie assiette qui se dresse en couches, vapeur sur l'assiette, ciel réel du lieu, cloches du traiteur",
+  "le feu de la vraie cheminée animé à partir d'une seule photo, et « Le Restaurant » qui s'ouvre jusqu'au plein écran",
+  "Les fêtes : éphéméride dont les pages s'arrachent jusqu'au vrai décompte, six billets datés, menu de Noël écrit à l'encre dorée, Saint-Sylvestre où chaque plat arrive avec son verre",
+  "Réserver en quatre étapes : assiettes autour d'une table ronde, frise des heures, carton de table qui se remplit puis reçoit le tampon « Réservé »",
+  "un espace restaurateur de démonstration : réservations, soirées, horaires, ardoise et photos modifiables, le site suit aussitôt ; chaque geste s'annule, barre « Que voulez-vous faire ? » en phrases simples",
+  "dix vrais avis qui défilent, mosaïque des vrais mariages, plan du domaine à toucher"
  ],
  "reserves": [
-  "réservation en deux validations (Vérifier puis Confirmer)",
-  "12:00, 19:00 et 23:00 de l'accueil encore en images générées",
-  "textes de l'ardoise et de la carte à confirmer avec l'établissement"
+  "très long à produire : sept versions puis des dizaines de reprises (v7.5.8 à v7.7.1 du 13 au 18 novembre 2026), page par page à la demande du client",
+  "plats de la Saint-Sylvestre, du traiteur et quelques ambiances en images générées (signalées) ; mode calme retiré de la maquette",
+  "dépôt très lourd (145 Mo) ; espace restaurateur en démonstration seulement (tout reste dans le navigateur)"
  ],
  "animations": [
   "ouverture-orchestrée",
@@ -88,7 +88,8 @@
   "reactif-vitesse",
   "fil-conducteur",
   "galerie-horizontale",
-  "flip"
+  "flip",
+  "marquee"
  ],
  "interactions": [
   "réservation-simulee",
@@ -97,8 +98,9 @@
   "recherche",
   "saisie-personnalisee",
   "schema-interactif",
-  "mode-calme",
-  "jeu"
+  "jeu",
+  "panier-simule",
+  "galerie-cliquable"
  ],
  "dependances": [
   "gsap",
@@ -186,21 +188,28 @@
   "jardins-hacienda-2-maquette/apres-midi",
   "jardins-hacienda-2-maquette/feu",
   "jardins-hacienda-2-maquette/fetes",
+  "jardins-hacienda-2-maquette/devise",
   "jardins-hacienda-2-maquette/offrir-emporter",
   "jardins-hacienda-2-maquette/venir",
   "jardins-hacienda-2-maquette/pied",
   "jardins-hacienda-2-maquette/404-debut",
+  "jardins-hacienda-2-maquette/a-emporter-debut",
+  "jardins-hacienda-2-maquette/a-emporter-produits",
+  "jardins-hacienda-2-maquette/a-emporter-calendrier",
+  "jardins-hacienda-2-maquette/a-emporter-emp-tiroir",
+  "jardins-hacienda-2-maquette/espace-espace",
   "jardins-hacienda-2-maquette/infos-pratiques-debut",
   "jardins-hacienda-2-maquette/infos-pratiques-horaires",
   "jardins-hacienda-2-maquette/infos-pratiques-acces",
+  "jardins-hacienda-2-maquette/infos-pratiques-plan",
   "jardins-hacienda-2-maquette/infos-pratiques-ecrire",
   "jardins-hacienda-2-maquette/la-carte-debut",
   "jardins-hacienda-2-maquette/la-carte-toute-la-carte",
   "jardins-hacienda-2-maquette/la-carte-passe",
-  "jardins-hacienda-2-maquette/la-carte-fin",
   "jardins-hacienda-2-maquette/les-fetes-debut",
   "jardins-hacienda-2-maquette/les-fetes-dates",
   "jardins-hacienda-2-maquette/les-fetes-noel",
+  "jardins-hacienda-2-maquette/les-fetes-offrir-noel",
   "jardins-hacienda-2-maquette/les-fetes-saint-sylvestre",
   "jardins-hacienda-2-maquette/les-fetes-ete",
   "jardins-hacienda-2-maquette/offrir-debut",
@@ -209,8 +218,9 @@
   "jardins-hacienda-2-maquette/receptions-debut",
   "jardins-hacienda-2-maquette/receptions-occasions",
   "jardins-hacienda-2-maquette/receptions-espaces",
-  "jardins-hacienda-2-maquette/receptions-demande",
   "jardins-hacienda-2-maquette/receptions-terrasse",
+  "jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui",
+  "jardins-hacienda-2-maquette/receptions-demande",
   "jardins-hacienda-2-maquette/reserver-debut",
   "jardins-hacienda-2-maquette/reserver-formulaire",
   "jardins-hacienda-2-maquette/reserver-plan"

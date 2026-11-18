@@ -26,20 +26,18 @@
    "Caveat"
   ],
   "points_forts": [
-   "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir)",
-   "la saison réelle décide de l'ouverture : la piscine et son eau l'été, la salle aux baies vitrées et son soleil l'hiver",
-   "dix-sept modules restaurant de la bibliothèque, un par endroit et par heure : ardoise à la craie, vraie assiette qui se dresse, vapeur sur l'assiette, vitre givrée, ciel réel du lieu",
-   "vraie photo d'assiette découpée en couches qui se posent sur la même assiette floue, puis la photo nette",
-   "21 vraies photos du site actuel, éclaircies, et l'enseigne détourée devant le ciel calculé de Moineville",
-   "panorama du domaine épinglé dont la lumière passe de 14 h 30 à 19 h",
-   "le feu de la vraie cheminée animé à partir d'une seule photo : flammes qui ondulent, lueur qui vacille, braises au foyer",
-   "les assiettes à toucher à 12 h 30 : chacune passe en grand et fume",
-   "la carte cadeau en carte de luxe : vert de nuit, guilloché doré, montant en dorure"
+   "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir), sur de vraies photos du lieu",
+   "dix-sept modules restaurant de la bibliothèque, un par endroit : ardoise à la craie, vraie assiette qui se dresse en couches, vapeur sur l'assiette, ciel réel du lieu, cloches du traiteur",
+   "le feu de la vraie cheminée animé à partir d'une seule photo, et « Le Restaurant » qui s'ouvre jusqu'au plein écran",
+   "Les fêtes : éphéméride dont les pages s'arrachent jusqu'au vrai décompte, six billets datés, menu de Noël écrit à l'encre dorée, Saint-Sylvestre où chaque plat arrive avec son verre",
+   "Réserver en quatre étapes : assiettes autour d'une table ronde, frise des heures, carton de table qui se remplit puis reçoit le tampon « Réservé »",
+   "un espace restaurateur de démonstration : réservations, soirées, horaires, ardoise et photos modifiables, le site suit aussitôt ; chaque geste s'annule, barre « Que voulez-vous faire ? » en phrases simples",
+   "dix vrais avis qui défilent, mosaïque des vrais mariages, plan du domaine à toucher"
   ],
   "reserves": [
-   "réservation en deux validations (Vérifier puis Confirmer)",
-   "12:00, 19:00 et 23:00 de l'accueil encore en images générées",
-   "textes de l'ardoise et de la carte à confirmer avec l'établissement"
+   "très long à produire : sept versions puis des dizaines de reprises (v7.5.8 à v7.7.1 du 13 au 18 novembre 2026), page par page à la demande du client",
+   "plats de la Saint-Sylvestre, du traiteur et quelques ambiances en images générées (signalées) ; mode calme retiré de la maquette",
+   "dépôt très lourd (145 Mo) ; espace restaurateur en démonstration seulement (tout reste dans le navigateur)"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -57,7 +55,8 @@
    "reactif-vitesse",
    "fil-conducteur",
    "galerie-horizontale",
-   "flip"
+   "flip",
+   "marquee"
   ],
   "interactions": [
    "réservation-simulee",
@@ -66,10 +65,11 @@
    "recherche",
    "saisie-personnalisee",
    "schema-interactif",
-   "mode-calme",
-   "jeu"
+   "jeu",
+   "panier-simule",
+   "galerie-cliquable"
   ],
-  "change_depuis_audit": "v7 après l'audit complet, le test visiteur et le regard neuf : vraie assiette en couches à la place du dessin plat, agenda en colonne propre et « Réserver » au bon jour avec rappel de la soirée, Noël et Saint-Sylvestre sans heure inventée, heures accordées (Les fêtes 23:30, Réserver le soir 21:00), espace insécable avant ; ! ?, ancre gardée après le chargement des modules. Retour du client (v7.1) : l'hiver, plus de piscine en avant sur l'accueil (ouverture, panorama, Infos) ; vapeur de l'assiette rendue visible. Suite (v7.2) : ouverture d'hiver plus vive, assiettes qui fument à 12 h 30, 21 h en vert nuit, coin du feu en vraie photo animée à 19 h l'hiver, terrasse en bas, grande heure du pied de page retirée. Audit complet de la v7.3 : 0 échec ; violet remplacé par le vert de nuit, terrasse d'hiver compacte, Offrir en vraie photo. v7.4 : plus aucune heure affichée, ouverture midi et soir, Offrir retiré de l'accueil, carte cadeau de luxe. Suite (v7.5) : polices Fraunces et Manrope de la référence du client ; ouverture sur la photo panoramique de la salle ; chef clair, déjeuner foncé ; cartes de La carte ; Offrir & emporter et Venir en bas de l'accueil ; nouvelles ouvertures de Réceptions (arche, médaillon, sceau) et des fêtes (vraies affiches, plus de vitre givrée). Puis : carte de Noël qui s'ouvre au défilement, Saint-Sylvestre en nuit dorée, transitions crème au monogramme, ouverture claire et semaine des horaires d'Infos pratiques, ardoise au dos du polaroïd.",
+  "change_depuis_audit": "v7.5.17 à v7.7.1 (16 au 18 novembre 2026) : Réceptions refaite (parcours, palette crème, vrais mariages en mosaïque, espaces qui glissent au défilement), Les fêtes refaite (éphéméride, billets, carte de Noël à l'encre dorée, carte cadeau en enveloppe), Saint-Sylvestre avec chaque plat et son verre, Offrir avec une seule carte et des idées, La carte ouverte en doubles pages, accueil (Le Restaurant, Pour les fêtes, vrais avis qui défilent), Réserver en quatre étapes avec carton de table, et nouvel espace restaurateur de démonstration (/espace).",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
@@ -82,7 +82,7 @@
   "div": {
    "titre": "Voile à l'heure d'arrivée",
    "role": "transition-de-page",
-   "description": "Voile en cloche aux couleurs et aux chiffres de l'heure de la page d'arrivée (calculée : déjeuner ou dîner selon l'heure réelle, service demandé).",
+   "description": "Voile en cloche crème entre les pages : il se pose en fondu et se soulève en fondu régulier, sans à-coup entre une page sombre et une page claire.",
    "animations": [
     "transition-de-page",
     "morphing"
@@ -120,9 +120,9 @@
   "header": {
    "titre": "En-tête et horloge de la journée",
    "role": "barre-fixe",
-   "description": "Logo, pastille d'heure qui suit le défilement (12:00 → 00:00), menu horodaté, bouton Réserver ; couleur et graisse suivent la lumière.",
+   "description": "En-tête : monogramme et nom, la carte, réceptions, événements, traiteur, offrir, infos pratiques, bouton rouge « Réserver » ; plus aucune heure affichée depuis la v7.4.",
    "animations": [
-    "reactif-vitesse"
+    "aucune"
    ],
    "interactions": [
     "aucune"
@@ -138,7 +138,7 @@
   "menu": {
    "titre": "Menu horodaté",
    "role": "menu",
-   "description": "Chaque page avec son heure, dans l'ordre de la journée.",
+   "description": "Menu plein écran du téléphone : les pages du site et le bouton Réserver, sur le fond de la maison.",
    "animations": [
     "aucune"
    ],
@@ -216,52 +216,13 @@
    "pieges": [
     "overflow: hidden sur la section casse l'épinglage collant : overflow: clip",
     "une légende ne s'allume que si son lieu est à l'écran"
-   ]
-  },
-  "terrasse": {
-   "titre": "19:00, la terrasse s'allume",
-   "role": "manifeste",
-   "description": "Scène épinglée : trois états de la même image alignés (couchant, heure bleue, nuit), puis les guirlandes s'allument sur les ampoules relevées dans l'image ; on les allume aussi du doigt. L'hiver, elle passe tout en bas de l'accueil en une seule image de nuit, guirlandes allumées, sans épinglage : un clin d'œil à l'été.",
-   "animations": [
-    "section-fixée",
-    "progression-fixée",
-    "filtre-anime"
    ],
-   "interactions": [
-    "schema-interactif"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 5,
-   "reutilisable": true,
-   "module": null,
-   "pieges": [
-    "aligner les trois images (SIFT) et donner un recadrage téléphone dédié",
-    "positions des ampoules en pixels de la source, viewBox changé pour le recadrage téléphone"
-   ],
-   "ignorer": true
-  },
-  "diner": {
-   "titre": "21:00, le dîner",
-   "role": "calculateur",
-   "description": "Le dîner sur fond vert nuit : la salle au mur de pierre étalonnée en lumière du soir, prochains services ouverts, couverts, carton qui s'envole vers la réservation déjà remplie.",
-   "animations": [
-    "morphing"
-   ],
-   "interactions": [
-    "réservation-simulee"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
-   "module": "envol-vers-le-panier",
-   "pieges": [],
-   "modules": [],
-   "ignorer": true
+   "sans_capture": true
   },
   "feu": {
-   "titre": "23:00, au coin du feu",
+   "titre": "Le Restaurant",
    "role": "manifeste",
-   "description": "La fenêtre sur la vraie cheminée de la salle s'ouvre jusqu'au plein écran, les mots « Au coin » et « du feu » s'écartent ; ensuite le titre remonte et se resserre et le petit module de réservation (prochains services, couverts, carton qui s'envole vers la réservation déjà remplie) monte du bas. Les flammes de la photo ondulent, la lueur vacille, les braises partent du foyer et s'écartent sous la main.",
+   "description": "« Le Restaurant », avec « Au coin du feu » l'hiver et « Aux beaux jours » l'été : la vraie salle le soir s'ouvre jusqu'au plein écran, le titre au centre ; puis il glisse à gauche, texte, repères dessinés au trait (flamme qui vacille, soleil qui tourne) et services de la semaine montent, et la petite photo encadrée du coin du feu arrive de la droite, avec ses flammes qui ondulent et ses braises qu'on attise à la main.",
    "animations": [
     "masque",
     "canvas-2d",
@@ -302,35 +263,18 @@
     "compter les jours du calendrier à Moineville, pas des tranches de 24 h"
    ]
   },
-  "minuit": {
-   "titre": "Offrir un moment aux Jardins",
-   "role": "appel",
-   "description": "Offrir seul, en plein écran : la carte cadeau brille dans le noir ; « Venir » (distances et accès) passe au pied de page.",
-   "animations": [
-    "trace-svg"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
-   "module": null,
-   "pieges": [],
-   "ignorer": true
-  },
   "pied": {
    "titre": "Pied de page 00:00",
    "role": "pied-de-page",
-   "description": "Pied sombre, horaires, contact, mode calme.",
+   "description": "Pied de page sombre « À très vite, aux Jardins » : bandeau de vraies photos du domaine, statut ouvert ou fermé en direct, boutons réserver et appeler, adresse et distances, sommaire, réseaux, lien discret vers l'espace restaurateur de démonstration ; le bouton suit l'action de la page.",
    "animations": [
-    "aucune"
+    "apparition-au-défilement"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": [
@@ -447,17 +391,16 @@
   "la-carte-toute-la-carte": {
    "titre": "Toute la carte",
    "role": "carte",
-   "description": "Grand index par rubriques, recherche et filtre végétarien, barre des rubriques collante. En v7.5, chaque rubrique est une carte sable (titre italique terre cuite, noms en Fraunces gras, pointillés, prix) à côté de sa photo collée, d'après la référence du client.",
+   "description": "« Toute la carte » : la carte ouverte en deux doubles pages de papier crème avec ombre de pliure (entrées | plats, à partager | desserts), photo en bandeau, numéro, fourchette de prix et nombre de plats ; onglets, filtre végétarien et recherche, note des allergènes discrète.",
    "animations": [
-    "apparition-au-défilement",
-    "parallaxe"
+    "apparition-au-défilement"
    ],
    "interactions": [
     "filtres",
     "recherche"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": "carte-du-restaurant",
    "pieges": [
@@ -486,46 +429,34 @@
     "un comblement automatique du fond a laissé des taches : fond flou et sombre à la place"
    ]
   },
-  "la-carte-fin": {
-   "titre": "Une table vous attend",
-   "role": "appel",
-   "description": "Les cèpes en grand (vraie photo en parallaxe), statut, « Réserver » le service affiché, téléphone.",
-   "animations": [
-    "apparition-au-défilement"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
-  },
   "les-fetes-debut": {
    "titre": "La saison décide",
    "role": "ouverture",
-   "description": "Nuit chaude et petites lueurs dorées qui scintillent ; les vraies affiches du restaurant (Noël derrière, Saint-Sylvestre devant) flottent doucement et mènent chacune à son menu ; le décompte de la Saint-Sylvestre en médaille dorée ; la bascule hiver/été. L'été : nuit turquoise, la piscine en arche et les lanternes en médaillon. La vitre givrée (module givre-webgl) est retirée à la demande du client.",
+   "description": "« Les fêtes au coin du feu » : une grande éphéméride à reliure rouge dont les pages des jours passés s'arrachent une à une jusqu'au vrai nombre de jours avant la Saint-Sylvestre, calculé chaque jour ; les vraies affiches de Noël et de la Saint-Sylvestre à attraper et retourner ; bascule « Cet hiver / Cet été ».",
    "animations": [
-    "apparition-au-défilement",
+    "ouverture-orchestrée",
+    "compteur",
     "parallaxe"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": null,
    "pieges": [
     "shader plein écran redessiné à chaque image : ne redessiner que si l'image change, rien pendant le défilement, démarrer à demi-résolution",
     "installé seulement au repos en haut de page et l'hiver"
+   ],
+   "particularites": [
+    "éphéméride dont les pages s'arrachent jusqu'au vrai décompte"
    ]
   },
   "les-fetes-saint-sylvestre": {
    "titre": "Le menu de la Saint-Sylvestre",
    "role": "offre",
-   "description": "Nuit dorée : paillettes qui scintillent, la lueur de la salle prend la couleur du vin du plat choisi (propriété @property animée), le verre posé sur un reflet de table ; prix en médailles, vinyle du DJ qui tourne ; plats numérotés en chiffres romains dorés, le plat choisi éclairé de la couleur de son vin ; titre en dorure.",
+   "description": "« Le menu de la Saint-Sylvestre » épinglé : cinq temps du dîner ; à chaque temps l'assiette servie glisse et s'en va, la suivante arrive, le verre de l'accord change de forme et se remplit, le vin est écrit dessous ; au dessert, la pluie d'or de minuit ; interrupteur « avec l'accord mets et vins » qui change le prix.",
    "animations": [
     "morphing",
     "révélation-texte"
@@ -542,7 +473,7 @@
   "les-fetes-noel": {
    "titre": "Le menu de Noël",
    "role": "menu",
-   "description": "Scène collante : une carte de vœux sur un vert de sapin où tombe une neige dorée. La couverture est la vraie affiche du restaurant (un reflet y passe) ; au défilement elle tourne sur sa charnière, la photo de la coupe devant la cheminée apparaît à gauche et les cinq plats s'inscrivent un à un entre deux filets d'or ; prix et réservation à gauche. Sur téléphone, la couverture se soulève vers le haut et s'efface.",
+   "description": "« Le menu de Noël » épinglé : la carte a sa couverture de velours vert sapin, double filet doré et houx ; elle s'ouvre au défilement et chaque plat s'écrit à l'encre dorée, une étincelle au bout de la plume, puis son détail apparaît.",
    "animations": [
     "section-fixée",
     "progression-fixée",
@@ -558,24 +489,9 @@
    "pieges": [
     "--p posé par ScrollTrigger, tout le reste en calc() dans le CSS : un seul déclencheur, aucun saut",
     "sur téléphone, rotation sur l'axe horizontal et fondu, sinon la couverture recouvre le titre"
-   ]
-  },
-  "les-fetes-passes": {
-   "titre": "Les soirées passées",
-   "role": "preuves",
-   "description": "Liste des soirées passées à côté d'une vraie photo.",
-   "animations": [
-    "apparition-au-défilement"
    ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 2,
-   "reutilisable": false,
-   "module": null,
-   "pieges": [
-    "ne jamais barrer une soirée passée (on lit « annulé »)"
+   "particularites": [
+    "menu écrit à l'encre dorée, plat par plat"
    ]
   },
   "les-fetes-ete": {
@@ -592,21 +508,22 @@
    "note_qualite": 3,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [],
+   "sans_capture": true
   },
   "offrir-debut": {
    "titre": "Offrir une soirée",
    "role": "ouverture",
-   "description": "Un vrai dîner au coin du feu (deux verres, une assiette, la cheminée allumée au fond), braises qui suivent la main, carte cadeau en aperçu dont le montant tourne.",
+   "description": "« Offrir un moment aux Jardins » sur la vraie salle au coin du feu : la carte cadeau vert de nuit et or, guillochée, qu'on incline à la main (reflet doré qui la suit) et qu'on retourne d'un toucher.",
    "animations": [
-    "canvas-2d",
-    "compteur"
+    "révélation-texte",
+    "parallaxe"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -614,7 +531,7 @@
   "offrir-composer": {
    "titre": "Votre carte cadeau",
    "role": "outil-interactif",
-   "description": "La carte cadeau qui se compose, en carte de luxe : vert de nuit profond, guilloché doré (SVG), monogramme en filigrane, montant en dorure animée, double filet d'or, reflet qui passe et inclinaison sous la souris ; le prénom, le mot et la signature s'écrivent en italique sur la carte ; elle part dans son enveloppe scellée. Formulaire à l'or (puces dorées, champs filetés d'or, total doré).",
+   "description": "« Votre carte cadeau » : la même carte vert de nuit et or reste à l'écran pendant qu'on la compose ; partir d'une idée (une planche à partager, un dîner pour deux, la Saint-Sylvestre) choisit le montant et écrit un mot suggéré, montants en pastilles, nombre de cartes, mot écrit au dos en sépia, « Pour la recevoir » en trois étapes ; achat simulé.",
    "animations": [
     "morphing",
     "flip"
@@ -633,7 +550,7 @@
   "receptions-debut": {
    "titre": "Recevoir pour un …",
    "role": "ouverture",
-   "description": "Vert de nuit et lueur dorée : la pergola dressée en grande arche, en pleine lumière (plus de voile sombre sur la photo), la table au bord de la piscine en médaillon cerclé d'or, un sceau doré qui tourne (Mariages · Baptêmes · Anniversaires · Pots de départ autour du monogramme) ; l'occasion change dans le titre en italique doré.",
+   "description": "« Recevoir pour un mariage » sur vert de nuit : l'occasion du titre change avec le diaporama de vraies photos en arche (mariage, anniversaire…), médaillon de la table au bord de la piscine, sceau tournant de la maison, boutons demander une réception et voir les espaces.",
    "animations": [
     "révélation-texte",
     "parallaxe"
@@ -650,16 +567,17 @@
   "receptions-espaces": {
    "titre": "Trois lieux, deux saisons",
    "role": "services",
-   "description": "La salle et son mur de pierre, le brasero sous la pergola, la piscine aux palmiers, en vraies photos ; l'ordre suit la saison.",
+   "description": "« Cinq espaces, un seul domaine » épinglé sur vert de nuit : la rangée des cinq espaces (coin bar, salle de réception, salle du restaurant, pergola, piscine) glisse de droite à gauche au défilement, chaque photo un peu moins vite que sa carte, fil doré qui suit ; capacité, saison et ambiance de chaque espace.",
    "animations": [
-    "flip",
-    "révélation-image"
+    "galerie-horizontale",
+    "section-fixée",
+    "parallaxe"
    ],
    "interactions": [
-    "galerie-cliquable"
+    "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -667,15 +585,17 @@
   "receptions-occasions": {
    "titre": "Ce que l'on fête ici",
    "role": "galerie",
-   "description": "Vraies photos par occasion (table au bord de la piscine, gâteaux).",
+   "description": "« Ce que l'on fête ici » épinglé sur crème : mariages, anniversaires, pots de départ, baptêmes défilent tour à tour, chacun avec son titre en italique terre cuite, sa phrase, sa saison et sa vraie photo ; les onglets du bas suivent.",
    "animations": [
-    "apparition-au-défilement"
+    "section-fixée",
+    "progression-fixée",
+    "révélation-image"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 2,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -683,7 +603,7 @@
   "receptions-demande": {
    "titre": "Demander une réception",
    "role": "contact",
-   "description": "Demande en trois étapes (date ou période), carton d'invitation pré-écrit qui se remplit puis reçoit le tampon « Demande reçue ».",
+   "description": "« Demander une réception » en dernier : trois étapes (l'occasion en vignettes photo, la date et les invités, les coordonnées) ; le carton d'invitation « Votre fête » se remplit pendant qu'on répond, deux polaroïds montrent l'occasion et l'espace choisis, tampon « Demande reçue » à l'envoi.",
    "animations": [
     "morphing"
    ],
@@ -717,21 +637,26 @@
   },
   "reserver-formulaire": {
    "titre": "Le jour, l'heure, les couverts",
-   "role": "calculateur",
-   "description": "Réservation simulée sans cadres : jours et créneaux en texte, sélection en pastille pleine, carte de placement, récapitulatif en ticket dentelé.",
+   "role": "outil-interactif",
+   "description": "« Le jour, l'heure, les couverts » en quatre étapes, une seule à l'écran (Quand, Combien, Où, Vous) avec frise numérotée : jours en cartes de calendrier avec soleil et lune allumés s'il reste de la place, midi ou soir en grandes tuiles, assiettes qui se posent autour d'une table ronde, frise des heures où file une ligne d'or ; le carton de table se remplit à mesure et reçoit le tampon « Réservé ».",
    "animations": [
     "morphing"
    ],
    "interactions": [
-    "réservation-simulee"
+    "réservation-simulee",
+    "formulaire-par-étapes"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": "reservation-de-table",
    "pieges": [
     "erreur sous son champ (classe de champ sur chaque label)",
     "choix confirmés jamais barrés"
+   ],
+   "particularites": [
+    "assiettes qui se posent autour d'une table ronde selon les couverts",
+    "tampon « Réservé » sur le carton de table"
    ]
   },
   "reserver-plan": {
@@ -753,12 +678,13 @@
   "les-fetes-dates": {
    "titre": "Les prochaines dates",
    "role": "agenda",
-   "description": "Les soirées des affiches du site (côte de bœuf, raclette, brunch, soirée libanaise), Noël et la Saint-Sylvestre : la prochaine en premier avec son décompte, ajout à l'agenda, « Réserver » au bon jour avec la soirée rappelée au-dessus du formulaire, dates passées repliées ; photo de la piste de danse collante à gauche.",
+   "description": "« Les prochaines dates » : six grands billets, trois par mois, chacun avec sa vraie photo, le jour en grands chiffres dorés, une ligne perforée et ses encoches, le prix, « Réserver » (le formulaire s'ouvre au bon jour) et « Agenda » (fichier .ics) ; filtres soirée, brunch, fête ; arrivée en cascade.",
    "animations": [
     "apparition-au-défilement",
     "compteur"
    ],
    "interactions": [
+    "filtres",
     "réservation-simulee"
    ],
    "telephone": "adapté",
@@ -792,7 +718,7 @@
   "chef": {
    "titre": "Régis Clauss, l'âme de notre cuisine",
    "role": "équipe",
-   "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur un papier crème à lumière chaude (fond clair, v7.5) : il suit un peu la main et se retourne d'un geste (au dos, la carte de la semaine écrite comme une fiche) ; autour, des étiquettes autocollantes (deux vraies photos rondes, cèpes et girolles, et des mots : fait maison, produits de saison, une nouvelle carte chaque semaine, suggestions de vive voix) qui se collent à l'arrivée et se déplacent du doigt. À droite, le texte et deux boutons (la carte, Instagram).",
+   "description": "Le chef en polaroïd (vraie photo du site) posé de travers sur un papier crème : des étiquettes (une nouvelle carte chaque semaine, fait maison, produits de saison, cèpes, girolles) qu'on déplace à la main, et la photo qui se retourne d'un geste sur l'ardoise du chef.",
    "animations": [
     "apparition-au-défilement",
     "flip"
@@ -854,7 +780,7 @@
   "offrir-emporter": {
    "titre": "Offrir & emporter",
    "role": "offre",
-   "description": "Deux grandes cartes sable : les incontournables des fêtes (vraie photo du foie gras maison, sceau rond « Fait maison », la liste du site en pastilles, lien vers la commande en ligne du restaurant) et la carte cadeau de luxe (vert de nuit, guilloché et filet d'or) qui s'incline vers la main avec un reflet qui suit, montant à choisir en pastilles dorées.",
+   "description": "« Pour les fêtes, ou pour faire plaisir » sur la nuit des fêtes, en un seul écran : deux cartes crème, les incontournables à emporter (vraie photo du foie gras, sceau « Fait maison », spécialités en rouge brique) et la carte cadeau vert de nuit et or dont on choisit le montant en pastilles.",
    "animations": [
     "apparition-au-défilement",
     "survol-image"
@@ -888,6 +814,176 @@
    "pieges": [
     "distances calculées (haversine) et dites « à vol d'oiseau »"
    ]
+  },
+  "devise": {
+   "titre": "Ce que nos clients retiennent",
+   "role": "témoignages",
+   "description": "« Ici on aime rire, s'embrasser, faire la fête… » : la vraie pancarte du bar en polaroïd, note Google 4,5 sur plus de 1 600 avis, dix vrais extraits d'avis (Mariages.net, Bridebook, Google, traduits quand il le faut) sur des cartes qui défilent en deux rangs en sens contraires, arrêtés au survol.",
+   "animations": [
+    "marquee",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-debut": {
+   "titre": "Les fêtes du chef, à emporter",
+   "role": "ouverture",
+   "description": "Traiteur : « Les fêtes du chef, à emporter » sur nuit chaude ; trois plats sous des cloches de verre en carrousel (tourte aux escargots, pâté lorrain…), prix, flèches, bouton « Composer ma commande », retrait du 5 au 31 décembre.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-produits": {
+   "titre": "Nos produits à emporter",
+   "role": "produits",
+   "description": "« Nos produits à emporter » : les plats détourés sous des cloches qu'on soulève (survol ou toucher), nom, prix, quantité ou poids, bouton « Ajouter » qui remplit la commande.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "panier-simule",
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "cloches de verre qu'on soulève sur chaque plat"
+   ]
+  },
+  "a-emporter-calendrier": {
+   "titre": "Le calendrier du retrait",
+   "role": "outil-interactif",
+   "description": "« Le calendrier du retrait » : décembre en cases dorées, chacune dit midi, soir ou fermé ; on touche son jour, il s'ouvre dans la commande.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "a-emporter-commande": {
+   "ignorer": "conteneur du panneau de commande, rendu par a-emporter-emp-tiroir"
+  },
+  "a-emporter-emp-tiroir": {
+   "titre": "Ma commande",
+   "role": "outil-interactif",
+   "description": "« Ma commande » : panneau qui s'ouvre à droite, la commande en trois étapes (les plats, le jour et le moment du retrait, les coordonnées) ; commande simulée.",
+   "animations": [
+    "masque"
+   ],
+   "interactions": [
+    "panier-simule",
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Commande simulée"
+   ],
+   "sans_capture": true
+  },
+  "a-emporter-visuellement-cache": {
+   "ignorer": "élément masqué pour les lecteurs d'écran (la capture montre le pied de page)"
+  },
+  "espace-espace": {
+   "titre": "Votre espace",
+   "role": "outil-interactif",
+   "description": "« Votre espace » : un espace restaurateur de démonstration ; connexion déjà remplie, puis une application aux couleurs du site avec cinq rubriques (Jour, Agenda, Soirées, Textes, Photos) : confirmer ou refuser les réservations, dire complet ou fermé, créer une soirée avec sa photo, changer les horaires, l'ardoise et l'annonce ; le site suit aussitôt. Chaque geste s'annule dix secondes ; la barre « Que voulez-vous faire ? » comprend des phrases simples (« fermer samedi soir », « table pour 4 vendredi 20 h au nom de Martin »).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "saisie-personnalisee",
+    "formulaire-par-étapes",
+    "réservation-simulee",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Tout reste dans le navigateur (démonstration)",
+    "La barre de phrases est faite de règles écrites, pas d'IA"
+   ],
+   "particularites": [
+    "espace restaurateur qui modifie le site en direct",
+    "barre « Que voulez-vous faire ? » qui comprend des phrases simples"
+   ]
+  },
+  "infos-pratiques-plan": {
+   "titre": "Le plan du domaine",
+   "role": "outil-interactif",
+   "description": "« Le plan du domaine » : plan schématique dessiné (restaurant, salon, salle de réception, terrasse, piscine, parking, bar) ; on touche un lieu, sa vraie photo, sa capacité et sa saison s'affichent à côté.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "les-fetes-offrir-noel": {
+   "titre": "Offrez un moment aux Jardins",
+   "role": "offre",
+   "description": "« Pour Noël, offrez un moment aux Jardins » sur crème : la vraie carte cadeau vert de nuit et or sort de son enveloppe rouge cachetée à l'arrivée et s'incline vers la main ; les montants (25 à 200 €) la changent, bouton vers Offrir.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "receptions-ils-ont-dit-oui": {
+   "titre": "Ils ont dit oui aux Jardins",
+   "role": "galerie",
+   "description": "« Ils ont dit oui aux Jardins » : grande mosaïque de neuf vraies photos de mariages (la cérémonie sous les palmiers en grand, première danse, pièce montée, grande tablée) qui montent en cascade, légendes manuscrites, note Google 4,5 ; un clic ouvre l'album en grand avec confettis, flèches et Échap.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
   }
  }
 }

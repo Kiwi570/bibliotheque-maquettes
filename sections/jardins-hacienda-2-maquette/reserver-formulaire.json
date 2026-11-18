@@ -3,28 +3,29 @@
  "maquette": "jardins-hacienda-2-maquette",
  "page": "reserver",
  "titre": "Le jour, l'heure, les couverts",
- "role": "calculateur",
- "description": "Réservation simulée sans cadres : jours et créneaux en texte, sélection en pastille pleine, carte de placement, récapitulatif en ticket dentelé.",
+ "role": "outil-interactif",
+ "description": "« Le jour, l'heure, les couverts » en quatre étapes, une seule à l'écran (Quand, Combien, Où, Vous) avec frise numérotée : jours en cartes de calendrier avec soleil et lune allumés s'il reste de la place, midi ou soir en grandes tuiles, assiettes qui se posent autour d'une table ronde, frise des heures où file une ligne d'or ; le carton de table se remplit à mesure et reçoit le tampon « Réservé ».",
  "animations": [
   "morphing"
  ],
  "interactions": [
-  "réservation-simulee"
+  "réservation-simulee",
+  "formulaire-par-étapes"
  ],
  "dependances": [
   "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
+ "note_qualite": 5,
  "reutilisable": false,
  "module": "reservation-de-table",
  "modules": [
   "reservation-de-table"
  ],
  "code": {
-  "html": "reserver.html:141-219",
-  "css": "assets/js/modules/reservation-de-table/module.css:5-35,43-53,59-69,88-96 ; assets/css/site.css:445-451,568-583,673-676,723,993-1005,1177-1180",
-  "js": "assets/js/site.js:118,158-164,489-538,1000-1097,1232-1249,1257-1321,1537-1561 ; assets/js/modules/reservation-de-table/module.js:27,35,84,101,108,124,131,134,152,159,164,169-170,183,202,250-251"
+  "html": "reserver.html:139-235",
+  "css": "assets/js/modules/reservation-de-table/module.css:5-35,43-53,59-69,88-96 ; assets/css/site.css:445-451,568-581,673-676,723,993-1005,1177-1180,3899-3952,3968-3982,3993-4002,4006,4014-4015,4022-4067,4093-4095,4100-4138",
+  "js": "assets/js/site.js:122,163-169,420-443,500-549,1597,1789-1884,1887-1904,1912-1990 ; assets/js/espace.js:149,338,342,438 ; assets/js/espace-regles.js:39-45,66-74 ; assets/js/espace-barre.js:14 ; assets/js/espace-commandes.js:72-140 ; assets/js/espace-donnees.js:17-21 ; assets/js/espace-stock.js:13 ; assets/js/modules/formulaire-par-etapes/module.js:1,41,64,174,194 ; assets/js/modules/reservation-de-table/module.js:41,49,99,145,152,167,173,204,208,236-238,244,248,251,263-264,273-275,281,288,296,320,386-389,394-395 ; assets/js/espace-apercu.js:74,77-78,99,122"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/reserver-formulaire-p1440.jpg",
@@ -34,9 +35,13 @@
   "erreur sous son champ (classe de champ sur chaque label)",
   "choix confirmés jamais barrés"
  ],
+ "particularites": [
+  "assiettes qui se posent autour d'une table ronde selon les couverts",
+  "tampon « Réservé » sur le carton de table"
+ ],
  "mesures": {
-  "hauteur_p1440": 1802,
-  "hauteur_m390": 2535,
+  "hauteur_p1440": 970,
+  "hauteur_m390": 1486,
   "epinglee": false,
   "scrolltriggers": 0
  },

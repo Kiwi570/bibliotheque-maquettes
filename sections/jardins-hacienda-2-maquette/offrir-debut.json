@@ -4,31 +4,32 @@
  "page": "offrir",
  "titre": "Offrir une soirée",
  "role": "ouverture",
- "description": "Un vrai dîner au coin du feu (deux verres, une assiette, la cheminée allumée au fond), braises qui suivent la main, carte cadeau en aperçu dont le montant tourne.",
+ "description": "« Offrir un moment aux Jardins » sur la vraie salle au coin du feu : la carte cadeau vert de nuit et or, guillochée, qu'on incline à la main (reflet doré qui la suit) et qu'on retourne d'un toucher.",
  "animations": [
-  "canvas-2d",
-  "compteur"
+  "révélation-texte",
+  "parallaxe"
  ],
  "interactions": [
-  "aucune"
+  "jeu"
  ],
  "dependances": [
   "gsap",
-  "scrolltrigger",
-  "canvas"
+  "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "offrir.html:119-143",
-  "css": "assets/css/socle.css:120,270,275-278 ; assets/css/site.css:26,72,252-257,334,365,468-481,501,597,608,614,620,638,697,779,792,817,841,883,936-937,947,1026,1067,1076,1114,1123,1182-1183,1221-1222,1454-1457,1498,1611,1626-1629,1645-1647,1676,1717,1726,1745,1772,1811,1869,1960,1989,2242,2504,2522,2653",
-  "js": "assets/js/site.js:630-659,691-699,739-760,1537-1561,1590-1596 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:9,28,273-288,363-407 ; assets/js/socle/onde.js:1,67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+  "html": "offrir.html:117-147",
+  "css": "assets/css/socle.css:270 ; assets/css/site.css:72-74,252-257,468-481,597,614,779,841,936-937,1123,1183,3216-3231,3253,3497-3507,3536-3547",
+  "js": "assets/js/site.js:706-716,756-777,1276-1296,1302-1360,1436-1498,2206-2232,2261-2269,2393 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,41,45,55,101-102"
  },
  "medias": {
-  "capture": "medias/jardins-hacienda-2-maquette/offrir-debut-p1440.jpg"
+  "capture": "medias/jardins-hacienda-2-maquette/offrir-debut-p1440.jpg",
+  "capture_m390": "medias/jardins-hacienda-2-maquette/offrir-debut-m390.jpg",
+  "video": "medias/jardins-hacienda-2-maquette/offrir-debut-p720.mp4"
  },
  "pieges": [],
  "mesures": {
@@ -37,8 +38,6 @@
   "epinglee": false,
   "scrolltriggers": 2
  },
- "familles": [
-  "particules"
- ],
+ "familles": [],
  "impact": "vivant"
 }

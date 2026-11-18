@@ -4,12 +4,13 @@
  "page": "les-fetes",
  "titre": "Les prochaines dates",
  "role": "agenda",
- "description": "Les soirées des affiches du site (côte de bœuf, raclette, brunch, soirée libanaise), Noël et la Saint-Sylvestre : la prochaine en premier avec son décompte, ajout à l'agenda, « Réserver » au bon jour avec la soirée rappelée au-dessus du formulaire, dates passées repliées ; photo de la piste de danse collante à gauche.",
+ "description": "« Les prochaines dates » : six grands billets, trois par mois, chacun avec sa vraie photo, le jour en grands chiffres dorés, une ligne perforée et ses encoches, le prix, « Réserver » (le formulaire s'ouvre au bon jour) et « Agenda » (fichier .ics) ; filtres soirée, brunch, fête ; arrivée en cascade.",
  "animations": [
   "apparition-au-défilement",
   "compteur"
  ],
  "interactions": [
+  "filtres",
   "réservation-simulee"
  ],
  "dependances": [
@@ -23,9 +24,9 @@
   "agenda-des-dates"
  ],
  "code": {
-  "html": "les-fetes.html:161-212",
-  "css": "assets/js/modules/agenda-des-dates/module.css:3-12,16,24-25,32-44,52,63-64,74 ; assets/css/site.css:953-962,1120-1122,1146-1147",
-  "js": "assets/js/site.js:126,435-465,468-488 ; assets/js/modules/agenda-des-dates/module.js:1,10-15,20-23,30,39,50,57-58,62,66,78,81,91-94,98,103-104,146,150,187,198,208,220,237,243,254 ; assets/js/modules/reservation-de-table/module.js:49,83"
+  "html": "les-fetes.html:194-284",
+  "css": "assets/js/modules/agenda-des-dates/module.css:3-12,16,24-25,32-44,52,63-64,74 ; assets/css/site.css:953-962,1146-1147,2916-2917,3360-3396,3459-3466",
+  "js": "assets/js/site.js:130,158-161,171,183-210,446-476,479-499,732-753,1241-1272,1887-1904,1912-1996,1999-2045 ; assets/js/espace.js:189,238,242,427 ; assets/js/espace-regles.js:33-37 ; assets/js/espace-commandes.js:72-140 ; assets/js/modules/agenda-des-dates/module.js:1,10-15,20-23,30,39,50,57-58,62,66,78,81,91-94,98,103-104,146,150,187,198,208,220,237,243,254 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41,64 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11 ; assets/js/espace-apercu.js:75-76,92-93,96-102,112-114"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/les-fetes-dates-p1440.jpg",
@@ -36,8 +37,8 @@
   "date seule pour Noël et la Saint-Sylvestre (aucune heure inventée)"
  ],
  "mesures": {
-  "hauteur_p1440": 2376,
-  "hauteur_m390": 3093,
+  "hauteur_p1440": 1642,
+  "hauteur_m390": 3235,
   "epinglee": false,
   "scrolltriggers": 0
  },

@@ -17,8 +17,8 @@
     "palette": {
       "fond": "--calcaire",
       "texte": "--ombre",
-      "accent": "--corde",
-      "secondaire": "--turquoise"
+      "accent": "--vert",
+      "secondaire": "--corde"
     },
     "polices": {
       "titres": "Big Shoulders",
@@ -28,15 +28,17 @@
     "points_forts": [
       "idée-maîtresse « la descente » : faire défiler la page, c'est descendre le canyon ; l'altimètre de la marge compte les mètres, le pied de page annonce « Vous êtes au fond », la 404 est un rappel raté",
       "ouverture en illustration plate (falaises, vasque turquoise, personnage sur la corde) et titre géant « Sauter. Glisser. Descendre. »",
+      "grand menu ludique : le canyoniste descend le profil du canyon survolé, les canyons tombent comme des gouttes sur la carte du Verdon, le grimpeur monte au niveau de l'itinéraire",
       "coupe du canyon épinglée en cinq obstacles, le personnage suit le chemin de l'eau",
-      "canyon-mètre : âge, envie, point de départ et durée donnent le bon canyon et son profil",
+      "canyon-mètre : âge, envie, point de départ et durée donnent le bon canyon et son profil ; « Quel canyon à quel âge ? » pour les familles",
       "mini-jeu du rappel (bouton, écran ou barre d'espace), aussi sur la 404",
       "comparateur topo / photo par secteur, pont de singe qui réagit, voie d'escalade qui se trace en remontant, calculateur de groupe, cotation V/A/I",
+      "le carnet : les huit articles du blog réécrits, sommaire et canyons cités à côté du texte ; FAQ et CGV complètes",
       "JavaScript natif sans bibliothèque, pages générées en Python"
     ],
     "reserves": [
       "maquette d'avant la v10.2 : pas de voile de transition ni d'intro vers l'objet relevés par la grille",
-      "quatre canyons illustrés par des photos d'autres sorties et une via ferrata en image générée (signalés) ; pas de portrait individuel de Yann",
+      "article de la Cramassouri illustré faute de photo ; parcours absents de l'offre et dates de saison signalés à Yann en mode relecture",
       "pages de secteur (Verdon, Nice, Haut-Var) construites sur la même mise en page"
     ],
     "animations": [
@@ -47,7 +49,8 @@
       "fil-conducteur",
       "marquee",
       "curseur-personnalisé",
-      "empilement-de-fiches"
+      "empilement-de-fiches",
+      "masque"
     ],
     "interactions": [
       "jeu",
@@ -58,7 +61,7 @@
       "formulaire-par-étapes",
       "schema-interactif"
     ],
-    "change_depuis_audit": null,
+    "change_depuis_audit": "Retours de Yann des 4, 5 et 17 novembre 2026 puis carnet (18 novembre) : logo original et couleurs du logo (vert et bleu, boutons verts unis), canyons famille en tête et Artuby de Comps à la une, onzième canyon (Ravin de la Ferné), « Quel canyon à quel âge ? », FAQ canyoning et via ferrata, location du kit, page CGV, titre d'accueil adapté aux écrans bas, grand menu ludique sur ordinateur, et la rubrique « Le carnet » avec les huit articles du blog réécrits.",
     "accueil": "heros",
     "plan": "recit-lineaire",
     "grille": {
@@ -88,23 +91,32 @@
     "entete": {
       "titre": "",
       "role": "menu",
-      "description": "En-tête : logo, quatre liens, bouton du son de rivière (coupé par défaut), Réserver orange, Menu",
+      "description": "En-tête : logo original (montagne et rivière), Canyoning, Verdon et Via ferrata qui ouvrent chacun un grand menu ludique au survol ou au chevron, Tarifs, son de rivière (coupé par défaut), Réserver vert, Menu. Le grand menu descend en rideau sur un voile, contenu en cascade : les onze canyons par public (au survol, photo, profil qui se dessine et canyoniste qui le descend), les trois secteurs sur une carte schématique où les canyons tombent comme des gouttes, les six itinéraires de via ferrata où un grimpeur gravit la paroi jusqu'au niveau survolé.",
       "animations": [
-        "aucune"
+        "masque",
+        "trace-svg",
+        "apparition-au-défilement"
       ],
       "interactions": [
-        "ambiance-sonore"
+        "ambiance-sonore",
+        "schema-interactif"
       ],
       "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
+      "note_qualite": 5,
+      "reutilisable": true,
       "module": null,
-      "pieges": []
+      "pieges": [
+        "Sur ordinateur seulement (1261 px et plus) ; Échap, clic extérieur ou défilement le referment",
+        "Images chargées à la première ouverture"
+      ],
+      "particularites": [
+        "grand menu ludique : canyoniste qui descend le profil du canyon survolé, grimpeur qui monte au niveau de l'itinéraire"
+      ]
     },
     "menu": {
       "titre": "",
       "role": "menu",
-      "description": "Menu plein écran avec photo et toutes les pages",
+      "description": "Menu plein écran du téléphone sur vert sapin, libellés et profondeurs en vert du logo, toutes les pages dont le carnet",
       "animations": [
         "apparition-au-défilement"
       ],
@@ -120,7 +132,7 @@
     "altimetre": {
       "titre": "",
       "role": "barre-fixe",
-      "description": "Altimètre de la marge droite : corde orange graduée, le repère compte les mètres de descente au défilement (−150 m au fond de l'accueil, en montée sur la via ferrata)",
+      "description": "Altimètre de la marge droite : corde bleue du logo graduée, le repère compte les mètres de descente au défilement (−150 m au fond de l'accueil, en montée sur la via ferrata)",
       "animations": [
         "fil-conducteur"
       ],
@@ -156,7 +168,7 @@
     "heros": {
       "titre": "Sauter.Glisser.Descendre.",
       "role": "ouverture",
-      "description": "Ouverture : titre géant « Sauter. Glisser. Descendre. » en Big Shoulders sur une gorge en illustration plate (falaises, vasque turquoise), un personnage descend en rappel le long d'une corde orange, cascade animée ; encart blanc avec Verdon, Nice, Haut-Var et deux boutons",
+      "description": "Ouverture : titre géant « Sauter. Glisser. Descendre. » en Big Shoulders (sa taille suit aussi la hauteur de l'écran) sur une gorge en illustration plate (falaises, vasque turquoise), un personnage descend en rappel le long de la corde, cascade animée ; encart blanc avec Verdon, Nice, Haut-Var et deux boutons verts",
       "animations": [
         "canvas-2d",
         "parallaxe",
@@ -190,7 +202,7 @@
     "le-principe": {
       "titre": "La descente · −12 m",
       "role": "manifeste",
-      "description": "« Un canyon, c'est une rivière qui a pris le chemin le plus court » : manifeste en capitales géantes, les mots passent de l'orange au noir au défilement, profondeur affichée en surtitre",
+      "description": "« Un canyon, c'est une rivière qui a pris le chemin le plus court » : manifeste en capitales géantes dont les mots s'éclairent au défilement, profondeur affichée en surtitre",
       "animations": [
         "révélation-texte"
       ],
@@ -227,7 +239,7 @@
     "horiz": {
       "titre": "Dix canyons, trois secteurs.",
       "role": "produits",
-      "description": "« Dix canyons, trois secteurs » : défilement horizontal épinglé des canyons sur fond d'eau sombre, photo, profil de dénivelé tracé, durée et niveau",
+      "description": "« Onze canyons, trois secteurs » : défilement horizontal épinglé des canyons sur fond d'eau sombre, les canyons famille en tête avec un bandeau « Famille · très demandé », photo, profil de dénivelé tracé, durée et niveau",
       "animations": [
         "galerie-horizontale",
         "section-fixée",
@@ -245,7 +257,7 @@
     "canyon-metre": {
       "titre": "Quel canyon pour vous ?",
       "role": "calculateur",
-      "description": "« Quel canyon pour vous ? » : le canyon-mètre, âge, envie (sensations ou découverte), point de départ et durée donnent le bon canyon avec sa photo et son profil",
+      "description": "« Quel canyon pour vous ? » : le canyon-mètre, âge, envie (sensations ou découverte), point de départ et durée donnent le bon canyon avec sa photo et son profil ; l'Artuby de Comps en recommandation principale, l'aller-retour pour les 6-7 ans",
       "animations": [
         "section-fixée"
       ],
@@ -476,7 +488,7 @@
     "canyoning-tous": {
       "titre": "La liste complète.",
       "role": "produits",
-      "description": "« La liste complète » : les dix canyons filtrables (secteur, niveau), photo et profil de dénivelé",
+      "description": "« La liste complète » : les onze canyons filtrables (secteur, niveau), photo et profil de dénivelé",
       "animations": [
         "flip"
       ],
@@ -553,22 +565,6 @@
       "module": null,
       "pieges": []
     },
-    "escalade-ph": {
-      "titre": "Pour une fois, on remonte.",
-      "role": "ouverture",
-      "description": "Ouverture Escalade : « Pour une fois, on remonte », grimpeur en grande voie",
-      "animations": [
-        "révélation-texte"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
     "escalade-voie-t": {
       "titre": "La voie, longueur par longueur",
       "role": "étapes",
@@ -583,22 +579,6 @@
       "telephone": "adapté",
       "note_qualite": 4,
       "reutilisable": true,
-      "module": null,
-      "pieges": []
-    },
-    "escalade-fond": {
-      "titre": "Une cordée à monter ?",
-      "role": "appel",
-      "description": "« Une cordée à monter ? » : appel de fin, altitude en filigrane",
-      "animations": [
-        "révélation-texte"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
       "module": null,
       "pieges": []
     },
@@ -735,7 +715,7 @@
     "guide-carnet-t": {
       "titre": "Le blog de Yann.",
       "role": "articles",
-      "description": "« Le blog de Yann » : liste d'articles sur fond sombre",
+      "description": "« Le blog de Yann » : les articles du carnet sur fond sombre, liens vers la rubrique",
       "animations": [
         "aucune"
       ],
@@ -751,7 +731,7 @@
     "haut-var-ph": {
       "titre": "Le Haut-Var, eau claire.",
       "role": "ouverture",
-      "description": "Ouverture Haut-Var : « Le Haut-Var, eau claire »",
+      "description": "Ouverture de page de secteur, partagée par le Haut-Var, le Verdon et l'arrière-pays niçois : titre en capitales (« Le Haut-Var, eau claire »), photo du secteur, profondeur en surtitre",
       "animations": [
         "révélation-texte"
       ],
@@ -767,7 +747,7 @@
     "haut-var-liste": {
       "titre": "Artuby de Comps",
       "role": "produits",
-      "description": "Canyons du secteur : photo, durée, dénivelé, prix et profil",
+      "description": "Canyons du secteur en fiches (Haut-Var, Verdon, Nice) : photo, famille ou niveau, âge, durée, départ de Castellane, prix et profil de dénivelé dessiné",
       "animations": [
         "aucune"
       ],
@@ -783,7 +763,7 @@
     "haut-var-cmp": {
       "titre": "Du papier à l’eau.",
       "role": "outil-interactif",
-      "description": "« Du papier à l'eau » : comparateur topo / photo à glisser",
+      "description": "« Du papier à l'eau » sur fond sombre (Haut-Var, Verdon, Nice) : on glisse la corde, à gauche le topo du canyon que Yann prépare, à droite la vraie photo du parcours",
       "animations": [
         "aucune"
       ],
@@ -828,54 +808,6 @@
       "module": null,
       "pieges": []
     },
-    "nice-ph": {
-      "titre": "À une heure de la mer.",
-      "role": "ouverture",
-      "description": "Ouverture Nice : « À une heure de la mer »",
-      "animations": [
-        "révélation-texte"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
-    "nice-liste": {
-      "titre": "Gours du Ray",
-      "role": "produits",
-      "description": "Canyons de l'arrière-pays niçois : photo, durée, dénivelé, prix et profil",
-      "animations": [
-        "aucune"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
-    "nice-cmp": {
-      "titre": "Le parcours, en repères.",
-      "role": "outil-interactif",
-      "description": "« Le parcours, en repères » : profil tracé du canyon sur fond sombre",
-      "animations": [
-        "trace-svg"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
     "reserver-ph": {
       "titre": "On s’encorde quand ?",
       "role": "ouverture",
@@ -901,22 +833,6 @@
       ],
       "interactions": [
         "réservation-simulee"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
-    "tarifs-ph": {
-      "titre": "Tout, sur une page.",
-      "role": "ouverture",
-      "description": "Ouverture Tarifs : « Tout, sur une page »",
-      "animations": [
-        "révélation-texte"
-      ],
-      "interactions": [
-        "aucune"
       ],
       "telephone": "adapté",
       "note_qualite": 3,
@@ -956,54 +872,6 @@
       "module": null,
       "pieges": []
     },
-    "verdon-ph": {
-      "titre": "Le Verdon, par l’intérieur.",
-      "role": "ouverture",
-      "description": "Ouverture Verdon : « Le Verdon, par l'intérieur »",
-      "animations": [
-        "révélation-texte"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
-    "verdon-liste": {
-      "titre": "Rayaup",
-      "role": "produits",
-      "description": "Canyons du Verdon : photo, durée, dénivelé, prix et profil",
-      "animations": [
-        "aucune"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
-    "verdon-cmp": {
-      "titre": "Le parcours, en repères.",
-      "role": "outil-interactif",
-      "description": "« Le parcours, en repères » : profil tracé du canyon sur fond sombre",
-      "animations": [
-        "trace-svg"
-      ],
-      "interactions": [
-        "aucune"
-      ],
-      "telephone": "adapté",
-      "note_qualite": 3,
-      "reutilisable": false,
-      "module": null,
-      "pieges": []
-    },
     "via-ferrata-ph": {
       "titre": "Marcher sur le vide.",
       "role": "ouverture",
@@ -1023,7 +891,7 @@
     "via-ferrata-le-pont-de-singe": {
       "titre": "Le pont de singe",
       "role": "outil-interactif",
-      "description": "« Le pont de singe » : illustration d'un pont de singe entre deux falaises qui ondule et réagit au pointeur",
+      "description": "« Le pont de singe » : illustration d'un pont de singe entre deux falaises qui ondule et réagit au pointeur ; un grimpeur le traverse de droite à gauche puis revient",
       "animations": [
         "canvas-2d"
       ],
@@ -1036,10 +904,10 @@
       "module": null,
       "pieges": []
     },
-    "via-ferrata-vias": {
-      "titre": "Six lignes verticales.",
-      "role": "produits",
-      "description": "« Six lignes verticales » : six via ferrata en cartes, niveau et prix",
+    "via-ferrata-seranon": {
+      "titre": "Séranon, heure par heure.",
+      "role": "étapes",
+      "description": "« Séranon, heure par heure » : déroulé d'une sortie sur fond sombre",
       "animations": [
         "aucune"
       ],
@@ -1052,12 +920,288 @@
       "module": null,
       "pieges": []
     },
-    "via-ferrata-seranon": {
-      "titre": "Séranon, heure par heure.",
-      "role": "étapes",
-      "description": "« Séranon, heure par heure » : déroulé d'une sortie sur fond sombre",
+    "mega-voile": {
+      "ignorer": "voile sous le grand menu, décrit avec l'en-tête"
+    },
+    "canyon-respiration": {
+      "titre": "L'Artuby de Comps",
+      "role": "offre",
+      "description": "« À la une, le plus proche du camp de base : l'Artuby de Comps. » sur fond d'eau : photo du groupe dans le canyon, ce qu'on y fait, prix de l'intégral et de l'aller-retour spécial enfants, boutons réserver et voir la fiche.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-ph": {
+      "titre": "Le carnet de Yann.",
+      "role": "ouverture",
+      "description": "Ouverture du carnet : « Le carnet de Yann. » en capitales bicolores, fil d'Ariane, nombre d'articles, phrase de présentation ; l'altimètre continue dans la marge.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-les-articles": {
+      "titre": "Les articles",
+      "role": "articles",
+      "description": "Les huit articles du blog réécrits : l'article à la une en grand (photo, titre en capitales, chapeau, « Lire l'article »), puis les autres en cartes photo avec catégorie, date et temps de lecture.",
+      "animations": [
+        "apparition-au-défilement",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "blog-fond": {
+      "titre": "Envie de passer de la lecture à l'eau ?",
+      "role": "appel",
+      "description": "Appel de fin du carnet « Envie de passer de la lecture à l'eau ? » sur fond d'eau sombre, profondeur en filigrane, réserver ou appeler.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-canyon-cramassouri-tempete-alex-ph": {
+      "titre": "Ouverture d'article",
+      "role": "ouverture",
+      "description": "Ouverture d'un article du carnet : catégorie, date, temps de lecture et auteur, titre en capitales (« Le canyon de la Cramassouri après la tempête Alex »), chapeau.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-canyon-cramassouri-tempete-alex-article-couv": {
+      "titre": "Couverture d'article",
+      "role": "decor",
+      "description": "Couverture de l'article : la photo du canyon, ou, faute de photo (Cramassouri), un profil schématique dessiné du canyon en marches sur fond sombre, signalé comme illustration.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-canyon-cramassouri-tempete-alex-article": {
+      "titre": "Corps d'article",
+      "role": "articles",
+      "description": "Corps d'article : intertitres en capitales, encadrés et tableaux ; à droite, sommaire « Dans cet article » et canyons cités en cartes (photo, âge, prix) qui restent à l'écran, bouton réserver ; données structurées BlogPosting.",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "blog-canyon-cramassouri-tempete-alex-lire-aussi": {
+      "titre": "À lire aussi.",
+      "role": "articles",
+      "description": "« À lire aussi. » sur fond sombre : trois autres articles en cartes photo avec catégorie et date.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "blog-canyon-cramassouri-tempete-alex-fond": {
+      "titre": "Appel de fin d'article",
+      "role": "appel",
+      "description": "Appel de fin d'article sur fond d'eau sombre, profondeur en filigrane, réserver ou appeler.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "canyoning-enfants": {
+      "titre": "Quel canyon à quel âge ?",
+      "role": "offre",
+      "description": "« Quel canyon à quel âge ? » en tête de la page Canyoning : c'est le plus jeune qui décide du parcours ; colonnes par âge (spécial enfants avec l'Artuby aller-retour, dès 8, 9, 12 et 14 ans) avec les canyons, la durée et le prix.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "cgv-ph": {
+      "titre": "Conditions de vente.",
+      "role": "texte-legal",
+      "description": "Ouverture des conditions générales de vente en capitales bicolores, fil d'Ariane et phrase de présentation.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cgv-section": {
+      "titre": "Conditions générales de vente",
+      "role": "texte-legal",
+      "description": "Conditions générales de vente en treize articles numérotés (réservation, acompte de 30 %, annulation, météo, participation, location, responsabilité…), encadré « Document à valider », date de version.",
       "animations": [
         "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "haut-var-fond": {
+      "titre": "On se retrouve au bord de l'eau ?",
+      "role": "appel",
+      "description": "Appel de fin des pages de secteur « On se retrouve au bord de l'eau ? » sur fond d'eau sombre, profondeur atteinte en filigrane, réserver ou appeler.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-itineraires": {
+      "titre": "Six lignes verticales.",
+      "role": "produits",
+      "description": "« Six lignes verticales. » : les six itinéraires de via ferrata et via cordata en cartes (niveau, lieu, description, durée, âge et gabarit, prix), chacune avec son ancre.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-location": {
+      "titre": "En autonomie ? Louez le kit.",
+      "role": "offre",
+      "description": "« En autonomie ? Louez le kit. » sur fond sombre : kit complet à 20 € la journée (baudrier, casque, longe double), conditions de prêt, bouton « Réserver un kit » qui préremplit la réservation.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-canyon-respiration": {
+      "titre": "Encordé, au-dessus du Verdon.",
+      "role": "manifeste",
+      "description": "« Encordé, au-dessus du Verdon. » sur fond d'eau : la via cordata expliquée, photo d'une grimpeuse au-dessus des gorges.",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-faq-v": {
+      "titre": "Avant de vous longer.",
+      "role": "faq",
+      "description": "« Avant de vous longer. » : treize questions par thèmes (différences, âge, vertige, matériel, lieux) en accordéons natifs, données structurées FAQPage.",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "via-ferrata-fond": {
+      "titre": "Appel de fin via ferrata",
+      "role": "appel",
+      "description": "Appel de fin de la page via ferrata, altitude en filigrane, réserver ou appeler.",
+      "animations": [
+        "révélation-texte"
       ],
       "interactions": [
         "aucune"

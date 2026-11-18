@@ -1,8 +1,8 @@
 {
  "depot": "jardins-hacienda-2-maquette",
- "commit": "bb5e198",
- "date_commit": "2026-11-13T14:01:37+01:00",
- "genere": "2026-11-13T13:08:48.309Z",
+ "commit": "9a8c0ac",
+ "date_commit": "2026-11-18T17:22:57+01:00",
+ "genere": "2026-11-18T16:42:49.839Z",
  "pages": {
   "404": {
    "fichier": "404.html",
@@ -13,6 +13,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -51,7 +57,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/404",
@@ -83,6 +90,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -121,7 +134,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/",
@@ -146,6 +160,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -184,7 +204,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/a-emporter",
@@ -201,15 +222,20 @@
    "ajoutes_par_js": [],
    "gabarit_de": []
   },
-  "infos-pratiques": {
-   "fichier": "infos-pratiques.html",
+  "espace": {
+   "fichier": "espace.html",
    "css": [
     "assets/css/socle.css",
-    "assets/js/modules/formulaire-par-etapes/module.css",
     "assets/css/site.css"
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -248,7 +274,85 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
+   ],
+   "gabarit": null,
+   "url": "/espace",
+   "erreurs": [],
+   "globals": {
+    "gsap": true,
+    "scrolltrigger": true,
+    "splittext": true,
+    "flip": false,
+    "lenis": false,
+    "ogl": false,
+    "three": false
+   },
+   "ajoutes_par_js": [
+    {
+     "sig": "div.barre-masquee",
+     "fixe": true,
+     "h": 0
+    }
+   ],
+   "gabarit_de": []
+  },
+  "infos-pratiques": {
+   "fichier": "infos-pratiques.html",
+   "css": [
+    "assets/css/socle.css",
+    "assets/js/modules/formulaire-par-etapes/module.css",
+    "assets/css/site.css"
+   ],
+   "js": [
+    "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
+    "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
+    "assets/js/modules/envol-vers-le-panier/module.js",
+    "assets/js/socle/socle.js",
+    "assets/js/socle/defilement.js",
+    "assets/js/socle/mesures.js",
+    "assets/js/socle/etat.js",
+    "assets/js/modules/lumiere-au-pointeur/module.js",
+    "assets/js/modules/rideau-en-lanieres/module.js",
+    "assets/js/modules/formulaire-par-etapes/module.js",
+    "assets/js/modules/ciel-en-direct/module.js",
+    "assets/js/modules/agenda-des-dates/module.js",
+    "assets/js/modules/givre-webgl/module.js",
+    "assets/js/modules/depliant-3d/module.js",
+    "assets/js/modules/plat-fumant/module.js",
+    "assets/js/modules/assiette-qui-se-dresse/module.js",
+    "assets/js/modules/ardoise-a-la-craie/module.js",
+    "assets/js/modules/carte-cadeau-qui-se-compose/module.js",
+    "assets/js/modules/reservation-de-table/module.js",
+    "assets/js/modules/plan-de-salle/module.js",
+    "assets/js/modules/horaires-ouvert-maintenant/module.js",
+    "assets/js/modules/accords-mets-et-vins/module.js",
+    "assets/js/modules/carte-du-restaurant/module.js",
+    "assets/js/modules/carte-du-restaurant/carte-rendu.js",
+    "assets/js/socle/index.js",
+    "assets/js/socle/ouverture.js",
+    "assets/js/socle/voile.js",
+    "assets/js/socle/gouttiere.js",
+    "assets/js/socle/apparitions.js",
+    "assets/js/socle/effets.js",
+    "assets/js/socle/onde.js",
+    "assets/js/socle/boucles.js",
+    "assets/js/socle/curseur.js",
+    "assets/js/socle/compteurs.js",
+    "assets/js/socle/lecture.js",
+    "assets/js/socle/formulaires.js",
+    "assets/js/socle/transitions.js",
+    "assets/js/socle/entete.js",
+    "assets/js/socle/calme.js",
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/infos-pratiques",
@@ -276,6 +380,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -314,7 +424,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/la-carte",
@@ -336,11 +447,16 @@
    "css": [
     "assets/css/socle.css",
     "assets/js/modules/agenda-des-dates/module.css",
-    "assets/js/modules/accords-mets-et-vins/module.css",
     "assets/css/site.css"
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -379,7 +495,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/les-fetes",
@@ -405,6 +522,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -443,7 +566,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/offrir",
@@ -469,6 +593,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -507,7 +637,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/receptions",
@@ -535,6 +666,12 @@
    ],
    "js": [
     "assets/js/site.js",
+    "assets/js/espace.js",
+    "assets/js/espace-regles.js",
+    "assets/js/espace-barre.js",
+    "assets/js/espace-commandes.js",
+    "assets/js/espace-donnees.js",
+    "assets/js/espace-stock.js",
     "assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js",
     "assets/js/modules/envol-vers-le-panier/module.js",
     "assets/js/socle/socle.js",
@@ -573,7 +710,8 @@
     "assets/js/socle/transitions.js",
     "assets/js/socle/entete.js",
     "assets/js/socle/calme.js",
-    "assets/js/socle/socle/index.js"
+    "assets/js/socle/socle/index.js",
+    "assets/js/espace-apercu.js"
    ],
    "gabarit": null,
    "url": "/reserver",
@@ -608,6 +746,8 @@
     "404",
     "a-emporter",
     "a-emporter",
+    "espace",
+    "espace",
     "infos-pratiques",
     "infos-pratiques",
     "la-carte",
@@ -624,9 +764,9 @@
    "sig": "div",
    "dans_main": false,
    "code": {
-    "html": "index.html:73-73",
+    "html": "index.html:72-72",
     "css": "assets/css/socle.css:220-221",
-    "js": "assets/js/site.js:44-83 ; assets/js/modules/rideau-en-lanieres/module.js:30-146 ; assets/js/modules/plan-de-salle/module.js:42,75 ; assets/js/socle/voile.js:2,21-25 ; assets/js/socle/transitions.js:54-74"
+    "js": "assets/js/site.js:46-85,1170-1239 ; assets/js/modules/rideau-en-lanieres/module.js:30-146 ; assets/js/modules/plan-de-salle/module.js:42,75 ; assets/js/socle/voile.js:2,21-25 ; assets/js/socle/transitions.js:54-74"
    },
    "titre": "",
    "hauteur": 900,
@@ -678,6 +818,7 @@
     "index",
     "404",
     "a-emporter",
+    "espace",
     "infos-pratiques",
     "la-carte",
     "les-fetes",
@@ -688,9 +829,9 @@
    "sig": "div.ouverture-panneau",
    "dans_main": false,
    "code": {
-    "html": "index.html:74-78",
+    "html": "index.html:73-77",
     "css": "assets/css/socle.css:229-232",
-    "js": "assets/js/site.js:57-74,1700-1702 ; assets/js/socle/ouverture.js:25-33,163-251"
+    "js": "assets/js/site.js:59-76,2387-2389 ; assets/js/socle/ouverture.js:25-33,163-251"
    },
    "titre": "",
    "hauteur": 0,
@@ -739,6 +880,7 @@
     "index",
     "404",
     "a-emporter",
+    "espace",
     "infos-pratiques",
     "la-carte",
     "les-fetes",
@@ -749,9 +891,9 @@
    "sig": "header",
    "dans_main": false,
    "code": {
-    "html": "index.html:80-95",
-    "css": "assets/css/socle.css:148-153,160-161,166-173,178,182-185,189-193 ; assets/css/site.css:40-52,430-431,707-711",
-    "js": "assets/js/site.js:24,56-74,241,250-289,489-538,711 ; assets/js/modules/envol-vers-le-panier/module.js:26-64 ; assets/js/socle/mesures.js:36-78 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/socle/entete.js:8,26-56,60-165"
+    "html": "index.html:79-94",
+    "css": "assets/css/socle.css:148-153,160-161,166-173,178,182-185,189-193 ; assets/css/site.css:40-52,430-431,707-711,3028",
+    "js": "assets/js/site.js:26,58-76,246,255-294,500-549,728 ; assets/js/espace-donnees.js:60-96 ; assets/js/modules/envol-vers-le-panier/module.js:26-64 ; assets/js/socle/mesures.js:36-78 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/entete.js:8,26-56,60-165 ; assets/js/socle/calme.js:15-44"
    },
    "titre": "",
    "hauteur": 65,
@@ -821,6 +963,7 @@
     "index",
     "404",
     "a-emporter",
+    "espace",
     "infos-pratiques",
     "la-carte",
     "les-fetes",
@@ -831,7 +974,7 @@
    "sig": "div#menu",
    "dans_main": false,
    "code": {
-    "html": "index.html:112-117",
+    "html": "index.html:111-115",
     "css": "assets/css/socle.css:178,195-198,215-216 ; assets/css/site.css:57-58",
     "js": "assets/js/socle/defilement.js:48-86 ; assets/js/socle/entete.js:8,84-165"
    },
@@ -855,7 +998,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 1,
+    "boutons": 0,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -870,12 +1013,7 @@
    ],
    "data": [
     "data-menu",
-    "data-libelle",
-    "data-calme-bascule",
-    "data-libelle-reduire",
-    "data-libelle-retablir",
-    "data-libelle-systeme",
-    "data-libelle-bouton"
+    "data-libelle"
    ],
    "medias": {
     "capture_m390": "medias/jardins-hacienda-2-maquette/menu-m390.jpg"
@@ -890,9 +1028,9 @@
    "sig": "section#midi.heros",
    "dans_main": true,
    "code": {
-    "html": "index.html:121-174",
-    "css": "assets/css/socle.css:245-250,255,271,279-282 ; assets/css/site.css:86-92,106,116,167,229,267,322,358,377,473,491,598,610,622,626,666,721,747,1085,1097,1167,1193-1209,1261-1268,1280-1282,1346-1405,1664,2064",
-    "js": "assets/js/site.js:327-390,763-804,1391-1409,1428,1431-1456,1649,1704-1706,1713-1714,1718 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:24-25,40,152-159,363-407 ; assets/js/socle/transitions.js:25-46"
+    "html": "index.html:119-172",
+    "css": "assets/css/socle.css:245-250,255,271,279-282 ; assets/css/site.css:86-92,106,116,167,229,267,322,358,377,473,491,598,610,622,626,666,721,747,1085,1097,1167,1193-1209,1261-1268,1280-1282,1346-1405,1664,2064,3483,3599,3613,3634",
+    "js": "assets/js/site.js:332-395,856-897,2060-2078,2097,2100-2125,2325,2393-2396,2403-2404,2408 ; assets/js/socle/index.js:13 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:24-25,40,152-159,363-407 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Les Jardins de l'Hacienda",
    "hauteur": 900,
@@ -903,8 +1041,8 @@
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 2,
-   "animations_css": 3,
+   "boucles_css": 1,
+   "animations_css": 1,
    "canvas": [
     "webgl"
    ],
@@ -969,6 +1107,7 @@
     "data-pause",
     "data-reprendre",
     "data-anime",
+    "data-edit",
     "data-iris-centre",
     "data-t-ete-jour",
     "data-t-hiver-soir",
@@ -979,8 +1118,7 @@
     "data-heros-rdv-lien",
     "data-heros-rdv",
     "data-heros-bascule",
-    "data-href-ete",
-    "data-heros-agenda"
+    "data-href-ete"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/midi-p1440.jpg",
@@ -997,9 +1135,9 @@
    "sig": "section#chef.chef",
    "dans_main": true,
    "code": {
-    "html": "index.html:175-227",
-    "css": "assets/css/site.css:32,1408-1422,1428-1466,1589-1590,1594,1599-1600,1604-1606,1623-1638,1668,1843-1858",
-    "js": "assets/js/site.js:242,1458-1506,1650 ; assets/js/modules/plan-de-salle/module.js:183-186"
+    "html": "index.html:173-225",
+    "css": "assets/css/site.css:1408-1422,1428-1466,1589-1590,1594,1599-1600,1604-1606,1623-1638,1668,1843-1858,3662-3665",
+    "js": "assets/js/site.js:247,2127-2175,2326 ; assets/js/espace.js:234,248 ; assets/js/modules/reservation-de-table/module.js:105 ; assets/js/modules/plan-de-salle/module.js:183-186 ; assets/js/espace-apercu.js:43,47-48"
    },
    "titre": "Régis Clauss, l'âme de notre cuisine",
    "hauteur": 828,
@@ -1065,6 +1203,7 @@
     "data-lumiere",
     "data-chef-table",
     "data-polaroid",
+    "data-edit-photo",
     "data-face",
     "data-prix",
     "data-polaroid-retourner",
@@ -1073,6 +1212,7 @@
     "data-superpose",
     "data-etiquette",
     "data-anime",
+    "data-edit",
     "data-libelle"
    ],
    "medias": {
@@ -1089,13 +1229,13 @@
    "sig": "section#dejeuner.dejeuner",
    "dans_main": true,
    "code": {
-    "html": "index.html:228-362",
-    "css": "assets/js/modules/plat-fumant/module.css:4-9 ; assets/css/site.css:67-69,130-136,142-152,688-692,864-865,923-924,1215-1226,1245-1246,1470-1493,1532,1549,1588,1639-1659,1666-1667,2429-2486,2491-2512",
-    "js": "assets/js/site.js:166,178-205,242-243,393-399,541,544,603-628,715-736,925-989,1232-1249,1257-1327,1330-1376,1509-1519 ; assets/js/modules/plat-fumant/module.js:1,4,45-47,56-170 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67,91,106,120 ; assets/js/modules/carte-du-restaurant/module.js:11"
+    "html": "index.html:226-360",
+    "css": "assets/js/modules/plat-fumant/module.css:4-9 ; assets/css/site.css:67-69,130-136,142-152,688-692,864-865,923-924,1215-1226,1245-1246,1470-1493,1532,1549,1588,1639-1659,1666-1667,2429-2486,2491-2512,3618-3621,3626",
+    "js": "assets/js/site.js:171,183-210,247-248,398-404,552,555,618-643,732-753,1073-1137,1887-1904,1912-1996,1999-2045,2178-2188 ; assets/js/espace.js:184,449 ; assets/js/espace-commandes.js:72-140 ; assets/js/modules/plat-fumant/module.js:1,4,45-47,56-170 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67,91,106,120 ; assets/js/modules/carte-du-restaurant/module.js:11"
    },
    "titre": "La carte de la semaine",
    "hauteur": 4040,
-   "hauteur_m390": 4440,
+   "hauteur_m390": 2918,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1228,9 +1368,9 @@
    "sig": "section#lieu.lieu-defile",
    "dans_main": true,
    "code": {
-    "html": "index.html:363-415",
+    "html": "index.html:361-413",
     "css": "assets/css/site.css:1496-1523,1611-1615",
-    "js": "assets/js/site.js:1523-1533 ; assets/js/socle/effets.js:14,238-269"
+    "js": "assets/js/site.js:2192-2202 ; assets/js/socle/effets.js:14,238-269"
    },
    "titre": "Un endroit magique, en pleine nature",
    "hauteur": 1588,
@@ -1310,9 +1450,9 @@
    "sig": "section#apres-midi.apresmidi",
    "dans_main": true,
    "code": {
-    "html": "index.html:416-439",
+    "html": "index.html:414-437",
     "css": "assets/css/socle.css:268-270 ; assets/css/site.css:130-131,156,867-920,1124-1125,1130-1140,1176",
-    "js": "assets/js/site.js:57-74,242,434-465,667-688,739-760,855,1521-1533,1647 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:2,20-33,63 ; assets/js/modules/ciel-en-direct/module.js:2,67-69,97 ; assets/js/modules/agenda-des-dates/module.js:11,62,85,135 ; assets/js/modules/reservation-de-table/module.js:6 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,17 ; assets/js/socle/voile.js:10 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:2"
+    "js": "assets/js/site.js:59-76,247,445-476,682-703,756-777,1018,2190-2202,2323 ; assets/js/espace.js:252,260-261 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:2,20-33,63 ; assets/js/modules/ciel-en-direct/module.js:2,67-69,97 ; assets/js/modules/agenda-des-dates/module.js:11,62,85,135 ; assets/js/modules/reservation-de-table/module.js:8 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,17 ; assets/js/socle/voile.js:10 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:2"
    },
    "titre": "Les journées festives",
    "hauteur": 0,
@@ -1381,13 +1521,13 @@
    "sig": "section#feu.feu",
    "dans_main": true,
    "code": {
-    "html": "index.html:440-481",
-    "css": "assets/css/site.css:200-215,220-232,756-760,782,928-930,1237,1243,1526-1554,1591-1598,1607-1609,1665-1668,2192,2598-2601",
-    "js": "assets/js/site.js:242-243,489-540,544,547-600,630-659,703-707,1000-1097,1278-1321,1535-1561 ; assets/js/modules/agenda-des-dates/module.js:4,91 ; assets/js/modules/reservation-de-table/module.js:134,250-251 ; assets/js/socle/effets.js:18,273-288 ; assets/js/socle/compteurs.js:6-36"
+    "html": "index.html:438-513",
+    "css": "assets/css/site.css:200-215,220-224,228-232,756,782,1237,1243,1527-1554,1591-1598,1608-1609,1668,2192,2598-2601,2845-2847,3719-3765,3770-3794",
+    "js": "assets/js/site.js:229-244,247-248,500-551,555,558-615,645-674,720-724,1597,1933-1990,2204-2232 ; assets/js/modules/agenda-des-dates/module.js:4,91 ; assets/js/modules/reservation-de-table/module.js:167,288,386-387 ; assets/js/socle/effets.js:273-288 ; assets/js/socle/compteurs.js:6-36"
    },
-   "titre": "Au coin du feu",
-   "hauteur": 2610,
-   "hauteur_m390": 2448,
+   "titre": "Le Restaurant",
+   "hauteur": 2520,
+   "hauteur_m390": 1352,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1396,7 +1536,7 @@
      "pin": false,
      "scrub": 0.6,
      "debut": 7356,
-     "fin": 9066,
+     "fin": 8976,
      "anime": true,
      "toggle": false
     },
@@ -1404,18 +1544,18 @@
      "pin": false,
      "scrub": true,
      "debut": 7356,
-     "fin": 8531,
+     "fin": 8490,
      "anime": true,
      "toggle": false
     }
    ],
-   "tweens": 12,
+   "tweens": 6,
    "proprietes": [
     "clipPath",
-    "xPercent",
+    "x",
     "y",
-    "autoAlpha",
     "scale",
+    "autoAlpha",
     "opacity"
    ],
    "boucles_css": 0,
@@ -1436,18 +1576,31 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 6,
     "liens": 1
    },
    "classes_exclusives": [
     "feu",
+    "feu--resto",
     "feu__cadre",
     "feu__photo",
     "feu__braises",
-    "feu__tete",
-    "feu__sous",
-    "feu__titre",
-    "feu__legende",
+    "resto",
+    "resto__texte",
+    "resto__tete",
+    "resto__sous",
+    "resto__titre",
+    "resto__infos",
+    "resto__legende",
+    "resto__reperes",
+    "icone-flamme",
+    "icone-rayons",
+    "resto__horaires",
+    "resto__services",
+    "resto__statut",
+    "resto__droite",
+    "resto__vignette",
+    "feu__photo-vignette",
     "mini-resa",
     "feu__resa",
     "feu__resa-haut",
@@ -1456,12 +1609,7 @@
     "mini-resa__services",
     "mini-resa__puces",
     "puce",
-    "feu__resa-bas",
-    "mini-resa__couverts",
-    "mini-resa__libelle",
-    "compteur",
-    "mini-resa__envoi",
-    "feu__indice"
+    "feu__resa-bas"
    ],
    "data": [
     "data-heure",
@@ -1469,23 +1617,26 @@
     "data-fx",
     "data-fx-depart",
     "data-collant",
-    "data-foyer",
-    "data-foyer-mobile",
+    "data-edit-photo",
     "data-braises",
     "data-effet",
     "data-souris",
     "data-audit-ignorer",
     "data-feu-tete",
-    "data-fx-apres",
-    "data-fx-ecarte",
-    "data-mini-resa",
+    "data-saison-seul",
+    "data-anime",
+    "data-resto-infos",
+    "data-edit",
+    "data-statut-resto",
     "data-feu-resa",
+    "data-foyer",
+    "data-foyer-mobile",
+    "data-mini-resa",
     "data-services-nombre",
     "data-libelle",
     "data-services",
     "data-moins",
-    "data-plus",
-    "data-grille"
+    "data-plus"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/feu-p1440.jpg",
@@ -1502,9 +1653,9 @@
    "sig": "section#fetes.moment",
    "dans_main": true,
    "code": {
-    "html": "index.html:482-537",
+    "html": "index.html:514-569",
     "css": "assets/css/site.css:1557-1577,1581,1587",
-    "js": "assets/js/site.js:27-30,146-152,242,308-390,667-688,715-736,991,1000-1097,1343-1376,1430-1456 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:331 ; assets/js/modules/agenda-des-dates/module.js:2,31 ; assets/js/modules/ardoise-a-la-craie/module.js:47 ; assets/js/modules/accords-mets-et-vins/module.js:63,91,109 ; assets/js/socle/calme.js:15-44"
+    "js": "assets/js/site.js:29-32,150-156,247,313-395,682-703,732-753,1139,1557,1639-1643,1699-1701,1704-1705,1715-1717,1724,1730,1738,1741,2012-2045,2099-2125 ; assets/js/espace.js:133 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/ciel-en-direct/module.js:331 ; assets/js/modules/agenda-des-dates/module.js:2,31 ; assets/js/modules/ardoise-a-la-craie/module.js:47 ; assets/js/modules/accords-mets-et-vins/module.js:63,91,109 ; assets/js/socle/calme.js:15-44 ; assets/js/espace-apercu.js:120"
    },
    "titre": "En ce moment",
    "hauteur": 948,
@@ -1516,16 +1667,16 @@
     {
      "pin": false,
      "scrub": null,
-     "debut": 9676,
-     "fin": 10475,
+     "debut": 9586,
+     "fin": 10385,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": null,
-     "debut": 9676,
-     "fin": 10475,
+     "debut": 9586,
+     "fin": 10385,
      "anime": true,
      "toggle": false
     }
@@ -1594,21 +1745,21 @@
    "sig": "section#devise.devise",
    "dans_main": true,
    "code": {
-    "html": "index.html:538-570",
-    "css": "assets/css/site.css:2313-2365",
-    "js": "assets/js/site.js:867-878,1677 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:43,58,71 ; assets/js/modules/carte-du-restaurant/carte-rendu.js:35-39,48-67,79-90,93-116"
+    "html": "index.html:570-598",
+    "css": "assets/css/site.css:2313-2339,2346-2365,3852-3892",
+    "js": "assets/js/site.js:1030-1041,2364 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:43,58,71 ; assets/js/modules/carte-du-restaurant/carte-rendu.js:35-39,48-67,79-90,93-116 ; assets/js/socle/effets.js:152-159"
    },
    "titre": "Ce que nos clients retiennent",
-   "hauteur": 946,
-   "hauteur_m390": 1445,
+   "hauteur": 792,
+   "hauteur_m390": 868,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "boucles_css": 2,
+   "animations_css": 2,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -1651,23 +1802,27 @@
     "devise__etoiles",
     "devise__etoile",
     "devise__sur",
-    "devise__themes",
-    "devise__icone",
-    "devise__releve"
+    "avis-defile",
+    "avis-defile__rang",
+    "avis-defile__piste",
+    "avis",
+    "avis__etoiles"
    ],
    "data": [
     "data-heure",
     "data-lumiere",
     "data-devise",
     "data-superpose",
+    "data-edit-photo",
     "data-devise-mots",
     "data-devise-chiffre",
     "data-effet",
-    "data-saison-seul"
+    "data-visuel"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/devise-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/devise-m390.jpg"
+    "capture_m390": "medias/jardins-hacienda-2-maquette/devise-m390.jpg",
+    "video": "medias/jardins-hacienda-2-maquette/devise-p720.mp4"
    }
   },
   {
@@ -1679,13 +1834,13 @@
    "sig": "section#offrir-emporter.offrir-emporter",
    "dans_main": true,
    "code": {
-    "html": "index.html:571-612",
-    "css": "assets/css/site.css:1771-1805",
-    "js": "assets/js/site.js:1565-1587"
+    "html": "index.html:599-640",
+    "css": "assets/css/site.css:1771-1805,3441,3454-3455,3550-3555,3801-3825,3829-3846",
+    "js": "assets/js/site.js:2236-2258"
    },
    "titre": "Pour les fêtes, ou pour faire plaisir",
-   "hauteur": 1045,
-   "hauteur_m390": 1535,
+   "hauteur": 835,
+   "hauteur_m390": 1312,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1756,13 +1911,13 @@
    "sig": "section#venir.venir",
    "dans_main": true,
    "code": {
-    "html": "index.html:613-641",
-    "css": "assets/css/site.css:75-78,858,1026,1067,1809-1840",
-    "js": "assets/js/site.js:121,224-239,242,667-688,1322-1327,1565-1587 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/agenda-des-dates/module.js:2-3,18-20,30-31,65,86-88,157,188-191,198 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/apparitions.js:35-56 ; assets/js/socle/effets.js:85"
+    "html": "index.html:641-669",
+    "css": "assets/css/site.css:1809-1840",
+    "js": "assets/js/site.js:229-244,247,682-703,1434,2236-2258 ; assets/js/espace.js:185,190 ; assets/js/espace-commandes.js:69 ; assets/js/modules/agenda-des-dates/module.js:2,20,30-31,198 ; assets/js/socle/apparitions.js:38-59 ; assets/js/socle/effets.js:85"
    },
    "titre": "En pleine nature, à 19 km de Metz",
    "hauteur": 825,
-   "hauteur_m390": 1167,
+   "hauteur_m390": 1178,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -1792,9 +1947,7 @@
     "venir__grille",
     "venir__texte",
     "venir__adresse",
-    "statut",
     "venir__statut",
-    "statut__point",
     "venir__actions",
     "venir__plan",
     "venir__carte",
@@ -1814,6 +1967,7 @@
     "data-heure",
     "data-lumiere",
     "data-anime",
+    "data-edit",
     "data-statut-accueil",
     "data-libelle",
     "data-venir"
@@ -1831,6 +1985,7 @@
     "index",
     "404",
     "a-emporter",
+    "espace",
     "infos-pratiques",
     "la-carte",
     "les-fetes",
@@ -1841,21 +1996,21 @@
    "sig": "footer#pied.pied",
    "dans_main": false,
    "code": {
-    "html": "index.html:643-669",
-    "css": "assets/css/socle.css:309-314 ; assets/css/site.css:262-266,306-307,691,1086",
-    "js": "assets/js/site.js:75-83 ; assets/js/socle/mesures.js:42-78 ; assets/js/modules/accords-mets-et-vins/module.js:12,38,136 ; assets/js/socle/transitions.js:16-23"
+    "html": "index.html:671-766",
+    "css": "assets/css/socle.css:309-314 ; assets/css/site.css:262,266,306-307,691,3034-3083,3087-3088,3254,4172",
+    "js": "assets/js/site.js:77-85,229-244,925-1016,1141-1164,1564,1933-1990 ; assets/js/espace.js:6,454 ; assets/js/socle/mesures.js:42-78 ; assets/js/modules/accords-mets-et-vins/module.js:12,38,136 ; assets/js/socle/transitions.js:16-23 ; assets/js/espace-apercu.js:64"
    },
-   "titre": "",
-   "hauteur": 642,
-   "hauteur_m390": 1288,
+   "titre": "À très vite, aux Jardins",
+   "hauteur": 1940,
+   "hauteur_m390": 1810,
    "masque_m390": false,
-   "position": "static",
+   "position": "relative",
    "cache": false,
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "boucles_css": 1,
+   "animations_css": 1,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -1865,34 +2020,53 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 1,
+    "boutons": 0,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 1,
-    "liens": 13
+    "images": 32,
+    "liens": 15
    },
    "classes_exclusives": [
     "pied",
-    "pied-grille",
-    "pied-maison",
-    "pied-logo",
-    "pied-reseaux",
-    "pied-venir",
-    "pied-bas"
+    "pied2",
+    "pied2__bandeau",
+    "pied2__piste",
+    "pied2__photo",
+    "pied2__photo--0",
+    "pied2__photo--1",
+    "pied2__photo--2",
+    "pied2__photo--3",
+    "pied2__appel",
+    "pied2__titre",
+    "pied2__statut",
+    "pied2__actions",
+    "pied2__grille",
+    "pied2__bloc",
+    "pied2__t",
+    "pied2__adresse",
+    "pied2__distances",
+    "pied2__liens",
+    "pied2__reseaux",
+    "pied2__reseau",
+    "pied2__haut-ligne",
+    "pied2__haut",
+    "pied2__haut-icone",
+    "pied2__marque",
+    "pied-bas",
+    "pied2__bas"
    ],
    "data": [
+    "data-statut-pied",
+    "data-horaires-pied",
     "data-libelle",
-    "data-calme-bascule",
-    "data-libelle-reduire",
-    "data-libelle-retablir",
-    "data-libelle-systeme",
-    "data-libelle-bouton",
-    "data-sans-transition"
+    "data-sans-transition",
+    "data-pied-marque"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/pied-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/pied-m390.jpg"
+    "capture_m390": "medias/jardins-hacienda-2-maquette/pied-m390.jpg",
+    "video": "medias/jardins-hacienda-2-maquette/pied-p720.mp4"
    }
   },
   {
@@ -1904,9 +2078,9 @@
    "sig": "section#debut.introuvable",
    "dans_main": true,
    "code": {
-    "html": "404.html:119-134",
-    "css": "assets/css/socle.css:120,245-250,255,271,275-278 ; assets/js/modules/lumiere-au-pointeur/module.css:3-64 ; assets/css/site.css:32,72,276-282,614,739,747,780,785,947,1073-1082,1142-1145,1172,1221-1222,1632,1726,2032",
-    "js": "assets/js/site.js:166,178-205,250-289,296,715-736,1232-1249,1257-1327,1330-1376,1537-1561,1590-1596 ; assets/js/modules/lumiere-au-pointeur/module.js:123-125,139-274 ; assets/js/modules/ciel-en-direct/module.js:32-33,118 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:9,273-288 ; assets/js/socle/onde.js:1 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+    "html": "404.html:117-132",
+    "css": "assets/css/socle.css:245-250,255,271 ; assets/js/modules/lumiere-au-pointeur/module.css:3-64 ; assets/css/site.css:72,276-282,614,739,747,780,785,1073-1082,1142-1145,1172,2032",
+    "js": "assets/js/site.js:171,183-210,255-294,301,732-753,1302-1360,1887-1904,1912-1996,1999-2045,2206-2232,2261-2269,2393 ; assets/js/modules/lumiere-au-pointeur/module.js:123-125,139-274 ; assets/js/modules/ciel-en-direct/module.js:32-33,118 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Cette page a fermé à minuit.",
    "hauteur": 900,
@@ -1942,7 +2116,6 @@
     "lum",
     "ecran",
     "lum__fond",
-    "media",
     "introuvable__photo",
     "lum__canvas",
     "lum__ombre",
@@ -1953,7 +2126,6 @@
     "lum__texte",
     "introuvable__actions",
     "lum__actions",
-    "bouton--clair",
     "lum__indice",
     "indice",
     "lum__indice-souris",
@@ -1980,36 +2152,24 @@
    "pages": [
     "a-emporter"
    ],
-   "sig": "section#debut.ouv-emp",
+   "sig": "section#debut.ouv-traiteur",
    "dans_main": true,
    "code": {
-    "html": "a-emporter.html:118-139",
-    "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:947,1076,1221-1222,1685-1691,1697-1698,1726,2130-2143,2234",
-    "js": "assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:9-11,22,190-214,273-288,320-347 ; assets/js/socle/onde.js:1-3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "a-emporter.html:116-178",
+    "css": "assets/css/site.css:2873-2903,2920-2928,3610,3648-3649,3708",
+    "js": "assets/js/site.js:1432,1436-1498,2393 ; assets/js/espace.js:85-86,195,385,448 ; assets/js/modules/plat-fumant/module.js:17 ; assets/js/modules/plan-de-salle/module.js:21-38,75,100,115,178 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:45,55,101-102"
    },
-   "titre": "Les incontournables des fêtes",
+   "titre": "Les fêtes du chef, à emporter",
    "hauteur": 900,
-   "hauteur_m390": 844,
+   "hauteur_m390": 925,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": -746,
-     "fin": 794,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 1,
-   "animations_css": 1,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 7,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -2019,36 +2179,58 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 8,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 6,
     "liens": 1
    },
    "classes_exclusives": [
-    "ouv-emp",
-    "ouv-emp__grille",
-    "ouv-emp__contenu",
-    "ouv-emp__titre",
-    "ouv-emp__texte",
-    "ouv-emp__actions",
-    "ouv-emp__info",
-    "ouv-emp__visuel",
-    "media",
-    "ouv-emp__arche",
-    "sceau",
-    "sceau--emp",
-    "sceau__texte",
-    "sceau__logo"
+    "ouv-traiteur",
+    "ouv-traiteur__grille",
+    "ouv-traiteur__contenu",
+    "ouv-traiteur__titre",
+    "ouv-traiteur__texte",
+    "ouv-traiteur__actions",
+    "ouv-traiteur__info",
+    "ouv-traiteur__scene",
+    "ronde",
+    "ronde__mention",
+    "ronde__halo",
+    "ronde__sol",
+    "ronde__cloche",
+    "est-devant",
+    "ronde__verre",
+    "ronde__bouton",
+    "ronde__legende",
+    "ronde__num",
+    "ronde__nom",
+    "ronde__prix",
+    "ronde__commandes",
+    "ronde__fleche"
    ],
    "data": [
+    "data-ronde",
     "data-iris-centre",
     "data-action-principale",
     "data-sans-transition",
     "data-info-cle",
-    "data-fx",
-    "data-fx-force"
+    "data-ronde-scene",
+    "data-grok",
+    "data-superpose",
+    "data-effet",
+    "data-ronde-i",
+    "data-id",
+    "data-nom",
+    "data-prix",
+    "data-num",
+    "data-ronde-bouton",
+    "data-ronde-num",
+    "data-ronde-nom",
+    "data-ronde-prix",
+    "data-ronde-prec",
+    "data-ronde-suiv"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/a-emporter-debut-p1440.jpg",
@@ -2065,9 +2247,9 @@
    "sig": "section#produits.emp-produits",
    "dans_main": true,
    "code": {
-    "html": "a-emporter.html:140-284",
-    "css": "assets/css/site.css:2145-2150,2154-2163,2167,2649-2717",
-    "js": "assets/js/site.js:178-205,602-628,994-1097,1389 ; assets/js/modules/plat-fumant/module.js:1,4,17,49,54-170"
+    "html": "a-emporter.html:179-329",
+    "css": "assets/css/site.css:2145-2150,2154-2163,2167,2649-2658,2663-2664,2670-2704,2710-2717,2752",
+    "js": "assets/js/site.js:617-643,1436-1498,1501-1506,1680-1682,1691,1734,2058 ; assets/js/espace.js:154,164,172,390,439 ; assets/js/modules/plat-fumant/module.js:1,4,17,49,54-170"
    },
    "titre": "Nos produits à emporter",
    "hauteur": 1594,
@@ -2093,7 +2275,7 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 0,
+    "images": 6,
     "liens": 0
    },
    "classes_exclusives": [
@@ -2109,13 +2291,8 @@
     "emp-produits__note",
     "emp-produits__grille",
     "emp-produit",
-    "emp-cloche",
-    "emp-cloche__fond",
-    "emp-cloche__ombre",
-    "emp-cloche__arriere",
-    "emp-cloche__plat",
     "emp-cloche__vapeur",
-    "emp-cloche__dome",
+    "emp-cloche__mention",
     "emp-cloche__verre",
     "emp-produit__corps",
     "emp-produit__num",
@@ -2145,23 +2322,23 @@
    }
   },
   {
-   "id": "a-emporter-commande",
+   "id": "a-emporter-calendrier",
    "page": "a-emporter",
    "pages": [
     "a-emporter"
    ],
-   "sig": "section#commande.emp-commande",
+   "sig": "section#calendrier.avent",
    "dans_main": true,
    "code": {
-    "html": "a-emporter.html:285-323",
-    "css": "assets/css/site.css:204-208,1548,2170-2206,2214-2218,2598-2601",
-    "js": "assets/js/site.js:489-538,1000-1097 ; assets/js/socle/effets.js:152-159"
+    "html": "a-emporter.html:330-347",
+    "css": "assets/css/site.css:3114-3146,4347",
+    "js": "assets/js/site.js:1365-1397 ; assets/js/espace.js:150 ; assets/js/modules/accords-mets-et-vins/module.js:71,201,213"
    },
-   "titre": "Le retrait",
-   "hauteur": 1259,
-   "hauteur_m390": 1673,
+   "titre": "Le calendrier du retrait",
+   "hauteur": 971,
+   "hauteur_m390": 1301,
    "masque_m390": false,
-   "position": "static",
+   "position": "relative",
    "cache": false,
    "scrolltriggers": [],
    "tweens": 0,
@@ -2170,24 +2347,93 @@
    "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 1,
+   "sticky": 0,
    "elements": {
     "videos": 0,
     "audio": 0,
     "iframes": 0,
-    "formulaires": 1,
-    "champs": 25,
-    "boutons": 1,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 19,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
     "images": 0,
-    "liens": 0
+    "liens": 1
    },
+   "classes_exclusives": [
+    "avent",
+    "avent__tete",
+    "avent__titre",
+    "avent__intro",
+    "avent__choix",
+    "avent__mur",
+    "avent__cases",
+    "avent__case",
+    "avent__cellule",
+    "avent__date",
+    "avent__sem",
+    "avent__jour",
+    "avent__services",
+    "avent__service",
+    "avent__votre",
+    "avent__porte",
+    "avent__porte-num",
+    "est-ferme",
+    "avent__ferme"
+   ],
+   "data": [
+    "data-avent",
+    "data-choisi",
+    "data-ou",
+    "data-le",
+    "data-anime",
+    "data-avent-choix",
+    "data-sans-transition",
+    "data-visuel",
+    "data-effet",
+    "data-avent-jour",
+    "data-superpose"
+   ],
+   "medias": {
+    "capture": "medias/jardins-hacienda-2-maquette/a-emporter-calendrier-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-2-maquette/a-emporter-calendrier-m390.jpg"
+   }
+  },
+  {
+   "id": "a-emporter-commande",
+   "page": "a-emporter",
+   "pages": [
+    "a-emporter"
+   ],
+   "sig": "section#commande.emp-commande",
+   "dans_main": true,
+   "code": {
+    "html": "a-emporter.html:348-392",
+    "css": "assets/css/site.css:204-208,1548,2170-2206,2214-2218,2598-2601,2831-2862",
+    "js": "assets/js/site.js:500-549,1365-1397,1511-1512,1576,1640,1643,1648,1673,1694,1697,1713-1717,1723,1730,1734"
+   },
+   "titre": "",
+   "hauteur": null,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": null,
+   "cache": null,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": null,
    "classes_exclusives": [
     "emp-commande",
     "emp-commande__grille",
     "emp-form",
+    "emp-form__intro",
+    "emp-form__etape",
     "emp-form__texte",
     "emp-calendrier",
     "emp-calendrier__mois",
@@ -2202,6 +2448,7 @@
     "puce",
     "emp-form__coord",
     "emp-form__note",
+    "emp-form__envoyer",
     "emp-form__merci",
     "emp-panier",
     "emp-panier__titre",
@@ -2213,6 +2460,7 @@
    "data": [
     "data-emp-form",
     "data-anime",
+    "data-form-etape",
     "data-emp-calendrier",
     "data-visuel",
     "data-libelle",
@@ -2227,10 +2475,95 @@
     "data-panier-total",
     "data-panier-retrait"
    ],
-   "medias": {
-    "capture": "medias/jardins-hacienda-2-maquette/a-emporter-commande-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/a-emporter-commande-m390.jpg"
-   }
+   "medias": {}
+  },
+  {
+   "id": "a-emporter-emp-tiroir",
+   "page": "a-emporter",
+   "pages": [
+    "a-emporter"
+   ],
+   "sig": "dialog.emp-tiroir",
+   "dans_main": true,
+   "code": {
+    "html": "a-emporter.html:394-427",
+    "css": "assets/css/site.css:2768-2786,2802-2812,2816-2862",
+    "js": "assets/js/site.js:414-419,1524-1526,1559,1564,1571-1574,1580,1589,1635-1638,1647,1706 ; assets/js/espace.js:273 ; assets/js/socle/defilement.js:48-86"
+   },
+   "titre": "Ma commande",
+   "hauteur": 0,
+   "hauteur_m390": null,
+   "masque_m390": false,
+   "position": "fixed",
+   "cache": true,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 25,
+    "boutons": 6,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 0,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "emp-tiroir",
+    "emp-tiroir__voile",
+    "emp-tiroir__panneau",
+    "emp-tiroir__tete",
+    "emp-tiroir__retour",
+    "emp-tiroir__titre",
+    "emp-tiroir__nombre",
+    "emp-tiroir__fermer",
+    "emp-tiroir__fil",
+    "emp-tiroir__ajoute",
+    "emp-tiroir__defile",
+    "emp-tiroir__vue",
+    "emp-tiroir__lignes",
+    "emp-tiroir__vide",
+    "emp-tiroir__pied",
+    "emp-tiroir__total",
+    "emp-tiroir__retrait",
+    "emp-tiroir__valider",
+    "emp-tiroir__continuer"
+   ],
+   "data": [
+    "data-emp-tiroir",
+    "data-tiroir-fermer",
+    "data-tiroir-retour",
+    "data-tiroir-titre",
+    "data-panier",
+    "data-retrait",
+    "data-coordonnees",
+    "data-merci",
+    "data-tiroir-nombre",
+    "data-fil",
+    "data-tiroir-ajoute",
+    "data-defilable",
+    "data-vue",
+    "data-tiroir-lignes",
+    "data-tiroir-vide",
+    "data-tiroir-form",
+    "data-tiroir-total",
+    "data-tiroir-retrait",
+    "data-defaut",
+    "data-tiroir-valider",
+    "data-pied",
+    "data-sans-transition",
+    "data-tiroir-suite"
+   ],
+   "medias": {}
   },
   {
    "id": "a-emporter-visuellement-cache",
@@ -2241,9 +2574,9 @@
    "sig": "p.visuellement-cache",
    "dans_main": true,
    "code": {
-    "html": "a-emporter.html:325-325",
+    "html": "a-emporter.html:428-428",
     "css": null,
-    "js": "assets/js/site.js:1000-1097"
+    "js": "assets/js/site.js:1512"
    },
    "titre": "",
    "hauteur": 1,
@@ -2282,21 +2615,122 @@
    }
   },
   {
+   "id": "espace-espace",
+   "page": "espace",
+   "pages": [
+    "espace"
+   ],
+   "sig": "section#espace.espace",
+   "dans_main": true,
+   "code": {
+    "html": "espace.html:116-186",
+    "css": "assets/css/site.css:3079,4145-4167,4173-4228,4251-4252,4333-4334,4416,4454-4480,4487-4488,4524,4552-4555",
+    "js": "assets/js/site.js:6,229-244,414-419,924,1143-1164,1789-1884,2012-2045,2311-2312 ; assets/js/espace.js:1,6,31,46,74-75,91,106,159-161,166-171,197-202,231-234,238,243,252,269,273-274,286,365,371,382-383,404,407-408,435,438,454-458 ; assets/js/espace-regles.js:1,19,33,38,50-63,66-74,80 ; assets/js/espace-barre.js:1,21,24-92 ; assets/js/espace-commandes.js:1,69,72-140 ; assets/js/espace-donnees.js:1,60-96 ; assets/js/espace-stock.js:1-3,44 ; assets/js/modules/lumiere-au-pointeur/module.js:139-274 ; assets/js/modules/reservation-de-table/module.js:37-38,94,202,206-207,214-216,232,244,288,329,338,341,418 ; assets/js/modules/plan-de-salle/module.js:43,48,61,77,147-149 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/espace-apercu.js:1,4,15,18,29,37,118,135"
+   },
+   "titre": "Votre espace",
+   "hauteur": 994,
+   "hauteur_m390": 1079,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 1,
+    "champs": 4,
+    "boutons": 55,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 2,
+    "images": 37,
+    "liens": 3
+   },
+   "classes_exclusives": [
+    "espace",
+    "espace__cadre",
+    "esp-tete",
+    "esp-tete__sur",
+    "esp-demo",
+    "esp-long",
+    "esp-court",
+    "esp-tete__maison",
+    "esp-tete__titre",
+    "esp-tete__texte",
+    "esp-outils",
+    "esp-quoi",
+    "esp-quoi__ico",
+    "esp-quoi__touche",
+    "esp-sauve",
+    "esp-sauve__point",
+    "esp-outils__site",
+    "esp-menu",
+    "esp-rond",
+    "esp-menu__bouton",
+    "esp-menu__panneau",
+    "esp-menu__danger",
+    "esp-connexion",
+    "esp-connexion__carte",
+    "esp-connexion__sceau",
+    "esp-connexion__texte",
+    "esp-champ",
+    "esp-connexion__bouton",
+    "esp-connexion__photo",
+    "esp-app"
+   ],
+   "data": [
+    "data-espace",
+    "data-esp-outils",
+    "data-esp-quoi",
+    "data-esp-quoi-touche",
+    "data-esp-sauve",
+    "data-etat",
+    "data-esp-sauve-texte",
+    "data-esp-plus",
+    "data-esp-plus-panneau",
+    "data-esp-quitter",
+    "data-tout-effacer",
+    "data-esp-connexion",
+    "data-esp-app",
+    "data-esp-vue",
+    "data-esp-badge",
+    "data-vue",
+    "data-esp-rendu",
+    "data-esp-toast",
+    "data-esp-toast-texte",
+    "data-esp-toast-lien",
+    "data-esp-annuler",
+    "data-esp-donnees"
+   ],
+   "medias": {
+    "capture": "medias/jardins-hacienda-2-maquette/espace-espace-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-2-maquette/espace-espace-m390.jpg"
+   }
+  },
+  {
    "id": "infos-pratiques-debut",
    "page": "infos-pratiques",
    "pages": [
     "infos-pratiques"
    ],
-   "sig": "section#debut.ouv-infos2",
+   "sig": "section#debut.ouv-emp",
    "dans_main": true,
    "code": {
-    "html": "infos-pratiques.html:119-147",
-    "css": "assets/css/site.css:75-78,858,1026,1067,1958-1982",
-    "js": "assets/js/site.js:121,178-205,224-239,1322-1327,1609-1636 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "infos-pratiques.html:117-139",
+    "css": "assets/css/site.css:1685-1691,1697-1698,2130-2143,2234,2866-2869,3640-3641,3648-3649,3656",
+    "js": "assets/js/site.js:229-244,2393 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,41,64"
    },
-   "titre": "Horaires, accès et contact",
+   "titre": "Venez nous voir à Moineville",
    "hauteur": 900,
-   "hauteur_m390": 933,
+   "hauteur_m390": 987,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2304,8 +2738,8 @@
     {
      "pin": false,
      "scrub": true,
-     "debut": -768,
-     "fin": 815,
+     "debut": -746,
+     "fin": 794,
      "anime": true,
      "toggle": false
     }
@@ -2315,8 +2749,8 @@
     "yPercent",
     "scale"
    ],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "boucles_css": 1,
+   "animations_css": 1,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -2331,38 +2765,36 @@
     "onglets": 0,
     "deplies": 0,
     "images": 2,
-    "liens": 3
+    "liens": 2
    },
    "classes_exclusives": [
-    "ouv-infos2",
-    "ouv-infos2__grille",
-    "ouv-infos2__texte",
-    "statut",
-    "ouv-infos2__statut",
-    "ouv-infos2__adresse",
-    "ouv-infos2__distances",
-    "ouv-infos2__actions",
-    "ouv-infos2__visuel",
-    "ouv-infos2__arche",
-    "carte-visite",
-    "carte-visite__logo",
-    "carte-visite__nom",
-    "carte-visite__ligne",
-    "carte-visite__tel",
-    "carte-visite__statut"
+    "ouv-emp",
+    "ouv-infos3",
+    "ouv-emp__grille",
+    "ouv-emp__contenu",
+    "ouv-emp__titre",
+    "ouv-emp__texte",
+    "ouv-emp__actions",
+    "ouv-infos3__lien",
+    "ouv-emp__info",
+    "ouv-infos3__info",
+    "ouv-emp__visuel",
+    "ouv-emp__arche",
+    "sceau",
+    "sceau--emp",
+    "sceau__texte",
+    "sceau__logo"
    ],
    "data": [
     "data-iris-centre",
-    "data-statut-accueil",
-    "data-horaires-accueil",
-    "data-info-cle",
     "data-action-principale",
     "data-sans-transition",
-    "data-carte-visite",
+    "data-info-cle",
+    "data-statut-accueil",
+    "data-horaires-accueil",
     "data-fx",
     "data-fx-force",
-    "data-superpose",
-    "data-statut-accueil-bis"
+    "data-edit-photo"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/infos-pratiques-debut-p1440.jpg",
@@ -2379,13 +2811,13 @@
    "sig": "section#horaires.semaine",
    "dans_main": true,
    "code": {
-    "html": "infos-pratiques.html:148-199",
+    "html": "infos-pratiques.html:140-191",
     "css": "assets/css/site.css:1987-2027",
-    "js": "assets/js/site.js:126,923,1343-1376,1458,1607-1636 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:4,36-61,64-83,102-111 ; assets/js/modules/assiette-qui-se-dresse/module.js:10,17-66 ; assets/js/modules/reservation-de-table/module.js:91,163,248-249,277 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,19-90 ; assets/js/socle/effets.js:152-159"
+    "js": "assets/js/site.js:130,229-244,1071,2012-2045,2127,2280-2309 ; assets/js/espace.js:3-4,159-161,225,245-248,388-389,421-423 ; assets/js/espace-regles.js:39-44 ; assets/js/espace-commandes.js:56-59,72-140 ; assets/js/espace-donnees.js:29 ; assets/js/espace-stock.js:12 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:4,36-61,64-83,102-111 ; assets/js/modules/assiette-qui-se-dresse/module.js:10,17-66 ; assets/js/modules/reservation-de-table/module.js:113,243,288,319,377-381 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,19-90 ; assets/js/socle/effets.js:152-159 ; assets/js/espace-apercu.js:43,61-62,66,72"
    },
    "titre": "Ouvert maintenant ?",
    "hauteur": 898,
-   "hauteur_m390": 1002,
+   "hauteur_m390": 972,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -2461,13 +2893,13 @@
    "sig": "section#acces.acces",
    "dans_main": true,
    "code": {
-    "html": "infos-pratiques.html:200-224",
-    "css": "assets/css/site.css:507-513,523,1034-1048,1099-1105",
+    "html": "infos-pratiques.html:192-223",
+    "css": "assets/css/site.css:507-513,523,1034-1048,1099-1105,3605-3608",
     "js": null
    },
    "titre": "Venir à Moineville",
    "hauteur": 1148,
-   "hauteur_m390": 1342,
+   "hauteur_m390": 1636,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -2479,10 +2911,20 @@
      "fin": 2349,
      "anime": true,
      "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": true,
+     "debut": 1418,
+     "fin": 2800,
+     "anime": true,
+     "toggle": false
     }
    ],
-   "tweens": 1,
+   "tweens": 2,
    "proprietes": [
+    "yPercent",
+    "scale",
     "strokeDashoffset"
    ],
    "boucles_css": 0,
@@ -2500,7 +2942,7 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 0,
+    "images": 2,
     "liens": 1
    },
    "classes_exclusives": [
@@ -2520,11 +2962,14 @@
     "carte__ici",
     "carte__ici-nom",
     "carte__note",
-    "acces__regles"
+    "acces__droite",
+    "acces__regles",
+    "acces__photo"
    ],
    "data": [
     "data-anime",
-    "data-fx"
+    "data-fx",
+    "data-fx-force"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/infos-pratiques-acces-p1440.jpg",
@@ -2541,9 +2986,9 @@
    "sig": "section#plan.plan-domaine",
    "dans_main": true,
    "code": {
-    "html": "infos-pratiques.html:225-344",
-    "css": "assets/css/site.css:1089-1090,2049,2056-2058,2106-2112,2257-2263,2274-2309,2543",
-    "js": "assets/js/site.js:739-760,763-804,856-864,1100-1128,1134-1229 ; assets/js/modules/assiette-qui-se-dresse/module.js:17-66 ; assets/js/modules/plan-de-salle/module.js:159"
+    "html": "infos-pratiques.html:224-343",
+    "css": "assets/css/site.css:1089-1090,2049,2056-2058,2106-2112,2257-2263,2274-2309,2543,2909,2981,3098,3207,3314-3317,3481,3697,3709-3711",
+    "js": "assets/js/site.js:756-777,856-897,1019-1027,1170-1239,1243-1272,1401-1430,1750-1783,1789-1884,1933-1990 ; assets/js/modules/assiette-qui-se-dresse/module.js:17-66 ; assets/js/modules/plan-de-salle/module.js:159"
    },
    "titre": "Le plan du domaine",
    "hauteur": 844,
@@ -2622,9 +3067,9 @@
    "sig": "section#ecrire.ecrire",
    "dans_main": true,
    "code": {
-    "html": "infos-pratiques.html:345-394",
+    "html": "infos-pratiques.html:344-393",
     "css": "assets/js/modules/formulaire-par-etapes/module.css:3,9-10,26-48,54-58,63-69,75-81,86-94,101-105,115-119,131-140 ; assets/css/site.css:514-517,523,1051-1062,1107",
-    "js": "assets/js/site.js:166,178-205,415-432,715-736,1134-1229,1232-1249,1257-1327,1330-1376 ; assets/js/modules/formulaire-par-etapes/module.js:1,25,41,44-47,51,64,72,76,84,121,153,156,166,172-174,180,194,220-221,239,266 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:5,40,43,50-149 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
+    "js": "assets/js/site.js:171,183-210,420-443,732-753,1789-1884,1887-1904,1912-1996,1999-2045 ; assets/js/espace-donnees.js:5,60-96 ; assets/js/espace-stock.js:33-40 ; assets/js/modules/formulaire-par-etapes/module.js:1,25,41,44-47,51,64,72,76,84,121,153,156,166,172-174,180,194,220-221,239,266 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:5,40,43,50-149 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41,263,273-275 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
    },
    "titre": "Une question",
    "hauteur": 927,
@@ -2703,9 +3148,9 @@
    "sig": "section#debut.ouv-carte",
    "dans_main": true,
    "code": {
-    "html": "la-carte.html:121-150",
-    "css": "assets/css/socle.css:270 ; assets/js/modules/ardoise-a-la-craie/module.css:13-31,36-53,59-61 ; assets/css/site.css:26,334,365,480,501,608,614,620,638,697,792,805-841,883,1026,1067,1093,1108-1109,1114,1128,1182-1183,1254,1454-1457,1498,1611,1626-1629,1645-1647,1676,1717,1745,1772,1811,1869,1960,1989,2242,2504,2522,2653",
-    "js": "assets/js/site.js:141-152,715-736 ; assets/js/modules/ardoise-a-la-craie/module.js:1-4,9,27,40,43-47,50-149 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:152-159 ; assets/js/socle/transitions.js:25-46"
+    "html": "la-carte.html:119-150",
+    "css": "assets/css/socle.css:270 ; assets/js/modules/ardoise-a-la-craie/module.css:13-31,36-53,59-61 ; assets/css/site.css:614,805-841,1093,1108-1109,1128,1254",
+    "js": "assets/js/site.js:33-45,145-156,229-244,500-549,732-753,900-909,1436-1498,2393 ; assets/js/espace.js:5,226,230,248,404-405,416-417 ; assets/js/espace-commandes.js:59 ; assets/js/espace-donnees.js:22,30 ; assets/js/espace-stock.js:11 ; assets/js/modules/ardoise-a-la-craie/module.js:1-4,9,27,40,43-47,50-149 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:152-159 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,43-46,49-56,64,101-102"
    },
    "titre": "La carte de la semaine",
    "hauteur": 900,
@@ -2747,7 +3192,6 @@
     "ouv-carte",
     "ouv-carte__grille",
     "ouv-carte__texte",
-    "surtitre",
     "masque-ecran-tres-bas",
     "ouv-carte__info",
     "ouv-carte__actions",
@@ -2779,7 +3223,9 @@
     "data-visuel",
     "data-ardoise-date",
     "data-ardoise",
-    "data-sans-transition"
+    "data-sans-transition",
+    "data-reservation-accueil",
+    "data-horaires-accueil"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/la-carte-debut-p1440.jpg",
@@ -2796,13 +3242,13 @@
    "sig": "section#toute-la-carte.carte-resto",
    "dans_main": true,
    "code": {
-    "html": "la-carte.html:151-160",
-    "css": "assets/js/modules/carte-du-restaurant/module.css:4-10,14-59,63-95 ; assets/css/site.css:311-315,681-682,1751-1766,2034-2042,2229-2231",
-    "js": "assets/js/modules/ciel-en-direct/module.js:266,332 ; assets/js/modules/carte-du-restaurant/module.js:11-13,16-121 ; assets/js/modules/carte-du-restaurant/carte-rendu.js:69-71,74-90,93-116 ; assets/js/socle/formulaires.js:34-58"
+    "html": "la-carte.html:151-176",
+    "css": "assets/css/socle.css:279-282 ; assets/js/modules/carte-du-restaurant/module.css:4-10,14-59,63-95 ; assets/css/site.css:92,167,229,267,311-315,322,358,377,473,491,598,681-682,1085,1097,1167,1388,1751-1766,2034-2042,2229-2231,3095,3105-3108,3483,3560-3599,3634",
+    "js": "assets/js/site.js:1401-1430 ; assets/js/modules/ciel-en-direct/module.js:266,332 ; assets/js/modules/carte-du-restaurant/module.js:11-13,16-121 ; assets/js/modules/carte-du-restaurant/carte-rendu.js:69-71,74-90,93-116 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/formulaires.js:34-58"
    },
    "titre": "Toute la carte",
-   "hauteur": 4089,
-   "hauteur_m390": 5128,
+   "hauteur": 2882,
+   "hauteur_m390": 4961,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -2824,7 +3270,7 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 4,
+    "images": 12,
     "liens": 4
    },
    "classes_exclusives": [
@@ -2842,7 +3288,13 @@
     "carte-resto__recherche",
     "carte-resto__sr",
     "carte-resto__corps",
+    "carte-ouverte",
     "carte-resto__rubrique",
+    "rubrique-bande",
+    "rubrique-bande__photo",
+    "rubrique-bande__infos",
+    "rubrique-bande__num",
+    "rubrique-bande__detail",
     "carte-resto__rubrique-tete",
     "carte-resto__rubrique-titre",
     "carte-resto__photo",
@@ -2851,13 +3303,7 @@
     "carte-resto__plat-ligne",
     "carte-resto__plat-nom",
     "carte-resto__points",
-    "carte-resto__prix",
-    "carte-resto__desc",
-    "carte-resto__rubrique-note",
-    "carte-resto__etiquettes",
-    "carte-resto__regime",
-    "carte-resto__aucun",
-    "carte-resto__legende"
+    "carte-resto__prix"
    ],
    "data": [
     "data-module",
@@ -2870,8 +3316,10 @@
     "data-rubrique",
     "data-fx",
     "data-fx-force",
+    "data-effet",
     "data-filtres",
     "data-texte",
+    "data-grok",
     "data-aucun"
    ],
    "medias": {
@@ -2888,9 +3336,9 @@
    "sig": "section#passe.assiette",
    "dans_main": true,
    "code": {
-    "html": "la-carte.html:161-176",
+    "html": "la-carte.html:177-192",
     "css": "assets/js/modules/assiette-qui-se-dresse/module.css:9-49,55,60-70 ; assets/css/site.css:844-846,1088-1091,1149-1153,1170",
-    "js": "assets/js/site.js:2,925-989,1609-1636 ; assets/js/modules/assiette-qui-se-dresse/module.js:1,5-6,10,17-66"
+    "js": "assets/js/site.js:2,1073-1137,1170-1239,2282-2309 ; assets/js/modules/assiette-qui-se-dresse/module.js:1,5-6,10,17-66"
    },
    "titre": "Les mains du chef",
    "hauteur": 900,
@@ -2902,8 +3350,8 @@
     {
      "pin": true,
      "scrub": 0.6,
-     "debut": 4989,
-     "fin": 6249,
+     "debut": 3782,
+     "fin": 5042,
      "anime": false,
      "toggle": false
     }
@@ -2958,83 +3406,6 @@
    }
   },
   {
-   "id": "la-carte-fin",
-   "page": "la-carte",
-   "pages": [
-    "la-carte"
-   ],
-   "sig": "section#fin.fin-carte",
-   "dans_main": true,
-   "code": {
-    "html": "la-carte.html:177-191",
-    "css": "assets/css/socle.css:120,275-278 ; assets/css/site.css:75-78,850-858,947,1026,1067,1076,1221-1222,1726",
-    "js": "assets/js/site.js:31-43,121,224-239,489-538,807-816,1322-1327 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:64-83 ; assets/js/modules/agenda-des-dates/module.js:3,18-19,65,86-88,157,188-191 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:14,66,224,249-251,257,262 ; assets/js/modules/horaires-ouvert-maintenant/module.js:2,5-7,19-90 ; assets/js/socle/effets.js:9,273-288 ; assets/js/socle/onde.js:1"
-   },
-   "titre": "Une table vous attend",
-   "hauteur": 738,
-   "hauteur_m390": 692,
-   "masque_m390": false,
-   "position": "relative",
-   "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 4989,
-     "fin": 6627,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 0,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 2,
-    "liens": 4
-   },
-   "classes_exclusives": [
-    "fin-carte",
-    "media",
-    "fin-carte__photo",
-    "fin-carte__texte",
-    "statut",
-    "statut__point",
-    "fin-carte__actions"
-   ],
-   "data": [
-    "data-fx",
-    "data-fx-force",
-    "data-anime",
-    "data-libelle",
-    "data-statut-accueil",
-    "data-reservation-accueil",
-    "data-horaires-accueil",
-    "data-moment-seul"
-   ],
-   "medias": {
-    "capture": "medias/jardins-hacienda-2-maquette/la-carte-fin-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/la-carte-fin-m390.jpg",
-    "video": "medias/jardins-hacienda-2-maquette/la-carte-fin-p720.mp4"
-   }
-  },
-  {
    "id": "les-fetes-debut",
    "page": "les-fetes",
    "pages": [
@@ -3043,13 +3414,13 @@
    "sig": "section#debut.ouv-fetes",
    "dans_main": true,
    "code": {
-    "html": "les-fetes.html:120-160",
-    "css": "assets/css/site.css:318-334,595,603,609,614,696-698,715-718,742-744,767-768,787,791-795,943-948,1111-1114,1164-1167,1183,1250,1707-1746,2030",
-    "js": "assets/js/site.js:56,739-760 ; assets/js/modules/formulaire-par-etapes/module.js:30 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:97-102 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:3 ; assets/js/socle/transitions.js:25-46"
+    "html": "les-fetes.html:117-193",
+    "css": "assets/css/site.css:73-74,318-334,595,603,609,614,696-698,715-718,742-744,767-768,787,791-795,943-948,1111-1114,1164-1167,1183,1250,1707-1746,2030,3150-3184,3324-3354,3648-3649,3654,3658,3705",
+    "js": "assets/js/site.js:58,756-777,781-823,1298-1360,2393 ; assets/js/espace.js:241,248 ; assets/js/modules/formulaire-par-etapes/module.js:30 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:97-102 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:3 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,41"
    },
    "titre": "Les fêtes au coin du feuL'été au bord de l'eau",
    "hauteur": 900,
-   "hauteur_m390": 923,
+   "hauteur_m390": 892,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3069,7 +3440,7 @@
     "scale"
    ],
    "boucles_css": 3,
-   "animations_css": 3,
+   "animations_css": 8,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -3079,10 +3450,10 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 2,
+    "boutons": 4,
     "details": 0,
     "onglets": 0,
-    "deplies": 0,
+    "deplies": 2,
     "images": 8,
     "liens": 4
    },
@@ -3091,33 +3462,59 @@
     "ouv-fetes__lueurs",
     "ouv-fetes__grille",
     "ouv-fetes__contenu",
-    "ouv-fetes__decompte",
-    "ouv-fetes__j",
+    "ouv-fetes__saisons",
+    "bascule-saison",
+    "bascule-saison--discret",
+    "ouv-fetes__rang",
+    "ephem",
+    "ephem__reliure",
+    "ephem__bloc",
+    "ephem__epaisseur",
+    "ephem__page",
+    "ephem__haut",
+    "ephem__n",
+    "ephem__bas",
+    "insecable",
+    "ouv-fetes__suite",
     "ouv-fetes__texte",
     "ouv-fetes__actions",
-    "bascule-saison",
     "ouv-fetes__info",
     "ouv-fetes__visuel",
     "affiche",
     "affiche--noel",
+    "affiche__main",
+    "affiche__pivot",
+    "affiche__face",
+    "affiche__face--avant",
     "affiche__photo",
-    "affiche--sylvestre",
-    "ouv-fetes__visuel--ete",
-    "ouv-fetes__arche",
-    "ouv-fetes__rond"
+    "affiche__reflet"
    ],
    "data": [
     "data-effet",
-    "data-saison-seul",
+    "data-saison-choix",
     "data-iris-centre",
-    "data-decompte-geant",
+    "data-saison-seul",
+    "data-ephemeride",
+    "data-haut",
+    "data-bas",
+    "data-bas1",
+    "data-ce-soir-haut",
+    "data-ce-soir",
+    "data-ce-soir-bas",
+    "data-apres-haut",
+    "data-apres-bas",
+    "data-ephem-page",
+    "data-ephem-haut",
+    "data-ephem-n",
+    "data-ephem-bas",
     "data-libelle",
     "data-action-principale",
-    "data-saison-choix",
     "data-info-cle",
+    "data-grille",
+    "data-affiche",
     "data-sans-transition",
-    "data-fx",
-    "data-fx-force"
+    "data-affiche-avant",
+    "data-face"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/les-fetes-debut-p1440.jpg",
@@ -3134,13 +3531,13 @@
    "sig": "section#dates.agd",
    "dans_main": true,
    "code": {
-    "html": "les-fetes.html:161-212",
-    "css": "assets/js/modules/agenda-des-dates/module.css:3-12,16,24-25,32-44,52,63-64,74 ; assets/css/site.css:953-962,1120-1122,1146-1147",
-    "js": "assets/js/site.js:126,435-465,468-488 ; assets/js/modules/agenda-des-dates/module.js:1,10-15,20-23,30,39,50,57-58,62,66,78,81,91-94,98,103-104,146,150,187,198,208,220,237,243,254 ; assets/js/modules/reservation-de-table/module.js:49,83"
+    "html": "les-fetes.html:194-284",
+    "css": "assets/js/modules/agenda-des-dates/module.css:3-12,16,24-25,32-44,52,63-64,74 ; assets/css/site.css:953-962,1146-1147,2916-2917,3360-3396,3459-3466",
+    "js": "assets/js/site.js:130,158-161,171,183-210,446-476,479-499,732-753,1241-1272,1887-1904,1912-1996,1999-2045 ; assets/js/espace.js:189,238,242,427 ; assets/js/espace-regles.js:33-37 ; assets/js/espace-commandes.js:72-140 ; assets/js/modules/agenda-des-dates/module.js:1,10-15,20-23,30,39,50,57-58,62,66,78,81,91-94,98,103-104,146,150,187,198,208,220,237,243,254 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41,64 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11 ; assets/js/espace-apercu.js:75-76,92-93,96-102,112-114"
    },
    "titre": "Les prochaines dates",
-   "hauteur": 2376,
-   "hauteur_m390": 3093,
+   "hauteur": 1642,
+   "hauteur_m390": 3235,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3151,7 +3548,7 @@
    "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 1,
+   "sticky": 0,
    "elements": {
     "videos": 0,
     "audio": 0,
@@ -3162,25 +3559,27 @@
     "details": 1,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 16,
     "liens": 9
    },
    "classes_exclusives": [
     "agd",
     "dates",
+    "dates--billets",
     "agd__tete",
     "agd__h2",
     "agd__prochaine",
     "agd__outils",
     "agd__filtres",
     "agd__compte",
-    "dates__grille",
-    "dates__photo",
-    "dates__liste",
     "agd__liste",
     "agd__date",
+    "billet",
+    "billet__photo",
+    "billet__perfo",
     "agd__titre",
     "agd__texte",
+    "billet__menu",
     "agd__vide",
     "dates__source"
    ],
@@ -3191,6 +3590,7 @@
     "data-anime",
     "data-prochaine",
     "data-compte",
+    "data-effet",
     "data-debut",
     "data-type",
     "data-lieu",
@@ -3213,9 +3613,9 @@
    "sig": "section#noel.noel-scene",
    "dans_main": true,
    "code": {
-    "html": "les-fetes.html:213-251",
-    "css": "assets/css/site.css:72,1863-1915,1950",
-    "js": "assets/js/site.js:703-707,1537-1561,1590-1596 ; assets/js/socle/effets.js:17,152-159,271-288"
+    "html": "les-fetes.html:285-328",
+    "css": "assets/css/site.css:1863-1915,1950,3403-3430,3674-3684",
+    "js": "assets/js/site.js:558-615,720-724,2261-2269 ; assets/js/socle/effets.js:17,152-159,271-288"
    },
    "titre": "Le menu de Noël",
    "hauteur": 2700,
@@ -3227,8 +3627,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2772,
-     "fin": 4572,
+     "debut": 2542,
+     "fin": 4342,
      "anime": false,
      "toggle": false
     }
@@ -3250,7 +3650,7 @@
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 4,
+    "images": 2,
     "liens": 1
    },
    "classes_exclusives": [
@@ -3274,13 +3674,16 @@
     "noel-carte__logo",
     "noel-carte__couverture",
     "noel-carte__face",
-    "noel-carte__affiche",
+    "noel-couv",
+    "noel-couv__cadre",
+    "noel-couv__houx",
+    "noel-couv__logo",
+    "noel-couv__maison",
+    "noel-couv__titre",
+    "noel-couv__etoile",
+    "noel-couv__date",
     "noel-carte__brillant",
-    "noel-carte__dos",
-    "noel-carte__photo",
-    "noel-carte__mot",
-    "indice",
-    "noel-scene__indice"
+    "noel-carte__dos"
    ],
    "data": [
     "data-saison-seul",
@@ -3297,29 +3700,29 @@
    }
   },
   {
-   "id": "les-fetes-saint-sylvestre",
+   "id": "les-fetes-offrir-noel",
    "page": "les-fetes",
    "pages": [
     "les-fetes"
    ],
-   "sig": "section#saint-sylvestre.ame",
+   "sig": "section#offrir-noel.cadeau-fetes",
    "dans_main": true,
    "code": {
-    "html": "les-fetes.html:252-302",
-    "css": "assets/js/modules/accords-mets-et-vins/module.css:7-41,45-48,52-55,75-76,82,87-88,92-93 ; assets/css/site.css:301-302,336-341,594,611-612,967,1922-1949",
-    "js": "assets/js/site.js:178-205,603-628,1599-1605 ; assets/js/modules/accords-mets-et-vins/module.js:66-67,71,76-78,90-93,106-110,119-122,170-171,201,213 ; assets/js/socle/effets.js:152-159"
+    "html": "les-fetes.html:329-356",
+    "css": "assets/css/site.css:1788-1805,3435-3458,3550-3555,3813-3817,3821-3825,3836-3846",
+    "js": "assets/js/site.js:826-830,2236-2258 ; assets/js/socle/effets.js:152-159"
    },
-   "titre": "Le menu de la Saint-Sylvestre",
-   "hauteur": 1391,
-   "hauteur_m390": 1186,
+   "titre": "Offrez un moment aux Jardins",
+   "hauteur": 601,
+   "hauteur_m390": 926,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 17,
-   "animations_css": 17,
+   "boucles_css": 0,
+   "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -3328,8 +3731,8 @@
     "audio": 0,
     "iframes": 0,
     "formulaires": 0,
-    "champs": 5,
-    "boutons": 0,
+    "champs": 0,
+    "boutons": 5,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -3337,50 +3740,142 @@
     "liens": 1
    },
    "classes_exclusives": [
-    "ame",
-    "sylvestre",
-    "sylvestre__pluie",
-    "ame__grille",
-    "socle-cadre",
-    "ame__tete",
-    "socle-surtitre",
-    "sylvestre__titre",
-    "sylvestre__prix",
-    "sylvestre__medaille",
-    "sylvestre__medaille--or",
-    "ame__statique",
-    "sylvestre__dj",
-    "vinyle",
-    "ame__liste",
-    "ame__plat",
-    "ame__pastille",
-    "ame__moment",
-    "ame__rang",
-    "ame__nom",
-    "ame__detail",
-    "ame__accord",
-    "ame__type",
-    "ame__boisson",
-    "ame__region",
-    "ame__scene",
-    "ame__verre",
-    "ame__fiche",
-    "sylvestre__actions",
-    "sylvestre__alcool"
+    "cadeau-fetes",
+    "cadeau-fetes__grille",
+    "cadeau-fetes__objet",
+    "enveloppe__dos",
+    "cadeau-fetes__carte",
+    "carte-luxe",
+    "carte-luxe__reflet",
+    "carte-luxe__logo",
+    "carte-luxe__montant",
+    "carte-luxe__titre",
+    "carte-luxe__nom",
+    "carte-luxe__validite",
+    "enveloppe__poche",
+    "enveloppe__sceau",
+    "cadeau-fetes__texte",
+    "cadeau-fetes__intro",
+    "oe-carte__montants",
+    "cadeau-fetes__montants",
+    "oe-montant",
+    "cadeau-fetes__actions"
    ],
    "data": [
     "data-saison-seul",
-    "data-module",
-    "data-sylvestre",
-    "data-anime",
-    "data-prix",
+    "data-cadeau-fetes",
+    "data-carte-luxe",
     "data-visuel",
-    "data-choisi",
-    "data-plat",
-    "data-type",
+    "data-effet",
+    "data-audit-ignorer",
+    "data-carte-montant",
+    "data-anime",
+    "data-montant",
+    "data-libelle"
+   ],
+   "medias": {
+    "capture": "medias/jardins-hacienda-2-maquette/les-fetes-offrir-noel-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-2-maquette/les-fetes-offrir-noel-m390.jpg"
+   }
+  },
+  {
+   "id": "les-fetes-saint-sylvestre",
+   "page": "les-fetes",
+   "pages": [
+    "les-fetes"
+   ],
+   "sig": "section#saint-sylvestre.ss",
+   "dans_main": true,
+   "code": {
+    "html": "les-fetes.html:357-478",
+    "css": "assets/css/socle.css:279-282 ; assets/css/site.css:90-92,167,182,229,267,322,358,377,473,491,598,1085,1089-1091,1097,1167,1388,1924-1927,1937-1938,1948-1949,2049,2056-2058,2106-2112,2307,2452-2455,2543,2909,2936-3026,3098,3188-3189,3195,3207,3472-3492,3599,3630-3634,3912",
+    "js": "assets/js/site.js:332-395,420-443,446-476,856-897,1019-1027,1073-1137,1170-1239,1243-1272,1401-1430,1750-1783,1789-1884 ; assets/js/modules/formulaire-par-etapes/module.js:192 ; assets/js/modules/depliant-3d/module.js:17-59 ; assets/js/modules/plat-fumant/module.js:56-170 ; assets/js/modules/assiette-qui-se-dresse/module.js:17-66 ; assets/js/modules/ardoise-a-la-craie/module.js:50-149 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:74,281 ; assets/js/modules/reservation-de-table/module.js:60,434 ; assets/js/modules/plan-de-salle/module.js:69,159,271 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/modules/accords-mets-et-vins/module.js:93 ; assets/js/modules/carte-du-restaurant/module.js:16-121"
+   },
+   "titre": "Le menu de la Saint-Sylvestre",
+   "hauteur": 3690,
+   "hauteur_m390": 3147,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 21,
+   "animations_css": 21,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 1,
+    "boutons": 5,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 20,
+    "liens": 1
+   },
+   "classes_exclusives": [
+    "sylvestre__pluie",
+    "ss__collant",
+    "ss__minuit",
+    "ss__grille",
+    "ss__tete",
+    "ss__titre",
+    "ss__intro",
+    "ss__formule",
+    "ss__prix",
+    "ss__bascule",
+    "ss__interrupteur",
+    "ss__dj",
+    "vinyle",
+    "ss__actions",
+    "ss__alcool",
+    "ss__scene",
+    "ss__plats",
+    "ss-plat",
+    "est-actif",
+    "ss-plat__photo",
+    "mention-ia",
+    "ss-plat__rang",
+    "ss-plat__moment",
+    "ss-plat__nom",
+    "ss-plat__detail",
+    "ss-plat__vin",
+    "ss-plat__goutte",
+    "ss__service",
+    "ss__assiette",
+    "ss__photo"
+   ],
+   "data": [
+    "data-saison-seul",
+    "data-ss",
+    "data-accord",
+    "data-ss-minuit",
+    "data-audit-ignorer",
+    "data-anime",
+    "data-ss-prix",
+    "data-sans",
+    "data-avec",
+    "data-ss-prix-detail",
+    "data-ss-accord",
+    "data-libelle",
+    "data-effet",
+    "data-ss-plat",
     "data-couleur",
     "data-verre",
-    "data-libelle"
+    "data-type",
+    "data-vin",
+    "data-region",
+    "data-grok",
+    "data-ss-assiette",
+    "data-ss-photo",
+    "data-forme",
+    "data-ss-type",
+    "data-ss-vin"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/les-fetes-saint-sylvestre-p1440.jpg",
@@ -3397,9 +3892,9 @@
    "sig": "section#ete.ete-heures",
    "dans_main": true,
    "code": {
-    "html": "les-fetes.html:303-346",
+    "html": "les-fetes.html:479-522",
     "css": "assets/css/site.css:342-350",
-    "js": "assets/js/site.js:435-465,739-760,1384-1387"
+    "js": "assets/js/site.js:446-476,756-777,2053-2056"
    },
    "titre": "L'été, de 12 h à minuit",
    "hauteur": 0,
@@ -3489,9 +3984,9 @@
    "sig": "section#debut.ouv-offrir",
    "dans_main": true,
    "code": {
-    "html": "offrir.html:119-143",
-    "css": "assets/css/socle.css:120,270,275-278 ; assets/css/site.css:26,72,252-257,334,365,468-481,501,597,608,614,620,638,697,779,792,817,841,883,936-937,947,1026,1067,1076,1114,1123,1182-1183,1221-1222,1454-1457,1498,1611,1626-1629,1645-1647,1676,1717,1726,1745,1772,1811,1869,1960,1989,2242,2504,2522,2653",
-    "js": "assets/js/site.js:630-659,691-699,739-760,1537-1561,1590-1596 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:9,28,273-288,363-407 ; assets/js/socle/onde.js:1,67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+    "html": "offrir.html:117-147",
+    "css": "assets/css/socle.css:270 ; assets/css/site.css:72-74,252-257,468-481,597,614,779,841,936-937,1123,1183,3216-3231,3253,3497-3507,3536-3547",
+    "js": "assets/js/site.js:706-716,756-777,1276-1296,1302-1360,1436-1498,2206-2232,2261-2269,2393 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,41,45,55,101-102"
    },
    "titre": "Offrir un moment aux Jardins",
    "hauteur": 900,
@@ -3503,16 +3998,16 @@
     {
      "pin": false,
      "scrub": 0.5,
-     "debut": -585,
-     "fin": 638,
+     "debut": -576,
+     "fin": 617,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": null,
-     "debut": -399,
-     "fin": 625,
+     "debut": -396,
+     "fin": 617,
      "anime": false,
      "toggle": false
     }
@@ -3524,9 +4019,7 @@
    ],
    "boucles_css": 0,
    "animations_css": 0,
-   "canvas": [
-    "2d"
-   ],
+   "canvas": [],
    "decoupe": 0,
    "sticky": 0,
    "elements": {
@@ -3535,7 +4028,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 1,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -3544,38 +4037,49 @@
    },
    "classes_exclusives": [
     "ouv-offrir",
-    "media",
     "ouv-offrir__fond",
-    "ouv-offrir__braises",
     "ouv-offrir__grille",
     "ouv-offrir__texte",
-    "surtitre",
     "masque-ecran-tres-bas",
     "ouv-offrir__actions",
     "ouv-offrir__info",
     "carte-cadeau-apercu",
     "ouv-offrir__carte",
+    "cca__objet",
     "cca__face",
+    "cca__haut",
+    "cca__noms",
     "cca__nom",
-    "cca__montant",
     "cca__pour",
+    "cca__validite",
+    "cca__montant",
+    "cca__brillance",
+    "cca__dos",
+    "cca__dos-sur",
+    "cca__dos-mot",
+    "cca__dos-bas",
+    "cca__dos-signe",
+    "cca__retourner",
     "indice",
-    "ouv-offrir__indice"
+    "ouv-offrir__indice",
+    "indice--souris",
+    "indice--doigt"
    ],
    "data": [
-    "data-braises",
-    "data-effet",
-    "data-souris",
-    "data-audit-ignorer",
+    "data-edit-photo",
     "data-anime",
     "data-saison-seul",
     "data-action-principale",
     "data-sans-transition",
     "data-info-cle",
     "data-prix",
+    "data-effet",
     "data-iris-centre",
     "data-grille",
-    "data-montant-tournant"
+    "data-cca",
+    "data-montant-tournant",
+    "data-face",
+    "data-cca-retourner"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/offrir-debut-p1440.jpg",
@@ -3592,13 +4096,13 @@
    "sig": "section#composer.ccq",
    "dans_main": true,
    "code": {
-    "html": "offrir.html:144-203",
-    "css": "assets/js/modules/carte-cadeau-qui-se-compose/module.css:7-57,66,96-136 ; assets/css/site.css:300-304,482-484,967,1287-1336,1929",
-    "js": "assets/js/site.js:166,178-205,715-736,1232-1249,1257-1327,1330-1376 ; assets/js/modules/formulaire-par-etapes/module.js:68,181 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38,45,51-55,59,65-67,155,178,247 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
+    "html": "offrir.html:148-234",
+    "css": "assets/js/modules/carte-cadeau-qui-se-compose/module.css:7-57,66,96-136 ; assets/css/site.css:300-304,482-484,967,1287-1336,1929,3510-3534",
+    "js": "assets/js/site.js:171,183-210,732-753,834-853,1887-1904,1912-1996,1999-2045 ; assets/js/modules/formulaire-par-etapes/module.js:68,181 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38,45,51-55,59,65-67,155,178,247 ; assets/js/modules/reservation-de-table/module.js:41 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
    },
    "titre": "Votre carte cadeau",
-   "hauteur": 1161,
-   "hauteur_m390": 1532,
+   "hauteur": 1733,
+   "hauteur_m390": 2128,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -3612,19 +4116,19 @@
    "animations_css": 3,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 0,
+   "sticky": 1,
    "elements": {
     "videos": 0,
     "audio": 0,
     "iframes": 0,
     "formulaires": 1,
     "champs": 9,
-    "boutons": 4,
+    "boutons": 7,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 1,
-    "liens": 0
+    "images": 4,
+    "liens": 1
    },
    "classes_exclusives": [
     "ccq",
@@ -3669,6 +4173,8 @@
     "data-ccq-mot",
     "data-ccq-de",
     "data-ccq-ticket",
+    "data-idee-montant",
+    "data-idee-mot",
     "data-ccq-erreur",
     "data-ccq-moins",
     "data-ccq-plus",
@@ -3693,9 +4199,9 @@
    "sig": "div.rdl",
    "dans_main": true,
    "code": {
-    "html": "receptions.html:120-123",
+    "html": "receptions.html:118-121",
     "css": "assets/js/modules/rideau-en-lanieres/module.css:3-19,30-38,45-57 ; assets/css/site.css:303,982-983,1118-1119",
-    "js": "assets/js/site.js:166,178-205,715-736,1232-1249,1257-1327,1330-1376 ; assets/js/modules/rideau-en-lanieres/module.js:13,30-146 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:27 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
+    "js": "assets/js/site.js:171,183-210,732-753,1887-1904,1912-1996,1999-2045 ; assets/js/modules/rideau-en-lanieres/module.js:13,30-146 ; assets/js/modules/agenda-des-dates/module.js:173,177 ; assets/js/modules/plat-fumant/module.js:45 ; assets/js/modules/ardoise-a-la-craie/module.js:43 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:38 ; assets/js/modules/reservation-de-table/module.js:41 ; assets/js/modules/plan-de-salle/module.js:45 ; assets/js/modules/horaires-ouvert-maintenant/module.js:12 ; assets/js/modules/accords-mets-et-vins/module.js:67 ; assets/js/modules/carte-du-restaurant/module.js:11"
    },
    "titre": "",
    "hauteur": null,
@@ -3732,13 +4238,13 @@
    "sig": "section#debut.ouv-recep",
    "dans_main": true,
    "code": {
-    "html": "receptions.html:124-168",
-    "css": "assets/css/site.css:354-366,596,603,609,614-616,638-639,697-700,729,750-752,792-797,1115,1174,1251,1365-1366,1672-1702,2047-2071,2141-2142",
-    "js": "assets/js/site.js:763-804,1391-1409,1431-1456 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "receptions.html:122-166",
+    "css": "assets/css/site.css:354-366,596,603,609,614-616,638-639,697-700,729,750-752,792-797,1115,1174,1251,1365-1366,1672-1702,2047-2071,2141-2142,2869,3648-3653,3657,3701-3704",
+    "js": "assets/js/site.js:856-897,2060-2078,2100-2125,2393 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Recevoir pour un mariage",
    "hauteur": 906,
-   "hauteur_m390": 975,
+   "hauteur_m390": 907,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3829,12 +4335,12 @@
    "sig": "section#occasions.fetes-defile",
    "dans_main": true,
    "code": {
-    "html": "receptions.html:169-240",
-    "css": "assets/css/site.css:2077-2124",
-    "js": "assets/js/site.js:1100-1128,1134-1229"
+    "html": "receptions.html:167-238",
+    "css": "assets/css/site.css:2077-2124,3201-3210,3688-3691",
+    "js": "assets/js/site.js:1750-1783,1789-1884"
    },
    "titre": "Ce que l'on fête ici",
-   "hauteur": 3600,
+   "hauteur": 4500,
    "hauteur_m390": 3376,
    "masque_m390": false,
    "position": "relative",
@@ -3903,12 +4409,12 @@
    "sig": "section#espaces.domaine",
    "dans_main": true,
    "code": {
-    "html": "receptions.html:241-329",
-    "css": "assets/css/site.css:2239-2270",
-    "js": "assets/js/site.js:739-760,827-855,1675"
+    "html": "receptions.html:239-329",
+    "css": "assets/css/site.css:2239-2270,3304-3319",
+    "js": "assets/js/site.js:756-777,920,925-1018,2362 ; assets/js/socle/effets.js:14,238-269"
    },
    "titre": "Cinq espaces, un seul domaine",
-   "hauteur": 1020,
+   "hauteur": 2718,
    "hauteur_m390": 1004,
    "masque_m390": false,
    "position": "static",
@@ -3920,7 +4426,7 @@
    "animations_css": 0,
    "canvas": [],
    "decoupe": 0,
-   "sticky": 0,
+   "sticky": 1,
    "elements": {
     "videos": 0,
     "audio": 0,
@@ -3936,6 +4442,7 @@
    },
    "classes_exclusives": [
     "domaine",
+    "domaine__collant",
     "domaine__tete",
     "domaine__commandes",
     "domaine__fleche",
@@ -3951,6 +4458,7 @@
     "domaine__info"
    ],
    "data": [
+    "data-domaine-scene",
     "data-anime",
     "data-domaine-prec",
     "data-domaine-suiv",
@@ -3966,6 +4474,186 @@
    }
   },
   {
+   "id": "receptions-terrasse",
+   "page": "receptions",
+   "pages": [
+    "receptions"
+   ],
+   "sig": "section#terrasse.terrasse",
+   "dans_main": true,
+   "code": {
+    "html": "receptions.html:330-366",
+    "css": "assets/css/socle.css:279-282 ; assets/css/site.css:67-72,92,159-193,229,267,322,358,377,473,491,598,692,763-765,989,1085,1097,1167,1240-1242,1255-1256,1388,1532,1549,3248,3483,3599,3634",
+    "js": "assets/js/site.js:5,119,183-210,214-225,247-248,312,411,414-443,500-549,558-615,682-703,720-724,925-1016,1030-1041,1276-1296,1302-1360,1436-1498,1642-1644,1653-1655,1663,1668,1734,1789-1884,2206-2232,2261-2269,2322 ; assets/js/espace.js:91,273 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/lumiere-au-pointeur/module.js:2,129-130,139-274 ; assets/js/modules/rideau-en-lanieres/module.js:24,30-146 ; assets/js/modules/ciel-en-direct/module.js:136,188,242,247,291,301 ; assets/js/modules/givre-webgl/module.js:70-189 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:3,199,268,319-321 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:49-54 ; assets/js/socle/effets.js:17,152-159,190-214,271-288,293-318 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
+   },
+   "titre": "Recevoir, le soir venu",
+   "hauteur": 2340,
+   "hauteur_m390": 1857,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.4,
+     "debut": 8124,
+     "fin": 9564,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 1,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 6,
+    "liens": 2
+   },
+   "classes_exclusives": [
+    "terrasse",
+    "terrasse__cadre",
+    "terrasse__images",
+    "terrasse__img",
+    "terrasse__img--1",
+    "mention-ia",
+    "terrasse__img--2",
+    "terrasse__img--3",
+    "guirlandes",
+    "ampoule",
+    "halo",
+    "coeur",
+    "cible",
+    "terrasse__texte",
+    "terrasse__etapes",
+    "terrasse__fin",
+    "saison-tag",
+    "saison-tag--nuit",
+    "indice",
+    "terrasse__indice"
+   ],
+   "data": [
+    "data-scene",
+    "data-entete-cache",
+    "data-grille",
+    "data-collant",
+    "data-effet",
+    "data-grok",
+    "data-vue",
+    "data-vue-telephone",
+    "data-audit-ignorer",
+    "data-etape",
+    "data-sans-transition"
+   ],
+   "medias": {
+    "capture": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-2-maquette/receptions-terrasse-m390.jpg",
+    "video": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p720.mp4"
+   }
+  },
+  {
+   "id": "receptions-ils-ont-dit-oui",
+   "page": "receptions",
+   "pages": [
+    "receptions"
+   ],
+   "sig": "section#ils-ont-dit-oui.oui",
+   "dans_main": true,
+   "code": {
+    "html": "receptions.html:367-478",
+    "css": "assets/css/site.css:2369-2379,2390-2393,2400-2424,3261-3296,3694",
+    "js": "assets/js/site.js:1043-1069,1170-1239,1276-1296,1302-1360,1365-1397,2366 ; assets/js/modules/ciel-en-direct/module.js:111 ; assets/js/modules/plan-de-salle/module.js:215 ; assets/js/socle/calme.js:15-44"
+   },
+   "titre": "Ils ont dit oui aux Jardins",
+   "hauteur": 1390,
+   "hauteur_m390": 1888,
+   "masque_m390": false,
+   "position": "relative",
+   "cache": false,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 12,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 19,
+    "liens": 0
+   },
+   "classes_exclusives": [
+    "oui",
+    "oui__guirlande",
+    "oui__ampoule",
+    "oui__tete",
+    "oui__titre",
+    "oui__oui",
+    "oui__consigne",
+    "oui__note",
+    "oui__chiffre",
+    "oui__etoiles",
+    "oui__etoile",
+    "oui__sur",
+    "oui__grille",
+    "oui__tuile",
+    "oui__tuile--grande",
+    "oui__ouvrir",
+    "oui__image",
+    "oui__legende",
+    "oui__tuile--haute",
+    "oui__tuile--large",
+    "oui__album",
+    "oui__album-cadre",
+    "oui__album-photo",
+    "oui__album-btn",
+    "oui__album-btn--prec",
+    "oui__album-btn--suiv",
+    "oui__album-fermer",
+    "oui__album-confettis"
+   ],
+   "data": [
+    "data-oui",
+    "data-effet",
+    "data-oui-ouvrir",
+    "data-oui-album",
+    "data-oui-img",
+    "data-oui-legende",
+    "data-oui-compte",
+    "data-oui-prec",
+    "data-oui-suiv",
+    "data-oui-fermer",
+    "data-superpose",
+    "data-oui-donnees",
+    "data-oui-textes"
+   ],
+   "medias": {
+    "capture": "medias/jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui-m390.jpg"
+   }
+  },
+  {
    "id": "receptions-demande",
    "page": "receptions",
    "pages": [
@@ -3974,13 +4662,13 @@
    "sig": "section.demande",
    "dans_main": true,
    "code": {
-    "html": "receptions.html:330-456",
-    "css": "assets/css/site.css:204-208,396-424,703,725-728,769,783-784,1548,2192,2518-2593,2597-2644,2720-2744",
-    "js": "assets/js/site.js:489-538,762,1100-1128,1134-1229,1680 ; assets/js/socle/socle.js:58 ; assets/js/modules/formulaire-par-etapes/module.js:46-47,220-221 ; assets/js/modules/reservation-de-table/module.js:2,79,139,144,151,157,165,217,220-221,226,276 ; assets/js/modules/accords-mets-et-vins/module.js:1 ; assets/js/socle/effets.js:152-159 ; assets/js/socle/calme.js:1"
+    "html": "receptions.html:479-605",
+    "css": "assets/css/site.css:204-208,396-424,703,725-728,769,783-784,1548,2192,2518-2593,2597-2644,2720-2744,2845-2847,3292",
+    "js": "assets/js/site.js:500-549,855,1539,1588,1653,1750-1783,1789-1884,2367 ; assets/js/espace.js:11,91,112-116,171,354,438 ; assets/js/espace-regles.js:50-74 ; assets/js/espace-commandes.js:72-140 ; assets/js/socle/socle.js:57 ; assets/js/modules/formulaire-par-etapes/module.js:46-47,220-221 ; assets/js/modules/reservation-de-table/module.js:3,37-38,94,216,220-221,233,237,245,248,338,341-342,347,418,426 ; assets/js/modules/accords-mets-et-vins/module.js:1 ; assets/js/socle/effets.js:152-159 ; assets/js/socle/calme.js:1"
    },
    "titre": "Demander une réception",
-   "hauteur": 1037,
-   "hauteur_m390": 1871,
+   "hauteur": 983,
+   "hauteur_m390": 1820,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -4068,199 +4756,6 @@
    }
   },
   {
-   "id": "receptions-terrasse",
-   "page": "receptions",
-   "pages": [
-    "receptions"
-   ],
-   "sig": "section#terrasse.terrasse",
-   "dans_main": true,
-   "code": {
-    "html": "receptions.html:457-493",
-    "css": "assets/css/socle.css:279-282 ; assets/css/site.css:67-72,92,159-193,229,267,322,358,377,473,491,598,692,763-765,989,1085,1097,1167,1240-1242,1255-1256,1388,1532,1549",
-    "js": "assets/js/site.js:5,115,178-205,209-220,242-243,307,406,409-432,489-538,667-688,703-707,867-878,1000-1097,1134-1229,1537-1561,1590-1596,1646 ; assets/js/modules/envol-vers-le-panier/module.js:10-15,23-64 ; assets/js/socle/defilement.js:8,34-42,48-86,100-109 ; assets/js/modules/lumiere-au-pointeur/module.js:2,129-130,139-274 ; assets/js/modules/rideau-en-lanieres/module.js:24,30-146 ; assets/js/modules/ciel-en-direct/module.js:136,188,242,247,291,301 ; assets/js/modules/givre-webgl/module.js:70-189 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:73 ; assets/js/modules/reservation-de-table/module.js:2,119 ; assets/js/modules/plan-de-salle/module.js:44,68,77,147,234,239,244 ; assets/js/modules/carte-du-restaurant/module.js:16-121 ; assets/js/socle/ouverture.js:49-54 ; assets/js/socle/effets.js:17,152-159,190-214,271-288,293-318 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/boucles.js:56-81 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
-   },
-   "titre": "Recevoir, le soir venu",
-   "hauteur": 2340,
-   "hauteur_m390": 1857,
-   "masque_m390": false,
-   "position": "relative",
-   "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.4,
-     "debut": 6563,
-     "fin": 8003,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 0,
-   "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 1,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 6,
-    "liens": 2
-   },
-   "classes_exclusives": [
-    "terrasse",
-    "terrasse__cadre",
-    "terrasse__images",
-    "terrasse__img",
-    "terrasse__img--1",
-    "mention-ia",
-    "terrasse__img--2",
-    "terrasse__img--3",
-    "guirlandes",
-    "ampoule",
-    "halo",
-    "coeur",
-    "cible",
-    "terrasse__texte",
-    "terrasse__etapes",
-    "terrasse__fin",
-    "saison-tag",
-    "saison-tag--nuit",
-    "indice",
-    "terrasse__indice"
-   ],
-   "data": [
-    "data-scene",
-    "data-entete-cache",
-    "data-grille",
-    "data-collant",
-    "data-effet",
-    "data-grok",
-    "data-vue",
-    "data-vue-telephone",
-    "data-audit-ignorer",
-    "data-etape",
-    "data-sans-transition"
-   ],
-   "medias": {
-    "capture": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/receptions-terrasse-m390.jpg",
-    "video": "medias/jardins-hacienda-2-maquette/receptions-terrasse-p720.mp4"
-   }
-  },
-  {
-   "id": "receptions-ils-ont-dit-oui",
-   "page": "receptions",
-   "pages": [
-    "receptions"
-   ],
-   "sig": "section#ils-ont-dit-oui.oui",
-   "dans_main": true,
-   "code": {
-    "html": "receptions.html:494-621",
-    "css": "assets/css/site.css:2369-2424",
-    "js": "assets/js/site.js:880-921,1679 ; assets/js/modules/ciel-en-direct/module.js:111 ; assets/js/modules/plan-de-salle/module.js:215 ; assets/js/socle/calme.js:15-44"
-   },
-   "titre": "Ils ont dit oui aux Jardins",
-   "hauteur": 3119,
-   "hauteur_m390": 3308,
-   "masque_m390": false,
-   "position": "relative",
-   "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.6,
-     "debut": 8903,
-     "fin": 11122,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "x"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 1,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 13,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 21,
-    "liens": 0
-   },
-   "classes_exclusives": [
-    "oui",
-    "oui__collant",
-    "oui__guirlande",
-    "oui__ampoule",
-    "oui__tete",
-    "oui__titre",
-    "oui__oui",
-    "oui__consigne",
-    "oui__fil",
-    "oui__corde",
-    "oui__piste",
-    "oui__photo",
-    "oui__polaroid",
-    "oui__pince",
-    "oui__image",
-    "oui__legende",
-    "oui__pied",
-    "oui__progres",
-    "oui__album",
-    "oui__album-cadre",
-    "oui__album-photo",
-    "oui__album-btn",
-    "oui__album-btn--prec",
-    "oui__album-btn--suiv",
-    "oui__album-fermer",
-    "oui__album-confettis"
-   ],
-   "data": [
-    "data-oui",
-    "data-galerie",
-    "data-oui-piste",
-    "data-effet",
-    "data-oui-ouvrir",
-    "data-oui-progres",
-    "data-oui-album",
-    "data-oui-img",
-    "data-oui-legende",
-    "data-oui-compte",
-    "data-oui-prec",
-    "data-oui-suiv",
-    "data-oui-fermer",
-    "data-superpose",
-    "data-oui-donnees",
-    "data-oui-textes"
-   ],
-   "medias": {
-    "capture": "medias/jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui-m390.jpg",
-    "video": "medias/jardins-hacienda-2-maquette/receptions-ils-ont-dit-oui-p720.mp4"
-   }
-  },
-  {
    "id": "reserver-debut",
    "page": "reserver",
    "pages": [
@@ -4269,9 +4764,9 @@
    "sig": "section#debut.ouv-resa",
    "dans_main": true,
    "code": {
-    "html": "reserver.html:121-140",
-    "css": "assets/css/socle.css:268-270,279-282 ; assets/css/site.css:26,92,167,229,267,322,334,358,365,377,432-444,473,480,491,501,598,604-608,614,619-620,628-638,697,792,817,883,902,906,1026,1067,1085,1097,1114,1167,1182-1183,1388,1454-1457,1498,1611,1626-1629,1645-1647,1676,1717,1745,1772,1811,1869,1960,1989,2242,2504,2522,2653",
-    "js": "assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "reserver.html:119-138",
+    "css": "assets/css/socle.css:268-270,279-282 ; assets/css/site.css:92,167,229,267,322,358,377,432-444,473,491,598,604-608,614,619-620,628-636,902,906,1085,1097,1167,1388,3483,3599,3634",
+    "js": "assets/js/site.js:2393 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Votre table",
    "hauteur": 680,
@@ -4328,7 +4823,6 @@
     "ouv-resa__img--soir",
     "mention-ia",
     "ouv-resa__texte",
-    "surtitre",
     "ouv-resa__h-midi",
     "ouv-resa__h-soir",
     "masque-ecran-bas",
@@ -4361,13 +4855,13 @@
    "sig": "section#formulaire.resa",
    "dans_main": true,
    "code": {
-    "html": "reserver.html:141-219",
-    "css": "assets/js/modules/reservation-de-table/module.css:5-35,43-53,59-69,88-96 ; assets/css/site.css:445-451,568-583,673-676,723,993-1005,1177-1180",
-    "js": "assets/js/site.js:118,158-164,489-538,1000-1097,1232-1249,1257-1321,1537-1561 ; assets/js/modules/reservation-de-table/module.js:27,35,84,101,108,124,131,134,152,159,164,169-170,183,202,250-251"
+    "html": "reserver.html:139-235",
+    "css": "assets/js/modules/reservation-de-table/module.css:5-35,43-53,59-69,88-96 ; assets/css/site.css:445-451,568-581,673-676,723,993-1005,1177-1180,3899-3952,3968-3982,3993-4002,4006,4014-4015,4022-4067,4093-4095,4100-4138",
+    "js": "assets/js/site.js:122,163-169,420-443,500-549,1597,1789-1884,1887-1904,1912-1990 ; assets/js/espace.js:149,338,342,438 ; assets/js/espace-regles.js:39-45,66-74 ; assets/js/espace-barre.js:14 ; assets/js/espace-commandes.js:72-140 ; assets/js/espace-donnees.js:17-21 ; assets/js/espace-stock.js:13 ; assets/js/modules/formulaire-par-etapes/module.js:1,41,64,174,194 ; assets/js/modules/reservation-de-table/module.js:41,49,99,145,152,167,173,204,208,236-238,244,248,251,263-264,273-275,281,288,296,320,386-389,394-395 ; assets/js/espace-apercu.js:74,77-78,99,122"
    },
    "titre": "Le jour, l'heure, les couverts",
-   "hauteur": 1802,
-   "hauteur_m390": 2535,
+   "hauteur": 970,
+   "hauteur_m390": 1486,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -4384,58 +4878,72 @@
     "audio": 0,
     "iframes": 0,
     "formulaires": 1,
-    "champs": 25,
-    "boutons": 16,
+    "champs": 21,
+    "boutons": 22,
     "details": 1,
     "onglets": 0,
-    "deplies": 0,
+    "deplies": 1,
     "images": 2,
-    "liens": 2
+    "liens": 3
    },
    "classes_exclusives": [
     "resa",
     "resa__grille",
     "resa__form",
     "resa__tete",
-    "resa__bandeau",
     "resa__soiree",
+    "resa__intro",
+    "resa__progression",
+    "resa__pas",
+    "resa__pas-n",
+    "resa__pas-t",
+    "resa__etape",
     "resa__champ",
     "resa__jours",
+    "resa__cal",
     "resa__date",
+    "resa__date--jour",
     "resa__puces",
     "resa__puce",
+    "resa__puce--service",
+    "resa__ico",
+    "resa__puce-h",
     "resa__libelle",
+    "resa__couverts-scene",
+    "resa__table",
+    "resa__couverts-cote",
     "resa__compteur",
+    "resa__couverts-mot",
     "resa__aide",
     "resa__creneaux",
-    "resa__plus",
-    "resa__facultatif",
-    "sr-only",
-    "resa__puces--demandes",
-    "resa__date--large",
-    "resa__contact",
-    "resa__mention",
-    "resa__bouton",
-    "resa__recap"
+    "resa__puces--lieux"
    ],
    "data": [
     "data-module",
     "data-grille",
+    "data-voir-table",
     "data-reservation",
     "data-resa-form",
     "data-anime",
     "data-soiree",
     "data-agenda",
+    "data-resa-progression",
+    "data-aller-etape",
+    "data-etape",
     "data-champ",
     "data-resa-jours",
+    "data-resa-cal",
     "data-note",
+    "data-resa-table",
     "data-moins",
     "data-plus",
+    "data-resa-couverts-mot",
     "data-resa-groupe",
     "data-libelle",
     "data-resa-creneaux",
     "data-resa-creneaux-aide",
-    "data-resa-recap"
+    "data-resa-table-choisie",
+    "data-sans-transition"
    ],
    "medias": {
     "capture": "medias/jardins-hacienda-2-maquette/reserver-formulaire-p1440.jpg",
@@ -4451,9 +4959,9 @@
    "sig": "section#plan.pds",
    "dans_main": true,
    "code": {
-    "html": "reserver.html:220-285",
-    "css": "assets/js/modules/plan-de-salle/module.css:7-23,29-67,75,80,87,105-139 ; assets/css/site.css:303-304,460-465,552-565,617,1006-1008",
-    "js": "assets/js/site.js:1278-1321 ; assets/js/modules/agenda-des-dates/module.js:11,14,60,173,177 ; assets/js/modules/plan-de-salle/module.js:41-45,51,56-58,61,73-78,85-89,105,115,127,131,139,143,154,159-162,184,202,214-217,220,225,250,255 ; assets/js/socle/effets.js:152-159"
+    "html": "reserver.html:236-301",
+    "css": "assets/js/modules/plan-de-salle/module.css:7-23,29-67,75,80,87,105-139 ; assets/css/site.css:303-304,460-465,552-565,617,1006-1008,3235-3237,3602",
+    "js": "assets/js/site.js:1933-1990 ; assets/js/modules/agenda-des-dates/module.js:11,14,60,173,177 ; assets/js/modules/plan-de-salle/module.js:41-45,51,56-58,61,73-78,85-89,105,115,127,131,139,143,154,159-162,184,202,214-217,220,225,250,255"
    },
    "titre": "Choisir ma table (facultatif)",
    "hauteur": 1595,
@@ -4465,8 +4973,8 @@
     {
      "pin": false,
      "scrub": null,
-     "debut": 2119,
-     "fin": 3818,
+     "debut": 1287,
+     "fin": 4284,
      "anime": false,
      "toggle": false
     }

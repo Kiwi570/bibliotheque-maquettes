@@ -4,27 +4,28 @@
  "page": "les-fetes",
  "titre": "La saison décide",
  "role": "ouverture",
- "description": "Nuit chaude et petites lueurs dorées qui scintillent ; les vraies affiches du restaurant (Noël derrière, Saint-Sylvestre devant) flottent doucement et mènent chacune à son menu ; le décompte de la Saint-Sylvestre en médaille dorée ; la bascule hiver/été. L'été : nuit turquoise, la piscine en arche et les lanternes en médaillon. La vitre givrée (module givre-webgl) est retirée à la demande du client.",
+ "description": "« Les fêtes au coin du feu » : une grande éphéméride à reliure rouge dont les pages des jours passés s'arrachent une à une jusqu'au vrai nombre de jours avant la Saint-Sylvestre, calculé chaque jour ; les vraies affiches de Noël et de la Saint-Sylvestre à attraper et retourner ; bascule « Cet hiver / Cet été ».",
  "animations": [
-  "apparition-au-défilement",
+  "ouverture-orchestrée",
+  "compteur",
   "parallaxe"
  ],
  "interactions": [
-  "aucune"
+  "jeu"
  ],
  "dependances": [
   "gsap",
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
+ "note_qualite": 5,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "les-fetes.html:120-160",
-  "css": "assets/css/site.css:318-334,595,603,609,614,696-698,715-718,742-744,767-768,787,791-795,943-948,1111-1114,1164-1167,1183,1250,1707-1746,2030",
-  "js": "assets/js/site.js:56,739-760 ; assets/js/modules/formulaire-par-etapes/module.js:30 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:97-102 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,149-187 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:3 ; assets/js/socle/transitions.js:25-46"
+  "html": "les-fetes.html:117-193",
+  "css": "assets/css/site.css:73-74,318-334,595,603,609,614,696-698,715-718,742-744,767-768,787,791-795,943-948,1111-1114,1164-1167,1183,1250,1707-1746,2030,3150-3184,3324-3354,3648-3649,3654,3658,3705",
+  "js": "assets/js/site.js:58,756-777,781-823,1298-1360,2393 ; assets/js/espace.js:241,248 ; assets/js/modules/formulaire-par-etapes/module.js:30 ; assets/js/modules/carte-cadeau-qui-se-compose/module.js:97-102 ; assets/js/socle/ouverture.js:35 ; assets/js/socle/voile.js:5,45-53,56-76,151-191 ; assets/js/socle/effets.js:11,22,190-214,320-347 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:3 ; assets/js/socle/transitions.js:25-46 ; assets/js/espace-apercu.js:2,41"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/les-fetes-debut-p1440.jpg",
@@ -35,12 +36,17 @@
   "shader plein écran redessiné à chaque image : ne redessiner que si l'image change, rien pendant le défilement, démarrer à demi-résolution",
   "installé seulement au repos en haut de page et l'hiver"
  ],
+ "particularites": [
+  "éphéméride dont les pages s'arrachent jusqu'au vrai décompte"
+ ],
  "mesures": {
   "hauteur_p1440": 900,
-  "hauteur_m390": 923,
+  "hauteur_m390": 892,
   "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [],
- "impact": "vivant"
+ "familles": [
+  "objet-manipulable"
+ ],
+ "impact": "spectaculaire"
 }
