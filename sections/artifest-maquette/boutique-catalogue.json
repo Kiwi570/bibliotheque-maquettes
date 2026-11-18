@@ -1,0 +1,51 @@
+{
+ "id": "artifest-maquette/boutique-catalogue",
+ "maquette": "artifest-maquette",
+ "page": "boutique",
+ "titre": "Tous les articles",
+ "role": "produits",
+ "description": "« Tous les articles » sur crème : 85 articles filtrables (rayon, prix maximum, tri) avec recherche qui ignore accents et pluriels, grille qui se réorganise en glissant, aperçu rapide et ajout au panier en tiroir",
+ "animations": [
+  "flip",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres",
+  "recherche",
+  "panier-simule",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "flip"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": "catalogue-filtres-flip",
+ "modules": [
+  "catalogue-filtres-flip"
+ ],
+ "code": {
+  "html": "boutique.html:132-1481",
+  "css": "assets/js/modules/catalogue-filtres-flip/module.css:28-29,38 ; assets/css/site.css:34-46,148-162,167-170,175,181-185,196,221,239,305,327-354,378-382,410,472,479,483,491,507,511-515",
+  "js": "assets/js/site.js:5,15-35,80,136-172,175-194,197-214,217-235,245 ; assets/js/modules/catalogue-filtres-flip/module.js:1,9,15-130 ; assets/js/socle/effets.js:16,151-158 ; assets/js/socle/formulaires.js:34-58 ; assets/js/modules/panier-en-tiroir/module.js:2-5,41,50,64,112,116,139,145,202-204,210-213,221,310,325,330,349,354,384"
+ },
+ "medias": {
+  "capture": "medias/artifest-maquette/boutique-catalogue-p1440.jpg",
+  "capture_m390": "medias/artifest-maquette/boutique-catalogue-m390.jpg"
+ },
+ "pieges": [
+  "Commande simulée"
+ ],
+ "mesures": {
+  "hauteur_p1440": 8029,
+  "hauteur_m390": 17899,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "recomposition"
+ ],
+ "impact": "vivant"
+}

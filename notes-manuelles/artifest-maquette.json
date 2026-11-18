@@ -1,0 +1,657 @@
+{
+  "maquette": {
+    "client": "boutique de feux d'artifice pour particuliers dans les Ardennes (secteur Sedan et Mouzon) : compacts, longue durée, pétards, fumigènes, feux de jour, spécial mariage, retrait en boutique",
+    "activite": [
+      "commerce",
+      "spectacle"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "nocturne",
+      "énergique",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--nuit",
+      "texte": "--jour",
+      "accent": "--flamme",
+      "secondaire": "--or"
+    },
+    "polices": {
+      "titres": "Unbounded",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Nuit de fête » : la nuit pour les feux, le jour (crème) pour la boutique et les outils, flamme orange pour les boutons, or pour un mot par titre ; Unbounded large",
+      "intro : la mèche s'allume, la fusée monte et le bouquet éclate autour du logo ; bouquets de feux d'artifice en canvas qui éclatent au-dessus des appels finaux",
+      "mèche qui se consume au fil des trois étapes de la commande ; fumée de couleur qui suit la couleur choisie pour les feux de jour",
+      "composeur de budget : occasion et budget, sélection d'articles proposée et total, tout ajouté au panier en un clic",
+      "boutique de 85 articles filtrables (rayons, prix, recherche qui ignore accents et pluriels) avec aperçu rapide et panier en tiroir (modules de la bibliothèque)"
+    ],
+    "reserves": [
+      "photos de feux et de mariage générées par Grok ; photos produits du site actuel",
+      "page Conseils assez textuelle (distances, catégories)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "trace-svg",
+      "révélation-texte",
+      "flip",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "panier-simule",
+      "filtres",
+      "recherche",
+      "calculateur",
+      "configurateur",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le bouquet de feu d'artifice qui éclate",
+      "fil": "la mèche qui se consume"
+    },
+    "metier": "boutique de feux d'artifice"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro de 2,4 s : la mèche s'allume, la fusée monte et le bouquet éclate autour du logo ; voile de nuit entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête de nuit : logo Artifest, boutique, mariage, conseils, contact, recherche, bouton flamme « Panier » avec pastille",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur nuit, liens en Unbounded",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Le feu d’artificeà petits prix,dans les Ardennes",
+      "role": "ouverture",
+      "description": "Ouverture : « Le feu d'artifice à petits prix, dans les Ardennes » avec « petits prix » en or ; grande photo de bouquet doré au-dessus d'une ville la nuit, bouquets en canvas qui éclatent, boutons boutique et spécial mariage, nombre d'articles",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "acheter": {
+      "titre": "Acheter chez Artifest",
+      "role": "preuves",
+      "description": "« Acheter chez Artifest » : quatre engagements en bandeau (réservé aux majeurs, retrait, cartes et espèces, conseils)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rayons": {
+      "titre": "Cinq rayons, du claque-doigts au bouquet final",
+      "role": "produits",
+      "description": "« Cinq rayons, du claque-doigts au bouquet final » : grandes cartes photo des rayons avec nombre d'articles et prix de départ",
+      "animations": [
+        "révélation-image",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "vedettes": {
+      "titre": "Best-sellers et nouveautés",
+      "role": "produits",
+      "description": "« Best-sellers et nouveautés » sur crème : rangée de produits avec étiquette, prix et bouton « Ajouter » qui envoie au panier en tiroir",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage": {
+      "titre": "Un bouquet final que personne n’oubliera",
+      "role": "offre",
+      "description": "« Un bouquet final que personne n'oubliera » : couple devant un feu d'artifice, liste des avantages, carte du produit vedette (Full Emotion, 349 €)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "composer": {
+      "titre": "Dites-nous l’occasion et le budget",
+      "role": "calculateur",
+      "description": "« Dites-nous l'occasion et le budget » sur crème : occasion en étiquettes et curseur de budget ; sélection d'articles proposée avec total, bouton « Tout ajouter au panier »",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur",
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "sélection d'articles proposée selon l'occasion et le budget"
+      ]
+    },
+    "feux-de-jour": {
+      "titre": "Feu de jour rouge",
+      "role": "outil-interactif",
+      "description": "« Huit couleurs de fumée, en plein jour » : on choisit la couleur, la fumée en canvas et le produit affiché suivent",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "fumée de couleur qui suit la couleur choisie"
+      ]
+    },
+    "commande": {
+      "titre": "Trois étapes, et c’est prêt",
+      "role": "étapes",
+      "description": "« Trois étapes, et c'est prêt » : une mèche se consume au défilement le long des trois étapes (commander, préparer, retirer), photo de bouquet",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "mèche qui se consume le long des étapes"
+      ]
+    },
+    "appel": {
+      "titre": "On allume la mèche ?",
+      "role": "appel",
+      "description": "Appel final « On allume la mèche ? » sur nuit : bouquets de feux d'artifice en canvas qui éclatent au-dessus du titre, boutons boutique ou e-mail et téléphone",
+      "animations": [
+        "canvas-2d",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouquets de feux d'artifice qui éclatent au-dessus de l'appel"
+      ]
+    },
+    "pied": {
+      "titre": "Secteur Sedan et Mouzon",
+      "role": "pied-de-page",
+      "description": "Pied de page de nuit : logo, secteur Sedan et Mouzon, sommaire, rayons de la boutique, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Pétard mouillé",
+      "role": "page-404",
+      "description": "404 « Pétard mouillé » : fusée qui retombe sans éclater, boutons retour et boutique",
+      "animations": [
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-debut": {
+      "titre": "La boutique",
+      "role": "ouverture",
+      "description": "« La boutique » en très grand, recherche, nombre d'articles par rayon en tuiles qui choisissent le filtre du catalogue",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "recherche",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "boutique-catalogue": {
+      "titre": "Tous les articles",
+      "role": "produits",
+      "description": "« Tous les articles » sur crème : 85 articles filtrables (rayon, prix maximum, tri) avec recherche qui ignore accents et pluriels, grille qui se réorganise en glissant, aperçu rapide et ajout au panier en tiroir",
+      "animations": [
+        "flip",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "panier-simule",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "catalogue-filtres-flip",
+      "pieges": [
+        "Commande simulée"
+      ],
+      "dependances": [
+        "gsap",
+        "flip"
+      ]
+    },
+    "boutique-appel": {
+      "titre": "Vous hésitez entre deux feux ?",
+      "role": "appel",
+      "description": "Appel final « Vous hésitez entre deux feux ? » sur nuit : bouquets de feux d'artifice en canvas qui éclatent au-dessus du titre, boutons boutique ou e-mail et téléphone",
+      "animations": [
+        "canvas-2d",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouquets de feux d'artifice qui éclatent au-dessus de l'appel"
+      ]
+    },
+    "conseils-debut": {
+      "titre": "Tirer en toute sécurité",
+      "role": "ouverture",
+      "description": "« Tirer en toute sécurité » : titre avec le dernier mot en or, photo de feu au-dessus d'un lac",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-categories": {
+      "titre": "Quatre catégories, quatre âges",
+      "role": "services",
+      "description": "« Quatre catégories, quatre âges » : F1 à F4 en cartes avec âge minimum et usage",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-distances": {
+      "titre": "Distances de sécurité : celles de la notice de chaque article",
+      "role": "outil-interactif",
+      "description": "« Distances de sécurité » : schéma où une flèche se trace entre le feu et le public",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-gestes": {
+      "titre": "Avant, pendant, après",
+      "role": "étapes",
+      "description": "« Avant, pendant, après » : trois gestes numérotés en cartes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-questions": {
+      "titre": "Vos questions",
+      "role": "faq",
+      "description": "« Vos questions » : questions dépliables et photo de fumigène rouge",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseils-appel": {
+      "titre": "Un doute avant de tirer ?",
+      "role": "appel",
+      "description": "Appel final « Un doute avant de tirer ? » sur nuit : bouquets de feux d'artifice en canvas qui éclatent au-dessus du titre, boutons boutique ou e-mail et téléphone",
+      "animations": [
+        "canvas-2d",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouquets de feux d'artifice qui éclatent au-dessus de l'appel"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Une question, une commande ?",
+      "role": "ouverture",
+      "description": "« Une question, une commande ? » : numéro en très grand flamme sur une photo de bouquet au-dessus des toits",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : formulaire avec case « J'ai 18 ans ou plus », adresse, retrait et paiement épinglés",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-secteur": {
+      "titre": "Entre Sedan et Mouzon",
+      "role": "carte",
+      "description": "« Entre Sedan et Mouzon » : carte dessinée où la route se trace jusqu'à la boutique",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-debut": {
+      "titre": "Le bouquet finalde votre mariage",
+      "role": "ouverture",
+      "description": "« Le bouquet final de votre mariage » : couple devant un grand feu doré, boutons",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-moments": {
+      "titre": "Une journée, trois lumières",
+      "role": "produits",
+      "description": "« Une journée, trois lumières » : les articles par moment de la journée (sortie de la mairie, vin d'honneur, soirée) avec ajout au panier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-vedette": {
+      "titre": "Full Emotion",
+      "role": "produits",
+      "description": "« Full Emotion » : le produit vedette du mariage en grand, prix et ajout au panier",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-longue-duree": {
+      "titre": "Pour les grands bouquets",
+      "role": "produits",
+      "description": "« Pour les grands bouquets » : articles longue durée en grille avec ajout au panier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-jour-scene": {
+      "titre": "Fumées et étincelles froides",
+      "role": "produits",
+      "description": "« Fumées et étincelles froides » : articles de jour et de scène en grille",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "mariage-appel": {
+      "titre": "On en parle ?",
+      "role": "appel",
+      "description": "Appel final « On en parle ? » sur nuit : bouquets de feux d'artifice en canvas qui éclatent au-dessus du titre, boutons boutique ou e-mail et téléphone",
+      "animations": [
+        "canvas-2d",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouquets de feux d'artifice qui éclatent au-dessus de l'appel"
+      ]
+    }
+  }
+}
