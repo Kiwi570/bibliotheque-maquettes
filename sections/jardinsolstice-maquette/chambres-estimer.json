@@ -1,0 +1,43 @@
+{
+ "id": "jardinsolstice-maquette/chambres-estimer",
+ "maquette": "jardinsolstice-maquette",
+ "page": "chambres",
+ "titre": "Votre séjour, en un coup d'œil",
+ "role": "calculateur",
+ "description": "Calculateur de séjour : chambre (vignettes rondes), nuits et personnes, Assiette en option, total animé, lien qui emporte les choix",
+ "animations": [
+  "compteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "calculateur"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "chambres.html:252-276",
+  "css": "assets/css/site.css:37,370-398,634,677-681",
+  "js": "assets/js/site.js:217-260"
+ },
+ "medias": {
+  "capture": "medias/jardinsolstice-maquette/chambres-estimer-p1440.jpg",
+  "capture_m390": "medias/jardinsolstice-maquette/chambres-estimer-m390.jpg"
+ },
+ "pieges": [
+  "Radios visibles (pas d'input caché en 1 px) sinon l'audit voit le focus sur un élément caché"
+ ],
+ "mesures": {
+  "hauteur_p1440": 875,
+  "hauteur_m390": 1108,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

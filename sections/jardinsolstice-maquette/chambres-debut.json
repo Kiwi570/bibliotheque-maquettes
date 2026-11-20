@@ -1,0 +1,48 @@
+{
+ "id": "jardinsolstice-maquette/chambres-debut",
+ "maquette": "jardinsolstice-maquette",
+ "page": "chambres",
+ "titre": "Trois chambresécologiques",
+ "role": "ouverture",
+ "description": "Photo de la maison dans un disque solaire qui s'ouvre puis s'étend en carré au défilement",
+ "animations": [
+  "ouverture-orchestrée",
+  "masque",
+  "révélation-texte"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "chambres.html:110-126",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:75-76,313-332,670-672,676,697-699,717-718",
+  "js": "assets/js/site.js:92-111,114-128,469-470,477 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:27,40,151-158 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/jardinsolstice-maquette/chambres-debut-p1440.jpg",
+  "capture_m390": "medias/jardinsolstice-maquette/chambres-debut-m390.jpg",
+  "video": "medias/jardinsolstice-maquette/chambres-debut-p720.mp4"
+ },
+ "pieges": [
+  "Poser l'état de départ du disque en CSS pour les arrivées intro et voile, sinon flash au retrait du voile"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 781,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "masque"
+ ],
+ "impact": "vivant"
+}

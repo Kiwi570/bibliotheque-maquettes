@@ -1,0 +1,1127 @@
+{
+ "maquette": {
+  "client": "micro-ferme bio, chambres d'hôtes écologiques et tisanes de plantes médicinales (Perche)",
+  "activite": [
+   "hébergement",
+   "commerce",
+   "tourisme"
+  ],
+  "concept": [
+   "carnet",
+   "catalogue"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "--fond",
+   "texte": "--texte",
+   "accent": "--soleil",
+   "secondaire": "--sauge"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Figtree",
+   "mono": ""
+  },
+  "points_forts": [
+   "Soleil réel du lieu calculé en direct (lever, coucher, jours avant le solstice) dans l'intro et l'ouverture",
+   "La saison du jour choisit l'ouverture (ombelle givrée en hiver) et la roue de l'année",
+   "Photos du client mises en grand (produits au soleil, maison, jardin) et 14 images Grok cohérentes",
+   "Outils utiles : calculateur de séjour relié à la demande, catalogue de 35 tisanes filtrable avec panier simulé, demande en trois étapes préremplie",
+   "Pages intérieures au niveau de l'accueil, chacune avec sa composition d'ouverture (disque, étal, horizon, carte, bandeau)"
+  ],
+  "reserves": [
+   "Photos des chambres petites (1072 px) : en cartes moyennes seulement",
+   "Une seule ouverture d'accueil (hiver) : les autres saisons n'ont pas encore leur visuel d'ouverture",
+   "Pas d'objet manipulable : l'effet signature est un soleil calculé, pas un geste"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "masque",
+   "trace-svg",
+   "progression-fixée",
+   "galerie-horizontale",
+   "reactif-vitesse",
+   "transition-de-page",
+   "filtre-anime",
+   "compteur"
+  ],
+  "interactions": [
+   "calculateur",
+   "filtres",
+   "recherche",
+   "panier-simule",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "le soleil du jour sur son arc, qui ouvre le site et le voile",
+   "fil": "le soleil et la saison : arc, disque des Chambres, roue de l'année"
+  },
+  "metier": "chambres d'hôtes et paysans-herboristes",
+  "besoins": [
+   "réserver",
+   "vendre",
+   "catalogue",
+   "agenda"
+  ]
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "decor",
+   "description": "Voile de transition en iris, soleil au centre et nom de la page",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "voile du socle"
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "ouverture",
+   "description": "Panneau d'intro : l'arc du soleil se dessine, le soleil monte puis glisse jusqu'au soleil de la page",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "intro, filmée avec l'ouverture de l'accueil"
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête chaux avec logo du client recoloré pour le contraste",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "en-tête du socle"
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran du socle",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "menu du socle"
+  },
+  "debut": {
+   "titre": "Vivre au rythmede la nature",
+   "role": "ouverture",
+   "description": "Ombelle givrée en plein cadre, arc du soleil du jour à Vaupillon (lever, coucher, durée du jour, position réelle), titre à droite, solstice à J-n",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Le texte clair sur photo veut une couleur de fond sombre sur la figure (.media a un fond clair par défaut) sinon axe mesure un faux contraste",
+    "Soleil de nuit : disque pâle en bout d'arc, jamais caché (objet d'ouverture du voile)"
+   ]
+  },
+  "ferme": {
+   "titre": "Deux paysans-herboristes, une micro-ferme bio",
+   "role": "équipe",
+   "description": "Deux paysans-herboristes : texte, quatre repères vrais, grande photo du jardin et portrait en médaillon",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement",
+    "parallaxe",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chambres": {
+   "titre": "Trois chambres écologiques pour un séjour à la campagne",
+   "role": "offre",
+   "description": "Bande sauge : trois cartes de chambres (photo, nom latin de la plante, niveau, prix dès)",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Lien de carte étendu par ::after : marquer data-superpose sinon l'audit voit le prix recouvert"
+   ]
+  },
+  "table": {
+   "titre": "L'Assiette du jardin",
+   "role": "tarifs",
+   "description": "L'Assiette du jardin en carte numérotée, prix adulte et enfant, jours de service",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes": {
+   "titre": "Une sélection pour l'hiver",
+   "role": "produits",
+   "description": "Sélection de tisanes en sachets kraft dessinés qui glissent à l'horizontale au défilement et s'inclinent selon la vitesse",
+   "animations": [
+    "galerie-horizontale",
+    "reactif-vitesse",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Sans JavaScript la rangée doit rester défilable (overflow-x auto), sinon contenu inaccessible"
+   ]
+  },
+  "saisons": {
+   "titre": "Au fil des saisons",
+   "role": "outil-interactif",
+   "description": "Roue de l'année en scène collante : l'anneau des mois tourne au défilement depuis la saison du jour, photo ronde et faits de chaque saison",
+   "animations": [
+    "progression-fixée",
+    "masque",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Faire tourner le <svg> avec transformOrigin 50% 50%, jamais svgOrigin sur la racine",
+    "La mention Illustration générée hors du disque, sinon coupée"
+   ]
+  },
+  "marches": {
+   "titre": "Les marchés de fin d'année",
+   "role": "agenda",
+   "description": "Marchés de fin d'année classés passé, prochain, à venir d'après la date du jour, photo collante",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "maison": {
+   "titre": "Une maison qui respire",
+   "role": "méthode",
+   "description": "Maison qui respire : terres cuites en grand et liste matériaux, énergie, eau",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "venir": {
+   "titre": "Venez vivre au rythme du Perche",
+   "role": "appel",
+   "description": "Appel final sur la tasse près de la fenêtre givrée (Grok), deux actions",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Sommaire",
+   "role": "pied-de-page",
+   "description": "Pied sauge, logo clair, labels, mentions à compléter non cliquables",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Ce sentier ne mène nulle part",
+   "role": "page-404",
+   "description": "Panier de cueillette vide dans l'herbe givrée, titre du métier",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-debut": {
+   "titre": "Le Perche,depuis La Floudière",
+   "role": "ouverture",
+   "description": "Bocage d'hiver en plein cadre, brume qui dérive, raccourcis vers sept rubriques",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-balades": {
+   "titre": "Balades à pied",
+   "role": "carte",
+   "description": "Balades : liste en deux colonnes et photo de forêt",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-velo": {
+   "titre": "À vélo, sur la Véloscénie",
+   "role": "carte",
+   "description": "Vélo et Véloscénie : services de la ferme et photo",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-jardins": {
+   "titre": "Jardins à visiter",
+   "role": "carte",
+   "description": "Jardins à visiter, petite photo",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-patrimoine": {
+   "titre": "Abbayes, manoirs et musées",
+   "role": "carte",
+   "description": "Patrimoine avec dessin SVG d'abbaye qui se trace",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-loisirs": {
+   "titre": "Sports et loisirs",
+   "role": "carte",
+   "description": "Sports et loisirs du Perche en liste à deux colonnes, avec une petite photo de téléski nautique",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-tables": {
+   "titre": "Où dîner le samedi",
+   "role": "carte",
+   "description": "Tables du samedi avec dessin d'assiette qui se trace",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-adresses": {
+   "titre": "Bonnes adresses bio",
+   "role": "carte",
+   "description": "Bonnes adresses bio et photo du magasin de producteurs",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-coups-de-coeur": {
+   "titre": "Trois adresses à part",
+   "role": "preuves",
+   "description": "Trois coups de cœur des hôtes en cartes sur bande sauge, une seule avec photo",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "alentours-appel": {
+   "titre": "Le Perche, au départ de la ferme",
+   "role": "appel",
+   "description": "Appel final dessiné : arc du soleil qui se trace",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-debut": {
+   "titre": "Apprendre les plantes,au jardin",
+   "role": "ouverture",
+   "description": "Grand titre puis bandeau photo qui s'ouvre depuis une pastille et s'élargit au défilement",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-programme": {
+   "titre": "Trois rendez-vous, au fil de l'été",
+   "role": "agenda",
+   "description": "Programme 2026 en trois cartes, statut Terminé calculé",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-journee": {
+   "titre": "Une journée à la ferme",
+   "role": "étapes",
+   "description": "Frise d'une journée en immersion qui se trace",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-groupes": {
+   "titre": "Venir à plusieurs",
+   "role": "offre",
+   "description": "Visites de groupe : photo, prix, action",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-stages": {
+   "titre": "Mieux connaître les plantes",
+   "role": "services",
+   "description": "Stages : objectifs et invitation à écrire",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "animations-appel": {
+   "titre": "Être prévenu des prochaines dates",
+   "role": "appel",
+   "description": "Appel dessiné pour être prévenu",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chambres-debut": {
+   "titre": "Trois chambresécologiques",
+   "role": "ouverture",
+   "description": "Photo de la maison dans un disque solaire qui s'ouvre puis s'étend en carré au défilement",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Poser l'état de départ du disque en CSS pour les arrivées intro et voile, sinon flash au retrait du voile"
+   ]
+  },
+  "chambres-rubus": {
+   "titre": "Rubus",
+   "role": "tarifs",
+   "description": "Chambre Rubus : photo et vignettes collantes, fiche, tableau des tarifs, demande préremplie",
+   "animations": [
+    "masque",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Petit surtitre au-dessus d'un grand titre italique : padding-top .18em sur le titre sinon chevauchement mesuré"
+   ]
+  },
+  "chambres-tilia": {
+   "titre": "Tilia",
+   "role": "tarifs",
+   "description": "Chambre Tilia : photo et vignettes collantes, fiche, tableau des tarifs, demande préremplie",
+   "animations": [
+    "masque",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Petit surtitre au-dessus d'un grand titre italique : padding-top .18em sur le titre sinon chevauchement mesuré"
+   ]
+  },
+  "chambres-borago": {
+   "titre": "Borago",
+   "role": "tarifs",
+   "description": "Chambre Borago : photo et vignettes collantes, fiche, tableau des tarifs, demande préremplie",
+   "animations": [
+    "masque",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Petit surtitre au-dessus d'un grand titre italique : padding-top .18em sur le titre sinon chevauchement mesuré"
+   ]
+  },
+  "chambres-table": {
+   "titre": "À table, les produits du jardin",
+   "role": "tarifs",
+   "description": "Petit-déjeuner et Assiette du jardin sur bande sauge",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chambres-estimer": {
+   "titre": "Votre séjour, en un coup d'œil",
+   "role": "calculateur",
+   "description": "Calculateur de séjour : chambre (vignettes rondes), nuits et personnes, Assiette en option, total animé, lien qui emporte les choix",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Radios visibles (pas d'input caché en 1 px) sinon l'audit voit le focus sur un élément caché"
+   ]
+  },
+  "chambres-conditions": {
+   "titre": "Avant de venir",
+   "role": "faq",
+   "description": "Bon à savoir en liste de définitions, photo de linge",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "chambres-appel": {
+   "titre": "Une question avant de réserver ?",
+   "role": "appel",
+   "description": "Appel final dessiné : arc du soleil et horizon qui se tracent au défilement, deux actions",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Venir àLa Floudière",
+   "role": "carte",
+   "description": "Coordonnées et plan d'accès schématique en SVG : trajet de la gare qui se trace, ferme en soleil",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Étiquettes de carte en % : repositionner par largeur et en masquer sur petit écran, sinon chevauchements"
+   ]
+  },
+  "contact-demande": {
+   "titre": "Réserver, commander, demander",
+   "role": "contact",
+   "description": "Demande en trois étapes (séjour, table, commande, groupe, autre), récapitulatif en direct, préremplie par l'adresse",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "Par le train, le vélo ou la route",
+   "role": "carte",
+   "description": "Accès train, vélo, voiture et plan dessiné du client",
+   "animations": [
+    "apparition-au-défilement",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-debut": {
+   "titre": "Paysans-herboristesdans le Perche",
+   "role": "ouverture",
+   "description": "Prairie et maison en plein cadre qui s'ouvrent comme un horizon, titre en bas",
+   "animations": [
+    "ouverture-orchestrée",
+    "masque",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-nous": {
+   "titre": "Deux reconversions, un même jardin",
+   "role": "équipe",
+   "description": "Magalie et Sébastien, portrait et abeilles",
+   "animations": [
+    "apparition-au-défilement",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-jardin": {
+   "titre": "Flâner dans le jardin",
+   "role": "galerie",
+   "description": "Planches du jardin qui glissent au défilement",
+   "animations": [
+    "galerie-horizontale",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-cultures": {
+   "titre": "Au plus près de l'état sauvage",
+   "role": "chiffres",
+   "description": "Cultures : chiffres vrais, méthodes, photos superposées",
+   "animations": [
+    "apparition-au-défilement",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-maison": {
+   "titre": "La maison qui respire",
+   "role": "méthode",
+   "description": "Plan dessiné du lieu et démarche en quatre colonnes",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-nuit": {
+   "titre": "Des nuits vraiment noires",
+   "role": "manifeste",
+   "description": "Nuits noires : ciel étoilé en grand",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-questions": {
+   "titre": "Nos choix, expliqués",
+   "role": "faq",
+   "description": "Questions et engagements en pastilles",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "la-ferme-appel": {
+   "titre": "Venir voir la ferme",
+   "role": "appel",
+   "description": "Appel à organiser une visite de groupe, arc du soleil qui se trace et deux actions",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-debut": {
+   "titre": "Une quarantaine de plantes,cultivées ici",
+   "role": "ouverture",
+   "description": "Étal de trois photos qui arrivent en biais et glissent à des vitesses différentes",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-catalogue": {
+   "titre": "Classiques, saisonnières, goûteuses",
+   "role": "produits",
+   "description": "35 tisanes filtrables par famille et par plante (accents et pluriels ignorés), filtre gardé dans l'adresse, ajout au panier",
+   "animations": [
+    "filtre-anime",
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-panier-bouton": {
+   "titre": "",
+   "role": "barre-fixe",
+   "description": "Bouton panier flottant",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "partie du panier"
+  },
+  "tisanes-panier": {
+   "titre": "Votre panier",
+   "role": "outil-interactif",
+   "description": "Panier en tiroir : minimum 15 €, port offert dès 75 €, deux onglets synchronisés, donnée abîmée nettoyée",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "fenêtre, testée par les parcours"
+  },
+  "tisanes-produits": {
+   "titre": "Sirops, hydrolats, baumes",
+   "role": "produits",
+   "description": "Autres préparations en grille sur bande sauge",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-champ": {
+   "titre": "Quatre gestes, tous à la main",
+   "role": "étapes",
+   "description": "Du champ à la tasse : quatre gestes et trait qui se trace",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-trouver": {
+   "titre": "Près de chez vous, dans le Perche et au-delà",
+   "role": "carte",
+   "description": "Points de vente par zone en accordéons, photo collante",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-questions": {
+   "titre": "Pourquoi nous faisons comme ça",
+   "role": "faq",
+   "description": "Questions sur les choix de la ferme",
+   "animations": [
+    "apparition-au-défilement",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tisanes-commander": {
+   "titre": "Une commande pour l'hiver ?",
+   "role": "appel",
+   "description": "Appel final sur fleurs d'origan",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

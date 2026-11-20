@@ -1,0 +1,50 @@
+{
+ "id": "jardinsolstice-maquette/debut",
+ "maquette": "jardinsolstice-maquette",
+ "page": "index",
+ "titre": "Vivre au rythmede la nature",
+ "role": "ouverture",
+ "description": "Ombelle givrée en plein cadre, arc du soleil du jour à Vaupillon (lever, coucher, durée du jour, position réelle), titre à droite, solstice à J-n",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "parallaxe",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:110-141",
+  "css": "assets/css/socle.css:240-245,250,263-266 ; assets/css/site.css:69-118,301-302,306-309,664-669,674-675,697,706,712-717",
+  "js": "assets/js/site.js:39-72,92-111,114-128,469-470,478 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/boucles.js:5,54-77 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/jardinsolstice-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/jardinsolstice-maquette/debut-m390.jpg",
+  "video": "medias/jardinsolstice-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Le texte clair sur photo veut une couleur de fond sombre sur la figure (.media a un fond clair par défaut) sinon axe mesure un faux contraste",
+  "Soleil de nuit : disque pâle en bout d'arc, jamais caché (objet d'ouverture du voile)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "spectaculaire"
+}
