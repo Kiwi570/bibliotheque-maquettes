@@ -1,0 +1,684 @@
+{
+ "maquette": {
+  "client": "agence de communication événementielle, hospitalités et expériences de marque (sport et divertissement)",
+  "activite": [
+   "services-b2b",
+   "spectacle"
+  ],
+  "concept": [
+   "affiche"
+  ],
+  "ambiance": [
+   "clair",
+   "énergique"
+  ],
+  "palette": {
+   "fond": "#F4F3EF",
+   "texte": "#111113",
+   "accent": "#E6E017",
+   "secondaire": "#E7E5DE"
+  },
+  "polices": {
+   "titres": "Archivo semi-large (wdth 112), 800",
+   "texte": "Instrument Sans",
+   "mono": null
+  },
+  "points_forts": [
+   "Le noir, le blanc et le jaune du « & » du logo tenus sur toutes les pages, fond clair dominant",
+   "Plus de 80 vraies photos d'événements en grand, aucune image générée",
+   "Intro « coupe » : la barre oblique du logo fend l'écran et l'ouvre en deux, reprise par le voile entre les pages",
+   "Appel final « we create & deliver » redessiné en typographie géante, barre qui se trace",
+   "Réalisations filtrables par métier (filtre dans l'adresse) et galeries enfin légendées",
+   "Deux études de cas sur un même modèle, chiffres vrais du site actuel"
+  ],
+  "reserves": [
+   "Aucun objet à manipuler : le site joue sur la photo et la typographie",
+   "Sections clients et chiffres purement typographiques",
+   "Galerie PGW non épinglée (rangée qui glisse) après des flashs à l'épinglage"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "révélation-texte",
+   "révélation-image",
+   "parallaxe",
+   "marquee",
+   "trace-svg",
+   "compteur",
+   "galerie-horizontale",
+   "masque",
+   "bouton-magnétique"
+  ],
+  "interactions": [
+   "filtres",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "aucun objet à manipuler ; l'intro fend l'écran le long de la barre oblique du logo",
+   "fil": "la barre oblique du logo : intro, voile en biais, signature « we create & deliver »"
+  },
+  "metier": "agence événementielle"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile « coupe »",
+   "role": "transition-de-page",
+   "description": "Voile « coupe » : panneau noir au bord en biais (la barre oblique du logo) qui entre par la gauche et sort par la droite, avec le logo et le nom de la page d'arrivée.",
+   "animations": [
+    "transition-de-page",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Forme ajoutée dans voile.js (coupeEntre, coupeSort) et dans FORMES_VOILE du générateur et du gabarit."
+   ]
+  },
+  "ouverture-panneau": {
+   "titre": "Intro « coupe »",
+   "role": "ouverture",
+   "description": "Intro « coupe » : le logo blanc se pose, un trait oblique se trace à la pente du logo (14°, recalculée selon le format), puis le panneau s'ouvre en deux le long du trait (clip-path à un seul polygone) pendant que le titre monte.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "La pente se calcule en % de largeur d'après la hauteur de l'écran, sinon le trait se couche sur téléphone.",
+    "Pas de versObjet : l'audit le signale (grille indicative)."
+   ]
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "En-tête noir, logo blanc d'origine, trois liens et bouton jaune « Votre projet ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran noir, études de cas en sous-liens précédés d'une barre oblique jaune.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Nous créons& livrons desévénementspremium.",
+   "role": "ouverture",
+   "description": "Texte sur le noir à gauche, photo de foule coupée en biais à droite avec un fin trait blanc ; titre en 4 lignes, « & » jaune ; la photo respire doucement et glisse en parallaxe. Sur téléphone : photo en bandeau au bord biseauté, texte dessous.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Aperçu flou en fond de la figure, sinon une case vide au retour arrière.",
+    "Sans JavaScript, min-height à 0 : l'en-tête dans le flux poussait l'information clé hors de l'écran."
+   ]
+  },
+  "clients": {
+   "titre": "Ils nous font confiance 25",
+   "role": "preuves",
+   "description": "Bandeau des 25 clients sur le noir : deux rangs en sens contraires, noms séparés par des barres obliques jaunes, rang du bas en lettres évidées, bouton pause.",
+   "animations": [
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Rang en lettres évidées : aria-hidden et data-audit-ignorer, sinon contraste 1,00 partout."
+   ]
+  },
+  "metiers": {
+   "titre": "Du pop-up à la loge, toujours au cœur de l’événement.",
+   "role": "services",
+   "description": "Les 5 métiers en lignes numérotées : la photo de chaque ligne s'ouvre en biais à son arrivée et glisse au défilement, le numéro de la ligne au centre passe en jaune.",
+   "animations": [
+    "révélation-image",
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Classe d'état .ouvert (jamais .vu, posée par le socle).",
+    "Liens fléchés à 44 px de haut (soulignés, pas bordés)."
+   ]
+  },
+  "the-alters": {
+   "titre": "The Alters infiltre la Fashion Week.",
+   "role": "portfolio",
+   "description": "Étude de cas à la une : colonne collante avec chiffres et tracé schématique République → Champs-Élysées qui se dessine pendant que le camion avance, photos du camion à droite.",
+   "animations": [
+    "trace-svg",
+    "compteur",
+    "révélation-image",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Points du tracé calculés une fois (80), pas de getPointAtLength à chaque image.",
+    "« Tracé schématique » écrit sous le dessin : aucun faux plan de Paris."
+   ]
+  },
+  "paris-games-week": {
+   "titre": "Paris Games Week, une partie sans fin.",
+   "role": "galerie",
+   "description": "Paris Games Week sur le noir : rangée de 6 photos légendées qui glisse à l'horizontale pendant que la section passe, barre de progression jaune.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "L'épinglage (data-fx=\"galerie\") donnait des flashs à l'entrée, même sans anticipatePin : rangée qui glisse sans épinglage.",
+    "Images chargées en eager juste après l'ouverture."
+   ]
+  },
+  "art-de-recevoir": {
+   "titre": "L’art de recevoir",
+   "role": "services",
+   "description": "« L'art de recevoir » : une table dressée qui s'ouvre jusqu'au plein écran pendant que les deux mots s'écartent, carte noire des prestations à la fin.",
+   "animations": [
+    "masque",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Section ramenée à 170svh pour raccourcir l'accueil."
+   ]
+  },
+  "methode": {
+   "titre": "Conseil Conception Évènement",
+   "role": "méthode",
+   "description": "Conseil × Conception × Évènement en très grand, les « × » dans des pastilles jaunes qui tournent au défilement, trois colonnes de verbes vrais.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Glissement des mots seulement dès 1024 px : sur téléphone, « texte coupé ».",
+    "« × » dessinés en SVG, pas en caractère (chevauchements à l'audit)."
+   ]
+  },
+  "engagements": {
+   "titre": "Des événements plus responsables, évalués et mesurés.",
+   "role": "preuves",
+   "description": "Engagements RSE sur le fond d'appoint : mot surligné en jaune, chiffres (9 chartes, top 15 %), photo en rideau, médaille EcoVadis qui tourne et se pose.",
+   "animations": [
+    "compteur",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Parlons de votre prochain événement.",
+   "role": "appel",
+   "description": "Appel final : « we create & deliver » en typographie géante, barre oblique qui se trace et « & » jaune qui se pose, puis titre, téléphone et e-mail.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Décor aria-hidden et data-audit-ignorer.",
+    "Décalages vers l'intérieur seulement : la section coupe ce qui sort."
+   ]
+  },
+  "pied": {
+   "titre": "Adresse",
+   "role": "pied-de-page",
+   "description": "Pied noir : logo, adresse et métro, sommaire complet, réseaux, mentions à compléter.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Vous êtesen coulisses.",
+   "role": "page-404",
+   "description": "« Vous êtes en coulisses. » sur une photo de régie plein cadre.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons devotre prochainévénement.",
+   "role": "contact",
+   "description": "Titre et coordonnées à gauche, demande de projet en 3 étapes (type d'événement en pastilles, période, lieu, invités, coordonnées) et récapitulatif « Votre brief » noir qui se remplit en direct.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Étapes masquées seulement avec JavaScript ; sans lui, le formulaire entier s'affiche."
+   ]
+  },
+  "contact-agence": {
+   "titre": "Au cœur de Paris, entre les Grands Boulevards et le Faubourg Poissonnière.",
+   "role": "contact",
+   "description": "Bandeau panoramique des toits de Paris, puis adresse, métro et téléphone sur le noir.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-carriere": {
+   "titre": "Rejoindre l’équipe.",
+   "role": "contact",
+   "description": "Candidature spontanée, avec une photo de plateau.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-fin": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "engagements-debut": {
+   "titre": "Des événementsplus responsables,évalués et mesurés.",
+   "role": "ouverture",
+   "description": "Titre surligné, médaille EcoVadis qui tourne à l'arrivée et au défilement, deux chiffres, puis bande photo qui se resserre.",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements-demarche": {
+   "titre": "Mesurer, proposer, progresser.",
+   "role": "manifeste",
+   "description": "Démarche (solutions durables proposées, bilan CLIMEET) et photo en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements-achats": {
+   "titre": "Des partenaires labellisés, des ressources locales.",
+   "role": "preuves",
+   "description": "Achats labellisés en étiquettes sur le noir, photo en rideau.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements-ecovadis": {
+   "titre": "Quatre thèmes passés au crible.",
+   "role": "preuves",
+   "description": "Quatre thèmes évalués par EcoVadis en cartes numérotées.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements-chartes": {
+   "titre": "Neuf chartes, une même exigence.",
+   "role": "preuves",
+   "description": "Les 9 chartes en liste numérotée, Charte de la diversité.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "engagements-fin": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "paris-games-week-debut": {
+   "titre": "PGW etPremium Events,une partie sans fin.",
+   "role": "ouverture",
+   "description": "Ouverture d'étude de cas : texte à gauche (fil d'Ariane, titre surligné, action, fiche Pour / Mission), photo coupée en biais à droite.",
+   "animations": [
+    "ouverture-orchestrée",
+    "parallaxe",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "La fiche passe après l'action et l'information clé, sinon elles sortent du premier écran sur téléphone."
+   ]
+  },
+  "paris-games-week-chiffres": {
+   "titre": "En images",
+   "role": "chiffres",
+   "description": "Trois chiffres vrais sur le noir, filets jaunes.",
+   "animations": [
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "paris-games-week-idee": {
+   "titre": "Un salon, des stands tous différents.",
+   "role": "portfolio",
+   "description": "L'idée du projet, photo en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "paris-games-week-temps-fort": {
+   "titre": "Mezzanine, arène, plateau tournant.",
+   "role": "portfolio",
+   "description": "Temps fort sur le noir : dispositifs numérotés (ou parcours tracé pour The Alters), deux photos décalées.",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "paris-games-week-public": {
+   "titre": "Huit marques du jeu et de la tech.",
+   "role": "preuves",
+   "description": "Les marques ou le public, citation à filet jaune, photo en rideau.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "paris-games-week-galerie": {
+   "titre": "En images",
+   "role": "galerie",
+   "description": "Mosaïque de 5 photos légendées (une grande carrée, quatre petites).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "5 photos et non 6 : la sixième restait seule sur une ligne.",
+    "Grande photo en 1:1 pour garder 1 280 px de large."
+   ]
+  },
+  "paris-games-week-suite": {
+   "titre": "Autre étude de cas",
+   "role": "portfolio",
+   "description": "Carte vers l'autre étude de cas.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "paris-games-week-fin": {
+   "ignorer": "même appel final que l'accueil"
+  },
+  "realisations-debut": {
+   "titre": "Toujoursau cœurde l’événement.",
+   "role": "ouverture",
+   "description": "Grand titre « Toujours au cœur de l'événement. » puis bande de photos qui défile seule, avec pause.",
+   "animations": [
+    "ouverture-orchestrée",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-realisations": {
+   "titre": "Filtrer par métier",
+   "role": "portfolio",
+   "description": "Barre de filtres collante (5 métiers, filtre gardé dans l'adresse) et 5 chapitres : numéro jaune, titre du site actuel, projets cités en pastilles, mosaïque légendée.",
+   "animations": [
+    "apparition-au-défilement",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Barre collante sous l'en-tête, remontée à 0 quand l'en-tête se cache."
+   ]
+  },
+  "realisations-etudes": {
+   "titre": "Deux projets racontés de bout en bout.",
+   "role": "portfolio",
+   "description": "Deux cartes d'études de cas côte à côte (The Alters, Paris Games Week) : grande photo qui se resserre au défilement, surtitre, titre, résumé et lien.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-clients": {
+   "titre": "Ils nous font confiance.",
+   "role": "preuves",
+   "description": "Index des 25 marques clientes sur le noir, en grille typographique qui arrive en cascade ; mention des logos à fournir.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "realisations-fin": {
+   "ignorer": "même appel final que l'accueil"
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "id": "premium-events-maquette/ouverture-panneau",
+ "maquette": "premium-events-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "engagements",
+  "paris-games-week",
+  "realisations",
+  "the-alters"
+ ],
+ "titre": "Intro « coupe »",
+ "role": "ouverture",
+ "description": "Intro « coupe » : le logo blanc se pose, un trait oblique se trace à la pente du logo (14°, recalculée selon le format), puis le panneau s'ouvre en deux le long du trait (clip-path à un seul polygone) pendant que le titre monte.",
+ "animations": [
+  "ouverture-orchestrée",
+  "trace-svg",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:64-68",
+  "css": "assets/css/socle.css:224-227 ; assets/css/site.css:83-87",
+  "js": "assets/js/site.js:27-47,232-239 ; assets/js/socle/ouverture.js:22-30,160-237"
+ },
+ "medias": {},
+ "pieges": [
+  "La pente se calcule en % de largeur d'après la hauteur de l'écran, sinon le trait se couche sur téléphone.",
+  "Pas de versObjet : l'audit le signale (grille indicative)."
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "masque",
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

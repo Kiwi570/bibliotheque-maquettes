@@ -1,0 +1,47 @@
+{
+ "id": "premium-events-maquette/metiers",
+ "maquette": "premium-events-maquette",
+ "page": "index",
+ "titre": "Du pop-up à la loge, toujours au cœur de l’événement.",
+ "role": "services",
+ "description": "Les 5 métiers en lignes numérotées : la photo de chaque ligne s'ouvre en biais à son arrivée et glisse au défilement, le numéro de la ligne au centre passe en jaune.",
+ "animations": [
+  "révélation-image",
+  "parallaxe",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:135-210",
+  "css": "assets/css/site.css:188-200,453,476-477",
+  "js": "assets/js/site.js:50-57,139-167,170-220,232-239"
+ },
+ "medias": {
+  "capture": "medias/premium-events-maquette/metiers-p1440.jpg",
+  "capture_m390": "medias/premium-events-maquette/metiers-m390.jpg",
+  "video": "medias/premium-events-maquette/metiers-p720.mp4"
+ },
+ "pieges": [
+  "Classe d'état .ouvert (jamais .vu, posée par le socle).",
+  "Liens fléchés à 44 px de haut (soulignés, pas bordés)."
+ ],
+ "mesures": {
+  "hauteur_p1440": 1866,
+  "hauteur_m390": 2766,
+  "epinglee": false,
+  "scrolltriggers": 15
+ },
+ "familles": [],
+ "impact": "vivant"
+}

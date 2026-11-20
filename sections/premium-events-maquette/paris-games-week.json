@@ -1,0 +1,47 @@
+{
+ "id": "premium-events-maquette/paris-games-week",
+ "maquette": "premium-events-maquette",
+ "page": "index",
+ "titre": "Paris Games Week, une partie sans fin.",
+ "role": "galerie",
+ "description": "Paris Games Week sur le noir : rangée de 6 photos légendées qui glisse à l'horizontale pendant que la section passe, barre de progression jaune.",
+ "animations": [
+  "galerie-horizontale"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:255-312",
+  "css": "assets/css/site.css:37,235-249,479-482,571",
+  "js": "assets/js/site.js:94-102,223-230 ; assets/js/socle/effets.js:14,236-267"
+ },
+ "medias": {
+  "capture": "medias/premium-events-maquette/paris-games-week-p1440.jpg",
+  "capture_m390": "medias/premium-events-maquette/paris-games-week-m390.jpg",
+  "video": "medias/premium-events-maquette/paris-games-week-p720.mp4"
+ },
+ "pieges": [
+  "L'épinglage (data-fx=\"galerie\") donnait des flashs à l'entrée, même sans anticipatePin : rangée qui glisse sans épinglage.",
+  "Images chargées en eager juste après l'ouverture."
+ ],
+ "mesures": {
+  "hauteur_p1440": 997,
+  "hauteur_m390": 830,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "defilement-horizontal"
+ ],
+ "impact": "vivant"
+}
