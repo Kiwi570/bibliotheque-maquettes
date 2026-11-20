@@ -1,0 +1,48 @@
+{
+ "id": "baugier-maquette/grande",
+ "maquette": "baugier-maquette",
+ "page": "index",
+ "titre": "Une toile de 2,40 mètres",
+ "role": "galerie",
+ "description": "La plus grande toile part d'une vignette (découpe) et s'ouvre jusqu'au cadre complet, en contain sur fond encre ; « 240 cm » et « 145 cm » s'écartent de part et d'autre.",
+ "animations": [
+  "masque",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:274-289",
+  "css": "assets/css/site.css:132-145,437-440",
+  "js": "assets/js/site.js:14-17 ; assets/js/socle/gouttiere.js:8 ; assets/js/socle/effets.js:17-18,151-158,269-283"
+ },
+ "medias": {
+  "capture": "medias/baugier-maquette/grande-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/grande-m390.jpg",
+  "video": "medias/baugier-maquette/grande-p720.mp4"
+ },
+ "pieges": [
+  "object-fit contain sur une œuvre en plein cadre, sinon elle est recadrée.",
+  "Sur téléphone, vignette de départ plus large (attribut posé avant demarrer()) sinon écran presque vide."
+ ],
+ "mesures": {
+  "hauteur_p1440": 1485,
+  "hauteur_m390": 1097,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "masque"
+ ],
+ "impact": "vivant"
+}

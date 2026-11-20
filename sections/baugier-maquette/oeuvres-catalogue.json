@@ -1,0 +1,44 @@
+{
+ "id": "baugier-maquette/oeuvres-catalogue",
+ "maquette": "baugier-maquette",
+ "page": "oeuvres",
+ "titre": "Catalogue",
+ "role": "produits",
+ "description": "Filtres période, support et format gardés dans l'adresse, mur d'œuvres justifié (flex-grow proportionnel au ratio) et cartels.",
+ "animations": [
+  "apparition-au-défilement",
+  "filtre-anime"
+ ],
+ "interactions": [
+  "filtres",
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "oeuvres.html:126-1168",
+  "css": "assets/css/socle.css:39-42 ; assets/css/site.css:34,39-40,77,121,128,142,260-275,348,454",
+  "js": "assets/js/site.js:4,20,83-118,135 ; assets/js/catalogue.js:1,9,13-18,29,34,47-48,52,60,125,128,171 ; assets/js/socle/mesures.js:42-78"
+ },
+ "medias": {
+  "capture": "medias/baugier-maquette/oeuvres-catalogue-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/oeuvres-catalogue-m390.jpg"
+ },
+ "pieges": [
+  "Ligne finale : un élément vide en flex-grow énorme évite d'étirer la dernière rangée."
+ ],
+ "mesures": {
+  "hauteur_p1440": 9443,
+  "hauteur_m390": 14392,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

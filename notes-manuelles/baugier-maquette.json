@@ -1,0 +1,679 @@
+{
+ "maquette": {
+  "client": "Marcel Baugier, peintre abstrait, atelier-galerie à Barjols (Var)",
+  "activite": [
+   "culture",
+   "commerce"
+  ],
+  "concept": [
+   "galerie"
+  ],
+  "ambiance": [
+   "clair",
+   "sobre",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "#F4F1EA",
+   "texte": "#1B1A17",
+   "accent": "#B23A24",
+   "secondaire": "#E8E2D6"
+  },
+  "polices": {
+   "titres": "Instrument Serif",
+   "texte": "Inter Tight",
+   "mono": null
+  },
+  "points_forts": [
+   "113 vraies toiles du client en grand, jamais recadrées ni filtrées (figures à la proportion exacte de chaque photo)",
+   "Intro : la grille de la toile n° 1368 se trace puis la vraie toile apparaît case par case",
+   "Accrochage à l'échelle réelle au-dessus d'une console de 180 cm (photo Grok calée en centimètres)",
+   "Catalogue filtrable avec visionneuse, loupe, voir au mur et lien direct par œuvre",
+   "Palette chaux, pierre, encre et un seul rouge tenue sur toutes les pages"
+  ],
+  "reserves": [
+   "Photos de l'atelier anciennes et moyennes (1600 px) en grand",
+   "32 toiles sans légende sur le site du client (« Sans numéro »)",
+   "Sections typographiques sans image (acquérir, expositions, formulaire)"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "masque",
+   "marquee",
+   "reactif-vitesse",
+   "trace-svg",
+   "compteur",
+   "transition-de-page"
+  ],
+  "interactions": [
+   "filtres",
+   "galerie-cliquable",
+   "schema-interactif"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "galerie",
+  "grille": {
+   "objet": "la toile qu'on accroche au mur à sa vraie taille",
+   "fil": "le mur qui prend la teinte des toiles regardées"
+  },
+  "metier": "peintre abstrait"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile de transition",
+   "role": "transition-de-page",
+   "description": "Rideau couleur pierre (dégradé radial) avec le monogramme et le nom de la page d'arrivée.",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Un voile clair garde une matière (dégradé qui fonce vers les bords) pour ne pas flasher."
+   ]
+  },
+  "ouverture-panneau": {
+   "titre": "Panneau de l'intro",
+   "role": "transition-de-page",
+   "description": "Panneau chaux : monogramme, nom du peintre, trait rouge ; le monogramme glisse jusqu'à la toile d'ouverture et le panneau s'ouvre en cercle depuis elle.",
+   "animations": [
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "Monogramme et nom en Instrument Serif (Baugier en italique rouge), quatre liens, bouton « Venir à l'atelier ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran encre, liens en grand serif, appel téléphonique.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Marcel Baugier",
+   "role": "ouverture",
+   "description": "Titre scindé : nom très grand (Baugier en italique rouge) à gauche, la toile n° 1368 à droite avec son cartel. Intro : traits gris qui tracent la grille de la toile, cases chaux qui s'effacent au hasard sur la vraie toile ; une lumière de verrière (bandes en dégradé) traverse ensuite le mur et suit la souris.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "masque",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Ne jamais animer l'objet [data-iris-centre] avant versObjet.",
+    "Cases de couverture en couleur du fond, jamais un filtre sur l'œuvre."
+   ]
+  },
+  "manifeste": {
+   "titre": "Ce qu'en dit Jean Vautrin",
+   "role": "manifeste",
+   "description": "Citation de l'écrivain en grand italique, mot par mot, à côté de la photo du peintre à sa table (rideau).",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Guillemets écrits dans le gabarit : espaces insécables à la main (\\u00a0)."
+   ]
+  },
+  "decennies": {
+   "titre": "Quatre décennies, quatre salles",
+   "role": "galerie",
+   "description": "Quatre salles l'une sous l'autre (année en grand, nom de période, trois toiles à la même hauteur) ; le fond se teinte à 9 % de la couleur dominante de la toile du milieu de la salle au centre de l'écran, ou de la toile survolée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "La version épinglée horizontale accélérée (end = 0,45 × distance) faisait 52 flashs à l'audit d'épinglage : toiles très contrastées qui défilent trop vite.",
+    "Teinte calculée hors ligne (pixel le plus saturé d'une vignette 12×12), jamais pendant le défilement."
+   ]
+  },
+  "grande": {
+   "titre": "Une toile de 2,40 mètres",
+   "role": "galerie",
+   "description": "La plus grande toile part d'une vignette (découpe) et s'ouvre jusqu'au cadre complet, en contain sur fond encre ; « 240 cm » et « 145 cm » s'écartent de part et d'autre.",
+   "animations": [
+    "masque",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "object-fit contain sur une œuvre en plein cadre, sinon elle est recadrée.",
+    "Sur téléphone, vignette de départ plus large (attribut posé avant demarrer()) sinon écran presque vide."
+   ]
+  },
+  "atelier": {
+   "titre": "Un atelier dans les anciennes tanneries",
+   "role": "chiffres",
+   "description": "Texte, trois chiffres (1985, 300 m², 207 rue des Tanneurs) et deux photos de la salle superposées en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Une année ou un numéro de rue ne s'anime pas en compteur."
+   ]
+  },
+  "chez-vous": {
+   "titre": "Accrochée à la bonne taille",
+   "role": "outil-interactif",
+   "description": "Cinq toiles au choix ; la toile s'accroche à sa vraie taille au-dessus d'une console de 180 cm (photo Grok frontale, mesurée en pixels puis exprimée en cm avec des unités de conteneur), balancement élastique au changement, mur prolongé vers le haut pour les grands formats.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Ne pas centrer la toile avec la propriété CSS translate : GSAP la replie dans transform et la perd quand l'élément est caché ; calculer left.",
+    "Mesurer la console sur la photo (ici 681 px sur 1280 = 180 cm, soit 338 cm de mur)."
+   ]
+  },
+  "reconnaissance": {
+   "titre": "Exposé de Paris à Florence, de Monaco à Riyad",
+   "role": "preuves",
+   "description": "Villes d'exposition en mots géants qui filent en sens opposés, puis quatre repères (Florence 2003, Salon d'Automne 1989, Drouot, achats publics).",
+   "animations": [
+    "marquee",
+    "reactif-vitesse",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "axe mesure le contraste des mots géants même en aria-hidden : 3:1 au moins."
+   ]
+  },
+  "acquerir": {
+   "titre": "Les prix se donnent à l'atelier",
+   "role": "offre",
+   "description": "Quatre cartes : atelier (encre), Rise Art, Singulart, galeries permanentes ; prix sur demande.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Venir voir les toiles en vrai",
+   "role": "appel",
+   "description": "Photo de la salle en plein cadre sous un dégradé encre, zoom au défilement, deux boutons.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Fond pierre, nom en serif, adresse, sommaire, mentions légales en texte « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette toile n'est pas accrochée ici",
+   "role": "page-404",
+   "description": "Grand titre et cadre vide posé contre un mur (Grok).",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-debut": {
+   "titre": "Une salle des anciennes tanneries",
+   "role": "ouverture",
+   "description": "Photo de la salle en plein cadre sous un dégradé encre, titre clair en bas avec mot en italique rose.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sans JavaScript, l'en-tête dans le flux pousse un premier écran en 100svh : min-height 0."
+   ]
+  },
+  "atelier-chiffres": {
+   "titre": "L'atelier en trois chiffres",
+   "role": "chiffres",
+   "description": "1985, 300, 2 en très grand serif sur filet encre.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Interligne 1,12 au moins pour un chiffre géant en Instrument Serif, sinon chevauchement avec la légende."
+   ]
+  },
+  "atelier-table": {
+   "titre": "La table aux couleurs",
+   "role": "équipe",
+   "description": "Photo du peintre au travail en rideau et texte court.",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-salles": {
+   "titre": "Les toiles au mur",
+   "role": "galerie",
+   "description": "Deux photos de la salle en parallaxe sur fond pierre.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-visiter": {
+   "titre": "Venir à l'atelier",
+   "role": "contact",
+   "description": "Trois cartes : vidéo Instagram, expositions permanentes, venir.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-fin": {
+   "titre": "Une toile vous a plu ?",
+   "role": "appel",
+   "description": "Appel final scindé avec une toile cliquable.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Venir à l'atelier",
+   "role": "ouverture",
+   "description": "Titre scindé, appel au peintre, adresse, coordonnées en liste, photo de la salle en parallaxe.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Écrire au peintre",
+   "role": "contact",
+   "description": "Formulaire simulé sur fond pierre, sujet en puces, numéro d'œuvre prérempli par l'adresse.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-venir": {
+   "titre": "Barjols, dans le Haut-Var",
+   "role": "carte",
+   "description": "Schéma d'accès en SVG (courbes de niveau, trajet qui se trace, repère).",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Un trait en pointillés ne peut pas se tracer (dasharray pris par l'effet)."
+   ]
+  },
+  "contact-fin": {
+   "titre": "Avant de venir, regardez les toiles",
+   "role": "appel",
+   "description": "Appel final scindé avec une toile.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-debut": {
+   "titre": "113 œuvres, de 1980 à 2024",
+   "role": "ouverture",
+   "description": "Grand titre puis ruban de toiles à leur proportion qui glisse tout seul et accélère avec le défilement, bouton pause.",
+   "animations": [
+    "révélation-texte",
+    "marquee",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-catalogue": {
+   "titre": "Catalogue",
+   "role": "produits",
+   "description": "Filtres période, support et format gardés dans l'adresse, mur d'œuvres justifié (flex-grow proportionnel au ratio) et cartels.",
+   "animations": [
+    "apparition-au-défilement",
+    "filtre-anime"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Ligne finale : un élément vide en flex-grow énorme évite d'étirer la dernière rangée."
+   ]
+  },
+  "oeuvres-en-ligne": {
+   "titre": "Aussi en ligne",
+   "role": "offre",
+   "description": "Liens Rise Art, Singulart et sérigraphies.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 2,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-fin": {
+   "titre": "Les toiles se regardent mieux en vrai",
+   "role": "appel",
+   "description": "Photo de la salle en plein cadre, zoom au défilement.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "oeuvres-visionneuse": {
+   "titre": "Visionneuse",
+   "role": "outil-interactif",
+   "description": "Œuvre en grand, loupe à la souris, flèches et glissement, cartel, prix sur demande, voir au mur à l'échelle, lien direct ?oeuvre=.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable",
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Fenêtre en grille : grid-template-columns minmax(0, 1fr) et min-width 0, sinon une image en aspect-ratio élargit tout et les boutons sortent de l'écran sur téléphone."
+   ]
+  },
+  "parcours-debut": {
+   "titre": "De Barjols au Louvre, et retour",
+   "role": "ouverture",
+   "description": "Collines du Haut-Var (Grok) en plein cadre, année géante qui défile de 1946 à 2024 avec la page.",
+   "animations": [
+    "révélation-texte",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours-vie": {
+   "titre": "Une vie de peintre",
+   "role": "étapes",
+   "description": "Frise : année en grand, titre, texte et vignette d'œuvre ou de l'atelier ; trait rouge qui se trace.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours-vautrin": {
+   "titre": "BAUGIER brûle sous ses glacis",
+   "role": "témoignages",
+   "description": "Bande encre : titre en italique rose, texte de Jean Vautrin paraphrasé, citation courte, toile des années 1980.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours-expositions": {
+   "titre": "40 expositions",
+   "role": "preuves",
+   "description": "Expositions classées par région en colonnes, ventes et achats publics en encadré.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "parcours-fin": {
+   "titre": "Voir où en est la peinture aujourd'hui",
+   "role": "appel",
+   "description": "Appel final scindé avec la toile n° 1365.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
