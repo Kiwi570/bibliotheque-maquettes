@@ -1,0 +1,106 @@
+{
+ "projet": "catherine-becker-maquette",
+ "client": "Catherine Becker, diététicienne nutritionniste (Cannes et Nice)",
+ "siteActuel": "https://www.catherinebecker.fr",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1.1",
+   "perimetre": [
+    "accueil",
+    "consultation",
+    "tarifs",
+    "presentation",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-20T16:10:35+01:00",
+     "fin": "2026-11-20T16:17:00+01:00"
+    },
+    {
+     "etape": "plans et document Grok",
+     "budget": 10,
+     "debut": "2026-11-20T16:19:41+01:00",
+     "fin": "2026-11-20T16:24:00+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 40,
+     "debut": "2026-11-20T16:24:00+01:00",
+     "fin": "2026-11-20T16:37:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films",
+     "budget": 5,
+     "debut": "2026-11-20T16:37:00+01:00",
+     "fin": "2026-11-20T16:41:52+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet, contact et catégorie",
+     "budget": 40,
+     "debut": "2026-11-20T16:41:52+01:00",
+     "fin": "2026-11-20T16:50:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 25,
+     "debut": "2026-11-20T16:50:00+01:00",
+     "fin": "2026-11-20T17:54:39+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-20T17:54:39+01:00",
+     "fin": "2026-11-20T18:00:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-20T16:17:00+01:00",
+     "fin": "2026-11-20T16:19:00+01:00"
+    },
+    {
+     "pour": "images du site et images Grok",
+     "debut": "2026-11-20T16:24:00+01:00",
+     "fin": "2026-11-20T16:32:00+01:00"
+    },
+    {
+     "pour": "validation de l aperçu de l accueil",
+     "debut": "2026-11-20T16:40:00+01:00",
+     "fin": "2026-11-20T16:41:30+01:00"
+    }
+   ],
+   "allersRetours": 2,
+   "modules": [
+    "temoignages-en-pile",
+    "horaires-ouvert-maintenant"
+   ],
+   "audit": {
+    "niveau": "standard, passe des formats, puis complet après validation",
+    "echecsPremierPassage": 59,
+    "relances": 6,
+    "corrections": [
+     "e-mail en texte (mailto pris pour un lien vers le site actuel)",
+     "images de partage produites",
+     "premier écran des petits téléphones et des écrans bas resserré",
+     "zones tactiles du pied de page",
+     "contrastes (carte tomate, À noter, numéros des étapes sans transition de couleur)",
+     "boutons des avis nommés sans JavaScript",
+     "chevauchements des prix des packs et du calculateur",
+     "titre géant de la présentation",
+     "débordement du formulaire (select)",
+     "liens profonds vers les motifs (cartes sorties de la cascade)",
+     "ouverture du contact sur écran bas sans JavaScript (audit complet)"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Audit plus long que le budget (environ 65 min au lieu de 25) : deux passes en parallèle ont rendu un contrôle d intro instable, relancé seul ensuite. CSS commun modifié après l audit standard : audit standard complet relancé, 0 échec. Audit complet après validation : 1 échec (1000×560 sans JS, contact), corrigé, contrôle ciblé à 0 ; livré en v1.1 (?v=2)."
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "catherine-becker-maquette/avis",
+ "maquette": "catherine-becker-maquette",
+ "page": "index",
+ "titre": "Ce qu'en disent ses patients",
+ "role": "témoignages",
+ "description": "Quatre extraits d'avis réels en pile à lancer à la main, image de terrasse générée à côté (retirée sur téléphone).",
+ "animations": [
+  "empilement-de-fiches",
+  "parallaxe"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "temoignages-en-pile",
+ "modules": [
+  "temoignages-en-pile"
+ ],
+ "code": {
+  "html": "index.html:381-416",
+  "css": "assets/css/pile.css:3,7-17,24-27,34-38,42-50 ; assets/css/site.css:237-245,563",
+  "js": "assets/js/site.js:212-214 ; assets/js/horaires/module.js:11 ; assets/js/pile/module.js:1,8-9,12-13,19-159"
+ },
+ "medias": {
+  "capture": "medias/catherine-becker-maquette/avis-p1440.jpg",
+  "capture_m390": "medias/catherine-becker-maquette/avis-m390.jpg",
+  "video": "medias/catherine-becker-maquette/avis-p720.mp4"
+ },
+ "pieges": [
+  "boutons de la pile nommés et dessinés dans le HTML : sans JavaScript, le module ne les remplit pas"
+ ],
+ "mesures": {
+  "hauteur_p1440": 779,
+  "hauteur_m390": 782,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "empilement"
+ ],
+ "impact": "vivant"
+}

@@ -1,0 +1,837 @@
+{
+ "maquette": {
+  "client": "diététicienne nutritionniste à Cannes et à Nice (Catherine Becker) : bilan avec bio-impédancemétrie, rééquilibrage, suivi, téléconsultation, packs",
+  "activite": [
+   "santé",
+   "bien-être"
+  ],
+  "concept": [
+   "atelier"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "végétal"
+  ],
+  "palette": {
+   "fond": "#F7F2E8",
+   "texte": "#22301E",
+   "accent": "#C23E22",
+   "secondaire": "#33442F"
+  },
+  "polices": {
+   "titres": "Young Serif",
+   "texte": "Outfit",
+   "mono": ""
+  },
+  "points_forts": [
+   "l'assiette compartimentée en inox de sa box relie le site : intro qui la remplit puis la pose sur la photo, méthode qui remplit un compartiment par étape, appel final",
+   "six ouvertures toutes différentes dans un seul système (photo et assiette, bandeau, prix géant qui défile, portrait en arche, carte de la côte, assiette vide de la 404)",
+   "vraies photos de la praticienne en grand, illustrations générées cohérentes (marché, Riviera, cuisine)",
+   "horaires des deux cabinets à l'heure de Paris, formulés en positif, sans statut les jours fériés inconnus"
+  ],
+  "reserves": [
+   "carte de la côte schématique un peu raide",
+   "l'assiette ne se manipule pas"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "apparition-au-défilement",
+   "révélation-texte",
+   "parallaxe",
+   "compteur",
+   "reactif-vitesse",
+   "empilement-de-fiches",
+   "trace-svg",
+   "marquee"
+  ],
+  "interactions": [
+   "calculateur",
+   "jeu"
+  ],
+  "change_depuis_audit": "v1.1 : ouverture du contact resserrée sur écran bas sans JavaScript (seul échec de l'audit complet).",
+  "accueil": "debut",
+  "plan": "objet-unique",
+  "grille": {
+   "objet": "l'assiette compartimentée en inox qui se remplit",
+   "fil": "l'assiette, de l'intro à l'appel final, et les ingrédients dessinés"
+  },
+  "metier": "diététicienne nutritionniste"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "conteneur technique"
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "panneau de l'intro, décrit avec l'ouverture"
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "Monogramme CB du logo, nom et métier, quatre liens, bouton Doctolib ; deuxième rangée dès 900 px quand les liens ne tiennent plus.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran lin, liens qui arrivent l'un après l'autre, Doctolib et téléphone.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Bien manger, sans régime miracle.",
+   "role": "ouverture",
+   "description": "Intro : panneau olive, l'assiette en inox se trace, les aliments y tombent avec un rebond, puis elle glisse sur le coin de la grande photo du marché et le panneau s'ouvre depuis elle (versObjet, disque). Titre en trois lignes, « sans » en tomate ; l'assiette respire et les ingrédients dessinés flottent ensuite.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "GSAP yPercent sur une ligne dont la transform CSS de départ est en % : GSAP lit le translate en px comme y ; fromTo avec y: 0 explicite",
+    "ombre de l'assiette qui tourne : box-shadow sur le cadre rond, pas de drop-shadow sur le SVG animé"
+   ]
+  },
+  "motifs": {
+   "titre": "Vous venez pour…",
+   "role": "services",
+   "description": "Huit motifs de consultation en cartes avec un ingrédient dessiné chacun (pomme, olive, menthe…), lien vers le détail sur la page Consultation avec le motif marqué.",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "cartes compactes (icône à gauche) sur téléphone, sinon 8 écrans de cartes"
+   ]
+  },
+  "methode": {
+   "titre": "Trois temps, à votre rythme.",
+   "role": "méthode",
+   "description": "Bande olive : trois étapes à gauche, à droite l'assiette collante dont chaque compartiment se remplit quand son étape passe au milieu de l'écran (bilan, rééquilibrage, suivi) ; sur téléphone, l'assiette se remplit d'elle-même en entrant.",
+   "animations": [
+    "apparition-au-défilement",
+    "section-fixée",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "ne pas atténuer les étapes inactives par l'opacité : axe mesure leur contraste ; un trait d'accent marque l'étape active",
+    "pas de transition de couleur sur les numéros : contraste mesuré au milieu"
+   ]
+  },
+  "bilan": {
+   "titre": "Ce que l'on regarde ensemble",
+   "role": "preuves",
+   "description": "Photo générée en arche, texte du bilan et liste des cinq mesures de la bio-impédancemétrie avec des coches.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cabinets": {
+   "titre": "Deux cabinets, et la visio.",
+   "role": "carte",
+   "description": "Deux cartes de cabinets (ambiance générée, adresse, jours de consultation, statut du moment à l'heure de Paris) et une carte visio dessinée.",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "horaires-ouvert-maintenant",
+   "pieges": [
+    "statut formulé en positif (« Prochaines consultations lundi dès 8 h »), aucun statut un jour férié aux horaires inconnus"
+   ]
+  },
+  "tarifs": {
+   "titre": "Des prix clairs, des formules qui suivent.",
+   "role": "tarifs",
+   "description": "Consultation 70 € en carte tomate, trois packs avec le prix par consultation, compteurs.",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "catherine": {
+   "titre": "Catherine Becker, plus de 20 ans à l'écoute.",
+   "role": "équipe",
+   "description": "Vraie photo de la praticienne en arche avec une vignette au micro de France Bleu Azur, parcours en deux paragraphes, puis bandeau de mots géants des médias qui filent au défilement.",
+   "animations": [
+    "révélation-image",
+    "reactif-vitesse",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce qu'en disent ses patients",
+   "role": "témoignages",
+   "description": "Quatre extraits d'avis réels en pile à lancer à la main, image de terrasse générée à côté (retirée sur téléphone).",
+   "animations": [
+    "empilement-de-fiches",
+    "parallaxe"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "temoignages-en-pile",
+   "pieges": [
+    "boutons de la pile nommés et dessinés dans le HTML : sans JavaScript, le module ne les remplit pas"
+   ]
+  },
+  "rendez-vous": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Bande olive : assiette pleine qui tourne au défilement, Doctolib et téléphone, ce qu'il faut apporter à la première visite.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Cabinets",
+   "role": "pied-de-page",
+   "description": "Pied olive : monogramme clair, ARS, deux cabinets, téléphone, e-mail en texte, réseaux, mentions « à compléter ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "e-mail du client en texte : un mailto sur le domaine du site actuel compte comme lien vers le site actuel"
+   ]
+  },
+  "404-debut": {
+   "titre": "Cette page n'est pas au menu.",
+   "role": "page-404",
+   "description": "Assiette vide en plein cadre avec un seul petit pois, carte lin « Cette page n'est pas au menu ».",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-debut": {
+   "titre": "Pas à pas, avec vous.",
+   "role": "ouverture",
+   "description": "Grand titre à gauche, texte et Doctolib à droite, puis bandeau photo d'un bureau lumineux à coin arrondi qui s'élargit au défilement.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-motifs": {
+   "titre": "Je viens pour…",
+   "role": "services",
+   "description": "Puces des huit motifs et cartes détaillées ; la carte venue de l'accueil (?motif=) est marquée.",
+   "animations": [
+    "reactif-vitesse",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "jamais d'ancre de lien profond dans un enfant de cascade : la carte arrive 17 px sous l'en-tête"
+   ]
+  },
+  "consultation-deroule": {
+   "titre": "Trois étapes, dans cet ordre.",
+   "role": "étapes",
+   "description": "Trois étapes sur une frise dont le trait se dessine, gros numéros olive.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-bilan": {
+   "titre": "La base de tout le suivi.",
+   "role": "méthode",
+   "description": "Contenu du bilan en liste numérotée, carte de la bio-impédancemétrie avec l'assiette en coin et les cinq mesures expliquées.",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-preparer": {
+   "titre": "Préparer votre première visite",
+   "role": "étapes",
+   "description": "Vraie photo du cabinet et trois choses à apporter, chacune avec un ingrédient dessiné.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-rythme": {
+   "titre": "Combien de rendez-vous ?",
+   "role": "étapes",
+   "description": "Bande olive : jalons du suivi (1 à 2 semaines, 1 à 2 rendez-vous, 3 à 6 rendez-vous, ensuite) sur une ligne qui se remplit au défilement.",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-modalites": {
+   "titre": "Quatre façons de consulter",
+   "role": "offre",
+   "description": "Quatre façons de consulter en cartes avec leur prix.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-medecin": {
+   "titre": "Un courrier à votre médecin, avec votre accord.",
+   "role": "preuves",
+   "description": "Encart : courrier au médecin avec l'accord du patient, enveloppe qui se dessine.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "consultation-rendez-vous": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Appel final sur bande olive, le même sur chaque page : assiette pleine qui tourne au défilement, Doctolib, téléphone et ce qu'il faut apporter à la première visite.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Cannes, Nice, ou chez vous.",
+   "role": "ouverture",
+   "description": "Carte dessinée de la côte de Cannes à Nice qui se trace, épingles des deux cabinets, pastille visio dans la mer.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "côte schématique : la dessiner d'après une vraie carte, le cap en V paraît raide"
+   ]
+  },
+  "contact-cabinets": {
+   "titre": "Quand venir au cabinet",
+   "role": "carte",
+   "description": "Module horaires : cadran 24 h à l'heure de Paris, choix Cannes ou Nice, statut et semaine type, jours fériés « à confirmer ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "horaires-ouvert-maintenant",
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "Cannes",
+   "role": "contact",
+   "description": "Accès de chaque cabinet (bus, voiture, à pied, accessibilité) et vraie photo du cabinet.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Une question ? Écrivez-nous.",
+   "role": "contact",
+   "description": "Coordonnées et formulaire simulé (objet, cabinet), prérempli par ?objet=.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "select dans une grille à deux colonnes : width 100 % et min-width 0, sinon la page déborde"
+   ]
+  },
+  "presentation-debut": {
+   "titre": "Catherine Becker",
+   "role": "ouverture",
+   "description": "Nom en très grand et vrai portrait dans une arche qui se resserre au défilement, rameau d'olivier qui flotte.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-parcours": {
+   "titre": "De l'hôpital au cabinet.",
+   "role": "étapes",
+   "description": "Frise du parcours en huit étapes datées (formation, hôpital, cabinets, radio, conférences).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-metier": {
+   "titre": "Diététicienne : un métier de santé.",
+   "role": "manifeste",
+   "description": "Bande olive : ce qu'est une diététicienne, dessin d'assiette qui se trace.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-engagements": {
+   "titre": "Sept engagements, aucun miracle.",
+   "role": "preuves",
+   "description": "Sept engagements en cartes avec ingrédients dessinés.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-medias": {
+   "titre": "On l'entend, on la lit.",
+   "role": "preuves",
+   "description": "Chiffres (50+ émissions, 50+ passages), listes télé, radio, presse, vraies vignettes décalées qui s'inclinent à la vitesse.",
+   "animations": [
+    "compteur",
+    "reactif-vitesse",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-collaborations": {
+   "titre": "Collaborations et conférences",
+   "role": "preuves",
+   "description": "Deux vignettes d'événements réels et la liste des collaborations et conférences.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-reseaux": {
+   "titre": "Elle travaille en réseau",
+   "role": "preuves",
+   "description": "Réseaux de soin et partenaires en cartes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "presentation-rendez-vous": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Appel final sur bande olive, le même sur chaque page : assiette pleine qui tourne au défilement, Doctolib, téléphone et ce qu'il faut apporter à la première visite.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-debut": {
+   "titre": "Ce que coûte un suivi, clairement.",
+   "role": "ouverture",
+   "description": "« 70 € » en très grand : les deux chiffres défilent comme des rouleaux jusqu'à 7 et 0 à l'intro, agrumes générés en arche à côté.",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "rouleaux : hauteur de colonne 1,18 em sinon le haut du 7 est coupé ; prix lu par un texte caché, pas d'aria-label sur un p"
+   ]
+  },
+  "tarifs-consultations": {
+   "titre": "À l'unité",
+   "role": "tarifs",
+   "description": "Consultation, domicile, téléconsultation en trois cartes, compteur.",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-packs": {
+   "titre": "Plus de rendez-vous, un prix qui baisse.",
+   "role": "calculateur",
+   "description": "Trois packs avec l'économie, et un calculateur olive collant : nombre de consultations, prix à l'unité, meilleure combinaison de packs (programmation dynamique), économie ; vérifié par le parcours d'audit.",
+   "animations": [
+    "apparition-au-défilement",
+    "compteur"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-domicile": {
+   "titre": "Dans votre cuisine, au marché.",
+   "role": "offre",
+   "description": "Photo de cuisine générée et lignes de prix des prestations à domicile.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-en-ligne": {
+   "titre": "En ligne, partout en France.",
+   "role": "offre",
+   "description": "Coaching en ligne et suivi en ligne en grandes cartes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-remboursement": {
+   "titre": "Votre mutuelle peut aider.",
+   "role": "preuves",
+   "description": "Bande olive : Sécurité sociale, mutuelles, facture, réseaux Santéclair et Carte Blanche en carte claire.",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-conditions": {
+   "titre": "Les conditions, sans petites lignes.",
+   "role": "texte-legal",
+   "description": "Paiement et annulation en deux cartes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-cadeau": {
+   "titre": "Offrir une consultation",
+   "role": "offre",
+   "description": "Bon cadeau dessiné (olive, ruban tomate, rondelle de citron) qui s'incline à la vitesse, lien vers le formulaire prérempli.",
+   "animations": [
+    "reactif-vitesse",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "tarifs-rendez-vous": {
+   "titre": "Prendre rendez-vous",
+   "role": "appel",
+   "description": "Appel final sur bande olive, le même sur chaque page : assiette pleine qui tourne au défilement, Doctolib, téléphone et ce qu'il faut apporter à la première visite.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
