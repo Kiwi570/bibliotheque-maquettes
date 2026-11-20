@@ -1,0 +1,45 @@
+{
+ "id": "baugier-maquette/decennies",
+ "maquette": "baugier-maquette",
+ "page": "index",
+ "titre": "Quatre décennies, quatre salles",
+ "role": "galerie",
+ "description": "Quatre salles l'une sous l'autre (année en grand, nom de période, trois toiles à la même hauteur) ; le fond se teinte à 9 % de la couleur dominante de la toile du milieu de la salle au centre de l'écran, ou de la toile survolée.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:147-273",
+  "css": "assets/css/site.css:38-41,110-128",
+  "js": "assets/js/site.js:62-80,157 ; assets/js/catalogue.js:84,128,169 ; assets/js/socle/effets.js:14,236-267"
+ },
+ "medias": {
+  "capture": "medias/baugier-maquette/decennies-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/decennies-m390.jpg",
+  "video": "medias/baugier-maquette/decennies-p720.mp4"
+ },
+ "pieges": [
+  "La version épinglée horizontale accélérée (end = 0,45 × distance) faisait 52 flashs à l'audit d'épinglage : toiles très contrastées qui défilent trop vite.",
+  "Teinte calculée hors ligne (pixel le plus saturé d'une vignette 12×12), jamais pendant le défilement."
+ ],
+ "mesures": {
+  "hauteur_p1440": 2874,
+  "hauteur_m390": 3008,
+  "epinglee": false,
+  "scrolltriggers": 4
+ },
+ "familles": [],
+ "impact": "calme"
+}

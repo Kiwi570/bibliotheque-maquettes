@@ -1,0 +1,45 @@
+{
+ "id": "baugier-maquette/chez-vous",
+ "maquette": "baugier-maquette",
+ "page": "index",
+ "titre": "Accrochée à la bonne taille",
+ "role": "outil-interactif",
+ "description": "Cinq toiles au choix ; la toile s'accroche à sa vraie taille au-dessus d'une console de 180 cm (photo Grok frontale, mesurée en pixels puis exprimée en cm avec des unités de conteneur), balancement élastique au changement, mur prolongé vers le haut pour les grands formats.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:315-357",
+  "css": "assets/css/socle.css:39-42,274-277 ; assets/css/site.css:42,158-171,175-178",
+  "js": "assets/js/site.js:48,83-118 ; assets/js/catalogue.js:2,57"
+ },
+ "medias": {
+  "capture": "medias/baugier-maquette/chez-vous-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/chez-vous-m390.jpg",
+  "video": "medias/baugier-maquette/chez-vous-p720.mp4"
+ },
+ "pieges": [
+  "Ne pas centrer la toile avec la propriété CSS translate : GSAP la replie dans transform et la perd quand l'élément est caché ; calculer left.",
+  "Mesurer la console sur la photo (ici 681 px sur 1280 = 180 cm, soit 338 cm de mur)."
+ ],
+ "mesures": {
+  "hauteur_p1440": 898,
+  "hauteur_m390": 953,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}
