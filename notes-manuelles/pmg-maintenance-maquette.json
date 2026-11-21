@@ -1,0 +1,729 @@
+{
+ "maquette": {
+  "client": "entretien extérieur de bâtiment (déneigement et déglaçage de toiture à la vapeur, lumières de Noël, gouttières, lavage basse pression, vitres) à Ottawa-Gatineau",
+  "activite": [
+   "bâtiment",
+   "artisanat",
+   "services-b2b"
+  ],
+  "concept": [
+   "carte",
+   "atelier"
+  ],
+  "ambiance": [
+   "froid",
+   "nocturne",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "#f3f6f9",
+   "texte": "#0c1a2a",
+   "accent": "#ff5b14",
+   "secondaire": "#d6e8f5"
+  },
+  "polices": {
+   "titres": "Archivo (étendu 125 %)",
+   "texte": "Archivo",
+   "mono": ""
+  },
+  "points_forts": [
+   "Ligne de toit qui relie le site : ampoules C9 qui s'allument, glaçons qui fondent, gouttière où l'eau coule",
+   "Vraies photos du client partout (vapeur, maisons illuminées, avant/après, équipe en hauteur)",
+   "La saison du jour choisit l'information clé et l'onglet des services",
+   "Outils utiles : repère des 24 po, couleurs C9, avant/après, recherche parmi 97 localités, estimation en 4 étapes"
+  ],
+  "reserves": [
+   "Images Grok non reçues : la façade des lumières reste une vraie photo avec une guirlande dessinée",
+   "Peu de mouvement seul dans le premier écran (neige fine et scintillement)",
+   "Plusieurs sections typographiques (avis, appel final, FAQ)"
+  ],
+  "animations": [
+   "chargement-orchestré",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "canvas-2d",
+   "révélation-image",
+   "compteur",
+   "marquee"
+  ],
+  "interactions": [
+   "filtres",
+   "formulaire-par-étapes",
+   "schema-interactif",
+   "galerie-cliquable",
+   "saisie-personnalisee"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "les couleurs des ampoules C9 de sa ligne de toit, le repère des 24 po, le réglet avant/après",
+   "fil": "la ligne de toit : ampoules, glaçons, gouttière"
+  },
+  "metier": "déneigement de toiture et entretien extérieur"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "voile de transition du socle (forme vague)"
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : ligne de toit qui s'allume",
+   "role": "transition-de-page",
+   "description": "Panneau de nuit : logo, nom, petite ligne de toit tracée puis ampoules C9 allumées une à une ; le logo glisse jusqu'à la ligne de toit de la page et le panneau s'ouvre depuis elle.",
+   "animations": [
+    "chargement-orchestré",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "En-tête clair, logo provisoire (pignon et trois ampoules), liens, FR/EN, bouton orange.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu plein écran de nuit",
+   "role": "menu",
+   "description": "Menu plein écran nuit, liens en Archivo étendu.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Tout se joue au bord du toit",
+   "role": "ouverture",
+   "description": "Plein cadre de nuit sur une vraie maison illuminée par le client, dégradé à gauche, neige fine en canvas, ligne de toit d'ampoules C9 multicolores en bas qui s'allument et scintillent, information clé selon la saison du jour.",
+   "animations": [
+    "chargement-orchestré",
+    "révélation-texte",
+    "canvas-2d",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "titre orange sur photo claire : dégradé fort à gauche, sinon contraste sous 3:1",
+    "ligne de toit en bas : réserver sa hauteur dans le padding du héros sur téléphone"
+   ]
+  },
+  "saisons": {
+   "titre": "Le bon service, à la bonne saison",
+   "role": "services",
+   "description": "Onglets Automne / Hiver / Printemps, la saison du jour ouverte d'office ; trois grandes cartes photo par saison.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "panneau choisi avant le premier affichage par l'attribut data-saison (script critique)"
+   ]
+  },
+  "repere": {
+   "titre": "Le repère des 24 po",
+   "role": "outil-interactif",
+   "description": "Curseur d'épaisseur sur une coupe de toit de nuit (la neige s'empile), cases des signes d'alerte et pluie annoncée, avis en direct.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "les équivalences de charge du site du client étaient incohérentes : l'outil ne calcule aucune charge"
+   ]
+  },
+  "vapeur": {
+   "titre": "La vapeur, jamais le marteau",
+   "role": "méthode",
+   "description": "Nuit : glaçons qui pendent sous la ligne de toit et fondent au défilement, liste de ce qu'on n'utilise jamais rayée en orange, vraies photos de déglaçage.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "icônes tracées (data-fx trace) dans une cascade : positions de défilement faussées de 30 px"
+   ]
+  },
+  "lumieres": {
+   "titre": "Vos lumières de Noël",
+   "role": "produits",
+   "description": "Choix des couleurs C9 (cinq boutons) qui recolorent une guirlande dessinée au-dessus d'une vraie maison illuminée.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avant-apres": {
+   "titre": "Avant, après. Vraies photos.",
+   "role": "preuves",
+   "description": "Réglet à glisser entre deux vraies photos, onglets par surface, démonstration automatique à l'entrée arrêtée au premier geste.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "photos du client en 1000 px : garder le réglet sous un quart de l'écran"
+   ]
+  },
+  "securite": {
+   "titre": "Assurés et formés pour le travail en hauteur",
+   "role": "preuves",
+   "description": "Compteur 5 000 000 $, quatre garanties réelles avec pictogrammes, photo de l'équipe sur ses échelles.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ce que disent nos clients",
+   "role": "témoignages",
+   "description": "Six citations courtes réelles (en anglais sur la version anglaise, tirées de la page anglaise du client), ruban de noms et villes avec pause ; rangée à faire glisser sur téléphone.",
+   "animations": [
+    "apparition-au-défilement",
+    "marquee"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "zone": {
+   "titre": "Des deux côtés de la rivière",
+   "role": "carte",
+   "description": "Carte schématique de nuit : la rivière des Outaouais se trace, les localités s'allument ; recherche d'une ville parmi les 97 desservies (accents ignorés).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "carte-interactive",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Votre estimation, gratuite",
+   "role": "appel",
+   "description": "Appel final de nuit : longue ligne de toit qui s'allume et scintille, codes promo réels en tickets.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page de nuit",
+   "role": "pied-de-page",
+   "description": "Coordonnées (courriel en texte sélectionnable, sans lien), sommaire, mentions à compléter non cliquables.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette page est restée sous la neige",
+   "role": "page-404",
+   "description": "404 de nuit avec glaçons sous la ligne de toit et vraie photo de glaçons.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Parlons de votre maison",
+   "role": "ouverture",
+   "description": "Ouverture glace : grand numéro, carte de la zone et recherche de ville.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-estimation": {
+   "titre": "Estimation en quatre étapes",
+   "role": "contact",
+   "description": "Formulaire simulé en étapes (services par saison, adresse, coordonnées, code promo), récapitulatif collant en direct, préremplissage par l'adresse (?service=, ?code=).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "contact-coordonnees": {
+   "titre": "Nous joindre",
+   "role": "contact",
+   "description": "Cartes de coordonnées sur nuit, paiement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-debut": {
+   "titre": "Propre, sans haute pression",
+   "role": "ouverture",
+   "description": "Grand titre sur toute la largeur, puis bandeau pleine largeur de l'équipe sur ses échelles.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-basse-pression": {
+   "titre": "Pourquoi la basse pression",
+   "role": "méthode",
+   "description": "Trois points numérotés, encadré du lavage complet, deux photos superposées.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-surfaces": {
+   "titre": "Ce qu'on lave",
+   "role": "galerie",
+   "description": "Filtres de surfaces en pastilles et avant/après à cinq onglets.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "comparateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-gouttieres": {
+   "titre": "Des gouttières qui font leur travail",
+   "role": "méthode",
+   "description": "La ligne de toit devient gouttière où l'eau coule (trois tours), trois vérifications cochées, photos.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-vitres": {
+   "titre": "Des vitres qui laissent passer le jour",
+   "role": "services",
+   "description": "Deux photos décalées et une photo d'après-construction.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lavage-exterieur-fin": {
+   "titre": "Deux codes, un bon voisin",
+   "role": "appel",
+   "description": "Appel final avec les offres en tickets.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-debut": {
+   "titre": "Votre maison, allumée pour les Fêtes",
+   "role": "ouverture",
+   "description": "Outil d'abord : couleurs C9 qui recolorent la guirlande posée sur une vraie maison à l'heure bleue (prévu sur une façade Grok où les ampoules suivent la ligne de toit en SVG au cadrage de l'image).",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "configurateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-couleurs": {
+   "titre": "Cinq couleurs, une ligne de toit",
+   "role": "produits",
+   "description": "Cinq ampoules C9 dessinées en SVG sur fond nuit, vraie photo d'ampoule.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-service": {
+   "titre": "De l'automne au printemps",
+   "role": "étapes",
+   "description": "Quatre étapes sur une frise pointillée.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-realisations": {
+   "titre": "Maisons et commerces allumés",
+   "role": "galerie",
+   "description": "Galerie de nuit des vraies réalisations, une grande et huit petites, filtres résidentiel et commercial.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-garantie": {
+   "titre": "Une ampoule s'éteint ? On revient.",
+   "role": "preuves",
+   "description": "Garantie et avis propres aux lumières.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-lumieres-de-noel-fin": {
+   "titre": "Cette année, on s'en occupe",
+   "role": "appel",
+   "description": "Appel final de nuit, ligne de toit multicolore.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-debut": {
+   "titre": "Le toit dégagé, les bardeaux intacts",
+   "role": "ouverture",
+   "description": "Ouverture claire scindée, vraie photo de déglaçage sur le bord du toit, « 24 po » en très grand dans un cartouche de nuit qui déborde de la photo.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "« 24 in » en anglais : white-space nowrap sur le chiffre"
+   ]
+  },
+  "en-toiture-hiver-signes": {
+   "titre": "Les signes qui ne trompent pas",
+   "role": "faq",
+   "description": "Deux cartes blanches (neige, glace) avec photo et liste cochée.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-repere": {
+   "titre": "Le repère des 24 po",
+   "role": "outil-interactif",
+   "description": "Même outil que l'accueil, autre fond.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "calculateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-deneigement": {
+   "titre": "Le déneigement, à la main",
+   "role": "étapes",
+   "description": "Quatre étapes numérotées, photo du chantier, encadrés quand déneiger et ce qu'on évite, photo du périmètre sécurisé.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-vapeur": {
+   "titre": "Le déglaçage à la vapeur",
+   "role": "méthode",
+   "description": "Nuit, glaçons qui fondent, pastilles de ce que la vapeur épargne, liste rayée, mosaïque de vraies photos.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-securite": {
+   "titre": "Assurés et formés",
+   "role": "preuves",
+   "description": "Bloc sécurité repris de l'accueil.",
+   "animations": [
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-faq": {
+   "titre": "Questions fréquentes",
+   "role": "faq",
+   "description": "FAQ dépliable, encadré du prix par écrit, photo de glaçons.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "en-toiture-hiver-fin": {
+   "titre": "Un toit chargé ? Écrivez-nous",
+   "role": "appel",
+   "description": "Appel final de nuit : ligne de toit d'ampoules blanc chaud et blanc pur qui s'allume, demande de soumission préremplie pour le déneigement, texto.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

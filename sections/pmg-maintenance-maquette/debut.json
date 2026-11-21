@@ -1,0 +1,53 @@
+{
+ "id": "pmg-maintenance-maquette/debut",
+ "maquette": "pmg-maintenance-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "en/index"
+ ],
+ "titre": "Tout se joue au bord du toit",
+ "role": "ouverture",
+ "description": "Plein cadre de nuit sur une vraie maison illuminée par le client, dégradé à gauche, neige fine en canvas, ligne de toit d'ampoules C9 multicolores en bas qui s'allument et scintillent, information clé selon la saison du jour.",
+ "animations": [
+  "chargement-orchestré",
+  "révélation-texte",
+  "canvas-2d",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:120-141",
+  "css": "assets/css/socle.css:240-245,250,265-266 ; assets/css/site.css:22,34-35,81-110,324-327,334,338,446-447,528-529,537-539",
+  "js": "assets/js/site.js:27-34,42-69,378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/pmg-maintenance-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/pmg-maintenance-maquette/debut-m390.jpg",
+  "video": "medias/pmg-maintenance-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "titre orange sur photo claire : dégradé fort à gauche, sinon contraste sous 3:1",
+  "ligne de toit en bas : réserver sa hauteur dans le padding du héros sur téléphone"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}
