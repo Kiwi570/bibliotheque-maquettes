@@ -1,0 +1,630 @@
+{
+ "maquette": {
+  "client": "école de natation pour enfants, cours en groupe à Puidoux-Chexbres (Vaud)",
+  "activite": [
+   "sport",
+   "formation"
+  ],
+  "concept": [
+   "autre"
+  ],
+  "ambiance": [
+   "clair",
+   "ludique",
+   "océanique"
+  ],
+  "palette": {
+   "fond": "#F5FAFB",
+   "texte": "#0B2230",
+   "accent": "#D42A21",
+   "secondaire": "#0A62A8"
+  },
+  "polices": {
+   "titres": "Unbounded",
+   "texte": "Figtree",
+   "mono": null
+  },
+  "points_forts": [
+   "Palette tenue du début à la fin, tirée des vraies couleurs de la piscine du client (carrelage blanc, eau turquoise, lignes d'eau rouge et blanc)",
+   "Le logo du client (poisson dessiné d'un trait) vectorisé : il se trace dans l'intro, glisse jusqu'à la page et revient dans le voile, le pied et les appels",
+   "Contenu utile tout de suite : 5 groupes sur la ligne d'eau avec prix, cycle en cours calculé à la date du jour, horaires, inscription en étapes",
+   "Petites interactions de l'eau partout : ronds au clic, eau qui réagit à la souris, bouées qui tournent, hublot à vague, bulles"
+  ],
+  "reserves": [
+   "Portraits de l'équipe en petite définition (selfies du site actuel), mis en valeur par les bouées mais faibles",
+   "Les sections de texte (pédagogie, déroulé, horaires) restent typographiques"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "compteur",
+   "webgl-shader",
+   "reactif-vitesse",
+   "trace-svg",
+   "galerie-horizontale",
+   "fil-conducteur"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "schema-interactif"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "l'eau du bassin qui fait des ronds sous la souris et au toucher ; le sélecteur de level sur la ligne d'eau",
+   "fil": "la ligne d'eau à 10 flotteurs (les 10 levels) et le poisson du logo qui la parcourt"
+  },
+  "metier": "école de natation pour enfants"
+ },
+ "sections": {
+  "div": {
+   "titre": "Voile de transition en iris",
+   "role": "transition-de-page",
+   "description": "Disque bleu bassin qui part du clic avec le poisson et le nom de la page, puis s'ouvre en trou sur l'objet de la page d'arrivée, bordé de deux ronds dans l'eau qui suivent le bord du trou (variables --cx, --cy, --trou du socle).",
+   "animations": [
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Les anneaux sont des enfants du voile qui lisent --trou : leur largeur suit le trou sans JavaScript de plus"
+   ]
+  },
+  "ouverture-panneau": {
+   "titre": "Intro : le poisson se trace",
+   "role": "ouverture",
+   "description": "Le poisson du logo vectorisé se trace en blanc (stroke-dashoffset sur le chemin complet), se remplit, deux gouttes tombent, des ronds partent de son œil, puis il glisse jusqu'au grand cadre de l'accueil (versObjet) et la page s'ouvre en cercle.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Logo vectorisé depuis le JPG par seuil, composantes connexes et contours lissés en Catmull-Rom ; arrondir les coordonnées pour garder le SVG sous 25 Ko"
+   ]
+  },
+  "header": {
+   "titre": "En-tête au poisson",
+   "role": "menu",
+   "description": "Poisson du logo et marque ESN, trois liens et le bouton S'inscrire ; le poisson frétille au survol.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran du socle sur fond blanc d'eau : liens en Unbounded qui arrivent l'un après l'autre, page en cours en rouge, bouton d'appel.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Apprendre à nager, à son rythme.",
+   "role": "ouverture",
+   "description": "Titre Unbounded sur un carrelage traversé de reflets de lumière en WebGL (caustiques), grand cadre du bassin vu du dessus où l'eau fait des ronds sous la souris, carte inclinée d'un vrai groupe, ligne d'eau qui ondule selon la vitesse en bas.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte",
+    "parallaxe",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Shader de caustiques : qualité qui baisse seule si les images dépassent 24 ms (en audit sans GPU elle descend à 0,25)",
+    "Ronds sous la souris : un toutes les 140 ms au plus, dans la figure en overflow hidden"
+   ]
+  },
+  "pour-qui": {
+   "titre": "Petits groupes, grands progrès.",
+   "role": "chiffres",
+   "description": "Quatre chiffres réels (4 ans, 12 enfants, 45 min, 10 leçons) en compteurs, photo générée de bonnets et lunettes qui se resserre.",
+   "animations": [
+    "compteur",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "groupes": {
+   "titre": "Cinq groupes, dix levels.",
+   "role": "offre",
+   "description": "Bande bleue : ligne d'eau de 10 flotteurs numérotés, accolades des 5 groupes ; un petit poisson parcourt les levels au défilement et la carte du groupe atteint passe en blanc. Chaque carte porte une jauge de 10 flotteurs.",
+   "animations": [
+    "fil-conducteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Libellés des groupes masqués sous 760 px (une colonne de 30 px ne les tient pas) : display none sur le span, jamais font-size 0 (texte sous 12 px à l'audit)"
+   ]
+  },
+  "methode": {
+   "titre": "Le dos et le crawl d'abord. La brasse en dernier.",
+   "role": "méthode",
+   "description": "Quatre étapes de la pédagogie du client le long d'un tracé qui se dessine ; sur grand écran un poisson descend en marge et les étapes atteintes passent au rouge ; photo réelle d'un plongeon en rideau.",
+   "animations": [
+    "trace-svg",
+    "révélation-image",
+    "fil-conducteur"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "vector-effect: non-scaling-stroke sur un tracé data-fx=trace avec preserveAspectRatio none : le tracé paraît fini d'avance (longueurs en unités différentes)"
+   ]
+  },
+  "conseils": {
+   "titre": "Les quatre conseils aux débutants",
+   "role": "manifeste",
+   "description": "Courage, patience, régularité, plaisir en mots géants (contour et plein) qui filent en sens opposés, puis bande de photos des groupes qui glisse à l'horizontale avec le défilement, sans épinglage.",
+   "animations": [
+    "reactif-vitesse",
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "annee": {
+   "titre": "Trois cycles par année scolaire.",
+   "role": "agenda",
+   "description": "Barre de septembre à juin qui se remplit jusqu'à aujourd'hui (heure de Zurich), les trois cycles placés sur une grille de 10 mois avec leur statut calculé (en cours, prochain, ensuite, terminé), infos pratiques.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "equipe": {
+   "titre": "L'équipe au bord du bassin.",
+   "role": "équipe",
+   "description": "Quatre portraits ronds entourés d'une bouée rouge et blanche (conic-gradient) qui tourne au défilement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Bouée derrière la photo, largeur = photo + 36 px, décalée de -18 px : même calcul quelle que soit la largeur"
+   ]
+  },
+  "confiance": {
+   "titre": "Éducation. Découverte. Plaisir.",
+   "role": "preuves",
+   "description": "Années d'école en compteur sous le poisson, devise, trois droits de la charte en puces flotteurs.",
+   "animations": [
+    "compteur",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Le prochain cycle commence en janvier.",
+   "role": "appel",
+   "description": "Bande bleue avec caustiques WebGL blancs et bulles qui montent au défilement, poisson clair, deux boutons.",
+   "animations": [
+    "webgl-shader",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Ligne d'eau qui ondule en haut, fond nuit, lieu, horaires, sommaire ; mentions légales en texte « à compléter ».",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Perdu dans le grand bassin ?",
+   "role": "page-404",
+   "description": "Une planche jaune seule au milieu du bassin (image générée), titre et retour.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Une question ? Appelez l'école.",
+   "role": "contact",
+   "description": "Le numéro en très grand, l'e-mail en texte sélectionnable, le bassin au soir.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-lieu": {
+   "titre": "Au collège du Verrney.",
+   "role": "carte",
+   "description": "Plan indicatif en SVG : terrasses qui se tracent, lac qui ondule, boussole, piscine signalée par des ronds.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-horaires": {
+   "titre": "Les horaires.",
+   "role": "agenda",
+   "description": "Deux cartes bleues Lundi et Jeudi avec le créneau sur une frise du soir (16 h – 21 h) qui se remplit.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-ecrire": {
+   "titre": "Écrire à l'école.",
+   "role": "contact",
+   "description": "Formulaire simulé avec mention nLPD, poisson qui s'incline à la vitesse.",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cours-debut": {
+   "titre": "Cinq groupes, du Level 1 au Level 10.",
+   "role": "tarifs",
+   "description": "Le prix dans un disque bleu devenu hublot (vague SVG qui ondule, bulles), objet d'ouverture du voile ; sélecteur de level sur une ligne d'eau de 10 boutons-flotteurs ; bandeau de planches en parallaxe.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sous 760 px, 10 boutons ne tiennent pas en 44 px : grille de 5 colonnes sur 2 rangées"
+   ]
+  },
+  "cours-groupes": {
+   "titre": "Le bon groupe pour chaque enfant.",
+   "role": "offre",
+   "description": "Cinq fiches avec pastille de levels, jauge de 10 flotteurs, durée, prix et lien d'inscription prérempli.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cours-deroule": {
+   "titre": "Une inscription en quatre temps.",
+   "role": "étapes",
+   "description": "Quatre étapes sur une vague qui se trace.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cours-faq": {
+   "titre": "Bon à savoir",
+   "role": "faq",
+   "description": "Six questions tirées du site actuel, photo réelle d'un groupe qui se resserre.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cours-appel": {
+   "titre": "Prêt pour le grand bain ?",
+   "role": "appel",
+   "description": "Appel final partagé (caustiques, bulles).",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-debut": {
+   "titre": "Depuis 1995, la natation pour tous.",
+   "role": "ouverture",
+   "description": "Plein cadre sous l'eau (image générée), voile sombre en dégradé dans la figure, titre blanc en bas.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Titre clair sur photo : couleur de fond sombre sur la section et voile dégradé jusqu'à 0,9 dès 60 % de la hauteur, sinon contraste refusé à 390 et 1366"
+   ]
+  },
+  "ecole-histoire": {
+   "titre": "1995 · Éducation. Découverte. Plaisir.",
+   "role": "manifeste",
+   "description": "L'année en très grand lettre à lettre, devise, texte, photo réelle en rideau.",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-pedagogie": {
+   "titre": "Une pédagogie sans pression.",
+   "role": "méthode",
+   "description": "Quatre cartes blanches sur le second fond, chacune avec un pictogramme au trait bleu (pas de compétition, la brasse en dernier, pas à pas, en groupe) et une phrase tirée du site.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-equipe": {
+   "titre": "L'équipe.",
+   "role": "équipe",
+   "description": "Mêmes bouées que l'accueil, sur fond clair.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-charte": {
+   "titre": "Les droits de l'enfant dans le sport.",
+   "role": "manifeste",
+   "description": "Les 7 droits de la charte en puces flotteurs, poisson en filigrane.",
+   "animations": [
+    "apparition-au-défilement",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-jeunesse-sport": {
+   "titre": "Avec Jeunesse+Sport.",
+   "role": "preuves",
+   "description": "Bande bleue, sigle J+S en lettres, lien externe.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-photos": {
+   "titre": "Trimestre après trimestre.",
+   "role": "galerie",
+   "description": "Bande de photos des groupes qui glisse avec le défilement.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "ecole-appel": {
+   "titre": "Rejoindre l'école.",
+   "role": "appel",
+   "description": "Appel final partagé par toutes les pages : bande bleu bassin, caustiques WebGL blancs, bulles qui montent au défilement, poisson clair et deux boutons.",
+   "animations": [
+    "webgl-shader"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "inscription-debut": {
+   "titre": "Une place pour votre enfant.",
+   "role": "outil-interactif",
+   "description": "Formulaire d'inscription en 3 étapes et récapitulatif (module formulaire-par-etapes), groupe prérempli par l'adresse, cycles calculés ; à l'envoi le poisson arrive en nageant avec des ronds ; carte du sac de piscine et « à retenir ».",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Sur téléphone, aside en display: contents et ordre (tête, image, formulaire, à retenir) ; une grid-area nommée plus spécifique crée des colonnes implicites",
+    "Aside collant seulement si l'écran fait 980 px de haut : sinon son bas n'est jamais visible (focus sur un élément caché)"
+   ]
+  }
+ }
+}

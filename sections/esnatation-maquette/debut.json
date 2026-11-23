@@ -1,0 +1,53 @@
+{
+ "id": "esnatation-maquette/debut",
+ "maquette": "esnatation-maquette",
+ "page": "index",
+ "titre": "Apprendre à nager, à son rythme.",
+ "role": "ouverture",
+ "description": "Titre Unbounded sur un carrelage traversé de reflets de lumière en WebGL (caustiques), grand cadre du bassin vu du dessus où l'eau fait des ronds sous la souris, carte inclinée d'un vrai groupe, ligne d'eau qui ondule selon la vitesse en bas.",
+ "animations": [
+  "webgl-shader",
+  "révélation-texte",
+  "parallaxe",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger",
+  "canvas"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:111-138",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:83-101,300,333,397-404,438-439,446-447,451-457,633-636,653-654,727",
+  "js": "assets/js/site.js:34,214-231,340-347,384-386 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/esnatation-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/esnatation-maquette/debut-m390.jpg",
+  "video": "medias/esnatation-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Shader de caustiques : qualité qui baisse seule si les images dépassent 24 ms (en audit sans GPU elle descend à 0,25)",
+  "Ronds sous la souris : un toutes les 140 ms au plus, dans la figure en overflow hidden"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "vitesse",
+  "lumiere-pointeur",
+  "webgl"
+ ],
+ "impact": "spectaculaire"
+}

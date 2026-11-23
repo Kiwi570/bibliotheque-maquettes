@@ -1,0 +1,47 @@
+{
+ "id": "esnatation-maquette/groupes",
+ "maquette": "esnatation-maquette",
+ "page": "index",
+ "titre": "Cinq groupes, dix levels.",
+ "role": "offre",
+ "description": "Bande bleue : ligne d'eau de 10 flotteurs numérotés, accolades des 5 groupes ; un petit poisson parcourt les levels au défilement et la carte du groupe atteint passe en blanc. Chaque carte porte une jauge de 10 flotteurs.",
+ "animations": [
+  "fil-conducteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:158-213",
+  "css": "assets/css/site.css:29,114-139,259,270-271,384,406-412,629,639,668,694-698",
+  "js": "assets/js/site.js:6,115-144,353"
+ },
+ "medias": {
+  "capture": "medias/esnatation-maquette/groupes-p1440.jpg",
+  "capture_m390": "medias/esnatation-maquette/groupes-m390.jpg",
+  "video": "medias/esnatation-maquette/groupes-p720.mp4"
+ },
+ "pieges": [
+  "Libellés des groupes masqués sous 760 px (une colonne de 30 px ne les tient pas) : display none sur le span, jamais font-size 0 (texte sous 12 px à l'audit)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1012,
+  "hauteur_m390": 1660,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "fil-conducteur"
+ ],
+ "impact": "vivant"
+}

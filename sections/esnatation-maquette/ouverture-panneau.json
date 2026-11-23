@@ -1,0 +1,50 @@
+{
+ "id": "esnatation-maquette/ouverture-panneau",
+ "maquette": "esnatation-maquette",
+ "page": "index",
+ "pages": [
+  "index",
+  "404",
+  "contact",
+  "cours",
+  "ecole",
+  "inscription"
+ ],
+ "titre": "Intro : le poisson se trace",
+ "role": "ouverture",
+ "description": "Le poisson du logo vectorisé se trace en blanc (stroke-dashoffset sur le chemin complet), se remplit, deux gouttes tombent, des ronds partent de son œil, puis il glisse jusqu'au grand cadre de l'accueil (versObjet) et la page s'ouvre en cercle.",
+ "animations": [
+  "ouverture-orchestrée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:64-72",
+  "css": "assets/css/socle.css:224-227 ; assets/css/site.css:65-73",
+  "js": "assets/js/site.js:369,376-378 ; assets/js/socle/ouverture.js:22-30,160-237"
+ },
+ "medias": {},
+ "pieges": [
+  "Logo vectorisé depuis le JPG par seuil, composantes connexes et contours lissés en Catmull-Rom ; arrondir les coordonnées pour garder le SVG sous 25 Ko"
+ ],
+ "mesures": {
+  "hauteur_p1440": 0,
+  "hauteur_m390": null,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}
