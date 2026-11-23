@@ -4,36 +4,40 @@
  "page": "atelier",
  "titre": "La table aux couleurs",
  "role": "équipe",
- "description": "Photo du peintre au travail en rideau et texte court.",
+ "description": "Photo du peintre au travail en rideau, texte court et graphique « Sur quoi il peint » : barres des supports comptés sur le catalogue (papier 34, toile 33, bois et panneau 13, carton 1), remplies au défilement, avec le nombre d'œuvres sans légende.",
  "animations": [
   "révélation-image",
-  "révélation-texte"
+  "révélation-texte",
+  "apparition-au-défilement"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "atelier.html:129-140",
-  "css": "assets/css/site.css:325-326,340",
-  "js": null
+  "html": "atelier.html:129-145",
+  "css": "assets/css/site.css:343-344,358,500-507",
+  "js": "assets/js/site.js:2,108-113,215-227,230-246,256 ; assets/js/socle/voile.js:26 ; assets/js/socle/effets.js:27,40,151-158"
  },
  "medias": {
-  "capture": "medias/baugier-maquette/atelier-table-p1440.jpg"
+  "capture": "medias/baugier-maquette/atelier-table-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/atelier-table-m390.jpg",
+  "video": "medias/baugier-maquette/atelier-table-p720.mp4"
  },
  "pieges": [],
  "mesures": {
   "hauteur_p1440": 753,
-  "hauteur_m390": 806,
+  "hauteur_m390": 1032,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  },
  "familles": [],
  "impact": "vivant"

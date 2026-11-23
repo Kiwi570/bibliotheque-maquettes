@@ -1,8 +1,8 @@
 {
  "depot": "baugier-maquette",
- "commit": "76e12b2",
- "date_commit": "2026-11-20T20:47:48+01:00",
- "genere": "2026-11-20T19:52:37.151Z",
+ "commit": "966b855",
+ "date_commit": "2026-11-23T15:57:12+01:00",
+ "genere": "2026-11-23T15:10:33.122Z",
  "pages": {
   "404": {
    "fichier": "404.html",
@@ -49,6 +49,11 @@
      "sig": "div.barre-masquee",
      "fixe": true,
      "h": 0
+    },
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
     }
    ],
    "gabarit_de": []
@@ -93,7 +98,13 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [],
+   "ajoutes_par_js": [
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
+    }
+   ],
    "gabarit_de": []
   },
   "atelier": {
@@ -136,7 +147,13 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [],
+   "ajoutes_par_js": [
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
+    }
+   ],
    "gabarit_de": []
   },
   "contact": {
@@ -179,7 +196,13 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [],
+   "ajoutes_par_js": [
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
+    }
+   ],
    "gabarit_de": []
   },
   "oeuvres": {
@@ -222,7 +245,13 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [],
+   "ajoutes_par_js": [
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
+    }
+   ],
    "gabarit_de": []
   },
   "parcours": {
@@ -265,7 +294,13 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [],
+   "ajoutes_par_js": [
+    {
+     "sig": "div.curseur",
+     "fixe": true,
+     "h": 16
+    }
+   ],
    "gabarit_de": []
   }
  },
@@ -349,7 +384,7 @@
    "code": {
     "html": "index.html:64-69",
     "css": "assets/css/socle.css:224-227 ; assets/css/site.css:56-60",
-    "js": "assets/js/site.js:166-167 ; assets/js/socle/ouverture.js:22-30,160-237"
+    "js": "assets/js/site.js:267-268 ; assets/js/socle/ouverture.js:22-30,160-237"
    },
    "titre": "",
    "hauteur": 0,
@@ -524,8 +559,8 @@
    "dans_main": true,
    "code": {
     "html": "index.html:108-133",
-    "css": "assets/css/site.css:65-97,430-433,446-450,456",
-    "js": "assets/js/site.js:3,21-36,39-46,49-60,170 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/site.css:65-98,448-451,464-468,474",
+    "js": "assets/js/site.js:3,21-36,39-46,131-137,140-151,271 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "MarcelBaugier",
    "hauteur": 900,
@@ -555,7 +590,7 @@
     "onglets": 0,
     "deplies": 0,
     "images": 2,
-    "liens": 1
+    "liens": 2
    },
    "classes_exclusives": [
     "hero",
@@ -571,6 +606,7 @@
     "hero-info",
     "hero-oeuvre",
     "hero-cadre",
+    "hero-lien",
     "hero-media",
     "toile-grille",
     "hero-cartel"
@@ -603,7 +639,7 @@
    "dans_main": true,
    "code": {
     "html": "index.html:134-146",
-    "css": "assets/css/site.css:101-107",
+    "css": "assets/css/site.css:102-108",
     "js": null
    },
    "titre": "Ce qu'en dit Jean Vautrin",
@@ -658,8 +694,8 @@
    "dans_main": true,
    "code": {
     "html": "index.html:147-273",
-    "css": "assets/css/site.css:38-41,110-128",
-    "js": "assets/js/site.js:62-80,157 ; assets/js/catalogue.js:84,128,169 ; assets/js/socle/effets.js:14,236-267"
+    "css": "assets/css/site.css:38-41,111-129",
+    "js": "assets/js/site.js:69-74,131-137,153-171,251 ; assets/js/catalogue.js:86,131,177 ; assets/js/socle/effets.js:14,236-267"
    },
    "titre": "Quatre décennies, quatre salles",
    "hauteur": 2874,
@@ -678,10 +714,58 @@
     },
     {
      "pin": false,
+     "scrub": 0.6,
+     "debut": 1316,
+     "fin": 1676,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 1317,
+     "fin": 1677,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 1318,
+     "fin": 1678,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
      "scrub": null,
      "debut": 2191,
      "fin": 2899,
      "anime": false,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 1905,
+     "fin": 2265,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 1906,
+     "fin": 2266,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 1907,
+     "fin": 2267,
+     "anime": true,
      "toggle": false
     },
     {
@@ -694,15 +778,67 @@
     },
     {
      "pin": false,
+     "scrub": 0.6,
+     "debut": 2613,
+     "fin": 2973,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 2613,
+     "fin": 2973,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 2616,
+     "fin": 2976,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
      "scrub": null,
      "debut": 3547,
      "fin": 4105,
      "anime": false,
      "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3236,
+     "fin": 3596,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3237,
+     "fin": 3597,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 3239,
+     "fin": 3599,
+     "anime": true,
+     "toggle": false
     }
    ],
-   "tweens": 0,
-   "proprietes": [],
+   "tweens": 12,
+   "proprietes": [
+    "y",
+    "rotation",
+    "transformOrigin"
+   ],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
@@ -755,13 +891,13 @@
    "sig": "section#grande.grande",
    "dans_main": true,
    "code": {
-    "html": "index.html:274-289",
-    "css": "assets/css/site.css:132-145,437-440",
-    "js": "assets/js/site.js:14-17 ; assets/js/socle/gouttiere.js:8 ; assets/js/socle/effets.js:17-18,151-158,269-283"
+    "html": "index.html:274-293",
+    "css": "assets/css/site.css:133-164,455-457",
+    "js": "assets/js/site.js:14-16,48-66 ; assets/js/socle/gouttiere.js:8 ; assets/js/socle/effets.js:17,151-158,269-283"
    },
    "titre": "Une toile de 2,40 mètres",
-   "hauteur": 1485,
-   "hauteur_m390": 1097,
+   "hauteur": 1800,
+   "hauteur_m390": 489,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -770,17 +906,16 @@
      "pin": false,
      "scrub": 0.6,
      "debut": 4680,
-     "fin": 5265,
+     "fin": 5580,
      "anime": true,
      "toggle": false
     }
    ],
-   "tweens": 4,
+   "tweens": 3,
    "proprietes": [
-    "clipPath",
-    "xPercent",
-    "y",
-    "autoAlpha"
+    "scaleX",
+    "scaleY",
+    "clipPath"
    ],
    "boucles_css": 0,
    "animations_css": 0,
@@ -803,19 +938,22 @@
    "classes_exclusives": [
     "grande",
     "grande-collant",
-    "grande-mot",
-    "grande-mot--g",
+    "grande-tete",
+    "grande-cadre",
+    "grande-toile",
     "grande-media",
-    "grande-mot--d",
-    "grande-texte"
+    "cote",
+    "cote--h",
+    "cote-label",
+    "cote-label--h",
+    "cote--v",
+    "cote-label--v",
+    "grande-cartel"
    ],
    "data": [
-    "data-fx",
-    "data-fx-depart",
+    "data-scene",
     "data-collant",
-    "data-fx-ecarte",
-    "data-audit-ignorer",
-    "data-fx-apres"
+    "data-effet"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/grande-p1440.jpg",
@@ -832,8 +970,8 @@
    "sig": "section#atelier.atelier-bloc",
    "dans_main": true,
    "code": {
-    "html": "index.html:290-314",
-    "css": "assets/css/socle.css:49 ; assets/css/site.css:148-155",
+    "html": "index.html:294-318",
+    "css": "assets/css/socle.css:49 ; assets/css/site.css:167-174",
     "js": "assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36 ; assets/js/socle/formulaires.js:8"
    },
    "titre": "Un atelier dans les anciennes tanneries",
@@ -846,16 +984,16 @@
     {
      "pin": false,
      "scrub": true,
-     "debut": 5438,
-     "fin": 6754,
+     "debut": 5753,
+     "fin": 7069,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": true,
-     "debut": 5719,
-     "fin": 6871,
+     "debut": 6034,
+     "fin": 7186,
      "anime": true,
      "toggle": false
     }
@@ -915,9 +1053,9 @@
    "sig": "section#chez-vous.chezvous",
    "dans_main": true,
    "code": {
-    "html": "index.html:315-357",
-    "css": "assets/css/socle.css:39-42,274-277 ; assets/css/site.css:42,158-171,175-178",
-    "js": "assets/js/site.js:48,83-118 ; assets/js/catalogue.js:2,57"
+    "html": "index.html:319-362",
+    "css": "assets/css/socle.css:39-42,274-277 ; assets/css/site.css:42,177-190,194-197,477-479",
+    "js": "assets/js/site.js:76,86-106,139,174-212 ; assets/js/catalogue.js:2,58"
    },
    "titre": "Accrochée à la bonne taille",
    "hauteur": 898,
@@ -929,8 +1067,8 @@
     {
      "pin": false,
      "scrub": 0.6,
-     "debut": 6373,
-     "fin": 6997,
+     "debut": 6688,
+     "fin": 7312,
      "anime": true,
      "toggle": false
     }
@@ -973,6 +1111,7 @@
     "mur-photo",
     "mention-ia",
     "mur-toile",
+    "mur-cartel",
     "mur-repere"
    ],
    "data": [
@@ -986,7 +1125,8 @@
     "data-oeuvres",
     "data-grok",
     "data-toile",
-    "data-effet"
+    "data-effet",
+    "data-mur-cartel"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/chez-vous-p1440.jpg",
@@ -1003,8 +1143,8 @@
    "sig": "section#reconnaissance.reconnaissance",
    "dans_main": true,
    "code": {
-    "html": "index.html:358-371",
-    "css": "assets/css/site.css:181-192",
+    "html": "index.html:363-376",
+    "css": "assets/css/site.css:200-211",
     "js": "assets/js/socle/effets.js:19-20,151-158,285,315-331,407-428"
    },
    "titre": "Exposé de Paris à Florence, de Monaco à Riyad",
@@ -1017,16 +1157,16 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 7181,
-     "fin": 8383,
+     "debut": 7496,
+     "fin": 8698,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 7181,
-     "fin": 8383,
+     "debut": 7496,
+     "fin": 8698,
      "anime": true,
      "toggle": false
     }
@@ -1087,86 +1227,29 @@
    "sig": "section#acquerir.acquerir",
    "dans_main": true,
    "code": {
-    "html": "index.html:372-395",
-    "css": "assets/css/site.css:195-205",
+    "html": "index.html:377-405",
+    "css": "assets/css/site.css:214-227,524",
     "js": "assets/js/socle/effets.js:358-402"
    },
    "titre": "Les prix se donnent à l'atelier",
-   "hauteur": 684,
-   "hauteur_m390": 1118,
+   "hauteur": 961,
+   "hauteur_m390": 1394,
    "masque_m390": false,
    "position": "static",
-   "cache": false,
-   "scrolltriggers": [],
-   "tweens": 0,
-   "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 0,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 0,
-    "liens": 3
-   },
-   "classes_exclusives": [
-    "acquerir",
-    "acquerir-tete",
-    "acquerir-cartes",
-    "acquerir-carte",
-    "acquerir-carte--atelier"
-   ],
-   "data": [
-    "data-anime",
-    "data-survol",
-    "data-survol-force",
-    "data-libelle"
-   ],
-   "medias": {
-    "capture": "medias/baugier-maquette/acquerir-p1440.jpg",
-    "capture_m390": "medias/baugier-maquette/acquerir-m390.jpg"
-   }
-  },
-  {
-   "id": "fin",
-   "page": "index",
-   "pages": [
-    "index"
-   ],
-   "sig": "section#fin.fin",
-   "dans_main": true,
-   "code": {
-    "html": "index.html:396-410",
-    "css": "assets/css/site.css:32,208-215",
-    "js": "assets/js/catalogue.js:110,117 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
-   },
-   "titre": "Venir voir les toiles en vrai",
-   "hauteur": 828,
-   "hauteur_m390": 776,
-   "masque_m390": false,
-   "position": "relative",
    "cache": false,
    "scrolltriggers": [
     {
      "pin": false,
-     "scrub": 0.4,
-     "debut": 8807,
-     "fin": 9671,
+     "scrub": true,
+     "debut": 8818,
+     "fin": 10139,
      "anime": true,
      "toggle": false
     }
    ],
    "tweens": 1,
    "proprietes": [
+    "yPercent",
     "scale"
    ],
    "boucles_css": 0,
@@ -1185,22 +1268,97 @@
     "onglets": 0,
     "deplies": 0,
     "images": 2,
-    "liens": 2
+    "liens": 3
    },
    "classes_exclusives": [
-    "fin",
-    "fin--photo",
-    "fin-fond",
-    "fin-texte",
-    "fin-actions",
-    "bouton--clair"
+    "acquerir",
+    "acquerir-tete",
+    "acquerir-photo",
+    "acquerir-cartes",
+    "acquerir-carte",
+    "acquerir-carte--atelier"
    ],
    "data": [
+    "data-anime",
     "data-fx",
     "data-fx-force",
+    "data-survol",
+    "data-survol-force",
+    "data-libelle"
+   ],
+   "medias": {
+    "capture": "medias/baugier-maquette/acquerir-p1440.jpg",
+    "capture_m390": "medias/baugier-maquette/acquerir-m390.jpg",
+    "video": "medias/baugier-maquette/acquerir-p720.mp4"
+   }
+  },
+  {
+   "id": "fin",
+   "page": "index",
+   "pages": [
+    "index"
+   ],
+   "sig": "section#fin.mur-final",
+   "dans_main": true,
+   "code": {
+    "html": "index.html:406-421",
+    "css": "assets/css/site.css:236,482-490",
+    "js": "assets/js/site.js:77-83,131-137"
+   },
+   "titre": "Venir voir les toiles en vrai",
+   "hauteur": 758,
+   "hauteur_m390": 741,
+   "masque_m390": false,
+   "position": "static",
+   "cache": false,
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.6,
+     "debut": 9647,
+     "fin": 10183,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 10,
+   "proprietes": [
+    "y",
+    "rotation",
+    "opacity"
+   ],
+   "boucles_css": 0,
+   "animations_css": 0,
+   "canvas": [],
+   "decoupe": 0,
+   "sticky": 0,
+   "elements": {
+    "videos": 0,
+    "audio": 0,
+    "iframes": 0,
+    "formulaires": 0,
+    "champs": 0,
+    "boutons": 0,
+    "details": 0,
+    "onglets": 0,
+    "deplies": 0,
+    "images": 10,
+    "liens": 12
+   },
+   "classes_exclusives": [
+    "mur-final",
+    "mur-final-grille",
+    "mur-final-texte",
+    "fin-actions",
+    "accrochage-salon",
+    "salon-rangee",
+    "salon-toile"
+   ],
+   "data": [
     "data-anime",
     "data-libelle",
-    "data-survol"
+    "data-survol",
+    "data-effet"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/fin-p1440.jpg",
@@ -1222,8 +1380,8 @@
    "sig": "footer#pied.pied",
    "dans_main": false,
    "code": {
-    "html": "index.html:412-428",
-    "css": "assets/css/socle.css:304-309 ; assets/css/site.css:218-226",
+    "html": "index.html:423-439",
+    "css": "assets/css/socle.css:304-309 ; assets/css/site.css:240-248",
     "js": "assets/js/socle/mesures.js:42-78 ; assets/js/socle/transitions.js:16-23"
    },
    "titre": "",
@@ -1279,8 +1437,8 @@
    "dans_main": true,
    "code": {
     "html": "404.html:108-120",
-    "css": "assets/css/socle.css:120,270-277 ; assets/css/site.css:33,42,97,106,140,214,232-235,240-243,319-320,401,446-450",
-    "js": "assets/js/site.js:20,121-133 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:9,271-283 ; assets/js/socle/onde.js:1 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:120,270-277 ; assets/css/site.css:33,42,98,107,136,236,254-257,262-265,337-338,419,464-468,484",
+    "js": "assets/js/site.js:20,50-66,215-227 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:9,271-283 ; assets/js/socle/onde.js:1 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Cette toile n'est pas accrochée ici",
    "hauteur": 900,
@@ -1342,7 +1500,7 @@
    "dans_main": true,
    "code": {
     "html": "atelier.html:108-120",
-    "css": "assets/css/socle.css:265 ; assets/css/site.css:33,69-70,97,106,140,235-237,313-321,341,401,444-452",
+    "css": "assets/css/socle.css:265 ; assets/css/site.css:33,69-70,98,107,136,257-259,331-339,359,419,462-470,484",
     "js": "assets/js/site.js:20-36 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Une salle desanciennes tanneries",
@@ -1422,7 +1580,7 @@
    "dans_main": true,
    "code": {
     "html": "atelier.html:121-128",
-    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:322-324,340",
+    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:340-342,358",
     "js": "assets/js/socle/effets.js:40,151-158 ; assets/js/socle/compteurs.js:1,6-36"
    },
    "titre": "L'atelier en trois chiffres",
@@ -1476,19 +1634,30 @@
    "sig": "section#table.bloc-image",
    "dans_main": true,
    "code": {
-    "html": "atelier.html:129-140",
-    "css": "assets/css/site.css:325-326,340",
-    "js": null
+    "html": "atelier.html:129-145",
+    "css": "assets/css/site.css:343-344,358,500-507",
+    "js": "assets/js/site.js:2,108-113,215-227,230-246,256 ; assets/js/socle/voile.js:26 ; assets/js/socle/effets.js:27,40,151-158"
    },
    "titre": "La table aux couleurs",
    "hauteur": 753,
-   "hauteur_m390": 806,
+   "hauteur_m390": 1032,
    "masque_m390": false,
    "position": "static",
    "cache": false,
-   "scrolltriggers": [],
-   "tweens": 0,
-   "proprietes": [],
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.5,
+     "debut": 805,
+     "fin": 1212,
+     "anime": true,
+     "toggle": false
+    }
+   ],
+   "tweens": 1,
+   "proprietes": [
+    "scaleX"
+   ],
    "boucles_css": 0,
    "animations_css": 0,
    "canvas": [],
@@ -1509,15 +1678,23 @@
    },
    "classes_exclusives": [
     "bloc-image",
-    "bloc-image-media"
+    "bloc-image-media",
+    "supports",
+    "supports-titre",
+    "supports-nom",
+    "supports-barre",
+    "supports-n",
+    "supports-note"
    ],
    "data": [
     "data-anime",
+    "data-effet",
     "data-libelle"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/atelier-table-p1440.jpg",
-    "capture_m390": "medias/baugier-maquette/atelier-table-m390.jpg"
+    "capture_m390": "medias/baugier-maquette/atelier-table-m390.jpg",
+    "video": "medias/baugier-maquette/atelier-table-p720.mp4"
    }
   },
   {
@@ -1529,8 +1706,8 @@
    "sig": "section#salles.salles-photos",
    "dans_main": true,
    "code": {
-    "html": "atelier.html:141-158",
-    "css": "assets/css/site.css:327-330,340",
+    "html": "atelier.html:146-163",
+    "css": "assets/css/site.css:345-348,358",
     "js": null
    },
    "titre": "Les toiles au mur",
@@ -1607,8 +1784,8 @@
    "sig": "section#visiter.atelier-infos",
    "dans_main": true,
    "code": {
-    "html": "atelier.html:159-180",
-    "css": "assets/css/site.css:32,215,331-340",
+    "html": "atelier.html:164-185",
+    "css": "assets/css/site.css:32,237,349-358",
     "js": null
    },
    "titre": "L'atelier en vidéo",
@@ -1664,9 +1841,9 @@
    "sig": "section#fin.fin-oeuvre",
    "dans_main": true,
    "code": {
-    "html": "atelier.html:181-197",
-    "css": "assets/css/site.css:34,38-41,77,121,128,142,214,270-272,344-349,454",
-    "js": "assets/js/site.js:20,64-80,83-118 ; assets/js/catalogue.js:84,128,169"
+    "html": "atelier.html:186-202",
+    "css": "assets/css/site.css:34,38-41,77,122,129,236,292-294,362-367,472,484",
+    "js": "assets/js/site.js:20,86-106,131-137,155-171,174-212 ; assets/js/catalogue.js:86,131,177"
    },
    "titre": "Une toile vous a plu ?",
    "hauteur": 696,
@@ -1725,7 +1902,7 @@
    "dans_main": true,
    "code": {
     "html": "contact.html:108-125",
-    "css": "assets/css/socle.css:265 ; assets/css/site.css:33,69-70,97,106,140,235-237,319-321,398-409,446-450",
+    "css": "assets/css/socle.css:265 ; assets/css/site.css:33,69-70,98,107,136,257-259,337-339,416-427,464-468,484",
     "js": "assets/js/site.js:20-36 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Venir àl'atelier",
@@ -1805,8 +1982,8 @@
    "dans_main": true,
    "code": {
     "html": "contact.html:126-150",
-    "css": "assets/css/socle.css:280-285 ; assets/css/site.css:410-423",
-    "js": "assets/js/site.js:82-118 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/entete.js:10"
+    "css": "assets/css/socle.css:280-285 ; assets/css/site.css:428-441",
+    "js": "assets/js/site.js:173-212 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58 ; assets/js/socle/entete.js:10"
    },
    "titre": "Écrire au peintre",
    "hauteur": 1006,
@@ -1867,7 +2044,7 @@
    "dans_main": true,
    "code": {
     "html": "contact.html:151-176",
-    "css": "assets/css/site.css:35-37,424-427",
+    "css": "assets/css/site.css:35-37,442-445",
     "js": "assets/js/socle/apparitions.js:35-56 ; assets/js/socle/effets.js:85,151-158,214-234"
    },
    "titre": "Barjols, dans le Haut-Var",
@@ -1936,8 +2113,8 @@
    "dans_main": true,
    "code": {
     "html": "contact.html:177-193",
-    "css": "assets/css/site.css:34,38-41,77,121,128,142,214,270-272,344-349,454",
-    "js": "assets/js/site.js:20,64-80,83-118 ; assets/js/catalogue.js:84,128,169"
+    "css": "assets/css/site.css:34,38-41,77,122,129,236,292-294,362-367,472,484",
+    "js": "assets/js/site.js:20,86-106,131-137,155-171,174-212 ; assets/js/catalogue.js:86,131,177"
    },
    "titre": "Avant de venir, regardez les toiles",
    "hauteur": 741,
@@ -1997,8 +2174,8 @@
    "dans_main": true,
    "code": {
     "html": "oeuvres.html:108-125",
-    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:33,69-70,97,106,140,235-237,246-257,319-321,401,446-450",
-    "js": "assets/js/site.js:4,20-36,136-152 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:151-158 ; assets/js/socle/boucles.js:6,54-77 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:33,69-70,98,107,136,257-259,268-279,337-339,419,464-468,484",
+    "js": "assets/js/site.js:4,20-36,230-246 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:151-158 ; assets/js/socle/boucles.js:6,54-77 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "113 œuvres,de 1980 à 2024",
    "hauteur": 900,
@@ -2084,13 +2261,13 @@
    "sig": "section#catalogue.catalogue",
    "dans_main": true,
    "code": {
-    "html": "oeuvres.html:126-1168",
-    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:34,39-40,77,121,128,142,260-275,348,454",
-    "js": "assets/js/site.js:4,20,83-118,135 ; assets/js/catalogue.js:1,9,13-18,29,34,47-48,52,60,125,128,171 ; assets/js/socle/mesures.js:42-78"
+    "html": "oeuvres.html:126-1169",
+    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:34,39-40,77,122,129,282-297,366,472,493",
+    "js": "assets/js/site.js:4,20,86-106,131-137,174-212,229 ; assets/js/catalogue.js:1,10,14-19,30,35,48-49,53,61,128,131,134-137,179 ; assets/js/socle/mesures.js:42-78"
    },
    "titre": "Filtrer les œuvres",
    "hauteur": 9443,
-   "hauteur_m390": 14392,
+   "hauteur_m390": 14413,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -2108,7 +2285,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 15,
+    "boutons": 16,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -2123,6 +2300,7 @@
     "filtre-nom",
     "puce",
     "catalogue-compte",
+    "hasard",
     "cat-mur",
     "cat-item",
     "cat-lien",
@@ -2138,6 +2316,7 @@
     "data-valeur",
     "data-compte",
     "data-modele",
+    "data-hasard",
     "data-decennie",
     "data-support",
     "data-format",
@@ -2153,89 +2332,37 @@
    }
   },
   {
-   "id": "oeuvres-en-ligne",
-   "page": "oeuvres",
-   "pages": [
-    "oeuvres"
-   ],
-   "sig": "section#en-ligne.en-ligne",
-   "dans_main": true,
-   "code": {
-    "html": "oeuvres.html:1169-1179",
-    "css": "assets/css/site.css:277-281",
-    "js": null
-   },
-   "titre": "Aussi en ligne",
-   "hauteur": 346,
-   "hauteur_m390": 386,
-   "masque_m390": false,
-   "position": "static",
-   "cache": false,
-   "scrolltriggers": [],
-   "tweens": 0,
-   "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
-   "canvas": [],
-   "decoupe": 0,
-   "sticky": 0,
-   "elements": {
-    "videos": 0,
-    "audio": 0,
-    "iframes": 0,
-    "formulaires": 0,
-    "champs": 0,
-    "boutons": 0,
-    "details": 0,
-    "onglets": 0,
-    "deplies": 0,
-    "images": 0,
-    "liens": 3
-   },
-   "classes_exclusives": [
-    "en-ligne",
-    "en-ligne-liens"
-   ],
-   "data": [
-    "data-anime",
-    "data-libelle"
-   ],
-   "medias": {
-    "capture": "medias/baugier-maquette/oeuvres-en-ligne-p1440.jpg",
-    "capture_m390": "medias/baugier-maquette/oeuvres-en-ligne-m390.jpg"
-   }
-  },
-  {
    "id": "oeuvres-fin",
    "page": "oeuvres",
    "pages": [
     "oeuvres"
    ],
-   "sig": "section#fin.fin",
+   "sig": "section#fin.fin-oeuvre",
    "dans_main": true,
    "code": {
-    "html": "oeuvres.html:1180-1191",
-    "css": "assets/css/site.css:208-215",
-    "js": "assets/js/catalogue.js:110,117 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:11,18,22,185,188-234,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:6-36"
+    "html": "oeuvres.html:1170-1191",
+    "css": "assets/css/site.css:35-37,236,299,362-367,484,494-497",
+    "js": "assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190"
    },
    "titre": "Les toiles se regardent mieux en vrai",
-   "hauteur": 828,
-   "hauteur_m390": 776,
+   "hauteur": 743,
+   "hauteur_m390": 840,
    "masque_m390": false,
-   "position": "relative",
+   "position": "static",
    "cache": false,
    "scrolltriggers": [
     {
      "pin": false,
-     "scrub": 0.4,
-     "debut": 9790,
-     "fin": 10654,
+     "scrub": true,
+     "debut": 9583,
+     "fin": 10946,
      "anime": true,
      "toggle": false
     }
    ],
    "tweens": 1,
    "proprietes": [
+    "yPercent",
     "scale"
    ],
    "boucles_css": 0,
@@ -2254,20 +2381,23 @@
     "onglets": 0,
     "deplies": 0,
     "images": 2,
-    "liens": 1
+    "liens": 4
    },
    "classes_exclusives": [
-    "fin",
-    "fin--photo",
-    "fin-fond",
-    "fin-texte",
-    "fin-actions"
+    "fin-oeuvre",
+    "fin-oeuvre--pierre",
+    "fin-oeuvre-grille",
+    "fin-actions",
+    "fin-en-ligne",
+    "en-ligne-liens",
+    "lien-fleche",
+    "fin-oeuvre-photo"
    ],
    "data": [
-    "data-fx",
-    "data-fx-force",
     "data-anime",
-    "data-libelle"
+    "data-libelle",
+    "data-fx",
+    "data-fx-force"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/oeuvres-fin-p1440.jpg",
@@ -2284,9 +2414,9 @@
    "sig": "div.visionneuse",
    "dans_main": true,
    "code": {
-    "html": "oeuvres.html:1192-1233",
-    "css": "assets/css/socle.css:274-277 ; assets/css/site.css:42,167-171,175-177,284-310",
-    "js": "assets/js/site.js:48,83-118 ; assets/js/catalogue.js:2,10,15,56-58,72-75,97,107,130-132 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34"
+    "html": "oeuvres.html:1192-1234",
+    "css": "assets/css/socle.css:274-277 ; assets/css/site.css:42,186-190,194-196,302-328,477-479",
+    "js": "assets/js/site.js:76,86-106,139,174-212 ; assets/js/catalogue.js:2,11,16,57-59,73-76,99,110,133,139-140 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34"
    },
    "titre": "Visionneuse",
    "hauteur": 0,
@@ -2346,6 +2476,7 @@
     "mur-photo",
     "mention-ia",
     "mur-toile",
+    "mur-cartel",
     "mur-repere",
     "vis-fleche--d",
     "vis-cartel",
@@ -2376,6 +2507,7 @@
     "data-grok",
     "data-toile",
     "data-effet",
+    "data-mur-cartel",
     "data-vis-suiv",
     "data-vis-titre",
     "data-vis-details",
@@ -2395,8 +2527,8 @@
    "dans_main": true,
    "code": {
     "html": "parcours.html:108-121",
-    "css": "assets/css/socle.css:263-265,274-277 ; assets/css/site.css:33,42,69-70,97,106,140,235-237,241,317-321,352-358,401,444-452",
-    "js": "assets/js/site.js:2,20-36,121-133,136-152 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:27,40,151-158 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:263-265,274-277 ; assets/css/site.css:33,42,69-70,98,107,136,257-259,263,335-339,370-376,419,462-470,484",
+    "js": "assets/js/site.js:20-36,215-227 ; assets/js/socle/ouverture.js:32,160-237 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:151-158 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "De Barjols au Louvre,et retour",
    "hauteur": 900,
@@ -2480,9 +2612,9 @@
    "sig": "section#vie.frise",
    "dans_main": true,
    "code": {
-    "html": "parcours.html:122-188",
-    "css": "assets/css/site.css:360-369",
-    "js": null
+    "html": "parcours.html:122-189",
+    "css": "assets/css/site.css:378-387,510-514",
+    "js": "assets/js/site.js:115-122,255"
    },
    "titre": "Une vie de peintre",
    "hauteur": 2386,
@@ -2498,11 +2630,100 @@
      "fin": 2741,
      "anime": true,
      "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": 0.4,
+     "debut": 658,
+     "fin": 2651,
+     "anime": true,
+     "toggle": false
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 678,
+     "fin": 827,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 827,
+     "fin": 1031,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1031,
+     "fin": 1181,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1181,
+     "fin": 1331,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1331,
+     "fin": 1585,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1585,
+     "fin": 1795,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1795,
+     "fin": 1916,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 1916,
+     "fin": 2225,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2225,
+     "fin": 2404,
+     "anime": false,
+     "toggle": true
+    },
+    {
+     "pin": false,
+     "scrub": null,
+     "debut": 2404,
+     "fin": 2670,
+     "anime": false,
+     "toggle": true
     }
    ],
-   "tweens": 1,
+   "tweens": 2,
    "proprietes": [
-    "strokeDashoffset"
+    "strokeDashoffset",
+    "y"
    ],
    "boucles_css": 0,
    "animations_css": 0,
@@ -2526,6 +2747,7 @@
     "frise",
     "frise-liste",
     "frise-trait",
+    "frise-point",
     "frise-etape",
     "frise-annee",
     "frise-corps",
@@ -2534,7 +2756,9 @@
    ],
    "data": [
     "data-anime",
-    "data-fx"
+    "data-fx",
+    "data-effet",
+    "data-audit-ignorer"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/parcours-vie-p1440.jpg",
@@ -2551,8 +2775,8 @@
    "sig": "section#vautrin.vautrin",
    "dans_main": true,
    "code": {
-    "html": "parcours.html:189-209",
-    "css": "assets/css/site.css:371-380,453-454",
+    "html": "parcours.html:190-210",
+    "css": "assets/css/site.css:389-398,471-472",
     "js": null
    },
    "titre": "« BAUGIER brûle sous ses glacis »",
@@ -2608,13 +2832,13 @@
    "sig": "section#expositions.expositions",
    "dans_main": true,
    "code": {
-    "html": "parcours.html:210-239",
-    "css": "assets/css/site.css:382-395",
-    "js": null
+    "html": "parcours.html:211-240",
+    "css": "assets/css/site.css:400-413,515-519",
+    "js": "assets/js/site.js:125-128 ; assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
    },
-   "titre": "40 expositions",
+   "titre": "0 expositions",
    "hauteur": 1490,
-   "hauteur_m390": 3275,
+   "hauteur_m390": 2297,
    "masque_m390": false,
    "position": "static",
    "cache": false,
@@ -2633,7 +2857,7 @@
     "formulaires": 0,
     "champs": 0,
     "boutons": 0,
-    "details": 0,
+    "details": 5,
     "onglets": 0,
     "deplies": 0,
     "images": 0,
@@ -2647,7 +2871,8 @@
     "reconnu"
    ],
    "data": [
-    "data-anime"
+    "data-anime",
+    "data-compteur"
    ],
    "medias": {
     "capture": "medias/baugier-maquette/parcours-expositions-p1440.jpg",
@@ -2663,8 +2888,8 @@
    "sig": "section#fin.fin-oeuvre",
    "dans_main": true,
    "code": {
-    "html": "parcours.html:240-256",
-    "css": "assets/css/site.css:214,344-349",
+    "html": "parcours.html:241-257",
+    "css": "assets/css/site.css:236,362-367,484",
     "js": null
    },
    "titre": "Voir où en est la peinture aujourd'hui",

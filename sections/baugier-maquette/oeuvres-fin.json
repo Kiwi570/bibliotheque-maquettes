@@ -4,9 +4,9 @@
  "page": "oeuvres",
  "titre": "Les toiles se regardent mieux en vrai",
  "role": "appel",
- "description": "Photo de la salle en plein cadre, zoom au défilement.",
+ "description": "Fin claire sur fond pierre : appel, photo de l'atelier et liens Rise Art, Singulart et sérigraphies (ancienne section « Aussi en ligne »).",
  "animations": [
-  "parallaxe"
+  "apparition-au-défilement"
  ],
  "interactions": [
   "aucune"
@@ -21,17 +21,19 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "oeuvres.html:1180-1191",
-  "css": "assets/css/site.css:208-215",
-  "js": "assets/js/catalogue.js:110,117 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:11,18,22,185,188-234,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/compteurs.js:6-36"
+  "html": "oeuvres.html:1170-1191",
+  "css": "assets/css/site.css:35-37,236,299,362-367,484,494-497",
+  "js": "assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190"
  },
  "medias": {
   "capture": "medias/baugier-maquette/oeuvres-fin-p1440.jpg"
  },
- "pieges": [],
+ "pieges": [
+  "Ne pas reprendre le nom de classe d'une section retirée qui portait une grille (.en-ligne) : la fin chevauchait en paysage téléphone (844 × 390)."
+ ],
  "mesures": {
-  "hauteur_p1440": 828,
-  "hauteur_m390": 776,
+  "hauteur_p1440": 743,
+  "hauteur_m390": 840,
   "epinglee": false,
   "scrolltriggers": 1
  },

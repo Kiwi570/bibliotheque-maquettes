@@ -4,10 +4,11 @@
  "page": "parcours",
  "titre": "Une vie de peintre",
  "role": "étapes",
- "description": "Frise : année en grand, titre, texte et vignette d'œuvre ou de l'atelier ; trait rouge qui se trace.",
+ "description": "Frise : année en grand, titre, texte et vignette d'œuvre ou de l'atelier ; trait rouge qui se trace. Un point rouge suit la frise et l'année de l'étape au centre de l'écran s'allume.",
  "animations": [
   "trace-svg",
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "fil-conducteur"
  ],
  "interactions": [
   "aucune"
@@ -22,9 +23,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "parcours.html:122-188",
-  "css": "assets/css/site.css:360-369",
-  "js": null
+  "html": "parcours.html:122-189",
+  "css": "assets/css/site.css:378-387,510-514",
+  "js": "assets/js/site.js:115-122,255"
  },
  "medias": {
   "capture": "medias/baugier-maquette/parcours-vie-p1440.jpg",
@@ -36,9 +37,10 @@
   "hauteur_p1440": 2386,
   "hauteur_m390": 3489,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 12
  },
  "familles": [
+  "fil-conducteur",
   "trait-qui-se-dessine"
  ],
  "impact": "vivant"
