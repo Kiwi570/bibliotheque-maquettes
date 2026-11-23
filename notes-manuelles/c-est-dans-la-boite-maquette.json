@@ -1,0 +1,638 @@
+{
+ "maquette": {
+  "client": "créatrice de photomontages 3D faits main, présentés dans une boîte façon Polaroïd de 21 × 16 cm (Carine Schwalm, Lingolsheim, Alsace) : sur mesure par e-mail, 35 €",
+  "activite": [
+   "artisanat",
+   "commerce"
+  ],
+  "concept": [
+   "atelier",
+   "galerie"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "artisanal"
+  ],
+  "palette": {
+   "fond": "#F7F3EC",
+   "texte": "#1B1714",
+   "accent": "#C8322B",
+   "secondaire": "#E6D5BA"
+  },
+  "polices": {
+   "titres": "Fraunces",
+   "texte": "Instrument Sans",
+   "mono": ""
+  },
+  "points_forts": [
+   "l'effet « développement » (l'image sort d'un gris sombre comme un Polaroïd) relie l'intro, les photos, les étapes et le composeur",
+   "on joue avec la boîte : pile qu'on mélange à l'ouverture, boîte en relief 3D qu'on attrape pour la faire tourner, composeur dont la boîte s'envole dans une enveloppe",
+   "la boîte ouverte en six plans en 3D CSS au défilement explique le métier, et le mot « relief » prend du relief en même temps",
+   "étapes pendues à un fil avec des pinces, mur d'instantanés qui tombent sur un fil tendu : un même geste d'une page à l'autre",
+   "six ouvertures différentes dans un seul système (pile, mur d'instantanés, plein cadre, prix géant, coordonnées, 404)"
+  ],
+  "reserves": [
+   "photos du client sur des fonds variés (briques, bois, papier peint), harmonisées mais pas détourées",
+   "galeries de personnages sous droits écartées : portfolio réduit à 14 boîtes"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "apparition-au-défilement",
+   "révélation-texte",
+   "révélation-image",
+   "parallaxe",
+   "progression-fixée",
+   "marquee",
+   "reactif-vitesse",
+   "bouton-magnétique",
+   "survol-image"
+  ],
+  "interactions": [
+   "filtres",
+   "galerie-cliquable",
+   "saisie-personnalisee",
+   "configurateur",
+   "jeu",
+   "schema-interactif",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "objet-unique",
+  "grille": {
+   "objet": "la boîte : pile qu'on mélange, boîte en relief qu'on fait tourner, aperçu du composeur qui part dans l'enveloppe",
+   "fil": "l'image qui se développe comme un Polaroïd, et le fil à linge des étapes et du mur"
+  },
+  "metier": "photomontages 3D en boîte"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "voile de transition, décrit avec l'ouverture"
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "panneau de l'intro, décrit avec l'ouverture"
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "Cadre du logo, nom avec « la boîte » en italique rouge, quatre liens soulignés en rouge, bouton Commander.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran papier, liens en Fraunces qui arrivent l'un après l'autre, téléphone et e-mail.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Donnez vie à vos images !",
+   "role": "ouverture",
+   "description": "Intro encre : le cadre du logo sort « laiteux », se développe, file vers la boîte de devant et l'écran s'ouvre depuis elle (versObjet). Titre en deux lignes, « vie » en italique rouge ; à droite trois vraies boîtes en pile qui se développent, s'écartent en profondeur au défilement, suivent la souris et se mélangent au clic (la boîte de devant part derrière, la suivante arrive, les autres se redéveloppent) ; note manuscrite avec flèche et légende qui s'écrit.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "révélation-image",
+    "parallaxe"
+   ],
+   "interactions": [
+    "jeu"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "GSAP absorbe les propriétés CSS translate/rotate dans sa transform au premier tween : centrer une carte par inset: 0 et margin: auto, jamais par translate -50%",
+    "trois sources de mouvement sur une carte (défilement, souris, mélange) : une par élément (cadre, photo) pour ne pas se battre sur xPercent",
+    "variables CSS animées par GSAP qui finissent à 0 sans unité : calc(-50% + 0) est invalide ; écrire var(--x) * 1%"
+   ]
+  },
+  "occasions": {
+   "titre": "Quel souvenir mettez-vous en boîte ?",
+   "role": "services",
+   "description": "Ruban de mots géants en italique (occasions) écrits en pseudo-élément, puis cinq cartes en quinconce : quatre vraies boîtes avec leur légende manuscrite et une carte « Votre idée » ; chaque carte préremplit le composeur.",
+   "animations": [
+    "marquee",
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "mots géants très clairs : axe signale le contraste ; écrire les mots dans ::before { content: attr(data-texte) }"
+   ]
+  },
+  "dans-la-boite": {
+   "titre": "Un souvenir en relief, plan par plan",
+   "role": "étapes",
+   "description": "Section collante sur fond kraft : une boîte dessinée en CSS 3D (verre, cadre, premier plan, personnages, décor, boîtier) s'ouvre plan par plan au défilement, la liste allume le plan en cours ; le mot « relief » du titre prend trois couches d'ombre au même rythme.",
+   "animations": [
+    "progression-fixée",
+    "section-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "cadre avec fenêtre : box-shadow 0 0 0 100vmax sur un ::before de la taille de la fenêtre",
+    "SplitText garde une copie cachée du titre : piloter l'effet d'un mot par une variable posée sur la section, pas sur l'élément trouvé au départ",
+    "sur téléphone, plus de collant : la boîte s'ouvre pendant qu'elle traverse l'écran"
+   ]
+  },
+  "format": {
+   "titre": "Une boîte de 21 × 16 cm, 35 €",
+   "role": "offre",
+   "description": "Boîte en relief en CSS 3D (vraie face photographiée, côtés, dos à anneau) qui tourne au défilement, qu'on attrape pour la faire tourner (retour élastique), reflet de verre qui passe, cotes 16 et 21 cm ; vignettes du dos et du carton ; prix en italique rouge, quatre atouts.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "image dans une scène qu'on fait glisser : -webkit-user-drag: none et dragstart annulé, sinon le navigateur glisse l'image et le pointeur est perdu"
+   ]
+  },
+  "creations": {
+   "titre": "Déjà mises en boîte",
+   "role": "galerie",
+   "description": "Section encre : rangée de six boîtes qui file à l'horizontale pendant que la section passe (scrub x sans épinglage), légendes manuscrites, carte de fin vers toutes les créations ; défilement au doigt sur téléphone.",
+   "animations": [
+    "galerie-horizontale",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "commander": {
+   "titre": "Trois étapes, sans bouger de chez vous",
+   "role": "étapes",
+   "description": "Trois instantanés dessinés pendus à un fil qui se trace, avec des pinces à linge, qui se balancent et se développent ; liste compacte sur téléphone.",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carine": {
+   "titre": "Derrière chaque boîte, Carine",
+   "role": "manifeste",
+   "description": "Kraft : établi généré en parallaxe, parcours de la créatrice, citation en Fraunces italique filet rouge.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "fin": {
+   "titre": "Votre souvenir mérite sa boîte.",
+   "role": "appel",
+   "description": "Encre : cadre du logo incliné qui se développe et réagit à la vitesse, grand titre, Composer et Appeler.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Pied",
+   "role": "pied-de-page",
+   "description": "Logo, créatrice, téléphone et e-mail, sommaire, mentions « à compléter » en texte.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Cette boîte est vide.",
+   "role": "page-404",
+   "description": "Plein cadre : carton kraft ouvert et vide (généré), titre en haut, « vide » en italique.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-debut": {
+   "titre": "Tout est fait main",
+   "role": "ouverture",
+   "description": "Plein cadre sombre : mains qui découpent une photo au cutter (générée), voile dégradé, titre et action à gauche.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-carine": {
+   "titre": "Un Polaroïd, dix photos",
+   "role": "manifeste",
+   "description": "Cadre du logo incliné qui réagit à la vitesse, histoire du Polaroïd des années 80, citation.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-fabrication": {
+   "titre": "Quatre gestes, une boîte",
+   "role": "étapes",
+   "description": "Quatre photos générées en quinconce (boîtier, verre, plans, matières), numéros en italique rouge, zoom à l'entrée.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-matieres": {
+   "titre": "Du vrai sable, de la vraie fourrure",
+   "role": "galerie",
+   "description": "Quatre matières en arche (sable, coquillages, gazon, fourrure) qui se développent, naturel ou pas.",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-envoi": {
+   "titre": "Bien protégée, jusqu'à vous",
+   "role": "preuves",
+   "description": "Dos de la boîte qui se balance et carton d'envoi en parallaxe, légendes manuscrites.",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "atelier-fin": {
+   "titre": "On en fabrique une pour vous ?",
+   "role": "appel",
+   "description": "Appel final encre avec une vraie boîte inclinée.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Écrivez à Carine",
+   "role": "contact",
+   "description": "E-mail et téléphone en très grand (Fraunces, soulignés rouge), bouton « Copier » qui répond « Copiée ! », lieu, photo générée d'enveloppe kraft.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-formulaire": {
+   "titre": "Un message rapide",
+   "role": "contact",
+   "description": "Formulaire de démonstration sur kraft, carton d'envoi qui se balance ; rappelle que l'e-mail reste le plus simple.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-acces": {
+   "titre": "À Lingolsheim, près de Strasbourg",
+   "role": "carte",
+   "description": "Plan simplifié en SVG (Lingolsheim, Strasbourg, Rhin) dont les routes se tracent.",
+   "animations": [
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-debut": {
+   "titre": "Des souvenirs, mis en boîte",
+   "role": "ouverture",
+   "description": "Titre centré ; le fil se tend, puis les instantanés (intérieurs de vraies boîtes, légende manuscrite) tombent dessus un par un avec un rebond et se balancent selon la vitesse du défilement.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "padding en % dans une carte de largeur fixe : il se calcule sur la largeur du parent, la photo devient minuscule ; padding en px ou clamp"
+   ]
+  },
+  "creations-galerie": {
+   "titre": "Toutes les boîtes",
+   "role": "portfolio",
+   "description": "Filtres en pastilles (adresse ?filtre=), quatre colonnes de vraies boîtes qui se développent et se secouent au survol, légende manuscrite ; chaque carte ouvre la visionneuse ; carte finale « La prochaine, la vôtre ? » vers le composeur.",
+   "animations": [
+    "filtre-anime",
+    "révélation-image"
+   ],
+   "interactions": [
+    "filtres",
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "creations-visionneuse": {
+   "titre": "Toutes les boîtes",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "visionneuse, décrite avec la galerie"
+  },
+  "creations-vraie-taille": {
+   "titre": "Elle tient dans la main",
+   "role": "outil-interactif",
+   "description": "Boîte à l'échelle (1 cm = --k px) dans un décor dessiné à la même échelle : papier peint rayé, étagère, tasse de 9,5 cm, plante, interrupteur de 8 cm ; accrochée ou posée, cotes.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "un déclencheur ScrollTrigger posé sur un objet qui change de place au clic : l'audit voit une position non recalculée ; déclencher sur le parent"
+   ]
+  },
+  "creations-fin": {
+   "titre": "Et la vôtre ?",
+   "role": "appel",
+   "description": "Appel final encre, vraie boîte inclinée.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-debut": {
+   "titre": "Votre boîte, sur mesure",
+   "role": "ouverture",
+   "description": "Titre à gauche, encart kraft avec « 35 € » géant en rouge, détails et une vraie boîte inclinée à côté (jamais sur le prix).",
+   "animations": [
+    "révélation-texte",
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-composer": {
+   "titre": "Composez, Carine réalise",
+   "role": "calculateur",
+   "description": "Composeur : occasion, éléments ludiques, légende, remise ; aperçu collant d'une boîte blanche dont l'intérieur (vraie boîte) se développe et tremble à chaque occasion, matières dessinées qui montent, légende écrite en direct en Caveat ; récapitulatif encre ; au clic, la boîte s'envole dans une enveloppe, une note manuscrite confirme et un vrai e-mail prérempli s'ouvre.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "configurateur",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "texte écrit par le JavaScript : mettre les espaces insécables dans les données (« again ! »), la typographie du gabarit ne passe pas",
+    "champ caché sur une pastille : Playwright refuse de cliquer le libellé, cliquer l'input"
+   ]
+  },
+  "sur-mesure-delais": {
+   "titre": "Quand et comment elle arrive",
+   "role": "offre",
+   "description": "Trois délais en grand chiffre rouge et le carton d'envoi qui se balance.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-questions": {
+   "titre": "Avant de commander",
+   "role": "faq",
+   "description": "Six questions dépliantes sur kraft, + qui tourne en ×, petite boîte de biais.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "sur-mesure-fin": {
+   "titre": "Une question avant ?",
+   "role": "appel",
+   "description": "Appel final encre : vrai lien e-mail et téléphone.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

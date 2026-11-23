@@ -1,0 +1,48 @@
+{
+ "id": "c-est-dans-la-boite-maquette/format",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "index",
+ "titre": "Une boîte de 21 × 16 cm, 35 €",
+ "role": "offre",
+ "description": "Boîte en relief en CSS 3D (vraie face photographiée, côtés, dos à anneau) qui tourne au défilement, qu'on attrape pour la faire tourner (retour élastique), reflet de verre qui passe, cotes 16 et 21 cm ; vignettes du dos et du carton ; prix en italique rouge, quatre atouts.",
+ "animations": [
+  "apparition-au-défilement",
+  "parallaxe"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:252-303",
+  "css": "assets/css/site.css:55,203-216,411,552-588",
+  "js": "assets/js/site.js:336-366"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/format-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/format-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/format-p720.mp4"
+ },
+ "pieges": [
+  "image dans une scène qu'on fait glisser : -webkit-user-drag: none et dragstart annulé, sinon le navigateur glisse l'image et le pointeur est perdu"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1052,
+  "hauteur_m390": 1370,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "3d",
+  "objet-manipulable"
+ ],
+ "impact": "spectaculaire"
+}

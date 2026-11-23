@@ -1,0 +1,48 @@
+{
+ "id": "c-est-dans-la-boite-maquette/occasions",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "index",
+ "titre": "Quel souvenir mettez-vous en boîte ?",
+ "role": "services",
+ "description": "Ruban de mots géants en italique (occasions) écrits en pseudo-élément, puis cinq cartes en quinconce : quatre vraies boîtes avec leur légende manuscrite et une carte « Votre idée » ; chaque carte préremplit le composeur.",
+ "animations": [
+  "marquee",
+  "apparition-au-défilement",
+  "révélation-image"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:143-205",
+  "css": "assets/css/site.css:139-159,612,620-621",
+  "js": "assets/js/site.js:235-303 ; assets/js/socle/effets.js:19-20,151-158,285,315-331,407-428 ; assets/js/socle/curseur.js:5-34"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/occasions-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/occasions-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/occasions-p720.mp4"
+ },
+ "pieges": [
+  "mots géants très clairs : axe signale le contraste ; écrire les mots dans ::before { content: attr(data-texte) }"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1413,
+  "hauteur_m390": 1777,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "typo-geante"
+ ],
+ "impact": "vivant"
+}

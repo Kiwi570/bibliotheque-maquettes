@@ -1,0 +1,44 @@
+{
+ "id": "c-est-dans-la-boite-maquette/creations-vraie-taille",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "creations",
+ "titre": "Elle tient dans la main",
+ "role": "outil-interactif",
+ "description": "Boîte à l'échelle (1 cm = --k px) dans un décor dessiné à la même échelle : papier peint rayé, étagère, tasse de 9,5 cm, plante, interrupteur de 8 cm ; accrochée ou posée, cotes.",
+ "animations": [
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "creations.html:331-362",
+  "css": "assets/css/site.css:42-44,337-356,624-630",
+  "js": "assets/js/site.js:219-232"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/creations-vraie-taille-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/creations-vraie-taille-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/creations-vraie-taille-p720.mp4"
+ },
+ "pieges": [
+  "un déclencheur ScrollTrigger posé sur un objet qui change de place au clic : l'audit voit une position non recalculée ; déclencher sur le parent"
+ ],
+ "mesures": {
+  "hauteur_p1440": 739,
+  "hauteur_m390": 838,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

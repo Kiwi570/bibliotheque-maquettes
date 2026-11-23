@@ -1,0 +1,51 @@
+{
+ "id": "c-est-dans-la-boite-maquette/debut",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "index",
+ "titre": "Donnez vie à vos images !",
+ "role": "ouverture",
+ "description": "Intro encre : le cadre du logo sort « laiteux », se développe, file vers la boîte de devant et l'écran s'ouvre depuis elle (versObjet). Titre en deux lignes, « vie » en italique rouge ; à droite trois vraies boîtes en pile qui se développent, s'écartent en profondeur au défilement, suivent la souris et se mélangent au clic (la boîte de devant part derrière, la suivante arrive, les autres se redéveloppent) ; note manuscrite avec flèche et légende qui s'écrit.",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "révélation-image",
+  "parallaxe"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:109-142",
+  "css": "assets/css/site.css:95-135,279-280,286,297,368,521-522,536,540-549",
+  "js": "assets/js/site.js:15-43,83-91,128-216,307-333,386-412 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/debut-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "GSAP absorbe les propriétés CSS translate/rotate dans sa transform au premier tween : centrer une carte par inset: 0 et margin: auto, jamais par translate -50%",
+  "trois sources de mouvement sur une carte (défilement, souris, mélange) : une par élément (cadre, photo) pour ne pas se battre sur xPercent",
+  "variables CSS animées par GSAP qui finissent à 0 sans unité : calc(-50% + 0) est invalide ; écrire var(--x) * 1%"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 1010,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "profondeur"
+ ],
+ "impact": "spectaculaire"
+}

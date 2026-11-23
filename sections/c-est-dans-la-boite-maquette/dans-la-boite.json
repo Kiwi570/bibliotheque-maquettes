@@ -1,0 +1,50 @@
+{
+ "id": "c-est-dans-la-boite-maquette/dans-la-boite",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "index",
+ "titre": "Un souvenir en relief, plan par plan",
+ "role": "étapes",
+ "description": "Section collante sur fond kraft : une boîte dessinée en CSS 3D (verre, cadre, premier plan, personnages, décor, boîtier) s'ouvre plan par plan au défilement, la liste allume le plan en cours ; le mot « relief » du titre prend trois couches d'ombre au même rythme.",
+ "animations": [
+  "progression-fixée",
+  "section-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:206-251",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:57,162-199,646",
+  "js": "assets/js/site.js:3,25-76,235-303,335 ; assets/js/socle/effets.js:17,151-158,269-283"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/dans-la-boite-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/dans-la-boite-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/dans-la-boite-p720.mp4"
+ },
+ "pieges": [
+  "cadre avec fenêtre : box-shadow 0 0 0 100vmax sur un ::before de la taille de la fenêtre",
+  "SplitText garde une copie cachée du titre : piloter l'effet d'un mot par une variable posée sur la section, pas sur l'élément trouvé au départ",
+  "sur téléphone, plus de collant : la boîte s'ouvre pendant qu'elle traverse l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1980,
+  "hauteur_m390": 1365,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "3d",
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}

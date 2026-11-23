@@ -1,0 +1,47 @@
+{
+ "id": "c-est-dans-la-boite-maquette/creations-debut",
+ "maquette": "c-est-dans-la-boite-maquette",
+ "page": "creations",
+ "titre": "Des souvenirs, mis en boîte",
+ "role": "ouverture",
+ "description": "Titre centré ; le fil se tend, puis les instantanés (intérieurs de vraies boîtes, légende manuscrite) tombent dessus un par un avec un rebond et se balancent selon la vitesse du défilement.",
+ "animations": [
+  "révélation-texte",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "creations.html:109-158",
+  "css": "assets/css/site.css:101-107,122,127,134,279-303,368,521-522,616-618",
+  "js": "assets/js/site.js:15-22,83-91,108-125,218-232,386-412 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/c-est-dans-la-boite-maquette/creations-debut-p1440.jpg",
+  "capture_m390": "medias/c-est-dans-la-boite-maquette/creations-debut-m390.jpg",
+  "video": "medias/c-est-dans-la-boite-maquette/creations-debut-p720.mp4"
+ },
+ "pieges": [
+  "padding en % dans une carte de largeur fixe : il se calcule sur la largeur du parent, la photo devient minuscule ; padding en px ou clamp"
+ ],
+ "mesures": {
+  "hauteur_p1440": 825,
+  "hauteur_m390": 695,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "vitesse"
+ ],
+ "impact": "vivant"
+}
