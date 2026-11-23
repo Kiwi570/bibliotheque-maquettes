@@ -27,14 +27,17 @@
   "points_forts": [
    "113 vraies toiles du client en grand, jamais recadrées ni filtrées (figures à la proportion exacte de chaque photo)",
    "Intro : la grille de la toile n° 1368 se trace puis la vraie toile apparaît case par case",
-   "Accrochage à l'échelle réelle au-dessus d'une console de 180 cm (photo Grok calée en centimètres)",
-   "Catalogue filtrable avec visionneuse, loupe, voir au mur et lien direct par œuvre",
+   "La plus grande toile (240 × 145 cm) se dévoile, épinglée, pendant que des cotes d'architecte se tracent autour de son cadre",
+   "Accrochage à l'échelle réelle au-dessus d'une console de 180 cm, avec cartel de musée posé à côté de la toile",
+   "Appel final en mur d'accrochage en salon : dix vraies toiles arrivent une à une et ouvrent chacune leur fiche",
+   "Catalogue filtrable avec œuvre au hasard, visionneuse, loupe, voir au mur et lien direct par œuvre",
    "Palette chaux, pierre, encre et un seul rouge tenue sur toutes les pages"
   ],
   "reserves": [
    "Photos de l'atelier anciennes et moyennes (1600 px) en grand",
    "32 toiles sans légende sur le site du client (« Sans numéro »)",
-   "Sections typographiques sans image (acquérir, expositions, formulaire)"
+   "Expositions et formulaire sans image",
+   "Accueil long sur ordinateur : 12,8 écrans (8 à 10 attendus)"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -46,7 +49,10 @@
    "reactif-vitesse",
    "trace-svg",
    "compteur",
-   "transition-de-page"
+   "transition-de-page",
+   "section-fixée",
+   "curseur-personnalisé",
+   "fil-conducteur"
   ],
   "interactions": [
    "filtres",
@@ -132,7 +138,7 @@
   "debut": {
    "titre": "Marcel Baugier",
    "role": "ouverture",
-   "description": "Titre scindé : nom très grand (Baugier en italique rouge) à gauche, la toile n° 1368 à droite avec son cartel. Intro : traits gris qui tracent la grille de la toile, cases chaux qui s'effacent au hasard sur la vraie toile ; une lumière de verrière (bandes en dégradé) traverse ensuite le mur et suit la souris.",
+   "description": "Titre scindé : nom très grand (Baugier en italique rouge) à gauche, la toile n° 1368 à droite avec son cartel. Intro : traits gris qui tracent la grille de la toile, cases chaux qui s'effacent au hasard sur la vraie toile ; une lumière de verrière (bandes en dégradé) traverse ensuite le mur et suit la souris. La toile ouvre sa fiche dans la visionneuse au clic.",
    "animations": [
     "ouverture-orchestrée",
     "révélation-texte",
@@ -173,7 +179,7 @@
   "decennies": {
    "titre": "Quatre décennies, quatre salles",
    "role": "galerie",
-   "description": "Quatre salles l'une sous l'autre (année en grand, nom de période, trois toiles à la même hauteur) ; le fond se teinte à 9 % de la couleur dominante de la toile du milieu de la salle au centre de l'écran, ou de la toile survolée.",
+   "description": "Quatre salles l'une sous l'autre (année en grand, nom de période, trois toiles à la même hauteur) ; le fond se teinte à 9 % de la couleur dominante de la toile du milieu de la salle au centre de l'écran, ou de la toile survolée. Chaque toile s'accroche au défilement : légère chute et balancement qui se pose (scrub, pivot en haut du cadre).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -192,21 +198,24 @@
   "grande": {
    "titre": "Une toile de 2,40 mètres",
    "role": "galerie",
-   "description": "La plus grande toile part d'une vignette (découpe) et s'ouvre jusqu'au cadre complet, en contain sur fond encre ; « 240 cm » et « 145 cm » s'écartent de part et d'autre.",
+   "description": "La plus grande toile, épinglée sur deux écrans : des cotes d'architecte (240 cm, 145 cm, avec leurs taquets) se tracent autour du cadre pendant que la toile s'ouvre d'une découpe jusqu'au cadre complet, en contain. Sur téléphone, sans épinglage : cotes et découpe au défilement.",
    "animations": [
     "masque",
-    "section-fixée"
+    "section-fixée",
+    "trace-svg"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
+   "note_qualite": 5,
+   "reutilisable": true,
    "module": null,
    "pieges": [
     "object-fit contain sur une œuvre en plein cadre, sinon elle est recadrée.",
-    "Sur téléphone, vignette de départ plus large (attribut posé avant demarrer()) sinon écran presque vide."
+    "Cotes en spans CSS animés en scaleX et scaleY : en SVG, vector-effect et pathLength donnaient des pointillés irréguliers.",
+    "Largeur du cadre bornée par la hauteur et par la place des étiquettes de cote, sinon la cote verticale est coupée en 768.",
+    "Partir d'une découpe assez large (15 % et 21 % de marge) : à 27 % et 34 %, l'écran d'entrée était presque vide à l'aperçu."
    ]
   },
   "atelier": {
@@ -232,7 +241,7 @@
   "chez-vous": {
    "titre": "Accrochée à la bonne taille",
    "role": "outil-interactif",
-   "description": "Cinq toiles au choix ; la toile s'accroche à sa vraie taille au-dessus d'une console de 180 cm (photo Grok frontale, mesurée en pixels puis exprimée en cm avec des unités de conteneur), balancement élastique au changement, mur prolongé vers le haut pour les grands formats.",
+   "description": "Cinq toiles au choix ; la toile s'accroche à sa vraie taille au-dessus d'une console de 180 cm (photo Grok frontale, mesurée en pixels puis exprimée en cm avec des unités de conteneur), balancement élastique au changement, mur prolongé vers le haut pour les grands formats. Un cartel de musée (numéro, dimensions, nom du peintre) se pose à droite de la toile s'il y a la place, sinon à gauche, sinon se cache.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -271,9 +280,10 @@
   "acquerir": {
    "titre": "Les prix se donnent à l'atelier",
    "role": "offre",
-   "description": "Quatre cartes : atelier (encre), Rise Art, Singulart, galeries permanentes ; prix sur demande.",
+   "description": "Photo de la salle (parallaxe) à côté de quatre cartes : atelier (encre), Rise Art, Singulart, galeries permanentes ; prix sur demande.",
    "animations": [
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "parallaxe"
    ],
    "interactions": [
     "aucune"
@@ -287,18 +297,20 @@
   "fin": {
    "titre": "Venir voir les toiles en vrai",
    "role": "appel",
-   "description": "Photo de la salle en plein cadre sous un dégradé encre, zoom au défilement, deux boutons.",
+   "description": "Fond pierre : texte et deux boutons à gauche ; à droite, mur d'accrochage en salon de dix vraies toiles en trois rangées, à hauteur proportionnelle, qui arrivent une à une au défilement (légère chute et rotation) ; chaque toile ouvre sa fiche dans le catalogue.",
    "animations": [
-    "parallaxe"
+    "apparition-au-défilement"
    ],
    "interactions": [
-    "aucune"
+    "galerie-cliquable"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
-   "reutilisable": false,
+   "note_qualite": 4,
+   "reutilisable": true,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Petites toiles cliquables à 44 px au moins (min-width et min-height), sinon échec à l'audit des cibles tactiles."
+   ]
   },
   "pied": {
    "titre": "Pied de page",
@@ -354,7 +366,7 @@
   "atelier-chiffres": {
    "titre": "L'atelier en trois chiffres",
    "role": "chiffres",
-   "description": "1985, 300, 2 en très grand serif sur filet encre.",
+   "description": "1985, 300 et 113 (œuvres au catalogue) en très grand serif sur filet encre, comptés au défilement.",
    "animations": [
     "compteur",
     "apparition-au-défilement"
@@ -373,16 +385,17 @@
   "atelier-table": {
    "titre": "La table aux couleurs",
    "role": "équipe",
-   "description": "Photo du peintre au travail en rideau et texte court.",
+   "description": "Photo du peintre au travail en rideau, texte court et graphique « Sur quoi il peint » : barres des supports comptés sur le catalogue (papier 34, toile 33, bois et panneau 13, carton 1), remplies au défilement, avec le nombre d'œuvres sans légende.",
    "animations": [
     "révélation-image",
-    "révélation-texte"
+    "révélation-texte",
+    "apparition-au-défilement"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -523,7 +536,7 @@
   "oeuvres-catalogue": {
    "titre": "Catalogue",
    "role": "produits",
-   "description": "Filtres période, support et format gardés dans l'adresse, mur d'œuvres justifié (flex-grow proportionnel au ratio) et cartels.",
+   "description": "Filtres période, support et format gardés dans l'adresse, mur d'œuvres justifié (flex-grow proportionnel au ratio) et cartels. Bouton « Une œuvre au hasard » qui ouvre la visionneuse.",
    "animations": [
     "apparition-au-défilement",
     "filtre-anime"
@@ -540,28 +553,12 @@
     "Ligne finale : un élément vide en flex-grow énorme évite d'étirer la dernière rangée."
    ]
   },
-  "oeuvres-en-ligne": {
-   "titre": "Aussi en ligne",
-   "role": "offre",
-   "description": "Liens Rise Art, Singulart et sérigraphies.",
-   "animations": [
-    "apparition-au-défilement"
-   ],
-   "interactions": [
-    "aucune"
-   ],
-   "telephone": "adapté",
-   "note_qualite": 2,
-   "reutilisable": false,
-   "module": null,
-   "pieges": []
-  },
   "oeuvres-fin": {
    "titre": "Les toiles se regardent mieux en vrai",
    "role": "appel",
-   "description": "Photo de la salle en plein cadre, zoom au défilement.",
+   "description": "Fin claire sur fond pierre : appel, photo de l'atelier et liens Rise Art, Singulart et sérigraphies (ancienne section « Aussi en ligne »).",
    "animations": [
-    "parallaxe"
+    "apparition-au-défilement"
    ],
    "interactions": [
     "aucune"
@@ -570,12 +567,14 @@
    "note_qualite": 3,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Ne pas reprendre le nom de classe d'une section retirée qui portait une grille (.en-ligne) : la fin chevauchait en paysage téléphone (844 × 390)."
+   ]
   },
   "oeuvres-visionneuse": {
    "titre": "Visionneuse",
    "role": "outil-interactif",
-   "description": "Œuvre en grand, loupe à la souris, flèches et glissement, cartel, prix sur demande, voir au mur à l'échelle, lien direct ?oeuvre=.",
+   "description": "Œuvre en grand, loupe à la souris, flèches et glissement, cartel, prix sur demande, voir au mur à l'échelle avec cartel de musée, lien direct ?oeuvre=.",
    "animations": [
     "aucune"
    ],
@@ -588,7 +587,8 @@
    "reutilisable": true,
    "module": null,
    "pieges": [
-    "Fenêtre en grille : grid-template-columns minmax(0, 1fr) et min-width 0, sinon une image en aspect-ratio élargit tout et les boutons sortent de l'écran sur téléphone."
+    "Fenêtre en grille : grid-template-columns minmax(0, 1fr) et min-width 0, sinon une image en aspect-ratio élargit tout et les boutons sortent de l'écran sur téléphone.",
+    "Masquer « Voir au mur » pour les œuvres sans dimensions plutôt que le désactiver (bouton désactivé : test du parcours bloqué)."
    ]
   },
   "parcours-debut": {
@@ -612,10 +612,11 @@
   "parcours-vie": {
    "titre": "Une vie de peintre",
    "role": "étapes",
-   "description": "Frise : année en grand, titre, texte et vignette d'œuvre ou de l'atelier ; trait rouge qui se trace.",
+   "description": "Frise : année en grand, titre, texte et vignette d'œuvre ou de l'atelier ; trait rouge qui se trace. Un point rouge suit la frise et l'année de l'étape au centre de l'écran s'allume.",
    "animations": [
     "trace-svg",
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "fil-conducteur"
    ],
    "interactions": [
     "aucune"
@@ -646,8 +647,9 @@
   "parcours-expositions": {
    "titre": "40 expositions",
    "role": "preuves",
-   "description": "Expositions classées par région en colonnes, ventes et achats publics en encadré.",
+   "description": "Titre qui compte jusqu'à 40 ; expositions classées par région, en colonnes sur ordinateur et en accordéon (details) sur téléphone ; ventes et achats publics en encadré.",
    "animations": [
+    "compteur",
     "apparition-au-défilement"
    ],
    "interactions": [
@@ -657,7 +659,9 @@
    "note_qualite": 3,
    "reutilisable": false,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "Titre de région (summary) à 44 px de haut au moins, sinon échec à l'audit des cibles tactiles."
+   ]
   },
   "parcours-fin": {
    "titre": "Voir où en est la peinture aujourd'hui",

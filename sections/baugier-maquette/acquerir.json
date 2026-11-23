@@ -4,15 +4,17 @@
  "page": "index",
  "titre": "Les prix se donnent à l'atelier",
  "role": "offre",
- "description": "Quatre cartes : atelier (encre), Rise Art, Singulart, galeries permanentes ; prix sur demande.",
+ "description": "Photo de la salle (parallaxe) à côté de quatre cartes : atelier (encre), Rise Art, Singulart, galeries permanentes ; prix sur demande.",
  "animations": [
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "parallaxe"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 3,
@@ -20,8 +22,8 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:372-395",
-  "css": "assets/css/site.css:195-205",
+  "html": "index.html:377-405",
+  "css": "assets/css/site.css:214-227,524",
   "js": "assets/js/socle/effets.js:358-402"
  },
  "medias": {
@@ -29,11 +31,11 @@
  },
  "pieges": [],
  "mesures": {
-  "hauteur_p1440": 684,
-  "hauteur_m390": 1118,
+  "hauteur_p1440": 961,
+  "hauteur_m390": 1394,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  },
  "familles": [],
- "impact": "calme"
+ "impact": "vivant"
 }

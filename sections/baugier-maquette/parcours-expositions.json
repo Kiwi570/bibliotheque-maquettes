@@ -4,8 +4,9 @@
  "page": "parcours",
  "titre": "40 expositions",
  "role": "preuves",
- "description": "Expositions classées par région en colonnes, ventes et achats publics en encadré.",
+ "description": "Titre qui compte jusqu'à 40 ; expositions classées par région, en colonnes sur ordinateur et en accordéon (details) sur téléphone ; ventes et achats publics en encadré.",
  "animations": [
+  "compteur",
   "apparition-au-défilement"
  ],
  "interactions": [
@@ -20,20 +21,22 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "parcours.html:210-239",
-  "css": "assets/css/site.css:382-395",
-  "js": null
+  "html": "parcours.html:211-240",
+  "css": "assets/css/site.css:400-413,515-519",
+  "js": "assets/js/site.js:125-128 ; assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
  },
  "medias": {
   "capture": "medias/baugier-maquette/parcours-expositions-p1440.jpg"
  },
- "pieges": [],
+ "pieges": [
+  "Titre de région (summary) à 44 px de haut au moins, sinon échec à l'audit des cibles tactiles."
+ ],
  "mesures": {
   "hauteur_p1440": 1490,
-  "hauteur_m390": 3275,
+  "hauteur_m390": 2297,
   "epinglee": false,
   "scrolltriggers": 0
  },
  "familles": [],
- "impact": "calme"
+ "impact": "vivant"
 }

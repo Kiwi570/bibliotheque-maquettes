@@ -4,10 +4,11 @@
  "page": "index",
  "titre": "Une toile de 2,40 mètres",
  "role": "galerie",
- "description": "La plus grande toile part d'une vignette (découpe) et s'ouvre jusqu'au cadre complet, en contain sur fond encre ; « 240 cm » et « 145 cm » s'écartent de part et d'autre.",
+ "description": "La plus grande toile, épinglée sur deux écrans : des cotes d'architecte (240 cm, 145 cm, avec leurs taquets) se tracent autour du cadre pendant que la toile s'ouvre d'une découpe jusqu'au cadre complet, en contain. Sur téléphone, sans épinglage : cotes et découpe au défilement.",
  "animations": [
   "masque",
-  "section-fixée"
+  "section-fixée",
+  "trace-svg"
  ],
  "interactions": [
   "aucune"
@@ -17,14 +18,14 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
+ "note_qualite": 5,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:274-289",
-  "css": "assets/css/site.css:132-145,437-440",
-  "js": "assets/js/site.js:14-17 ; assets/js/socle/gouttiere.js:8 ; assets/js/socle/effets.js:17-18,151-158,269-283"
+  "html": "index.html:274-293",
+  "css": "assets/css/site.css:133-164,455-457",
+  "js": "assets/js/site.js:14-16,48-66 ; assets/js/socle/gouttiere.js:8 ; assets/js/socle/effets.js:17,151-158,269-283"
  },
  "medias": {
   "capture": "medias/baugier-maquette/grande-p1440.jpg",
@@ -33,16 +34,19 @@
  },
  "pieges": [
   "object-fit contain sur une œuvre en plein cadre, sinon elle est recadrée.",
-  "Sur téléphone, vignette de départ plus large (attribut posé avant demarrer()) sinon écran presque vide."
+  "Cotes en spans CSS animés en scaleX et scaleY : en SVG, vector-effect et pathLength donnaient des pointillés irréguliers.",
+  "Largeur du cadre bornée par la hauteur et par la place des étiquettes de cote, sinon la cote verticale est coupée en 768.",
+  "Partir d'une découpe assez large (15 % et 21 % de marge) : à 27 % et 34 %, l'écran d'entrée était presque vide à l'aperçu."
  ],
  "mesures": {
-  "hauteur_p1440": 1485,
-  "hauteur_m390": 1097,
+  "hauteur_p1440": 1800,
+  "hauteur_m390": 489,
   "epinglee": false,
   "scrolltriggers": 1
  },
  "familles": [
-  "masque"
+  "masque",
+  "trait-qui-se-dessine"
  ],
  "impact": "vivant"
 }

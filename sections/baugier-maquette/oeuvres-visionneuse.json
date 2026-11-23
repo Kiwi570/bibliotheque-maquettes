@@ -4,7 +4,7 @@
  "page": "oeuvres",
  "titre": "Visionneuse",
  "role": "outil-interactif",
- "description": "Œuvre en grand, loupe à la souris, flèches et glissement, cartel, prix sur demande, voir au mur à l'échelle, lien direct ?oeuvre=.",
+ "description": "Œuvre en grand, loupe à la souris, flèches et glissement, cartel, prix sur demande, voir au mur à l'échelle avec cartel de musée, lien direct ?oeuvre=.",
  "animations": [
   "aucune"
  ],
@@ -22,13 +22,14 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "oeuvres.html:1192-1233",
-  "css": "assets/css/socle.css:274-277 ; assets/css/site.css:42,167-171,175-177,284-310",
-  "js": "assets/js/site.js:48,83-118 ; assets/js/catalogue.js:2,10,15,56-58,72-75,97,107,130-132 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34"
+  "html": "oeuvres.html:1192-1234",
+  "css": "assets/css/socle.css:274-277 ; assets/css/site.css:42,186-190,194-196,302-328,477-479",
+  "js": "assets/js/site.js:76,86-106,139,174-212 ; assets/js/catalogue.js:2,11,16,57-59,73-76,99,110,133,139-140 ; assets/js/socle/effets.js:28,358-402 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/curseur.js:5-34"
  },
  "medias": {},
  "pieges": [
-  "Fenêtre en grille : grid-template-columns minmax(0, 1fr) et min-width 0, sinon une image en aspect-ratio élargit tout et les boutons sortent de l'écran sur téléphone."
+  "Fenêtre en grille : grid-template-columns minmax(0, 1fr) et min-width 0, sinon une image en aspect-ratio élargit tout et les boutons sortent de l'écran sur téléphone.",
+  "Masquer « Voir au mur » pour les œuvres sans dimensions plutôt que le désactiver (bouton désactivé : test du parcours bloqué)."
  ],
  "mesures": {
   "hauteur_p1440": 0,

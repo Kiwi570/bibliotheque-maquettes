@@ -4,34 +4,38 @@
  "page": "index",
  "titre": "Venir voir les toiles en vrai",
  "role": "appel",
- "description": "Photo de la salle en plein cadre sous un dégradé encre, zoom au défilement, deux boutons.",
+ "description": "Fond pierre : texte et deux boutons à gauche ; à droite, mur d'accrochage en salon de dix vraies toiles en trois rangées, à hauteur proportionnelle, qui arrivent une à une au défilement (légère chute et rotation) ; chaque toile ouvre sa fiche dans le catalogue.",
  "animations": [
-  "parallaxe"
+  "apparition-au-défilement"
  ],
  "interactions": [
-  "aucune"
+  "galerie-cliquable"
  ],
  "dependances": [
   "gsap",
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
- "reutilisable": false,
+ "note_qualite": 4,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:396-410",
-  "css": "assets/css/site.css:32,208-215",
-  "js": "assets/js/catalogue.js:110,117 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
+  "html": "index.html:406-421",
+  "css": "assets/css/site.css:236,482-490",
+  "js": "assets/js/site.js:77-83,131-137"
  },
  "medias": {
-  "capture": "medias/baugier-maquette/fin-p1440.jpg"
+  "capture": "medias/baugier-maquette/fin-p1440.jpg",
+  "capture_m390": "medias/baugier-maquette/fin-m390.jpg",
+  "video": "medias/baugier-maquette/fin-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "Petites toiles cliquables à 44 px au moins (min-width et min-height), sinon échec à l'audit des cibles tactiles."
+ ],
  "mesures": {
-  "hauteur_p1440": 828,
-  "hauteur_m390": 776,
+  "hauteur_p1440": 758,
+  "hauteur_m390": 741,
   "epinglee": false,
   "scrolltriggers": 1
  },
