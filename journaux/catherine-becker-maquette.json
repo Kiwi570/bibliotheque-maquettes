@@ -101,6 +101,64 @@
    "effetsRetires": [],
    "grilleDispenses": {},
    "notes": "Audit plus long que le budget (environ 65 min au lieu de 25) : deux passes en parallèle ont rendu un contrôle d intro instable, relancé seul ensuite. CSS commun modifié après l audit standard : audit standard complet relancé, 0 échec. Audit complet après validation : 1 échec (1000×560 sans JS, contact), corrigé, contrôle ciblé à 0 ; livré en v1.1 (?v=2)."
+  },
+  {
+   "version": 3,
+   "skill": "v11.1.1",
+   "perimetre": [
+    "accueil",
+    "consultation",
+    "tarifs",
+    "presentation",
+    "contact"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse complète de la v1.1 (captures ordinateur et téléphone)",
+     "budget": 10,
+     "debut": "2026-11-23T15:00:00+01:00",
+     "fin": "2026-11-23T15:05:00+01:00"
+    },
+    {
+     "etape": "améliorations v2 : jeux, illustrations, finitions",
+     "budget": 30,
+     "debut": "2026-11-23T15:05:00+01:00",
+     "fin": "2026-11-23T15:14:00+01:00"
+    },
+    {
+     "etape": "audit complet, corrections",
+     "budget": 30,
+     "debut": "2026-11-23T15:14:00+01:00",
+     "fin": "2026-11-23T16:10:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-23T16:10:00+01:00",
+     "fin": "2026-11-23T16:20:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [
+    "temoignages-en-pile",
+    "horaires-ouvert-maintenant"
+   ],
+   "audit": {
+    "niveau": "complet (13 tailles, tous les modes), lancé seul",
+    "echecsPremierPassage": 3,
+    "relances": 1,
+    "corrections": [
+     "épingles de la carte : liens HTML posés sur le dessin (l'audit ne lit pas les liens SVG)",
+     "étiquette Resservir : plus de transition de couleur (contraste mesuré pendant la transition)",
+     "mention Valeur au choix du bon cadeau à 13 px"
+    ]
+   },
+   "effetsRetires": [
+    "tomate flottante du premier écran de l'accueil (mal placée sur le coin de la photo)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Dernière passe demandée par l'utilisateur : analyse page par page, puis jeux (resservir l'assiette, compartiments cliquables, préparation à cocher, épingles qui choisissent le cabinet), illustrations refaites (visio, lettre au médecin, sceau du métier, côte), frise qui se trace, calculateur en assiettes."
   }
  ]
 }

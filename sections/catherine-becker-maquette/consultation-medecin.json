@@ -4,9 +4,9 @@
  "page": "consultation",
  "titre": "Un courrier à votre médecin, avec votre accord.",
  "role": "preuves",
- "description": "Encart : courrier au médecin avec l'accord du patient, enveloppe qui se dessine.",
+ "description": "Encart : courrier au médecin avec l'accord du patient ; la lettre sort de l'enveloppe au défilement et le cachet tomate se pose.",
  "animations": [
-  "trace-svg",
+  "apparition-au-défilement",
   "révélation-texte"
  ],
  "interactions": [
@@ -17,27 +17,27 @@
   "scrolltrigger"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "consultation.html:290-300",
-  "css": "assets/css/site.css:294,356,414-416",
-  "js": null
+  "html": "consultation.html:291-316",
+  "css": "assets/css/site.css:289,351,409-411,670-672",
+  "js": "assets/js/site.js:156-162"
  },
  "medias": {
-  "capture": "medias/catherine-becker-maquette/consultation-medecin-p1440.jpg"
+  "capture": "medias/catherine-becker-maquette/consultation-medecin-p1440.jpg",
+  "capture_m390": "medias/catherine-becker-maquette/consultation-medecin-m390.jpg",
+  "video": "medias/catherine-becker-maquette/consultation-medecin-p720.mp4"
  },
  "pieges": [],
  "mesures": {
   "hauteur_p1440": 647,
-  "hauteur_m390": 728,
+  "hauteur_m390": 781,
   "epinglee": false,
   "scrolltriggers": 1
  },
- "familles": [
-  "trait-qui-se-dessine"
- ],
+ "familles": [],
  "impact": "vivant"
 }

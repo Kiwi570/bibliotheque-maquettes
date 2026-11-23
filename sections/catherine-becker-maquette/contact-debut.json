@@ -4,32 +4,34 @@
  "page": "contact",
  "titre": "Cannes, Nice, ou chez vous.",
  "role": "ouverture",
- "description": "Carte dessinée de la côte de Cannes à Nice qui se trace, épingles des deux cabinets, pastille visio dans la mer.",
+ "description": "Carte dessinée de la côte de Cannes à Nice (baie de Cannes, îles de Lérins, cap d'Antibes, baie des Anges) qui se trace ; les épingles tombent à l'ouverture et respirent ; un clic choisit le cabinet dans les horaires et y mène ; pastille visio dans la mer.",
  "animations": [
   "trace-svg",
   "révélation-texte"
  ],
  "interactions": [
-  "aucune"
+  "carte-interactive"
  ],
  "dependances": [
   "splittext"
  ],
  "telephone": "adapté",
- "note_qualite": 3,
+ "note_qualite": 4,
  "reutilisable": false,
  "module": null,
  "modules": [],
  "code": {
-  "html": "contact.html:123-144",
-  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:64-65,290-292,301-302,310,347-353,566-569,573,580,585,590,595,603-604",
-  "js": "assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:214-234 ; assets/js/socle/transitions.js:25-46"
+  "html": "contact.html:123-155",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:64-65,285-287,296-297,305,342-348,561-564,568,575,580,585,590,598-599,706-714",
+  "js": "assets/js/site.js:185-206,394 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:214-234 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
-  "capture": "medias/catherine-becker-maquette/contact-debut-p1440.jpg"
+  "capture": "medias/catherine-becker-maquette/contact-debut-p1440.jpg",
+  "capture_m390": "medias/catherine-becker-maquette/contact-debut-m390.jpg",
+  "video": "medias/catherine-becker-maquette/contact-debut-p720.mp4"
  },
  "pieges": [
-  "côte schématique : la dessiner d'après une vraie carte, le cap en V paraît raide"
+  "liens dans un SVG : l'audit lit a.href comme un objet et les compte morts ; poser des liens HTML en pourcentage sur le dessin"
  ],
  "mesures": {
   "hauteur_p1440": 900,

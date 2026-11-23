@@ -4,15 +4,17 @@
  "page": "presentation",
  "titre": "De l'hôpital au cabinet.",
  "role": "étapes",
- "description": "Frise du parcours en huit étapes datées (formation, hôpital, cabinets, radio, conférences).",
+ "description": "Frise du parcours en huit étapes datées (formation, hôpital, cabinets, radio, conférences) ; chaque trait se trace en tomate au défilement, puis son point grandit.",
  "animations": [
-  "apparition-au-défilement"
+  "apparition-au-défilement",
+  "fil-conducteur"
  ],
  "interactions": [
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 4,
@@ -21,20 +23,23 @@
  "modules": [],
  "code": {
   "html": "presentation.html:144-154",
-  "css": "assets/css/site.css:478-486",
-  "js": null
+  "css": "assets/css/site.css:473-481,683-685",
+  "js": "assets/js/site.js:8-9,173-182,362"
  },
  "medias": {
   "capture": "medias/catherine-becker-maquette/presentation-parcours-p1440.jpg",
-  "capture_m390": "medias/catherine-becker-maquette/presentation-parcours-m390.jpg"
+  "capture_m390": "medias/catherine-becker-maquette/presentation-parcours-m390.jpg",
+  "video": "medias/catherine-becker-maquette/presentation-parcours-p720.mp4"
  },
  "pieges": [],
  "mesures": {
   "hauteur_p1440": 745,
   "hauteur_m390": 1600,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  },
- "familles": [],
- "impact": "calme"
+ "familles": [
+  "fil-conducteur"
+ ],
+ "impact": "vivant"
 }

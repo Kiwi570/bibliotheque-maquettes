@@ -4,14 +4,14 @@
  "page": "index",
  "titre": "Bien manger, sans régime miracle.",
  "role": "ouverture",
- "description": "Intro : panneau olive, l'assiette en inox se trace, les aliments y tombent avec un rebond, puis elle glisse sur le coin de la grande photo du marché et le panneau s'ouvre depuis elle (versObjet, disque). Titre en trois lignes, « sans » en tomate ; l'assiette respire et les ingrédients dessinés flottent ensuite.",
+ "description": "Intro : panneau olive, l'assiette en inox se trace, les aliments y tombent avec un rebond, puis elle glisse sur le coin de la grande photo du marché et le panneau s'ouvre depuis elle (versObjet, disque). Titre en trois lignes, « sans » en tomate ; l'assiette respire, les ingrédients dessinés flottent, et un clic sur l'assiette (bouton « Resservir ») la vide et la remplit de nouveau.",
  "animations": [
   "ouverture-orchestrée",
   "révélation-texte",
   "parallaxe"
  ],
  "interactions": [
-  "aucune"
+  "jeu"
  ],
  "dependances": [
   "gsap",
@@ -23,9 +23,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:123-166",
-  "css": "assets/css/site.css:79-123,566-567,573,585-590",
-  "js": "assets/js/site.js:4,82-101,104-110,211,235-237,244,251-258 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+  "html": "index.html:123-165",
+  "css": "assets/css/site.css:84-122,561-562,568,580-585,605-606,614-616",
+  "js": "assets/js/site.js:209-230,233-239,391-393,402,409-416 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
  },
  "medias": {
   "capture": "medias/catherine-becker-maquette/debut-p1440.jpg",
@@ -34,14 +34,15 @@
  },
  "pieges": [
   "GSAP yPercent sur une ligne dont la transform CSS de départ est en % : GSAP lit le translate en px comme y ; fromTo avec y: 0 explicite",
-  "ombre de l'assiette qui tourne : box-shadow sur le cadre rond, pas de drop-shadow sur le SVG animé"
+  "ombre de l'assiette qui tourne : box-shadow sur le cadre rond, pas de drop-shadow sur le SVG animé",
+  "étiquette posée sur une photo : pas de transition de couleur, l'audit mesure le contraste juste après avoir rendu la couleur"
  ],
  "mesures": {
   "hauteur_p1440": 900,
   "hauteur_m390": 1099,
   "epinglee": false,
-  "scrolltriggers": 4
+  "scrolltriggers": 3
  },
  "familles": [],
- "impact": "vivant"
+ "impact": "spectaculaire"
 }

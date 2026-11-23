@@ -25,14 +25,15 @@
    "mono": ""
   },
   "points_forts": [
-   "l'assiette compartimentée en inox de sa box relie le site : intro qui la remplit puis la pose sur la photo, méthode qui remplit un compartiment par étape, appel final",
+   "l'assiette compartimentée en inox de sa box relie le site : intro qui la remplit puis la pose sur la photo, méthode qui remplit un compartiment par étape, visio, sceau du métier, appel final ; elle se ressert d'un clic",
    "six ouvertures toutes différentes dans un seul système (photo et assiette, bandeau, prix géant qui défile, portrait en arche, carte de la côte, assiette vide de la 404)",
    "vraies photos de la praticienne en grand, illustrations générées cohérentes (marché, Riviera, cuisine)",
+   "petits jeux utiles : préparation de la visite à cocher, épingles de la carte qui choisissent le cabinet, calculateur en petites assiettes",
    "horaires des deux cabinets à l'heure de Paris, formulés en positif, sans statut les jours fériés inconnus"
   ],
   "reserves": [
-   "carte de la côte schématique un peu raide",
-   "l'assiette ne se manipule pas"
+   "le cabinet choisi dans les horaires revient au premier au rechargement",
+   "l'assiette se ressert mais ne se fait pas tourner à la main"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -48,9 +49,11 @@
   ],
   "interactions": [
    "calculateur",
-   "jeu"
+   "jeu",
+   "carte-interactive",
+   "schema-interactif"
   ],
-  "change_depuis_audit": "v1.1 : ouverture du contact resserrée sur écran bas sans JavaScript (seul échec de l'audit complet).",
+  "change_depuis_audit": "v2 : analyse page par page puis jeux (resservir l'assiette, compartiments cliquables, préparation à cocher, épingles qui choisissent le cabinet), illustrations refaites (visio, lettre au médecin, sceau du métier, côte avec le cap d'Antibes), frise qui se trace, calculateur en assiettes ; audit complet à 0 échec.",
   "accueil": "debut",
   "plan": "objet-unique",
   "grille": {
@@ -125,14 +128,14 @@
   "debut": {
    "titre": "Bien manger, sans régime miracle.",
    "role": "ouverture",
-   "description": "Intro : panneau olive, l'assiette en inox se trace, les aliments y tombent avec un rebond, puis elle glisse sur le coin de la grande photo du marché et le panneau s'ouvre depuis elle (versObjet, disque). Titre en trois lignes, « sans » en tomate ; l'assiette respire et les ingrédients dessinés flottent ensuite.",
+   "description": "Intro : panneau olive, l'assiette en inox se trace, les aliments y tombent avec un rebond, puis elle glisse sur le coin de la grande photo du marché et le panneau s'ouvre depuis elle (versObjet, disque). Titre en trois lignes, « sans » en tomate ; l'assiette respire, les ingrédients dessinés flottent, et un clic sur l'assiette (bouton « Resservir ») la vide et la remplit de nouveau.",
    "animations": [
     "ouverture-orchestrée",
     "révélation-texte",
     "parallaxe"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
@@ -140,7 +143,8 @@
    "module": null,
    "pieges": [
     "GSAP yPercent sur une ligne dont la transform CSS de départ est en % : GSAP lit le translate en px comme y ; fromTo avec y: 0 explicite",
-    "ombre de l'assiette qui tourne : box-shadow sur le cadre rond, pas de drop-shadow sur le SVG animé"
+    "ombre de l'assiette qui tourne : box-shadow sur le cadre rond, pas de drop-shadow sur le SVG animé",
+    "étiquette posée sur une photo : pas de transition de couleur, l'audit mesure le contraste juste après avoir rendu la couleur"
    ]
   },
   "motifs": {
@@ -165,14 +169,14 @@
   "methode": {
    "titre": "Trois temps, à votre rythme.",
    "role": "méthode",
-   "description": "Bande olive : trois étapes à gauche, à droite l'assiette collante dont chaque compartiment se remplit quand son étape passe au milieu de l'écran (bilan, rééquilibrage, suivi) ; sur téléphone, l'assiette se remplit d'elle-même en entrant.",
+   "description": "Bande olive : trois étapes à gauche, à droite l'assiette collante aux compartiments vides en pointillés ; chacun se remplit quand son étape passe au milieu de l'écran (bilan, rééquilibrage, suivi), un clic sur un compartiment mène à son étape, le survol d'une étape fait sautiller ses aliments ; sur téléphone, l'assiette se remplit d'elle-même en entrant.",
    "animations": [
     "apparition-au-défilement",
     "section-fixée",
     "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "schema-interactif"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
@@ -203,7 +207,7 @@
   "cabinets": {
    "titre": "Deux cabinets, et la visio.",
    "role": "carte",
-   "description": "Deux cartes de cabinets (ambiance générée, adresse, jours de consultation, statut du moment à l'heure de Paris) et une carte visio dessinée.",
+   "description": "Deux cartes de cabinets (ambiance générée, adresse, jours de consultation, statut du moment à l'heure de Paris) et une carte visio dessinée : un écran d'appel avec l'assiette qui tourne, l'image de la patiente et les boutons de l'appel.",
    "animations": [
     "apparition-au-défilement",
     "reactif-vitesse"
@@ -257,7 +261,7 @@
   "avis": {
    "titre": "Ce qu'en disent ses patients",
    "role": "témoignages",
-   "description": "Quatre extraits d'avis réels en pile à lancer à la main, image de terrasse générée à côté (retirée sur téléphone).",
+   "description": "Quatre extraits d'avis réels en pile à lancer à la main, fiches centrées avec un ingrédient dessiné en coin (avis courts en plus grand), image de terrasse générée à côté (retirée sur téléphone).",
    "animations": [
     "empilement-de-fiches",
     "parallaxe"
@@ -276,13 +280,13 @@
   "rendez-vous": {
    "titre": "Prendre rendez-vous",
    "role": "appel",
-   "description": "Bande olive : assiette pleine qui tourne au défilement, Doctolib et téléphone, ce qu'il faut apporter à la première visite.",
+   "description": "Bande olive : assiette pleine qui tourne au défilement et se ressert d'un clic, Doctolib et téléphone, ce qu'il faut apporter à la première visite.",
    "animations": [
     "parallaxe",
     "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
    "note_qualite": 4,
@@ -398,16 +402,16 @@
   "consultation-preparer": {
    "titre": "Préparer votre première visite",
    "role": "étapes",
-   "description": "Vraie photo du cabinet et trois choses à apporter, chacune avec un ingrédient dessiné.",
+   "description": "Vraie photo du cabinet et trois choses à apporter, chacune avec un ingrédient dessiné et une case ronde à cocher ; un état « 2 sur 3 », puis « Tout est prêt » quand tout est coché (gardé dans le navigateur, cases cachées sans JavaScript).",
    "animations": [
     "révélation-image",
     "apparition-au-défilement"
    ],
    "interactions": [
-    "aucune"
+    "jeu"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -448,16 +452,16 @@
   "consultation-medecin": {
    "titre": "Un courrier à votre médecin, avec votre accord.",
    "role": "preuves",
-   "description": "Encart : courrier au médecin avec l'accord du patient, enveloppe qui se dessine.",
+   "description": "Encart : courrier au médecin avec l'accord du patient ; la lettre sort de l'enveloppe au défilement et le cachet tomate se pose.",
    "animations": [
-    "trace-svg",
+    "apparition-au-défilement",
     "révélation-texte"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -481,20 +485,20 @@
   "contact-debut": {
    "titre": "Cannes, Nice, ou chez vous.",
    "role": "ouverture",
-   "description": "Carte dessinée de la côte de Cannes à Nice qui se trace, épingles des deux cabinets, pastille visio dans la mer.",
+   "description": "Carte dessinée de la côte de Cannes à Nice (baie de Cannes, îles de Lérins, cap d'Antibes, baie des Anges) qui se trace ; les épingles tombent à l'ouverture et respirent ; un clic choisit le cabinet dans les horaires et y mène ; pastille visio dans la mer.",
    "animations": [
     "trace-svg",
     "révélation-texte"
    ],
    "interactions": [
-    "aucune"
+    "carte-interactive"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": [
-    "côte schématique : la dessiner d'après une vraie carte, le cap en V paraît raide"
+    "liens dans un SVG : l'audit lit a.href comme un objet et les compte morts ; poser des liens HTML en pourcentage sur le dessin"
    ]
   },
   "contact-cabinets": {
@@ -568,9 +572,10 @@
   "presentation-parcours": {
    "titre": "De l'hôpital au cabinet.",
    "role": "étapes",
-   "description": "Frise du parcours en huit étapes datées (formation, hôpital, cabinets, radio, conférences).",
+   "description": "Frise du parcours en huit étapes datées (formation, hôpital, cabinets, radio, conférences) ; chaque trait se trace en tomate au défilement, puis son point grandit.",
    "animations": [
-    "apparition-au-défilement"
+    "apparition-au-défilement",
+    "fil-conducteur"
    ],
    "interactions": [
     "aucune"
@@ -584,16 +589,16 @@
   "presentation-metier": {
    "titre": "Diététicienne : un métier de santé.",
    "role": "manifeste",
-   "description": "Bande olive : ce qu'est une diététicienne, dessin d'assiette qui se trace.",
+   "description": "Bande olive : ce qu'est une diététicienne ; un sceau dont l'anneau de texte (« Diététicienne nutritionniste · Enregistrée à l'ARS ») tourne au défilement autour de l'assiette, qui tourne en sens inverse.",
    "animations": [
-    "trace-svg",
-    "révélation-texte"
+    "révélation-texte",
+    "reactif-vitesse"
    ],
    "interactions": [
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -601,7 +606,7 @@
   "presentation-engagements": {
    "titre": "Sept engagements, aucun miracle.",
    "role": "preuves",
-   "description": "Sept engagements en cartes avec ingrédients dessinés.",
+   "description": "Sept engagements en cartes inclinables avec ingrédients dessinés ; une huitième case olive « Et vous ? » mène au rendez-vous et ferme la grille.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -609,7 +614,7 @@
     "aucune"
    ],
    "telephone": "adapté",
-   "note_qualite": 3,
+   "note_qualite": 4,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -720,7 +725,7 @@
   "tarifs-packs": {
    "titre": "Plus de rendez-vous, un prix qui baisse.",
    "role": "calculateur",
-   "description": "Trois packs avec l'économie, et un calculateur olive collant : nombre de consultations, prix à l'unité, meilleure combinaison de packs (programmation dynamique), économie ; vérifié par le parcours d'audit.",
+   "description": "Trois packs avec l'économie, et un calculateur olive collant : nombre de consultations, une petite assiette par consultation colorée selon la formule, prix à l'unité, meilleure combinaison de packs (programmation dynamique) avec les mêmes couleurs, économie ; vérifié par le parcours d'audit.",
    "animations": [
     "apparition-au-défilement",
     "compteur"
@@ -729,7 +734,7 @@
     "calculateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": true,
    "module": null,
    "pieges": []

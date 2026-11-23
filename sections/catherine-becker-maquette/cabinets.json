@@ -4,7 +4,7 @@
  "page": "index",
  "titre": "Deux cabinets, et la visio.",
  "role": "carte",
- "description": "Deux cartes de cabinets (ambiance générée, adresse, jours de consultation, statut du moment à l'heure de Paris) et une carte visio dessinée.",
+ "description": "Deux cartes de cabinets (ambiance générée, adresse, jours de consultation, statut du moment à l'heure de Paris) et une carte visio dessinée : un écran d'appel avec l'assiette qui tourne, l'image de la patiente et les boutons de l'appel.",
  "animations": [
   "apparition-au-défilement",
   "reactif-vitesse"
@@ -23,20 +23,21 @@
   "horaires-ouvert-maintenant"
  ],
  "code": {
-  "html": "index.html:278-322",
-  "css": "assets/css/site.css:183-207",
-  "js": "assets/js/site.js:6,9,31-48 ; assets/js/horaires/module.js:2,5-6,11,18-89 ; assets/js/horaires/calcul.js:51-63,66-86"
+  "html": "index.html:278-346",
+  "css": "assets/css/site.css:182-202,623-637",
+  "js": "assets/js/site.js:6,10-12,34-51,119-124,184-199,365 ; assets/js/horaires/module.js:2,5-6,11,18-89 ; assets/js/horaires/calcul.js:51-63,66-86"
  },
  "medias": {
   "capture": "medias/catherine-becker-maquette/cabinets-p1440.jpg",
-  "capture_m390": "medias/catherine-becker-maquette/cabinets-m390.jpg"
+  "capture_m390": "medias/catherine-becker-maquette/cabinets-m390.jpg",
+  "video": "medias/catherine-becker-maquette/cabinets-p720.mp4"
  },
  "pieges": [
   "statut formulé en positif (« Prochaines consultations lundi dès 8 h »), aucun statut un jour férié aux horaires inconnus"
  ],
  "mesures": {
   "hauteur_p1440": 1158,
-  "hauteur_m390": 2023,
+  "hauteur_m390": 2036,
   "epinglee": false,
   "scrolltriggers": 0
  },

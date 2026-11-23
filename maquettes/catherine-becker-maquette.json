@@ -46,20 +46,21 @@
   "tarifs",
   "404"
  ],
- "commit": "f573d65",
- "date_commit": "2026-11-20",
- "change_depuis_audit": "v1.1 : ouverture du contact resserrée sur écran bas sans JavaScript (seul échec de l'audit complet).",
- "note": 86,
+ "commit": "1d1b290",
+ "date_commit": "2026-11-23",
+ "change_depuis_audit": "v2 : analyse page par page puis jeux (resservir l'assiette, compartiments cliquables, préparation à cocher, épingles qui choisissent le cabinet), illustrations refaites (visio, lettre au médecin, sceau du métier, côte avec le cap d'Antibes), frise qui se trace, calculateur en assiettes ; audit complet à 0 échec.",
+ "note": 90,
  "verdict": "Prête à envoyer",
  "points_forts": [
-  "l'assiette compartimentée en inox de sa box relie le site : intro qui la remplit puis la pose sur la photo, méthode qui remplit un compartiment par étape, appel final",
+  "l'assiette compartimentée en inox de sa box relie le site : intro qui la remplit puis la pose sur la photo, méthode qui remplit un compartiment par étape, visio, sceau du métier, appel final ; elle se ressert d'un clic",
   "six ouvertures toutes différentes dans un seul système (photo et assiette, bandeau, prix géant qui défile, portrait en arche, carte de la côte, assiette vide de la 404)",
   "vraies photos de la praticienne en grand, illustrations générées cohérentes (marché, Riviera, cuisine)",
+  "petits jeux utiles : préparation de la visite à cocher, épingles de la carte qui choisissent le cabinet, calculateur en petites assiettes",
   "horaires des deux cabinets à l'heure de Paris, formulés en positif, sans statut les jours fériés inconnus"
  ],
  "reserves": [
-  "carte de la côte schématique un peu raide",
-  "l'assiette ne se manipule pas"
+  "le cabinet choisi dans les horaires revient au premier au rechargement",
+  "l'assiette se ressert mais ne se fait pas tourner à la main"
  ],
  "animations": [
   "ouverture-orchestrée",
@@ -75,7 +76,9 @@
  ],
  "interactions": [
   "calculateur",
-  "jeu"
+  "jeu",
+  "carte-interactive",
+  "schema-interactif"
  ],
  "dependances": [
   "gsap",
@@ -87,7 +90,9 @@
   "objet": "l'assiette compartimentée en inox qui se remplit",
   "fil": "l'assiette, de l'intro à l'appel final, et les ingrédients dessinés",
   "intro_vers_objet": true,
-  "marques": []
+  "marques": [
+   "manipuler"
+  ]
  },
  "journal": {
   "fichier": "journaux/catherine-becker-maquette.json",
@@ -98,6 +103,13 @@
     "budget": 145,
     "attente": 12,
     "allers_retours": 2
+   },
+   {
+    "version": 3,
+    "travail": 80,
+    "budget": 75,
+    "attente": 0,
+    "allers_retours": 0
    }
   ]
  },
