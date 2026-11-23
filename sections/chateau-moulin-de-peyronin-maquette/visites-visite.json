@@ -1,0 +1,49 @@
+{
+ "id": "chateau-moulin-de-peyronin-maquette/visites-visite",
+ "maquette": "chateau-moulin-de-peyronin-maquette",
+ "page": "visites",
+ "titre": "La visite, pas à pas",
+ "role": "étapes",
+ "description": "Chemin en pointillés qui se dessine au défilement, petit moulinet qui le parcourt et allume les quatre étapes photo (vignes, chai, barriques et amphores, dégustation) ; titre dont les lettres poussent.",
+ "animations": [
+  "trace-svg",
+  "fil-conducteur",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "visites.html:128-178",
+  "css": "assets/css/socle.css:280-283 ; assets/css/site.css:111,161,165-168,479-489,650,748-756",
+  "js": "assets/js/site.js:121-181,260-289,292-313 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
+ },
+ "medias": {
+  "capture": "medias/chateau-moulin-de-peyronin-maquette/visites-visite-p1440.jpg",
+  "capture_m390": "medias/chateau-moulin-de-peyronin-maquette/visites-visite-m390.jpg",
+  "video": "medias/chateau-moulin-de-peyronin-maquette/visites-visite-p720.mp4"
+ },
+ "pieges": [
+  "table de 121 points calculée une fois, largeur relue seulement au rafraîchissement de ScrollTrigger"
+ ],
+ "mesures": {
+  "hauteur_p1440": 966,
+  "hauteur_m390": 1831,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "fil-conducteur",
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

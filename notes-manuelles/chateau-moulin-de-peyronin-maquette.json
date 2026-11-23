@@ -1,0 +1,722 @@
+{
+ "maquette": {
+  "client": "domaine viticole familial en bio et biodynamie Demeter (Château Moulin de Peyronin, Véronique et Franck Terral, Pujols, Entre-deux-Mers) : vente au carton de 6, visites-dégustations sur rendez-vous, aire de camping-cars",
+  "activite": [
+   "commerce",
+   "tourisme"
+  ],
+  "concept": [
+   "atelier",
+   "carte"
+  ],
+  "ambiance": [
+   "clair",
+   "végétal",
+   "chaleureux"
+  ],
+  "palette": {
+   "fond": "#f2ede2",
+   "texte": "#1e3328",
+   "accent": "#e2a72e",
+   "secondaire": "#e8e0cf"
+  },
+  "polices": {
+   "titres": "Gloock",
+   "texte": "Figtree",
+   "mono": ""
+  },
+  "points_forts": [
+   "le moulinet du logo relie tout : il se déplie à l'intro et se pose dans le titre, tourne avec le défilement, ferme le voile de transition en quatre pales, se fait tourner à la main dans l'appel final et parcourt le chemin de la visite",
+   "vortex de la dynamisation en canvas : il tourne dans un sens, se casse et repart dans l'autre au défilement, et se remue du doigt",
+   "parcelle dessinée où la moutarde fleurit et un mouton traverse les rangs ; titres dont les lettres poussent une sur deux",
+   "carton par 6 panachable en six cases à la couleur de chaque vin, frais de port réels du bon de commande",
+   "heure réelle du coucher du soleil à Pujols sur l'ouverture des visites ; ouverture de l'accueil qui suit la saison"
+  ],
+  "reserves": [
+   "photos prises par la famille, retouchées mais inégales en plein cadre",
+   "accords mets et vins, cépages et partenaires seulement en image sur le site actuel : non repris"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "transition-de-page",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "compteur",
+   "canvas-2d",
+   "trace-svg",
+   "reactif-vitesse",
+   "fil-conducteur",
+   "galerie-horizontale",
+   "révélation-image"
+  ],
+  "interactions": [
+   "filtres",
+   "panier-simule",
+   "réservation-simulee",
+   "schema-interactif"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "le moulinet du logo, qu'on fait tourner en soufflant ou à la main ; l'eau du vortex qu'on remue",
+   "fil": "le moulinet : intro, en-tête, voile, appel final, carton, chemin de la visite"
+  },
+  "metier": "domaine viticole bio, vigneron"
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "voile de transition en moulinet, décrit avec l'ouverture"
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "",
+   "description": "",
+   "animations": [],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "panneau de l'intro, décrit avec l'ouverture"
+  },
+  "header": {
+   "titre": "En-tête",
+   "role": "menu",
+   "description": "Moulinet du logo qui tourne avec le défilement puis ralentit, nom sur deux lignes, quatre liens, bouton moutarde Réserver une visite.",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran lin : liens en Gloock, Réserver et Appeler, horaires, phrase du domaine et grand moulinet en décor.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Le vin d'un sol vivant",
+   "role": "ouverture",
+   "description": "Plein cadre qui suit la saison (rangs taillés, moutarde, grappes, vendanges), petit moulinet sur lequel on souffle, titre en lignes masquées, deux boutons, info clé, repère Faites défiler.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "GSAP absorbe le translateY posé en CSS : fromTo avec y: 0 explicite et yPercent",
+    "aperçu flou de la photo en fond de figure pour le retour arrière"
+   ]
+  },
+  "terroir": {
+   "titre": "Entre Garonne et Dordogne",
+   "role": "carte",
+   "description": "Carte de l'Entre-deux-Mers projetée (Garonne, Dordogne, villes) qui se trace, quatre chiffres comptés, cépages.",
+   "animations": [
+    "trace-svg",
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "étiquettes de villes placées à la main par décalage : vérifier les chevauchements à chaque largeur"
+   ]
+  },
+  "vins": {
+   "titre": "Neuf vins, un seul sol",
+   "role": "produits",
+   "description": "Étagère des neuf bouteilles détourées sur fond vert, filtres par famille, bouteilles qui oscillent avec la vitesse du défilement et se soulèvent au survol, lien vers chaque fiche.",
+   "animations": [
+    "reactif-vitesse",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "sol": {
+   "titre": "Un rang sur deux",
+   "role": "manifeste",
+   "description": "Titre dont les lettres poussent une sur deux, parcelle dessinée en SVG (quatre rangs, moutarde qui fleurit en vague, mouton qui traverse au défilement), bento de cinq photos.",
+   "animations": [
+    "révélation-texte",
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "150 fleurs : transition CSS déclenchée une fois, pas de scrub par élément",
+    "lettres animées en échelle depuis la ligne de base : un décalage vertical chevauche le surtitre au premier écran",
+    "SVG en preserveAspectRatio slice sur téléphone pour garder une hauteur lisible"
+   ]
+  },
+  "biodynamie": {
+   "titre": "Faire tourner l'eau",
+   "role": "méthode",
+   "description": "Vortex de la dynamisation en canvas dans un cuivre : il tourne dans un sens, se casse puis repart à l'envers selon le défilement, se remue au doigt ; trois étapes qui s'allument, préparations 500 à 507.",
+   "animations": [
+    "canvas-2d",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "phases pilotées par la progression du défilement (0,42 et 0,58) : aucune mesure de mise en page pendant le défilement"
+   ]
+  },
+  "famille": {
+   "titre": "Véronique, Franck et Narco",
+   "role": "équipe",
+   "description": "Portrait du couple devant la tour du moulin, trois personnes en vignettes rondes (Franck, Véronique, Narco le chien).",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "venir": {
+   "titre": "Comme à la maison",
+   "role": "offre",
+   "description": "Deux cartes photo : visite-dégustation gratuite et aire de camping-cars, avec l'heure réelle du coucher du soleil à Pujols et un petit soleil qui suit son arc.",
+   "animations": [
+    "apparition-au-défilement",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "avis": {
+   "titre": "Ils sont passés par ici",
+   "role": "témoignages",
+   "description": "Six avis Google en cartes lin et vert, rangée qui glisse au défilement sur ordinateur et se glisse au doigt sur téléphone, grand guillemet moutarde.",
+   "animations": [
+    "galerie-horizontale"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "déclencheur sur le cadre de la rangée (top bottom à bottom top), sinon les premières cartes sont passées avant d'être lues"
+   ]
+  },
+  "fin": {
+   "titre": "On vous attend à Pujols",
+   "role": "appel",
+   "description": "Appel final vert : titre en lettres, deux boutons, lettre d'information simulée, grand moulinet qu'on fait tourner à la main (glisser, toucher ou Entrée pour une bourrasque).",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "pied": {
+   "titre": "Nous joindre",
+   "role": "pied-de-page",
+   "description": "Pied vert : logo clair, coordonnées et itinéraire, horaires, réseaux, labels bio, Demeter et Ecocert, message sanitaire de la loi Évin.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Narco a cherché partout",
+   "role": "page-404",
+   "description": "Narco le chien a cherché partout : photo, trois liens et horaires.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Nous trouver à Pujols",
+   "role": "carte",
+   "description": "Grande carte de l'Entre-deux-Mers qui se trace jusqu'à Pujols, itinéraire et téléphone.",
+   "animations": [
+    "trace-svg",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-coordonnees": {
+   "titre": "Coordonnées",
+   "role": "contact",
+   "description": "Coordonnées sur vert : adresse avec bouton Copier l'adresse, téléphones, e-mail, horaires, photo du panneau du domaine.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "contact-ecrire": {
+   "titre": "Écrivez-nous",
+   "role": "contact",
+   "description": "Formulaire simulé (nom, e-mail, téléphone, sujet, message) à côté des réseaux ; titre dont les lettres poussent.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-debut": {
+   "titre": "Quatorze hectares, une famille",
+   "role": "ouverture",
+   "description": "Ouverture partagée : titre de page à gauche, photo des moutons dans les rangs à droite qui zoome doucement.",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-histoire": {
+   "titre": "Une histoire en six dates",
+   "role": "étapes",
+   "description": "Frise de six dates qui se trace, deux photos d'archive.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-terroir": {
+   "titre": "Argile, calcaire et Dordogne",
+   "role": "manifeste",
+   "description": "Terroir sur vert : photo des rangs, texte, cépages rouges et blancs en cartouches.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-sol": {
+   "titre": "Le sol d'abord",
+   "role": "méthode",
+   "description": "Liste des pratiques du sol vivant, photo de moutarde, trois photos des haies et du chêne ; titre dont les lettres poussent.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-biodynamie": {
+   "titre": "La biodynamie au quotidien",
+   "role": "méthode",
+   "description": "Biodynamie au quotidien : trois principes numérotés, préparations, dynamiser et pulvériser, illustration générée du vortex dans le cuivre.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-equipe": {
+   "titre": "L'équipe",
+   "role": "équipe",
+   "description": "Trois portraits (Franck, Véronique, Narco) avec leur rôle.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-photos": {
+   "titre": "Au fil des saisons",
+   "role": "galerie",
+   "description": "Au fil des saisons : quatre photos du domaine en rangée.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaine-fin": {
+   "titre": "Le mieux, c'est de venir voir",
+   "role": "appel",
+   "description": "Appel final vert avec grand moulinet qui tourne au défilement.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-debut": {
+   "titre": "Nos vins, bio et Demeter",
+   "role": "ouverture",
+   "description": "Titre de page et rangée des dix bouteilles en éventail sur une planche ; chaque bouteille mène à sa fiche, avec son nom au survol.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "liens de bouteilles étroites sur petit téléphone : marge intérieure et marge négative pour 44 px sans changer la mise en page",
+    "étiquettes au survol masquées sous 760 px et section en overflow-x: clip, sinon débordement horizontal"
+   ]
+  },
+  "vins-catalogue": {
+   "titre": "La gamme",
+   "role": "produits",
+   "description": "Gamme filtrable (filtre gardé dans l'adresse) en fiches avec stepper et Ajouter ; carton par 6 panachable en six cases à la couleur de chaque vin, numéro du carton, frais de port du bon de commande, retrait au domaine, bouteille qui s'envole vers le carton, barre du carton en bas d'écran.",
+   "animations": [
+    "apparition-au-défilement",
+    "flip"
+   ],
+   "interactions": [
+    "filtres",
+    "panier-simule"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "localStorage nettoyé au chargement et partagé entre onglets",
+    "barre du carton cachée quand le carton est à l'écran (IntersectionObserver)",
+    "pluriels écrits en toutes lettres, jamais « (s) »"
+   ]
+  },
+  "vins-bon": {
+   "titre": "Bon de commande",
+   "role": "contact",
+   "description": "Bon de commande simulé : récapitulatif du carton, coordonnées, règlement, case 18 ans obligatoire.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-conditions": {
+   "titre": "Frais de port",
+   "role": "tarifs",
+   "description": "Tableau de participation aux frais de port et conditions de livraison.",
+   "animations": [
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "vins-ailleurs": {
+   "titre": "Ailleurs qu'au domaine",
+   "role": "preuves",
+   "description": "Cavistes, restaurants et salons, photo de la salle de dégustation en rideau.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-debut": {
+   "titre": "Venez comme à la maison",
+   "role": "ouverture",
+   "description": "Plein cadre au coucher du soleil, arc du soleil avec l'heure réelle du couchant à Pujols, bouton Réserver.",
+   "animations": [
+    "révélation-texte",
+    "trace-svg",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-visite": {
+   "titre": "La visite, pas à pas",
+   "role": "étapes",
+   "description": "Chemin en pointillés qui se dessine au défilement, petit moulinet qui le parcourt et allume les quatre étapes photo (vignes, chai, barriques et amphores, dégustation) ; titre dont les lettres poussent.",
+   "animations": [
+    "trace-svg",
+    "fil-conducteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "simplifié",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "table de 121 points calculée une fois, largeur relue seulement au rafraîchissement de ScrollTrigger"
+   ]
+  },
+  "visites-horaires": {
+   "titre": "Quand venir",
+   "role": "agenda",
+   "description": "Horaires sur vert, jour d'aujourd'hui signalé (fuseau de Paris).",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-aire": {
+   "titre": "L'aire de camping-cars",
+   "role": "offre",
+   "description": "Aire de camping-cars : deux photos superposées, conditions, France Passion, bouton.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-reserver": {
+   "titre": "Réserver en ligne",
+   "role": "outil-interactif",
+   "description": "Réservation simulée en deux onglets (visite ou emplacement), récapitulatif en direct, deux nuits au plus.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-faq": {
+   "titre": "Questions pratiques",
+   "role": "faq",
+   "description": "Six questions pratiques dépliantes.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visites-fin": {
+   "titre": "On vous attend à Pujols",
+   "role": "appel",
+   "description": "Appel final vert avec grand moulinet.",
+   "animations": [
+    "révélation-texte",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

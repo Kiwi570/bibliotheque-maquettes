@@ -1,0 +1,47 @@
+{
+ "id": "chateau-moulin-de-peyronin-maquette/debut",
+ "maquette": "chateau-moulin-de-peyronin-maquette",
+ "page": "index",
+ "titre": "Le vin d'un sol vivant",
+ "role": "ouverture",
+ "description": "Plein cadre qui suit la saison (rangs taillés, moutarde, grappes, vendanges), petit moulinet sur lequel on souffle, titre en lignes masquées, deux boutons, info clé, repère Faites défiler.",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:110-144",
+  "css": "assets/css/socle.css:269-271 ; assets/css/site.css:35,94-161,646-648,653-655,661-662,669-672",
+  "js": "assets/js/site.js:338-345,376-378 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,44-52,55-75,168-201 ; assets/js/socle/gouttiere.js:9,64-96 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/chateau-moulin-de-peyronin-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/chateau-moulin-de-peyronin-maquette/debut-m390.jpg",
+  "video": "medias/chateau-moulin-de-peyronin-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "GSAP absorbe le translateY posé en CSS : fromTo avec y: 0 explicite et yPercent",
+  "aperçu flou de la photo en fond de figure pour le retour arrière"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 844,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

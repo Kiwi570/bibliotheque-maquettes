@@ -1,0 +1,50 @@
+{
+ "id": "chateau-moulin-de-peyronin-maquette/sol",
+ "maquette": "chateau-moulin-de-peyronin-maquette",
+ "page": "index",
+ "titre": "Un rang sur deux",
+ "role": "manifeste",
+ "description": "Titre dont les lettres poussent une sur deux, parcelle dessinée en SVG (quatre rangs, moutarde qui fleurit en vague, mouton qui traverse au défilement), bento de cinq photos.",
+ "animations": [
+  "révélation-texte",
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:267-336",
+  "css": "assets/css/site.css:164-168,215-230,683-698,774-775",
+  "js": "assets/js/site.js:26-90,220-289,353 ; assets/js/socle/effets.js:19 ; assets/js/socle/onde.js:67-190 ; assets/js/socle/entete.js:3-4,60-82"
+ },
+ "medias": {
+  "capture": "medias/chateau-moulin-de-peyronin-maquette/sol-p1440.jpg",
+  "capture_m390": "medias/chateau-moulin-de-peyronin-maquette/sol-m390.jpg",
+  "video": "medias/chateau-moulin-de-peyronin-maquette/sol-p720.mp4"
+ },
+ "pieges": [
+  "150 fleurs : transition CSS déclenchée une fois, pas de scrub par élément",
+  "lettres animées en échelle depuis la ligne de base : un décalage vertical chevauche le surtitre au premier écran",
+  "SVG en preserveAspectRatio slice sur téléphone pour garder une hauteur lisible"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1565,
+  "hauteur_m390": 2415,
+  "epinglee": false,
+  "scrolltriggers": 3
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

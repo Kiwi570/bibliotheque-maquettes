@@ -1,0 +1,44 @@
+{
+ "id": "chateau-moulin-de-peyronin-maquette/vins-debut",
+ "maquette": "chateau-moulin-de-peyronin-maquette",
+ "page": "vins",
+ "titre": "Nos vins, bio et Demeter",
+ "role": "ouverture",
+ "description": "Titre de page et rangée des dix bouteilles en éventail sur une planche ; chaque bouteille mène à sa fiche, avec son nom au survol.",
+ "animations": [
+  "révélation-texte",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "vins.html:110-128",
+  "css": "assets/css/socle.css:269-271 ; assets/css/site.css:39-42,329-354,472,543,606,634-638,648,653-660,664-665,724-732",
+  "js": "assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,44-52,55-75,168-201 ; assets/js/socle/effets.js:151-158 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/chateau-moulin-de-peyronin-maquette/vins-debut-p1440.jpg",
+  "capture_m390": "medias/chateau-moulin-de-peyronin-maquette/vins-debut-m390.jpg"
+ },
+ "pieges": [
+  "liens de bouteilles étroites sur petit téléphone : marge intérieure et marge négative pour 44 px sans changer la mise en page",
+  "étiquettes au survol masquées sous 760 px et section en overflow-x: clip, sinon débordement horizontal"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 879,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}
