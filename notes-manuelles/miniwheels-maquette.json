@@ -1,0 +1,740 @@
+{
+  "maquette": {
+    "client": "magasin et atelier de pit bikes, quads et motos tout terrain enfants (Le Mesnil-Simon, 28) avec terrain de pit bike du samedi (Longnes, 78) et école de pilotage de l'ancien champion d'enduro Séb Guillaume",
+    "activite": [
+      "auto-moto",
+      "sport",
+      "commerce"
+    ],
+    "concept": [
+      "affiche",
+      "catalogue"
+    ],
+    "ambiance": [
+      "clair",
+      "énergique",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--blanc",
+      "texte": "--noir",
+      "accent": "--vert",
+      "secondaire": "--clair2"
+    },
+    "polices": {
+      "titres": "Archivo",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "intro « grille de départ » : 8 barres qui se dressent puis tombent, le badge du logo roule jusqu'à la pastille du samedi",
+      "titres Archivo très condensée italique surlignés de vert comme une plaque de course, damier en bord de voile et d'appel final",
+      "prochaine ouverture du Park en direct (heure de Paris) avec compte à rebours à volets et semaine en 7 cases",
+      "pit bike dessinée qui roule le long des 5 étapes jusqu'au drapeau, pilote qui parcourt le profil de chaque piste",
+      "calculateur de session avec jauge de temps de roulage et créneau du samedi, catalogue de 65 véhicules filtrable (FLIP, filtre dans l'adresse)"
+    ],
+    "reserves": [
+      "Safari non vérifié (WebKit indisponible dans la session)",
+      "37 véhicules sur 65 sans photo constructeur : pictogrammes à la place",
+      "petit saut de la photo d'ouverture au retour arrière ou avant",
+      "réservation et formulaire simulés"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "transition-de-page",
+      "révélation-texte",
+      "apparition-au-défilement",
+      "révélation-image",
+      "parallaxe",
+      "compteur",
+      "marquee",
+      "flip",
+      "trace-svg",
+      "curseur-personnalisé",
+      "reactif-vitesse"
+    ],
+    "interactions": [
+      "calculateur",
+      "réservation-simulee",
+      "filtres"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la pastille ronde « Le Park, samedi » où roule le badge du logo",
+      "fil": "vert du logo, damier de course et pit bike dessinée"
+    },
+    "metier": "pit bike shop et circuit"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile noir qui glisse entre les pages, bordé d'une bande en damier, avec le badge du logo et le nom de la page d'arrivée.",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "le damier du bord est un dégradé répété : garder une hauteur multiple de la case pour éviter une demi-case"
+      ]
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "decor",
+      "description": "Intro « grille de départ » : 8 barres de la grille de motocross se dressent puis tombent, le badge du logo roule et file vers la pastille du samedi de l'ouverture ; moins de 3 s, accélérée au premier geste.",
+      "animations": [
+        "ouverture-orchestrée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "animer les lignes du titre dans la même timeline que l'intro, sinon le geste qui accélère ne les rattrape pas"
+      ],
+      "particularites": [
+        "grille de départ de motocross qui tombe à l'ouverture"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête blanc compact : badge rond, liens soulignés de vert, bouton « Réserver » vert ; jauge de lecture verte de 4 px dessous.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran sombre sur téléphone, liens en Archivo italique et boutons d'appel des deux lieux.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "debut": {
+      "titre": "Du premier tourau podium",
+      "role": "ouverture",
+      "description": "Photo plein cadre d'un jeune pilote en saut, titre « Du premier tour au podium » dont le mot surligné reçoit des traits de vitesse, pastille ronde du Park avec la prochaine date et le temps restant.",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "trois-en-un": {
+      "titre": "Trois en un, depuis 2014",
+      "role": "services",
+      "description": "Trois cartes photo (Park, Shop, atelier) qui s'inclinent au survol, étiquette du lieu en pastille.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "samedi": {
+      "titre": "Prochaine ouverture",
+      "role": "agenda",
+      "description": "Prochaine ouverture du Park calculée à l'heure de Paris, compte à rebours à volets (chaque chiffre bascule en rotateX), tuiles de tarifs.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "calculer la date avec Intl et le fuseau Europe/Paris, jamais l'heure du visiteur"
+      ]
+    },
+    "premiere-fois": {
+      "titre": "Ta première session en 5 étapes",
+      "role": "étapes",
+      "description": "Les 5 étapes de la première session en cartes photo ; dessous, une pit bike dessinée en SVG roule sur une piste en pointillés jusqu'au drapeau à damier au fil du défilement (défilement horizontal sur téléphone).",
+      "animations": [
+        "progression-fixée",
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "sur téléphone la progression suit le défilement horizontal du rail, pas celui de la page"
+      ],
+      "particularites": [
+        "pit bike SVG qui avance le long des étapes, roues qui tournent"
+      ]
+    },
+    "pistes": {
+      "titre": "Trois pistes, tous les niveaux",
+      "role": "offre",
+      "description": "Trois pistes en onglets ; chaque piste a son profil vu de côté en SVG (bosses, sauts) tracé à l'ouverture de l'onglet, avec un pilote qui le parcourt en boucle.",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "boucle du pilote mise en pause hors écran (IntersectionObserver), sinon elle tourne pour rien"
+      ]
+    },
+    "shop": {
+      "titre": "Pit bikes dès 999 €",
+      "role": "produits",
+      "description": "Prix d'appel par famille calculés sur le catalogue (« dès 999 € »), photo d'une YCF 50 cc, lien vers le catalogue.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seb": {
+      "titre": "Quinze ans au plus haut niveau",
+      "role": "équipe",
+      "description": "Portrait noir et blanc de Séb, palmarès en grands chiffres verts qui comptent, citation et lien vers ses stages.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "photos": {
+      "titre": "Les photos, c'est cadeau",
+      "role": "galerie",
+      "description": "Deux rangées de photos du samedi qui glissent en sens contraires selon la vitesse de défilement, tampon rond qui tourne « 238 séances · photos offertes ».",
+      "animations": [
+        "marquee",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "un élément qui tourne en boucle doit être rogné en cercle par son parent : sa boîte carrée grandit de 41 % en tournant et fait déborder la page sans JavaScript"
+      ]
+    },
+    "fin": {
+      "titre": "On se voit samedi ?",
+      "role": "appel",
+      "description": "Photo plein cadre d'un pilote qui lève le bras, titre « On se voit samedi ? », trois boutons (réserver, appeler le Park, appeler le Shop), damier en bas.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Le Shop & l'atelier",
+      "role": "pied-de-page",
+      "description": "Pied sombre : badge, les deux lieux avec adresses, téléphones et horaires, sommaire, réseaux.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Sortiede piste",
+      "role": "page-404",
+      "description": "« Sortie de piste » sur une photo de saut, boutons retour accueil et Park.",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Deux adresses,un numéro par lieu",
+      "role": "contact",
+      "description": "Deux adresses avec statut d'ouverture en direct, boutons d'appel par lieu, cartes photo des lieux avec itinéraire.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Nous écrire",
+      "role": "contact",
+      "description": "Formulaire simulé (sujet et modèle préremplis depuis le catalogue) avec la carte « Corine vous répond pour le Park ».",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-debut": {
+      "titre": "Trois pistes,le samedi",
+      "role": "ouverture",
+      "description": "Écran partagé : titre « Trois pistes, le samedi », photo aérienne des pistes en biais, bande de balises rouges et blanches qui défile.",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-image",
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-ouverture": {
+      "titre": "Quand rouler ?",
+      "role": "agenda",
+      "description": "Semaine en 7 cases sur fond noir : samedi du Park en vert avec un halo qui pulse, mercredi des stages cerclé, jour d'aujourd'hui marqué ; compte à rebours à volets.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "halo en scale sur une case pleine largeur : sur téléphone, l'agrandir surtout en hauteur, sinon la page déborde de quelques pixels"
+      ]
+    },
+    "park-pistes": {
+      "titre": "Les pistes",
+      "role": "offre",
+      "description": "Trois cartes photo des pistes (Kids, SX, MX) avec public et description.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-reserver": {
+      "titre": "Location et initiation",
+      "role": "calculateur",
+      "description": "Tarifs de location et calculateur : nombre de pit bikes enfant et ado, initiation offerte, total, jauge « temps de roulage » où une pit bike avance jusqu'à 2 h, créneau du samedi et réservation simulée.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "calculateur",
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "le calculateur s'ouvre sur un exemple réaliste (1 pit bike, 15 €), jamais sur 0 €"
+      ],
+      "particularites": [
+        "jauge de temps de roulage avec pit bike qui avance"
+      ]
+    },
+    "park-initiation": {
+      "titre": "Ta première session en 5 étapes",
+      "role": "étapes",
+      "description": "Liste à coches des 5 étapes de l'initiation à côté d'une photo d'enfant casqué au briefing.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-avec-ta-moto": {
+      "titre": "Avec ta moto sans réserver",
+      "role": "tarifs",
+      "description": "Entrées avec sa propre moto (licencié ou non) en cartes noires, Pass'Park et Fid'Park en cartes vertes, photo « Accès pistes ».",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-equipement": {
+      "titre": "L'équipement",
+      "role": "offre",
+      "description": "Équipement prêté, à apporter et interdit, à côté d'une illustration générée de l'équipement.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-equipe": {
+      "titre": "L'équipe du samedi",
+      "role": "équipe",
+      "description": "L'équipe du samedi en portraits ronds (Séb, Coco, Chouchou) et le camion à crêpes du snack.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-faq": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "Questions fréquentes en accordéon.",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "park-fin": {
+      "titre": "Prêt pour samedi ?",
+      "role": "appel",
+      "description": "Photo plein cadre de départ groupé, « Prêt pour samedi ? », trois boutons, damier.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-debut": {
+      "titre": "Séb",
+      "role": "ouverture",
+      "description": "Portrait noir et blanc, « SÉB » vert et le même mot géant en gris derrière, qui glisse à l'ouverture.",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-palmares": {
+      "titre": "Le palmarès d'un champion",
+      "role": "chiffres",
+      "description": "Palmarès en six grands chiffres verts qui comptent, en grille sur fond noir.",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-frise": {
+      "titre": "De la course à la transmission",
+      "role": "méthode",
+      "description": "Frise 2014-2018 (Shop, Park, Academy) avec un trait qui se trace au défilement.",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-archives": {
+      "titre": "Les années course",
+      "role": "galerie",
+      "description": "Archives de course en polaroïds légèrement inclinés qui défilent à la vitesse du défilement.",
+      "animations": [
+        "reactif-vitesse",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-academy": {
+      "titre": "Stages pour progresser",
+      "role": "offre",
+      "description": "Stages Seb'One Academy : prix, fiches format, niveau, moto, équipement, licence ; badge de l'Academy en tampon tournant sur la photo du stage.",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sebastien-fin": {
+      "titre": "Rouler avec Séb",
+      "role": "appel",
+      "description": "Photo plein cadre d'un saut poing levé, « Rouler avec Séb », trois boutons, damier.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-debut": {
+      "titre": "Pit bikesdès 999 €",
+      "role": "ouverture",
+      "description": "« Pit bikes dès 999 € », étiquette ronde « 65 véhicules » qui roule à l'ouverture, statut d'ouverture du Shop, photo du magasin plein cadre.",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-catalogue": {
+      "titre": "Le catalogue du Shop",
+      "role": "produits",
+      "description": "Catalogue de 65 véhicules : familles, énergie et tri, animation FLIP au filtrage, filtre gardé dans l'adresse, 15 véhicules puis « Voir les autres », pictogrammes pit bike, quad et SSV pour les véhicules sans photo.",
+      "animations": [
+        "flip",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "un catalogue de plus de 20 cartes s'ouvre replié avec un bouton « Voir les N autres »"
+      ]
+    },
+    "shop-atelier": {
+      "titre": "Toutes marques, tous modèles",
+      "role": "services",
+      "description": "Atelier toutes marques sur une illustration générée plein cadre, étiquettes des types de motos.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-marques": {
+      "titre": "Venir au Shop",
+      "role": "contact",
+      "description": "Marques en mots géants qui défilent en sens contraires, puis venir au Shop : adresse, horaires, itinéraire et photo de la façade.",
+      "animations": [
+        "marquee",
+        "reactif-vitesse",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-fin": {
+      "titre": "Un conseil avant d'acheter ?",
+      "role": "appel",
+      "description": "Photo plein cadre d'un pilote, « Un conseil avant d'acheter ? », trois boutons, damier.",
+      "animations": [
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}

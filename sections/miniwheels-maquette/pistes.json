@@ -1,0 +1,47 @@
+{
+ "id": "miniwheels-maquette/pistes",
+ "maquette": "miniwheels-maquette",
+ "page": "index",
+ "titre": "Trois pistes, tous les niveaux",
+ "role": "offre",
+ "description": "Trois pistes en onglets ; chaque piste a son profil vu de côté en SVG (bosses, sauts) tracé à l'ouverture de l'onglet, avec un pilote qui le parcourt en boucle.",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "galerie-cliquable"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:255-300",
+  "css": "assets/css/site.css:176-189,463,479,574",
+  "js": "assets/js/site.js:84,89-112,279-300,312"
+ },
+ "medias": {
+  "capture": "medias/miniwheels-maquette/pistes-p1440.jpg",
+  "capture_m390": "medias/miniwheels-maquette/pistes-m390.jpg",
+  "video": "medias/miniwheels-maquette/pistes-p720.mp4"
+ },
+ "pieges": [
+  "boucle du pilote mise en pause hors écran (IntersectionObserver), sinon elle tourne pour rien"
+ ],
+ "mesures": {
+  "hauteur_p1440": 937,
+  "hauteur_m390": 1051,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

@@ -1,0 +1,48 @@
+{
+ "id": "miniwheels-maquette/photos",
+ "maquette": "miniwheels-maquette",
+ "page": "index",
+ "titre": "Les photos, c'est cadeau",
+ "role": "galerie",
+ "description": "Deux rangées de photos du samedi qui glissent en sens contraires selon la vitesse de défilement, tampon rond qui tourne « 238 séances · photos offertes ».",
+ "animations": [
+  "marquee",
+  "reactif-vitesse"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:340-390",
+  "css": "assets/css/site.css:214-221,463,480,577-584,643-645,655-657",
+  "js": "assets/js/site.js:3,115-124,313 ; assets/js/socle/effets.js:20,315-331"
+ },
+ "medias": {
+  "capture": "medias/miniwheels-maquette/photos-p1440.jpg",
+  "capture_m390": "medias/miniwheels-maquette/photos-m390.jpg",
+  "video": "medias/miniwheels-maquette/photos-p720.mp4"
+ },
+ "pieges": [
+  "un élément qui tourne en boucle doit être rogné en cercle par son parent : sa boîte carrée grandit de 41 % en tournant et fait déborder la page sans JavaScript"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1250,
+  "hauteur_m390": 1006,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "typo-geante",
+  "vitesse"
+ ],
+ "impact": "spectaculaire"
+}
