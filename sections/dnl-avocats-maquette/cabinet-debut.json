@@ -1,0 +1,46 @@
+{
+ "id": "dnl-avocats-maquette/cabinet-debut",
+ "maquette": "dnl-avocats-maquette",
+ "page": "cabinet",
+ "titre": "Un contact privilégiéet unique, au servicede l'humain",
+ "role": "ouverture",
+ "description": "Photo de la table du cabinet en plein cadre, voile sombre, titre en bas à gauche, image qui se resserre au défilement ; sur téléphone, texte puis photo",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "parallaxe"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "cabinet.html:106-118",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:86,105-106,290-309,665-670,689,696",
+  "js": "assets/js/site.js:187-201,339-344,383-384 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/gouttiere.js:95 ; assets/js/socle/effets.js:16,269 ; assets/js/socle/transitions.js:25-46 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/cabinet-debut-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/cabinet-debut-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/cabinet-debut-p720.mp4"
+ },
+ "pieges": [
+  "Sans JavaScript l'en-tête est dans le flux : l'ouverture ne garde pas 100svh, sinon le bouton sort de l'écran"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 759,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

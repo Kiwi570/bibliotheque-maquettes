@@ -1,0 +1,51 @@
+{
+ "id": "dnl-avocats-maquette/methode",
+ "maquette": "dnl-avocats-maquette",
+ "page": "index",
+ "titre": "Autour de la table",
+ "role": "méthode",
+ "description": "« Autour de la table » sur sapin, scène collante : table ronde vue de dessus qui tourne pour amener chaque place face au visiteur (écouter, rassurer, conseiller, défendre), anneau de progression, numéros cliquables qui mènent au bon moment ; sur téléphone, jouée au temps et rejouée au toucher",
+ "animations": [
+  "section-fixée",
+  "progression-fixée",
+  "trace-svg"
+ ],
+ "interactions": [
+  "schema-interactif"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:165-192",
+  "css": "assets/css/site.css:35,150-188,267-268,711-719",
+  "js": "assets/js/site.js:83-139,172-184,324-329,351 ; assets/js/modules/formulaire-par-etapes.js:1,43,66,176,196 ; assets/js/socle/effets.js:17,151-158,269-283 ; assets/js/socle/mesures.js:25-34 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/compteurs.js:2 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/methode-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/methode-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/methode-p720.mp4"
+ },
+ "pieges": [
+  "Libellés contre-tournés autour de leur propre point (svgOrigin) pour rester droits pendant la rotation",
+  "Étapes inactives en couleur atténuée plutôt qu'en opacité (contraste)",
+  "Zone morte de 3 % au début de la scène"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2160,
+  "hauteur_m390": 1334,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "scene-epinglee",
+  "trait-qui-se-dessine"
+ ],
+ "impact": "spectaculaire"
+}

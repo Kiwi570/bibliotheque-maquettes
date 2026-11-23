@@ -1,0 +1,48 @@
+{
+ "id": "dnl-avocats-maquette/domaines-domaines-suite",
+ "maquette": "dnl-avocats-maquette",
+ "page": "domaines",
+ "titre": "Famille et personnes",
+ "role": "services",
+ "description": "Sous-navigation collante qui suit la lecture (domaine en cours, barre de progression ; sur téléphone « 3 / 4 Urbanisme » et bouton suivant) et quatre domaines aux compositions différentes : image collante, arche sur sapin, bandeau, image à droite ; avocates concernées, repères d'honoraires, bouton prérempli",
+ "animations": [
+  "apparition-au-défilement",
+  "parallaxe",
+  "révélation-image",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "domaines.html:124-267",
+  "css": "assets/css/site.css:329-367,752-775",
+  "js": "assets/js/site.js:283-303"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/domaines-domaines-suite-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/domaines-domaines-suite-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/domaines-domaines-suite-p720.mp4"
+ },
+ "pieges": [
+  "Domaine courant calculé à partir des positions gardées des ScrollTrigger, pas d'onToggle : sinon faux après un saut direct",
+  "scroll-margin-top des domaines = en-tête + sous-navigation"
+ ],
+ "mesures": {
+  "hauteur_p1440": 5350,
+  "hauteur_m390": 7418,
+  "epinglee": false,
+  "scrolltriggers": 9
+ },
+ "familles": [],
+ "impact": "vivant"
+}

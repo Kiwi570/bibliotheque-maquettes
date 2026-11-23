@@ -1,0 +1,48 @@
+{
+ "id": "dnl-avocats-maquette/honoraires-etapes",
+ "maquette": "dnl-avocats-maquette",
+ "page": "honoraires",
+ "titre": "Trois étapes, sans surprise",
+ "role": "étapes",
+ "description": "Trois étapes reliées par un trait qui se dessine, pictogrammes tracés (petite table ronde, devis, convention signée)",
+ "animations": [
+  "trace-svg",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "honoraires.html:125-135",
+  "css": "assets/css/site.css:390-399,800-808",
+  "js": "assets/js/site.js:90-139,324-329,365 ; assets/js/modules/formulaire-par-etapes.js:43,52-53,66,73,98,161,182,189,193,261,282 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/honoraires-etapes-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/honoraires-etapes-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/honoraires-etapes-p720.mp4"
+ },
+ "pieges": [
+  "Pictogrammes sur fond ivoire pour couper le trait qui passe derrière",
+  "Tracé déclenché par une classe posée par le parent, jamais de ScrollTrigger dans les enfants de la cascade"
+ ],
+ "mesures": {
+  "hauteur_p1440": 633,
+  "hauteur_m390": 1012,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "trait-qui-se-dessine"
+ ],
+ "impact": "vivant"
+}

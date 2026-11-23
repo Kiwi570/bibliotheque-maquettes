@@ -1,0 +1,50 @@
+{
+ "id": "dnl-avocats-maquette/debut",
+ "maquette": "dnl-avocats-maquette",
+ "page": "index",
+ "titre": "À vos côtéspour un mondeplus juste",
+ "role": "ouverture",
+ "description": "Titre « À vos côtés pour un monde plus juste » à gauche, large arche photo des trois avocates à droite, pastille sapin « 180 € » dont l'anneau de texte tourne avec le défilement puis fait un tour lent après l'intro",
+ "animations": [
+  "ouverture-orchestrée",
+  "révélation-texte",
+  "parallaxe",
+  "masque"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:106-130",
+  "css": "assets/css/socle.css:265 ; assets/css/site.css:80-121,665,688,701",
+  "js": "assets/js/site.js:3,59-66,339-344,349,383-384 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/debut-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/debut-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/debut-p720.mp4"
+ },
+ "pieges": [
+  "Arche en 4:3 dont la largeur dépend de la hauteur d'écran (calc(100svh…) × 4/3) : les trois personnes restent entières à toutes les tailles",
+  "Ne jamais réécrire l'attribut class d'un SVG de mise en page depuis le script (la pastille avait perdu sa position : débordement de 7 à 37 px)"
+ ],
+ "mesures": {
+  "hauteur_p1440": 900,
+  "hauteur_m390": 960,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "masque"
+ ],
+ "impact": "spectaculaire"
+}

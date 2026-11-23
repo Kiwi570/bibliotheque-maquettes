@@ -1,0 +1,606 @@
+{
+ "maquette": {
+  "metier": "avocat",
+  "client": "cabinet de trois avocates en droit de la famille et droit public (Lyon et Avignon)",
+  "activite": [
+   "juridique"
+  ],
+  "concept": [
+   "autre"
+  ],
+  "ambiance": [
+   "clair",
+   "chaleureux",
+   "sobre"
+  ],
+  "palette": {
+   "fond": "--ivoire",
+   "texte": "--encre",
+   "accent": "--accent",
+   "secondaire": "--sapin"
+  },
+  "polices": {
+   "titres": "DM Serif Display",
+   "texte": "Albert Sans",
+   "mono": ""
+  },
+  "points_forts": [
+   "Vraies photos du cabinet en grand (les trois avocates devant la silhouette de Lyon, la table ronde, portraits) : un cabinet humain, pas de palais ni de marteau",
+   "Une idée tirée du lieu, la table ronde en chêne, tenue sans envahir : intro et voile en cercle, méthode autour de la table qui tourne, appel où la place « Vous » s'allume, anneau de lecture du monogramme",
+   "Honoraires transparents mis en scène (compteur 180 €, horloge d'une heure à une heure trente, grille filtrable avec barres proportionnelles)",
+   "Outils utiles : « Qui vous reçoit pour… », sous-navigation des domaines qui suit la lecture, formulaire de rendez-vous en quatre étapes prérempli par l'adresse",
+   "Règles de communication des avocats respectées (pas de mention laudative ni comparative, « domaines » plutôt qu'« expertises »)"
+  ],
+  "reserves": [
+   "Photos de Lyon et d'Avignon issues de banques d'images, en moyen format seulement",
+   "Pas de vrai logo : monogramme DNL composé dans la police des titres",
+   "Safari non vérifié par l'audit"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "masque",
+   "compteur",
+   "trace-svg",
+   "section-fixée",
+   "progression-fixée",
+   "transition-de-page",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "morphing"
+  ],
+  "interactions": [
+   "schema-interactif",
+   "filtres",
+   "recherche",
+   "formulaire-par-étapes"
+  ],
+  "change_depuis_audit": "v2 : table qui tourne et étapes cliquables, anneau de lecture, filtre « Qui vous reçoit pour… », sous-navigation des domaines, frise qui s'allume, barres de la grille, pictogrammes tracés",
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "la table ronde du cabinet, qui tourne pour amener chaque étape face au visiteur (numéros cliquables)",
+   "fil": "l'anneau de la table : monogramme qui se remplit à la lecture, voile en iris, place « Vous » de l'appel final"
+  }
+ },
+ "sections": {
+  "div": {
+   "titre": "",
+   "ignorer": "élément technique du socle (curseur ou barre fixe)"
+  },
+  "ouverture-panneau": {
+   "titre": "",
+   "role": "transition-de-page",
+   "description": "Intro : D, N, L montent l'un après l'autre, l'anneau terre cuite de la table se trace autour, puis le monogramme glisse vers la photo d'ouverture et la page s'ouvre en cercle depuis elle ; voile vert sapin en iris entre les pages",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg",
+    "masque",
+    "transition-de-page"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Monogramme vectorisé depuis la police des titres (opentype.js) pour que chaque lettre soit un tracé animable"
+   ]
+  },
+  "header": {
+   "titre": "",
+   "role": "menu",
+   "description": "En-tête ivoire, monogramme DNL dont l'anneau terre cuite se remplit avec la lecture de la page",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Anneau de lecture : un second cercle pathLength 1 au-dessus d'un anneau pâle, sinon le monogramme paraît sans anneau en haut de page"
+   ]
+  },
+  "menu": {
+   "titre": "Menu",
+   "role": "menu",
+   "description": "Menu plein écran du socle aux couleurs du site",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "À vos côtéspour un mondeplus juste",
+   "role": "ouverture",
+   "description": "Titre « À vos côtés pour un monde plus juste » à gauche, large arche photo des trois avocates à droite, pastille sapin « 180 € » dont l'anneau de texte tourne avec le défilement puis fait un tour lent après l'intro",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe",
+    "masque"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Arche en 4:3 dont la largeur dépend de la hauteur d'écran (calc(100svh…) × 4/3) : les trois personnes restent entières à toutes les tailles",
+    "Ne jamais réécrire l'attribut class d'un SVG de mise en page depuis le script (la pastille avait perdu sa position : débordement de 7 à 37 px)"
+   ]
+  },
+  "situation": {
+   "titre": "Votre situation concerne…",
+   "role": "services",
+   "description": "« Votre situation concerne… » en écran partagé : Votre famille / Face à l'administration, images qui s'ouvrent depuis la ligne de partage, cartes et puces qui mènent au bon domaine",
+   "animations": [
+    "masque",
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Glissement horizontal des moitiés sous overflow hidden : textes coupés à l'audit ; remplacé par une découpe clip-path depuis la ligne de partage",
+    "Écran bas (1000×560) : hauteur minimale de 660 px, sinon la carte recouvre la mention « Illustration générée »"
+   ]
+  },
+  "methode": {
+   "titre": "Autour de la table",
+   "role": "méthode",
+   "description": "« Autour de la table » sur sapin, scène collante : table ronde vue de dessus qui tourne pour amener chaque place face au visiteur (écouter, rassurer, conseiller, défendre), anneau de progression, numéros cliquables qui mènent au bon moment ; sur téléphone, jouée au temps et rejouée au toucher",
+   "animations": [
+    "section-fixée",
+    "progression-fixée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "schema-interactif"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Libellés contre-tournés autour de leur propre point (svgOrigin) pour rester droits pendant la rotation",
+    "Étapes inactives en couleur atténuée plutôt qu'en opacité (contraste)",
+    "Zone morte de 3 % au début de la scène"
+   ]
+  },
+  "honoraires": {
+   "titre": "Vous savez ce que coûte le premier rendez-vous",
+   "role": "tarifs",
+   "description": "Compteur 0 → 180 € au centre d'une horloge : l'anneau d'une heure puis la demi-heure se tracent, deux repères courent dessus ; trois exemples de la grille et lien",
+   "animations": [
+    "compteur",
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Nombre géant en DM Serif : sa boîte de glyphe dépasse l'interligne et chevauche le texte voisin à l'audit ; interligne 1,3 et marge"
+   ]
+  },
+  "avocates": {
+   "titre": "Trois avocates pour un même objectif",
+   "role": "équipe",
+   "description": "Trois portraits décalés ; « Qui vous reçoit pour… » : un domaine choisi fait s'avancer les avocates concernées (les autres passent en gris) et une phrase dit qui reçoit ; citation de Gisèle Halimi",
+   "animations": [
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "filtres"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Pas de parallaxe dans les cartes d'une cascade (déclencheurs mesurés pendant l'apparition)"
+   ]
+  },
+  "amiable": {
+   "titre": "L'amiable d'abord",
+   "role": "méthode",
+   "description": "L'amiable d'abord : négociation, médiation, droit collaboratif ; deux cercles (vous, l'autre partie) se rapprochent au défilement et leur zone commune « Accord » se colore",
+   "animations": [
+    "morphing",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Le cercle de découpe (clipPath) doit bouger avec le cercle gauche, sinon la zone d'accord ne suit pas"
+   ]
+  },
+  "bureaux": {
+   "titre": "Lyon et Avignon",
+   "role": "contact",
+   "description": "Lyon et Avignon : deux cartes photo, adresse, statut d'horaires calculé à l'heure de Paris (jours fériés compris), lien de rendez-vous prérempli par ville",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Photos de paysage en 4:3 : en 3:4, Lyon et Avignon ne montraient plus que le ciel et l'eau"
+   ]
+  },
+  "appel": {
+   "titre": "Dans les situations difficiles, il est important de ne pas rester seul.",
+   "role": "appel",
+   "description": "« Dans les situations difficiles, il est important de ne pas rester seul » sur sapin, photo ronde de la table qui s'ouvre (découpe en cercle) en se redressant",
+   "animations": [
+    "masque",
+    "parallaxe",
+    "bouton-magnétique"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Mention « Illustration générée » remontée à 22 % du bas, sinon cachée par la découpe circulaire de départ"
+   ]
+  },
+  "pied": {
+   "titre": "Nos bureaux",
+   "role": "pied-de-page",
+   "description": "Grande phrase de fin « À vos côtés. » qui glisse, bureaux, horaires, sommaire, mentions « à compléter » en texte simple",
+   "animations": [
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Pièce introuvable",
+   "role": "page-404",
+   "description": "« Pièce introuvable » : une chaise bleu marine seule dans une pièce vide (jeu sur la pièce du dossier), voile clair dans la figure pour le texte",
+   "animations": [
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Texte posé sur la photo : voile clair dégradé dans la figure, sinon contraste insuffisant à l'audit"
+   ]
+  },
+  "cabinet-debut": {
+   "titre": "Un contact privilégiéet unique, au servicede l'humain",
+   "role": "ouverture",
+   "description": "Photo de la table du cabinet en plein cadre, voile sombre, titre en bas à gauche, image qui se resserre au défilement ; sur téléphone, texte puis photo",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sans JavaScript l'en-tête est dans le flux : l'ouverture ne garde pas 100svh, sinon le bouton sort de l'écran"
+   ]
+  },
+  "cabinet-equipe": {
+   "titre": "Trois parcours, une même table",
+   "role": "équipe",
+   "description": "Trois biographies longues, photo collante pendant la lecture (alternée gauche droite), parcours en fil vertical, mention de spécialisation",
+   "animations": [
+    "révélation-image",
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "cabinet-reperes": {
+   "titre": "De 2009 à Avignon",
+   "role": "étapes",
+   "description": "Repères 2009 → 2024 sur sapin : trait qui se dessine et années qui s'allument une à une au défilement, citation « Ne vous résignez jamais »",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Couleurs des pastilles changées sans transition : à mi-chemin, axe mesurait un contraste insuffisant",
+    "data-effet sur les pastilles qui changent, pas sur le conteneur"
+   ]
+  },
+  "cabinet-engagements": {
+   "titre": "Ce que vous pouvez attendre de nous",
+   "role": "preuves",
+   "description": "Cinq engagements numérotés à côté de la photo des trois avocates en arche collante",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "cabinet-appel": {
+   "titre": "Dans les situations difficiles, il est important de ne pas rester seul.",
+   "role": "appel",
+   "description": "Table dessinée avec les trois avocates et une place « Vous » : la table tourne au défilement jusqu'à ce que la place vide soit face au visiteur, puis elle s'allume",
+   "animations": [
+    "trace-svg",
+    "progression-fixée",
+    "bouton-magnétique"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "contact-debut": {
+   "titre": "Prenons rendez-vous",
+   "role": "contact",
+   "description": "Formulaire de rendez-vous en quatre étapes dès l'ouverture (situation, lieu, coordonnées, récapitulatif), prérempli par ?sujet= et ?lieu= ; téléphone, statut d'horaires et médaillons des trois avocates",
+   "animations": [
+    "ouverture-orchestrée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Noms des étapes du module coupés entre 768 et 1 100 px : seul le nom de l'étape active s'affiche"
+   ]
+  },
+  "contact-bureaux": {
+   "titre": "Deux adresses, un même numéro",
+   "role": "contact",
+   "description": "Deux bureaux sur sapin, photos 16:10, adresses, numéro commun",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaines-debut": {
+   "titre": "Droit de la familleet droit public",
+   "role": "ouverture",
+   "description": "Grand titre centré « Droit de la famille et droit public », index des quatre domaines en pastilles, bandeau panoramique de toits qui s'ouvre depuis une fente",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "masque",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "domaines-domaines-suite": {
+   "titre": "Famille et personnes",
+   "role": "services",
+   "description": "Sous-navigation collante qui suit la lecture (domaine en cours, barre de progression ; sur téléphone « 3 / 4 Urbanisme » et bouton suivant) et quatre domaines aux compositions différentes : image collante, arche sur sapin, bandeau, image à droite ; avocates concernées, repères d'honoraires, bouton prérempli",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe",
+    "révélation-image",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Domaine courant calculé à partir des positions gardées des ScrollTrigger, pas d'onToggle : sinon faux après un saut direct",
+    "scroll-margin-top des domaines = en-tête + sous-navigation"
+   ]
+  },
+  "domaines-appel": {
+   "titre": "Dans les situations difficiles, il est important de ne pas rester seul.",
+   "role": "appel",
+   "description": "Appel final avec la table où la place « Vous » s'allume",
+   "animations": [
+    "trace-svg",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "honoraires-debut": {
+   "titre": "Des honoraires annoncés avant de commencer",
+   "role": "ouverture",
+   "description": "Panneau sapin : « 180 € » géant qui compte, photo ronde d'une table vue de dessus qui tourne, taux horaire",
+   "animations": [
+    "ouverture-orchestrée",
+    "compteur",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sans JavaScript, pas de hauteur d'écran imposée"
+   ]
+  },
+  "honoraires-etapes": {
+   "titre": "Trois étapes, sans surprise",
+   "role": "étapes",
+   "description": "Trois étapes reliées par un trait qui se dessine, pictogrammes tracés (petite table ronde, devis, convention signée)",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": [
+    "Pictogrammes sur fond ivoire pour couper le trait qui passe derrière",
+    "Tracé déclenché par une classe posée par le parent, jamais de ScrollTrigger dans les enfants de la cascade"
+   ]
+  },
+  "honoraires-grille": {
+   "titre": "Les premiers repères, par démarche",
+   "role": "tarifs",
+   "description": "Grille indicative filtrable (famille, droit public) avec recherche sans accents ni pluriels, filtres gardés dans l'adresse, barres proportionnelles aux montants « à partir de »",
+   "animations": [
+    "filtre-anime",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "filtres",
+    "recherche"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": true,
+   "module": null,
+   "pieges": []
+  },
+  "honoraires-faq": {
+   "titre": "Ce qu'on nous demande souvent",
+   "role": "faq",
+   "description": "Six questions sur les honoraires, titre et photo de la table du cabinet en colonne collante",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "honoraires-appel": {
+   "titre": "Dans les situations difficiles, il est important de ne pas rester seul.",
+   "role": "appel",
+   "description": "Appel final avec la table où la place « Vous » s'allume",
+   "animations": [
+    "trace-svg",
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}

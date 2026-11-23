@@ -1,0 +1,47 @@
+{
+ "id": "dnl-avocats-maquette/contact-debut",
+ "maquette": "dnl-avocats-maquette",
+ "page": "contact",
+ "titre": "Prenons rendez-vous",
+ "role": "contact",
+ "description": "Formulaire de rendez-vous en quatre étapes dès l'ouverture (situation, lieu, coordonnées, récapitulatif), prérempli par ?sujet= et ?lieu= ; téléphone, statut d'horaires et médaillons des trois avocates",
+ "animations": [
+  "ouverture-orchestrée",
+  "apparition-au-défilement"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "formulaire-par-etapes",
+ "modules": [
+  "formulaire-par-etapes"
+ ],
+ "code": {
+  "html": "contact.html:106-191",
+  "css": "assets/css/socle.css:287 ; assets/css/site.css:86,105-106,251-253,283,290,475-492,519,525-530,537-564,570-586,591-597,602-628,632-636,647-657,661,665,674-681",
+  "js": "assets/js/site.js:4,32-56,235-249,252-257,339-344,348,358,383-384 ; assets/js/modules/formulaire-par-etapes.js:1,27,43,46-49,53,59-69,74,78,86,123,155,158,168,174-176,182,196,199,222-223,241,268 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:151-158 ; assets/js/socle/transitions.js:25-46"
+ },
+ "medias": {
+  "capture": "medias/dnl-avocats-maquette/contact-debut-p1440.jpg",
+  "capture_m390": "medias/dnl-avocats-maquette/contact-debut-m390.jpg",
+  "video": "medias/dnl-avocats-maquette/contact-debut-p720.mp4"
+ },
+ "pieges": [
+  "Noms des étapes du module coupés entre 768 et 1 100 px : seul le nom de l'étape active s'affiche"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1099,
+  "hauteur_m390": 1736,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}
