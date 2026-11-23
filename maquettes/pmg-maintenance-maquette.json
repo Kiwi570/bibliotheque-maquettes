@@ -14,7 +14,7 @@
  "ambiance": [
   "froid",
   "nocturne",
-  "sobre"
+  "ludique"
  ],
  "palette": {
   "fond": "#f3f6f9",
@@ -26,7 +26,7 @@
  "luminosite": "clair",
  "ton": [
   "froid",
-  "sobre"
+  "ludique"
  ],
  "univers": [
   "nocturne"
@@ -54,20 +54,21 @@
   "toiture-hiver",
   "404"
  ],
- "commit": "dd15b4d",
- "date_commit": "2026-11-21",
- "note": 84,
- "verdict": "À peaufiner",
+ "commit": "824bc88",
+ "date_commit": "2026-11-23",
+ "note": 89,
+ "verdict": "Prête à envoyer",
  "points_forts": [
   "Ligne de toit qui relie le site : ampoules C9 qui s'allument, glaçons qui fondent, gouttière où l'eau coule",
-  "Vraies photos du client partout (vapeur, maisons illuminées, avant/après, équipe en hauteur)",
-  "La saison du jour choisit l'information clé et l'onglet des services",
-  "Outils utiles : repère des 24 po, couleurs C9, avant/après, recherche parmi 97 localités, estimation en 4 étapes"
+  "Façade illustrée dessinée en code, sans image : la vraie ligne de toit d'une maison enneigée prend les couleurs C9 choisies, avec un interrupteur",
+  "Vapeur à manier : les glaçons fondent sous une bouffée de vapeur (bouton, survol ou doigt), l'eau s'égoutte, puis on recommence",
+  "Vraies photos du client partout ailleurs (vapeur, maisons illuminées, avant/après, équipe en hauteur)",
+  "Outils utiles : repère des 24 po (maison, pluie, alerte), avant/après, recherche parmi 97 localités, estimation en 4 étapes où chaque service allume une ampoule"
  ],
  "reserves": [
-  "Images Grok non reçues : la façade des lumières reste une vraie photo avec une guirlande dessinée",
-  "Peu de mouvement seul dans le premier écran (neige fine et scintillement)",
-  "Plusieurs sections typographiques (avis, appel final, FAQ)"
+  "Avis et appel final de l'accueil restent typographiques",
+  "Fluidité de l'accueil au plus juste sur processeur lent : décor de la façade en fichier SVG, boucles CSS en pause hors écran, sinon saccades",
+  "Logo provisoire (aucun logo trouvé chez le client)"
  ],
  "animations": [
   "chargement-orchestré",
@@ -77,14 +78,18 @@
   "canvas-2d",
   "révélation-image",
   "compteur",
-  "marquee"
+  "marquee",
+  "rature",
+  "fil-conducteur"
  ],
  "interactions": [
   "filtres",
   "formulaire-par-étapes",
   "schema-interactif",
   "galerie-cliquable",
-  "saisie-personnalisee"
+  "saisie-personnalisee",
+  "configurateur",
+  "simulateur"
  ],
  "dependances": [
   "gsap",
@@ -94,7 +99,7 @@
  ],
  "grille": {
   "voile": "vague",
-  "objet": "les couleurs des ampoules C9 de sa ligne de toit, le repère des 24 po, le réglet avant/après",
+  "objet": "la façade dont on compose et allume la ligne de toit, les glaçons qu'on fait fondre à la vapeur, le repère des 24 po, le réglet avant/après",
   "fil": "la ligne de toit : ampoules, glaçons, gouttière",
   "intro_vers_objet": true,
   "marques": [
@@ -113,6 +118,13 @@
     "budget": 140,
     "attente": 3,
     "allers_retours": 1
+   },
+   {
+    "version": 2,
+    "travail": 134,
+    "budget": 145,
+    "attente": 0,
+    "allers_retours": 0
    }
   ]
  },

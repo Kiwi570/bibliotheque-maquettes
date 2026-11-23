@@ -8,7 +8,7 @@
  ],
  "titre": "De l'automne au printemps",
  "role": "étapes",
- "description": "Quatre étapes sur une frise pointillée.",
+ "description": "Quatre étapes : un trait orange avance au défilement et chaque pastille s'allume de sa couleur au passage.",
  "animations": [
   "apparition-au-défilement"
  ],
@@ -16,7 +16,8 @@
   "aucune"
  ],
  "dependances": [
-  "aucune"
+  "gsap",
+  "scrolltrigger"
  ],
  "telephone": "adapté",
  "note_qualite": 3,
@@ -24,9 +25,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "en/lumieres-de-noel.html:180-191",
-  "css": "assets/css/site.css:39,286,346,362-365,383,389,418-421",
-  "js": "assets/js/site.js:277-344 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
+  "html": "en/lumieres-de-noel.html:186-197",
+  "css": "assets/css/site.css:40,322,395,413-416,434,440,510-517,528",
+  "js": "assets/js/site.js:350-383,472-542 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
  },
  "medias": {
   "capture": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-service-p1440.jpg"
@@ -36,7 +37,7 @@
   "hauteur_p1440": 565,
   "hauteur_m390": 1014,
   "epinglee": false,
-  "scrolltriggers": 0
+  "scrolltriggers": 1
  },
  "familles": [],
  "impact": "calme"

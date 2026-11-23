@@ -8,17 +8,18 @@
  ],
  "titre": "La vapeur, jamais le marteau",
  "role": "méthode",
- "description": "Nuit : glaçons qui pendent sous la ligne de toit et fondent au défilement, liste de ce qu'on n'utilise jamais rayée en orange, vraies photos de déglaçage.",
+ "description": "Nuit : sous la ligne de toit, les glaçons fondent sous une bouffée de vapeur (bouton « Passer la vapeur », survol ou doigt), l'eau s'égoutte en canvas, « Glace partie, bardeaux intacts. » puis Recommencer ; démonstration sur les premiers glaçons à l'entrée ; liste de ce qu'on n'utilise jamais rayée en orange ; vraies photos.",
  "animations": [
   "apparition-au-défilement",
-  "révélation-image"
+  "révélation-image",
+  "canvas-2d",
+  "rature"
  ],
  "interactions": [
-  "aucune"
+  "simulateur"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger"
+  "canvas"
  ],
  "telephone": "adapté",
  "note_qualite": 5,
@@ -26,9 +27,9 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:269-296",
-  "css": "assets/css/site.css:57,163-178,369",
-  "js": "assets/js/site.js:146-154,157-163"
+  "html": "index.html:282-316",
+  "css": "assets/css/site.css:58,176-208,375,420",
+  "js": "assets/js/site.js:6,181-287,290-296"
  },
  "medias": {
   "capture": "medias/pmg-maintenance-maquette/vapeur-p1440.jpg",
@@ -36,14 +37,15 @@
   "video": "medias/pmg-maintenance-maquette/vapeur-p720.mp4"
  },
  "pieges": [
-  "icônes tracées (data-fx trace) dans une cascade : positions de défilement faussées de 30 px"
+  "icônes tracées (data-fx trace) dans une cascade : positions de défilement faussées de 30 px",
+  "fonte trop lente pour un balayage rapide : régler la vitesse de fonte sur la vitesse du balai (un glaçon reçoit environ 0,2 s de vapeur)"
  ],
  "mesures": {
-  "hauteur_p1440": 991,
-  "hauteur_m390": 1088,
+  "hauteur_p1440": 1056,
+  "hauteur_m390": 1203,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 0
  },
  "familles": [],
- "impact": "vivant"
+ "impact": "spectaculaire"
 }

@@ -8,40 +8,43 @@
  ],
  "titre": "Vos lumières de Noël",
  "role": "produits",
- "description": "Choix des couleurs C9 (cinq boutons) qui recolorent une guirlande dessinée au-dessus d'une vraie maison illuminée.",
+ "description": "Choix des couleurs C9 (cinq boutons) qui recolorent les ampoules posées sur la vraie ligne de toit d'une façade illustrée en code (maison enneigée à l'heure bleue, garage, épinette, cheminée qui fume), interrupteur qui éteint et rallume en chenillard.",
  "animations": [
   "apparition-au-défilement",
-  "parallaxe"
+  "fil-conducteur"
  ],
  "interactions": [
   "configurateur"
  ],
  "dependances": [
-  "gsap",
-  "scrolltrigger"
+  "aucune"
  ],
  "telephone": "adapté",
- "note_qualite": 4,
- "reutilisable": false,
+ "note_qualite": 5,
+ "reutilisable": true,
  "module": null,
  "modules": [],
  "code": {
-  "html": "index.html:297-325",
-  "css": "assets/css/site.css:181-200,530-531,537",
-  "js": "assets/js/site.js:166-188"
+  "html": "index.html:317-345",
+  "css": "assets/css/site.css:211-228,447-489,536,637-638,644",
+  "js": "assets/js/site.js:21-34,37-55,299-324"
  },
  "medias": {
   "capture": "medias/pmg-maintenance-maquette/lumieres-p1440.jpg",
   "capture_m390": "medias/pmg-maintenance-maquette/lumieres-m390.jpg",
   "video": "medias/pmg-maintenance-maquette/lumieres-p720.mp4"
  },
- "pieges": [],
+ "pieges": [
+  "façade SVG complexe sous des boucles animées : saccades au défilement ; décor en fichier SVG (img), ampoules seules dans la page, halos en dégradés plutôt qu'en flou, neige en calque HTML déplacé par transform"
+ ],
  "mesures": {
   "hauteur_p1440": 898,
-  "hauteur_m390": 1091,
+  "hauteur_m390": 1026,
   "epinglee": false,
-  "scrolltriggers": 1
+  "scrolltriggers": 0
  },
- "familles": [],
+ "familles": [
+  "fil-conducteur"
+ ],
  "impact": "vivant"
 }

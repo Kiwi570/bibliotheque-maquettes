@@ -1,8 +1,8 @@
 {
  "depot": "pmg-maintenance-maquette",
- "commit": "dd15b4d",
- "date_commit": "2026-11-21T03:20:50+01:00",
- "genere": "2026-11-21T02:26:24.930Z",
+ "commit": "824bc88",
+ "date_commit": "2026-11-23T16:23:49+01:00",
+ "genere": "2026-11-23T15:30:02.500Z",
  "pages": {
   "404": {
    "fichier": "404.html",
@@ -43,13 +43,7 @@
     "ogl": false,
     "three": false
    },
-   "ajoutes_par_js": [
-    {
-     "sig": "div.barre-masquee",
-     "fixe": true,
-     "h": 0
-    }
-   ],
+   "ajoutes_par_js": [],
    "gabarit_de": []
   },
   "index": {
@@ -515,8 +509,8 @@
    "dans_main": false,
    "code": {
     "html": "index.html:71-79",
-    "css": "assets/css/socle.css:224-227 ; assets/css/site.css:63-67",
-    "js": "assets/js/site.js:27-34,367-370 ; assets/js/socle/ouverture.js:22-30,160-237"
+    "css": "assets/css/socle.css:224-227 ; assets/css/site.css:64-68",
+    "js": "assets/js/site.js:27-34,568-571 ; assets/js/socle/ouverture.js:22-30,160-237"
    },
    "titre": "",
    "hauteur": 0,
@@ -578,7 +572,7 @@
    "dans_main": false,
    "code": {
     "html": "index.html:81-96",
-    "css": "assets/css/socle.css:143-148,155-156,161-168,173,177-180,184-188 ; assets/css/site.css:70-71",
+    "css": "assets/css/socle.css:143-148,155-156,161-168,173,177-180,184-188 ; assets/css/site.css:71-72",
     "js": "assets/js/socle/mesures.js:36-78 ; assets/js/socle/entete.js:8,26-56,60-165"
    },
    "titre": "",
@@ -651,7 +645,7 @@
    "dans_main": false,
    "code": {
     "html": "index.html:113-118",
-    "css": "assets/css/socle.css:173,190-193,210-211 ; assets/css/site.css:74-75",
+    "css": "assets/css/socle.css:173,190-193,210-211 ; assets/css/site.css:75-76",
     "js": "assets/js/socle/defilement.js:48-86 ; assets/js/socle/entete.js:8,84-165"
    },
    "titre": "Menu",
@@ -705,8 +699,8 @@
    "dans_main": true,
    "code": {
     "html": "index.html:120-141",
-    "css": "assets/css/socle.css:240-245,250,265-266 ; assets/css/site.css:22,34-35,81-110,324-327,334,338,446-447,528-529,537-539",
-    "js": "assets/js/site.js:27-34,42-69,378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:240-245,250,265-266 ; assets/css/site.css:23,35-36,82-111,373-376,383,387,544-545,635-636,644-646",
+    "js": "assets/js/site.js:27-34,63-103,579-580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Tout se joueau bord du toit.",
    "hauteur": 900,
@@ -803,8 +797,8 @@
    "dans_main": true,
    "code": {
     "html": "index.html:142-231",
-    "css": "assets/css/site.css:114-120,124-136",
-    "js": "assets/js/site.js:10,94-110,352"
+    "css": "assets/css/site.css:115-121,125-137",
+    "js": "assets/js/site.js:10,128-144,550"
    },
    "titre": "Le bon service, à la bonne saison.",
    "hauteur": 881,
@@ -867,9 +861,9 @@
    "sig": "section#repere.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:232-268",
-    "css": "assets/css/site.css:139-160",
-    "js": "assets/js/site.js:5,113-143"
+    "html": "index.html:232-281",
+    "css": "assets/css/site.css:140-163,167-173",
+    "js": "assets/js/site.js:5,147-179"
    },
    "titre": "Votre toit, où en est-il ?",
    "hauteur": 929,
@@ -880,8 +874,8 @@
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 10,
-   "animations_css": 10,
+   "boucles_css": 26,
+   "animations_css": 26,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -907,11 +901,18 @@
     "jauge-signes",
     "case",
     "jauge-visuel",
+    "jauge-scene",
     "jauge-coupe",
-    "jauge-flocons",
+    "jauge-fenetres",
+    "jauge-regle",
     "jauge-neige",
+    "jauge-toit",
     "jauge-repere",
     "jauge-repere-texte",
+    "jauge-alerte",
+    "jauge-meteo",
+    "jauge-flocons",
+    "jauge-pluie",
     "jauge-verdict",
     "jauge-verdict-titre",
     "jauge-etat",
@@ -927,14 +928,15 @@
     "data-jauge-pluie",
     "data-visuel",
     "data-effet",
-    "data-boucle-css",
+    "data-niveau",
+    "data-pluie",
     "data-jauge-neige",
+    "data-boucle-css",
     "data-jauge-niveau",
     "data-jauge-etat",
     "data-ok",
     "data-attention",
     "data-depasse",
-    "data-pluie",
     "data-alerte",
     "data-libelle"
    ],
@@ -954,33 +956,24 @@
    "sig": "section#vapeur.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:269-296",
-    "css": "assets/css/site.css:57,163-178,369",
-    "js": "assets/js/site.js:146-154,157-163"
+    "html": "index.html:282-316",
+    "css": "assets/css/site.css:58,176-208,375,420",
+    "js": "assets/js/site.js:6,181-287,290-296"
    },
    "titre": "La vapeur, jamais le marteau.",
-   "hauteur": 991,
-   "hauteur_m390": 1088,
+   "hauteur": 1056,
+   "hauteur_m390": 1203,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.6,
-     "debut": 2035,
-     "fin": 3297,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "scaleY"
-   ],
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
-   "canvas": [],
+   "canvas": [
+    "2d"
+   ],
    "decoupe": 0,
    "sticky": 0,
    "elements": {
@@ -989,7 +982,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 1,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -998,9 +991,16 @@
    },
    "classes_exclusives": [
     "vapeur",
+    "vapeur-jeu",
     "toit--glacons",
     "vapeur-toit",
     "glacon",
+    "vapeur-canvas",
+    "vapeur-commande",
+    "bouton-vapeur",
+    "si-pret",
+    "si-fini",
+    "vapeur-astuce",
     "vapeur-grille",
     "vapeur-texte",
     "vapeur-jamais-titre",
@@ -1011,8 +1011,12 @@
     "vapeur-seconde"
    ],
    "data": [
+    "data-vapeur-jeu",
     "data-effet",
     "data-visuel",
+    "data-audit-ignorer",
+    "data-vapeur-bouton",
+    "data-etat",
     "data-anime",
     "data-rature",
     "data-libelle",
@@ -1034,33 +1038,21 @@
    "sig": "section#lumieres.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:297-325",
-    "css": "assets/css/site.css:181-200,530-531,537",
-    "js": "assets/js/site.js:166-188"
+    "html": "index.html:317-345",
+    "css": "assets/css/site.css:211-228,447-489,536,637-638,644",
+    "js": "assets/js/site.js:21-34,37-55,299-324"
    },
    "titre": "Vos lumières de Noël, sans monter à l'échelle.",
    "hauteur": 898,
-   "hauteur_m390": 1091,
+   "hauteur_m390": 1026,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": 2973,
-     "fin": 4355,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 5,
+   "animations_css": 5,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -1070,11 +1062,11 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 5,
+    "boutons": 6,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 1,
     "liens": 2
    },
    "classes_exclusives": [
@@ -1087,23 +1079,41 @@
     "c9-bouton",
     "c9-pastille",
     "c9-consigne",
-    "si-souris",
-    "si-toucher",
     "lumieres-note",
     "lumieres-actions",
     "lumieres-photo",
-    "lumieres-media",
-    "lumieres-toit"
+    "facade-maison",
+    "facade-fond",
+    "facade-svg",
+    "f-fils",
+    "f-fil",
+    "f-ampoules",
+    "c9-svg",
+    "c9-halo",
+    "c9-douille",
+    "c9-verre",
+    "c9-reflet",
+    "facade-fumee",
+    "facade-neige",
+    "facade-note",
+    "facade-interrupteur",
+    "interrupteur-piste",
+    "si-allume",
+    "si-eteint"
    ],
    "data": [
     "data-anime",
     "data-c9-choix",
     "data-c9",
     "data-libelle",
-    "data-fx",
-    "data-effet",
     "data-c9-cible",
-    "data-grille"
+    "data-effet",
+    "data-grille",
+    "data-visuel",
+    "data-boucle-css",
+    "data-facade",
+    "data-interrupteur",
+    "data-allume"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/lumieres-p1440.jpg",
@@ -1121,13 +1131,13 @@
    "sig": "section#avant-apres.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:326-384",
-    "css": "assets/css/site.css:118-119,203-219",
-    "js": "assets/js/site.js:8,191-217"
+    "html": "index.html:346-404",
+    "css": "assets/css/site.css:119-120,231-248",
+    "js": "assets/js/site.js:8,386-412"
    },
    "titre": "Avant, après. Vraies photos.",
    "hauteur": 752,
-   "hauteur_m390": 881,
+   "hauteur_m390": 787,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1192,8 +1202,8 @@
    "sig": "section#securite.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:385-410",
-    "css": "assets/css/site.css:222-233",
+    "html": "index.html:405-430",
+    "css": "assets/css/site.css:251-262",
     "js": "assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
    },
    "titre": "Assurés et formés pour le travail en hauteur.",
@@ -1206,8 +1216,8 @@
     {
      "pin": false,
      "scrub": true,
-     "debut": 4580,
-     "fin": 6137,
+     "debut": 4645,
+     "fin": 6202,
      "anime": true,
      "toggle": false
     }
@@ -1264,8 +1274,8 @@
    "sig": "section#avis.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:411-448",
-    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:114-116,135,236-250",
+    "html": "index.html:431-468",
+    "css": "assets/css/socle.css:39-42 ; assets/css/site.css:115-117,136,265-279",
     "js": "assets/js/socle/effets.js:151-158 ; assets/js/socle/boucles.js:6,54-77"
    },
    "titre": "Ce que disent nos clients.",
@@ -1334,9 +1344,9 @@
    "sig": "section#zone.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:449-574",
-    "css": "assets/css/site.css:253-275,486",
-    "js": "assets/js/site.js:166-188,221-254,277-344 ; assets/js/socle/voile.js:33"
+    "html": "index.html:469-643",
+    "css": "assets/css/site.css:282-311,592",
+    "js": "assets/js/site.js:299-324,416-449,472-542 ; assets/js/socle/voile.js:33"
    },
    "titre": "Des deux côtés de la rivière.",
    "hauteur": 803,
@@ -1347,8 +1357,8 @@
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "boucles_css": 1,
+   "animations_css": 1,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -1375,13 +1385,18 @@
     "zone-colonnes",
     "zone-col-titre",
     "zone-carte",
+    "zone-plan",
     "zone-fond",
+    "zone-rive",
+    "zone-rive--qc",
+    "zone-rive--on",
     "zone-riviere",
     "zone-province",
     "zone-point",
     "zone-point--qc",
     "zone-point--on",
     "zone-point--siege",
+    "zone-onde",
     "zone-schema"
    ],
    "data": [
@@ -1397,11 +1412,13 @@
     "data-zone-on",
     "data-visuel",
     "data-effet",
+    "data-boucle-css",
     "data-ville"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/zone-p1440.jpg",
-    "capture_m390": "medias/pmg-maintenance-maquette/zone-m390.jpg"
+    "capture_m390": "medias/pmg-maintenance-maquette/zone-m390.jpg",
+    "video": "medias/pmg-maintenance-maquette/zone-p720.mp4"
    }
   },
   {
@@ -1414,13 +1431,13 @@
    "sig": "section#fin.section",
    "dans_main": true,
    "code": {
-    "html": "index.html:575-595",
-    "css": "assets/css/site.css:278-301",
-    "js": "assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
+    "html": "index.html:644-664",
+    "css": "assets/css/site.css:314-336,350",
+    "js": "assets/js/site.js:182-287,590-611 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "Votre estimation, gratuite.",
    "hauteur": 783,
-   "hauteur_m390": 1319,
+   "hauteur_m390": 1105,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1490,8 +1507,8 @@
    "sig": "footer#pied.pied",
    "dans_main": false,
    "code": {
-    "html": "index.html:597-624",
-    "css": "assets/css/socle.css:304-309 ; assets/css/site.css:33,304-313",
+    "html": "index.html:666-693",
+    "css": "assets/css/socle.css:304-309 ; assets/css/site.css:34,353-362",
     "js": "assets/js/socle/mesures.js:42-78 ; assets/js/socle/transitions.js:16-23"
    },
    "titre": "Nous joindre",
@@ -1549,33 +1566,24 @@
    "sig": "section#debut.page-tete",
    "dans_main": true,
    "code": {
-    "html": "404.html:115-133",
-    "css": "assets/css/socle.css:120,270-273 ; assets/css/site.css:22,40-43,57,92,110-111,168,207-209,286,320-328,338,342,447,527-529,535-541,545-548",
-    "js": "assets/js/site.js:146-154,379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:9,27,40,151-158,271-283 ; assets/js/socle/onde.js:1 ; assets/js/socle/transitions.js:25-46"
+    "html": "404.html:115-140",
+    "css": "assets/css/socle.css:120,270-273 ; assets/css/site.css:23,41-44,58,93,111-112,177-193,198,226-227,236-238,322,369-377,387,391,402,545,634-636,642-648,652-655",
+    "js": "assets/js/site.js:182-287,580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:9,27,40,151-158,271-283 ; assets/js/socle/onde.js:1 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Cette page est restée sous la neige.",
-   "hauteur": 900,
-   "hauteur_m390": 844,
+   "hauteur": 1019,
+   "hauteur_m390": 996,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.6,
-     "debut": -675,
-     "fin": 495,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "scaleY"
-   ],
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
-   "canvas": [],
+   "canvas": [
+    "2d"
+   ],
    "decoupe": 0,
    "sticky": 0,
    "elements": {
@@ -1584,7 +1592,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 1,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -1599,9 +1607,18 @@
     "hero-info",
     "media",
     "page-tete-media",
+    "vapeur-jeu",
     "toit--glacons",
-    "page-toit",
-    "glacon"
+    "vapeur-toit",
+    "glacon",
+    "vapeur-canvas",
+    "vapeur-commande",
+    "bouton-vapeur",
+    "si-pret",
+    "si-fini",
+    "vapeur-astuce",
+    "si-souris",
+    "si-toucher"
    ],
    "data": [
     "data-anime",
@@ -1610,7 +1627,12 @@
     "data-action-principale",
     "data-info-cle",
     "data-iris-centre",
-    "data-effet"
+    "data-vapeur-jeu",
+    "data-effet",
+    "data-visuel",
+    "data-audit-ignorer",
+    "data-vapeur-bouton",
+    "data-etat"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/404-debut-p1440.jpg",
@@ -1628,9 +1650,9 @@
    "sig": "section#debut.page-tete",
    "dans_main": true,
    "code": {
-    "html": "contact.html:120-253",
-    "css": "assets/css/socle.css:265 ; assets/css/site.css:39,87-93,105-106,110-111,254-275,286,320-328,334-338,395,445-447,481-486,520,527-529,535-541,545-549",
-    "js": "assets/js/site.js:221-254,277-344,378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+    "html": "contact.html:120-302",
+    "css": "assets/css/socle.css:265 ; assets/css/site.css:40,88-94,106-107,111-112,283-311,322,369-377,383-387,402,445,543-545,587-592,627,634-636,642-648,652-656",
+    "js": "assets/js/site.js:416-449,472-542,579-580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/boucles.js:5,54-77 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Parlons devotre maison.",
    "hauteur": 900,
@@ -1641,8 +1663,8 @@
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "boucles_css": 1,
+   "animations_css": 1,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -1675,19 +1697,21 @@
     "pastille-saison",
     "contact-zone",
     "zone-carte",
+    "zone-plan",
     "zone-fond",
+    "zone-rive",
+    "zone-rive--qc",
+    "zone-rive--on",
     "zone-riviere",
     "zone-province",
     "zone-point",
     "zone-point--qc",
     "zone-point--on",
     "zone-point--siege",
+    "zone-onde",
     "zone-schema",
     "zone-recherche",
-    "zone-reponse",
-    "zone-listes",
-    "zone-colonnes",
-    "zone-col-titre"
+    "zone-reponse"
    ],
    "data": [
     "data-grille",
@@ -1697,6 +1721,7 @@
     "data-iris-centre",
     "data-visuel",
     "data-effet",
+    "data-boucle-css",
     "data-ville",
     "data-zone",
     "data-oui",
@@ -1710,7 +1735,8 @@
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/contact-debut-p1440.jpg",
-    "capture_m390": "medias/pmg-maintenance-maquette/contact-debut-m390.jpg"
+    "capture_m390": "medias/pmg-maintenance-maquette/contact-debut-m390.jpg",
+    "video": "medias/pmg-maintenance-maquette/contact-debut-p720.mp4"
    }
   },
   {
@@ -1723,13 +1749,13 @@
    "sig": "section#estimation.section",
    "dans_main": true,
    "code": {
-    "html": "contact.html:254-324",
-    "css": "assets/css/socle.css:280-287 ; assets/css/site.css:146-147,487-508,518-522",
-    "js": "assets/js/site.js:10,221-254,276-344,360 ; assets/js/socle/ouverture.js:92-146 ; assets/js/socle/effets.js:315-331 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58"
+    "html": "contact.html:303-376",
+    "css": "assets/css/socle.css:280-287 ; assets/css/site.css:147-148,593-615,625-629",
+    "js": "assets/js/site.js:10,26-34,416-449,471-542,561 ; assets/js/socle/ouverture.js:92-146 ; assets/js/socle/effets.js:315-331 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/formulaires.js:1-3,8,12-58"
    },
    "titre": "Votre estimation gratuite.",
    "hauteur": 1300,
-   "hauteur_m390": 1431,
+   "hauteur_m390": 1463,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -1792,6 +1818,7 @@
     "data-desservie",
     "data-nonlistee",
     "data-remise",
+    "data-manuel",
     "data-visuel",
     "data-grille",
     "data-recap-services",
@@ -1813,8 +1840,8 @@
    "sig": "section#coordonnees.section",
    "dans_main": true,
    "code": {
-    "html": "contact.html:325-340",
-    "css": "assets/css/site.css:22,40-42,168,286,327,342,509-518,522",
+    "html": "contact.html:377-392",
+    "css": "assets/css/site.css:23,41-43,198,322,376,391,616-625,629",
     "js": null
    },
    "titre": "Nous joindre.",
@@ -1871,9 +1898,9 @@
    "sig": "section#debut.page-tete",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:120-137",
-    "css": "assets/css/socle.css:265 ; assets/css/site.css:34-35,87-93,105-106,110-111,320-327,334-338,395,442-448,476,527-547",
-    "js": "assets/js/site.js:378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "html": "en/lavage-exterieur.html:120-140",
+    "css": "assets/css/socle.css:265 ; assets/css/site.css:35-36,88-94,106-107,111-112,369-376,383-387,445,540-552,582,634-654",
+    "js": "assets/js/site.js:579-580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/curseur.js:5-34 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Clean,without high pressure.",
    "hauteur": 1073,
@@ -1927,7 +1954,10 @@
     "hero-actions",
     "hero-info",
     "pastille-saison",
-    "lavage-bandeau"
+    "lavage-bandeau-cadre",
+    "lavage-bandeau",
+    "lavage-voile",
+    "lavage-raclette"
    ],
    "data": [
     "data-anime",
@@ -1936,9 +1966,11 @@
     "data-action-principale",
     "data-survol",
     "data-info-cle",
+    "data-raclette",
     "data-iris-centre",
     "data-fx",
-    "data-fx-force"
+    "data-fx-force",
+    "data-audit-ignorer"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/en-lavage-exterieur-debut-p1440.jpg",
@@ -1956,9 +1988,9 @@
    "sig": "section#basse-pression.section",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:138-165",
-    "css": "assets/css/site.css:343-346,449-455,476",
-    "js": "assets/js/site.js:113-143"
+    "html": "en/lavage-exterieur.html:141-168",
+    "css": "assets/css/site.css:392-395,514-517,553-559,582",
+    "js": "assets/js/site.js:147-179,350-383"
    },
    "titre": "Why low pressure?",
    "hauteur": 812,
@@ -2016,13 +2048,13 @@
    "sig": "section#surfaces.section",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:166-257",
-    "css": "assets/css/site.css:118-119,205-219,427-429,456-459,476",
-    "js": "assets/js/site.js:10,191-217,256-274,359"
+    "html": "en/lavage-exterieur.html:169-260",
+    "css": "assets/css/site.css:119-120,233-248,523-525,560-565,582",
+    "js": "assets/js/site.js:10,386-412,451-469,560"
    },
    "titre": "What we wash.",
    "hauteur": 804,
-   "hauteur_m390": 940,
+   "hauteur_m390": 896,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2090,9 +2122,9 @@
    "sig": "section#gouttieres.section",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:258-289",
-    "css": "assets/css/site.css:58-59,167-168,449,453,460-469,476",
-    "js": "assets/js/site.js:36-39"
+    "html": "en/lavage-exterieur.html:261-292",
+    "css": "assets/css/site.css:59-60,197-198,553,557,566-575,582",
+    "js": "assets/js/site.js:57-60,182-287"
    },
    "titre": "Gutters that do their job.",
    "hauteur": 913,
@@ -2157,8 +2189,8 @@
    "sig": "section#vitres.section",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:290-314",
-    "css": "assets/css/site.css:470-477",
+    "html": "en/lavage-exterieur.html:293-317",
+    "css": "assets/css/site.css:576-583",
     "js": null
    },
    "titre": "Windows that let the light in.",
@@ -2227,13 +2259,13 @@
    "sig": "section#fin.section",
    "dans_main": true,
    "code": {
-    "html": "en/lavage-exterieur.html:315-335",
-    "css": "assets/css/site.css:22,40-42,168,278-301,327,342",
-    "js": "assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/boucles.js:5,54-77 ; assets/js/socle/compteurs.js:6-36"
+    "html": "en/lavage-exterieur.html:318-338",
+    "css": "assets/css/site.css:23,41-43,198,314-336,350,376,391",
+    "js": "assets/js/site.js:182-287,590-611 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/boucles.js:5,54-77 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "Two codes, one good neighbour.",
    "hauteur": 754,
-   "hauteur_m390": 1187,
+   "hauteur_m390": 1029,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2295,33 +2327,21 @@
    "sig": "section#debut.page-tete",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:120-147",
-    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:34-35,87-93,105-106,110-111,190-199,320-328,334-338,392-397,407,434-436,445-447,525-531,535-541,545-548",
-    "js": "assets/js/site.js:26-34,166-188,378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
+    "html": "en/lumieres-de-noel.html:120-148",
+    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:35-36,88-94,106-107,111-112,218-227,369-377,383-387,402,443-489,530-531,536,543-545,632-638,642-648,652-655",
+    "js": "assets/js/site.js:21-34,37-55,299-324,579-580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "Your home,lit for the holidays.",
    "hauteur": 900,
-   "hauteur_m390": 1165,
+   "hauteur_m390": 942,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": true,
-     "debut": -639,
-     "fin": 680,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "yPercent",
-    "scale"
-   ],
-   "boucles_css": 0,
-   "animations_css": 0,
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
+   "boucles_css": 5,
+   "animations_css": 5,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -2331,11 +2351,11 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 5,
+    "boutons": 6,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
-    "images": 2,
+    "images": 1,
     "liens": 1
    },
    "classes_exclusives": [
@@ -2360,8 +2380,15 @@
     "si-souris",
     "si-toucher",
     "facade",
-    "facade-media",
-    "facade-toit"
+    "facade-maison",
+    "facade-maison--grande",
+    "facade-fond",
+    "facade-svg",
+    "f-fils",
+    "f-fil",
+    "f-ampoules",
+    "c9-svg",
+    "c9-halo"
    ],
    "data": [
     "data-anime",
@@ -2373,10 +2400,13 @@
     "data-c9-choix",
     "data-c9",
     "data-iris-centre",
-    "data-fx",
-    "data-fx-force",
     "data-c9-cible-page",
-    "data-effet"
+    "data-effet",
+    "data-visuel",
+    "data-boucle-css",
+    "data-facade",
+    "data-interrupteur",
+    "data-allume"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-debut-p1440.jpg",
@@ -2394,13 +2424,13 @@
    "sig": "section#couleurs.section",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:148-179",
-    "css": "assets/css/site.css:339-342,368,375,408-417,432,439",
-    "js": "assets/js/site.js:7 ; assets/js/socle/onde.js:2"
+    "html": "en/lumieres-de-noel.html:149-185",
+    "css": "assets/css/site.css:491-508,528,535",
+    "js": "assets/js/site.js:7,326,332-347 ; assets/js/socle/onde.js:2"
    },
    "titre": "Five colours, one roofline.",
-   "hauteur": 856,
-   "hauteur_m390": 1334,
+   "hauteur": 765,
+   "hauteur_m390": 894,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2408,8 +2438,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 507,
-     "fin": 1067,
+     "debut": 277,
+     "fin": 907,
      "anime": true,
      "toggle": false
     }
@@ -2438,20 +2468,24 @@
    },
    "classes_exclusives": [
     "couleurs",
+    "couleurs-grille",
+    "couleurs-photo-cadre",
+    "couleurs-photo",
+    "couleurs-panneau",
+    "couleurs-fil",
     "ampoules-grille",
     "ampoule-carte",
     "ac-halo",
     "ac-douille",
     "ac-verre",
     "ac-facette",
-    "couleurs-bas",
-    "couleurs-photo",
-    "encadre"
+    "couleurs-note"
    ],
    "data": [
     "data-anime",
+    "data-fx",
     "data-visuel",
-    "data-fx"
+    "data-ampoules-balance"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-couleurs-p1440.jpg",
@@ -2469,9 +2503,9 @@
    "sig": "section#service.section",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:180-191",
-    "css": "assets/css/site.css:39,286,346,362-365,383,389,418-421",
-    "js": "assets/js/site.js:277-344 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
+    "html": "en/lumieres-de-noel.html:186-197",
+    "css": "assets/css/site.css:40,322,395,413-416,434,440,510-517,528",
+    "js": "assets/js/site.js:350-383,472-542 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
    },
    "titre": "From fall to spring.",
    "hauteur": 565,
@@ -2479,7 +2513,16 @@
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [],
+   "scrolltriggers": [
+    {
+     "pin": false,
+     "scrub": 0.4,
+     "debut": 1163,
+     "fin": 1651,
+     "anime": false,
+     "toggle": false
+    }
+   ],
    "tweens": 0,
    "proprietes": [],
    "boucles_css": 0,
@@ -2512,11 +2555,13 @@
    ],
    "data": [
     "data-anime",
+    "data-frise",
     "data-visuel"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-service-p1440.jpg",
-    "capture_m390": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-service-m390.jpg"
+    "capture_m390": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-service-m390.jpg",
+    "video": "medias/pmg-maintenance-maquette/en-lumieres-de-noel-service-p720.mp4"
    }
   },
   {
@@ -2529,9 +2574,9 @@
    "sig": "section#realisations.section",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:192-258",
-    "css": "assets/css/site.css:118-119,422-429,437,457",
-    "js": "assets/js/site.js:10,257-274,359 ; assets/js/socle/voile.js:133 ; assets/js/socle/apparitions.js:35-56"
+    "html": "en/lumieres-de-noel.html:198-264",
+    "css": "assets/css/site.css:119-120,518-525,532,561",
+    "js": "assets/js/site.js:10,452-469,560 ; assets/js/socle/voile.js:133 ; assets/js/socle/apparitions.js:35-56 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190"
    },
    "titre": "Homes and businesses, lit up.",
    "hauteur": 1661,
@@ -2543,72 +2588,72 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 1728,
-     "fin": 2488,
+     "debut": 1637,
+     "fin": 2397,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 1728,
-     "fin": 2329,
+     "debut": 1637,
+     "fin": 2238,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2045,
-     "fin": 2646,
+     "debut": 1954,
+     "fin": 2555,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2362,
-     "fin": 2963,
+     "debut": 2271,
+     "fin": 2872,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2362,
-     "fin": 2963,
+     "debut": 2271,
+     "fin": 2872,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2362,
-     "fin": 2963,
+     "debut": 2271,
+     "fin": 2872,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2679,
-     "fin": 3280,
+     "debut": 2588,
+     "fin": 3189,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2679,
-     "fin": 3280,
+     "debut": 2588,
+     "fin": 3189,
      "anime": true,
      "toggle": false
     },
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 2679,
-     "fin": 3280,
+     "debut": 2588,
+     "fin": 3189,
      "anime": true,
      "toggle": false
     }
@@ -2666,8 +2711,8 @@
    "sig": "section#garantie.section",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:259-275",
-    "css": "assets/css/site.css:237-243,249-250,430-434",
+    "html": "en/lumieres-de-noel.html:265-281",
+    "css": "assets/css/site.css:266-272,278-279,526-530",
     "js": null
    },
    "titre": "A bulb goes out? We come back.",
@@ -2725,13 +2770,13 @@
    "sig": "section#fin.section",
    "dans_main": true,
    "code": {
-    "html": "en/lumieres-de-noel.html:276-291",
-    "css": "assets/css/site.css:288-301",
-    "js": "assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/boucles.js:5,54-77 ; assets/js/socle/compteurs.js:6-36"
+    "html": "en/lumieres-de-noel.html:282-308",
+    "css": "assets/css/site.css:326-350",
+    "js": "assets/js/site.js:182-287,590-611 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "This year, leave it to us.",
-   "hauteur": 609,
-   "hauteur_m390": 454,
+   "hauteur": 738,
+   "hauteur_m390": 935,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -2754,13 +2799,19 @@
     "onglets": 0,
     "deplies": 0,
     "images": 0,
-    "liens": 2
+    "liens": 5
    },
    "classes_exclusives": [
     "fin",
     "fin-toit",
     "fin-grille",
-    "fin-actions"
+    "fin-actions",
+    "fin-carte",
+    "fin-carte-toit",
+    "fin-carte-titre",
+    "fin-carte-tel",
+    "fin-carte-liste",
+    "fin-carte-zone"
    ],
    "data": [
     "data-effet",
@@ -2788,8 +2839,8 @@
    "dans_main": true,
    "code": {
     "html": "en/toiture-hiver.html:120-141",
-    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:34-35,87-93,105-106,110-111,320-328,334-338,349-354,385-386,395,445-447,527-529,535-541,545-550",
-    "js": "assets/js/site.js:378-379,389-396 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
+    "css": "assets/css/socle.css:263-265 ; assets/css/site.css:35-36,88-94,106-107,111-112,369-377,383-387,398-405,436-437,445,543-545,634-636,642-648,652-657",
+    "js": "assets/js/site.js:579-580,590-611 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:5,43-51,54-74,138-168 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190 ; assets/js/socle/transitions.js:25-46"
    },
    "titre": "A clear roof,shingles intact.",
    "hauteur": 867,
@@ -2857,7 +2908,8 @@
     "data-info-cle",
     "data-iris-centre",
     "data-fx",
-    "data-fx-force"
+    "data-fx-force",
+    "data-compte-arrivee"
    ],
    "medias": {
     "capture": "medias/pmg-maintenance-maquette/en-toiture-hiver-debut-p1440.jpg",
@@ -2876,7 +2928,7 @@
    "dans_main": true,
    "code": {
     "html": "en/toiture-hiver.html:142-167",
-    "css": "assets/css/site.css:343-345,355-359,387",
+    "css": "assets/css/site.css:392-394,406-410,438",
     "js": "assets/js/site.js:5"
    },
    "titre": "Signs you shouldn't ignore.",
@@ -2953,9 +3005,9 @@
    "sig": "section#repere.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:168-204",
-    "css": "assets/css/site.css:139-160",
-    "js": "assets/js/site.js:5,113-143"
+    "html": "en/toiture-hiver.html:168-217",
+    "css": "assets/css/site.css:140-163,167-173",
+    "js": "assets/js/site.js:5,147-179"
    },
    "titre": "The 24-inch benchmark.",
    "hauteur": 958,
@@ -2966,8 +3018,8 @@
    "scrolltriggers": [],
    "tweens": 0,
    "proprietes": [],
-   "boucles_css": 10,
-   "animations_css": 10,
+   "boucles_css": 26,
+   "animations_css": 26,
    "canvas": [],
    "decoupe": 0,
    "sticky": 0,
@@ -2993,11 +3045,18 @@
     "jauge-signes",
     "case",
     "jauge-visuel",
+    "jauge-scene",
     "jauge-coupe",
-    "jauge-flocons",
+    "jauge-fenetres",
+    "jauge-regle",
     "jauge-neige",
+    "jauge-toit",
     "jauge-repere",
     "jauge-repere-texte",
+    "jauge-alerte",
+    "jauge-meteo",
+    "jauge-flocons",
+    "jauge-pluie",
     "jauge-verdict",
     "jauge-verdict-titre",
     "jauge-etat",
@@ -3013,14 +3072,15 @@
     "data-jauge-pluie",
     "data-visuel",
     "data-effet",
-    "data-boucle-css",
+    "data-niveau",
+    "data-pluie",
     "data-jauge-neige",
+    "data-boucle-css",
     "data-jauge-niveau",
     "data-jauge-etat",
     "data-ok",
     "data-attention",
     "data-depasse",
-    "data-pluie",
     "data-alerte",
     "data-libelle"
    ],
@@ -3040,9 +3100,9 @@
    "sig": "section#deneigement.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:205-229",
-    "css": "assets/css/site.css:341,346,360-368,383,387-389",
-    "js": "assets/js/site.js:277-344 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
+    "html": "en/toiture-hiver.html:218-242",
+    "css": "assets/css/site.css:390,395,411-419,434,438-440,514-517",
+    "js": "assets/js/site.js:350-383,472-542 ; assets/js/socle/index.js:37-58 ; assets/js/socle/effets.js:214-234"
    },
    "titre": "Snow removal, by hand.",
    "hauteur": 1250,
@@ -3102,33 +3162,24 @@
    "sig": "section#vapeur.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:230-263",
-    "css": "assets/css/site.css:57,163-173,178,369-373",
-    "js": "assets/js/site.js:146-154,157-163"
+    "html": "en/toiture-hiver.html:243-283",
+    "css": "assets/css/site.css:58,176-203,208,226-227,375,420-424",
+    "js": "assets/js/site.js:6,181-287,290-296 ; assets/js/socle/curseur.js:5-34"
    },
    "titre": "Ice dam removal with steam.",
-   "hauteur": 1045,
-   "hauteur_m390": 1348,
+   "hauteur": 1110,
+   "hauteur_m390": 1463,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
-   "scrolltriggers": [
-    {
-     "pin": false,
-     "scrub": 0.6,
-     "debut": 3412,
-     "fin": 4726,
-     "anime": true,
-     "toggle": false
-    }
-   ],
-   "tweens": 1,
-   "proprietes": [
-    "scaleY"
-   ],
+   "scrolltriggers": [],
+   "tweens": 0,
+   "proprietes": [],
    "boucles_css": 0,
    "animations_css": 0,
-   "canvas": [],
+   "canvas": [
+    "2d"
+   ],
    "decoupe": 0,
    "sticky": 0,
    "elements": {
@@ -3137,7 +3188,7 @@
     "iframes": 0,
     "formulaires": 0,
     "champs": 0,
-    "boutons": 0,
+    "boutons": 1,
     "details": 0,
     "onglets": 0,
     "deplies": 0,
@@ -3147,9 +3198,18 @@
    "classes_exclusives": [
     "vapeur",
     "vapeur--page",
+    "vapeur-jeu",
     "toit--glacons",
     "vapeur-toit",
     "glacon",
+    "vapeur-canvas",
+    "vapeur-commande",
+    "bouton-vapeur",
+    "si-pret",
+    "si-fini",
+    "vapeur-astuce",
+    "si-souris",
+    "si-toucher",
     "vapeur-grille",
     "vapeur-texte",
     "vapeur-jamais-titre",
@@ -3161,9 +3221,12 @@
     "vm-3"
    ],
    "data": [
+    "data-vapeur-jeu",
     "data-effet",
     "data-visuel",
-    "data-grille",
+    "data-audit-ignorer",
+    "data-vapeur-bouton",
+    "data-etat",
     "data-anime",
     "data-rature",
     "data-fx"
@@ -3184,8 +3247,8 @@
    "sig": "section#securite.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:264-289",
-    "css": "assets/css/site.css:222-233",
+    "html": "en/toiture-hiver.html:284-309",
+    "css": "assets/css/site.css:251-262",
     "js": "assets/js/socle/effets.js:40 ; assets/js/socle/compteurs.js:1,6-36"
    },
    "titre": "Insured and trained for working at heights.",
@@ -3198,8 +3261,8 @@
     {
      "pin": false,
      "scrub": true,
-     "debut": 4361,
-     "fin": 5918,
+     "debut": 4426,
+     "fin": 5983,
      "anime": true,
      "toggle": false
     }
@@ -3256,8 +3319,8 @@
    "sig": "section#faq.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:290-306",
-    "css": "assets/css/site.css:374-382,387,474",
+    "html": "en/toiture-hiver.html:310-326",
+    "css": "assets/css/site.css:425-433,438,580",
     "js": null
    },
    "titre": "Frequently asked questions",
@@ -3270,8 +3333,8 @@
     {
      "pin": false,
      "scrub": 0.4,
-     "debut": 5680,
-     "fin": 6260,
+     "debut": 5745,
+     "fin": 6324,
      "anime": true,
      "toggle": false
     }
@@ -3327,13 +3390,13 @@
    "sig": "section#fin.section",
    "dans_main": true,
    "code": {
-    "html": "en/toiture-hiver.html:307-322",
-    "css": "assets/css/site.css:288-301",
-    "js": "assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
+    "html": "en/toiture-hiver.html:327-353",
+    "css": "assets/css/site.css:326-350",
+    "js": "assets/js/site.js:182-287,590-611 ; assets/js/socle/ouverture.js:18,55-80,92-146 ; assets/js/socle/voile.js:138-168 ; assets/js/socle/gouttiere.js:14,59-91 ; assets/js/socle/apparitions.js:21 ; assets/js/socle/effets.js:18,185,214-234 ; assets/js/socle/compteurs.js:6-36"
    },
    "titre": "Roof loaded? Write to us.",
-   "hauteur": 638,
-   "hauteur_m390": 454,
+   "hauteur": 738,
+   "hauteur_m390": 935,
    "masque_m390": false,
    "position": "relative",
    "cache": false,
@@ -3356,13 +3419,19 @@
     "onglets": 0,
     "deplies": 0,
     "images": 0,
-    "liens": 2
+    "liens": 5
    },
    "classes_exclusives": [
     "fin",
     "fin-toit",
     "fin-grille",
-    "fin-actions"
+    "fin-actions",
+    "fin-carte",
+    "fin-carte-toit",
+    "fin-carte-titre",
+    "fin-carte-tel",
+    "fin-carte-liste",
+    "fin-carte-zone"
    ],
    "data": [
     "data-effet",

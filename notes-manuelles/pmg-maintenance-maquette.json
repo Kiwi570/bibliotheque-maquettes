@@ -13,7 +13,7 @@
   "ambiance": [
    "froid",
    "nocturne",
-   "sobre"
+   "ludique"
   ],
   "palette": {
    "fond": "#f3f6f9",
@@ -28,14 +28,15 @@
   },
   "points_forts": [
    "Ligne de toit qui relie le site : ampoules C9 qui s'allument, glaçons qui fondent, gouttière où l'eau coule",
-   "Vraies photos du client partout (vapeur, maisons illuminées, avant/après, équipe en hauteur)",
-   "La saison du jour choisit l'information clé et l'onglet des services",
-   "Outils utiles : repère des 24 po, couleurs C9, avant/après, recherche parmi 97 localités, estimation en 4 étapes"
+   "Façade illustrée dessinée en code, sans image : la vraie ligne de toit d'une maison enneigée prend les couleurs C9 choisies, avec un interrupteur",
+   "Vapeur à manier : les glaçons fondent sous une bouffée de vapeur (bouton, survol ou doigt), l'eau s'égoutte, puis on recommence",
+   "Vraies photos du client partout ailleurs (vapeur, maisons illuminées, avant/après, équipe en hauteur)",
+   "Outils utiles : repère des 24 po (maison, pluie, alerte), avant/après, recherche parmi 97 localités, estimation en 4 étapes où chaque service allume une ampoule"
   ],
   "reserves": [
-   "Images Grok non reçues : la façade des lumières reste une vraie photo avec une guirlande dessinée",
-   "Peu de mouvement seul dans le premier écran (neige fine et scintillement)",
-   "Plusieurs sections typographiques (avis, appel final, FAQ)"
+   "Avis et appel final de l'accueil restent typographiques",
+   "Fluidité de l'accueil au plus juste sur processeur lent : décor de la façade en fichier SVG, boucles CSS en pause hors écran, sinon saccades",
+   "Logo provisoire (aucun logo trouvé chez le client)"
   ],
   "animations": [
    "chargement-orchestré",
@@ -45,20 +46,24 @@
    "canvas-2d",
    "révélation-image",
    "compteur",
-   "marquee"
+   "marquee",
+   "rature",
+   "fil-conducteur"
   ],
   "interactions": [
    "filtres",
    "formulaire-par-étapes",
    "schema-interactif",
    "galerie-cliquable",
-   "saisie-personnalisee"
+   "saisie-personnalisee",
+   "configurateur",
+   "simulateur"
   ],
   "change_depuis_audit": null,
   "accueil": "debut",
   "plan": "recit-lineaire",
   "grille": {
-   "objet": "les couleurs des ampoules C9 de sa ligne de toit, le repère des 24 po, le réglet avant/après",
+   "objet": "la façade dont on compose et allume la ligne de toit, les glaçons qu'on fait fondre à la vapeur, le repère des 24 po, le réglet avant/après",
    "fil": "la ligne de toit : ampoules, glaçons, gouttière"
   },
   "metier": "déneigement de toiture et entretien extérieur"
@@ -131,7 +136,7 @@
   "debut": {
    "titre": "Tout se joue au bord du toit",
    "role": "ouverture",
-   "description": "Plein cadre de nuit sur une vraie maison illuminée par le client, dégradé à gauche, neige fine en canvas, ligne de toit d'ampoules C9 multicolores en bas qui s'allument et scintillent, information clé selon la saison du jour.",
+   "description": "Plein cadre de nuit sur une vraie maison illuminée par le client, dégradé à gauche, neige fine en canvas qui s'écarte sous la souris, ligne de toit d'ampoules C9 multicolores en bas qui s'allument et scintillent, information clé selon la saison du jour.",
    "animations": [
     "chargement-orchestré",
     "révélation-texte",
@@ -172,7 +177,7 @@
   "repere": {
    "titre": "Le repère des 24 po",
    "role": "outil-interactif",
-   "description": "Curseur d'épaisseur sur une coupe de toit de nuit (la neige s'empile), cases des signes d'alerte et pluie annoncée, avis en direct.",
+   "description": "Curseur d'épaisseur sur une petite maison de nuit (cheminée, porte, règle graduée) où la neige s'empile ; signes d'alerte et pluie annoncée : la pluie remplace la neige, une alerte clignote au-delà du repère ; avis en direct.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -191,38 +196,43 @@
   "vapeur": {
    "titre": "La vapeur, jamais le marteau",
    "role": "méthode",
-   "description": "Nuit : glaçons qui pendent sous la ligne de toit et fondent au défilement, liste de ce qu'on n'utilise jamais rayée en orange, vraies photos de déglaçage.",
+   "description": "Nuit : sous la ligne de toit, les glaçons fondent sous une bouffée de vapeur (bouton « Passer la vapeur », survol ou doigt), l'eau s'égoutte en canvas, « Glace partie, bardeaux intacts. » puis Recommencer ; démonstration sur les premiers glaçons à l'entrée ; liste de ce qu'on n'utilise jamais rayée en orange ; vraies photos.",
    "animations": [
     "apparition-au-défilement",
-    "révélation-image"
+    "révélation-image",
+    "canvas-2d",
+    "rature"
    ],
    "interactions": [
-    "aucune"
+    "simulateur"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
    "reutilisable": true,
    "module": null,
    "pieges": [
-    "icônes tracées (data-fx trace) dans une cascade : positions de défilement faussées de 30 px"
+    "icônes tracées (data-fx trace) dans une cascade : positions de défilement faussées de 30 px",
+    "fonte trop lente pour un balayage rapide : régler la vitesse de fonte sur la vitesse du balai (un glaçon reçoit environ 0,2 s de vapeur)"
    ]
   },
   "lumieres": {
    "titre": "Vos lumières de Noël",
    "role": "produits",
-   "description": "Choix des couleurs C9 (cinq boutons) qui recolorent une guirlande dessinée au-dessus d'une vraie maison illuminée.",
+   "description": "Choix des couleurs C9 (cinq boutons) qui recolorent les ampoules posées sur la vraie ligne de toit d'une façade illustrée en code (maison enneigée à l'heure bleue, garage, épinette, cheminée qui fume), interrupteur qui éteint et rallume en chenillard.",
    "animations": [
     "apparition-au-défilement",
-    "parallaxe"
+    "fil-conducteur"
    ],
    "interactions": [
     "configurateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
-   "reutilisable": false,
+   "note_qualite": 5,
+   "reutilisable": true,
    "module": null,
-   "pieges": []
+   "pieges": [
+    "façade SVG complexe sous des boucles animées : saccades au défilement ; décor en fichier SVG (img), ampoules seules dans la page, halos en dégradés plutôt qu'en flou, neige en calque HTML déplacé par transform"
+   ]
   },
   "avant-apres": {
    "titre": "Avant, après. Vraies photos.",
@@ -280,7 +290,7 @@
   "zone": {
    "titre": "Des deux côtés de la rivière",
    "role": "carte",
-   "description": "Carte schématique de nuit : la rivière des Outaouais se trace, les localités s'allument ; recherche d'une ville parmi les 97 desservies (accents ignorés).",
+   "description": "Carte schématique de nuit, deux rives teintées : la rivière des Outaouais se trace, les localités s'allument, L'Ange-Gardien pulse, nom au survol ; recherche d'une ville parmi les 97 desservies (accents ignorés).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -329,7 +339,7 @@
   "404-debut": {
    "titre": "Cette page est restée sous la neige",
    "role": "page-404",
-   "description": "404 de nuit avec glaçons sous la ligne de toit et vraie photo de glaçons.",
+   "description": "404 de nuit : glaçons à faire fondre à la vapeur sous la ligne de toit, vraie photo de glaçons.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -362,7 +372,7 @@
   "contact-estimation": {
    "titre": "Estimation en quatre étapes",
    "role": "contact",
-   "description": "Formulaire simulé en étapes (services par saison, adresse, coordonnées, code promo), récapitulatif collant en direct, préremplissage par l'adresse (?service=, ?code=).",
+   "description": "Formulaire simulé en étapes (services par saison, adresse, coordonnées, code promo), récapitulatif collant en nuit dont la ligne de toit allume une ampoule par service coché.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -394,7 +404,7 @@
   "en-lavage-exterieur-debut": {
    "titre": "Propre, sans haute pression",
    "role": "ouverture",
-   "description": "Grand titre sur toute la largeur, puis bandeau pleine largeur de l'équipe sur ses échelles.",
+   "description": "Grand titre sur toute la largeur, puis bandeau pleine largeur de l'équipe sur ses échelles, nettoyé à la raclette à l'arrivée (voile terne essuyé de gauche à droite).",
    "animations": [
     "révélation-texte",
     "parallaxe"
@@ -428,7 +438,7 @@
   "en-lavage-exterieur-surfaces": {
    "titre": "Ce qu'on lave",
    "role": "galerie",
-   "description": "Filtres de surfaces en pastilles et avant/après à cinq onglets.",
+   "description": "Filtres de surfaces et matériaux en liste claire à puces, avant/après à cinq onglets (qui défilent sur téléphone).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -494,7 +504,7 @@
   "en-lumieres-de-noel-debut": {
    "titre": "Votre maison, allumée pour les Fêtes",
    "role": "ouverture",
-   "description": "Outil d'abord : couleurs C9 qui recolorent la guirlande posée sur une vraie maison à l'heure bleue (prévu sur une façade Grok où les ampoules suivent la ligne de toit en SVG au cadrage de l'image).",
+   "description": "Outil d'abord : la façade illustrée en code s'allume avec les couleurs C9 choisies, interrupteur.",
    "animations": [
     "révélation-texte",
     "parallaxe"
@@ -503,7 +513,7 @@
     "configurateur"
    ],
    "telephone": "adapté",
-   "note_qualite": 4,
+   "note_qualite": 5,
    "reutilisable": false,
    "module": null,
    "pieges": []
@@ -511,7 +521,7 @@
   "en-lumieres-de-noel-couleurs": {
    "titre": "Cinq couleurs, une ligne de toit",
    "role": "produits",
-   "description": "Cinq ampoules C9 dessinées en SVG sur fond nuit, vraie photo d'ampoule.",
+   "description": "La vraie photo d'ampoule et les cinq couleurs C9 suspendues à un fil sur fond nuit, qui se balancent à l'entrée et au survol.",
    "animations": [
     "apparition-au-défilement",
     "révélation-image"
@@ -528,7 +538,7 @@
   "en-lumieres-de-noel-service": {
    "titre": "De l'automne au printemps",
    "role": "étapes",
-   "description": "Quatre étapes sur une frise pointillée.",
+   "description": "Quatre étapes : un trait orange avance au défilement et chaque pastille s'allume de sa couleur au passage.",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -577,7 +587,7 @@
   "en-lumieres-de-noel-fin": {
    "titre": "Cette année, on s'en occupe",
    "role": "appel",
-   "description": "Appel final de nuit, ligne de toit multicolore.",
+   "description": "Appel final de nuit, ligne de toit multicolore ; carte de contact (numéro en grand, sans frais, textos, courriel, zone).",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -593,7 +603,7 @@
   "en-toiture-hiver-debut": {
    "titre": "Le toit dégagé, les bardeaux intacts",
    "role": "ouverture",
-   "description": "Ouverture claire scindée, vraie photo de déglaçage sur le bord du toit, « 24 po » en très grand dans un cartouche de nuit qui déborde de la photo.",
+   "description": "Ouverture claire scindée, vraie photo de déglaçage sur le bord du toit, « 24 po » qui compte jusqu'à 24 dans un cartouche de nuit.",
    "animations": [
     "révélation-texte",
     "parallaxe"
@@ -662,7 +672,7 @@
   "en-toiture-hiver-vapeur": {
    "titre": "Le déglaçage à la vapeur",
    "role": "méthode",
-   "description": "Nuit, glaçons qui fondent, pastilles de ce que la vapeur épargne, liste rayée, mosaïque de vraies photos.",
+   "description": "Nuit, glaçons à faire fondre à la vapeur, pastilles de ce que la vapeur épargne, liste rayée, mosaïque de vraies photos.",
    "animations": [
     "apparition-au-défilement",
     "révélation-image"
@@ -712,7 +722,7 @@
   "en-toiture-hiver-fin": {
    "titre": "Un toit chargé ? Écrivez-nous",
    "role": "appel",
-   "description": "Appel final de nuit : ligne de toit d'ampoules blanc chaud et blanc pur qui s'allume, demande de soumission préremplie pour le déneigement, texto.",
+   "description": "Appel final de nuit : ligne de toit d'ampoules blanc chaud et blanc pur qui s'allume, demande de soumission préremplie pour le déneigement, texto ; carte de contact (numéro en grand, sans frais, textos, courriel, zone).",
    "animations": [
     "apparition-au-défilement"
    ],
