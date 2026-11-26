@@ -1,0 +1,641 @@
+{
+  "maquette": {
+    "client": "conciergerie privée de villas en location saisonnière à Saint-Raphaël, de Valescure à Anthéor (Madame & Monsieur, superhostraph.com) : dix-neuf villas de 4 à 12 voyageurs, services hôteliers sur demande",
+    "activite": [
+      "hébergement",
+      "tourisme",
+      "immobilier"
+    ],
+    "concept": [
+      "catalogue",
+      "carte"
+    ],
+    "ambiance": [
+      "luxueux",
+      "océanique",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--lin",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--rade"
+    },
+    "polices": {
+      "titres": "Noto Serif Display",
+      "texte": "Albert Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Volets ouverts » : lin, bleu de la rade et rouge de l'Estérel, Noto Serif Display avec un mot en italique rouge ; arriver dans une villa, c'est ouvrir les persiennes",
+      "intro : deux volets à lames pivotent, « Madame » et « Monsieur » partent avec leurs volets et le « & » rejoint celui de l'en-tête ; voile en lames entre les pages",
+      "« Combien serez-vous ? » : un curseur de voyageurs range la collection de villas, celles qui vous accueillent passent au premier rang",
+      "le littoral de Valescure à Anthéor se dessine au défilement, les secteurs s'allument et les repères surgissent quand le trait les atteint ; macaron du classement cinq étoiles qui tourne",
+      "catalogue des 19 villas filtrable (voyageurs, budget, piscine, vue mer, secteur) avec fiche en galerie, demande de séjour en trois étapes"
+    ],
+    "reserves": [
+      "plusieurs services illustrés par des images générées ; Safari non testé"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "masque",
+      "flip",
+      "trace-svg",
+      "marquee",
+      "section-fixée",
+      "parallaxe",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "configurateur",
+      "filtres",
+      "carte-interactive",
+      "galerie-cliquable",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "territoire",
+    "grille": {
+      "objet": "les volets à lames qui s'ouvrent sur la villa",
+      "fil": "le & de Madame & Monsieur"
+    },
+    "metier": "conciergerie de villas"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : deux volets à lames bleu rade pivotent, « Madame » et « Monsieur » partent avec leurs volets et le « & » rejoint celui de l'en-tête ; voile en lames qui se ferme et s'ouvre entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "volets à lames qui s'ouvrent, le & qui rejoint l'en-tête"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : Madame & Monsieur (& en rouge), nos villas, chez vous, chez nous, renseignements, bouton rouge « Demander un séjour »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur lin, liens en Noto Serif",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "L’excellencecomme signature",
+      "role": "ouverture",
+      "description": "« L'excellence comme signature » (signature en italique) sur une terrasse de villa face à l'Estérel et à la mer : boutons trouver ma villa et demander un séjour, 19 villas de 4 à 12 voyageurs",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "esprit": {
+      "titre": "Plus qu’un lieu de vie",
+      "role": "manifeste",
+      "description": "« Nous voulons faire plus que vous trouver un simple lieu de vie » : terrasse sous une pergola, chiffres 19, 12, 5 qui comptent",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "collection": {
+      "titre": "Combien serez-vous ?",
+      "role": "outil-interactif",
+      "description": "« Combien serez-vous ? » : un curseur de voyageurs (personnages qui s'allument) range la collection de villas, celles qui vous accueillent passent au premier rang en glissant ; le curseur glisse seul de 4 à 8 à la première apparition ; cartes avec classement, secteur et prix",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "configurateur",
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "curseur de voyageurs qui range la collection de villas"
+      ]
+    },
+    "cote": {
+      "titre": "De Valescure à Anthéor",
+      "role": "carte",
+      "description": "« De Valescure à Anthéor » : le littoral se dessine au défilement, les secteurs s'allument et les repères surgissent quand le trait les atteint ; survoler un repère éclaire sa ligne dans la liste ; au téléphone la carte glisse seule jusqu'à l'Estérel",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "littoral qui se dessine au défilement et allume les secteurs"
+      ]
+    },
+    "services": {
+      "titre": "Un service digne des plus grands hôtels",
+      "role": "services",
+      "description": "« Un service digne des plus grands hôtels » sur bleu rade : rangée de services en photos (haute couture à l'arrivée, à table, déplacements, sur demande)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lieux": {
+      "titre": "Saint-Raphaël, sans fausse note",
+      "role": "galerie",
+      "description": "« Saint-Raphaël, sans fausse note » : rangée de photos de la ville (port, villas Belle Époque, couchers de soleil) à hauteurs décalées",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "confiance": {
+      "titre": "Classées, et réservables partout",
+      "role": "preuves",
+      "description": "« Classées, et réservables partout » sur bleu rade : macaron du classement cinq étoiles qui tourne, villas classées, bandeau des quartiers et plateformes qui défile",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "demande": {
+      "titre": "Votre séjour commence ici",
+      "role": "contact",
+      "description": "« Votre séjour commence ici » : carte lin sur un coucher de soleil, villa, arrivée et voyageurs, bouton continuer ma demande",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "réservation-simulee"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Nous joindre",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu rade : « Madame & Monsieur » en très grand, adresse, contact, sommaire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette villa n’existe pas (encore)",
+      "role": "page-404",
+      "description": "404 « Cette villa n'existe pas (encore) » : vieille clé sur un mur de pierre devant un volet, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-debut": {
+      "titre": "Chez nous…c’est chez vous",
+      "role": "ouverture",
+      "description": "« Chez nous… c'est chez vous » (en italique) sur une vague contre les rochers de l'Île d'Or, bouton voir les lieux",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-station": {
+      "titre": "",
+      "role": "manifeste",
+      "description": "La station balnéaire entre Cannes et Saint-Tropez en grand texte Noto Serif",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-esterel": {
+      "titre": "",
+      "role": "decor",
+      "description": "« L'Estérel plonge dans la mer » épinglé sur bleu rade : la photo des rochers rouges s'agrandit jusqu'au plein écran sous le titre",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "chez-nous-lieux": {
+      "titre": "Nos lieux préférés",
+      "role": "galerie",
+      "description": "« Nos lieux préférés » : grille de photos légendées (Île d'Or, criques, port, villas Belle Époque…)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-activites": {
+      "titre": "Ce que l’on fait ici",
+      "role": "services",
+      "description": "« Ce que l'on fait ici » : la mer, l'Estérel, tennis et golf, l'arrière-pays, la table, titre épinglé",
+      "animations": [
+        "section-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-partenaires": {
+      "titre": "Nos partenaires",
+      "role": "preuves",
+      "description": "« Nos partenaires » : noms reliés par des & rouges",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-nous-appel": {
+      "titre": "Le plus beau, c’est d’y être",
+      "role": "appel",
+      "description": "« Le plus beau, c'est d'y être » : carte lin posée sur un coucher de soleil sur la rade, bouton voir les villas",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-vous-debut": {
+      "titre": "Chez vous…en bien mieux",
+      "role": "ouverture",
+      "description": "« Chez vous… en bien mieux » : chambre de villa au lit capitonné, bouton composer mon séjour",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-vous-temps": {
+      "titre": "Votre séjour, en quatre temps",
+      "role": "étapes",
+      "description": "« Votre séjour, en quatre temps » : avant, à l'arrivée, pendant, au départ, sur une ligne",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-vous-services": {
+      "titre": "Ce que nous faisons pour vous",
+      "role": "services",
+      "description": "« Ce que nous faisons pour vous » : six services numérotés qui défilent tour à tour avec leur photo, compteur 01 / 06 épinglé",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "chez-vous-inclus": {
+      "titre": "Dans nos villas, d’office",
+      "role": "services",
+      "description": "« Dans nos villas, d'office » : liste de ce qui est inclus",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chez-vous-appel": {
+      "titre": "Une envie particulière ?",
+      "role": "appel",
+      "description": "« Une envie particulière ? » : carte lin posée sur un coucher de soleil sur la rade, bouton demander un service",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "nos-villas-debut": {
+      "titre": "Dix-neuf villas,une signature",
+      "role": "ouverture",
+      "description": "« Dix-neuf villas, une signature » : mosaïque de vignettes de villas, de 140 à 980 € la nuit, bouton",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "nos-villas-catalogue": {
+      "titre": "Toutes nos villas",
+      "role": "produits",
+      "description": "« Toutes nos villas » : 19 villas filtrables (voyageurs, budget, piscine, vue mer, secteur) en cartes photo qui se réorganisent, chacune ouvre sa fiche",
+      "animations": [
+        "flip",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "catalogue-filtres-flip",
+      "pieges": []
+    },
+    "nos-villas-fiche": {
+      "titre": "",
+      "role": "galerie",
+      "description": "Fiche d'une villa : galerie à flèches, équipements, bouton demander cette villa",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "nos-villas-appel": {
+      "titre": "Une villa vous fait de l’œil ?",
+      "role": "appel",
+      "description": "« Une villa vous fait de l'œil ? » : carte lin posée sur un coucher de soleil sur la rade, boutons demander un séjour et appeler",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "renseignements-debut": {
+      "titre": "Parlons devotre séjour",
+      "role": "ouverture",
+      "description": "« Parlons de votre séjour » : terrasse au coucher du soleil, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "renseignements-demande": {
+      "titre": "Préparons votre séjour",
+      "role": "contact",
+      "description": "« Préparons votre séjour » : trois étapes (la villa et les dates, les voyageurs, vos coordonnées), récapitulatif épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Demande simulée"
+      ]
+    },
+    "renseignements-joindre": {
+      "titre": "Nous joindre",
+      "role": "contact",
+      "description": "« Nous joindre » : téléphone et WhatsApp, e-mail, adresse, plateformes ; macaron qui tourne",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
