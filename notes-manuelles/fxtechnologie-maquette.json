@@ -1,0 +1,817 @@
+{
+  "maquette": {
+    "client": "spécialiste québécois des engrenages et de la transmission de puissance (Sainte-Sophie) : fabrication, réparation et usinage de la petite pièce à la couronne de 320 po, métallisation HVOF, interventions en usine, six centres de services",
+    "activite": [
+      "industrie",
+      "services-b2b"
+    ],
+    "concept": [
+      "atelier",
+      "catalogue"
+    ],
+    "ambiance": [
+      "industriel",
+      "sombre",
+      "brut"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--braise",
+      "secondaire": "--graphite"
+    },
+    "polices": {
+      "titres": "Big Shoulders",
+      "texte": "IBM Plex Sans",
+      "mono": "IBM Plex Mono"
+    },
+    "points_forts": [
+      "direction « Acier et braise » : graphite, béton clair et orange de forge, Big Shoulders étroite en capitales et cotes en Plex Mono ; une couronne géante dans l'atelier à l'ouverture, étincelles de meulage",
+      "engrenages partout et justes : deux roues dans la marge qui tournent au défilement en rapport 2:1, méthode où la grande roue avance d'une dent par étape, roue à attraper et lancer dans l'appel, 404 « Il manque une dent »",
+      "outils d'ingénieur : couronne à l'échelle d'une silhouette dont on change le type et la largeur de face, simulateur de rapport de réduction aux vraies proportions de vitesse, loupe d'inspection sur les photos",
+      "schéma HVOF en quatre temps dont la flamme projette plus de particules à chaque étape, réseau des centres qui se trace d'ouest en est, soumission en quatre étapes préremplie par l'adresse"
+    ],
+    "reserves": [
+      "une partie des images sont générées ; logo d'origine en basse définition, adresse à confirmer"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "webgl-particules",
+      "fil-conducteur",
+      "section-fixée",
+      "progression-fixée",
+      "trace-svg",
+      "compteur",
+      "marquee",
+      "révélation-texte",
+      "reactif-vitesse"
+    ],
+    "interactions": [
+      "simulateur",
+      "configurateur",
+      "jeu",
+      "carte-interactive",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la couronne d'engrenage géante",
+      "fil": "deux roues dans la marge qui tournent au défilement en rapport 2:1"
+    },
+    "metier": "fabricant et réparateur d'engrenages"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile : une roue dentée tourne sur graphite pendant que des étincelles de meulage jaillissent, puis le voile se lève",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "étincelles de meulage pilotées par le temps"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête graphite : logo FX Technologie, produits, services, expertise, contact, bouton orange « Demander une soumission »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec la ligne d'urgence",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Le spécialistede l'engrenage",
+      "role": "ouverture",
+      "description": "« Le spécialiste de l'engrenage » en Big Shoulders, le mot en orange, sur la photo d'une couronne géante dans l'atelier qui respire par un zoom très lent ; étincelles de meulage au centre de la couronne, bouton et urgence 24 h",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "étincelles de meulage jaillissant au centre de la couronne de la photo"
+      ]
+    },
+    "reperes": {
+      "titre": "Repères",
+      "role": "chiffres",
+      "description": "Repères sur graphite : +25 ans, 320 po, 12 services, 14 secteurs en grands chiffres, normes AGMA en mono",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits": {
+      "titre": "Quatre familles de pièces, une seule exigence",
+      "role": "produits",
+      "description": "« Quatre familles de pièces, une seule exigence » : quatre cartes photo numérotées (engrenages, grande couronne, sécherie, réducteur)",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "capacites": {
+      "titre": "Jusqu'à 8,13 m de diamètre",
+      "role": "outil-interactif",
+      "description": "« Jusqu'à 8,13 m de diamètre » : la couronne grandit et tourne au défilement à côté d'une silhouette humaine à l'échelle ; boutons droit, hélicoïdal, double hélice qui changent la largeur de face, tableau des capacités",
+      "animations": [
+        "progression-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "couronne à l'échelle d'une silhouette qui grandit et tourne au défilement"
+      ]
+    },
+    "services": {
+      "titre": "Douze savoir-faire sous le même toit",
+      "role": "services",
+      "description": "« Douze savoir-faire sous le même toit » épinglé : index numéroté des services, la ligne au milieu de l'écran devient active et la photo à droite la suit",
+      "animations": [
+        "section-fixée",
+        "survol-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "index dont la ligne au milieu de l'écran s'active et change la photo"
+      ]
+    },
+    "atelier": {
+      "titre": "On vient à la machine quand elle ne peut pas venir à nous",
+      "role": "decor",
+      "description": "« Dans nos ateliers ou chez vous » épinglé : la photo d'atelier s'ouvre en plein écran, puis « On vient à la machine quand elle ne peut pas venir à nous »",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode": {
+      "titre": "Cinq temps, une dent à la fois",
+      "role": "méthode",
+      "description": "« Cinq temps, une dent à la fois » épinglé : à chaque étape la grande roue grise tourne d'une dent repérée et le pignon orange suit en rapport 2:1, compteur 01/05",
+      "animations": [
+        "section-fixée",
+        "progression-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "grande roue qui avance d'une dent par étape, pignon qui suit en rapport 2:1"
+      ]
+    },
+    "pannes": {
+      "titre": "Trouver la cause, pas seulement changer la pièce",
+      "role": "services",
+      "description": "« Trouver la cause, pas seulement changer la pièce » : photo d'une trappe de visite, trois bénéfices, lien vers l'expertise",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs": {
+      "titre": "14 secteurs servis",
+      "role": "preuves",
+      "description": "« 14 secteurs servis » : noms des secteurs en grands bandeaux Big Shoulders qui défilent en sens contraires, pleins et en contour",
+      "animations": [
+        "marquee",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "centres": {
+      "titre": "Du Québec à l'Ontario, aux États-Unis et en Europe",
+      "role": "carte",
+      "description": "« Du Québec à l'Ontario, aux États-Unis et en Europe » : la ligne du réseau se trace d'ouest en est et les six centres s'allument à son passage, avec leurs téléphones",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "réseau des centres qui se trace d'ouest en est"
+      ]
+    },
+    "appel": {
+      "titre": "Une pièce à refaire, une machine à l'arrêt ?",
+      "role": "appel",
+      "description": "« Une pièce à refaire, une machine à l'arrêt ? » : deux roues engrenées à attraper et lancer à la souris ou au doigt (un clic donne une impulsion), bouton de soumission et urgence 24 h",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "roue à attraper et lancer qui entraîne le pignon"
+      ]
+    },
+    "pied": {
+      "titre": "Nous joindre",
+      "role": "pied-de-page",
+      "description": "Pied de page graphite : logo, adresse, téléphones, sommaire, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "engrenement": {
+      "titre": "",
+      "role": "decor",
+      "description": "Engrènement de la marge sur grands écrans : deux petites roues orange et grise qui tournent avec le défilement en rapport 2:1",
+      "animations": [
+        "fil-conducteur",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "deux roues engrenées dans la marge qui tournent au défilement"
+      ]
+    },
+    "404-debut": {
+      "titre": "Il manque une dent à cette page",
+      "role": "page-404",
+      "description": "404 « Il manque une dent à cette page » : la roue tourne et la dent manquante passe en haut ; « L'accueil, lui, tourne rond »",
+      "animations": [
+        "révélation-texte",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre pièce",
+      "role": "contact",
+      "description": "« Parlons de votre pièce » : ligne d'urgence en grand au centre d'un cadran dont la couronne tourne doucement",
+      "animations": [
+        "canvas-2d",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-soumission": {
+      "titre": "Demande de soumission",
+      "role": "contact",
+      "description": "« Demande de soumission » : quatre étapes (besoin, pièce, détails, coordonnées), récapitulatif en direct avec une roue qui tourne, préremplie par l'adresse (?besoin=reparation&piece=couronne)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-coordonnees": {
+      "titre": "Nos coordonnées",
+      "role": "contact",
+      "description": "« Nos coordonnées » : adresse, urgence, courriel, téléphones des centres en mono, photo de l'enseigne",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-debut": {
+      "titre": "Trouver la cause",
+      "role": "ouverture",
+      "description": "« Trouver la cause » en très grand ; photo d'une trappe de visite autour de laquelle un anneau se trace, avec une loupe d'inspection qui grossit la photo sous la souris ou le doigt",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "loupe d'inspection qui grossit la photo sous la souris"
+      ]
+    },
+    "expertise-analyse": {
+      "titre": "L'analyse des engrenages et des pannes",
+      "role": "services",
+      "description": "« L'analyse des engrenages et des pannes » : trois apports numérotés et photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-methode": {
+      "titre": "Une seule équipe, du besoin à la livraison",
+      "role": "méthode",
+      "description": "« Une seule équipe, du besoin à la livraison » : cinq étapes reliées par une ligne crantée orange qui se trace",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-normes": {
+      "titre": "Normes et références",
+      "role": "preuves",
+      "description": "« Normes et références » : AGMA, boîte de 22 tonnes pour Atlas Steel, 25 ans, photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-centres": {
+      "titre": "Six centres de services régionaux",
+      "role": "carte",
+      "description": "« Six centres de services régionaux » : même réseau qui se trace, tableau des centres avec téléphones",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-secteurs": {
+      "titre": "Les secteurs que nous servons",
+      "role": "preuves",
+      "description": "« Les secteurs que nous servons » : grille des 14 secteurs numérotés sur graphite",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expertise-appel": {
+      "titre": "Une panne à comprendre ?",
+      "role": "appel",
+      "description": "« Une panne à comprendre ? » sur graphite : roue orange qui tourne avec le défilement, bouton de soumission et ligne d'urgence 24 h",
+      "animations": [
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-debut": {
+      "titre": "La pièce exacte, à la bonne taille",
+      "role": "ouverture",
+      "description": "« La pièce exacte, à la bonne taille » sur la photo d'un grand engrenage dans la pénombre, couronnes jusqu'à 320 po",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-sommaire-produits": {
+      "titre": "Sur cette page",
+      "role": "barre-fixe",
+      "description": "Sommaire des produits qui reste en haut et marque la famille qu'on lit",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-engrenages": {
+      "titre": "Engrenages",
+      "role": "produits",
+      "description": "« Engrenages » : types, matériaux et normes en tableau mono, mosaïque de photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-grande-couronne": {
+      "titre": "Grande couronne",
+      "role": "produits",
+      "description": "« Grande couronne » sur graphite : diamètre max et largeur de face par type en barres orange qui se dessinent au défilement, avantages des couronnes segmentées",
+      "animations": [
+        "progression-fixée",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-sechage": {
+      "titre": "Engrenage de sécherie",
+      "role": "produits",
+      "description": "« Engrenage de sécherie » : pièces pour machines à papier, photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-reducteur": {
+      "titre": "Réducteur sur mesure",
+      "role": "produits",
+      "description": "« Réducteur sur mesure » : bénéfices et encart « à réparer plutôt qu'à remplacer ? », photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "produits-rapport": {
+      "titre": "Essayez un rapport de réduction",
+      "role": "calculateur",
+      "description": "« Essayez un rapport de réduction » : curseurs des dents du pignon et de la roue et vitesse d'entrée ; les deux engrenages tournent à leur vraie proportion de vitesse, rapport, vitesse de sortie et couple affichés",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "simulateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "engrenages qui tournent à la vraie proportion du rapport choisi"
+      ]
+    },
+    "produits-appel": {
+      "titre": "Une pièce à refaire, une machine à l'arrêt ?",
+      "role": "appel",
+      "description": "« Une pièce à refaire, une machine à l'arrêt ? » sur graphite : roue orange qui tourne avec le défilement, bouton de soumission et ligne d'urgence 24 h",
+      "animations": [
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-debut": {
+      "titre": "Réparer, usiner, revêtir, intervenir",
+      "role": "ouverture",
+      "description": "« Réparer, usiner, revêtir, intervenir » sur la photo d'une projection d'étincelles dans l'atelier",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-sommaire-produits": {
+      "titre": "Sur cette page",
+      "role": "barre-fixe",
+      "description": "Sommaire des quatre familles de services qui reste en haut",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-reparer": {
+      "titre": "Réparer et remettre à neuf",
+      "role": "services",
+      "description": "« Réparer et remettre à neuf » : six réparations en cartes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-usiner": {
+      "titre": "Usiner et fabriquer",
+      "role": "services",
+      "description": "« Usiner et fabriquer » : matériaux en bandeau qui défile, trois savoir-faire en photos",
+      "animations": [
+        "marquee",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-surfaces": {
+      "titre": "La métallisation HVOF, en quatre temps",
+      "role": "étapes",
+      "description": "« La métallisation HVOF, en quatre temps » épinglé : l'étape au milieu de l'écran s'allume, le schéma du pistolet montre la combustion puis l'accélération, la flamme projette plus de particules et le jet file plus vite à chaque étape",
+      "animations": [
+        "section-fixée",
+        "canvas-2d",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "schéma HVOF dont la flamme projette plus de particules à chaque étape"
+      ]
+    },
+    "services-sur-place": {
+      "titre": "Intervenir sur place",
+      "role": "services",
+      "description": "« Intervenir sur place » : assistance en usine, encart urgence 24 h, photos d'interventions",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-appel": {
+      "titre": "Dites-nous ce qui ne tourne plus rond",
+      "role": "appel",
+      "description": "« Dites-nous ce qui ne tourne plus rond » sur graphite : roue orange qui tourne avec le défilement, bouton de soumission et ligne d'urgence 24 h",
+      "animations": [
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
