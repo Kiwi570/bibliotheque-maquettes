@@ -1,0 +1,726 @@
+{
+  "maquette": {
+    "client": "maison d'hôtes de charme du XVIIIe siècle à Sauternes, en Gironde (La Sauternaise, Pascale et Didier) : quatre chambres aux noms de grands vins avec salle de bains bien-être, dans l'ancien Office de dégustation du village",
+    "activite": [
+      "hébergement",
+      "tourisme"
+    ],
+    "concept": [
+      "carnet",
+      "vitrine"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "luxueux",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--chaux",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--or"
+    },
+    "polices": {
+      "titres": "Ibarra Real Nova",
+      "texte": "Hanken Grotesk",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « L'Office de dégustation » : chaux, pierre blonde et cave, rouge et or du logo, Ibarra Real Nova avec une ligne en italique rouge ; élégance discrète d'une maison du XVIIIe",
+      "intro où un tirage photo se développe ; « Hier et aujourd'hui » : la photo d'archive de la façade s'écarte au défilement et se glisse à la main",
+      "les chambres en tirages qui se posent l'un sur l'autre ; la buée qu'on essuie à la souris sur la photo de la salle de bains, gouttes et coulures",
+      "la règle des distances qui se remplit d'or au défilement, chaque château s'allumant à son passage ; 39 visites filtrables par distance et par envie",
+      "demande de réservation avec calendrier et récapitulatif, cachet d'encre posé avec le nombre de nuits à l'envoi"
+    ],
+    "reserves": [
+      "aucun tarif publié sur le site actuel ; cinq illustrations générées"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "parallaxe",
+      "empilement-de-fiches",
+      "canvas-2d",
+      "trace-svg",
+      "masque",
+      "section-fixée",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "comparateur",
+      "filtres",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le tirage photo qui se développe, hier et aujourd'hui",
+      "fil": "l'or du Sauternes qui remplit la règle des distances"
+    },
+    "metier": "maison d'hôtes"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile pierre blonde entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "intro-tirage": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : un tirage photo de la façade se développe comme dans un bain de révélateur, puis se pose dans l'ouverture",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "tirage photo qui se développe à l'intro"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête chaux : logo La Sauternaise, les chambres, la maison, les environs, accès et contact, bouton rouge « Réserver »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur pierre blonde",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Charme et bien-êtreau cœur deSauternes",
+      "role": "ouverture",
+      "description": "« Charme et bien-être au cœur de Sauternes » (Sauternes en italique rouge) : la façade de l'Office de dégustation qui glisse doucement au défilement, cachet du logo qui tourne, plus vite quand on défile ; boutons réserver en direct et voir les chambres",
+      "animations": [
+        "ouverture-orchestrée",
+        "parallaxe",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "histoire": {
+      "titre": "Hier et aujourd’hui",
+      "role": "outil-interactif",
+      "description": "« Une maison légendaire qui vient de renaître » : la photo d'archive en noir et blanc et la photo d'aujourd'hui en tirages ; l'archive s'écarte au défilement et se glisse à la main (« Glisser »)",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "comparateur",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "archive de la façade qu'on écarte à la main"
+      ]
+    },
+    "chambres": {
+      "titre": "Quatre chambres,quatre grands vins",
+      "role": "produits",
+      "description": "« Quatre chambres, quatre grands vins » épinglé : les noms des chambres en liste (Or de Bordeaux, Reflets de Saint-Émilion…), et leurs photos en tirages qui se posent l'un sur le précédent au défilement",
+      "animations": [
+        "empilement-de-fiches",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "bien-etre": {
+      "titre": "Une salle de bainspour se détendre",
+      "role": "outil-interactif",
+      "description": "« Une salle de bains pour se détendre » sur cave : la photo de la salle de bains couverte de buée, gouttes et coulures en canvas ; on l'essuie à la souris ou au doigt (« Essuyer »), une vague passe d'abord une fois ; hammam, sauna, balnéo",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "buée à essuyer sur la photo, gouttes et coulures"
+      ]
+    },
+    "matin": {
+      "titre": "Le petit-déjeuner,compris",
+      "role": "offre",
+      "description": "« Le petit-déjeuner, compris » : croissants et confiture, horaires et liste de ce qui est servi",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "hotes": {
+      "titre": "Pascaleet Didier",
+      "role": "équipe",
+      "description": "« Pascale et Didier » sur pierre blonde : portrait des hôtes, citation, présentation de chacun",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-pied": {
+      "titre": "Yquem à 2 km,à pied",
+      "role": "carte",
+      "description": "« Yquem à 2 km, à pied » : grappes de raisin en bandeau, puis la règle des distances qui se remplit d'or au défilement, chaque château s'allumant à son passage",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "règle des distances qui se remplit d'or au défilement"
+      ]
+    },
+    "reserver": {
+      "titre": "Le meilleur tarif,chez nous",
+      "role": "appel",
+      "description": "« Le meilleur tarif, chez nous » sur cave : 5 à 10 € de moins, 48 h pour annuler, -5 % dès 4 nuits, verre de Sauternes à la fenêtre, boutons",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page cave : logo, adresse, sommaire, réseaux, labels, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette porte ne mène nulle part",
+      "role": "page-404",
+      "description": "404 « Cette porte ne mène nulle part » : une vieille clé sur une marche devant une porte en bois, bouton",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces-debut": {
+      "titre": "Venirà Sauternes",
+      "role": "ouverture",
+      "description": "« Venir à Sauternes » : carte schématique où la route se trace de Bordeaux à Sauternes, bouton itinéraire",
+      "animations": [
+        "trace-svg",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces-route": {
+      "titre": "Par la route",
+      "role": "carte",
+      "description": "« Par la route » : étapes numérotées depuis Bordeaux et temps de route depuis les grandes villes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces-arriver": {
+      "titre": "En arrivant",
+      "role": "faq",
+      "description": "« En arrivant » : façade, parking de l'église, arrivée autonome dès 16 h",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "acces-contact": {
+      "titre": "Une question ?",
+      "role": "contact",
+      "description": "« Une question ? » sur cave : adresse, téléphone, photo de la cour, formulaire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "chambres-debut": {
+      "titre": "Quatre chambres,quatre grands vins",
+      "role": "ouverture",
+      "description": "« Quatre chambres, quatre grands vins » en grand, bandeau de la chambre aux deux lits, bouton demander mes dates",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-les-quatre": {
+      "titre": "Choisissez votre cru",
+      "role": "produits",
+      "description": "« Choisissez votre cru » : quatre étiquettes de chambres comme des étiquettes de vin, équipements et lien",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-en-images": {
+      "titre": "Les chambres en images",
+      "role": "galerie",
+      "description": "« Les chambres en images » : rangée de photos des quatre chambres qui glisse, légendes",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-bien-etre": {
+      "titre": "Hammam, sauna, balnéo",
+      "role": "services",
+      "description": "« Hammam, sauna, balnéo » : vapeur dessinée, quatre équipements de salle de bains et photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-sommeil": {
+      "titre": "Un lit d’hôtel, une chambre de maison",
+      "role": "services",
+      "description": "« Un lit d'hôtel, une chambre de maison » : literie, draps, oreillers, climatisation, photo de lit",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-fin": {
+      "titre": "Quelle chambre vous tente ?",
+      "role": "appel",
+      "description": "Appel de fin « Quelle chambre vous tente ? » : un éventail de tirages s'ouvre à son arrivée et suit le défilement, boutons demander mes dates et suite",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "environs-debut": {
+      "titre": "De 100 mà 100 km",
+      "role": "ouverture",
+      "description": "« Les environs, de 100 m à 100 km » : 2 km jusqu'au château d'Yquem, 39 visites, vignes dans la brume",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "environs-visites": {
+      "titre": "Choisissez votre sortie",
+      "role": "carte",
+      "description": "« Choisissez votre sortie » : 39 visites filtrables par distance (moins de 3 km à 100 km) et par envie (grands crus, châteaux, nature, villages), cartes photo qui se réorganisent",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "environs-conseil": {
+      "titre": "Demandez à Didier",
+      "role": "appel",
+      "description": "« Demandez à Didier » : professionnel du vin, ses adresses, vélos à l'office de tourisme",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "environs-fin": {
+      "titre": "Une base au cœur du vignoble",
+      "role": "appel",
+      "description": "Appel de fin « Une base au cœur du vignoble » : un éventail de tirages s'ouvre à son arrivée et suit le défilement, boutons demander mes dates et suite",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-debut": {
+      "titre": "« Une maison légendairequi vient de renaître »",
+      "role": "ouverture",
+      "description": "« La maison » : « Une maison légendaire qui vient de renaître », le tirage d'ouverture se pose puis dérive doucement au défilement ; la même inscription, hier et aujourd'hui",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-histoire": {
+      "titre": "L’ancien Office de dégustation",
+      "role": "manifeste",
+      "description": "« L'ancien Office de dégustation » : l'archive se développe au défilement, le bain de révélateur s'éclaircit et l'image se resserre",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "archive qui se développe au défilement comme dans un bain de révélateur"
+      ]
+    },
+    "la-maison-hotes": {
+      "titre": "Pascale et Didier",
+      "role": "équipe",
+      "description": "« Pascale et Didier » : parcours de chacun, photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-petit-dejeuner": {
+      "titre": "Compris, au jardin ou en salle",
+      "role": "offre",
+      "description": "« Compris, au jardin ou en salle » : horaires et ce qui est servi, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-services": {
+      "titre": "Le café, la cave, le salon",
+      "role": "services",
+      "description": "« Le café, la cave, le salon » : services de la maison en cartes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-jardin": {
+      "titre": "La cour et le jardin",
+      "role": "decor",
+      "description": "« La cour et le jardin » épinglé : photos du jardin, restaurant Les Granges",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-fin": {
+      "titre": "Venez la découvrir",
+      "role": "appel",
+      "description": "Appel de fin « Venez la découvrir » : un éventail de tirages s'ouvre à son arrivée et suit le défilement, boutons demander mes dates et suite",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-debut": {
+      "titre": "Demandez vos dates",
+      "role": "outil-interactif",
+      "description": "« Demandez vos dates » : calendrier d'arrivée et de départ, chambre, voyageurs, coordonnées ; récapitulatif épinglé, à l'envoi un cachet d'encre se pose avec le nombre de nuits",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Demande simulée, sans tarif"
+      ],
+      "particularites": [
+        "cachet d'encre posé sur le récapitulatif"
+      ]
+    },
+    "reserver-conditions": {
+      "titre": "Bon à savoir",
+      "role": "faq",
+      "description": "« Bon à savoir » : arrivée, départ, annulation, professionnels",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
