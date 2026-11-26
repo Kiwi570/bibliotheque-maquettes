@@ -1,0 +1,777 @@
+{
+  "maquette": {
+    "client": "boutique de machines à coudre à Vannes depuis 2012 (E-maginacoudre, Michèle et Pascal Zimmer) : vente Brother et Babylock avec prise en main, atelier de réparation (SAV) familial et industriel",
+    "activite": [
+      "commerce",
+      "artisanat"
+    ],
+    "concept": [
+      "atelier",
+      "catalogue"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--nuit"
+    },
+    "polices": {
+      "titres": "Instrument Serif",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Coton & framboise » : coton clair, bleu nuit et framboise, Instrument Serif avec une ligne en italique framboise ; coupons de tissu et coutures pointillées",
+      "« Quelle machine pour quoi ? » : on choisit une machine, sa couture se pique sur une bande de tissu (point droit, surjet, recouvrement, broderie)",
+      "Michèle et Pascal en deux volets qui s'écartent du centre ; « Poussez la porte » : la boutique en plein écran ; 10 000 machines remises en route",
+      "appel final dont le cadre se pique au défilement avec des coupons qui flottent ; atelier dont la photo se referme comme un capot ; tarifs à choisir qui préremplissent la demande",
+      "22 machines filtrables par type et par marque (gardés dans l'adresse), statut ouvert ou fermé à l'heure de Paris"
+    ],
+    "reserves": [
+      "quelques illustrations générées (atelier, 404) ; attente de 46 min pendant la v1"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "trace-svg",
+      "masque",
+      "section-fixée",
+      "parallaxe",
+      "compteur",
+      "marquee",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "filtres",
+      "configurateur",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "ecran-partage",
+    "grille": {
+      "objet": "la couture qui se pique sur une bande de tissu",
+      "fil": "le fil pointillé et les coupons de tissu"
+    },
+    "metier": "vente et réparation de machines à coudre"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile bleu nuit entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête coton : logo en lettres de tissu, machines, atelier, prise en main, la maison, contact, bouton framboise « Venir essayer »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur bleu nuit",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Coudre, broder, surjeter. Et réparer.",
+      "role": "ouverture",
+      "description": "Écran partagé : « Coudre, broder, surjeter. Et réparer. » (Et réparer en italique framboise), gros plan sur l'aiguille qui pique une couture framboise ; boutons, statut ouvert aujourd'hui",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "quelle-machine": {
+      "titre": "Quelle machine pour quoi ?",
+      "role": "outil-interactif",
+      "description": "« Quelle machine pour quoi ? » : quatre cartes (machine à coudre, surjeteuse, recouvreuse, brodeuse) ; on en choisit une et sa couture se pique sur une bande de tissu ; prix de départ",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "couture de la machine choisie qui se pique sur une bande de tissu"
+      ]
+    },
+    "vitrine": {
+      "titre": "En vitrine, prise en main comprise",
+      "role": "produits",
+      "description": "« En vitrine, prise en main comprise » : six machines en cartes avec prix et demande d'essai",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "michele-et-pascal": {
+      "titre": "Michèle conseille, Pascal répare",
+      "role": "équipe",
+      "description": "« Michèle conseille, Pascal répare » : deux volets qui s'écartent du centre en entrant, portraits et rôles",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier": {
+      "titre": "Diagnostic gratuit, sous vos yeux",
+      "role": "tarifs",
+      "description": "« Diagnostic gratuit, sous vos yeux » sur bleu nuit : tarifs de l'atelier en liste, gros plan sur une réparation ; la photo se referme comme un capot quand on descend",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reperes": {
+      "titre": "10 000 machines remises en route",
+      "role": "chiffres",
+      "description": "« 10 000 machines remises en route » : bobine framboise, le chiffre qui compte, frise 1997, 2012",
+      "animations": [
+        "compteur",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entrez": {
+      "titre": "Une boutique à toucher du doigt",
+      "role": "decor",
+      "description": "« Poussez la porte. » épinglé : la photo de la boutique s'agrandit jusqu'au plein écran sous le titre",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "boutique": {
+      "titre": "La boutique, 4 rue Alain-René Lesage",
+      "role": "carte",
+      "description": "« La boutique, 4 rue Alain-René Lesage » : devanture, horaires avec le jour même mis en avant, itinéraire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "horaires-ouvert-maintenant",
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Venez l'essayer avant de choisir.",
+      "role": "appel",
+      "description": "« Venez l'essayer avant de choisir. » sur bleu nuit : le cadre se pique au défilement comme une couture, des coupons de tissu flottent à des vitesses différentes, bobine qui tourne ; boutons préparer ma visite et appeler",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadre qui se pique au défilement, coupons qui flottent"
+      ]
+    },
+    "pied": {
+      "titre": "Le site",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit : logo, adresse, sommaire, horaires, avis Google",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Point sauté.",
+      "role": "page-404",
+      "description": "404 « Point sauté. » : aiguille et fil sur un tissu froissé, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-debut": {
+      "titre": "Diagnostic gratuit, sous vos yeux.",
+      "role": "ouverture",
+      "description": "« Diagnostic gratuit, sous vos yeux. » : « 0 € » en très grand, outils de réparation sur un tapis de coupe",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-deroule": {
+      "titre": "Trois étapes, pas de surprise",
+      "role": "étapes",
+      "description": "« Trois étapes, pas de surprise » : diagnostic, devis, entretien sur une ligne",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-tarifs": {
+      "titre": "Les tarifs de l'atelier",
+      "role": "outil-interactif",
+      "description": "« Les tarifs de l'atelier » : on choisit une prestation (diagnostic, devis, entretien, révision, réparation), elle s'ajoute à un récapitulatif épinglé qui prépare la demande de passage",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-revision": {
+      "titre": "Une révision, à cœur ouvert",
+      "role": "services",
+      "description": "« Une révision, à cœur ouvert » : photos d'une machine ouverte, étapes numérotées",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-industrie": {
+      "titre": "Familiales et industrielles",
+      "role": "services",
+      "description": "« Familiales et industrielles » sur bleu nuit : marques industrielles, 10 000 machines",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-fin": {
+      "titre": "Une machine qui coince ?",
+      "role": "appel",
+      "description": "« Une machine qui coince ? » sur bleu nuit : le cadre se pique au défilement comme une couture, des coupons de tissu flottent à des vitesses différentes, bobine qui tourne ; boutons préparer ma visite et appeler",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadre qui se pique au défilement, coupons qui flottent"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Passez à la boutique.",
+      "role": "ouverture",
+      "description": "« Passez à la boutique. » : statut ouvert, adresse, téléphone, mur de bobines",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Préparer votre visite",
+      "role": "contact",
+      "description": "« Préparer votre visite » : les champs changent selon le sujet (essai, réparation, prise en main), récapitulatif bleu nuit en direct",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-horaires": {
+      "titre": "Les horaires",
+      "role": "carte",
+      "description": "« Les horaires » : semaine avec le jour même mis en avant, photo",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "horaires-ouvert-maintenant",
+      "pieges": []
+    },
+    "la-maison-debut": {
+      "titre": "29 ans de machines à coudre.",
+      "role": "ouverture",
+      "description": "« 29 ans de machines à coudre. » : Michèle et Pascal Zimmer, boutique",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-histoire": {
+      "titre": "De la microélectronique à la boutique",
+      "role": "étapes",
+      "description": "« De la microélectronique à la boutique » : frise avec photos",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-equipe": {
+      "titre": "Deux métiers, une boutique",
+      "role": "équipe",
+      "description": "« Deux métiers, une boutique » : Michèle et Pascal",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-marques": {
+      "titre": "Les marques de la maison",
+      "role": "preuves",
+      "description": "Bandeau des marques qui défile (Brother, Babylock, Pfaff, Janome, Bernina, Juki…)",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-actualites": {
+      "titre": "Les actualités",
+      "role": "articles",
+      "description": "« Les actualités » : nouveaux horaires et nouvelles de la boutique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-dans-la-boutique": {
+      "titre": "Dans la boutique",
+      "role": "galerie",
+      "description": "« Dans la boutique » : mosaïque de photos de la boutique et des créations",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-boutique": {
+      "titre": "La boutique, 4 rue Alain-René Lesage",
+      "role": "carte",
+      "description": "« La boutique, 4 rue Alain-René Lesage » : horaires et adresse",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-fin": {
+      "titre": "Passez nous voir.",
+      "role": "appel",
+      "description": "« Passez nous voir. » sur bleu nuit : le cadre se pique au défilement comme une couture, des coupons de tissu flottent à des vitesses différentes, bobine qui tourne ; boutons préparer ma visite et appeler",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadre qui se pique au défilement, coupons qui flottent"
+      ]
+    },
+    "machines-debut": {
+      "titre": "22 machines, à essayer avant de choisir.",
+      "role": "ouverture",
+      "description": "« 22 machines, à essayer avant de choisir. » : bandeau de machines qui glisse au défilement",
+      "animations": [
+        "révélation-texte",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machines-catalogue": {
+      "titre": "Le catalogue",
+      "role": "produits",
+      "description": "« Le catalogue » : 22 machines Brother et Babylock rangées par type, filtrables par type et par marque (gardés dans l'adresse), prix et demande d'essai",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "machines-prix": {
+      "titre": "Comment lire les prix",
+      "role": "faq",
+      "description": "« Comment lire les prix » : Brother et Babylock, prise en main comprise",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machines-conseil": {
+      "titre": "Pas sûr de votre choix ?",
+      "role": "appel",
+      "description": "« Pas sûr de votre choix ? » : Michèle conseille, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "machines-fin": {
+      "titre": "Venez l'essayer avant de choisir.",
+      "role": "appel",
+      "description": "« Venez l'essayer avant de choisir. » sur bleu nuit : le cadre se pique au défilement comme une couture, des coupons de tissu flottent à des vitesses différentes, bobine qui tourne ; boutons préparer ma visite et appeler",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadre qui se pique au défilement, coupons qui flottent"
+      ]
+    },
+    "prise-en-main-debut": {
+      "titre": "Votre machine, et quelqu'un pour vous l'apprendre.",
+      "role": "ouverture",
+      "description": "« Votre machine, et quelqu'un pour vous l'apprendre. » : bandeau qui s'élargit au défilement",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prise-en-main-avant-pendant-apres": {
+      "titre": "Avant, pendant, après",
+      "role": "étapes",
+      "description": "« Avant, pendant, après » : trois temps et photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prise-en-main-cours": {
+      "titre": "Des cours de couture",
+      "role": "offre",
+      "description": "« Des cours de couture » assurés par Camille, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prise-en-main-questions": {
+      "titre": "Vos questions",
+      "role": "faq",
+      "description": "« Vos questions » : questions dépliables",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prise-en-main-fin": {
+      "titre": "On commence par un essai ?",
+      "role": "appel",
+      "description": "« On commence par un essai ? » sur bleu nuit : le cadre se pique au défilement comme une couture, des coupons de tissu flottent à des vitesses différentes, bobine qui tourne ; boutons préparer ma visite et appeler",
+      "animations": [
+        "trace-svg",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadre qui se pique au défilement, coupons qui flottent"
+      ]
+    }
+  }
+}
