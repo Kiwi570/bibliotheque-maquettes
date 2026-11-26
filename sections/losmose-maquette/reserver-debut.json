@@ -1,0 +1,50 @@
+{
+ "id": "losmose-maquette/reserver-debut",
+ "maquette": "losmose-maquette",
+ "page": "reserver",
+ "titre": "Votre table à L’Osmose",
+ "role": "outil-interactif",
+ "description": "« Votre table à L'Osmose » : jours, service et créneaux, couverts, formule préchoisie depuis les autres pages ; billet récapitulatif épinglé qui reçoit le cachet « Reçue » à l'envoi",
+ "animations": [
+  "section-fixée"
+ ],
+ "interactions": [
+  "réservation-simulee",
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": true,
+ "module": "reservation-de-table",
+ "modules": [
+  "reservation-de-table"
+ ],
+ "code": {
+  "html": "reserver.html:113-147",
+  "css": "assets/css/socle.css:263-265,274-277 ; assets/css/site.css:70,109-112,251-252,256,315-317,369-386,447-449,453,474-475,479,488,494-498,502-503,525,533,553,558,566-567,576,585,589,597,638 ; assets/css/apercus.css:9-10",
+  "js": "assets/js/site.js:25-46,209-306,373-398,491 ; assets/modules/horaires/horaires-calcul.js:36-61,64-100,114-127 ; assets/js/socle/ouverture.js:32 ; assets/js/socle/voile.js:1,5,43-51,54-74,95-130,138-168 ; assets/js/socle/effets.js:214-234 ; assets/js/socle/transitions.js:25-46,52-115"
+ },
+ "medias": {
+  "capture": "medias/losmose-maquette/reserver-debut-p1440.jpg",
+  "capture_m390": "medias/losmose-maquette/reserver-debut-m390.jpg",
+  "video": "medias/losmose-maquette/reserver-debut-p720.mp4"
+ },
+ "pieges": [
+  "Réservation simulée"
+ ],
+ "particularites": [
+  "billet de réservation tamponné « Reçue »"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1749,
+  "hauteur_m390": 2216,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "calme"
+}

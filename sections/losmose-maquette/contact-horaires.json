@@ -1,0 +1,44 @@
+{
+ "id": "losmose-maquette/contact-horaires",
+ "maquette": "losmose-maquette",
+ "page": "contact",
+ "titre": "Quand venir",
+ "role": "outil-interactif",
+ "description": "« Quand venir » : cadran dont l'aiguille rejoint l'heure d'Obernai quand il entre à l'écran, « Ouvre à 12 h » ou ouvert maintenant, horaires de la semaine (le jour même en rouge), parking, paiements",
+ "animations": [
+  "compteur"
+ ],
+ "interactions": [
+  "aucune"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "horaires-ouvert-maintenant",
+ "modules": [
+  "horaires-ouvert-maintenant"
+ ],
+ "code": {
+  "html": "contact.html:146-156",
+  "css": "assets/css/site.css:45-46,50,207-219,419-427,447,529",
+  "js": "assets/js/site.js:25-35,147-158,231-306 ; assets/modules/horaires/horaires-calcul.js:103-111,114-127"
+ },
+ "medias": {
+  "capture": "medias/losmose-maquette/contact-horaires-p1440.jpg",
+  "capture_m390": "medias/losmose-maquette/contact-horaires-m390.jpg",
+  "video": "medias/losmose-maquette/contact-horaires-p720.mp4"
+ },
+ "pieges": [],
+ "mesures": {
+  "hauteur_p1440": 845,
+  "hauteur_m390": 1071,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [],
+ "impact": "calme"
+}

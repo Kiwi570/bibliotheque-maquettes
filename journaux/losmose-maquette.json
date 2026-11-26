@@ -1,0 +1,172 @@
+{
+ "projet": "losmose-maquette",
+ "client": "Restaurant L'Osmose (Obernai)",
+ "siteActuel": "https://www.restaurantlosmose.fr",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "la-maison",
+    "menus",
+    "bons-cadeaux",
+    "reserver",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-20T16:12:59+01:00",
+     "fin": "2026-11-20T16:22:00+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 10,
+     "debut": "2026-11-20T16:22:40+01:00",
+     "fin": "2026-11-20T16:27:30+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 40,
+     "debut": "2026-11-20T16:28:27+01:00",
+     "fin": "2026-11-20T16:42:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films (attente de la réponse notée à part)",
+     "budget": 5,
+     "debut": "2026-11-20T16:42:00+01:00",
+     "fin": "2026-11-20T16:50:00+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet, contact et page de catégorie",
+     "budget": 40,
+     "debut": "2026-11-20T16:43:00+01:00",
+     "fin": "2026-11-20T16:53:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 25,
+     "debut": "2026-11-20T16:53:30+01:00",
+     "fin": "2026-11-20T18:08:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-20T18:08:00+01:00",
+     "fin": "2026-11-20T18:12:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "images du site",
+     "debut": "2026-11-20T16:13:30+01:00",
+     "fin": "2026-11-20T16:20:00+01:00"
+    },
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-20T16:22:00+01:00",
+     "fin": "2026-11-20T16:22:30+01:00"
+    },
+    {
+     "pour": "images Grok",
+     "debut": "2026-11-20T16:27:30+01:00",
+     "fin": "2026-11-20T16:32:00+01:00"
+    },
+    {
+     "pour": "réponse à l'aperçu de l'accueil",
+     "debut": "2026-11-20T16:50:30+01:00",
+     "fin": "2026-11-20T16:51:30+01:00"
+    }
+   ],
+   "allersRetours": 1,
+   "modules": [
+    "horaires-ouvert-maintenant (calcul et cadran)"
+   ],
+   "audit": {
+    "niveau": "standard + passe des formats",
+    "echecsPremierPassage": 16,
+    "relances": 7,
+    "corrections": [
+     "courriel du client affiché en texte (l'audit prend le mailto pour un lien vers le site actuel)",
+     "logo de l'en-tête : nom accessible",
+     "premiers écrans sur 320×568, 375×667, 844×390, 1000×560 et 1366×768 (titres, chapeaux masqués sur écran bas, ordre des blocs)",
+     "créneaux de réservation écrits une fois (boutons jamais recréés)",
+     "textes de 12,8 px passés à 13 px",
+     "aperçus flous sous les images d'ouverture",
+     "contraste des jours fermés et du champ de la lettre"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Toutes les pages sont des pages types : l'audit standard couvre les six pages."
+  },
+  {
+   "version": 2,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "la-maison",
+    "menus",
+    "bons-cadeaux",
+    "reserver",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "audit et analyse de chaque page (captures ordinateur et téléphone, rapport v1)",
+     "budget": 15,
+     "debut": "2026-11-23T15:01:00+01:00",
+     "fin": "2026-11-23T15:14:00+01:00"
+    },
+    {
+     "etape": "améliorations : triptyque, verres à faire tourner, fil de vin, titres au vin, cachets, images, téléphone",
+     "budget": 45,
+     "debut": "2026-11-23T15:14:00+01:00",
+     "fin": "2026-11-23T15:33:00+01:00"
+    },
+    {
+     "etape": "audit complet et corrections",
+     "budget": 30,
+     "debut": "2026-11-23T15:33:00+01:00",
+     "fin": "2026-11-23T16:43:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-23T16:43:00+01:00",
+     "fin": "2026-11-23T16:47:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [
+    "horaires-ouvert-maintenant (calcul et cadran)",
+    "fil de vin (propre au projet)",
+    "verres à faire tourner (propre au projet)",
+    "cachet de retour (propre au projet)"
+   ],
+   "audit": {
+    "niveau": "complet",
+    "echecsPremierPassage": 2,
+    "relances": 2,
+    "corrections": [
+     "bons cadeaux sans JavaScript sur 375×667 : la carte reste sous le formulaire (le bouton 100 € revient dans le premier écran)",
+     "accueil : parallaxe retirée des photos du triptyque (les arches bougent déjà) ; positions de défilement justes après un changement",
+     "La maison : photo du parcours notée 5 (le mets vu du dessus) au lieu d'une photo moyenne affichée en grand sur téléphone",
+     "fil de vin : positions mesurées une fois, rien relu pendant le défilement (fluidité des menus)",
+     "texte de l'astuce des verres passé à 13 px",
+     "titres des pages intérieures : le remplissage du mot n'arrête plus l'entrée du titre (titre resté à 82 % d'opacité, vu sur capture, non relevé par l'audit)"
+    ]
+   },
+   "effetsRetires": [
+    "gouttes en orbite autour de l'arche (remplacées par le triptyque)"
+   ],
+   "grilleDispenses": {},
+   "notes": "Demande de l'utilisateur : dernier audit complet et analyse de tout le site, puis version optimale, ludique et de haut niveau. Restent à regarder : changement brusque au retour avant vers /la-maison (bascule d'une page à l'autre par l'historique, sans voile, voulue par le socle) et au départ du voile vers /la-maison#salle (21 %, échantillonnage du film) ; Safari à vérifier sur le Mac."
+  }
+ ]
+}

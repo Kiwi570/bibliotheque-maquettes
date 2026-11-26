@@ -1,0 +1,751 @@
+{
+  "maquette": {
+    "client": "restaurant gastronomique à Obernai, en Alsace (L'Osmose, chef Antoine Botter et sommelier Frédéric Voné) : menus en 4 et 5 services avec accord mets et vins, All Inclusive, Table de Chef Gault&Millau 2026, Nouvel An, bons cadeaux",
+    "activite": [
+      "restauration"
+    ],
+    "concept": [
+      "carnet",
+      "vitrine"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "luxueux",
+      "nocturne"
+    ],
+    "palette": {
+      "fond": "--lin",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--vin"
+    },
+    "polices": {
+      "titres": "Gloock",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Grès rose et vin d'Alsace » : lin, grès rose, vin profond et terre cuite, Gloock avec un mot qui se remplit de vin à son arrivée ; un fil de vin relie les sections dans la marge",
+      "ouverture : le nom et trois assiettes dans un triptyque d'arches qui suit la souris, le O du nom qui se remplit de vin ; le mets et le vin qui se rapprochent et se mêlent au défilement",
+      "l'accord du sommelier : trois ou quatre verres se remplissent par le fond, le vin penche à contre-sens du geste et ondule, on le fait tourner à la souris ou au doigt, un appui fait trinquer",
+      "cadran des horaires dont l'aiguille rejoint l'heure d'Obernai (ouvert maintenant), vitrail dont les taches de lumière glissent, bon cadeau qui se dessine puis reçoit le cachet « Envoyé »",
+      "réservation simulée (jours, créneaux, couverts, formule préchoisie, Nouvel An) avec billet récapitulatif et cachet « Reçue », composeur All Inclusive"
+    ],
+    "reserves": [
+      "quelques illustrations générées (assiettes, salle, verres) ; mentions légales à compléter"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "parallaxe",
+      "fil-conducteur",
+      "masque",
+      "section-fixée",
+      "compteur",
+      "galerie-horizontale",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "réservation-simulee",
+      "configurateur",
+      "calculateur",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "les verres de l'accord qu'on fait tourner",
+      "fil": "le fil de vin qui relie les sections"
+    },
+    "metier": "restaurant gastronomique"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile vin profond entre les pages, mot d'accent de chaque titre qui se remplit de vin",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : logo L'Osmose, la maison, les menus, bons cadeaux, contact, bouton terre cuite « Réserver »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur vin profond",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "L’Osmose",
+      "role": "ouverture",
+      "description": "« L'Osmose » en Gloock : le O se remplit de vin ; trois assiettes dans un triptyque d'arches qui suit la souris, boutons réserver et voir les menus, pastille ouvert ou fermé",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "triptyque d'arches qui suit la souris",
+        "O du nom qui se remplit de vin"
+      ]
+    },
+    "philosophie": {
+      "titre": "Notre philosophie",
+      "role": "manifeste",
+      "description": "« Vivre le plaisir pour le plaisir de vivre » : deux cercles, le mets et le vin, se rapprochent et se mêlent au défilement",
+      "animations": [
+        "parallaxe",
+        "morphing"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "le mets et le vin qui se mêlent au défilement"
+      ]
+    },
+    "menus": {
+      "titre": "Choisissez votre nombre de services",
+      "role": "offre",
+      "description": "« Choisissez votre nombre de services » : menu du jour, 4 et 5 services en cartes photo avec prix et prix avec accord",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "accord": {
+      "titre": "Un verre pour chaque assiette",
+      "role": "outil-interactif",
+      "description": "« Un verre pour chaque assiette » sur vin : 4 ou 5 services en bascule, trois ou quatre verres se remplissent par le fond, le vin penche à contre-sens du geste, ondule et déborde un peu ; on le fait tourner à la souris ou au doigt, un appui fait trinquer ; prix de l'accord",
+      "animations": [
+        "canvas-2d",
+        "compteur"
+      ],
+      "interactions": [
+        "jeu",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "verres qui se remplissent et qu'on fait tourner à la souris"
+      ]
+    },
+    "chef": {
+      "titre": "Antoine Botter, un parcours de grandes maisons",
+      "role": "équipe",
+      "description": "« Antoine Botter, un parcours de grandes maisons » : assiette en grand, frise du parcours (médaille d'or, Lembach, L'Osmose, Gault&Millau) épinglée",
+      "animations": [
+        "section-fixée",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "salle": {
+      "titre": "Grès d’Alsace, poutres et vitraux",
+      "role": "decor",
+      "description": "« Grès d'Alsace, poutres et vitraux » : la salle et un vitrail dont les taches de lumière colorée glissent à des vitesses différentes",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "taches de lumière du vitrail qui glissent"
+      ]
+    },
+    "en-ce-moment": {
+      "titre": "Les fêtes à L’Osmose",
+      "role": "agenda",
+      "description": "« Les fêtes à L'Osmose » : la soirée du Nouvel An en grande photo avec compte des jours, bons cadeaux, assiettes",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "infos": {
+      "titre": "Venir à L’Osmose",
+      "role": "outil-interactif",
+      "description": "« Venir à L'Osmose » : cadran dont l'aiguille rejoint l'heure d'Obernai quand il entre à l'écran, « Ouvre à 12 h » ou ouvert maintenant, horaires de la semaine (le jour même en rouge), parking, paiements",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "horaires-ouvert-maintenant",
+      "pieges": []
+    },
+    "reserver-fin": {
+      "titre": "Une table vous attend",
+      "role": "appel",
+      "description": "Appel de fin « Une table vous attend » sur vin : deux gouttes qui se rejoignent au défilement, boutons réserver et appeler",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "deux gouttes qui se rejoignent au défilement"
+      ]
+    },
+    "pied": {
+      "titre": "Horaires",
+      "role": "pied-de-page",
+      "description": "Pied de page vin : logo, adresse, horaires, paiements, sommaire, inscription à la lettre des menus",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil de vin dans la marge gauche sur grand écran, avec le nom de la section ; un trait en haut de l'écran ailleurs",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "fil de vin qui relie les sections dans la marge"
+      ]
+    },
+    "404-debut": {
+      "titre": "Cette assiette est déjà repartie en cuisine",
+      "role": "page-404",
+      "description": "404 « Cette assiette est déjà repartie en cuisine » : nappe blanche vide sous la lumière du vitrail, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bons-cadeaux-debut": {
+      "titre": "Offrir L’Osmose",
+      "role": "outil-interactif",
+      "description": "« Offrir L'Osmose » : montant (100 à 250 €), noms et petit mot ; le bon vin profond se dessine pendant qu'on le remplit, sur une table de Noël ; à l'envoi il se retourne et reçoit le cachet « Envoyé »",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "carte-cadeau-qui-se-compose",
+      "pieges": [
+        "Commande simulée"
+      ],
+      "particularites": [
+        "cachet « Envoyé » posé sur le bon"
+      ]
+    },
+    "bons-cadeaux-comment": {
+      "titre": "En trois temps",
+      "role": "étapes",
+      "description": "« En trois temps » : choisir, personnaliser, offrir ; idée de montant selon les menus",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bons-cadeaux-fin": {
+      "titre": "Une question sur un bon ?",
+      "role": "appel",
+      "description": "Appel de fin « Une question sur un bon ? » sur vin : deux gouttes qui se rejoignent au défilement, boutons réserver et appeler",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "deux gouttes qui se rejoignent au défilement"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Nous trouver",
+      "role": "carte",
+      "description": "« Nous trouver » : plan schématique d'Obernai où une goutte tombe sur le restaurant, parkings, adresse, boutons",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-horaires": {
+      "titre": "Quand venir",
+      "role": "outil-interactif",
+      "description": "« Quand venir » : cadran dont l'aiguille rejoint l'heure d'Obernai quand il entre à l'écran, « Ouvre à 12 h » ou ouvert maintenant, horaires de la semaine (le jour même en rouge), parking, paiements",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "horaires-ouvert-maintenant",
+      "pieges": []
+    },
+    "contact-message": {
+      "titre": "Laissez-nous un message",
+      "role": "contact",
+      "description": "« Laissez-nous un message » : vitrail, paiements acceptés, formulaire (réservation, privatisation, bon cadeau)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "la-maison-debut": {
+      "titre": "Une osmose entre mets et vins",
+      "role": "ouverture",
+      "description": "« Une osmose entre mets et vins » (mets et vins se remplissent de vin) : mur de grès rose éclairé par le vitrail",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-duo": {
+      "titre": "Le chef et le sommelier",
+      "role": "équipe",
+      "description": "« Le chef et le sommelier » : deux portraits et parcours côte à côte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-parcours": {
+      "titre": "De Lembach à Obernai",
+      "role": "étapes",
+      "description": "« De Lembach à Obernai » : frise du parcours du chef qui se trace",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-gault-millau": {
+      "titre": "Table de Chef",
+      "role": "preuves",
+      "description": "« 13,5 sur 20, Table de Chef » : la note Gault&Millau 2026 en grand et la citation du guide",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-salle": {
+      "titre": "Le grès, le bois, la lumière",
+      "role": "decor",
+      "description": "« Le grès, le bois, la lumière » : la salle et son vitrail aux taches de lumière",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-privatiser": {
+      "titre": "Votre fête, notre cuisine",
+      "role": "offre",
+      "description": "« Votre fête, notre cuisine » : privatisation dès 25 couverts, photo, bouton",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-maison-fin": {
+      "titre": "Venez goûter l’osmose",
+      "role": "appel",
+      "description": "Appel de fin « Venez goûter l'osmose » sur vin : deux gouttes qui se rejoignent au défilement, boutons réserver et appeler",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "deux gouttes qui se rejoignent au défilement"
+      ]
+    },
+    "menus-debut": {
+      "titre": "Choisir son nombre de services",
+      "role": "ouverture",
+      "description": "« Choisir son nombre de services » : 29 €, 4 et 5 services en chiffres, assiette en grand",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menus-menu-du-jour": {
+      "titre": "Le menu du jour",
+      "role": "offre",
+      "description": "« Le menu du jour » : entrée, plat et dessert à l'ardoise, 29 €",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menus-carte": {
+      "titre": "Les menus en 4 et 5 services",
+      "role": "produits",
+      "description": "« Les menus en 4 et 5 services » : la carte de saison avec bascule 4 / 5 services, chaque plat et son vin, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menus-all-inclusive": {
+      "titre": "Tout compris, de l’apéritif au café",
+      "role": "calculateur",
+      "description": "« Tout compris, de l'apéritif au café » : composeur All Inclusive (services, convives, accord), total en direct et économie, photo épinglée",
+      "animations": [
+        "section-fixée",
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "composeur-de-formule",
+      "pieges": []
+    },
+    "menus-assiettes": {
+      "titre": "Quelques assiettes de la maison",
+      "role": "galerie",
+      "description": "« Quelques assiettes de la maison » : rangée d'assiettes à faire glisser",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menus-fin": {
+      "titre": "Votre menu est choisi ?",
+      "role": "appel",
+      "description": "Appel de fin « Votre menu est choisi ? » sur vin : deux gouttes qui se rejoignent au défilement, boutons réserver et appeler",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "deux gouttes qui se rejoignent au défilement"
+      ]
+    },
+    "reserver-debut": {
+      "titre": "Votre table à L’Osmose",
+      "role": "outil-interactif",
+      "description": "« Votre table à L'Osmose » : jours, service et créneaux, couverts, formule préchoisie depuis les autres pages ; billet récapitulatif épinglé qui reçoit le cachet « Reçue » à l'envoi",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "reservation-de-table",
+      "pieges": [
+        "Réservation simulée"
+      ],
+      "particularites": [
+        "billet de réservation tamponné « Reçue »"
+      ]
+    },
+    "reserver-nouvel-an": {
+      "titre": "La soirée du Nouvel An",
+      "role": "offre",
+      "description": "« La soirée du Nouvel An » : sept services à la harpe, menu et All Inclusive, compte des jours, photo",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-bon-a-savoir": {
+      "titre": "Avant de venir",
+      "role": "faq",
+      "description": "« Avant de venir » : menu du jour, All Inclusive, groupes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-fin-2": {
+      "titre": "Vous préférez appeler ?",
+      "role": "appel",
+      "description": "« Vous préférez appeler ? » sur vin : horaires et deux numéros en grand",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
