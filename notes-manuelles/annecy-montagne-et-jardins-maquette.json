@@ -1,0 +1,713 @@
+{
+  "maquette": {
+    "client": "paysagiste à Vallières-sur-Fier, entre Annecy et Aix-les-Bains (Annecy Montagne et Jardins, AMJ) : entretien des espaces verts, création paysagère, élagage et abattage, éco-pâturage avec des moutons",
+    "activite": [
+      "artisanat",
+      "services-b2b"
+    ],
+    "concept": [
+      "atelier",
+      "carte"
+    ],
+    "ambiance": [
+      "végétal",
+      "montagne",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--lin",
+      "texte": "--texte",
+      "accent": "--anis",
+      "secondaire": "--sapin"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Lac et crêtes » : lin, vert sapin et vert anis, Bricolage Grotesque avec un mot en italique ; le lac d'Annecy et ses montagnes",
+      "ouverture en calques : la pelouse avance, le lac et la montagne restent, le titre monte plus vite ; tampon « 50 % » qui tourne au défilement",
+      "le coup de sécateur au défilement : le pointillé se trace, la lame passe et la moitié du prix se détache ; simulateur du crédit d'impôt",
+      "éco-pâturage : un troupeau qui avance en bougeant les pattes et rase l'herbe haute derrière lui, et sous la souris",
+      "zone d'intervention entre deux lacs dessinée, devis en quatre étapes"
+    ],
+    "reserves": [
+      "plusieurs illustrations générées (matières, paillages) ; Safari non testé"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "parallaxe",
+      "canvas-2d",
+      "trace-svg",
+      "section-fixée",
+      "compteur",
+      "marquee",
+      "galerie-horizontale",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "simulateur",
+      "calculateur",
+      "jeu",
+      "carte-interactive",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le troupeau qui rase l'herbe et le coup de sécateur",
+      "fil": "le pointillé qui se trace"
+    },
+    "metier": "paysagiste"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile vert sapin entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : logo AMJ et ses crêtes, entretien, création, éco-pâturage, contact, bouton anis « Demander un devis »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur vert sapin",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Vos jardins, au pied des montagnes.",
+      "role": "ouverture",
+      "description": "« Vos jardins, au pied des montagnes. » : une pelouse devant le lac et les montagnes en calques ; la pelouse avance, le lac et la montagne restent, le titre monte plus vite, la scène respire ; tampon « 50 % crédit d'impôt » qui tourne",
+      "animations": [
+        "ouverture-orchestrée",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "ouverture en calques pelouse, lac et montagne"
+      ]
+    },
+    "metiers": {
+      "titre": "Quatre métiers, une même équipe.",
+      "role": "services",
+      "description": "« Quatre métiers, une même équipe. » : quatre cartes photo (entretien, création, élagage, éco-pâturage) avec lien",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "budget": {
+      "titre": "Votre entretien, la moitié en crédit d'impôt.",
+      "role": "calculateur",
+      "description": "« Votre entretien, la moitié en crédit d'impôt. » sur vert sapin : on fait glisser le budget annuel d'entretien ; au défilement le pointillé se trace, la lame du sécateur passe et la moitié se détache ; à payer, crédit d'impôt et reste à votre charge",
+      "animations": [
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Montants indicatifs"
+      ],
+      "particularites": [
+        "coup de sécateur qui détache la moitié du prix"
+      ]
+    },
+    "eco": {
+      "titre": "Une autre façon d'entretenir vos pelouses.",
+      "role": "outil-interactif",
+      "description": "« Une autre façon d'entretenir vos pelouses. » : moutons dans une prairie ; un troupeau dessiné avance en bougeant les pattes et rase l'herbe haute derrière lui, de gauche à droite, et sous la souris",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "troupeau qui rase l'herbe, et l'herbe se rase sous la souris"
+      ]
+    },
+    "matieres": {
+      "titre": "Des matières d'ici, des plantes qui tiennent l'été.",
+      "role": "produits",
+      "description": "« Des matières d'ici, des plantes qui tiennent l'été. » épinglé : paillages sans plastique, bois local, pierre régionale en photos qui défilent",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "realisations": {
+      "titre": "Quelques chantiers, chez nos clients.",
+      "role": "galerie",
+      "description": "« Quelques chantiers, chez nos clients. » : photos de chantiers qui glissent et montent à des vitesses différentes",
+      "animations": [
+        "galerie-horizontale",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "equipe": {
+      "titre": "Depuis 2018, une équipe à taille humaine.",
+      "role": "équipe",
+      "description": "« Depuis 2018, une équipe à taille humaine. » : portrait, frise 2018, 2023, aujourd'hui, noms",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "references": {
+      "titre": "Ils nous font confiance.",
+      "role": "témoignages",
+      "description": "« Ils nous font confiance. » : avis en grand et bandeau des clients qui défile (pause au bouton)",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "zone": {
+      "titre": "Entre deux lacs, depuis Vallières-sur-Fier.",
+      "role": "carte",
+      "description": "« Entre deux lacs, depuis Vallières-sur-Fier. » : carte dessinée du lac d'Annecy et du lac du Bourget, l'Albanais et les bassins qui s'allument, épingle de l'entreprise",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Parlons de votre jardin.",
+      "role": "appel",
+      "description": "« Parlons de votre jardin. » sur vert sapin : ligne des crêtes en haut, boutons demander un devis et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page vert sapin : logo, adresse, plan du site, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Nos moutons cherchent encore cette page.",
+      "role": "page-404",
+      "description": "404 « Nos moutons cherchent encore cette page. » : deux moutons qui broutent, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre jardin.",
+      "role": "ouverture",
+      "description": "« Parlons de votre jardin. » : téléphone, e-mail, adresse, photo de jardin en pente",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-devis": {
+      "titre": "Votre demande en quatre étapes.",
+      "role": "contact",
+      "description": "« Votre demande en quatre étapes. » : besoin, profil, terrain, coordonnées ; récapitulatif vert sapin épinglé avec le portrait du gérant",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-zone": {
+      "titre": "Entre deux lacs, depuis Vallières-sur-Fier.",
+      "role": "carte",
+      "description": "« Entre deux lacs, depuis Vallières-sur-Fier. » : carte dessinée du lac d'Annecy et du lac du Bourget, l'Albanais et les bassins qui s'allument, épingle de l'entreprise",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-debut": {
+      "titre": "Du croquis au jardin.",
+      "role": "ouverture",
+      "description": "« Du croquis au jardin. » : un croquis en noir et blanc posé sur la photo du jardin réalisé",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-prestations": {
+      "titre": "Cinq savoir-faire pour votre extérieur.",
+      "role": "services",
+      "description": "« Cinq savoir-faire pour votre extérieur. » épinglé : la liste (gazon, clôtures, vivaces, arbres, terrasses) change la photo au défilement",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "creation-matieres": {
+      "titre": "Des matières d'ici.",
+      "role": "produits",
+      "description": "« Des matières d'ici. » : quatre cartes photo (paillages, bois local, pierre, plantes sobres)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-realisations": {
+      "titre": "Quelques aménagements chez nos clients.",
+      "role": "galerie",
+      "description": "« Quelques aménagements chez nos clients. » : photos de chantiers qui glissent et montent à des vitesses différentes",
+      "animations": [
+        "galerie-horizontale",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-pour-qui": {
+      "titre": "Pour les particuliers, les entreprises et les collectivités.",
+      "role": "services",
+      "description": "« Pour les particuliers, les entreprises et les collectivités. »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creation-fin": {
+      "titre": "Parlons de votre jardin.",
+      "role": "appel",
+      "description": "« Parlons de votre jardin. » sur vert sapin : ligne des crêtes en haut, boutons demander un devis et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-debut": {
+      "titre": "Des moutons pour vos pelouses.",
+      "role": "ouverture",
+      "description": "« Des moutons pour vos pelouses. » : troupeau dans la prairie",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-principe": {
+      "titre": "La pelouse entretenue au pas du troupeau.",
+      "role": "outil-interactif",
+      "description": "« La pelouse entretenue au pas du troupeau. » : l'herbe haute se rase derrière le troupeau qui avance, et sous la souris",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-avantages": {
+      "titre": "Ce que change le troupeau.",
+      "role": "preuves",
+      "description": "« Ce que change le troupeau. » : quatre avantages en cartes qui arrivent une à une",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-pour-qui": {
+      "titre": "Copropriétés, collectivités, entreprises.",
+      "role": "services",
+      "description": "« Copropriétés, collectivités, entreprises. » : photo et texte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-cle-en-main": {
+      "titre": "Une solution clé en main, adaptée à chaque projet.",
+      "role": "étapes",
+      "description": "« Une solution clé en main » : étapes du service avec photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "eco-paturage-fin": {
+      "titre": "Parlons de votre jardin.",
+      "role": "appel",
+      "description": "« Parlons de votre jardin. » sur vert sapin : ligne des crêtes en haut, boutons demander un devis et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-debut": {
+      "titre": "Travail soigné, budget allégé.",
+      "role": "ouverture",
+      "description": "« Travail soigné, budget allégé. » : tonte au pied des montagnes",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-travaux": {
+      "titre": "Ce que nous entretenons.",
+      "role": "services",
+      "description": "« Ce que nous entretenons. » : tonte, taille, débroussaillage… en cartes numérotées",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-pour-qui": {
+      "titre": "Particuliers, copropriétés, entreprises.",
+      "role": "services",
+      "description": "« Particuliers, copropriétés, entreprises. »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-calcul": {
+      "titre": "Combien vous coûte vraiment l'entretien ?",
+      "role": "calculateur",
+      "description": "« Combien vous coûte vraiment l'entretien ? » : on fait glisser le budget annuel d'entretien ; au défilement le pointillé se trace, la lame du sécateur passe et la moitié se détache ; à payer, crédit d'impôt et reste à votre charge",
+      "animations": [
+        "trace-svg",
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Montants indicatifs"
+      ],
+      "particularites": [
+        "coup de sécateur qui détache la moitié du prix"
+      ]
+    },
+    "entretien-elagage": {
+      "titre": "Prendre soin de vos arbres.",
+      "role": "offre",
+      "description": "« Prendre soin de vos arbres. » : élagage et abattage, photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-realisations": {
+      "titre": "Quelques chantiers d'entretien.",
+      "role": "galerie",
+      "description": "« Quelques chantiers d'entretien. » : photos de chantiers qui glissent et montent à des vitesses différentes",
+      "animations": [
+        "galerie-horizontale",
+        "parallaxe"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "entretien-fin": {
+      "titre": "Parlons de votre jardin.",
+      "role": "appel",
+      "description": "« Parlons de votre jardin. » sur vert sapin : ligne des crêtes en haut, boutons demander un devis et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
