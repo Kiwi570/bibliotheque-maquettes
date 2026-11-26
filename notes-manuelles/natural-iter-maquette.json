@@ -1,0 +1,651 @@
+{
+  "maquette": {
+    "client": "producteur et négociant d'huile d'olive taggiasca du Ponente Ligure, d'olives et de paté, avec la linfa di betulla et l'ail des ours bio Waldmuus, à Mendrisio (Natural-Iter, Giacomo Bassanini) ; site en italien, vente en Suisse",
+    "activite": [
+      "commerce",
+      "artisanat",
+      "restauration"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "végétal",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--couleur-secondaire"
+    },
+    "polices": {
+      "titres": "Young Serif",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Le fasce » : pierre de Ligurie, olive profond et jaune des étiquettes Natural-Iter, Young Serif avec un mot en jaune olive ; site entier en italien",
+      "un mot de chaque grand titre se remplit d'huile et clapote sous la souris ou le doigt ; le panier de l'en-tête se remplit d'huile jusqu'à la livraison offerte",
+      "muret de pierres sèches qui se construit au défilement, thermomètre qui descend sous 25 °C, goutte qui fait le trajet de la Ligurie à Mendrisio, six mois de fermentation qui s'allument",
+      "calculateur des cartons pour les restaurants, boutique de 20 produits filtrable avec recherche, bouteille-jauge vers CHF 150, bon cadeau qui se compose"
+    ],
+    "reserves": [
+      "quatorze illustrations générées (terrasses, récolte, moulin, bois, cartes) ; mentions légales, paiement et frais de port à compléter"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "trace-svg",
+      "compteur",
+      "flip",
+      "filtre-anime",
+      "parallaxe",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "panier-simule",
+      "filtres",
+      "recherche",
+      "calculateur",
+      "configurateur",
+      "jeu",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "inizio",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la bouteille et les mots qui se remplissent d'huile",
+      "fil": "le muret de pierres sèches des fasce"
+    },
+    "metier": "producteur d'huile d'olive"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile olive profond entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête pierre : logo jaune Natural-Iter, prodotti, chi siamo, shop, contatti, bouton jaune « Acquista » et panier qui se remplit d'huile jusqu'à la livraison offerte",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "panier de l'en-tête qui se remplit d'huile"
+      ]
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur olive profond",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "inizio": {
+      "titre": "Olio taggiasco dalle fasce liguri alla tavola svizzera",
+      "role": "ouverture",
+      "description": "« Olio taggiasco, dalle fasce liguri alla tavola svizzera » : « taggiasco » en jaune qui se remplit d'huile ; bouteille sur les terrasses d'oliviers au-dessus de la mer, petite carte du produit avec prix et « Aggiungi », livraison offerte dès CHF 150",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "mot du titre qui se remplit d'huile et clapote sous la souris"
+      ]
+    },
+    "prodotti": {
+      "titre": "Sei sapori del Ponente",
+      "role": "produits",
+      "description": "« Sei sapori del Ponente » : rangée de produits photographiés au soleil (huiles, huile au citron, olives, paté) avec prix et « Aggiungi » ; la pastille s'envole vers le panier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "envol-vers-le-panier",
+      "pieges": []
+    },
+    "taggiasca": {
+      "titre": "Piccola, coltivata sulle fasce",
+      "role": "manifeste",
+      "description": "« L'oliva taggiasca, piccola, coltivata sulle fasce » : olivier sur sa terrasse, vraie photo des filets sous les arbres, trois repères ; en bas, un muret de pierres sèches se construit pierre par pierre au défilement",
+      "animations": [
+        "révélation-image",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "muret de pierres sèches qui se construit au défilement"
+      ]
+    },
+    "filiera": {
+      "titre": "Poche ore tra l’albero e il frantoio",
+      "role": "étapes",
+      "description": "« Poche ore tra l'albero e il frantoio » sur olive : quatre étapes en photos (récolte, moulin, moins de 25 °C, filtrage) ; un thermomètre descend sous 25 °C",
+      "animations": [
+        "apparition-au-défilement",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "thermomètre qui descend sous 25 °C"
+      ]
+    },
+    "bosco": {
+      "titre": "Linfa di betulla e aglio orsino, raccolti nel bosco",
+      "role": "produits",
+      "description": "« Linfa di betulla e aglio orsino, raccolti nel bosco » : sous-bois de bouleaux, deux cartes produit Waldmuus avec prix et « Aggiungi », label Bio Suisse",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "panettone": {
+      "titre": "Il panettone al cioccolato bianco",
+      "role": "offre",
+      "description": "« Il panettone al cioccolato bianco » de Noël : photo sur noir, histoire, formats, prix barré et « Aggiungi »",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "storia": {
+      "titre": "Da Jürg a Giacomo, la stessa strada",
+      "role": "équipe",
+      "description": "« Da Jürg a Giacomo, la stessa strada » : vraies photos d'archives en tirages superposés, « 40 anni di lavoro » qui compte",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "professionisti": {
+      "titre": "Cartoni, latte e formati da cucina",
+      "role": "calculateur",
+      "description": "« Cartoni, latte e formati da cucina » sur olive : calculateur des cartons de 6 bouteilles (1, 2 ou 5 cartons), les bouteilles s'alignent, prix total et prix par bouteille, liste des grands formats",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "calculateur de cartons pour les restaurants"
+      ]
+    },
+    "finale": {
+      "titre": "Porta la Liguria a tavola",
+      "role": "appel",
+      "description": "« Porta la Liguria a tavola » : huile versée sur une table au soleil, boutons shop et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page olive : logo, adresse de Mendrisio, sommaire, réseaux, livraison",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-inizio": {
+      "titre": "Qui la raccolta è finita",
+      "role": "page-404",
+      "description": "404 « Qui la raccolta è finita » : vieil olivier et son échelle au soleil couchant, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chi-siamo-inizio": {
+      "titre": "Più di quarant’anni sulle fasce",
+      "role": "ouverture",
+      "description": "« Più di quarant'anni sulle fasce » (sulle fasce en jaune) : vraie photo d'archive de Jürg sur un muret, boutons",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chi-siamo-radici": {
+      "titre": "Una storia in quattro tappe",
+      "role": "étapes",
+      "description": "« Una storia in quattro tappe » : 40 ans et 5 langues qui comptent, puis quatre étapes (anni '80, '90, 2021…) qui arrivent chacune avec sa photo",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "chi-siamo-giacomo": {
+      "titre": "Giacomo Bassanini, chimico di formazione",
+      "role": "équipe",
+      "description": "« Giacomo Bassanini, chimico di formazione » : portrait rond, texte, les cinq langues qu'il parle en étiquettes",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chi-siamo-tragitto": {
+      "titre": "Dal Ponente Ligure a Mendrisio",
+      "role": "carte",
+      "description": "« Dal Ponente Ligure a Mendrisio » sur olive : carte schématique où une goutte d'huile fait le trajet de la Ligurie au Tessin",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "goutte d'huile qui fait le trajet sur la carte"
+      ]
+    },
+    "chi-siamo-fine": {
+      "titre": "Il lavoro di quarant’anni, a casa tua",
+      "role": "appel",
+      "description": "« Il lavoro di quarant'anni, a casa tua » : muret de pierres qui se construit sous le texte, boutons shop et scrivici",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contatti-inizio": {
+      "titre": "Scrivici o chiamaci",
+      "role": "ouverture",
+      "description": "« Scrivici o chiamaci » : téléphone, e-mail et adresse, collines au soleil",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contatti-dove": {
+      "titre": "La base è a Mendrisio",
+      "role": "carte",
+      "description": "« La base è a Mendrisio » sur olive : carte schématique avec la goutte, partenaire de marketing",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contatti-scrivici": {
+      "titre": "Il tuo messaggio",
+      "role": "contact",
+      "description": "« Il tuo messaggio » : « Ti risponde Giacomo » avec son portrait et ses langues, encart restaurants, formulaire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "prodotti-inizio": {
+      "titre": "Dall’oliva all’olio",
+      "role": "ouverture",
+      "description": "« Dall'oliva all'olio » (all'olio se remplit d'huile) : bandeau d'oliveraie, livraison offerte",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prodotti-olio": {
+      "titre": "Armonioso, leggermente fruttato",
+      "role": "produits",
+      "description": "« Armonioso, leggermente fruttato » : la bouteille en grand, étiquettes de goût et grille des formats avec prix",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prodotti-limone": {
+      "titre": "Olive e limoni, moliti insieme",
+      "role": "produits",
+      "description": "« Olive e limoni, moliti insieme » : citrons et olives, carte de l'huile au citron",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prodotti-olive": {
+      "titre": "Almeno sei mesi di pazienza",
+      "role": "produits",
+      "description": "« Almeno sei mesi di pazienza » sur olive : six cercles jaunes qui s'allument (six mois de fermentation), olives et paté en cartes",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "six mois de fermentation qui s'allument"
+      ]
+    },
+    "prodotti-waldmuus": {
+      "titre": "Raccolta selvatica, certificata",
+      "role": "produits",
+      "description": "« Raccolta selvatica, certificata » : linfa di betulla et aglio orsino en cartes photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prodotti-senza": {
+      "titre": "Senza ingredienti artificiali",
+      "role": "appel",
+      "description": "« Senza ingredienti artificiali » : phrase et bouton shop",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-inizio": {
+      "titre": "Lo shop di Natural-Iter",
+      "role": "ouverture",
+      "description": "« Lo shop di Natural-Iter » : carte olive « CHF 150 » avec une bouteille-jauge qui se remplit à chaque produit ajouté, jusqu'à la livraison offerte",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "bouteille-jauge qui se remplit jusqu'à la livraison offerte"
+      ]
+    },
+    "shop-catalogo": {
+      "titre": "Tutti i prodotti",
+      "role": "produits",
+      "description": "« Tutti i prodotti » : 20 produits filtrables par rayon (huile, olives et paté, bois, grands formats, cadeaux) avec tri et recherche qui ignore accents et pluriels ; grille qui se réorganise, « Aggiungi » vers le panier en tiroir",
+      "animations": [
+        "flip",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "catalogue-filtres-flip",
+      "pieges": [
+        "Commande simulée"
+      ]
+    },
+    "shop-quantita": {
+      "titre": "Quantità diverse? Scrivici",
+      "role": "appel",
+      "description": "« Quantità diverse? Scrivici » sur olive : bidon d'huile, boutons écrire et appeler",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "shop-buono-regalo": {
+      "titre": "Un regalo che sa di Liguria",
+      "role": "offre",
+      "description": "« Un regalo che sa di Liguria » : bon cadeau olive et or qui se compose (montant de CHF 25 à 200 ou libre, nombre, pour, de la part de, message) et s'ajoute au panier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "configurateur",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "carte-cadeau-qui-se-compose",
+      "pieges": []
+    }
+  }
+}
