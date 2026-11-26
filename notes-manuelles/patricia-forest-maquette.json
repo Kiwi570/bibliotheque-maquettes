@@ -1,0 +1,687 @@
+{
+  "maquette": {
+    "client": "réflexologue plantaire certifiée à domicile dans le Var, de Six-Fours à Hyères, et au cabinet de La Crau (Patricia Forest) : séances, forfaits, bons cadeaux, ateliers et pauses bien-être en entreprise",
+    "activite": [
+      "bien-être",
+      "santé"
+    ],
+    "concept": [
+      "vitrine",
+      "atelier"
+    ],
+    "ambiance": [
+      "doux",
+      "chaleureux",
+      "végétal"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--terre",
+      "secondaire": "--pin"
+    },
+    "polices": {
+      "titres": "DM Serif Display",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Reprendre pied » : sable, vert pin parasol et terre cuite, DM Serif Display avec un mot en italique terre cuite ; méditerranéenne et apaisante",
+      "la carte du pied à toucher : chaque zone réflexe s'allume avec son nom, la carte passe une fois sur toutes les zones puis s'arrête sur le plexus solaire",
+      "« Ralentir, pour commencer » : une minute de respiration guidée avec un cercle qui grandit et se resserre ; séance en trois temps épinglée",
+      "prix à rouleaux qui tournent jusqu'au prix, bascule domicile / La Crau, littoral du Var dessiné, bon cadeau qui se compose sous les yeux, demande en quatre étapes"
+    ],
+    "reserves": [
+      "plusieurs illustrations générées (olivier, salle, plage) ; horaires contradictoires sur le site actuel, aucune heure affichée",
+      "26 points à regarder au dernier audit complet (surtout des textes à 12 px)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "section-fixée",
+      "trace-svg",
+      "compteur",
+      "parallaxe",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "schema-interactif",
+      "jeu",
+      "configurateur",
+      "formulaire-par-étapes",
+      "carte-interactive"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le pied, carte du corps, et ses zones qui s'allument",
+      "fil": "le médaillon au pied tracé qui tourne"
+    },
+    "metier": "réflexologue"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile vert pin entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sable : médaillon et nom, la réflexologie, la praticienne, séances et tarifs, rendez-vous, bouton terre cuite « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur sable, liens en DM Serif",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Reprendre pied.",
+      "role": "ouverture",
+      "description": "« Reprendre pied. » (pied en italique terre cuite) : Patricia en séance, médaillon au pied tracé dont le texte circulaire tourne lentement et au défilement, boutons rendez-vous et téléphone, prix de l'heure",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "médaillon au texte circulaire qui tourne au défilement"
+      ]
+    },
+    "principe": {
+      "titre": "Le pied, une carte du corps",
+      "role": "manifeste",
+      "description": "« Le pied, une carte du corps » : texte en grand dont les mots s'allument au défilement, les deux pieds dessinés et la liste des zones",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "manifeste-mot-a-mot",
+      "pieges": []
+    },
+    "seance": {
+      "titre": "Une séance en trois temps",
+      "role": "étapes",
+      "description": "« Une séance en trois temps » épinglée : les trois temps (faire connaissance, la séance, la détente) défilent avec leur photo et leur numéro",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "zone": {
+      "titre": "Chez vous, de Six-Fours à Hyères",
+      "role": "carte",
+      "description": "« Chez vous, de Six-Fours à Hyères » : le littoral du Var dessiné, l'épingle de La Crau et les villes qui se posent, domicile et cabinet en points, bouton",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tarifs": {
+      "titre": "Une heure pour vous",
+      "role": "tarifs",
+      "description": "Tarifs sur vert pin : bascule à domicile / à La Crau, trois cartes (30 min, une heure, forfait de 5) dont les prix à rouleaux tournent de zéro jusqu'au prix, encart bon cadeau",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "tarifs-a-rouleaux",
+      "pieges": []
+    },
+    "praticienne": {
+      "titre": "Patricia Forest, réflexologue certifiée",
+      "role": "équipe",
+      "description": "« Patricia Forest, réflexologue certifiée » : vieil olivier aux racines, chiffres (500 h, 1986, FFR), lien vers son parcours",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avis": {
+      "titre": "",
+      "role": "témoignages",
+      "description": "« Ils en parlent » : un avis en grand italique terre cuite sur un horizon de mer brumeuse",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Et si vous repreniez pied ?",
+      "role": "appel",
+      "description": "« Et si vous repreniez pied ? » sur la garrigue au lever du jour : boutons demande et téléphone, encart du guide malin de la réflexologie offert par e-mail",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Inscription simulée"
+      ]
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page vert pin : nom, contact, sommaire, cabinet de La Crau, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Vous avez perdu pied ?",
+      "role": "page-404",
+      "description": "404 « Vous avez perdu pied ? » : des pas sur le sable d'une crique, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-praticienne-debut": {
+      "titre": "Patricia Forest",
+      "role": "ouverture",
+      "description": "« Patricia Forest » (Forest en italique terre cuite) : portrait en séance, réflexologue certifiée RNCP, plus de 500 heures de formation",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-praticienne-parcours": {
+      "titre": "De Bangkok à la plante des pieds",
+      "role": "étapes",
+      "description": "« De Bangkok à la plante des pieds » : frise terre cuite (1986 Bangkok, Paris, Isère, 500 h, FFR) dont le trait se trace, titre épinglé",
+      "animations": [
+        "trace-svg",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-praticienne-pourquoi": {
+      "titre": "L'enracinement",
+      "role": "manifeste",
+      "description": "« L'enracinement » : vieil olivier, idéogramme du pied, texte sur la symbolique",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-praticienne-lieux": {
+      "titre": "Chez vous, ou à La Crau",
+      "role": "services",
+      "description": "« Chez vous, ou à La Crau » : trois cartes (à domicile, au cabinet, en groupe)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-praticienne-appel": {
+      "titre": "Et si vous repreniez pied ?",
+      "role": "appel",
+      "description": "« Et si vous repreniez pied ? » sur vert pin : médaillon avec le pied tracé et ses points, boutons faire une demande et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-reflexologie-debut": {
+      "titre": "Le pied, carte du corps.",
+      "role": "ouverture",
+      "description": "« Le pied, carte du corps. » : pieds nus sur un chemin de terre sous les pins, bouton rendez-vous",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-reflexologie-principe": {
+      "titre": "Le corps, en miniature",
+      "role": "manifeste",
+      "description": "« Le corps, en miniature » : principe de la réflexologie en grand texte",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-reflexologie-carte": {
+      "titre": "La carte du pied",
+      "role": "outil-interactif",
+      "description": "« La carte du pied » : deux pieds dessinés et la liste des zones ; on touche une zone, elle s'allume avec son nom et sa fonction ; à l'arrivée la carte passe sur toutes les zones puis s'arrête sur le plexus solaire",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Schéma simplifié, signalé"
+      ],
+      "particularites": [
+        "carte du pied dont les zones réflexes s'allument au toucher"
+      ]
+    },
+    "la-reflexologie-pause": {
+      "titre": "Ralentir, pour commencer",
+      "role": "outil-interactif",
+      "description": "« Ralentir, pour commencer » : une minute de respiration guidée, le cercle au pied tracé grandit (inspirez) et se resserre (expirez), six respirations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "une minute de respiration guidée"
+      ]
+    },
+    "la-reflexologie-histoire": {
+      "titre": "Quatre mille ans de pieds",
+      "role": "étapes",
+      "description": "« Quatre mille ans de pieds » sur vert pin : frise de 2330 av. J.-C. à aujourd'hui",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-reflexologie-cadre": {
+      "titre": "Du bien-être, en complément",
+      "role": "faq",
+      "description": "« Du bien-être, en complément » : ce qu'elle est et n'est pas, en coches et croix",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-reflexologie-appel": {
+      "titre": "Et si vous repreniez pied ?",
+      "role": "appel",
+      "description": "« Et si vous repreniez pied ? » sur vert pin : médaillon avec le pied tracé et ses points, boutons faire une demande et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-debut": {
+      "titre": "On prend rendez-vous ?",
+      "role": "ouverture",
+      "description": "« On prend rendez-vous ? » (rendez-vous en italique) : vieille porte en pierre (générée), numéro en grand, bouton faire une demande",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-demande": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » en quatre étapes (le lieu, la séance, vos disponibilités, vos coordonnées) avec choix en cartes ; récapitulatif vert pin épinglé avec le tarif",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "rendez-vous-zone": {
+      "titre": "La zone et le cabinet",
+      "role": "carte",
+      "description": "« Chez vous, de Six-Fours à Hyères » : le littoral du Var dessiné, l'épingle de La Crau et les villes qui se posent, domicile et cabinet en points, bouton",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-contact": {
+      "titre": "Appeler, écrire",
+      "role": "contact",
+      "description": "« Appeler, écrire » sur vert pin : téléphone, e-mail, Facebook en trois cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-et-tarifs-debut": {
+      "titre": "60 € la séance d'une heure, chez vous.",
+      "role": "ouverture",
+      "description": "« 60 € la séance d'une heure, chez vous. » : prix en très grand terre cuite, tabouret, serviettes et galets (générés), boutons rendez-vous et bon cadeau",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-et-tarifs-premiere": {
+      "titre": "Prendre le temps de faire connaissance",
+      "role": "étapes",
+      "description": "« Prendre le temps de faire connaissance » : trois étapes numérotées de la première séance (environ 1 h 30)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-et-tarifs-tarifs": {
+      "titre": "Chez vous ou à La Crau",
+      "role": "tarifs",
+      "description": "Tarifs sur vert pin : bascule à domicile / à La Crau, trois cartes (30 min, une heure, forfait de 5) dont les prix à rouleaux tournent de zéro jusqu'au prix, encart bon cadeau",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "tarifs-a-rouleaux",
+      "pieges": []
+    },
+    "seances-et-tarifs-bon-cadeau": {
+      "titre": "Composer un bon cadeau",
+      "role": "offre",
+      "description": "« Composer un bon cadeau » : séance, lieu et prénoms ; le bon vert pin se compose sous les yeux, valable 6 mois",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "carte-cadeau-qui-se-compose",
+      "pieges": []
+    },
+    "seances-et-tarifs-groupes": {
+      "titre": "Ateliers et pauses bien-être",
+      "role": "offre",
+      "description": "« Ateliers et pauses bien-être » : maisons de retraite, associations, entreprises (pauses de 20 minutes), bouton devis",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-et-tarifs-questions": {
+      "titre": "Avant de réserver",
+      "role": "faq",
+      "description": "« Avant de réserver » : questions pratiques dépliables",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "seances-et-tarifs-appel": {
+      "titre": "Et si vous repreniez pied ?",
+      "role": "appel",
+      "description": "« Et si vous repreniez pied ? » sur vert pin : médaillon avec le pied tracé et ses points, boutons faire une demande et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
