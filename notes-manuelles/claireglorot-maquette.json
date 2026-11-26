@@ -1,0 +1,719 @@
+{
+  "maquette": {
+    "client": "consultante, formatrice et coach professionnelle à Sainte-Anne, en Guadeloupe (Claire Glorot) : conseil en organisation et RH, centre de formation certifié Qualiopi (13 formations), coaching individuel et d'équipe",
+    "activite": [
+      "conseil",
+      "formation",
+      "services-b2b"
+    ],
+    "concept": [
+      "vitrine",
+      "catalogue"
+    ],
+    "ambiance": [
+      "clair",
+      "chaleureux",
+      "océanique"
+    ],
+    "palette": {
+      "fond": "--sable",
+      "texte": "--texte",
+      "accent": "--corail",
+      "secondaire": "--ocean"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « L'équilibre » : sable, océan profond et corail, Bricolage Grotesque avec un mot en corail ; un mobile suspendu tient en équilibre conseil, formation et coaching",
+      "le mobile de l'ouverture : effleurer une pièce la fait tourner sur son fil, le souffle de la souris le balance, il se pose en douceur",
+      "orienteur « Où en êtes-vous ? » : cinq situations, une balance penche vers le métier qui répond ; méthode en cartes qui reculent quand la suivante se pose",
+      "persiennes qui s'ouvrent sur la page Conseil, frise d'une mission qui se remplit, compte à rebours du petit-déjeuner à l'heure de la Guadeloupe, catalogue filtrable des 13 formations"
+    ],
+    "reserves": [
+      "plusieurs illustrations générées (salles, bureaux) ; À propos, planning 2026 et CGV non repris",
+      "12 points à regarder au dernier audit"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "empilement-de-fiches",
+      "section-fixée",
+      "compteur",
+      "parallaxe",
+      "marquee",
+      "masque",
+      "flip",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "schema-interactif",
+      "filtres",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le mobile suspendu en équilibre (conseil, formation, coaching)",
+      "fil": "la balance qui penche vers la bonne réponse"
+    },
+    "metier": "consultante formatrice et coach"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Panneau océan qui s'ouvre sur chaque page, voile entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sable : logo, conseil, formation, coaching, contact, bouton corail « Demander un échange »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur sable, liens en Bricolage",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Concilier performance et bien-être",
+      "role": "ouverture",
+      "description": "« Concilier performance et bien-être » (performance en corail) : un mobile suspendu tient trois pièces en équilibre (formation, conseil, coaching) dans un grand cercle sable ; effleurer une pièce la fait tourner sur son fil, le souffle de la souris le balance ; prochain rendez-vous en bas",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "mobile suspendu qu'on fait tourner et balancer à la souris"
+      ]
+    },
+    "situations": {
+      "titre": "Où en êtes-vous ?",
+      "role": "outil-interactif",
+      "description": "« Où en êtes-vous ? » : cinq situations numérotées ; en choisir une fait pencher une petite balance vers le métier qui répond (conseil, formation ou coaching), avec le lien vers l'offre",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "balance qui penche vers le métier qui répond"
+      ]
+    },
+    "metiers": {
+      "titre": "Une même exigence",
+      "role": "services",
+      "description": "« Une même exigence » : trois métiers en grandes photos (conseil, formation, coaching) qui montent à des vitesses différentes",
+      "animations": [
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "claire": {
+      "titre": "Claire Glorot",
+      "role": "équipe",
+      "description": "« Claire Glorot » : portrait, parcours (Accenture, Stanwell), chiffres (15 ans, 13 ans, 9,3/10) et trois valeurs",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode": {
+      "titre": "De l'analyse des besoins à la mise en œuvre",
+      "role": "méthode",
+      "description": "« De l'analyse des besoins à la mise en œuvre » : trois cartes numérotées épinglées, chacune recule quand la suivante vient se poser dessus (la dernière en océan)",
+      "animations": [
+        "empilement-de-fiches",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "planches-empilees",
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "formations": {
+      "titre": "Quatre formations à la une",
+      "role": "offre",
+      "description": "« Quatre formations à la une » : cartes avec thème, durée, participants, prix et demande de devis, logo Qualiopi",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous": {
+      "titre": "Leadership au féminin, petit-déjeuner inspirant",
+      "role": "agenda",
+      "description": "« Prochain rendez-vous » « Leadership au féminin, petit-déjeuner inspirant » : date, lieu, durée, participants, prix ; compte à rebours en jours à l'heure de la Guadeloupe (« a eu lieu » après la date), petit-déjeuner au soleil, bouton réserver",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "compte à rebours à l'heure de la Guadeloupe"
+      ]
+    },
+    "confiance": {
+      "titre": "Des mots qui comptent",
+      "role": "témoignages",
+      "description": "« Des mots qui comptent » : deux témoignages avec grands guillemets corail, bandeau des clients qui défile (pause au bouton)",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Trouvons ensemble le bon équilibre",
+      "role": "appel",
+      "description": "« Trouvons ensemble le bon équilibre » sur océan : le mobile (cadre bleu, disque corail, arche) en grand, boutons demander un échange et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Coordonnées",
+      "role": "pied-de-page",
+      "description": "Pied de page océan : logo, coordonnées, plan du site, réseaux, logo Qualiopi, numéro de déclaration",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page est en pleine transition",
+      "role": "page-404",
+      "description": "404 « Cette page est en pleine transition » : chevalet et chaise dans une salle de formation vide, bouton",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-debut": {
+      "titre": "Prendre du recul pour mieux avancer",
+      "role": "ouverture",
+      "description": "« Prendre du recul pour mieux avancer » : chiffres géants en parallaxe (10 séances, 6 à 8 mois), salon de coaching",
+      "animations": [
+        "révélation-texte",
+        "parallaxe",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-situations": {
+      "titre": "Quand le coaching fait la différence",
+      "role": "services",
+      "description": "« Quand le coaching fait la différence » : étiquettes de situations qui s'allument une à une au défilement (océan, corail)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-deroule": {
+      "titre": "Comment ça se passe",
+      "role": "étapes",
+      "description": "« Comment ça se passe » : cinq étapes numérotées du coaching individuel, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-themes": {
+      "titre": "Ce que l'on travaille",
+      "role": "services",
+      "description": "« Ce que l'on travaille » : trois cartes (posture, organisation, collectif) avec leurs thèmes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-equipe": {
+      "titre": "Avancer ensemble",
+      "role": "offre",
+      "description": "« Avancer ensemble » : coaching d'équipe, photo d'une séance, bouton",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-temoignages": {
+      "titre": "Un cadre clair",
+      "role": "témoignages",
+      "description": "Témoignages en grands guillemets corail et encart « Un cadre clair » (déontologie)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "coaching-appel": {
+      "titre": "Trouvons ensemble le bon équilibre",
+      "role": "appel",
+      "description": "« Trouvons ensemble le bon équilibre » sur océan : le mobile (cadre bleu, disque corail, arche) en grand, boutons demander un échange et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseil-debut": {
+      "titre": "Préparer et conduire le changement",
+      "role": "ouverture",
+      "description": "« Préparer et conduire le changement » : la photo d'une salle derrière des persiennes qui s'ouvrent à l'arrivée et se referment à moitié quand on quitte l'ouverture",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "persiennes qui s'ouvrent sur la photo"
+      ]
+    },
+    "conseil-axes": {
+      "titre": "Ce que j'accompagne",
+      "role": "services",
+      "description": "« Ce que j'accompagne » : trois axes d'expertise en tiroirs qui s'ouvrent sur les missions possibles, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "offre-a-tiroirs",
+      "pieges": []
+    },
+    "conseil-mission": {
+      "titre": "Une méthode adaptée",
+      "role": "étapes",
+      "description": "« Une méthode adaptée » : frise d'une mission qui se remplit, chaque étape s'allume quand elle est atteinte",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseil-territoire": {
+      "titre": "Une expertise basée en Guadeloupe",
+      "role": "manifeste",
+      "description": "« Guadeloupe · Caraïbe · International » en bandeau qui défile, trois expertises",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseil-appel": {
+      "titre": "Trouvons ensemble le bon équilibre",
+      "role": "appel",
+      "description": "« Trouvons ensemble le bon équilibre » sur océan : le mobile (cadre bleu, disque corail, arche) en grand, boutons demander un échange et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre situation",
+      "role": "ouverture",
+      "description": "« Parlons de votre situation » : coordonnées, portrait, délai de réponse",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Quatre étapes, une réponse sur mesure",
+      "role": "contact",
+      "description": "« Quatre étapes, une réponse sur mesure » : choix de l'accompagnement en cartes, détails, coordonnées, récapitulatif épinglé ; préremplie par l'adresse (?sujet=…&formation=…)",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-acces": {
+      "titre": "En Guadeloupe, de Sainte-Anne à Jarry",
+      "role": "carte",
+      "description": "« En Guadeloupe, de Sainte-Anne à Jarry » : carte schématique et lieux de formation",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formation-debut": {
+      "titre": "Manager avec exigence et humanité",
+      "role": "ouverture",
+      "description": "« Manager avec exigence et humanité » : centre de formation certifié Qualiopi, grand titre puis une image qui s'ouvre en plein écran",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formation-pedagogie": {
+      "titre": "",
+      "role": "decor",
+      "description": "« Une pédagogie immersive » épinglée : la photo d'une formation s'ouvre jusqu'au plein écran, intra et inter de part et d'autre",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "formation-cycle": {
+      "titre": "Cycle Management & Leadership",
+      "role": "offre",
+      "description": "« Cycle Management & Leadership » : cinq modules à la carte, bouton demander les dates",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formation-rendez-vous": {
+      "titre": "Leadership au féminin, petit-déjeuner inspirant",
+      "role": "agenda",
+      "description": "Rendez-vous « Leadership au féminin, petit-déjeuner inspirant » : date, lieu, durée, participants, prix ; compte à rebours en jours à l'heure de la Guadeloupe (« a eu lieu » après la date), petit-déjeuner au soleil, bouton réserver",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "compte à rebours à l'heure de la Guadeloupe"
+      ]
+    },
+    "formation-catalogue": {
+      "titre": "13 formations, à filtrer",
+      "role": "produits",
+      "description": "« 13 formations, à filtrer » : catalogue filtrable par thème avec recherche, cartes (durée, participants, prix net) qui se réorganisent, demande de devis préremplie",
+      "animations": [
+        "flip",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "recherche"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "catalogue-filtres-flip",
+      "pieges": []
+    },
+    "formation-formats": {
+      "titre": "Chez vous ou entre pairs",
+      "role": "offre",
+      "description": "« Chez vous ou entre pairs » : intra et inter-entreprises en deux cartes photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formation-engagements": {
+      "titre": "Une pédagogie qui engage",
+      "role": "preuves",
+      "description": "« Une pédagogie qui engage » : engagements (circuit court, humaniste et systémique…), Qualiopi",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formation-appel": {
+      "titre": "Trouvons ensemble le bon équilibre",
+      "role": "appel",
+      "description": "« Trouvons ensemble le bon équilibre » sur océan : le mobile (cadre bleu, disque corail, arche) en grand, boutons demander un échange et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
