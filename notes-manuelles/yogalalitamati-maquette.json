@@ -1,0 +1,858 @@
+{
+  "maquette": {
+    "client": "enseignante de yoga somatique et praticienne de la méthode TRE® au Québec (Lalita Mati, Isabelle Cloutier) : yoga doux et somatique, automassage avec balles, pleine conscience, ateliers et sessions à Saint-Jean-sur-Richelieu, Longueuil, en Estrie et en ligne",
+    "activite": [
+      "bien-être",
+      "sport",
+      "formation"
+    ],
+    "concept": [
+      "atelier",
+      "vitrine"
+    ],
+    "ambiance": [
+      "doux",
+      "clair",
+      "ludique"
+    ],
+    "palette": {
+      "fond": "--lin",
+      "texte": "--encre",
+      "accent": "--turquoise",
+      "secondaire": "--prune"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Hanken Grotesk",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Relâcher » : lin rosé, lilas du studio et prune, avec le lime et le turquoise des balles d'automassage ; Bricolage Grotesque avec un mot en turquoise",
+      "les deux vagues du lotus du logo deviennent le geste du TRE® : elles se dessinent, tremblent puis s'apaisent à l'intro ; voile en vague entre les pages",
+      "« Sept exercices, puis le corps relâche » : tension, tremblements puis calme au défilement, les vagues tremblent quand on les touche ; le mot « relâche » respire",
+      "balles d'automassage qu'on attrape et qu'on lance, cartes qui arrivent inclinées et se posent, agenda au jour réel avec compte des jours, 32 formations filtrables"
+    ],
+    "reserves": [
+      "plusieurs illustrations générées (salles, studio) ; v2 longue (2 h 45)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "trace-svg",
+      "révélation-texte",
+      "section-fixée",
+      "compteur",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "filtres",
+      "carte-interactive",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "les deux vagues du lotus qui tremblent puis s'apaisent",
+      "fil": "les vagues et les balles d'automassage"
+    },
+    "metier": "enseignante de yoga somatique"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : le lotus du logo se dessine, ses deux vagues tremblent puis s'apaisent et il glisse sur le lotus de la page ; voile en vague prune entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête lin : logo Lalita Mati, activités, approches, méthode TRE®, à propos, contact, bouton lime « S'inscrire »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur prune",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Retrouver du pouvoir sur sa santé",
+      "role": "ouverture",
+      "description": "« Retrouver du pouvoir sur sa santé » (pouvoir en turquoise) : tapis, coussin et balles d'automassage sur un parquet, lotus qui respire et tourne un peu au défilement, boutons, prochain rendez-vous",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "dates": {
+      "titre": "Les prochains rendez-vous",
+      "role": "agenda",
+      "description": "« Les prochains rendez-vous » sur lilas : compte des jours avant le prochain, cartes datées (ateliers, Pauses de saison, sessions) avec balle de couleur, prix taxes incluses ; dates passées retirées au jour réel",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "approches": {
+      "titre": "Cinq façons d’habiter son corps",
+      "role": "services",
+      "description": "« Cinq façons d'habiter son corps » : cinq cartes photo numérotées (TRE®, yoga doux, yoga somatique, automassage, accompagnement) qui arrivent inclinées puis se posent",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "tre": {
+      "titre": "Sept exercices, puis le corps relâche.relâche.",
+      "role": "outil-interactif",
+      "description": "« Sept exercices, puis le corps relâche. » sur prune : trois temps (comprendre, expérimenter, pratiquer) ; au défilement les vagues passent de la tension aux tremblements puis au calme ; les toucher les fait trembler ; le mot « relâche » s'écarte et respire",
+      "animations": [
+        "canvas-2d",
+        "section-fixée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "vagues qui tremblent puis s'apaisent, au défilement et au toucher"
+      ]
+    },
+    "formats": {
+      "titre": "À votre rythme",
+      "role": "outil-interactif",
+      "description": "« À votre rythme » : des balles d'automassage lime, turquoise et lilas qu'on attrape et qu'on lance au-dessus de trois cartes (séance privée, cours en session, ateliers et pauses)",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "balles d'automassage à attraper et lancer"
+      ]
+    },
+    "lieux": {
+      "titre": "Quatre lieux, et votre salon",
+      "role": "carte",
+      "description": "« Quatre lieux, et votre salon » : carte schématique du sud du Québec (Montréal, Longueuil, Saint-Jean, Estrie) avec les lieux et Zoom",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "isabelle": {
+      "titre": "Isabelle Cloutier",
+      "role": "équipe",
+      "description": "« Isabelle Cloutier » : portrait, 20 ans d'enseignement et 32 formations qui comptent, rôles",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "temoignages": {
+      "titre": "Ce qu’en disent les participants",
+      "role": "témoignages",
+      "description": "« Ce qu'en disent les participants » : cartes de témoignages qui arrivent inclinées puis se posent, initiale en pastille",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Envie d’essayer ?",
+      "role": "appel",
+      "description": "Citation de Thérèse Bertherat et « Envie d'essayer ? » sur prune, vague en haut, lotus, boutons",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "",
+      "role": "pied-de-page",
+      "description": "Pied de page prune : logo, lieux, téléphone et courriel, plan du site, réseaux",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "On respire, on revient.",
+      "role": "page-404",
+      "description": "404 « On respire, on revient. » : balle lime sur un parquet clair, chemins les plus fréquentés",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-debut": {
+      "titre": "Isabelle CloutierCloutier",
+      "role": "ouverture",
+      "description": "« Isabelle Cloutier » en très grand bicolore, portrait rond avec le lotus, 20 ans d'enseignement",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-roles": {
+      "titre": "Cinq casquettes, une même attention",
+      "role": "services",
+      "description": "« Cinq casquettes, une même attention » : rôles numérotés et photos de cours",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-parcours": {
+      "titre": "Vingt ans à se former",
+      "role": "étapes",
+      "description": "« Vingt ans à se former » : 32 formations depuis 2005 sur une frise, filtrables par thème (yoga, approches corporelles, TRE®, pleine conscience, trauma, hypnose)",
+      "animations": [
+        "filtre-anime",
+        "trace-svg"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-lieux": {
+      "titre": "Ses lieux et collaborations",
+      "role": "preuves",
+      "description": "« Ses lieux et collaborations » : cartes des lieux (fondation, clinique, centre de méditation…)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-livres": {
+      "titre": "Deux livres et un CD",
+      "role": "produits",
+      "description": "« Deux livres et un CD » : couvertures en éventail et références",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "a-propos-fin": {
+      "titre": "Faire connaissance",
+      "role": "appel",
+      "description": "Appel de fin « Faire connaissance » sur prune : lotus qui respire, boutons écrire à Isabelle et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "activites-debut": {
+      "titre": "Douze rendez-vous,rendez-vous, de janvier à juin",
+      "role": "ouverture",
+      "description": "« Douze rendez-vous, de janvier à juin » : studio lumineux sous la neige, prochaine date avec compte des jours",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "activites-agenda": {
+      "titre": "L’agenda",
+      "role": "agenda",
+      "description": "« L'agenda » : douze rendez-vous filtrables par type et par lieu, chaque date avec horaire, lieu, description, prix, « Ajouter à mon agenda » et « S'inscrire » ; photo épinglée",
+      "animations": [
+        "section-fixée",
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "activites-session": {
+      "titre": "Une session, jeudi après jeudi",
+      "role": "étapes",
+      "description": "« Une session, jeudi après jeudi » : déroulé des sessions de 8 ou 10 semaines, photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "activites-pauses": {
+      "titre": "Se déposer, en trois temps",
+      "role": "offre",
+      "description": "« Les Pauses de saison » : se déposer en trois temps, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "activites-faq": {
+      "titre": "Questions pratiques",
+      "role": "faq",
+      "description": "« Questions pratiques » : questions dépliables, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "activites-fin": {
+      "titre": "Un doute sur le bon choix ?",
+      "role": "appel",
+      "description": "Appel de fin « Un doute sur le bon choix ? » sur prune : lotus qui respire, boutons écrire à Isabelle et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-debut": {
+      "titre": "Cinq approches, un seul corpscorps",
+      "role": "ouverture",
+      "description": "« Cinq approches, un seul corps » : le mot corps qui respire, photo de studio",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-sommaire-approches": {
+      "titre": "Les cinq approches",
+      "role": "menu",
+      "description": "Sommaire collant des cinq approches numérotées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-tre": {
+      "titre": "Méthode TRE®",
+      "role": "services",
+      "description": "« Méthode TRE® » : sept exercices, vagues qui ondulent, lien vers la page dédiée",
+      "animations": [
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-yoga-doux": {
+      "titre": "Yoga doux thérapeutique",
+      "role": "services",
+      "description": "« Yoga doux thérapeutique » : texte et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-yoga-somatique": {
+      "titre": "Yoga somatique",
+      "role": "services",
+      "description": "« Yoga somatique » : texte et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-automassage": {
+      "titre": "Automassage avec balles",
+      "role": "outil-interactif",
+      "description": "« Automassage avec balles » : les gestes (masser, compresser, étirer…) en boutons qui changent la photo, balles de couleur",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-accompagnement": {
+      "titre": "Accompagnement somatique",
+      "role": "services",
+      "description": "« Accompagnement somatique » : séances individuelles, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-aussi": {
+      "titre": "Et aussi",
+      "role": "services",
+      "description": "« Et aussi » : pleine conscience, méthode RMT",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "approches-fin": {
+      "titre": "Par où commencer ?",
+      "role": "appel",
+      "description": "Appel de fin « Par où commencer ? » sur prune : lotus qui respire, boutons écrire à Isabelle et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Écrire à Isabelle",
+      "role": "ouverture",
+      "description": "« Écrire à Isabelle » : téléphone, courriel, balles qui flottent",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre message",
+      "role": "contact",
+      "description": "« Votre message » : choix du motif en cartes (inscription, séance privée, atelier pour un organisme), trois champs obligatoires",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-lieux": {
+      "titre": "Où se retrouver",
+      "role": "carte",
+      "description": "« Où se retrouver » : lieux avec adresse et activités",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-tre-fil-ondes": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil d'ondes de la page Méthode TRE® : les vagues qui tremblent accompagnent la lecture",
+      "animations": [
+        "fil-conducteur",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "methode-tre-debut": {
+      "titre": "7 exercices, puis le corps relâcherelâche",
+      "role": "outil-interactif",
+      "description": "« 7 exercices, puis le corps relâche » sur prune : trois temps (comprendre, expérimenter, pratiquer) ; au défilement les vagues passent de la tension aux tremblements puis au calme ; les toucher les fait trembler ; le mot « relâche » s'écarte et respire",
+      "animations": [
+        "canvas-2d",
+        "section-fixée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "vagues qui tremblent puis s'apaisent, au défilement et au toucher"
+      ]
+    },
+    "methode-tre-quoi": {
+      "titre": "Un mécanisme naturel",
+      "role": "manifeste",
+      "description": "« Un mécanisme naturel » : texte sur les tremblements neurogènes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-tre-fondateur": {
+      "titre": "Le Dr David Berceli",
+      "role": "équipe",
+      "description": "« Le Dr David Berceli » : portrait et texte",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-tre-formats": {
+      "titre": "Quatre façons de commencer",
+      "role": "offre",
+      "description": "« Quatre façons de commencer » : séance privée, atelier, session, organisme",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-tre-dates": {
+      "titre": "Ateliers et sessions",
+      "role": "agenda",
+      "description": "« Prochaines dates TRE® » : ateliers et sessions datés",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "methode-tre-temoignages": {
+      "titre": "Ce qu’ils en retiennent",
+      "role": "témoignages",
+      "description": "« Ce qu'en disent les participants » : cartes de témoignages qui arrivent inclinées puis se posent, initiale en pastille",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "methode-tre-fin": {
+      "titre": "Prête, prêt à essayer ?",
+      "role": "appel",
+      "description": "Appel de fin « Prête, prêt à essayer ? » sur prune : lotus qui respire, boutons écrire à Isabelle et téléphone",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
