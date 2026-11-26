@@ -49,8 +49,12 @@ const PLAFOND = 150 * 1024;
    raccourcit après les points forts (90, 60 caractères, puis plus de client : le métier reste).
    18 novembre 2026 (107 maquettes, 148,6 Ko, vingt de plus à venir) : dernier recours, les sections notées 5 sans module se
    limitent à 4, 3, 2 puis 1 par maquette (celles qui ont un module restent toutes ; ouverture et effet le plus fort d'abord).
-   L'index ne bloque donc plus l'ajout d'une maquette. Le site (site/index-site.json), les fiches et chercher.mjs gardent tout. */
-const compacter = (pf, client) => maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pf)
+   L'index ne bloque donc plus l'ajout d'une maquette. Le site (site/index-site.json), les fiches et chercher.mjs gardent tout.
+   26 novembre 2026 (138 maquettes, 150,2 Ko au plus léger, vingt-huit de plus à venir) : paliers suivants, plus de section
+   notée 5 sans module (seules restent les sections tirées en module), puis le point fort raccourci à 140 et 100 caractères,
+   puis plus de point fort (la grille, le métier et les besoins restent). */
+const raccourcir = (s, n) => (typeof s === 'string' && s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s);
+const compacter = (pf, client, lpf = Infinity) => maquettes.map((l) => l.map((v, i) => (i === 5 ? v.slice(0, pf).map((s) => raccourcir(s, lpf))
   : i === 6 ? (v === `https://${l[0]}.vercel.app` ? 1 : v)
   : i === 7 && client < 0 ? null
   : i === 7 && client && typeof v === 'string' && v.length > client ? v.slice(0, client - 1).trimEnd() + '…' : v)));
@@ -67,17 +71,19 @@ const limiter = (k) => {
   }
   return sections.filter((l) => garde.has(l));
 };
-const ETAPES = [[3, 0, Infinity], [2, 0, Infinity], [1, 0, Infinity], [1, 90, Infinity], [1, 60, Infinity], [1, -1, Infinity], [1, -1, 4], [1, -1, 3], [1, -1, 2], [1, -1, 1]];
+const ETAPES = [[3, 0, Infinity], [2, 0, Infinity], [1, 0, Infinity], [1, 90, Infinity], [1, 60, Infinity], [1, -1, Infinity], [1, -1, 4], [1, -1, 3], [1, -1, 2], [1, -1, 1],
+  [1, -1, 0], [1, -1, 0, 140], [1, -1, 0, 100], [0, -1, 0]];
 let txt = '', etape = 0, pointsForts = 3, nbSections = sections.length;
 for (; etape < ETAPES.length; etape++) {
-  const [pf, cl, k] = ETAPES[etape];
+  const [pf, cl, k, lpf] = ETAPES[etape];
   const secs = limiter(k);
   nbSections = secs.length;
-  txt = ecrire({ ...index, ...(Number.isFinite(k) ? { aide: index.aide + ` Index allégé : au plus ${k} section(s) notée(s) 5 sans module par maquette (les autres : site/index-site.json ou chercher.mjs).` } : {}), maquettes: compacter(pf, cl), sections: secs });
+  const allege = k === 0 ? ` Index allégé : seules les sections tirées en module sont listées${pf === 0 ? ', sans les points forts des maquettes' : lpf ? ', points forts raccourcis' : ''} (les sections notées 4 ou 5 : site/index-site.json ou chercher.mjs ; les points forts : maquettes/<dépôt>.json).` : ` Index allégé : au plus ${k} section(s) notée(s) 5 sans module par maquette (les autres : site/index-site.json ou chercher.mjs).`;
+  txt = ecrire({ ...index, ...(Number.isFinite(k) ? { aide: index.aide + allege } : {}), maquettes: compacter(pf, cl, lpf), sections: secs });
   if (Buffer.byteLength(txt) <= PLAFOND) break;
 }
 etape = Math.min(etape, ETAPES.length - 1); pointsForts = ETAPES[etape][0];
 if (Buffer.byteLength(txt) > PLAFOND) console.log(`ATTENTION : index.json dépasse 150 Ko même au plus léger : alléger l'index (colonnes) avant d'ajouter des maquettes.`);
 fs.writeFileSync(path.join(RACINE, 'index.json'), txt);
 fs.writeFileSync(path.join(RACINE, 'site', 'index-site.json'), ecrire({ ...index, aide: 'Copie de index.json pour le site de consultation, avec toutes les sections notées 4 ou 5 et la liste des maquettes favorites (favoris.json).', favoris: lireFavoris().map((f) => f.depot), sections: toutes }));
-console.log(`index.json : ${maquettes.length} maquettes, ${nbSections} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette${ETAPES[etape][1] > 0 ? `, client en ${ETAPES[etape][1]} caractères` : ETAPES[etape][1] < 0 ? ', sans client' : ''}${Number.isFinite(ETAPES[etape][2]) ? `, ${ETAPES[etape][2]} section(s) notée(s) 5 sans module par maquette` : ''} pour rester sous 150 Ko)` : ''}`);
+console.log(`index.json : ${maquettes.length} maquettes, ${nbSections} sections (site : ${toutes.length}), ${modules.length} modules, ${Math.round(Buffer.byteLength(txt) / 102.4) / 10} Ko${pointsForts < 3 ? ` (${pointsForts} point(s) fort(s) par maquette${ETAPES[etape][1] > 0 ? `, client en ${ETAPES[etape][1]} caractères` : ETAPES[etape][1] < 0 ? ', sans client' : ''}${ETAPES[etape][3] ? `, point fort en ${ETAPES[etape][3]} caractères` : ''}${ETAPES[etape][2] === 0 ? ', seulement les sections tirées en module' : Number.isFinite(ETAPES[etape][2]) ? `, ${ETAPES[etape][2]} section(s) notée(s) 5 sans module par maquette` : ''} pour rester sous 150 Ko)` : ''}`);
