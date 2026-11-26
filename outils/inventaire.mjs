@@ -243,6 +243,22 @@ const faire = async (p, ms) => { try { return await p.evaluate(ms); } catch (e) 
 const scrollerA = (p, y) => p.evaluate(y => { const l = window.lenis || window.__lenis; if (l?.scrollTo) l.scrollTo(y, { immediate: true, force: true }); window.scrollTo(0, y); }, y);
 const scrollerDoux = (p, y0, y1, ms) => p.evaluate(([y0, y1, ms]) => new Promise(ok => { const t0 = performance.now(); const l = window.lenis || window.__lenis; const pas = () => { const k = Math.min(1, (performance.now() - t0) / ms); const e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2; const y = y0 + (y1 - y0) * e; if (l?.scrollTo) l.scrollTo(y, { immediate: true, force: true }); window.scrollTo(0, y); k < 1 ? requestAnimationFrame(pas) : ok(); }; requestAnimationFrame(pas); }), [y0, y1, ms]);
 const attendre = ms => new Promise(r => setTimeout(r, ms));
+// Bandeau de consentement (cookies) : refusé avant les mesures, pour que les captures montrent la page et pas le bandeau
+// (Cirenza, 26 novembre 2026 : le bandeau de la v6 couvrait toutes les captures). Cas non trouvé : --stockage cle=valeur.
+const fermerBandeaux = async (p) => {
+  const fait = await p.evaluate(() => {
+    const vis = (el) => { const r = el.getBoundingClientRect(); const s = getComputedStyle(el); return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none'; };
+    const boites = [...document.querySelectorAll('[id*="cookie" i], [class*="cookie" i], [id*="consent" i], [class*="consent" i], [id*="rgpd" i], [class*="rgpd" i]')].filter(vis);
+    for (const b of boites) {
+      const boutons = [...b.querySelectorAll('button, [role="button"]')].filter(vis);
+      const choix = boutons.find(x => /refus|reject|decline|deny|necessary|nécessaires|continuer sans/i.test(x.textContent)) || boutons.find(x => /accept|^\s*ok\s*$|compris|agree|d.accord/i.test(x.textContent));
+      if (choix) { choix.click(); return true; }
+    }
+    return false;
+  }).catch(() => false);
+  if (fait) await attendre(700);
+  return fait;
+};
 
 async function jpeg(page, fichier, opts = {}) {
   let q = 80; let buf = await page.screenshot({ type: 'jpeg', quality: q, ...opts });
@@ -261,7 +277,8 @@ for (const page of pagesAVisiter) {
   pg.on('console', m => { if (m.type() === 'error') erreurs.push(m.text().slice(0, 200)); });
   await pg.goto(url, { waitUntil: 'load' }).catch(() => {});
   await attendre(INTRO_MS);
-  const mes = await pg.evaluate(mesurerDansPage, s.blocs.map(b => b.sig));
+  await fermerBandeaux(pg);
+  const mes =await pg.evaluate(mesurerDansPage, s.blocs.map(b => b.sig));
   const segments = [];
   if (avecMedias) {
     // Le premier bloc du main reçoit la vidéo du chargement (ouverture).
@@ -321,7 +338,7 @@ for (const page of pagesAVisiter) {
     const ctxm = await navigateur.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true });
     await preparer(ctxm);
     const pm = await ctxm.newPage();
-    await pm.goto(url, { waitUntil: 'load' }).catch(() => {}); await attendre(INTRO_MS);
+    await pm.goto(url, { waitUntil: 'load' }).catch(() => {}); await attendre(INTRO_MS); await fermerBandeaux(pm);
     const mm = await pm.evaluate(mesurerDansPage, s.blocs.map(b => b.sig));
     for (let i = 0; i < s.blocs.length; i++) {
       const fi = s.blocs[i].ref; const inf = mm.infos[i];
