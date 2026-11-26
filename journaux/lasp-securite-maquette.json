@@ -1,0 +1,164 @@
+{
+ "projet": "lasp-securite-maquette",
+ "client": "LASP — Lion Agence Sécurité Privée",
+ "siteActuel": "https://www.laspsecurite.fr",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1.1",
+   "perimetre": [
+    "accueil",
+    "prestations",
+    "secteurs",
+    "agence",
+    "devis",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-20T20:40:54+01:00",
+     "fin": "2026-11-20T20:49:00+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 10,
+     "debut": "2026-11-20T20:49:40+01:00",
+     "fin": "2026-11-20T20:52:30+01:00"
+    },
+    {
+     "etape": "construction : accueil",
+     "budget": 40,
+     "debut": "2026-11-20T20:53:20+01:00",
+     "fin": "2026-11-20T21:15:50+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films (attente de la réponse notée à part)",
+     "budget": 5,
+     "debut": "2026-11-20T21:15:50+01:00",
+     "fin": "2026-11-20T21:20:00+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet, contact et page de catégorie",
+     "budget": 40,
+     "debut": "2026-11-20T21:00:00+01:00",
+     "fin": "2026-11-20T21:22:00+01:00"
+    },
+    {
+     "etape": "audit, regard neuf et corrections",
+     "budget": 25,
+     "debut": "2026-11-20T21:38:00+01:00",
+     "fin": "2026-11-20T22:33:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-20T22:33:00+01:00",
+     "fin": "2026-11-20T22:40:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "images du site (zip reçu pendant l'analyse)",
+     "debut": "2026-11-20T20:41:30+01:00",
+     "fin": "2026-11-20T20:43:00+01:00"
+    },
+    {
+     "pour": "réponses aux questions",
+     "debut": "2026-11-20T20:49:00+01:00",
+     "fin": "2026-11-20T20:51:00+01:00"
+    },
+    {
+     "pour": "images Grok",
+     "debut": "2026-11-20T20:52:30+01:00",
+     "fin": "2026-11-20T21:07:00+01:00"
+    },
+    {
+     "pour": "réponse à l'aperçu de l'accueil",
+     "debut": "2026-11-20T21:20:00+01:00",
+     "fin": "2026-11-20T21:37:00+01:00"
+    }
+   ],
+   "allersRetours": 0,
+   "modules": [
+    "formulaire-par-etapes"
+   ],
+   "audit": {
+    "niveau": "standard + passe des formats",
+    "echecsPremierPassage": 33,
+    "relances": 4,
+    "corrections": [
+     "information clé et bouton hors du premier écran (petits téléphones, sans JavaScript, 1000×560)",
+     "images de secteurs agrandies (faibles en grand)",
+     "titre de l’appel final coupé à 320 px",
+     "aperçu flou des ouvertures (flash au retour)",
+     "paramètre de l’outil renommé (lien profond)",
+     "contraste des surtitres sur photo",
+     "anneau tourné qui élargissait la page",
+     "qualifications et noms d’étapes du devis"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Pages intérieures construites pendant l'attente des images Grok (en parallèle de l'accueil)."
+  },
+  {
+   "version": 2,
+   "skill": "v11.1.1",
+   "perimetre": [
+    "accueil",
+    "prestations",
+    "secteurs",
+    "agence",
+    "devis",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse complète de la v1 (captures, sections, téléphone)",
+     "budget": 20,
+     "debut": "2026-11-23T14:21:25+01:00",
+     "fin": "2026-11-23T14:27:00+01:00"
+    },
+    {
+     "etape": "améliorations v2",
+     "budget": 60,
+     "debut": "2026-11-23T14:27:00+01:00",
+     "fin": "2026-11-23T14:38:00+01:00"
+    },
+    {
+     "etape": "audit complet, regard neuf et corrections",
+     "budget": 50,
+     "debut": "2026-11-23T14:38:27+01:00",
+     "fin": "2026-11-23T15:14:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-23T15:14:00+01:00",
+     "fin": "2026-11-23T15:20:00+01:00"
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [
+    "formulaire-par-etapes"
+   ],
+   "audit": {
+    "niveau": "complet",
+    "echecsPremierPassage": 54,
+    "relances": 1,
+    "corrections": [
+     "repères d'heure de l'horloge en HTML (13 px)",
+     "numéros des points de vigilance sans transition (contraste)",
+     "parcours du projet plus robuste",
+     "points de vigilance posés après la photo"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Demande de l'utilisateur : audit complet et analyse de tout le site, puis version optimale, ludique et de haut niveau."
+  }
+ ]
+}

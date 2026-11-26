@@ -1,0 +1,819 @@
+{
+  "maquette": {
+    "client": "agence de sécurité privée à Lyon 9e (Lion Agence Sécurité Privée) : agents de sécurité, maîtres-chiens, sécurité incendie SSIAP, événementiel, magasins, intervention et rondes, 24 h/24 et 7 j/7",
+    "activite": [
+      "services-b2b"
+    ],
+    "concept": [
+      "station",
+      "dossier"
+    ],
+    "ambiance": [
+      "nocturne",
+      "sombre",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--rouge",
+      "secondaire": "--bleu"
+    },
+    "polices": {
+      "titres": "Archivo",
+      "texte": "Instrument Sans",
+      "mono": "JetBrains Mono"
+    },
+    "points_forts": [
+      "direction « Ronde de nuit » : nuit bleue, rouge et bleu du logo, Archivo étendue en capitales ; à l'ouverture la lampe de l'agent suit la souris et une pluie fine n'apparaît que dans son faisceau",
+      "fil de la ronde dans la marge : un point de pointage par section, allumé à mesure de la lecture ; cadran 24/7 à l'heure de Lyon",
+      "outil « Votre dispositif » : trois questions (site, horaires, priorité), les prestations qui conviennent s'allument et préremplissent le devis ; secteurs avec points de vigilance numérotés sur la photo",
+      "lignes de valeurs et de gestes qui s'allument à hauteur de lecture, grand logo rouge et bleu dans l'appel final, 404 « Accès non autorisé »"
+    ],
+    "reserves": [
+      "illustrations générées pour toutes les photos ; aucun chiffre ni avis client, numéro CNAPS et mentions légales à fournir"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "curseur-personnalisé",
+      "fil-conducteur",
+      "révélation-texte",
+      "apparition-au-défilement",
+      "trace-svg",
+      "compteur",
+      "section-fixée",
+      "filtre-anime"
+    ],
+    "interactions": [
+      "configurateur",
+      "filtres",
+      "formulaire-par-étapes",
+      "carte-interactive"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "le faisceau de la lampe dans la nuit",
+      "fil": "le fil de la ronde : un point de pointage par section"
+    },
+    "metier": "société de sécurité privée"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile : la nuit tombe sur la page, la lampe fait sa ronde, puis l'en-tête et le titre arrivent",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête de nuit : logo LASP, prestations, secteurs, l'agence, devis et contact, bouton rouge « Demander un devis »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur nuit avec les deux numéros",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Jour et nuit,on veille survos sites.",
+      "role": "ouverture",
+      "description": "« Jour et nuit, on veille sur vos sites. » en Archivo étendue, la fin en rouge, sur la photo d'un agent dans une allée mouillée ; la lampe suit la souris (ou le doigt) et fait sa ronde seule sinon, une pluie fine ne se voit que dans son faisceau ; sceau rond « 24/24 » qui tourne",
+      "animations": [
+        "ouverture-orchestrée",
+        "canvas-2d",
+        "curseur-personnalisé",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "faisceau de lampe qui suit la souris dans une photo de nuit",
+        "pluie fine visible seulement dans le faisceau"
+      ]
+    },
+    "engagements": {
+      "titre": "Une présence continue, des agents qui savent quoi faire.",
+      "role": "preuves",
+      "description": "« Une présence continue, des agents qui savent quoi faire. » : cadran 24 h rouge dont l'aiguille marque l'heure de Lyon (« Il est 4 h 17 à Lyon »), six engagements en icônes",
+      "animations": [
+        "compteur",
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "cadran 24/7 à l'heure de Lyon"
+      ]
+    },
+    "prestations": {
+      "titre": "Six métiers,un seul niveau d'exigence.",
+      "role": "services",
+      "description": "« Six métiers, un seul niveau d'exigence. » : six cartes photo numérotées qui arrivent en cascade, ramenées à l'écran au clavier",
+      "animations": [
+        "apparition-au-défilement",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs": {
+      "titre": "Du quai de chargement à la scène de concert.",
+      "role": "galerie",
+      "description": "« Du quai de chargement à la scène de concert. » : quatre secteurs en grandes photos de nuit",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "dispositif": {
+      "titre": "Trois questions, une première idée.",
+      "role": "outil-interactif",
+      "description": "« Trois questions, une première idée. » : site, horaires (en journée, la nuit, 24/24) et priorité en pastilles ; sur un écran sombre les voyants balaient la liste des prestations puis se posent sur celles conseillées, bande des 24 h colorée, bouton de devis prérempli",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "voyants qui balaient la liste puis se posent sur le conseil"
+      ]
+    },
+    "etapes": {
+      "titre": "Quatre temps, une seule équipe.",
+      "role": "étapes",
+      "description": "« Quatre temps, une seule équipe. » : ligne rouge de la ronde qui se trace entre quatre points numérotés",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "confiance": {
+      "titre": "Des entreprises qui nous confient leurs sites.",
+      "role": "preuves",
+      "description": "« Des entreprises qui nous confient leurs sites. » : noms des clients en Archivo et plan de Lyon 9e entre Saône et Rhône",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Un site à protéger ?Parlons-en maintenant.",
+      "role": "appel",
+      "description": "« Un site à protéger ? Parlons-en maintenant. » en capitales blanches et rouges sur nuit, grand logo rouge et bleu en fond qui glisse, bouton et téléphones en mono",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "logo géant en fond de l'appel final"
+      ]
+    },
+    "fil-ronde": {
+      "titre": "Ronde de la page",
+      "role": "decor",
+      "description": "Fil de la ronde dans la marge gauche : un point de pointage par section, allumé à mesure de la lecture, sur grands écrans",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "points de pointage de la ronde allumés à mesure de la lecture"
+      ]
+    },
+    "pied": {
+      "titre": "Contact",
+      "role": "pied-de-page",
+      "description": "Pied de page de nuit : logo, adresse, téléphones, sommaire, mention CNAPS (article L612-14)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Accès non autorisé.",
+      "role": "page-404",
+      "description": "404 « Accès non autorisé. » sur un cadenas de grille la nuit : « la ronde continue à l'accueil »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-debut": {
+      "titre": "Une agence lyonnaise,sur le terrain.",
+      "role": "ouverture",
+      "description": "« Une agence lyonnaise, sur le terrain. » : texte à gauche, deux agents de dos face à la ville la nuit, sceau du logo",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-valeurs": {
+      "titre": "Ce qui nous guide",
+      "role": "manifeste",
+      "description": "« Ce qui nous guide » : cinq valeurs en capitales qui s'allument une à une en rouge quand elles arrivent à hauteur de lecture",
+      "animations": [
+        "révélation-texte",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "mots qui s'allument à hauteur de lecture"
+      ]
+    },
+    "agence-engagements": {
+      "titre": "Une présence continue, des agents qui savent quoi faire.",
+      "role": "preuves",
+      "description": "« Une présence continue, des agents qui savent quoi faire. » : six engagements en cartes sur nuit",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-moyens": {
+      "titre": "Des agents équipés",
+      "role": "services",
+      "description": "« Des agents équipés » : PTI, radios, véhicules en cartes blanches avec icônes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-qualifications": {
+      "titre": "Des qualifications reconnues",
+      "role": "preuves",
+      "description": "« Des qualifications reconnues » : ADS, SSIAP 1·2·3, cynophile avec écussons",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-tenue": {
+      "titre": "En tenue LASP",
+      "role": "galerie",
+      "description": "« En tenue LASP » : trois photos d'agents en tenue, du poste incendie à la ronde de nuit",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-lieu": {
+      "titre": "Basés à Lyon 9e",
+      "role": "carte",
+      "description": "« Basés à Lyon 9e » : plan dessiné de Lyon entre Saône et Rhône, l'agence marquée du logo",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agence-fin": {
+      "titre": "Un site à protéger ?Parlons-en maintenant.",
+      "role": "appel",
+      "description": "« Un site à protéger ? Parlons-en maintenant. » en capitales blanches et rouges sur nuit, grand logo rouge et bleu en fond, bouton et téléphones",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-debut": {
+      "titre": "Parlonsde votre site.",
+      "role": "contact",
+      "description": "« Parlons de votre site. » : téléphones de l'agence et du portable en grand, plan de Lyon 9e qui se trace, bouton vers la demande",
+      "animations": [
+        "trace-svg",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "devis-demande": {
+      "titre": "Votre demande de devis",
+      "role": "contact",
+      "description": "« Votre demande de devis » : type de site en cartes, prestation, coordonnées, récapitulatif ; préremplie depuis l'outil ou une prestation, ce qui se passe ensuite à côté",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "devis-appel": {
+      "titre": "Un site à protéger ?Parlons-en maintenant.",
+      "role": "appel",
+      "description": "« Un site à protéger ? Parlons-en maintenant. » en capitales blanches et rouges sur nuit, grand logo rouge et bleu en fond, bouton et téléphones",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-debut": {
+      "titre": "Six métiers,un seul niveaud'exigence.",
+      "role": "ouverture",
+      "description": "« Six métiers, un seul niveau d'exigence. » centré sur un parking souterrain la nuit, qualifications en mono",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-sommaire-prestations": {
+      "titre": "Aller à une prestation",
+      "role": "barre-fixe",
+      "description": "Barre des six prestations qui reste en haut et marque celle qu'on lit",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-agent": {
+      "titre": "Agent de sécurité",
+      "role": "services",
+      "description": "« Agent de sécurité » (gardiennage, accueil et contrôle d'accès) : photo d'un agent à une barrière, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-maitre-chien": {
+      "titre": "Maître-chien",
+      "role": "services",
+      "description": "« Maître-chien » (agent cynophile et son chien) : photo d'un maître-chien la nuit, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-incendie": {
+      "titre": "Sécurité incendie",
+      "role": "services",
+      "description": "« Sécurité incendie » (agents SSIAP 1, 2 et 3) : photo d'un couloir et d'un extincteur, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-evenementiel": {
+      "titre": "Événementiel",
+      "role": "services",
+      "description": "« Événementiel » (accès, filtrage et flux du public) : photo d'agents devant une scène, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-magasin": {
+      "titre": "Magasin",
+      "role": "services",
+      "description": "« Magasin » (prévention des vols) : photo d'un agent à l'entrée d'un magasin, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-rondes": {
+      "titre": "Intervention et rondes",
+      "role": "services",
+      "description": "« Intervention et rondes » (rondes programmées et interventions rapides) : photo d'un agent à la lampe, numéro géant en filigrane, liste de missions, secteurs où on l'utilise en étiquettes, lien de devis prérempli",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-gestes": {
+      "titre": "Cinq gestes, du poste d'entrée à la ronde de nuit.",
+      "role": "manifeste",
+      "description": "« Cinq gestes, du poste d'entrée à la ronde de nuit. » sur nuit : cinq lignes en capitales qui s'allument une fois à hauteur de lecture",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "prestations-fin": {
+      "titre": "Un site à protéger ?Parlons-en maintenant.",
+      "role": "appel",
+      "description": "« Un site à protéger ? Parlons-en maintenant. » en capitales blanches et rouges sur nuit, grand logo rouge et bleu en fond, bouton et téléphones",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-debut": {
+      "titre": "Chaque sitea ses risques.",
+      "role": "ouverture",
+      "description": "« Chaque site a ses risques. » sur une vue aérienne d'un site industriel la nuit, bouton vers le premier secteur",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-onglets": {
+      "titre": "Choisir un secteur",
+      "role": "barre-fixe",
+      "description": "Onglets des quatre secteurs qui restent en haut et marquent celui qu'on lit",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-industrie": {
+      "titre": "Industrie et logistique",
+      "role": "services",
+      "description": "« Industrie et logistique » : usines, entrepôts, plateformes ; sur la photo, des points de vigilance numérotés s'allument, liste de ce qu'il faut protéger et prestations conseillées, bouton « Devis pour ce secteur »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "points de vigilance numérotés qui s'allument sur la photo du secteur"
+      ]
+    },
+    "secteurs-commerces": {
+      "titre": "Commerces",
+      "role": "services",
+      "description": "« Commerces » : magasins, galeries, enseignes ; sur la photo, des points de vigilance numérotés s'allument, liste de ce qu'il faut protéger et prestations conseillées, bouton « Devis pour ce secteur »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-evenements": {
+      "titre": "Événements",
+      "role": "services",
+      "description": "« Événements » : concerts, salons, manifestations ; sur la photo, des points de vigilance numérotés s'allument, liste de ce qu'il faut protéger et prestations conseillées, bouton « Devis pour ce secteur »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-entreprises": {
+      "titre": "Entreprises et collectivités",
+      "role": "services",
+      "description": "« Entreprises et collectivités » : bureaux, bâtiments, sites sensibles ; sur la photo, des points de vigilance numérotés s'allument, liste de ce qu'il faut protéger et prestations conseillées, bouton « Devis pour ce secteur »",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-references": {
+      "titre": "Des entreprises qui nous confient leurs sites et leurs équipes.",
+      "role": "preuves",
+      "description": "« Des entreprises qui nous confient leurs sites et leurs équipes. » : noms des clients en grande Archivo sur nuit",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "secteurs-fin": {
+      "titre": "Un site à protéger ?Parlons-en maintenant.",
+      "role": "appel",
+      "description": "« Un site à protéger ? Parlons-en maintenant. » en capitales blanches et rouges sur nuit, grand logo rouge et bleu en fond, bouton et téléphones",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
