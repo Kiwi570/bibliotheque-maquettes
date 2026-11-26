@@ -1,0 +1,706 @@
+{
+  "maquette": {
+    "client": "batteur de jazz, funk et New Orleans (Gabriel Delmas) : Gabriel Delmas Trio et l'album New Step, trois méthodes de batterie, clinics, sessions intensives et enregistrement à distance ; site en français et en anglais",
+    "activite": [
+      "culture",
+      "spectacle",
+      "formation"
+    ],
+    "concept": [
+      "scène",
+      "catalogue"
+    ],
+    "ambiance": [
+      "sombre",
+      "nocturne",
+      "énergique"
+    ],
+    "palette": {
+      "fond": "--noir",
+      "texte": "--pierre",
+      "accent": "--rouge",
+      "secondaire": "--pierre-2"
+    },
+    "polices": {
+      "titres": "Big Shoulders Display",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « New Step » : la pochette de l'album devient le site ; noir de studio pour les portraits, pierre grège pour lire et acheter, rouge lave pour l'action ; Big Shoulders en capitales avec un mot en Instrument Serif italique",
+      "ouverture : le nom en très grand, une grille de 16 pas qui joue en silence et un halo qui bat la grosse caisse, portrait à la caisse claire rouge",
+      "« Koum, Ka, groove » : séquenceur de 16 pas jouable au clic, sons synthétisés, syllabes en grand, tempo et motifs (basique, ghost notes, New Orleans)",
+      "album avec tête de lecture qui suit le défilement, vidéos qui glissent, bandeau géant des grands noms croisés sur scène, dates passées marquées toutes seules",
+      "méthodes avec panier en tiroir et pages à feuilleter, demande en quatre étapes préremplie selon le bouton d'origine, tout le site aussi en anglais"
+    ],
+    "reserves": [
+      "six illustrations générées (clinic, studio, club, pad, salle de travail, 404) ; aucune date à venir, tarifs des cours et prix à confirmer",
+      "13 textes à 12 px sur l'accueil à regarder"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "section-fixée",
+      "progression-fixée",
+      "galerie-horizontale",
+      "parallaxe",
+      "marquee",
+      "trace-svg",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "ambiance-sonore",
+      "lecteur-vidéo",
+      "panier-simule",
+      "formulaire-par-étapes",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la grille de 16 pas (Koum, Ka) qui joue",
+      "fil": "le halo qui bat la mesure et la tête de lecture"
+    },
+    "metier": "batteur"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile noir de studio entre les pages, ouverture de chaque page ligne par ligne",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : nom en capitales (Delmas en rouge), musique, méthodes, clinics et studio, bio et matériel, contact, FR/EN, panier, bouton rouge « Engager Gabriel »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur noir, liens en Big Shoulders",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Gabriel Delmas le groove d’abord",
+      "role": "ouverture",
+      "description": "Ouverture sur noir : « Gabriel Delmas » en très grandes capitales et « le groove d'abord » en italique rouge ; sous le titre, une grille de 16 pas qui joue en silence, un halo qui bat la grosse caisse du motif ; portrait de Gabriel avec sa caisse claire rouge, boutons écouter New Step et engager Gabriel",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "grille de 16 pas qui joue en silence dans l'ouverture",
+        "halo qui bat la grosse caisse"
+      ]
+    },
+    "album": {
+      "titre": "New Step",
+      "role": "portfolio",
+      "description": "« New Step » sur la pierre : la pochette, le quartet, les onze titres ; la piste en cours (tête de lecture rouge) suit le défilement, boutons Spotify et plateformes",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "tête de lecture qui suit le défilement"
+      ]
+    },
+    "videos": {
+      "titre": "En vidéo",
+      "role": "galerie",
+      "description": "« En vidéo » sur noir : rangée de vidéos du trio (club, studio, invités) qui glisse pendant que la section passe, lien vers la chaîne",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "groove": {
+      "titre": "Koum, Ka, groove",
+      "role": "outil-interactif",
+      "description": "« Koum, Ka, groove » : séquenceur de 16 pas jouable (grosse caisse « Koum », caisse claire « Ka », ghost notes) ; on allume des cases, on lance la boucle, on règle le tempo ; motifs basique, ghost notes et New Orleans, syllabe en très grand à droite, sons synthétisés après un clic",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "jeu",
+        "ambiance-sonore"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Le son ne part qu'après un clic du visiteur",
+        "La boucle s'arrête quand on quitte la section"
+      ],
+      "particularites": [
+        "séquenceur de batterie jouable avec syllabes Koum et Ka"
+      ]
+    },
+    "methodes": {
+      "titre": "Du pad vers le groove",
+      "role": "produits",
+      "description": "« Du pad vers le groove » sur noir : chiffres en rouge (300 exercices, 195 vidéos, 108 pages), trois couvertures de méthodes qui montent à des vitesses différentes, bouton voir les méthodes",
+      "animations": [
+        "parallaxe",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics": {
+      "titre": "Clinics & studio",
+      "role": "services",
+      "description": "« Clinics & studio » sur la pierre : deux cartes photo (clinics et masterclass, batterie à distance) avec liens",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "scenes": {
+      "titre": "Sur scène avec les grands",
+      "role": "preuves",
+      "description": "« Sur scène avec les grands » : bandeau de noms géants qui défile (Sonny Emory, Aaron Spears, Robert Sput…) et des lieux en rouge (Moulin Rouge, Jazz in Marciac), photo de concert, texte",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "kit": {
+      "titre": "Sonor Vintage Red Oyster",
+      "role": "decor",
+      "description": "« Le kit » en lettres géantes sur la photo de la batterie Sonor Vintage Red Oyster, épinglée, qui s'ouvre en plein écran ; marques Sonor, Zildjian, Remo",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "dates": {
+      "titre": "Le quartet sur scène",
+      "role": "agenda",
+      "description": "« Le quartet sur scène » sur fond de club : dernières dates rangées au jour réel (passées marquées « Passé »), boutons programmer le quartet et engager Gabriel",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "statut des dates recalculé à la date du jour"
+      ]
+    },
+    "pied": {
+      "titre": "Écrire",
+      "role": "pied-de-page",
+      "description": "Pied de page noir : nom en capitales, adresses e-mail, sommaire, réseaux et plateformes, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Baguette perdue",
+      "role": "page-404",
+      "description": "404 « Baguette perdue » : une baguette oubliée sur une scène vide, retour à l'accueil",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bio-debut": {
+      "titre": "Une vie en rythme",
+      "role": "ouverture",
+      "description": "« Une vie en rythme » (en rythme en rouge) : Gabriel derrière sa batterie Sonor sur noir, bouton voir le parcours",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bio-parcours": {
+      "titre": "Le parcours",
+      "role": "étapes",
+      "description": "« Le parcours » sur la pierre : frise rouge dont le trait se trace au défilement (2 ans, 4 ans, Toulouse, 2015, 2017…), portrait épinglé à côté",
+      "animations": [
+        "trace-svg",
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "bio-scenes": {
+      "titre": "Scènes partagées",
+      "role": "preuves",
+      "description": "« Scènes partagées » sur noir : noms en capitales, invités des soirées groove, photo de concert",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "bio-materiel": {
+      "titre": "Le matériel",
+      "role": "produits",
+      "description": "« Le matériel » : grande photo du kit et liste pièce par pièce (batteries, cymbales, peaux), liens vers les marques",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics-et-studio-debut": {
+      "titre": "Transmettre le groove",
+      "role": "ouverture",
+      "description": "« Transmettre le groove » (le groove en rouge) sur une clinic dans une salle sombre, boutons organiser une clinic et enregistrement à distance",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics-et-studio-themes": {
+      "titre": "Ce qu'on travaille en clinic",
+      "role": "services",
+      "description": "« Ce qu'on travaille en clinic » : trois cartes noires numérotées (créativité, groove, méthode de travail)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics-et-studio-organiser": {
+      "titre": "Organiser une clinic",
+      "role": "contact",
+      "description": "« Organiser une clinic » sur noir : contacts de Gabriel et de Sonor, portrait à la caisse claire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics-et-studio-sessions": {
+      "titre": "Sessions intensives",
+      "role": "offre",
+      "description": "« Sessions intensives » dans l'Aveyron : salle de travail, liste (1 ou 2 jours, 7 h de batterie par jour, pension complète), boutons",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "clinics-et-studio-studio": {
+      "titre": "Batterie enregistrée à distance",
+      "role": "offre",
+      "description": "« Batterie enregistrée à distance » sur noir : home studio, enregistrement, remplacements, sideman, bouton",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre projet",
+      "role": "ouverture",
+      "description": "« Parlons de votre projet » (votre projet en rouge) : portrait en extérieur, réponse par e-mail, bouton commencer la demande",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » sur noir : demande en quatre étapes avec choix en cartes à pictogramme (programmer le quartet, clinic, enregistrement, remplacement, cours, méthodes), préremplie selon le bouton d'origine (?sujet=booking…), portrait épinglé",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-coordonnees": {
+      "titre": "Écrire directement",
+      "role": "contact",
+      "description": "« Écrire directement » : quatre cartes noires (Gabriel, booking du quartet, masterclass Sonor, réseaux)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-methodes-debut": {
+      "titre": "From pad to groove",
+      "role": "ouverture",
+      "description": "Méthodes (français et anglais) : « Du pad vers le groove » (le groove en rouge), portrait au pad sur noir, couvertures des trois livres en éventail, à partir de 15 €",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "couvertures en éventail"
+      ]
+    },
+    "en-methodes-livres": {
+      "titre": "The books",
+      "role": "produits",
+      "description": "« Les livres » sur la pierre : trois fiches épinglées l'une après l'autre (couverture, pour qui, ce qu'il y a dedans, avis, prix), ajout au panier en tiroir avec la pastille qui s'envole",
+      "animations": [
+        "section-fixée",
+        "empilement-de-fiches"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "panier-en-tiroir",
+      "pieges": [
+        "Commande simulée"
+      ]
+    },
+    "en-methodes-feuilleter": {
+      "titre": "Look inside",
+      "role": "galerie",
+      "description": "« Feuilleter » sur noir : pages des méthodes en vignettes, visionneuse avec flèches",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-methodes-travailler": {
+      "titre": "Count, sing, groove",
+      "role": "méthode",
+      "description": "« Compter, chanter, groover » : trois étapes numérotées, photo du pad et du métronome (générée), questions sur les méthodes",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-musique-debut": {
+      "titre": "New Step",
+      "role": "ouverture",
+      "description": "Musique (français et anglais) : « NEW STEP » géant sur la pierre et photo du quartet, sortie et label, boutons écouter et programmer",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-musique-album": {
+      "titre": "Eleven tracks",
+      "role": "portfolio",
+      "description": "« Onze titres » sur noir : la pochette et la liste des titres ; la piste en cours suit le défilement, lien vers la vidéo de Herbie N Be",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "en-musique-quartet": {
+      "titre": "The quartet",
+      "role": "équipe",
+      "description": "« Le quartet » : les quatre musiciens numérotés et leur instrument, photo en studio",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-musique-videos": {
+      "titre": "The quartet on video",
+      "role": "galerie",
+      "description": "« Le quartet en vidéo » sur noir : une grande vidéo et ses vignettes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-musique-dates": {
+      "titre": "Live",
+      "role": "agenda",
+      "description": "« Sur scène » : dates passées marquées toutes seules, booking du quartet par e-mail",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
