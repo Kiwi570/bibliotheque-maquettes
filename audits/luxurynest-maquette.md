@@ -1,14 +1,14 @@
 # luxurynest-maquette
 
-<https://luxurynest-maquette.vercel.app> · audit du 12/11/2026 · dernier commit dd2e24c du 04/11/2026
+<https://luxurynest-maquette.vercel.app> · audit du 26/11/2026 · dernier commit 8d0f92d du 19/11/2026
 
-> Audit d'entrée en bibliothèque : inventaire de la bibliothèque (28 pages, captures 1440 et 390, aucune erreur de console), audit, contrastes et tests Playwright du projet (outils/audit.py, contraste.py, tests_refonte.py) et lecture des captures ; maquette antérieure au script d'audit de la skill. Pas d'audit externe : la note est à confirmer.
+> Audit d'entrée en bibliothèque : mise à jour du 26 novembre 2026 (V2, commit 8d0f92d du 19 novembre) : message du commit et compte rendu de la V2 (corrections d'Hélène du 18 novembre), tests du projet (53/53, 75/75, 65/65), inventaire de la bibliothèque (30 pages, captures 1440 et 390) et lecture des captures ; maquette antérieure au script d'audit de la skill. Remplace l'audit du 4 novembre. Pas d'audit externe : la note est à confirmer.
 
 ## Verdict
 
-**85/100 · Prête à envoyer · 0 défaut bloquant**
+**86/100 · Prête à envoyer · 0 défaut bloquant**
 
-Direction « L'île sur mesure » pour une agence d'immobilier de prestige à Maurice : charte officielle respectée, Bodoni Moda et Jost, sceau LN qui tourne, lagon qui ondule en WebGL, carte de l'île qui s'éclaire selon les envies, journée à Maurice au défilement. Très soignée, élégante et complète (vraie recherche immobilière), dans le registre attendu du luxe.
+Direction « L'île sur mesure » pour une agence d'immobilier de prestige à Maurice : charte officielle, Bodoni Moda et Jost, sceau LN, lagon qui ondule en WebGL, carte de l'île qui s'éclaire selon les envies. La V2 intègre les corrections de la fondatrice : textes recentrés sur le conseil, L'Agence refaite, vrai barème d'honoraires, recherche plus juste, repères sourcés pour s'installer à Maurice. Élégante, complète et maintenant validée par la cliente.
 
 ## Notes
 
@@ -19,11 +19,11 @@ Direction « L'île sur mesure » pour une agence d'immobilier de prestige à Ma
 | 3. Animations et effets | 12/15 | Sceau, WebGL du lagon, journée au défilement, régions en relief, galerie épinglée, visite immersive, sceau entre les pages. |
 | 4. Expérience ludique et interactions | 9/10 | Recherche immobilière complète, configurateur qui éclaire la carte, enveloppe à cacheter, favoris et partage, son du lagon. |
 | 5. Tous les formats | 13/15 | Captures 1440 et 390 propres sur les 28 pages, contrastes mesurés sur les photos. |
-| 6. Contenu et fiabilité | 8/10 | Un seul vrai bien, annonces de démonstration signalées ; honoraires et informations à compléter. |
+| 6. Contenu et fiabilité | 9/10 | Corrections de la cliente intégrées, barème d'honoraires réel, repères avec sources officielles ; un seul vrai bien, les autres annonces restent des démonstrations. |
 | 7. Technique et performance | 7/10 | Aucune erreur, WebGL seulement visible ; 39 Mo d'images. |
 | 8. Mise en ligne | 5/5 | noindex en maquette, sitemap, redirections, image de partage. |
 | 9. Accessibilité | 5/5 | Contraste réel mesuré pour chaque texte sur photo, clavier, version sans mouvement complète. |
-| **Total** | **85/100** | |
+| **Total** | **86/100** | |
 
 ## Points forts
 
@@ -45,5 +45,4 @@ Aucun.
 
 ### Finition
 
-1. **Honoraires** : barème à fournir. Effort : petit.
-2. **Safari** : WebGL du lagon et épinglages à contrôler sous WebKit. Effort : petit.
+1. **Safari** : WebGL du lagon et épinglages à contrôler sous WebKit. Effort : petit.
