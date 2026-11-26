@@ -1,0 +1,746 @@
+{
+  "maquette": {
+    "client": "sculpteur à la tronçonneuse des Laurentides, au Québec (Benoit Sauvageau, dit Bendigo) : toiles imprimées de ses sculptures sur bois, sur neige et de ses tableaux au pointillisme, commandées par courriel",
+    "activite": [
+      "artisanat",
+      "culture",
+      "commerce"
+    ],
+    "concept": [
+      "atelier",
+      "galerie"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "artisanal",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--noyer"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "DM Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Le trait de scie » : sciure, noyer et orange tronçonneuse, Bricolage Grotesque ; une intro où un coup de scie traverse l'écran en diagonale avec ses copeaux",
+      "ouverture : trois toiles en éventail qui flottent et suivent la souris en relief, sciure qui tombe doucement derrière",
+      "la toile en 3D : elle tourne sur elle-même au défilement (face, bordure miroir, cadre, dos signé) et se fait pivoter au doigt",
+      "« Essayez une toile au mur » : la toile choisie prend place au-dessus du canapé ; avant / après d'une souche à faire glisser ; parcours en cernes de tronc",
+      "catalogue filtrable par collection et version (couleur, noir et blanc), la toile ajoutée s'envole vers « Ma demande », qui prépare le courriel"
+    ],
+    "reserves": [
+      "catalogue limité à 9 images sur 128 (diaporamas Wix non récupérables) ; cinq illustrations générées",
+      "pas de commande en ligne : tout se règle par courriel"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "canvas-2d",
+      "parallaxe",
+      "section-fixée",
+      "révélation-texte",
+      "compteur",
+      "galerie-horizontale",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "comparateur",
+      "filtres",
+      "galerie-cliquable",
+      "configurateur",
+      "formulaire-par-étapes",
+      "panier-simule"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "objet-unique",
+    "grille": {
+      "objet": "la toile qui tourne de la face au dos signé",
+      "fil": "le trait de scie en diagonale et la sciure"
+    },
+    "metier": "sculpteur à la tronçonneuse"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro : la signature de Bendigo, puis un coup de scie traverse l'écran en diagonale et lâche des copeaux ; voile noyer entre les pages",
+      "animations": [
+        "ouverture-orchestrée",
+        "trace-svg",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "coup de scie en diagonale avec copeaux à l'ouverture"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête sciure : logo Bendigo, toiles, sculptures, l'artiste, contact, bouton orange « Commander une toile » qui rebondit quand une toile est ajoutée",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur noyer",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Le Magicien à la tronçonneuse",
+      "role": "ouverture",
+      "description": "« Le Magicien à la tronçonneuse » (tronçonneuse en orange) : trois vraies toiles en éventail qui flottent et suivent la souris en relief, sciure qui tombe doucement en canvas derrière, boutons voir les toiles et comment commander",
+      "animations": [
+        "ouverture-orchestrée",
+        "parallaxe",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toiles en éventail qui suivent la souris en relief",
+        "sciure qui tombe derrière le premier écran"
+      ]
+    },
+    "toile-reelle": {
+      "titre": "Mettez de la vie dans votre environnement avec une toile d'œuvre réelle.",
+      "role": "chiffres",
+      "description": "« Mettez de la vie dans votre environnement avec une toile d'œuvre réelle » : toile au mur d'une chambre, chiffres (130 images, environ 300, 55 po)",
+      "animations": [
+        "compteur",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "collections": {
+      "titre": "Trois collections",
+      "role": "services",
+      "description": "« Trois collections » : sculptures sur bois, sur neige, tableaux et murales en grandes cartes photo avec nombre d'images",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "la-toile": {
+      "titre": "Une vraie toile, de la face au dos",
+      "role": "outil-interactif",
+      "description": "« Une vraie toile, de la face au dos » épinglé : la toile tourne sur elle-même au défilement (l'image entière, les bordures miroir, le cadre rigide, la signature au dos) et se fait pivoter au doigt, puis revient avec un ressort",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toile en 3D qui tourne de la face au dos signé"
+      ]
+    },
+    "sur-le-mur": {
+      "titre": "Imaginez-la au mur",
+      "role": "galerie",
+      "description": "« Imaginez-la au mur » : rangée de toiles et de mises en situation qui glisse, titres et codes sous chaque image",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculpteur": {
+      "titre": "Dix-neuf ans de copeaux",
+      "role": "équipe",
+      "description": "« Dix-neuf ans de copeaux » : Bendigo assis entre deux sculptures, « 2004 → 2023 » avec un cerne de bois, boutons",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "commander": {
+      "titre": "Commander en quatre étapes",
+      "role": "étapes",
+      "description": "« Commander en quatre étapes » : quatre cartes numérotées en orange (choisissez, écrivez, Bendigo confirme, recevez), paiement Interac ou comptant",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Une œuvre réelle, chez vous.",
+      "role": "appel",
+      "description": "Appel de fin « Une œuvre réelle, chez vous. » sur noyer : grand logo Bendigo en blanc, préparer ma demande et voir les toiles, bouton orange",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Écrire",
+      "role": "pied-de-page",
+      "description": "Pied de page noyer : logo, courriel, Facebook, sommaire, mentions",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visuellement-cache": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "élément masqué pour les lecteurs d'écran (la capture montre le pied de page)"
+    },
+    "404-debut": {
+      "titre": "Coupe de travers",
+      "role": "page-404",
+      "description": "404 « Coupe de travers » : une bûche sciée de travers sur un billot dans la forêt, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-debut": {
+      "titre": "Bendigo",
+      "role": "ouverture",
+      "description": "« Bendigo » : portrait du sculpteur à la casquette, « 2004 » géant en filigrane, bouton voir ses toiles",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-parcours": {
+      "titre": "Le parcours, cerne par cerne",
+      "role": "étapes",
+      "description": "« Le parcours, cerne par cerne » : un grand cerne de bois épinglé affiche l'année, les étapes (extraits du journal « Le Mont-Réel ») défilent à côté",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "parcours en cernes de tronc"
+      ]
+    },
+    "artiste-sculpture-rapide": {
+      "titre": "Sculpture rapide et spectacles",
+      "role": "portfolio",
+      "description": "« Sculpture rapide et spectacles » : deux photos de démonstrations, citation « Toutes les idées ont un potentiel… »",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-geste": {
+      "titre": "Une signature dans le mouvement",
+      "role": "manifeste",
+      "description": "« Une signature dans le mouvement » sur noyer : grand logo et texte sur le geste à la tronçonneuse",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "artiste-fin": {
+      "titre": "Ses œuvres, chez vous",
+      "role": "appel",
+      "description": "Appel de fin « Ses œuvres, chez vous » sur noyer : les sculptures ne se commandent plus, les toiles oui, bouton orange",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Commander une toile",
+      "role": "ouverture",
+      "description": "« Commander une toile » : l'atelier en rondins sous la neige (illustration générée), bouton préparer ma demande",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Ma demande",
+      "role": "contact",
+      "description": "« Ma demande » : les toiles choisies (gardées d'une page à l'autre), nom, courriel, région, taille, réception ; le courriel se prépare tout seul",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Ouvre la messagerie du visiteur"
+      ]
+    },
+    "contact-reception": {
+      "titre": "Paiement et réception",
+      "role": "étapes",
+      "description": "« Paiement et réception » : quatre cartes numérotées (paiement, ramassage à l'atelier, livraison par Bendigo, transporteur)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-faq": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "« Questions fréquentes » : codes NB, mod, tag et 3D, intelligence artificielle, tailles, entretien, délais",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-fin": {
+      "titre": "Encore à choisir ?",
+      "role": "appel",
+      "description": "Appel de fin « Encore à choisir ? » sur noyer : le catalogue vous attend, bouton orange",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-debut": {
+      "titre": "Sculptures",
+      "role": "ouverture",
+      "description": "« Sculptures » : archives 2004 à 2023, grand aigle en bois sculpté et son auteur, bouton voir les toiles",
+      "animations": [
+        "révélation-texte",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-souche": {
+      "titre": "Un arbre tombe, une sculpture se lève",
+      "role": "galerie",
+      "description": "« Un arbre tombe, une sculpture se lève » : souches sculptées sur place (ours, totems) en grandes photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-sept-pieds": {
+      "titre": "",
+      "role": "decor",
+      "description": "« Gardez 7 à 8 pieds » : une haute souche dans la forêt (illustration générée), photo des souches avant sculpture",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-avant-apres": {
+      "titre": "Ouverture éclaire d'un songe",
+      "role": "outil-interactif",
+      "description": "« Avant, après » : le même tronc debout puis taillé en oiseau ; on fait glisser le curseur pour comparer",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "comparateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "avant-apres",
+      "pieges": []
+    },
+    "sculptures-collection": {
+      "titre": "La collection",
+      "role": "galerie",
+      "description": "« La collection » : sculptures fusionnées en mosaïque de photos décalées",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-bancs": {
+      "titre": "Bancs de jardin",
+      "role": "galerie",
+      "description": "« Bancs de jardin » : rangée de bancs sculptés qui glisse (aigle, guitare et botte, castors)",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-neige": {
+      "titre": "Elles attirent l'attention et rapprochent les gens",
+      "role": "galerie",
+      "description": "« Elles attirent l'attention et rapprochent les gens » : bloc de neige sur fond nocturne, puis les sculptures sur neige en mosaïque",
+      "animations": [
+        "parallaxe",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "sculptures-fin": {
+      "titre": "Ces œuvres existent en toile",
+      "role": "appel",
+      "description": "Appel de fin « Ces œuvres existent en toile » sur noyer : choisissez votre image dans le catalogue, bouton orange",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "toiles-debut": {
+      "titre": "Les toiles",
+      "role": "ouverture",
+      "description": "« Les toiles » en très grand, bandeau de toiles en bas, bouton parcourir le catalogue",
+      "animations": [
+        "révélation-texte",
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "toiles-catalogue": {
+      "titre": "Choisir une toile",
+      "role": "produits",
+      "description": "« Choisir une toile » : catalogue filtrable par collection et par version (couleur, noir et blanc), grille qui se réorganise, chaque toile s'ouvre dans la visionneuse (?voir=…) et s'ajoute à la demande",
+      "animations": [
+        "filtre-anime",
+        "flip"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "catalogue-filtres-flip",
+      "pieges": []
+    },
+    "toiles-decor": {
+      "titre": "Essayez une toile au mur",
+      "role": "outil-interactif",
+      "description": "« Essayez une toile au mur » : on choisit une toile dans la liste, elle prend place au-dessus du canapé d'un salon de chalet, à sa proportion ; mises en situation de Bendigo dessous",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Proportions indicatives"
+      ],
+      "particularites": [
+        "la toile choisie posée au mur d'un salon"
+      ]
+    },
+    "toiles-la-toile": {
+      "titre": "La toile, en détail",
+      "role": "produits",
+      "description": "« La toile, en détail » : grande toile d'aigle et liste (canevas, 55 po, cadre MDF, bordures miroir, encre Latex, signée au dos)",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "toiles-fin": {
+      "titre": "Votre sélection est prête ?",
+      "role": "appel",
+      "description": "Appel de fin « Votre sélection est prête ? » sur noyer : les toiles ajoutées attendent dans la demande, bouton orange",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "toiles-visionneuse": {
+      "titre": "Agrandir",
+      "role": "galerie",
+      "description": "Visionneuse des toiles : agrandissement, flèches, ajouter à ma demande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable",
+        "panier-simule"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    }
+  }
+}

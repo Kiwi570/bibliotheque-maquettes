@@ -1,0 +1,50 @@
+{
+ "id": "creationsbendigo-maquette/la-toile",
+ "maquette": "creationsbendigo-maquette",
+ "page": "index",
+ "titre": "Une vraie toile, de la face au dos",
+ "role": "outil-interactif",
+ "description": "« Une vraie toile, de la face au dos » épinglé : la toile tourne sur elle-même au défilement (l'image entière, les bordures miroir, le cadre rigide, la signature au dos) et se fait pivoter au doigt, puis revient avec un ressort",
+ "animations": [
+  "section-fixée",
+  "progression-fixée"
+ ],
+ "interactions": [
+  "jeu"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "simplifié",
+ "note_qualite": 5,
+ "reutilisable": true,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:196-230",
+  "css": "assets/css/socle.css:263-265 ; assets/css/site.css:143-180,265-272,293-296,305-309",
+  "js": "assets/js/site.js:241-256,272-298,567 ; assets/js/socle/effets.js:17,151-158,269-283 ; assets/js/socle/defilement.js:100-108 ; assets/js/socle/entete.js:84-165"
+ },
+ "medias": {
+  "capture": "medias/creationsbendigo-maquette/la-toile-p1440.jpg",
+  "capture_m390": "medias/creationsbendigo-maquette/la-toile-m390.jpg",
+  "video": "medias/creationsbendigo-maquette/la-toile-p720.mp4"
+ },
+ "pieges": [],
+ "particularites": [
+  "toile en 3D qui tourne de la face au dos signé"
+ ],
+ "mesures": {
+  "hauteur_p1440": 2430,
+  "hauteur_m390": 2110,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [
+  "3d",
+  "objet-manipulable",
+  "scene-epinglee"
+ ],
+ "impact": "spectaculaire"
+}
