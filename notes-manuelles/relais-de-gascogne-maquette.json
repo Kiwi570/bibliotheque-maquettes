@@ -1,0 +1,651 @@
+{
+  "maquette": {
+    "client": "hôtel-restaurant de village à Mézin (Lot-et-Garonne), au pays de l'Armagnac, tenu par Valérie et Etienne Soufflet : 17 chambres, cuisine gasconne de saison, salle de 120 places pour les fêtes et les groupes en autocar",
+    "activite": [
+      "restauration",
+      "hébergement",
+      "tourisme"
+    ],
+    "concept": [
+      "vitrine",
+      "carte"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "clair",
+      "artisanal"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--accent",
+      "secondaire": "--bleu"
+    },
+    "polices": {
+      "titres": "Fraunces",
+      "texte": "Figtree",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Volets bleus » : crème de la façade, bleu des volets et du logo, rouge des géraniums ; Fraunces avec un mot en italique bleu, grands blocs bleus pour les appels, une fenêtre aux volets ouverts sur les vignes de l'Armagnac à l'ouverture",
+      "détails ludiques et utiles : composeur de menu où l'on touche une entrée et un plat, estimateur de séjour par saison dont le total se compose, schéma de la salle où les 120 couverts s'allument",
+      "panneau indicateur dont les lames pivotent au défilement, clé de chambre qui se balance selon la vitesse, photos de la maison qui passent devant au toucher, plan d'accès qui se trace",
+      "site en français et en anglais, demande en trois étapes avec récapitulatif et tampon « demande simulée »"
+    ],
+    "reserves": [
+      "beaucoup d'illustrations générées (galeries Wix non récupérées) ; horaires, dates de saison et textes légaux à fournir"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "masque",
+      "révélation-texte",
+      "section-fixée",
+      "marquee",
+      "trace-svg",
+      "reactif-vitesse",
+      "compteur",
+      "apparition-au-défilement",
+      "transition-de-page"
+    ],
+    "interactions": [
+      "configurateur",
+      "calculateur",
+      "formulaire-par-étapes",
+      "schema-interactif",
+      "galerie-cliquable"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la fenêtre aux volets bleus ouverte sur le pays",
+      "fil": "le bleu des volets qui revient en grands blocs"
+    },
+    "metier": "hôtel-restaurant"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile : deux volets bleus s'ouvrent sur la page puis passent de profil et se retirent ; entre les pages, la page se découvre pendant que son titre monte",
+      "animations": [
+        "ouverture-orchestrée",
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "volets bleus qui s'ouvrent sur la page à l'arrivée"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête crème : logo calligraphié à la plaque rouge, la table, les chambres, groupes et réceptions, réserver et venir, EN, bouton rouge « Réserver »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone avec le numéro et la version anglaise",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Une table et des chambres au pays de l'Armagnac",
+      "role": "ouverture",
+      "description": "« Une table et des chambres au pays de l'Armagnac » à gauche ; à droite une fenêtre aux volets bleus ouverts sur un village et ses vignes, géraniums au premier plan ; boutons table et téléphone, prix d'appel",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "fenêtre aux volets bleus ouverte sur le paysage comme image d'ouverture"
+      ]
+    },
+    "table": {
+      "titre": "Une cuisine de Gascogne qui suit les saisons",
+      "role": "offre",
+      "description": "« Une cuisine de Gascogne qui suit les saisons » : ardoise des menus dont les points de conduite et les filets se tracent jusqu'aux prix, photos en arche",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "ardoise des menus aux points de conduite qui se tracent"
+      ]
+    },
+    "saveurs": {
+      "titre": "Les saveurs du pays",
+      "role": "decor",
+      "description": "« Les saveurs du pays » : Armagnac, foie gras, canard, pruneaux en deux bandeaux Fraunces qui défilent en sens contraires",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres": {
+      "titre": "Dormir au Relais, volets ouverts sur le village",
+      "role": "offre",
+      "description": "« Dormir au Relais, volets ouverts sur le village » sur bleu : photo de chambre, chiffres 17 chambres, dès 53 €, soirée étape 80 €, petit-déjeuner ; une clé de chambre se balance selon la vitesse du défilement",
+      "animations": [
+        "reactif-vitesse",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "clé de chambre qui se balance selon la vitesse du défilement"
+      ]
+    },
+    "maison": {
+      "titre": "Une maison de village, à l'entrée de Mézin",
+      "role": "équipe",
+      "description": "« Une maison de village, à l'entrée de Mézin » : Valérie et Etienne, couverts en salle et en terrasse, photos posées comme des tirages dont celle qu'on touche passe devant",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pays": {
+      "titre": "",
+      "role": "decor",
+      "description": "« Au pays de l'Armagnac » épinglé : une petite photo du village au milieu du crème s'agrandit jusqu'au plein écran au défilement",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "autour": {
+      "titre": "Au pays de l'Armagnac, du foie gras et des pruneaux",
+      "role": "carte",
+      "description": "« Au pays de l'Armagnac, du foie gras et des pruneaux » : panneau indicateur dont les lames bleues, rouges et crème pivotent en place au défilement (Gers 10 km, Landes 10 km, océan 120 km, Lourdes 120 km), lieux à visiter",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "panneau indicateur dont les lames pivotent au défilement"
+      ]
+    },
+    "salle": {
+      "titre": "Une salle de 120 places pour vos fêtes",
+      "role": "offre",
+      "description": "« Une salle de 120 places pour vos fêtes » : « 120 » rouge en très grand, photos de la salle, bouton",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Une table, une chambre ? Appelez-nous",
+      "role": "appel",
+      "description": "« Une table, une chambre ? Appelez-nous » : carte crème posée sur la photo de la terrasse sous les arbres, numéro en grand",
+      "animations": [
+        "apparition-au-défilement",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Nous trouver",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu : logo, adresse, téléphone, e-mail, Facebook, sommaire",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Volets clos",
+      "role": "page-404",
+      "description": "404 « Volets clos » sur des volets bleus fermés et un pot de géraniums : « La maison, elle, vous attend toujours »",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-debut": {
+      "titre": "17 chambres pour l'étape ou le séjour",
+      "role": "ouverture",
+      "description": "« 17 chambres pour l'étape ou le séjour » en Fraunces avec un mot en italique bleu : texte et bouton à droite, grande photo d'une chambre ensoleillée qui s'ouvre en dessous",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-equipements": {
+      "titre": "Toute équipée, soignée",
+      "role": "services",
+      "description": "« Toute équipée, soignée » : icônes douche, WC, lavabo, télévision, wifi, citation du site et photos des chambres",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-tarifs": {
+      "titre": "Le prix de la nuit, saison par saison",
+      "role": "calculateur",
+      "description": "« Le prix de la nuit, saison par saison » : bascule basse ou haute saison, tableau des prix ; estimateur de séjour (type de chambre, nuits, petit-déjeuner) dont le total se compose à l'entrée puis suit chaque choix",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "estimateur de séjour par saison au total qui se compose"
+      ]
+    },
+    "chambres-formules": {
+      "titre": "Pour une nuit ou pour la semaine",
+      "role": "tarifs",
+      "description": "« Pour une nuit ou pour la semaine » : soirée étape, demi-pension, pension, petit-déjeuner en liste à prix rouges, photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "chambres-fin": {
+      "titre": "Une chambre pour ce soir ?",
+      "role": "appel",
+      "description": "« Une chambre pour ce soir ? » sur bleu des volets : phrase courte, numéro en très grand souligné d'un trait, bouton de demande et adresse",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-groupes-debut": {
+      "titre": "Celebrations, banquets and group days",
+      "role": "ouverture",
+      "description": "« Fêtes, banquets et journées de groupe » en Fraunces avec un mot en italique bleu : « 120 » rouge en très grand, grande photo de la salle dressée",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-groupes-salle": {
+      "titre": "Fully equipped, with parking",
+      "role": "outil-interactif",
+      "description": "« Toute équipée, avec parking » : types de fêtes en étiquettes, schéma de la salle où les 120 couverts s'allument table par table, photos",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "schéma de salle dont les 120 couverts s'allument"
+      ]
+    },
+    "en-groupes-journee": {
+      "titre": "A day in Mézin, from morning to teatime",
+      "role": "étapes",
+      "description": "« Une journée à Mézin, du matin au goûter » sur bleu : pour les autocars, frise qui se dessine et étapes qui s'allument (musée du liège, déjeuner au Relais à 26 ou 31 €, après-midi au choix)",
+      "animations": [
+        "trace-svg",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "journée de groupe en frise qui se dessine"
+      ]
+    },
+    "en-groupes-autour": {
+      "titre": "To discover in our lovely region",
+      "role": "galerie",
+      "description": "« À découvrir dans notre belle région » : lieux à visiter, encart saisonnier et vignettes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-groupes-fin": {
+      "titre": "Let's talk about your group",
+      "role": "appel",
+      "description": "« Parlons de votre groupe » sur bleu des volets : date, nombre d'invités, menu, numéro en très grand souligné d'un trait, bouton de demande et adresse",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-la-table-debut": {
+      "titre": "Gascon cooking, in season",
+      "role": "ouverture",
+      "description": "« Cuisine gasconne, de saison » en Fraunces avec un mot en italique bleu : menus de 16,50 à 33 €, grande photo de légumes et de châtaignes en arche",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-la-table-menus": {
+      "titre": "Four menus, from lunch to dinner",
+      "role": "outil-interactif",
+      "description": "« Quatre menus, du déjeuner au dîner » : quatre cartes de menu ; on touche une entrée et un plat et le menu se compose, soupière dessinée",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "composeur de menu : on touche une entrée et un plat"
+      ]
+    },
+    "en-la-table-specialites": {
+      "titre": "The house specialities",
+      "role": "produits",
+      "description": "« Les spécialités de la maison » sur bleu : salade gasconne, assiette gourmande, magret, confit en grande Fraunces, photo",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-la-table-salle": {
+      "titre": "Indoors or under the trees",
+      "role": "services",
+      "description": "« À l'intérieur ou sous les arbres » : couverts en salle et en terrasse, allergènes, photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-la-table-fin": {
+      "titre": "Book a table",
+      "role": "appel",
+      "description": "« Réserver une table » sur bleu des volets : un appel suffit, numéro en très grand souligné d'un trait, bouton de demande et adresse",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-reserver-debut": {
+      "titre": "A table, a room, a function room",
+      "role": "ouverture",
+      "description": "« Une table, une chambre, une salle » en Fraunces avec un mot en italique bleu : photo d'une sonnette de réception et de géraniums, numéro en grand rouge, e-mail",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "en-reserver-demande": {
+      "titre": "In three steps",
+      "role": "contact",
+      "description": "« En trois étapes » : table, chambre ou groupe en cartes, détails, coordonnées ; récapitulatif bleu à côté qui reçoit un tampon « demande simulée »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "tampon « demande simulée » sur le récapitulatif"
+      ]
+    },
+    "en-reserver-acces": {
+      "titre": "At the entrance to Mézin, on the RD 656",
+      "role": "carte",
+      "description": "« À l'entrée de Mézin, par la RD 656 » : schéma d'accès où les routes depuis Nérac, les Landes, l'océan et Lourdes se tracent, Mézin bat doucement",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "schéma d'accès aux routes qui se tracent"
+      ]
+    }
+  }
+}
