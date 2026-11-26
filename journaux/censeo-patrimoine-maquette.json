@@ -1,0 +1,153 @@
+{
+ "projet": "censeo-patrimoine-maquette",
+ "client": "Censeo Patrimoine",
+ "siteActuel": "https://www.censeopatrimoine.fr",
+ "versions": [
+  {
+   "version": 1,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "offre-financiere",
+    "offre-immobiliere",
+    "cabinet",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse, bibliothèque et questions",
+     "budget": 20,
+     "debut": "2026-11-20T17:28:13+01:00",
+     "fin": "2026-11-20T17:36:30+01:00"
+    },
+    {
+     "etape": "plans, images du site et document Grok",
+     "budget": 10,
+     "debut": "2026-11-20T17:36:30+01:00",
+     "fin": "2026-11-20T17:41:00+01:00"
+    },
+    {
+     "etape": "construction : socle, données, composants et accueil",
+     "budget": 40,
+     "debut": "2026-11-20T17:41:00+01:00",
+     "fin": "2026-11-20T18:24:00+01:00"
+    },
+    {
+     "etape": "aperçu de l'accueil en films (attente de la réponse notée à part)",
+     "budget": 5,
+     "debut": "2026-11-20T18:18:00+01:00",
+     "fin": "2026-11-20T18:25:00+01:00"
+    },
+    {
+     "etape": "construction : pages d'onglet, contact et 404",
+     "budget": 40,
+     "debut": "2026-11-20T18:26:00+01:00",
+     "fin": "2026-11-20T18:33:00+01:00"
+    },
+    {
+     "etape": "audit standard, passe des formats, regard neuf et corrections",
+     "budget": 25,
+     "debut": "2026-11-20T18:33:00+01:00",
+     "fin": "2026-11-20T19:25:00+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-20T19:25:00+01:00",
+     "fin": "2026-11-20T19:32:00+01:00"
+    }
+   ],
+   "attentes": [
+    {
+     "pour": "réponses aux questions (directions, pages, rendements, langues)",
+     "debut": "2026-11-20T17:36:00+01:00",
+     "fin": "2026-11-20T17:36:30+01:00"
+    },
+    {
+     "pour": "images Grok",
+     "debut": "2026-11-20T17:41:00+01:00",
+     "fin": "2026-11-20T18:09:00+01:00"
+    }
+   ],
+   "allersRetours": 3,
+   "modules": [
+    "formulaire-par-etapes"
+   ],
+   "audit": {
+    "niveau": "standard + passe des formats",
+    "echecsPremierPassage": 20,
+    "relances": 4,
+    "corrections": [
+     "contraste des petits ors",
+     "titre d'ouverture translate (GSAP y en px)",
+     "images Grok verticales agrandies à 1320 px de large",
+     "premier écran sans JavaScript en 1000×560",
+     "aperçus flous sous les images d'ouverture",
+     "chevauchement des repères à 1920"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "Attentes : réponses aux questions 30 s, images Grok 28 min (travail continué pendant l'attente : socle, pages, styles, audit rapide)."
+  },
+  {
+   "version": 2,
+   "skill": "v11.1",
+   "perimetre": [
+    "accueil",
+    "offre-financiere",
+    "offre-immobiliere",
+    "cabinet",
+    "contact",
+    "404"
+   ],
+   "etapes": [
+    {
+     "etape": "analyse complète (captures, films, critères du regard)",
+     "budget": 15,
+     "debut": "2026-11-23T15:02:19+01:00",
+     "fin": "2026-11-23T15:05:00+01:00"
+    },
+    {
+     "etape": "améliorations : clé de voûte, mur à composer, pinceau, fil du logo, curseur des années, cachet, téléphone",
+     "budget": 60,
+     "debut": "2026-11-23T15:05:00+01:00",
+     "fin": "2026-11-23T15:11:10+01:00"
+    },
+    {
+     "etape": "audit complet, corrections, audit complet final",
+     "budget": 50,
+     "debut": "2026-11-23T15:11:10+01:00",
+     "fin": "2026-11-23T16:17:32+01:00"
+    },
+    {
+     "etape": "livraison",
+     "budget": 5,
+     "debut": "2026-11-23T16:17:32+01:00",
+     "fin": ""
+    }
+   ],
+   "attentes": [],
+   "allersRetours": 0,
+   "modules": [
+    "formulaire-par-etapes"
+   ],
+   "audit": {
+    "niveau": "complet",
+    "echecsPremierPassage": 1,
+    "relances": 3,
+    "corrections": [
+     "déclencheurs mesurés sous une apparition en cascade (décalage de 29 px) : cascade retirée autour des images en parallaxe et des étapes",
+     "texte du mur de longueur constante",
+     "typographie des textes écrits par le script",
+     "clé posée sans animation au retour arrière",
+     "trait de pinceau joué hors de la timeline d'intro"
+    ]
+   },
+   "effetsRetires": [],
+   "grilleDispenses": {},
+   "notes": "v2 demandée : audit complet, analyse de tout le site et améliorations (plus ludique, attrayant, haut niveau)."
+  }
+ ]
+}

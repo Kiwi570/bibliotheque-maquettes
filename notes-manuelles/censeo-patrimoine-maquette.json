@@ -1,0 +1,773 @@
+{
+  "maquette": {
+    "client": "cabinet de conseil en gestion de patrimoine à Montpellier, rue de la Loge, depuis 2004 (Censeo Patrimoine, Jean-Marie Kassigian) : diagnostic patrimonial, placements financiers, SCPI, nue-propriété, immobilier direct et aux États-Unis",
+    "activite": [
+      "finance",
+      "conseil",
+      "immobilier"
+    ],
+    "concept": [
+      "dossier",
+      "vitrine"
+    ],
+    "ambiance": [
+      "luxueux",
+      "minéral",
+      "sobre"
+    ],
+    "palette": {
+      "fond": "--pierre",
+      "texte": "--texte",
+      "accent": "--or",
+      "secondaire": "--nuit"
+    },
+    "polices": {
+      "titres": "Instrument Serif",
+      "texte": "Hanken Grotesk",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « La rue dorée » : pierre blonde de l'Écusson, bleu nuit et or doux, Instrument Serif avec un mot en italique or ; censeo veut dire « j'estime » et le patrimoine se bâtit pierre à pierre",
+      "ouverture : une arche de pierre dont on pose la clé de voûte (« Posez la clé ») sur une cour d'hôtel particulier",
+      "« Un patrimoine se bâtit par assises » : un mur de pierres à composer (fondation puis assises), qui préremplit la demande de rendez-vous",
+      "curseur des années du démembrement en nue-propriété, frise du parcours, cachet de cire posé à l'envoi de la demande"
+    ],
+    "reserves": [
+      "illustrations générées (cour, arches, bureau, portrait au cabinet) en attendant de vraies photos ; mentions et assurance à confirmer",
+      "beaucoup de texte réglementaire sur les pages d'offre"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "parallaxe",
+      "section-fixée",
+      "trace-svg",
+      "compteur",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "configurateur",
+      "simulateur",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "l'arche dont on pose la clé de voûte",
+      "fil": "les pierres posées par assises"
+    },
+    "metier": "conseiller en gestion de patrimoine"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile bleu nuit entre les pages",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête pierre : logo typographique à l'arche, offre financière, offre immobilière, le cabinet, contact, bouton bleu nuit « Prendre rendez-vous »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur pierre, liens en Instrument Serif",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Bâtir un patrimoinequi dure.",
+      "role": "ouverture",
+      "description": "« Bâtir un patrimoine qui dure. » (dure en italique or) : une arche de pierre sur une cour d'hôtel particulier de l'Écusson ; on pose la clé de voûte (« Posez la clé ») et l'arche se ferme ; boutons rendez-vous et téléphone, ORIAS",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "clé de voûte à poser dans l'arche"
+      ]
+    },
+    "reperes": {
+      "titre": "Quelques repères",
+      "role": "chiffres",
+      "description": "« Quelques repères » : 2004, +30, 1993, 2011 en grands chiffres Instrument Serif qui comptent",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "metiers": {
+      "titre": "Le financier et la pierre, pensés ensemble.",
+      "role": "services",
+      "description": "« Le financier et la pierre, pensés ensemble. » : deux grandes photos en arches (fenêtre et façade) qui glissent à des vitesses différentes, liens vers les deux offres",
+      "animations": [
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pierre-a-pierre": {
+      "titre": "Un patrimoine se bâtit par assises.",
+      "role": "outil-interactif",
+      "description": "« Un patrimoine se bâtit par assises. » épinglé : un mur de pierres blondes (financer l'économie réelle, préparer la retraite, investir dans la pierre, protéger, épargner) ; on touche les pierres qui vous concernent, elles se posent sur la fondation du diagnostic ; le mur préremplit la demande de rendez-vous",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "configurateur",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "mur du patrimoine à composer qui préremplit le rendez-vous"
+      ]
+    },
+    "methode": {
+      "titre": "Quatre temps, et le suivi qui ne s'arrête pas.",
+      "role": "méthode",
+      "description": "« Quatre temps, et le suivi qui ne s'arrête pas. » sur bleu nuit : quatre temps (diagnostic, préconisations, mise en œuvre, suivi permanent) reliés par un fil or qui se trace, pastilles qui s'allument",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "conseiller": {
+      "titre": "Jean-Marie Kassigian",
+      "role": "équipe",
+      "description": "« Jean-Marie Kassigian » : portrait sur un bureau de pierre, parcours et engagements",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rue-doree": {
+      "titre": "Au cœur de la rue dorée.",
+      "role": "manifeste",
+      "description": "« Au cœur de la rue dorée » : la rue de la Loge en grande photo et l'histoire des orfèvres en carte posée dessus",
+      "animations": [
+        "parallaxe",
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transparence": {
+      "titre": "Ce qu'il faut savoir avant de commencer.",
+      "role": "preuves",
+      "description": "« Ce qu'il faut savoir avant de commencer. » : six cartes réglementaires (CIF, ORIAS, courtier, indépendance, rémunération, médiation)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "rendez-vous-final": {
+      "titre": "Parlons de votre patrimoine.",
+      "role": "appel",
+      "description": "« Parlons de votre patrimoine. » sur bleu nuit : arcades dorées, boutons rendez-vous et téléphone",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page bleu nuit : logo, adresse, sommaire, statuts, mentions et avertissement sur les risques",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page n'est pas au registre.",
+      "role": "page-404",
+      "description": "404 « Cette page n'est pas au registre. » : un registre ouvert sur un bureau de pierre, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-debut": {
+      "titre": "Un cabinet,un conseiller.",
+      "role": "ouverture",
+      "description": "« Un cabinet, un conseiller. » : « 2004 » en grand chiffre or, escalier de pierre en arche",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-parcours": {
+      "titre": "Un parcours, une adresse.",
+      "role": "étapes",
+      "description": "« Un parcours, une adresse. » : frise de 1993 à aujourd'hui qui se trace",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-censeo": {
+      "titre": "Censeo : « j'estime ».",
+      "role": "manifeste",
+      "description": "« Censeo : j'estime. » : le mot latin cēnseō en grand italique or, portrait, sens du nom",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-methode": {
+      "titre": "Quatre temps, pas à pas.",
+      "role": "méthode",
+      "description": "« Quatre temps, pas à pas. » sur bleu nuit : quatre temps (diagnostic, préconisations, mise en œuvre, suivi permanent) reliés par un fil or qui se trace, pastilles qui s'allument",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-statuts": {
+      "titre": "Statuts, rémunération, médiation.",
+      "role": "texte-legal",
+      "description": "« Statuts, rémunération, médiation. » : six cartes tirées du document d'entrée en relation",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-faq": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "« Questions fréquentes » : coût du conseil, indépendance, contrôle, réclamations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "cabinet-rendez-vous-final": {
+      "titre": "Faisons connaissance.",
+      "role": "appel",
+      "description": "« Faisons connaissance. » sur bleu nuit : l'arche dessinée au trait or et sa clé de voûte qui se pose, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Prendrerendez-vous.",
+      "role": "ouverture",
+      "description": "« Prendre rendez-vous. » : vieille porte de l'Écusson en arche, boutons, téléphone, e-mail, adresse",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-rendez-vous": {
+      "titre": "Votre demande, en trois étapes.",
+      "role": "contact",
+      "description": "« Votre demande, en trois étapes. » : sujet, coordonnées, vérification ; préremplie par le mur du patrimoine (?objet=…&sujets=…) ; à l'envoi un cachet de cire or se pose sur la demande",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "cachet de cire posé à l'envoi"
+      ]
+    },
+    "contact-acces": {
+      "titre": "Venir au cabinet.",
+      "role": "carte",
+      "description": "« Venir au cabinet. » : rue piétonne de l'Écusson, tramway, parkings",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-debut": {
+      "titre": "Faire travailler votre épargne,sans perdre le fil.",
+      "role": "ouverture",
+      "description": "« Faire travailler votre épargne, sans perdre le fil. » : fil or qui se tend, photo",
+      "animations": [
+        "révélation-texte",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-sommaire-offre": {
+      "titre": "Les huit solutions",
+      "role": "menu",
+      "description": "Sommaire des huit solutions numérotées, liens vers chaque section",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-diagnostic": {
+      "titre": "Le diagnostic, avant tout.",
+      "role": "manifeste",
+      "description": "« Le diagnostic, avant tout. » : texte sur l'approche globale",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-contrats": {
+      "titre": "Les enveloppes du temps long.",
+      "role": "services",
+      "description": "« Les enveloppes du temps long. » : assurance vie, capitalisation, PER en cartes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-portefeuille": {
+      "titre": "Gérer un portefeuille, à deux mains.",
+      "role": "services",
+      "description": "« Gérer un portefeuille, à deux mains. » : gestion directe ou sous mandat",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-diversifier": {
+      "titre": "Diversifier, hors des sentiers battus.",
+      "role": "services",
+      "description": "« Diversifier, hors des sentiers battus. » : forêts, terres, œuvres d'art en photos qui glissent",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-fiscal": {
+      "titre": "Fiscalité, salariés et prévoyance.",
+      "role": "services",
+      "description": "« Fiscalité, salariés et prévoyance. » : dispositifs en cartes numérotées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-partenaires-liste": {
+      "titre": "Partenaires financiers cités par le cabinet",
+      "role": "preuves",
+      "description": "« Partenaires financiers » : liste des partenaires cités par le cabinet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-financiere-rendez-vous-final": {
+      "titre": "Votre épargne mérite un diagnostic.",
+      "role": "appel",
+      "description": "« Votre épargne mérite un diagnostic. » sur bleu nuit : l'arche dessinée au trait or et sa clé de voûte qui se pose, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-debut": {
+      "titre": "La pierre,à votre façon.",
+      "role": "ouverture",
+      "description": "« La pierre, à votre façon. » (à votre façon en italique or) : cinq façons d'investir, façade en pierre",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-facons": {
+      "titre": "Cinq façons d'investir",
+      "role": "menu",
+      "description": "Sommaire des cinq façons d'investir (SCPI, nue-propriété, direct, crowdfunding, États-Unis)",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-scpi": {
+      "titre": "SCPI : l'immobilier en parts.",
+      "role": "services",
+      "description": "« SCPI : l'immobilier en parts. » : explication et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-nue-propriete": {
+      "titre": "Nue-propriété : acheter moins cher, posséder plus tard.",
+      "role": "outil-interactif",
+      "description": "« Nue-propriété : acheter moins cher, posséder plus tard. » : curseur des années du démembrement, la part de nue-propriété et d'usufruit se partage sur une barre",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Chiffres d'exemple"
+      ],
+      "particularites": [
+        "curseur des années du démembrement"
+      ]
+    },
+    "offre-immobiliere-direct": {
+      "titre": "L'immobilier en direct.",
+      "role": "services",
+      "description": "« L'immobilier en direct » et « Le crowdfunding immobilier » en deux colonnes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-etats-unis": {
+      "titre": "Investir aux États-Unis.",
+      "role": "services",
+      "description": "« Investir aux États-Unis. » : accompagnement de A à Z, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-partenaires-liste": {
+      "titre": "Partenaires immobiliers cités par le cabinet",
+      "role": "preuves",
+      "description": "« Partenaires immobiliers » : liste des partenaires cités par le cabinet",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "offre-immobiliere-rendez-vous-final": {
+      "titre": "Un projet dans la pierre ?",
+      "role": "appel",
+      "description": "« Un projet dans la pierre ? » sur bleu nuit : l'arche dessinée au trait or et sa clé de voûte qui se pose, boutons prendre rendez-vous et téléphone",
+      "animations": [
+        "trace-svg",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
