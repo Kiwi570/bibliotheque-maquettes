@@ -1,0 +1,48 @@
+{
+ "id": "melanie-neumann-maquette/seance-demande",
+ "maquette": "melanie-neumann-maquette",
+ "page": "seance",
+ "titre": "Demande en trois étapes",
+ "role": "contact",
+ "description": "Module formulaire par étapes : séance et lieu en grandes cartes, situation, coordonnées, récapitulatif, envoi simulé ; colonne collante « Qui vous reçoit » avec portrait noir et blanc.",
+ "animations": [
+  "apparition-au-défilement",
+  "parallaxe"
+ ],
+ "interactions": [
+  "formulaire-par-étapes"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 4,
+ "reutilisable": false,
+ "module": "formulaire-par-etapes",
+ "modules": [
+  "formulaire-par-etapes"
+ ],
+ "code": {
+  "html": "seance.html:132-209",
+  "css": "assets/css/site.css:502-517,556,575-576 ; assets/css/formulaire-par-etapes.css:3,8-14,21-70,75-81,86-112,116-120,131-142",
+  "js": "assets/js/site.js:284-294,307 ; assets/js/modules/formulaire-par-etapes.js:1,26,42,45-48,52,58-68,73,77,85,122,154,157,167,173-175,181,195,198,221-222,240,267 ; assets/js/socle/effets.js:11,22,188-212,315-342 ; assets/js/socle/onde.js:3,67-190"
+ },
+ "medias": {
+  "capture": "medias/melanie-neumann-maquette/seance-demande-p1440.jpg",
+  "capture_m390": "medias/melanie-neumann-maquette/seance-demande-m390.jpg",
+  "video": "medias/melanie-neumann-maquette/seance-demande-p720.mp4"
+ },
+ "pieges": [
+  "Libellés de progression trop longs coupés en ellipse vers 1000 px : libellés courts et retour à la ligne permis.",
+  "Le module attend rafraichir() de son socle : fournir un équivalent qui appelle ScrollTrigger.refresh."
+ ],
+ "mesures": {
+  "hauteur_p1440": 1482,
+  "hauteur_m390": 1759,
+  "epinglee": false,
+  "scrolltriggers": 1
+ },
+ "familles": [],
+ "impact": "vivant"
+}

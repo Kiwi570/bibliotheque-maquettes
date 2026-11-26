@@ -1,0 +1,47 @@
+{
+ "id": "melanie-neumann-maquette/orienteur",
+ "maquette": "melanie-neumann-maquette",
+ "page": "index",
+ "titre": "Orienteur « Où en êtes-vous ? »",
+ "role": "outil-interactif",
+ "description": "Huit pastilles de situations (je cherche ma voie, je me reconvertis, je dirige…) ; une fiche noire se recompose : accompagnement conseillé, détail réel, pôle, bouton vers la séance offerte préremplie et lien vers la page.",
+ "animations": [
+  "apparition-au-défilement",
+  "parallaxe"
+ ],
+ "interactions": [
+  "simulateur"
+ ],
+ "dependances": [
+  "gsap",
+  "scrolltrigger"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 5,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "index.html:129-214",
+  "css": "assets/css/site.css:138,154-174,318",
+  "js": "assets/js/site.js:67-87,307"
+ },
+ "medias": {
+  "capture": "medias/melanie-neumann-maquette/orienteur-p1440.jpg",
+  "capture_m390": "medias/melanie-neumann-maquette/orienteur-m390.jpg",
+  "video": "medias/melanie-neumann-maquette/orienteur-p720.mp4"
+ },
+ "pieges": [
+  "Le déclencheur des effets au défilement est la section, pas la fiche qui bouge elle-même (positions faussées de 28 px après un choix)."
+ ],
+ "mesures": {
+  "hauteur_p1440": 715,
+  "hauteur_m390": 1239,
+  "epinglee": false,
+  "scrolltriggers": 2
+ },
+ "familles": [
+  "recomposition"
+ ],
+ "impact": "vivant"
+}

@@ -1,0 +1,724 @@
+{
+ "maquette": {
+  "client": "coach carrière, bilans de compétences, conseil RH et bien-être à Épinal",
+  "activite": [
+   "conseil",
+   "bien-être",
+   "formation"
+  ],
+  "concept": [
+   "autre"
+  ],
+  "ambiance": [
+   "sombre",
+   "chaleureux",
+   "luxueux"
+  ],
+  "palette": {
+   "fond": "--noir",
+   "texte": "--ivoire",
+   "accent": "--or",
+   "secondaire": "--bronze"
+  },
+  "polices": {
+   "titres": "DM Serif Display",
+   "texte": "Manrope",
+   "mono": null
+  },
+  "points_forts": [
+   "Portraits studio sur fond noir fondus dans la page, lumière d'or au pointeur",
+   "Orienteur à huit situations qui mène à la bonne séance offerte, préremplie",
+   "Un seul système noir, ivoire et or sur six pages, une ouverture propre à chaque page"
+  ],
+  "reserves": [
+   "Pas de grande scène spectaculaire : la force vient des portraits et de la finition",
+   "Sections objectifs en cartes blanches sans image"
+  ],
+  "animations": [
+   "ouverture-orchestrée",
+   "révélation-texte",
+   "apparition-au-défilement",
+   "parallaxe",
+   "compteur",
+   "curseur-personnalisé",
+   "bouton-magnétique",
+   "transition-de-page",
+   "reactif-vitesse",
+   "trace-svg"
+  ],
+  "interactions": [
+   "formulaire-par-étapes",
+   "galerie-cliquable",
+   "simulateur"
+  ],
+  "change_depuis_audit": null,
+  "accueil": "debut",
+  "plan": "recit-lineaire",
+  "grille": {
+   "objet": "lumière d'or qui suit le pointeur sur le portrait",
+   "fil": "le point d'or : intro, voile en iris doré, repères de chaque page"
+  },
+  "metier": "coach carrière et bilans de compétences"
+ },
+ "sections": {
+  "div": {
+   "ignorer": "conteneur technique du gabarit"
+  },
+  "ouverture-panneau": {
+   "ignorer": "panneau de l'intro, décrit avec l'ouverture de l'accueil"
+  },
+  "header": {
+   "titre": "En-tête noir et monogramme",
+   "role": "menu",
+   "description": "En-tête noir opaque : monogramme « mn » dessiné en DM Serif dans un cercle d'or, nom et « Carrière & Bien-être » en petites capitales or, trois liens et bouton or « Séance offerte ».",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le sous-nom en petites capitales passait sous 12 px : 0,78 rem."
+   ]
+  },
+  "menu": {
+   "titre": "Menu plein écran noir",
+   "role": "menu",
+   "description": "Menu plein écran noir, liens en DM Serif qui arrivent l'un après l'autre, bouton or de la séance offerte et appel.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "debut": {
+   "titre": "Portrait qui sort du noir",
+   "role": "ouverture",
+   "description": "Grand titre DM Serif « Soyez l'artiste de votre trajectoire », mot en italique or ; à droite, le portrait studio de la cliente sur fond noir, bords fondus en masque dans le noir de la page ; une lumière d'or (voile sombre percé d'un trou radial) suit le pointeur, fait un tour seule après l'intro et descend vers le carnet au défilement. L'intro fait filer un point d'or jusqu'au portrait.",
+   "animations": [
+    "ouverture-orchestrée",
+    "révélation-texte",
+    "curseur-personnalisé"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "La photo doit avoir un fond noir pur : le masque en dégradé la fond dans un noir de page presque identique (#0E0C0A).",
+    "Lignes du titre animées en yPercent : GSAP lit la translation CSS de départ comme y en px, d'où fromTo avec y: 0 explicite."
+   ],
+   "particularites": [
+    "lumière d'or au pointeur sur un portrait par masque radial, sans WebGL"
+   ]
+  },
+  "orienteur": {
+   "titre": "Orienteur « Où en êtes-vous ? »",
+   "role": "outil-interactif",
+   "description": "Huit pastilles de situations (je cherche ma voie, je me reconvertis, je dirige…) ; une fiche noire se recompose : accompagnement conseillé, détail réel, pôle, bouton vers la séance offerte préremplie et lien vers la page.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "simulateur"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Le déclencheur des effets au défilement est la section, pas la fiche qui bouge elle-même (positions faussées de 28 px après un choix)."
+   ]
+  },
+  "accompagnements": {
+   "titre": "Quatre accompagnements",
+   "role": "services",
+   "description": "Quatre grandes cartes photo 4:5 (images générées en lumière dorée), titre DM Serif, mots-clés en or, lien ; rangée qui glisse au doigt sur téléphone.",
+   "animations": [
+    "parallaxe",
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Un libellé visuellement caché en position absolute dans une carte d'une rangée qui défile élargit la page sur téléphone : la carte doit être position: relative."
+   ]
+  },
+  "methode": {
+   "titre": "Trois temps",
+   "role": "étapes",
+   "description": "Trois grands numéros bronze, un trait qui se remplit et un point d'or qui parcourt les étapes au défilement (vertical sur téléphone).",
+   "animations": [
+    "progression-fixée",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Grands chiffres DM Serif : boîte de police 1,37 em, interligne 1,45 sinon chevauchement avec le titre suivant."
+   ]
+  },
+  "formules": {
+   "titre": "Seul, à deux ou ensemble",
+   "role": "offre",
+   "description": "Trois cartes (Coup de Pouce, Main dans la Main, Côte à Côte) : un point d'or, deux points qui se rapprochent, sept points qui se rassemblent en rangée au défilement.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "points d'or qui se rejoignent selon la formule (seul, à deux, en groupe)"
+   ]
+  },
+  "melanie": {
+   "titre": "Mélanie, chiffres et certificats",
+   "role": "équipe",
+   "description": "Portrait sur fond noir en parallaxe, trois rôles dont l'actif passe en italique bronze au défilement, parcours, quatre compteurs, puis cinq certificats en vignettes qui s'ouvrent en visionneuse.",
+   "animations": [
+    "parallaxe",
+    "compteur",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Compteurs sur quatre colonnes trop étroits à 1000 px : deux colonnes sous 1200 px."
+   ]
+  },
+  "methodes": {
+   "titre": "Méthodes signées",
+   "role": "preuves",
+   "description": "Huit sigles de méthodes en DM Serif or (SERUM®, B.I.L.A.N.©…) qui s'allument lettre après lettre, ce qu'ils servent, puis les approches en pastilles.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Les symboles ® et © en exposant passent sous 12 px : max(12.5px, .42em)."
+   ]
+  },
+  "avis": {
+   "titre": "Avis",
+   "role": "témoignages",
+   "description": "Cinq étoiles qui se posent, note Google, deux citations réelles en DM Serif italique avec filet d'or.",
+   "animations": [
+    "révélation-texte",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "appel": {
+   "titre": "Une heure, offerte",
+   "role": "appel",
+   "description": "Grand titre « Commençons par une heure, offerte », lueur d'or qui grandit au défilement, deux cartes vers les deux séances offertes avec la séance préremplie.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "visionneuse": {
+   "titre": "Visionneuse des certificats",
+   "role": "galerie",
+   "description": "Fenêtre plein écran noire : certificat en grand, précédent et suivant, flèches, glissement, Échap, focus rendu à la vignette.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "galerie-cliquable"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Ne pas laisser l'image vide dans le HTML (audit : image non chargée) : la première image en src."
+   ]
+  },
+  "pied": {
+   "titre": "Pied de page",
+   "role": "pied-de-page",
+   "description": "Monogramme et accroche en italique or, coordonnées (e-mail en texte sélectionnable), sommaire, réseaux, mentions légales « à compléter » en texte simple.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "404-debut": {
+   "titre": "Ce chemin bifurque",
+   "role": "page-404",
+   "description": "Plein cadre d'un chemin forestier qui se sépare dans la brume, titre « Ce chemin bifurque », retour à l'accueil et séance offerte.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bien-etre-debut": {
+   "titre": "Retrouver son équilibre",
+   "role": "ouverture",
+   "description": "Plein cadre d'une pièce calme au matin (pastels sur une table basse), voile en dégradé, texte à gauche.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Sur téléphone, le surtitre or sur la photo était à 3,97:1 : dégradé plus dense vers le haut."
+   ]
+  },
+  "bien-etre-questions": {
+   "titre": "Vous vous reconnaissez ?",
+   "role": "services",
+   "description": "Huit questions réelles en cartes blanches à pastille d'or.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bien-etre-objectifs": {
+   "titre": "Cinq objectifs et S.A.N.T.É.",
+   "role": "méthode",
+   "description": "Liste des cinq objectifs à gauche, anneau SVG de cinq arcs d'or qui se complètent au défilement avec ses cinq repères.",
+   "animations": [
+    "trace-svg",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Ne pas animer l'opacité des étiquettes : axe mesure le contraste au milieu du fondu."
+   ]
+  },
+  "bien-etre-mediation": {
+   "titre": "S’exprimer autrement",
+   "role": "manifeste",
+   "description": "Image de pastels en rideau, texte mot à mot, consultations individuelles et mention « ne remplace pas un suivi médical ».",
+   "animations": [
+    "révélation-image",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bien-etre-qvct": {
+   "titre": "Qualité de vie au travail",
+   "role": "services",
+   "description": "Trois actions numérotées et image en parallaxe d'une salle de pause.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "bien-etre-appel": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Même appel final que l'accueil.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "même appel que l'accueil"
+  },
+  "carriere-debut": {
+   "titre": "Quatre verbes géants",
+   "role": "ouverture",
+   "description": "Quatre verbes en DM Serif très grands (S'aligner, S'orienter, Évoluer, Changer) qui s'allument tour à tour en italique or, puis au défilement ; texte et bouton à droite.",
+   "animations": [
+    "révélation-texte",
+    "ouverture-orchestrée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Une section d'ouverture moins haute (82svh) laisse dépasser le bandeau suivant."
+   ]
+  },
+  "carriere-pv-bandeau": {
+   "titre": "Bandeau panoramique",
+   "role": "decor",
+   "description": "Bandeau 21:9 d'un chemin forestier révélé par un rideau sous l'ouverture.",
+   "animations": [
+    "révélation-image"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carriere-objectifs": {
+   "titre": "Quatre objectifs",
+   "role": "services",
+   "description": "Quatre cartes blanches numérotées, verbes en DM Serif, trois points chacun.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carriere-bilans": {
+   "titre": "Une pastille par séance",
+   "role": "tarifs",
+   "description": "Liste des bilans : titre, pastilles d'or (pleines pour le minimum, cerclées pour l'option) qui se posent au défilement, durée, description, méthode en étiquette.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "particularites": [
+    "nombre de séances montré en pastilles qui se posent"
+   ]
+  },
+  "carriere-coachings": {
+   "titre": "Réglette des coachings",
+   "role": "offre",
+   "description": "Réglette graduée de 1 à 24 séances : chaque coaching remplit sa plage en dégradé bronze-or au défilement, la formule à la demande en pointillés.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carriere-thematiques": {
+   "titre": "Thématiques",
+   "role": "services",
+   "description": "Image collante en parallaxe à gauche, thématiques en liste avec la méthode en or.",
+   "animations": [
+    "parallaxe",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "carriere-appel": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Même appel final que l'accueil.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "même appel que l'accueil"
+  },
+  "entreprises-debut": {
+   "titre": "L’humain au cœur de la performance",
+   "role": "ouverture",
+   "description": "Écran scindé : texte et pastilles des quatre verbes à gauche, image pleine hauteur à droite collée au bord, en parallaxe.",
+   "animations": [
+    "parallaxe",
+    "révélation-texte"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entreprises-objectifs": {
+   "titre": "Diriger, piloter, recruter, accompagner",
+   "role": "services",
+   "description": "Quatre cartes blanches numérotées.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entreprises-thematiques": {
+   "titre": "Sept thématiques",
+   "role": "services",
+   "description": "Sept cartes sombres à filet d'or qui s'inclinent selon la vitesse.",
+   "animations": [
+    "reactif-vitesse"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entreprises-coachings": {
+   "titre": "Coaching de dirigeant",
+   "role": "offre",
+   "description": "Même réglette que la page Carrière, trois formules.",
+   "animations": [
+    "progression-fixée"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entreprises-diagnostic": {
+   "titre": "Séance diagnostic",
+   "role": "méthode",
+   "description": "Image d'un sablier et d'un carnet en rideau, quatre étapes numérotées, bouton.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "entreprises-appel": {
+   "titre": "Appel final",
+   "role": "appel",
+   "description": "Même appel final que l'accueil.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [],
+   "ignorer": "même appel que l'accueil"
+  },
+  "seance-debut": {
+   "titre": "Cadran de l’heure offerte",
+   "role": "ouverture",
+   "description": "« 1 h » en or dans un cadran SVG gradué dont l'arc se trace à l'ouverture et qui tourne au défilement ; titre, bouton et deux cartes qui préremplissent la demande.",
+   "animations": [
+    "ouverture-orchestrée",
+    "trace-svg"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 5,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Objet rond marqué data-iris-centre=\"disque\" : le voile en iris s'ouvre exactement à sa taille."
+   ]
+  },
+  "seance-demande": {
+   "titre": "Demande en trois étapes",
+   "role": "contact",
+   "description": "Module formulaire par étapes : séance et lieu en grandes cartes, situation, coordonnées, récapitulatif, envoi simulé ; colonne collante « Qui vous reçoit » avec portrait noir et blanc.",
+   "animations": [
+    "apparition-au-défilement",
+    "parallaxe"
+   ],
+   "interactions": [
+    "formulaire-par-étapes"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 4,
+   "reutilisable": false,
+   "module": "formulaire-par-etapes",
+   "pieges": [
+    "Libellés de progression trop longs coupés en ellipse vers 1000 px : libellés courts et retour à la ligne permis.",
+    "Le module attend rafraichir() de son socle : fournir un équivalent qui appelle ScrollTrigger.refresh."
+   ]
+  },
+  "seance-deroule": {
+   "titre": "Comment se passe la séance",
+   "role": "étapes",
+   "description": "Quatre étapes numérotées et image d'un cabinet en rideau.",
+   "animations": [
+    "révélation-image",
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  },
+  "seance-contact": {
+   "titre": "Au cabinet ou à distance",
+   "role": "contact",
+   "description": "Cercles concentriques autour d'un point d'or (le cabinet au centre, la visio tout autour) qui se déploient au défilement, coordonnées, FAQ dépliable.",
+   "animations": [
+    "apparition-au-défilement"
+   ],
+   "interactions": [
+    "aucune"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": []
+  }
+ }
+}
