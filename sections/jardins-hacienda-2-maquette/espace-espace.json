@@ -4,7 +4,7 @@
  "page": "espace",
  "titre": "Votre espace",
  "role": "outil-interactif",
- "description": "« Votre espace » : un espace restaurateur de démonstration ; connexion déjà remplie, puis une application aux couleurs du site avec cinq rubriques (Jour, Agenda, Soirées, Textes, Photos) : confirmer ou refuser les réservations, dire complet ou fermé, créer une soirée avec sa photo, changer les horaires, l'ardoise et l'annonce ; le site suit aussitôt. Chaque geste s'annule dix secondes ; la barre « Que voulez-vous faire ? » comprend des phrases simples (« fermer samedi soir », « table pour 4 vendredi 20 h au nom de Martin »).",
+ "description": "« Votre espace » : l'outil de gestion du restaurant, en démonstration (connexion déjà remplie). Navigation Aujourd'hui, Demandes, Agenda, Offres, Clients, Site : le prochain service et les priorités avec leur action directe, le service et la salle (présence des groupes, état des tables, tables à rapprocher), les réceptions de A à Z (dossier unique, propositions versionnées, options qui retiennent les espaces, jour J imprimable), le traiteur de la commande au retrait, les cartes cadeaux, un catalogue d'offres qu'on prépare puis publie avec aperçu et historique. Huit démonstrations avec horloge simulée, visite guidée en cinq étapes, assistant « Que voulez-vous faire ? » en phrases simples, indicateurs qui disent leur calcul, « Préparer l'outil pour votre restaurant ».",
  "animations": [
   "apparition-au-défilement"
  ],
@@ -12,7 +12,9 @@
   "saisie-personnalisee",
   "formulaire-par-étapes",
   "réservation-simulee",
-  "recherche"
+  "recherche",
+  "visite-guidee",
+  "filtres"
  ],
  "dependances": [
   "aucune"
@@ -23,25 +25,27 @@
  "module": null,
  "modules": [],
  "code": {
-  "html": "espace.html:116-186",
-  "css": "assets/css/site.css:3079,4145-4167,4173-4228,4251-4252,4333-4334,4416,4454-4480,4487-4488,4524,4552-4555",
-  "js": "assets/js/site.js:6,229-244,414-419,924,1143-1164,1789-1884,2012-2045,2311-2312 ; assets/js/espace.js:1,6,31,46,74-75,91,106,159-161,166-171,197-202,231-234,238,243,252,269,273-274,286,365,371,382-383,404,407-408,435,438,454-458 ; assets/js/espace-regles.js:1,19,33,38,50-63,66-74,80 ; assets/js/espace-barre.js:1,21,24-92 ; assets/js/espace-commandes.js:1,69,72-140 ; assets/js/espace-donnees.js:1,60-96 ; assets/js/espace-stock.js:1-3,44 ; assets/js/modules/lumiere-au-pointeur/module.js:139-274 ; assets/js/modules/reservation-de-table/module.js:37-38,94,202,206-207,214-216,232,244,288,329,338,341,418 ; assets/js/modules/plan-de-salle/module.js:43,48,61,77,147-149 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/espace-apercu.js:1,4,15,18,29,37,118,135"
+  "html": "espace.html:120-209",
+  "css": "assets/css/site.css:3089,4155-4177,4183-4239,4262-4263,4344-4345,4427,4465-4491,4498-4499,4596-4599,4621,4663-4666,4730,4927,4959-4962,4969-4984,5379-5382,5441",
+  "js": "assets/js/site.js:6-8,28,165,282-308,478-483,543-559,990,1209-1230,1801,1809,1884,1918,1929,1985-2082,2202-2235,2503-2504 ; assets/js/reception-client.js:4,14-125 ; assets/js/espace-receptions.js:38,58-71,77,87-97,129,148-156,293-341,376-420,426-442,565,568-569,578,604-613,732-739 ; assets/js/espace-salle.js:1,112-117 ; assets/js/espace-service.js:1 ; assets/js/disponibilites.js:2,8,11,17,50-52,98,102-113,132-160,255,258-279 ; assets/js/espace-regles.js:1,18,38-40,44-48,75-99,102-114,119,138 ; assets/js/espace-stock.js:1-3,31,47-106,153,189,219 ; assets/js/venue.js:3,13-105 ; assets/js/espace-venue.js:2,79,91 ; assets/js/espace.js:1,6,16,26,78-80,84,113,134,144,194,208-209,226,245,304,336-338,343-348,379-384,418-421,427,432,442,454,484,488-493,500-501,514,581,596,625,628,635-636,653,657,663,674-682,685,691,694,720,723-724,752,763,781-785,792,803,811,845,853,860-861,873-874,892,904,910,917,929-931,949,964,968,975,983-987 ; assets/js/espace-serveur.js:1-3,9,17-172 ; assets/js/commerce.js:2,19,53,86,205,243-245,256,579 ; assets/js/espace-offres.js:5,153-166,301 ; assets/js/espace-carte.js:1-3,29,71 ; assets/js/espace-attente.js:79-99,109-113 ; assets/js/espace-presence.js:112-114 ; assets/js/espace-demandes.js:1,34-46,49-75 ; assets/js/espace-accueil.js:80-128 ; assets/js/espace-clients.js:1,102,204 ; assets/js/espace-conseils.js:1,16 ; assets/js/espace-vue-commerce.js:6,39,72-77,102,127-130,205,221,242-243,253-255,297-299,325,330,344-345,355-357 ; assets/js/espace-vue-receptions.js:1-2,35,56,59,130,159,180-181,187,204,224,289,362-364,404-405 ; assets/js/espace-repli.js:18-45,53-61 ; assets/js/espace-vue-clients.js:1,9-44 ; assets/js/espace-assistant.js:64,69-186 ; assets/js/espace-bilans.js:65-66 ; assets/js/espace-commandes.js:1,110,113-233 ; assets/js/espace-vue-mise.js:10-69 ; assets/js/espace-mise-en-main.js:7,47-140 ; assets/js/espace-vue-bilan.js:13-81 ; assets/js/espace-vue-accueil.js:38,53,79,96-97,104-106,134,142-143,173,176-178,233,236 ; assets/js/espace-vue-client.js:10-100 ; assets/js/espace-vue-attente.js:1,11-121 ; assets/js/espace-vue-salle.js:48-50,84 ; assets/js/espace-vue-service.js:29-33,48-50,73,88-90,106,126,178 ; assets/js/espace-vue-propose.js:1,13-72 ; assets/js/espace-vue-offres.js:6,58-71,77-79,140 ; assets/js/espace-vue-carte.js:1,12-98 ; assets/js/espace-vue-demandes.js:1,5,22-103 ; assets/js/espace-barre.js:1,32,35-126 ; assets/js/espace-scenarios.js:26,52,99,103,115-116,131,151-152,175,181,205 ; assets/js/espace-donnees.js:1,60,205-280 ; assets/js/modules/horaires-ouvert-maintenant/horaires-calcul.js:20-37 ; assets/js/modules/lumiere-au-pointeur/module.js:139-274 ; assets/js/modules/formulaire-par-etapes/module.js:181,222 ; assets/js/modules/reservation-de-table/module.js:12,26-31,42-43,96,111,231-233,241,244,249,267,286,299,309,313-314,321-323,340,352,396,440,456,459,549 ; assets/js/modules/plan-de-salle/module.js:43,48,61,77,147-149 ; assets/js/modules/horaires-ouvert-maintenant/module.js:19-90 ; assets/js/espace-apercu.js:1,4,15,18,29,41,54,91,106,114-115,155,212,232,240,273,288,339,354-356"
  },
  "medias": {
   "capture": "medias/jardins-hacienda-2-maquette/espace-espace-p1440.jpg",
   "capture_m390": "medias/jardins-hacienda-2-maquette/espace-espace-m390.jpg"
  },
  "pieges": [
-  "Tout reste dans le navigateur (démonstration)",
-  "La barre de phrases est faite de règles écrites, pas d'IA"
+  "Tout reste dans le navigateur (démonstration) ; un serveur partagé existe mais n'est ni connecté ni déployé",
+  "L'assistant est fait de règles écrites, pas d'IA",
+  "Paiements et messages simulés"
  ],
  "particularites": [
-  "espace restaurateur qui modifie le site en direct",
-  "barre « Que voulez-vous faire ? » qui comprend des phrases simples"
+  "outil de gestion complet du restaurant derrière le site, en démonstration",
+  "huit démonstrations avec horloge simulée et visite guidée",
+  "propositions de réception versionnées, l'accord lié à une version"
  ],
  "mesures": {
   "hauteur_p1440": 994,
-  "hauteur_m390": 1079,
+  "hauteur_m390": 1097,
   "epinglee": false,
   "scrolltriggers": 0
  },

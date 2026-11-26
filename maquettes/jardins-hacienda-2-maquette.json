@@ -51,12 +51,14 @@
   "offrir",
   "receptions",
   "reserver",
+  "votre-reception",
+  "votre-venue",
   "404"
  ],
- "commit": "9a8c0ac",
- "date_commit": "2026-11-18",
- "change_depuis_audit": "v7.5.17 à v7.7.1 (16 au 18 novembre 2026) : Réceptions refaite (parcours, palette crème, vrais mariages en mosaïque, espaces qui glissent au défilement), Les fêtes refaite (éphéméride, billets, carte de Noël à l'encre dorée, carte cadeau en enveloppe), Saint-Sylvestre avec chaque plat et son verre, Offrir avec une seule carte et des idées, La carte ouverte en doubles pages, accueil (Le Restaurant, Pour les fêtes, vrais avis qui défilent), Réserver en quatre étapes avec carton de table, et nouvel espace restaurateur de démonstration (/espace).",
- "note": 86,
+ "commit": "b4b85db",
+ "date_commit": "2026-11-25",
+ "change_depuis_audit": "v7.7.2 à v7.16.0 (18 au 25 novembre 2026), « prête à présenter » : le site public ne change presque pas (finitions) ; l'espace restaurateur devient un outil de gestion complet en six étapes (service et salle, réceptions avec propositions versionnées, offres préparées puis publiées, traiteur et cartes cadeaux, Aujourd'hui et assistant, huit démonstrations avec visite guidée), deux pages client (« Votre réception », « Votre venue ») et un serveur partagé écrit et testé mais non branché. 255 tests. Avant : v7.5.17 à v7.7.1, Réceptions, Les fêtes, Offrir, La carte et Réserver refaites.",
+ "note": 87,
  "verdict": "Prête à envoyer",
  "points_forts": [
   "une journée à la maison, du déjeuner à la nuit, sans heures affichées : l'ouverture change selon la saison et le moment réels (midi ou soir), sur de vraies photos du lieu",
@@ -64,13 +66,13 @@
   "le feu de la vraie cheminée animé à partir d'une seule photo, et « Le Restaurant » qui s'ouvre jusqu'au plein écran",
   "Les fêtes : éphéméride dont les pages s'arrachent jusqu'au vrai décompte, six billets datés, menu de Noël écrit à l'encre dorée, Saint-Sylvestre où chaque plat arrive avec son verre",
   "Réserver en quatre étapes : assiettes autour d'une table ronde, frise des heures, carton de table qui se remplit puis reçoit le tampon « Réservé »",
-  "un espace restaurateur de démonstration : réservations, soirées, horaires, ardoise et photos modifiables, le site suit aussitôt ; chaque geste s'annule, barre « Que voulez-vous faire ? » en phrases simples",
+  "derrière le site, un outil de gestion complet en démonstration : service et salle, réceptions avec propositions versionnées, offres à publier, traiteur, cartes cadeaux ; huit démonstrations avec horloge simulée, visite guidée et assistant en phrases simples",
   "dix vrais avis qui défilent, mosaïque des vrais mariages, plan du domaine à toucher"
  ],
  "reserves": [
-  "très long à produire : sept versions puis des dizaines de reprises (v7.5.8 à v7.7.1 du 13 au 18 novembre 2026), page par page à la demande du client",
+  "très long à produire : une vingtaine de versions et des dizaines de reprises du 11 au 25 novembre 2026, page par page puis outil par outil",
   "plats de la Saint-Sylvestre, du traiteur et quelques ambiances en images générées (signalées) ; mode calme retiré de la maquette",
-  "dépôt très lourd (145 Mo) ; espace restaurateur en démonstration seulement (tout reste dans le navigateur)"
+  "dépôt très lourd (163 Mo) ; l'outil de gestion reste une démonstration dans le navigateur, le serveur partagé n'est pas branché"
  ],
  "animations": [
   "ouverture-orchestrée",
@@ -100,7 +102,8 @@
   "schema-interactif",
   "jeu",
   "panier-simule",
-  "galerie-cliquable"
+  "galerie-cliquable",
+  "visite-guidee"
  ],
  "dependances": [
   "gsap",
@@ -223,7 +226,9 @@
   "jardins-hacienda-2-maquette/receptions-demande",
   "jardins-hacienda-2-maquette/reserver-debut",
   "jardins-hacienda-2-maquette/reserver-formulaire",
-  "jardins-hacienda-2-maquette/reserver-plan"
+  "jardins-hacienda-2-maquette/reserver-plan",
+  "jardins-hacienda-2-maquette/votre-reception-reception",
+  "jardins-hacienda-2-maquette/votre-venue-venue"
  ],
  "captures": {
   "accueil-ordinateur": "medias/jardins-hacienda-2-maquette/midi-p1440.jpg",

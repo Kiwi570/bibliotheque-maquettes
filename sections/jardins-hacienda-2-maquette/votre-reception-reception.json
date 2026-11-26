@@ -1,0 +1,40 @@
+{
+ "id": "jardins-hacienda-2-maquette/votre-reception-reception",
+ "maquette": "jardins-hacienda-2-maquette",
+ "page": "votre-reception",
+ "titre": "Votre réception aux Jardins",
+ "role": "outil-interactif",
+ "description": "« Votre réception aux Jardins » : la page du client d'une réception, ouverte par son lien ; il retrouve son projet, la proposition en cours, ce qui est convenu et les prochaines étapes, donne son accord sur une version précise, pose une question ou demande un changement d'horaire, d'effectif ou d'espace (simulé). Sans dossier, elle dit « Projet introuvable » et renvoie aux réceptions.",
+ "animations": [
+  "aucune"
+ ],
+ "interactions": [
+  "formulaire-par-étapes",
+  "saisie-personnalisee"
+ ],
+ "dependances": [
+  "aucune"
+ ],
+ "telephone": "adapté",
+ "note_qualite": 3,
+ "reutilisable": false,
+ "module": null,
+ "modules": [],
+ "code": {
+  "html": "votre-reception.html:116-131",
+  "css": "assets/css/site.css:5289-5291,5324-5327,5351-5355,5361,5626,5640-5646",
+  "js": "assets/js/site.js:2505-2508 ; assets/js/reception-client.js:14-125 ; assets/js/espace-regles.js:74,122,132 ; assets/js/espace-stock.js:208 ; assets/js/venue.js:1,13-105 ; assets/js/espace-venue.js:1,24-26,29-45,75-77 ; assets/js/espace.js:933,938 ; assets/js/commerce.js:63 ; assets/js/espace-attente.js:43 ; assets/js/espace-accueil.js:80-128 ; assets/js/espace-clients.js:128 ; assets/js/espace-recherche.js:21-34 ; assets/js/espace-vue-clients.js:9-44 ; assets/js/espace-assistant.js:69-186 ; assets/js/espace-bilans.js:27-56,72-143 ; assets/js/espace-vue-accueil.js:17 ; assets/js/espace-vue-client.js:10-100 ; assets/js/espace-vue-service.js:72 ; assets/js/espace-donnees.js:205-280 ; assets/js/modules/reservation-de-table/module.js:306"
+ },
+ "medias": {},
+ "pieges": [
+  "Lit un dossier fictif enregistré dans le navigateur : la capture montre l'état sans dossier"
+ ],
+ "mesures": {
+  "hauteur_p1440": 1373,
+  "hauteur_m390": 1160,
+  "epinglee": false,
+  "scrolltriggers": 0
+ },
+ "familles": [],
+ "impact": "vivant"
+}

@@ -31,13 +31,13 @@
    "le feu de la vraie cheminée animé à partir d'une seule photo, et « Le Restaurant » qui s'ouvre jusqu'au plein écran",
    "Les fêtes : éphéméride dont les pages s'arrachent jusqu'au vrai décompte, six billets datés, menu de Noël écrit à l'encre dorée, Saint-Sylvestre où chaque plat arrive avec son verre",
    "Réserver en quatre étapes : assiettes autour d'une table ronde, frise des heures, carton de table qui se remplit puis reçoit le tampon « Réservé »",
-   "un espace restaurateur de démonstration : réservations, soirées, horaires, ardoise et photos modifiables, le site suit aussitôt ; chaque geste s'annule, barre « Que voulez-vous faire ? » en phrases simples",
+   "derrière le site, un outil de gestion complet en démonstration : service et salle, réceptions avec propositions versionnées, offres à publier, traiteur, cartes cadeaux ; huit démonstrations avec horloge simulée, visite guidée et assistant en phrases simples",
    "dix vrais avis qui défilent, mosaïque des vrais mariages, plan du domaine à toucher"
   ],
   "reserves": [
-   "très long à produire : sept versions puis des dizaines de reprises (v7.5.8 à v7.7.1 du 13 au 18 novembre 2026), page par page à la demande du client",
+   "très long à produire : une vingtaine de versions et des dizaines de reprises du 11 au 25 novembre 2026, page par page puis outil par outil",
    "plats de la Saint-Sylvestre, du traiteur et quelques ambiances en images générées (signalées) ; mode calme retiré de la maquette",
-   "dépôt très lourd (145 Mo) ; espace restaurateur en démonstration seulement (tout reste dans le navigateur)"
+   "dépôt très lourd (163 Mo) ; l'outil de gestion reste une démonstration dans le navigateur, le serveur partagé n'est pas branché"
   ],
   "animations": [
    "ouverture-orchestrée",
@@ -67,9 +67,10 @@
    "schema-interactif",
    "jeu",
    "panier-simule",
-   "galerie-cliquable"
+   "galerie-cliquable",
+   "visite-guidee"
   ],
-  "change_depuis_audit": "v7.5.17 à v7.7.1 (16 au 18 novembre 2026) : Réceptions refaite (parcours, palette crème, vrais mariages en mosaïque, espaces qui glissent au défilement), Les fêtes refaite (éphéméride, billets, carte de Noël à l'encre dorée, carte cadeau en enveloppe), Saint-Sylvestre avec chaque plat et son verre, Offrir avec une seule carte et des idées, La carte ouverte en doubles pages, accueil (Le Restaurant, Pour les fêtes, vrais avis qui défilent), Réserver en quatre étapes avec carton de table, et nouvel espace restaurateur de démonstration (/espace).",
+  "change_depuis_audit": "v7.7.2 à v7.16.0 (18 au 25 novembre 2026), « prête à présenter » : le site public ne change presque pas (finitions) ; l'espace restaurateur devient un outil de gestion complet en six étapes (service et salle, réceptions avec propositions versionnées, offres préparées puis publiées, traiteur et cartes cadeaux, Aujourd'hui et assistant, huit démonstrations avec visite guidée), deux pages client (« Votre réception », « Votre venue ») et un serveur partagé écrit et testé mais non branché. 255 tests. Avant : v7.5.17 à v7.7.1, Réceptions, Les fêtes, Offrir, La carte et Réserver refaites.",
   "accueil": "midi",
   "plan": "journee",
   "grille": {
@@ -914,7 +915,7 @@
   "espace-espace": {
    "titre": "Votre espace",
    "role": "outil-interactif",
-   "description": "« Votre espace » : un espace restaurateur de démonstration ; connexion déjà remplie, puis une application aux couleurs du site avec cinq rubriques (Jour, Agenda, Soirées, Textes, Photos) : confirmer ou refuser les réservations, dire complet ou fermé, créer une soirée avec sa photo, changer les horaires, l'ardoise et l'annonce ; le site suit aussitôt. Chaque geste s'annule dix secondes ; la barre « Que voulez-vous faire ? » comprend des phrases simples (« fermer samedi soir », « table pour 4 vendredi 20 h au nom de Martin »).",
+   "description": "« Votre espace » : l'outil de gestion du restaurant, en démonstration (connexion déjà remplie). Navigation Aujourd'hui, Demandes, Agenda, Offres, Clients, Site : le prochain service et les priorités avec leur action directe, le service et la salle (présence des groupes, état des tables, tables à rapprocher), les réceptions de A à Z (dossier unique, propositions versionnées, options qui retiennent les espaces, jour J imprimable), le traiteur de la commande au retrait, les cartes cadeaux, un catalogue d'offres qu'on prépare puis publie avec aperçu et historique. Huit démonstrations avec horloge simulée, visite guidée en cinq étapes, assistant « Que voulez-vous faire ? » en phrases simples, indicateurs qui disent leur calcul, « Préparer l'outil pour votre restaurant ».",
    "animations": [
     "apparition-au-défilement"
    ],
@@ -922,19 +923,23 @@
     "saisie-personnalisee",
     "formulaire-par-étapes",
     "réservation-simulee",
-    "recherche"
+    "recherche",
+    "visite-guidee",
+    "filtres"
    ],
    "telephone": "adapté",
    "note_qualite": 5,
    "reutilisable": true,
    "module": null,
    "pieges": [
-    "Tout reste dans le navigateur (démonstration)",
-    "La barre de phrases est faite de règles écrites, pas d'IA"
+    "Tout reste dans le navigateur (démonstration) ; un serveur partagé existe mais n'est ni connecté ni déployé",
+    "L'assistant est fait de règles écrites, pas d'IA",
+    "Paiements et messages simulés"
    ],
    "particularites": [
-    "espace restaurateur qui modifie le site en direct",
-    "barre « Que voulez-vous faire ? » qui comprend des phrases simples"
+    "outil de gestion complet du restaurant derrière le site, en démonstration",
+    "huit démonstrations avec horloge simulée et visite guidée",
+    "propositions de réception versionnées, l'accord lié à une version"
    ]
   },
   "infos-pratiques-plan": {
@@ -984,6 +989,45 @@
    "reutilisable": false,
    "module": null,
    "pieges": []
+  },
+  "votre-reception-reception": {
+   "titre": "Votre réception aux Jardins",
+   "role": "outil-interactif",
+   "description": "« Votre réception aux Jardins » : la page du client d'une réception, ouverte par son lien ; il retrouve son projet, la proposition en cours, ce qui est convenu et les prochaines étapes, donne son accord sur une version précise, pose une question ou demande un changement d'horaire, d'effectif ou d'espace (simulé). Sans dossier, elle dit « Projet introuvable » et renvoie aux réceptions.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "formulaire-par-étapes",
+    "saisie-personnalisee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Lit un dossier fictif enregistré dans le navigateur : la capture montre l'état sans dossier"
+   ],
+   "sans_capture": true
+  },
+  "votre-venue-venue": {
+   "titre": "Votre venue aux Jardins",
+   "role": "outil-interactif",
+   "description": "« Votre venue aux Jardins » : la page du client d'une réservation de table, ouverte par son lien ; il voit sa réservation, peut la modifier ou l'annuler (simulé), avec les informations pratiques. Sans réservation, elle dit « Réservation introuvable » et propose de réserver.",
+   "animations": [
+    "aucune"
+   ],
+   "interactions": [
+    "réservation-simulee"
+   ],
+   "telephone": "adapté",
+   "note_qualite": 3,
+   "reutilisable": false,
+   "module": null,
+   "pieges": [
+    "Lit une réservation fictive enregistrée dans le navigateur : la capture montre l'état sans réservation"
+   ],
+   "sans_capture": true
   }
  }
 }
