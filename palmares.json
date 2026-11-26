@@ -749,27 +749,27 @@
     "en_ligne": "https://surffm-maquette.vercel.app/nous-capter"
    },
    {
-    "id": "jplocmob-maquette/carte",
-    "maquette": "jplocmob-maquette",
-    "client": "location de mobylettes restaurées et balades en Isère au départ de Chèzeneuve : trois balades, formules à la demi-journée ou à la journée",
+    "id": "ewa-design-maquette/architecture-concours",
+    "maquette": "ewa-design-maquette",
+    "client": "atelier d'architecture, de design et d'art à Bordeaux depuis 2012 (EWA Design, Eco Workshop Art) : estampes numériques en 30 exemplaires tirées à la demande, concours d'architecture, habitat autonome en bois, kiosques et luminaires",
     "note_section": 5,
     "note_maquette": 89,
-    "titre": "Deux boucles au départ de Chèzeneuve",
-    "description": "« Deux boucles au départ de Chèzeneuve » sur vert sapin : plan épinglé où le tracé jaune se dessine, la mobylette le suit, les villages s'allument au passage, les kilomètres comptent ; choix de la balade et bouton « Rejouer le tracé »",
+    "titre": "Sept escales, quatre continents",
+    "description": "« Sept escales, quatre continents » épinglé : un globe en points tourne d'escale en escale au défilement, chaque concours apparaît avec son lieu, ses partenaires et ses planches",
     "animations": [
-     "trace-svg",
      "section-fixée",
-     "compteur"
+     "canvas-2d"
     ],
     "interactions": [
-     "carte-interactive"
+     "carte-interactive",
+     "galerie-cliquable"
     ],
-    "module": null,
-    "fiche": "sections/jplocmob-maquette/carte.json",
-    "capture": "medias/jplocmob-maquette/carte-p1440.jpg",
-    "capture_m390": "medias/jplocmob-maquette/carte-m390.jpg",
-    "video": "medias/jplocmob-maquette/carte-p720.mp4",
-    "en_ligne": "https://jplocmob-maquette.vercel.app"
+    "module": "globe-itineraire",
+    "fiche": "sections/ewa-design-maquette/architecture-concours.json",
+    "capture": "medias/ewa-design-maquette/architecture-concours-p1440.jpg",
+    "capture_m390": "medias/ewa-design-maquette/architecture-concours-m390.jpg",
+    "video": "medias/ewa-design-maquette/architecture-concours-p720.mp4",
+    "en_ligne": "https://ewa-design-maquette.vercel.app/architecture"
    }
   ],
   "offre": [
@@ -1393,6 +1393,73 @@
     "en_ligne": "https://enluminure-marienuel-maquette.vercel.app"
    }
   ],
+  "decor": [
+   {
+    "id": "jardins-hacienda-v2-maquette/plongee",
+    "maquette": "jardins-hacienda-v2-maquette",
+    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Plongée dans la piscine",
+    "description": "« Plongez. » épinglé : une arche s'agrandit sur la piscine jusqu'au plein écran, la photo plonge sous l'eau",
+    "animations": [
+     "section-fixée",
+     "masque"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/jardins-hacienda-v2-maquette/plongee.json",
+    "capture": "medias/jardins-hacienda-v2-maquette/plongee-p1440.jpg",
+    "capture_m390": "medias/jardins-hacienda-v2-maquette/plongee-m390.jpg",
+    "video": "medias/jardins-hacienda-v2-maquette/plongee-p720.mp4",
+    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app"
+   },
+   {
+    "id": "games42-maquette/portal",
+    "maquette": "games42-maquette",
+    "client": "escape game familial (enfants, familles, adultes, groupes)",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Portail vivant",
+    "description": "Fond WebGL fixe (OGL) : l'image du monde traversé tourbillonne autour d'un anneau lumineux et passe d'un monde à l'autre par une dissolution ; il plonge dans le portail en quittant l'ouverture. Sans WebGL, fondu enchaîné d'images en CSS.",
+    "animations": [
+     "webgl-shader",
+     "progression-fixée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": null,
+    "fiche": "sections/games42-maquette/portal.json",
+    "capture": "medias/games42-maquette/portal-p1440.jpg",
+    "capture_m390": "medias/games42-maquette/portal-m390.jpg",
+    "video": null,
+    "en_ligne": "https://games42-maquette.vercel.app"
+   },
+   {
+    "id": "surffm-maquette/cadran",
+    "maquette": "surffm-maquette",
+    "client": "radio associative de glisse",
+    "note_section": 5,
+    "note_maquette": 90,
+    "titre": "Cadran de fréquences latéral",
+    "description": "Règle verticale de 87,5 à 108 MHz fixée à droite : l'aiguille suit la progression de la page, chaque section porte une fréquence cliquable et son nom s'affiche en étiquette au changement, avec un grésillement bref ; sur téléphone il devient une règle horizontale au-dessus du lecteur.",
+    "animations": [
+     "progression-fixée"
+    ],
+    "interactions": [
+     "aucune"
+    ],
+    "module": "rail-de-sections",
+    "fiche": "sections/surffm-maquette/cadran.json",
+    "capture": "medias/surffm-maquette/cadran-p1440.jpg",
+    "capture_m390": null,
+    "video": null,
+    "en_ligne": "https://surffm-maquette.vercel.app"
+   }
+  ],
   "chiffres": [
    {
     "id": "observatoire-des-cse-maquette/pouls",
@@ -1463,73 +1530,6 @@
     "capture_m390": "medias/instinct-aventure-maquette/namibie-m390.jpg",
     "video": "medias/instinct-aventure-maquette/namibie-p720.mp4",
     "en_ligne": "https://instinct-aventure-maquette.vercel.app"
-   }
-  ],
-  "decor": [
-   {
-    "id": "jardins-hacienda-v2-maquette/plongee",
-    "maquette": "jardins-hacienda-v2-maquette",
-    "client": "restaurant et lieu de réception à Moineville, à 15 km de Metz (Les Jardins de l'Hacienda, chef Régis Clauss) : cuisine de saison, terrasse sous les palmiers, piscine, Grand Buffet du dimanche, mariages et fêtes ; seconde maquette pour ce client",
-    "note_section": 5,
-    "note_maquette": 90,
-    "titre": "Plongée dans la piscine",
-    "description": "« Plongez. » épinglé : une arche s'agrandit sur la piscine jusqu'au plein écran, la photo plonge sous l'eau",
-    "animations": [
-     "section-fixée",
-     "masque"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/jardins-hacienda-v2-maquette/plongee.json",
-    "capture": "medias/jardins-hacienda-v2-maquette/plongee-p1440.jpg",
-    "capture_m390": "medias/jardins-hacienda-v2-maquette/plongee-m390.jpg",
-    "video": "medias/jardins-hacienda-v2-maquette/plongee-p720.mp4",
-    "en_ligne": "https://jardins-hacienda-v2-maquette.vercel.app"
-   },
-   {
-    "id": "games42-maquette/portal",
-    "maquette": "games42-maquette",
-    "client": "escape game familial (enfants, familles, adultes, groupes)",
-    "note_section": 5,
-    "note_maquette": 90,
-    "titre": "Portail vivant",
-    "description": "Fond WebGL fixe (OGL) : l'image du monde traversé tourbillonne autour d'un anneau lumineux et passe d'un monde à l'autre par une dissolution ; il plonge dans le portail en quittant l'ouverture. Sans WebGL, fondu enchaîné d'images en CSS.",
-    "animations": [
-     "webgl-shader",
-     "progression-fixée"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": null,
-    "fiche": "sections/games42-maquette/portal.json",
-    "capture": "medias/games42-maquette/portal-p1440.jpg",
-    "capture_m390": "medias/games42-maquette/portal-m390.jpg",
-    "video": null,
-    "en_ligne": "https://games42-maquette.vercel.app"
-   },
-   {
-    "id": "surffm-maquette/cadran",
-    "maquette": "surffm-maquette",
-    "client": "radio associative de glisse",
-    "note_section": 5,
-    "note_maquette": 90,
-    "titre": "Cadran de fréquences latéral",
-    "description": "Règle verticale de 87,5 à 108 MHz fixée à droite : l'aiguille suit la progression de la page, chaque section porte une fréquence cliquable et son nom s'affiche en étiquette au changement, avec un grésillement bref ; sur téléphone il devient une règle horizontale au-dessus du lecteur.",
-    "animations": [
-     "progression-fixée"
-    ],
-    "interactions": [
-     "aucune"
-    ],
-    "module": "rail-de-sections",
-    "fiche": "sections/surffm-maquette/cadran.json",
-    "capture": "medias/surffm-maquette/cadran-p1440.jpg",
-    "capture_m390": null,
-    "video": null,
-    "en_ligne": "https://surffm-maquette.vercel.app"
    }
   ],
   "témoignages": [

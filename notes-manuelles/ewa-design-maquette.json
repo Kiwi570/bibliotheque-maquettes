@@ -1,0 +1,965 @@
+{
+  "maquette": {
+    "client": "atelier d'architecture, de design et d'art à Bordeaux depuis 2012 (EWA Design, Eco Workshop Art) : estampes numériques en 30 exemplaires tirées à la demande, concours d'architecture, habitat autonome en bois, kiosques et luminaires",
+    "activite": [
+      "culture",
+      "artisanat",
+      "services-b2b"
+    ],
+    "concept": [
+      "galerie",
+      "dossier"
+    ],
+    "ambiance": [
+      "sobre",
+      "clair",
+      "minéral"
+    ],
+    "palette": {
+      "fond": "--papier",
+      "texte": "--encre",
+      "accent": "--accent",
+      "secondaire": "--pierre"
+    },
+    "polices": {
+      "titres": "Jost",
+      "texte": "DM Sans",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Art | chitecture » : papier, encre et orange, Jost fine ; la barre verticale du logo coupe l'écran entre une estampe et un croquis d'architecture, puis descend dans la marge avec la lecture",
+      "à l'ouverture la barre monte sur toute la hauteur et l'écran s'ouvre de part et d'autre ; l'estampe s'imprime sous une ligne de lumière",
+      "formats gigognes : on tire le coin de l'estampe de 30 à 60 puis 90 cm à côté d'une silhouette d'1,70 m ; trame de l'habitat autonome qui s'agrandit module après module",
+      "globe des sept concours sur quatre continents (module de la bibliothèque), visionneuses avec loupe, catalogue d'estampes filtrable, confirmation imprimée comme un tirage"
+    ],
+    "reserves": [
+      "quelques supports illustrés par des images générées ; 53 min d'attente pendant la v1, Safari non testé"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "masque",
+      "révélation-texte",
+      "section-fixée",
+      "galerie-horizontale",
+      "fil-conducteur",
+      "canvas-2d",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "configurateur",
+      "carte-interactive",
+      "galerie-cliquable",
+      "filtres",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "ecran-partage",
+    "grille": {
+      "objet": "l'estampe qui s'imprime et change d'échelle",
+      "fil": "la barre du logo qui coupe l'écran puis descend dans la marge"
+    },
+    "metier": "atelier d'architecture, de design et d'estampes"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Intro et voile : la barre du logo monte sur toute la hauteur puis glisse jusqu'à l'objet d'ouverture, l'écran s'ouvre de part et d'autre",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête papier : logo EWA Design, estampes, architecture, design et sculpture, l'atelier, contact, bouton encre « Choisir une estampe »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur encre",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "debut": {
+      "titre": "Artchitecture",
+      "role": "ouverture",
+      "description": "Écran coupé par la barre orange du logo : une estampe Impulsions à gauche qui s'imprime sous une ligne de lumière, le croquis de concours de Chan Chan (Pérou) à droite, les deux répondent à la souris ; « ART|CHITECTURE » écrit par la barre, boutons",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "écran coupé par la barre du logo entre estampe et architecture",
+        "estampe qui s'imprime sous une ligne de lumière"
+      ]
+    },
+    "demarche": {
+      "titre": "Pas de stock, pas de déchets",
+      "role": "manifeste",
+      "description": "« Pas de stock, pas de déchets » : trois principes numérotés et une imprimante grand format",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "series": {
+      "titre": "Cinq séries, une seule règle : 30 exemplaires",
+      "role": "galerie",
+      "description": "« Cinq séries, une seule règle : 30 exemplaires » : rangée d'estampes qui glisse au défilement sur ordinateur",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "formats": {
+      "titre": "30, 60 ou 90 centimètres de côté",
+      "role": "outil-interactif",
+      "description": "« 30, 60 ou 90 centimètres de côté » : à côté d'une silhouette d'1,70 m, on tire le coin de l'estampe qui passe de 30 à 60 puis 90 cm ; quatre supports en vignettes",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "jeu",
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "coin de l'estampe à tirer de 30 à 90 cm à côté d'une silhouette"
+      ]
+    },
+    "architecture": {
+      "titre": "L'architecture d'EWA",
+      "role": "decor",
+      "description": "« Du Pérou à la Finlande » épinglé sur encre : l'image d'un concours s'ouvre en plein écran, les mots s'effacent quand la légende arrive",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "trame": {
+      "titre": "Une maison qui grandit, module après module",
+      "role": "outil-interactif",
+      "description": "« Une maison qui grandit, module après module » : trame de 4 × 4 m en bois ; on choisit un des cinq modèles, la grille s'agrandit case par case avec occupants, surface et production",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "configurateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "trame d'habitat qui s'agrandit module après module"
+      ]
+    },
+    "design": {
+      "titre": "Du kiosque au luminaire",
+      "role": "portfolio",
+      "description": "« Du kiosque au luminaire » : The Crêpe Café et planches de luminaires en photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "expositions": {
+      "titre": "Exposées de Paris à New York",
+      "role": "galerie",
+      "description": "« Exposées de Paris à New York » : photos d'accrochages qui défilent avec ville et date",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Une estampe, un projet ?",
+      "role": "appel",
+      "description": "« Une estampe, un projet ? » : estampe encadrée sur encre, bouton et e-mail de l'atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Écrire à l'atelier",
+      "role": "pied-de-page",
+      "description": "Pied de page encre : logo, e-mail, sommaire, informations",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "404-debut": {
+      "titre": "Cette pièce n'est pas encore construite",
+      "role": "page-404",
+      "description": "404 « Cette pièce n'est pas encore construite » : coupe d'une maison en bois en construction, liens",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "architecture-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "architecture-debut": {
+      "titre": "Dessinerpour un climat",
+      "role": "ouverture",
+      "description": "« Dessiner pour un climat » : grand titre orange et image de concours au bord de l'eau ; l'écran s'ouvre de part et d'autre de la barre du logo",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "architecture-concours": {
+      "titre": "Sept escales, quatre continents",
+      "role": "carte",
+      "description": "« Sept escales, quatre continents » épinglé : un globe en points tourne d'escale en escale au défilement, chaque concours apparaît avec son lieu, ses partenaires et ses planches",
+      "animations": [
+        "section-fixée",
+        "canvas-2d"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "galerie-cliquable"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": "globe-itineraire",
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "architecture-habitat": {
+      "titre": "Des maisons qui se suffisent",
+      "role": "portfolio",
+      "description": "« Des maisons qui se suffisent » : coupe annotée d'une maison autonome en bois, principes en colonnes",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "architecture-urbanisme": {
+      "titre": "Habiter l'eau et la terre",
+      "role": "portfolio",
+      "description": "« Habiter l'eau et la terre » : maisons sur l'eau, île-jardin, village en terre",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "architecture-esquisse": {
+      "titre": "Le parti pris du non-photoréalisme",
+      "role": "galerie",
+      "description": "« Le parti pris du non-photoréalisme » : esquisses à l'encre et au lavis",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "architecture-fin": {
+      "titre": "Un terrain, un programme, un concours ?",
+      "role": "appel",
+      "description": "« Un terrain, un programme, un concours ? » : phrase et bouton, bouton et e-mail de l'atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "atelier-debut": {
+      "titre": "Eco Workshop Art, à Bordeaux",
+      "role": "ouverture",
+      "description": "« L'atelier EWA » : « 2012 » en grand ; l'écran s'ouvre de part et d'autre de la barre du logo",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-metiers": {
+      "titre": "Ce que l'on peut demander à EWA",
+      "role": "services",
+      "description": "« Un atelier, quatre métiers » : architecture, design, estampes, sculpture en cartes photo",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-parcours": {
+      "titre": "De Paris-Malaquais à Bordeaux",
+      "role": "étapes",
+      "description": "« De Paris-Malaquais à Bordeaux » : frise du parcours",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-expositions": {
+      "titre": "Les accrochages, 2023 – 2025",
+      "role": "galerie",
+      "description": "« Les accrochages, 2023 – 2025 » : expositions en photos qui défilent",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-presse": {
+      "titre": "Ils en ont parlé",
+      "role": "preuves",
+      "description": "« Ils en ont parlé » : couvertures de magazines qui s'ouvrent dans la visionneuse",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "atelier-visionneuse": {
+      "titre": "Accrochages",
+      "role": "galerie",
+      "description": "Visionneuse avec loupe pour explorer l'œuvre ou la planche, flèches et demande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "atelier-fin": {
+      "titre": "Une exposition, un article, une collaboration ?",
+      "role": "appel",
+      "description": "« Une exposition, un article, une collaboration ? » : phrase et bouton, bouton et e-mail de l'atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "contact-debut": {
+      "titre": "Écrire à l'atelier",
+      "role": "ouverture",
+      "description": "« Écrire à l'atelier » : e-mail et adresse ; l'écran s'ouvre de part et d'autre de la barre du logo",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "En quatre étapes",
+      "role": "contact",
+      "description": "« Votre demande, en quatre étapes » : estampe, architecture, luminaire ou exposition en cartes, détails, coordonnées ; la confirmation sort comme un tirage",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "formulaire-par-etapes",
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "design-sculpture-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "design-sculpture-debut": {
+      "titre": "La formeet la lumière",
+      "role": "ouverture",
+      "description": "« La forme et la lumière » : kiosque et luminaire ; l'écran s'ouvre de part et d'autre de la barre du logo",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-sculpture-commercial": {
+      "titre": "The Crêpe Café, cinq kiosques",
+      "role": "portfolio",
+      "description": "« The Crêpe Café, cinq kiosques » : charte et photos des kiosques",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-sculpture-interieur": {
+      "titre": "Des pièces qui s'arrondissent",
+      "role": "portfolio",
+      "description": "« Des pièces qui s'arrondissent » : intérieurs courbes en photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-sculpture-luminaires": {
+      "titre": "Collection 2027",
+      "role": "galerie",
+      "description": "« Collection 2027 » : huit planches de luminaires à ouvrir en grand avec la loupe",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-sculpture-visionneuse": {
+      "titre": "Ondoring",
+      "role": "galerie",
+      "description": "Visionneuse avec loupe pour explorer l'œuvre ou la planche, flèches et demande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "design-sculpture-sculptures": {
+      "titre": "L'acier qui se tend",
+      "role": "portfolio",
+      "description": "« L'acier qui se tend » : sculptures en acier Corten et installations de verre",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "design-sculpture-fin": {
+      "titre": "Un kiosque, un intérieur, un luminaire ?",
+      "role": "appel",
+      "description": "« Un kiosque, un intérieur, un luminaire ? » : phrase et bouton, bouton et e-mail de l'atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-fil": {
+      "titre": "",
+      "role": "decor",
+      "description": "Fil dans la marge : la barre du logo descend avec la lecture et le folio de la section change",
+      "animations": [
+        "fil-conducteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true,
+      "particularites": [
+        "barre du logo qui descend dans la marge avec la lecture"
+      ]
+    },
+    "estampes-debut": {
+      "titre": "Signées,numérotées,tirées pour vous",
+      "role": "ouverture",
+      "description": "« Signées, numérotées, tirées pour vous » : l'œuvre en majesté et « 1/30 » en très grand ; l'écran s'ouvre de part et d'autre de la barre du logo",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-principe": {
+      "titre": "Trois choix, puis l'impression",
+      "role": "étapes",
+      "description": "« Trois choix, puis l'impression » : l'œuvre, le format et le support, la commande",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-catalogue": {
+      "titre": "Choisir une estampe",
+      "role": "produits",
+      "description": "« Choisir une estampe » : catalogue filtrable par série (gardé dans l'adresse ?serie=), chaque œuvre s'ouvre dans la visionneuse (?oeuvre=)",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres",
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-visionneuse": {
+      "titre": "Impulsions",
+      "role": "galerie",
+      "description": "Visionneuse avec loupe pour explorer l'œuvre ou la planche, flèches et demande",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "galerie-cliquable"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "estampes-supports": {
+      "titre": "Brillant, brossé, mat ou pigmentaire",
+      "role": "produits",
+      "description": "« Brillant, brossé, mat ou pigmentaire » : quatre supports en photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-ventes": {
+      "titre": "Chez ceux qui les ont choisies",
+      "role": "preuves",
+      "description": "« Chez ceux qui les ont choisies » : estampes accrochées chez des clients, en photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "estampes-fin": {
+      "titre": "Une œuvre vous a retenu ?",
+      "role": "appel",
+      "description": "« Une œuvre vous a retenu ? » : estampe encadrée sur encre, bouton et e-mail de l'atelier",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
