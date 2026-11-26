@@ -1,0 +1,657 @@
+{
+  "maquette": {
+    "client": "services à la personne à Hondainville, dans l'Oise (ATOUS CŒUR, Jérôme Sannier) : ménage, jardin, courses, repas, rendez-vous et papiers, avec l'avance immédiate de l'Urssaf",
+    "activite": [
+      "services-b2b",
+      "santé"
+    ],
+    "concept": [
+      "vitrine",
+      "autre"
+    ],
+    "ambiance": [
+      "chaleureux",
+      "clair",
+      "doux"
+    ],
+    "palette": {
+      "fond": "--fond",
+      "texte": "--texte",
+      "accent": "--rouge",
+      "secondaire": "--aubergine"
+    },
+    "polices": {
+      "titres": "Bricolage Grotesque",
+      "texte": "Atkinson Hyperlegible",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Les couleurs de la voiture » : blanc chaud, lin, aubergine et rouge ; la bande rouge et violette de la voiture d'ATOUS CŒUR traverse l'écran à l'ouverture et revient dans l'appel final",
+      "texte en Atkinson Hyperlegible à 18 px, police conçue pour les personnes qui voient mal : pensé pour des clients âgés",
+      "« Vous ne payez que la moitié » : 30 € coupé en deux par la bande, il reste 15 € ; composez votre semaine avec des jetons à glisser sur les jours, reste à charge calculé",
+      "trois étapes sur une route où roule une petite voiture, carte autour de Hondainville où l'on fait rouler la voiture jusqu'à sa ville, voiture annotée",
+      "réservation simulée sur les 14 prochains jours avec récapitulatif et reste à charge"
+    ],
+    "reserves": [
+      "onze illustrations générées ; zone d'intervention et horaires non précisés par le client"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "masque",
+      "trace-svg",
+      "section-fixée",
+      "compteur",
+      "parallaxe",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "simulateur",
+      "calculateur",
+      "jeu",
+      "carte-interactive",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la voiture d'ATOUS CŒUR et sa bande rouge et violette",
+      "fil": "la bande qui traverse l'écran"
+    },
+    "metier": "services à la personne"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile aubergine entre les pages, titres qui arrivent en lignes",
+      "animations": [
+        "transition-de-page"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête blanc chaud : logo ATOUS CŒUR, services, Jérôme, réserver, contact, bouton rouge avec le numéro de téléphone",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur aubergine",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Vous assister au quotidien.",
+      "role": "ouverture",
+      "description": "« Vous assister au quotidien » sur le vrai jardin : la bande rouge et violette de la voiture traverse l'écran en biais sous le titre, un reflet passe dessus ; encart « Première inscription gratuite, 30 € → 15 € », boutons appeler et réserver",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "bande de la voiture qui traverse l'écran"
+      ]
+    },
+    "services": {
+      "titre": "Ce que Jérôme fait pour vous.",
+      "role": "services",
+      "description": "« Ce que Jérôme fait pour vous » : six cartes photo (ménage, jardin, courses, repas, rendez-vous, papiers) avec prix à l'heure ; les pictogrammes se posent comme des autocollants sur une portière",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "avance": {
+      "titre": "Vous ne payez que la moitié.",
+      "role": "calculateur",
+      "description": "« Vous ne payez que la moitié » sur aubergine : « 30 € » coupé en deux par la bande rouge, il reste « 15 € » en très grand ; « Composez votre semaine » : on glisse (ou touche) des jetons de services sur les jours, les heures s'empilent, total et reste à charge avec l'avance immédiate",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur",
+        "calculateur",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Montants indicatifs"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "prix coupé en deux par la bande",
+        "semaine composée avec des jetons à glisser"
+      ]
+    },
+    "jerome": {
+      "titre": "Vous reconnaîtrez sa voiture.",
+      "role": "équipe",
+      "description": "« Vous reconnaîtrez sa voiture » : la vraie voiture floquée, « Passionnés. Expérimentés. Attentionnés. », bouton faire connaissance",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "etapes": {
+      "titre": "Trois étapes, pas une de plus.",
+      "role": "étapes",
+      "description": "« Trois étapes, pas une de plus » : une route rouge se trace et une petite voiture roule dessus jusqu'aux trois cartes numérotées",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "petite voiture qui roule sur la route des étapes"
+      ]
+    },
+    "zone": {
+      "titre": "Depuis Hondainville.",
+      "role": "carte",
+      "description": "« Depuis Hondainville » : carte dessinée où les routes se tracent et les villes se posent, trois ondes ; on fait rouler la voiture jusqu'à sa ville, la distance s'affiche, villes en étiquettes",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "voiture qu'on fait rouler sur la carte jusqu'à sa ville"
+      ]
+    },
+    "engagements": {
+      "titre": "Ce qui compte chez vous.",
+      "role": "preuves",
+      "description": "« Ce qui compte chez vous » : engagements avec cœurs rouges (vie privée, habitudes, réactivité, tarifs), fauteuil près de la fenêtre",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Un coup de fil suffit.",
+      "role": "appel",
+      "description": "« Un coup de main ? Un coup de fil suffit. » sur aubergine : la bande de la voiture traverse l'écran, le numéro en très grand, boutons réserver en ligne et écrire",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Téléphone",
+      "role": "pied-de-page",
+      "description": "Pied de page aubergine : logo, téléphone et e-mail, sommaire, déclaration SAP et SIRET",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Cette page est partie faire les courses.",
+      "role": "page-404",
+      "description": "404 « Cette page est partie faire les courses » : sac en papier et pomme sur une table, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons-en.",
+      "role": "ouverture",
+      "description": "« Parlons-en » : le numéro en très grand souligné de rouge, ses groupes s'écartent un peu au défilement ; téléphone posé près d'une fenêtre",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-ecrire": {
+      "titre": "Écrire à Jérôme.",
+      "role": "contact",
+      "description": "« Écrire à Jérôme » : la voiture en photo et un formulaire simple",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-zone": {
+      "titre": "Depuis Hondainville.",
+      "role": "carte",
+      "description": "« Depuis Hondainville » : carte dessinée où les routes se tracent et les villes se posent, trois ondes ; on fait rouler la voiture jusqu'à sa ville, la distance s'affiche, villes en étiquettes",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "carte-interactive",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "voiture qu'on fait rouler sur la carte jusqu'à sa ville"
+      ]
+    },
+    "jerome-debut": {
+      "titre": "Passionnés. Expérimentés. Attentionnés.",
+      "role": "ouverture",
+      "description": "« Passionnés. Expérimentés. Attentionnés. » (le dernier en rouge) : boutons, bandeau du village qui s'ouvre en diagonale comme la bande de la voiture",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-idee": {
+      "titre": "Il n'y a pas de meilleur endroit que son chez-soi.",
+      "role": "manifeste",
+      "description": "« Il n'y a pas de meilleur endroit que son chez-soi » : maison au cœur dessinée au trait rouge",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-voiture": {
+      "titre": "Blanche, rouge et violette.",
+      "role": "outil-interactif",
+      "description": "« Blanche, rouge et violette » : la voiture en grand, trois repères numérotés qui se posent l'un après l'autre (le nom, les services, le numéro)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "schema-interactif"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-route": {
+      "titre": "De chemin en rendez-vous.",
+      "role": "galerie",
+      "description": "« De chemin en rendez-vous » : vraies photos de la voiture sur les chemins de l'Oise et devant un pôle santé",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-confiance": {
+      "titre": "Chez vous, comme vous l'aimez.",
+      "role": "preuves",
+      "description": "« Chez vous, comme vous l'aimez » : manteau et écharpe à une patère, engagements",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-sap": {
+      "titre": "Déclaré services à la personne.",
+      "role": "preuves",
+      "description": "« Déclaré services à la personne » sur aubergine : tampon circulaire qui tourne au défilement, numéros SAP et SIRET, lien vers l'avance immédiate",
+      "animations": [
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "jerome-appel": {
+      "titre": "Un coup de fil suffit.",
+      "role": "appel",
+      "description": "« Un coup de main ? Un coup de fil suffit. » sur aubergine : la bande de la voiture traverse l'écran, le numéro en très grand, boutons réserver en ligne et écrire",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-debut": {
+      "titre": "Réservez un créneau.",
+      "role": "outil-interactif",
+      "description": "« Réservez un créneau » : service, durée, jour parmi les 14 prochains à partir d'aujourd'hui, matin ou après-midi, coordonnées ; récapitulatif épinglé avec prix et reste à charge, service prérempli depuis les autres pages",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes",
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Réservation simulée"
+      ]
+    },
+    "reserver-appeler": {
+      "titre": "Jérôme décroche.",
+      "role": "appel",
+      "description": "« Vous préférez appeler ? Jérôme décroche. » : téléphone et photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "reserver-savoir": {
+      "titre": "Bon à savoir",
+      "role": "faq",
+      "description": "« Bon à savoir » : première inscription gratuite, services personnalisés, la moitié du prix",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-debut": {
+      "titre": "Tout ce qui aide à rester chez soi.",
+      "role": "ouverture",
+      "description": "« Tout ce qui aide à rester chez soi » : de 25 à 35 € de l'heure, de 12,50 à 17,50 € avec l'avance immédiate, liens vers les six services",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-liste": {
+      "titre": "Les six services",
+      "role": "services",
+      "description": "« Les six services » : chaque service en détail avec sa photo et son pictogramme qui se pose comme un autocollant, prix et bouton réserver",
+      "animations": [
+        "apparition-au-défilement",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-tarifs": {
+      "titre": "Des prix à l'heure, sans surprise.",
+      "role": "tarifs",
+      "description": "« Des prix à l'heure, sans surprise » : tableau des tarifs avec et sans avance immédiate, les lignes se posent l'une après l'autre",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-avance": {
+      "titre": "Comment ça marche ?",
+      "role": "calculateur",
+      "description": "« Comment ça marche ? » sur aubergine : « 30 € » coupé en deux par la bande rouge, il reste « 15 € » en très grand ; « Composez votre semaine » : on glisse (ou touche) des jetons de services sur les jours, les heures s'empilent, total et reste à charge avec l'avance immédiate",
+      "animations": [
+        "section-fixée",
+        "masque",
+        "compteur"
+      ],
+      "interactions": [
+        "simulateur",
+        "calculateur",
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Montants indicatifs"
+      ],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "prix coupé en deux par la bande",
+        "semaine composée avec des jetons à glisser"
+      ]
+    },
+    "services-faq": {
+      "titre": "Questions fréquentes",
+      "role": "faq",
+      "description": "« Questions fréquentes » : questions dépliables, photo épinglée",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "services-appel": {
+      "titre": "Un coup de fil suffit.",
+      "role": "appel",
+      "description": "« Un coup de main ? Un coup de fil suffit. » sur aubergine : la bande de la voiture traverse l'écran, le numéro en très grand, boutons réserver en ligne et écrire",
+      "animations": [
+        "masque",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
