@@ -1,0 +1,682 @@
+{
+  "maquette": {
+    "client": "compagnie de danse contemporaine à Limoges (la Virevoltée, Mathilde Rader) : cinq créations pour la rue et la scène avec musique en direct, éducation artistique, coaching scénique, entraînement partagé",
+    "activite": [
+      "spectacle",
+      "culture",
+      "association"
+    ],
+    "concept": [
+      "scène",
+      "affiche"
+    ],
+    "ambiance": [
+      "énergique",
+      "nocturne",
+      "chaleureux"
+    ],
+    "palette": {
+      "fond": "--lin",
+      "texte": "--encre",
+      "accent": "--brique",
+      "secondaire": "--plateau"
+    },
+    "polices": {
+      "titres": "Syne",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Virevolte » : lin, plateau sombre et rouge brique du logo, Syne ExtraBold en capitales larges ; les lettres des titres d'ouverture tournoient",
+      "la toupie de l'accueil : on l'attrape et on la lance, en tournant elle déroule des rubans aux couleurs de la jupe de la danseuse ; anneau de texte qui tourne plus vite au défilement",
+      "roue des cinq créations qu'on attrape ou qu'on fait défiler, rail de disques pendant les chapitres, portraits de l'équipe qui se retournent",
+      "agenda de 55 dates rangées au jour réel avec carte de France où les villes apparaissent saison après saison ; tampon de la compagnie posé sur la demande"
+    ],
+    "reserves": [
+      "une illustration générée (coaching) ; teasers YouTube chargés au clic"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "révélation-texte",
+      "reactif-vitesse",
+      "canvas-2d",
+      "section-fixée",
+      "marquee",
+      "compteur",
+      "filtre-anime",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "lecteur-vidéo",
+      "galerie-cliquable",
+      "filtres",
+      "carte-interactive",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la toupie qu'on lance et qui déroule des rubans",
+      "fil": "les lettres qui tournoient"
+    },
+    "metier": "compagnie de danse contemporaine"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile rouge brique entre les pages, lettres des titres d'ouverture qui tournoient",
+      "animations": [
+        "transition-de-page",
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête : logo la Virevoltée, créations, agenda, transmission, contact, bouton brique « Programmer »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur plateau sombre",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Une danse organique et explosive",
+      "role": "ouverture",
+      "description": "« Une danse organique et explosive » (organique en brique) sur la photo de la danseuse en jupe fleurie : la toupie du logo, son anneau de texte tourne doucement et plus vite au défilement ; on l'attrape et on la lance, en tournant elle déroule des rubans aux couleurs de la jupe ; elle se lance seule jusqu'au premier geste",
+      "animations": [
+        "ouverture-orchestrée",
+        "révélation-texte",
+        "canvas-2d",
+        "reactif-vitesse"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "toupie à lancer qui déroule des rubans"
+      ]
+    },
+    "compagnie": {
+      "titre": "Mélanger les arts pour faire danser tous les publics",
+      "role": "manifeste",
+      "description": "« Mélanger les arts pour faire danser tous les publics » : photo de la danseuse au sol en arche sombre, histoire de la compagnie",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations": {
+      "titre": "Cinq pièces, de la rue à la scène",
+      "role": "portfolio",
+      "description": "« Cinq pièces, de la rue à la scène » épinglé : roue de cinq disques photo qu'on fait défiler ou qu'on attrape, elle tourne d'une création à l'autre avec un cran, fiche de la création au centre (année, format, durée, citation)",
+      "animations": [
+        "section-fixée",
+        "progression-fixée"
+      ],
+      "interactions": [
+        "jeu",
+        "galerie-cliquable"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "roue des créations qu'on attrape et fait tourner"
+      ]
+    },
+    "dates": {
+      "titre": "Prochaines dates",
+      "role": "agenda",
+      "description": "« Prochaines dates » : chiffres (55 dates, 32 villes, 5 créations), dates à venir avec vignette de la création",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "videos": {
+      "titre": "La compagnie en mouvement",
+      "role": "galerie",
+      "description": "« La compagnie en mouvement » sur plateau sombre : quatre teasers en grandes vignettes, vidéo YouTube chargée au clic",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmettre": {
+      "titre": "Danser avec les élèves, les musiciens, les danseurs",
+      "role": "services",
+      "description": "« Danser avec les élèves, les musiciens, les danseurs » : trois cartes photo (éducation artistique, coaching scénique, Dada Collectif)",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "equipe": {
+      "titre": "Une danseuse, et les artistes qu’elle invite",
+      "role": "équipe",
+      "description": "« Une danseuse, et les artistes qu'elle invite » : six portraits en arches qui se retournent pour montrer la présentation",
+      "animations": [
+        "flip"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "lieux": {
+      "titre": "Ils accueillent et soutiennent la compagnie",
+      "role": "preuves",
+      "description": "Noms des villes traversées en bandeau géant qui défile, puis soutiens et lieux de résidence",
+      "animations": [
+        "marquee"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "appel": {
+      "titre": "Programmer la Virevoltée",
+      "role": "appel",
+      "description": "« Programmer la Virevoltée » sur plateau sombre : festival, saison, médiathèque, école, logo en filigrane, boutons écrire et appeler",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page plateau sombre : logo, adresse, sommaire, réseaux, « LA VIREVOLTÉE » en très grand brique",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Faux pas : cette page n’est pas au programme",
+      "role": "page-404",
+      "description": "404 « Faux pas : cette page n'est pas au programme » : scène vide sous les projecteurs, toupie, boutons",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-debut": {
+      "titre": "Les dates de la Virevoltée",
+      "role": "ouverture",
+      "description": "« Les dates de la Virevoltée » : la prochaine date dans un grand rond brique, photo d'un spectacle de rue",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-dates": {
+      "titre": "Les dates de la compagnie",
+      "role": "agenda",
+      "description": "« Les dates de la compagnie » : 55 dates rangées toutes seules selon le jour (à venir en haut, saisons passées repliées), filtrables par création, ajout à l'agenda",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "agenda-carte": {
+      "titre": "Les villes traversées depuis 2021",
+      "role": "carte",
+      "description": "« Les villes traversées depuis 2021 » sur plateau sombre : carte de France où les points des villes apparaissent saison après saison, l'année en grand brique",
+      "animations": [
+        "compteur",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "carte-interactive"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "villes qui apparaissent saison après saison sur la carte"
+      ]
+    },
+    "agenda-appel": {
+      "titre": "Accueillir la compagnie",
+      "role": "appel",
+      "description": "« Accueillir la compagnie » sur plateau sombre : votre saison, votre festival, logo en filigrane, boutons écrire et appeler",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Parlons de votre projet",
+      "role": "ouverture",
+      "description": "« Parlons de votre projet » : portrait rond de Mathilde Rader cerclé de brique, téléphone en grand",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-demande": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » : trois questions (projet en cartes photo, quand et où, coordonnées) ; le tampon de la compagnie se pose quand la demande est prête",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ],
+      "particularites": [
+        "tampon de la compagnie posé sur la demande"
+      ]
+    },
+    "contact-programmateurs": {
+      "titre": "Pour programmer la compagnie",
+      "role": "texte-legal",
+      "description": "« Pour programmer la compagnie » sur plateau sombre : association, SIRET, licences, bureau ; soutenir la compagnie",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-debut": {
+      "titre": "Cinq créations, de la rue à la scène",
+      "role": "ouverture",
+      "description": "« Cinq créations, de la rue à la scène » : toupie, rangée de cinq disques photo des créations",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-rail": {
+      "titre": "Aller à une création",
+      "role": "menu",
+      "description": "Rail de disques des cinq créations qui n'apparaît que pendant les chapitres",
+      "animations": [
+        "section-fixée"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "masqué",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "creations-inshift": {
+      "titre": "InShift",
+      "role": "portfolio",
+      "description": "01 / 05 « InShift » : solo de danse pour la rue ; citation, format, durée, public, photos de la pièce et teaser",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-nocturnes": {
+      "titre": "NOCTURNES",
+      "role": "portfolio",
+      "description": "02 / 05 « NOCTURNES » : concert spectacle danse et musique ; citation, format, durée, public, photos de la pièce et teaser",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-echo": {
+      "titre": "L’écho d’une chute",
+      "role": "portfolio",
+      "description": "03 / 05 « L'écho d'une chute » : duo pour l'espace public avec le Collectif Melpo ; citation, format, durée, public, photos de la pièce et teaser",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-doline": {
+      "titre": "DOLINE",
+      "role": "portfolio",
+      "description": "04 / 05 « DOLINE » : danse, musique, images et arts numériques ; citation, format, durée, public, photos de la pièce et teaser",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-souffle": {
+      "titre": "Souffle",
+      "role": "portfolio",
+      "description": "05 / 05 « Souffle » : duo danse et guitares ; citation, format, durée, public, photos de la pièce et teaser",
+      "animations": [
+        "apparition-au-défilement",
+        "révélation-image"
+      ],
+      "interactions": [
+        "lecteur-vidéo"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "creations-appel": {
+      "titre": "Une pièce pour votre lieu ?",
+      "role": "appel",
+      "description": "« Une pièce pour votre lieu ? » sur plateau sombre : où, quand, pour quel public, logo en filigrane, boutons écrire et appeler",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-debut": {
+      "titre": "Transmettre la danse, de corps à corps",
+      "role": "ouverture",
+      "description": "« Transmettre la danse, de corps à corps » : photo d'atelier, toupie",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-eac": {
+      "titre": "Créer avec les élèves",
+      "role": "offre",
+      "description": "« Créer avec les élèves » : éducation artistique, photos d'ateliers",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-coaching": {
+      "titre": "Du studio à la scène",
+      "role": "offre",
+      "description": "« Du studio à la scène » : coaching scénique pour les groupes de musique",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-dada": {
+      "titre": "S’entraîner ensemble, chaque jeudi",
+      "role": "offre",
+      "description": "« S'entraîner ensemble, chaque jeudi » : Dada Collectif, photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-regard": {
+      "titre": "Danser pour les autres",
+      "role": "portfolio",
+      "description": "« Danser pour les autres » : chorégraphies et regard extérieur pour d'autres artistes, photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "transmission-appel": {
+      "titre": "Un projet avec la compagnie ?",
+      "role": "appel",
+      "description": "« Un projet avec la compagnie ? » sur plateau sombre : école, groupe de musique, structure culturelle, logo en filigrane, boutons écrire et appeler",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
