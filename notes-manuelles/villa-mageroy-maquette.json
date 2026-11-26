@@ -1,0 +1,837 @@
+{
+  "maquette": {
+    "client": "villa gallo-romaine de Mageroy à Habay-la-Vieille, en Belgique (asbl ARC-HAB) : site archéologique en accès libre, visites guidées, ateliers scolaires, fêtes et fouilles d'été",
+    "activite": [
+      "culture",
+      "tourisme",
+      "association"
+    ],
+    "concept": [
+      "carnet",
+      "voyage"
+    ],
+    "ambiance": [
+      "minéral",
+      "chaleureux",
+      "clair"
+    ],
+    "palette": {
+      "fond": "--pierre",
+      "texte": "--texte",
+      "accent": "--ambre",
+      "secondaire": "--charbon"
+    },
+    "polices": {
+      "titres": "Gloock",
+      "texte": "Manrope",
+      "mono": null
+    },
+    "points_forts": [
+      "direction « Pierre et ambre » : pierre, sable, charbon et ambre, Gloock avec un mot en ambre ; le quadrillage de fouille comme fil",
+      "ouverture : la photo des vestiges dans les coquelicots se dégage carré par carré, puis la case du quadrillage sous le pointeur s'allume (A1, B3…)",
+      "frise des siècles épinglée qui défile de côté avec un pictogramme par étape, le domaine vu du ciel en plein écran, le trésor de 105 antoniniens qui tombent et se comptent",
+      "calculateur de la visite guidée (forfait et personnes en plus), ateliers scolaires filtrables par niveau, agenda au jour réel"
+    ],
+    "reserves": [
+      "quelques illustrations générées (nuit sur le domaine, 404) ; accueil long (12,5 écrans sur ordinateur)"
+    ],
+    "animations": [
+      "ouverture-orchestrée",
+      "masque",
+      "galerie-horizontale",
+      "section-fixée",
+      "canvas-2d",
+      "compteur",
+      "trace-svg",
+      "parallaxe",
+      "transition-de-page",
+      "apparition-au-défilement"
+    ],
+    "interactions": [
+      "jeu",
+      "calculateur",
+      "filtres",
+      "réservation-simulee",
+      "formulaire-par-étapes"
+    ],
+    "change_depuis_audit": null,
+    "accueil": "debut",
+    "plan": "recit-lineaire",
+    "grille": {
+      "objet": "la photo des vestiges dégagée carré par carré",
+      "fil": "le quadrillage de fouille"
+    },
+    "metier": "site archéologique"
+  },
+  "sections": {
+    "div": {
+      "titre": "",
+      "role": "",
+      "description": "",
+      "animations": [],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "ignorer": "conteneur de l'intro sans rendu propre"
+    },
+    "ouverture-panneau": {
+      "titre": "",
+      "role": "transition-de-page",
+      "description": "Voile charbon entre les pages, la grille de fouille couvre la photo d'ouverture puis se vide",
+      "animations": [
+        "transition-de-page",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "header": {
+      "titre": "",
+      "role": "menu",
+      "description": "En-tête pierre : logo de la villa, visiter, écoles, le site, agenda, contact, bouton ambre « Réserver une visite »",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "menu": {
+      "titre": "Menu",
+      "role": "menu",
+      "description": "Menu plein écran du téléphone sur pierre, liens en Gloock",
+      "animations": [
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "sans_capture": true
+    },
+    "debut": {
+      "titre": "Une villaromaineà ciel ouvert",
+      "role": "ouverture",
+      "description": "« Une villa romaine à ciel ouvert » (à ciel ouvert en ambre) : la photo des vestiges dans les coquelicots se dégage carré par carré, puis la case du quadrillage sous le pointeur s'allume avec son nom (A1, B3…) ; accessible maintenant, prochain rendez-vous",
+      "animations": [
+        "ouverture-orchestrée",
+        "masque"
+      ],
+      "interactions": [
+        "jeu"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ],
+      "particularites": [
+        "photo dégagée carré par carré comme un carré de fouille",
+        "case du quadrillage qui s'allume sous le pointeur"
+      ]
+    },
+    "que-faire": {
+      "titre": "Que faire à Mageroy ?",
+      "role": "services",
+      "description": "« Que faire à Mageroy ? » : quatre cartes photo (visite libre, visite guidée, écoles, événements) avec prix",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "siecles": {
+      "titre": "Quatre siècles de vie, quarante ans de fouilles",
+      "role": "étapes",
+      "description": "« Quatre siècles de vie, quarante ans de fouilles » : frise des siècles (I, II, III, IV…) avec un pictogramme par étape, épinglée et qui défile de côté sur ordinateur, en fil vertical sur téléphone",
+      "animations": [
+        "section-fixée",
+        "galerie-horizontale",
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 5,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "domaine": {
+      "titre": "Le domaine vu du ciel",
+      "role": "decor",
+      "description": "« Près de 3 hectares » épinglé sur charbon : la vue du ciel du domaine s'agrandit jusqu'au plein écran sous le titre, pars urbana et pars rustica",
+      "animations": [
+        "section-fixée",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "simplifié",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [],
+      "dependances": [
+        "gsap",
+        "scrolltrigger"
+      ]
+    },
+    "decouvertes": {
+      "titre": "Ce que la terre a gardé",
+      "role": "outil-interactif",
+      "description": "« Ce que la terre a gardé » : 105 antoniniens d'argent qui tombent en averse et se comptent sur charbon, objets conservés en pictogrammes (bois, tablette à écrire, sandale)",
+      "animations": [
+        "canvas-2d",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "trésor de 105 pièces qui tombent et se comptent"
+      ]
+    },
+    "rendez-vous": {
+      "titre": "Le prochain rendez-vous",
+      "role": "agenda",
+      "description": "« Le prochain rendez-vous » : carte ambre avec la date en grand (Saint-Nicolas), compte des jours, bouton réserver, autres dates de l'année",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "association": {
+      "titre": "Ceux qui font vivre la villa",
+      "role": "équipe",
+      "description": "« Ceux qui font vivre la villa » : l'asbl ARC-HAB, photos des artisans, jardiniers et fouilleurs",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "fin": {
+      "titre": "Venez marcher dans le domaine",
+      "role": "appel",
+      "description": "« Venez marcher dans le domaine » sur le domaine à la tombée de la nuit, boutons ambre (réserver une visite, accès)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "pied": {
+      "titre": "Sommaire",
+      "role": "pied-de-page",
+      "description": "Pied de page charbon : logo, adresse, sommaire, pratique, réseaux, soutiens",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "404-debut": {
+      "titre": "Rien dans ce carré de fouille",
+      "role": "page-404",
+      "description": "404 « Rien dans ce carré de fouille » : un carré de fouille vide, bouton",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-debut": {
+      "titre": "Les rendez-vousde la villa",
+      "role": "ouverture",
+      "description": "« Les rendez-vous de la villa » : « 5 déc. » en très grand, prochain rendez-vous et photo de fête costumée",
+      "animations": [
+        "révélation-texte",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-dates": {
+      "titre": "Toutes les dates",
+      "role": "agenda",
+      "description": "« Toutes les dates » : rendez-vous filtrables par type, dates passées repliées, ajouter à mon agenda et réserver",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": "agenda-des-dates",
+      "pieges": []
+    },
+    "agenda-en-images": {
+      "titre": "La villa en images",
+      "role": "galerie",
+      "description": "« La villa en images » : piste de photos des rendez-vous de l'année qui défile",
+      "animations": [
+        "galerie-horizontale"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "agenda-lettre": {
+      "titre": "Recevoir le programme",
+      "role": "contact",
+      "description": "« Recevoir le programme » : inscription à la lettre",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Inscription simulée"
+      ]
+    },
+    "agenda-fin": {
+      "titre": "Entre deux fêtes, la villa reste ouverte",
+      "role": "appel",
+      "description": "« Entre deux fêtes, la villa reste ouverte » sur un légionnaire dans le jardin, boutons ambre (réserver une visite, accès)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-debut": {
+      "titre": "Une question, une visite, une classe ?",
+      "role": "ouverture",
+      "description": "« Une question, une visite, une classe ? » : téléphone en grand, bandeau du pavillon qui s'élargit au défilement",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-formulaire": {
+      "titre": "Votre demande",
+      "role": "contact",
+      "description": "« Votre demande » : sujet, coordonnées, message",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Envoi simulé"
+      ]
+    },
+    "contact-adresses": {
+      "titre": "Trois adresses, un seul site",
+      "role": "carte",
+      "description": "« Trois adresses, un seul site » : adresses et carte schématique des routes",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "contact-soutenir": {
+      "titre": "Devenir membre d'ARC-HAB",
+      "role": "offre",
+      "description": "« Devenir membre d'ARC-HAB » : bénévole ou membre à 15 € par an, carte charbon",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-debut": {
+      "titre": "L'Antiquité,les mains dans la terre",
+      "role": "ouverture",
+      "description": "« L'Antiquité, les mains dans la terre » : élèves en atelier, bandeau qui s'élargit",
+      "animations": [
+        "révélation-texte",
+        "masque"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-travaux": {
+      "titre": "Pendant les travaux du pavillon",
+      "role": "faq",
+      "description": "Encart « Pendant les travaux du pavillon » : ateliers donnés en classe",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-visite": {
+      "titre": "La visite guidée",
+      "role": "offre",
+      "description": "« La visite guidée » : 1 h 30 avec un guide, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-ateliers": {
+      "titre": "Huit ateliers d'1 h 15",
+      "role": "produits",
+      "description": "« Huit ateliers d'1 h 15 » : filtrables par niveau (maternelle, primaire, secondaire, en classe), cartes photo avec prix par élève",
+      "animations": [
+        "filtre-anime"
+      ],
+      "interactions": [
+        "filtres"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-dossier": {
+      "titre": "Le dossier pédagogique « Mageroy »",
+      "role": "offre",
+      "description": "« Le dossier pédagogique » : 48 pages, couverture et lien",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "ecoles-reserver": {
+      "titre": "Demander une réservation",
+      "role": "contact",
+      "description": "« Demander une réservation » : classe, niveau, élèves, date, ateliers",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Demande simulée"
+      ]
+    },
+    "ecoles-fin": {
+      "titre": "Une sortie qui laisse des traces",
+      "role": "appel",
+      "description": "« Une sortie qui laisse des traces » sur une photo d'atelier, boutons ambre (réserver une visite, accès)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-debut": {
+      "titre": "Quatre siècles sous nos pieds",
+      "role": "ouverture",
+      "description": "« Quatre siècles sous nos pieds » : mosaïque de photos de fouilles",
+      "animations": [
+        "révélation-texte"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-lieu": {
+      "titre": "Une villa dans un creux humide",
+      "role": "manifeste",
+      "description": "« Une villa dans un creux humide » : la Rulles entre Gaume et Ardenne, photo",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-siecles": {
+      "titre": "Du Ier au XVIIe siècle",
+      "role": "étapes",
+      "description": "« Du Ier au XVIIe siècle » : chronologie dont le fil se trace au défilement",
+      "animations": [
+        "trace-svg"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-domaine": {
+      "titre": "Deux cours dans un grand enclos",
+      "role": "chiffres",
+      "description": "« Deux cours dans un grand enclos » : 200 × 145 m, plan et photo",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-decouvertes": {
+      "titre": "Ce que la terre a gardé",
+      "role": "outil-interactif",
+      "description": "« Découvertes » : 105 antoniniens d'argent qui tombent en averse et se comptent sur charbon, objets conservés en pictogrammes (bois, tablette à écrire, sandale)",
+      "animations": [
+        "canvas-2d",
+        "compteur"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": [],
+      "particularites": [
+        "trésor de 105 pièces qui tombent et se comptent"
+      ]
+    },
+    "le-site-recherche": {
+      "titre": "Plus de quarante ans de fouilles",
+      "role": "preuves",
+      "description": "« Plus de quarante ans de fouilles » : prospections, fouilles, publications, photos",
+      "animations": [
+        "révélation-image"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "le-site-fin": {
+      "titre": "Voir les vestiges de ses yeux",
+      "role": "appel",
+      "description": "« Voir les vestiges de ses yeux » sur les murs de la villa, boutons ambre (réserver une visite, accès)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-debut": {
+      "titre": "Entrée libre, jour et nuit",
+      "role": "ouverture",
+      "description": "« Entrée libre, jour et nuit » : « 0 € » en très grand qui remonte doucement au défilement sur une photo plein cadre",
+      "animations": [
+        "révélation-texte",
+        "parallaxe"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-formules": {
+      "titre": "Quatre façons de découvrir la villa",
+      "role": "tarifs",
+      "description": "« Quatre façons de découvrir la villa » : formules en grandes photos avec prix et conditions",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-calcul": {
+      "titre": "Combien coûte votre visite guidée ?",
+      "role": "calculateur",
+      "description": "« Combien coûte votre visite guidée ? » : personnes de 6 ans et plus, forfait de 40 € puis 4 € par personne, total en direct",
+      "animations": [
+        "compteur"
+      ],
+      "interactions": [
+        "calculateur"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": true,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-reserver": {
+      "titre": "Demander une visite guidée",
+      "role": "contact",
+      "description": "« Demander une visite guidée » : date, groupe, coordonnées",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "réservation-simulee",
+        "formulaire-par-étapes"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": [
+        "Demande simulée"
+      ]
+    },
+    "visiter-acces": {
+      "titre": "Venir à la villa",
+      "role": "carte",
+      "description": "« Venir à la villa » : en voiture, en train, parking",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-autour": {
+      "titre": "Prolonger la balade",
+      "role": "galerie",
+      "description": "« Prolonger la balade » : circuits vélo et balades en photos",
+      "animations": [
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-faq": {
+      "titre": "Avant de venir",
+      "role": "faq",
+      "description": "« Avant de venir » : questions pratiques dépliables",
+      "animations": [
+        "aucune"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 3,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    },
+    "visiter-fin": {
+      "titre": "Venez marcher dans le domaine",
+      "role": "appel",
+      "description": "« Venez marcher dans le domaine » sur le domaine à la tombée de la nuit, boutons ambre (réserver une visite, accès)",
+      "animations": [
+        "révélation-texte",
+        "apparition-au-défilement"
+      ],
+      "interactions": [
+        "aucune"
+      ],
+      "telephone": "adapté",
+      "note_qualite": 4,
+      "reutilisable": false,
+      "module": null,
+      "pieges": []
+    }
+  }
+}
